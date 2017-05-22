@@ -7,7 +7,7 @@ class CoinAPI
     {
         $this->ApiKey = $Key;
     }
-
+    
     // Metadata
     function GetExchanges()
     {
@@ -56,7 +56,7 @@ class CoinAPI
         $url = 'https://rest.coinapi.io/v1/exchangerate/' . $asset_id_base;
         return $this->CurlRequest($url);
     }
-	
+    
     // OHCLV
     function GetPeriods()
     {
@@ -119,7 +119,7 @@ class CoinAPI
         }
         return $this->CurlRequest($url);
     }
-	
+    
     // Trades
     function GetTradesLatest($symbol_id = null, $limit = null)
     {
@@ -127,10 +127,10 @@ class CoinAPI
         {
             $url = 'https://rest.coinapi.io/v1/trades/latest';
         }
-	else if ($symbol_id == null && $limit != null)
-	{
-	    $url = 'https://rest.coinapi.io/v1/trades/latest?limit=' . $limit;
-	}
+        else if ($symbol_id == null && $limit != null)
+        {
+            $url = 'https://rest.coinapi.io/v1/trades/latest?limit=' . $limit;
+        }
         else if ($limit == null && $symbol_id != null)
         {
             $url = 'https://rest.coinapi.io/v1/trades/' . $symbol_id . '/latest';
@@ -354,25 +354,25 @@ class CoinAPI
             'Content-Type: application/json'
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$output = curl_exec($ch);
-		$info = curl_getinfo($ch);
-		if ($output === false)
-		{
-			if (curl_error($ch))
-			{
-				throw new Exception(curl_error($ch));
-			}
-			else
-			{
-				throw new Exception($info);
-			}
-		}
+        $output = curl_exec($ch);
+        $info   = curl_getinfo($ch);
+        if ($output === false)
+        {
+            if (curl_error($ch))
+            {
+                throw new Exception(curl_error($ch));
+            }
+            else
+            {
+                throw new Exception($info);
+            }
+        }
         $json_data = json_decode($output);
-		if ($json_data == NULL)
-		{
-			// json parsing failed
-			throw new Exception($output);
-		}
+        if ($json_data == NULL)
+        {
+            // json parsing failed
+            throw new Exception($output);
+        }
         $http_status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         if ($http_status_code != 200)
         {
