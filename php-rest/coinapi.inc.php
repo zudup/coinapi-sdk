@@ -127,6 +127,10 @@ class CoinAPI
         {
             $url = 'https://rest.coinapi.io/v1/trades/latest';
         }
+	else if ($symbol_id == null && $limit != null)
+	{
+	    $url = 'https://rest.coinapi.io/v1/trades/latest?limit=' . $limit;
+	}
         else if ($limit == null && $symbol_id != null)
         {
             $url = 'https://rest.coinapi.io/v1/trades/' . $symbol_id . '/latest';
@@ -188,6 +192,10 @@ class CoinAPI
         {
             $url = 'https://rest.coinapi.io/v1/quotes/latest';
         }
+        else if ($symbol_id == null && $limit != null)
+        {
+            $url = 'https://rest.coinapi.io/v1/quotes/latest?limit=' . $limit;
+        }
         else if ($limit == null && $symbol_id != null)
         {
             $url = 'https://rest.coinapi.io/v1/quotes/' . $symbol_id . '/latest';
@@ -230,19 +238,19 @@ class CoinAPI
         return $this->CurlRequest($url);
     }
     //Order Books
-    function GetOrderBookCurrent($symbol_id = null)
+    function GetOrderbookCurrent($symbol_id = null)
     {
         if ($symbol_id == null)
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/current';
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/current';
         }
         else
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/current';
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/current';
         }
         return $this->CurlRequest($url);
     }
-    function GetOrderBookLatest($symbol_id, $limit = null)
+    function GetOrderbookLatest($symbol_id, $limit = null)
     {
         if ($symbol_id == null)
         {
@@ -250,15 +258,15 @@ class CoinAPI
         }
         if ($limit == null)
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/latest';
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/latest';
         }
         else
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/latest?limit=' . $limit;
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/latest?limit=' . $limit;
         }
         return $this->CurlRequest($url);
     }
-    function GetOrderBookHistory($symbol_id, $time_start, $time_end = null, $limit = null)
+    function GetOrderbookHistory($symbol_id, $time_start, $time_end = null, $limit = null)
     {
         if ($symbol_id == null)
         {
@@ -271,21 +279,21 @@ class CoinAPI
         $time_start = $this->FormatDateTime($time_start);
         if ($time_end == null && $limit != null)
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&limit=' . $limit;
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&limit=' . $limit;
         }
         else if ($limit == null && $time_end != null)
         {
             $time_end = $this->FormatDateTime($time_end);
-            $url      = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&time_end=' . $time_end;
+            $url      = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&time_end=' . $time_end;
         }
         else if ($limit == null && $time_end == null)
         {
-            $url = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/history?time_start=' . $time_start;
+            $url = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/history?time_start=' . $time_start;
         }
         else
         {
             $time_end = $this->FormatDateTime($time_end);
-            $url      = 'https://rest.coinapi.io/v1/orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&time_end=' . $time_end . '&limit=' . $limit;
+            $url      = 'https://rest.coinapi.io/v1/Orderbooks/' . $symbol_id . '/history?time_start=' . $time_start . '&time_end=' . $time_end . '&limit=' . $limit;
         }
         return $this->CurlRequest($url);
     }

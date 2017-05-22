@@ -2,7 +2,7 @@
 require_once ('coinapi.inc.php');
 
 // define constants for testing
-$api_key = "FEA6BCB0-058C-4C82-921C-455A0036F29F"; // YOUR_API_KEY_HERE
+$api_key = "YOUR_API_KEY_HERE"; // insert here you api key
 $asset_id_base = 'BTC';
 $asset_id_quote = 'USD';
 $symbol_id = 'BITSTAMP_SPOT_BTC_USD';
@@ -36,7 +36,7 @@ print_r($capi->GetTradesLatest($symbol_id, $limit));
 // get history trades from specific symbol and time range
 print_r($capi->GetTradesHistory($symbol_id, $time_start, $time_end, $limit));
 // get current quotes across all symbols
-print_r($capi->GetQuotesCurrent();
+print_r($capi->GetQuotesCurrent());
 // get current quote for specific symbol
 print_r($capi->GetQuotesCurrent($symbol_id));
 // get latest quotes across all symbols
@@ -45,14 +45,14 @@ print_r($capi->GetQuotesLatest(null, $limit));
 print_r($capi->GetQuotesLatest($symbol_id, $limit));
 // get history quotes from specific symbol and time range
 print_r($capi->GetQuotesHistory($symbol_id, $time_start, $time_end, $limit));
-// get current orderbooks across all symbols
-print_r($capi->GetOrderBookCurrent());
-// get current orderbook from specific symbol
-print_r($capi->GetOrderBookCurrent($symbol_id));
-// get latest orderbooks from spefific symbol
-print_r($capi->GetOrderBookLatest($symbol_id, $limit));
-// get history orderbooks from specific symbol and time range
-print_r($capi->GetOrderBookHistory($symbol_id, $time_start, $time_end, $limit));
+// get current Orderbooks across all symbols
+print_r($capi->GetOrderbookCurrent());
+// get current Orderbook from specific symbol
+print_r($capi->GetOrderbookCurrent($symbol_id));
+// get latest Orderbooks from spefific symbol
+print_r($capi->GetOrderbookLatest($symbol_id, $limit));
+// get history Orderbooks from specific symbol and time range
+print_r($capi->GetOrderbookHistory($symbol_id, $time_start, $time_end, $limit));
 // get latest twitter data
 print_r($capi->GetTwitterLatest($limit));
 // get history twitter data from specific time range
