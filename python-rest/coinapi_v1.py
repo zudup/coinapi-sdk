@@ -1,4 +1,3 @@
-import abc
 import urllib.request
 import urllib.parse
 import gzip
@@ -7,11 +6,6 @@ import json
 PRODUCTION_URL = 'https://rest.coinapi.io/'
 MOCK_URL = 'https://rest-test.coinapi.io/'
 VERSION = 'v1'
-
-class AbstractRequest(abc.ABC):
-    @abc.abstractmethod
-    def endpoint(self):
-        pass
 
 class HTTPClient:
     def __init__(self, endpoint, headers = dict(), params = dict()):
@@ -38,26 +32,19 @@ class HTTPClient:
         response = json.loads(raw_response.decode(encoding))
         return response
 
-
-class AbstractRequestWithQueryString(AbstractRequest):
-    def __with_parameter(self, param, value):
-        old = self.query_paramteres
-        new = {param: value}
-        return {**old, **new}
-
-class MetadataListExchangesRequest(AbstractRequest):
+class MetadataListExchangesRequest:
     def endpoint(self):
         return '/exchanges'
 
-class MetadataListAssetsRequest(AbstractRequest):
+class MetadataListAssetsRequest:
     def endpoint(self):
         return '/assets'
 
-class MetadataListSymbolsRequest(AbstractRequest):
+class MetadataListSymbolsRequest:
     def endpoint(self):
         return '/symbols'
 
-class ExchangeRatesGetSpecificRateRequest(AbstractRequestWithQueryString):
+class ExchangeRatesGetSpecificRateRequest:
     def __init__(self,
                  asset_id_base,
                  asset_id_quote,
@@ -71,25 +58,18 @@ class ExchangeRatesGetSpecificRateRequest(AbstractRequestWithQueryString):
             self.asset_id_base,
             self.asset_id_quote)
 
-    def time(self, date):
-        params = self.__with_paramter('time', date)
-        return ExchangeRatesGetSpecificRateRequest(self.asset_id_base,
-                                                   self.asset_id_quote,
-                                                   params)
-    at = time
-
-class ExchangeRatesGetAllCurrentRates(AbstractRequest):
+class ExchangeRatesGetAllCurrentRates:
     def __init__(self, asset_id_base):
         self.asset_id_base = asset_id_base
 
     def endpoint(self):
         return '/exchangerate/%s' % self.asset_id_base
 
-class OHLCVListAllPeriodsRequest(AbstractRequest):
+class OHLCVListAllPeriodsRequest:
     def endpoint(self):
         return '/ohlcv/periods'
 
-class OHLCVLatestDataRequest(AbstractRequestWithQueryString):
+class OHLCVLatestDataRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -97,17 +77,7 @@ class OHLCVLatestDataRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/ohlcv/%s/latest' % self.symbol_id
 
-    def period(self, period_id):
-        params = self.__with_parameter('period_id', period_id)
-        return OHLCVLatestDataRequest(self.symbol_id, params)
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return OHLCVLatestDataRequest(self.symbol_id, params)
-
-    only = limit
-
-class OHLCVHistoricalDataRequest(AbstractRequestWithQueryString):
+class OHLCVHistoricalDataRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -115,42 +85,14 @@ class OHLCVHistoricalDataRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/ohlcv/%s/history' % self.symbol_id
 
-    def period(self, period_id):
-        params = self.__with_parameter('period_id', period_id)
-        return OHLCVHistoricalDataRequest(symbol_id, params)
-
-    def time_start(self, date):
-        params = self.__with_parameter('time_start', date)
-        return OHLCVHistoricalDataRequest(self.symbol_id, params)
-
-    since = time_start
-
-    def time_end(self, date):
-        params = self.__with_parameter('time_end', date)
-        return OHLCVHistoricalDataRequest(self.symbol_id, params)
-
-    until = time_end
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return OHLCVHistoricalDataRequest(self.symbol_id, params)
-
-    only = limit
-
-class TradesLatestDataAllRequest(AbstractRequestWithQueryString):
+class TradesLatestDataAllRequest:
     def __init__(self, query_parameters = dict()):
         self.query_parameters = query_parameters
 
     def endpoint(self):
         return '/trades/latest'
 
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return OHLCVHistoricalDataRequest(self.symbol_id, params)
-
-    only = limit
-
-class TradesLatestDataSymbolRequest(AbstractRequestWithQueryString):
+class TradesLatestDataSymbolRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -158,13 +100,7 @@ class TradesLatestDataSymbolRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/trades/%s/latest' % self.symbol_id
 
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return TradesLatestDataSymbolRequest(self.symbol_id, params)
-
-    only = limit
-
-class TradesHistoricalDataRequest(AbstractRequestWithQueryString):
+class TradesHistoricalDataRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -172,47 +108,25 @@ class TradesHistoricalDataRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/trades/%s/history' % self.symbol_id
 
-    def time_start(self, date):
-        params = self.__with_parameter('time_start', date)
-        return TradesHistoricalDataRequest(self.symbol_id, params)
-    since = time_start
-
-    def time_end(self, date):
-        params = self.__with_parameter('time_end', date)
-        return TradesHistoricalDataRequest(self.symbol_id, params)
-    until = time_end
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return TradesHistoricalDataRequest(self.symbol_id, params)
-
-    only = limit
-
-class QuotesCurrentDataAllRequest(AbstractRequest):
+class QuotesCurrentDataAllRequest:
     def endpoint(self):
         return '/quotes/current'
 
-class QuotesCurrentDataSymbolRequest(AbstractRequest):
+class QuotesCurrentDataSymbolRequest:
     def __init__(self, symbol_id):
         self.symbol_id = symbol_id
 
     def endpoint(self):
         return '/quotes/%s/current' % self.symbol_id
 
-class QuotesLatestDataAllRequest(AbstractRequestWithQueryString):
+class QuotesLatestDataAllRequest:
     def __init__(self, query_parameters = dict()):
         self.query_parameters = query_parameters
 
     def endpoint(self):
         return '/quotes/latest'
 
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return QuotesLatestDataAllRequest(params)
-
-    only = limit
-
-class QuotesLatestDataSymbolRequest(AbstractRequestWithQueryString):
+class QuotesLatestDataSymbolRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -225,7 +139,7 @@ class QuotesLatestDataSymbolRequest(AbstractRequestWithQueryString):
         return QuotesLatestDataSymbolRequest(self.symbol_id, params)
     only = limit
 
-class QuotesHistoricalData(AbstractRequestWithQueryString):
+class QuotesHistoricalData:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -233,36 +147,18 @@ class QuotesHistoricalData(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/quotes/%s/history' % self.symbol_id
 
-    def time_start(self, date):
-        params = self.__with_parameter('time_start', date)
-        return QuotesHistoricalData(self.symbol_id, params)
-
-    since = time_start
-
-    def time_end(self, date):
-        params = self.__with_parameter('time_end', date)
-        return QuotesHistoricalData(self.symbol_id, params)
-
-    until = time_end
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return QuotesHistoricalData(self.symbol_id, params)
-
-    only = limit
-
-class OrderbooksCurrentDataAllRequest(AbstractRequest):
+class OrderbooksCurrentDataAllRequest:
     def endpoint(self):
         return '/orderbooks/current'
 
-class OrderbooksCurrentDataSymbolRequest(AbstractRequest):
+class OrderbooksCurrentDataSymbolRequest:
     def __init__(self, symbol_id):
         self.symbol_id = symbol_id
 
     def endpoint(self):
         return '/orderbooks/%s/current' % self.symbol_id
 
-class OrderbooksLatestDataRequest(AbstractRequestWithQueryString):
+class OrderbooksLatestDataRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -270,11 +166,7 @@ class OrderbooksLatestDataRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/orderbooks/%s/latest' % self.symbol_id
 
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return OrderbooksLatestDataRequest(self.symbol_id, params)
-
-class OrderbooksHistoricalDataRequest(AbstractRequestWithQueryString):
+class OrderbooksHistoricalDataRequest:
     def __init__(self, symbol_id, query_parameters = dict()):
         self.symbol_id = symbol_id
         self.query_parameters = query_parameters
@@ -282,59 +174,19 @@ class OrderbooksHistoricalDataRequest(AbstractRequestWithQueryString):
     def endpoint(self):
         return '/orderbooks/%s/history' % self.symbol_id
 
-    def time_start(self, date):
-        params = self.__with_parameter('time_start', date)
-        return OrderbooksHistoricalDataRequest(self.symbol_id, params)
-    since = time_start
-
-    def time_end(self, date):
-        params = self.__with_parameter('time_end', date)
-        return OrderbooksHistoricalDataRequest(self.symbol_id, params)
-    until = time_end
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return OrderbooksHistoricalDataRequest(self.symbol_id, params)
-
-    only = limit
-
-class TwitterLatestDataRequest(AbstractRequestWithQueryString):
+class TwitterLatestDataRequest:
     def __init__(self, query_parameters = dict()):
         self.query_parameters = query_parameters
 
     def endpoint(self):
         return '/twitter/latest'
 
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return TwitterLatestDataRequest(params)
-
-    only = limit
-
-class TwitterHistoricalDataRequest(AbstractRequestWithQueryString):
+class TwitterHistoricalDataRequest:
     def __init__(self, query_parameters = dict()):
         self.query_parameters = query_parameters
 
     def endpoint(self):
         return '/twitter/history'
-
-    def time_start(self, date):
-        params = self.__with_parameter('time_start', date)
-        return TwitterHistoricalDataRequest(params)
-
-    since = time_start
-
-    def time_end(self, date):
-        params = self.__with_parameter('time_end', date)
-        return TwitterHistoricalDataRequest(params)
-
-    until = time_end
-
-    def limit(self, lim):
-        params = self.__with_parameter('limit', lim)
-        return TwitterHistoricalDataRequest(params)
-
-    only = limit
 
 class CoinAPIv1:
     DEFAULT_HEADERS = {

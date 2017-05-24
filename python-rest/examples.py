@@ -1,4 +1,4 @@
-from coinapi_v1_fix import CoinAPIv1
+from coinapi_v1 import CoinAPIv1
 import datetime
 
 test_key = '73034021-0EBC-493D-8A00-E0F138111F41'
