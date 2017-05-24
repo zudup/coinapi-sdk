@@ -207,55 +207,49 @@ class CoinAPIv1:
         old_headers = self.headers
         return CoinAPIv1(api_key, {**old_headers, **additional_headers})
 
-    def metadata_list_exchanges(self, request_block = lambda x: x):
-        request = request_block(MetadataListExchangesRequest())
+    def metadata_list_exchanges(self):
+        request = MetadataListExchangesRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
-    def metadata_list_assets(self, request_block = lambda x: x):
-        request = request_block(MetadataListAssetsRequest())
+    def metadata_list_assets(self):
+        request = MetadataListAssetsRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
-    def metadata_list_symbols(self, request_block = lambda x: x):
-        request = request_block(MetadataListSymbolsRequest())
+    def metadata_list_symbols(self):
+        request = MetadataListSymbolsRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def exchange_rates_get_specific_rate(self,
                                          asset_id_base,
                                          asset_id_quote,
-                                         query_parameters = dict(),
-                                         request_block = lambda x: x):
-        request = request_block(
-            ExchangeRatesGetSpecificRateRequest(asset_id_base,
-                                                asset_id_quote,
-                                                query_parameters))
+                                         query_parameters = dict()):
+        request = ExchangeRatesGetSpecificRateRequest(asset_id_base,
+                                                      asset_id_quote,
+                                                      query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
     def exchange_rates_get_all_current_rates(self,
-                                             asset_id_base,
-                                             request_block = lambda x: x):
-        request = request_block(
-            ExchangeRatesGetAllCurrentRates(asset_id_base))
+                                             asset_id_base):
+        request = ExchangeRatesGetAllCurrentRates(asset_id_base)
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
-    def ohlcv_list_all_periods(self, request_block = lambda x: x):
-        request = request_block(OHLCVListAllPeriodsRequest())
+    def ohlcv_list_all_periods(self):
+        request = OHLCVListAllPeriodsRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def ohlcv_latest_data(self,
                           symbol_id,
-                          query_parameters = dict(),
-                          request_block = lambda x: x):
-        request = request_block(
-            OHLCVLatestDataRequest(symbol_id,
-                                   query_parameters))
+                          query_parameters = dict()):
+        request =  OHLCVLatestDataRequest(symbol_id,
+                                          query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -263,19 +257,16 @@ class CoinAPIv1:
 
     def ohlcv_historical_data(self,
                               symbol_id,
-                              query_parameters,
-                              request_block = lambda x: x):
-        request = request_block(
-            OHLCVHistoricalDataRequest(symbol_id, query_parameters))
+                              query_parameters):
+        request = OHLCVHistoricalDataRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
     def trades_latest_data_all(self,
-                               query_parameters = dict(),
-                               request_block = lambda x: x):
-        request = request_block(TradesLatestDataAllRequest(query_parameters))
+                               query_parameters = dict()):
+        request = TradesLatestDataAllRequest(query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -283,10 +274,8 @@ class CoinAPIv1:
 
     def trades_latest_data_symbol(self,
                                   symbol_id,
-                                  query_parameters = dict(),
-                                  request_block = lambda x: x):
-        request = request_block(
-            TradesLatestDataSymbolRequest(symbol_id, query_parameters))
+                                  query_parameters = dict()):
+        request = TradesLatestDataSymbolRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -294,32 +283,27 @@ class CoinAPIv1:
 
     def trades_historical_data(self,
                                symbol_id,
-                               query_parameters = dict(),
-                               request_block = lambda x: x):
-        request = request_block(
-            TradesHistoricalDataRequest(symbol_id, query_parameters))
+                               query_parameters = dict()):
+        request = TradesHistoricalDataRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
-    def quotes_current_data_all(self, request_block = lambda x: x):
-        request = request_block(QuotesCurrentDataAllRequest())
+    def quotes_current_data_all(self):
+        request = QuotesCurrentDataAllRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def quotes_current_data_symbol(self,
-                                   symbol_id,
-                                   request_block = lambda x: x):
-        request = request_block(QuotesCurrentDataSymbolRequest(symbol_id))
+                                   symbol_id):
+        request = QuotesCurrentDataSymbolRequest(symbol_id)
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def quotes_latest_data_all(self,
-                               query_parameters = dict(),
-                               request_block = lambda x: x):
-        request = request_block(
-            QuotesLatestDataAllRequest(query_parameters))
+                               query_parameters = dict()):
+        request = QuotesLatestDataAllRequest(query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -327,10 +311,8 @@ class CoinAPIv1:
 
     def quotes_latest_data_symbol(self,
                                   symbol_id,
-                                  query_parameters = dict(),
-                                  request_block = lambda x: x):
-        request = request_block(
-            QuotesLatestDataSymbolRequest(symbol_id, query_parameters))
+                                  query_parameters = dict()):
+        request = QuotesLatestDataSymbolRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -338,35 +320,28 @@ class CoinAPIv1:
 
     def quotes_historical_data(self,
                                symbol_id,
-                               query_parameters = dict(),
-                               request_block = lambda x: x):
-        request = request_block(
-            QuotesHistoricalData(symbol_id, query_parameters))
+                               query_parameters = dict()):
+        request = QuotesHistoricalData(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
-    def orderbooks_current_data_all(self, request_block = lambda x: x):
-        request = request_block(
-            OrderbooksCurrentDataAllRequest())
+    def orderbooks_current_data_all(self):
+        request = OrderbooksCurrentDataAllRequest()
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def orderbooks_current_data_symbol(self,
-                                       symbol_id,
-                                       request_block = lambda x: x):
-        request = request_block(
-            OrderbooksCurrentDataSymbolRequest(symbol_id))
+                                       symbol_id):
+        request = OrderbooksCurrentDataSymbolRequest(symbol_id)
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
     def orderbooks_latest_data(self,
                                symbol_id,
-                               query_parameters = dict(),
-                               request_block = lambda x: x):
-        request = request_block(
-            OrderbooksLatestDataRequest(symbol_id, query_parameters))
+                               query_parameters = dict()):
+        request = OrderbooksLatestDataRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
@@ -374,30 +349,24 @@ class CoinAPIv1:
 
     def orderbooks_historical_data(self,
                                    symbol_id,
-                                   query_parameters = dict(),
-                                   request_block = lambda x: x):
-        request = request_block(
-            OrderbooksHistoricalDataRequest(symbol_id, query_parameters))
+                                   query_parameters = dict()):
+        request = OrderbooksHistoricalDataRequest(symbol_id, query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
     def twitter_latest_data(self,
-                            query_parameters = dict(),
-                            request_block = lambda x: x):
-        request = request_block(
-            TwitterLatestDataRequest(query_parameters))
+                            query_parameters = dict()):
+        request = TwitterLatestDataRequest(query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
         return client.perform()
 
     def twitter_historical_data(self,
-                                query_parameters = dict(),
-                                request_block = lambda x: x):
-        request = request_block(
-            TwitterHistoricalDataRequest(query_parameters))
+                                query_parameters = dict()):
+        request = TwitterHistoricalDataRequest(query_parameters)
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
