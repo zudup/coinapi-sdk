@@ -14,6 +14,7 @@ namespace csharp_rest {
         public decimal option_contract_unit { get; set; }
         public string option_exercise_style { get; set; }
         public DateTime option_expiration_time { get; set; }
+        public DateTime future_delivery_time { get; set; }
         public string asset_id_base { get; set; }
         public string asset_id_quote { get; set; }
     }

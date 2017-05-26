@@ -32,16 +32,27 @@ namespace csharp_rest {
                 Console.Write(Environment.NewLine);
                 Console.Write("symbol_type:" + item.symbol_type);
                 Console.Write(Environment.NewLine);
-                Console.Write("option_type_is_call:" + item.option_type_is_call);
-                Console.Write(Environment.NewLine);
-                Console.Write("option_strike_price:" + item.option_strike_price);
-                Console.Write(Environment.NewLine);
-                Console.Write("option_contract_unit:" + item.option_contract_unit);
-                Console.Write(Environment.NewLine);
-                Console.Write("option_exercise_style:" + item.option_exercise_style);
-                Console.Write(Environment.NewLine);
-                Console.Write("option_expiration_time:" + item.option_expiration_time);
-                Console.Write(Environment.NewLine);
+
+                if (item.symbol_type == "OPTION")
+                {
+                    Console.Write("option_type_is_call:" + item.option_type_is_call);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("option_strike_price:" + item.option_strike_price);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("option_contract_unit:" + item.option_contract_unit);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("option_exercise_style:" + item.option_exercise_style);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("option_expiration_time:" + item.option_expiration_time);
+                    Console.Write(Environment.NewLine);
+                }
+
+                if (item.symbol_type == "FUTURES")
+                {
+                    Console.Write("future_delivery_time:" + item.future_delivery_time);
+                    Console.Write(Environment.NewLine);
+                }
+
                 Console.Write("asset_id_base:" + item.asset_id_base);
                 Console.Write(Environment.NewLine);
                 Console.Write("asset_id_quote:" + item.asset_id_quote);
