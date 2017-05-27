@@ -529,7 +529,7 @@ func (sdk SDK) get_response_text(path string) (responseBody string, err error) {
 	if req_err != nil {
 		return "", req_err
 	}
-	req.Header.Set("X-CoinAPI-Key", API_KEY)
+	req.Header.Set("X-CoinAPI-Key", sdk.api_key)
 
 	client := &http.Client{}
 
