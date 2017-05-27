@@ -440,7 +440,7 @@ func (sdk SDK) Orderbooks_current_data_all(limit uint32) (orderbooks []Orderbook
 	return
 }
 
-func (sdk SDK) orderbooks_current_data_symbol(symbol_id string, limit uint32) (orderbook Orderbook, err error) {
+func (sdk SDK) Orderbooks_current_data_symbol(symbol_id string, limit uint32) (orderbook Orderbook, err error) {
 	if limit == 0 {
 		limit = 100
 	}
