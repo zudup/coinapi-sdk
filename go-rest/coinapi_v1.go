@@ -160,7 +160,7 @@ func NewSDK(api_key string, url string) *SDK {
 	return sdk
 }
 
-func (sdk SDK) metadata_list_exchanges() (exchanges []Exchange, err error) {
+func (sdk SDK) Metadata_list_exchanges() (exchanges []Exchange, err error) {
 	path := "/v1/exchanges"
 	text, req_err := sdk.get_response_text(path)
 	if req_err != nil {
@@ -171,7 +171,7 @@ func (sdk SDK) metadata_list_exchanges() (exchanges []Exchange, err error) {
 	return
 }
 
-func (sdk SDK) metadata_list_assets() (assets []Asset, err error) {
+func (sdk SDK) Metadata_list_assets() (assets []Asset, err error) {
 	path := "/v1/assets"
 	text, req_err := sdk.get_response_text(path)
 	if req_err != nil {
@@ -182,7 +182,7 @@ func (sdk SDK) metadata_list_assets() (assets []Asset, err error) {
 	return
 }
 
-func (sdk SDK) metadata_list_symbols() (spots []Spot, futures []Future, options []Option, err error) {
+func (sdk SDK) Metadata_list_symbols() (spots []Spot, futures []Future, options []Option, err error) {
 	path := "/v1/symbols"
 
 	spots = []Spot{}
@@ -219,7 +219,7 @@ func (sdk SDK) metadata_list_symbols() (spots []Spot, futures []Future, options 
 	return
 }
 
-func (sdk SDK) exchange_rates_get_specific_rate(asset_id_base string, asset_id_quote string, _time time.Time) (rate Exchange_rate, err error) {
+func (sdk SDK) Exchange_rates_get_specific_rate(asset_id_base string, asset_id_quote string, _time time.Time) (rate Exchange_rate, err error) {
 	path := fmt.Sprintf("/v1/exchangerate/%s/%s", asset_id_base, asset_id_quote)
 	if !_time.IsZero() {
 		path = path + "?time=" + _time.Format(time.RFC3339)
@@ -233,7 +233,7 @@ func (sdk SDK) exchange_rates_get_specific_rate(asset_id_base string, asset_id_q
 	return
 }
 
-func (sdk SDK) exchange_rates_get_all_current_rates(asset_id_base string) (rates []Exchange_rate, err error) {
+func (sdk SDK) Exchange_rates_get_all_current_rates(asset_id_base string) (rates []Exchange_rate, err error) {
 	path := fmt.Sprintf("/v1/exchangerate/%s", asset_id_base)
 	rates = []Exchange_rate{}
 
@@ -257,7 +257,7 @@ func (sdk SDK) exchange_rates_get_all_current_rates(asset_id_base string) (rates
 	return
 }
 
-func (sdk SDK) ohlcv_list_all_periods() (periods []Ohlcv_period, err error) {
+func (sdk SDK) Ohlcv_list_all_periods() (periods []Ohlcv_period, err error) {
 	path := "/v1/ohlcv/periods"
 	text, req_err := sdk.get_response_text(path)
 	if req_err != nil {
@@ -268,7 +268,7 @@ func (sdk SDK) ohlcv_list_all_periods() (periods []Ohlcv_period, err error) {
 	return
 }
 
-func (sdk SDK) ohlcv_latest_data(symbol_id string, period_id string, limit uint32) (data []Ohlcv_data, err error) {
+func (sdk SDK) Ohlcv_latest_data(symbol_id string, period_id string, limit uint32) (data []Ohlcv_data, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -282,7 +282,7 @@ func (sdk SDK) ohlcv_latest_data(symbol_id string, period_id string, limit uint3
 	return
 }
 
-func (sdk SDK) ohlcv_historic_data(symbol_id string, period_id string, time_start time.Time, time_end time.Time, limit uint32) (data []Ohlcv_data, err error) {
+func (sdk SDK) Ohlcv_historic_data(symbol_id string, period_id string, time_start time.Time, time_end time.Time, limit uint32) (data []Ohlcv_data, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -300,7 +300,7 @@ func (sdk SDK) ohlcv_historic_data(symbol_id string, period_id string, time_star
 	return
 }
 
-func (sdk SDK) trades_latest_data_all(limit uint32) (trades []Trade, err error) {
+func (sdk SDK) Trades_latest_data_all(limit uint32) (trades []Trade, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -314,7 +314,7 @@ func (sdk SDK) trades_latest_data_all(limit uint32) (trades []Trade, err error) 
 	return
 }
 
-func (sdk SDK) trades_latest_data_symbol(symbol_id string, limit uint32) (trades []Trade, err error) {
+func (sdk SDK) Trades_latest_data_symbol(symbol_id string, limit uint32) (trades []Trade, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -328,7 +328,7 @@ func (sdk SDK) trades_latest_data_symbol(symbol_id string, limit uint32) (trades
 	return
 }
 
-func (sdk SDK) trades_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (trades []Trade, err error) {
+func (sdk SDK) Trades_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (trades []Trade, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -348,7 +348,7 @@ func (sdk SDK) trades_historical_data(symbol_id string, time_start time.Time, ti
 
 // quotes
 
-func (sdk SDK) quotes_current_data_all(limit uint32) (quotes []Quote, err error) {
+func (sdk SDK) Quotes_current_data_all(limit uint32) (quotes []Quote, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -362,7 +362,7 @@ func (sdk SDK) quotes_current_data_all(limit uint32) (quotes []Quote, err error)
 	return
 }
 
-func (sdk SDK) quotes_current_data_symbol(symbol_id string, limit uint32) (quote Quote, err error) {
+func (sdk SDK) Quotes_current_data_symbol(symbol_id string, limit uint32) (quote Quote, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -376,7 +376,7 @@ func (sdk SDK) quotes_current_data_symbol(symbol_id string, limit uint32) (quote
 	return
 }
 
-func (sdk SDK) quotes_latest_data_all(limit uint32) (quotes []Quote, err error) {
+func (sdk SDK) Quotes_latest_data_all(limit uint32) (quotes []Quote, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -390,7 +390,7 @@ func (sdk SDK) quotes_latest_data_all(limit uint32) (quotes []Quote, err error) 
 	return
 }
 
-func (sdk SDK) quotes_latest_data_symbol(symbol_id string, limit uint32) (quotes []Quote, err error) {
+func (sdk SDK) Quotes_latest_data_symbol(symbol_id string, limit uint32) (quotes []Quote, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -404,7 +404,7 @@ func (sdk SDK) quotes_latest_data_symbol(symbol_id string, limit uint32) (quotes
 	return
 }
 
-func (sdk SDK) quotes_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (quotes []Quote, err error) {
+func (sdk SDK) Quotes_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (quotes []Quote, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -426,7 +426,7 @@ func (sdk SDK) quotes_historical_data(symbol_id string, time_start time.Time, ti
 
 // orderbooks
 
-func (sdk SDK) orderbooks_current_data_all(limit uint32) (orderbooks []Orderbook, err error) {
+func (sdk SDK) Orderbooks_current_data_all(limit uint32) (orderbooks []Orderbook, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -454,7 +454,7 @@ func (sdk SDK) orderbooks_current_data_symbol(symbol_id string, limit uint32) (o
 	return
 }
 
-func (sdk SDK) orderbooks_latest_data(symbol_id string, limit uint32) (orderbooks []Orderbook, err error) {
+func (sdk SDK) Orderbooks_latest_data(symbol_id string, limit uint32) (orderbooks []Orderbook, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -468,7 +468,7 @@ func (sdk SDK) orderbooks_latest_data(symbol_id string, limit uint32) (orderbook
 	return
 }
 
-func (sdk SDK) orderbooks_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (orderbooks []Orderbook, err error) {
+func (sdk SDK) Orderbooks_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (orderbooks []Orderbook, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -489,7 +489,7 @@ func (sdk SDK) orderbooks_historical_data(symbol_id string, time_start time.Time
 // orderbooks end
 
 // twitter
-func (sdk SDK) twitter_latest_data(limit uint32) (tweets []Tweet, err error) {
+func (sdk SDK) Twitter_latest_data(limit uint32) (tweets []Tweet, err error) {
 	if limit == 0 {
 		limit = 100
 	}
@@ -503,7 +503,7 @@ func (sdk SDK) twitter_latest_data(limit uint32) (tweets []Tweet, err error) {
 	return
 }
 
-func (sdk SDK) twitter_historical_data(time_start time.Time, time_end time.Time, limit uint32) (tweets []Tweet, err error) {
+func (sdk SDK) Twitter_historical_data(time_start time.Time, time_end time.Time, limit uint32) (tweets []Tweet, err error) {
 	if limit == 0 {
 		limit = 100
 	}
