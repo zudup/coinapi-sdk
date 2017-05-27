@@ -1,5 +1,5 @@
 //
-//  CoinAPIExample.h
+//  ViewController.h
 //  CoinAPITest
 //
 //  Created by MyMac on 26/05/2017.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CoinAPIExample : UIViewController
+@interface ViewController : UIViewController
 
 
 @end

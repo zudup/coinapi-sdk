@@ -23,31 +23,31 @@
 - (void)getAllMetadataSymbols;
 
 /** Exchange Rates Functions **/
-- (void)getSpecificExchangeRates:(NSString*)asset_id_base asset_id_quote:(NSString*)asset_id_quote;
+- (void)getSpecificExchangeRates:(NSString*)asset_id_base asset_id_quote:(NSString*)asset_id_quote time:(NSInteger)time;
 - (void)getAllExchangeRates:(NSString*)asset_id_base;
 
 /** OHLCV Functions **/
 - (void)getAllOHLCVPeriods;
-- (void)getLatestOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id;
-- (void)getHistoricalOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id time_start:(NSString*)time_start;
+- (void)getLatestOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id limit:(NSInteger)limit;
+- (void)getHistoricalOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit;
 
 /** Trades Functions **/
-- (void)getLatestTradesData;
-- (void)getHistoricalTradesData:(NSString*)symbol_id time_start:(NSString*)time_start;
+- (void)getLatestTradesData:(NSString*)symbol_id limit:(NSInteger)limit;
+- (void)getHistoricalTradesData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit;
 
 /** Quotes Functions **/
-- (void)getCurrentQuotesData;
-- (void)getLatestQuotesData;
-- (void)getHistoricalQuotesData:(NSString*)symbol_id time_start:(NSString*)time_start;
+- (void)getCurrentQuotesData:(NSString*)symbol_id;
+- (void)getLatestQuotesData:(NSString*)symbol_id limit:(NSInteger)limit;
+- (void)getHistoricalQuotesData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit;
 
 /** Orderbooks Functions **/
-- (void)getCurrentOrderbooksData;
-- (void)getLatestOrderbooksData:(NSString*)symbol_id;
-- (void)getHistoricalOrderbooksData:(NSString*)symbol_id time_start:(NSString*)time_start;
+- (void)getCurrentOrderbooksData:(NSString*)symbol_id;
+- (void)getLatestOrderbooksData:(NSString*)symbol_id limit:(NSInteger)limit;
+- (void)getHistoricalOrderbooksData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit;
 
 /** Twitter Functions **/
-- (void)getLatestTwitterData;
-- (void)getHistoricalTwitterData:(NSString*)time_start;
+- (void)getLatestTwitterData:(NSInteger)limit;
+- (void)getHistoricalTwitterData:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit;
 
 /*************** Websocket API ***************/
 

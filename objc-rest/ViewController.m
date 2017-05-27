@@ -1,19 +1,19 @@
 //
-//  CoinAPIExample.m
+//  ViewController.m
 //  CoinAPITest
 //
 //  Created by MyMac on 26/05/2017.
 //  Copyright © 2017 Panda Mobile. All rights reserved.
 //
 
-#import "CoinAPIExample.h"
+#import "ViewController.h"
 #import "CoinAPI.h"
 
-@interface CoinAPIExample ()
+@interface ViewController ()
 
 @end
 
-@implementation CoinAPIExample
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,31 +38,31 @@
     [coin getAllMetadataSymbols];
     
     /** Exchange Rates Functions **/
-    [coin getSpecificExchangeRates:@"BTC" asset_id_quote:@"USD"];
+    [coin getSpecificExchangeRates:@"BTC" asset_id_quote:@"USD" time:0];
     [coin getAllExchangeRates:@"BTC"];
     
-    /** OHLCV Functions **/
+    /* OHLCV Functions */
     [coin getAllOHLCVPeriods];
-    [coin getLatestOHLCVData:@"BITSTAMP_SPOT_BTC_USD" period_id:@"1MIN"];
-    [coin getHistoricalOHLCVData:@"BITSTAMP_SPOT_BTC_USD" period_id:@"1MIN" time_start:@"2016-01-01T00:00:00"];
+    [coin getLatestOHLCVData:@"BITSTAMP_SPOT_BTC_USD" period_id:@"1MIN" limit:0];
+    [coin getHistoricalOHLCVData:@"BITSTAMP_SPOT_BTC_USD" period_id:@"1MIN" time_start:@"2016-01-01T00:00:00" time_end:NULL limit:0];
     
-    /** Trades Functions **/
-    [coin getLatestTradesData];
-    [coin getHistoricalTradesData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00"];
+    /* Trades Functions */
+    [coin getLatestTradesData:NULL limit:0];
+    [coin getHistoricalTradesData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00" time_end:NULL limit:0];
     
-    /** Quotes Functions **/
-    [coin getCurrentQuotesData];
-    [coin getLatestQuotesData];
-    [coin getHistoricalQuotesData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00"];
+    /* Quotes Functions */
+    [coin getCurrentQuotesData:NULL];
+    [coin getLatestQuotesData:NULL limit:0];
+    [coin getHistoricalQuotesData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00" time_end:NULL limit:0];
     
-    /** Orderbooks Functions **/
-    [coin getCurrentOrderbooksData];
-    [coin getLatestOrderbooksData:@"BITSTAMP_SPOT_BTC_USD"];
-    [coin getHistoricalOrderbooksData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00"];
+    /* Orderbooks Functions */
+    [coin getCurrentOrderbooksData:NULL];
+    [coin getLatestOrderbooksData:@"BITSTAMP_SPOT_BTC_USD" limit:0];
+    [coin getHistoricalOrderbooksData:@"BITSTAMP_SPOT_BTC_USD" time_start:@"2016-01-01T00:00:00" time_end:NULL limit:0];
     
-    /** Twitter Functions **/
-    [coin getLatestTwitterData];
-    [coin getHistoricalTwitterData:@"2016-01-01T00:00:00"];
+    /* Twitter Functions */
+    [coin getLatestTwitterData:0];
+    [coin getHistoricalTwitterData:@"2016-01-01T00:00:00" time_end:NULL limit:0];
 }
 
 

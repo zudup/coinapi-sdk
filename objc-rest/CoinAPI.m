@@ -37,7 +37,7 @@
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/exchanges"];
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -53,7 +53,7 @@
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/assets"];
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -68,7 +68,7 @@
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/symbols"];
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -80,12 +80,15 @@
 }
 
 /** Exchange Rates Functions **/
-- (void)getSpecificExchangeRates:(NSString*)asset_id_base asset_id_quote:(NSString*)asset_id_quote
+- (void)getSpecificExchangeRates:(NSString*)asset_id_base asset_id_quote:(NSString*)asset_id_quote time:(NSInteger)time
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/exchangerate/%@/%@", asset_id_base, asset_id_quote]];
+    if (time > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/exchangerate/%@/%@?time=%ld", asset_id_base, asset_id_quote, time]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -100,7 +103,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/exchangerate/%@", asset_id_base]];
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -117,7 +120,7 @@
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/ohlcv/periods"];
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -127,12 +130,15 @@
         NSLog(@"OHLCV - List all periods : %@", jsonResult);
     }] resume];
 }
-- (void)getLatestOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id
+- (void)getLatestOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/ohlcv/%@/latest?period_id=%@", symbol_id, period_id]];
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/ohlcv/%@/latest?period_id=%@&limit=%ld", symbol_id, period_id, limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -142,12 +148,18 @@
         NSLog(@"OHLCV - Latest data : %@", jsonResult);
     }] resume];
 }
-- (void)getHistoricalOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id time_start:(NSString*)time_start
+- (void)getHistoricalOHLCVData:(NSString*)symbol_id period_id:(NSString*)period_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/ohlcv/%@/latest?period_id=%@&time_start=%@", symbol_id, period_id, time_start]];
+    if (time_end){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&time_end=%@", [url absoluteString], time_end]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -159,12 +171,18 @@
 }
 
 /** Trades Functions **/
-- (void)getLatestTradesData
+- (void)getLatestTradesData:(NSString*)symbol_id limit:(NSInteger)limit;
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/trades/latest"];
+    if (symbol_id){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/trades/%@/latest", symbol_id]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -175,12 +193,18 @@
     }] resume];
 }
 
-- (void)getHistoricalTradesData:(NSString*)symbol_id time_start:(NSString*)time_start
+- (void)getHistoricalTradesData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/trades/%@/history?time_start=%@", symbol_id, time_start]];
+    if (time_end){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&time_end=%@", [url absoluteString], time_end]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -192,12 +216,15 @@
 }
 
 /** Quotes Functions **/
-- (void)getCurrentQuotesData
+- (void)getCurrentQuotesData:(NSString*)symbol_id
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/quotes/current"];
+    if (symbol_id){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/quotes/%@/current", symbol_id]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -208,12 +235,18 @@
     }] resume];
 }
 
-- (void)getLatestQuotesData
+- (void)getLatestQuotesData:(NSString*)symbol_id limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/quotes/latest"];
+    if (symbol_id){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/quotes/%@/latest", symbol_id]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -224,11 +257,17 @@
     }] resume];
 }
 
-- (void)getHistoricalQuotesData:(NSString*)symbol_id time_start:(NSString*)time_start
+- (void)getHistoricalQuotesData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/quotes/%@/history?time_start=%@", symbol_id, time_start]];
+    if (time_end){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&time_end=%@", [url absoluteString], time_end]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -240,12 +279,15 @@
 }
 
 /** Orderbooks Functions **/
-- (void)getCurrentOrderbooksData
+- (void)getCurrentOrderbooksData:(NSString*)symbol_id
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/orderbooks/current"];
+    if (symbol_id){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/orderbooks/%@/current", symbol_id]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -256,12 +298,15 @@
     }] resume];
 }
 
-- (void)getLatestOrderbooksData:(NSString*)symbol_id
+- (void)getLatestOrderbooksData:(NSString*)symbol_id limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/orderbooks/%@/latest", symbol_id]];
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -272,11 +317,17 @@
     }] resume];
 }
 
-- (void)getHistoricalOrderbooksData:(NSString*)symbol_id time_start:(NSString*)time_start
+- (void)getHistoricalOrderbooksData:(NSString*)symbol_id time_start:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/orderbooks/%@/history?time_start=%@", symbol_id, time_start]];
+    if (time_end){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&time_end=%@", [url absoluteString], time_end]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -288,12 +339,15 @@
 }
 
 /** Twitter Functions **/
-- (void)getLatestTwitterData
+- (void)getLatestTwitterData:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/twitter/latest"];
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
+    }
     
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
@@ -304,11 +358,17 @@
     }] resume];
 }
 
-- (void)getHistoricalTwitterData:(NSString*)time_start
+- (void)getHistoricalTwitterData:(NSString*)time_start time_end:(NSString*)time_end limit:(NSInteger)limit
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/twitter/history?time_start=%@", time_start]];
+    if (time_end){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&time_end=%@", [url absoluteString], time_end]];
+    }
+    if (limit > 0){
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
+    }
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod: @"POST"];
+    [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
     request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
