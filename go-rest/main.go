@@ -7,11 +7,11 @@ import (
 )
 
 import SDK "github.com/IMRaziel/coinapi-sdk/go-rest"
+
 var API_KEY = "73034021-0EBC-493D-8A00-E0F138111F41"
-var URL = "https://rest.coinapi.io"
 
 func main() {
-	sdk := SDK.NewSDK(API_KEY, URL)
+	sdk := SDK.NewSDK(API_KEY)
 
 	t, _ := time.Parse(
 		time.RFC3339,

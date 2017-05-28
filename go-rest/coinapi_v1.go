@@ -153,10 +153,20 @@ type ErrorMessage struct {
 	Message string `json:"message"`
 }
 
-func NewSDK(api_key string, url string) *SDK {
+var URL = "https://rest.coinapi.io"
+var TEST_URL = "https://rest-test.coinapi.io"
+
+func NewSDK(api_key string) *SDK {
 	sdk := new(SDK)
 	sdk.api_key = api_key
-	sdk.url = url
+	sdk.url = URL
+	return sdk
+}
+
+func NewTestSDK(api_key string) *SDK {
+	sdk := new(SDK)
+	sdk.api_key = api_key
+	sdk.url = TEST_URL
 	return sdk
 }
 
