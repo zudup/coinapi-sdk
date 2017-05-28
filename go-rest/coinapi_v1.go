@@ -105,7 +105,7 @@ type Quote struct {
 
 type Bid struct {
 	Price decimal.Decimal `json:"price"`
-	Size  decimal.Decimal `json:"price"`
+	Size  decimal.Decimal `json:"size"`
 }
 
 type Orderbook struct {
@@ -162,23 +162,13 @@ func NewSDK(api_key string, url string) *SDK {
 
 func (sdk SDK) Metadata_list_exchanges() (exchanges []Exchange, err error) {
 	path := "/v1/exchanges"
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &exchanges)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &exchanges)
 	return
 }
 
 func (sdk SDK) Metadata_list_assets() (assets []Asset, err error) {
 	path := "/v1/assets"
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &assets)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &assets)
 	return
 }
 
@@ -219,17 +209,18 @@ func (sdk SDK) Metadata_list_symbols() (spots []Spot, futures []Future, options 
 	return
 }
 
-func (sdk SDK) Exchange_rates_get_specific_rate(asset_id_base string, asset_id_quote string, _time time.Time) (rate Exchange_rate, err error) {
+func (sdk SDK) Exchange_rates_get_specific_rate(asset_id_base string, asset_id_quote string) (rate Exchange_rate, err error) {
+	path := fmt.Sprintf("/v1/exchangerate/%s/%s", asset_id_base, asset_id_quote)
+	err = sdk.do_request_and_unmarshal(path, &rate)
+	return
+}
+
+func (sdk SDK) Exchange_rates_get_specific_rate_with_time(asset_id_base string, asset_id_quote string, _time time.Time) (rate Exchange_rate, err error) {
 	path := fmt.Sprintf("/v1/exchangerate/%s/%s", asset_id_base, asset_id_quote)
 	if !_time.IsZero() {
 		path = path + "?time=" + _time.Format(time.RFC3339)
-		fmt.Println("time:", path)
 	}
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return Exchange_rate{}, req_err
-	}
-	json.Unmarshal([]byte(text), &rate)
+	err = sdk.do_request_and_unmarshal(path, &rate)
 	return
 }
 
@@ -259,166 +250,157 @@ func (sdk SDK) Exchange_rates_get_all_current_rates(asset_id_base string) (rates
 
 func (sdk SDK) Ohlcv_list_all_periods() (periods []Ohlcv_period, err error) {
 	path := "/v1/ohlcv/periods"
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &periods)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &periods)
 	return
 }
 
-func (sdk SDK) Ohlcv_latest_data(symbol_id string, period_id string, limit uint32) (data []Ohlcv_data, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Ohlcv_latest_data(symbol_id string, period_id string) (data []Ohlcv_data, err error) {
+	path := fmt.Sprintf("/v1/ohlcv/%s/latest?period_id=%s", symbol_id, period_id)
+	err = sdk.do_request_and_unmarshal(path, &data)
+	return
+}
+
+func (sdk SDK) Ohlcv_latest_data_with_limit(symbol_id string, period_id string, limit uint32) (data []Ohlcv_data, err error) {
 	path := fmt.Sprintf("/v1/ohlcv/%s/latest?period_id=%s&limit=%d", symbol_id, period_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &data)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &data)
 	return
 }
 
-func (sdk SDK) Ohlcv_historic_data(symbol_id string, period_id string, time_start time.Time, time_end time.Time, limit uint32) (data []Ohlcv_data, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	if time_end.IsZero() {
-		time_end = time.Now()
-	}
+func (sdk SDK) Ohlcv_historic_data(symbol_id string, period_id string, time_start time.Time) (data []Ohlcv_data, err error) {
+	path := fmt.Sprintf("/v1/ohlcv/%s/history?period_id=%s&time_start=%s",
+		symbol_id, period_id, time_start.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &data)
+	return
+}
+
+func (sdk SDK) Ohlcv_historic_data_with_time_end_and_limit(symbol_id string, period_id string, time_start time.Time, time_end time.Time, limit uint32) (data []Ohlcv_data, err error) {
 	path := fmt.Sprintf("/v1/ohlcv/%s/history?period_id=%s&time_start=%s&time_end=%s&limit=%d",
 		symbol_id, period_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339), limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &data)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &data)
 	return
 }
 
-func (sdk SDK) Trades_latest_data_all(limit uint32) (trades []Trade, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Ohlcv_historic_data_with_time_end(symbol_id string, period_id string, time_start time.Time, time_end time.Time) (data []Ohlcv_data, err error) {
+	path := fmt.Sprintf("/v1/ohlcv/%s/history?period_id=%s&time_start=%s&time_end=%s",
+		symbol_id, period_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &data)
+	return
+}
+
+func (sdk SDK) Ohlcv_historic_data_with_limit(symbol_id string, period_id string, time_start time.Time, limit uint32) (data []Ohlcv_data, err error) {
+	path := fmt.Sprintf("/v1/ohlcv/%s/history?period_id=%s&time_start=%s&limit=%d",
+		symbol_id, period_id, time_start.Format(time.RFC3339), limit)
+	err = sdk.do_request_and_unmarshal(path, &data)
+	return
+}
+
+func (sdk SDK) Trades_latest_data_all() (trades []Trade, err error) {
+	path := fmt.Sprintf("/v1/trades/latest")
+	err = sdk.do_request_and_unmarshal(path, &trades)
+	return
+}
+
+func (sdk SDK) Trades_latest_data_all_with_limit(limit uint32) (trades []Trade, err error) {
 	path := fmt.Sprintf("/v1/trades/latest?limit=%d", limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &trades)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &trades)
 	return
 }
 
-func (sdk SDK) Trades_latest_data_symbol(symbol_id string, limit uint32) (trades []Trade, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Trades_latest_data_symbol(symbol_id string) (trades []Trade, err error) {
+	path := fmt.Sprintf("/v1/trades/%s/latest", symbol_id)
+	err = sdk.do_request_and_unmarshal(path, &trades)
+	return
+}
+
+func (sdk SDK) Trades_latest_data_symbol_with_limit(symbol_id string, limit uint32) (trades []Trade, err error) {
 	path := fmt.Sprintf("/v1/trades/%s/latest?limit=%d", symbol_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &trades)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &trades)
 	return
 }
 
-func (sdk SDK) Trades_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (trades []Trade, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	if time_end.IsZero() {
-		time_end = time.Now()
-	}
+func (sdk SDK) Trades_historical_data(symbol_id string, time_start time.Time) (trades []Trade, err error) {
+	path := fmt.Sprintf("/v1/trades/%s/history?time_start=%s", symbol_id, time_start.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &trades)
+	return
+}
 
+func (sdk SDK) Trades_historical_data_with_limit(symbol_id string, time_start time.Time, limit uint32) (trades []Trade, err error) {
+	path := fmt.Sprintf("/v1/trades/%s/history?time_start=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), limit)
+	err = sdk.do_request_and_unmarshal(path, &trades)
+	return
+}
+
+func (sdk SDK) Trades_historical_data_with_time_end(symbol_id string, time_start time.Time, time_end time.Time) (trades []Trade, err error) {
+	path := fmt.Sprintf("/v1/trades/%s/history?time_start=%s&time_end=%s", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &trades)
+	return
+}
+
+func (sdk SDK) Trades_historical_data_with_time_end_and_limit(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (trades []Trade, err error) {
 	path := fmt.Sprintf("/v1/trades/%s/history?time_start=%s&time_end=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339), limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &trades)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &trades)
 	return
 }
 
 // quotes
 
-func (sdk SDK) Quotes_current_data_all(limit uint32) (quotes []Quote, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	path := fmt.Sprintf("/v1/quotes/current?limit=%d", limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &quotes)
-	err = nil
+func (sdk SDK) Quotes_current_data_all() (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/current")
+	err = sdk.do_request_and_unmarshal(path, &quotes)
 	return
 }
 
-func (sdk SDK) Quotes_current_data_symbol(symbol_id string, limit uint32) (quote Quote, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	path := fmt.Sprintf("/v1/quotes/%s/current?limit=%d", symbol_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return Quote{}, req_err
-	}
-	json.Unmarshal([]byte(text), &quote)
-	err = nil
+func (sdk SDK) Quotes_current_data_symbol(symbol_id string) (quote Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/%s/current", symbol_id)
+	err = sdk.do_request_and_unmarshal(path, &quote)
 	return
 }
 
-func (sdk SDK) Quotes_latest_data_all(limit uint32) (quotes []Quote, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Quotes_latest_data_all() (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/latest")
+	err = sdk.do_request_and_unmarshal(path, &quotes)
+	return
+}
+
+func (sdk SDK) Quotes_latest_data_all_with_limit(limit uint32) (quotes []Quote, err error) {
 	path := fmt.Sprintf("/v1/quotes/latest?limit=%d", limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &quotes)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &quotes)
 	return
 }
 
-func (sdk SDK) Quotes_latest_data_symbol(symbol_id string, limit uint32) (quotes []Quote, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Quotes_latest_data_symbol(symbol_id string) (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/%s/latest", symbol_id)
+	err = sdk.do_request_and_unmarshal(path, &quotes)
+	return
+}
+
+func (sdk SDK) Quotes_latest_data_symbol_with_limit(symbol_id string, limit uint32) (quotes []Quote, err error) {
 	path := fmt.Sprintf("/v1/quotes/%s/latest?limit=%d", symbol_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &quotes)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &quotes)
 	return
 }
 
-func (sdk SDK) Quotes_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (quotes []Quote, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	if time_end.IsZero() {
-		time_end = time.Now()
-	}
+func (sdk SDK) Quotes_historical_data(symbol_id string, time_start time.Time) (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/%s/history?time_start=%s", symbol_id, time_start.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &quotes)
+	return
+}
 
+func (sdk SDK) Quotes_historical_data_with_limit(symbol_id string, time_start time.Time, limit uint32) (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/%s/history?time_start=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), limit)
+	err = sdk.do_request_and_unmarshal(path, &quotes)
+	return
+}
+
+func (sdk SDK) Quotes_historical_data_with_time_end(symbol_id string, time_start time.Time, time_end time.Time) (quotes []Quote, err error) {
+	path := fmt.Sprintf("/v1/quotes/%s/history?time_start=%s&time_end=%s", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &quotes)
+	return
+}
+
+func (sdk SDK) Quotes_historical_data_with_time_end_and_limit(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (quotes []Quote, err error) {
 	path := fmt.Sprintf("/v1/quotes/%s/history?time_start=%s&time_end=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339), limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &quotes)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &quotes)
 	return
 }
 
@@ -426,102 +408,103 @@ func (sdk SDK) Quotes_historical_data(symbol_id string, time_start time.Time, ti
 
 // orderbooks
 
-func (sdk SDK) Orderbooks_current_data_all(limit uint32) (orderbooks []Orderbook, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	path := fmt.Sprintf("/v1/orderbooks/current?limit=%d", limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &orderbooks)
-	err = nil
+func (sdk SDK) Orderbooks_current_data_all() (orderbooks []Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/current")
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
 	return
 }
 
-func (sdk SDK) Orderbooks_current_data_symbol(symbol_id string, limit uint32) (orderbook Orderbook, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	path := fmt.Sprintf("/v1/orderbooks/%s/current?limit=%d", symbol_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return Orderbook{}, req_err
-	}
-	json.Unmarshal([]byte(text), &orderbook)
-	err = nil
+func (sdk SDK) Orderbooks_current_data_symbol(symbol_id string) (orderbook Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/%s/current", symbol_id)
+	err = sdk.do_request_and_unmarshal(path, &orderbook)
 	return
 }
 
-func (sdk SDK) Orderbooks_latest_data(symbol_id string, limit uint32) (orderbooks []Orderbook, err error) {
-	if limit == 0 {
-		limit = 100
-	}
+func (sdk SDK) Orderbooks_latest_data(symbol_id string) (orderbooks []Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/%s/latest", symbol_id)
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
+	return
+}
+
+func (sdk SDK) Orderbooks_latest_data_with_limit(symbol_id string, limit uint32) (orderbooks []Orderbook, err error) {
 	path := fmt.Sprintf("/v1/orderbooks/%s/latest?limit=%d", symbol_id, limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &orderbooks)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
 	return
 }
 
-func (sdk SDK) Orderbooks_historical_data(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (orderbooks []Orderbook, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	if time_end.IsZero() {
-		time_end = time.Now()
-	}
+func (sdk SDK) Orderbooks_historical_data(symbol_id string, time_start time.Time) (orderbooks []Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/%s/history?time_start=%s", symbol_id, time_start.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
+	return
+}
 
+func (sdk SDK) Orderbooks_historical_data_with_limit(symbol_id string, time_start time.Time, limit uint32) (orderbooks []Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/%s/history?time_start=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), limit)
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
+	return
+}
+
+func (sdk SDK) Orderbooks_historical_data_with_time_end(symbol_id string, time_start time.Time, time_end time.Time) (orderbooks []Orderbook, err error) {
+	path := fmt.Sprintf("/v1/orderbooks/%s/history?time_start=%s&time_end=%s", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
+	return
+}
+
+func (sdk SDK) Orderbooks_historical_data_with_time_end_and_limit(symbol_id string, time_start time.Time, time_end time.Time, limit uint32) (orderbooks []Orderbook, err error) {
 	path := fmt.Sprintf("/v1/orderbooks/%s/history?time_start=%s&time_end=%s&limit=%d", symbol_id, time_start.Format(time.RFC3339), time_end.Format(time.RFC3339), limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &orderbooks)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &orderbooks)
 	return
 }
 
 // orderbooks end
 
 // twitter
-func (sdk SDK) Twitter_latest_data(limit uint32) (tweets []Tweet, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	path := fmt.Sprintf("/v1/twitter/latest?limit=%d", limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &tweets)
-	err = nil
+func (sdk SDK) Twitter_latest_data() (tweets []Tweet, err error) {
+	path := fmt.Sprintf("/v1/twitter/latest")
+	err = sdk.do_request_and_unmarshal(path, &tweets)
 	return
 }
 
-func (sdk SDK) Twitter_historical_data(time_start time.Time, time_end time.Time, limit uint32) (tweets []Tweet, err error) {
-	if limit == 0 {
-		limit = 100
-	}
-	if time_end.IsZero() {
-		time_end = time.Now()
-	}
+func (sdk SDK) Twitter_latest_data_with_limit(limit uint32) (tweets []Tweet, err error) {
+	path := fmt.Sprintf("/v1/twitter/latest?limit=%d", limit)
+	err = sdk.do_request_and_unmarshal(path, &tweets)
+	return
+}
 
+func (sdk SDK) Twitter_historical_data(time_start time.Time) (tweets []Tweet, err error) {
+	path := fmt.Sprintf("/v1/twitter/history?time_start=%s", time_start.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &tweets)
+	return
+}
+
+func (sdk SDK) Twitter_historical_data_with_limit(time_start time.Time, limit uint32) (tweets []Tweet, err error) {
+	path := fmt.Sprintf("/v1/twitter/history?time_start=%s&limit=%d", time_start.Format(time.RFC3339), limit)
+	err = sdk.do_request_and_unmarshal(path, &tweets)
+	return
+}
+
+func (sdk SDK) Twitter_historical_data_with_time_end(time_start time.Time, time_end time.Time) (tweets []Tweet, err error) {
+	path := fmt.Sprintf("/v1/twitter/history?time_start=%s&time_end=%s", time_start.Format(time.RFC3339), time_end.Format(time.RFC3339))
+	err = sdk.do_request_and_unmarshal(path, &tweets)
+	return
+}
+
+func (sdk SDK) Twitter_historical_data_with_time_end_and_limit(time_start time.Time, time_end time.Time, limit uint32) (tweets []Tweet, err error) {
 	path := fmt.Sprintf("/v1/twitter/history?time_start=%s&time_end=%s&limit=%d", time_start.Format(time.RFC3339), time_end.Format(time.RFC3339), limit)
-	text, req_err := sdk.get_response_text(path)
-	if req_err != nil {
-		return nil, req_err
-	}
-	json.Unmarshal([]byte(text), &tweets)
-	err = nil
+	err = sdk.do_request_and_unmarshal(path, &tweets)
 	return
 }
 
 // twitter end
+
+func (sdk SDK) do_request_and_unmarshal(path string, o interface{}) (err error) {
+	text, req_err := sdk.get_response_text(path)
+	if req_err != nil {
+		return req_err
+	}
+	err = json.Unmarshal([]byte(text), o)
+	return
+}
 
 func (sdk SDK) get_response_text(path string) (responseBody string, err error) {
 	url := sdk.url + path
@@ -547,14 +530,12 @@ func (sdk SDK) get_response_text(path string) (responseBody string, err error) {
 	if resp.StatusCode != http.StatusOK {
 		error_message := ErrorMessage{}
 		err := json.Unmarshal(body, &error_message)
-		fmt.Println(error_message.Message)
 		if err != nil && error_message.Message != "" {
 			return "", errors.New(error_message.Message)
 		}
 		return "", fmt.Errorf("Server responded with status code: %d", resp.StatusCode)
 	}
-
-	fmt.Println(string(body))
-
+	fmt.Println("response:", string(body))
 	return string(body), nil
 }
+
