@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var coinapi_v1_1 = require("./coinapi_v1");
 // this is to support both browser and node
 var COIN_API_SDK = typeof window !== 'undefined' ? window.COIN_API_SDK : coinapi_v1_1["default"];
-var sdk = new COIN_API_SDK("");
+var sdk = new COIN_API_SDK("YOUR_API_KEY_HERE");
 function run() {
     return __awaiter(this, void 0, void 0, function () {
         var t, exchanges, Metadata_list_assets, Metadata_list_symbols, Exchange_rates_get_specific_rate, Exchange_rates_get_all_current_rates, Ohlcv_list_all_periods, Ohlcv_latest_data, Ohlcv_historic_data, Trades_latest_data_all, Trades_latest_data_symbol, Trades_historical_data, Quotes_current_data_all, Quotes_current_data_symbol, Quotes_latest_data_all, Quotes_latest_data_symbol, Quotes_historical_data, Orderbooks_current_data_all, Orderbooks_current_data_symbol, Orderbooks_latest_data, Orderbooks_historical_data, Twitter_latest_data, Twitter_historical_data;
