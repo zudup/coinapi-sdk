@@ -1,4 +1,4 @@
-# (https://www.coinapi.io) CoinAPI
+# CoinAPI-SDK
 
 Welcome to the CoinAPI SDK. This repository contain SDK for our API documented at https://docs.coinapi.io/ 
 
