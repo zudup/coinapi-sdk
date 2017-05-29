@@ -30,7 +30,7 @@
 {
     [super viewWillAppear:animated];
     CoinAPI *coin = [CoinAPI alloc];
-    coin = [coin initWithAPIKey:@"73034021-0EBC-493D-8A00-E0F138111F41s"];
+    coin = [coin initWithAPIKey:@"YOUR_API_KEY_HERE"];
     
     /** Metadata Functions **/
     [coin getAllMetadataExchanges];

@@ -6,9 +6,9 @@ import (
 	"time"
 )
 
-import SDK "github.com/IMRaziel/coinapi-sdk/go-rest"
+import SDK "github.com/CoinAPI/coinapi-sdk/go-rest"
 
-var API_KEY = "73034021-0EBC-493D-8A00-E0F138111F41"
+var API_KEY = "YOUR_API_KEY_HERE"
 
 func main() {
 	sdk := SDK.NewSDK(API_KEY)

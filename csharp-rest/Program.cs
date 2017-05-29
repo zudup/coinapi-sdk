@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace csharp_rest {
     class Program {
         static void Main(string[] args) {
-            var coinApi = new CoinApi("73034021-0EBC-493D-8A00-E0F138111F41");
+            var coinApi = new CoinApi("YOUR_API_KEY_HERE");
             Console.Write("Exchange:");
             Console.Write(Environment.NewLine);
             var exchange = coinApi.Metadata_list_exchanges();

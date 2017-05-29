@@ -1,7 +1,7 @@
 from coinapi_v1 import CoinAPIv1
 import datetime
 
-test_key = '73034021-0EBC-493D-8A00-E0F138111F41'
+test_key = 'YOUR_API_KEY_HERE'
 
 api = CoinAPIv1(test_key)
 exchanges = api.metadata_list_exchanges()
