@@ -15,4 +15,4 @@ In this repository you cnan find libraries that will help you use our API with m
  * Haskel
  * Objective-C
 
-If you spot something wrong, feel free to make pull request.
+If you spot something wrong, feel free to make Pull Request with proposed changes or create an Issue.
