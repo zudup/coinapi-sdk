@@ -1,5 +1,4 @@
-# coinapi-sdk
-SDKs for CoinAPI
+# [![CoinAPI](https://www.coinapi.io/color_logo_transparent_background.svg)](https://www.coinapi.io) CoinAPI
 
 Welcome to the CoinAPI SDK. This repository contain SDK for our API documented at https://docs.coinapi.io/ 
 
