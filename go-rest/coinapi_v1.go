@@ -163,9 +163,8 @@ func NewSDK(api_key string) *SDK {
 	return sdk
 }
 
-func NewTestSDK(api_key string) *SDK {
+func NewTestSDK() *SDK {
 	sdk := new(SDK)
-	sdk.api_key = api_key
 	sdk.url = TEST_URL
 	return sdk
 }
@@ -522,7 +521,9 @@ func (sdk SDK) get_response_text(path string) (responseBody string, err error) {
 	if req_err != nil {
 		return "", req_err
 	}
-	req.Header.Set("X-CoinAPI-Key", sdk.api_key)
+	if sdk.api_key != "" {
+		req.Header.Set("X-CoinAPI-Key", sdk.api_key)
+	}
 
 	client := &http.Client{}
 
