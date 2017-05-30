@@ -5,6 +5,7 @@ Welcome to the CoinAPI SDK. This repository contain SDK for our API documented a
 In this repository you cnan find libraries that will help you use our API with minimal development effort from:
  * C#
  * C++
+ * .NET
  * Java
  * Python
  * Ruby
