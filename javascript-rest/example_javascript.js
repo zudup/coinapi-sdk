@@ -3,7 +3,7 @@ var SDK = typeof window !== 'undefined' ? window.COIN_API_SDK : require("./coina
 
 var sdk = new SDK("YOUR_API_KEY_HERE")
 
-async function run() {
+function run() {
   var t = new Date(Date.parse("2016-11-01T22:08:41+00:00"))
 
   sdk.metadata_list_exchanges().then(function (exchanges) {
