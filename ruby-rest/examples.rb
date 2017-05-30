@@ -31,7 +31,7 @@ for symbol in symbols
   puts "Asset ID base: #{symbol[:asset_id_base]}"
   puts "Asset ID quote: #{symbol[:asset_id_quote]}"
 
-  if (symbol['symbol_type'] == 'FUTURE')
+  if (symbol['symbol_type'] == 'FUTURES')
     puts "Future delivery time: #{symbol[:future_delivery_time]}"
   end
   if (symbol['symbol_type'] == 'OPTION')
