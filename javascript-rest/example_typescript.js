@@ -50,130 +50,129 @@ function run() {
                     exchanges = _a.sent();
                     console.log('exchanges:');
                     console.log('number: ', exchanges.length);
-                    console.log('first item: ', exchanges[0]);
+                    exchanges.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.metadata_list_assets()];
                 case 2:
                     Metadata_list_assets = _a.sent();
                     console.log('Metadata_list_assets:');
                     console.log('number: ', Metadata_list_assets.length);
-                    console.log('first item: ', Metadata_list_assets[0]);
+                    Metadata_list_assets.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.metadata_list_symbols()];
                 case 3:
                     Metadata_list_symbols = _a.sent();
                     console.log('Metadata_list_symbols:');
                     console.log('number: ', Metadata_list_symbols.length);
-                    console.log('first item: ', Metadata_list_symbols[0]);
+                    Metadata_list_symbols.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.exchange_rates_get_specific_rate("BTC", "USD", t)];
                 case 4:
                     Exchange_rates_get_specific_rate = _a.sent();
                     console.log('Exchange_rates_get_specific_rate:');
-                    console.log('number: ', Exchange_rates_get_specific_rate.length);
-                    console.log('first item: ', Exchange_rates_get_specific_rate[0]);
+                    console.log(Exchange_rates_get_specific_rate);
                     return [4 /*yield*/, sdk.exchange_rates_get_all_current_rates("BTC")];
                 case 5:
                     Exchange_rates_get_all_current_rates = _a.sent();
                     console.log('Exchange_rates_get_all_current_rates:');
-                    console.log('first item: ', Exchange_rates_get_all_current_rates[0]);
+                    console.log(Exchange_rates_get_all_current_rates);
                     return [4 /*yield*/, sdk.ohlcv_list_all_periods()];
                 case 6:
                     Ohlcv_list_all_periods = _a.sent();
                     console.log('Ohlcv_list_all_periods:');
                     console.log('number: ', Ohlcv_list_all_periods.length);
-                    console.log('first item: ', Ohlcv_list_all_periods[0]);
+                    Ohlcv_list_all_periods.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.ohlcv_latest_data("BITSTAMP_SPOT_BTC_USD", "1MIN", 5)];
                 case 7:
                     Ohlcv_latest_data = _a.sent();
                     console.log('Ohlcv_latest_data:');
                     console.log('number: ', Ohlcv_latest_data.length);
-                    console.log('first item: ', Ohlcv_latest_data[0]);
+                    Ohlcv_latest_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.ohlcv_historic_data("BITSTAMP_SPOT_BTC_USD", "1MIN", t, new Date(), 5)];
                 case 8:
                     Ohlcv_historic_data = _a.sent();
                     console.log('Ohlcv_historic_data:');
                     console.log('number: ', Ohlcv_historic_data.length);
-                    console.log('first item: ', Ohlcv_historic_data[0]);
+                    Ohlcv_historic_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.trades_latest_data_all(5)];
                 case 9:
                     Trades_latest_data_all = _a.sent();
                     console.log('Trades_latest_data_all:');
                     console.log('number: ', Trades_latest_data_all.length);
-                    console.log('first item: ', Trades_latest_data_all[0]);
+                    Trades_latest_data_all.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.trades_latest_data_symbol("BITSTAMP_SPOT_BTC_USD", 5)];
                 case 10:
                     Trades_latest_data_symbol = _a.sent();
                     console.log('Trades_latest_data_symbol:');
                     console.log('number: ', Trades_latest_data_symbol.length);
-                    console.log('first item: ', Trades_latest_data_symbol[0]);
+                    Trades_latest_data_symbol.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.trades_historical_data("BITSTAMP_SPOT_BTC_USD", t, new Date(), 5)];
                 case 11:
                     Trades_historical_data = _a.sent();
                     console.log('Trades_historical_data:');
                     console.log('number: ', Trades_historical_data.length);
-                    console.log('first item: ', Trades_historical_data[0]);
+                    Trades_historical_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.quotes_current_data_all()];
                 case 12:
                     Quotes_current_data_all = _a.sent();
                     console.log('Quotes_current_data_all:');
                     console.log('number: ', Quotes_current_data_all.length);
-                    console.log('first item: ', Quotes_current_data_all[0]);
+                    Quotes_current_data_all.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.quotes_current_data_symbol("BITSTAMP_SPOT_BTC_USD")];
                 case 13:
                     Quotes_current_data_symbol = _a.sent();
                     console.log('Quotes_current_data_symbol:');
-                    console.log('first item: ', Quotes_current_data_symbol[0]);
+                    console.log(Quotes_current_data_symbol);
                     return [4 /*yield*/, sdk.quotes_latest_data_all(5)];
                 case 14:
                     Quotes_latest_data_all = _a.sent();
                     console.log('Quotes_latest_data_all:');
                     console.log('number: ', Quotes_latest_data_all.length);
-                    console.log('first item: ', Quotes_latest_data_all[0]);
+                    Quotes_latest_data_all.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.quotes_latest_data_symbol("BITSTAMP_SPOT_BTC_USD", 5)];
                 case 15:
                     Quotes_latest_data_symbol = _a.sent();
                     console.log('Quotes_latest_data_symbol:');
                     console.log('number: ', Quotes_latest_data_symbol.length);
-                    console.log('first item: ', Quotes_latest_data_symbol[0]);
+                    Quotes_latest_data_symbol.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.quotes_historical_data("BITSTAMP_SPOT_BTC_USD", t, new Date(), 5)];
                 case 16:
                     Quotes_historical_data = _a.sent();
                     console.log('Quotes_historical_data:');
                     console.log('number: ', Quotes_historical_data.length);
-                    console.log('first item: ', Quotes_historical_data[0]);
+                    Quotes_historical_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.orderbooks_current_data_all()];
                 case 17:
                     Orderbooks_current_data_all = _a.sent();
                     console.log('Orderbooks_current_data_all:');
                     console.log('number: ', Orderbooks_current_data_all.length);
-                    console.log('first item: ', Orderbooks_current_data_all[0]);
+                    Orderbooks_current_data_all.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.orderbooks_current_data_symbol("BITSTAMP_SPOT_BTC_USD")];
                 case 18:
                     Orderbooks_current_data_symbol = _a.sent();
                     console.log('Orderbooks_current_data_symbol:');
-                    console.log('first item: ', Orderbooks_current_data_symbol[0]);
+                    console.log(Orderbooks_current_data_symbol);
                     return [4 /*yield*/, sdk.orderbooks_latest_data("BITSTAMP_SPOT_BTC_USD", 5)];
                 case 19:
                     Orderbooks_latest_data = _a.sent();
                     console.log('Orderbooks_latest_data:');
                     console.log('number: ', Orderbooks_latest_data.length);
-                    console.log('first item: ', Orderbooks_latest_data[0]);
+                    Orderbooks_latest_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.orderbooks_historical_data("BITSTAMP_SPOT_BTC_USD", t, new Date(), 5)];
                 case 20:
                     Orderbooks_historical_data = _a.sent();
                     console.log('Orderbooks_historical_data:');
                     console.log('number: ', Orderbooks_historical_data.length);
-                    console.log('first item: ', Orderbooks_historical_data[0]);
+                    Orderbooks_historical_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.twitter_latest_data(5)];
                 case 21:
                     Twitter_latest_data = _a.sent();
                     console.log('Twitter_latest_data:');
                     console.log('number: ', Twitter_latest_data.length);
-                    console.log('first item: ', Twitter_latest_data[0]);
+                    Twitter_latest_data.forEach(function (x) { console.log(x); });
                     return [4 /*yield*/, sdk.twitter_historical_data(t, new Date(), 5)];
                 case 22:
                     Twitter_historical_data = _a.sent();
                     console.log('Twitter_historical_data:');
                     console.log('number: ', Twitter_historical_data.length);
-                    console.log('first item: ', Twitter_historical_data[0]);
+                    Twitter_historical_data.forEach(function (x) { console.log(x); });
                     return [2 /*return*/];
             }
         });
