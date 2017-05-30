@@ -1,8 +1,7 @@
 To run examples:
 
 ```bash
-cd /path/to/working/dir/
 git clone https://github.com/coinapi/coinapi-sdk/
-cd python-rest
+cd coinapi-sdk/python-rest
 python examples.py
 ```
