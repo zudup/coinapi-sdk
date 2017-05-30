@@ -14,7 +14,9 @@ module CoinAPIv1
     end
 
     def metadata_list_all_assets
-      request(endpoint: 'assets')
+      request(endpoint: 'assets').collect! do |asset|
+        Transformers::asset(asset)
+      end
     end
 
     def metadata_list_all_symbols
@@ -29,7 +31,7 @@ module CoinAPIv1
       end
     end
 
-    def exchange_rates_get_specific_rate(asset_id_base:, asset_id_quote:, paremeters: {})
+    def exchange_rates_get_specific_rate(asset_id_base:, asset_id_quote:, parameters: {})
       endpoint = "exchangerate/#{asset_id_base}/#{asset_id_quote}"
       exchange_rate = request(endpoint: endpoint, parameters: parameters)
       exchange_rate[:time] = DateTime.parse(exchange_rate[:time])
@@ -40,6 +42,7 @@ module CoinAPIv1
       all_rates = request(endpoint: "exchangerate/#{asset_id_base}")
       all_rates[:rates].collect! do |rate|
         rate[:time] = DateTime.parse(rate[:time])
+        rate
       end
     end
 
@@ -56,7 +59,7 @@ module CoinAPIv1
     end
 
     def ohlcv_historical_data(symbol_id:, period_id:, time_start:, parameters: {})
-      endpoint = "ohlcv/#{symbol_id}"
+      endpoint = "ohlcv/#{symbol_id}/history"
       params = parameters.merge({period_id: period_id, time_start: time_start})
       request(endpoint: endpoint, parameters: params).collect! do |data_point|
         Transformers::data_point(data_point)
@@ -128,19 +131,17 @@ module CoinAPIv1
 
     def orderbooks_current_data_symbol(symbol_id:)
       endpoint = "orderbooks/#{symbol_id}/current"
-      request(endpoint: endpoint).collect! do |entry|
-        Transformers::orderbook_entry(entry)
-      end
+      Transformers::orderbook_entry(request(endpoint: endpoint))
     end
 
-    def orderbooks_latest_data(symbol_id:, parameters:)
+    def orderbooks_latest_data(symbol_id:, parameters: {})
       endpoint = "orderbooks/#{symbol_id}/latest"
       request(endpoint: endpoint, parameters: parameters).collect! do |entry|
         Transformers::orderbook_entry(entry)
       end
     end
 
-    def orderbooks_historical_data(symbol_id:, time_start:, parameters:)
+    def orderbooks_historical_data(symbol_id:, time_start:, parameters: {})
       endpoint = "orderbooks/#{symbol_id}/history"
       params = parameters.merge(time_start: time_start)
       request(endpoint: endpoint, parameters: params).collect! do |entry|
@@ -148,12 +149,12 @@ module CoinAPIv1
       end
     end
 
-    def twitter_latest_data(parameters:)
+    def twitter_latest_data(parameters: {})
       endpoint = "twitter/latest"
       request(endpoint: endpoint, parameters: parameters)
     end
 
-    def twitter_historical_data(time_start:, parameters:)
+    def twitter_historical_data(time_start:, parameters: {})
       endpoint = "twitter/history"
       request(endpoint: endpoint, parameters: parameters)
     end
@@ -204,6 +205,15 @@ module CoinAPIv1
   private
   module Transformers
     class << self
+      def asset(a)
+        if a[:type_is_crypto] == 0
+          a[:type_is_crypto] = true
+        else
+          a[:type_is_crypto] = false
+        end
+        a
+      end
+
       def data_point(dp)
         dp[:time_period_start] = DateTime.parse(dp[:time_period_start])
         dp[:time_period_end] = DateTime.parse(dp[:time_period_end])
@@ -224,8 +234,8 @@ module CoinAPIv1
 
         if q.has_key?(:last_trade) and q[:last_trade]
           trade = q[:last_trade]
-          trade[:time_exchange] = DateTime.parse(q[:time_exchange])
-          trade[:time_coinapi] = DateTime.parse(q[:time_coinapi])
+          trade[:time_exchange] = DateTime.parse(trade[:time_exchange])
+          trade[:time_coinapi] = DateTime.parse(trade[:time_coinapi])
           q[:last_trade] = trade
         end
         q
