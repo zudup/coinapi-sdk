@@ -2,7 +2,7 @@
 
 Welcome to the CoinAPI SDK. This repository contain SDK for our API documented at https://docs.coinapi.io/ 
 
-In this repository you cnan find libraries that will help you use our API with minimal development effort from languages like:
+In this repository you cnan find libraries that will help you use our API with minimal development effort from:
  * C#
  * C++
  * Java
@@ -10,6 +10,7 @@ In this repository you cnan find libraries that will help you use our API with m
  * Ruby
  * Go
  * JavaScript
+ * TypeScript
  * Node.js
  * PHP
  * Haskel
