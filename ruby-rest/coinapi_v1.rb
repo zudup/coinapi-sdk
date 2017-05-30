@@ -1,4 +1,5 @@
 require 'net/http'
+require 'openssl'
 require 'date'
 require 'json'
 
@@ -197,6 +198,8 @@ module CoinAPIv1
       request.initialize_http_header(headers)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
+	  # uncomment only in development enviroment if ruby don't have trusted CA directory
+	  #http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       response = http.request(request)
       JSON.parse(response.body, symbolize_names: true)
     end
