@@ -75,7 +75,7 @@ export default class COIN_API_SDK {
 
     return axios.get(path, { headers: this.headers, transformResponse, params })
       .then(resp => {
-        return resp.data as Exchange_rate[]
+        return resp.data as Exchange_rate
       })
   }
 

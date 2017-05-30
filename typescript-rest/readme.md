@@ -1,4 +1,4 @@
-to compile typescript and run examples:
+To compile typescript and run examples:
 
 ```
 cd /path/to/sdk/folder
@@ -7,7 +7,4 @@ tsc ./example_typescript.ts
 node ./example_typescript.js
 ```
 
-to run javascript examples:
-```
-node .\example_javascript.js
-```
+There are compiled files of sdk and example are in javascript-rest folder
