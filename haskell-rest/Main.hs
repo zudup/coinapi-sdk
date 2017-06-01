@@ -7,41 +7,7 @@ import qualified CoinApi.Monadic as M
 import Data.Time
 import Control.Monad.State (liftIO)
 
--- CoinApi types
-
-import CoinApi.Types.Asset (Asset)
-import qualified CoinApi.Types.Asset as Asset
-
-import CoinApi.Types.Exchange (Exchange)
-import qualified CoinApi.Types.Exchange as Exchange
-
-import CoinApi.Types.OHLCV (OHLCV)
-import qualified CoinApi.Types.OHLCV as OHLCV
-
-import CoinApi.Types.Orderbook (Orderbook)
-import qualified CoinApi.Types.Orderbook as Orderbook
-
-import CoinApi.Types.Period (Period)
-import qualified CoinApi.Types.Period as Period
-
-import CoinApi.Types.Quote (Quote)
-import qualified CoinApi.Types.Quote as Quote
-
-import CoinApi.Types.Rate (Rate)
-import qualified CoinApi.Types.Rate as Rate
-
-import CoinApi.Types.Symbol (Symbol, SymbolType (..))
-import qualified CoinApi.Types.Symbol as Symbol
-
-import CoinApi.Types.Trade (Trade)
-import qualified CoinApi.Types.Trade as Trade
-
-import CoinApi.Types.Tweet (Tweet)
-import qualified CoinApi.Types.Tweet as Tweet
-
-----
-
-key = "73034021-0EBC-493D-8A00-E0F138111F41" :: ApiKey
+key = "73034021-0EBC-493D-8A00-E0F138111F41"
 asset_id_base = "BTC"
 asset_id_quote = "USD"
 symbol_id = "BITSTAMP_SPOT_BTC_USD"
