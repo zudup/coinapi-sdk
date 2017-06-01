@@ -103,8 +103,6 @@ showTime :: UTCTime -> String
 showTime time = take (length str - 5) str ++ "Z"
   where str = formatTime defaultTimeLocale "%0Y-%m-%dT%T.%q" time
 
-key = "73034021-0EBC-493D-8A00-E0F138111F41"
-
 request :: (MonadIO m, FromJSON a) => ApiKey -> String -> m (Either String a)
 request apiKey path = do response <- httpLBS req
                          let msg    = statusMessage status
