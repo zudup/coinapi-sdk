@@ -323,5 +323,5 @@ twitter_historical_data_l apiKey time_start limit = request apiKey ("/v1/twitter
 twitter_historical_data_el :: MonadIO m => ApiKey -> UTCTime -> UTCTime -> Int -> m (Either String [Tweet])
 twitter_historical_data_el apiKey time_start time_end limit = request apiKey ("/v1/twitter/history" ++
                                                                               "?time_start=" ++ showTime time_start ++
-                                                                              "&amptime_end=" ++ showTime time_end ++
-                                                                              "&amplimit=" ++ show limit)
+                                                                              "&amp;time_end=" ++ showTime time_end ++
+                                                                              "&amp;limit=" ++ show limit)
