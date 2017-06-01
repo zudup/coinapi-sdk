@@ -47,6 +47,8 @@ module CoinApi (ApiKey (..)
                ,twitter_historical_data_l
                ,twitter_historical_data_el) where
 
+import Debug.Trace
+
 -- CoinApi types
 
 import CoinApi.Types.Asset (Asset)
@@ -54,6 +56,9 @@ import qualified CoinApi.Types.Asset as Asset
 
 import CoinApi.Types.Exchange (Exchange)
 import qualified CoinApi.Types.Exchange as Exchange
+
+import CoinApi.Types.Message (Message)
+import qualified CoinApi.Types.Message as Message
 
 import CoinApi.Types.OHLCV (OHLCV)
 import qualified CoinApi.Types.OHLCV as OHLCV
@@ -110,7 +115,10 @@ request apiKey path = do response <- httpLBS req
                              body   = getResponseBody response
                          return $ if status == ok200
                                   then eitherDecode body
-                                  else Left (C8.unpack msg)
+                                  else let msg = eitherDecode body :: Either String Message
+                                       in case msg of
+                                            Right msg -> Left $ "Bad request: " ++ (unpack $ Message.fromMessage msg)
+                                            Left err  -> Left err
   where initReq = parseRequest_ $ coinAPIHost ++ path
         req = initReq { requestHeaders = [("X-CoinAPI-Key", C8.pack apiKey)] }
 
