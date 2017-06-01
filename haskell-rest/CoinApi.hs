@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module CoinApi (ApiKey
+module CoinApi (ApiKey (..)
                ,metadata_list_exchanges
                ,metadata_list_assets
                ,metadata_list_symbols
