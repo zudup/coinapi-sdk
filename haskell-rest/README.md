@@ -2,5 +2,9 @@
 
 ## Installation
 
-* `cd haskell-rest`
+* `cd haskell-rest/`
 * `cabal install`
+
+## Examples
+* `cd haskell-rest/`
+* `cabal run examples`
