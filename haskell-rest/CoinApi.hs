@@ -168,35 +168,35 @@ ohlcv_latest_data_l :: MonadIO m => ApiKey -> String -> String -> Int -> m (Eith
 ohlcv_latest_data_l apiKey symbol_id period_id limit = request apiKey ("/v1/ohlcv/" ++
                                                                        symbol_id ++ "/" ++
                                                                        "latest?period_id=" ++ period_id ++
-                                                                       "&limit=" ++ show limit)
+                                                                       "&amp;limit=" ++ show limit)
 
 ohlcv_historical_data :: MonadIO m => ApiKey -> String -> String -> UTCTime -> m (Either String [OHLCV])
 ohlcv_historical_data apiKey symbol_id period_id time_start = request apiKey ("/v1/ohlcv/" ++
                                                                               symbol_id ++ "/" ++
                                                                               "history?period_id=" ++ period_id ++
-                                                                              "&time_start=" ++ showTime time_start)
+                                                                              "&amp;time_start=" ++ showTime time_start)
 
 ohlcv_historical_data_e :: MonadIO m => ApiKey -> String -> String -> UTCTime -> UTCTime -> m (Either String [OHLCV])
 ohlcv_historical_data_e apiKey symbol_id period_id time_start time_end = request apiKey ("/v1/ohlcv/" ++
                                                                                          symbol_id ++ "/" ++
                                                                                          "history?period_id=" ++ period_id ++
-                                                                                         "&time_start=" ++ showTime time_start ++
-                                                                                         "&time_end=" ++ showTime time_end)
+                                                                                         "&amp;time_start=" ++ showTime time_start ++
+                                                                                         "&amp;time_end=" ++ showTime time_end)
 
 ohlcv_historical_data_l :: MonadIO m => ApiKey -> String -> String -> UTCTime -> Int -> m (Either String [OHLCV])
 ohlcv_historical_data_l apiKey symbol_id period_id time_start limit = request apiKey ("/v1/ohlcv/" ++
                                                                                       symbol_id ++ "/" ++
                                                                                       "history?period_id=" ++ period_id ++
-                                                                                      "&time_start=" ++ showTime time_start ++
-                                                                                      "&limit=" ++ show limit)
+                                                                                      "&amp;time_start=" ++ showTime time_start ++
+                                                                                      "&amp;limit=" ++ show limit)
 
 ohlcv_historical_data_el :: MonadIO m => ApiKey -> String -> String -> UTCTime -> UTCTime -> Int -> m (Either String [OHLCV])
 ohlcv_historical_data_el apiKey symbol_id period_id time_start time_end limit = request apiKey ("/v1/ohlcv/" ++
                                                                                                 symbol_id ++ "/" ++
                                                                                                 "history?period_id=" ++ period_id ++
-                                                                                                "&time_start=" ++ showTime time_start ++
-                                                                                                "&time_end=" ++ showTime time_end ++
-                                                                                                "&limit=" ++ show limit)
+                                                                                                "&amp;time_start=" ++ showTime time_start ++
+                                                                                                "&amp;time_end=" ++ showTime time_end ++
+                                                                                                "&amp;limit=" ++ show limit)
 
 trades_latest_data :: MonadIO m => ApiKey -> m (Either String [Trade])
 trades_latest_data apiKey = request apiKey "/v1/trades/latest"
@@ -217,19 +217,19 @@ trades_historical_data apiKey symbol_id time_start = request apiKey ("/v1/trades
 trades_historical_data_e :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> m (Either String [Trade])
 trades_historical_data_e apiKey symbol_id time_start time_end = request apiKey ("/v1/trades/" ++ symbol_id ++
                                                                                 "/history?time_start=" ++ showTime time_start ++
-                                                                                "&time_end=" ++ showTime time_end)
+                                                                                "&amp;time_end=" ++ showTime time_end)
                                                                                 
 
 trades_historical_data_l :: MonadIO m => ApiKey -> String -> UTCTime -> Int -> m (Either String [Trade])
 trades_historical_data_l apiKey symbol_id time_start limit = request apiKey ("/v1/trades/" ++ symbol_id ++
                                                                              "/history?time_start=" ++ showTime time_start ++
-                                                                             "&limit=" ++ show limit)
+                                                                             "&amp;limit=" ++ show limit)
 
 trades_historical_data_el :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> Int -> m (Either String [Trade])
 trades_historical_data_el apiKey symbol_id time_start time_end limit = request apiKey ("/v1/trades/" ++ symbol_id ++
                                                                                        "/history?time_start=" ++ showTime time_start ++
-                                                                                       "&time_end=" ++ showTime time_end ++
-                                                                                       "&limit=" ++ show limit)
+                                                                                       "&amp;time_end=" ++ showTime time_end ++
+                                                                                       "&amp;limit=" ++ show limit)
 
 quotes_current_data :: MonadIO m => ApiKey -> m (Either String [Quote])
 quotes_current_data apiKey = request apiKey "/v1/quotes/current"
@@ -256,18 +256,18 @@ quotes_historical_data apiKey symbol_id time_start = request apiKey ("/v1/quotes
 quotes_historical_data_e :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> m (Either String [Quote])
 quotes_historical_data_e apiKey symbol_id time_start time_end = request apiKey ("/v1/quotes/" ++ symbol_id ++
                                                                                 "/history?time_start=" ++ showTime time_start ++
-                                                                                "&time_end=" ++ showTime time_end)
+                                                                                "&amp;time_end=" ++ showTime time_end)
 
 quotes_historical_data_l :: MonadIO m => ApiKey -> String -> UTCTime -> Int -> m (Either String [Quote])
 quotes_historical_data_l apiKey symbol_id time_start limit = request apiKey ("/v1/quotes/" ++ symbol_id ++
                                                                              "/history?time_start=" ++ showTime time_start ++
-                                                                             "&limit=" ++ show limit)
+                                                                             "&amp;limit=" ++ show limit)
 
 quotes_historical_data_el :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> Int -> m (Either String [Quote])
 quotes_historical_data_el apiKey symbol_id time_start time_end limit = request apiKey ("/v1/quotes/" ++ symbol_id ++
                                                                                        "/history?time_start=" ++ showTime time_start ++
-                                                                                       "&time_end=" ++ showTime time_end ++
-                                                                                       "&limit=" ++ show limit)
+                                                                                       "&amp;time_end=" ++ showTime time_end ++
+                                                                                       "&amp;limit=" ++ show limit)
 
 orderbooks_current_data :: MonadIO m => ApiKey -> m (Either String [Orderbook])
 orderbooks_current_data apiKey = request apiKey "/v1/orderbooks/current"
@@ -288,18 +288,18 @@ orderbooks_historical_data apiKey symbol_id time_start = request apiKey ("/v1/or
 orderbooks_historical_data_e :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> m (Either String [Orderbook])
 orderbooks_historical_data_e apiKey symbol_id time_start time_end = request apiKey ("/v1/orderbooks/" ++ symbol_id ++
                                                                                     "/history?time_start=" ++ showTime time_start ++
-                                                                                    "&time_end=" ++ showTime time_end)
+                                                                                    "&amp;time_end=" ++ showTime time_end)
 
 orderbooks_historical_data_l :: MonadIO m => ApiKey -> String -> UTCTime -> Int -> m (Either String [Orderbook])
 orderbooks_historical_data_l apiKey symbol_id time_start limit = request apiKey ("/v1/orderbooks/" ++ symbol_id ++
                                                                                  "/history?time_start=" ++ showTime time_start ++
-                                                                                 "&limit=" ++ show limit)
+                                                                                 "&amp;limit=" ++ show limit)
 
 orderbooks_historical_data_el :: MonadIO m => ApiKey -> String -> UTCTime -> UTCTime -> Int -> m (Either String [Orderbook])
 orderbooks_historical_data_el apiKey symbol_id time_start time_end limit = request apiKey ("/v1/orderbooks/" ++ symbol_id ++
                                                                                            "/history?time_start=" ++ showTime time_start ++
-                                                                                           "&time_end=" ++ showTime time_end ++
-                                                                                           "&limit=" ++ show limit)
+                                                                                           "&amp;time_end=" ++ showTime time_end ++
+                                                                                           "&amp;limit=" ++ show limit)
 
 twitter_latest_data :: MonadIO m => ApiKey -> m (Either String [Tweet])
 twitter_latest_data apiKey = request apiKey "/v1/twitter/latest"
@@ -313,15 +313,15 @@ twitter_historical_data apiKey time_start = request apiKey ("/v1/twitter/history
 twitter_historical_data_e :: MonadIO m => ApiKey -> UTCTime -> UTCTime -> m (Either String [Tweet])
 twitter_historical_data_e apiKey time_start time_end = request apiKey ("/v1/twitter/history?time_start=" ++
                                                                       showTime time_start ++
-                                                                      "&time_end=" ++ showTime time_end)
+                                                                      "&amp;time_end=" ++ showTime time_end)
 
 twitter_historical_data_l :: MonadIO m => ApiKey -> UTCTime -> Int -> m (Either String [Tweet])
 twitter_historical_data_l apiKey time_start limit = request apiKey ("/v1/twitter/history" ++
                                                                    "?time_start=" ++ showTime time_start ++
-                                                                   "&limit=" ++ show limit)
+                                                                   "&amp;limit=" ++ show limit)
 
 twitter_historical_data_el :: MonadIO m => ApiKey -> UTCTime -> UTCTime -> Int -> m (Either String [Tweet])
 twitter_historical_data_el apiKey time_start time_end limit = request apiKey ("/v1/twitter/history" ++
-                                                                             "?time_start=" ++ showTime time_start ++
-                                                                             "&time_end=" ++ showTime time_end ++
-                                                                             "&limit=" ++ show limit)
+                                                                              "?time_start=" ++ showTime time_start ++
+                                                                              "&amptime_end=" ++ showTime time_end ++
+                                                                              "&amplimit=" ++ show limit)
