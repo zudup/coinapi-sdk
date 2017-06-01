@@ -166,6 +166,9 @@ orderbooks_historical_data_el symbol_id time_start time_end limit = get >>= (\ke
 twitter_latest_data :: MonadIO m => CoinApi m (Either String [Tweet])
 twitter_latest_data = get >>= CA.twitter_latest_data
 
+twitter_latest_data_l :: MonadIO m => Int -> CoinApi m (Either String [Tweet])
+twitter_latest_data_l limit = get >>= (\key -> CA.twitter_latest_data_l key limit)
+
 twitter_historical_data :: MonadIO m => UTCTime -> CoinApi m (Either String [Tweet])
 twitter_historical_data time_start = get >>= (\key -> CA.twitter_historical_data key time_start)
 
