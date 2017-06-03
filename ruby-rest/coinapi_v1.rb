@@ -23,7 +23,7 @@ module CoinAPIv1
     def metadata_list_all_symbols
       request(endpoint: 'symbols').each do |symbol|
         case symbol[:symbol_type]
-        when 'FUTURE'
+        when 'FUTURES'
           symbol[:future_delivery_time] = Date.parse(symbol[:future_delivery_time])
         when 'OPTION'
           symbol[:option_expiration_time] = Date.parse(symbol[:option_expiration_time])
