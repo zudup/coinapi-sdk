@@ -205,7 +205,7 @@ func (sdk SDK) Metadata_list_symbols() (spots []Spot, futures []Future, options 
 			spot := Spot{}
 			json.Unmarshal(symbol, &spot)
 			spots = append(spots, spot)
-		case "FUTURE":
+		case "FUTURES":
 			future := Future{}
 			json.Unmarshal(symbol, &future)
 			futures = append(futures, future)
