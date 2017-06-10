@@ -3,11 +3,13 @@
 Welcome to the CoinAPI SDK. This repository contain SDK for our API documented at https://docs.coinapi.io/ 
 
 In this repository you can find libraries that will help you use our API with minimal development effort from:
+ * Python
+ * R
+ * Matlab
  * C#
  * C++
  * .NET
  * Java
- * Python
  * Ruby
  * Go
  * JavaScript
