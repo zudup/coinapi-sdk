@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace csharp_rest {
     public class Hashtag {
         public string text { get; set; }
-        public int[] indices { get; set; }
+        public long[] indices { get; set; }
     }
 }
