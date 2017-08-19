@@ -3,13 +3,11 @@ import urllib.parse
 import gzip
 import json
 
-PRODUCTION_URL = 'https://rest.coinapi.io/'
-MOCK_URL = 'https://rest-test.coinapi.io/'
-VERSION = 'v1'
+PRODUCTION_URL = 'https://rest.coinapi.io/v1%s'
 
 class HTTPClient:
     def __init__(self, endpoint, headers = dict(), params = dict()):
-        self.url = 'https://rest.coinapi.io/v1%s' % endpoint
+        self.url = PRODUCTION_URL % endpoint
         self.params = params
         self.headers = headers
 
@@ -190,12 +188,12 @@ class TwitterHistoricalDataRequest:
 
 class CoinAPIv1:
     DEFAULT_HEADERS = {
-        'Accept': 'application/json',
-        'Accept-Encoding': 'deflat, gzip'
+        'Accept': 'application/json'
     }
     def __init__(self, api_key, headers = dict(), client_class=HTTPClient):
         self.api_key = api_key
-        self.headers = {**self.DEFAULT_HEADERS, **headers}
+        header_apikey = {'X-CoinAPI-Key': self.api_key}
+        self.headers = {**self.DEFAULT_HEADERS, **headers, **header_apikey}
         self.client_class = client_class
 
     def with_header(self, header, value):
