@@ -167,8 +167,8 @@ export default class OrdersApi {
     }
 
     /**
-     * Callback function to receive the result of the v1OrdersHistoryTimeStartTimeEndGet operation.
-     * @callback module:api/OrdersApi~v1OrdersHistoryTimeStartTimeEndGetCallback
+     * Callback function to receive the result of the v1OrdersHistoryGet operation.
+     * @callback module:api/OrdersApi~v1OrdersHistoryGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/OrderHistory>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -179,25 +179,25 @@ export default class OrdersApi {
      * Based on the date range, all changes registered in the orderbook.
      * @param {String} timeStart Start date
      * @param {String} timeEnd End date
-     * @param {module:api/OrdersApi~v1OrdersHistoryTimeStartTimeEndGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OrdersApi~v1OrdersHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/OrderHistory>}
      */
-    v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd, callback) {
+    v1OrdersHistoryGet(timeStart, timeEnd, callback) {
       let postBody = null;
       // verify the required parameter 'timeStart' is set
       if (timeStart === undefined || timeStart === null) {
-        throw new Error("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet");
+        throw new Error("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet");
       }
       // verify the required parameter 'timeEnd' is set
       if (timeEnd === undefined || timeEnd === null) {
-        throw new Error("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet");
+        throw new Error("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet");
       }
 
       let pathParams = {
-        'time_start': timeStart,
-        'time_end': timeEnd
       };
       let queryParams = {
+        'time_start': timeStart,
+        'time_end': timeEnd
       };
       let headerParams = {
       };
@@ -209,7 +209,7 @@ export default class OrdersApi {
       let accepts = ['application/json'];
       let returnType = [OrderHistory];
       return this.apiClient.callApi(
-        '/v1/orders/history/{time_start}/{time_end}', 'GET',
+        '/v1/orders/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

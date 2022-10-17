@@ -22,6 +22,7 @@ package org.openapitools.client.apis
 
 import java.io.IOException
 import okhttp3.OkHttpClient
+import okhttp3.HttpUrl
 
 import org.openapitools.client.models.Balance
 import org.openapitools.client.models.MessageReject
@@ -42,7 +43,7 @@ import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class BalancesApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath) {
+class BalancesApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -125,4 +126,7 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClien
         )
     }
 
+
+    private fun encodeURIComponent(uriComponent: kotlin.String): kotlin.String =
+        HttpUrl.Builder().scheme("http").host("localhost").addPathSegment(uriComponent).build().encodedPathSegments[0]
 }

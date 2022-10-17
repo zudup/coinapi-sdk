@@ -24,8 +24,6 @@ import org.openapitools.client.models.Fills
 import org.openapitools.client.models.OrdSide
 import org.openapitools.client.models.OrdStatus
 import org.openapitools.client.models.OrdType
-import org.openapitools.client.models.OrderExecutionReportAllOf
-import org.openapitools.client.models.OrderNewSingleRequest
 import org.openapitools.client.models.TimeInForce
 
 import com.squareup.moshi.Json

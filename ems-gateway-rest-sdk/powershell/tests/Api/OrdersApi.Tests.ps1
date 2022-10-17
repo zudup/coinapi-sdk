@@ -31,9 +31,9 @@ Describe -tag 'PSOpenAPITools' -name 'OrdersApi' {
         }
     }
 
-    Context 'Invoke-V1OrdersHistoryTimeStartTimeEndGet' {
-        It 'Test Invoke-V1OrdersHistoryTimeStartTimeEndGet' {
-            #$TestResult = Invoke-V1OrdersHistoryTimeStartTimeEndGet -TimeStart "TEST_VALUE" -TimeEnd "TEST_VALUE"
+    Context 'Invoke-V1OrdersHistoryGet' {
+        It 'Test Invoke-V1OrdersHistoryGet' {
+            #$TestResult = Invoke-V1OrdersHistoryGet -TimeStart "TEST_VALUE" -TimeEnd "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

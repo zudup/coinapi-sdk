@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * MessageReject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T04:34:17.634419Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T08:55:30.679306Z[Etc/UTC]")
 public class MessageReject {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -70,7 +70,7 @@ public class MessageReject {
   @SerializedName(SERIALIZED_NAME_REJECTED_MESSAGE)
   private String rejectedMessage;
 
-  public MessageReject() { 
+  public MessageReject() {
   }
 
   public MessageReject type(String type) {
@@ -273,16 +273,16 @@ public class MessageReject {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MessageReject` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      if (jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonPrimitive()) {
+      if ((jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonNull()) && !jsonObj.get("exchange_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_id").toString()));
       }
-      if (jsonObj.get("message") != null && !jsonObj.get("message").isJsonPrimitive()) {
+      if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
-      if (jsonObj.get("rejected_message") != null && !jsonObj.get("rejected_message").isJsonPrimitive()) {
+      if ((jsonObj.get("rejected_message") != null && !jsonObj.get("rejected_message").isJsonNull()) && !jsonObj.get("rejected_message").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `rejected_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rejected_message").toString()));
       }
   }

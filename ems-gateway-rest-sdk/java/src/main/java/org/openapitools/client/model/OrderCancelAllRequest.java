@@ -48,13 +48,13 @@ import org.openapitools.client.JSON;
  * Cancel all orders request object.
  */
 @ApiModel(description = "Cancel all orders request object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T04:34:17.634419Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T08:55:30.679306Z[Etc/UTC]")
 public class OrderCancelAllRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
   private String exchangeId;
 
-  public OrderCancelAllRequest() { 
+  public OrderCancelAllRequest() {
   }
 
   public OrderCancelAllRequest exchangeId(String exchangeId) {
@@ -161,7 +161,7 @@ public class OrderCancelAllRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonPrimitive()) {
+      if ((jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonNull()) && !jsonObj.get("exchange_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_id").toString()));
       }
   }

@@ -402,39 +402,47 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiV1OrdersHistoryTimeStartTimeEndGetRequest struct {
+type ApiV1OrdersHistoryGetRequest struct {
 	ctx context.Context
 	ApiService *OrdersApiService
-	timeStart string
-	timeEnd string
+	timeStart *string
+	timeEnd *string
 }
 
-func (r ApiV1OrdersHistoryTimeStartTimeEndGetRequest) Execute() ([]OrderHistory, *http.Response, error) {
-	return r.ApiService.V1OrdersHistoryTimeStartTimeEndGetExecute(r)
+// Start date
+func (r ApiV1OrdersHistoryGetRequest) TimeStart(timeStart string) ApiV1OrdersHistoryGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// End date
+func (r ApiV1OrdersHistoryGetRequest) TimeEnd(timeEnd string) ApiV1OrdersHistoryGetRequest {
+	r.timeEnd = &timeEnd
+	return r
+}
+
+func (r ApiV1OrdersHistoryGetRequest) Execute() ([]OrderHistory, *http.Response, error) {
+	return r.ApiService.V1OrdersHistoryGetExecute(r)
 }
 
 /*
-V1OrdersHistoryTimeStartTimeEndGet History of order changes
+V1OrdersHistoryGet History of order changes
 
 Based on the date range, all changes registered in the orderbook.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param timeStart Start date
- @param timeEnd End date
- @return ApiV1OrdersHistoryTimeStartTimeEndGetRequest
+ @return ApiV1OrdersHistoryGetRequest
 */
-func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGet(ctx context.Context, timeStart string, timeEnd string) ApiV1OrdersHistoryTimeStartTimeEndGetRequest {
-	return ApiV1OrdersHistoryTimeStartTimeEndGetRequest{
+func (a *OrdersApiService) V1OrdersHistoryGet(ctx context.Context) ApiV1OrdersHistoryGetRequest {
+	return ApiV1OrdersHistoryGetRequest{
 		ApiService: a,
 		ctx: ctx,
-		timeStart: timeStart,
-		timeEnd: timeEnd,
 	}
 }
 
 // Execute executes the request
 //  @return []OrderHistory
-func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1OrdersHistoryTimeStartTimeEndGetRequest) ([]OrderHistory, *http.Response, error) {
+func (a *OrdersApiService) V1OrdersHistoryGetExecute(r ApiV1OrdersHistoryGetRequest) ([]OrderHistory, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -442,19 +450,25 @@ func (a *OrdersApiService) V1OrdersHistoryTimeStartTimeEndGetExecute(r ApiV1Orde
 		localVarReturnValue  []OrderHistory
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrdersApiService.V1OrdersHistoryTimeStartTimeEndGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrdersApiService.V1OrdersHistoryGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/v1/orders/history/{time_start}/{time_end}"
-	localVarPath = strings.Replace(localVarPath, "{"+"time_start"+"}", url.PathEscape(parameterToString(r.timeStart, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"time_end"+"}", url.PathEscape(parameterToString(r.timeEnd, "")), -1)
+	localVarPath := localBasePath + "/v1/orders/history"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+	if r.timeStart == nil {
+		return localVarReturnValue, nil, reportError("timeStart is required and must be specified")
+	}
+	if r.timeEnd == nil {
+		return localVarReturnValue, nil, reportError("timeEnd is required and must be specified")
+	}
 
+	localVarQueryParams.Add("time_start", parameterToString(*r.timeStart, ""))
+	localVarQueryParams.Add("time_end", parameterToString(*r.timeEnd, ""))
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

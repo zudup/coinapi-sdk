@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
  * Cancel single order request object.
  */
 @ApiModel(description = "Cancel single order request object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T04:34:17.634419Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T08:55:30.679306Z[Etc/UTC]")
 public class OrderCancelSingleRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -62,7 +62,7 @@ public class OrderCancelSingleRequest {
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID)
   private String clientOrderId;
 
-  public OrderCancelSingleRequest() { 
+  public OrderCancelSingleRequest() {
   }
 
   public OrderCancelSingleRequest exchangeId(String exchangeId) {
@@ -221,13 +221,13 @@ public class OrderCancelSingleRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonPrimitive()) {
+      if ((jsonObj.get("exchange_id") != null && !jsonObj.get("exchange_id").isJsonNull()) && !jsonObj.get("exchange_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_id").toString()));
       }
-      if (jsonObj.get("exchange_order_id") != null && !jsonObj.get("exchange_order_id").isJsonPrimitive()) {
+      if ((jsonObj.get("exchange_order_id") != null && !jsonObj.get("exchange_order_id").isJsonNull()) && !jsonObj.get("exchange_order_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_order_id").toString()));
       }
-      if (jsonObj.get("client_order_id") != null && !jsonObj.get("client_order_id").isJsonPrimitive()) {
+      if ((jsonObj.get("client_order_id") != null && !jsonObj.get("client_order_id").isJsonNull()) && !jsonObj.get("client_order_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `client_order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("client_order_id").toString()));
       }
   }

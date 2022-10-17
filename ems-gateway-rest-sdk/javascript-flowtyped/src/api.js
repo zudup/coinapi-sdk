@@ -1014,22 +1014,28 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
          * @summary History of order changes
          * @throws {RequiredError}
          */
-        v1OrdersHistoryTimeStartTimeEndGet(timeStart: string, timeEnd: string, options: RequestOptions): FetchArgs {
+        v1OrdersHistoryGet(timeStart: string, timeEnd: string, options: RequestOptions): FetchArgs {
             // verify required parameter 'timeStart' is not null or undefined
             if (timeStart === null || timeStart === undefined) {
-                throw new RequiredError('timeStart','Required parameter timeStart was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+                throw new RequiredError('timeStart','Required parameter timeStart was null or undefined when calling v1OrdersHistoryGet.');
             }
             // verify required parameter 'timeEnd' is not null or undefined
             if (timeEnd === null || timeEnd === undefined) {
-                throw new RequiredError('timeEnd','Required parameter timeEnd was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+                throw new RequiredError('timeEnd','Required parameter timeEnd was null or undefined when calling v1OrdersHistoryGet.');
             }
-            const localVarPath = `/v1/orders/history/{time_start}/{time_end}`
-                .replace(`{${"time_start"}}`, encodeURIComponent(String(timeStart)))
-                .replace(`{${"time_end"}}`, encodeURIComponent(String(timeEnd)));
+            const localVarPath = `/v1/orders/history`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
+
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
+            if (timeEnd !== undefined) {
+                localVarQueryParameter['time_end'] = ((timeEnd:any):string);
+            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -1108,7 +1114,7 @@ export type OrdersApiType = {
 
     v1OrdersGet(exchangeId?: string, options?: RequestOptions): Promise<Array<OrderExecutionReport>>,
 
-    v1OrdersHistoryTimeStartTimeEndGet(timeStart: string, timeEnd: string, options?: RequestOptions): Promise<Array<OrderHistory>>,
+    v1OrdersHistoryGet(timeStart: string, timeEnd: string, options?: RequestOptions): Promise<Array<OrderHistory>>,
 
     v1OrdersPost(orderNewSingleRequest: OrderNewSingleRequest, options?: RequestOptions): Promise<OrderExecutionReport>,
 
@@ -1172,8 +1178,8 @@ export const OrdersApi = function(configuration?: Configuration, fetch: FetchAPI
          * @summary History of order changes
          * @throws {RequiredError}
          */
-        v1OrdersHistoryTimeStartTimeEndGet(timeStart: string, timeEnd: string, options?: RequestOptions = {}): Promise<Array<OrderHistory>> {
-            const localVarFetchArgs = OrdersApiFetchParamCreator(configuration).v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd, options);
+        v1OrdersHistoryGet(timeStart: string, timeEnd: string, options?: RequestOptions = {}): Promise<Array<OrderHistory>> {
+            const localVarFetchArgs = OrdersApiFetchParamCreator(configuration).v1OrdersHistoryGet(timeStart, timeEnd, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

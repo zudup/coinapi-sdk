@@ -3,7 +3,7 @@
 -export([v1_orders_cancel_all_post/2, v1_orders_cancel_all_post/3,
          v1_orders_cancel_post/2, v1_orders_cancel_post/3,
          v1_orders_get/1, v1_orders_get/2,
-         v1_orders_history_time_start_time_end_get/3, v1_orders_history_time_start_time_end_get/4,
+         v1_orders_history_get/3, v1_orders_history_get/4,
          v1_orders_post/2, v1_orders_post/3,
          v1_orders_status_client_order_id_get/2, v1_orders_status_client_order_id_get/3]).
 
@@ -74,18 +74,18 @@ v1_orders_get(Ctx, Optional) ->
 
 %% @doc History of order changes
 %% Based on the date range, all changes registered in the orderbook.
--spec v1_orders_history_time_start_time_end_get(ctx:ctx(), binary(), binary()) -> {ok, [openapi_order_history:openapi_order_history()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-v1_orders_history_time_start_time_end_get(Ctx, TimeStart, TimeEnd) ->
-    v1_orders_history_time_start_time_end_get(Ctx, TimeStart, TimeEnd, #{}).
+-spec v1_orders_history_get(ctx:ctx(), binary(), binary()) -> {ok, [openapi_order_history:openapi_order_history()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_orders_history_get(Ctx, TimeStart, TimeEnd) ->
+    v1_orders_history_get(Ctx, TimeStart, TimeEnd, #{}).
 
--spec v1_orders_history_time_start_time_end_get(ctx:ctx(), binary(), binary(), maps:map()) -> {ok, [openapi_order_history:openapi_order_history()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-v1_orders_history_time_start_time_end_get(Ctx, TimeStart, TimeEnd, Optional) ->
+-spec v1_orders_history_get(ctx:ctx(), binary(), binary(), maps:map()) -> {ok, [openapi_order_history:openapi_order_history()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_orders_history_get(Ctx, TimeStart, TimeEnd, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/v1/orders/history/", TimeStart, "/", TimeEnd, "">>],
-    QS = [],
+    Path = [<<"/v1/orders/history">>],
+    QS = lists:flatten([{<<"time_start">>, TimeStart}, {<<"time_end">>, TimeEnd}])++openapi_utils:optional_params([], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

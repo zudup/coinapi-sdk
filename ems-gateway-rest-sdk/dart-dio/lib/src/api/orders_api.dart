@@ -306,7 +306,7 @@ class OrdersApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<OrderHistory>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<OrderHistory>>> v1OrdersHistoryTimeStartTimeEndGet({ 
+  Future<Response<BuiltList<OrderHistory>>> v1OrdersHistoryGet({ 
     required String timeStart,
     required String timeEnd,
     CancelToken? cancelToken,
@@ -316,7 +316,7 @@ class OrdersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/v1/orders/history/{time_start}/{time_end}'.replaceAll('{' r'time_start' '}', timeStart.toString()).replaceAll('{' r'time_end' '}', timeEnd.toString());
+    final _path = r'/v1/orders/history';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -329,9 +329,15 @@ class OrdersApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
+      r'time_end': encodeQueryParameter(_serializers, timeEnd, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

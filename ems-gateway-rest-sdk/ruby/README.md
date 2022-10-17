@@ -146,7 +146,7 @@ Class | Method | HTTP request | Description
 *OpenapiClient::OrdersApi* | [**v1_orders_cancel_all_post**](docs/OrdersApi.md#v1_orders_cancel_all_post) | **POST** /v1/orders/cancel/all | Cancel all orders request
 *OpenapiClient::OrdersApi* | [**v1_orders_cancel_post**](docs/OrdersApi.md#v1_orders_cancel_post) | **POST** /v1/orders/cancel | Cancel order request
 *OpenapiClient::OrdersApi* | [**v1_orders_get**](docs/OrdersApi.md#v1_orders_get) | **GET** /v1/orders | Get open orders
-*OpenapiClient::OrdersApi* | [**v1_orders_history_time_start_time_end_get**](docs/OrdersApi.md#v1_orders_history_time_start_time_end_get) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+*OpenapiClient::OrdersApi* | [**v1_orders_history_get**](docs/OrdersApi.md#v1_orders_history_get) | **GET** /v1/orders/history | History of order changes
 *OpenapiClient::OrdersApi* | [**v1_orders_post**](docs/OrdersApi.md#v1_orders_post) | **POST** /v1/orders | Send new order
 *OpenapiClient::OrdersApi* | [**v1_orders_status_client_order_id_get**](docs/OrdersApi.md#v1_orders_status_client_order_id_get) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 *OpenapiClient::PositionsApi* | [**v1_positions_get**](docs/PositionsApi.md#v1_positions_get) | **GET** /v1/positions | Get open positions

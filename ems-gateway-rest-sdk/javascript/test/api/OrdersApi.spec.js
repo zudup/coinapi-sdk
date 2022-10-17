@@ -78,10 +78,10 @@
         done();
       });
     });
-    describe('v1OrdersHistoryTimeStartTimeEndGet', function() {
-      it('should call v1OrdersHistoryTimeStartTimeEndGet successfully', function(done) {
-        //uncomment below and update the code to test v1OrdersHistoryTimeStartTimeEndGet
-        //instance.v1OrdersHistoryTimeStartTimeEndGet(function(error) {
+    describe('v1OrdersHistoryGet', function() {
+      it('should call v1OrdersHistoryGet successfully', function(done) {
+        //uncomment below and update the code to test v1OrdersHistoryGet
+        //instance.v1OrdersHistoryGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

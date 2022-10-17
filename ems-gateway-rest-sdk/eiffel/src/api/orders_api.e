@@ -130,7 +130,7 @@ feature -- API Access
 			end
 		end
 
-	v1_orders_history_time_start_time_end_get (time_start: STRING_32; time_end: STRING_32): detachable LIST [ORDER_HISTORY]
+	v1_orders_history_get (time_start: STRING_32; time_end: STRING_32): detachable LIST [ORDER_HISTORY]
 			-- History of order changes
 			-- Based on the date range, all changes registered in the orderbook.
 			-- 
@@ -149,9 +149,9 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/v1/orders/history/{time_start}/{time_end}"
-			l_path.replace_substring_all ("{"+"time_start"+"}", api_client.url_encode (time_start.out))
-			l_path.replace_substring_all ("{"+"time_end"+"}", api_client.url_encode (time_end.out))
+			l_path := "/v1/orders/history"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_end", time_end));
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"application/json">>)  as l_accept then
