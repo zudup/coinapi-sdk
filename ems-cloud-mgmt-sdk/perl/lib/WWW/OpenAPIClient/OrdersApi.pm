@@ -239,7 +239,7 @@ sub v1_orders_get {
 }
 
 #
-# v1_orders_history_time_start_time_end_get
+# v1_orders_history_get
 #
 # History of order changes
 #
@@ -258,7 +258,7 @@ sub v1_orders_get {
         required => '1',
     },
     };
-    __PACKAGE__->method_documentation->{ 'v1_orders_history_time_start_time_end_get' } = {
+    __PACKAGE__->method_documentation->{ 'v1_orders_history_get' } = {
         summary => 'History of order changes',
         params => $params,
         returns => 'ARRAY[OrderHistory]',
@@ -266,21 +266,21 @@ sub v1_orders_get {
 }
 # @return ARRAY[OrderHistory]
 #
-sub v1_orders_history_time_start_time_end_get {
+sub v1_orders_history_get {
     my ($self, %args) = @_;
 
     # verify the required parameter 'time_start' is set
     unless (exists $args{'time_start'}) {
-      croak("Missing the required parameter 'time_start' when calling v1_orders_history_time_start_time_end_get");
+      croak("Missing the required parameter 'time_start' when calling v1_orders_history_get");
     }
 
     # verify the required parameter 'time_end' is set
     unless (exists $args{'time_end'}) {
-      croak("Missing the required parameter 'time_end' when calling v1_orders_history_time_start_time_end_get");
+      croak("Missing the required parameter 'time_end' when calling v1_orders_history_get");
     }
 
     # parse inputs
-    my $_resource_path = '/v1/orders/history/{time_start}/{time_end}';
+    my $_resource_path = '/v1/orders/history';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -294,18 +294,14 @@ sub v1_orders_history_time_start_time_end_get {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
-    # path params
+    # query params
     if ( exists $args{'time_start'}) {
-        my $_base_variable = "{" . "time_start" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'time_start'});
-        $_resource_path =~ s/$_base_variable/$_base_value/g;
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
-    # path params
+    # query params
     if ( exists $args{'time_end'}) {
-        my $_base_variable = "{" . "time_end" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'time_end'});
-        $_resource_path =~ s/$_base_variable/$_base_value/g;
+        $query_params->{'time_end'} = $self->{api_client}->to_query_value($args{'time_end'});
     }
 
     my $_body_data;

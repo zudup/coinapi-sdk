@@ -36,8 +36,8 @@ describe("orders_api", function()
     end)
   end)
 
-  -- unit tests for v1_orders_history_time_start_time_end_get
-  describe("v1_orders_history_time_start_time_end_get test", function()
+  -- unit tests for v1_orders_history_get
+  describe("v1_orders_history_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

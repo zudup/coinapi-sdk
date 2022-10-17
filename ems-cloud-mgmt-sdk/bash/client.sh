@@ -99,8 +99,8 @@ operation_parameters_minimum_occurrences["v1BalancesGet:::exchange_id"]=0
 operation_parameters_minimum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_minimum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=1
-operation_parameters_minimum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=1
+operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_start"]=1
+operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_end"]=1
 operation_parameters_minimum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=1
 operation_parameters_minimum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=1
 operation_parameters_minimum_occurrences["v1PositionsGet:::exchange_id"]=0
@@ -116,8 +116,8 @@ operation_parameters_maximum_occurrences["v1BalancesGet:::exchange_id"]=0
 operation_parameters_maximum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=0
+operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_start"]=0
+operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_end"]=0
 operation_parameters_maximum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=0
 operation_parameters_maximum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=0
 operation_parameters_maximum_occurrences["v1PositionsGet:::exchange_id"]=0
@@ -130,8 +130,8 @@ operation_parameters_collection_type["v1BalancesGet:::exchange_id"]=""
 operation_parameters_collection_type["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=""
 operation_parameters_collection_type["v1OrdersCancelPost:::OrderCancelSingleRequest"]=""
 operation_parameters_collection_type["v1OrdersGet:::exchange_id"]=""
-operation_parameters_collection_type["v1OrdersHistoryTimeStartTimeEndGet:::time_start"]=""
-operation_parameters_collection_type["v1OrdersHistoryTimeStartTimeEndGet:::time_end"]=""
+operation_parameters_collection_type["v1OrdersHistoryGet:::time_start"]=""
+operation_parameters_collection_type["v1OrdersHistoryGet:::time_end"]=""
 operation_parameters_collection_type["v1OrdersPost:::OrderNewSingleRequest"]=""
 operation_parameters_collection_type["v1OrdersStatusClientOrderIdGet:::client_order_id"]=""
 operation_parameters_collection_type["v1PositionsGet:::exchange_id"]=""
@@ -528,7 +528,7 @@ read -r -d '' ops <<EOF
   ${CYAN}v1OrdersCancelAllPost${OFF};Cancel all orders request
   ${CYAN}v1OrdersCancelPost${OFF};Cancel order request
   ${CYAN}v1OrdersGet${OFF};Get open orders
-  ${CYAN}v1OrdersHistoryTimeStartTimeEndGet${OFF};History of order changes
+  ${CYAN}v1OrdersHistoryGet${OFF};History of order changes
   ${CYAN}v1OrdersPost${OFF};Send new order
   ${CYAN}v1OrdersStatusClientOrderIdGet${OFF};Get order execution report
 EOF
@@ -743,18 +743,20 @@ print_v1OrdersGet_help() {
 }
 ##############################################################################
 #
-# Print help for v1OrdersHistoryTimeStartTimeEndGet operation
+# Print help for v1OrdersHistoryGet operation
 #
 ##############################################################################
-print_v1OrdersHistoryTimeStartTimeEndGet_help() {
+print_v1OrdersHistoryGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersHistoryTimeStartTimeEndGet - History of order changes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}v1OrdersHistoryGet - History of order changes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Based on the date range, all changes registered in the orderbook." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}time_start${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Start date ${YELLOW}Specify as: time_start=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}time_end${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - End date ${YELLOW}Specify as: time_end=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}time_start${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Start date${YELLOW} Specify as: time_start=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}time_end${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - End date${YELLOW} Specify as: time_end=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -1060,19 +1062,19 @@ call_v1OrdersGet() {
 
 ##############################################################################
 #
-# Call v1OrdersHistoryTimeStartTimeEndGet operation
+# Call v1OrdersHistoryGet operation
 #
 ##############################################################################
-call_v1OrdersHistoryTimeStartTimeEndGet() {
+call_v1OrdersHistoryGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(time_start time_end)
+    local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=()
+    local query_parameter_names=(time_start time_end)
     local path
 
-    if ! path=$(build_request_path "/v1/orders/history/{time_start}/{time_end}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/v1/orders/history" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1353,8 +1355,8 @@ case $key in
     v1OrdersGet)
     operation="v1OrdersGet"
     ;;
-    v1OrdersHistoryTimeStartTimeEndGet)
-    operation="v1OrdersHistoryTimeStartTimeEndGet"
+    v1OrdersHistoryGet)
+    operation="v1OrdersHistoryGet"
     ;;
     v1OrdersPost)
     operation="v1OrdersPost"
@@ -1454,8 +1456,8 @@ case $operation in
     v1OrdersGet)
     call_v1OrdersGet
     ;;
-    v1OrdersHistoryTimeStartTimeEndGet)
-    call_v1OrdersHistoryTimeStartTimeEndGet
+    v1OrdersHistoryGet)
+    call_v1OrdersHistoryGet
     ;;
     v1OrdersPost)
     call_v1OrdersPost

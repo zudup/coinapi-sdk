@@ -107,19 +107,21 @@ public class OASOrdersApi {
      * @return List<OASOrderHistory>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASOrderHistory> v1OrdersHistoryTimeStartTimeEndGet(Map<String, Object> params) {
+    public List<OASOrderHistory> v1OrdersHistoryGet(Map<String, Object> params) {
         client.assertNotNull(params.get('timeStart'), 'timeStart');
         client.assertNotNull(params.get('timeEnd'), 'timeEnd');
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
+        query.addAll(client.makeParam('time_end', (String) params.get('timeEnd')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASOrderHistory>) client.invoke(
-            'GET', '/v1/orders/history/{time_start}/{time_end}', '',
+            'GET', '/v1/orders/history', '',
             query, form,
-            new Map<String, Object>{
-                'time_start' => (String) params.get('timeStart'),
-                'time_end' => (String) params.get('timeEnd')
-            },
+            new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),

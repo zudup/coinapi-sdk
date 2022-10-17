@@ -30,6 +30,13 @@ private class OASOrdersApiTest {
         expectedResponse = OASMessageReject.getExample();
         response = (OASMessageReject) api.v1OrdersCancelAllPost(params);
         System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(OASMessageReject.getExample());
+        res.setHeader('Content-Type', 'appliction/json');
+        res.setBody(js);
+        expectedResponse = OASMessageReject.getExample();
+        response = (OASMessageReject) api.v1OrdersCancelAllPost(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -58,6 +65,13 @@ private class OASOrdersApiTest {
 
         js = JSON.serialize(OASOrderExecutionReport.getExample());
         res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASOrderExecutionReport.getExample();
+        response = (OASOrderExecutionReport) api.v1OrdersCancelPost(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(OASOrderExecutionReport.getExample());
+        res.setHeader('Content-Type', 'appliction/json');
         res.setBody(js);
         expectedResponse = OASOrderExecutionReport.getExample();
         response = (OASOrderExecutionReport) api.v1OrdersCancelPost(params);
@@ -94,6 +108,13 @@ private class OASOrdersApiTest {
         expectedResponse = List.getExample();
         response = (List<OASOrderExecutionReport>) api.v1OrdersGet(params);
         System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(List.getExample());
+        res.setHeader('Content-Type', 'appliction/json');
+        res.setBody(js);
+        expectedResponse = List.getExample();
+        response = (List<OASOrderExecutionReport>) api.v1OrdersGet(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -102,7 +123,7 @@ private class OASOrdersApiTest {
      * Based on the date range, all changes registered in the orderbook.
      */
     @isTest
-    private static void v1OrdersHistoryTimeStartTimeEndGetTest() {
+    private static void v1OrdersHistoryGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -125,7 +146,7 @@ private class OASOrdersApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASOrderHistory>) api.v1OrdersHistoryTimeStartTimeEndGet(params);
+        response = (List<OASOrderHistory>) api.v1OrdersHistoryGet(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -155,6 +176,13 @@ private class OASOrdersApiTest {
 
         js = JSON.serialize(OASOrderExecutionReport.getExample());
         res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASOrderExecutionReport.getExample();
+        response = (OASOrderExecutionReport) api.v1OrdersPost(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(OASOrderExecutionReport.getExample());
+        res.setHeader('Content-Type', 'appliction/json');
         res.setBody(js);
         expectedResponse = OASOrderExecutionReport.getExample();
         response = (OASOrderExecutionReport) api.v1OrdersPost(params);

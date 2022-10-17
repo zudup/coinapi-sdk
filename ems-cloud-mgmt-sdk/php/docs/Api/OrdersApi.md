@@ -1,15 +1,15 @@
 # OpenAPI\Client\OrdersApi
 
-All URIs are relative to https://ems-gateway-aws-eu-central-1-dev.coinapi.io.
+All URIs are relative to https://ems-gateway-aws-eu-central-1-dev.coinapi.io, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1OrdersCancelAllPost()**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
-[**v1OrdersCancelPost()**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
-[**v1OrdersGet()**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders
-[**v1OrdersHistoryTimeStartTimeEndGet()**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
-[**v1OrdersPost()**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order
-[**v1OrdersStatusClientOrderIdGet()**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**v1OrdersCancelAllPost()**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request |
+| [**v1OrdersCancelPost()**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request |
+| [**v1OrdersGet()**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders |
+| [**v1OrdersHistoryGet()**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes |
+| [**v1OrdersPost()**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order |
+| [**v1OrdersStatusClientOrderIdGet()**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
 
 ## `v1OrdersCancelAllPost()`
@@ -47,9 +47,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_cancel_all_request** | [**\OpenAPI\Client\Model\OrderCancelAllRequest**](../Model/OrderCancelAllRequest.md)| OrderCancelAllRequest object. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_cancel_all_request** | [**\OpenAPI\Client\Model\OrderCancelAllRequest**](../Model/OrderCancelAllRequest.md)| OrderCancelAllRequest object. | |
 
 ### Return type
 
@@ -103,9 +103,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_cancel_single_request** | [**\OpenAPI\Client\Model\OrderCancelSingleRequest**](../Model/OrderCancelSingleRequest.md)| OrderCancelSingleRequest object. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_cancel_single_request** | [**\OpenAPI\Client\Model\OrderCancelSingleRequest**](../Model/OrderCancelSingleRequest.md)| OrderCancelSingleRequest object. | |
 
 ### Return type
 
@@ -159,9 +159,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_id** | **string**| Filter the open orders to the specific exchange. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **exchange_id** | **string**| Filter the open orders to the specific exchange. | [optional] |
 
 ### Return type
 
@@ -180,10 +180,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `v1OrdersHistoryTimeStartTimeEndGet()`
+## `v1OrdersHistoryGet()`
 
 ```php
-v1OrdersHistoryTimeStartTimeEndGet($time_start, $time_end): \OpenAPI\Client\Model\OrderHistory[]
+v1OrdersHistoryGet($time_start, $time_end): \OpenAPI\Client\Model\OrderHistory[]
 ```
 
 History of order changes
@@ -207,19 +207,19 @@ $time_start = 2022-05-01T00:00:00; // string | Start date
 $time_end = 2022-05-01T12:00:00; // string | End date
 
 try {
-    $result = $apiInstance->v1OrdersHistoryTimeStartTimeEndGet($time_start, $time_end);
+    $result = $apiInstance->v1OrdersHistoryGet($time_start, $time_end);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->v1OrdersHistoryTimeStartTimeEndGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->v1OrdersHistoryGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **time_start** | **string**| Start date |
- **time_end** | **string**| End date |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **time_start** | **string**| Start date | |
+| **time_end** | **string**| End date | |
 
 ### Return type
 
@@ -273,9 +273,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_new_single_request** | [**\OpenAPI\Client\Model\OrderNewSingleRequest**](../Model/OrderNewSingleRequest.md)| OrderNewSingleRequest object. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_new_single_request** | [**\OpenAPI\Client\Model\OrderNewSingleRequest**](../Model/OrderNewSingleRequest.md)| OrderNewSingleRequest object. | |
 
 ### Return type
 
@@ -329,9 +329,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **client_order_id** | **string**| The unique identifier of the order assigned by the client. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **client_order_id** | **string**| The unique identifier of the order assigned by the client. | |
 
 ### Return type
 

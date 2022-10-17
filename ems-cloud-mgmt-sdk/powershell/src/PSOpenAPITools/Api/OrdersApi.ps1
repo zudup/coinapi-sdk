@@ -294,7 +294,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 OrderHistory[]
 #>
-function Invoke-V1OrdersHistoryTimeStartTimeEndGet {
+function Invoke-V1OrdersHistoryGet {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -308,7 +308,7 @@ function Invoke-V1OrdersHistoryTimeStartTimeEndGet {
     )
 
     Process {
-        'Calling method: Invoke-V1OrdersHistoryTimeStartTimeEndGet' | Write-Debug
+        'Calling method: Invoke-V1OrdersHistoryGet' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -324,15 +324,17 @@ function Invoke-V1OrdersHistoryTimeStartTimeEndGet {
         # HTTP header 'Accept' (if needed)
         $LocalVarAccepts = @('application/json')
 
-        $LocalVarUri = '/v1/orders/history/{time_start}/{time_end}'
+        $LocalVarUri = '/v1/orders/history'
+
         if (!$TimeStart) {
-            throw "Error! The required parameter `TimeStart` missing when calling v1OrdersHistoryTimeStartTimeEndGet."
+            throw "Error! The required parameter `TimeStart` missing when calling v1OrdersHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{time_start}', [System.Web.HTTPUtility]::UrlEncode($TimeStart))
+        $LocalVarQueryParameters['time_start'] = $TimeStart
+
         if (!$TimeEnd) {
-            throw "Error! The required parameter `TimeEnd` missing when calling v1OrdersHistoryTimeStartTimeEndGet."
+            throw "Error! The required parameter `TimeEnd` missing when calling v1OrdersHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{time_end}', [System.Web.HTTPUtility]::UrlEncode($TimeEnd))
+        $LocalVarQueryParameters['time_end'] = $TimeEnd
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

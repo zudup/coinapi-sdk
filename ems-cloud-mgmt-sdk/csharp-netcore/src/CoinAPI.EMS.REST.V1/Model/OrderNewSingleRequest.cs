@@ -36,19 +36,19 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <summary>
         /// Gets or Sets Side
         /// </summary>
-        [DataMember(Name = "side", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "side", IsRequired = true, EmitDefaultValue = true)]
         public OrdSide Side { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderType
         /// </summary>
-        [DataMember(Name = "order_type", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "order_type", IsRequired = true, EmitDefaultValue = true)]
         public OrdType OrderType { get; set; }
 
         /// <summary>
         /// Gets or Sets TimeInForce
         /// </summary>
-        [DataMember(Name = "time_in_force", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "time_in_force", IsRequired = true, EmitDefaultValue = true)]
         public TimeInForce TimeInForce { get; set; }
         /// <summary>
         /// Defines ExecInst
@@ -132,14 +132,14 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Exchange identifier used to identify the routing destination.
         /// </summary>
         /// <value>Exchange identifier used to identify the routing destination.</value>
-        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = true)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// The unique identifier of the order assigned by the client.
         /// </summary>
         /// <value>The unique identifier of the order assigned by the client.</value>
-        [DataMember(Name = "client_order_id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "client_order_id", IsRequired = true, EmitDefaultValue = true)]
         public string ClientOrderId { get; set; }
 
         /// <summary>
@@ -160,14 +160,14 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Order quantity.
         /// </summary>
         /// <value>Order quantity.</value>
-        [DataMember(Name = "amount_order", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "amount_order", IsRequired = true, EmitDefaultValue = true)]
         public decimal AmountOrder { get; set; }
 
         /// <summary>
         /// Order price.
         /// </summary>
         /// <value>Order price.</value>
-        [DataMember(Name = "price", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "price", IsRequired = true, EmitDefaultValue = true)]
         public decimal Price { get; set; }
 
         /// <summary>

@@ -247,24 +247,30 @@ export class OrdersApi {
      * @param timeStart Start date
      * @param timeEnd End date
      */
-    public v1OrdersHistoryTimeStartTimeEndGet(timeStart: string, timeEnd: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1OrdersHistoryGet(timeStart: string, timeEnd: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.OrderHistory>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/v1/orders/history/{time_start}/{time_end}'.replace('{' + 'time_start' + '}', encodeURIComponent(String(timeStart))).replace('{' + 'time_end' + '}', encodeURIComponent(String(timeEnd)));
+        let localVarPath = this.basePath + '/v1/orders/history';
 
         let queryParameters: any = {};
         let headerParams: any = {};
         // verify required parameter 'timeStart' is not null or undefined
         if (timeStart === null || timeStart === undefined) {
-            throw new Error('Required parameter timeStart was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+            throw new Error('Required parameter timeStart was null or undefined when calling v1OrdersHistoryGet.');
         }
 
         // verify required parameter 'timeEnd' is not null or undefined
         if (timeEnd === null || timeEnd === undefined) {
-            throw new Error('Required parameter timeEnd was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+            throw new Error('Required parameter timeEnd was null or undefined when calling v1OrdersHistoryGet.');
         }
 
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
+        }
+        if (timeEnd !== null && timeEnd !== undefined) {
+            queryParameters['time_end'] = <string><any>timeEnd;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header

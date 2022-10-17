@@ -304,10 +304,8 @@ export class OrdersApi {
      * @param timeStart Start date
      * @param timeEnd End date
      */
-    public async v1OrdersHistoryTimeStartTimeEndGet (timeStart: string, timeEnd: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<OrderHistory>;  }> {
-        const localVarPath = this.basePath + '/v1/orders/history/{time_start}/{time_end}'
-            .replace('{' + 'time_start' + '}', encodeURIComponent(String(timeStart)))
-            .replace('{' + 'time_end' + '}', encodeURIComponent(String(timeEnd)));
+    public async v1OrdersHistoryGet (timeStart: string, timeEnd: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<OrderHistory>;  }> {
+        const localVarPath = this.basePath + '/v1/orders/history';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -321,12 +319,20 @@ export class OrdersApi {
 
         // verify required parameter 'timeStart' is not null or undefined
         if (timeStart === null || timeStart === undefined) {
-            throw new Error('Required parameter timeStart was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+            throw new Error('Required parameter timeStart was null or undefined when calling v1OrdersHistoryGet.');
         }
 
         // verify required parameter 'timeEnd' is not null or undefined
         if (timeEnd === null || timeEnd === undefined) {
-            throw new Error('Required parameter timeEnd was null or undefined when calling v1OrdersHistoryTimeStartTimeEndGet.');
+            throw new Error('Required parameter timeEnd was null or undefined when calling v1OrdersHistoryGet.');
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
+        }
+
+        if (timeEnd !== undefined) {
+            localVarQueryParameters['time_end'] = ObjectSerializer.serialize(timeEnd, "string");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

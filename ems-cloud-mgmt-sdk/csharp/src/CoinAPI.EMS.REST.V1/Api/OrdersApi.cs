@@ -98,7 +98,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeStart">Start date</param>
         /// <param name="timeEnd">End date</param>
         /// <returns>List<OrderHistory></returns>
-        List<OrderHistory> V1OrdersHistoryTimeStartTimeEndGet (string timeStart, string timeEnd);
+        List<OrderHistory> V1OrdersHistoryGet (string timeStart, string timeEnd);
 
         /// <summary>
         /// History of order changes
@@ -110,7 +110,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeStart">Start date</param>
         /// <param name="timeEnd">End date</param>
         /// <returns>ApiResponse of List<OrderHistory></returns>
-        ApiResponse<List<OrderHistory>> V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo (string timeStart, string timeEnd);
+        ApiResponse<List<OrderHistory>> V1OrdersHistoryGetWithHttpInfo (string timeStart, string timeEnd);
         /// <summary>
         /// Send new order
         /// </summary>
@@ -235,7 +235,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeEnd">End date</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<OrderHistory></returns>
-        System.Threading.Tasks.Task<List<OrderHistory>> V1OrdersHistoryTimeStartTimeEndGetAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<OrderHistory>> V1OrdersHistoryGetAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// History of order changes
@@ -248,7 +248,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeEnd">End date</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;OrderHistory&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<OrderHistory>>> V1OrdersHistoryTimeStartTimeEndGetWithHttpInfoAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<OrderHistory>>> V1OrdersHistoryGetWithHttpInfoAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send new order
         /// </summary>
@@ -850,9 +850,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeStart">Start date</param>
         /// <param name="timeEnd">End date</param>
         /// <returns>List<OrderHistory></returns>
-        public List<OrderHistory> V1OrdersHistoryTimeStartTimeEndGet (string timeStart, string timeEnd)
+        public List<OrderHistory> V1OrdersHistoryGet (string timeStart, string timeEnd)
         {
-             ApiResponse<List<OrderHistory>> localVarResponse = V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart, timeEnd);
+             ApiResponse<List<OrderHistory>> localVarResponse = V1OrdersHistoryGetWithHttpInfo(timeStart, timeEnd);
              return localVarResponse.Data;
         }
 
@@ -863,16 +863,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeStart">Start date</param>
         /// <param name="timeEnd">End date</param>
         /// <returns>ApiResponse of List<OrderHistory></returns>
-        public ApiResponse<List<OrderHistory>> V1OrdersHistoryTimeStartTimeEndGetWithHttpInfo (string timeStart, string timeEnd)
+        public ApiResponse<List<OrderHistory>> V1OrdersHistoryGetWithHttpInfo (string timeStart, string timeEnd)
         {
             // verify the required parameter 'timeStart' is set
             if (timeStart == null)
-                throw new ApiException(400, "Missing required parameter 'timeStart' when calling OrdersApi->V1OrdersHistoryTimeStartTimeEndGet");
+                throw new ApiException(400, "Missing required parameter 'timeStart' when calling OrdersApi->V1OrdersHistoryGet");
             // verify the required parameter 'timeEnd' is set
             if (timeEnd == null)
-                throw new ApiException(400, "Missing required parameter 'timeEnd' when calling OrdersApi->V1OrdersHistoryTimeStartTimeEndGet");
+                throw new ApiException(400, "Missing required parameter 'timeEnd' when calling OrdersApi->V1OrdersHistoryGet");
 
-            var localVarPath = "/v1/orders/history/{time_start}/{time_end}";
+            var localVarPath = "/v1/orders/history";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -893,8 +893,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (timeStart != null) localVarPathParams.Add("time_start", this.Configuration.ApiClient.ParameterToString(timeStart)); // path parameter
-            if (timeEnd != null) localVarPathParams.Add("time_end", this.Configuration.ApiClient.ParameterToString(timeEnd)); // path parameter
+            if (timeStart != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "time_start", timeStart)); // query parameter
+            if (timeEnd != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "time_end", timeEnd)); // query parameter
 
 
             // make the HTTP request
@@ -906,7 +906,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("V1OrdersHistoryTimeStartTimeEndGet", localVarResponse);
+                Exception exception = ExceptionFactory("V1OrdersHistoryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -923,9 +923,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeEnd">End date</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<OrderHistory></returns>
-        public async System.Threading.Tasks.Task<List<OrderHistory>> V1OrdersHistoryTimeStartTimeEndGetAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<OrderHistory>> V1OrdersHistoryGetAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<OrderHistory>> localVarResponse = await V1OrdersHistoryTimeStartTimeEndGetWithHttpInfoAsync(timeStart, timeEnd, cancellationToken);
+             ApiResponse<List<OrderHistory>> localVarResponse = await V1OrdersHistoryGetWithHttpInfoAsync(timeStart, timeEnd, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -938,16 +938,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="timeEnd">End date</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;OrderHistory&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<OrderHistory>>> V1OrdersHistoryTimeStartTimeEndGetWithHttpInfoAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<OrderHistory>>> V1OrdersHistoryGetWithHttpInfoAsync (string timeStart, string timeEnd, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'timeStart' is set
             if (timeStart == null)
-                throw new ApiException(400, "Missing required parameter 'timeStart' when calling OrdersApi->V1OrdersHistoryTimeStartTimeEndGet");
+                throw new ApiException(400, "Missing required parameter 'timeStart' when calling OrdersApi->V1OrdersHistoryGet");
             // verify the required parameter 'timeEnd' is set
             if (timeEnd == null)
-                throw new ApiException(400, "Missing required parameter 'timeEnd' when calling OrdersApi->V1OrdersHistoryTimeStartTimeEndGet");
+                throw new ApiException(400, "Missing required parameter 'timeEnd' when calling OrdersApi->V1OrdersHistoryGet");
 
-            var localVarPath = "/v1/orders/history/{time_start}/{time_end}";
+            var localVarPath = "/v1/orders/history";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -968,8 +968,8 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (timeStart != null) localVarPathParams.Add("time_start", this.Configuration.ApiClient.ParameterToString(timeStart)); // path parameter
-            if (timeEnd != null) localVarPathParams.Add("time_end", this.Configuration.ApiClient.ParameterToString(timeEnd)); // path parameter
+            if (timeStart != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "time_start", timeStart)); // query parameter
+            if (timeEnd != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "time_end", timeEnd)); // query parameter
 
 
             // make the HTTP request
@@ -981,7 +981,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("V1OrdersHistoryTimeStartTimeEndGet", localVarResponse);
+                Exception exception = ExceptionFactory("V1OrdersHistoryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

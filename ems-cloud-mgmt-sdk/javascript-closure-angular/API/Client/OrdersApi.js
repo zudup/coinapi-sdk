@@ -168,11 +168,9 @@ API.Client.OrdersApi.prototype.v1OrdersGet = function(opt_exchangeId, opt_extraH
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.OrderHistory>>}
  */
-API.Client.OrdersApi.prototype.v1OrdersHistoryTimeStartTimeEndGet = function(timeStart, timeEnd, opt_extraHttpRequestParams) {
+API.Client.OrdersApi.prototype.v1OrdersHistoryGet = function(timeStart, timeEnd, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/v1/orders/history/{time_start}/{time_end}'
-      .replace('{' + 'time_start' + '}', String(timeStart))
-      .replace('{' + 'time_end' + '}', String(timeEnd));
+  var path = this.basePath_ + '/v1/orders/history';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -181,12 +179,20 @@ API.Client.OrdersApi.prototype.v1OrdersHistoryTimeStartTimeEndGet = function(tim
   var headerParams = angular.extend({}, this.defaultHeaders_);
   // verify required parameter 'timeStart' is set
   if (!timeStart) {
-    throw new Error('Missing required parameter timeStart when calling v1OrdersHistoryTimeStartTimeEndGet');
+    throw new Error('Missing required parameter timeStart when calling v1OrdersHistoryGet');
   }
   // verify required parameter 'timeEnd' is set
   if (!timeEnd) {
-    throw new Error('Missing required parameter timeEnd when calling v1OrdersHistoryTimeStartTimeEndGet');
+    throw new Error('Missing required parameter timeEnd when calling v1OrdersHistoryGet');
   }
+  if (timeStart !== undefined) {
+    queryParameters['time_start'] = timeStart;
+  }
+
+  if (timeEnd !== undefined) {
+    queryParameters['time_end'] = timeEnd;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

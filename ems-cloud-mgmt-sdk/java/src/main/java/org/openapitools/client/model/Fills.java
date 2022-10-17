@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Fills
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T04:34:27.933192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T08:55:11.608447Z[Etc/UTC]")
 public class Fills {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
@@ -63,7 +63,7 @@ public class Fills {
   @SerializedName(SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
-  public Fills() { 
+  public Fills() {
   }
 
   public Fills time(LocalDate time) {
