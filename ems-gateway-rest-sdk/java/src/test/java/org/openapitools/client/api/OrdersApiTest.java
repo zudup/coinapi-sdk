@@ -88,10 +88,10 @@ public class OrdersApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v1OrdersHistoryTimeStartTimeEndGetTest() throws ApiException {
+    public void v1OrdersHistoryGetTest() throws ApiException {
         String timeStart = null;
         String timeEnd = null;
-        List<OrderHistory> response = api.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd);
+        List<OrderHistory> response = api.v1OrdersHistoryGet(timeStart, timeEnd);
         // TODO: test validations
     }
 

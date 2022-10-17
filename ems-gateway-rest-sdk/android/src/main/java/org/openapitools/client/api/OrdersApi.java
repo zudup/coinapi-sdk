@@ -444,21 +444,21 @@ public class OrdersApi {
    * @param timeEnd End date
    * @return List<OrderHistory>
   */
-  public List<OrderHistory> v1OrdersHistoryTimeStartTimeEndGet (String timeStart, String timeEnd) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<OrderHistory> v1OrdersHistoryGet (String timeStart, String timeEnd) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'timeStart' is set
     if (timeStart == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet"));
     }
     // verify the required parameter 'timeEnd' is set
     if (timeEnd == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet"));
     }
 
     // create path and map variables
-    String path = "/v1/orders/history/{time_start}/{time_end}".replaceAll("\\{" + "time_start" + "\\}", apiInvoker.escapeString(timeStart.toString())).replaceAll("\\{" + "time_end" + "\\}", apiInvoker.escapeString(timeEnd.toString()));
+    String path = "/v1/orders/history";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -466,6 +466,8 @@ public class OrdersApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_end", timeEnd));
     String[] contentTypes = {
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -510,22 +512,22 @@ public class OrdersApi {
    * Based on the date range, all changes registered in the orderbook.
    * @param timeStart Start date   * @param timeEnd End date
   */
-  public void v1OrdersHistoryTimeStartTimeEndGet (String timeStart, String timeEnd, final Response.Listener<List<OrderHistory>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1OrdersHistoryGet (String timeStart, String timeEnd, final Response.Listener<List<OrderHistory>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'timeStart' is set
     if (timeStart == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet"));
     }
     // verify the required parameter 'timeEnd' is set
     if (timeEnd == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet",
-        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryTimeStartTimeEndGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet",
+        new ApiException(400, "Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet"));
     }
 
     // create path and map variables
-    String path = "/v1/orders/history/{time_start}/{time_end}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "time_start" + "\\}", apiInvoker.escapeString(timeStart.toString())).replaceAll("\\{" + "time_end" + "\\}", apiInvoker.escapeString(timeEnd.toString()));
+    String path = "/v1/orders/history".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -534,6 +536,8 @@ public class OrdersApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_end", timeEnd));
 
 
     String[] contentTypes = {

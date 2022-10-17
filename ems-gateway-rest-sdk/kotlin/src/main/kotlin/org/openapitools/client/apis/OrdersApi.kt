@@ -22,6 +22,7 @@ package org.openapitools.client.apis
 
 import java.io.IOException
 import okhttp3.OkHttpClient
+import okhttp3.HttpUrl
 
 import org.openapitools.client.models.MessageError
 import org.openapitools.client.models.MessageReject
@@ -48,7 +49,7 @@ import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath) {
+class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -287,8 +288,8 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun v1OrdersHistoryTimeStartTimeEndGet(timeStart: kotlin.String, timeEnd: kotlin.String) : kotlin.collections.List<OrderHistory> {
-        val localVarResponse = v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart = timeStart, timeEnd = timeEnd)
+    fun v1OrdersHistoryGet(timeStart: kotlin.String, timeEnd: kotlin.String) : kotlin.collections.List<OrderHistory> {
+        val localVarResponse = v1OrdersHistoryGetWithHttpInfo(timeStart = timeStart, timeEnd = timeEnd)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<OrderHistory>
@@ -316,8 +317,8 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun v1OrdersHistoryTimeStartTimeEndGetWithHttpInfo(timeStart: kotlin.String, timeEnd: kotlin.String) : ApiResponse<kotlin.collections.List<OrderHistory>?> {
-        val localVariableConfig = v1OrdersHistoryTimeStartTimeEndGetRequestConfig(timeStart = timeStart, timeEnd = timeEnd)
+    fun v1OrdersHistoryGetWithHttpInfo(timeStart: kotlin.String, timeEnd: kotlin.String) : ApiResponse<kotlin.collections.List<OrderHistory>?> {
+        val localVariableConfig = v1OrdersHistoryGetRequestConfig(timeStart = timeStart, timeEnd = timeEnd)
 
         return request<Unit, kotlin.collections.List<OrderHistory>>(
             localVariableConfig
@@ -325,21 +326,25 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
     }
 
     /**
-     * To obtain the request config of the operation v1OrdersHistoryTimeStartTimeEndGet
+     * To obtain the request config of the operation v1OrdersHistoryGet
      *
      * @param timeStart Start date
      * @param timeEnd End date
      * @return RequestConfig
      */
-    fun v1OrdersHistoryTimeStartTimeEndGetRequestConfig(timeStart: kotlin.String, timeEnd: kotlin.String) : RequestConfig<Unit> {
+    fun v1OrdersHistoryGetRequestConfig(timeStart: kotlin.String, timeEnd: kotlin.String) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                put("time_start", listOf(timeStart.toString()))
+                put("time_end", listOf(timeEnd.toString()))
+            }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/orders/history/{time_start}/{time_end}".replace("{"+"time_start"+"}", "$timeStart").replace("{"+"time_end"+"}", "$timeEnd"),
+            path = "/v1/orders/history",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -480,11 +485,14 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/orders/status/{client_order_id}".replace("{"+"client_order_id"+"}", "$clientOrderId"),
+            path = "/v1/orders/status/{client_order_id}".replace("{"+"client_order_id"+"}", encodeURIComponent(clientOrderId.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
     }
 
+
+    private fun encodeURIComponent(uriComponent: kotlin.String): kotlin.String =
+        HttpUrl.Builder().scheme("http").host("localhost").addPathSegment(uriComponent).build().encodedPathSegments[0]
 }

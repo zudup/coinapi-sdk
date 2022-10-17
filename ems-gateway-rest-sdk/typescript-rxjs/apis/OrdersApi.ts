@@ -38,7 +38,7 @@ export interface V1OrdersGetRequest {
     exchangeId?: string;
 }
 
-export interface V1OrdersHistoryTimeStartTimeEndGetRequest {
+export interface V1OrdersHistoryGetRequest {
     timeStart: string;
     timeEnd: string;
 }
@@ -121,15 +121,21 @@ export class OrdersApi extends BaseAPI {
      * Based on the date range, all changes registered in the orderbook.
      * History of order changes
      */
-    v1OrdersHistoryTimeStartTimeEndGet({ timeStart, timeEnd }: V1OrdersHistoryTimeStartTimeEndGetRequest): Observable<Array<OrderHistory>>
-    v1OrdersHistoryTimeStartTimeEndGet({ timeStart, timeEnd }: V1OrdersHistoryTimeStartTimeEndGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<OrderHistory>>>
-    v1OrdersHistoryTimeStartTimeEndGet({ timeStart, timeEnd }: V1OrdersHistoryTimeStartTimeEndGetRequest, opts?: OperationOpts): Observable<Array<OrderHistory> | AjaxResponse<Array<OrderHistory>>> {
-        throwIfNullOrUndefined(timeStart, 'timeStart', 'v1OrdersHistoryTimeStartTimeEndGet');
-        throwIfNullOrUndefined(timeEnd, 'timeEnd', 'v1OrdersHistoryTimeStartTimeEndGet');
+    v1OrdersHistoryGet({ timeStart, timeEnd }: V1OrdersHistoryGetRequest): Observable<Array<OrderHistory>>
+    v1OrdersHistoryGet({ timeStart, timeEnd }: V1OrdersHistoryGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<OrderHistory>>>
+    v1OrdersHistoryGet({ timeStart, timeEnd }: V1OrdersHistoryGetRequest, opts?: OperationOpts): Observable<Array<OrderHistory> | AjaxResponse<Array<OrderHistory>>> {
+        throwIfNullOrUndefined(timeStart, 'timeStart', 'v1OrdersHistoryGet');
+        throwIfNullOrUndefined(timeEnd, 'timeEnd', 'v1OrdersHistoryGet');
+
+        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
+            'time_start': timeStart,
+            'time_end': timeEnd,
+        };
 
         return this.request<Array<OrderHistory>>({
-            url: '/v1/orders/history/{time_start}/{time_end}'.replace('{time_start}', encodeURI(timeStart)).replace('{time_end}', encodeURI(timeEnd)),
+            url: '/v1/orders/history',
             method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 

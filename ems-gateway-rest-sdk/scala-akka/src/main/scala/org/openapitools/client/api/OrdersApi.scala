@@ -92,10 +92,10 @@ class OrdersApi(baseUrl: String) {
    * @param timeStart Start date
    * @param timeEnd End date
    */
-  def v1OrdersHistoryTimeStartTimeEndGet(timeStart: String, timeEnd: String): ApiRequest[Seq[OrderHistory]] =
-    ApiRequest[Seq[OrderHistory]](ApiMethods.GET, baseUrl, "/v1/orders/history/{time_start}/{time_end}", "application/json")
-      .withPathParam("time_start", timeStart)
-      .withPathParam("time_end", timeEnd)
+  def v1OrdersHistoryGet(timeStart: String, timeEnd: String): ApiRequest[Seq[OrderHistory]] =
+    ApiRequest[Seq[OrderHistory]](ApiMethods.GET, baseUrl, "/v1/orders/history", "application/json")
+      .withQueryParam("time_start", timeStart)
+      .withQueryParam("time_end", timeEnd)
       .withSuccessResponse[Seq[OrderHistory]](200)
       .withErrorResponse[MessageError](400)
       

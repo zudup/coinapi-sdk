@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
  * The order execution report message.
  */
 @ApiModel(description = "The order execution report message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T04:34:17.634419Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T08:55:30.679306Z[Etc/UTC]")
 public class OrderExecutionReportAllOf {
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "client_order_id_format_exchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)
@@ -91,7 +91,7 @@ public class OrderExecutionReportAllOf {
   @SerializedName(SERIALIZED_NAME_FILLS)
   private List<Fills> fills = null;
 
-  public OrderExecutionReportAllOf() { 
+  public OrderExecutionReportAllOf() {
   }
 
   public OrderExecutionReportAllOf clientOrderIdFormatExchange(String clientOrderIdFormatExchange) {
@@ -425,30 +425,32 @@ public class OrderExecutionReportAllOf {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("client_order_id_format_exchange") != null && !jsonObj.get("client_order_id_format_exchange").isJsonPrimitive()) {
+      if ((jsonObj.get("client_order_id_format_exchange") != null && !jsonObj.get("client_order_id_format_exchange").isJsonNull()) && !jsonObj.get("client_order_id_format_exchange").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `client_order_id_format_exchange` to be a primitive type in the JSON string but got `%s`", jsonObj.get("client_order_id_format_exchange").toString()));
       }
-      if (jsonObj.get("exchange_order_id") != null && !jsonObj.get("exchange_order_id").isJsonPrimitive()) {
+      if ((jsonObj.get("exchange_order_id") != null && !jsonObj.get("exchange_order_id").isJsonNull()) && !jsonObj.get("exchange_order_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_order_id").toString()));
       }
       // ensure the json data is an array
-      if (jsonObj.get("status_history") != null && !jsonObj.get("status_history").isJsonArray()) {
+      if ((jsonObj.get("status_history") != null && !jsonObj.get("status_history").isJsonNull()) && !jsonObj.get("status_history").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `status_history` to be an array in the JSON string but got `%s`", jsonObj.get("status_history").toString()));
       }
-      if (jsonObj.get("error_message") != null && !jsonObj.get("error_message").isJsonPrimitive()) {
+      if ((jsonObj.get("error_message") != null && !jsonObj.get("error_message").isJsonNull()) && !jsonObj.get("error_message").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `error_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_message").toString()));
       }
-      JsonArray jsonArrayfills = jsonObj.getAsJsonArray("fills");
-      if (jsonArrayfills != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("fills").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `fills` to be an array in the JSON string but got `%s`", jsonObj.get("fills").toString()));
-        }
+      if (jsonObj.get("fills") != null && !jsonObj.get("fills").isJsonNull()) {
+        JsonArray jsonArrayfills = jsonObj.getAsJsonArray("fills");
+        if (jsonArrayfills != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("fills").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `fills` to be an array in the JSON string but got `%s`", jsonObj.get("fills").toString()));
+          }
 
-        // validate the optional field `fills` (array)
-        for (int i = 0; i < jsonArrayfills.size(); i++) {
-          Fills.validateJsonObject(jsonArrayfills.get(i).getAsJsonObject());
-        };
+          // validate the optional field `fills` (array)
+          for (int i = 0; i < jsonArrayfills.size(); i++) {
+            Fills.validateJsonObject(jsonArrayfills.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

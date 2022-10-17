@@ -146,24 +146,26 @@ instance Produces V1OrdersGet MimeJSON
 instance Produces V1OrdersGet MimeApplictionJson
 
 
--- *** v1OrdersHistoryTimeStartTimeEndGet
+-- *** v1OrdersHistoryGet
 
--- | @GET \/v1\/orders\/history\/{time_start}\/{time_end}@
+-- | @GET \/v1\/orders\/history@
 -- 
 -- History of order changes
 -- 
 -- Based on the date range, all changes registered in the orderbook.
 -- 
-v1OrdersHistoryTimeStartTimeEndGet
+v1OrdersHistoryGet
   :: TimeStart -- ^ "timeStart" -  Start date
   -> TimeEnd -- ^ "timeEnd" -  End date
-  -> EMS-RESTRequest V1OrdersHistoryTimeStartTimeEndGet MimeNoContent [OrderHistory] MimeJSON
-v1OrdersHistoryTimeStartTimeEndGet (TimeStart timeStart) (TimeEnd timeEnd) =
-  _mkRequest "GET" ["/v1/orders/history/",toPath timeStart,"/",toPath timeEnd]
+  -> EMS-RESTRequest V1OrdersHistoryGet MimeNoContent [OrderHistory] MimeJSON
+v1OrdersHistoryGet (TimeStart timeStart) (TimeEnd timeEnd) =
+  _mkRequest "GET" ["/v1/orders/history"]
+    `addQuery` toQuery ("time_start", Just timeStart)
+    `addQuery` toQuery ("time_end", Just timeEnd)
 
-data V1OrdersHistoryTimeStartTimeEndGet  
+data V1OrdersHistoryGet  
 -- | @application/json@
-instance Produces V1OrdersHistoryTimeStartTimeEndGet MimeJSON
+instance Produces V1OrdersHistoryGet MimeJSON
 
 
 -- *** v1OrdersPost

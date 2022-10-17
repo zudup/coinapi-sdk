@@ -7,7 +7,7 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 | [**v1OrdersCancelAllPost**](OrdersApi.md#v1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request |
 | [**v1OrdersCancelPost**](OrdersApi.md#v1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request |
 | [**v1OrdersGet**](OrdersApi.md#v1OrdersGet) | **GET** /v1/orders | Get open orders |
-| [**v1OrdersHistoryTimeStartTimeEndGet**](OrdersApi.md#v1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes |
+| [**v1OrdersHistoryGet**](OrdersApi.md#v1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes |
 | [**v1OrdersPost**](OrdersApi.md#v1OrdersPost) | **POST** /v1/orders | Send new order |
 | [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
@@ -203,9 +203,9 @@ No authorization required
 | **200** | Collection of order execution reports. |  -  |
 | **490** | Filtered exchange is unreachable. |  -  |
 
-<a name="v1OrdersHistoryTimeStartTimeEndGet"></a>
-# **v1OrdersHistoryTimeStartTimeEndGet**
-> List&lt;OrderHistory&gt; v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd)
+<a name="v1OrdersHistoryGet"></a>
+# **v1OrdersHistoryGet**
+> List&lt;OrderHistory&gt; v1OrdersHistoryGet(timeStart, timeEnd)
 
 History of order changes
 
@@ -229,10 +229,10 @@ public class Example {
     String timeStart = "2022-05-01T00:00:00"; // String | Start date
     String timeEnd = "2022-05-01T12:00:00"; // String | End date
     try {
-      List<OrderHistory> result = apiInstance.v1OrdersHistoryTimeStartTimeEndGet(timeStart, timeEnd);
+      List<OrderHistory> result = apiInstance.v1OrdersHistoryGet(timeStart, timeEnd);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling OrdersApi#v1OrdersHistoryTimeStartTimeEndGet");
+      System.err.println("Exception when calling OrdersApi#v1OrdersHistoryGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

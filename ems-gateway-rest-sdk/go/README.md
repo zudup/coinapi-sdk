@@ -126,7 +126,7 @@ Each operation can use different server URL defined using `OperationServers` map
 An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
 Similar rules for overriding default operation server index and variables applies by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
 
-```
+```golang
 ctx := context.WithValue(context.Background(), openapi.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
@@ -147,7 +147,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**V1OrdersCancelAllPost**](docs/OrdersApi.md#v1orderscancelallpost) | **Post** /v1/orders/cancel/all | Cancel all orders request
 *OrdersApi* | [**V1OrdersCancelPost**](docs/OrdersApi.md#v1orderscancelpost) | **Post** /v1/orders/cancel | Cancel order request
 *OrdersApi* | [**V1OrdersGet**](docs/OrdersApi.md#v1ordersget) | **Get** /v1/orders | Get open orders
-*OrdersApi* | [**V1OrdersHistoryTimeStartTimeEndGet**](docs/OrdersApi.md#v1ordershistorytimestarttimeendget) | **Get** /v1/orders/history/{time_start}/{time_end} | History of order changes
+*OrdersApi* | [**V1OrdersHistoryGet**](docs/OrdersApi.md#v1ordershistoryget) | **Get** /v1/orders/history | History of order changes
 *OrdersApi* | [**V1OrdersPost**](docs/OrdersApi.md#v1orderspost) | **Post** /v1/orders | Send new order
 *OrdersApi* | [**V1OrdersStatusClientOrderIdGet**](docs/OrdersApi.md#v1ordersstatusclientorderidget) | **Get** /v1/orders/status/{client_order_id} | Get order execution report
 *PositionsApi* | [**V1PositionsGet**](docs/PositionsApi.md#v1positionsget) | **Get** /v1/positions | Get open positions

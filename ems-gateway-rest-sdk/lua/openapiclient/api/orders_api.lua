@@ -204,13 +204,13 @@ function orders_api:v1_orders_get(exchange_id)
 	end
 end
 
-function orders_api:v1_orders_history_time_start_time_end_get(time_start, time_end)
+function orders_api:v1_orders_history_get(time_start, time_end)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/orders/history/%s/%s",
-			self.basePath, time_start, time_end);
+		path = string.format("%s/v1/orders/history?time_start=%s&time_end=%s",
+			self.basePath, http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(time_end));
 	})
 
 	-- set HTTP verb

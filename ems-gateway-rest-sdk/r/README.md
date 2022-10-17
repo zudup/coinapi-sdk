@@ -93,7 +93,7 @@ git clone https://github.com/GIT_USER_ID/GIT_REPO_ID
 cd GIT_REPO_ID
 R CMD build .
 R CMD check openapi_1.0.0.tar.gz --no-manual
-R CMD INSTALL openapi_1.0.0.tar.gz
+R CMD INSTALL --preclean openapi_1.0.0.tar.gz
 ```
 
 ### Install the package
@@ -107,6 +107,11 @@ To install directly from Github, use `devtools`:
 install.packages("devtools")
 library(devtools)
 install_github("GIT_USER_ID/GIT_REPO_ID")
+```
+
+To install the package from a local file:
+```R
+install.packages("openapi_1.0.0.tar.gz", repos = NULL, type = "source")
 ```
 
 ### Usage
@@ -125,7 +130,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**V1OrdersCancelAllPost**](docs/OrdersApi.md#V1OrdersCancelAllPost) | **POST** /v1/orders/cancel/all | Cancel all orders request
 *OrdersApi* | [**V1OrdersCancelPost**](docs/OrdersApi.md#V1OrdersCancelPost) | **POST** /v1/orders/cancel | Cancel order request
 *OrdersApi* | [**V1OrdersGet**](docs/OrdersApi.md#V1OrdersGet) | **GET** /v1/orders | Get open orders
-*OrdersApi* | [**V1OrdersHistoryTimeStartTimeEndGet**](docs/OrdersApi.md#V1OrdersHistoryTimeStartTimeEndGet) | **GET** /v1/orders/history/{time_start}/{time_end} | History of order changes
+*OrdersApi* | [**V1OrdersHistoryGet**](docs/OrdersApi.md#V1OrdersHistoryGet) | **GET** /v1/orders/history | History of order changes
 *OrdersApi* | [**V1OrdersPost**](docs/OrdersApi.md#V1OrdersPost) | **POST** /v1/orders | Send new order
 *OrdersApi* | [**V1OrdersStatusClientOrderIdGet**](docs/OrdersApi.md#V1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 *PositionsApi* | [**V1PositionsGet**](docs/PositionsApi.md#V1PositionsGet) | **GET** /v1/positions | Get open positions
@@ -159,8 +164,6 @@ Class | Method | HTTP request | Description
  All endpoints do not require authorization.
 
 
-
 ## Author
 
 support@coinapi.io
-
