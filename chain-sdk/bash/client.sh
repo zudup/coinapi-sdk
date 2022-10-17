@@ -12,7 +12,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #
-# This is a Bash client for EMS - REST API.
+# This is a Bash client for OnChain API.
 #
 # LICENSE:
 # https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
@@ -21,7 +21,7 @@
 # support@coinapi.io
 #
 # MORE INFORMATION:
-# https://docs.coinapi.io/
+# 
 #
 
 # For improved pattern matching in case statements
@@ -95,15 +95,135 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 0 - optional
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
-operation_parameters_minimum_occurrences["v1BalancesGet:::exchange_id"]=0
-operation_parameters_minimum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=1
-operation_parameters_minimum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=1
-operation_parameters_minimum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_start"]=1
-operation_parameters_minimum_occurrences["v1OrdersHistoryGet:::time_end"]=1
-operation_parameters_minimum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=1
-operation_parameters_minimum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=1
-operation_parameters_minimum_occurrences["v1PositionsGet:::exchange_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2PoolsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2SwapsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2TokensCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3BundleCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3BurnsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3FactoryCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3MintsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3MintsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TicksCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TicksCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensCurrentGet:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=1
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -112,29 +232,269 @@ operation_parameters_minimum_occurrences["v1PositionsGet:::exchange_id"]=0
 # N - N values
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
-operation_parameters_maximum_occurrences["v1BalancesGet:::exchange_id"]=0
-operation_parameters_maximum_occurrences["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=0
-operation_parameters_maximum_occurrences["v1OrdersCancelPost:::OrderCancelSingleRequest"]=0
-operation_parameters_maximum_occurrences["v1OrdersGet:::exchange_id"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_start"]=0
-operation_parameters_maximum_occurrences["v1OrdersHistoryGet:::time_end"]=0
-operation_parameters_maximum_occurrences["v1OrdersPost:::OrderNewSingleRequest"]=0
-operation_parameters_maximum_occurrences["v1OrdersStatusClientOrderIdGet:::client_order_id"]=0
-operation_parameters_maximum_occurrences["v1PositionsGet:::exchange_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurvePoolsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveSwapsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsCowTradesHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTradesHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2PoolsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2SwapsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2TokensCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3BundleCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3BurnsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3FactoryCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3MintsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3MintsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TicksCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TicksCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensCurrentGet:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
-operation_parameters_collection_type["v1BalancesGet:::exchange_id"]=""
-operation_parameters_collection_type["v1OrdersCancelAllPost:::OrderCancelAllRequest"]=""
-operation_parameters_collection_type["v1OrdersCancelPost:::OrderCancelSingleRequest"]=""
-operation_parameters_collection_type["v1OrdersGet:::exchange_id"]=""
-operation_parameters_collection_type["v1OrdersHistoryGet:::time_start"]=""
-operation_parameters_collection_type["v1OrdersHistoryGet:::time_end"]=""
-operation_parameters_collection_type["v1OrdersPost:::OrderNewSingleRequest"]=""
-operation_parameters_collection_type["v1OrdersStatusClientOrderIdGet:::client_order_id"]=""
-operation_parameters_collection_type["v1PositionsGet:::exchange_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurvePoolsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveSwapsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTradesHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTradesHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTradesHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTradesHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsCowTradesHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTradesHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTradesHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTradesHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTradesHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTradesHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2PoolsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2SwapsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2TokensCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3BundleCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3BurnsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3FactoryCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3MintsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3MintsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TicksCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TicksCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensCurrentGet:::filter_token_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=""
 
 
 ##
@@ -488,7 +848,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}EMS - REST API command line client (API version v1)${OFF}
+${BOLD}${WHITE}OnChain API command line client (API version v1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -517,26 +877,76 @@ ${BOLD}${WHITE}Usage${OFF}
 EOF
     echo -e "${BOLD}${WHITE}Operations (grouped by tags)${OFF}"
     echo ""
-    echo -e "${BOLD}${WHITE}[balances]${OFF}"
+    echo -e "${BOLD}${WHITE}[pools]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}v1BalancesGet${OFF};Get balances
+  ${CYAN}chainsChainIdDappsCurvePoolsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsSushiswapPoolsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv2PoolsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv3PoolsHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[orders]${OFF}"
+    echo -e "${BOLD}${WHITE}[sushiswap]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}v1OrdersCancelAllPost${OFF};Cancel all orders request
-  ${CYAN}v1OrdersCancelPost${OFF};Cancel order request
-  ${CYAN}v1OrdersGet${OFF};Get open orders
-  ${CYAN}v1OrdersHistoryGet${OFF};History of order changes
-  ${CYAN}v1OrdersPost${OFF};Send new order
-  ${CYAN}v1OrdersStatusClientOrderIdGet${OFF};Get order execution report
+  ${CYAN}chainsChainIdDappsSushiswapPoolsCurrentGet${OFF};GetPools
+  ${CYAN}chainsChainIdDappsSushiswapSwapsCurrentGet${OFF};GetSwaps
+  ${CYAN}chainsChainIdDappsSushiswapTokensCurrentGet${OFF};GetTokens
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[positions]${OFF}"
+    echo -e "${BOLD}${WHITE}[swaps]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}v1PositionsGet${OFF};Get open positions
+  ${CYAN}chainsChainIdDappsCurveSwapsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsSushiswapSwapsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv2SwapsHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv3SwapsHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[tokens]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsCowTokensHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsCurveTokensHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsDexTokensHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsSushiswapTokensHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv2TokensHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsUniswapv3TokensHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[trades]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsCowTradesHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsDexTradesHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[uniswapV2]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsUniswapv2PoolsCurrentGet${OFF};GetPools
+  ${CYAN}chainsChainIdDappsUniswapv2SwapsCurrentGet${OFF};GetSwaps
+  ${CYAN}chainsChainIdDappsUniswapv2TokensCurrentGet${OFF};GetTokens
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[uniswapV3]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsUniswapv3BundleCurrentGet${OFF};GetBundles
+  ${CYAN}chainsChainIdDappsUniswapv3BurnsCurrentGet${OFF};GetBurns
+  ${CYAN}chainsChainIdDappsUniswapv3FactoryCurrentGet${OFF};GetFactory
+  ${CYAN}chainsChainIdDappsUniswapv3MintsCurrentGet${OFF};GetMints
+  ${CYAN}chainsChainIdDappsUniswapv3PoolsCurrentGet${OFF};GetPools
+  ${CYAN}chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet${OFF};GetPoolsDayData
+  ${CYAN}chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet${OFF};GetPoolsHourData
+  ${CYAN}chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet${OFF};GetPositionSnapshot
+  ${CYAN}chainsChainIdDappsUniswapv3PositionsCurrentGet${OFF};GetPositions
+  ${CYAN}chainsChainIdDappsUniswapv3SwapsCurrentGet${OFF};GetSwaps
+  ${CYAN}chainsChainIdDappsUniswapv3TicksCurrentGet${OFF};GetTicks
+  ${CYAN}chainsChainIdDappsUniswapv3TicksDayDataCurrentGet${OFF};GetTicksDayData
+  ${CYAN}chainsChainIdDappsUniswapv3TokensCurrentGet${OFF};GetTokens
+  ${CYAN}chainsChainIdDappsUniswapv3TokensDayDataCurrentGet${OFF};GetTokensDayData
+  ${CYAN}chainsChainIdDappsUniswapv3TokensHourDataCurrentGet${OFF};GetTokensHourData
+  ${CYAN}chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet${OFF};GetUniswapDayData
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -545,7 +955,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "  -V,--version\\t\\t\\t\\tPrint API version"
     echo -e "  --about\\t\\t\\t\\tPrint the information about service"
     echo -e "  --host ${CYAN}<url>${OFF}\\t\\t\\t\\tSpecify the host URL "
-echo -e "              \\t\\t\\t\\t(e.g. 'https://ems-gateway-aws-eu-central-1-dev.coinapi.io')"
+echo -e "              \\t\\t\\t\\t(e.g. 'https://onchain.coinapi.io')"
 
     echo -e "  --force\\t\\t\\t\\tForce command invocation in spite of missing"
     echo -e "         \\t\\t\\t\\trequired parameters or wrong content type"
@@ -566,77 +976,16 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://ems-gateway-aws-eu-central-1-d
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}EMS - REST API command line client (API version v1)${OFF}"
+    echo -e "${BOLD}${WHITE}OnChain API command line client (API version v1)${OFF}"
     echo ""
-    echo -e "License: 28961"
+    echo -e "License: MIT License"
     echo -e "Contact: support@coinapi.io"
     echo ""
 read -r -d '' appdescription <<EOF
 
-This section will provide necessary information about the 'CoinAPI EMS REST API' protocol.
-<br/>
-This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>      
+This section will provide necessary information about the 'OnChain API' protocol. 
 <br/><br/>
-Implemented Standards:
-
-  * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)
-  * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)
-  * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)
-   
-### Endpoints
-<table>
-  <thead>
-    <tr>
-      <th>Deployment method</th>
-      <th>Environment</th>
-      <th>Url</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Production</td>
-      <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>
-    </tr>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Sandbox</td>
-      <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Production</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Sandbox</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-  </tbody>
-</table>
-
-### Authentication
-If the software is deployed as 'Self-Hosted' then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls. 
-<br/><br/>
-If the software is deployed in our 'Managed Cloud', there are 2 methods for authenticating with us, you only need to use one:
-
- 1. Custom authorization header named 'X-CoinAPI-Key' with the API Key
- 2. Query string parameter named 'apikey' with the API Key
- 3. <a href=\"#certificate\">TLS Client Certificate</a> from the 'Managed Cloud REST API' (/v1/certificate/pem endpoint) while establishing a TLS session with us.
-
-#### Custom authorization header
-You can authorize by providing additional custom header named 'X-CoinAPI-Key' and API key as its value.
-Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY', then the authorization header you should send to us will look like:
-<br/><br/>
-'X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY'
-<aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside>
-#### Query string authorization parameter
-You can authorize by providing an additional parameter named 'apikey' with a value equal to your API key in the query string of your HTTP request.
-Assuming that your API key is '73034021-THIS-IS-SAMPLE-KEY' and that you want to request all balances, then your query string should look like this: 
-<br/><br/>
-'GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY'
-<aside class=\"notice\">Query string method may be more practical for development activities.</aside>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 EOF
 echo "$appdescription" | paste -sd' ' | fold -sw 80
 }
@@ -649,204 +998,819 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}EMS - REST API command line client (API version v1)${OFF}"
+    echo -e "${BOLD}OnChain API command line client (API version v1)${OFF}"
     echo ""
 }
 
 ##############################################################################
 #
-# Print help for v1BalancesGet operation
+# Print help for chainsChainIdDappsCurvePoolsHistoricalGet operation
 #
 ##############################################################################
-print_v1BalancesGet_help() {
+print_chainsChainIdDappsCurvePoolsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}v1BalancesGet - Get balances${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Get current currency balance from all or single exchange." | paste -sd' ' | fold -sw 80
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsCurvePoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}exchange_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter the balances to the specific exchange.${YELLOW} Specify as: exchange_id=value${OFF}" \
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Collection of balances.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for v1OrdersCancelAllPost operation
+# Print help for chainsChainIdDappsSushiswapPoolsHistoricalGet operation
 #
 ##############################################################################
-print_v1OrdersCancelAllPost_help() {
+print_chainsChainIdDappsSushiswapPoolsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersCancelAllPost - Cancel all orders request${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "This request cancels all open orders on single specified exchange." | paste -sd' ' | fold -sw 80
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapPoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - OrderCancelAllRequest object." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Result${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Input model validation errors.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for v1OrdersCancelPost operation
-#
-##############################################################################
-print_v1OrdersCancelPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersCancelPost - Cancel order request${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Request cancel for an existing order. The order can be canceled using the 'client_order_id' or 'exchange_order_id'." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - OrderCancelSingleRequest object." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;The last execution report for the order for which cancelation was requested.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Input model validation errors.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for v1OrdersGet operation
-#
-##############################################################################
-print_v1OrdersGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersGet - Get open orders${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Get last execution reports for open orders across all or single exchange." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}exchange_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter the open orders to the specific exchange.${YELLOW} Specify as: exchange_id=value${OFF}" \
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Collection of order execution reports.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Filtered exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for v1OrdersHistoryGet operation
+# Print help for chainsChainIdDappsUniswapv2PoolsHistoricalGet operation
 #
 ##############################################################################
-print_v1OrdersHistoryGet_help() {
+print_chainsChainIdDappsUniswapv2PoolsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersHistoryGet - History of order changes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Based on the date range, all changes registered in the orderbook." | paste -sd' ' | fold -sw 80
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2PoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}time_start${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Start date${YELLOW} Specify as: time_start=value${OFF}" \
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}time_end${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - End date${YELLOW} Specify as: time_end=value${OFF}" \
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;The last execution report of the requested order.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Orders log is not configured.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for v1OrdersPost operation
-#
-##############################################################################
-print_v1OrdersPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersPost - Send new order${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "This request creating new order for the specific exchange." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - OrderNewSingleRequest object." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Input model validation errors.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=504
-    echo -e "${result_color_table[${code:0:1}]}  504;Exchange didn't responded in the defined timeout.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for v1OrdersStatusClientOrderIdGet operation
-#
-##############################################################################
-print_v1OrdersStatusClientOrderIdGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}v1OrdersStatusClientOrderIdGet - Get order execution report${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Get the last order execution report for the specified order. The requested order does not need to be active or opened." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}client_order_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The unique identifier of the order assigned by the client. ${YELLOW}Specify as: client_order_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;The last execution report of the requested order.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The requested order was not found.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for v1PositionsGet operation
-#
-##############################################################################
-print_v1PositionsGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}v1PositionsGet - Get open positions${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Get current open positions across all or single exchange." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}exchange_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter the balances to the specific exchange.${YELLOW} Specify as: exchange_id=value${OFF}" \
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Collection of positons.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=490
-    echo -e "${result_color_table[${code:0:1}]}  490;Exchange is unreachable.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PoolsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PoolsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsSushiswapPoolsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsSushiswapPoolsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapPoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsSushiswapSwapsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsSushiswapSwapsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapSwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsSushiswapTokensCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsSushiswapTokensCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapTokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsCurveSwapsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsCurveSwapsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsCurveSwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsSushiswapSwapsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsSushiswapSwapsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapSwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2SwapsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2SwapsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2SwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3SwapsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3SwapsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3SwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsCowTokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsCowTokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsCowTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsCurveTokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsCurveTokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsCurveTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexTokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexTokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsSushiswapTokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsSushiswapTokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsSushiswapTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2TokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2TokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2TokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsCowTradesHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsCowTradesHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsCowTradesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexTradesHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexTradesHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexTradesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2PoolsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2PoolsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2PoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2SwapsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2SwapsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2SwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2TokensCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2TokensCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2TokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3BundleCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3BundleCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3BundleCurrentGet - GetBundles${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3BurnsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3BurnsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3BurnsCurrentGet - GetBurns${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3FactoryCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3FactoryCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3FactoryCurrentGet - GetFactory${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3MintsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3MintsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3MintsCurrentGet - GetMints${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PoolsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PoolsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet - GetPoolsDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet - GetPoolsHourData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet - GetPositionSnapshot${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3PositionsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3PositionsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3PositionsCurrentGet - GetPositions${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3SwapsCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3SwapsCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3SwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TicksCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TicksCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TicksCurrentGet - GetTicks${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TicksDayDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TicksDayDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TicksDayDataCurrentGet - GetTicksDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TokensCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TokensCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TokensDayDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TokensDayDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TokensDayDataCurrentGet - GetTokensDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3TokensHourDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3TokensHourDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3TokensHourDataCurrentGet - GetTokensHourData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet - GetUniswapDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Chain id ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 
 
 ##############################################################################
 #
-# Call v1BalancesGet operation
+# Call chainsChainIdDappsCurvePoolsHistoricalGet operation
 #
 ##############################################################################
-call_v1BalancesGet() {
+call_chainsChainIdDappsCurvePoolsHistoricalGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(chain_id)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(exchange_id)
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/v1/balances" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/curve/pools/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -870,175 +1834,19 @@ call_v1BalancesGet() {
 
 ##############################################################################
 #
-# Call v1OrdersCancelAllPost operation
+# Call chainsChainIdDappsSushiswapPoolsHistoricalGet operation
 #
 ##############################################################################
-call_v1OrdersCancelAllPost() {
+call_chainsChainIdDappsSushiswapPoolsHistoricalGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(chain_id)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=()
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/v1/orders/cancel/all" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call v1OrdersCancelPost operation
-#
-##############################################################################
-call_v1OrdersCancelPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/v1/orders/cancel" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call v1OrdersGet operation
-#
-##############################################################################
-call_v1OrdersGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(exchange_id)
-    local path
-
-    if ! path=$(build_request_path "/v1/orders" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/pools/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1062,19 +1870,19 @@ call_v1OrdersGet() {
 
 ##############################################################################
 #
-# Call v1OrdersHistoryGet operation
+# Call chainsChainIdDappsUniswapv2PoolsHistoricalGet operation
 #
 ##############################################################################
-call_v1OrdersHistoryGet() {
+call_chainsChainIdDappsUniswapv2PoolsHistoricalGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(chain_id)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(time_start time_end)
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/v1/orders/history" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/pools/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1098,97 +1906,19 @@ call_v1OrdersHistoryGet() {
 
 ##############################################################################
 #
-# Call v1OrdersPost operation
+# Call chainsChainIdDappsUniswapv3PoolsHistoricalGet operation
 #
 ##############################################################################
-call_v1OrdersPost() {
+call_chainsChainIdDappsUniswapv3PoolsHistoricalGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(chain_id)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=()
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/v1/orders" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call v1OrdersStatusClientOrderIdGet operation
-#
-##############################################################################
-call_v1OrdersStatusClientOrderIdGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(client_order_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/v1/orders/status/{client_order_id}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/pools/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1212,19 +1942,1207 @@ call_v1OrdersStatusClientOrderIdGet() {
 
 ##############################################################################
 #
-# Call v1PositionsGet operation
+# Call chainsChainIdDappsSushiswapPoolsCurrentGet operation
 #
 ##############################################################################
-call_v1PositionsGet() {
+call_chainsChainIdDappsSushiswapPoolsCurrentGet() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(chain_id)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(exchange_id)
+    local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/v1/positions" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/pools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsSushiswapSwapsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsSushiswapSwapsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsSushiswapTokensCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsSushiswapTokensCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/tokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsCurveSwapsHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsCurveSwapsHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/curve/swaps/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsSushiswapSwapsHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsSushiswapSwapsHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/swaps/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2SwapsHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2SwapsHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/swaps/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3SwapsHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3SwapsHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/swaps/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsCowTokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsCowTokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/cow/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsCurveTokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsCurveTokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/curve/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexTokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexTokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsSushiswapTokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsSushiswapTokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2TokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2TokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/tokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsCowTradesHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsCowTradesHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/cow/trades/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexTradesHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexTradesHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/trades/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2PoolsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2PoolsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/pools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2SwapsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2SwapsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2TokensCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2TokensCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/tokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3BundleCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3BundleCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/bundle/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3BurnsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3BurnsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/burns/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3FactoryCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3FactoryCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/factory/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3MintsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3MintsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/mints/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3PoolsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3PoolsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/pools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3PositionsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3PositionsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/positions/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3SwapsCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3SwapsCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TicksCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TicksCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/ticks/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TicksDayDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TicksDayDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TokensCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TokensCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_token_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/tokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TokensDayDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TokensDayDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_token_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3TokensHourDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3TokensHourDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_token_id)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -1343,29 +3261,119 @@ case $key in
         OFF=""
         result_color_table=( "" "" "" "" "" "" "" )
     ;;
-    v1BalancesGet)
-    operation="v1BalancesGet"
+    chainsChainIdDappsCurvePoolsHistoricalGet)
+    operation="chainsChainIdDappsCurvePoolsHistoricalGet"
     ;;
-    v1OrdersCancelAllPost)
-    operation="v1OrdersCancelAllPost"
+    chainsChainIdDappsSushiswapPoolsHistoricalGet)
+    operation="chainsChainIdDappsSushiswapPoolsHistoricalGet"
     ;;
-    v1OrdersCancelPost)
-    operation="v1OrdersCancelPost"
+    chainsChainIdDappsUniswapv2PoolsHistoricalGet)
+    operation="chainsChainIdDappsUniswapv2PoolsHistoricalGet"
     ;;
-    v1OrdersGet)
-    operation="v1OrdersGet"
+    chainsChainIdDappsUniswapv3PoolsHistoricalGet)
+    operation="chainsChainIdDappsUniswapv3PoolsHistoricalGet"
     ;;
-    v1OrdersHistoryGet)
-    operation="v1OrdersHistoryGet"
+    chainsChainIdDappsSushiswapPoolsCurrentGet)
+    operation="chainsChainIdDappsSushiswapPoolsCurrentGet"
     ;;
-    v1OrdersPost)
-    operation="v1OrdersPost"
+    chainsChainIdDappsSushiswapSwapsCurrentGet)
+    operation="chainsChainIdDappsSushiswapSwapsCurrentGet"
     ;;
-    v1OrdersStatusClientOrderIdGet)
-    operation="v1OrdersStatusClientOrderIdGet"
+    chainsChainIdDappsSushiswapTokensCurrentGet)
+    operation="chainsChainIdDappsSushiswapTokensCurrentGet"
     ;;
-    v1PositionsGet)
-    operation="v1PositionsGet"
+    chainsChainIdDappsCurveSwapsHistoricalGet)
+    operation="chainsChainIdDappsCurveSwapsHistoricalGet"
+    ;;
+    chainsChainIdDappsSushiswapSwapsHistoricalGet)
+    operation="chainsChainIdDappsSushiswapSwapsHistoricalGet"
+    ;;
+    chainsChainIdDappsUniswapv2SwapsHistoricalGet)
+    operation="chainsChainIdDappsUniswapv2SwapsHistoricalGet"
+    ;;
+    chainsChainIdDappsUniswapv3SwapsHistoricalGet)
+    operation="chainsChainIdDappsUniswapv3SwapsHistoricalGet"
+    ;;
+    chainsChainIdDappsCowTokensHistoricalGet)
+    operation="chainsChainIdDappsCowTokensHistoricalGet"
+    ;;
+    chainsChainIdDappsCurveTokensHistoricalGet)
+    operation="chainsChainIdDappsCurveTokensHistoricalGet"
+    ;;
+    chainsChainIdDappsDexTokensHistoricalGet)
+    operation="chainsChainIdDappsDexTokensHistoricalGet"
+    ;;
+    chainsChainIdDappsSushiswapTokensHistoricalGet)
+    operation="chainsChainIdDappsSushiswapTokensHistoricalGet"
+    ;;
+    chainsChainIdDappsUniswapv2TokensHistoricalGet)
+    operation="chainsChainIdDappsUniswapv2TokensHistoricalGet"
+    ;;
+    chainsChainIdDappsUniswapv3TokensHistoricalGet)
+    operation="chainsChainIdDappsUniswapv3TokensHistoricalGet"
+    ;;
+    chainsChainIdDappsCowTradesHistoricalGet)
+    operation="chainsChainIdDappsCowTradesHistoricalGet"
+    ;;
+    chainsChainIdDappsDexTradesHistoricalGet)
+    operation="chainsChainIdDappsDexTradesHistoricalGet"
+    ;;
+    chainsChainIdDappsUniswapv2PoolsCurrentGet)
+    operation="chainsChainIdDappsUniswapv2PoolsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv2SwapsCurrentGet)
+    operation="chainsChainIdDappsUniswapv2SwapsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv2TokensCurrentGet)
+    operation="chainsChainIdDappsUniswapv2TokensCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3BundleCurrentGet)
+    operation="chainsChainIdDappsUniswapv3BundleCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3BurnsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3BurnsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3FactoryCurrentGet)
+    operation="chainsChainIdDappsUniswapv3FactoryCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3MintsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3MintsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3PoolsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3PoolsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3PositionsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3PositionsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3SwapsCurrentGet)
+    operation="chainsChainIdDappsUniswapv3SwapsCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3TicksCurrentGet)
+    operation="chainsChainIdDappsUniswapv3TicksCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3TicksDayDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3TokensCurrentGet)
+    operation="chainsChainIdDappsUniswapv3TokensCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3TokensDayDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3TokensHourDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"
+    ;;
+    chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet)
+    operation="chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"
     ;;
     *==*)
     # Parse body arguments and convert them into top level
@@ -1444,29 +3452,119 @@ fi
 
 # Run cURL command based on the operation ID
 case $operation in
-    v1BalancesGet)
-    call_v1BalancesGet
+    chainsChainIdDappsCurvePoolsHistoricalGet)
+    call_chainsChainIdDappsCurvePoolsHistoricalGet
     ;;
-    v1OrdersCancelAllPost)
-    call_v1OrdersCancelAllPost
+    chainsChainIdDappsSushiswapPoolsHistoricalGet)
+    call_chainsChainIdDappsSushiswapPoolsHistoricalGet
     ;;
-    v1OrdersCancelPost)
-    call_v1OrdersCancelPost
+    chainsChainIdDappsUniswapv2PoolsHistoricalGet)
+    call_chainsChainIdDappsUniswapv2PoolsHistoricalGet
     ;;
-    v1OrdersGet)
-    call_v1OrdersGet
+    chainsChainIdDappsUniswapv3PoolsHistoricalGet)
+    call_chainsChainIdDappsUniswapv3PoolsHistoricalGet
     ;;
-    v1OrdersHistoryGet)
-    call_v1OrdersHistoryGet
+    chainsChainIdDappsSushiswapPoolsCurrentGet)
+    call_chainsChainIdDappsSushiswapPoolsCurrentGet
     ;;
-    v1OrdersPost)
-    call_v1OrdersPost
+    chainsChainIdDappsSushiswapSwapsCurrentGet)
+    call_chainsChainIdDappsSushiswapSwapsCurrentGet
     ;;
-    v1OrdersStatusClientOrderIdGet)
-    call_v1OrdersStatusClientOrderIdGet
+    chainsChainIdDappsSushiswapTokensCurrentGet)
+    call_chainsChainIdDappsSushiswapTokensCurrentGet
     ;;
-    v1PositionsGet)
-    call_v1PositionsGet
+    chainsChainIdDappsCurveSwapsHistoricalGet)
+    call_chainsChainIdDappsCurveSwapsHistoricalGet
+    ;;
+    chainsChainIdDappsSushiswapSwapsHistoricalGet)
+    call_chainsChainIdDappsSushiswapSwapsHistoricalGet
+    ;;
+    chainsChainIdDappsUniswapv2SwapsHistoricalGet)
+    call_chainsChainIdDappsUniswapv2SwapsHistoricalGet
+    ;;
+    chainsChainIdDappsUniswapv3SwapsHistoricalGet)
+    call_chainsChainIdDappsUniswapv3SwapsHistoricalGet
+    ;;
+    chainsChainIdDappsCowTokensHistoricalGet)
+    call_chainsChainIdDappsCowTokensHistoricalGet
+    ;;
+    chainsChainIdDappsCurveTokensHistoricalGet)
+    call_chainsChainIdDappsCurveTokensHistoricalGet
+    ;;
+    chainsChainIdDappsDexTokensHistoricalGet)
+    call_chainsChainIdDappsDexTokensHistoricalGet
+    ;;
+    chainsChainIdDappsSushiswapTokensHistoricalGet)
+    call_chainsChainIdDappsSushiswapTokensHistoricalGet
+    ;;
+    chainsChainIdDappsUniswapv2TokensHistoricalGet)
+    call_chainsChainIdDappsUniswapv2TokensHistoricalGet
+    ;;
+    chainsChainIdDappsUniswapv3TokensHistoricalGet)
+    call_chainsChainIdDappsUniswapv3TokensHistoricalGet
+    ;;
+    chainsChainIdDappsCowTradesHistoricalGet)
+    call_chainsChainIdDappsCowTradesHistoricalGet
+    ;;
+    chainsChainIdDappsDexTradesHistoricalGet)
+    call_chainsChainIdDappsDexTradesHistoricalGet
+    ;;
+    chainsChainIdDappsUniswapv2PoolsCurrentGet)
+    call_chainsChainIdDappsUniswapv2PoolsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv2SwapsCurrentGet)
+    call_chainsChainIdDappsUniswapv2SwapsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv2TokensCurrentGet)
+    call_chainsChainIdDappsUniswapv2TokensCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3BundleCurrentGet)
+    call_chainsChainIdDappsUniswapv3BundleCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3BurnsCurrentGet)
+    call_chainsChainIdDappsUniswapv3BurnsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3FactoryCurrentGet)
+    call_chainsChainIdDappsUniswapv3FactoryCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3MintsCurrentGet)
+    call_chainsChainIdDappsUniswapv3MintsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3PoolsCurrentGet)
+    call_chainsChainIdDappsUniswapv3PoolsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet)
+    call_chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3PositionsCurrentGet)
+    call_chainsChainIdDappsUniswapv3PositionsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3SwapsCurrentGet)
+    call_chainsChainIdDappsUniswapv3SwapsCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3TicksCurrentGet)
+    call_chainsChainIdDappsUniswapv3TicksCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3TicksDayDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3TokensCurrentGet)
+    call_chainsChainIdDappsUniswapv3TokensCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3TokensDayDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3TokensHourDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet)
+    call_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

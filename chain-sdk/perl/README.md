@@ -1,72 +1,12 @@
 # NAME
 
-WWW::OpenAPIClient::Role - a Moose role for the EMS - REST API
+WWW::OpenAPIClient::Role - a Moose role for the OnChain API
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol.
-<br/>
-This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>      
+
+This section will provide necessary information about the `OnChain API` protocol. 
 <br/><br/>
-Implemented Standards:
-
-  * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)
-  * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)
-  * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)
-   
-### Endpoints
-<table>
-  <thead>
-    <tr>
-      <th>Deployment method</th>
-      <th>Environment</th>
-      <th>Url</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Production</td>
-      <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>
-    </tr>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Sandbox</td>
-      <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Production</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Sandbox</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-  </tbody>
-</table>
-
-### Authentication
-If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls. 
-<br/><br/>
-If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:
-
- 1. Custom authorization header named `X-CoinAPI-Key` with the API Key
- 2. Query string parameter named `apikey` with the API Key
- 3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.
-
-#### Custom authorization header
-You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like:
-<br/><br/>
-`X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY`
-<aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside>
-#### Query string authorization parameter
-You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: 
-<br/><br/>
-`GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY`
-<aside class=\"notice\">Query string method may be more practical for development activities.</aside>
-
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.        
+                    
 
 # VERSION
 
@@ -295,33 +235,42 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 
 To load the API packages:
 ```perl
-use WWW::OpenAPIClient::BalancesApi;
-use WWW::OpenAPIClient::OrdersApi;
-use WWW::OpenAPIClient::PositionsApi;
+use WWW::OpenAPIClient::PoolsApi;
+use WWW::OpenAPIClient::SushiswapApi;
+use WWW::OpenAPIClient::SwapsApi;
+use WWW::OpenAPIClient::TokensApi;
+use WWW::OpenAPIClient::TradesApi;
+use WWW::OpenAPIClient::UniswapV2Api;
+use WWW::OpenAPIClient::UniswapV3Api;
 
 ```
 
 To load the models:
 ```perl
-use WWW::OpenAPIClient::Object::Balance;
-use WWW::OpenAPIClient::Object::BalanceDataInner;
-use WWW::OpenAPIClient::Object::Fills;
-use WWW::OpenAPIClient::Object::MessageError;
-use WWW::OpenAPIClient::Object::MessageReject;
-use WWW::OpenAPIClient::Object::OrdSide;
-use WWW::OpenAPIClient::Object::OrdStatus;
-use WWW::OpenAPIClient::Object::OrdType;
-use WWW::OpenAPIClient::Object::OrderCancelAllRequest;
-use WWW::OpenAPIClient::Object::OrderCancelSingleRequest;
-use WWW::OpenAPIClient::Object::OrderExecutionReport;
-use WWW::OpenAPIClient::Object::OrderExecutionReportAllOf;
-use WWW::OpenAPIClient::Object::OrderHistory;
-use WWW::OpenAPIClient::Object::OrderNewSingleRequest;
-use WWW::OpenAPIClient::Object::Position;
-use WWW::OpenAPIClient::Object::PositionDataInner;
-use WWW::OpenAPIClient::Object::RejectReason;
-use WWW::OpenAPIClient::Object::TimeInForce;
-use WWW::OpenAPIClient::Object::ValidationError;
+use WWW::OpenAPIClient::Object::BigInteger;
+use WWW::OpenAPIClient::Object::BundleV3DTO;
+use WWW::OpenAPIClient::Object::BurnV3DTO;
+use WWW::OpenAPIClient::Object::ETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::FactoryV3DTO;
+use WWW::OpenAPIClient::Object::MintV3DTO;
+use WWW::OpenAPIClient::Object::PairDTO;
+use WWW::OpenAPIClient::Object::PairV2DTO;
+use WWW::OpenAPIClient::Object::PoolDayDataV3DTO;
+use WWW::OpenAPIClient::Object::PoolHourDataV3DTO;
+use WWW::OpenAPIClient::Object::PoolV3DTO;
+use WWW::OpenAPIClient::Object::PositionSnapshotV3DTO;
+use WWW::OpenAPIClient::Object::PositionV3DTO;
+use WWW::OpenAPIClient::Object::SwapDTO;
+use WWW::OpenAPIClient::Object::SwapV2DTO;
+use WWW::OpenAPIClient::Object::SwapV3DTO;
+use WWW::OpenAPIClient::Object::TickDayDataV3DTO;
+use WWW::OpenAPIClient::Object::TickV3DTO;
+use WWW::OpenAPIClient::Object::TokenDTO;
+use WWW::OpenAPIClient::Object::TokenHourDataV3DTO;
+use WWW::OpenAPIClient::Object::TokenV2DTO;
+use WWW::OpenAPIClient::Object::TokenV3DTO;
+use WWW::OpenAPIClient::Object::TokenV3DayDataDTO;
+use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
 
 ````
 
@@ -333,86 +282,134 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
-use WWW::OpenAPIClient::BalancesApi;
-use WWW::OpenAPIClient::OrdersApi;
-use WWW::OpenAPIClient::PositionsApi;
+use WWW::OpenAPIClient::PoolsApi;
+use WWW::OpenAPIClient::SushiswapApi;
+use WWW::OpenAPIClient::SwapsApi;
+use WWW::OpenAPIClient::TokensApi;
+use WWW::OpenAPIClient::TradesApi;
+use WWW::OpenAPIClient::UniswapV2Api;
+use WWW::OpenAPIClient::UniswapV3Api;
 
 # load the models
-use WWW::OpenAPIClient::Object::Balance;
-use WWW::OpenAPIClient::Object::BalanceDataInner;
-use WWW::OpenAPIClient::Object::Fills;
-use WWW::OpenAPIClient::Object::MessageError;
-use WWW::OpenAPIClient::Object::MessageReject;
-use WWW::OpenAPIClient::Object::OrdSide;
-use WWW::OpenAPIClient::Object::OrdStatus;
-use WWW::OpenAPIClient::Object::OrdType;
-use WWW::OpenAPIClient::Object::OrderCancelAllRequest;
-use WWW::OpenAPIClient::Object::OrderCancelSingleRequest;
-use WWW::OpenAPIClient::Object::OrderExecutionReport;
-use WWW::OpenAPIClient::Object::OrderExecutionReportAllOf;
-use WWW::OpenAPIClient::Object::OrderHistory;
-use WWW::OpenAPIClient::Object::OrderNewSingleRequest;
-use WWW::OpenAPIClient::Object::Position;
-use WWW::OpenAPIClient::Object::PositionDataInner;
-use WWW::OpenAPIClient::Object::RejectReason;
-use WWW::OpenAPIClient::Object::TimeInForce;
-use WWW::OpenAPIClient::Object::ValidationError;
+use WWW::OpenAPIClient::Object::BigInteger;
+use WWW::OpenAPIClient::Object::BundleV3DTO;
+use WWW::OpenAPIClient::Object::BurnV3DTO;
+use WWW::OpenAPIClient::Object::ETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::FactoryV3DTO;
+use WWW::OpenAPIClient::Object::MintV3DTO;
+use WWW::OpenAPIClient::Object::PairDTO;
+use WWW::OpenAPIClient::Object::PairV2DTO;
+use WWW::OpenAPIClient::Object::PoolDayDataV3DTO;
+use WWW::OpenAPIClient::Object::PoolHourDataV3DTO;
+use WWW::OpenAPIClient::Object::PoolV3DTO;
+use WWW::OpenAPIClient::Object::PositionSnapshotV3DTO;
+use WWW::OpenAPIClient::Object::PositionV3DTO;
+use WWW::OpenAPIClient::Object::SwapDTO;
+use WWW::OpenAPIClient::Object::SwapV2DTO;
+use WWW::OpenAPIClient::Object::SwapV3DTO;
+use WWW::OpenAPIClient::Object::TickDayDataV3DTO;
+use WWW::OpenAPIClient::Object::TickV3DTO;
+use WWW::OpenAPIClient::Object::TokenDTO;
+use WWW::OpenAPIClient::Object::TokenHourDataV3DTO;
+use WWW::OpenAPIClient::Object::TokenV2DTO;
+use WWW::OpenAPIClient::Object::TokenV3DTO;
+use WWW::OpenAPIClient::Object::TokenV3DayDataDTO;
+use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
 
 # for displaying the API response data
 use Data::Dumper;
 
 
-my $api_instance = WWW::OpenAPIClient::BalancesApi->new(
+my $api_instance = WWW::OpenAPIClient::PoolsApi->new(
 );
 
-my $exchange_id = KRAKEN; # string | Filter the balances to the specific exchange.
+my $chain_id = "chain_id_example"; # string | 
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->v1_balances_get(exchange_id => $exchange_id);
-    print Dumper($result);
+    $api_instance->chains_chain_id_dapps_curve_pools_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
 };
 if ($@) {
-    warn "Exception when calling BalancesApi->v1_balances_get: $@\n";
+    warn "Exception when calling PoolsApi->chains_chain_id_dapps_curve_pools_historical_get: $@\n";
 }
 
 ```
 
 # DOCUMENTATION FOR API ENDPOINTS
 
-All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
+All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BalancesApi* | [**v1_balances_get**](docs/BalancesApi.md#v1_balances_get) | **GET** /v1/balances | Get balances
-*OrdersApi* | [**v1_orders_cancel_all_post**](docs/OrdersApi.md#v1_orders_cancel_all_post) | **POST** /v1/orders/cancel/all | Cancel all orders request
-*OrdersApi* | [**v1_orders_cancel_post**](docs/OrdersApi.md#v1_orders_cancel_post) | **POST** /v1/orders/cancel | Cancel order request
-*OrdersApi* | [**v1_orders_get**](docs/OrdersApi.md#v1_orders_get) | **GET** /v1/orders | Get open orders
-*OrdersApi* | [**v1_orders_history_get**](docs/OrdersApi.md#v1_orders_history_get) | **GET** /v1/orders/history | History of order changes
-*OrdersApi* | [**v1_orders_post**](docs/OrdersApi.md#v1_orders_post) | **POST** /v1/orders | Send new order
-*OrdersApi* | [**v1_orders_status_client_order_id_get**](docs/OrdersApi.md#v1_orders_status_client_order_id_get) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
-*PositionsApi* | [**v1_positions_get**](docs/PositionsApi.md#v1_positions_get) | **GET** /v1/positions | Get open positions
+*PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
+*PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
+*PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
+*PoolsApi* | [**chains_chain_id_dapps_uniswapv3_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv3_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/historical | 
+*SushiswapApi* | [**chains_chain_id_dapps_sushiswap_pools_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_pools_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools
+*SushiswapApi* | [**chains_chain_id_dapps_sushiswap_swaps_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_swaps_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps
+*SushiswapApi* | [**chains_chain_id_dapps_sushiswap_tokens_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_tokens_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens
+*SwapsApi* | [**chains_chain_id_dapps_curve_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_curve_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/curve/swaps/historical | 
+*SwapsApi* | [**chains_chain_id_dapps_sushiswap_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_sushiswap_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/historical | 
+*SwapsApi* | [**chains_chain_id_dapps_uniswapv2_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_uniswapv2_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/historical | 
+*SwapsApi* | [**chains_chain_id_dapps_uniswapv3_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_uniswapv3_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
+*TokensApi* | [**chains_chain_id_dapps_cow_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_cow_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/cow/tokens/historical | 
+*TokensApi* | [**chains_chain_id_dapps_curve_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_curve_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/curve/tokens/historical | 
+*TokensApi* | [**chains_chain_id_dapps_dex_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_dex_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/dex/tokens/historical | 
+*TokensApi* | [**chains_chain_id_dapps_sushiswap_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_sushiswap_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/historical | 
+*TokensApi* | [**chains_chain_id_dapps_uniswapv2_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_uniswapv2_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/historical | 
+*TokensApi* | [**chains_chain_id_dapps_uniswapv3_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_uniswapv3_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
+*TradesApi* | [**chains_chain_id_dapps_cow_trades_historical_get**](docs/TradesApi.md#chains_chain_id_dapps_cow_trades_historical_get) | **GET** /chains/{chain_id}/dapps/cow/trades/historical | 
+*TradesApi* | [**chains_chain_id_dapps_dex_trades_historical_get**](docs/TradesApi.md#chains_chain_id_dapps_dex_trades_historical_get) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
+*UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_pools_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
+*UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_swaps_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_swaps_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
+*UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_tokens_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_tokens_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_bundle_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_bundle_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_burns_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_burns_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_factory_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_factory_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_mints_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_mints_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_pools_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_pools_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_position_snapshots_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_position_snapshots_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_positions_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_positions_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_swaps_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_swaps_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_ticks_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_ticks_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+*UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
 # DOCUMENTATION FOR MODELS
- - [WWW::OpenAPIClient::Object::Balance](docs/Balance.md)
- - [WWW::OpenAPIClient::Object::BalanceDataInner](docs/BalanceDataInner.md)
- - [WWW::OpenAPIClient::Object::Fills](docs/Fills.md)
- - [WWW::OpenAPIClient::Object::MessageError](docs/MessageError.md)
- - [WWW::OpenAPIClient::Object::MessageReject](docs/MessageReject.md)
- - [WWW::OpenAPIClient::Object::OrdSide](docs/OrdSide.md)
- - [WWW::OpenAPIClient::Object::OrdStatus](docs/OrdStatus.md)
- - [WWW::OpenAPIClient::Object::OrdType](docs/OrdType.md)
- - [WWW::OpenAPIClient::Object::OrderCancelAllRequest](docs/OrderCancelAllRequest.md)
- - [WWW::OpenAPIClient::Object::OrderCancelSingleRequest](docs/OrderCancelSingleRequest.md)
- - [WWW::OpenAPIClient::Object::OrderExecutionReport](docs/OrderExecutionReport.md)
- - [WWW::OpenAPIClient::Object::OrderExecutionReportAllOf](docs/OrderExecutionReportAllOf.md)
- - [WWW::OpenAPIClient::Object::OrderHistory](docs/OrderHistory.md)
- - [WWW::OpenAPIClient::Object::OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
- - [WWW::OpenAPIClient::Object::Position](docs/Position.md)
- - [WWW::OpenAPIClient::Object::PositionDataInner](docs/PositionDataInner.md)
- - [WWW::OpenAPIClient::Object::RejectReason](docs/RejectReason.md)
- - [WWW::OpenAPIClient::Object::TimeInForce](docs/TimeInForce.md)
- - [WWW::OpenAPIClient::Object::ValidationError](docs/ValidationError.md)
+ - [WWW::OpenAPIClient::Object::BigInteger](docs/BigInteger.md)
+ - [WWW::OpenAPIClient::Object::BundleV3DTO](docs/BundleV3DTO.md)
+ - [WWW::OpenAPIClient::Object::BurnV3DTO](docs/BurnV3DTO.md)
+ - [WWW::OpenAPIClient::Object::ETradeAggressiveSide](docs/ETradeAggressiveSide.md)
+ - [WWW::OpenAPIClient::Object::FactoryV3DTO](docs/FactoryV3DTO.md)
+ - [WWW::OpenAPIClient::Object::MintV3DTO](docs/MintV3DTO.md)
+ - [WWW::OpenAPIClient::Object::PairDTO](docs/PairDTO.md)
+ - [WWW::OpenAPIClient::Object::PairV2DTO](docs/PairV2DTO.md)
+ - [WWW::OpenAPIClient::Object::PoolDayDataV3DTO](docs/PoolDayDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::PoolHourDataV3DTO](docs/PoolHourDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::PoolV3DTO](docs/PoolV3DTO.md)
+ - [WWW::OpenAPIClient::Object::PositionSnapshotV3DTO](docs/PositionSnapshotV3DTO.md)
+ - [WWW::OpenAPIClient::Object::PositionV3DTO](docs/PositionV3DTO.md)
+ - [WWW::OpenAPIClient::Object::SwapDTO](docs/SwapDTO.md)
+ - [WWW::OpenAPIClient::Object::SwapV2DTO](docs/SwapV2DTO.md)
+ - [WWW::OpenAPIClient::Object::SwapV3DTO](docs/SwapV3DTO.md)
+ - [WWW::OpenAPIClient::Object::TickDayDataV3DTO](docs/TickDayDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::TickV3DTO](docs/TickV3DTO.md)
+ - [WWW::OpenAPIClient::Object::TokenDTO](docs/TokenDTO.md)
+ - [WWW::OpenAPIClient::Object::TokenHourDataV3DTO](docs/TokenHourDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::TokenV2DTO](docs/TokenV2DTO.md)
+ - [WWW::OpenAPIClient::Object::TokenV3DTO](docs/TokenV3DTO.md)
+ - [WWW::OpenAPIClient::Object::TokenV3DayDataDTO](docs/TokenV3DayDataDTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapDayDataV3DTO](docs/UniswapDayDataV3DTO.md)
 
 
 # DOCUMENTATION FOR AUTHORIZATION

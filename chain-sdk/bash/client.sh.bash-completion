@@ -68,26 +68,86 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["v1BalancesGet"]=1
-    operations["v1OrdersCancelAllPost"]=1
-    operations["v1OrdersCancelPost"]=1
-    operations["v1OrdersGet"]=1
-    operations["v1OrdersHistoryGet"]=1
-    operations["v1OrdersPost"]=1
-    operations["v1OrdersStatusClientOrderIdGet"]=1
-    operations["v1PositionsGet"]=1
+    operations["chainsChainIdDappsCurvePoolsHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapPoolsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapPoolsCurrentGet"]=1
+    operations["chainsChainIdDappsSushiswapSwapsCurrentGet"]=1
+    operations["chainsChainIdDappsSushiswapTokensCurrentGet"]=1
+    operations["chainsChainIdDappsCurveSwapsHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapSwapsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2SwapsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]=1
+    operations["chainsChainIdDappsCowTokensHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveTokensHistoricalGet"]=1
+    operations["chainsChainIdDappsDexTokensHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapTokensHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2TokensHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokensHistoricalGet"]=1
+    operations["chainsChainIdDappsCowTradesHistoricalGet"]=1
+    operations["chainsChainIdDappsDexTradesHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2PoolsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv2SwapsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv2TokensCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3BundleCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3BurnsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3FactoryCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3MintsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3PoolsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3PositionsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3SwapsCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3TicksCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokensCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["v1BalancesGet"]="exchange_id= "
-    operation_parameters["v1OrdersCancelAllPost"]=""
-    operation_parameters["v1OrdersCancelPost"]=""
-    operation_parameters["v1OrdersGet"]="exchange_id= "
-    operation_parameters["v1OrdersHistoryGet"]="time_start= time_end= "
-    operation_parameters["v1OrdersPost"]=""
-    operation_parameters["v1OrdersStatusClientOrderIdGet"]="client_order_id= "
-    operation_parameters["v1PositionsGet"]="exchange_id= "
+    operation_parameters["chainsChainIdDappsCurvePoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsSushiswapPoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsSushiswapPoolsCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsSushiswapSwapsCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsSushiswapTokensCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsCurveSwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsSushiswapSwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv2SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCowTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsCurveTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsDexTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsSushiswapTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsUniswapv2TokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsCowTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsDexTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsUniswapv2PoolsCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv2SwapsCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv2TokensCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3BundleCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3BurnsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3FactoryCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3MintsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3PoolsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3PositionsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3SwapsCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3TicksCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"]="chain_id= filter_pool_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokensCurrentGet"]="chain_id= filter_token_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]="chain_id= filter_token_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]="chain_id= filter_token_id= "
+    operation_parameters["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]="chain_id= "
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values

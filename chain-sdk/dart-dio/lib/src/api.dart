@@ -9,12 +9,16 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
-import 'package:openapi/src/api/balances_api.dart';
-import 'package:openapi/src/api/orders_api.dart';
-import 'package:openapi/src/api/positions_api.dart';
+import 'package:openapi/src/api/pools_api.dart';
+import 'package:openapi/src/api/sushiswap_api.dart';
+import 'package:openapi/src/api/swaps_api.dart';
+import 'package:openapi/src/api/tokens_api.dart';
+import 'package:openapi/src/api/trades_api.dart';
+import 'package:openapi/src/api/uniswap_v2_api.dart';
+import 'package:openapi/src/api/uniswap_v3_api.dart';
 
 class Openapi {
-  static const String basePath = r'https://ems-gateway-aws-eu-central-1-dev.coinapi.io';
+  static const String basePath = r'https://onchain.coinapi.io';
 
   final Dio dio;
   final Serializers serializers;
@@ -67,21 +71,45 @@ class Openapi {
     }
   }
 
-  /// Get BalancesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get PoolsApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  BalancesApi getBalancesApi() {
-    return BalancesApi(dio, serializers);
+  PoolsApi getPoolsApi() {
+    return PoolsApi(dio, serializers);
   }
 
-  /// Get OrdersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  OrdersApi getOrdersApi() {
-    return OrdersApi(dio, serializers);
+  SushiswapApi getSushiswapApi() {
+    return SushiswapApi(dio, serializers);
   }
 
-  /// Get PositionsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get SwapsApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  PositionsApi getPositionsApi() {
-    return PositionsApi(dio, serializers);
+  SwapsApi getSwapsApi() {
+    return SwapsApi(dio, serializers);
+  }
+
+  /// Get TokensApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TokensApi getTokensApi() {
+    return TokensApi(dio, serializers);
+  }
+
+  /// Get TradesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TradesApi getTradesApi() {
+    return TradesApi(dio, serializers);
+  }
+
+  /// Get UniswapV2Api instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UniswapV2Api getUniswapV2Api() {
+    return UniswapV2Api(dio, serializers);
+  }
+
+  /// Get UniswapV3Api instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UniswapV3Api getUniswapV3Api() {
+    return UniswapV3Api(dio, serializers);
   }
 }

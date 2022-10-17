@@ -1,70 +1,10 @@
 # OpenAPIClient-php
 
-This section will provide necessary information about the `CoinAPI EMS REST API` protocol.
-<br/>
-This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>      
+
+This section will provide necessary information about the `OnChain API` protocol. 
 <br/><br/>
-Implemented Standards:
-
-  * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)
-  * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)
-  * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)
-   
-### Endpoints
-<table>
-  <thead>
-    <tr>
-      <th>Deployment method</th>
-      <th>Environment</th>
-      <th>Url</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Production</td>
-      <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>
-    </tr>
-    <tr>
-      <td>Managed Cloud</td>
-      <td>Sandbox</td>
-      <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Production</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-    <tr>
-      <td>Self Hosted</td>
-      <td>Sandbox</td>
-      <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>
-    </tr>
-  </tbody>
-</table>
-
-### Authentication
-If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls. 
-<br/><br/>
-If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:
-
- 1. Custom authorization header named `X-CoinAPI-Key` with the API Key
- 2. Query string parameter named `apikey` with the API Key
- 3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.
-
-#### Custom authorization header
-You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like:
-<br/><br/>
-`X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY`
-<aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside>
-#### Query string authorization parameter
-You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request.
-Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: 
-<br/><br/>
-`GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY`
-<aside class=\"notice\">Query string method may be more practical for development activities.</aside>
-
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.        
+                    
 
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io).
 
@@ -115,58 +55,97 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BalancesApi(
+$apiInstance = new OpenAPI\Client\Api\PoolsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$exchange_id = KRAKEN; // string | Filter the balances to the specific exchange.
+$chain_id = 'chain_id_example'; // string
+$start_block = 56; // int
+$end_block = 56; // int
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$pool_id = 'pool_id_example'; // string
 
 try {
-    $result = $apiInstance->v1BalancesGet($exchange_id);
-    print_r($result);
+    $apiInstance->chainsChainIdDappsCurvePoolsHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date, $pool_id);
 } catch (Exception $e) {
-    echo 'Exception when calling BalancesApi->v1BalancesGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PoolsApi->chainsChainIdDappsCurvePoolsHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
 
 ## API Endpoints
 
-All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
+All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BalancesApi* | [**v1BalancesGet**](docs/Api/BalancesApi.md#v1balancesget) | **GET** /v1/balances | Get balances
-*OrdersApi* | [**v1OrdersCancelAllPost**](docs/Api/OrdersApi.md#v1orderscancelallpost) | **POST** /v1/orders/cancel/all | Cancel all orders request
-*OrdersApi* | [**v1OrdersCancelPost**](docs/Api/OrdersApi.md#v1orderscancelpost) | **POST** /v1/orders/cancel | Cancel order request
-*OrdersApi* | [**v1OrdersGet**](docs/Api/OrdersApi.md#v1ordersget) | **GET** /v1/orders | Get open orders
-*OrdersApi* | [**v1OrdersHistoryGet**](docs/Api/OrdersApi.md#v1ordershistoryget) | **GET** /v1/orders/history | History of order changes
-*OrdersApi* | [**v1OrdersPost**](docs/Api/OrdersApi.md#v1orderspost) | **POST** /v1/orders | Send new order
-*OrdersApi* | [**v1OrdersStatusClientOrderIdGet**](docs/Api/OrdersApi.md#v1ordersstatusclientorderidget) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
-*PositionsApi* | [**v1PositionsGet**](docs/Api/PositionsApi.md#v1positionsget) | **GET** /v1/positions | Get open positions
+*PoolsApi* | [**chainsChainIdDappsCurvePoolsHistoricalGet**](docs/Api/PoolsApi.md#chainschainiddappscurvepoolshistoricalget) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
+*PoolsApi* | [**chainsChainIdDappsSushiswapPoolsHistoricalGet**](docs/Api/PoolsApi.md#chainschainiddappssushiswappoolshistoricalget) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
+*PoolsApi* | [**chainsChainIdDappsUniswapv2PoolsHistoricalGet**](docs/Api/PoolsApi.md#chainschainiddappsuniswapv2poolshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
+*PoolsApi* | [**chainsChainIdDappsUniswapv3PoolsHistoricalGet**](docs/Api/PoolsApi.md#chainschainiddappsuniswapv3poolshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/historical | 
+*SushiswapApi* | [**chainsChainIdDappsSushiswapPoolsCurrentGet**](docs/Api/SushiswapApi.md#chainschainiddappssushiswappoolscurrentget) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools
+*SushiswapApi* | [**chainsChainIdDappsSushiswapSwapsCurrentGet**](docs/Api/SushiswapApi.md#chainschainiddappssushiswapswapscurrentget) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps
+*SushiswapApi* | [**chainsChainIdDappsSushiswapTokensCurrentGet**](docs/Api/SushiswapApi.md#chainschainiddappssushiswaptokenscurrentget) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens
+*SwapsApi* | [**chainsChainIdDappsCurveSwapsHistoricalGet**](docs/Api/SwapsApi.md#chainschainiddappscurveswapshistoricalget) | **GET** /chains/{chain_id}/dapps/curve/swaps/historical | 
+*SwapsApi* | [**chainsChainIdDappsSushiswapSwapsHistoricalGet**](docs/Api/SwapsApi.md#chainschainiddappssushiswapswapshistoricalget) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/historical | 
+*SwapsApi* | [**chainsChainIdDappsUniswapv2SwapsHistoricalGet**](docs/Api/SwapsApi.md#chainschainiddappsuniswapv2swapshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/historical | 
+*SwapsApi* | [**chainsChainIdDappsUniswapv3SwapsHistoricalGet**](docs/Api/SwapsApi.md#chainschainiddappsuniswapv3swapshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
+*TokensApi* | [**chainsChainIdDappsCowTokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappscowtokenshistoricalget) | **GET** /chains/{chain_id}/dapps/cow/tokens/historical | 
+*TokensApi* | [**chainsChainIdDappsCurveTokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappscurvetokenshistoricalget) | **GET** /chains/{chain_id}/dapps/curve/tokens/historical | 
+*TokensApi* | [**chainsChainIdDappsDexTokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappsdextokenshistoricalget) | **GET** /chains/{chain_id}/dapps/dex/tokens/historical | 
+*TokensApi* | [**chainsChainIdDappsSushiswapTokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappssushiswaptokenshistoricalget) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/historical | 
+*TokensApi* | [**chainsChainIdDappsUniswapv2TokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappsuniswapv2tokenshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/historical | 
+*TokensApi* | [**chainsChainIdDappsUniswapv3TokensHistoricalGet**](docs/Api/TokensApi.md#chainschainiddappsuniswapv3tokenshistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
+*TradesApi* | [**chainsChainIdDappsCowTradesHistoricalGet**](docs/Api/TradesApi.md#chainschainiddappscowtradeshistoricalget) | **GET** /chains/{chain_id}/dapps/cow/trades/historical | 
+*TradesApi* | [**chainsChainIdDappsDexTradesHistoricalGet**](docs/Api/TradesApi.md#chainschainiddappsdextradeshistoricalget) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
+*UniswapV2Api* | [**chainsChainIdDappsUniswapv2PoolsCurrentGet**](docs/Api/UniswapV2Api.md#chainschainiddappsuniswapv2poolscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
+*UniswapV2Api* | [**chainsChainIdDappsUniswapv2SwapsCurrentGet**](docs/Api/UniswapV2Api.md#chainschainiddappsuniswapv2swapscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
+*UniswapV2Api* | [**chainsChainIdDappsUniswapv2TokensCurrentGet**](docs/Api/UniswapV2Api.md#chainschainiddappsuniswapv2tokenscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3BundleCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3bundlecurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3BurnsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3burnscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3FactoryCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3factorycurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3MintsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3mintscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3PoolsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3poolscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3poolsdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3poolshourdatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3positionsnapshotscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3PositionsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3positionscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3SwapsCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3swapscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3TicksCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3tickscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3ticksdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3TokensCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3tokenscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3tokensdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3tokenshourdatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+*UniswapV3Api* | [**chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](docs/Api/UniswapV3Api.md#chainschainiddappsuniswapv3uniswapdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 ## Models
 
-- [Balance](docs/Model/Balance.md)
-- [BalanceDataInner](docs/Model/BalanceDataInner.md)
-- [Fills](docs/Model/Fills.md)
-- [MessageError](docs/Model/MessageError.md)
-- [MessageReject](docs/Model/MessageReject.md)
-- [OrdSide](docs/Model/OrdSide.md)
-- [OrdStatus](docs/Model/OrdStatus.md)
-- [OrdType](docs/Model/OrdType.md)
-- [OrderCancelAllRequest](docs/Model/OrderCancelAllRequest.md)
-- [OrderCancelSingleRequest](docs/Model/OrderCancelSingleRequest.md)
-- [OrderExecutionReport](docs/Model/OrderExecutionReport.md)
-- [OrderExecutionReportAllOf](docs/Model/OrderExecutionReportAllOf.md)
-- [OrderHistory](docs/Model/OrderHistory.md)
-- [OrderNewSingleRequest](docs/Model/OrderNewSingleRequest.md)
-- [Position](docs/Model/Position.md)
-- [PositionDataInner](docs/Model/PositionDataInner.md)
-- [RejectReason](docs/Model/RejectReason.md)
-- [TimeInForce](docs/Model/TimeInForce.md)
-- [ValidationError](docs/Model/ValidationError.md)
+- [BigInteger](docs/Model/BigInteger.md)
+- [BundleV3DTO](docs/Model/BundleV3DTO.md)
+- [BurnV3DTO](docs/Model/BurnV3DTO.md)
+- [ETradeAggressiveSide](docs/Model/ETradeAggressiveSide.md)
+- [FactoryV3DTO](docs/Model/FactoryV3DTO.md)
+- [MintV3DTO](docs/Model/MintV3DTO.md)
+- [PairDTO](docs/Model/PairDTO.md)
+- [PairV2DTO](docs/Model/PairV2DTO.md)
+- [PoolDayDataV3DTO](docs/Model/PoolDayDataV3DTO.md)
+- [PoolHourDataV3DTO](docs/Model/PoolHourDataV3DTO.md)
+- [PoolV3DTO](docs/Model/PoolV3DTO.md)
+- [PositionSnapshotV3DTO](docs/Model/PositionSnapshotV3DTO.md)
+- [PositionV3DTO](docs/Model/PositionV3DTO.md)
+- [SwapDTO](docs/Model/SwapDTO.md)
+- [SwapV2DTO](docs/Model/SwapV2DTO.md)
+- [SwapV3DTO](docs/Model/SwapV3DTO.md)
+- [TickDayDataV3DTO](docs/Model/TickDayDataV3DTO.md)
+- [TickV3DTO](docs/Model/TickV3DTO.md)
+- [TokenDTO](docs/Model/TokenDTO.md)
+- [TokenHourDataV3DTO](docs/Model/TokenHourDataV3DTO.md)
+- [TokenV2DTO](docs/Model/TokenV2DTO.md)
+- [TokenV3DTO](docs/Model/TokenV3DTO.md)
+- [TokenV3DayDataDTO](docs/Model/TokenV3DayDataDTO.md)
+- [UniswapDayDataV3DTO](docs/Model/UniswapDayDataV3DTO.md)
 
 ## Authorization
 All endpoints do not require authorization.

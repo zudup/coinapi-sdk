@@ -27,7 +27,7 @@ else()
     message (STATUS "OpenSSL Not found.")
 endif()
 
-set(pkgName "ems___rest_api")
+set(pkgName "onchain_api")
 
 # this default version can be overridden in PreTarget.cmake
 set(PROJECT_VERSION_MAJOR 0)
@@ -54,28 +54,37 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/balance.c
-    model/balance_data_inner.c
-    model/fills.c
-    model/message_error.c
-    model/message_reject.c
-    model/ord_side.c
-    model/ord_status.c
-    model/ord_type.c
-    model/order_cancel_all_request.c
-    model/order_cancel_single_request.c
-    model/order_execution_report.c
-    model/order_execution_report_all_of.c
-    model/order_history.c
-    model/order_new_single_request.c
-    model/position.c
-    model/position_data_inner.c
-    model/reject_reason.c
-    model/time_in_force.c
-    model/validation_error.c
-    api/BalancesAPI.c
-    api/OrdersAPI.c
-    api/PositionsAPI.c
+    model/big_integer.c
+    model/bundle_v3_dto.c
+    model/burn_v3_dto.c
+    model/e_trade_aggressive_side.c
+    model/factory_v3_dto.c
+    model/mint_v3_dto.c
+    model/pair_dto.c
+    model/pair_v2_dto.c
+    model/pool_day_data_v3_dto.c
+    model/pool_hour_data_v3_dto.c
+    model/pool_v3_dto.c
+    model/position_snapshot_v3_dto.c
+    model/position_v3_dto.c
+    model/swap_dto.c
+    model/swap_v2_dto.c
+    model/swap_v3_dto.c
+    model/tick_day_data_v3_dto.c
+    model/tick_v3_dto.c
+    model/token_dto.c
+    model/token_hour_data_v3_dto.c
+    model/token_v2_dto.c
+    model/token_v3_day_data_dto.c
+    model/token_v3_dto.c
+    model/uniswap_day_data_v3_dto.c
+    api/PoolsAPI.c
+    api/SushiswapAPI.c
+    api/SwapsAPI.c
+    api/TokensAPI.c
+    api/TradesAPI.c
+    api/UniswapV2API.c
+    api/UniswapV3API.c
 
 )
 
@@ -86,28 +95,37 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/balance.h
-    model/balance_data_inner.h
-    model/fills.h
-    model/message_error.h
-    model/message_reject.h
-    model/ord_side.h
-    model/ord_status.h
-    model/ord_type.h
-    model/order_cancel_all_request.h
-    model/order_cancel_single_request.h
-    model/order_execution_report.h
-    model/order_execution_report_all_of.h
-    model/order_history.h
-    model/order_new_single_request.h
-    model/position.h
-    model/position_data_inner.h
-    model/reject_reason.h
-    model/time_in_force.h
-    model/validation_error.h
-    api/BalancesAPI.h
-    api/OrdersAPI.h
-    api/PositionsAPI.h
+    model/big_integer.h
+    model/bundle_v3_dto.h
+    model/burn_v3_dto.h
+    model/e_trade_aggressive_side.h
+    model/factory_v3_dto.h
+    model/mint_v3_dto.h
+    model/pair_dto.h
+    model/pair_v2_dto.h
+    model/pool_day_data_v3_dto.h
+    model/pool_hour_data_v3_dto.h
+    model/pool_v3_dto.h
+    model/position_snapshot_v3_dto.h
+    model/position_v3_dto.h
+    model/swap_dto.h
+    model/swap_v2_dto.h
+    model/swap_v3_dto.h
+    model/tick_day_data_v3_dto.h
+    model/tick_v3_dto.h
+    model/token_dto.h
+    model/token_hour_data_v3_dto.h
+    model/token_v2_dto.h
+    model/token_v3_day_data_dto.h
+    model/token_v3_dto.h
+    model/uniswap_day_data_v3_dto.h
+    api/PoolsAPI.h
+    api/SushiswapAPI.h
+    api/SwapsAPI.h
+    api/TokensAPI.h
+    api/TradesAPI.h
+    api/UniswapV2API.h
+    api/UniswapV3API.h
 
 )
 
@@ -189,9 +207,13 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
-#    unit-tests/manual-BalancesAPI.c
-#    unit-tests/manual-OrdersAPI.c
-#    unit-tests/manual-PositionsAPI.c
+#    unit-tests/manual-PoolsAPI.c
+#    unit-tests/manual-SushiswapAPI.c
+#    unit-tests/manual-SwapsAPI.c
+#    unit-tests/manual-TokensAPI.c
+#    unit-tests/manual-TradesAPI.c
+#    unit-tests/manual-UniswapV2API.c
+#    unit-tests/manual-UniswapV3API.c
 #)
 
 ##set header files

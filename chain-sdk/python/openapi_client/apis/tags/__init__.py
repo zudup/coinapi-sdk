@@ -6,6 +6,10 @@ import enum
 
 
 class TagValues(str, enum.Enum):
-    ORDERS = "Orders"
-    BALANCES = "Balances"
-    POSITIONS = "Positions"
+    SUSHISWAP = "Sushiswap"
+    UNISWAP_V2 = "UniswapV2"
+    UNISWAP_V3 = "UniswapV3"
+    POOLS = "Pools"
+    SWAPS = "Swaps"
+    TOKENS = "Tokens"
+    TRADES = "Trades"

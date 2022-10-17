@@ -1,0 +1,691 @@
+#' Create a new PoolDayDataV3DTO
+#'
+#' @description
+#' PoolDayDataV3DTO Class
+#'
+#' @docType class
+#' @title PoolDayDataV3DTO
+#' @description PoolDayDataV3DTO Class
+#' @format An \code{R6Class} generator object
+#' @field entry_time  character [optional]
+#' @field recv_time  character [optional]
+#' @field block_number  integer [optional]
+#' @field id  character [optional]
+#' @field date  integer [optional]
+#' @field pool  character [optional]
+#' @field liquidity  character [optional]
+#' @field sqrt_price  character [optional]
+#' @field token_0_price  character [optional]
+#' @field token_1_price  character [optional]
+#' @field tick  character [optional]
+#' @field fee_growth_global_0x128  character [optional]
+#' @field fee_growth_global_1x128  character [optional]
+#' @field tvl_usd  character [optional]
+#' @field volume_token_0  character [optional]
+#' @field volume_token_1  character [optional]
+#' @field volume_usd  character [optional]
+#' @field fees_usd  character [optional]
+#' @field tx_count  character [optional]
+#' @field open  character [optional]
+#' @field high  character [optional]
+#' @field low  character [optional]
+#' @field close  character [optional]
+#' @field vid  integer [optional]
+#' @importFrom R6 R6Class
+#' @importFrom jsonlite fromJSON toJSON
+#' @export
+PoolDayDataV3DTO <- R6::R6Class(
+  "PoolDayDataV3DTO",
+  public = list(
+    `entry_time` = NULL,
+    `recv_time` = NULL,
+    `block_number` = NULL,
+    `id` = NULL,
+    `date` = NULL,
+    `pool` = NULL,
+    `liquidity` = NULL,
+    `sqrt_price` = NULL,
+    `token_0_price` = NULL,
+    `token_1_price` = NULL,
+    `tick` = NULL,
+    `fee_growth_global_0x128` = NULL,
+    `fee_growth_global_1x128` = NULL,
+    `tvl_usd` = NULL,
+    `volume_token_0` = NULL,
+    `volume_token_1` = NULL,
+    `volume_usd` = NULL,
+    `fees_usd` = NULL,
+    `tx_count` = NULL,
+    `open` = NULL,
+    `high` = NULL,
+    `low` = NULL,
+    `close` = NULL,
+    `vid` = NULL,
+    #' Initialize a new PoolDayDataV3DTO class.
+    #'
+    #' @description
+    #' Initialize a new PoolDayDataV3DTO class.
+    #'
+    #' @param entry_time entry_time
+    #' @param recv_time recv_time
+    #' @param block_number block_number
+    #' @param id id
+    #' @param date date
+    #' @param pool pool
+    #' @param liquidity liquidity
+    #' @param sqrt_price sqrt_price
+    #' @param token_0_price token_0_price
+    #' @param token_1_price token_1_price
+    #' @param tick tick
+    #' @param fee_growth_global_0x128 fee_growth_global_0x128
+    #' @param fee_growth_global_1x128 fee_growth_global_1x128
+    #' @param tvl_usd tvl_usd
+    #' @param volume_token_0 volume_token_0
+    #' @param volume_token_1 volume_token_1
+    #' @param volume_usd volume_usd
+    #' @param fees_usd fees_usd
+    #' @param tx_count tx_count
+    #' @param open open
+    #' @param high high
+    #' @param low low
+    #' @param close close
+    #' @param vid vid
+    #' @param ... Other optional arguments.
+    #' @export
+    initialize = function(
+        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `date` = NULL, `pool` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `tvl_usd` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `open` = NULL, `high` = NULL, `low` = NULL, `close` = NULL, `vid` = NULL, ...
+    ) {
+      if (!is.null(`entry_time`)) {
+        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        self$`entry_time` <- `entry_time`
+      }
+      if (!is.null(`recv_time`)) {
+        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        self$`recv_time` <- `recv_time`
+      }
+      if (!is.null(`block_number`)) {
+        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        self$`block_number` <- `block_number`
+      }
+      if (!is.null(`id`)) {
+        stopifnot(is.character(`id`), length(`id`) == 1)
+        self$`id` <- `id`
+      }
+      if (!is.null(`date`)) {
+        stopifnot(is.numeric(`date`), length(`date`) == 1)
+        self$`date` <- `date`
+      }
+      if (!is.null(`pool`)) {
+        stopifnot(is.character(`pool`), length(`pool`) == 1)
+        self$`pool` <- `pool`
+      }
+      if (!is.null(`liquidity`)) {
+        stopifnot(is.character(`liquidity`), length(`liquidity`) == 1)
+        self$`liquidity` <- `liquidity`
+      }
+      if (!is.null(`sqrt_price`)) {
+        stopifnot(is.character(`sqrt_price`), length(`sqrt_price`) == 1)
+        self$`sqrt_price` <- `sqrt_price`
+      }
+      if (!is.null(`token_0_price`)) {
+        stopifnot(is.character(`token_0_price`), length(`token_0_price`) == 1)
+        self$`token_0_price` <- `token_0_price`
+      }
+      if (!is.null(`token_1_price`)) {
+        stopifnot(is.character(`token_1_price`), length(`token_1_price`) == 1)
+        self$`token_1_price` <- `token_1_price`
+      }
+      if (!is.null(`tick`)) {
+        stopifnot(is.character(`tick`), length(`tick`) == 1)
+        self$`tick` <- `tick`
+      }
+      if (!is.null(`fee_growth_global_0x128`)) {
+        stopifnot(is.character(`fee_growth_global_0x128`), length(`fee_growth_global_0x128`) == 1)
+        self$`fee_growth_global_0x128` <- `fee_growth_global_0x128`
+      }
+      if (!is.null(`fee_growth_global_1x128`)) {
+        stopifnot(is.character(`fee_growth_global_1x128`), length(`fee_growth_global_1x128`) == 1)
+        self$`fee_growth_global_1x128` <- `fee_growth_global_1x128`
+      }
+      if (!is.null(`tvl_usd`)) {
+        stopifnot(is.character(`tvl_usd`), length(`tvl_usd`) == 1)
+        self$`tvl_usd` <- `tvl_usd`
+      }
+      if (!is.null(`volume_token_0`)) {
+        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        self$`volume_token_0` <- `volume_token_0`
+      }
+      if (!is.null(`volume_token_1`)) {
+        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        self$`volume_token_1` <- `volume_token_1`
+      }
+      if (!is.null(`volume_usd`)) {
+        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        self$`volume_usd` <- `volume_usd`
+      }
+      if (!is.null(`fees_usd`)) {
+        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        self$`fees_usd` <- `fees_usd`
+      }
+      if (!is.null(`tx_count`)) {
+        stopifnot(is.character(`tx_count`), length(`tx_count`) == 1)
+        self$`tx_count` <- `tx_count`
+      }
+      if (!is.null(`open`)) {
+        stopifnot(is.character(`open`), length(`open`) == 1)
+        self$`open` <- `open`
+      }
+      if (!is.null(`high`)) {
+        stopifnot(is.character(`high`), length(`high`) == 1)
+        self$`high` <- `high`
+      }
+      if (!is.null(`low`)) {
+        stopifnot(is.character(`low`), length(`low`) == 1)
+        self$`low` <- `low`
+      }
+      if (!is.null(`close`)) {
+        stopifnot(is.character(`close`), length(`close`) == 1)
+        self$`close` <- `close`
+      }
+      if (!is.null(`vid`)) {
+        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        self$`vid` <- `vid`
+      }
+    },
+    #' To JSON string
+    #'
+    #' @description
+    #' To JSON String
+    #'
+    #' @return PoolDayDataV3DTO in JSON format
+    #' @export
+    toJSON = function() {
+      PoolDayDataV3DTOObject <- list()
+      if (!is.null(self$`entry_time`)) {
+        PoolDayDataV3DTOObject[["entry_time"]] <-
+          self$`entry_time`
+      }
+      if (!is.null(self$`recv_time`)) {
+        PoolDayDataV3DTOObject[["recv_time"]] <-
+          self$`recv_time`
+      }
+      if (!is.null(self$`block_number`)) {
+        PoolDayDataV3DTOObject[["block_number"]] <-
+          self$`block_number`
+      }
+      if (!is.null(self$`id`)) {
+        PoolDayDataV3DTOObject[["id"]] <-
+          self$`id`
+      }
+      if (!is.null(self$`date`)) {
+        PoolDayDataV3DTOObject[["date"]] <-
+          self$`date`
+      }
+      if (!is.null(self$`pool`)) {
+        PoolDayDataV3DTOObject[["pool"]] <-
+          self$`pool`
+      }
+      if (!is.null(self$`liquidity`)) {
+        PoolDayDataV3DTOObject[["liquidity"]] <-
+          self$`liquidity`
+      }
+      if (!is.null(self$`sqrt_price`)) {
+        PoolDayDataV3DTOObject[["sqrt_price"]] <-
+          self$`sqrt_price`
+      }
+      if (!is.null(self$`token_0_price`)) {
+        PoolDayDataV3DTOObject[["token_0_price"]] <-
+          self$`token_0_price`
+      }
+      if (!is.null(self$`token_1_price`)) {
+        PoolDayDataV3DTOObject[["token_1_price"]] <-
+          self$`token_1_price`
+      }
+      if (!is.null(self$`tick`)) {
+        PoolDayDataV3DTOObject[["tick"]] <-
+          self$`tick`
+      }
+      if (!is.null(self$`fee_growth_global_0x128`)) {
+        PoolDayDataV3DTOObject[["fee_growth_global_0x128"]] <-
+          self$`fee_growth_global_0x128`
+      }
+      if (!is.null(self$`fee_growth_global_1x128`)) {
+        PoolDayDataV3DTOObject[["fee_growth_global_1x128"]] <-
+          self$`fee_growth_global_1x128`
+      }
+      if (!is.null(self$`tvl_usd`)) {
+        PoolDayDataV3DTOObject[["tvl_usd"]] <-
+          self$`tvl_usd`
+      }
+      if (!is.null(self$`volume_token_0`)) {
+        PoolDayDataV3DTOObject[["volume_token_0"]] <-
+          self$`volume_token_0`
+      }
+      if (!is.null(self$`volume_token_1`)) {
+        PoolDayDataV3DTOObject[["volume_token_1"]] <-
+          self$`volume_token_1`
+      }
+      if (!is.null(self$`volume_usd`)) {
+        PoolDayDataV3DTOObject[["volume_usd"]] <-
+          self$`volume_usd`
+      }
+      if (!is.null(self$`fees_usd`)) {
+        PoolDayDataV3DTOObject[["fees_usd"]] <-
+          self$`fees_usd`
+      }
+      if (!is.null(self$`tx_count`)) {
+        PoolDayDataV3DTOObject[["tx_count"]] <-
+          self$`tx_count`
+      }
+      if (!is.null(self$`open`)) {
+        PoolDayDataV3DTOObject[["open"]] <-
+          self$`open`
+      }
+      if (!is.null(self$`high`)) {
+        PoolDayDataV3DTOObject[["high"]] <-
+          self$`high`
+      }
+      if (!is.null(self$`low`)) {
+        PoolDayDataV3DTOObject[["low"]] <-
+          self$`low`
+      }
+      if (!is.null(self$`close`)) {
+        PoolDayDataV3DTOObject[["close"]] <-
+          self$`close`
+      }
+      if (!is.null(self$`vid`)) {
+        PoolDayDataV3DTOObject[["vid"]] <-
+          self$`vid`
+      }
+      PoolDayDataV3DTOObject
+    },
+    #' Deserialize JSON string into an instance of PoolDayDataV3DTO
+    #'
+    #' @description
+    #' Deserialize JSON string into an instance of PoolDayDataV3DTO
+    #'
+    #' @param input_json the JSON input
+    #' @return the instance of PoolDayDataV3DTO
+    #' @export
+    fromJSON = function(input_json) {
+      this_object <- jsonlite::fromJSON(input_json)
+      if (!is.null(this_object$`entry_time`)) {
+        self$`entry_time` <- this_object$`entry_time`
+      }
+      if (!is.null(this_object$`recv_time`)) {
+        self$`recv_time` <- this_object$`recv_time`
+      }
+      if (!is.null(this_object$`block_number`)) {
+        self$`block_number` <- this_object$`block_number`
+      }
+      if (!is.null(this_object$`id`)) {
+        self$`id` <- this_object$`id`
+      }
+      if (!is.null(this_object$`date`)) {
+        self$`date` <- this_object$`date`
+      }
+      if (!is.null(this_object$`pool`)) {
+        self$`pool` <- this_object$`pool`
+      }
+      if (!is.null(this_object$`liquidity`)) {
+        self$`liquidity` <- this_object$`liquidity`
+      }
+      if (!is.null(this_object$`sqrt_price`)) {
+        self$`sqrt_price` <- this_object$`sqrt_price`
+      }
+      if (!is.null(this_object$`token_0_price`)) {
+        self$`token_0_price` <- this_object$`token_0_price`
+      }
+      if (!is.null(this_object$`token_1_price`)) {
+        self$`token_1_price` <- this_object$`token_1_price`
+      }
+      if (!is.null(this_object$`tick`)) {
+        self$`tick` <- this_object$`tick`
+      }
+      if (!is.null(this_object$`fee_growth_global_0x128`)) {
+        self$`fee_growth_global_0x128` <- this_object$`fee_growth_global_0x128`
+      }
+      if (!is.null(this_object$`fee_growth_global_1x128`)) {
+        self$`fee_growth_global_1x128` <- this_object$`fee_growth_global_1x128`
+      }
+      if (!is.null(this_object$`tvl_usd`)) {
+        self$`tvl_usd` <- this_object$`tvl_usd`
+      }
+      if (!is.null(this_object$`volume_token_0`)) {
+        self$`volume_token_0` <- this_object$`volume_token_0`
+      }
+      if (!is.null(this_object$`volume_token_1`)) {
+        self$`volume_token_1` <- this_object$`volume_token_1`
+      }
+      if (!is.null(this_object$`volume_usd`)) {
+        self$`volume_usd` <- this_object$`volume_usd`
+      }
+      if (!is.null(this_object$`fees_usd`)) {
+        self$`fees_usd` <- this_object$`fees_usd`
+      }
+      if (!is.null(this_object$`tx_count`)) {
+        self$`tx_count` <- this_object$`tx_count`
+      }
+      if (!is.null(this_object$`open`)) {
+        self$`open` <- this_object$`open`
+      }
+      if (!is.null(this_object$`high`)) {
+        self$`high` <- this_object$`high`
+      }
+      if (!is.null(this_object$`low`)) {
+        self$`low` <- this_object$`low`
+      }
+      if (!is.null(this_object$`close`)) {
+        self$`close` <- this_object$`close`
+      }
+      if (!is.null(this_object$`vid`)) {
+        self$`vid` <- this_object$`vid`
+      }
+      self
+    },
+    #' To JSON string
+    #'
+    #' @description
+    #' To JSON String
+    #'
+    #' @return PoolDayDataV3DTO in JSON format
+    #' @export
+    toJSONString = function() {
+      jsoncontent <- c(
+        if (!is.null(self$`entry_time`)) {
+          sprintf(
+          '"entry_time":
+            "%s"
+                    ',
+          self$`entry_time`
+          )
+        },
+        if (!is.null(self$`recv_time`)) {
+          sprintf(
+          '"recv_time":
+            "%s"
+                    ',
+          self$`recv_time`
+          )
+        },
+        if (!is.null(self$`block_number`)) {
+          sprintf(
+          '"block_number":
+            %d
+                    ',
+          self$`block_number`
+          )
+        },
+        if (!is.null(self$`id`)) {
+          sprintf(
+          '"id":
+            "%s"
+                    ',
+          self$`id`
+          )
+        },
+        if (!is.null(self$`date`)) {
+          sprintf(
+          '"date":
+            %d
+                    ',
+          self$`date`
+          )
+        },
+        if (!is.null(self$`pool`)) {
+          sprintf(
+          '"pool":
+            "%s"
+                    ',
+          self$`pool`
+          )
+        },
+        if (!is.null(self$`liquidity`)) {
+          sprintf(
+          '"liquidity":
+            "%s"
+                    ',
+          self$`liquidity`
+          )
+        },
+        if (!is.null(self$`sqrt_price`)) {
+          sprintf(
+          '"sqrt_price":
+            "%s"
+                    ',
+          self$`sqrt_price`
+          )
+        },
+        if (!is.null(self$`token_0_price`)) {
+          sprintf(
+          '"token_0_price":
+            "%s"
+                    ',
+          self$`token_0_price`
+          )
+        },
+        if (!is.null(self$`token_1_price`)) {
+          sprintf(
+          '"token_1_price":
+            "%s"
+                    ',
+          self$`token_1_price`
+          )
+        },
+        if (!is.null(self$`tick`)) {
+          sprintf(
+          '"tick":
+            "%s"
+                    ',
+          self$`tick`
+          )
+        },
+        if (!is.null(self$`fee_growth_global_0x128`)) {
+          sprintf(
+          '"fee_growth_global_0x128":
+            "%s"
+                    ',
+          self$`fee_growth_global_0x128`
+          )
+        },
+        if (!is.null(self$`fee_growth_global_1x128`)) {
+          sprintf(
+          '"fee_growth_global_1x128":
+            "%s"
+                    ',
+          self$`fee_growth_global_1x128`
+          )
+        },
+        if (!is.null(self$`tvl_usd`)) {
+          sprintf(
+          '"tvl_usd":
+            "%s"
+                    ',
+          self$`tvl_usd`
+          )
+        },
+        if (!is.null(self$`volume_token_0`)) {
+          sprintf(
+          '"volume_token_0":
+            "%s"
+                    ',
+          self$`volume_token_0`
+          )
+        },
+        if (!is.null(self$`volume_token_1`)) {
+          sprintf(
+          '"volume_token_1":
+            "%s"
+                    ',
+          self$`volume_token_1`
+          )
+        },
+        if (!is.null(self$`volume_usd`)) {
+          sprintf(
+          '"volume_usd":
+            "%s"
+                    ',
+          self$`volume_usd`
+          )
+        },
+        if (!is.null(self$`fees_usd`)) {
+          sprintf(
+          '"fees_usd":
+            "%s"
+                    ',
+          self$`fees_usd`
+          )
+        },
+        if (!is.null(self$`tx_count`)) {
+          sprintf(
+          '"tx_count":
+            "%s"
+                    ',
+          self$`tx_count`
+          )
+        },
+        if (!is.null(self$`open`)) {
+          sprintf(
+          '"open":
+            "%s"
+                    ',
+          self$`open`
+          )
+        },
+        if (!is.null(self$`high`)) {
+          sprintf(
+          '"high":
+            "%s"
+                    ',
+          self$`high`
+          )
+        },
+        if (!is.null(self$`low`)) {
+          sprintf(
+          '"low":
+            "%s"
+                    ',
+          self$`low`
+          )
+        },
+        if (!is.null(self$`close`)) {
+          sprintf(
+          '"close":
+            "%s"
+                    ',
+          self$`close`
+          )
+        },
+        if (!is.null(self$`vid`)) {
+          sprintf(
+          '"vid":
+            %d
+                    ',
+          self$`vid`
+          )
+        }
+      )
+      jsoncontent <- paste(jsoncontent, collapse = ",")
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+    },
+    #' Deserialize JSON string into an instance of PoolDayDataV3DTO
+    #'
+    #' @description
+    #' Deserialize JSON string into an instance of PoolDayDataV3DTO
+    #'
+    #' @param input_json the JSON input
+    #' @return the instance of PoolDayDataV3DTO
+    #' @export
+    fromJSONString = function(input_json) {
+      this_object <- jsonlite::fromJSON(input_json)
+      self$`entry_time` <- this_object$`entry_time`
+      self$`recv_time` <- this_object$`recv_time`
+      self$`block_number` <- this_object$`block_number`
+      self$`id` <- this_object$`id`
+      self$`date` <- this_object$`date`
+      self$`pool` <- this_object$`pool`
+      self$`liquidity` <- this_object$`liquidity`
+      self$`sqrt_price` <- this_object$`sqrt_price`
+      self$`token_0_price` <- this_object$`token_0_price`
+      self$`token_1_price` <- this_object$`token_1_price`
+      self$`tick` <- this_object$`tick`
+      self$`fee_growth_global_0x128` <- this_object$`fee_growth_global_0x128`
+      self$`fee_growth_global_1x128` <- this_object$`fee_growth_global_1x128`
+      self$`tvl_usd` <- this_object$`tvl_usd`
+      self$`volume_token_0` <- this_object$`volume_token_0`
+      self$`volume_token_1` <- this_object$`volume_token_1`
+      self$`volume_usd` <- this_object$`volume_usd`
+      self$`fees_usd` <- this_object$`fees_usd`
+      self$`tx_count` <- this_object$`tx_count`
+      self$`open` <- this_object$`open`
+      self$`high` <- this_object$`high`
+      self$`low` <- this_object$`low`
+      self$`close` <- this_object$`close`
+      self$`vid` <- this_object$`vid`
+      self
+    },
+    #' Validate JSON input with respect to PoolDayDataV3DTO
+    #'
+    #' @description
+    #' Validate JSON input with respect to PoolDayDataV3DTO and throw an exception if invalid
+    #'
+    #' @param input the JSON input
+    #' @export
+    validateJSON = function(input) {
+      input_json <- jsonlite::fromJSON(input)
+    },
+    #' To string (JSON format)
+    #'
+    #' @description
+    #' To string (JSON format)
+    #'
+    #' @return String representation of PoolDayDataV3DTO
+    #' @export
+    toString = function() {
+      self$toJSONString()
+    },
+    #' Return true if the values in all fields are valid.
+    #'
+    #' @description
+    #' Return true if the values in all fields are valid.
+    #'
+    #' @return true if the values in all fields are valid.
+    #' @export
+    isValid = function() {
+      TRUE
+    },
+    #' Return a list of invalid fields (if any).
+    #'
+    #' @description
+    #' Return a list of invalid fields (if any).
+    #'
+    #' @return A list of invalid fields (if any).
+    #' @export
+    getInvalidFields = function() {
+      invalid_fields <- list()
+      invalid_fields
+    },
+    #' Print the object
+    #'
+    #' @description
+    #' Print the object
+    #'
+    #' @export
+    print = function() {
+      print(jsonlite::prettify(self$toJSONString()))
+      invisible(self)
+    }),
+    # Lock the class to prevent modifications to the method or field
+    lock_class = TRUE
+)
+## Uncomment below to unlock the class to allow modifications of the method or field
+#PoolDayDataV3DTO$unlock()
+#
+## Below is an example to define the print fnuction
+#PoolDayDataV3DTO$set("public", "print", function(...) {
+#  print(jsonlite::prettify(self$toJSONString()))
+#  invisible(self)
+#})
+## Uncomment below to lock the class to prevent modifications to the method or field
+#PoolDayDataV3DTO$lock()
+

@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Build EMS - REST API
+    name: Build OnChain API
     runs-on: ubuntu-latest
     strategy:
       matrix:

@@ -1,6 +1,6 @@
 /**
- * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * OnChain API
+ *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -57,80 +57,100 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("Balance".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Balance>>(){}.getType();
+    if ("BigInteger".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BigInteger>>(){}.getType();
     }
     
-    if ("BalanceDataInner".equalsIgnoreCase(className)) {
-      return new TypeToken<List<BalanceDataInner>>(){}.getType();
+    if ("BundleV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BundleV3DTO>>(){}.getType();
     }
     
-    if ("Fills".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Fills>>(){}.getType();
+    if ("BurnV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BurnV3DTO>>(){}.getType();
     }
     
-    if ("MessageError".equalsIgnoreCase(className)) {
-      return new TypeToken<List<MessageError>>(){}.getType();
+    if ("ETradeAggressiveSide".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ETradeAggressiveSide>>(){}.getType();
     }
     
-    if ("MessageReject".equalsIgnoreCase(className)) {
-      return new TypeToken<List<MessageReject>>(){}.getType();
+    if ("FactoryV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FactoryV3DTO>>(){}.getType();
     }
     
-    if ("OrdSide".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrdSide>>(){}.getType();
+    if ("MintV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<MintV3DTO>>(){}.getType();
     }
     
-    if ("OrdStatus".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrdStatus>>(){}.getType();
+    if ("PairDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PairDTO>>(){}.getType();
     }
     
-    if ("OrdType".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrdType>>(){}.getType();
+    if ("PairV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PairV2DTO>>(){}.getType();
     }
     
-    if ("OrderCancelAllRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderCancelAllRequest>>(){}.getType();
+    if ("PoolDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PoolDayDataV3DTO>>(){}.getType();
     }
     
-    if ("OrderCancelSingleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderCancelSingleRequest>>(){}.getType();
+    if ("PoolHourDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PoolHourDataV3DTO>>(){}.getType();
     }
     
-    if ("OrderExecutionReport".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderExecutionReport>>(){}.getType();
+    if ("PoolV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PoolV3DTO>>(){}.getType();
     }
     
-    if ("OrderExecutionReportAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderExecutionReportAllOf>>(){}.getType();
+    if ("PositionSnapshotV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PositionSnapshotV3DTO>>(){}.getType();
     }
     
-    if ("OrderHistory".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderHistory>>(){}.getType();
+    if ("PositionV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PositionV3DTO>>(){}.getType();
     }
     
-    if ("OrderNewSingleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<OrderNewSingleRequest>>(){}.getType();
+    if ("SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SwapDTO>>(){}.getType();
     }
     
-    if ("Position".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Position>>(){}.getType();
+    if ("SwapV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SwapV2DTO>>(){}.getType();
     }
     
-    if ("PositionDataInner".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PositionDataInner>>(){}.getType();
+    if ("SwapV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SwapV3DTO>>(){}.getType();
     }
     
-    if ("RejectReason".equalsIgnoreCase(className)) {
-      return new TypeToken<List<RejectReason>>(){}.getType();
+    if ("TickDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TickDayDataV3DTO>>(){}.getType();
     }
     
-    if ("TimeInForce".equalsIgnoreCase(className)) {
-      return new TypeToken<List<TimeInForce>>(){}.getType();
+    if ("TickV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TickV3DTO>>(){}.getType();
     }
     
-    if ("ValidationError".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ValidationError>>(){}.getType();
+    if ("TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TokenDTO>>(){}.getType();
+    }
+    
+    if ("TokenHourDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TokenHourDataV3DTO>>(){}.getType();
+    }
+    
+    if ("TokenV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TokenV2DTO>>(){}.getType();
+    }
+    
+    if ("TokenV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TokenV3DTO>>(){}.getType();
+    }
+    
+    if ("TokenV3DayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TokenV3DayDataDTO>>(){}.getType();
+    }
+    
+    if ("UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapDayDataV3DTO>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -139,80 +159,100 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("Balance".equalsIgnoreCase(className)) {
-      return new TypeToken<Balance>(){}.getType();
+    if ("BigInteger".equalsIgnoreCase(className)) {
+      return new TypeToken<BigInteger>(){}.getType();
     }
     
-    if ("BalanceDataInner".equalsIgnoreCase(className)) {
-      return new TypeToken<BalanceDataInner>(){}.getType();
+    if ("BundleV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<BundleV3DTO>(){}.getType();
     }
     
-    if ("Fills".equalsIgnoreCase(className)) {
-      return new TypeToken<Fills>(){}.getType();
+    if ("BurnV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<BurnV3DTO>(){}.getType();
     }
     
-    if ("MessageError".equalsIgnoreCase(className)) {
-      return new TypeToken<MessageError>(){}.getType();
+    if ("ETradeAggressiveSide".equalsIgnoreCase(className)) {
+      return new TypeToken<ETradeAggressiveSide>(){}.getType();
     }
     
-    if ("MessageReject".equalsIgnoreCase(className)) {
-      return new TypeToken<MessageReject>(){}.getType();
+    if ("FactoryV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<FactoryV3DTO>(){}.getType();
     }
     
-    if ("OrdSide".equalsIgnoreCase(className)) {
-      return new TypeToken<OrdSide>(){}.getType();
+    if ("MintV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<MintV3DTO>(){}.getType();
     }
     
-    if ("OrdStatus".equalsIgnoreCase(className)) {
-      return new TypeToken<OrdStatus>(){}.getType();
+    if ("PairDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PairDTO>(){}.getType();
     }
     
-    if ("OrdType".equalsIgnoreCase(className)) {
-      return new TypeToken<OrdType>(){}.getType();
+    if ("PairV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PairV2DTO>(){}.getType();
     }
     
-    if ("OrderCancelAllRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderCancelAllRequest>(){}.getType();
+    if ("PoolDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PoolDayDataV3DTO>(){}.getType();
     }
     
-    if ("OrderCancelSingleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderCancelSingleRequest>(){}.getType();
+    if ("PoolHourDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PoolHourDataV3DTO>(){}.getType();
     }
     
-    if ("OrderExecutionReport".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderExecutionReport>(){}.getType();
+    if ("PoolV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PoolV3DTO>(){}.getType();
     }
     
-    if ("OrderExecutionReportAllOf".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderExecutionReportAllOf>(){}.getType();
+    if ("PositionSnapshotV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PositionSnapshotV3DTO>(){}.getType();
     }
     
-    if ("OrderHistory".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderHistory>(){}.getType();
+    if ("PositionV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<PositionV3DTO>(){}.getType();
     }
     
-    if ("OrderNewSingleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<OrderNewSingleRequest>(){}.getType();
+    if ("SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SwapDTO>(){}.getType();
     }
     
-    if ("Position".equalsIgnoreCase(className)) {
-      return new TypeToken<Position>(){}.getType();
+    if ("SwapV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SwapV2DTO>(){}.getType();
     }
     
-    if ("PositionDataInner".equalsIgnoreCase(className)) {
-      return new TypeToken<PositionDataInner>(){}.getType();
+    if ("SwapV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SwapV3DTO>(){}.getType();
     }
     
-    if ("RejectReason".equalsIgnoreCase(className)) {
-      return new TypeToken<RejectReason>(){}.getType();
+    if ("TickDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TickDayDataV3DTO>(){}.getType();
     }
     
-    if ("TimeInForce".equalsIgnoreCase(className)) {
-      return new TypeToken<TimeInForce>(){}.getType();
+    if ("TickV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TickV3DTO>(){}.getType();
     }
     
-    if ("ValidationError".equalsIgnoreCase(className)) {
-      return new TypeToken<ValidationError>(){}.getType();
+    if ("TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TokenDTO>(){}.getType();
+    }
+    
+    if ("TokenHourDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TokenHourDataV3DTO>(){}.getType();
+    }
+    
+    if ("TokenV2DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TokenV2DTO>(){}.getType();
+    }
+    
+    if ("TokenV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TokenV3DTO>(){}.getType();
+    }
+    
+    if ("TokenV3DayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TokenV3DayDataDTO>(){}.getType();
+    }
+    
+    if ("UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapDayDataV3DTO>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

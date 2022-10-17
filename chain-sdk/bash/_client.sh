@@ -296,12 +296,38 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "v1BalancesGet[Get balances]"             "v1OrdersCancelAllPost[Cancel all orders request]" \
-            "v1OrdersCancelPost[Cancel order request]" \
-            "v1OrdersGet[Get open orders]" \
-            "v1OrdersHistoryGet[History of order changes]" \
-            "v1OrdersPost[Send new order]" \
-            "v1OrdersStatusClientOrderIdGet[Get order execution report]"             "v1PositionsGet[Get open positions]" \
+            "chainsChainIdDappsCurvePoolsHistoricalGet[]" \
+            "chainsChainIdDappsSushiswapPoolsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2PoolsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3PoolsHistoricalGet[]"             "chainsChainIdDappsSushiswapPoolsCurrentGet[GetPools]" \
+            "chainsChainIdDappsSushiswapSwapsCurrentGet[GetSwaps]" \
+            "chainsChainIdDappsSushiswapTokensCurrentGet[GetTokens]"             "chainsChainIdDappsCurveSwapsHistoricalGet[]" \
+            "chainsChainIdDappsSushiswapSwapsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2SwapsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3SwapsHistoricalGet[]"             "chainsChainIdDappsCowTokensHistoricalGet[]" \
+            "chainsChainIdDappsCurveTokensHistoricalGet[]" \
+            "chainsChainIdDappsDexTokensHistoricalGet[]" \
+            "chainsChainIdDappsSushiswapTokensHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2TokensHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3TokensHistoricalGet[]"             "chainsChainIdDappsCowTradesHistoricalGet[]" \
+            "chainsChainIdDappsDexTradesHistoricalGet[]"             "chainsChainIdDappsUniswapv2PoolsCurrentGet[GetPools]" \
+            "chainsChainIdDappsUniswapv2SwapsCurrentGet[GetSwaps]" \
+            "chainsChainIdDappsUniswapv2TokensCurrentGet[GetTokens]"             "chainsChainIdDappsUniswapv3BundleCurrentGet[GetBundles]" \
+            "chainsChainIdDappsUniswapv3BurnsCurrentGet[GetBurns]" \
+            "chainsChainIdDappsUniswapv3FactoryCurrentGet[GetFactory]" \
+            "chainsChainIdDappsUniswapv3MintsCurrentGet[GetMints]" \
+            "chainsChainIdDappsUniswapv3PoolsCurrentGet[GetPools]" \
+            "chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet[GetPoolsDayData]" \
+            "chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet[GetPoolsHourData]" \
+            "chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet[GetPositionSnapshot]" \
+            "chainsChainIdDappsUniswapv3PositionsCurrentGet[GetPositions]" \
+            "chainsChainIdDappsUniswapv3SwapsCurrentGet[GetSwaps]" \
+            "chainsChainIdDappsUniswapv3TicksCurrentGet[GetTicks]" \
+            "chainsChainIdDappsUniswapv3TicksDayDataCurrentGet[GetTicksDayData]" \
+            "chainsChainIdDappsUniswapv3TokensCurrentGet[GetTokens]" \
+            "chainsChainIdDappsUniswapv3TokensDayDataCurrentGet[GetTokensDayData]" \
+            "chainsChainIdDappsUniswapv3TokensHourDataCurrentGet[GetTokensHourData]" \
+            "chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -309,58 +335,361 @@ case $state in
     ;;
   args)
     case $line[1] in
-      v1BalancesGet)
+      chainsChainIdDappsCurvePoolsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
-                    "exchange_id=:[QUERY] Filter the balances to the specific exchange."
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1OrdersCancelAllPost)
+      chainsChainIdDappsSushiswapPoolsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      v1OrdersCancelPost)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      v1OrdersGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "exchange_id=:[QUERY] Filter the open orders to the specific exchange."
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1OrdersHistoryGet)
+      chainsChainIdDappsUniswapv2PoolsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
-                    "time_start=:[QUERY] Start date"
-"time_end=:[QUERY] End date"
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1OrdersPost)
+      chainsChainIdDappsUniswapv3PoolsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1OrdersStatusClientOrderIdGet)
+      chainsChainIdDappsSushiswapPoolsCurrentGet)
         local -a _op_arguments
         _op_arguments=(
-          "client_order_id=:[PATH] The unique identifier of the order assigned by the client."
+          "chain_id=:[PATH] Chain id"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1PositionsGet)
+      chainsChainIdDappsSushiswapSwapsCurrentGet)
         local -a _op_arguments
         _op_arguments=(
-                    "exchange_id=:[QUERY] Filter the balances to the specific exchange."
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsSushiswapTokensCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveSwapsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsSushiswapSwapsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2SwapsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3SwapsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCowTokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveTokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsDexTokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsSushiswapTokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2TokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokensHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCowTradesHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsDexTradesHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2PoolsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2SwapsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2TokensCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3BundleCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3BurnsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3FactoryCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3MintsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PoolsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PositionsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3SwapsCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TicksCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TicksDayDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_pool_id=:[QUERY] Filter pool id"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokensCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_token_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokensDayDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_token_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokensHourDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+          "filter_token_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] Chain id"
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
     esac

@@ -1,24 +1,29 @@
 import localVarRequest from 'request';
 
-export * from './balance';
-export * from './balanceDataInner';
-export * from './fills';
-export * from './messageError';
-export * from './messageReject';
-export * from './ordSide';
-export * from './ordStatus';
-export * from './ordType';
-export * from './orderCancelAllRequest';
-export * from './orderCancelSingleRequest';
-export * from './orderExecutionReport';
-export * from './orderExecutionReportAllOf';
-export * from './orderHistory';
-export * from './orderNewSingleRequest';
-export * from './position';
-export * from './positionDataInner';
-export * from './rejectReason';
-export * from './timeInForce';
-export * from './validationError';
+export * from './bigInteger';
+export * from './bundleV3DTO';
+export * from './burnV3DTO';
+export * from './eTradeAggressiveSide';
+export * from './factoryV3DTO';
+export * from './mintV3DTO';
+export * from './pairDTO';
+export * from './pairV2DTO';
+export * from './poolDayDataV3DTO';
+export * from './poolHourDataV3DTO';
+export * from './poolV3DTO';
+export * from './positionSnapshotV3DTO';
+export * from './positionV3DTO';
+export * from './swapDTO';
+export * from './swapV2DTO';
+export * from './swapV3DTO';
+export * from './tickDayDataV3DTO';
+export * from './tickV3DTO';
+export * from './tokenDTO';
+export * from './tokenHourDataV3DTO';
+export * from './tokenV2DTO';
+export * from './tokenV3DTO';
+export * from './tokenV3DayDataDTO';
+export * from './uniswapDayDataV3DTO';
 
 import * as fs from 'fs';
 
@@ -33,25 +38,30 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { Balance } from './balance';
-import { BalanceDataInner } from './balanceDataInner';
-import { Fills } from './fills';
-import { MessageError } from './messageError';
-import { MessageReject } from './messageReject';
-import { OrdSide } from './ordSide';
-import { OrdStatus } from './ordStatus';
-import { OrdType } from './ordType';
-import { OrderCancelAllRequest } from './orderCancelAllRequest';
-import { OrderCancelSingleRequest } from './orderCancelSingleRequest';
-import { OrderExecutionReport } from './orderExecutionReport';
-import { OrderExecutionReportAllOf } from './orderExecutionReportAllOf';
-import { OrderHistory } from './orderHistory';
-import { OrderNewSingleRequest } from './orderNewSingleRequest';
-import { Position } from './position';
-import { PositionDataInner } from './positionDataInner';
-import { RejectReason } from './rejectReason';
-import { TimeInForce } from './timeInForce';
-import { ValidationError } from './validationError';
+import { BigInteger } from './bigInteger';
+import { BundleV3DTO } from './bundleV3DTO';
+import { BurnV3DTO } from './burnV3DTO';
+import { ETradeAggressiveSide } from './eTradeAggressiveSide';
+import { FactoryV3DTO } from './factoryV3DTO';
+import { MintV3DTO } from './mintV3DTO';
+import { PairDTO } from './pairDTO';
+import { PairV2DTO } from './pairV2DTO';
+import { PoolDayDataV3DTO } from './poolDayDataV3DTO';
+import { PoolHourDataV3DTO } from './poolHourDataV3DTO';
+import { PoolV3DTO } from './poolV3DTO';
+import { PositionSnapshotV3DTO } from './positionSnapshotV3DTO';
+import { PositionV3DTO } from './positionV3DTO';
+import { SwapDTO } from './swapDTO';
+import { SwapV2DTO } from './swapV2DTO';
+import { SwapV3DTO } from './swapV3DTO';
+import { TickDayDataV3DTO } from './tickDayDataV3DTO';
+import { TickV3DTO } from './tickV3DTO';
+import { TokenDTO } from './tokenDTO';
+import { TokenHourDataV3DTO } from './tokenHourDataV3DTO';
+import { TokenV2DTO } from './tokenV2DTO';
+import { TokenV3DTO } from './tokenV3DTO';
+import { TokenV3DayDataDTO } from './tokenV3DayDataDTO';
+import { UniswapDayDataV3DTO } from './uniswapDayDataV3DTO';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -66,31 +76,33 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "BalanceDataInner.LastUpdatedByEnum": BalanceDataInner.LastUpdatedByEnum,
-        "OrdSide": OrdSide,
-        "OrdStatus": OrdStatus,
-        "OrdType": OrdType,
-        "OrderExecutionReport.ExecInstEnum": OrderExecutionReport.ExecInstEnum,
-        "OrderNewSingleRequest.ExecInstEnum": OrderNewSingleRequest.ExecInstEnum,
-        "RejectReason": RejectReason,
-        "TimeInForce": TimeInForce,
+        "ETradeAggressiveSide": ETradeAggressiveSide,
 }
 
 let typeMap: {[index: string]: any} = {
-    "Balance": Balance,
-    "BalanceDataInner": BalanceDataInner,
-    "Fills": Fills,
-    "MessageError": MessageError,
-    "MessageReject": MessageReject,
-    "OrderCancelAllRequest": OrderCancelAllRequest,
-    "OrderCancelSingleRequest": OrderCancelSingleRequest,
-    "OrderExecutionReport": OrderExecutionReport,
-    "OrderExecutionReportAllOf": OrderExecutionReportAllOf,
-    "OrderHistory": OrderHistory,
-    "OrderNewSingleRequest": OrderNewSingleRequest,
-    "Position": Position,
-    "PositionDataInner": PositionDataInner,
-    "ValidationError": ValidationError,
+    "BigInteger": BigInteger,
+    "BundleV3DTO": BundleV3DTO,
+    "BurnV3DTO": BurnV3DTO,
+    "FactoryV3DTO": FactoryV3DTO,
+    "MintV3DTO": MintV3DTO,
+    "PairDTO": PairDTO,
+    "PairV2DTO": PairV2DTO,
+    "PoolDayDataV3DTO": PoolDayDataV3DTO,
+    "PoolHourDataV3DTO": PoolHourDataV3DTO,
+    "PoolV3DTO": PoolV3DTO,
+    "PositionSnapshotV3DTO": PositionSnapshotV3DTO,
+    "PositionV3DTO": PositionV3DTO,
+    "SwapDTO": SwapDTO,
+    "SwapV2DTO": SwapV2DTO,
+    "SwapV3DTO": SwapV3DTO,
+    "TickDayDataV3DTO": TickDayDataV3DTO,
+    "TickV3DTO": TickV3DTO,
+    "TokenDTO": TokenDTO,
+    "TokenHourDataV3DTO": TokenHourDataV3DTO,
+    "TokenV2DTO": TokenV2DTO,
+    "TokenV3DTO": TokenV3DTO,
+    "TokenV3DayDataDTO": TokenV3DayDataDTO,
+    "UniswapDayDataV3DTO": UniswapDayDataV3DTO,
 }
 
 export class ObjectSerializer {

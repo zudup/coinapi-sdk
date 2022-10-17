@@ -55,20 +55,8 @@ String parameterToString(dynamic value) {
   if (value is DateTime) {
     return value.toUtc().toIso8601String();
   }
-  if (value is OrdSide) {
-    return OrdSideTypeTransformer().encode(value).toString();
-  }
-  if (value is OrdStatus) {
-    return OrdStatusTypeTransformer().encode(value).toString();
-  }
-  if (value is OrdType) {
-    return OrdTypeTypeTransformer().encode(value).toString();
-  }
-  if (value is RejectReason) {
-    return RejectReasonTypeTransformer().encode(value).toString();
-  }
-  if (value is TimeInForce) {
-    return TimeInForceTypeTransformer().encode(value).toString();
+  if (value is ETradeAggressiveSide) {
+    return ETradeAggressiveSideTypeTransformer().encode(value).toString();
   }
   return value.toString();
 }

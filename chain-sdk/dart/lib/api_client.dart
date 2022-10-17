@@ -11,7 +11,7 @@
 part of openapi.api;
 
 class ApiClient {
-  ApiClient({this.basePath = 'https://ems-gateway-aws-eu-central-1-dev.coinapi.io', this.authentication,});
+  ApiClient({this.basePath = 'https://onchain.coinapi.io', this.authentication,});
 
   final String basePath;
   final Authentication? authentication;
@@ -181,44 +181,54 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
-        case 'Balance':
-          return Balance.fromJson(value);
-        case 'BalanceDataInner':
-          return BalanceDataInner.fromJson(value);
-        case 'Fills':
-          return Fills.fromJson(value);
-        case 'MessageError':
-          return MessageError.fromJson(value);
-        case 'MessageReject':
-          return MessageReject.fromJson(value);
-        case 'OrdSide':
-          return OrdSideTypeTransformer().decode(value);
-        case 'OrdStatus':
-          return OrdStatusTypeTransformer().decode(value);
-        case 'OrdType':
-          return OrdTypeTypeTransformer().decode(value);
-        case 'OrderCancelAllRequest':
-          return OrderCancelAllRequest.fromJson(value);
-        case 'OrderCancelSingleRequest':
-          return OrderCancelSingleRequest.fromJson(value);
-        case 'OrderExecutionReport':
-          return OrderExecutionReport.fromJson(value);
-        case 'OrderExecutionReportAllOf':
-          return OrderExecutionReportAllOf.fromJson(value);
-        case 'OrderHistory':
-          return OrderHistory.fromJson(value);
-        case 'OrderNewSingleRequest':
-          return OrderNewSingleRequest.fromJson(value);
-        case 'Position':
-          return Position.fromJson(value);
-        case 'PositionDataInner':
-          return PositionDataInner.fromJson(value);
-        case 'RejectReason':
-          return RejectReasonTypeTransformer().decode(value);
-        case 'TimeInForce':
-          return TimeInForceTypeTransformer().decode(value);
-        case 'ValidationError':
-          return ValidationError.fromJson(value);
+        case 'BigInteger':
+          return BigInteger.fromJson(value);
+        case 'BundleV3DTO':
+          return BundleV3DTO.fromJson(value);
+        case 'BurnV3DTO':
+          return BurnV3DTO.fromJson(value);
+        case 'ETradeAggressiveSide':
+          return ETradeAggressiveSideTypeTransformer().decode(value);
+        case 'FactoryV3DTO':
+          return FactoryV3DTO.fromJson(value);
+        case 'MintV3DTO':
+          return MintV3DTO.fromJson(value);
+        case 'PairDTO':
+          return PairDTO.fromJson(value);
+        case 'PairV2DTO':
+          return PairV2DTO.fromJson(value);
+        case 'PoolDayDataV3DTO':
+          return PoolDayDataV3DTO.fromJson(value);
+        case 'PoolHourDataV3DTO':
+          return PoolHourDataV3DTO.fromJson(value);
+        case 'PoolV3DTO':
+          return PoolV3DTO.fromJson(value);
+        case 'PositionSnapshotV3DTO':
+          return PositionSnapshotV3DTO.fromJson(value);
+        case 'PositionV3DTO':
+          return PositionV3DTO.fromJson(value);
+        case 'SwapDTO':
+          return SwapDTO.fromJson(value);
+        case 'SwapV2DTO':
+          return SwapV2DTO.fromJson(value);
+        case 'SwapV3DTO':
+          return SwapV3DTO.fromJson(value);
+        case 'TickDayDataV3DTO':
+          return TickDayDataV3DTO.fromJson(value);
+        case 'TickV3DTO':
+          return TickV3DTO.fromJson(value);
+        case 'TokenDTO':
+          return TokenDTO.fromJson(value);
+        case 'TokenHourDataV3DTO':
+          return TokenHourDataV3DTO.fromJson(value);
+        case 'TokenV2DTO':
+          return TokenV2DTO.fromJson(value);
+        case 'TokenV3DTO':
+          return TokenV3DTO.fromJson(value);
+        case 'TokenV3DayDataDTO':
+          return TokenV3DayDataDTO.fromJson(value);
+        case 'UniswapDayDataV3DTO':
+          return UniswapDayDataV3DTO.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

@@ -1,6 +1,6 @@
 /**
- * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. <br/> This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       <br/><br/> Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  <br/><br/> If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: <br/><br/> `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this:  <br/><br/> `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * OnChain API
+ *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -13,39 +13,48 @@
 
 
 import ApiClient from './ApiClient';
-import Balance from './model/Balance';
-import BalanceDataInner from './model/BalanceDataInner';
-import Fills from './model/Fills';
-import MessageError from './model/MessageError';
-import MessageReject from './model/MessageReject';
-import OrdSide from './model/OrdSide';
-import OrdStatus from './model/OrdStatus';
-import OrdType from './model/OrdType';
-import OrderCancelAllRequest from './model/OrderCancelAllRequest';
-import OrderCancelSingleRequest from './model/OrderCancelSingleRequest';
-import OrderExecutionReport from './model/OrderExecutionReport';
-import OrderExecutionReportAllOf from './model/OrderExecutionReportAllOf';
-import OrderHistory from './model/OrderHistory';
-import OrderNewSingleRequest from './model/OrderNewSingleRequest';
-import Position from './model/Position';
-import PositionDataInner from './model/PositionDataInner';
-import RejectReason from './model/RejectReason';
-import TimeInForce from './model/TimeInForce';
-import ValidationError from './model/ValidationError';
-import BalancesApi from './api/BalancesApi';
-import OrdersApi from './api/OrdersApi';
-import PositionsApi from './api/PositionsApi';
+import BigInteger from './model/BigInteger';
+import BundleV3DTO from './model/BundleV3DTO';
+import BurnV3DTO from './model/BurnV3DTO';
+import ETradeAggressiveSide from './model/ETradeAggressiveSide';
+import FactoryV3DTO from './model/FactoryV3DTO';
+import MintV3DTO from './model/MintV3DTO';
+import PairDTO from './model/PairDTO';
+import PairV2DTO from './model/PairV2DTO';
+import PoolDayDataV3DTO from './model/PoolDayDataV3DTO';
+import PoolHourDataV3DTO from './model/PoolHourDataV3DTO';
+import PoolV3DTO from './model/PoolV3DTO';
+import PositionSnapshotV3DTO from './model/PositionSnapshotV3DTO';
+import PositionV3DTO from './model/PositionV3DTO';
+import SwapDTO from './model/SwapDTO';
+import SwapV2DTO from './model/SwapV2DTO';
+import SwapV3DTO from './model/SwapV3DTO';
+import TickDayDataV3DTO from './model/TickDayDataV3DTO';
+import TickV3DTO from './model/TickV3DTO';
+import TokenDTO from './model/TokenDTO';
+import TokenHourDataV3DTO from './model/TokenHourDataV3DTO';
+import TokenV2DTO from './model/TokenV2DTO';
+import TokenV3DTO from './model/TokenV3DTO';
+import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
+import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
+import PoolsApi from './api/PoolsApi';
+import SushiswapApi from './api/SushiswapApi';
+import SwapsApi from './api/SwapsApi';
+import TokensApi from './api/TokensApi';
+import TradesApi from './api/TradesApi';
+import UniswapV2Api from './api/UniswapV2Api';
+import UniswapV3Api from './api/UniswapV3Api';
 
 
 /**
-* This section will provide necessary information about the &#x60;CoinAPI EMS REST API&#x60; protocol. &lt;br/&gt; This API is also available in the Postman application: &lt;a href&#x3D;\&quot;https://postman.coinapi.io/\&quot; target&#x3D;\&quot;_blank\&quot;&gt;https://postman.coinapi.io/&lt;/a&gt;       &lt;br/&gt;&lt;br/&gt; Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;Deployment method&lt;/th&gt;       &lt;th&gt;Environment&lt;/th&gt;       &lt;th&gt;Url&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;Managed Cloud&lt;/td&gt;       &lt;td&gt;Production&lt;/td&gt;       &lt;td&gt;Use &lt;a href&#x3D;\&quot;#ems-docs-sh\&quot;&gt;Managed Cloud REST API /v1/locations&lt;/a&gt; to get specific endpoints to each server site where your deployments span&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;Managed Cloud&lt;/td&gt;       &lt;td&gt;Sandbox&lt;/td&gt;       &lt;td&gt;&lt;code&gt;https://ems-gateway-aws-eu-central-1-dev.coinapi.io/&lt;/code&gt;&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;Self Hosted&lt;/td&gt;       &lt;td&gt;Production&lt;/td&gt;       &lt;td&gt;IP Address of the &lt;code&gt;ems-gateway&lt;/code&gt; container/excecutable in the closest server site to the caller location&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;Self Hosted&lt;/td&gt;       &lt;td&gt;Sandbox&lt;/td&gt;       &lt;td&gt;IP Address of the &lt;code&gt;ems-gateway&lt;/code&gt; container/excecutable in the closest server site to the caller location&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  ### Authentication If the software is deployed as &#x60;Self-Hosted&#x60; then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  &lt;br/&gt;&lt;br/&gt; If the software is deployed in our &#x60;Managed Cloud&#x60;, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named &#x60;X-CoinAPI-Key&#x60; with the API Key  2. Query string parameter named &#x60;apikey&#x60; with the API Key  3. &lt;a href&#x3D;\&quot;#certificate\&quot;&gt;TLS Client Certificate&lt;/a&gt; from the &#x60;Managed Cloud REST API&#x60; (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named &#x60;X-CoinAPI-Key&#x60; and API key as its value. Assuming that your API key is &#x60;73034021-THIS-IS-SAMPLE-KEY&#x60;, then the authorization header you should send to us will look like: &lt;br/&gt;&lt;br/&gt; &#x60;X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY&#x60; &lt;aside class&#x3D;\&quot;success\&quot;&gt;This method is recommended by us and you should use it in production environments.&lt;/aside&gt; #### Query string authorization parameter You can authorize by providing an additional parameter named &#x60;apikey&#x60; with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is &#x60;73034021-THIS-IS-SAMPLE-KEY&#x60; and that you want to request all balances, then your query string should look like this:  &lt;br/&gt;&lt;br/&gt; &#x60;GET /v1/balances?apikey&#x3D;73034021-THIS-IS-SAMPLE-KEY&#x60; &lt;aside class&#x3D;\&quot;notice\&quot;&gt;Query string method may be more practical for development activities.&lt;/aside&gt; .<br>
+*  This section will provide necessary information about the &#x60;OnChain API&#x60; protocol.  &lt;br/&gt;&lt;br/&gt; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             .<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var EmsRestApi = require('index'); // See note below*.
-* var xxxSvc = new EmsRestApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new EmsRestApi.Yyy(); // Construct a model instance.
+* var OnChainApi = require('index'); // See note below*.
+* var xxxSvc = new OnChainApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new OnChainApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -57,8 +66,8 @@ import PositionsApi from './api/PositionsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new EmsRestApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new EmsRestApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new OnChainApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new OnChainApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -76,134 +85,188 @@ export {
     ApiClient,
 
     /**
-     * The Balance model constructor.
-     * @property {module:model/Balance}
+     * The BigInteger model constructor.
+     * @property {module:model/BigInteger}
      */
-    Balance,
+    BigInteger,
 
     /**
-     * The BalanceDataInner model constructor.
-     * @property {module:model/BalanceDataInner}
+     * The BundleV3DTO model constructor.
+     * @property {module:model/BundleV3DTO}
      */
-    BalanceDataInner,
+    BundleV3DTO,
 
     /**
-     * The Fills model constructor.
-     * @property {module:model/Fills}
+     * The BurnV3DTO model constructor.
+     * @property {module:model/BurnV3DTO}
      */
-    Fills,
+    BurnV3DTO,
 
     /**
-     * The MessageError model constructor.
-     * @property {module:model/MessageError}
+     * The ETradeAggressiveSide model constructor.
+     * @property {module:model/ETradeAggressiveSide}
      */
-    MessageError,
+    ETradeAggressiveSide,
 
     /**
-     * The MessageReject model constructor.
-     * @property {module:model/MessageReject}
+     * The FactoryV3DTO model constructor.
+     * @property {module:model/FactoryV3DTO}
      */
-    MessageReject,
+    FactoryV3DTO,
 
     /**
-     * The OrdSide model constructor.
-     * @property {module:model/OrdSide}
+     * The MintV3DTO model constructor.
+     * @property {module:model/MintV3DTO}
      */
-    OrdSide,
+    MintV3DTO,
 
     /**
-     * The OrdStatus model constructor.
-     * @property {module:model/OrdStatus}
+     * The PairDTO model constructor.
+     * @property {module:model/PairDTO}
      */
-    OrdStatus,
+    PairDTO,
 
     /**
-     * The OrdType model constructor.
-     * @property {module:model/OrdType}
+     * The PairV2DTO model constructor.
+     * @property {module:model/PairV2DTO}
      */
-    OrdType,
+    PairV2DTO,
 
     /**
-     * The OrderCancelAllRequest model constructor.
-     * @property {module:model/OrderCancelAllRequest}
+     * The PoolDayDataV3DTO model constructor.
+     * @property {module:model/PoolDayDataV3DTO}
      */
-    OrderCancelAllRequest,
+    PoolDayDataV3DTO,
 
     /**
-     * The OrderCancelSingleRequest model constructor.
-     * @property {module:model/OrderCancelSingleRequest}
+     * The PoolHourDataV3DTO model constructor.
+     * @property {module:model/PoolHourDataV3DTO}
      */
-    OrderCancelSingleRequest,
+    PoolHourDataV3DTO,
 
     /**
-     * The OrderExecutionReport model constructor.
-     * @property {module:model/OrderExecutionReport}
+     * The PoolV3DTO model constructor.
+     * @property {module:model/PoolV3DTO}
      */
-    OrderExecutionReport,
+    PoolV3DTO,
 
     /**
-     * The OrderExecutionReportAllOf model constructor.
-     * @property {module:model/OrderExecutionReportAllOf}
+     * The PositionSnapshotV3DTO model constructor.
+     * @property {module:model/PositionSnapshotV3DTO}
      */
-    OrderExecutionReportAllOf,
+    PositionSnapshotV3DTO,
 
     /**
-     * The OrderHistory model constructor.
-     * @property {module:model/OrderHistory}
+     * The PositionV3DTO model constructor.
+     * @property {module:model/PositionV3DTO}
      */
-    OrderHistory,
+    PositionV3DTO,
 
     /**
-     * The OrderNewSingleRequest model constructor.
-     * @property {module:model/OrderNewSingleRequest}
+     * The SwapDTO model constructor.
+     * @property {module:model/SwapDTO}
      */
-    OrderNewSingleRequest,
+    SwapDTO,
 
     /**
-     * The Position model constructor.
-     * @property {module:model/Position}
+     * The SwapV2DTO model constructor.
+     * @property {module:model/SwapV2DTO}
      */
-    Position,
+    SwapV2DTO,
 
     /**
-     * The PositionDataInner model constructor.
-     * @property {module:model/PositionDataInner}
+     * The SwapV3DTO model constructor.
+     * @property {module:model/SwapV3DTO}
      */
-    PositionDataInner,
+    SwapV3DTO,
 
     /**
-     * The RejectReason model constructor.
-     * @property {module:model/RejectReason}
+     * The TickDayDataV3DTO model constructor.
+     * @property {module:model/TickDayDataV3DTO}
      */
-    RejectReason,
+    TickDayDataV3DTO,
 
     /**
-     * The TimeInForce model constructor.
-     * @property {module:model/TimeInForce}
+     * The TickV3DTO model constructor.
+     * @property {module:model/TickV3DTO}
      */
-    TimeInForce,
+    TickV3DTO,
 
     /**
-     * The ValidationError model constructor.
-     * @property {module:model/ValidationError}
+     * The TokenDTO model constructor.
+     * @property {module:model/TokenDTO}
      */
-    ValidationError,
+    TokenDTO,
 
     /**
-    * The BalancesApi service constructor.
-    * @property {module:api/BalancesApi}
+     * The TokenHourDataV3DTO model constructor.
+     * @property {module:model/TokenHourDataV3DTO}
+     */
+    TokenHourDataV3DTO,
+
+    /**
+     * The TokenV2DTO model constructor.
+     * @property {module:model/TokenV2DTO}
+     */
+    TokenV2DTO,
+
+    /**
+     * The TokenV3DTO model constructor.
+     * @property {module:model/TokenV3DTO}
+     */
+    TokenV3DTO,
+
+    /**
+     * The TokenV3DayDataDTO model constructor.
+     * @property {module:model/TokenV3DayDataDTO}
+     */
+    TokenV3DayDataDTO,
+
+    /**
+     * The UniswapDayDataV3DTO model constructor.
+     * @property {module:model/UniswapDayDataV3DTO}
+     */
+    UniswapDayDataV3DTO,
+
+    /**
+    * The PoolsApi service constructor.
+    * @property {module:api/PoolsApi}
     */
-    BalancesApi,
+    PoolsApi,
 
     /**
-    * The OrdersApi service constructor.
-    * @property {module:api/OrdersApi}
+    * The SushiswapApi service constructor.
+    * @property {module:api/SushiswapApi}
     */
-    OrdersApi,
+    SushiswapApi,
 
     /**
-    * The PositionsApi service constructor.
-    * @property {module:api/PositionsApi}
+    * The SwapsApi service constructor.
+    * @property {module:api/SwapsApi}
     */
-    PositionsApi
+    SwapsApi,
+
+    /**
+    * The TokensApi service constructor.
+    * @property {module:api/TokensApi}
+    */
+    TokensApi,
+
+    /**
+    * The TradesApi service constructor.
+    * @property {module:api/TradesApi}
+    */
+    TradesApi,
+
+    /**
+    * The UniswapV2Api service constructor.
+    * @property {module:api/UniswapV2Api}
+    */
+    UniswapV2Api,
+
+    /**
+    * The UniswapV3Api service constructor.
+    * @property {module:api/UniswapV3Api}
+    */
+    UniswapV3Api
 };

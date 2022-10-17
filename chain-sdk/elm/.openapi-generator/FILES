@@ -4,7 +4,11 @@ README.md
 elm.json
 src/Api.elm
 src/Api/Data.elm
-src/Api/Request/Balances.elm
-src/Api/Request/Orders.elm
-src/Api/Request/Positions.elm
+src/Api/Request/Pools.elm
+src/Api/Request/Sushiswap.elm
+src/Api/Request/Swaps.elm
+src/Api/Request/Tokens.elm
+src/Api/Request/Trades.elm
+src/Api/Request/UniswapV2.elm
+src/Api/Request/UniswapV3.elm
 src/Api/Time.elm

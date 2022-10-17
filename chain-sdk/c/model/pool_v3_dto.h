@@ -1,0 +1,102 @@
+/*
+ * pool_v3_dto.h
+ *
+ * 
+ */
+
+#ifndef _pool_v3_dto_H_
+#define _pool_v3_dto_H_
+
+#include <string.h>
+#include "../external/cJSON.h"
+#include "../include/list.h"
+#include "../include/keyValuePair.h"
+#include "../include/binary.h"
+
+typedef struct pool_v3_dto_t pool_v3_dto_t;
+
+#include "big_integer.h"
+
+
+
+typedef struct pool_v3_dto_t {
+    char *entry_time; //date time
+    char *recv_time; //date time
+    long block_number; //numeric
+    long vid; //numeric
+    char *id; // string
+    char *created_at_timestamp; //date time
+    char *token_0; // string
+    char *token_1; // string
+    struct big_integer_t *fee_tier; //model
+    struct big_integer_t *liquidity; //model
+    struct big_integer_t *sqrt_price; //model
+    struct big_integer_t *fee_growth_global_0x128; //model
+    struct big_integer_t *fee_growth_global_1x128; //model
+    char *token_0_price; // string
+    char *token_1_price; // string
+    struct big_integer_t *tick; //model
+    struct big_integer_t *observation_index; //model
+    char *volume_token_0; // string
+    char *volume_token_1; // string
+    char *volume_usd; // string
+    char *untracked_volume_usd; // string
+    char *fees_usd; // string
+    struct big_integer_t *tx_count; //model
+    char *collected_fees_token_0; // string
+    char *collected_fees_token_1; // string
+    char *collected_fees_usd; // string
+    char *total_value_locked_token_0; // string
+    char *total_value_locked_token_1; // string
+    char *total_value_locked_eth; // string
+    char *total_value_locked_usd; // string
+    char *total_value_locked_usd_untracked; // string
+    char *liquidity_provider_count; // string
+    double evaluated_ask; //numeric
+
+} pool_v3_dto_t;
+
+pool_v3_dto_t *pool_v3_dto_create(
+    char *entry_time,
+    char *recv_time,
+    long block_number,
+    long vid,
+    char *id,
+    char *created_at_timestamp,
+    char *token_0,
+    char *token_1,
+    big_integer_t *fee_tier,
+    big_integer_t *liquidity,
+    big_integer_t *sqrt_price,
+    big_integer_t *fee_growth_global_0x128,
+    big_integer_t *fee_growth_global_1x128,
+    char *token_0_price,
+    char *token_1_price,
+    big_integer_t *tick,
+    big_integer_t *observation_index,
+    char *volume_token_0,
+    char *volume_token_1,
+    char *volume_usd,
+    char *untracked_volume_usd,
+    char *fees_usd,
+    big_integer_t *tx_count,
+    char *collected_fees_token_0,
+    char *collected_fees_token_1,
+    char *collected_fees_usd,
+    char *total_value_locked_token_0,
+    char *total_value_locked_token_1,
+    char *total_value_locked_eth,
+    char *total_value_locked_usd,
+    char *total_value_locked_usd_untracked,
+    char *liquidity_provider_count,
+    double evaluated_ask
+);
+
+void pool_v3_dto_free(pool_v3_dto_t *pool_v3_dto);
+
+pool_v3_dto_t *pool_v3_dto_parseFromJSON(cJSON *pool_v3_dtoJSON);
+
+cJSON *pool_v3_dto_convertToJSON(pool_v3_dto_t *pool_v3_dto);
+
+#endif /* _pool_v3_dto_H_ */
+

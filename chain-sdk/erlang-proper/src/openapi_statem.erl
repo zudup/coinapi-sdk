@@ -58,12 +58,162 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% v1_positions_get
+%% chains_chain_id_dapps_uniswapv3_bundle_current_get
 %%==============================================================================
 
-v1_positions_get() ->
-  openapi_api:v1_positions_get().
+chains_chain_id_dapps_uniswapv3_bundle_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_bundle_current_get(ChainId).
 
-v1_positions_get_args(_S) ->
-  [].
+chains_chain_id_dapps_uniswapv3_bundle_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_burns_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_burns_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_burns_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_burns_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_factory_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_factory_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_factory_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_factory_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_mints_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_mints_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_mints_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_mints_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_pools_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_pools_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_pools_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_pools_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_pools_day_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_pools_day_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_pools_day_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_pools_day_data_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_position_snapshots_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_position_snapshots_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_position_snapshots_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_position_snapshots_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_positions_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_positions_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_positions_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_positions_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_swaps_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_swaps_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_swaps_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_swaps_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_ticks_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_ticks_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_ticks_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_ticks_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_tokens_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_tokens_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_tokens_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_tokens_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get_args(_S) ->
+  [binary()].
+
+%%==============================================================================
+%% chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get
+%%==============================================================================
+
+chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get(ChainId).
+
+chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get_args(_S) ->
+  [binary()].
 

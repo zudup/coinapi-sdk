@@ -2,9 +2,13 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
-import { BalancesService } from './api/balances.service';
-import { OrdersService } from './api/orders.service';
-import { PositionsService } from './api/positions.service';
+import { PoolsService } from './api/pools.service';
+import { SushiswapService } from './api/sushiswap.service';
+import { SwapsService } from './api/swaps.service';
+import { TokensService } from './api/tokens.service';
+import { TradesService } from './api/trades.service';
+import { UniswapV2Service } from './api/uniswapV2.service';
+import { UniswapV3Service } from './api/uniswapV3.service';
 
 @NgModule({
   imports:      [],

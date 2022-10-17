@@ -1,0 +1,914 @@
+#' Create a new PoolV3DTO
+#'
+#' @description
+#' PoolV3DTO Class
+#'
+#' @docType class
+#' @title PoolV3DTO
+#' @description PoolV3DTO Class
+#' @format An \code{R6Class} generator object
+#' @field entry_time  character [optional]
+#' @field recv_time  character [optional]
+#' @field block_number  integer [optional]
+#' @field vid  integer [optional]
+#' @field id  character [optional]
+#' @field created_at_timestamp  character [optional]
+#' @field token_0  character [optional]
+#' @field token_1  character [optional]
+#' @field fee_tier  \link{BigInteger} [optional]
+#' @field liquidity  \link{BigInteger} [optional]
+#' @field sqrt_price  \link{BigInteger} [optional]
+#' @field fee_growth_global_0x128  \link{BigInteger} [optional]
+#' @field fee_growth_global_1x128  \link{BigInteger} [optional]
+#' @field token_0_price  character [optional]
+#' @field token_1_price  character [optional]
+#' @field tick  \link{BigInteger} [optional]
+#' @field observation_index  \link{BigInteger} [optional]
+#' @field volume_token_0  character [optional]
+#' @field volume_token_1  character [optional]
+#' @field volume_usd  character [optional]
+#' @field untracked_volume_usd  character [optional]
+#' @field fees_usd  character [optional]
+#' @field tx_count  \link{BigInteger} [optional]
+#' @field collected_fees_token_0  character [optional]
+#' @field collected_fees_token_1  character [optional]
+#' @field collected_fees_usd  character [optional]
+#' @field total_value_locked_token_0  character [optional]
+#' @field total_value_locked_token_1  character [optional]
+#' @field total_value_locked_eth  character [optional]
+#' @field total_value_locked_usd  character [optional]
+#' @field total_value_locked_usd_untracked  character [optional]
+#' @field liquidity_provider_count  character [optional]
+#' @field evaluated_ask  numeric [optional]
+#' @importFrom R6 R6Class
+#' @importFrom jsonlite fromJSON toJSON
+#' @export
+PoolV3DTO <- R6::R6Class(
+  "PoolV3DTO",
+  public = list(
+    `entry_time` = NULL,
+    `recv_time` = NULL,
+    `block_number` = NULL,
+    `vid` = NULL,
+    `id` = NULL,
+    `created_at_timestamp` = NULL,
+    `token_0` = NULL,
+    `token_1` = NULL,
+    `fee_tier` = NULL,
+    `liquidity` = NULL,
+    `sqrt_price` = NULL,
+    `fee_growth_global_0x128` = NULL,
+    `fee_growth_global_1x128` = NULL,
+    `token_0_price` = NULL,
+    `token_1_price` = NULL,
+    `tick` = NULL,
+    `observation_index` = NULL,
+    `volume_token_0` = NULL,
+    `volume_token_1` = NULL,
+    `volume_usd` = NULL,
+    `untracked_volume_usd` = NULL,
+    `fees_usd` = NULL,
+    `tx_count` = NULL,
+    `collected_fees_token_0` = NULL,
+    `collected_fees_token_1` = NULL,
+    `collected_fees_usd` = NULL,
+    `total_value_locked_token_0` = NULL,
+    `total_value_locked_token_1` = NULL,
+    `total_value_locked_eth` = NULL,
+    `total_value_locked_usd` = NULL,
+    `total_value_locked_usd_untracked` = NULL,
+    `liquidity_provider_count` = NULL,
+    `evaluated_ask` = NULL,
+    #' Initialize a new PoolV3DTO class.
+    #'
+    #' @description
+    #' Initialize a new PoolV3DTO class.
+    #'
+    #' @param entry_time entry_time
+    #' @param recv_time recv_time
+    #' @param block_number block_number
+    #' @param vid vid
+    #' @param id id
+    #' @param created_at_timestamp created_at_timestamp
+    #' @param token_0 token_0
+    #' @param token_1 token_1
+    #' @param fee_tier fee_tier
+    #' @param liquidity liquidity
+    #' @param sqrt_price sqrt_price
+    #' @param fee_growth_global_0x128 fee_growth_global_0x128
+    #' @param fee_growth_global_1x128 fee_growth_global_1x128
+    #' @param token_0_price token_0_price
+    #' @param token_1_price token_1_price
+    #' @param tick tick
+    #' @param observation_index observation_index
+    #' @param volume_token_0 volume_token_0
+    #' @param volume_token_1 volume_token_1
+    #' @param volume_usd volume_usd
+    #' @param untracked_volume_usd untracked_volume_usd
+    #' @param fees_usd fees_usd
+    #' @param tx_count tx_count
+    #' @param collected_fees_token_0 collected_fees_token_0
+    #' @param collected_fees_token_1 collected_fees_token_1
+    #' @param collected_fees_usd collected_fees_usd
+    #' @param total_value_locked_token_0 total_value_locked_token_0
+    #' @param total_value_locked_token_1 total_value_locked_token_1
+    #' @param total_value_locked_eth total_value_locked_eth
+    #' @param total_value_locked_usd total_value_locked_usd
+    #' @param total_value_locked_usd_untracked total_value_locked_usd_untracked
+    #' @param liquidity_provider_count liquidity_provider_count
+    #' @param evaluated_ask evaluated_ask
+    #' @param ... Other optional arguments.
+    #' @export
+    initialize = function(
+        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `created_at_timestamp` = NULL, `token_0` = NULL, `token_1` = NULL, `fee_tier` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `observation_index` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `collected_fees_token_0` = NULL, `collected_fees_token_1` = NULL, `collected_fees_usd` = NULL, `total_value_locked_token_0` = NULL, `total_value_locked_token_1` = NULL, `total_value_locked_eth` = NULL, `total_value_locked_usd` = NULL, `total_value_locked_usd_untracked` = NULL, `liquidity_provider_count` = NULL, `evaluated_ask` = NULL, ...
+    ) {
+      if (!is.null(`entry_time`)) {
+        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        self$`entry_time` <- `entry_time`
+      }
+      if (!is.null(`recv_time`)) {
+        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        self$`recv_time` <- `recv_time`
+      }
+      if (!is.null(`block_number`)) {
+        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        self$`block_number` <- `block_number`
+      }
+      if (!is.null(`vid`)) {
+        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        self$`vid` <- `vid`
+      }
+      if (!is.null(`id`)) {
+        stopifnot(is.character(`id`), length(`id`) == 1)
+        self$`id` <- `id`
+      }
+      if (!is.null(`created_at_timestamp`)) {
+        stopifnot(is.character(`created_at_timestamp`), length(`created_at_timestamp`) == 1)
+        self$`created_at_timestamp` <- `created_at_timestamp`
+      }
+      if (!is.null(`token_0`)) {
+        stopifnot(is.character(`token_0`), length(`token_0`) == 1)
+        self$`token_0` <- `token_0`
+      }
+      if (!is.null(`token_1`)) {
+        stopifnot(is.character(`token_1`), length(`token_1`) == 1)
+        self$`token_1` <- `token_1`
+      }
+      if (!is.null(`fee_tier`)) {
+        stopifnot(R6::is.R6(`fee_tier`))
+        self$`fee_tier` <- `fee_tier`
+      }
+      if (!is.null(`liquidity`)) {
+        stopifnot(R6::is.R6(`liquidity`))
+        self$`liquidity` <- `liquidity`
+      }
+      if (!is.null(`sqrt_price`)) {
+        stopifnot(R6::is.R6(`sqrt_price`))
+        self$`sqrt_price` <- `sqrt_price`
+      }
+      if (!is.null(`fee_growth_global_0x128`)) {
+        stopifnot(R6::is.R6(`fee_growth_global_0x128`))
+        self$`fee_growth_global_0x128` <- `fee_growth_global_0x128`
+      }
+      if (!is.null(`fee_growth_global_1x128`)) {
+        stopifnot(R6::is.R6(`fee_growth_global_1x128`))
+        self$`fee_growth_global_1x128` <- `fee_growth_global_1x128`
+      }
+      if (!is.null(`token_0_price`)) {
+        stopifnot(is.character(`token_0_price`), length(`token_0_price`) == 1)
+        self$`token_0_price` <- `token_0_price`
+      }
+      if (!is.null(`token_1_price`)) {
+        stopifnot(is.character(`token_1_price`), length(`token_1_price`) == 1)
+        self$`token_1_price` <- `token_1_price`
+      }
+      if (!is.null(`tick`)) {
+        stopifnot(R6::is.R6(`tick`))
+        self$`tick` <- `tick`
+      }
+      if (!is.null(`observation_index`)) {
+        stopifnot(R6::is.R6(`observation_index`))
+        self$`observation_index` <- `observation_index`
+      }
+      if (!is.null(`volume_token_0`)) {
+        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        self$`volume_token_0` <- `volume_token_0`
+      }
+      if (!is.null(`volume_token_1`)) {
+        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        self$`volume_token_1` <- `volume_token_1`
+      }
+      if (!is.null(`volume_usd`)) {
+        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        self$`volume_usd` <- `volume_usd`
+      }
+      if (!is.null(`untracked_volume_usd`)) {
+        stopifnot(is.character(`untracked_volume_usd`), length(`untracked_volume_usd`) == 1)
+        self$`untracked_volume_usd` <- `untracked_volume_usd`
+      }
+      if (!is.null(`fees_usd`)) {
+        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        self$`fees_usd` <- `fees_usd`
+      }
+      if (!is.null(`tx_count`)) {
+        stopifnot(R6::is.R6(`tx_count`))
+        self$`tx_count` <- `tx_count`
+      }
+      if (!is.null(`collected_fees_token_0`)) {
+        stopifnot(is.character(`collected_fees_token_0`), length(`collected_fees_token_0`) == 1)
+        self$`collected_fees_token_0` <- `collected_fees_token_0`
+      }
+      if (!is.null(`collected_fees_token_1`)) {
+        stopifnot(is.character(`collected_fees_token_1`), length(`collected_fees_token_1`) == 1)
+        self$`collected_fees_token_1` <- `collected_fees_token_1`
+      }
+      if (!is.null(`collected_fees_usd`)) {
+        stopifnot(is.character(`collected_fees_usd`), length(`collected_fees_usd`) == 1)
+        self$`collected_fees_usd` <- `collected_fees_usd`
+      }
+      if (!is.null(`total_value_locked_token_0`)) {
+        stopifnot(is.character(`total_value_locked_token_0`), length(`total_value_locked_token_0`) == 1)
+        self$`total_value_locked_token_0` <- `total_value_locked_token_0`
+      }
+      if (!is.null(`total_value_locked_token_1`)) {
+        stopifnot(is.character(`total_value_locked_token_1`), length(`total_value_locked_token_1`) == 1)
+        self$`total_value_locked_token_1` <- `total_value_locked_token_1`
+      }
+      if (!is.null(`total_value_locked_eth`)) {
+        stopifnot(is.character(`total_value_locked_eth`), length(`total_value_locked_eth`) == 1)
+        self$`total_value_locked_eth` <- `total_value_locked_eth`
+      }
+      if (!is.null(`total_value_locked_usd`)) {
+        stopifnot(is.character(`total_value_locked_usd`), length(`total_value_locked_usd`) == 1)
+        self$`total_value_locked_usd` <- `total_value_locked_usd`
+      }
+      if (!is.null(`total_value_locked_usd_untracked`)) {
+        stopifnot(is.character(`total_value_locked_usd_untracked`), length(`total_value_locked_usd_untracked`) == 1)
+        self$`total_value_locked_usd_untracked` <- `total_value_locked_usd_untracked`
+      }
+      if (!is.null(`liquidity_provider_count`)) {
+        stopifnot(is.character(`liquidity_provider_count`), length(`liquidity_provider_count`) == 1)
+        self$`liquidity_provider_count` <- `liquidity_provider_count`
+      }
+      if (!is.null(`evaluated_ask`)) {
+        stopifnot(is.numeric(`evaluated_ask`), length(`evaluated_ask`) == 1)
+        self$`evaluated_ask` <- `evaluated_ask`
+      }
+    },
+    #' To JSON string
+    #'
+    #' @description
+    #' To JSON String
+    #'
+    #' @return PoolV3DTO in JSON format
+    #' @export
+    toJSON = function() {
+      PoolV3DTOObject <- list()
+      if (!is.null(self$`entry_time`)) {
+        PoolV3DTOObject[["entry_time"]] <-
+          self$`entry_time`
+      }
+      if (!is.null(self$`recv_time`)) {
+        PoolV3DTOObject[["recv_time"]] <-
+          self$`recv_time`
+      }
+      if (!is.null(self$`block_number`)) {
+        PoolV3DTOObject[["block_number"]] <-
+          self$`block_number`
+      }
+      if (!is.null(self$`vid`)) {
+        PoolV3DTOObject[["vid"]] <-
+          self$`vid`
+      }
+      if (!is.null(self$`id`)) {
+        PoolV3DTOObject[["id"]] <-
+          self$`id`
+      }
+      if (!is.null(self$`created_at_timestamp`)) {
+        PoolV3DTOObject[["created_at_timestamp"]] <-
+          self$`created_at_timestamp`
+      }
+      if (!is.null(self$`token_0`)) {
+        PoolV3DTOObject[["token_0"]] <-
+          self$`token_0`
+      }
+      if (!is.null(self$`token_1`)) {
+        PoolV3DTOObject[["token_1"]] <-
+          self$`token_1`
+      }
+      if (!is.null(self$`fee_tier`)) {
+        PoolV3DTOObject[["fee_tier"]] <-
+          self$`fee_tier`$toJSON()
+      }
+      if (!is.null(self$`liquidity`)) {
+        PoolV3DTOObject[["liquidity"]] <-
+          self$`liquidity`$toJSON()
+      }
+      if (!is.null(self$`sqrt_price`)) {
+        PoolV3DTOObject[["sqrt_price"]] <-
+          self$`sqrt_price`$toJSON()
+      }
+      if (!is.null(self$`fee_growth_global_0x128`)) {
+        PoolV3DTOObject[["fee_growth_global_0x128"]] <-
+          self$`fee_growth_global_0x128`$toJSON()
+      }
+      if (!is.null(self$`fee_growth_global_1x128`)) {
+        PoolV3DTOObject[["fee_growth_global_1x128"]] <-
+          self$`fee_growth_global_1x128`$toJSON()
+      }
+      if (!is.null(self$`token_0_price`)) {
+        PoolV3DTOObject[["token_0_price"]] <-
+          self$`token_0_price`
+      }
+      if (!is.null(self$`token_1_price`)) {
+        PoolV3DTOObject[["token_1_price"]] <-
+          self$`token_1_price`
+      }
+      if (!is.null(self$`tick`)) {
+        PoolV3DTOObject[["tick"]] <-
+          self$`tick`$toJSON()
+      }
+      if (!is.null(self$`observation_index`)) {
+        PoolV3DTOObject[["observation_index"]] <-
+          self$`observation_index`$toJSON()
+      }
+      if (!is.null(self$`volume_token_0`)) {
+        PoolV3DTOObject[["volume_token_0"]] <-
+          self$`volume_token_0`
+      }
+      if (!is.null(self$`volume_token_1`)) {
+        PoolV3DTOObject[["volume_token_1"]] <-
+          self$`volume_token_1`
+      }
+      if (!is.null(self$`volume_usd`)) {
+        PoolV3DTOObject[["volume_usd"]] <-
+          self$`volume_usd`
+      }
+      if (!is.null(self$`untracked_volume_usd`)) {
+        PoolV3DTOObject[["untracked_volume_usd"]] <-
+          self$`untracked_volume_usd`
+      }
+      if (!is.null(self$`fees_usd`)) {
+        PoolV3DTOObject[["fees_usd"]] <-
+          self$`fees_usd`
+      }
+      if (!is.null(self$`tx_count`)) {
+        PoolV3DTOObject[["tx_count"]] <-
+          self$`tx_count`$toJSON()
+      }
+      if (!is.null(self$`collected_fees_token_0`)) {
+        PoolV3DTOObject[["collected_fees_token_0"]] <-
+          self$`collected_fees_token_0`
+      }
+      if (!is.null(self$`collected_fees_token_1`)) {
+        PoolV3DTOObject[["collected_fees_token_1"]] <-
+          self$`collected_fees_token_1`
+      }
+      if (!is.null(self$`collected_fees_usd`)) {
+        PoolV3DTOObject[["collected_fees_usd"]] <-
+          self$`collected_fees_usd`
+      }
+      if (!is.null(self$`total_value_locked_token_0`)) {
+        PoolV3DTOObject[["total_value_locked_token_0"]] <-
+          self$`total_value_locked_token_0`
+      }
+      if (!is.null(self$`total_value_locked_token_1`)) {
+        PoolV3DTOObject[["total_value_locked_token_1"]] <-
+          self$`total_value_locked_token_1`
+      }
+      if (!is.null(self$`total_value_locked_eth`)) {
+        PoolV3DTOObject[["total_value_locked_eth"]] <-
+          self$`total_value_locked_eth`
+      }
+      if (!is.null(self$`total_value_locked_usd`)) {
+        PoolV3DTOObject[["total_value_locked_usd"]] <-
+          self$`total_value_locked_usd`
+      }
+      if (!is.null(self$`total_value_locked_usd_untracked`)) {
+        PoolV3DTOObject[["total_value_locked_usd_untracked"]] <-
+          self$`total_value_locked_usd_untracked`
+      }
+      if (!is.null(self$`liquidity_provider_count`)) {
+        PoolV3DTOObject[["liquidity_provider_count"]] <-
+          self$`liquidity_provider_count`
+      }
+      if (!is.null(self$`evaluated_ask`)) {
+        PoolV3DTOObject[["evaluated_ask"]] <-
+          self$`evaluated_ask`
+      }
+      PoolV3DTOObject
+    },
+    #' Deserialize JSON string into an instance of PoolV3DTO
+    #'
+    #' @description
+    #' Deserialize JSON string into an instance of PoolV3DTO
+    #'
+    #' @param input_json the JSON input
+    #' @return the instance of PoolV3DTO
+    #' @export
+    fromJSON = function(input_json) {
+      this_object <- jsonlite::fromJSON(input_json)
+      if (!is.null(this_object$`entry_time`)) {
+        self$`entry_time` <- this_object$`entry_time`
+      }
+      if (!is.null(this_object$`recv_time`)) {
+        self$`recv_time` <- this_object$`recv_time`
+      }
+      if (!is.null(this_object$`block_number`)) {
+        self$`block_number` <- this_object$`block_number`
+      }
+      if (!is.null(this_object$`vid`)) {
+        self$`vid` <- this_object$`vid`
+      }
+      if (!is.null(this_object$`id`)) {
+        self$`id` <- this_object$`id`
+      }
+      if (!is.null(this_object$`created_at_timestamp`)) {
+        self$`created_at_timestamp` <- this_object$`created_at_timestamp`
+      }
+      if (!is.null(this_object$`token_0`)) {
+        self$`token_0` <- this_object$`token_0`
+      }
+      if (!is.null(this_object$`token_1`)) {
+        self$`token_1` <- this_object$`token_1`
+      }
+      if (!is.null(this_object$`fee_tier`)) {
+        fee_tier_object <- BigInteger$new()
+        fee_tier_object$fromJSON(jsonlite::toJSON(this_object$fee_tier, auto_unbox = TRUE, digits = NA))
+        self$`fee_tier` <- fee_tier_object
+      }
+      if (!is.null(this_object$`liquidity`)) {
+        liquidity_object <- BigInteger$new()
+        liquidity_object$fromJSON(jsonlite::toJSON(this_object$liquidity, auto_unbox = TRUE, digits = NA))
+        self$`liquidity` <- liquidity_object
+      }
+      if (!is.null(this_object$`sqrt_price`)) {
+        sqrt_price_object <- BigInteger$new()
+        sqrt_price_object$fromJSON(jsonlite::toJSON(this_object$sqrt_price, auto_unbox = TRUE, digits = NA))
+        self$`sqrt_price` <- sqrt_price_object
+      }
+      if (!is.null(this_object$`fee_growth_global_0x128`)) {
+        fee_growth_global_0x128_object <- BigInteger$new()
+        fee_growth_global_0x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_0x128, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_global_0x128` <- fee_growth_global_0x128_object
+      }
+      if (!is.null(this_object$`fee_growth_global_1x128`)) {
+        fee_growth_global_1x128_object <- BigInteger$new()
+        fee_growth_global_1x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_1x128, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_global_1x128` <- fee_growth_global_1x128_object
+      }
+      if (!is.null(this_object$`token_0_price`)) {
+        self$`token_0_price` <- this_object$`token_0_price`
+      }
+      if (!is.null(this_object$`token_1_price`)) {
+        self$`token_1_price` <- this_object$`token_1_price`
+      }
+      if (!is.null(this_object$`tick`)) {
+        tick_object <- BigInteger$new()
+        tick_object$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
+        self$`tick` <- tick_object
+      }
+      if (!is.null(this_object$`observation_index`)) {
+        observation_index_object <- BigInteger$new()
+        observation_index_object$fromJSON(jsonlite::toJSON(this_object$observation_index, auto_unbox = TRUE, digits = NA))
+        self$`observation_index` <- observation_index_object
+      }
+      if (!is.null(this_object$`volume_token_0`)) {
+        self$`volume_token_0` <- this_object$`volume_token_0`
+      }
+      if (!is.null(this_object$`volume_token_1`)) {
+        self$`volume_token_1` <- this_object$`volume_token_1`
+      }
+      if (!is.null(this_object$`volume_usd`)) {
+        self$`volume_usd` <- this_object$`volume_usd`
+      }
+      if (!is.null(this_object$`untracked_volume_usd`)) {
+        self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
+      }
+      if (!is.null(this_object$`fees_usd`)) {
+        self$`fees_usd` <- this_object$`fees_usd`
+      }
+      if (!is.null(this_object$`tx_count`)) {
+        tx_count_object <- BigInteger$new()
+        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- tx_count_object
+      }
+      if (!is.null(this_object$`collected_fees_token_0`)) {
+        self$`collected_fees_token_0` <- this_object$`collected_fees_token_0`
+      }
+      if (!is.null(this_object$`collected_fees_token_1`)) {
+        self$`collected_fees_token_1` <- this_object$`collected_fees_token_1`
+      }
+      if (!is.null(this_object$`collected_fees_usd`)) {
+        self$`collected_fees_usd` <- this_object$`collected_fees_usd`
+      }
+      if (!is.null(this_object$`total_value_locked_token_0`)) {
+        self$`total_value_locked_token_0` <- this_object$`total_value_locked_token_0`
+      }
+      if (!is.null(this_object$`total_value_locked_token_1`)) {
+        self$`total_value_locked_token_1` <- this_object$`total_value_locked_token_1`
+      }
+      if (!is.null(this_object$`total_value_locked_eth`)) {
+        self$`total_value_locked_eth` <- this_object$`total_value_locked_eth`
+      }
+      if (!is.null(this_object$`total_value_locked_usd`)) {
+        self$`total_value_locked_usd` <- this_object$`total_value_locked_usd`
+      }
+      if (!is.null(this_object$`total_value_locked_usd_untracked`)) {
+        self$`total_value_locked_usd_untracked` <- this_object$`total_value_locked_usd_untracked`
+      }
+      if (!is.null(this_object$`liquidity_provider_count`)) {
+        self$`liquidity_provider_count` <- this_object$`liquidity_provider_count`
+      }
+      if (!is.null(this_object$`evaluated_ask`)) {
+        self$`evaluated_ask` <- this_object$`evaluated_ask`
+      }
+      self
+    },
+    #' To JSON string
+    #'
+    #' @description
+    #' To JSON String
+    #'
+    #' @return PoolV3DTO in JSON format
+    #' @export
+    toJSONString = function() {
+      jsoncontent <- c(
+        if (!is.null(self$`entry_time`)) {
+          sprintf(
+          '"entry_time":
+            "%s"
+                    ',
+          self$`entry_time`
+          )
+        },
+        if (!is.null(self$`recv_time`)) {
+          sprintf(
+          '"recv_time":
+            "%s"
+                    ',
+          self$`recv_time`
+          )
+        },
+        if (!is.null(self$`block_number`)) {
+          sprintf(
+          '"block_number":
+            %d
+                    ',
+          self$`block_number`
+          )
+        },
+        if (!is.null(self$`vid`)) {
+          sprintf(
+          '"vid":
+            %d
+                    ',
+          self$`vid`
+          )
+        },
+        if (!is.null(self$`id`)) {
+          sprintf(
+          '"id":
+            "%s"
+                    ',
+          self$`id`
+          )
+        },
+        if (!is.null(self$`created_at_timestamp`)) {
+          sprintf(
+          '"created_at_timestamp":
+            "%s"
+                    ',
+          self$`created_at_timestamp`
+          )
+        },
+        if (!is.null(self$`token_0`)) {
+          sprintf(
+          '"token_0":
+            "%s"
+                    ',
+          self$`token_0`
+          )
+        },
+        if (!is.null(self$`token_1`)) {
+          sprintf(
+          '"token_1":
+            "%s"
+                    ',
+          self$`token_1`
+          )
+        },
+        if (!is.null(self$`fee_tier`)) {
+          sprintf(
+          '"fee_tier":
+          %s
+          ',
+          jsonlite::toJSON(self$`fee_tier`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`liquidity`)) {
+          sprintf(
+          '"liquidity":
+          %s
+          ',
+          jsonlite::toJSON(self$`liquidity`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`sqrt_price`)) {
+          sprintf(
+          '"sqrt_price":
+          %s
+          ',
+          jsonlite::toJSON(self$`sqrt_price`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`fee_growth_global_0x128`)) {
+          sprintf(
+          '"fee_growth_global_0x128":
+          %s
+          ',
+          jsonlite::toJSON(self$`fee_growth_global_0x128`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`fee_growth_global_1x128`)) {
+          sprintf(
+          '"fee_growth_global_1x128":
+          %s
+          ',
+          jsonlite::toJSON(self$`fee_growth_global_1x128`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`token_0_price`)) {
+          sprintf(
+          '"token_0_price":
+            "%s"
+                    ',
+          self$`token_0_price`
+          )
+        },
+        if (!is.null(self$`token_1_price`)) {
+          sprintf(
+          '"token_1_price":
+            "%s"
+                    ',
+          self$`token_1_price`
+          )
+        },
+        if (!is.null(self$`tick`)) {
+          sprintf(
+          '"tick":
+          %s
+          ',
+          jsonlite::toJSON(self$`tick`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`observation_index`)) {
+          sprintf(
+          '"observation_index":
+          %s
+          ',
+          jsonlite::toJSON(self$`observation_index`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`volume_token_0`)) {
+          sprintf(
+          '"volume_token_0":
+            "%s"
+                    ',
+          self$`volume_token_0`
+          )
+        },
+        if (!is.null(self$`volume_token_1`)) {
+          sprintf(
+          '"volume_token_1":
+            "%s"
+                    ',
+          self$`volume_token_1`
+          )
+        },
+        if (!is.null(self$`volume_usd`)) {
+          sprintf(
+          '"volume_usd":
+            "%s"
+                    ',
+          self$`volume_usd`
+          )
+        },
+        if (!is.null(self$`untracked_volume_usd`)) {
+          sprintf(
+          '"untracked_volume_usd":
+            "%s"
+                    ',
+          self$`untracked_volume_usd`
+          )
+        },
+        if (!is.null(self$`fees_usd`)) {
+          sprintf(
+          '"fees_usd":
+            "%s"
+                    ',
+          self$`fees_usd`
+          )
+        },
+        if (!is.null(self$`tx_count`)) {
+          sprintf(
+          '"tx_count":
+          %s
+          ',
+          jsonlite::toJSON(self$`tx_count`$toJSON(), auto_unbox = TRUE, digits = NA)
+          )
+        },
+        if (!is.null(self$`collected_fees_token_0`)) {
+          sprintf(
+          '"collected_fees_token_0":
+            "%s"
+                    ',
+          self$`collected_fees_token_0`
+          )
+        },
+        if (!is.null(self$`collected_fees_token_1`)) {
+          sprintf(
+          '"collected_fees_token_1":
+            "%s"
+                    ',
+          self$`collected_fees_token_1`
+          )
+        },
+        if (!is.null(self$`collected_fees_usd`)) {
+          sprintf(
+          '"collected_fees_usd":
+            "%s"
+                    ',
+          self$`collected_fees_usd`
+          )
+        },
+        if (!is.null(self$`total_value_locked_token_0`)) {
+          sprintf(
+          '"total_value_locked_token_0":
+            "%s"
+                    ',
+          self$`total_value_locked_token_0`
+          )
+        },
+        if (!is.null(self$`total_value_locked_token_1`)) {
+          sprintf(
+          '"total_value_locked_token_1":
+            "%s"
+                    ',
+          self$`total_value_locked_token_1`
+          )
+        },
+        if (!is.null(self$`total_value_locked_eth`)) {
+          sprintf(
+          '"total_value_locked_eth":
+            "%s"
+                    ',
+          self$`total_value_locked_eth`
+          )
+        },
+        if (!is.null(self$`total_value_locked_usd`)) {
+          sprintf(
+          '"total_value_locked_usd":
+            "%s"
+                    ',
+          self$`total_value_locked_usd`
+          )
+        },
+        if (!is.null(self$`total_value_locked_usd_untracked`)) {
+          sprintf(
+          '"total_value_locked_usd_untracked":
+            "%s"
+                    ',
+          self$`total_value_locked_usd_untracked`
+          )
+        },
+        if (!is.null(self$`liquidity_provider_count`)) {
+          sprintf(
+          '"liquidity_provider_count":
+            "%s"
+                    ',
+          self$`liquidity_provider_count`
+          )
+        },
+        if (!is.null(self$`evaluated_ask`)) {
+          sprintf(
+          '"evaluated_ask":
+            %d
+                    ',
+          self$`evaluated_ask`
+          )
+        }
+      )
+      jsoncontent <- paste(jsoncontent, collapse = ",")
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+    },
+    #' Deserialize JSON string into an instance of PoolV3DTO
+    #'
+    #' @description
+    #' Deserialize JSON string into an instance of PoolV3DTO
+    #'
+    #' @param input_json the JSON input
+    #' @return the instance of PoolV3DTO
+    #' @export
+    fromJSONString = function(input_json) {
+      this_object <- jsonlite::fromJSON(input_json)
+      self$`entry_time` <- this_object$`entry_time`
+      self$`recv_time` <- this_object$`recv_time`
+      self$`block_number` <- this_object$`block_number`
+      self$`vid` <- this_object$`vid`
+      self$`id` <- this_object$`id`
+      self$`created_at_timestamp` <- this_object$`created_at_timestamp`
+      self$`token_0` <- this_object$`token_0`
+      self$`token_1` <- this_object$`token_1`
+      self$`fee_tier` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_tier, auto_unbox = TRUE, digits = NA))
+      self$`liquidity` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$liquidity, auto_unbox = TRUE, digits = NA))
+      self$`sqrt_price` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$sqrt_price, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_global_0x128` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_0x128, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_global_1x128` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_1x128, auto_unbox = TRUE, digits = NA))
+      self$`token_0_price` <- this_object$`token_0_price`
+      self$`token_1_price` <- this_object$`token_1_price`
+      self$`tick` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
+      self$`observation_index` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$observation_index, auto_unbox = TRUE, digits = NA))
+      self$`volume_token_0` <- this_object$`volume_token_0`
+      self$`volume_token_1` <- this_object$`volume_token_1`
+      self$`volume_usd` <- this_object$`volume_usd`
+      self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
+      self$`fees_usd` <- this_object$`fees_usd`
+      self$`tx_count` <- BigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+      self$`collected_fees_token_0` <- this_object$`collected_fees_token_0`
+      self$`collected_fees_token_1` <- this_object$`collected_fees_token_1`
+      self$`collected_fees_usd` <- this_object$`collected_fees_usd`
+      self$`total_value_locked_token_0` <- this_object$`total_value_locked_token_0`
+      self$`total_value_locked_token_1` <- this_object$`total_value_locked_token_1`
+      self$`total_value_locked_eth` <- this_object$`total_value_locked_eth`
+      self$`total_value_locked_usd` <- this_object$`total_value_locked_usd`
+      self$`total_value_locked_usd_untracked` <- this_object$`total_value_locked_usd_untracked`
+      self$`liquidity_provider_count` <- this_object$`liquidity_provider_count`
+      self$`evaluated_ask` <- this_object$`evaluated_ask`
+      self
+    },
+    #' Validate JSON input with respect to PoolV3DTO
+    #'
+    #' @description
+    #' Validate JSON input with respect to PoolV3DTO and throw an exception if invalid
+    #'
+    #' @param input the JSON input
+    #' @export
+    validateJSON = function(input) {
+      input_json <- jsonlite::fromJSON(input)
+    },
+    #' To string (JSON format)
+    #'
+    #' @description
+    #' To string (JSON format)
+    #'
+    #' @return String representation of PoolV3DTO
+    #' @export
+    toString = function() {
+      self$toJSONString()
+    },
+    #' Return true if the values in all fields are valid.
+    #'
+    #' @description
+    #' Return true if the values in all fields are valid.
+    #'
+    #' @return true if the values in all fields are valid.
+    #' @export
+    isValid = function() {
+      TRUE
+    },
+    #' Return a list of invalid fields (if any).
+    #'
+    #' @description
+    #' Return a list of invalid fields (if any).
+    #'
+    #' @return A list of invalid fields (if any).
+    #' @export
+    getInvalidFields = function() {
+      invalid_fields <- list()
+      invalid_fields
+    },
+    #' Print the object
+    #'
+    #' @description
+    #' Print the object
+    #'
+    #' @export
+    print = function() {
+      print(jsonlite::prettify(self$toJSONString()))
+      invisible(self)
+    }),
+    # Lock the class to prevent modifications to the method or field
+    lock_class = TRUE
+)
+## Uncomment below to unlock the class to allow modifications of the method or field
+#PoolV3DTO$unlock()
+#
+## Below is an example to define the print fnuction
+#PoolV3DTO$set("public", "print", function(...) {
+#  print(jsonlite::prettify(self$toJSONString()))
+#  invisible(self)
+#})
+## Uncomment below to lock the class to prevent modifications to the method or field
+#PoolV3DTO$lock()
+
