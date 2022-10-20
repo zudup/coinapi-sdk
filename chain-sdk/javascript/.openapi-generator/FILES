@@ -22,6 +22,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -53,6 +54,7 @@ src/api/PoiApi.js
 src/api/PoolDayDataApi.js
 src/api/PoolHourDataApi.js
 src/api/PoolsApi.js
+src/api/PositionSnapshotApi.js
 src/api/SushiswapApi.js
 src/api/SwapsApi.js
 src/api/TokensApi.js
@@ -92,6 +94,7 @@ test/api/PoiApi.spec.js
 test/api/PoolDayDataApi.spec.js
 test/api/PoolHourDataApi.spec.js
 test/api/PoolsApi.spec.js
+test/api/PositionSnapshotApi.spec.js
 test/api/SushiswapApi.spec.js
 test/api/SwapsApi.spec.js
 test/api/TokensApi.spec.js

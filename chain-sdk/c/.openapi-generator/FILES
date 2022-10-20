@@ -18,6 +18,8 @@ api/PoolHourDataAPI.c
 api/PoolHourDataAPI.h
 api/PoolsAPI.c
 api/PoolsAPI.h
+api/PositionSnapshotAPI.c
+api/PositionSnapshotAPI.h
 api/SushiswapAPI.c
 api/SushiswapAPI.h
 api/SwapsAPI.c
@@ -38,6 +40,7 @@ docs/PoiAPI.md
 docs/PoolDayDataAPI.md
 docs/PoolHourDataAPI.md
 docs/PoolsAPI.md
+docs/PositionSnapshotAPI.md
 docs/SushiswapAPI.md
 docs/SwapsAPI.md
 docs/TokensAPI.md

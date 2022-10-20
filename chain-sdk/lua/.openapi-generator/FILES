@@ -10,6 +10,7 @@ openapiclient/api/poi_api.lua
 openapiclient/api/pool_day_data_api.lua
 openapiclient/api/pool_hour_data_api.lua
 openapiclient/api/pools_api.lua
+openapiclient/api/position_snapshot_api.lua
 openapiclient/api/sushiswap_api.lua
 openapiclient/api/swaps_api.lua
 openapiclient/api/tokens_api.lua
@@ -59,6 +60,7 @@ spec/pool_hour_data_api_spec.lua
 spec/pool_hour_data_v3_dto_spec.lua
 spec/pool_v3_dto_spec.lua
 spec/pools_api_spec.lua
+spec/position_snapshot_api_spec.lua
 spec/position_snapshot_v3_dto_spec.lua
 spec/position_v3_dto_spec.lua
 spec/sushiswap_api_spec.lua

@@ -20,6 +20,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -51,6 +52,7 @@ src/main/scala/org/openapitools/client/api/PoiApi.scala
 src/main/scala/org/openapitools/client/api/PoolDayDataApi.scala
 src/main/scala/org/openapitools/client/api/PoolHourDataApi.scala
 src/main/scala/org/openapitools/client/api/PoolsApi.scala
+src/main/scala/org/openapitools/client/api/PositionSnapshotApi.scala
 src/main/scala/org/openapitools/client/api/SushiswapApi.scala
 src/main/scala/org/openapitools/client/api/SwapsApi.scala
 src/main/scala/org/openapitools/client/api/TokensApi.scala

@@ -21,6 +21,7 @@ doc/PoolHourDataApi.md
 doc/PoolHourDataV3DTO.md
 doc/PoolV3DTO.md
 doc/PoolsApi.md
+doc/PositionSnapshotApi.md
 doc/PositionSnapshotV3DTO.md
 doc/PositionV3DTO.md
 doc/SushiswapApi.md
@@ -50,6 +51,7 @@ lib/src/api/poi_api.dart
 lib/src/api/pool_day_data_api.dart
 lib/src/api/pool_hour_data_api.dart
 lib/src/api/pools_api.dart
+lib/src/api/position_snapshot_api.dart
 lib/src/api/sushiswap_api.dart
 lib/src/api/swaps_api.dart
 lib/src/api/tokens_api.dart
@@ -109,6 +111,7 @@ test/pool_hour_data_api_test.dart
 test/pool_hour_data_v3_dto_test.dart
 test/pool_v3_dto_test.dart
 test/pools_api_test.dart
+test/position_snapshot_api_test.dart
 test/position_snapshot_v3_dto_test.dart
 test/position_v3_dto_test.dart
 test/sushiswap_api_test.dart

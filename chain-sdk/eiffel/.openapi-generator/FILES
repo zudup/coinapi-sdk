@@ -21,6 +21,7 @@ docs/POOLS_API.md
 docs/POOL_DAY_DATA_V3_DTO.md
 docs/POOL_HOUR_DATA_V3_DTO.md
 docs/POOL_V3_DTO.md
+docs/POSITIONSNAPSHOT_API.md
 docs/POSITION_SNAPSHOT_V3_DTO.md
 docs/POSITION_V3_DTO.md
 docs/SUSHISWAP_API.md
@@ -48,6 +49,7 @@ src/api/poi_api.e
 src/api/pool_day_data_api.e
 src/api/pool_hour_data_api.e
 src/api/pools_api.e
+src/api/position_snapshot_api.e
 src/api/sushiswap_api.e
 src/api/swaps_api.e
 src/api/tokens_api.e
@@ -103,6 +105,7 @@ test/apis/poi_api_test.e
 test/apis/pooldaydata_api_test.e
 test/apis/poolhourdata_api_test.e
 test/apis/pools_api_test.e
+test/apis/positionsnapshot_api_test.e
 test/apis/sushiswap_api_test.e
 test/apis/swaps_api_test.e
 test/apis/tokens_api_test.e

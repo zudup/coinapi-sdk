@@ -35,6 +35,7 @@ part 'api/poi_api.dart';
 part 'api/pool_day_data_api.dart';
 part 'api/pool_hour_data_api.dart';
 part 'api/pools_api.dart';
+part 'api/position_snapshot_api.dart';
 part 'api/sushiswap_api.dart';
 part 'api/swaps_api.dart';
 part 'api/tokens_api.dart';

@@ -26,6 +26,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -55,6 +56,7 @@ lib/openapi_client/api/poi_api.rb
 lib/openapi_client/api/pool_day_data_api.rb
 lib/openapi_client/api/pool_hour_data_api.rb
 lib/openapi_client/api/pools_api.rb
+lib/openapi_client/api/position_snapshot_api.rb
 lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/swaps_api.rb
 lib/openapi_client/api/tokens_api.rb
@@ -98,6 +100,7 @@ spec/api/poi_api_spec.rb
 spec/api/pool_day_data_api_spec.rb
 spec/api/pool_hour_data_api_spec.rb
 spec/api/pools_api_spec.rb
+spec/api/position_snapshot_api_spec.rb
 spec/api/sushiswap_api_spec.rb
 spec/api/swaps_api_spec.rb
 spec/api/tokens_api_spec.rb

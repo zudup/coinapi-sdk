@@ -22,6 +22,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -77,6 +78,7 @@ lib/WWW/OpenAPIClient/PoiApi.pm
 lib/WWW/OpenAPIClient/PoolDayDataApi.pm
 lib/WWW/OpenAPIClient/PoolHourDataApi.pm
 lib/WWW/OpenAPIClient/PoolsApi.pm
+lib/WWW/OpenAPIClient/PositionSnapshotApi.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
 lib/WWW/OpenAPIClient/SushiswapApi.pm
@@ -104,6 +106,7 @@ t/PoolHourDataApiTest.t
 t/PoolHourDataV3DTOTest.t
 t/PoolV3DTOTest.t
 t/PoolsApiTest.t
+t/PositionSnapshotApiTest.t
 t/PositionSnapshotV3DTOTest.t
 t/PositionV3DTOTest.t
 t/SushiswapApiTest.t

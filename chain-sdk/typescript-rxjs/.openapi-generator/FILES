@@ -8,6 +8,7 @@ apis/PoiApi.ts
 apis/PoolDayDataApi.ts
 apis/PoolHourDataApi.ts
 apis/PoolsApi.ts
+apis/PositionSnapshotApi.ts
 apis/SushiswapApi.ts
 apis/SwapsApi.ts
 apis/TokensApi.ts

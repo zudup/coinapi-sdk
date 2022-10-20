@@ -21,6 +21,7 @@ src/openapi_pool_hour_data_api.erl
 src/openapi_pool_hour_data_v3_dto.erl
 src/openapi_pool_v3_dto.erl
 src/openapi_pools_api.erl
+src/openapi_position_snapshot_api.erl
 src/openapi_position_snapshot_v3_dto.erl
 src/openapi_position_v3_dto.erl
 src/openapi_sushiswap_api.erl

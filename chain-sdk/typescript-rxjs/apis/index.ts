@@ -6,6 +6,7 @@ export * from './PoiApi';
 export * from './PoolDayDataApi';
 export * from './PoolHourDataApi';
 export * from './PoolsApi';
+export * from './PositionSnapshotApi';
 export * from './SushiswapApi';
 export * from './SwapsApi';
 export * from './TokensApi';

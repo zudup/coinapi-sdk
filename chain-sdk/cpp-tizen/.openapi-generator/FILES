@@ -47,6 +47,8 @@ src/PoolV3DTO.cpp
 src/PoolV3DTO.h
 src/PoolsManager.cpp
 src/PoolsManager.h
+src/PositionSnapshotManager.cpp
+src/PositionSnapshotManager.h
 src/PositionSnapshotV3DTO.cpp
 src/PositionSnapshotV3DTO.h
 src/PositionV3DTO.cpp

@@ -186,6 +186,7 @@ Class | Method | HTTP request | Description
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv3_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_uniswapv3_pools_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/pools/historical | 
+*PositionSnapshotApi* | [**chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get**](docs/apis/tags/PositionSnapshotApi.md#chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | 
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_pools_current_get**](docs/apis/tags/SushiswapApi.md#chains_chain_id_dapps_sushiswap_pools_current_get) | **get** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_swaps_current_get**](docs/apis/tags/SushiswapApi.md#chains_chain_id_dapps_sushiswap_swaps_current_get) | **get** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_tokens_current_get**](docs/apis/tags/SushiswapApi.md#chains_chain_id_dapps_sushiswap_tokens_current_get) | **get** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens
@@ -254,6 +255,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

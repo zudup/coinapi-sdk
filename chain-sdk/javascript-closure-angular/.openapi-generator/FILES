@@ -18,6 +18,7 @@ API/Client/PoolHourDataApi.js
 API/Client/PoolHourDataV3DTO.js
 API/Client/PoolV3DTO.js
 API/Client/PoolsApi.js
+API/Client/PositionSnapshotApi.js
 API/Client/PositionSnapshotV3DTO.js
 API/Client/PositionV3DTO.js
 API/Client/SushiswapApi.js

@@ -21,6 +21,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -59,6 +60,7 @@ src/main/java/org/openapitools/client/api/PoiApi.java
 src/main/java/org/openapitools/client/api/PoolDayDataApi.java
 src/main/java/org/openapitools/client/api/PoolHourDataApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
+src/main/java/org/openapitools/client/api/PositionSnapshotApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
 src/main/java/org/openapitools/client/api/TokensApi.java

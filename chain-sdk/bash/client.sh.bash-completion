@@ -79,6 +79,7 @@ _()
     operations["chainsChainIdDappsSushiswapPoolsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapPoolsCurrentGet"]=1
     operations["chainsChainIdDappsSushiswapSwapsCurrentGet"]=1
     operations["chainsChainIdDappsSushiswapTokensCurrentGet"]=1
@@ -128,6 +129,7 @@ _()
     operation_parameters["chainsChainIdDappsSushiswapPoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsSushiswapPoolsCurrentGet"]="chain_id= "
     operation_parameters["chainsChainIdDappsSushiswapSwapsCurrentGet"]="chain_id= "
     operation_parameters["chainsChainIdDappsSushiswapTokensCurrentGet"]="chain_id= "

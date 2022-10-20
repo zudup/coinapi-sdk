@@ -17,6 +17,7 @@ import 'package:openapi/src/api/poi_api.dart';
 import 'package:openapi/src/api/pool_day_data_api.dart';
 import 'package:openapi/src/api/pool_hour_data_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
+import 'package:openapi/src/api/position_snapshot_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
 import 'package:openapi/src/api/tokens_api.dart';
@@ -124,6 +125,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   PoolsApi getPoolsApi() {
     return PoolsApi(dio, serializers);
+  }
+
+  /// Get PositionSnapshotApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PositionSnapshotApi getPositionSnapshotApi() {
+    return PositionSnapshotApi(dio, serializers);
   }
 
   /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,

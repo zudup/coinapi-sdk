@@ -31,6 +31,7 @@ build = {
 		["openapiclient.api.pool_day_data_api"] = "openapiclient/api/pool_day_data_api.lua";
 		["openapiclient.api.pool_hour_data_api"] = "openapiclient/api/pool_hour_data_api.lua";
 		["openapiclient.api.pools_api"] = "openapiclient/api/pools_api.lua";
+		["openapiclient.api.position_snapshot_api"] = "openapiclient/api/position_snapshot_api.lua";
 		["openapiclient.api.sushiswap_api"] = "openapiclient/api/sushiswap_api.lua";
 		["openapiclient.api.swaps_api"] = "openapiclient/api/swaps_api.lua";
 		["openapiclient.api.tokens_api"] = "openapiclient/api/tokens_api.lua";

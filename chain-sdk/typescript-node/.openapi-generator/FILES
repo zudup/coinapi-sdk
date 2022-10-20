@@ -10,6 +10,7 @@ api/poiApi.ts
 api/poolDayDataApi.ts
 api/poolHourDataApi.ts
 api/poolsApi.ts
+api/positionSnapshotApi.ts
 api/sushiswapApi.ts
 api/swapsApi.ts
 api/tokensApi.ts

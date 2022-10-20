@@ -27,6 +27,7 @@ R/pool_hour_data_api.R
 R/pool_hour_data_v3_dto.R
 R/pool_v3_dto.R
 R/pools_api.R
+R/position_snapshot_api.R
 R/position_snapshot_v3_dto.R
 R/position_v3_dto.R
 R/sushiswap_api.R
@@ -66,6 +67,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -106,6 +108,7 @@ tests/testthat/test_pool_hour_data_api.R
 tests/testthat/test_pool_hour_data_v3_dto.R
 tests/testthat/test_pool_v3_dto.R
 tests/testthat/test_pools_api.R
+tests/testthat/test_position_snapshot_api.R
 tests/testthat/test_position_snapshot_v3_dto.R
 tests/testthat/test_position_v3_dto.R
 tests/testthat/test_sushiswap_api.R

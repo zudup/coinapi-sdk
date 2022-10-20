@@ -11,6 +11,7 @@ api/poi.service.ts
 api/poolDayData.service.ts
 api/poolHourData.service.ts
 api/pools.service.ts
+api/positionSnapshot.service.ts
 api/sushiswap.service.ts
 api/swaps.service.ts
 api/tokens.service.ts

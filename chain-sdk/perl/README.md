@@ -243,6 +243,7 @@ use WWW::OpenAPIClient::PoiApi;
 use WWW::OpenAPIClient::PoolDayDataApi;
 use WWW::OpenAPIClient::PoolHourDataApi;
 use WWW::OpenAPIClient::PoolsApi;
+use WWW::OpenAPIClient::PositionSnapshotApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
 use WWW::OpenAPIClient::TokensApi;
@@ -297,6 +298,7 @@ use WWW::OpenAPIClient::PoiApi;
 use WWW::OpenAPIClient::PoolDayDataApi;
 use WWW::OpenAPIClient::PoolHourDataApi;
 use WWW::OpenAPIClient::PoolsApi;
+use WWW::OpenAPIClient::PositionSnapshotApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
 use WWW::OpenAPIClient::TokensApi;
@@ -369,6 +371,7 @@ Class | Method | HTTP request | Description
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv3_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv3_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/historical | 
+*PositionSnapshotApi* | [**chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get**](docs/PositionSnapshotApi.md#chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | 
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_pools_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_pools_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_swaps_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_swaps_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps
 *SushiswapApi* | [**chains_chain_id_dapps_sushiswap_tokens_current_get**](docs/SushiswapApi.md#chains_chain_id_dapps_sushiswap_tokens_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens

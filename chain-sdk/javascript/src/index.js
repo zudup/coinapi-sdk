@@ -45,6 +45,7 @@ import PoiApi from './api/PoiApi';
 import PoolDayDataApi from './api/PoolDayDataApi';
 import PoolHourDataApi from './api/PoolHourDataApi';
 import PoolsApi from './api/PoolsApi';
+import PositionSnapshotApi from './api/PositionSnapshotApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
 import TokensApi from './api/TokensApi';
@@ -282,6 +283,12 @@ export {
     * @property {module:api/PoolsApi}
     */
     PoolsApi,
+
+    /**
+    * The PositionSnapshotApi service constructor.
+    * @property {module:api/PositionSnapshotApi}
+    */
+    PositionSnapshotApi,
 
     /**
     * The SushiswapApi service constructor.

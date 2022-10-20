@@ -101,6 +101,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3PoolsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/pools/historical | .
 
 
+### PositionSnapshotManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | .
+*chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | .
+
+
 ### SushiswapManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

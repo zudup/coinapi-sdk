@@ -10,6 +10,7 @@ import { PoiService } from './api/poi.service';
 import { PoolDayDataService } from './api/poolDayData.service';
 import { PoolHourDataService } from './api/poolHourData.service';
 import { PoolsService } from './api/pools.service';
+import { PositionSnapshotService } from './api/positionSnapshot.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { SwapsService } from './api/swaps.service';
 import { TokensService } from './api/tokens.service';

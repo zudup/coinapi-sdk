@@ -28,6 +28,7 @@ class PathValues(str, enum.Enum):
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_DAY_DATA_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HOUR_DATA_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITIONS_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/positions/current"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOT_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOTS_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_SWAPS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/swaps/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_SWAPS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv2/swaps/historical"

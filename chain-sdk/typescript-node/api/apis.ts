@@ -14,6 +14,8 @@ export * from './poolHourDataApi';
 import { PoolHourDataApi } from './poolHourDataApi';
 export * from './poolsApi';
 import { PoolsApi } from './poolsApi';
+export * from './positionSnapshotApi';
+import { PositionSnapshotApi } from './positionSnapshotApi';
 export * from './sushiswapApi';
 import { SushiswapApi } from './sushiswapApi';
 export * from './swapsApi';
@@ -37,4 +39,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [BundlesApi, BurnsApi, FactoryApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, SushiswapApi, SwapsApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [BundlesApi, BurnsApi, FactoryApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, SushiswapApi, SwapsApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];

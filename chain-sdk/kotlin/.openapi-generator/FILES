@@ -20,6 +20,7 @@ docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
+docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/SushiswapApi.md
@@ -52,6 +53,7 @@ src/main/kotlin/org/openapitools/client/apis/PoiApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolDayDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolHourDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolsApi.kt
+src/main/kotlin/org/openapitools/client/apis/PositionSnapshotApi.kt
 src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
 src/main/kotlin/org/openapitools/client/apis/SwapsApi.kt
 src/main/kotlin/org/openapitools/client/apis/TokensApi.kt

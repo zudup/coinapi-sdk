@@ -81,6 +81,10 @@ force-app/main/default/classes/OASPoolsApi.cls
 force-app/main/default/classes/OASPoolsApi.cls-meta.xml
 force-app/main/default/classes/OASPoolsApiTest.cls
 force-app/main/default/classes/OASPoolsApiTest.cls-meta.xml
+force-app/main/default/classes/OASPositionSnapshotApi.cls
+force-app/main/default/classes/OASPositionSnapshotApi.cls-meta.xml
+force-app/main/default/classes/OASPositionSnapshotApiTest.cls
+force-app/main/default/classes/OASPositionSnapshotApiTest.cls-meta.xml
 force-app/main/default/classes/OASPositionSnapshotV3DTO.cls
 force-app/main/default/classes/OASPositionSnapshotV3DTO.cls-meta.xml
 force-app/main/default/classes/OASPositionSnapshotV3DTOTest.cls

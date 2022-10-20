@@ -12,6 +12,7 @@ docs/Api/PoiApi.md
 docs/Api/PoolDayDataApi.md
 docs/Api/PoolHourDataApi.md
 docs/Api/PoolsApi.md
+docs/Api/PositionSnapshotApi.md
 docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
 docs/Api/TokensApi.md
@@ -51,6 +52,7 @@ lib/Api/PoiApi.php
 lib/Api/PoolDayDataApi.php
 lib/Api/PoolHourDataApi.php
 lib/Api/PoolsApi.php
+lib/Api/PositionSnapshotApi.php
 lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
 lib/Api/TokensApi.php
@@ -95,6 +97,7 @@ test/Api/PoiApiTest.php
 test/Api/PoolDayDataApiTest.php
 test/Api/PoolHourDataApiTest.php
 test/Api/PoolsApiTest.php
+test/Api/PositionSnapshotApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php
 test/Api/TokensApiTest.php
