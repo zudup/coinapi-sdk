@@ -8,8 +8,11 @@ API/Client/ETradeAggressiveSide.js
 API/Client/FactoryApi.js
 API/Client/FactoryV3DTO.js
 API/Client/MintV3DTO.js
+API/Client/MintsApi.js
 API/Client/PairDTO.js
 API/Client/PairV2DTO.js
+API/Client/PoiApi.js
+API/Client/PoolDayDataApi.js
 API/Client/PoolDayDataV3DTO.js
 API/Client/PoolHourDataV3DTO.js
 API/Client/PoolV3DTO.js

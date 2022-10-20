@@ -14,8 +14,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -44,6 +47,9 @@ mono_nunit_test.sh
 src/CoinAPI.EMS.REST.V1.Test/Api/BundlesApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/BurnsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/FactoryApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/MintsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/PoiApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/PoolDayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SwapsApiTests.cs
@@ -80,6 +86,9 @@ src/CoinAPI.EMS.REST.V1.Test/packages.config
 src/CoinAPI.EMS.REST.V1/Api/BundlesApi.cs
 src/CoinAPI.EMS.REST.V1/Api/BurnsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/FactoryApi.cs
+src/CoinAPI.EMS.REST.V1/Api/MintsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/PoiApi.cs
+src/CoinAPI.EMS.REST.V1/Api/PoolDayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SwapsApi.cs

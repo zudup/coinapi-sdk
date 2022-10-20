@@ -16,6 +16,9 @@ include/CppRestOpenAPIClient/Object.h
 include/CppRestOpenAPIClient/api/BundlesApi.h
 include/CppRestOpenAPIClient/api/BurnsApi.h
 include/CppRestOpenAPIClient/api/FactoryApi.h
+include/CppRestOpenAPIClient/api/MintsApi.h
+include/CppRestOpenAPIClient/api/PoiApi.h
+include/CppRestOpenAPIClient/api/PoolDayDataApi.h
 include/CppRestOpenAPIClient/api/PoolsApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/SwapsApi.h
@@ -58,6 +61,9 @@ src/Object.cpp
 src/api/BundlesApi.cpp
 src/api/BurnsApi.cpp
 src/api/FactoryApi.cpp
+src/api/MintsApi.cpp
+src/api/PoiApi.cpp
+src/api/PoolDayDataApi.cpp
 src/api/PoolsApi.cpp
 src/api/SushiswapApi.cpp
 src/api/SwapsApi.cpp

@@ -3,6 +3,9 @@
 apis/BundlesApi.ts
 apis/BurnsApi.ts
 apis/FactoryApi.ts
+apis/MintsApi.ts
+apis/PoiApi.ts
+apis/PoolDayDataApi.ts
 apis/PoolsApi.ts
 apis/SushiswapApi.ts
 apis/SwapsApi.ts

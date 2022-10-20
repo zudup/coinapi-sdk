@@ -9,6 +9,9 @@ lib/OnChain/API.hs
 lib/OnChain/API/Bundles.hs
 lib/OnChain/API/Burns.hs
 lib/OnChain/API/Factory.hs
+lib/OnChain/API/Mints.hs
+lib/OnChain/API/Poi.hs
+lib/OnChain/API/PoolDayData.hs
 lib/OnChain/API/Pools.hs
 lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/Swaps.hs

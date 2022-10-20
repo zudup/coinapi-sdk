@@ -59,6 +59,9 @@ Class | Method | HTTP request | Description
 *BundlesApi* | [**Invoke-ChainsChainIdDappsUniswapv3BundlesHistoricalGet**](docs/BundlesApi.md#Invoke-ChainsChainIdDappsUniswapv3BundlesHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
 *BurnsApi* | [**Invoke-ChainsChainIdDappsUniswapv3BurnsHistoricalGet**](docs/BurnsApi.md#Invoke-ChainsChainIdDappsUniswapv3BurnsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
 *FactoryApi* | [**Invoke-ChainsChainIdDappsUniswapv3FactoryHistoricalGet**](docs/FactoryApi.md#Invoke-ChainsChainIdDappsUniswapv3FactoryHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
+*MintsApi* | [**Invoke-ChainsChainIdDappsUniswapv3MintsHistoricalGet**](docs/MintsApi.md#Invoke-ChainsChainIdDappsUniswapv3MintsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/historical | 
+*PoiApi* | [**Invoke-ChainsChainIdDappsUniswapv3PoiHistoricalGet**](docs/PoiApi.md#Invoke-ChainsChainIdDappsUniswapv3PoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poi/historical | 
+*PoolDayDataApi* | [**Invoke-ChainsChainIdDappsUniswapv3PoolDayDataHistoricalGet**](docs/PoolDayDataApi.md#Invoke-ChainsChainIdDappsUniswapv3PoolDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | 
 *PoolsApi* | [**Invoke-ChainsChainIdDappsCurvePoolsHistoricalGet**](docs/PoolsApi.md#Invoke-ChainsChainIdDappsCurvePoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**Invoke-ChainsChainIdDappsSushiswapPoolsHistoricalGet**](docs/PoolsApi.md#Invoke-ChainsChainIdDappsSushiswapPoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**Invoke-ChainsChainIdDappsUniswapv2PoolsHistoricalGet**](docs/PoolsApi.md#Invoke-ChainsChainIdDappsUniswapv2PoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

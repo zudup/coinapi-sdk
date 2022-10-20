@@ -12,8 +12,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -44,6 +47,7 @@ lib/WWW/OpenAPIClient/BundlesApi.pm
 lib/WWW/OpenAPIClient/BurnsApi.pm
 lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/FactoryApi.pm
+lib/WWW/OpenAPIClient/MintsApi.pm
 lib/WWW/OpenAPIClient/Object/BigInteger.pm
 lib/WWW/OpenAPIClient/Object/BundleV3DTO.pm
 lib/WWW/OpenAPIClient/Object/BurnV3DTO.pm
@@ -68,6 +72,8 @@ lib/WWW/OpenAPIClient/Object/TokenV2DTO.pm
 lib/WWW/OpenAPIClient/Object/TokenV3DTO.pm
 lib/WWW/OpenAPIClient/Object/TokenV3DayDataDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapDayDataV3DTO.pm
+lib/WWW/OpenAPIClient/PoiApi.pm
+lib/WWW/OpenAPIClient/PoolDayDataApi.pm
 lib/WWW/OpenAPIClient/PoolsApi.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
@@ -86,8 +92,11 @@ t/ETradeAggressiveSideTest.t
 t/FactoryApiTest.t
 t/FactoryV3DTOTest.t
 t/MintV3DTOTest.t
+t/MintsApiTest.t
 t/PairDTOTest.t
 t/PairV2DTOTest.t
+t/PoiApiTest.t
+t/PoolDayDataApiTest.t
 t/PoolDayDataV3DTOTest.t
 t/PoolHourDataV3DTOTest.t
 t/PoolV3DTOTest.t

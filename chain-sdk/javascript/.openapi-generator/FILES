@@ -12,8 +12,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -44,6 +47,9 @@ src/ApiClient.js
 src/api/BundlesApi.js
 src/api/BurnsApi.js
 src/api/FactoryApi.js
+src/api/MintsApi.js
+src/api/PoiApi.js
+src/api/PoolDayDataApi.js
 src/api/PoolsApi.js
 src/api/SushiswapApi.js
 src/api/SwapsApi.js
@@ -79,6 +85,9 @@ src/model/UniswapDayDataV3DTO.js
 test/api/BundlesApi.spec.js
 test/api/BurnsApi.spec.js
 test/api/FactoryApi.spec.js
+test/api/MintsApi.spec.js
+test/api/PoiApi.spec.js
+test/api/PoolDayDataApi.spec.js
 test/api/PoolsApi.spec.js
 test/api/SushiswapApi.spec.js
 test/api/SwapsApi.spec.js

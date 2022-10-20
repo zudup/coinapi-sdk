@@ -7,6 +7,9 @@ config/runtime.exs
 lib/on_chain_api/api/bundles.ex
 lib/on_chain_api/api/burns.ex
 lib/on_chain_api/api/factory.ex
+lib/on_chain_api/api/mints.ex
+lib/on_chain_api/api/poi.ex
+lib/on_chain_api/api/pool_day_data.ex
 lib/on_chain_api/api/pools.ex
 lib/on_chain_api/api/sushiswap.ex
 lib/on_chain_api/api/swaps.ex

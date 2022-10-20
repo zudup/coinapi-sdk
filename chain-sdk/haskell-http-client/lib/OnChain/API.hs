@@ -17,6 +17,9 @@ module OnChain.API
   ( module OnChain.API.Bundles
   , module OnChain.API.Burns
   , module OnChain.API.Factory
+  , module OnChain.API.Mints
+  , module OnChain.API.Poi
+  , module OnChain.API.PoolDayData
   , module OnChain.API.Pools
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
@@ -29,6 +32,9 @@ module OnChain.API
 import OnChain.API.Bundles
 import OnChain.API.Burns
 import OnChain.API.Factory
+import OnChain.API.Mints
+import OnChain.API.Poi
+import OnChain.API.PoolDayData
 import OnChain.API.Pools
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps

@@ -7,6 +7,9 @@ composer.json
 docs/Api/BundlesApi.md
 docs/Api/BurnsApi.md
 docs/Api/FactoryApi.md
+docs/Api/MintsApi.md
+docs/Api/PoiApi.md
+docs/Api/PoolDayDataApi.md
 docs/Api/PoolsApi.md
 docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
@@ -42,6 +45,9 @@ git_push.sh
 lib/Api/BundlesApi.php
 lib/Api/BurnsApi.php
 lib/Api/FactoryApi.php
+lib/Api/MintsApi.php
+lib/Api/PoiApi.php
+lib/Api/PoolDayDataApi.php
 lib/Api/PoolsApi.php
 lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
@@ -82,6 +88,9 @@ phpunit.xml.dist
 test/Api/BundlesApiTest.php
 test/Api/BurnsApiTest.php
 test/Api/FactoryApiTest.php
+test/Api/MintsApiTest.php
+test/Api/PoiApiTest.php
+test/Api/PoolDayDataApiTest.php
 test/Api/PoolsApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php
