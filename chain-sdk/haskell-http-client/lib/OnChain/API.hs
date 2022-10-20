@@ -14,7 +14,10 @@ Module : OnChain.API
 -}
 
 module OnChain.API
-  ( module OnChain.API.Pools
+  ( module OnChain.API.Bundles
+  , module OnChain.API.Burns
+  , module OnChain.API.Factory
+  , module OnChain.API.Pools
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
   , module OnChain.API.Tokens
@@ -23,6 +26,9 @@ module OnChain.API
   , module OnChain.API.UniswapV3
   ) where
 
+import OnChain.API.Bundles
+import OnChain.API.Burns
+import OnChain.API.Factory
 import OnChain.API.Pools
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps

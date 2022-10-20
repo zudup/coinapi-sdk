@@ -3,8 +3,11 @@ README.md
 build.gradle
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -37,6 +40,9 @@ gradle/wrapper/gradle-wrapper.properties
 gradlew
 gradlew.bat
 settings.gradle
+src/main/kotlin/org/openapitools/client/apis/BundlesApi.kt
+src/main/kotlin/org/openapitools/client/apis/BurnsApi.kt
+src/main/kotlin/org/openapitools/client/apis/FactoryApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolsApi.kt
 src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
 src/main/kotlin/org/openapitools/client/apis/SwapsApi.kt

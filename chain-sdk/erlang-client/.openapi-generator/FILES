@@ -4,8 +4,11 @@ rebar.config
 src/openapi.app.src
 src/openapi_big_integer.erl
 src/openapi_bundle_v3_dto.erl
+src/openapi_bundles_api.erl
 src/openapi_burn_v3_dto.erl
+src/openapi_burns_api.erl
 src/openapi_e_trade_aggressive_side.erl
+src/openapi_factory_api.erl
 src/openapi_factory_v3_dto.erl
 src/openapi_mint_v3_dto.erl
 src/openapi_pair_dto.erl

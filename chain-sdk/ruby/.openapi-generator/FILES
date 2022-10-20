@@ -9,8 +9,11 @@ README.md
 Rakefile
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -40,6 +43,9 @@ docs/UniswapV2Api.md
 docs/UniswapV3Api.md
 git_push.sh
 lib/openapi_client.rb
+lib/openapi_client/api/bundles_api.rb
+lib/openapi_client/api/burns_api.rb
+lib/openapi_client/api/factory_api.rb
 lib/openapi_client/api/pools_api.rb
 lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/swaps_api.rb
@@ -76,6 +82,9 @@ lib/openapi_client/models/token_v3_dto.rb
 lib/openapi_client/models/uniswap_day_data_v3_dto.rb
 lib/openapi_client/version.rb
 openapi_client.gemspec
+spec/api/bundles_api_spec.rb
+spec/api/burns_api_spec.rb
+spec/api/factory_api_spec.rb
 spec/api/pools_api_spec.rb
 spec/api/sushiswap_api_spec.rb
 spec/api/swaps_api_spec.rb

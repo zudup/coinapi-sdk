@@ -68,6 +68,9 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["chainsChainIdDappsUniswapv3BundlesHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]=1
     operations["chainsChainIdDappsCurvePoolsHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapPoolsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]=1
@@ -110,6 +113,9 @@ _()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["chainsChainIdDappsUniswapv3BundlesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsCurvePoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsSushiswapPoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "

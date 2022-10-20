@@ -4,6 +4,9 @@
 .travis.yml
 README.md
 composer.json
+docs/Api/BundlesApi.md
+docs/Api/BurnsApi.md
+docs/Api/FactoryApi.md
 docs/Api/PoolsApi.md
 docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
@@ -36,6 +39,9 @@ docs/Model/TokenV3DTO.md
 docs/Model/TokenV3DayDataDTO.md
 docs/Model/UniswapDayDataV3DTO.md
 git_push.sh
+lib/Api/BundlesApi.php
+lib/Api/BurnsApi.php
+lib/Api/FactoryApi.php
 lib/Api/PoolsApi.php
 lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
@@ -73,6 +79,9 @@ lib/Model/TokenV3DayDataDTO.php
 lib/Model/UniswapDayDataV3DTO.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/BundlesApiTest.php
+test/Api/BurnsApiTest.php
+test/Api/FactoryApiTest.php
 test/Api/PoolsApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php

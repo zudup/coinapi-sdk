@@ -4,6 +4,9 @@ README.md
 elm.json
 src/Api.elm
 src/Api/Data.elm
+src/Api/Request/Bundles.elm
+src/Api/Request/Burns.elm
+src/Api/Request/Factory.elm
 src/Api/Request/Pools.elm
 src/Api/Request/Sushiswap.elm
 src/Api/Request/Swaps.elm

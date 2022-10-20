@@ -9,6 +9,9 @@ export 'package:openapi/src/auth/oauth.dart';
 export 'package:openapi/src/serializers.dart';
 export 'package:openapi/src/model/date.dart';
 
+export 'package:openapi/src/api/bundles_api.dart';
+export 'package:openapi/src/api/burns_api.dart';
+export 'package:openapi/src/api/factory_api.dart';
 export 'package:openapi/src/api/pools_api.dart';
 export 'package:openapi/src/api/sushiswap_api.dart';
 export 'package:openapi/src/api/swaps_api.dart';

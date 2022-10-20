@@ -1,8 +1,11 @@
 .openapi-generator-ignore
 API/Client/BigInteger.js
 API/Client/BundleV3DTO.js
+API/Client/BundlesApi.js
 API/Client/BurnV3DTO.js
+API/Client/BurnsApi.js
 API/Client/ETradeAggressiveSide.js
+API/Client/FactoryApi.js
 API/Client/FactoryV3DTO.js
 API/Client/MintV3DTO.js
 API/Client/PairDTO.js

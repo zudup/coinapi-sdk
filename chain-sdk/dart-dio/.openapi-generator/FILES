@@ -4,8 +4,11 @@ README.md
 analysis_options.yaml
 doc/BigInteger.md
 doc/BundleV3DTO.md
+doc/BundlesApi.md
 doc/BurnV3DTO.md
+doc/BurnsApi.md
 doc/ETradeAggressiveSide.md
+doc/FactoryApi.md
 doc/FactoryV3DTO.md
 doc/MintV3DTO.md
 doc/PairDTO.md
@@ -35,6 +38,9 @@ doc/UniswapV2Api.md
 doc/UniswapV3Api.md
 lib/openapi.dart
 lib/src/api.dart
+lib/src/api/bundles_api.dart
+lib/src/api/burns_api.dart
+lib/src/api/factory_api.dart
 lib/src/api/pools_api.dart
 lib/src/api/sushiswap_api.dart
 lib/src/api/swaps_api.dart
@@ -78,8 +84,11 @@ lib/src/serializers.dart
 pubspec.yaml
 test/big_integer_test.dart
 test/bundle_v3_dto_test.dart
+test/bundles_api_test.dart
 test/burn_v3_dto_test.dart
+test/burns_api_test.dart
 test/e_trade_aggressive_side_test.dart
+test/factory_api_test.dart
 test/factory_v3_dto_test.dart
 test/mint_v3_dto_test.dart
 test/pair_dto_test.dart

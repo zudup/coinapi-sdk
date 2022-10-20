@@ -61,20 +61,19 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'openapi_client'
 
-api_instance = OpenapiClient::PoolsApi.new
+api_instance = OpenapiClient::BundlesApi.new
 chain_id = 'chain_id_example' # String | 
 opts = {
   start_block: 789, # Integer | 
   end_block: 789, # Integer | 
   start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  pool_id: 'pool_id_example' # String | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
 }
 
 begin
-  api_instance.chains_chain_id_dapps_curve_pools_historical_get(chain_id, opts)
+  api_instance.chains_chain_id_dapps_uniswapv3_bundles_historical_get(chain_id, opts)
 rescue OpenapiClient::ApiError => e
-  puts "Exception when calling PoolsApi->chains_chain_id_dapps_curve_pools_historical_get: #{e}"
+  puts "Exception when calling BundlesApi->chains_chain_id_dapps_uniswapv3_bundles_historical_get: #{e}"
 end
 
 ```
@@ -85,6 +84,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OpenapiClient::BundlesApi* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*OpenapiClient::BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*OpenapiClient::FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *OpenapiClient::PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *OpenapiClient::PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *OpenapiClient::PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

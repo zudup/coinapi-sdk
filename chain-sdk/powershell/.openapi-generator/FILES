@@ -4,8 +4,11 @@ README.md
 appveyor.yml
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -33,6 +36,9 @@ docs/TradesApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
+src/PSOpenAPITools/Api/BundlesApi.ps1
+src/PSOpenAPITools/Api/BurnsApi.ps1
+src/PSOpenAPITools/Api/FactoryApi.ps1
 src/PSOpenAPITools/Api/PoolsApi.ps1
 src/PSOpenAPITools/Api/SushiswapApi.ps1
 src/PSOpenAPITools/Api/SwapsApi.ps1
@@ -72,6 +78,9 @@ src/PSOpenAPITools/Private/HttpSignatureAuth.ps1
 src/PSOpenAPITools/Private/Out-DebugParameter.ps1
 src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
+tests/Api/BundlesApi.Tests.ps1
+tests/Api/BurnsApi.Tests.ps1
+tests/Api/FactoryApi.Tests.ps1
 tests/Api/PoolsApi.Tests.ps1
 tests/Api/SushiswapApi.Tests.ps1
 tests/Api/SwapsApi.Tests.ps1

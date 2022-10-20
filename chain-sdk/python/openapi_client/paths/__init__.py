@@ -8,7 +8,10 @@ import enum
 class PathValues(str, enum.Enum):
     CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_SWAPS_CURRENT = "/chains/{chain_id}/dapps/sushiswap/swaps/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLE_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/bundle/current"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLES_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/bundles/historical"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/burns/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/burns/current"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/factory/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/factory/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_MINTS_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/mints/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/pools/historical"

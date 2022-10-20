@@ -106,14 +106,13 @@ Please follow the [installation](#installation) instruction and execute the foll
 var OnChainApi = require('on_chain_api');
 
 
-var api = new OnChainApi.PoolsApi()
+var api = new OnChainApi.BundlesApi()
 var chainId = "chainId_example"; // {String} 
 var opts = {
   'startBlock': 789, // {Number} 
   'endBlock': 789, // {Number} 
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
-  'poolId': "poolId_example" // {String} 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // {Date} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -122,7 +121,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.chainsChainIdDappsCurvePoolsHistoricalGet(chainId, opts, callback);
+api.chainsChainIdDappsUniswapv3BundlesHistoricalGet(chainId, opts, callback);
 
 ```
 
@@ -132,6 +131,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OnChainApi.BundlesApi* | [**chainsChainIdDappsUniswapv3BundlesHistoricalGet**](docs/BundlesApi.md#chainsChainIdDappsUniswapv3BundlesHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*OnChainApi.BurnsApi* | [**chainsChainIdDappsUniswapv3BurnsHistoricalGet**](docs/BurnsApi.md#chainsChainIdDappsUniswapv3BurnsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*OnChainApi.FactoryApi* | [**chainsChainIdDappsUniswapv3FactoryHistoricalGet**](docs/FactoryApi.md#chainsChainIdDappsUniswapv3FactoryHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *OnChainApi.PoolsApi* | [**chainsChainIdDappsCurvePoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsCurvePoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *OnChainApi.PoolsApi* | [**chainsChainIdDappsSushiswapPoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsSushiswapPoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *OnChainApi.PoolsApi* | [**chainsChainIdDappsUniswapv2PoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsUniswapv2PoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

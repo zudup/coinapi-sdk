@@ -235,6 +235,9 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 
 To load the API packages:
 ```perl
+use WWW::OpenAPIClient::BundlesApi;
+use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::FactoryApi;
 use WWW::OpenAPIClient::PoolsApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
@@ -282,6 +285,9 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
+use WWW::OpenAPIClient::BundlesApi;
+use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::FactoryApi;
 use WWW::OpenAPIClient::PoolsApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
@@ -320,7 +326,7 @@ use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
 use Data::Dumper;
 
 
-my $api_instance = WWW::OpenAPIClient::PoolsApi->new(
+my $api_instance = WWW::OpenAPIClient::BundlesApi->new(
 );
 
 my $chain_id = "chain_id_example"; # string | 
@@ -328,13 +334,12 @@ my $start_block = 789; # int |
 my $end_block = 789; # int | 
 my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->chains_chain_id_dapps_curve_pools_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    $api_instance->chains_chain_id_dapps_uniswapv3_bundles_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
 };
 if ($@) {
-    warn "Exception when calling PoolsApi->chains_chain_id_dapps_curve_pools_historical_get: $@\n";
+    warn "Exception when calling BundlesApi->chains_chain_id_dapps_uniswapv3_bundles_historical_get: $@\n";
 }
 
 ```
@@ -345,6 +350,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BundlesApi* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

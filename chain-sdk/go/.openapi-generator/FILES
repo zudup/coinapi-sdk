@@ -3,6 +3,9 @@
 .travis.yml
 README.md
 api/openapi.yaml
+api_bundles.go
+api_burns.go
+api_factory.go
 api_pools.go
 api_sushiswap.go
 api_swaps.go
@@ -14,8 +17,11 @@ client.go
 configuration.go
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md

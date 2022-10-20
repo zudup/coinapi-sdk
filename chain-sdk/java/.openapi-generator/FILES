@@ -8,8 +8,11 @@ build.gradle
 build.sbt
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -59,6 +62,9 @@ src/main/java/org/openapitools/client/ProgressResponseBody.java
 src/main/java/org/openapitools/client/ServerConfiguration.java
 src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/StringUtil.java
+src/main/java/org/openapitools/client/api/BundlesApi.java
+src/main/java/org/openapitools/client/api/BurnsApi.java
+src/main/java/org/openapitools/client/api/FactoryApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
@@ -95,6 +101,9 @@ src/main/java/org/openapitools/client/model/TokenV2DTO.java
 src/main/java/org/openapitools/client/model/TokenV3DTO.java
 src/main/java/org/openapitools/client/model/TokenV3DayDataDTO.java
 src/main/java/org/openapitools/client/model/UniswapDayDataV3DTO.java
+src/test/java/org/openapitools/client/api/BundlesApiTest.java
+src/test/java/org/openapitools/client/api/BurnsApiTest.java
+src/test/java/org/openapitools/client/api/FactoryApiTest.java
 src/test/java/org/openapitools/client/api/PoolsApiTest.java
 src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/SwapsApiTest.java

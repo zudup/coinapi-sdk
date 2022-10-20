@@ -26,6 +26,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BUNDLES_API* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/BUNDLES_API.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*BURNS_API* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BURNS_API.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*FACTORY_API* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FACTORY_API.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *POOLS_API* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/POOLS_API.md#chains_chain_id_dapps_curve_pools_historical_get) | **Get** /chains/{chain_id}/dapps/curve/pools/historical | 
 *POOLS_API* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/POOLS_API.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *POOLS_API* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/POOLS_API.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

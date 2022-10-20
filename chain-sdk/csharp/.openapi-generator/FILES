@@ -7,8 +7,11 @@ build.bat
 build.sh
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -38,6 +41,9 @@ docs/UniswapV2Api.md
 docs/UniswapV3Api.md
 git_push.sh
 mono_nunit_test.sh
+src/CoinAPI.EMS.REST.V1.Test/Api/BundlesApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/BurnsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/FactoryApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SwapsApiTests.cs
@@ -71,6 +77,9 @@ src/CoinAPI.EMS.REST.V1.Test/Model/TokenV3DTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/TokenV3DayDataDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UniswapDayDataV3DTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/packages.config
+src/CoinAPI.EMS.REST.V1/Api/BundlesApi.cs
+src/CoinAPI.EMS.REST.V1/Api/BurnsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/FactoryApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SwapsApi.cs

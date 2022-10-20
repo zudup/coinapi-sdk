@@ -3,6 +3,9 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
+docs/apis/tags/BundlesApi.md
+docs/apis/tags/BurnsApi.md
+docs/apis/tags/FactoryApi.md
 docs/apis/tags/PoolsApi.md
 docs/apis/tags/SushiswapApi.md
 docs/apis/tags/SwapsApi.md
@@ -38,6 +41,9 @@ git_push.sh
 openapi_client/__init__.py
 openapi_client/api_client.py
 openapi_client/apis/__init__.py
+openapi_client/apis/tags/bundles_api.py
+openapi_client/apis/tags/burns_api.py
+openapi_client/apis/tags/factory_api.py
 openapi_client/apis/tags/pools_api.py
 openapi_client/apis/tags/sushiswap_api.py
 openapi_client/apis/tags/swaps_api.py

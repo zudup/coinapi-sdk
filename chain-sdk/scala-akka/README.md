@@ -70,19 +70,19 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 import org.openapitools.client.core._
 import org.openapitools.client.model._
-import org.openapitools.client.api.PoolsApi
+import org.openapitools.client.api.BundlesApi
 
 import akka.actor.ActorSystem
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
-object PoolsApiExample extends App {
+object BundlesApiExample extends App {
 
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
     // Create invoker to execute requests
     val apiInvoker = ApiInvoker()
-    val apiInstance = PoolsApi("https://onchain.coinapi.io")
+    val apiInstance = BundlesApi("https://onchain.coinapi.io")
     val chainId: String = chainId_example // String | 
 
     val startBlock: Long = 789 // Long | 
@@ -93,9 +93,7 @@ object PoolsApiExample extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
 
-    val poolId: String = poolId_example // String | 
-
-    val request = apiInstance.chainsChainIdDappsCurvePoolsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.chainsChainIdDappsUniswapv3BundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -104,14 +102,14 @@ object PoolsApiExample extends App {
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
 
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling PoolsApi#chainsChainIdDappsCurvePoolsHistoricalGet")
+            System.err.println("Exception when calling BundlesApi#chainsChainIdDappsUniswapv3BundlesHistoricalGet")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) =>
-            System.err.println("Exception when calling PoolsApi#chainsChainIdDappsCurvePoolsHistoricalGet")
+            System.err.println("Exception when calling BundlesApi#chainsChainIdDappsUniswapv3BundlesHistoricalGet")
             exception.printStackTrace();
     }
 
@@ -125,6 +123,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BundlesApi* | [**chainsChainIdDappsUniswapv3BundlesHistoricalGet**](docs/BundlesApi.md#chainsChainIdDappsUniswapv3BundlesHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*BurnsApi* | [**chainsChainIdDappsUniswapv3BurnsHistoricalGet**](docs/BurnsApi.md#chainsChainIdDappsUniswapv3BurnsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*FactoryApi* | [**chainsChainIdDappsUniswapv3FactoryHistoricalGet**](docs/FactoryApi.md#chainsChainIdDappsUniswapv3FactoryHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *PoolsApi* | [**chainsChainIdDappsCurvePoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsCurvePoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**chainsChainIdDappsSushiswapPoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsSushiswapPoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chainsChainIdDappsUniswapv2PoolsHistoricalGet**](docs/PoolsApi.md#chainsChainIdDappsUniswapv2PoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

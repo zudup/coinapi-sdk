@@ -3,9 +3,12 @@
 README.md
 api_client.ecf
 docs/BIG_INTEGER.md
+docs/BUNDLES_API.md
 docs/BUNDLE_V3_DTO.md
+docs/BURNS_API.md
 docs/BURN_V3_DTO.md
 docs/E_TRADE_AGGRESSIVE_SIDE.md
+docs/FACTORY_API.md
 docs/FACTORY_V3_DTO.md
 docs/MINT_V3_DTO.md
 docs/PAIR_DTO.md
@@ -33,6 +36,9 @@ docs/TRADES_API.md
 docs/UNISWAPV2_API.md
 docs/UNISWAPV3_API.md
 docs/UNISWAP_DAY_DATA_V3_DTO.md
+src/api/bundles_api.e
+src/api/burns_api.e
+src/api/factory_api.e
 src/api/pools_api.e
 src/api/sushiswap_api.e
 src/api/swaps_api.e
@@ -81,6 +87,9 @@ src/framework/serialization/api_serializer.e
 src/framework/serialization/json_basic_reflector_deserializer.e
 src/framework/serialization/json_type_utilities_ext.e
 test/api_test.ecf
+test/apis/bundles_api_test.e
+test/apis/burns_api_test.e
+test/apis/factory_api_test.e
 test/apis/pools_api_test.e
 test/apis/sushiswap_api_test.e
 test/apis/swaps_api_test.e

@@ -3,6 +3,9 @@
 README.md
 api.module.ts
 api/api.ts
+api/bundles.service.ts
+api/burns.service.ts
+api/factory.service.ts
 api/pools.service.ts
 api/sushiswap.service.ts
 api/swaps.service.ts

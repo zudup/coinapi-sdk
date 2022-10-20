@@ -2,6 +2,9 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
+import { BundlesService } from './api/bundles.service';
+import { BurnsService } from './api/burns.service';
+import { FactoryService } from './api/factory.service';
 import { PoolsService } from './api/pools.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { SwapsService } from './api/swaps.service';

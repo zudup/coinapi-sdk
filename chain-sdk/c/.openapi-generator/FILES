@@ -2,6 +2,12 @@
 CMakeLists.txt
 Packing.cmake
 README.md
+api/BundlesAPI.c
+api/BundlesAPI.h
+api/BurnsAPI.c
+api/BurnsAPI.h
+api/FactoryAPI.c
+api/FactoryAPI.h
 api/PoolsAPI.c
 api/PoolsAPI.h
 api/SushiswapAPI.c
@@ -16,6 +22,9 @@ api/UniswapV2API.c
 api/UniswapV2API.h
 api/UniswapV3API.c
 api/UniswapV3API.h
+docs/BundlesAPI.md
+docs/BurnsAPI.md
+docs/FactoryAPI.md
 docs/PoolsAPI.md
 docs/SushiswapAPI.md
 docs/SwapsAPI.md

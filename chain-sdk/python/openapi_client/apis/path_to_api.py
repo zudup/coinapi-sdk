@@ -3,7 +3,10 @@ import typing_extensions
 from openapi_client.paths import PathValues
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_swaps_current import ChainsChainIdDappsSushiswapSwapsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_bundle_current import ChainsChainIdDappsUniswapv3BundleCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_bundles_historical import ChainsChainIdDappsUniswapv3BundlesHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_historical import ChainsChainIdDappsUniswapv3BurnsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_current import ChainsChainIdDappsUniswapv3BurnsCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_historical import ChainsChainIdDappsUniswapv3FactoryHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_current import ChainsChainIdDappsUniswapv3FactoryCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_mints_current import ChainsChainIdDappsUniswapv3MintsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_pools_historical import ChainsChainIdDappsUniswapv3PoolsHistorical
@@ -45,7 +48,10 @@ PathToApi = typing_extensions.TypedDict(
     {
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_SWAPS_CURRENT: ChainsChainIdDappsSushiswapSwapsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLE_CURRENT: ChainsChainIdDappsUniswapv3BundleCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLES_HISTORICAL: ChainsChainIdDappsUniswapv3BundlesHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv3BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_MINTS_CURRENT: ChainsChainIdDappsUniswapv3MintsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HISTORICAL: ChainsChainIdDappsUniswapv3PoolsHistorical,
@@ -88,7 +94,10 @@ path_to_api = PathToApi(
     {
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_SWAPS_CURRENT: ChainsChainIdDappsSushiswapSwapsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLE_CURRENT: ChainsChainIdDappsUniswapv3BundleCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLES_HISTORICAL: ChainsChainIdDappsUniswapv3BundlesHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv3BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_MINTS_CURRENT: ChainsChainIdDappsUniswapv3MintsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HISTORICAL: ChainsChainIdDappsUniswapv3PoolsHistorical,

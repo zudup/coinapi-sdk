@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-10-17T08:55:36.154521Z[Etc/UTC]
+- Build date: 2022-10-20T15:39:09.923653Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -37,15 +37,14 @@ Then, run:
 
 
 ```groovy
-def apiInstance = new PoolsApi()
+def apiInstance = new BundlesApi()
 def chainId = "chainId_example" // String | 
 def startBlock = 56L // Long | 
 def endBlock = 56L // Long | 
 def startDate = new Date() // Date | 
 def endDate = new Date() // Date | 
-def poolId = "poolId_example" // String | 
 
-apiInstance.chainsChainIdDappsCurvePoolsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId)
+apiInstance.chainsChainIdDappsUniswapv3BundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     {
     // on success
         println it

@@ -39,6 +39,27 @@ Check out [Doxygen](https://www.doxygen.org/) for additional information about t
 All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 
 
+### BundlesManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3BundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/bundles/historical | .
+*chainsChainIdDappsUniswapv3BundlesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/bundles/historical | .
+
+
+### BurnsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3BurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
+*chainsChainIdDappsUniswapv3BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
+
+
+### FactoryManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3FactoryHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
+*chainsChainIdDappsUniswapv3FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
+
+
 ### PoolsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

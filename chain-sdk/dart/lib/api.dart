@@ -27,6 +27,9 @@ part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
+part 'api/bundles_api.dart';
+part 'api/burns_api.dart';
+part 'api/factory_api.dart';
 part 'api/pools_api.dart';
 part 'api/sushiswap_api.dart';
 part 'api/swaps_api.dart';

@@ -37,6 +37,9 @@ import TokenV2DTO from './model/TokenV2DTO';
 import TokenV3DTO from './model/TokenV3DTO';
 import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
 import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
+import BundlesApi from './api/BundlesApi';
+import BurnsApi from './api/BurnsApi';
+import FactoryApi from './api/FactoryApi';
 import PoolsApi from './api/PoolsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
@@ -227,6 +230,24 @@ export {
      * @property {module:model/UniswapDayDataV3DTO}
      */
     UniswapDayDataV3DTO,
+
+    /**
+    * The BundlesApi service constructor.
+    * @property {module:api/BundlesApi}
+    */
+    BundlesApi,
+
+    /**
+    * The BurnsApi service constructor.
+    * @property {module:api/BurnsApi}
+    */
+    BurnsApi,
+
+    /**
+    * The FactoryApi service constructor.
+    * @property {module:api/FactoryApi}
+    */
+    FactoryApi,
 
     /**
     * The PoolsApi service constructor.

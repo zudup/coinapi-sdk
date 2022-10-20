@@ -13,6 +13,9 @@ include/CppRestOpenAPIClient/JsonBody.h
 include/CppRestOpenAPIClient/ModelBase.h
 include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
+include/CppRestOpenAPIClient/api/BundlesApi.h
+include/CppRestOpenAPIClient/api/BurnsApi.h
+include/CppRestOpenAPIClient/api/FactoryApi.h
 include/CppRestOpenAPIClient/api/PoolsApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/SwapsApi.h
@@ -52,6 +55,9 @@ src/JsonBody.cpp
 src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
+src/api/BundlesApi.cpp
+src/api/BurnsApi.cpp
+src/api/FactoryApi.cpp
 src/api/PoolsApi.cpp
 src/api/SushiswapApi.cpp
 src/api/SwapsApi.cpp

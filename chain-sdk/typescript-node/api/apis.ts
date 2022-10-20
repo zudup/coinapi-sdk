@@ -1,3 +1,9 @@
+export * from './bundlesApi';
+import { BundlesApi } from './bundlesApi';
+export * from './burnsApi';
+import { BurnsApi } from './burnsApi';
+export * from './factoryApi';
+import { FactoryApi } from './factoryApi';
 export * from './poolsApi';
 import { PoolsApi } from './poolsApi';
 export * from './sushiswapApi';
@@ -23,4 +29,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [PoolsApi, SushiswapApi, SwapsApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [BundlesApi, BurnsApi, FactoryApi, PoolsApi, SushiswapApi, SwapsApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];

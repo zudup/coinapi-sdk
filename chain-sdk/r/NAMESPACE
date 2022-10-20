@@ -39,6 +39,9 @@ export(TokenV3DayDataDTO)
 export(UniswapDayDataV3DTO)
 
 # APIs
+export(BundlesApi)
+export(BurnsApi)
+export(FactoryApi)
 export(PoolsApi)
 export(SushiswapApi)
 export(SwapsApi)

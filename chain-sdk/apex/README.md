@@ -42,20 +42,19 @@ If everything is set correctly:
 Please follow the [installation](#installation) instruction and execute the following Apex code:
 
 ```java
-OASPoolsApi api = new OASPoolsApi();
+OASBundlesApi api = new OASBundlesApi();
 
 Map<String, Object> params = new Map<String, Object>{
     'chainId' => 'null',
     'startBlock' => 2147483648L,
     'endBlock' => 2147483648L,
     'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-    'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-    'poolId' => 'null'
+    'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3)
 };
 
 try {
     // cross your fingers
-    api.chainsChainIdDappsCurvePoolsHistoricalGet(params);
+    api.chainsChainIdDappsUniswapv3BundlesHistoricalGet(params);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
 }
@@ -67,6 +66,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OASBundlesApi* | [**chainsChainIdDappsUniswapv3BundlesHistoricalGet**](OASBundlesApi.md#chainsChainIdDappsUniswapv3BundlesHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*OASBurnsApi* | [**chainsChainIdDappsUniswapv3BurnsHistoricalGet**](OASBurnsApi.md#chainsChainIdDappsUniswapv3BurnsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*OASFactoryApi* | [**chainsChainIdDappsUniswapv3FactoryHistoricalGet**](OASFactoryApi.md#chainsChainIdDappsUniswapv3FactoryHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *OASPoolsApi* | [**chainsChainIdDappsCurvePoolsHistoricalGet**](OASPoolsApi.md#chainsChainIdDappsCurvePoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/pools/historical | 
 *OASPoolsApi* | [**chainsChainIdDappsSushiswapPoolsHistoricalGet**](OASPoolsApi.md#chainsChainIdDappsSushiswapPoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *OASPoolsApi* | [**chainsChainIdDappsUniswapv2PoolsHistoricalGet**](OASPoolsApi.md#chainsChainIdDappsUniswapv2PoolsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

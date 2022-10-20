@@ -1,4 +1,7 @@
 .openapi-generator-ignore
+api/BundlesApi.ts
+api/BurnsApi.ts
+api/FactoryApi.ts
 api/PoolsApi.ts
 api/SushiswapApi.ts
 api/SwapsApi.ts

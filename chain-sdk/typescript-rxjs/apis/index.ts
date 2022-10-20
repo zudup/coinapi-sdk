@@ -1,3 +1,6 @@
+export * from './BundlesApi';
+export * from './BurnsApi';
+export * from './FactoryApi';
 export * from './PoolsApi';
 export * from './SushiswapApi';
 export * from './SwapsApi';

@@ -10,8 +10,11 @@ R/api_client.R
 R/api_response.R
 R/big_integer.R
 R/bundle_v3_dto.R
+R/bundles_api.R
 R/burn_v3_dto.R
+R/burns_api.R
 R/e_trade_aggressive_side.R
+R/factory_api.R
 R/factory_v3_dto.R
 R/mint_v3_dto.R
 R/pair_dto.R
@@ -42,8 +45,11 @@ R/uniswap_v3_api.R
 README.md
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -75,8 +81,11 @@ git_push.sh
 tests/testthat.R
 tests/testthat/test_big_integer.R
 tests/testthat/test_bundle_v3_dto.R
+tests/testthat/test_bundles_api.R
 tests/testthat/test_burn_v3_dto.R
+tests/testthat/test_burns_api.R
 tests/testthat/test_e_trade_aggressive_side.R
+tests/testthat/test_factory_api.R
 tests/testthat/test_factory_v3_dto.R
 tests/testthat/test_mint_v3_dto.R
 tests/testthat/test_pair_dto.R

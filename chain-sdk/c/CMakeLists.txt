@@ -78,6 +78,9 @@ set(SRCS
     model/token_v3_day_data_dto.c
     model/token_v3_dto.c
     model/uniswap_day_data_v3_dto.c
+    api/BundlesAPI.c
+    api/BurnsAPI.c
+    api/FactoryAPI.c
     api/PoolsAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
@@ -119,6 +122,9 @@ set(HDRS
     model/token_v3_day_data_dto.h
     model/token_v3_dto.h
     model/uniswap_day_data_v3_dto.h
+    api/BundlesAPI.h
+    api/BurnsAPI.h
+    api/FactoryAPI.h
     api/PoolsAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
@@ -207,6 +213,9 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
+#    unit-tests/manual-BundlesAPI.c
+#    unit-tests/manual-BurnsAPI.c
+#    unit-tests/manual-FactoryAPI.c
 #    unit-tests/manual-PoolsAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c

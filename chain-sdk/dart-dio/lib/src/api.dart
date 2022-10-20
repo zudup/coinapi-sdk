@@ -9,6 +9,9 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
+import 'package:openapi/src/api/bundles_api.dart';
+import 'package:openapi/src/api/burns_api.dart';
+import 'package:openapi/src/api/factory_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
@@ -69,6 +72,24 @@ class Openapi {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
+  }
+
+  /// Get BundlesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  BundlesApi getBundlesApi() {
+    return BundlesApi(dio, serializers);
+  }
+
+  /// Get BurnsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  BurnsApi getBurnsApi() {
+    return BurnsApi(dio, serializers);
+  }
+
+  /// Get FactoryApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  FactoryApi getFactoryApi() {
+    return FactoryApi(dio, serializers);
   }
 
   /// Get PoolsApi instance, base route and serializer can be overridden by a given but be careful,

@@ -145,7 +145,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.apis import pools_api
+from openapi_client.apis import bundles_api
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -156,18 +156,17 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = pools_api.PoolsApi(api_client)
+    api_instance = bundles_api.BundlesApi(api_client)
     chain_id = "chain_id_example" # str | 
 start_block = 1 # int |  (optional)
 end_block = 1 # int |  (optional)
 start_date = "1970-01-01T00:00:00.00Z" # datetime |  (optional)
 end_date = "1970-01-01T00:00:00.00Z" # datetime |  (optional)
-pool_id = "poolId_example" # str |  (optional)
 
     try:
-        api_instance.chains_chain_id_dapps_curve_pools_historical_get(chain_idstart_block=start_blockend_block=end_blockstart_date=start_dateend_date=end_datepool_id=pool_id)
+        api_instance.chains_chain_id_dapps_uniswapv3_bundles_historical_get(chain_idstart_block=start_blockend_block=end_blockstart_date=start_dateend_date=end_date)
     except openapi_client.ApiException as e:
-        print("Exception when calling PoolsApi->chains_chain_id_dapps_curve_pools_historical_get: %s\n" % e)
+        print("Exception when calling BundlesApi->chains_chain_id_dapps_uniswapv3_bundles_historical_get: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -176,6 +175,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BundlesApi* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/apis/tags/BundlesApi.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/apis/tags/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/apis/tags/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **get** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
@@ -248,6 +250,9 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
+support@coinapi.io
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

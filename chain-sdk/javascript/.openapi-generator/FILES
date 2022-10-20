@@ -5,8 +5,11 @@
 README.md
 docs/BigInteger.md
 docs/BundleV3DTO.md
+docs/BundlesApi.md
 docs/BurnV3DTO.md
+docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
+docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
 docs/PairDTO.md
@@ -38,6 +41,9 @@ git_push.sh
 mocha.opts
 package.json
 src/ApiClient.js
+src/api/BundlesApi.js
+src/api/BurnsApi.js
+src/api/FactoryApi.js
 src/api/PoolsApi.js
 src/api/SushiswapApi.js
 src/api/SwapsApi.js
@@ -70,6 +76,9 @@ src/model/TokenV2DTO.js
 src/model/TokenV3DTO.js
 src/model/TokenV3DayDataDTO.js
 src/model/UniswapDayDataV3DTO.js
+test/api/BundlesApi.spec.js
+test/api/BurnsApi.spec.js
+test/api/FactoryApi.spec.js
 test/api/PoolsApi.spec.js
 test/api/SushiswapApi.spec.js
 test/api/SwapsApi.spec.js

@@ -64,6 +64,9 @@ library
   exposed-modules:
       OnChain
       OnChain.API
+      OnChain.API.Bundles
+      OnChain.API.Burns
+      OnChain.API.Factory
       OnChain.API.Pools
       OnChain.API.Sushiswap
       OnChain.API.Swaps
