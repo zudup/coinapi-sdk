@@ -17,6 +17,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -45,6 +46,7 @@ src/PSOpenAPITools/Api/FactoryApi.ps1
 src/PSOpenAPITools/Api/MintsApi.ps1
 src/PSOpenAPITools/Api/PoiApi.ps1
 src/PSOpenAPITools/Api/PoolDayDataApi.ps1
+src/PSOpenAPITools/Api/PoolHourDataApi.ps1
 src/PSOpenAPITools/Api/PoolsApi.ps1
 src/PSOpenAPITools/Api/SushiswapApi.ps1
 src/PSOpenAPITools/Api/SwapsApi.ps1
@@ -90,6 +92,7 @@ tests/Api/FactoryApi.Tests.ps1
 tests/Api/MintsApi.Tests.ps1
 tests/Api/PoiApi.Tests.ps1
 tests/Api/PoolDayDataApi.Tests.ps1
+tests/Api/PoolHourDataApi.Tests.ps1
 tests/Api/PoolsApi.Tests.ps1
 tests/Api/SushiswapApi.Tests.ps1
 tests/Api/SwapsApi.Tests.ps1

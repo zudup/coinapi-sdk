@@ -17,6 +17,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -56,6 +57,7 @@ src/main/java/org/openapitools/client/api/FactoryApi.java
 src/main/java/org/openapitools/client/api/MintsApi.java
 src/main/java/org/openapitools/client/api/PoiApi.java
 src/main/java/org/openapitools/client/api/PoolDayDataApi.java
+src/main/java/org/openapitools/client/api/PoolHourDataApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java

@@ -39,6 +39,8 @@ src/PoolDayDataManager.cpp
 src/PoolDayDataManager.h
 src/PoolDayDataV3DTO.cpp
 src/PoolDayDataV3DTO.h
+src/PoolHourDataManager.cpp
+src/PoolHourDataManager.h
 src/PoolHourDataV3DTO.cpp
 src/PoolHourDataV3DTO.h
 src/PoolV3DTO.cpp

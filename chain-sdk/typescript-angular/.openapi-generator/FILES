@@ -9,6 +9,7 @@ api/factory.service.ts
 api/mints.service.ts
 api/poi.service.ts
 api/poolDayData.service.ts
+api/poolHourData.service.ts
 api/pools.service.ts
 api/sushiswap.service.ts
 api/swaps.service.ts

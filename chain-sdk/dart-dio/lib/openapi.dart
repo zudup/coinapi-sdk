@@ -15,6 +15,7 @@ export 'package:openapi/src/api/factory_api.dart';
 export 'package:openapi/src/api/mints_api.dart';
 export 'package:openapi/src/api/poi_api.dart';
 export 'package:openapi/src/api/pool_day_data_api.dart';
+export 'package:openapi/src/api/pool_hour_data_api.dart';
 export 'package:openapi/src/api/pools_api.dart';
 export 'package:openapi/src/api/sushiswap_api.dart';
 export 'package:openapi/src/api/swaps_api.dart';

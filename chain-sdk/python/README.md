@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
 *MintsApi* | [**chains_chain_id_dapps_uniswapv3_mints_historical_get**](docs/apis/tags/MintsApi.md#chains_chain_id_dapps_uniswapv3_mints_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/mints/historical | 
 *PoiApi* | [**chains_chain_id_dapps_uniswapv3_poi_historical_get**](docs/apis/tags/PoiApi.md#chains_chain_id_dapps_uniswapv3_poi_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/poi/historical | 
 *PoolDayDataApi* | [**chains_chain_id_dapps_uniswapv3_pool_day_data_historical_get**](docs/apis/tags/PoolDayDataApi.md#chains_chain_id_dapps_uniswapv3_pool_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | 
+*PoolHourDataApi* | [**chains_chain_id_dapps_uniswapv3_pool_hour_data_historical_get**](docs/apis/tags/PoolHourDataApi.md#chains_chain_id_dapps_uniswapv3_pool_hour_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **get** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
@@ -253,6 +254,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

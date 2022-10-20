@@ -70,6 +70,7 @@ library
       OnChain.API.Mints
       OnChain.API.Poi
       OnChain.API.PoolDayData
+      OnChain.API.PoolHourData
       OnChain.API.Pools
       OnChain.API.Sushiswap
       OnChain.API.Swaps

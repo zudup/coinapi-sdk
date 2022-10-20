@@ -8,6 +8,7 @@ import { FactoryService } from './api/factory.service';
 import { MintsService } from './api/mints.service';
 import { PoiService } from './api/poi.service';
 import { PoolDayDataService } from './api/poolDayData.service';
+import { PoolHourDataService } from './api/poolHourData.service';
 import { PoolsService } from './api/pools.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { SwapsService } from './api/swaps.service';

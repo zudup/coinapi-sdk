@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 *MintsApi* | [**ChainsChainIdDappsUniswapv3MintsHistoricalGet**](docs/MintsApi.md#chainschainiddappsuniswapv3mintshistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/mints/historical | 
 *PoiApi* | [**ChainsChainIdDappsUniswapv3PoiHistoricalGet**](docs/PoiApi.md#chainschainiddappsuniswapv3poihistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/poi/historical | 
 *PoolDayDataApi* | [**ChainsChainIdDappsUniswapv3PoolDayDataHistoricalGet**](docs/PoolDayDataApi.md#chainschainiddappsuniswapv3pooldaydatahistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | 
+*PoolHourDataApi* | [**ChainsChainIdDappsUniswapv3PoolHourDataHistoricalGet**](docs/PoolHourDataApi.md#chainschainiddappsuniswapv3poolhourdatahistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | 
 *PoolsApi* | [**ChainsChainIdDappsCurvePoolsHistoricalGet**](docs/PoolsApi.md#chainschainiddappscurvepoolshistoricalget) | **Get** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**ChainsChainIdDappsSushiswapPoolsHistoricalGet**](docs/PoolsApi.md#chainschainiddappssushiswappoolshistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**ChainsChainIdDappsUniswapv2PoolsHistoricalGet**](docs/PoolsApi.md#chainschainiddappsuniswapv2poolshistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 

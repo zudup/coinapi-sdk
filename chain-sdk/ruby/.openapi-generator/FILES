@@ -22,6 +22,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -52,6 +53,7 @@ lib/openapi_client/api/factory_api.rb
 lib/openapi_client/api/mints_api.rb
 lib/openapi_client/api/poi_api.rb
 lib/openapi_client/api/pool_day_data_api.rb
+lib/openapi_client/api/pool_hour_data_api.rb
 lib/openapi_client/api/pools_api.rb
 lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/swaps_api.rb
@@ -94,6 +96,7 @@ spec/api/factory_api_spec.rb
 spec/api/mints_api_spec.rb
 spec/api/poi_api_spec.rb
 spec/api/pool_day_data_api_spec.rb
+spec/api/pool_hour_data_api_spec.rb
 spec/api/pools_api_spec.rb
 spec/api/sushiswap_api_spec.rb
 spec/api/swaps_api_spec.rb

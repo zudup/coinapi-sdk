@@ -18,6 +18,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -74,6 +75,7 @@ lib/WWW/OpenAPIClient/Object/TokenV3DayDataDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapDayDataV3DTO.pm
 lib/WWW/OpenAPIClient/PoiApi.pm
 lib/WWW/OpenAPIClient/PoolDayDataApi.pm
+lib/WWW/OpenAPIClient/PoolHourDataApi.pm
 lib/WWW/OpenAPIClient/PoolsApi.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
@@ -98,6 +100,7 @@ t/PairV2DTOTest.t
 t/PoiApiTest.t
 t/PoolDayDataApiTest.t
 t/PoolDayDataV3DTOTest.t
+t/PoolHourDataApiTest.t
 t/PoolHourDataV3DTOTest.t
 t/PoolV3DTOTest.t
 t/PoolsApiTest.t

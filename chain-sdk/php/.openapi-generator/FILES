@@ -10,6 +10,7 @@ docs/Api/FactoryApi.md
 docs/Api/MintsApi.md
 docs/Api/PoiApi.md
 docs/Api/PoolDayDataApi.md
+docs/Api/PoolHourDataApi.md
 docs/Api/PoolsApi.md
 docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
@@ -48,6 +49,7 @@ lib/Api/FactoryApi.php
 lib/Api/MintsApi.php
 lib/Api/PoiApi.php
 lib/Api/PoolDayDataApi.php
+lib/Api/PoolHourDataApi.php
 lib/Api/PoolsApi.php
 lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
@@ -91,6 +93,7 @@ test/Api/FactoryApiTest.php
 test/Api/MintsApiTest.php
 test/Api/PoiApiTest.php
 test/Api/PoolDayDataApiTest.php
+test/Api/PoolHourDataApiTest.php
 test/Api/PoolsApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php

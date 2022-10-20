@@ -15,6 +15,7 @@ class TagValues(str, enum.Enum):
     MINTS = "Mints"
     POI = "Poi"
     POOL_DAY_DATA = "PoolDayData"
+    POOL_HOUR_DATA = "PoolHourData"
     POOLS = "Pools"
     SWAPS = "Swaps"
     TOKENS = "Tokens"

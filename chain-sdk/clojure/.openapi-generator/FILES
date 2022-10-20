@@ -8,6 +8,7 @@ src/on_chain_api/api/factory.clj
 src/on_chain_api/api/mints.clj
 src/on_chain_api/api/poi.clj
 src/on_chain_api/api/pool_day_data.clj
+src/on_chain_api/api/pool_hour_data.clj
 src/on_chain_api/api/pools.clj
 src/on_chain_api/api/sushiswap.clj
 src/on_chain_api/api/swaps.clj

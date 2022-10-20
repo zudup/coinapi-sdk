@@ -17,6 +17,7 @@ src/openapi_pair_v2_dto.erl
 src/openapi_poi_api.erl
 src/openapi_pool_day_data_api.erl
 src/openapi_pool_day_data_v3_dto.erl
+src/openapi_pool_hour_data_api.erl
 src/openapi_pool_hour_data_v3_dto.erl
 src/openapi_pool_v3_dto.erl
 src/openapi_pools_api.erl

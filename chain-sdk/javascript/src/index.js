@@ -43,6 +43,7 @@ import FactoryApi from './api/FactoryApi';
 import MintsApi from './api/MintsApi';
 import PoiApi from './api/PoiApi';
 import PoolDayDataApi from './api/PoolDayDataApi';
+import PoolHourDataApi from './api/PoolHourDataApi';
 import PoolsApi from './api/PoolsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
@@ -269,6 +270,12 @@ export {
     * @property {module:api/PoolDayDataApi}
     */
     PoolDayDataApi,
+
+    /**
+    * The PoolHourDataApi service constructor.
+    * @property {module:api/PoolHourDataApi}
+    */
+    PoolHourDataApi,
 
     /**
     * The PoolsApi service constructor.

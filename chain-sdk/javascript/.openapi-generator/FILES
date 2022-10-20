@@ -18,6 +18,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -50,6 +51,7 @@ src/api/FactoryApi.js
 src/api/MintsApi.js
 src/api/PoiApi.js
 src/api/PoolDayDataApi.js
+src/api/PoolHourDataApi.js
 src/api/PoolsApi.js
 src/api/SushiswapApi.js
 src/api/SwapsApi.js
@@ -88,6 +90,7 @@ test/api/FactoryApi.spec.js
 test/api/MintsApi.spec.js
 test/api/PoiApi.spec.js
 test/api/PoolDayDataApi.spec.js
+test/api/PoolHourDataApi.spec.js
 test/api/PoolsApi.spec.js
 test/api/SushiswapApi.spec.js
 test/api/SwapsApi.spec.js

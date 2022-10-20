@@ -10,6 +10,7 @@ from openapi_client.apis.tags.factory_api import FactoryApi
 from openapi_client.apis.tags.mints_api import MintsApi
 from openapi_client.apis.tags.poi_api import PoiApi
 from openapi_client.apis.tags.pool_day_data_api import PoolDayDataApi
+from openapi_client.apis.tags.pool_hour_data_api import PoolHourDataApi
 from openapi_client.apis.tags.pools_api import PoolsApi
 from openapi_client.apis.tags.swaps_api import SwapsApi
 from openapi_client.apis.tags.tokens_api import TokensApi
@@ -27,6 +28,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.MINTS: MintsApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,
+        TagValues.POOL_HOUR_DATA: PoolHourDataApi,
         TagValues.POOLS: PoolsApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TOKENS: TokensApi,
@@ -45,6 +47,7 @@ tag_to_api = TagToApi(
         TagValues.MINTS: MintsApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,
+        TagValues.POOL_HOUR_DATA: PoolHourDataApi,
         TagValues.POOLS: PoolsApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TOKENS: TokensApi,

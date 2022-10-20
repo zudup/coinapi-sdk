@@ -81,6 +81,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | .
 
 
+### PoolHourDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3PoolHourDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | .
+*chainsChainIdDappsUniswapv3PoolHourDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | .
+
+
 ### PoolsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

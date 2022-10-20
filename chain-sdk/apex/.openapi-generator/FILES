@@ -65,6 +65,10 @@ force-app/main/default/classes/OASPoolDayDataV3DTO.cls
 force-app/main/default/classes/OASPoolDayDataV3DTO.cls-meta.xml
 force-app/main/default/classes/OASPoolDayDataV3DTOTest.cls
 force-app/main/default/classes/OASPoolDayDataV3DTOTest.cls-meta.xml
+force-app/main/default/classes/OASPoolHourDataApi.cls
+force-app/main/default/classes/OASPoolHourDataApi.cls-meta.xml
+force-app/main/default/classes/OASPoolHourDataApiTest.cls
+force-app/main/default/classes/OASPoolHourDataApiTest.cls-meta.xml
 force-app/main/default/classes/OASPoolHourDataV3DTO.cls
 force-app/main/default/classes/OASPoolHourDataV3DTO.cls-meta.xml
 force-app/main/default/classes/OASPoolHourDataV3DTOTest.cls

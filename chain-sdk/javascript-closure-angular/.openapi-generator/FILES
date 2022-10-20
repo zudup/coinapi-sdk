@@ -14,6 +14,7 @@ API/Client/PairV2DTO.js
 API/Client/PoiApi.js
 API/Client/PoolDayDataApi.js
 API/Client/PoolDayDataV3DTO.js
+API/Client/PoolHourDataApi.js
 API/Client/PoolHourDataV3DTO.js
 API/Client/PoolV3DTO.js
 API/Client/PoolsApi.js

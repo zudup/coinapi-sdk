@@ -8,6 +8,7 @@ openapiclient/api/factory_api.lua
 openapiclient/api/mints_api.lua
 openapiclient/api/poi_api.lua
 openapiclient/api/pool_day_data_api.lua
+openapiclient/api/pool_hour_data_api.lua
 openapiclient/api/pools_api.lua
 openapiclient/api/sushiswap_api.lua
 openapiclient/api/swaps_api.lua
@@ -54,6 +55,7 @@ spec/pair_v2_dto_spec.lua
 spec/poi_api_spec.lua
 spec/pool_day_data_api_spec.lua
 spec/pool_day_data_v3_dto_spec.lua
+spec/pool_hour_data_api_spec.lua
 spec/pool_hour_data_v3_dto_spec.lua
 spec/pool_v3_dto_spec.lua
 spec/pools_api_spec.lua

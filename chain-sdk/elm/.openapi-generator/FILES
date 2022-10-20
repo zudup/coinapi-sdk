@@ -10,6 +10,7 @@ src/Api/Request/Factory.elm
 src/Api/Request/Mints.elm
 src/Api/Request/Poi.elm
 src/Api/Request/PoolDayData.elm
+src/Api/Request/PoolHourData.elm
 src/Api/Request/Pools.elm
 src/Api/Request/Sushiswap.elm
 src/Api/Request/Swaps.elm

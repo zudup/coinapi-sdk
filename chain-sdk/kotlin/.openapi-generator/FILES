@@ -16,6 +16,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -49,6 +50,7 @@ src/main/kotlin/org/openapitools/client/apis/FactoryApi.kt
 src/main/kotlin/org/openapitools/client/apis/MintsApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoiApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolDayDataApi.kt
+src/main/kotlin/org/openapitools/client/apis/PoolHourDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolsApi.kt
 src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
 src/main/kotlin/org/openapitools/client/apis/SwapsApi.kt

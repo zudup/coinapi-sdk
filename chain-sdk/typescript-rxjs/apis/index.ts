@@ -4,6 +4,7 @@ export * from './FactoryApi';
 export * from './MintsApi';
 export * from './PoiApi';
 export * from './PoolDayDataApi';
+export * from './PoolHourDataApi';
 export * from './PoolsApi';
 export * from './SushiswapApi';
 export * from './SwapsApi';

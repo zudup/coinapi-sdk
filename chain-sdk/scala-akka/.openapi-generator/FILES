@@ -16,6 +16,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -48,6 +49,7 @@ src/main/scala/org/openapitools/client/api/FactoryApi.scala
 src/main/scala/org/openapitools/client/api/MintsApi.scala
 src/main/scala/org/openapitools/client/api/PoiApi.scala
 src/main/scala/org/openapitools/client/api/PoolDayDataApi.scala
+src/main/scala/org/openapitools/client/api/PoolHourDataApi.scala
 src/main/scala/org/openapitools/client/api/PoolsApi.scala
 src/main/scala/org/openapitools/client/api/SushiswapApi.scala
 src/main/scala/org/openapitools/client/api/SwapsApi.scala

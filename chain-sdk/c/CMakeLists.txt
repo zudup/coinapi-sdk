@@ -84,6 +84,7 @@ set(SRCS
     api/MintsAPI.c
     api/PoiAPI.c
     api/PoolDayDataAPI.c
+    api/PoolHourDataAPI.c
     api/PoolsAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
@@ -131,6 +132,7 @@ set(HDRS
     api/MintsAPI.h
     api/PoiAPI.h
     api/PoolDayDataAPI.h
+    api/PoolHourDataAPI.h
     api/PoolsAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
@@ -225,6 +227,7 @@ set(HDRS "")
 #    unit-tests/manual-MintsAPI.c
 #    unit-tests/manual-PoiAPI.c
 #    unit-tests/manual-PoolDayDataAPI.c
+#    unit-tests/manual-PoolHourDataAPI.c
 #    unit-tests/manual-PoolsAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c

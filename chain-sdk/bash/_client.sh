@@ -296,7 +296,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "chainsChainIdDappsUniswapv3BundlesHistoricalGet[]"             "chainsChainIdDappsUniswapv3BurnsHistoricalGet[]"             "chainsChainIdDappsUniswapv3FactoryHistoricalGet[]"             "chainsChainIdDappsUniswapv3MintsHistoricalGet[]"             "chainsChainIdDappsUniswapv3PoiHistoricalGet[]"             "chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet[]"             "chainsChainIdDappsCurvePoolsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3BundlesHistoricalGet[]"             "chainsChainIdDappsUniswapv3BurnsHistoricalGet[]"             "chainsChainIdDappsUniswapv3FactoryHistoricalGet[]"             "chainsChainIdDappsUniswapv3MintsHistoricalGet[]"             "chainsChainIdDappsUniswapv3PoiHistoricalGet[]"             "chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet[]"             "chainsChainIdDappsCurvePoolsHistoricalGet[]" \
             "chainsChainIdDappsSushiswapPoolsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2PoolsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3PoolsHistoricalGet[]"             "chainsChainIdDappsSushiswapPoolsCurrentGet[GetPools]" \
@@ -393,6 +393,18 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
           "chain_id=:[PATH] "

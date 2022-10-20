@@ -8,6 +8,7 @@ api/factoryApi.ts
 api/mintsApi.ts
 api/poiApi.ts
 api/poolDayDataApi.ts
+api/poolHourDataApi.ts
 api/poolsApi.ts
 api/sushiswapApi.ts
 api/swapsApi.ts

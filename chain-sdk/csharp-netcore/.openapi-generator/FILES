@@ -18,6 +18,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -47,6 +48,7 @@ src/CoinAPI.EMS.REST.V1.Test/Api/FactoryApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/MintsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoiApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolDayDataApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/PoolHourDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SwapsApiTests.cs
@@ -85,6 +87,7 @@ src/CoinAPI.EMS.REST.V1/Api/FactoryApi.cs
 src/CoinAPI.EMS.REST.V1/Api/MintsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoiApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolDayDataApi.cs
+src/CoinAPI.EMS.REST.V1/Api/PoolHourDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SwapsApi.cs

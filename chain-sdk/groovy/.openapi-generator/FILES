@@ -8,6 +8,7 @@ src/main/groovy/org/openapitools/api/FactoryApi.groovy
 src/main/groovy/org/openapitools/api/MintsApi.groovy
 src/main/groovy/org/openapitools/api/PoiApi.groovy
 src/main/groovy/org/openapitools/api/PoolDayDataApi.groovy
+src/main/groovy/org/openapitools/api/PoolHourDataApi.groovy
 src/main/groovy/org/openapitools/api/PoolsApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/SwapsApi.groovy

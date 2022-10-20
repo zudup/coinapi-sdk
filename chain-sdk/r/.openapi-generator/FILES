@@ -23,6 +23,7 @@ R/pair_v2_dto.R
 R/poi_api.R
 R/pool_day_data_api.R
 R/pool_day_data_v3_dto.R
+R/pool_hour_data_api.R
 R/pool_hour_data_v3_dto.R
 R/pool_v3_dto.R
 R/pools_api.R
@@ -61,6 +62,7 @@ docs/PairV2DTO.md
 docs/PoiApi.md
 docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
+docs/PoolHourDataApi.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
 docs/PoolsApi.md
@@ -100,6 +102,7 @@ tests/testthat/test_pair_v2_dto.R
 tests/testthat/test_poi_api.R
 tests/testthat/test_pool_day_data_api.R
 tests/testthat/test_pool_day_data_v3_dto.R
+tests/testthat/test_pool_hour_data_api.R
 tests/testthat/test_pool_hour_data_v3_dto.R
 tests/testthat/test_pool_v3_dto.R
 tests/testthat/test_pools_api.R

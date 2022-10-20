@@ -14,6 +14,8 @@ api/PoiAPI.c
 api/PoiAPI.h
 api/PoolDayDataAPI.c
 api/PoolDayDataAPI.h
+api/PoolHourDataAPI.c
+api/PoolHourDataAPI.h
 api/PoolsAPI.c
 api/PoolsAPI.h
 api/SushiswapAPI.c
@@ -34,6 +36,7 @@ docs/FactoryAPI.md
 docs/MintsAPI.md
 docs/PoiAPI.md
 docs/PoolDayDataAPI.md
+docs/PoolHourDataAPI.md
 docs/PoolsAPI.md
 docs/SushiswapAPI.md
 docs/SwapsAPI.md
