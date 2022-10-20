@@ -13,8 +13,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md

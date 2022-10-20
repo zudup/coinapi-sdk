@@ -41,6 +41,10 @@ force-app/main/default/classes/OASMintV3DTO.cls
 force-app/main/default/classes/OASMintV3DTO.cls-meta.xml
 force-app/main/default/classes/OASMintV3DTOTest.cls
 force-app/main/default/classes/OASMintV3DTOTest.cls-meta.xml
+force-app/main/default/classes/OASMintsApi.cls
+force-app/main/default/classes/OASMintsApi.cls-meta.xml
+force-app/main/default/classes/OASMintsApiTest.cls
+force-app/main/default/classes/OASMintsApiTest.cls-meta.xml
 force-app/main/default/classes/OASPairDTO.cls
 force-app/main/default/classes/OASPairDTO.cls-meta.xml
 force-app/main/default/classes/OASPairDTOTest.cls
@@ -49,6 +53,14 @@ force-app/main/default/classes/OASPairV2DTO.cls
 force-app/main/default/classes/OASPairV2DTO.cls-meta.xml
 force-app/main/default/classes/OASPairV2DTOTest.cls
 force-app/main/default/classes/OASPairV2DTOTest.cls-meta.xml
+force-app/main/default/classes/OASPoiApi.cls
+force-app/main/default/classes/OASPoiApi.cls-meta.xml
+force-app/main/default/classes/OASPoiApiTest.cls
+force-app/main/default/classes/OASPoiApiTest.cls-meta.xml
+force-app/main/default/classes/OASPoolDayDataApi.cls
+force-app/main/default/classes/OASPoolDayDataApi.cls-meta.xml
+force-app/main/default/classes/OASPoolDayDataApiTest.cls
+force-app/main/default/classes/OASPoolDayDataApiTest.cls-meta.xml
 force-app/main/default/classes/OASPoolDayDataV3DTO.cls
 force-app/main/default/classes/OASPoolDayDataV3DTO.cls-meta.xml
 force-app/main/default/classes/OASPoolDayDataV3DTOTest.cls

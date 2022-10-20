@@ -15,8 +15,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -65,6 +68,9 @@ src/main/java/org/openapitools/client/StringUtil.java
 src/main/java/org/openapitools/client/api/BundlesApi.java
 src/main/java/org/openapitools/client/api/BurnsApi.java
 src/main/java/org/openapitools/client/api/FactoryApi.java
+src/main/java/org/openapitools/client/api/MintsApi.java
+src/main/java/org/openapitools/client/api/PoiApi.java
+src/main/java/org/openapitools/client/api/PoolDayDataApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
@@ -104,6 +110,9 @@ src/main/java/org/openapitools/client/model/UniswapDayDataV3DTO.java
 src/test/java/org/openapitools/client/api/BundlesApiTest.java
 src/test/java/org/openapitools/client/api/BurnsApiTest.java
 src/test/java/org/openapitools/client/api/FactoryApiTest.java
+src/test/java/org/openapitools/client/api/MintsApiTest.java
+src/test/java/org/openapitools/client/api/PoiApiTest.java
+src/test/java/org/openapitools/client/api/PoolDayDataApiTest.java
 src/test/java/org/openapitools/client/api/PoolsApiTest.java
 src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/SwapsApiTest.java

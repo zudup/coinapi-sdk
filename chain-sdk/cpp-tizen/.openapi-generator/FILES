@@ -24,6 +24,8 @@ src/Helpers.cpp
 src/Helpers.h
 src/MintV3DTO.cpp
 src/MintV3DTO.h
+src/MintsManager.cpp
+src/MintsManager.h
 src/NetClient.cpp
 src/NetClient.h
 src/Object.h
@@ -31,6 +33,10 @@ src/PairDTO.cpp
 src/PairDTO.h
 src/PairV2DTO.cpp
 src/PairV2DTO.h
+src/PoiManager.cpp
+src/PoiManager.h
+src/PoolDayDataManager.cpp
+src/PoolDayDataManager.h
 src/PoolDayDataV3DTO.cpp
 src/PoolDayDataV3DTO.h
 src/PoolHourDataV3DTO.cpp

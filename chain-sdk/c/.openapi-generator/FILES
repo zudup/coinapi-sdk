@@ -8,6 +8,12 @@ api/BurnsAPI.c
 api/BurnsAPI.h
 api/FactoryAPI.c
 api/FactoryAPI.h
+api/MintsAPI.c
+api/MintsAPI.h
+api/PoiAPI.c
+api/PoiAPI.h
+api/PoolDayDataAPI.c
+api/PoolDayDataAPI.h
 api/PoolsAPI.c
 api/PoolsAPI.h
 api/SushiswapAPI.c
@@ -25,6 +31,9 @@ api/UniswapV3API.h
 docs/BundlesAPI.md
 docs/BurnsAPI.md
 docs/FactoryAPI.md
+docs/MintsAPI.md
+docs/PoiAPI.md
+docs/PoolDayDataAPI.md
 docs/PoolsAPI.md
 docs/SushiswapAPI.md
 docs/SwapsAPI.md

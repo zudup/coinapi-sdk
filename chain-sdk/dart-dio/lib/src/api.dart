@@ -12,6 +12,9 @@ import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/bundles_api.dart';
 import 'package:openapi/src/api/burns_api.dart';
 import 'package:openapi/src/api/factory_api.dart';
+import 'package:openapi/src/api/mints_api.dart';
+import 'package:openapi/src/api/poi_api.dart';
+import 'package:openapi/src/api/pool_day_data_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
@@ -90,6 +93,24 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   FactoryApi getFactoryApi() {
     return FactoryApi(dio, serializers);
+  }
+
+  /// Get MintsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  MintsApi getMintsApi() {
+    return MintsApi(dio, serializers);
+  }
+
+  /// Get PoiApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PoiApi getPoiApi() {
+    return PoiApi(dio, serializers);
+  }
+
+  /// Get PoolDayDataApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PoolDayDataApi getPoolDayDataApi() {
+    return PoolDayDataApi(dio, serializers);
   }
 
   /// Get PoolsApi instance, base route and serializer can be overridden by a given but be careful,

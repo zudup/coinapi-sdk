@@ -60,6 +60,27 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
 
 
+### MintsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3MintsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/mints/historical | .
+*chainsChainIdDappsUniswapv3MintsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/mints/historical | .
+
+
+### PoiManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3PoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poi/historical | .
+*chainsChainIdDappsUniswapv3PoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poi/historical | .
+
+
+### PoolDayDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | .
+*chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | .
+
+
 ### PoolsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

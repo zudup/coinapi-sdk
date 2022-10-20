@@ -40,6 +40,9 @@ import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
 import BundlesApi from './api/BundlesApi';
 import BurnsApi from './api/BurnsApi';
 import FactoryApi from './api/FactoryApi';
+import MintsApi from './api/MintsApi';
+import PoiApi from './api/PoiApi';
+import PoolDayDataApi from './api/PoolDayDataApi';
 import PoolsApi from './api/PoolsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
@@ -248,6 +251,24 @@ export {
     * @property {module:api/FactoryApi}
     */
     FactoryApi,
+
+    /**
+    * The MintsApi service constructor.
+    * @property {module:api/MintsApi}
+    */
+    MintsApi,
+
+    /**
+    * The PoiApi service constructor.
+    * @property {module:api/PoiApi}
+    */
+    PoiApi,
+
+    /**
+    * The PoolDayDataApi service constructor.
+    * @property {module:api/PoolDayDataApi}
+    */
+    PoolDayDataApi,
 
     /**
     * The PoolsApi service constructor.

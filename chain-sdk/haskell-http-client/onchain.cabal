@@ -67,6 +67,9 @@ library
       OnChain.API.Bundles
       OnChain.API.Burns
       OnChain.API.Factory
+      OnChain.API.Mints
+      OnChain.API.Poi
+      OnChain.API.PoolDayData
       OnChain.API.Pools
       OnChain.API.Sushiswap
       OnChain.API.Swaps

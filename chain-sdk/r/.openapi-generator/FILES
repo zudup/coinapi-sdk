@@ -17,8 +17,11 @@ R/e_trade_aggressive_side.R
 R/factory_api.R
 R/factory_v3_dto.R
 R/mint_v3_dto.R
+R/mints_api.R
 R/pair_dto.R
 R/pair_v2_dto.R
+R/poi_api.R
+R/pool_day_data_api.R
 R/pool_day_data_v3_dto.R
 R/pool_hour_data_v3_dto.R
 R/pool_v3_dto.R
@@ -52,8 +55,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -88,8 +94,11 @@ tests/testthat/test_e_trade_aggressive_side.R
 tests/testthat/test_factory_api.R
 tests/testthat/test_factory_v3_dto.R
 tests/testthat/test_mint_v3_dto.R
+tests/testthat/test_mints_api.R
 tests/testthat/test_pair_dto.R
 tests/testthat/test_pair_v2_dto.R
+tests/testthat/test_poi_api.R
+tests/testthat/test_pool_day_data_api.R
 tests/testthat/test_pool_day_data_v3_dto.R
 tests/testthat/test_pool_hour_data_v3_dto.R
 tests/testthat/test_pool_v3_dto.R

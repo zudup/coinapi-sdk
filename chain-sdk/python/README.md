@@ -178,6 +178,9 @@ Class | Method | HTTP request | Description
 *BundlesApi* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/apis/tags/BundlesApi.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
 *BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/apis/tags/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/apis/tags/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
+*MintsApi* | [**chains_chain_id_dapps_uniswapv3_mints_historical_get**](docs/apis/tags/MintsApi.md#chains_chain_id_dapps_uniswapv3_mints_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/mints/historical | 
+*PoiApi* | [**chains_chain_id_dapps_uniswapv3_poi_historical_get**](docs/apis/tags/PoiApi.md#chains_chain_id_dapps_uniswapv3_poi_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/poi/historical | 
+*PoolDayDataApi* | [**chains_chain_id_dapps_uniswapv3_pool_day_data_historical_get**](docs/apis/tags/PoolDayDataApi.md#chains_chain_id_dapps_uniswapv3_pool_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_curve_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_curve_pools_historical_get) | **get** /chains/{chain_id}/dapps/curve/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_sushiswap_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_sushiswap_pools_historical_get) | **get** /chains/{chain_id}/dapps/sushiswap/pools/historical | 
 *PoolsApi* | [**chains_chain_id_dapps_uniswapv2_pools_historical_get**](docs/apis/tags/PoolsApi.md#chains_chain_id_dapps_uniswapv2_pools_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/pools/historical | 
@@ -250,6 +253,9 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
+support@coinapi.io
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

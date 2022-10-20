@@ -81,6 +81,9 @@ set(SRCS
     api/BundlesAPI.c
     api/BurnsAPI.c
     api/FactoryAPI.c
+    api/MintsAPI.c
+    api/PoiAPI.c
+    api/PoolDayDataAPI.c
     api/PoolsAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
@@ -125,6 +128,9 @@ set(HDRS
     api/BundlesAPI.h
     api/BurnsAPI.h
     api/FactoryAPI.h
+    api/MintsAPI.h
+    api/PoiAPI.h
+    api/PoolDayDataAPI.h
     api/PoolsAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
@@ -216,6 +222,9 @@ set(HDRS "")
 #    unit-tests/manual-BundlesAPI.c
 #    unit-tests/manual-BurnsAPI.c
 #    unit-tests/manual-FactoryAPI.c
+#    unit-tests/manual-MintsAPI.c
+#    unit-tests/manual-PoiAPI.c
+#    unit-tests/manual-PoolDayDataAPI.c
 #    unit-tests/manual-PoolsAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c

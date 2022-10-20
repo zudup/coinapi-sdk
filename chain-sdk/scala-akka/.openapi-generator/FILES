@@ -10,8 +10,11 @@ docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
 docs/MintV3DTO.md
+docs/MintsApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
+docs/PoiApi.md
+docs/PoolDayDataApi.md
 docs/PoolDayDataV3DTO.md
 docs/PoolHourDataV3DTO.md
 docs/PoolV3DTO.md
@@ -42,6 +45,9 @@ src/main/scala/org/openapitools/client/api/BundlesApi.scala
 src/main/scala/org/openapitools/client/api/BurnsApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/FactoryApi.scala
+src/main/scala/org/openapitools/client/api/MintsApi.scala
+src/main/scala/org/openapitools/client/api/PoiApi.scala
+src/main/scala/org/openapitools/client/api/PoolDayDataApi.scala
 src/main/scala/org/openapitools/client/api/PoolsApi.scala
 src/main/scala/org/openapitools/client/api/SushiswapApi.scala
 src/main/scala/org/openapitools/client/api/SwapsApi.scala
