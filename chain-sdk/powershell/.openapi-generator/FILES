@@ -44,6 +44,7 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -66,6 +67,7 @@ src/PSOpenAPITools/Api/TokenHourDataApi.ps1
 src/PSOpenAPITools/Api/TokensApi.ps1
 src/PSOpenAPITools/Api/TradesApi.ps1
 src/PSOpenAPITools/Api/TransactionsApi.ps1
+src/PSOpenAPITools/Api/UniswapDayDataApi.ps1
 src/PSOpenAPITools/Api/UniswapV2Api.ps1
 src/PSOpenAPITools/Api/UniswapV3Api.ps1
 src/PSOpenAPITools/Client/Configuration.ps1
@@ -119,6 +121,7 @@ tests/Api/TokenHourDataApi.Tests.ps1
 tests/Api/TokensApi.Tests.ps1
 tests/Api/TradesApi.Tests.ps1
 tests/Api/TransactionsApi.Tests.ps1
+tests/Api/UniswapDayDataApi.Tests.ps1
 tests/Api/UniswapV2Api.Tests.ps1
 tests/Api/UniswapV3Api.Tests.ps1
 tests/Model/BigInteger.Tests.ps1

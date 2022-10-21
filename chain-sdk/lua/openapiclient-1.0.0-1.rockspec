@@ -42,6 +42,7 @@ build = {
 		["openapiclient.api.tokens_api"] = "openapiclient/api/tokens_api.lua";
 		["openapiclient.api.trades_api"] = "openapiclient/api/trades_api.lua";
 		["openapiclient.api.transactions_api"] = "openapiclient/api/transactions_api.lua";
+		["openapiclient.api.uniswap_day_data_api"] = "openapiclient/api/uniswap_day_data_api.lua";
 		["openapiclient.api.uniswap_v2_api"] = "openapiclient/api/uniswap_v2_api.lua";
 		["openapiclient.api.uniswap_v3_api"] = "openapiclient/api/uniswap_v3_api.lua";
 		["openapiclient.model.big_integer"] = "openapiclient/model/big_integer.lua";

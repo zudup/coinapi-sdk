@@ -48,6 +48,7 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -92,6 +93,7 @@ src/main/java/org/openapitools/client/api/TokenHourDataApi.java
 src/main/java/org/openapitools/client/api/TokensApi.java
 src/main/java/org/openapitools/client/api/TradesApi.java
 src/main/java/org/openapitools/client/api/TransactionsApi.java
+src/main/java/org/openapitools/client/api/UniswapDayDataApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
@@ -142,6 +144,7 @@ src/test/java/org/openapitools/client/api/TokenHourDataApiTest.java
 src/test/java/org/openapitools/client/api/TokensApiTest.java
 src/test/java/org/openapitools/client/api/TradesApiTest.java
 src/test/java/org/openapitools/client/api/TransactionsApiTest.java
+src/test/java/org/openapitools/client/api/UniswapDayDataApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2ApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3ApiTest.java
 src/test/java/org/openapitools/client/model/BigIntegerTest.java

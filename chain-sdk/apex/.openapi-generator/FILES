@@ -177,6 +177,10 @@ force-app/main/default/classes/OASTransactionsApi.cls
 force-app/main/default/classes/OASTransactionsApi.cls-meta.xml
 force-app/main/default/classes/OASTransactionsApiTest.cls
 force-app/main/default/classes/OASTransactionsApiTest.cls-meta.xml
+force-app/main/default/classes/OASUniswapDayDataApi.cls
+force-app/main/default/classes/OASUniswapDayDataApi.cls-meta.xml
+force-app/main/default/classes/OASUniswapDayDataApiTest.cls
+force-app/main/default/classes/OASUniswapDayDataApiTest.cls-meta.xml
 force-app/main/default/classes/OASUniswapDayDataV3DTO.cls
 force-app/main/default/classes/OASUniswapDayDataV3DTO.cls-meta.xml
 force-app/main/default/classes/OASUniswapDayDataV3DTOTest.cls

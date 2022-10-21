@@ -44,6 +44,7 @@ src/openapi_token_v3_dto.erl
 src/openapi_tokens_api.erl
 src/openapi_trades_api.erl
 src/openapi_transactions_api.erl
+src/openapi_uniswap_day_data_api.erl
 src/openapi_uniswap_day_data_v3_dto.erl
 src/openapi_uniswap_v2_api.erl
 src/openapi_uniswap_v3_api.erl

@@ -50,6 +50,7 @@ R/token_v3_dto.R
 R/tokens_api.R
 R/trades_api.R
 R/transactions_api.R
+R/uniswap_day_data_api.R
 R/uniswap_day_data_v3_dto.R
 R/uniswap_v2_api.R
 R/uniswap_v3_api.R
@@ -96,6 +97,7 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -143,6 +145,7 @@ tests/testthat/test_token_v3_dto.R
 tests/testthat/test_tokens_api.R
 tests/testthat/test_trades_api.R
 tests/testthat/test_transactions_api.R
+tests/testthat/test_uniswap_day_data_api.R
 tests/testthat/test_uniswap_day_data_v3_dto.R
 tests/testthat/test_uniswap_v2_api.R
 tests/testthat/test_uniswap_v3_api.R

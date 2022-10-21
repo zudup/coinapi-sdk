@@ -310,7 +310,7 @@ case $state in
             "chainsChainIdDappsSushiswapTokensHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2TokensHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3TokensHistoricalGet[]"             "chainsChainIdDappsCowTradesHistoricalGet[]" \
-            "chainsChainIdDappsDexTradesHistoricalGet[]"             "chainsChainIdDappsUniswapv3TransactionsHistoricalGet[]"             "chainsChainIdDappsUniswapv2PoolsCurrentGet[GetPools]" \
+            "chainsChainIdDappsDexTradesHistoricalGet[]"             "chainsChainIdDappsUniswapv3TransactionsHistoricalGet[]"             "chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv2PoolsCurrentGet[GetPools]" \
             "chainsChainIdDappsUniswapv2SwapsCurrentGet[GetSwaps]" \
             "chainsChainIdDappsUniswapv2TokensCurrentGet[GetTokens]"             "chainsChainIdDappsUniswapv3BundleCurrentGet[GetBundles]" \
             "chainsChainIdDappsUniswapv3BurnsCurrentGet[GetBurns]" \
@@ -700,6 +700,17 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsUniswapv3TransactionsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
           "chain_id=:[PATH] "

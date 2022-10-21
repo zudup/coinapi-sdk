@@ -21,6 +21,7 @@ openapiclient/api/token_hour_data_api.lua
 openapiclient/api/tokens_api.lua
 openapiclient/api/trades_api.lua
 openapiclient/api/transactions_api.lua
+openapiclient/api/uniswap_day_data_api.lua
 openapiclient/api/uniswap_v2_api.lua
 openapiclient/api/uniswap_v3_api.lua
 openapiclient/model/big_integer.lua
@@ -89,6 +90,7 @@ spec/token_v3_dto_spec.lua
 spec/tokens_api_spec.lua
 spec/trades_api_spec.lua
 spec/transactions_api_spec.lua
+spec/uniswap_day_data_api_spec.lua
 spec/uniswap_day_data_v3_dto_spec.lua
 spec/uniswap_v2_api_spec.lua
 spec/uniswap_v3_api_spec.lua

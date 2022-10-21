@@ -47,6 +47,7 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -71,6 +72,7 @@ src/CoinAPI.EMS.REST.V1.Test/Api/TokenHourDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/TokensApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/TradesApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/TransactionsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/UniswapDayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV2ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV3ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/CoinAPI.EMS.REST.V1.Test.csproj
@@ -118,6 +120,7 @@ src/CoinAPI.EMS.REST.V1/Api/TokenHourDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/TokensApi.cs
 src/CoinAPI.EMS.REST.V1/Api/TradesApi.cs
 src/CoinAPI.EMS.REST.V1/Api/TransactionsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/UniswapDayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV2Api.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV3Api.cs
 src/CoinAPI.EMS.REST.V1/Client/ApiClient.cs

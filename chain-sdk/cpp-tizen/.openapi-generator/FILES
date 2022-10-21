@@ -94,6 +94,8 @@ src/TradesManager.cpp
 src/TradesManager.h
 src/TransactionsManager.cpp
 src/TransactionsManager.h
+src/UniswapDayDataManager.cpp
+src/UniswapDayDataManager.h
 src/UniswapDayDataV3DTO.cpp
 src/UniswapDayDataV3DTO.h
 src/UniswapV2Manager.cpp

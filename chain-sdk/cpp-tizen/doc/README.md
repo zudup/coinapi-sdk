@@ -200,6 +200,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
 
 
+### UniswapDayDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
+*chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
+
+
 ### UniswapV2Manager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

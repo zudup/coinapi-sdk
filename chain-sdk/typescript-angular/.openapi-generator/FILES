@@ -22,6 +22,7 @@ api/tokenHourData.service.ts
 api/tokens.service.ts
 api/trades.service.ts
 api/transactions.service.ts
+api/uniswapDayData.service.ts
 api/uniswapV2.service.ts
 api/uniswapV3.service.ts
 configuration.ts

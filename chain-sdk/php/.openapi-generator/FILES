@@ -23,6 +23,7 @@ docs/Api/TokenHourDataApi.md
 docs/Api/TokensApi.md
 docs/Api/TradesApi.md
 docs/Api/TransactionsApi.md
+docs/Api/UniswapDayDataApi.md
 docs/Api/UniswapV2Api.md
 docs/Api/UniswapV3Api.md
 docs/Model/BigInteger.md
@@ -69,6 +70,7 @@ lib/Api/TokenHourDataApi.php
 lib/Api/TokensApi.php
 lib/Api/TradesApi.php
 lib/Api/TransactionsApi.php
+lib/Api/UniswapDayDataApi.php
 lib/Api/UniswapV2Api.php
 lib/Api/UniswapV3Api.php
 lib/ApiException.php
@@ -120,6 +122,7 @@ test/Api/TokenHourDataApiTest.php
 test/Api/TokensApiTest.php
 test/Api/TradesApiTest.php
 test/Api/TransactionsApiTest.php
+test/Api/UniswapDayDataApiTest.php
 test/Api/UniswapV2ApiTest.php
 test/Api/UniswapV3ApiTest.php
 test/Model/BigIntegerTest.php

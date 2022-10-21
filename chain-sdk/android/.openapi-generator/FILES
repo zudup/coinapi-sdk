@@ -44,6 +44,7 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -77,6 +78,7 @@ src/main/java/org/openapitools/client/api/TokenHourDataApi.java
 src/main/java/org/openapitools/client/api/TokensApi.java
 src/main/java/org/openapitools/client/api/TradesApi.java
 src/main/java/org/openapitools/client/api/TransactionsApi.java
+src/main/java/org/openapitools/client/api/UniswapDayDataApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java

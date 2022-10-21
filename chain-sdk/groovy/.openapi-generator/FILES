@@ -21,6 +21,7 @@ src/main/groovy/org/openapitools/api/TokenHourDataApi.groovy
 src/main/groovy/org/openapitools/api/TokensApi.groovy
 src/main/groovy/org/openapitools/api/TradesApi.groovy
 src/main/groovy/org/openapitools/api/TransactionsApi.groovy
+src/main/groovy/org/openapitools/api/UniswapDayDataApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy
 src/main/groovy/org/openapitools/api/UniswapV3Api.groovy
 src/main/groovy/org/openapitools/model/BigInteger.groovy

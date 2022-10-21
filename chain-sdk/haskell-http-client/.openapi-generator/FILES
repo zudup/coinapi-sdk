@@ -25,6 +25,7 @@ lib/OnChain/API/TokenHourData.hs
 lib/OnChain/API/Tokens.hs
 lib/OnChain/API/Trades.hs
 lib/OnChain/API/Transactions.hs
+lib/OnChain/API/UniswapDayData.hs
 lib/OnChain/API/UniswapV2.hs
 lib/OnChain/API/UniswapV3.hs
 lib/OnChain/Client.hs

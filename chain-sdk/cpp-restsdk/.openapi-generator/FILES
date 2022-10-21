@@ -32,6 +32,7 @@ include/CppRestOpenAPIClient/api/TokenHourDataApi.h
 include/CppRestOpenAPIClient/api/TokensApi.h
 include/CppRestOpenAPIClient/api/TradesApi.h
 include/CppRestOpenAPIClient/api/TransactionsApi.h
+include/CppRestOpenAPIClient/api/UniswapDayDataApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
 include/CppRestOpenAPIClient/api/UniswapV3Api.h
 include/CppRestOpenAPIClient/model/BigInteger.h
@@ -85,6 +86,7 @@ src/api/TokenHourDataApi.cpp
 src/api/TokensApi.cpp
 src/api/TradesApi.cpp
 src/api/TransactionsApi.cpp
+src/api/UniswapDayDataApi.cpp
 src/api/UniswapV2Api.cpp
 src/api/UniswapV3Api.cpp
 src/model/BigInteger.cpp
