@@ -21,6 +21,7 @@ from openapi_client.apis.tags.token_day_data_api import TokenDayDataApi
 from openapi_client.apis.tags.token_hour_data_api import TokenHourDataApi
 from openapi_client.apis.tags.tokens_api import TokensApi
 from openapi_client.apis.tags.trades_api import TradesApi
+from openapi_client.apis.tags.transactions_api import TransactionsApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -45,6 +46,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.TOKEN_HOUR_DATA: TokenHourDataApi,
         TagValues.TOKENS: TokensApi,
         TagValues.TRADES: TradesApi,
+        TagValues.TRANSACTIONS: TransactionsApi,
     }
 )
 
@@ -70,5 +72,6 @@ tag_to_api = TagToApi(
         TagValues.TOKEN_HOUR_DATA: TokenHourDataApi,
         TagValues.TOKENS: TokensApi,
         TagValues.TRADES: TradesApi,
+        TagValues.TRANSACTIONS: TransactionsApi,
     }
 )

@@ -20,6 +20,7 @@ api/tokenDayDataApi.ts
 api/tokenHourDataApi.ts
 api/tokensApi.ts
 api/tradesApi.ts
+api/transactionsApi.ts
 api/uniswapV2Api.ts
 api/uniswapV3Api.ts
 git_push.sh

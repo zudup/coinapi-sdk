@@ -21,6 +21,7 @@ docs/apis/tags/TokenDayDataApi.md
 docs/apis/tags/TokenHourDataApi.md
 docs/apis/tags/TokensApi.md
 docs/apis/tags/TradesApi.md
+docs/apis/tags/TransactionsApi.md
 docs/apis/tags/UniswapV2Api.md
 docs/apis/tags/UniswapV3Api.md
 docs/models/BigInteger.md
@@ -69,6 +70,7 @@ openapi_client/apis/tags/token_day_data_api.py
 openapi_client/apis/tags/token_hour_data_api.py
 openapi_client/apis/tags/tokens_api.py
 openapi_client/apis/tags/trades_api.py
+openapi_client/apis/tags/transactions_api.py
 openapi_client/apis/tags/uniswap_v2_api.py
 openapi_client/apis/tags/uniswap_v3_api.py
 openapi_client/configuration.py

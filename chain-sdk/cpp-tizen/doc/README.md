@@ -193,6 +193,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsDexTradesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/trades/historical | .
 
 
+### TransactionsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
+*chainsChainIdDappsUniswapv3TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
+
+
 ### UniswapV2Manager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

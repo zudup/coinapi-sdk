@@ -58,6 +58,7 @@ Class | Method | HTTP request | Description
 *TOKENS_API* | [**chains_chain_id_dapps_uniswapv3_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_uniswapv3_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
 *TRADES_API* | [**chains_chain_id_dapps_cow_trades_historical_get**](docs/TRADES_API.md#chains_chain_id_dapps_cow_trades_historical_get) | **Get** /chains/{chain_id}/dapps/cow/trades/historical | 
 *TRADES_API* | [**chains_chain_id_dapps_dex_trades_historical_get**](docs/TRADES_API.md#chains_chain_id_dapps_dex_trades_historical_get) | **Get** /chains/{chain_id}/dapps/dex/trades/historical | 
+*TRANSACTIONS_API* | [**chains_chain_id_dapps_uniswapv3_transactions_historical_get**](docs/TRANSACTIONS_API.md#chains_chain_id_dapps_uniswapv3_transactions_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
 *UNISWAPV2_API* | [**chains_chain_id_dapps_uniswapv2_pools_current_get**](docs/UNISWAPV2_API.md#chains_chain_id_dapps_uniswapv2_pools_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
 *UNISWAPV2_API* | [**chains_chain_id_dapps_uniswapv2_swaps_current_get**](docs/UNISWAPV2_API.md#chains_chain_id_dapps_uniswapv2_swaps_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
 *UNISWAPV2_API* | [**chains_chain_id_dapps_uniswapv2_tokens_current_get**](docs/UNISWAPV2_API.md#chains_chain_id_dapps_uniswapv2_tokens_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens

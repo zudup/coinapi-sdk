@@ -82,6 +82,7 @@ library
       OnChain.API.TokenHourData
       OnChain.API.Tokens
       OnChain.API.Trades
+      OnChain.API.Transactions
       OnChain.API.UniswapV2
       OnChain.API.UniswapV3
       OnChain.Client

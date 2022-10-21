@@ -40,6 +40,7 @@ API/Client/TokenV3DTO.js
 API/Client/TokenV3DayDataDTO.js
 API/Client/TokensApi.js
 API/Client/TradesApi.js
+API/Client/TransactionsApi.js
 API/Client/UniswapDayDataV3DTO.js
 API/Client/UniswapV2Api.js
 API/Client/UniswapV3Api.js

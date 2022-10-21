@@ -44,6 +44,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -69,6 +70,7 @@ src/api/TokenDayDataApi.js
 src/api/TokenHourDataApi.js
 src/api/TokensApi.js
 src/api/TradesApi.js
+src/api/TransactionsApi.js
 src/api/UniswapV2Api.js
 src/api/UniswapV3Api.js
 src/index.js
@@ -114,6 +116,7 @@ test/api/TokenDayDataApi.spec.js
 test/api/TokenHourDataApi.spec.js
 test/api/TokensApi.spec.js
 test/api/TradesApi.spec.js
+test/api/TransactionsApi.spec.js
 test/api/UniswapV2Api.spec.js
 test/api/UniswapV3Api.spec.js
 test/model/BigInteger.spec.js

@@ -61,6 +61,7 @@ require 'openapi_client/api/token_day_data_api'
 require 'openapi_client/api/token_hour_data_api'
 require 'openapi_client/api/tokens_api'
 require 'openapi_client/api/trades_api'
+require 'openapi_client/api/transactions_api'
 require 'openapi_client/api/uniswap_v2_api'
 require 'openapi_client/api/uniswap_v3_api'
 

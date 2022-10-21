@@ -21,6 +21,7 @@ api_token_day_data.go
 api_token_hour_data.go
 api_tokens.go
 api_trades.go
+api_transactions.go
 api_uniswap_v2.go
 api_uniswap_v3.go
 client.go
@@ -66,6 +67,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md

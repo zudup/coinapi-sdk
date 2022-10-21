@@ -22,6 +22,7 @@ lib/on_chain_api/api/token_day_data.ex
 lib/on_chain_api/api/token_hour_data.ex
 lib/on_chain_api/api/tokens.ex
 lib/on_chain_api/api/trades.ex
+lib/on_chain_api/api/transactions.ex
 lib/on_chain_api/api/uniswap_v2.ex
 lib/on_chain_api/api/uniswap_v3.ex
 lib/on_chain_api/connection.ex

@@ -253,6 +253,7 @@ use WWW::OpenAPIClient::TokenDayDataApi;
 use WWW::OpenAPIClient::TokenHourDataApi;
 use WWW::OpenAPIClient::TokensApi;
 use WWW::OpenAPIClient::TradesApi;
+use WWW::OpenAPIClient::TransactionsApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 
@@ -313,6 +314,7 @@ use WWW::OpenAPIClient::TokenDayDataApi;
 use WWW::OpenAPIClient::TokenHourDataApi;
 use WWW::OpenAPIClient::TokensApi;
 use WWW::OpenAPIClient::TradesApi;
+use WWW::OpenAPIClient::TransactionsApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 
@@ -402,6 +404,7 @@ Class | Method | HTTP request | Description
 *TokensApi* | [**chains_chain_id_dapps_uniswapv3_tokens_historical_get**](docs/TokensApi.md#chains_chain_id_dapps_uniswapv3_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
 *TradesApi* | [**chains_chain_id_dapps_cow_trades_historical_get**](docs/TradesApi.md#chains_chain_id_dapps_cow_trades_historical_get) | **GET** /chains/{chain_id}/dapps/cow/trades/historical | 
 *TradesApi* | [**chains_chain_id_dapps_dex_trades_historical_get**](docs/TradesApi.md#chains_chain_id_dapps_dex_trades_historical_get) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
+*TransactionsApi* | [**chains_chain_id_dapps_uniswapv3_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_uniswapv3_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_pools_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_swaps_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_swaps_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_tokens_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_tokens_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens

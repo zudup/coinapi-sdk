@@ -27,6 +27,7 @@ import 'package:openapi/src/api/token_day_data_api.dart';
 import 'package:openapi/src/api/token_hour_data_api.dart';
 import 'package:openapi/src/api/tokens_api.dart';
 import 'package:openapi/src/api/trades_api.dart';
+import 'package:openapi/src/api/transactions_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
 
@@ -190,6 +191,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   TradesApi getTradesApi() {
     return TradesApi(dio, serializers);
+  }
+
+  /// Get TransactionsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TransactionsApi getTransactionsApi() {
+    return TransactionsApi(dio, serializers);
   }
 
   /// Get UniswapV2Api instance, base route and serializer can be overridden by a given but be careful,

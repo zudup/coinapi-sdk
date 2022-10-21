@@ -42,6 +42,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -67,6 +68,7 @@ src/main/scala/org/openapitools/client/api/TokenDayDataApi.scala
 src/main/scala/org/openapitools/client/api/TokenHourDataApi.scala
 src/main/scala/org/openapitools/client/api/TokensApi.scala
 src/main/scala/org/openapitools/client/api/TradesApi.scala
+src/main/scala/org/openapitools/client/api/TransactionsApi.scala
 src/main/scala/org/openapitools/client/api/UniswapV2Api.scala
 src/main/scala/org/openapitools/client/api/UniswapV3Api.scala
 src/main/scala/org/openapitools/client/core/ApiInvoker.scala

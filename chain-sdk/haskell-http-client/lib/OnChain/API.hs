@@ -32,6 +32,7 @@ module OnChain.API
   , module OnChain.API.TokenHourData
   , module OnChain.API.Tokens
   , module OnChain.API.Trades
+  , module OnChain.API.Transactions
   , module OnChain.API.UniswapV2
   , module OnChain.API.UniswapV3
   ) where
@@ -54,5 +55,6 @@ import OnChain.API.TokenDayData
 import OnChain.API.TokenHourData
 import OnChain.API.Tokens
 import OnChain.API.Trades
+import OnChain.API.Transactions
 import OnChain.API.UniswapV2
 import OnChain.API.UniswapV3

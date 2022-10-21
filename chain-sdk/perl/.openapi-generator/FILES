@@ -44,6 +44,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -95,6 +96,7 @@ lib/WWW/OpenAPIClient/TokenDayDataApi.pm
 lib/WWW/OpenAPIClient/TokenHourDataApi.pm
 lib/WWW/OpenAPIClient/TokensApi.pm
 lib/WWW/OpenAPIClient/TradesApi.pm
+lib/WWW/OpenAPIClient/TransactionsApi.pm
 lib/WWW/OpenAPIClient/UniswapV2Api.pm
 lib/WWW/OpenAPIClient/UniswapV3Api.pm
 t/BigIntegerTest.t
@@ -138,6 +140,7 @@ t/TokenV3DTOTest.t
 t/TokenV3DayDataDTOTest.t
 t/TokensApiTest.t
 t/TradesApiTest.t
+t/TransactionsApiTest.t
 t/UniswapDayDataV3DTOTest.t
 t/UniswapV2ApiTest.t
 t/UniswapV3ApiTest.t

@@ -20,6 +20,7 @@ src/on_chain_api/api/token_day_data.clj
 src/on_chain_api/api/token_hour_data.clj
 src/on_chain_api/api/tokens.clj
 src/on_chain_api/api/trades.clj
+src/on_chain_api/api/transactions.clj
 src/on_chain_api/api/uniswap_v_.clj
 src/on_chain_api/core.clj
 src/on_chain_api/specs/big_integer.clj

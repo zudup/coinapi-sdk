@@ -27,6 +27,7 @@ export 'package:openapi/src/api/token_day_data_api.dart';
 export 'package:openapi/src/api/token_hour_data_api.dart';
 export 'package:openapi/src/api/tokens_api.dart';
 export 'package:openapi/src/api/trades_api.dart';
+export 'package:openapi/src/api/transactions_api.dart';
 export 'package:openapi/src/api/uniswap_v2_api.dart';
 export 'package:openapi/src/api/uniswap_v3_api.dart';
 

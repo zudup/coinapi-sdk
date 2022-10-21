@@ -86,6 +86,8 @@ type APIClient struct {
 
 	TradesApi *TradesApiService
 
+	TransactionsApi *TransactionsApiService
+
 	UniswapV2Api *UniswapV2ApiService
 
 	UniswapV3Api *UniswapV3ApiService
@@ -125,6 +127,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.TokenHourDataApi = (*TokenHourDataApiService)(&c.common)
 	c.TokensApi = (*TokensApiService)(&c.common)
 	c.TradesApi = (*TradesApiService)(&c.common)
+	c.TransactionsApi = (*TransactionsApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
 

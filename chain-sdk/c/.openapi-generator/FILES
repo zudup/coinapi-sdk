@@ -38,6 +38,8 @@ api/TokensAPI.c
 api/TokensAPI.h
 api/TradesAPI.c
 api/TradesAPI.h
+api/TransactionsAPI.c
+api/TransactionsAPI.h
 api/UniswapV2API.c
 api/UniswapV2API.h
 api/UniswapV3API.c
@@ -60,6 +62,7 @@ docs/TokenDayDataAPI.md
 docs/TokenHourDataAPI.md
 docs/TokensAPI.md
 docs/TradesAPI.md
+docs/TransactionsAPI.md
 docs/UniswapV2API.md
 docs/UniswapV3API.md
 docs/big_integer.md

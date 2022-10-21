@@ -18,6 +18,7 @@ apis/TokenDayDataApi.ts
 apis/TokenHourDataApi.ts
 apis/TokensApi.ts
 apis/TradesApi.ts
+apis/TransactionsApi.ts
 apis/UniswapV2Api.ts
 apis/UniswapV3Api.ts
 apis/index.ts

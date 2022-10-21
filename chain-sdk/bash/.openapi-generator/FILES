@@ -45,6 +45,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md

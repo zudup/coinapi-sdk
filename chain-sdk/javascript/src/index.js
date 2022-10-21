@@ -55,6 +55,7 @@ import TokenDayDataApi from './api/TokenDayDataApi';
 import TokenHourDataApi from './api/TokenHourDataApi';
 import TokensApi from './api/TokensApi';
 import TradesApi from './api/TradesApi';
+import TransactionsApi from './api/TransactionsApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
 
@@ -348,6 +349,12 @@ export {
     * @property {module:api/TradesApi}
     */
     TradesApi,
+
+    /**
+    * The TransactionsApi service constructor.
+    * @property {module:api/TransactionsApi}
+    */
+    TransactionsApi,
 
     /**
     * The UniswapV2Api service constructor.

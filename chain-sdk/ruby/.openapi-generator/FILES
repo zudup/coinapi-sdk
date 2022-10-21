@@ -48,6 +48,7 @@ docs/TokenV3DTO.md
 docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
+docs/TransactionsApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
@@ -71,6 +72,7 @@ lib/openapi_client/api/token_day_data_api.rb
 lib/openapi_client/api/token_hour_data_api.rb
 lib/openapi_client/api/tokens_api.rb
 lib/openapi_client/api/trades_api.rb
+lib/openapi_client/api/transactions_api.rb
 lib/openapi_client/api/uniswap_v2_api.rb
 lib/openapi_client/api/uniswap_v3_api.rb
 lib/openapi_client/api_client.rb
@@ -120,6 +122,7 @@ spec/api/token_day_data_api_spec.rb
 spec/api/token_hour_data_api_spec.rb
 spec/api/tokens_api_spec.rb
 spec/api/trades_api_spec.rb
+spec/api/transactions_api_spec.rb
 spec/api/uniswap_v2_api_spec.rb
 spec/api/uniswap_v3_api_spec.rb
 spec/api_client_spec.rb

@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *OASTokensApi* | [**chainsChainIdDappsUniswapv3TokensHistoricalGet**](OASTokensApi.md#chainsChainIdDappsUniswapv3TokensHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
 *OASTradesApi* | [**chainsChainIdDappsCowTradesHistoricalGet**](OASTradesApi.md#chainsChainIdDappsCowTradesHistoricalGet) | **GET** /chains/{chain_id}/dapps/cow/trades/historical | 
 *OASTradesApi* | [**chainsChainIdDappsDexTradesHistoricalGet**](OASTradesApi.md#chainsChainIdDappsDexTradesHistoricalGet) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
+*OASTransactionsApi* | [**chainsChainIdDappsUniswapv3TransactionsHistoricalGet**](OASTransactionsApi.md#chainsChainIdDappsUniswapv3TransactionsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
 *OASUniswapV2Api* | [**chainsChainIdDappsUniswapv2PoolsCurrentGet**](OASUniswapV2Api.md#chainsChainIdDappsUniswapv2PoolsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
 *OASUniswapV2Api* | [**chainsChainIdDappsUniswapv2SwapsCurrentGet**](OASUniswapV2Api.md#chainsChainIdDappsUniswapv2SwapsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
 *OASUniswapV2Api* | [**chainsChainIdDappsUniswapv2TokensCurrentGet**](OASUniswapV2Api.md#chainsChainIdDappsUniswapv2TokensCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens

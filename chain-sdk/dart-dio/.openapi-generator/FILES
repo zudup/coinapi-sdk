@@ -43,6 +43,7 @@ doc/TokenV3DTO.md
 doc/TokenV3DayDataDTO.md
 doc/TokensApi.md
 doc/TradesApi.md
+doc/TransactionsApi.md
 doc/UniswapDayDataV3DTO.md
 doc/UniswapV2Api.md
 doc/UniswapV3Api.md
@@ -66,6 +67,7 @@ lib/src/api/token_day_data_api.dart
 lib/src/api/token_hour_data_api.dart
 lib/src/api/tokens_api.dart
 lib/src/api/trades_api.dart
+lib/src/api/transactions_api.dart
 lib/src/api/uniswap_v2_api.dart
 lib/src/api/uniswap_v3_api.dart
 lib/src/api_util.dart
@@ -143,6 +145,7 @@ test/token_v3_day_data_dto_test.dart
 test/token_v3_dto_test.dart
 test/tokens_api_test.dart
 test/trades_api_test.dart
+test/transactions_api_test.dart
 test/uniswap_day_data_v3_dto_test.dart
 test/uniswap_v2_api_test.dart
 test/uniswap_v3_api_test.dart

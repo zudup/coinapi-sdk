@@ -51,6 +51,7 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_tokens_day_data_c
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_tokens_hour_data_current import ChainsChainIdDappsUniswapv3TokensHourDataCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_dex_trades_historical import ChainsChainIdDappsDexTradesHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_cow_trades_historical import ChainsChainIdDappsCowTradesHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_transactions_historical import ChainsChainIdDappsUniswapv3TransactionsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_uniswap_day_data_current import ChainsChainIdDappsUniswapv3UniswapDayDataCurrent
 
 PathToApi = typing_extensions.TypedDict(
@@ -106,6 +107,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKENS_HOUR_DATA_CURRENT: ChainsChainIdDappsUniswapv3TokensHourDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TRADES_HISTORICAL: ChainsChainIdDappsDexTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_COW_TRADES_HISTORICAL: ChainsChainIdDappsCowTradesHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv3TransactionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
     }
 )
@@ -162,6 +164,7 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKENS_HOUR_DATA_CURRENT: ChainsChainIdDappsUniswapv3TokensHourDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TRADES_HISTORICAL: ChainsChainIdDappsDexTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_COW_TRADES_HISTORICAL: ChainsChainIdDappsCowTradesHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv3TransactionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
     }
 )
