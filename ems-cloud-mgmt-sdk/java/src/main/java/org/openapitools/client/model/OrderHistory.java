@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * OrderHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-21T13:05:04.078988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-21T13:18:41.988502Z[Etc/UTC]")
 public class OrderHistory {
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
