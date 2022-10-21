@@ -90,6 +90,8 @@ _()
     operations["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TicksHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet"]=1
     operations["chainsChainIdDappsCowTokensHistoricalGet"]=1
     operations["chainsChainIdDappsCurveTokensHistoricalGet"]=1
     operations["chainsChainIdDappsDexTokensHistoricalGet"]=1
@@ -143,6 +145,8 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3TicksHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsCowTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsCurveTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsDexTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "

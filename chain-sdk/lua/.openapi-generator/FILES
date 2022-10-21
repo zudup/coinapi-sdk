@@ -16,6 +16,8 @@ openapiclient/api/sushiswap_api.lua
 openapiclient/api/swaps_api.lua
 openapiclient/api/tick_day_data_api.lua
 openapiclient/api/ticks_api.lua
+openapiclient/api/token_day_data_api.lua
+openapiclient/api/token_hour_data_api.lua
 openapiclient/api/tokens_api.lua
 openapiclient/api/trades_api.lua
 openapiclient/api/uniswap_v2_api.lua
@@ -76,7 +78,9 @@ spec/tick_day_data_api_spec.lua
 spec/tick_day_data_v3_dto_spec.lua
 spec/tick_v3_dto_spec.lua
 spec/ticks_api_spec.lua
+spec/token_day_data_api_spec.lua
 spec/token_dto_spec.lua
+spec/token_hour_data_api_spec.lua
 spec/token_hour_data_v3_dto_spec.lua
 spec/token_v2_dto_spec.lua
 spec/token_v3_day_data_dto_spec.lua

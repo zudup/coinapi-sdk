@@ -30,6 +30,10 @@ api/TickDayDataAPI.c
 api/TickDayDataAPI.h
 api/TicksAPI.c
 api/TicksAPI.h
+api/TokenDayDataAPI.c
+api/TokenDayDataAPI.h
+api/TokenHourDataAPI.c
+api/TokenHourDataAPI.h
 api/TokensAPI.c
 api/TokensAPI.h
 api/TradesAPI.c
@@ -52,6 +56,8 @@ docs/SushiswapAPI.md
 docs/SwapsAPI.md
 docs/TickDayDataAPI.md
 docs/TicksAPI.md
+docs/TokenDayDataAPI.md
+docs/TokenHourDataAPI.md
 docs/TokensAPI.md
 docs/TradesAPI.md
 docs/UniswapV2API.md

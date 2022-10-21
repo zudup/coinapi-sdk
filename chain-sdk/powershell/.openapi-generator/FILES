@@ -35,6 +35,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -58,6 +60,8 @@ src/PSOpenAPITools/Api/SushiswapApi.ps1
 src/PSOpenAPITools/Api/SwapsApi.ps1
 src/PSOpenAPITools/Api/TickDayDataApi.ps1
 src/PSOpenAPITools/Api/TicksApi.ps1
+src/PSOpenAPITools/Api/TokenDayDataApi.ps1
+src/PSOpenAPITools/Api/TokenHourDataApi.ps1
 src/PSOpenAPITools/Api/TokensApi.ps1
 src/PSOpenAPITools/Api/TradesApi.ps1
 src/PSOpenAPITools/Api/UniswapV2Api.ps1
@@ -108,6 +112,8 @@ tests/Api/SushiswapApi.Tests.ps1
 tests/Api/SwapsApi.Tests.ps1
 tests/Api/TickDayDataApi.Tests.ps1
 tests/Api/TicksApi.Tests.ps1
+tests/Api/TokenDayDataApi.Tests.ps1
+tests/Api/TokenHourDataApi.Tests.ps1
 tests/Api/TokensApi.Tests.ps1
 tests/Api/TradesApi.Tests.ps1
 tests/Api/UniswapV2Api.Tests.ps1

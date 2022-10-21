@@ -12,6 +12,8 @@ export * from './SushiswapApi';
 export * from './SwapsApi';
 export * from './TickDayDataApi';
 export * from './TicksApi';
+export * from './TokenDayDataApi';
+export * from './TokenHourDataApi';
 export * from './TokensApi';
 export * from './TradesApi';
 export * from './UniswapV2Api';

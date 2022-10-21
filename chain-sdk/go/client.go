@@ -78,6 +78,10 @@ type APIClient struct {
 
 	TicksApi *TicksApiService
 
+	TokenDayDataApi *TokenDayDataApiService
+
+	TokenHourDataApi *TokenHourDataApiService
+
 	TokensApi *TokensApiService
 
 	TradesApi *TradesApiService
@@ -117,6 +121,8 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.SwapsApi = (*SwapsApiService)(&c.common)
 	c.TickDayDataApi = (*TickDayDataApiService)(&c.common)
 	c.TicksApi = (*TicksApiService)(&c.common)
+	c.TokenDayDataApi = (*TokenDayDataApiService)(&c.common)
+	c.TokenHourDataApi = (*TokenHourDataApiService)(&c.common)
 	c.TokensApi = (*TokensApiService)(&c.common)
 	c.TradesApi = (*TradesApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)

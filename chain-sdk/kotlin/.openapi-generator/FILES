@@ -34,6 +34,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -62,6 +64,8 @@ src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
 src/main/kotlin/org/openapitools/client/apis/SwapsApi.kt
 src/main/kotlin/org/openapitools/client/apis/TickDayDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/TicksApi.kt
+src/main/kotlin/org/openapitools/client/apis/TokenDayDataApi.kt
+src/main/kotlin/org/openapitools/client/apis/TokenHourDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/TokensApi.kt
 src/main/kotlin/org/openapitools/client/apis/TradesApi.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV2Api.kt

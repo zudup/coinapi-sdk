@@ -16,6 +16,8 @@ api/sushiswapApi.ts
 api/swapsApi.ts
 api/tickDayDataApi.ts
 api/ticksApi.ts
+api/tokenDayDataApi.ts
+api/tokenHourDataApi.ts
 api/tokensApi.ts
 api/tradesApi.ts
 api/uniswapV2Api.ts

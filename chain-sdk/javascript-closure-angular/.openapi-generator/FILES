@@ -32,6 +32,8 @@ API/Client/TickDayDataV3DTO.js
 API/Client/TickV3DTO.js
 API/Client/TicksApi.js
 API/Client/TokenDTO.js
+API/Client/TokenDayDataApi.js
+API/Client/TokenHourDataApi.js
 API/Client/TokenHourDataV3DTO.js
 API/Client/TokenV2DTO.js
 API/Client/TokenV3DTO.js

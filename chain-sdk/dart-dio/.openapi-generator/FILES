@@ -35,6 +35,8 @@ doc/TickDayDataV3DTO.md
 doc/TickV3DTO.md
 doc/TicksApi.md
 doc/TokenDTO.md
+doc/TokenDayDataApi.md
+doc/TokenHourDataApi.md
 doc/TokenHourDataV3DTO.md
 doc/TokenV2DTO.md
 doc/TokenV3DTO.md
@@ -60,6 +62,8 @@ lib/src/api/sushiswap_api.dart
 lib/src/api/swaps_api.dart
 lib/src/api/tick_day_data_api.dart
 lib/src/api/ticks_api.dart
+lib/src/api/token_day_data_api.dart
+lib/src/api/token_hour_data_api.dart
 lib/src/api/tokens_api.dart
 lib/src/api/trades_api.dart
 lib/src/api/uniswap_v2_api.dart
@@ -130,7 +134,9 @@ test/tick_day_data_api_test.dart
 test/tick_day_data_v3_dto_test.dart
 test/tick_v3_dto_test.dart
 test/ticks_api_test.dart
+test/token_day_data_api_test.dart
 test/token_dto_test.dart
+test/token_hour_data_api_test.dart
 test/token_hour_data_v3_dto_test.dart
 test/token_v2_dto_test.dart
 test/token_v3_day_data_dto_test.dart

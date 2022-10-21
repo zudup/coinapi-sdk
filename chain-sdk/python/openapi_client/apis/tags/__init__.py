@@ -22,5 +22,7 @@ class TagValues(str, enum.Enum):
     SWAPS = "Swaps"
     TICK_DAY_DATA = "TickDayData"
     TICKS = "Ticks"
+    TOKEN_DAY_DATA = "TokenDayData"
+    TOKEN_HOUR_DATA = "TokenHourData"
     TOKENS = "Tokens"
     TRADES = "Trades"

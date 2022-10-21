@@ -76,6 +76,10 @@ src/TicksManager.cpp
 src/TicksManager.h
 src/TokenDTO.cpp
 src/TokenDTO.h
+src/TokenDayDataManager.cpp
+src/TokenDayDataManager.h
+src/TokenHourDataManager.cpp
+src/TokenHourDataManager.h
 src/TokenHourDataV3DTO.cpp
 src/TokenHourDataV3DTO.h
 src/TokenV2DTO.cpp

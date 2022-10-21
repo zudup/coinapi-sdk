@@ -78,6 +78,8 @@ library
       OnChain.API.Swaps
       OnChain.API.TickDayData
       OnChain.API.Ticks
+      OnChain.API.TokenDayData
+      OnChain.API.TokenHourData
       OnChain.API.Tokens
       OnChain.API.Trades
       OnChain.API.UniswapV2

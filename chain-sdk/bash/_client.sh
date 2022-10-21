@@ -304,7 +304,7 @@ case $state in
             "chainsChainIdDappsSushiswapTokensCurrentGet[GetTokens]"             "chainsChainIdDappsCurveSwapsHistoricalGet[]" \
             "chainsChainIdDappsSushiswapSwapsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2SwapsHistoricalGet[]" \
-            "chainsChainIdDappsUniswapv3SwapsHistoricalGet[]"             "chainsChainIdDappsUniswapv3TickDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TicksHistoricalGet[]"             "chainsChainIdDappsCowTokensHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3SwapsHistoricalGet[]"             "chainsChainIdDappsUniswapv3TickDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TicksHistoricalGet[]"             "chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet[]"             "chainsChainIdDappsCowTokensHistoricalGet[]" \
             "chainsChainIdDappsCurveTokensHistoricalGet[]" \
             "chainsChainIdDappsDexTokensHistoricalGet[]" \
             "chainsChainIdDappsSushiswapTokensHistoricalGet[]" \
@@ -578,6 +578,30 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
 "poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

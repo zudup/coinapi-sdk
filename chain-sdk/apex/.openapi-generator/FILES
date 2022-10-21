@@ -141,6 +141,14 @@ force-app/main/default/classes/OASTokenDTO.cls
 force-app/main/default/classes/OASTokenDTO.cls-meta.xml
 force-app/main/default/classes/OASTokenDTOTest.cls
 force-app/main/default/classes/OASTokenDTOTest.cls-meta.xml
+force-app/main/default/classes/OASTokenDayDataApi.cls
+force-app/main/default/classes/OASTokenDayDataApi.cls-meta.xml
+force-app/main/default/classes/OASTokenDayDataApiTest.cls
+force-app/main/default/classes/OASTokenDayDataApiTest.cls-meta.xml
+force-app/main/default/classes/OASTokenHourDataApi.cls
+force-app/main/default/classes/OASTokenHourDataApi.cls-meta.xml
+force-app/main/default/classes/OASTokenHourDataApiTest.cls
+force-app/main/default/classes/OASTokenHourDataApiTest.cls-meta.xml
 force-app/main/default/classes/OASTokenHourDataV3DTO.cls
 force-app/main/default/classes/OASTokenHourDataV3DTO.cls-meta.xml
 force-app/main/default/classes/OASTokenHourDataV3DTOTest.cls

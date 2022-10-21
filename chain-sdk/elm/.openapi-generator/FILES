@@ -18,6 +18,8 @@ src/Api/Request/Sushiswap.elm
 src/Api/Request/Swaps.elm
 src/Api/Request/TickDayData.elm
 src/Api/Request/Ticks.elm
+src/Api/Request/TokenDayData.elm
+src/Api/Request/TokenHourData.elm
 src/Api/Request/Tokens.elm
 src/Api/Request/Trades.elm
 src/Api/Request/UniswapV2.elm

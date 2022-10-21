@@ -18,6 +18,8 @@ docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
 docs/Api/TickDayDataApi.md
 docs/Api/TicksApi.md
+docs/Api/TokenDayDataApi.md
+docs/Api/TokenHourDataApi.md
 docs/Api/TokensApi.md
 docs/Api/TradesApi.md
 docs/Api/UniswapV2Api.md
@@ -61,6 +63,8 @@ lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
 lib/Api/TickDayDataApi.php
 lib/Api/TicksApi.php
+lib/Api/TokenDayDataApi.php
+lib/Api/TokenHourDataApi.php
 lib/Api/TokensApi.php
 lib/Api/TradesApi.php
 lib/Api/UniswapV2Api.php
@@ -109,6 +113,8 @@ test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php
 test/Api/TickDayDataApiTest.php
 test/Api/TicksApiTest.php
+test/Api/TokenDayDataApiTest.php
+test/Api/TokenHourDataApiTest.php
 test/Api/TokensApiTest.php
 test/Api/TradesApiTest.php
 test/Api/UniswapV2ApiTest.php

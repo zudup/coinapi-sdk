@@ -16,6 +16,8 @@ src/on_chain_api/api/sushiswap.clj
 src/on_chain_api/api/swaps.clj
 src/on_chain_api/api/tick_day_data.clj
 src/on_chain_api/api/ticks.clj
+src/on_chain_api/api/token_day_data.clj
+src/on_chain_api/api/token_hour_data.clj
 src/on_chain_api/api/tokens.clj
 src/on_chain_api/api/trades.clj
 src/on_chain_api/api/uniswap_v_.clj

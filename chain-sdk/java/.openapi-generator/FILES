@@ -39,6 +39,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -84,6 +86,8 @@ src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
 src/main/java/org/openapitools/client/api/TickDayDataApi.java
 src/main/java/org/openapitools/client/api/TicksApi.java
+src/main/java/org/openapitools/client/api/TokenDayDataApi.java
+src/main/java/org/openapitools/client/api/TokenHourDataApi.java
 src/main/java/org/openapitools/client/api/TokensApi.java
 src/main/java/org/openapitools/client/api/TradesApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
@@ -131,6 +135,8 @@ src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/SwapsApiTest.java
 src/test/java/org/openapitools/client/api/TickDayDataApiTest.java
 src/test/java/org/openapitools/client/api/TicksApiTest.java
+src/test/java/org/openapitools/client/api/TokenDayDataApiTest.java
+src/test/java/org/openapitools/client/api/TokenHourDataApiTest.java
 src/test/java/org/openapitools/client/api/TokensApiTest.java
 src/test/java/org/openapitools/client/api/TradesApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2ApiTest.java

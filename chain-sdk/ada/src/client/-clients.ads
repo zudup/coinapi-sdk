@@ -222,6 +222,26 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_3Token_Day_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Token_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_3Token_Hour_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Token_Id : in Swagger.Nullable_UString);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Cow_Tokens_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;

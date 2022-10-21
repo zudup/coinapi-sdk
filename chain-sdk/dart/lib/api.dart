@@ -41,6 +41,8 @@ part 'api/sushiswap_api.dart';
 part 'api/swaps_api.dart';
 part 'api/tick_day_data_api.dart';
 part 'api/ticks_api.dart';
+part 'api/token_day_data_api.dart';
+part 'api/token_hour_data_api.dart';
 part 'api/tokens_api.dart';
 part 'api/trades_api.dart';
 part 'api/uniswap_v2_api.dart';

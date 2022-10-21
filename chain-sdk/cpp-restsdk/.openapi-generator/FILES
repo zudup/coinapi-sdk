@@ -27,6 +27,8 @@ include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/SwapsApi.h
 include/CppRestOpenAPIClient/api/TickDayDataApi.h
 include/CppRestOpenAPIClient/api/TicksApi.h
+include/CppRestOpenAPIClient/api/TokenDayDataApi.h
+include/CppRestOpenAPIClient/api/TokenHourDataApi.h
 include/CppRestOpenAPIClient/api/TokensApi.h
 include/CppRestOpenAPIClient/api/TradesApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
@@ -77,6 +79,8 @@ src/api/SushiswapApi.cpp
 src/api/SwapsApi.cpp
 src/api/TickDayDataApi.cpp
 src/api/TicksApi.cpp
+src/api/TokenDayDataApi.cpp
+src/api/TokenHourDataApi.cpp
 src/api/TokensApi.cpp
 src/api/TradesApi.cpp
 src/api/UniswapV2Api.cpp

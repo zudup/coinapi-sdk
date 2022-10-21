@@ -17,6 +17,8 @@ docs/apis/tags/SushiswapApi.md
 docs/apis/tags/SwapsApi.md
 docs/apis/tags/TickDayDataApi.md
 docs/apis/tags/TicksApi.md
+docs/apis/tags/TokenDayDataApi.md
+docs/apis/tags/TokenHourDataApi.md
 docs/apis/tags/TokensApi.md
 docs/apis/tags/TradesApi.md
 docs/apis/tags/UniswapV2Api.md
@@ -63,6 +65,8 @@ openapi_client/apis/tags/sushiswap_api.py
 openapi_client/apis/tags/swaps_api.py
 openapi_client/apis/tags/tick_day_data_api.py
 openapi_client/apis/tags/ticks_api.py
+openapi_client/apis/tags/token_day_data_api.py
+openapi_client/apis/tags/token_hour_data_api.py
 openapi_client/apis/tags/tokens_api.py
 openapi_client/apis/tags/trades_api.py
 openapi_client/apis/tags/uniswap_v2_api.py

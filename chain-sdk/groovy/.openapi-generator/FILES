@@ -16,6 +16,8 @@ src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/SwapsApi.groovy
 src/main/groovy/org/openapitools/api/TickDayDataApi.groovy
 src/main/groovy/org/openapitools/api/TicksApi.groovy
+src/main/groovy/org/openapitools/api/TokenDayDataApi.groovy
+src/main/groovy/org/openapitools/api/TokenHourDataApi.groovy
 src/main/groovy/org/openapitools/api/TokensApi.groovy
 src/main/groovy/org/openapitools/api/TradesApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy

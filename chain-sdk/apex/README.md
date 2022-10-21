@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 *OASSwapsApi* | [**chainsChainIdDappsUniswapv3SwapsHistoricalGet**](OASSwapsApi.md#chainsChainIdDappsUniswapv3SwapsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
 *OASTickDayDataApi* | [**chainsChainIdDappsUniswapv3TickDayDataHistoricalGet**](OASTickDayDataApi.md#chainsChainIdDappsUniswapv3TickDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | 
 *OASTicksApi* | [**chainsChainIdDappsUniswapv3TicksHistoricalGet**](OASTicksApi.md#chainsChainIdDappsUniswapv3TicksHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/historical | 
+*OASTokenDayDataApi* | [**chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet**](OASTokenDayDataApi.md#chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | 
+*OASTokenHourDataApi* | [**chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet**](OASTokenHourDataApi.md#chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | 
 *OASTokensApi* | [**chainsChainIdDappsCowTokensHistoricalGet**](OASTokensApi.md#chainsChainIdDappsCowTokensHistoricalGet) | **GET** /chains/{chain_id}/dapps/cow/tokens/historical | 
 *OASTokensApi* | [**chainsChainIdDappsCurveTokensHistoricalGet**](OASTokensApi.md#chainsChainIdDappsCurveTokensHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/tokens/historical | 
 *OASTokensApi* | [**chainsChainIdDappsDexTokensHistoricalGet**](OASTokensApi.md#chainsChainIdDappsDexTokensHistoricalGet) | **GET** /chains/{chain_id}/dapps/dex/tokens/historical | 

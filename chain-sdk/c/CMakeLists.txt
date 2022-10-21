@@ -92,6 +92,8 @@ set(SRCS
     api/SwapsAPI.c
     api/TickDayDataAPI.c
     api/TicksAPI.c
+    api/TokenDayDataAPI.c
+    api/TokenHourDataAPI.c
     api/TokensAPI.c
     api/TradesAPI.c
     api/UniswapV2API.c
@@ -144,6 +146,8 @@ set(HDRS
     api/SwapsAPI.h
     api/TickDayDataAPI.h
     api/TicksAPI.h
+    api/TokenDayDataAPI.h
+    api/TokenHourDataAPI.h
     api/TokensAPI.h
     api/TradesAPI.h
     api/UniswapV2API.h
@@ -243,6 +247,8 @@ set(HDRS "")
 #    unit-tests/manual-SwapsAPI.c
 #    unit-tests/manual-TickDayDataAPI.c
 #    unit-tests/manual-TicksAPI.c
+#    unit-tests/manual-TokenDayDataAPI.c
+#    unit-tests/manual-TokenHourDataAPI.c
 #    unit-tests/manual-TokensAPI.c
 #    unit-tests/manual-TradesAPI.c
 #    unit-tests/manual-UniswapV2API.c

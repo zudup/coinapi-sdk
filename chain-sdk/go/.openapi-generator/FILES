@@ -17,6 +17,8 @@ api_sushiswap.go
 api_swaps.go
 api_tick_day_data.go
 api_ticks.go
+api_token_day_data.go
+api_token_hour_data.go
 api_tokens.go
 api_trades.go
 api_uniswap_v2.go
@@ -56,6 +58,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md

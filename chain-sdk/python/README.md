@@ -197,6 +197,8 @@ Class | Method | HTTP request | Description
 *SwapsApi* | [**chains_chain_id_dapps_uniswapv3_swaps_historical_get**](docs/apis/tags/SwapsApi.md#chains_chain_id_dapps_uniswapv3_swaps_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
 *TickDayDataApi* | [**chains_chain_id_dapps_uniswapv3_tick_day_data_historical_get**](docs/apis/tags/TickDayDataApi.md#chains_chain_id_dapps_uniswapv3_tick_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | 
 *TicksApi* | [**chains_chain_id_dapps_uniswapv3_ticks_historical_get**](docs/apis/tags/TicksApi.md#chains_chain_id_dapps_uniswapv3_ticks_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/ticks/historical | 
+*TokenDayDataApi* | [**chains_chain_id_dapps_uniswapv3_token_day_data_historical_get**](docs/apis/tags/TokenDayDataApi.md#chains_chain_id_dapps_uniswapv3_token_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | 
+*TokenHourDataApi* | [**chains_chain_id_dapps_uniswapv3_token_hour_data_historical_get**](docs/apis/tags/TokenHourDataApi.md#chains_chain_id_dapps_uniswapv3_token_hour_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | 
 *TokensApi* | [**chains_chain_id_dapps_cow_tokens_historical_get**](docs/apis/tags/TokensApi.md#chains_chain_id_dapps_cow_tokens_historical_get) | **get** /chains/{chain_id}/dapps/cow/tokens/historical | 
 *TokensApi* | [**chains_chain_id_dapps_curve_tokens_historical_get**](docs/apis/tags/TokensApi.md#chains_chain_id_dapps_curve_tokens_historical_get) | **get** /chains/{chain_id}/dapps/curve/tokens/historical | 
 *TokensApi* | [**chains_chain_id_dapps_dex_tokens_historical_get**](docs/apis/tags/TokensApi.md#chains_chain_id_dapps_dex_tokens_historical_get) | **get** /chains/{chain_id}/dapps/dex/tokens/historical | 
@@ -258,6 +260,8 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

@@ -28,6 +28,8 @@ module OnChain.API
   , module OnChain.API.Swaps
   , module OnChain.API.TickDayData
   , module OnChain.API.Ticks
+  , module OnChain.API.TokenDayData
+  , module OnChain.API.TokenHourData
   , module OnChain.API.Tokens
   , module OnChain.API.Trades
   , module OnChain.API.UniswapV2
@@ -48,6 +50,8 @@ import OnChain.API.Sushiswap
 import OnChain.API.Swaps
 import OnChain.API.TickDayData
 import OnChain.API.Ticks
+import OnChain.API.TokenDayData
+import OnChain.API.TokenHourData
 import OnChain.API.Tokens
 import OnChain.API.Trades
 import OnChain.API.UniswapV2

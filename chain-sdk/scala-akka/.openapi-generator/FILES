@@ -34,6 +34,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -61,6 +63,8 @@ src/main/scala/org/openapitools/client/api/SushiswapApi.scala
 src/main/scala/org/openapitools/client/api/SwapsApi.scala
 src/main/scala/org/openapitools/client/api/TickDayDataApi.scala
 src/main/scala/org/openapitools/client/api/TicksApi.scala
+src/main/scala/org/openapitools/client/api/TokenDayDataApi.scala
+src/main/scala/org/openapitools/client/api/TokenHourDataApi.scala
 src/main/scala/org/openapitools/client/api/TokensApi.scala
 src/main/scala/org/openapitools/client/api/TradesApi.scala
 src/main/scala/org/openapitools/client/api/UniswapV2Api.scala

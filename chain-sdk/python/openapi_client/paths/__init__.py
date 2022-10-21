@@ -41,6 +41,8 @@ class PathValues(str, enum.Enum):
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/ticks/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/ticks/current"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_DAY_DATA_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKEN_DAY_DATA_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKEN_HOUR_DATA_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKENS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/tokens/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_TOKENS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv2/tokens/historical"
     CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_TOKENS_HISTORICAL = "/chains/{chain_id}/dapps/sushiswap/tokens/historical"

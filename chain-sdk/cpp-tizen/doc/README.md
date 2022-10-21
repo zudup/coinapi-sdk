@@ -153,6 +153,20 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3TicksHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/ticks/historical | .
 
 
+### TokenDayDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | .
+*chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | .
+
+
+### TokenHourDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3TokenHourDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | .
+*chainsChainIdDappsUniswapv3TokenHourDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | .
+
+
 ### TokensManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

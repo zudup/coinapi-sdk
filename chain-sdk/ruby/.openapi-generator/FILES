@@ -40,6 +40,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -65,6 +67,8 @@ lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/swaps_api.rb
 lib/openapi_client/api/tick_day_data_api.rb
 lib/openapi_client/api/ticks_api.rb
+lib/openapi_client/api/token_day_data_api.rb
+lib/openapi_client/api/token_hour_data_api.rb
 lib/openapi_client/api/tokens_api.rb
 lib/openapi_client/api/trades_api.rb
 lib/openapi_client/api/uniswap_v2_api.rb
@@ -112,6 +116,8 @@ spec/api/sushiswap_api_spec.rb
 spec/api/swaps_api_spec.rb
 spec/api/tick_day_data_api_spec.rb
 spec/api/ticks_api_spec.rb
+spec/api/token_day_data_api_spec.rb
+spec/api/token_hour_data_api_spec.rb
 spec/api/tokens_api_spec.rb
 spec/api/trades_api_spec.rb
 spec/api/uniswap_v2_api_spec.rb

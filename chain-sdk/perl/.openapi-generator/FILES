@@ -36,6 +36,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -89,6 +91,8 @@ lib/WWW/OpenAPIClient/SushiswapApi.pm
 lib/WWW/OpenAPIClient/SwapsApi.pm
 lib/WWW/OpenAPIClient/TickDayDataApi.pm
 lib/WWW/OpenAPIClient/TicksApi.pm
+lib/WWW/OpenAPIClient/TokenDayDataApi.pm
+lib/WWW/OpenAPIClient/TokenHourDataApi.pm
 lib/WWW/OpenAPIClient/TokensApi.pm
 lib/WWW/OpenAPIClient/TradesApi.pm
 lib/WWW/OpenAPIClient/UniswapV2Api.pm
@@ -126,6 +130,8 @@ t/TickDayDataV3DTOTest.t
 t/TickV3DTOTest.t
 t/TicksApiTest.t
 t/TokenDTOTest.t
+t/TokenDayDataApiTest.t
+t/TokenHourDataApiTest.t
 t/TokenHourDataV3DTOTest.t
 t/TokenV2DTOTest.t
 t/TokenV3DTOTest.t

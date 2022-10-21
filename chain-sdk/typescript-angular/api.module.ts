@@ -16,6 +16,8 @@ import { SushiswapService } from './api/sushiswap.service';
 import { SwapsService } from './api/swaps.service';
 import { TickDayDataService } from './api/tickDayData.service';
 import { TicksService } from './api/ticks.service';
+import { TokenDayDataService } from './api/tokenDayData.service';
+import { TokenHourDataService } from './api/tokenHourData.service';
 import { TokensService } from './api/tokens.service';
 import { TradesService } from './api/trades.service';
 import { UniswapV2Service } from './api/uniswapV2.service';

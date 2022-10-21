@@ -51,6 +51,8 @@ import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
 import TickDayDataApi from './api/TickDayDataApi';
 import TicksApi from './api/TicksApi';
+import TokenDayDataApi from './api/TokenDayDataApi';
+import TokenHourDataApi from './api/TokenHourDataApi';
 import TokensApi from './api/TokensApi';
 import TradesApi from './api/TradesApi';
 import UniswapV2Api from './api/UniswapV2Api';
@@ -322,6 +324,18 @@ export {
     * @property {module:api/TicksApi}
     */
     TicksApi,
+
+    /**
+    * The TokenDayDataApi service constructor.
+    * @property {module:api/TokenDayDataApi}
+    */
+    TokenDayDataApi,
+
+    /**
+    * The TokenHourDataApi service constructor.
+    * @property {module:api/TokenHourDataApi}
+    */
+    TokenHourDataApi,
 
     /**
     * The TokensApi service constructor.

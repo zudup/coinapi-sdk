@@ -34,6 +34,8 @@ docs/TICKDAYDATA_API.md
 docs/TICKS_API.md
 docs/TICK_DAY_DATA_V3_DTO.md
 docs/TICK_V3_DTO.md
+docs/TOKENDAYDATA_API.md
+docs/TOKENHOURDATA_API.md
 docs/TOKENS_API.md
 docs/TOKEN_DTO.md
 docs/TOKEN_HOUR_DATA_V3_DTO.md
@@ -58,6 +60,8 @@ src/api/sushiswap_api.e
 src/api/swaps_api.e
 src/api/tick_day_data_api.e
 src/api/ticks_api.e
+src/api/token_day_data_api.e
+src/api/token_hour_data_api.e
 src/api/tokens_api.e
 src/api/trades_api.e
 src/api/uniswap_v2_api.e
@@ -117,6 +121,8 @@ test/apis/sushiswap_api_test.e
 test/apis/swaps_api_test.e
 test/apis/tickdaydata_api_test.e
 test/apis/ticks_api_test.e
+test/apis/tokendaydata_api_test.e
+test/apis/tokenhourdata_api_test.e
 test/apis/tokens_api_test.e
 test/apis/trades_api_test.e
 test/apis/uniswapv2_api_test.e

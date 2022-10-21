@@ -4528,6 +4528,174 @@ export const TicksApi = function(configuration?: Configuration, fetch: FetchAPI 
 
 
 /**
+ * TokenDayDataApi - fetch parameter creator
+ * @export
+ */
+export const TokenDayDataApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type TokenDayDataApiType = { 
+    chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * TokenDayDataApi - factory function to inject configuration 
+ * @export
+ */
+export const TokenDayDataApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TokenDayDataApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = TokenDayDataApiFetchParamCreator(configuration).chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * TokenHourDataApi - fetch parameter creator
+ * @export
+ */
+export const TokenHourDataApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type TokenHourDataApiType = { 
+    chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * TokenHourDataApi - factory function to inject configuration 
+ * @export
+ */
+export const TokenHourDataApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TokenHourDataApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = TokenHourDataApiFetchParamCreator(configuration).chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
  * TokensApi - fetch parameter creator
  * @export
  */
@@ -6019,6 +6187,10 @@ export type ApiTypes = {
     TickDayDataApi: TickDayDataApiType,
 
     TicksApi: TicksApiType,
+
+    TokenDayDataApi: TokenDayDataApiType,
+
+    TokenHourDataApi: TokenHourDataApiType,
 
     TokensApi: TokensApiType,
 

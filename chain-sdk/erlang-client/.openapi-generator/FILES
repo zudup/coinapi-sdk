@@ -34,7 +34,9 @@ src/openapi_tick_day_data_api.erl
 src/openapi_tick_day_data_v3_dto.erl
 src/openapi_tick_v3_dto.erl
 src/openapi_ticks_api.erl
+src/openapi_token_day_data_api.erl
 src/openapi_token_dto.erl
+src/openapi_token_hour_data_api.erl
 src/openapi_token_hour_data_v3_dto.erl
 src/openapi_token_v2_dto.erl
 src/openapi_token_v3_day_data_dto.erl

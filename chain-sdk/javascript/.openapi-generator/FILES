@@ -36,6 +36,8 @@ docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
 docs/TicksApi.md
 docs/TokenDTO.md
+docs/TokenDayDataApi.md
+docs/TokenHourDataApi.md
 docs/TokenHourDataV3DTO.md
 docs/TokenV2DTO.md
 docs/TokenV3DTO.md
@@ -63,6 +65,8 @@ src/api/SushiswapApi.js
 src/api/SwapsApi.js
 src/api/TickDayDataApi.js
 src/api/TicksApi.js
+src/api/TokenDayDataApi.js
+src/api/TokenHourDataApi.js
 src/api/TokensApi.js
 src/api/TradesApi.js
 src/api/UniswapV2Api.js
@@ -106,6 +110,8 @@ test/api/SushiswapApi.spec.js
 test/api/SwapsApi.spec.js
 test/api/TickDayDataApi.spec.js
 test/api/TicksApi.spec.js
+test/api/TokenDayDataApi.spec.js
+test/api/TokenHourDataApi.spec.js
 test/api/TokensApi.spec.js
 test/api/TradesApi.spec.js
 test/api/UniswapV2Api.spec.js

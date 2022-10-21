@@ -18,6 +18,8 @@ lib/on_chain_api/api/sushiswap.ex
 lib/on_chain_api/api/swaps.ex
 lib/on_chain_api/api/tick_day_data.ex
 lib/on_chain_api/api/ticks.ex
+lib/on_chain_api/api/token_day_data.ex
+lib/on_chain_api/api/token_hour_data.ex
 lib/on_chain_api/api/tokens.ex
 lib/on_chain_api/api/trades.ex
 lib/on_chain_api/api/uniswap_v2.ex

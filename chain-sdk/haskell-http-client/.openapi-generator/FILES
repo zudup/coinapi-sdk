@@ -20,6 +20,8 @@ lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/Swaps.hs
 lib/OnChain/API/TickDayData.hs
 lib/OnChain/API/Ticks.hs
+lib/OnChain/API/TokenDayData.hs
+lib/OnChain/API/TokenHourData.hs
 lib/OnChain/API/Tokens.hs
 lib/OnChain/API/Trades.hs
 lib/OnChain/API/UniswapV2.hs
