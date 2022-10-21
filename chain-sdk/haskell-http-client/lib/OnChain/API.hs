@@ -23,8 +23,11 @@ module OnChain.API
   , module OnChain.API.PoolHourData
   , module OnChain.API.Pools
   , module OnChain.API.PositionSnapshot
+  , module OnChain.API.Positions
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
+  , module OnChain.API.TickDayData
+  , module OnChain.API.Ticks
   , module OnChain.API.Tokens
   , module OnChain.API.Trades
   , module OnChain.API.UniswapV2
@@ -40,8 +43,11 @@ import OnChain.API.PoolDayData
 import OnChain.API.PoolHourData
 import OnChain.API.Pools
 import OnChain.API.PositionSnapshot
+import OnChain.API.Positions
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps
+import OnChain.API.TickDayData
+import OnChain.API.Ticks
 import OnChain.API.Tokens
 import OnChain.API.Trades
 import OnChain.API.UniswapV2

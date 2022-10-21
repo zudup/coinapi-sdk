@@ -53,6 +53,8 @@ src/PositionSnapshotV3DTO.cpp
 src/PositionSnapshotV3DTO.h
 src/PositionV3DTO.cpp
 src/PositionV3DTO.h
+src/PositionsManager.cpp
+src/PositionsManager.h
 src/RequestInfo.h
 src/SushiswapManager.cpp
 src/SushiswapManager.h
@@ -64,10 +66,14 @@ src/SwapV3DTO.cpp
 src/SwapV3DTO.h
 src/SwapsManager.cpp
 src/SwapsManager.h
+src/TickDayDataManager.cpp
+src/TickDayDataManager.h
 src/TickDayDataV3DTO.cpp
 src/TickDayDataV3DTO.h
 src/TickV3DTO.cpp
 src/TickV3DTO.h
+src/TicksManager.cpp
+src/TicksManager.h
 src/TokenDTO.cpp
 src/TokenDTO.h
 src/TokenHourDataV3DTO.cpp

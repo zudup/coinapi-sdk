@@ -13,8 +13,11 @@ docs/Api/PoolDayDataApi.md
 docs/Api/PoolHourDataApi.md
 docs/Api/PoolsApi.md
 docs/Api/PositionSnapshotApi.md
+docs/Api/PositionsApi.md
 docs/Api/SushiswapApi.md
 docs/Api/SwapsApi.md
+docs/Api/TickDayDataApi.md
+docs/Api/TicksApi.md
 docs/Api/TokensApi.md
 docs/Api/TradesApi.md
 docs/Api/UniswapV2Api.md
@@ -53,8 +56,11 @@ lib/Api/PoolDayDataApi.php
 lib/Api/PoolHourDataApi.php
 lib/Api/PoolsApi.php
 lib/Api/PositionSnapshotApi.php
+lib/Api/PositionsApi.php
 lib/Api/SushiswapApi.php
 lib/Api/SwapsApi.php
+lib/Api/TickDayDataApi.php
+lib/Api/TicksApi.php
 lib/Api/TokensApi.php
 lib/Api/TradesApi.php
 lib/Api/UniswapV2Api.php
@@ -98,8 +104,11 @@ test/Api/PoolDayDataApiTest.php
 test/Api/PoolHourDataApiTest.php
 test/Api/PoolsApiTest.php
 test/Api/PositionSnapshotApiTest.php
+test/Api/PositionsApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/SwapsApiTest.php
+test/Api/TickDayDataApiTest.php
+test/Api/TicksApiTest.php
 test/Api/TokensApiTest.php
 test/Api/TradesApiTest.php
 test/Api/UniswapV2ApiTest.php

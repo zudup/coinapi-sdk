@@ -22,6 +22,7 @@ docs/POOL_DAY_DATA_V3_DTO.md
 docs/POOL_HOUR_DATA_V3_DTO.md
 docs/POOL_V3_DTO.md
 docs/POSITIONSNAPSHOT_API.md
+docs/POSITIONS_API.md
 docs/POSITION_SNAPSHOT_V3_DTO.md
 docs/POSITION_V3_DTO.md
 docs/SUSHISWAP_API.md
@@ -29,6 +30,8 @@ docs/SWAPS_API.md
 docs/SWAP_DTO.md
 docs/SWAP_V2_DTO.md
 docs/SWAP_V3_DTO.md
+docs/TICKDAYDATA_API.md
+docs/TICKS_API.md
 docs/TICK_DAY_DATA_V3_DTO.md
 docs/TICK_V3_DTO.md
 docs/TOKENS_API.md
@@ -50,8 +53,11 @@ src/api/pool_day_data_api.e
 src/api/pool_hour_data_api.e
 src/api/pools_api.e
 src/api/position_snapshot_api.e
+src/api/positions_api.e
 src/api/sushiswap_api.e
 src/api/swaps_api.e
+src/api/tick_day_data_api.e
+src/api/ticks_api.e
 src/api/tokens_api.e
 src/api/trades_api.e
 src/api/uniswap_v2_api.e
@@ -105,9 +111,12 @@ test/apis/poi_api_test.e
 test/apis/pooldaydata_api_test.e
 test/apis/poolhourdata_api_test.e
 test/apis/pools_api_test.e
+test/apis/positions_api_test.e
 test/apis/positionsnapshot_api_test.e
 test/apis/sushiswap_api_test.e
 test/apis/swaps_api_test.e
+test/apis/tickdaydata_api_test.e
+test/apis/ticks_api_test.e
 test/apis/tokens_api_test.e
 test/apis/trades_api_test.e
 test/apis/uniswapv2_api_test.e

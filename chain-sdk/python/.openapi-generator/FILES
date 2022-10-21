@@ -12,8 +12,11 @@ docs/apis/tags/PoolDayDataApi.md
 docs/apis/tags/PoolHourDataApi.md
 docs/apis/tags/PoolsApi.md
 docs/apis/tags/PositionSnapshotApi.md
+docs/apis/tags/PositionsApi.md
 docs/apis/tags/SushiswapApi.md
 docs/apis/tags/SwapsApi.md
+docs/apis/tags/TickDayDataApi.md
+docs/apis/tags/TicksApi.md
 docs/apis/tags/TokensApi.md
 docs/apis/tags/TradesApi.md
 docs/apis/tags/UniswapV2Api.md
@@ -55,8 +58,11 @@ openapi_client/apis/tags/pool_day_data_api.py
 openapi_client/apis/tags/pool_hour_data_api.py
 openapi_client/apis/tags/pools_api.py
 openapi_client/apis/tags/position_snapshot_api.py
+openapi_client/apis/tags/positions_api.py
 openapi_client/apis/tags/sushiswap_api.py
 openapi_client/apis/tags/swaps_api.py
+openapi_client/apis/tags/tick_day_data_api.py
+openapi_client/apis/tags/ticks_api.py
 openapi_client/apis/tags/tokens_api.py
 openapi_client/apis/tags/trades_api.py
 openapi_client/apis/tags/uniswap_v2_api.py

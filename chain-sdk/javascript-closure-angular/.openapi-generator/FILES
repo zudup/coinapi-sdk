@@ -21,13 +21,16 @@ API/Client/PoolsApi.js
 API/Client/PositionSnapshotApi.js
 API/Client/PositionSnapshotV3DTO.js
 API/Client/PositionV3DTO.js
+API/Client/PositionsApi.js
 API/Client/SushiswapApi.js
 API/Client/SwapDTO.js
 API/Client/SwapV2DTO.js
 API/Client/SwapV3DTO.js
 API/Client/SwapsApi.js
+API/Client/TickDayDataApi.js
 API/Client/TickDayDataV3DTO.js
 API/Client/TickV3DTO.js
+API/Client/TicksApi.js
 API/Client/TokenDTO.js
 API/Client/TokenHourDataV3DTO.js
 API/Client/TokenV2DTO.js

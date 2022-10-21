@@ -73,8 +73,11 @@ library
       OnChain.API.PoolHourData
       OnChain.API.Pools
       OnChain.API.PositionSnapshot
+      OnChain.API.Positions
       OnChain.API.Sushiswap
       OnChain.API.Swaps
+      OnChain.API.TickDayData
+      OnChain.API.Ticks
       OnChain.API.Tokens
       OnChain.API.Trades
       OnChain.API.UniswapV2

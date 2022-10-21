@@ -22,8 +22,11 @@ include/CppRestOpenAPIClient/api/PoolDayDataApi.h
 include/CppRestOpenAPIClient/api/PoolHourDataApi.h
 include/CppRestOpenAPIClient/api/PoolsApi.h
 include/CppRestOpenAPIClient/api/PositionSnapshotApi.h
+include/CppRestOpenAPIClient/api/PositionsApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/SwapsApi.h
+include/CppRestOpenAPIClient/api/TickDayDataApi.h
+include/CppRestOpenAPIClient/api/TicksApi.h
 include/CppRestOpenAPIClient/api/TokensApi.h
 include/CppRestOpenAPIClient/api/TradesApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
@@ -69,8 +72,11 @@ src/api/PoolDayDataApi.cpp
 src/api/PoolHourDataApi.cpp
 src/api/PoolsApi.cpp
 src/api/PositionSnapshotApi.cpp
+src/api/PositionsApi.cpp
 src/api/SushiswapApi.cpp
 src/api/SwapsApi.cpp
+src/api/TickDayDataApi.cpp
+src/api/TicksApi.cpp
 src/api/TokensApi.cpp
 src/api/TradesApi.cpp
 src/api/UniswapV2Api.cpp

@@ -307,6 +307,31 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Chains_Chain_Id_Dapps_Uniswapv_3Position_Snapshot_Historical_Get;
 
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_3Positions_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv3/positions/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_3Positions_Historical_Get;
+
    --  GetPools
    --  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
    procedure Chains_Chain_Id_Dapps_Sushiswap_Pools_Current_Get
@@ -461,6 +486,56 @@ package body .Clients is
       URI.Set_Path_Param ("chain_id", Chain_Id);
       Client.Call (Swagger.Clients.GET, URI);
    end Chains_Chain_Id_Dapps_Uniswapv_3Swaps_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_3Tick_Day_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv3/tickDayData/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_3Tick_Day_Data_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_3Ticks_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv3/ticks/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_3Ticks_Historical_Get;
 
    --  
    procedure Chains_Chain_Id_Dapps_Cow_Tokens_Historical_Get

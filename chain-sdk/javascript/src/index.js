@@ -46,8 +46,11 @@ import PoolDayDataApi from './api/PoolDayDataApi';
 import PoolHourDataApi from './api/PoolHourDataApi';
 import PoolsApi from './api/PoolsApi';
 import PositionSnapshotApi from './api/PositionSnapshotApi';
+import PositionsApi from './api/PositionsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
+import TickDayDataApi from './api/TickDayDataApi';
+import TicksApi from './api/TicksApi';
 import TokensApi from './api/TokensApi';
 import TradesApi from './api/TradesApi';
 import UniswapV2Api from './api/UniswapV2Api';
@@ -291,6 +294,12 @@ export {
     PositionSnapshotApi,
 
     /**
+    * The PositionsApi service constructor.
+    * @property {module:api/PositionsApi}
+    */
+    PositionsApi,
+
+    /**
     * The SushiswapApi service constructor.
     * @property {module:api/SushiswapApi}
     */
@@ -301,6 +310,18 @@ export {
     * @property {module:api/SwapsApi}
     */
     SwapsApi,
+
+    /**
+    * The TickDayDataApi service constructor.
+    * @property {module:api/TickDayDataApi}
+    */
+    TickDayDataApi,
+
+    /**
+    * The TicksApi service constructor.
+    * @property {module:api/TicksApi}
+    */
+    TicksApi,
 
     /**
     * The TokensApi service constructor.

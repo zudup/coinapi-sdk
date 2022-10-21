@@ -108,6 +108,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | .
 
 
+### PositionsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3PositionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positions/historical | .
+*chainsChainIdDappsUniswapv3PositionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positions/historical | .
+
+
 ### SushiswapManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -130,6 +137,20 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv2SwapsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/swaps/historical | .
 *chainsChainIdDappsUniswapv3SwapsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/swaps/historical | .
 *chainsChainIdDappsUniswapv3SwapsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/swaps/historical | .
+
+
+### TickDayDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3TickDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | .
+*chainsChainIdDappsUniswapv3TickDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | .
+
+
+### TicksManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv3TicksHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/ticks/historical | .
+*chainsChainIdDappsUniswapv3TicksHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/ticks/historical | .
 
 
 ### TokensManager

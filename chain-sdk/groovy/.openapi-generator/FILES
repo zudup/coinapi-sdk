@@ -11,8 +11,11 @@ src/main/groovy/org/openapitools/api/PoolDayDataApi.groovy
 src/main/groovy/org/openapitools/api/PoolHourDataApi.groovy
 src/main/groovy/org/openapitools/api/PoolsApi.groovy
 src/main/groovy/org/openapitools/api/PositionSnapshotApi.groovy
+src/main/groovy/org/openapitools/api/PositionsApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/SwapsApi.groovy
+src/main/groovy/org/openapitools/api/TickDayDataApi.groovy
+src/main/groovy/org/openapitools/api/TicksApi.groovy
 src/main/groovy/org/openapitools/api/TokensApi.groovy
 src/main/groovy/org/openapitools/api/TradesApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy

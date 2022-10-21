@@ -18,8 +18,11 @@ import 'package:openapi/src/api/pool_day_data_api.dart';
 import 'package:openapi/src/api/pool_hour_data_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/position_snapshot_api.dart';
+import 'package:openapi/src/api/positions_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
+import 'package:openapi/src/api/tick_day_data_api.dart';
+import 'package:openapi/src/api/ticks_api.dart';
 import 'package:openapi/src/api/tokens_api.dart';
 import 'package:openapi/src/api/trades_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
@@ -133,6 +136,12 @@ class Openapi {
     return PositionSnapshotApi(dio, serializers);
   }
 
+  /// Get PositionsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PositionsApi getPositionsApi() {
+    return PositionsApi(dio, serializers);
+  }
+
   /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   SushiswapApi getSushiswapApi() {
@@ -143,6 +152,18 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   SwapsApi getSwapsApi() {
     return SwapsApi(dio, serializers);
+  }
+
+  /// Get TickDayDataApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TickDayDataApi getTickDayDataApi() {
+    return TickDayDataApi(dio, serializers);
+  }
+
+  /// Get TicksApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TicksApi getTicksApi() {
+    return TicksApi(dio, serializers);
   }
 
   /// Get TokensApi instance, base route and serializer can be overridden by a given but be careful,

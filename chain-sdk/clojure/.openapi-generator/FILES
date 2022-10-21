@@ -11,8 +11,11 @@ src/on_chain_api/api/pool_day_data.clj
 src/on_chain_api/api/pool_hour_data.clj
 src/on_chain_api/api/pools.clj
 src/on_chain_api/api/position_snapshot.clj
+src/on_chain_api/api/positions.clj
 src/on_chain_api/api/sushiswap.clj
 src/on_chain_api/api/swaps.clj
+src/on_chain_api/api/tick_day_data.clj
+src/on_chain_api/api/ticks.clj
 src/on_chain_api/api/tokens.clj
 src/on_chain_api/api/trades.clj
 src/on_chain_api/api/uniswap_v_.clj

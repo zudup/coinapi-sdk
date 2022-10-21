@@ -68,9 +68,15 @@ type APIClient struct {
 
 	PositionSnapshotApi *PositionSnapshotApiService
 
+	PositionsApi *PositionsApiService
+
 	SushiswapApi *SushiswapApiService
 
 	SwapsApi *SwapsApiService
+
+	TickDayDataApi *TickDayDataApiService
+
+	TicksApi *TicksApiService
 
 	TokensApi *TokensApiService
 
@@ -106,8 +112,11 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.PoolHourDataApi = (*PoolHourDataApiService)(&c.common)
 	c.PoolsApi = (*PoolsApiService)(&c.common)
 	c.PositionSnapshotApi = (*PositionSnapshotApiService)(&c.common)
+	c.PositionsApi = (*PositionsApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
 	c.SwapsApi = (*SwapsApiService)(&c.common)
+	c.TickDayDataApi = (*TickDayDataApiService)(&c.common)
+	c.TicksApi = (*TicksApiService)(&c.common)
 	c.TokensApi = (*TokensApiService)(&c.common)
 	c.TradesApi = (*TradesApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)

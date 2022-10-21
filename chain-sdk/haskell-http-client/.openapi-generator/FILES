@@ -15,8 +15,11 @@ lib/OnChain/API/PoolDayData.hs
 lib/OnChain/API/PoolHourData.hs
 lib/OnChain/API/Pools.hs
 lib/OnChain/API/PositionSnapshot.hs
+lib/OnChain/API/Positions.hs
 lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/Swaps.hs
+lib/OnChain/API/TickDayData.hs
+lib/OnChain/API/Ticks.hs
 lib/OnChain/API/Tokens.hs
 lib/OnChain/API/Trades.hs
 lib/OnChain/API/UniswapV2.hs

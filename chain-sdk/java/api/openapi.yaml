@@ -996,6 +996,61 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv3/positions/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Positions
+      x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/positions/current:
     get:
       parameters:
@@ -1430,6 +1485,116 @@ paths:
       summary: GetSwaps
       tags:
       - UniswapV2
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - TickDayData
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv3/ticks/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Ticks
       x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/ticks/current:
     get:

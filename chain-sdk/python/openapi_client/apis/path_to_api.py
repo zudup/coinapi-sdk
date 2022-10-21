@@ -22,6 +22,7 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_pools_current imp
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_pools_current import ChainsChainIdDappsSushiswapPoolsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_pools_day_data_current import ChainsChainIdDappsUniswapv3PoolsDayDataCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_pools_hour_data_current import ChainsChainIdDappsUniswapv3PoolsHourDataCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_positions_historical import ChainsChainIdDappsUniswapv3PositionsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_positions_current import ChainsChainIdDappsUniswapv3PositionsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_position_snapshot_historical import ChainsChainIdDappsUniswapv3PositionSnapshotHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_position_snapshots_current import ChainsChainIdDappsUniswapv3PositionSnapshotsCurrent
@@ -31,6 +32,8 @@ from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_swaps_historical 
 from openapi_client.apis.paths.chains_chain_id_dapps_curve_swaps_historical import ChainsChainIdDappsCurveSwapsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_swaps_current import ChainsChainIdDappsUniswapv3SwapsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_swaps_current import ChainsChainIdDappsUniswapv2SwapsCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_tick_day_data_historical import ChainsChainIdDappsUniswapv3TickDayDataHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_ticks_historical import ChainsChainIdDappsUniswapv3TicksHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_ticks_current import ChainsChainIdDappsUniswapv3TicksCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_ticks_day_data_current import ChainsChainIdDappsUniswapv3TicksDayDataCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_tokens_historical import ChainsChainIdDappsUniswapv3TokensHistorical
@@ -72,6 +75,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_POOLS_CURRENT: ChainsChainIdDappsSushiswapPoolsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3PoolsDayDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HOUR_DATA_CURRENT: ChainsChainIdDappsUniswapv3PoolsHourDataCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITIONS_HISTORICAL: ChainsChainIdDappsUniswapv3PositionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITIONS_CURRENT: ChainsChainIdDappsUniswapv3PositionsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOT_HISTORICAL: ChainsChainIdDappsUniswapv3PositionSnapshotHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOTS_CURRENT: ChainsChainIdDappsUniswapv3PositionSnapshotsCurrent,
@@ -81,6 +85,8 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_SWAPS_HISTORICAL: ChainsChainIdDappsCurveSwapsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_SWAPS_CURRENT: ChainsChainIdDappsUniswapv3SwapsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_SWAPS_CURRENT: ChainsChainIdDappsUniswapv2SwapsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICK_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3TickDayDataHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_HISTORICAL: ChainsChainIdDappsUniswapv3TicksHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_CURRENT: ChainsChainIdDappsUniswapv3TicksCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3TicksDayDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKENS_HISTORICAL: ChainsChainIdDappsUniswapv3TokensHistorical,
@@ -123,6 +129,7 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_POOLS_CURRENT: ChainsChainIdDappsSushiswapPoolsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3PoolsDayDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POOLS_HOUR_DATA_CURRENT: ChainsChainIdDappsUniswapv3PoolsHourDataCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITIONS_HISTORICAL: ChainsChainIdDappsUniswapv3PositionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITIONS_CURRENT: ChainsChainIdDappsUniswapv3PositionsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOT_HISTORICAL: ChainsChainIdDappsUniswapv3PositionSnapshotHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_POSITION_SNAPSHOTS_CURRENT: ChainsChainIdDappsUniswapv3PositionSnapshotsCurrent,
@@ -132,6 +139,8 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_SWAPS_HISTORICAL: ChainsChainIdDappsCurveSwapsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_SWAPS_CURRENT: ChainsChainIdDappsUniswapv3SwapsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_SWAPS_CURRENT: ChainsChainIdDappsUniswapv2SwapsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICK_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3TickDayDataHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_HISTORICAL: ChainsChainIdDappsUniswapv3TicksHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_CURRENT: ChainsChainIdDappsUniswapv3TicksCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TICKS_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3TicksDayDataCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TOKENS_HISTORICAL: ChainsChainIdDappsUniswapv3TokensHistorical,

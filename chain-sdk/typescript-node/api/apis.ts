@@ -16,10 +16,16 @@ export * from './poolsApi';
 import { PoolsApi } from './poolsApi';
 export * from './positionSnapshotApi';
 import { PositionSnapshotApi } from './positionSnapshotApi';
+export * from './positionsApi';
+import { PositionsApi } from './positionsApi';
 export * from './sushiswapApi';
 import { SushiswapApi } from './sushiswapApi';
 export * from './swapsApi';
 import { SwapsApi } from './swapsApi';
+export * from './tickDayDataApi';
+import { TickDayDataApi } from './tickDayDataApi';
+export * from './ticksApi';
+import { TicksApi } from './ticksApi';
 export * from './tokensApi';
 import { TokensApi } from './tokensApi';
 export * from './tradesApi';
@@ -39,4 +45,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [BundlesApi, BurnsApi, FactoryApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, SushiswapApi, SwapsApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [BundlesApi, BurnsApi, FactoryApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokensApi, TradesApi, UniswapV2Api, UniswapV3Api];
