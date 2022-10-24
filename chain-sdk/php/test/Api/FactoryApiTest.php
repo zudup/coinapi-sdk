@@ -73,6 +73,18 @@ class FactoryApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsUniswapv2FactoryHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2FactoryHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3FactoryHistoricalGet
      *
      * .

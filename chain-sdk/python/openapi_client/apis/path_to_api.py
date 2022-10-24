@@ -9,6 +9,7 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_historical 
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_burns_historical import ChainsChainIdDappsUniswapv2BurnsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_current import ChainsChainIdDappsUniswapv3BurnsCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_historical import ChainsChainIdDappsUniswapv3FactoryHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_factory_historical import ChainsChainIdDappsUniswapv2FactoryHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_current import ChainsChainIdDappsUniswapv3FactoryCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_liquidity_position_historical import ChainsChainIdDappsUniswapv2LiquidityPositionHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_liquidity_position_snapshots_historical import ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistorical
@@ -61,7 +62,9 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_tokens_hour_data_
 from openapi_client.apis.paths.chains_chain_id_dapps_dex_trades_historical import ChainsChainIdDappsDexTradesHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_cow_trades_historical import ChainsChainIdDappsCowTradesHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_transactions_historical import ChainsChainIdDappsUniswapv3TransactionsHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_transactions_historical import ChainsChainIdDappsUniswapv2TransactionsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical import ChainsChainIdDappsUniswapv3UniswapDayDataHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical import ChainsChainIdDappsUniswapv2UniswapDayDataHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_uniswap_day_data_current import ChainsChainIdDappsUniswapv3UniswapDayDataCurrent
 
 PathToApi = typing_extensions.TypedDict(
@@ -75,6 +78,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv2BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv2FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_SNAPSHOTS_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistorical,
@@ -127,7 +131,9 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TRADES_HISTORICAL: ChainsChainIdDappsDexTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_COW_TRADES_HISTORICAL: ChainsChainIdDappsCowTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv3TransactionsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv2TransactionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3UniswapDayDataHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv2UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
     }
 )
@@ -142,6 +148,7 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv2BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv2FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_SNAPSHOTS_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistorical,
@@ -194,7 +201,9 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TRADES_HISTORICAL: ChainsChainIdDappsDexTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_COW_TRADES_HISTORICAL: ChainsChainIdDappsCowTradesHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv3TransactionsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_TRANSACTIONS_HISTORICAL: ChainsChainIdDappsUniswapv2TransactionsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3UniswapDayDataHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv2UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
     }
 )

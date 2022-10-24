@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UniswapDayDataApi' {
+    Context 'Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

@@ -16,6 +16,14 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsUniswapv2TransactionsHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv3TransactionsHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -28,6 +36,27 @@ export interface ChainsChainIdDappsUniswapv3TransactionsHistoricalGetRequest {
  * no description
  */
 export class TransactionsApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsUniswapv2TransactionsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2TransactionsHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2TransactionsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2TransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2TransactionsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2TransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2TransactionsHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/uniswapv2/transactions/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

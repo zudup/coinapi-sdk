@@ -60,6 +60,8 @@ Method | HTTP request | Description
 ### FactoryManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2FactoryHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/factory/historical | .
+*chainsChainIdDappsUniswapv2FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/factory/historical | .
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
 
@@ -229,6 +231,8 @@ Method | HTTP request | Description
 ### TransactionsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/transactions/historical | .
+*chainsChainIdDappsUniswapv2TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/transactions/historical | .
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
 
@@ -236,6 +240,8 @@ Method | HTTP request | Description
 ### UniswapDayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | .
+*chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | .
 *chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
 *chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
 

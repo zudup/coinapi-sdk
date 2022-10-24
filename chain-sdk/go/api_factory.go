@@ -25,6 +25,132 @@ import (
 // FactoryApiService FactoryApi service
 type FactoryApiService service
 
+type ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest struct {
+	ctx context.Context
+	ApiService *FactoryApiService
+	chainId string
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+}
+
+func (r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ChainsChainIdDappsUniswapv2FactoryHistoricalGetExecute(r)
+}
+
+/*
+ChainsChainIdDappsUniswapv2FactoryHistoricalGet Method for ChainsChainIdDappsUniswapv2FactoryHistoricalGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param chainId
+ @return ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest
+*/
+func (a *FactoryApiService) ChainsChainIdDappsUniswapv2FactoryHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest {
+	return ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		chainId: chainId,
+	}
+}
+
+// Execute executes the request
+func (a *FactoryApiService) ChainsChainIdDappsUniswapv2FactoryHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv2FactoryHistoricalGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FactoryApiService.ChainsChainIdDappsUniswapv2FactoryHistoricalGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv2/factory/historical"
+	localVarPath = strings.Replace(localVarPath, "{"+"chain_id"+"}", url.PathEscape(parameterToString(r.chainId, "")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiChainsChainIdDappsUniswapv3FactoryHistoricalGetRequest struct {
 	ctx context.Context
 	ApiService *FactoryApiService

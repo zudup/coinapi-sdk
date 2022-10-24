@@ -33,6 +33,26 @@ class UniswapDayDataApi(baseUrl: String) {
    * @param startDate 
    * @param endDate 
    */
+  def chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withPathParam("chain_id", chainId)
+      .withSuccessResponse[Unit](200)
+      
+
+  /**
+   * Expected answers:
+   *   code 200 :  (Success)
+   * 
+   * @param chainId 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   */
   def chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)

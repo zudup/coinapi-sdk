@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'FactoryApi' {
+    Context 'Invoke-ChainsChainIdDappsUniswapv2FactoryHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsUniswapv2FactoryHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsUniswapv2FactoryHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv3FactoryHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv3FactoryHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv3FactoryHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

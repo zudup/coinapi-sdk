@@ -48,6 +48,16 @@
   }
 
   describe('UniswapDayDataApi', function() {
+    describe('chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet

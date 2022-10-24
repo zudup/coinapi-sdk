@@ -72,6 +72,7 @@ _()
     operations["chainsChainIdDappsUniswapv3BundlesHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2BurnsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2FactoryHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet"]=1
@@ -109,7 +110,9 @@ _()
     operations["chainsChainIdDappsUniswapv3TokensHistoricalGet"]=1
     operations["chainsChainIdDappsCowTradesHistoricalGet"]=1
     operations["chainsChainIdDappsDexTradesHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]=1
+    operations["chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2PoolsCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv2SwapsCurrentGet"]=1
@@ -138,6 +141,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3BundlesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2BurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsUniswapv2FactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
@@ -175,7 +179,9 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3TokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsCowTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsDexTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2PoolsCurrentGet"]="chain_id= "
     operation_parameters["chainsChainIdDappsUniswapv2SwapsCurrentGet"]="chain_id= "

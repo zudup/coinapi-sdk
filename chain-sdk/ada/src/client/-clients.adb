@@ -110,6 +110,29 @@ package body .Clients is
    end Chains_Chain_Id_Dapps_Uniswapv_3Burns_Historical_Get;
 
    --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_2Factory_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv2/factory/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_2Factory_Historical_Get;
+
+   --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_3Factory_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -1005,6 +1028,29 @@ package body .Clients is
    end Chains_Chain_Id_Dapps_Dex_Trades_Historical_Get;
 
    --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_2Transactions_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv2/transactions/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_2Transactions_Historical_Get;
+
+   --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_3Transactions_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -1026,6 +1072,29 @@ package body .Clients is
       URI.Set_Path_Param ("chain_id", Chain_Id);
       Client.Call (Swagger.Clients.GET, URI);
    end Chains_Chain_Id_Dapps_Uniswapv_3Transactions_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_2Uniswap_Day_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Uniswapv_2Uniswap_Day_Data_Historical_Get;
 
    --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_3Uniswap_Day_Data_Historical_Get

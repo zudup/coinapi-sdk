@@ -35,6 +35,20 @@ public class TransactionsApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsUniswapv2TransactionsHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        api.chainsChainIdDappsUniswapv2TransactionsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv3TransactionsHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;
