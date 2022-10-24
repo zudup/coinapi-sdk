@@ -110,6 +110,7 @@ _()
     operations["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TicksHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapTokenDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet"]=1
@@ -121,6 +122,7 @@ _()
     operations["chainsChainIdDappsUniswapv3TokensHistoricalGet"]=1
     operations["chainsChainIdDappsCowTradesHistoricalGet"]=1
     operations["chainsChainIdDappsDexTradesHistoricalGet"]=1
+    operations["chainsChainIdDappsSushiswapTransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2DayDataHistoricalGet"]=1
@@ -144,6 +146,7 @@ _()
     operations["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsSushiswapUsersHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2UsersHistoricalGet"]=1
 
     # An associative array of operations to their parameters
@@ -191,6 +194,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3TicksHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsSushiswapTokenDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
@@ -202,6 +206,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3TokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsCowTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsDexTradesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsSushiswapTransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2DayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
@@ -225,6 +230,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsSushiswapUsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2UsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
 
     # An associative array of possible values for enum parameters

@@ -8,6 +8,10 @@
 
 
 void
+TransactionsAPI_chainsChainIdDappsSushiswapTransactionsHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
 TransactionsAPI_chainsChainIdDappsUniswapv2TransactionsHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

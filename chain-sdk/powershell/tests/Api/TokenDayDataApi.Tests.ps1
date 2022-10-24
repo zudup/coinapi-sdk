@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'TokenDayDataApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapTokenDayDataHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapTokenDayDataHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapTokenDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"

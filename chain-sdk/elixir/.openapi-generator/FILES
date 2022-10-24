@@ -30,7 +30,7 @@ lib/on_chain_api/api/transactions.ex
 lib/on_chain_api/api/uniswap_day_data.ex
 lib/on_chain_api/api/uniswap_v2.ex
 lib/on_chain_api/api/uniswap_v3.ex
-lib/on_chain_api/api/user.ex
+lib/on_chain_api/api/users.ex
 lib/on_chain_api/connection.ex
 lib/on_chain_api/deserializer.ex
 lib/on_chain_api/model/big_integer.ex

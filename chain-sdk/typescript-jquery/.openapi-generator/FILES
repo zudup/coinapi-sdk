@@ -25,7 +25,7 @@ api/TransactionsApi.ts
 api/UniswapDayDataApi.ts
 api/UniswapV2Api.ts
 api/UniswapV3Api.ts
-api/UserApi.ts
+api/UsersApi.ts
 api/api.ts
 configuration.ts
 git_push.sh

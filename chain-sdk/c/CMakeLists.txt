@@ -104,7 +104,7 @@ set(SRCS
     api/UniswapDayDataAPI.c
     api/UniswapV2API.c
     api/UniswapV3API.c
-    api/UserAPI.c
+    api/UsersAPI.c
 
 )
 
@@ -165,7 +165,7 @@ set(HDRS
     api/UniswapDayDataAPI.h
     api/UniswapV2API.h
     api/UniswapV3API.h
-    api/UserAPI.h
+    api/UsersAPI.h
 
 )
 
@@ -273,7 +273,7 @@ set(HDRS "")
 #    unit-tests/manual-UniswapDayDataAPI.c
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c
-#    unit-tests/manual-UserAPI.c
+#    unit-tests/manual-UsersAPI.c
 #)
 
 ##set header files

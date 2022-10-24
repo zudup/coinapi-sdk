@@ -40,7 +40,7 @@ module OnChain.API
   , module OnChain.API.UniswapDayData
   , module OnChain.API.UniswapV2
   , module OnChain.API.UniswapV3
-  , module OnChain.API.User
+  , module OnChain.API.Users
   ) where
 
 import OnChain.API.Bundles
@@ -69,4 +69,4 @@ import OnChain.API.Transactions
 import OnChain.API.UniswapDayData
 import OnChain.API.UniswapV2
 import OnChain.API.UniswapV3
-import OnChain.API.User
+import OnChain.API.Users

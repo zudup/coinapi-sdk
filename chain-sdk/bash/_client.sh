@@ -320,14 +320,16 @@ case $state in
             "chainsChainIdDappsSushiswapTokensCurrentGet[GetTokens]"             "chainsChainIdDappsCurveSwapsHistoricalGet[]" \
             "chainsChainIdDappsSushiswapSwapsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2SwapsHistoricalGet[]" \
-            "chainsChainIdDappsUniswapv3SwapsHistoricalGet[]"             "chainsChainIdDappsUniswapv3TickDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TicksHistoricalGet[]"             "chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3SwapsHistoricalGet[]"             "chainsChainIdDappsUniswapv3TickDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TicksHistoricalGet[]"             "chainsChainIdDappsSushiswapTokenDayDataHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet[]"             "chainsChainIdDappsCowTokensHistoricalGet[]" \
             "chainsChainIdDappsCurveTokensHistoricalGet[]" \
             "chainsChainIdDappsDexTokensHistoricalGet[]" \
             "chainsChainIdDappsSushiswapTokensHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2TokensHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3TokensHistoricalGet[]"             "chainsChainIdDappsCowTradesHistoricalGet[]" \
-            "chainsChainIdDappsDexTradesHistoricalGet[]"             "chainsChainIdDappsUniswapv2TransactionsHistoricalGet[]" \
+            "chainsChainIdDappsDexTradesHistoricalGet[]"             "chainsChainIdDappsSushiswapTransactionsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2TransactionsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3TransactionsHistoricalGet[]"             "chainsChainIdDappsUniswapv2DayDataHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3DayDataHistoricalGet[]"             "chainsChainIdDappsUniswapv2PoolsCurrentGet[GetPools]" \
             "chainsChainIdDappsUniswapv2SwapsCurrentGet[GetSwaps]" \
@@ -346,7 +348,8 @@ case $state in
             "chainsChainIdDappsUniswapv3TokensCurrentGet[GetTokens]" \
             "chainsChainIdDappsUniswapv3TokensDayDataCurrentGet[GetTokensDayData]" \
             "chainsChainIdDappsUniswapv3TokensHourDataCurrentGet[GetTokensHourData]" \
-            "chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]"             "chainsChainIdDappsUniswapv2UsersHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]"             "chainsChainIdDappsSushiswapUsersHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2UsersHistoricalGet[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -832,6 +835,18 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      chainsChainIdDappsSushiswapTokenDayDataHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
@@ -952,6 +967,17 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsDexTradesHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsSushiswapTransactionsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
           "chain_id=:[PATH] "
@@ -1150,6 +1176,17 @@ case $state in
         _op_arguments=(
           "chain_id=:[PATH] Chain id"
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsSushiswapUsersHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsUniswapv2UsersHistoricalGet)

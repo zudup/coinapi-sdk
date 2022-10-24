@@ -58,7 +58,7 @@ R/uniswap_day_data_api.R
 R/uniswap_day_data_v3_dto.R
 R/uniswap_v2_api.R
 R/uniswap_v3_api.R
-R/user_api.R
+R/users_api.R
 README.md
 docs/BigInteger.md
 docs/BundleV3DTO.md
@@ -110,7 +110,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
-docs/UserApi.md
+docs/UsersApi.md
 git_push.sh
 tests/testthat.R
 tests/testthat/test_big_integer.R
@@ -163,4 +163,4 @@ tests/testthat/test_uniswap_day_data_api.R
 tests/testthat/test_uniswap_day_data_v3_dto.R
 tests/testthat/test_uniswap_v2_api.R
 tests/testthat/test_uniswap_v3_api.R
-tests/testthat/test_user_api.R
+tests/testthat/test_users_api.R

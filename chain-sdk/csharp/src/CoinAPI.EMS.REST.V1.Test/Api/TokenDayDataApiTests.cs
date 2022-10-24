@@ -63,6 +63,23 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
+        /// Test ChainsChainIdDappsSushiswapTokenDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void ChainsChainIdDappsSushiswapTokenDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.ChainsChainIdDappsSushiswapTokenDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
         /// Test ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet
         /// </summary>
         [Test]

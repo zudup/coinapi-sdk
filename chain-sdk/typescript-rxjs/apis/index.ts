@@ -24,4 +24,4 @@ export * from './TransactionsApi';
 export * from './UniswapDayDataApi';
 export * from './UniswapV2Api';
 export * from './UniswapV3Api';
-export * from './UserApi';
+export * from './UsersApi';

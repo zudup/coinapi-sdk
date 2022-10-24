@@ -17,6 +17,11 @@ void main() {
   // final instance = TokenDayDataApi();
 
   group('tests for TokenDayDataApi', () {
+    //Future chainsChainIdDappsSushiswapTokenDayDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test chainsChainIdDappsSushiswapTokenDayDataHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet', () async {
       // TODO

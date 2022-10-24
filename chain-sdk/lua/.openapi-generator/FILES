@@ -28,7 +28,7 @@ openapiclient/api/transactions_api.lua
 openapiclient/api/uniswap_day_data_api.lua
 openapiclient/api/uniswap_v2_api.lua
 openapiclient/api/uniswap_v3_api.lua
-openapiclient/api/user_api.lua
+openapiclient/api/users_api.lua
 openapiclient/model/big_integer.lua
 openapiclient/model/bundle_v3_dto.lua
 openapiclient/model/burn_v3_dto.lua
@@ -103,4 +103,4 @@ spec/uniswap_day_data_api_spec.lua
 spec/uniswap_day_data_v3_dto_spec.lua
 spec/uniswap_v2_api_spec.lua
 spec/uniswap_v3_api_spec.lua
-spec/user_api_spec.lua
+spec/users_api_spec.lua

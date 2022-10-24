@@ -28,7 +28,7 @@ import { TransactionsService } from './api/transactions.service';
 import { UniswapDayDataService } from './api/uniswapDayData.service';
 import { UniswapV2Service } from './api/uniswapV2.service';
 import { UniswapV3Service } from './api/uniswapV3.service';
-import { UserService } from './api/user.service';
+import { UsersService } from './api/users.service';
 
 @NgModule({
   imports:      [],

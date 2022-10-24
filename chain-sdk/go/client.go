@@ -102,7 +102,7 @@ type APIClient struct {
 
 	UniswapV3Api *UniswapV3ApiService
 
-	UserApi *UserApiService
+	UsersApi *UsersApiService
 }
 
 type service struct {
@@ -147,7 +147,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.UniswapDayDataApi = (*UniswapDayDataApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
-	c.UserApi = (*UserApiService)(&c.common)
+	c.UsersApi = (*UsersApiService)(&c.common)
 
 	return c
 }

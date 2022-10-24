@@ -73,6 +73,18 @@ class TransactionsApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsSushiswapTransactionsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsSushiswapTransactionsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv2TransactionsHistoricalGet
      *
      * .

@@ -15,7 +15,8 @@
 
 
 module Api.Request.Transactions exposing
-    ( chainsChainIdDappsUniswapv2TransactionsHistoricalGet
+    ( chainsChainIdDappsSushiswapTransactionsHistoricalGet
+    , chainsChainIdDappsUniswapv2TransactionsHistoricalGet
     , chainsChainIdDappsUniswapv3TransactionsHistoricalGet
     )
 
@@ -26,6 +27,19 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+
+
+chainsChainIdDappsSushiswapTransactionsHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+chainsChainIdDappsSushiswapTransactionsHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/chains/{chain_id}/dapps/sushiswap/transactions/historical"
+        [ ( "chainId", identity chainId_path ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
 
 
 

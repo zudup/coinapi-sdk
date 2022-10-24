@@ -35,7 +35,7 @@ export 'package:openapi/src/api/transactions_api.dart';
 export 'package:openapi/src/api/uniswap_day_data_api.dart';
 export 'package:openapi/src/api/uniswap_v2_api.dart';
 export 'package:openapi/src/api/uniswap_v3_api.dart';
-export 'package:openapi/src/api/user_api.dart';
+export 'package:openapi/src/api/users_api.dart';
 
 export 'package:openapi/src/model/big_integer.dart';
 export 'package:openapi/src/model/bundle_v3_dto.dart';

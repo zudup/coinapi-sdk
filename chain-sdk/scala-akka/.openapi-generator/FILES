@@ -51,7 +51,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
-docs/UserApi.md
+docs/UsersApi.md
 pom.xml
 project/build.properties
 src/main/resources/reference.conf
@@ -82,7 +82,7 @@ src/main/scala/org/openapitools/client/api/TransactionsApi.scala
 src/main/scala/org/openapitools/client/api/UniswapDayDataApi.scala
 src/main/scala/org/openapitools/client/api/UniswapV2Api.scala
 src/main/scala/org/openapitools/client/api/UniswapV3Api.scala
-src/main/scala/org/openapitools/client/api/UserApi.scala
+src/main/scala/org/openapitools/client/api/UsersApi.scala
 src/main/scala/org/openapitools/client/core/ApiInvoker.scala
 src/main/scala/org/openapitools/client/core/ApiRequest.scala
 src/main/scala/org/openapitools/client/core/ApiSettings.scala

@@ -53,7 +53,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
-docs/UserApi.md
+docs/UsersApi.md
 git_push.sh
 src/CoinAPI.EMS.REST.V1.Test/Api/BundlesApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/BurnsApiTests.cs
@@ -81,7 +81,7 @@ src/CoinAPI.EMS.REST.V1.Test/Api/TransactionsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapDayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV2ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV3ApiTests.cs
-src/CoinAPI.EMS.REST.V1.Test/Api/UserApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/UsersApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/CoinAPI.EMS.REST.V1.Test.csproj
 src/CoinAPI.EMS.REST.V1.Test/Model/BigIntegerTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/BundleV3DTOTests.cs
@@ -133,7 +133,7 @@ src/CoinAPI.EMS.REST.V1/Api/TransactionsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapDayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV2Api.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV3Api.cs
-src/CoinAPI.EMS.REST.V1/Api/UserApi.cs
+src/CoinAPI.EMS.REST.V1/Api/UsersApi.cs
 src/CoinAPI.EMS.REST.V1/Client/ApiClient.cs
 src/CoinAPI.EMS.REST.V1/Client/ApiException.cs
 src/CoinAPI.EMS.REST.V1/Client/ApiResponse.cs

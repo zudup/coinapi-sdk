@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'TransactionsApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapTransactionsHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapTransactionsHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapTransactionsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2TransactionsHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2TransactionsHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2TransactionsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

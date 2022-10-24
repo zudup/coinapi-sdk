@@ -8,6 +8,10 @@
 
 
 void
+TokenDayDataAPI_chainsChainIdDappsSushiswapTokenDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+
+void
 TokenDayDataAPI_chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 

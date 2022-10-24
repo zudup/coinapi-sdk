@@ -28,7 +28,7 @@ src/main/groovy/org/openapitools/api/TransactionsApi.groovy
 src/main/groovy/org/openapitools/api/UniswapDayDataApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy
 src/main/groovy/org/openapitools/api/UniswapV3Api.groovy
-src/main/groovy/org/openapitools/api/UserApi.groovy
+src/main/groovy/org/openapitools/api/UsersApi.groovy
 src/main/groovy/org/openapitools/model/BigInteger.groovy
 src/main/groovy/org/openapitools/model/BundleV3DTO.groovy
 src/main/groovy/org/openapitools/model/BurnV3DTO.groovy

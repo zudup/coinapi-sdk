@@ -107,6 +107,7 @@ Category | Method | HTTP request | Description
 *SwapsAPI* | [**SwapsAPI_chainsChainIdDappsUniswapv3SwapsHistoricalGet**](docs/SwapsAPI.md#SwapsAPI_chainsChainIdDappsUniswapv3SwapsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
 *TickDayDataAPI* | [**TickDayDataAPI_chainsChainIdDappsUniswapv3TickDayDataHistoricalGet**](docs/TickDayDataAPI.md#TickDayDataAPI_chainsChainIdDappsUniswapv3TickDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | 
 *TicksAPI* | [**TicksAPI_chainsChainIdDappsUniswapv3TicksHistoricalGet**](docs/TicksAPI.md#TicksAPI_chainsChainIdDappsUniswapv3TicksHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/historical | 
+*TokenDayDataAPI* | [**TokenDayDataAPI_chainsChainIdDappsSushiswapTokenDayDataHistoricalGet**](docs/TokenDayDataAPI.md#TokenDayDataAPI_chainsChainIdDappsSushiswapTokenDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/tokenDayData/historical | 
 *TokenDayDataAPI* | [**TokenDayDataAPI_chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet**](docs/TokenDayDataAPI.md#TokenDayDataAPI_chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical | 
 *TokenDayDataAPI* | [**TokenDayDataAPI_chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet**](docs/TokenDayDataAPI.md#TokenDayDataAPI_chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | 
 *TokenHourDataAPI* | [**TokenHourDataAPI_chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet**](docs/TokenHourDataAPI.md#TokenHourDataAPI_chainsChainIdDappsUniswapv3TokenHourDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | 
@@ -118,6 +119,7 @@ Category | Method | HTTP request | Description
 *TokensAPI* | [**TokensAPI_chainsChainIdDappsUniswapv3TokensHistoricalGet**](docs/TokensAPI.md#TokensAPI_chainsChainIdDappsUniswapv3TokensHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
 *TradesAPI* | [**TradesAPI_chainsChainIdDappsCowTradesHistoricalGet**](docs/TradesAPI.md#TradesAPI_chainsChainIdDappsCowTradesHistoricalGet) | **GET** /chains/{chain_id}/dapps/cow/trades/historical | 
 *TradesAPI* | [**TradesAPI_chainsChainIdDappsDexTradesHistoricalGet**](docs/TradesAPI.md#TradesAPI_chainsChainIdDappsDexTradesHistoricalGet) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
+*TransactionsAPI* | [**TransactionsAPI_chainsChainIdDappsSushiswapTransactionsHistoricalGet**](docs/TransactionsAPI.md#TransactionsAPI_chainsChainIdDappsSushiswapTransactionsHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/transactions/historical | 
 *TransactionsAPI* | [**TransactionsAPI_chainsChainIdDappsUniswapv2TransactionsHistoricalGet**](docs/TransactionsAPI.md#TransactionsAPI_chainsChainIdDappsUniswapv2TransactionsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/transactions/historical | 
 *TransactionsAPI* | [**TransactionsAPI_chainsChainIdDappsUniswapv3TransactionsHistoricalGet**](docs/TransactionsAPI.md#TransactionsAPI_chainsChainIdDappsUniswapv3TransactionsHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
 *UniswapDayDataAPI* | [**UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet**](docs/UniswapDayDataAPI.md#UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
@@ -141,7 +143,8 @@ Category | Method | HTTP request | Description
 *UniswapV3API* | [**UniswapV3API_chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](docs/UniswapV3API.md#UniswapV3API_chainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
 *UniswapV3API* | [**UniswapV3API_chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](docs/UniswapV3API.md#UniswapV3API_chainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
 *UniswapV3API* | [**UniswapV3API_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](docs/UniswapV3API.md#UniswapV3API_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
-*UserAPI* | [**UserAPI_chainsChainIdDappsUniswapv2UsersHistoricalGet**](docs/UserAPI.md#UserAPI_chainsChainIdDappsUniswapv2UsersHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
+*UsersAPI* | [**UsersAPI_chainsChainIdDappsSushiswapUsersHistoricalGet**](docs/UsersAPI.md#UsersAPI_chainsChainIdDappsSushiswapUsersHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/users/historical | 
+*UsersAPI* | [**UsersAPI_chainsChainIdDappsUniswapv2UsersHistoricalGet**](docs/UsersAPI.md#UsersAPI_chainsChainIdDappsUniswapv2UsersHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
 
 
 ## Documentation for Models

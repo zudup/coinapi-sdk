@@ -53,7 +53,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
-docs/UserApi.md
+docs/UsersApi.md
 git_push.sh
 mocha.opts
 package.json
@@ -84,7 +84,7 @@ src/api/TransactionsApi.js
 src/api/UniswapDayDataApi.js
 src/api/UniswapV2Api.js
 src/api/UniswapV3Api.js
-src/api/UserApi.js
+src/api/UsersApi.js
 src/index.js
 src/model/BigInteger.js
 src/model/BundleV3DTO.js
@@ -136,7 +136,7 @@ test/api/TransactionsApi.spec.js
 test/api/UniswapDayDataApi.spec.js
 test/api/UniswapV2Api.spec.js
 test/api/UniswapV3Api.spec.js
-test/api/UserApi.spec.js
+test/api/UsersApi.spec.js
 test/model/BigInteger.spec.js
 test/model/BundleV3DTO.spec.js
 test/model/BurnV3DTO.spec.js

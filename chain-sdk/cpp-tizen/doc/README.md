@@ -216,6 +216,8 @@ Method | HTTP request | Description
 ### TokenDayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapTokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/tokenDayData/historical | .
+*chainsChainIdDappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/tokenDayData/historical | .
 *chainsChainIdDappsUniswapv2TokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical | .
 *chainsChainIdDappsUniswapv2TokenDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical | .
 *chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | .
@@ -258,6 +260,8 @@ Method | HTTP request | Description
 ### TransactionsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapTransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/transactions/historical | .
+*chainsChainIdDappsSushiswapTransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/transactions/historical | .
 *chainsChainIdDappsUniswapv2TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/transactions/historical | .
 *chainsChainIdDappsUniswapv2TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/transactions/historical | .
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
@@ -321,9 +325,11 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData.
 
 
-### UserManager
+### UsersManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapUsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/users/historical | .
+*chainsChainIdDappsSushiswapUsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
 

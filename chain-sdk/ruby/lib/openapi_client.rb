@@ -69,7 +69,7 @@ require 'openapi_client/api/transactions_api'
 require 'openapi_client/api/uniswap_day_data_api'
 require 'openapi_client/api/uniswap_v2_api'
 require 'openapi_client/api/uniswap_v3_api'
-require 'openapi_client/api/user_api'
+require 'openapi_client/api/users_api'
 
 module OpenapiClient
   class << self

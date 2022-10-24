@@ -32,4 +32,4 @@ class TagValues(str, enum.Enum):
     TRADES = "Trades"
     TRANSACTIONS = "Transactions"
     UNISWAP_DAY_DATA = "UniswapDayData"
-    USER = "User"
+    USERS = "Users"

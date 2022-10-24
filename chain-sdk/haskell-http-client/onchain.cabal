@@ -90,7 +90,7 @@ library
       OnChain.API.UniswapDayData
       OnChain.API.UniswapV2
       OnChain.API.UniswapV3
-      OnChain.API.User
+      OnChain.API.Users
       OnChain.Client
       OnChain.Core
       OnChain.Logging

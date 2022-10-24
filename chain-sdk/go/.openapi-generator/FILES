@@ -29,7 +29,7 @@ api_transactions.go
 api_uniswap_day_data.go
 api_uniswap_v2.go
 api_uniswap_v3.go
-api_user.go
+api_users.go
 client.go
 configuration.go
 docs/BigInteger.md
@@ -82,7 +82,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
-docs/UserApi.md
+docs/UsersApi.md
 git_push.sh
 go.mod
 go.sum

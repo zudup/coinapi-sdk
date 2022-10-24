@@ -52,7 +52,7 @@ docs/UNISWAPDAYDATA_API.md
 docs/UNISWAPV2_API.md
 docs/UNISWAPV3_API.md
 docs/UNISWAP_DAY_DATA_V3_DTO.md
-docs/USER_API.md
+docs/USERS_API.md
 src/api/bundles_api.e
 src/api/burns_api.e
 src/api/day_data_api.e
@@ -79,7 +79,7 @@ src/api/transactions_api.e
 src/api/uniswap_day_data_api.e
 src/api/uniswap_v2_api.e
 src/api/uniswap_v3_api.e
-src/api/user_api.e
+src/api/users_api.e
 src/api_client.e
 src/domain/big_integer.e
 src/domain/bundle_v3_dto.e
@@ -147,5 +147,5 @@ test/apis/transactions_api_test.e
 test/apis/uniswapdaydata_api_test.e
 test/apis/uniswapv2_api_test.e
 test/apis/uniswapv3_api_test.e
-test/apis/user_api_test.e
+test/apis/users_api_test.e
 test/application.e

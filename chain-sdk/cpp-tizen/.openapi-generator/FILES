@@ -110,5 +110,5 @@ src/UniswapV2Manager.cpp
 src/UniswapV2Manager.h
 src/UniswapV3Manager.cpp
 src/UniswapV3Manager.h
-src/UserManager.cpp
-src/UserManager.h
+src/UsersManager.cpp
+src/UsersManager.h
