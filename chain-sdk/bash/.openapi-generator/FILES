@@ -13,9 +13,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md

@@ -5,6 +5,20 @@ context("Test FactoryApi")
 
 api_instance <- FactoryApi$new()
 
+test_that("ChainsChainIdDappsSushiswapFactoryHistoricalGet", {
+  # tests for ChainsChainIdDappsSushiswapFactoryHistoricalGet
+  # base path: https://onchain.coinapi.io
+  # @param chain_id character 
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("ChainsChainIdDappsUniswapv2FactoryHistoricalGet", {
   # tests for ChainsChainIdDappsUniswapv2FactoryHistoricalGet
   # base path: https://onchain.coinapi.io

@@ -17,6 +17,11 @@ void main() {
   // final instance = LiquidityPositionSnapshotsApi();
 
   group('tests for LiquidityPositionSnapshotsApi', () {
+    //Future chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet', () async {
       // TODO

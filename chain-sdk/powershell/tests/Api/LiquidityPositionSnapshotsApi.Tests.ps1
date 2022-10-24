@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'LiquidityPositionSnapshotsApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

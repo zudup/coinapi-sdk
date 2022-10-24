@@ -48,6 +48,16 @@
   }
 
   describe('LiquidityPositionApi', function() {
+    describe('chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet', function() {
+      it('should call chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet
+        //instance.chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet

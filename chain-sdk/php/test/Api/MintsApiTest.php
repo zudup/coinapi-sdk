@@ -73,6 +73,30 @@ class MintsApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsSushiswapMintsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsSushiswapMintsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for chainsChainIdDappsUniswapv2MintsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2MintsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3MintsHistoricalGet
      *
      * .

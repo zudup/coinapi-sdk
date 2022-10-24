@@ -35,6 +35,20 @@ public class FactoryApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsSushiswapFactoryHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        api.chainsChainIdDappsSushiswapFactoryHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv2FactoryHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

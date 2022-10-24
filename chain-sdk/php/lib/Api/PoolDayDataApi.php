@@ -117,6 +117,302 @@ class PoolDayDataApi
     }
 
     /**
+     * Operation chainsChainIdDappsSushiswapPoolDayDataHistoricalGet
+     *
+     * @param  string $chain_id chain_id (required)
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function chainsChainIdDappsSushiswapPoolDayDataHistoricalGet($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->chainsChainIdDappsSushiswapPoolDayDataHistoricalGetWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation chainsChainIdDappsSushiswapPoolDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  string $chain_id (required)
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function chainsChainIdDappsSushiswapPoolDayDataHistoricalGetWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->chainsChainIdDappsSushiswapPoolDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation chainsChainIdDappsSushiswapPoolDayDataHistoricalGetAsync
+     *
+     * @param  string $chain_id (required)
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chainsChainIdDappsSushiswapPoolDayDataHistoricalGetAsync($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->chainsChainIdDappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation chainsChainIdDappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  string $chain_id (required)
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chainsChainIdDappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->chainsChainIdDappsSushiswapPoolDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'chainsChainIdDappsSushiswapPoolDayDataHistoricalGet'
+     *
+     * @param  string $chain_id (required)
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function chainsChainIdDappsSushiswapPoolDayDataHistoricalGetRequest($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+        // verify the required parameter 'chain_id' is set
+        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chain_id when calling chainsChainIdDappsSushiswapPoolDayDataHistoricalGet'
+            );
+        }
+
+
+
+
+
+
+        $resourcePath = '/chains/{chain_id}/dapps/sushiswap/poolDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+        // path params
+        if ($chain_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'chain_id' . '}',
+                ObjectSerializer::toPathValue($chain_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
      *
      * @param  string $chain_id chain_id (required)

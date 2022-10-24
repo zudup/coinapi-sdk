@@ -17,9 +17,9 @@ include/CppRestOpenAPIClient/api/BundlesApi.h
 include/CppRestOpenAPIClient/api/BurnsApi.h
 include/CppRestOpenAPIClient/api/DayDataApi.h
 include/CppRestOpenAPIClient/api/FactoryApi.h
+include/CppRestOpenAPIClient/api/HourDataApi.h
 include/CppRestOpenAPIClient/api/LiquidityPositionApi.h
 include/CppRestOpenAPIClient/api/LiquidityPositionSnapshotsApi.h
-include/CppRestOpenAPIClient/api/MintApi.h
 include/CppRestOpenAPIClient/api/MintsApi.h
 include/CppRestOpenAPIClient/api/PoiApi.h
 include/CppRestOpenAPIClient/api/PoolDayDataApi.h
@@ -76,9 +76,9 @@ src/api/BundlesApi.cpp
 src/api/BurnsApi.cpp
 src/api/DayDataApi.cpp
 src/api/FactoryApi.cpp
+src/api/HourDataApi.cpp
 src/api/LiquidityPositionApi.cpp
 src/api/LiquidityPositionSnapshotsApi.cpp
-src/api/MintApi.cpp
 src/api/MintsApi.cpp
 src/api/PoiApi.cpp
 src/api/PoolDayDataApi.cpp

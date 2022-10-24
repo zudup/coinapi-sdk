@@ -15,6 +15,20 @@ Please update as you see appropriate
 ]]
 describe("mints_api", function()
   local openapiclient_mints_api = require "openapiclient.api.mints_api"
+  -- unit tests for chains_chain_id_dapps_sushiswap_mints_historical_get
+  describe("chains_chain_id_dapps_sushiswap_mints_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for chains_chain_id_dapps_uniswapv2_mints_historical_get
+  describe("chains_chain_id_dapps_uniswapv2_mints_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_uniswapv3_mints_historical_get
   describe("chains_chain_id_dapps_uniswapv3_mints_historical_get test", function()
     it("should work", function()

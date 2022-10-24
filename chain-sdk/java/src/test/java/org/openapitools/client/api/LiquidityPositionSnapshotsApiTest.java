@@ -35,6 +35,21 @@ public class LiquidityPositionSnapshotsApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        api.chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

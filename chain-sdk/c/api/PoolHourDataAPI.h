@@ -8,6 +8,10 @@
 
 
 void
+PoolHourDataAPI_chainsChainIdDappsSushiswapPoolHourDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
 PoolHourDataAPI_chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

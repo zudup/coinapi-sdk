@@ -8,6 +8,10 @@
 
 
 void
+FactoryAPI_chainsChainIdDappsSushiswapFactoryHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
 FactoryAPI_chainsChainIdDappsUniswapv2FactoryHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

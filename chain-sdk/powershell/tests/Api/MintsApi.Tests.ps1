@@ -7,6 +7,22 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'MintsApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapMintsHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapMintsHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapMintsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-ChainsChainIdDappsUniswapv2MintsHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsUniswapv2MintsHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsUniswapv2MintsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv3MintsHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv3MintsHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv3MintsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

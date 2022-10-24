@@ -16,9 +16,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -64,9 +64,9 @@ lib/openapi_client/api/bundles_api.rb
 lib/openapi_client/api/burns_api.rb
 lib/openapi_client/api/day_data_api.rb
 lib/openapi_client/api/factory_api.rb
+lib/openapi_client/api/hour_data_api.rb
 lib/openapi_client/api/liquidity_position_api.rb
 lib/openapi_client/api/liquidity_position_snapshots_api.rb
-lib/openapi_client/api/mint_api.rb
 lib/openapi_client/api/mints_api.rb
 lib/openapi_client/api/poi_api.rb
 lib/openapi_client/api/pool_day_data_api.rb
@@ -120,9 +120,9 @@ spec/api/bundles_api_spec.rb
 spec/api/burns_api_spec.rb
 spec/api/day_data_api_spec.rb
 spec/api/factory_api_spec.rb
+spec/api/hour_data_api_spec.rb
 spec/api/liquidity_position_api_spec.rb
 spec/api/liquidity_position_snapshots_api_spec.rb
-spec/api/mint_api_spec.rb
 spec/api/mints_api_spec.rb
 spec/api/poi_api_spec.rb
 spec/api/pool_day_data_api_spec.rb

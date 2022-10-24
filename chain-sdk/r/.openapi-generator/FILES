@@ -17,9 +17,9 @@ R/day_data_api.R
 R/e_trade_aggressive_side.R
 R/factory_api.R
 R/factory_v3_dto.R
+R/hour_data_api.R
 R/liquidity_position_api.R
 R/liquidity_position_snapshots_api.R
-R/mint_api.R
 R/mint_v3_dto.R
 R/mints_api.R
 R/pair_dto.R
@@ -69,9 +69,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -122,9 +122,9 @@ tests/testthat/test_day_data_api.R
 tests/testthat/test_e_trade_aggressive_side.R
 tests/testthat/test_factory_api.R
 tests/testthat/test_factory_v3_dto.R
+tests/testthat/test_hour_data_api.R
 tests/testthat/test_liquidity_position_api.R
 tests/testthat/test_liquidity_position_snapshots_api.R
-tests/testthat/test_mint_api.R
 tests/testthat/test_mint_v3_dto.R
 tests/testthat/test_mints_api.R
 tests/testthat/test_pair_dto.R

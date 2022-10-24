@@ -4,9 +4,9 @@ apis/BundlesApi.ts
 apis/BurnsApi.ts
 apis/DayDataApi.ts
 apis/FactoryApi.ts
+apis/HourDataApi.ts
 apis/LiquidityPositionApi.ts
 apis/LiquidityPositionSnapshotsApi.ts
-apis/MintApi.ts
 apis/MintsApi.ts
 apis/PoiApi.ts
 apis/PoolDayDataApi.ts

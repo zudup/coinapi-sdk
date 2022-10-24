@@ -16,6 +16,82 @@ class LiquidityPositionSnapshotsApi {
 
   final ApiClient apiClient;
 
+  /// Performs an HTTP 'GET /chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [String] chainId (required):
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical'
+      .replaceAll('{chain_id}', chainId);
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [String] chainId (required):
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo(chainId,  startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// Performs an HTTP 'GET /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical' operation and returns the [Response].
   /// Parameters:
   ///

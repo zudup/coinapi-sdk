@@ -14,9 +14,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -62,9 +62,9 @@ src/CoinAPI.EMS.REST.V1.Test/Api/BundlesApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/BurnsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/DayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/FactoryApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/HourDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionSnapshotsApiTests.cs
-src/CoinAPI.EMS.REST.V1.Test/Api/MintApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/MintsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoiApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolDayDataApiTests.cs
@@ -115,9 +115,9 @@ src/CoinAPI.EMS.REST.V1/Api/BundlesApi.cs
 src/CoinAPI.EMS.REST.V1/Api/BurnsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/DayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/FactoryApi.cs
+src/CoinAPI.EMS.REST.V1/Api/HourDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionSnapshotsApi.cs
-src/CoinAPI.EMS.REST.V1/Api/MintApi.cs
 src/CoinAPI.EMS.REST.V1/Api/MintsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoiApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolDayDataApi.cs

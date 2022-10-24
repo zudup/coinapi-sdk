@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getPoolDayDataApi();
 
   group(PoolDayDataApi, () {
+    //Future chainsChainIdDappsSushiswapPoolDayDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsSushiswapPoolDayDataHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet', () async {
       // TODO

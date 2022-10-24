@@ -8,9 +8,9 @@ lib/on_chain_api/api/bundles.ex
 lib/on_chain_api/api/burns.ex
 lib/on_chain_api/api/day_data.ex
 lib/on_chain_api/api/factory.ex
+lib/on_chain_api/api/hour_data.ex
 lib/on_chain_api/api/liquidity_position.ex
 lib/on_chain_api/api/liquidity_position_snapshots.ex
-lib/on_chain_api/api/mint.ex
 lib/on_chain_api/api/mints.ex
 lib/on_chain_api/api/poi.ex
 lib/on_chain_api/api/pool_day_data.ex

@@ -8,6 +8,10 @@
 
 
 void
+LiquidityPositionAPI_chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
 LiquidityPositionAPI_chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

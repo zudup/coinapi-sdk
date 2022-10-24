@@ -15,6 +15,13 @@ Please update as you see appropriate
 ]]
 describe("poi_api", function()
   local openapiclient_poi_api = require "openapiclient.api.poi_api"
+  -- unit tests for chains_chain_id_dapps_sushiswap_poi_historical_get
+  describe("chains_chain_id_dapps_sushiswap_poi_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_uniswapv2_poi_historical_get
   describe("chains_chain_id_dapps_uniswapv2_poi_historical_get test", function()
     it("should work", function()

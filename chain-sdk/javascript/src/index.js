@@ -41,9 +41,9 @@ import BundlesApi from './api/BundlesApi';
 import BurnsApi from './api/BurnsApi';
 import DayDataApi from './api/DayDataApi';
 import FactoryApi from './api/FactoryApi';
+import HourDataApi from './api/HourDataApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
 import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
-import MintApi from './api/MintApi';
 import MintsApi from './api/MintsApi';
 import PoiApi from './api/PoiApi';
 import PoolDayDataApi from './api/PoolDayDataApi';
@@ -273,6 +273,12 @@ export {
     FactoryApi,
 
     /**
+    * The HourDataApi service constructor.
+    * @property {module:api/HourDataApi}
+    */
+    HourDataApi,
+
+    /**
     * The LiquidityPositionApi service constructor.
     * @property {module:api/LiquidityPositionApi}
     */
@@ -283,12 +289,6 @@ export {
     * @property {module:api/LiquidityPositionSnapshotsApi}
     */
     LiquidityPositionSnapshotsApi,
-
-    /**
-    * The MintApi service constructor.
-    * @property {module:api/MintApi}
-    */
-    MintApi,
 
     /**
     * The MintsApi service constructor.

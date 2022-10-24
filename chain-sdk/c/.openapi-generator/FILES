@@ -10,12 +10,12 @@ api/DayDataAPI.c
 api/DayDataAPI.h
 api/FactoryAPI.c
 api/FactoryAPI.h
+api/HourDataAPI.c
+api/HourDataAPI.h
 api/LiquidityPositionAPI.c
 api/LiquidityPositionAPI.h
 api/LiquidityPositionSnapshotsAPI.c
 api/LiquidityPositionSnapshotsAPI.h
-api/MintAPI.c
-api/MintAPI.h
 api/MintsAPI.c
 api/MintsAPI.h
 api/PoiAPI.c
@@ -60,9 +60,9 @@ docs/BundlesAPI.md
 docs/BurnsAPI.md
 docs/DayDataAPI.md
 docs/FactoryAPI.md
+docs/HourDataAPI.md
 docs/LiquidityPositionAPI.md
 docs/LiquidityPositionSnapshotsAPI.md
-docs/MintAPI.md
 docs/MintsAPI.md
 docs/PoiAPI.md
 docs/PoolDayDataAPI.md

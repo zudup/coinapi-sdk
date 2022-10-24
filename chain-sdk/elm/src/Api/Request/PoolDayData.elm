@@ -15,7 +15,8 @@
 
 
 module Api.Request.PoolDayData exposing
-    ( chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
+    ( chainsChainIdDappsSushiswapPoolDayDataHistoricalGet
+    , chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
     , chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet
     )
 
@@ -26,6 +27,19 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+
+
+chainsChainIdDappsSushiswapPoolDayDataHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+chainsChainIdDappsSushiswapPoolDayDataHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/chains/{chain_id}/dapps/sushiswap/poolDayData/historical"
+        [ ( "chainId", identity chainId_path ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
 
 
 

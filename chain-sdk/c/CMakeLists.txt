@@ -82,9 +82,9 @@ set(SRCS
     api/BurnsAPI.c
     api/DayDataAPI.c
     api/FactoryAPI.c
+    api/HourDataAPI.c
     api/LiquidityPositionAPI.c
     api/LiquidityPositionSnapshotsAPI.c
-    api/MintAPI.c
     api/MintsAPI.c
     api/PoiAPI.c
     api/PoolDayDataAPI.c
@@ -143,9 +143,9 @@ set(HDRS
     api/BurnsAPI.h
     api/DayDataAPI.h
     api/FactoryAPI.h
+    api/HourDataAPI.h
     api/LiquidityPositionAPI.h
     api/LiquidityPositionSnapshotsAPI.h
-    api/MintAPI.h
     api/MintsAPI.h
     api/PoiAPI.h
     api/PoolDayDataAPI.h
@@ -251,9 +251,9 @@ set(HDRS "")
 #    unit-tests/manual-BurnsAPI.c
 #    unit-tests/manual-DayDataAPI.c
 #    unit-tests/manual-FactoryAPI.c
+#    unit-tests/manual-HourDataAPI.c
 #    unit-tests/manual-LiquidityPositionAPI.c
 #    unit-tests/manual-LiquidityPositionSnapshotsAPI.c
-#    unit-tests/manual-MintAPI.c
 #    unit-tests/manual-MintsAPI.c
 #    unit-tests/manual-PoiAPI.c
 #    unit-tests/manual-PoolDayDataAPI.c

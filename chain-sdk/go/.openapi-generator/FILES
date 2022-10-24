@@ -7,9 +7,9 @@ api_bundles.go
 api_burns.go
 api_day_data.go
 api_factory.go
+api_hour_data.go
 api_liquidity_position.go
 api_liquidity_position_snapshots.go
-api_mint.go
 api_mints.go
 api_poi.go
 api_pool_day_data.go
@@ -41,9 +41,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md

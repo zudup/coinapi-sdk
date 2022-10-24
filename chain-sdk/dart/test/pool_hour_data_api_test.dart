@@ -17,6 +17,11 @@ void main() {
   // final instance = PoolHourDataApi();
 
   group('tests for PoolHourDataApi', () {
+    //Future chainsChainIdDappsSushiswapPoolHourDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsSushiswapPoolHourDataHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet', () async {
       // TODO

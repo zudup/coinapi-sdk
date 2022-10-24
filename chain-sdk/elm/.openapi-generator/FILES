@@ -8,9 +8,9 @@ src/Api/Request/Bundles.elm
 src/Api/Request/Burns.elm
 src/Api/Request/DayData.elm
 src/Api/Request/Factory.elm
+src/Api/Request/HourData.elm
 src/Api/Request/LiquidityPosition.elm
 src/Api/Request/LiquidityPositionSnapshots.elm
-src/Api/Request/Mint.elm
 src/Api/Request/Mints.elm
 src/Api/Request/Poi.elm
 src/Api/Request/PoolDayData.elm

@@ -13,9 +13,9 @@ import 'package:openapi/src/api/bundles_api.dart';
 import 'package:openapi/src/api/burns_api.dart';
 import 'package:openapi/src/api/day_data_api.dart';
 import 'package:openapi/src/api/factory_api.dart';
+import 'package:openapi/src/api/hour_data_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
 import 'package:openapi/src/api/liquidity_position_snapshots_api.dart';
-import 'package:openapi/src/api/mint_api.dart';
 import 'package:openapi/src/api/mints_api.dart';
 import 'package:openapi/src/api/poi_api.dart';
 import 'package:openapi/src/api/pool_day_data_api.dart';
@@ -115,6 +115,12 @@ class Openapi {
     return FactoryApi(dio, serializers);
   }
 
+  /// Get HourDataApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  HourDataApi getHourDataApi() {
+    return HourDataApi(dio, serializers);
+  }
+
   /// Get LiquidityPositionApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   LiquidityPositionApi getLiquidityPositionApi() {
@@ -125,12 +131,6 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   LiquidityPositionSnapshotsApi getLiquidityPositionSnapshotsApi() {
     return LiquidityPositionSnapshotsApi(dio, serializers);
-  }
-
-  /// Get MintApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  MintApi getMintApi() {
-    return MintApi(dio, serializers);
   }
 
   /// Get MintsApi instance, base route and serializer can be overridden by a given but be careful,

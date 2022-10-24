@@ -34,6 +34,58 @@ export default class LiquidityPositionSnapshotsApi {
 
 
     /**
+     * Callback function to receive the result of the chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet operation.
+     * @callback module:api/LiquidityPositionSnapshotsApi~chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {String} chainId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/LiquidityPositionSnapshotsApi~chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet(chainId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'chainId' is set
+      if (chainId === undefined || chainId === null) {
+        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet");
+      }
+
+      let pathParams = {
+        'chain_id': chainId
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet operation.
      * @callback module:api/LiquidityPositionSnapshotsApi~chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetCallback
      * @param {String} error Error message, if any.

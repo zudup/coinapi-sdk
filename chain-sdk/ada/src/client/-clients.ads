@@ -82,6 +82,15 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Factory_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_2Factory_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -100,7 +109,36 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Hour_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Liquidity_Position_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_2Liquidity_Position_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Liquidity_Position_Snapshots_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;
@@ -120,7 +158,17 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString);
 
    --  
-   procedure Chains_Chain_Id_Dapps_Uniswapv_2Mint_Historical_Get
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Mints_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_2Mints_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;
@@ -138,6 +186,15 @@ package .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Poi_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
 
    --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_2Poi_Historical_Get
@@ -158,6 +215,16 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Pool_Day_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_2Pool_Day_Data_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -169,6 +236,16 @@ package .Clients is
 
    --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_3Pool_Day_Data_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Sushiswap_Pool_Hour_Data_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;

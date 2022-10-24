@@ -48,6 +48,26 @@
   }
 
   describe('MintsApi', function() {
+    describe('chainsChainIdDappsSushiswapMintsHistoricalGet', function() {
+      it('should call chainsChainIdDappsSushiswapMintsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsSushiswapMintsHistoricalGet
+        //instance.chainsChainIdDappsSushiswapMintsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('chainsChainIdDappsUniswapv2MintsHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2MintsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2MintsHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2MintsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3MintsHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3MintsHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3MintsHistoricalGet

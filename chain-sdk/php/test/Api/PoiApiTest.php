@@ -73,6 +73,18 @@ class PoiApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsSushiswapPoiHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsSushiswapPoiHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv2PoiHistoricalGet
      *
      * .

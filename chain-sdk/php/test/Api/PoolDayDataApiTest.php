@@ -73,6 +73,18 @@ class PoolDayDataApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsSushiswapPoolDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsSushiswapPoolDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
      *
      * .

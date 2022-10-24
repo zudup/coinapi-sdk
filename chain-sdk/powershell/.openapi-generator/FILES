@@ -11,9 +11,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -57,9 +57,9 @@ src/PSOpenAPITools/Api/BundlesApi.ps1
 src/PSOpenAPITools/Api/BurnsApi.ps1
 src/PSOpenAPITools/Api/DayDataApi.ps1
 src/PSOpenAPITools/Api/FactoryApi.ps1
+src/PSOpenAPITools/Api/HourDataApi.ps1
 src/PSOpenAPITools/Api/LiquidityPositionApi.ps1
 src/PSOpenAPITools/Api/LiquidityPositionSnapshotsApi.ps1
-src/PSOpenAPITools/Api/MintApi.ps1
 src/PSOpenAPITools/Api/MintsApi.ps1
 src/PSOpenAPITools/Api/PoiApi.ps1
 src/PSOpenAPITools/Api/PoolDayDataApi.ps1
@@ -116,9 +116,9 @@ tests/Api/BundlesApi.Tests.ps1
 tests/Api/BurnsApi.Tests.ps1
 tests/Api/DayDataApi.Tests.ps1
 tests/Api/FactoryApi.Tests.ps1
+tests/Api/HourDataApi.Tests.ps1
 tests/Api/LiquidityPositionApi.Tests.ps1
 tests/Api/LiquidityPositionSnapshotsApi.Tests.ps1
-tests/Api/MintApi.Tests.ps1
 tests/Api/MintsApi.Tests.ps1
 tests/Api/PoiApi.Tests.ps1
 tests/Api/PoolDayDataApi.Tests.ps1

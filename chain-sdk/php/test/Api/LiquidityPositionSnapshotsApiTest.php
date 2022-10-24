@@ -73,6 +73,18 @@ class LiquidityPositionSnapshotsApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
      *
      * .

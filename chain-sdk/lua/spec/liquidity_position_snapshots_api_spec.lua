@@ -15,6 +15,13 @@ Please update as you see appropriate
 ]]
 describe("liquidity_position_snapshots_api", function()
   local openapiclient_liquidity_position_snapshots_api = require "openapiclient.api.liquidity_position_snapshots_api"
+  -- unit tests for chains_chain_id_dapps_sushiswap_liquidity_position_snapshots_historical_get
+  describe("chains_chain_id_dapps_sushiswap_liquidity_position_snapshots_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_uniswapv2_liquidity_position_snapshots_historical_get
   describe("chains_chain_id_dapps_uniswapv2_liquidity_position_snapshots_historical_get test", function()
     it("should work", function()

@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getLiquidityPositionApi();
 
   group(LiquidityPositionApi, () {
+    //Future chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet', () async {
       // TODO

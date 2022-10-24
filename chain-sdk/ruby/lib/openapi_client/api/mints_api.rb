@@ -27,6 +27,150 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
     # @return [nil]
+    def chains_chain_id_dapps_sushiswap_mints_historical_get(chain_id, opts = {})
+      chains_chain_id_dapps_sushiswap_mints_historical_get_with_http_info(chain_id, opts)
+      nil
+    end
+
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def chains_chain_id_dapps_sushiswap_mints_historical_get_with_http_info(chain_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: MintsApi.chains_chain_id_dapps_sushiswap_mints_historical_get ...'
+      end
+      # verify the required parameter 'chain_id' is set
+      if @api_client.config.client_side_validation && chain_id.nil?
+        fail ArgumentError, "Missing the required parameter 'chain_id' when calling MintsApi.chains_chain_id_dapps_sushiswap_mints_historical_get"
+      end
+      # resource path
+      local_var_path = '/chains/{chain_id}/dapps/sushiswap/mints/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type]
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"MintsApi.chains_chain_id_dapps_sushiswap_mints_historical_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: MintsApi#chains_chain_id_dapps_sushiswap_mints_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [nil]
+    def chains_chain_id_dapps_uniswapv2_mints_historical_get(chain_id, opts = {})
+      chains_chain_id_dapps_uniswapv2_mints_historical_get_with_http_info(chain_id, opts)
+      nil
+    end
+
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def chains_chain_id_dapps_uniswapv2_mints_historical_get_with_http_info(chain_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: MintsApi.chains_chain_id_dapps_uniswapv2_mints_historical_get ...'
+      end
+      # verify the required parameter 'chain_id' is set
+      if @api_client.config.client_side_validation && chain_id.nil?
+        fail ArgumentError, "Missing the required parameter 'chain_id' when calling MintsApi.chains_chain_id_dapps_uniswapv2_mints_historical_get"
+      end
+      # resource path
+      local_var_path = '/chains/{chain_id}/dapps/uniswapv2/mints/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type]
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"MintsApi.chains_chain_id_dapps_uniswapv2_mints_historical_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: MintsApi#chains_chain_id_dapps_uniswapv2_mints_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # @param chain_id [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [nil]
     def chains_chain_id_dapps_uniswapv3_mints_historical_get(chain_id, opts = {})
       chains_chain_id_dapps_uniswapv3_mints_historical_get_with_http_info(chain_id, opts)
       nil

@@ -16,6 +16,15 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -29,6 +38,28 @@ export interface ChainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistorical
  * no description
  */
 export class LiquidityPositionSnapshotsApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

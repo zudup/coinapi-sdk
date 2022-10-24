@@ -11,10 +11,10 @@ docs/DAYDATA_API.md
 docs/E_TRADE_AGGRESSIVE_SIDE.md
 docs/FACTORY_API.md
 docs/FACTORY_V3_DTO.md
+docs/HOURDATA_API.md
 docs/LIQUIDITYPOSITIONSNAPSHOTS_API.md
 docs/LIQUIDITYPOSITION_API.md
 docs/MINTS_API.md
-docs/MINT_API.md
 docs/MINT_V3_DTO.md
 docs/PAIR_DTO.md
 docs/PAIR_V2_DTO.md
@@ -57,9 +57,9 @@ src/api/bundles_api.e
 src/api/burns_api.e
 src/api/day_data_api.e
 src/api/factory_api.e
+src/api/hour_data_api.e
 src/api/liquidity_position_api.e
 src/api/liquidity_position_snapshots_api.e
-src/api/mint_api.e
 src/api/mints_api.e
 src/api/poi_api.e
 src/api/pool_day_data_api.e
@@ -125,9 +125,9 @@ test/apis/bundles_api_test.e
 test/apis/burns_api_test.e
 test/apis/daydata_api_test.e
 test/apis/factory_api_test.e
+test/apis/hourdata_api_test.e
 test/apis/liquidityposition_api_test.e
 test/apis/liquiditypositionsnapshots_api_test.e
-test/apis/mint_api_test.e
 test/apis/mints_api_test.e
 test/apis/poi_api_test.e
 test/apis/pooldaydata_api_test.e

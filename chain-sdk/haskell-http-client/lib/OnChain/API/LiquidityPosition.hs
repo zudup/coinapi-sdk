@@ -58,6 +58,35 @@ import qualified Prelude as P
 
 -- ** LiquidityPosition
 
+-- *** chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet
+
+-- | @GET \/chains\/{chain_id}\/dapps\/sushiswap\/liquidityPosition\/historical@
+-- 
+chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainRequest ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/sushiswap/liquidityPosition/historical"]
+
+data ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet MimeNoContent
+
+
 -- *** chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/liquidityPosition\/historical@

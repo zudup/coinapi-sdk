@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getFactoryApi();
 
   group(FactoryApi, () {
+    //Future chainsChainIdDappsSushiswapFactoryHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsSushiswapFactoryHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2FactoryHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsUniswapv2FactoryHistoricalGet', () async {
       // TODO

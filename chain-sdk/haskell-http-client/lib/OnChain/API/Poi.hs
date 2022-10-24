@@ -58,6 +58,32 @@ import qualified Prelude as P
 
 -- ** Poi
 
+-- *** chainsChainIdDappsSushiswapPoiHistoricalGet
+
+-- | @GET \/chains\/{chain_id}\/dapps\/sushiswap\/poi\/historical@
+-- 
+chainsChainIdDappsSushiswapPoiHistoricalGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainRequest ChainsChainIdDappsSushiswapPoiHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsSushiswapPoiHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/sushiswap/poi/historical"]
+
+data ChainsChainIdDappsSushiswapPoiHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsSushiswapPoiHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapPoiHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapPoiHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsSushiswapPoiHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces ChainsChainIdDappsSushiswapPoiHistoricalGet MimeNoContent
+
+
 -- *** chainsChainIdDappsUniswapv2PoiHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/poi\/historical@

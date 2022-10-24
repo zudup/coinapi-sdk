@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'PoolDayDataApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapPoolDayDataHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapPoolDayDataHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapPoolDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

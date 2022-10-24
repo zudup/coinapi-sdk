@@ -8,9 +8,9 @@ from openapi_client.apis.tags.bundles_api import BundlesApi
 from openapi_client.apis.tags.burns_api import BurnsApi
 from openapi_client.apis.tags.day_data_api import DayDataApi
 from openapi_client.apis.tags.factory_api import FactoryApi
+from openapi_client.apis.tags.hour_data_api import HourDataApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
 from openapi_client.apis.tags.liquidity_position_snapshots_api import LiquidityPositionSnapshotsApi
-from openapi_client.apis.tags.mint_api import MintApi
 from openapi_client.apis.tags.mints_api import MintsApi
 from openapi_client.apis.tags.poi_api import PoiApi
 from openapi_client.apis.tags.pool_day_data_api import PoolDayDataApi
@@ -39,9 +39,9 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.BURNS: BurnsApi,
         TagValues.DAY_DATA: DayDataApi,
         TagValues.FACTORY: FactoryApi,
+        TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
-        TagValues.MINT: MintApi,
         TagValues.MINTS: MintsApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,
@@ -71,9 +71,9 @@ tag_to_api = TagToApi(
         TagValues.BURNS: BurnsApi,
         TagValues.DAY_DATA: DayDataApi,
         TagValues.FACTORY: FactoryApi,
+        TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
-        TagValues.MINT: MintApi,
         TagValues.MINTS: MintsApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,

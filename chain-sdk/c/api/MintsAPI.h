@@ -8,6 +8,14 @@
 
 
 void
+MintsAPI_chainsChainIdDappsSushiswapMintsHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+MintsAPI_chainsChainIdDappsUniswapv2MintsHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
 MintsAPI_chainsChainIdDappsUniswapv3MintsHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

@@ -48,6 +48,16 @@
   }
 
   describe('FactoryApi', function() {
+    describe('chainsChainIdDappsSushiswapFactoryHistoricalGet', function() {
+      it('should call chainsChainIdDappsSushiswapFactoryHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsSushiswapFactoryHistoricalGet
+        //instance.chainsChainIdDappsSushiswapFactoryHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv2FactoryHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv2FactoryHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv2FactoryHistoricalGet

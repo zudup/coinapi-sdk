@@ -11,9 +11,9 @@ docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/HourDataApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
-docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -68,9 +68,9 @@ src/main/java/org/openapitools/client/api/BundlesApi.java
 src/main/java/org/openapitools/client/api/BurnsApi.java
 src/main/java/org/openapitools/client/api/DayDataApi.java
 src/main/java/org/openapitools/client/api/FactoryApi.java
+src/main/java/org/openapitools/client/api/HourDataApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionSnapshotsApi.java
-src/main/java/org/openapitools/client/api/MintApi.java
 src/main/java/org/openapitools/client/api/MintsApi.java
 src/main/java/org/openapitools/client/api/PoiApi.java
 src/main/java/org/openapitools/client/api/PoolDayDataApi.java
