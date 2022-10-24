@@ -9,6 +9,9 @@ docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/LiquidityPositionApi.md
+docs/LiquidityPositionSnapshotsApi.md
+docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -55,6 +58,9 @@ settings.gradle
 src/main/kotlin/org/openapitools/client/apis/BundlesApi.kt
 src/main/kotlin/org/openapitools/client/apis/BurnsApi.kt
 src/main/kotlin/org/openapitools/client/apis/FactoryApi.kt
+src/main/kotlin/org/openapitools/client/apis/LiquidityPositionApi.kt
+src/main/kotlin/org/openapitools/client/apis/LiquidityPositionSnapshotsApi.kt
+src/main/kotlin/org/openapitools/client/apis/MintApi.kt
 src/main/kotlin/org/openapitools/client/apis/MintsApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoiApi.kt
 src/main/kotlin/org/openapitools/client/apis/PoolDayDataApi.kt

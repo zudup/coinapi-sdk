@@ -5,6 +5,21 @@ context("Test PoolHourDataApi")
 
 api_instance <- PoolHourDataApi$new()
 
+test_that("ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGet", {
+  # tests for ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGet
+  # base path: https://onchain.coinapi.io
+  # @param chain_id character 
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("ChainsChainIdDappsUniswapv3PoolHourDataHistoricalGet", {
   # tests for ChainsChainIdDappsUniswapv3PoolHourDataHistoricalGet
   # base path: https://onchain.coinapi.io

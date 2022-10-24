@@ -48,6 +48,16 @@
   }
 
   describe('BurnsApi', function() {
+    describe('chainsChainIdDappsUniswapv2BurnsHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2BurnsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2BurnsHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2BurnsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3BurnsHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3BurnsHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3BurnsHistoricalGet

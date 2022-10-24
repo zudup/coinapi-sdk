@@ -35,6 +35,21 @@ public class TokenDayDataApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsUniswapv2TokenDayDataHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String tokenId = null;
+        api.chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

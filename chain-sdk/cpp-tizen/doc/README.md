@@ -42,6 +42,8 @@ All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 ### BundlesManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2BundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/bundles/historical | .
+*chainsChainIdDappsUniswapv2BundlesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/bundles/historical | .
 *chainsChainIdDappsUniswapv3BundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/bundles/historical | .
 *chainsChainIdDappsUniswapv3BundlesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/bundles/historical | .
 
@@ -49,6 +51,8 @@ Method | HTTP request | Description
 ### BurnsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2BurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/burns/historical | .
+*chainsChainIdDappsUniswapv2BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/burns/historical | .
 *chainsChainIdDappsUniswapv3BurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
 *chainsChainIdDappsUniswapv3BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
 
@@ -58,6 +62,27 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
+
+
+### LiquidityPositionManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical | .
+*chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical | .
+
+
+### LiquidityPositionSnapshotsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical | .
+*chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical | .
+
+
+### MintManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2MintHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/mint/historical | .
+*chainsChainIdDappsUniswapv2MintHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/mint/historical | .
 
 
 ### MintsManager
@@ -70,6 +95,8 @@ Method | HTTP request | Description
 ### PoiManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2PoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poi/historical | .
+*chainsChainIdDappsUniswapv2PoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poi/historical | .
 *chainsChainIdDappsUniswapv3PoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poi/historical | .
 *chainsChainIdDappsUniswapv3PoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poi/historical | .
 
@@ -77,6 +104,8 @@ Method | HTTP request | Description
 ### PoolDayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2PoolDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poolDayData/historical | .
+*chainsChainIdDappsUniswapv2PoolDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poolDayData/historical | .
 *chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | .
 *chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical | .
 
@@ -84,6 +113,8 @@ Method | HTTP request | Description
 ### PoolHourDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2PoolHourDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poolHourData/historical | .
+*chainsChainIdDappsUniswapv2PoolHourDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poolHourData/historical | .
 *chainsChainIdDappsUniswapv3PoolHourDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | .
 *chainsChainIdDappsUniswapv3PoolHourDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical | .
 
@@ -156,6 +187,8 @@ Method | HTTP request | Description
 ### TokenDayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2TokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical | .
+*chainsChainIdDappsUniswapv2TokenDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical | .
 *chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | .
 *chainsChainIdDappsUniswapv3TokenDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical | .
 

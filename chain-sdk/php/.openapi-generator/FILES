@@ -7,6 +7,9 @@ composer.json
 docs/Api/BundlesApi.md
 docs/Api/BurnsApi.md
 docs/Api/FactoryApi.md
+docs/Api/LiquidityPositionApi.md
+docs/Api/LiquidityPositionSnapshotsApi.md
+docs/Api/MintApi.md
 docs/Api/MintsApi.md
 docs/Api/PoiApi.md
 docs/Api/PoolDayDataApi.md
@@ -54,6 +57,9 @@ git_push.sh
 lib/Api/BundlesApi.php
 lib/Api/BurnsApi.php
 lib/Api/FactoryApi.php
+lib/Api/LiquidityPositionApi.php
+lib/Api/LiquidityPositionSnapshotsApi.php
+lib/Api/MintApi.php
 lib/Api/MintsApi.php
 lib/Api/PoiApi.php
 lib/Api/PoolDayDataApi.php
@@ -106,6 +112,9 @@ phpunit.xml.dist
 test/Api/BundlesApiTest.php
 test/Api/BurnsApiTest.php
 test/Api/FactoryApiTest.php
+test/Api/LiquidityPositionApiTest.php
+test/Api/LiquidityPositionSnapshotsApiTest.php
+test/Api/MintApiTest.php
 test/Api/MintsApiTest.php
 test/Api/PoiApiTest.php
 test/Api/PoolDayDataApiTest.php

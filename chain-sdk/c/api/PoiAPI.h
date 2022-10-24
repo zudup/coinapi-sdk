@@ -8,6 +8,10 @@
 
 
 void
+PoiAPI_chainsChainIdDappsUniswapv2PoiHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
 PoiAPI_chainsChainIdDappsUniswapv3PoiHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

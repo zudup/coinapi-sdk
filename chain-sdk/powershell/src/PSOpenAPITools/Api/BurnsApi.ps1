@@ -41,6 +41,126 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 None
 #>
+function Invoke-ChainsChainIdDappsUniswapv2BurnsHistoricalGet {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${ChainId},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${PoolId},
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-ChainsChainIdDappsUniswapv2BurnsHistoricalGet' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        $LocalVarUri = '/chains/{chain_id}/dapps/uniswapv2/burns/historical'
+        if (!$ChainId) {
+            throw "Error! The required parameter `ChainId` missing when calling chainsChainIdDappsUniswapv2BurnsHistoricalGet."
+        }
+        $LocalVarUri = $LocalVarUri.replace('{chain_id}', [System.Web.HTTPUtility]::UrlEncode($ChainId))
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        if ($PoolId) {
+            $LocalVarQueryParameters['poolId'] = $PoolId
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+No summary available.
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ChainId
+No description available.
+
+.PARAMETER StartBlock
+No description available.
+
+.PARAMETER EndBlock
+No description available.
+
+.PARAMETER StartDate
+No description available.
+
+.PARAMETER EndDate
+No description available.
+
+.PARAMETER PoolId
+No description available.
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+None
+#>
 function Invoke-ChainsChainIdDappsUniswapv3BurnsHistoricalGet {
     [CmdletBinding()]
     Param (

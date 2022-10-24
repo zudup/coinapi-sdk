@@ -48,6 +48,16 @@
   }
 
   describe('PoiApi', function() {
+    describe('chainsChainIdDappsUniswapv2PoiHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2PoiHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2PoiHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2PoiHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3PoiHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3PoiHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoiHistoricalGet

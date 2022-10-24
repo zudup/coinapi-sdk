@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getBurnsApi();
 
   group(BurnsApi, () {
+    //Future chainsChainIdDappsUniswapv2BurnsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsUniswapv2BurnsHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv3BurnsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv3BurnsHistoricalGet', () async {
       // TODO

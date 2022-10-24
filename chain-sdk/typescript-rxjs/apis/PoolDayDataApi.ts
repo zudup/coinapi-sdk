@@ -16,6 +16,15 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv3PoolDayDataHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -29,6 +38,28 @@ export interface ChainsChainIdDappsUniswapv3PoolDayDataHistoricalGetRequest {
  * no description
  */
 export class PoolDayDataApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/uniswapv2/poolDayData/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

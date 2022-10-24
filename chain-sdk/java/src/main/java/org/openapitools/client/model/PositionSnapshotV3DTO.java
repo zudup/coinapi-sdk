@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * PositionSnapshotV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-21T13:18:41.479399Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T08:45:14.587695Z[Etc/UTC]")
 public class PositionSnapshotV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

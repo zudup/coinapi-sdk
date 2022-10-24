@@ -73,6 +73,18 @@ class TokenDayDataApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet
      *
      * .

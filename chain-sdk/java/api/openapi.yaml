@@ -145,7 +145,110 @@ paths:
       tags:
       - Bundles
       x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/bundles/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Bundles
+      x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/burns/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Burns
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/burns/historical:
     get:
       parameters:
       - explode: false
@@ -324,6 +427,171 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - LiquidityPosition
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - LiquidityPositionSnapshots
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/mint/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Mint
+      x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/mints/historical:
     get:
       parameters:
@@ -469,6 +737,54 @@ paths:
       tags:
       - Poi
       x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/poi/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Poi
+      x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical:
     get:
       parameters:
@@ -524,7 +840,117 @@ paths:
       tags:
       - PoolDayData
       x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/poolDayData/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - PoolDayData
+      x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - PoolHourData
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/poolHourData/historical:
     get:
       parameters:
       - explode: false
@@ -1681,6 +2107,61 @@ paths:
       - UniswapV3
       x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: tokenId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - TokenDayData
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical:
     get:
       parameters:
       - explode: false

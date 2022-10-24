@@ -2,6 +2,9 @@
 api/BundlesApi.ts
 api/BurnsApi.ts
 api/FactoryApi.ts
+api/LiquidityPositionApi.ts
+api/LiquidityPositionSnapshotsApi.ts
+api/MintApi.ts
 api/MintsApi.ts
 api/PoiApi.ts
 api/PoolDayDataApi.ts

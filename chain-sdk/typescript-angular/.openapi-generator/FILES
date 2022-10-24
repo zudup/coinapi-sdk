@@ -6,6 +6,9 @@ api/api.ts
 api/bundles.service.ts
 api/burns.service.ts
 api/factory.service.ts
+api/liquidityPosition.service.ts
+api/liquidityPositionSnapshots.service.ts
+api/mint.service.ts
 api/mints.service.ts
 api/poi.service.ts
 api/poolDayData.service.ts

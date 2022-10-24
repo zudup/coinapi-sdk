@@ -73,6 +73,18 @@ class BurnsApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsUniswapv2BurnsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2BurnsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3BurnsHistoricalGet
      *
      * .

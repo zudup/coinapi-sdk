@@ -35,6 +35,21 @@ public class PoolDayDataApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsUniswapv2PoolDayDataHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        api.chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv3PoolDayDataHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

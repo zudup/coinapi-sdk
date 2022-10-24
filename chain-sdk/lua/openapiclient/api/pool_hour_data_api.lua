@@ -43,6 +43,37 @@ local function new_pool_hour_data_api(authority, basePath, schemes)
 	}, pool_hour_data_api_mt)
 end
 
+function pool_hour_data_api:chains_chain_id_dapps_uniswapv2_pool_hour_data_historical_get(chain_id, start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/chains/%s/dapps/uniswapv2/poolHourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, chain_id, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
 function pool_hour_data_api:chains_chain_id_dapps_uniswapv3_pool_hour_data_historical_get(chain_id, start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;

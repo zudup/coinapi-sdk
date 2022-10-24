@@ -55,6 +55,26 @@ public:
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet(
+        utility::string_t chainId,
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> tokenId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="chainId"></param>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<void> chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(
         utility::string_t chainId,
         boost::optional<int64_t> startBlock,

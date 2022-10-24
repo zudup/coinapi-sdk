@@ -10,6 +10,9 @@ src/openapi_burns_api.erl
 src/openapi_e_trade_aggressive_side.erl
 src/openapi_factory_api.erl
 src/openapi_factory_v3_dto.erl
+src/openapi_liquidity_position_api.erl
+src/openapi_liquidity_position_snapshots_api.erl
+src/openapi_mint_api.erl
 src/openapi_mint_v3_dto.erl
 src/openapi_mints_api.erl
 src/openapi_pair_dto.erl

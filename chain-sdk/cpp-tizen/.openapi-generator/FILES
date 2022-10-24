@@ -22,6 +22,12 @@ src/FactoryV3DTO.cpp
 src/FactoryV3DTO.h
 src/Helpers.cpp
 src/Helpers.h
+src/LiquidityPositionManager.cpp
+src/LiquidityPositionManager.h
+src/LiquidityPositionSnapshotsManager.cpp
+src/LiquidityPositionSnapshotsManager.h
+src/MintManager.cpp
+src/MintManager.h
 src/MintV3DTO.cpp
 src/MintV3DTO.h
 src/MintsManager.cpp

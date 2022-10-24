@@ -25,6 +25,141 @@ import (
 // PoolDayDataApiService PoolDayDataApi service
 type PoolDayDataApiService service
 
+type ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest struct {
+	ctx context.Context
+	ApiService *PoolDayDataApiService
+	chainId string
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) PoolId(poolId string) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetExecute(r)
+}
+
+/*
+ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet Method for ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param chainId
+ @return ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest
+*/
+func (a *PoolDayDataApiService) ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest {
+	return ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		chainId: chainId,
+	}
+}
+
+// Execute executes the request
+func (a *PoolDayDataApiService) ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv2PoolDayDataHistoricalGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PoolDayDataApiService.ChainsChainIdDappsUniswapv2PoolDayDataHistoricalGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv2/poolDayData/historical"
+	localVarPath = strings.Replace(localVarPath, "{"+"chain_id"+"}", url.PathEscape(parameterToString(r.chainId, "")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiChainsChainIdDappsUniswapv3PoolDayDataHistoricalGetRequest struct {
 	ctx context.Context
 	ApiService *PoolDayDataApiService

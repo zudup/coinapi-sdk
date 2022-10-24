@@ -11,6 +11,9 @@ docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/LiquidityPositionApi.md
+docs/LiquidityPositionSnapshotsApi.md
+docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -56,6 +59,9 @@ lib/WWW/OpenAPIClient/BundlesApi.pm
 lib/WWW/OpenAPIClient/BurnsApi.pm
 lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/FactoryApi.pm
+lib/WWW/OpenAPIClient/LiquidityPositionApi.pm
+lib/WWW/OpenAPIClient/LiquidityPositionSnapshotsApi.pm
+lib/WWW/OpenAPIClient/MintApi.pm
 lib/WWW/OpenAPIClient/MintsApi.pm
 lib/WWW/OpenAPIClient/Object/BigInteger.pm
 lib/WWW/OpenAPIClient/Object/BundleV3DTO.pm
@@ -109,6 +115,9 @@ t/BurnsApiTest.t
 t/ETradeAggressiveSideTest.t
 t/FactoryApiTest.t
 t/FactoryV3DTOTest.t
+t/LiquidityPositionApiTest.t
+t/LiquidityPositionSnapshotsApiTest.t
+t/MintApiTest.t
 t/MintV3DTOTest.t
 t/MintsApiTest.t
 t/PairDTOTest.t

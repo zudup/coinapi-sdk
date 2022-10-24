@@ -8,6 +8,12 @@ api/BurnsAPI.c
 api/BurnsAPI.h
 api/FactoryAPI.c
 api/FactoryAPI.h
+api/LiquidityPositionAPI.c
+api/LiquidityPositionAPI.h
+api/LiquidityPositionSnapshotsAPI.c
+api/LiquidityPositionSnapshotsAPI.h
+api/MintAPI.c
+api/MintAPI.h
 api/MintsAPI.c
 api/MintsAPI.h
 api/PoiAPI.c
@@ -49,6 +55,9 @@ api/UniswapV3API.h
 docs/BundlesAPI.md
 docs/BurnsAPI.md
 docs/FactoryAPI.md
+docs/LiquidityPositionAPI.md
+docs/LiquidityPositionSnapshotsAPI.md
+docs/MintAPI.md
 docs/MintsAPI.md
 docs/PoiAPI.md
 docs/PoolDayDataAPI.md

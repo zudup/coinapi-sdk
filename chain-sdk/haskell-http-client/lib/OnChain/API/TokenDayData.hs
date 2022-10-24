@@ -58,6 +58,35 @@ import qualified Prelude as P
 
 -- ** TokenDayData
 
+-- *** chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet
+
+-- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/tokenDayData\/historical@
+-- 
+chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainRequest ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv2/tokenDayData/historical"]
+
+data ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet TokenId where
+  applyOptionalParam req (TokenId xs) =
+    req `addQuery` toQuery ("tokenId", Just xs)
+instance Produces ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGet MimeNoContent
+
+
 -- *** chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/tokenDayData\/historical@

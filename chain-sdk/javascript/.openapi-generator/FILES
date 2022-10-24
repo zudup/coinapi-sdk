@@ -11,6 +11,9 @@ docs/BurnsApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
+docs/LiquidityPositionApi.md
+docs/LiquidityPositionSnapshotsApi.md
+docs/MintApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/PairDTO.md
@@ -56,6 +59,9 @@ src/ApiClient.js
 src/api/BundlesApi.js
 src/api/BurnsApi.js
 src/api/FactoryApi.js
+src/api/LiquidityPositionApi.js
+src/api/LiquidityPositionSnapshotsApi.js
+src/api/MintApi.js
 src/api/MintsApi.js
 src/api/PoiApi.js
 src/api/PoolDayDataApi.js
@@ -103,6 +109,9 @@ src/model/UniswapDayDataV3DTO.js
 test/api/BundlesApi.spec.js
 test/api/BurnsApi.spec.js
 test/api/FactoryApi.spec.js
+test/api/LiquidityPositionApi.spec.js
+test/api/LiquidityPositionSnapshotsApi.spec.js
+test/api/MintApi.spec.js
 test/api/MintsApi.spec.js
 test/api/PoiApi.spec.js
 test/api/PoolDayDataApi.spec.js

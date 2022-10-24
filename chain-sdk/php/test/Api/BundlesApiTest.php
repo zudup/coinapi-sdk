@@ -73,6 +73,18 @@ class BundlesApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsUniswapv2BundlesHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2BundlesHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3BundlesHistoricalGet
      *
      * .

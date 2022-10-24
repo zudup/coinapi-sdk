@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'PoiApi' {
+    Context 'Invoke-ChainsChainIdDappsUniswapv2PoiHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsUniswapv2PoiHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsUniswapv2PoiHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv3PoiHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv3PoiHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PoiHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

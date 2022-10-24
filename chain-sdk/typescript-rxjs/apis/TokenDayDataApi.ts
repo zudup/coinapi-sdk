@@ -16,6 +16,15 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    tokenId?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv3TokenDayDataHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -29,6 +38,28 @@ export interface ChainsChainIdDappsUniswapv3TokenDayDataHistoricalGetRequest {
  * no description
  */
 export class TokenDayDataApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsUniswapv2TokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

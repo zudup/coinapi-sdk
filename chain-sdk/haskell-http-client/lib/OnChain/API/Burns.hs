@@ -58,6 +58,35 @@ import qualified Prelude as P
 
 -- ** Burns
 
+-- *** chainsChainIdDappsUniswapv2BurnsHistoricalGet
+
+-- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/burns\/historical@
+-- 
+chainsChainIdDappsUniswapv2BurnsHistoricalGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainRequest ChainsChainIdDappsUniswapv2BurnsHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsUniswapv2BurnsHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv2/burns/historical"]
+
+data ChainsChainIdDappsUniswapv2BurnsHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsUniswapv2BurnsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2BurnsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2BurnsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2BurnsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsUniswapv2BurnsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces ChainsChainIdDappsUniswapv2BurnsHistoricalGet MimeNoContent
+
+
 -- *** chainsChainIdDappsUniswapv3BurnsHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/burns\/historical@

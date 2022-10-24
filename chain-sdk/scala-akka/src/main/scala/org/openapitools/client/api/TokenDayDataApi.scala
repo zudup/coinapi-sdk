@@ -34,6 +34,28 @@ class TokenDayDataApi(baseUrl: String) {
    * @param endDate 
    * @param tokenId 
    */
+  def chainsChainIdDappsUniswapv2TokenDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("tokenId", tokenId)
+      .withPathParam("chain_id", chainId)
+      .withSuccessResponse[Unit](200)
+      
+
+  /**
+   * Expected answers:
+   *   code 200 :  (Success)
+   * 
+   * @param chainId 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param tokenId 
+   */
   def chainsChainIdDappsUniswapv3TokenDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)

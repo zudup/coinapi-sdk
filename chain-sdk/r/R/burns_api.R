@@ -14,6 +14,26 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ ChainsChainIdDappsUniswapv2BurnsHistoricalGet } \emph{  }
+#'
+#' \itemize{
+#' \item \emph{ @param } chain_id character
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#'
+#'
+#' \item status code : 200 | Success
+#'
+#'
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ ChainsChainIdDappsUniswapv3BurnsHistoricalGet } \emph{  }
 #'
 #' \itemize{
@@ -39,6 +59,21 @@
 #'
 #' @examples
 #' \dontrun{
+#' ####################  ChainsChainIdDappsUniswapv2BurnsHistoricalGet  ####################
+#'
+#' library(openapi)
+#' var_chain_id <- "chain_id_example" # character | 
+#' var_start_block <- 56 # integer | 
+#' var_end_block <- 56 # integer | 
+#' var_start_date <- "start_date_example" # character | 
+#' var_end_date <- "end_date_example" # character | 
+#' var_pool_id <- "pool_id_example" # character | 
+#'
+#' api_instance <- BurnsApi$new()
+#'
+#' api_instance$ChainsChainIdDappsUniswapv2BurnsHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#'
+#'
 #' ####################  ChainsChainIdDappsUniswapv3BurnsHistoricalGet  ####################
 #'
 #' library(openapi)
@@ -74,6 +109,115 @@ BurnsApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
+      }
+    },
+    #' 
+    #'
+    #' @description
+    #' 
+    #'
+    #' @param chain_id 
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param ... Other optional arguments
+    #' @return void
+    #' @export
+    ChainsChainIdDappsUniswapv2BurnsHistoricalGet = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+      local_var_response <- self$ChainsChainIdDappsUniswapv2BurnsHistoricalGetWithHttpInfo(chain_id, start_block, end_block, start_date, end_date, pool_id, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' 
+    #'
+    #' @description
+    #' 
+    #'
+    #' @param chain_id 
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param ... Other optional arguments
+    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @export
+    ChainsChainIdDappsUniswapv2BurnsHistoricalGetWithHttpInfo = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      if (missing(`chain_id`)) {
+        stop("Missing required parameter `chain_id`.")
+      }
+
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/chains/{chain_id}/dapps/uniswapv2/burns/historical"
+      if (!missing(`chain_id`)) {
+        local_var_url_path <- gsub("\\{chain_id\\}", URLencode(as.character(`chain_id`), reserved = TRUE), local_var_url_path)
+      }
+
+
+      # The Accept request HTTP header
+      local_var_accepts <- list()
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
       }
     },
     #' 

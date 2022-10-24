@@ -7,6 +7,9 @@ API/Client/BurnsApi.js
 API/Client/ETradeAggressiveSide.js
 API/Client/FactoryApi.js
 API/Client/FactoryV3DTO.js
+API/Client/LiquidityPositionApi.js
+API/Client/LiquidityPositionSnapshotsApi.js
+API/Client/MintApi.js
 API/Client/MintV3DTO.js
 API/Client/MintsApi.js
 API/Client/PairDTO.js

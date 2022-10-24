@@ -48,6 +48,16 @@
   }
 
   describe('PoolDayDataApi', function() {
+    describe('chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2PoolDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoolDayDataHistoricalGet

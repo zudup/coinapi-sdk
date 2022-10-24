@@ -73,6 +73,18 @@ class PoolHourDataApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsUniswapv2PoolHourDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet
      *
      * .

@@ -48,6 +48,16 @@
   }
 
   describe('PoolHourDataApi', function() {
+    describe('chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoolHourDataHistoricalGet

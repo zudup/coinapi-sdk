@@ -16,6 +16,15 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv3PoolHourDataHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -29,6 +38,28 @@ export interface ChainsChainIdDappsUniswapv3PoolHourDataHistoricalGetRequest {
  * no description
  */
 export class PoolHourDataApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, poolId }: ChainsChainIdDappsUniswapv2PoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2PoolHourDataHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/uniswapv2/poolHourData/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

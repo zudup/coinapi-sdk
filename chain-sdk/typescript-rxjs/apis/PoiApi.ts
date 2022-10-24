@@ -16,6 +16,14 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsUniswapv2PoiHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
 export interface ChainsChainIdDappsUniswapv3PoiHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -28,6 +36,27 @@ export interface ChainsChainIdDappsUniswapv3PoiHistoricalGetRequest {
  * no description
  */
 export class PoiApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsUniswapv2PoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2PoiHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2PoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2PoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2PoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2PoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2PoiHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/uniswapv2/poi/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

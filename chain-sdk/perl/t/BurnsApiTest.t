@@ -30,6 +30,18 @@ my $api = WWW::OpenAPIClient::BurnsApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::BurnsApi');
 
 #
+# chains_chain_id_dapps_uniswapv2_burns_historical_get test
+#
+# uncomment below and update the test
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_chain_id = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_start_block = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_end_block = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_start_date = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_end_date = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $chains_chain_id_dapps_uniswapv2_burns_historical_get_result = $api->chains_chain_id_dapps_uniswapv2_burns_historical_get(chain_id => $chains_chain_id_dapps_uniswapv2_burns_historical_get_chain_id, start_block => $chains_chain_id_dapps_uniswapv2_burns_historical_get_start_block, end_block => $chains_chain_id_dapps_uniswapv2_burns_historical_get_end_block, start_date => $chains_chain_id_dapps_uniswapv2_burns_historical_get_start_date, end_date => $chains_chain_id_dapps_uniswapv2_burns_historical_get_end_date, pool_id => $chains_chain_id_dapps_uniswapv2_burns_historical_get_pool_id);
+
+#
 # chains_chain_id_dapps_uniswapv3_burns_historical_get test
 #
 # uncomment below and update the test

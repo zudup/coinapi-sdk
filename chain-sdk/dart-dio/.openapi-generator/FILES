@@ -10,6 +10,9 @@ doc/BurnsApi.md
 doc/ETradeAggressiveSide.md
 doc/FactoryApi.md
 doc/FactoryV3DTO.md
+doc/LiquidityPositionApi.md
+doc/LiquidityPositionSnapshotsApi.md
+doc/MintApi.md
 doc/MintV3DTO.md
 doc/MintsApi.md
 doc/PairDTO.md
@@ -53,6 +56,9 @@ lib/src/api.dart
 lib/src/api/bundles_api.dart
 lib/src/api/burns_api.dart
 lib/src/api/factory_api.dart
+lib/src/api/liquidity_position_api.dart
+lib/src/api/liquidity_position_snapshots_api.dart
+lib/src/api/mint_api.dart
 lib/src/api/mints_api.dart
 lib/src/api/poi_api.dart
 lib/src/api/pool_day_data_api.dart
@@ -114,6 +120,9 @@ test/burns_api_test.dart
 test/e_trade_aggressive_side_test.dart
 test/factory_api_test.dart
 test/factory_v3_dto_test.dart
+test/liquidity_position_api_test.dart
+test/liquidity_position_snapshots_api_test.dart
+test/mint_api_test.dart
 test/mint_v3_dto_test.dart
 test/mints_api_test.dart
 test/pair_dto_test.dart
