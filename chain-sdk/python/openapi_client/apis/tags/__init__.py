@@ -11,6 +11,7 @@ class TagValues(str, enum.Enum):
     UNISWAP_V3 = "UniswapV3"
     BUNDLES = "Bundles"
     BURNS = "Burns"
+    DAY_DATA = "DayData"
     FACTORY = "Factory"
     LIQUIDITY_POSITION = "LiquidityPosition"
     LIQUIDITY_POSITION_SNAPSHOTS = "LiquidityPositionSnapshots"

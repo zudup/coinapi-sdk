@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
 
-## chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv2DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, opts)
+> chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, opts)
 
 
 
@@ -28,7 +28,7 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, opts, (error, data, response) => {
+apiInstance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -62,9 +62,9 @@ No authorization required
 - **Accept**: Not defined
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv3DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, opts)
+> chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, opts)
 
 
 
@@ -81,7 +81,7 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, opts, (error, data, response) => {
+apiInstance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

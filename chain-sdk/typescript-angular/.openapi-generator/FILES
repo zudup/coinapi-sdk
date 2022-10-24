@@ -5,6 +5,7 @@ api.module.ts
 api/api.ts
 api/bundles.service.ts
 api/burns.service.ts
+api/dayData.service.ts
 api/factory.service.ts
 api/liquidityPosition.service.ts
 api/liquidityPositionSnapshots.service.ts

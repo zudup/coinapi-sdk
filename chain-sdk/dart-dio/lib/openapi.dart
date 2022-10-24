@@ -11,6 +11,7 @@ export 'package:openapi/src/model/date.dart';
 
 export 'package:openapi/src/api/bundles_api.dart';
 export 'package:openapi/src/api/burns_api.dart';
+export 'package:openapi/src/api/day_data_api.dart';
 export 'package:openapi/src/api/factory_api.dart';
 export 'package:openapi/src/api/liquidity_position_api.dart';
 export 'package:openapi/src/api/liquidity_position_snapshots_api.dart';

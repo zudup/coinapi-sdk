@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-10-24T09:08:00.355333Z[Etc/UTC]
+- Build date: 2022-10-24T09:49:47.204566Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -44,7 +44,7 @@ def endBlock = 56L // Long |
 def startDate = new Date() // Date | 
 def endDate = new Date() // Date | 
 
-apiInstance.chainsChainIdDappsUniswapv2BundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+apiInstance.chainsChainIdDappsSushiswapBundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     {
     // on success
         println it

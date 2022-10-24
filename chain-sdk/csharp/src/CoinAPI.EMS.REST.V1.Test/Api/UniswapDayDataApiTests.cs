@@ -63,10 +63,10 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+        /// Test ChainsChainIdDappsUniswapv2DayDataHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetTest()
+        public void ChainsChainIdDappsUniswapv2DayDataHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string chainId = null;
@@ -74,15 +74,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+            //instance.ChainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
             
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+        /// Test ChainsChainIdDappsUniswapv3DayDataHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetTest()
+        public void ChainsChainIdDappsUniswapv3DayDataHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string chainId = null;
@@ -90,7 +90,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+            //instance.ChainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
             
         }
         

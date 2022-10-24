@@ -42,6 +42,8 @@ All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 ### BundlesManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapBundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/bundles/historical | .
+*chainsChainIdDappsSushiswapBundlesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/bundles/historical | .
 *chainsChainIdDappsUniswapv2BundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/bundles/historical | .
 *chainsChainIdDappsUniswapv2BundlesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/bundles/historical | .
 *chainsChainIdDappsUniswapv3BundlesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/bundles/historical | .
@@ -51,10 +53,19 @@ Method | HTTP request | Description
 ### BurnsManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapBurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/burns/historical | .
+*chainsChainIdDappsSushiswapBurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/burns/historical | .
 *chainsChainIdDappsUniswapv2BurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/burns/historical | .
 *chainsChainIdDappsUniswapv2BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/burns/historical | .
 *chainsChainIdDappsUniswapv3BurnsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
 *chainsChainIdDappsUniswapv3BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
+
+
+### DayDataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsSushiswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/dayData/historical | .
+*chainsChainIdDappsSushiswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/dayData/historical | .
 
 
 ### FactoryManager
@@ -240,10 +251,10 @@ Method | HTTP request | Description
 ### UniswapDayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-*chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | .
-*chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | .
-*chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
-*chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | .
+*chainsChainIdDappsUniswapv2DayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/dayData/historical | .
+*chainsChainIdDappsUniswapv2DayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/dayData/historical | .
+*chainsChainIdDappsUniswapv3DayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/dayData/historical | .
+*chainsChainIdDappsUniswapv3DayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/dayData/historical | .
 
 
 ### UniswapV2Manager

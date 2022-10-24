@@ -117,7 +117,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+     * Operation chainsChainIdDappsUniswapv2DayDataHistoricalGet
      *
      * @param  string $chain_id chain_id (required)
      * @param  int $start_block start_block (optional)
@@ -129,13 +129,13 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv2DayDataHistoricalGet($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        $this->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $this->chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date);
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo
+     * Operation chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -147,9 +147,9 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $request = $this->chainsChainIdDappsUniswapv2DayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
 
         try {
             $options = $this->createHttpClientOption();
@@ -197,7 +197,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync
+     * Operation chainsChainIdDappsUniswapv2DayDataHistoricalGetAsync
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -208,9 +208,9 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv2DayDataHistoricalGetAsync($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        return $this->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date)
+        return $this->chainsChainIdDappsUniswapv2DayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -219,7 +219,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsyncWithHttpInfo
+     * Operation chainsChainIdDappsUniswapv2DayDataHistoricalGetAsyncWithHttpInfo
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -230,10 +230,10 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv2DayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
         $returnType = '';
-        $request = $this->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $request = $this->chainsChainIdDappsUniswapv2DayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -259,7 +259,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet'
+     * Create request for operation 'chainsChainIdDappsUniswapv2DayDataHistoricalGet'
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -270,13 +270,13 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv2DayDataHistoricalGetRequest($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
 
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet'
+                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet'
             );
         }
 
@@ -284,7 +284,7 @@ class UniswapDayDataApi
 
 
 
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical';
+        $resourcePath = '/chains/{chain_id}/dapps/uniswapv2/dayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -398,7 +398,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+     * Operation chainsChainIdDappsUniswapv3DayDataHistoricalGet
      *
      * @param  string $chain_id chain_id (required)
      * @param  int $start_block start_block (optional)
@@ -410,13 +410,13 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv3DayDataHistoricalGet($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        $this->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $this->chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date);
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo
+     * Operation chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -428,9 +428,9 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $request = $this->chainsChainIdDappsUniswapv3DayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
 
         try {
             $options = $this->createHttpClientOption();
@@ -478,7 +478,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync
+     * Operation chainsChainIdDappsUniswapv3DayDataHistoricalGetAsync
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -489,9 +489,9 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv3DayDataHistoricalGetAsync($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
-        return $this->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date)
+        return $this->chainsChainIdDappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block, $end_block, $start_date, $end_date)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -500,7 +500,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsyncWithHttpInfo
+     * Operation chainsChainIdDappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -511,10 +511,10 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
         $returnType = '';
-        $request = $this->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
+        $request = $this->chainsChainIdDappsUniswapv3DayDataHistoricalGetRequest($chain_id, $start_block, $end_block, $start_date, $end_date);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -540,7 +540,7 @@ class UniswapDayDataApi
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet'
+     * Create request for operation 'chainsChainIdDappsUniswapv3DayDataHistoricalGet'
      *
      * @param  string $chain_id (required)
      * @param  int $start_block (optional)
@@ -551,13 +551,13 @@ class UniswapDayDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    public function chainsChainIdDappsUniswapv3DayDataHistoricalGetRequest($chain_id, $start_block = null, $end_block = null, $start_date = null, $end_date = null)
     {
 
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet'
+                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet'
             );
         }
 
@@ -565,7 +565,7 @@ class UniswapDayDataApi
 
 
 
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical';
+        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/dayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -48,20 +48,20 @@
   }
 
   describe('UniswapDayDataApi', function() {
-    describe('chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet', function() {
-      it('should call chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
-        //instance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(function(error) {
+    describe('chainsChainIdDappsUniswapv2DayDataHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv2DayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv2DayDataHistoricalGet
+        //instance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet', function() {
-      it('should call chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
-        //instance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(function(error) {
+    describe('chainsChainIdDappsUniswapv3DayDataHistoricalGet', function() {
+      it('should call chainsChainIdDappsUniswapv3DayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsUniswapv3DayDataHistoricalGet
+        //instance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

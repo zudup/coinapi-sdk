@@ -15,8 +15,8 @@
 
 
 module Api.Request.UniswapDayData exposing
-    ( chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
-    , chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+    ( chainsChainIdDappsUniswapv2DayDataHistoricalGet
+    , chainsChainIdDappsUniswapv3DayDataHistoricalGet
     )
 
 import Api
@@ -29,11 +29,11 @@ import Json.Encode
 
 
 
-chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
+chainsChainIdDappsUniswapv2DayDataHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+chainsChainIdDappsUniswapv2DayDataHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+        "/chains/{chain_id}/dapps/uniswapv2/dayData/historical"
         [ ( "chainId", identity chainId_path ) ]
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
@@ -42,11 +42,11 @@ chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet chainId_path startBlock_q
 
 
 
-chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
+chainsChainIdDappsUniswapv3DayDataHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+chainsChainIdDappsUniswapv3DayDataHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+        "/chains/{chain_id}/dapps/uniswapv3/dayData/historical"
         [ ( "chainId", identity chainId_path ) ]
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []

@@ -38,7 +38,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 None
 #>
-function Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet {
+function Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -61,7 +61,7 @@ function Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet {
     )
 
     Process {
-        'Calling method: Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -74,9 +74,9 @@ function Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
-        $LocalVarUri = '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'
+        $LocalVarUri = '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'
         if (!$ChainId) {
-            throw "Error! The required parameter `ChainId` missing when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet."
+            throw "Error! The required parameter `ChainId` missing when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet."
         }
         $LocalVarUri = $LocalVarUri.replace('{chain_id}', [System.Web.HTTPUtility]::UrlEncode($ChainId))
 
@@ -148,7 +148,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 None
 #>
-function Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet {
+function Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -171,7 +171,7 @@ function Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet {
     )
 
     Process {
-        'Calling method: Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -184,9 +184,9 @@ function Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
-        $LocalVarUri = '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'
+        $LocalVarUri = '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'
         if (!$ChainId) {
-            throw "Error! The required parameter `ChainId` missing when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet."
+            throw "Error! The required parameter `ChainId` missing when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet."
         }
         $LocalVarUri = $LocalVarUri.replace('{chain_id}', [System.Web.HTTPUtility]::UrlEncode($ChainId))
 

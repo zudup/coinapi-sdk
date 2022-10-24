@@ -1,6 +1,7 @@
 .openapi-generator-ignore
 api/BundlesApi.ts
 api/BurnsApi.ts
+api/DayDataApi.ts
 api/FactoryApi.ts
 api/LiquidityPositionApi.ts
 api/LiquidityPositionSnapshotsApi.ts

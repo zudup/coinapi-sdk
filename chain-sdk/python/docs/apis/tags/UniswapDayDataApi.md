@@ -5,12 +5,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**](#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**](#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chains_chain_id_dapps_uniswapv2_day_data_historical_get**](#chains_chain_id_dapps_uniswapv2_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chains_chain_id_dapps_uniswapv3_day_data_historical_get**](#chains_chain_id_dapps_uniswapv3_day_data_historical_get) | **get** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
-# **chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**
-<a name="chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get"></a>
-> chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(chain_id)
+# **chains_chain_id_dapps_uniswapv2_day_data_historical_get**
+<a name="chains_chain_id_dapps_uniswapv2_day_data_historical_get"></a>
+> chains_chain_id_dapps_uniswapv2_day_data_historical_get(chain_id)
 
 
 
@@ -38,12 +38,12 @@ with openapi_client.ApiClient(configuration) as api_client:
     query_params = {
     }
     try:
-        api_response = api_instance.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(
+        api_response = api_instance.chains_chain_id_dapps_uniswapv2_day_data_historical_get(
             path_params=path_params,
             query_params=query_params,
         )
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get: %s\n" % e)
+        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_day_data_historical_get: %s\n" % e)
 
     # example passing only optional values
     path_params = {
@@ -56,12 +56,12 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(
+        api_response = api_instance.chains_chain_id_dapps_uniswapv2_day_data_historical_get(
             path_params=path_params,
             query_params=query_params,
         )
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get: %s\n" % e)
+        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_day_data_historical_get: %s\n" % e)
 ```
 ### Parameters
 
@@ -131,9 +131,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#chains_chain_id_dapps_uniswapv2_day_data_historical_get.ApiResponseFor200) | Success
 
-#### chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get.ApiResponseFor200
+#### chains_chain_id_dapps_uniswapv2_day_data_historical_get.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -146,9 +146,9 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**
-<a name="chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get"></a>
-> chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(chain_id)
+# **chains_chain_id_dapps_uniswapv3_day_data_historical_get**
+<a name="chains_chain_id_dapps_uniswapv3_day_data_historical_get"></a>
+> chains_chain_id_dapps_uniswapv3_day_data_historical_get(chain_id)
 
 
 
@@ -176,12 +176,12 @@ with openapi_client.ApiClient(configuration) as api_client:
     query_params = {
     }
     try:
-        api_response = api_instance.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(
+        api_response = api_instance.chains_chain_id_dapps_uniswapv3_day_data_historical_get(
             path_params=path_params,
             query_params=query_params,
         )
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get: %s\n" % e)
+        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_day_data_historical_get: %s\n" % e)
 
     # example passing only optional values
     path_params = {
@@ -194,12 +194,12 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(
+        api_response = api_instance.chains_chain_id_dapps_uniswapv3_day_data_historical_get(
             path_params=path_params,
             query_params=query_params,
         )
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get: %s\n" % e)
+        print("Exception when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_day_data_historical_get: %s\n" % e)
 ```
 ### Parameters
 
@@ -269,9 +269,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#chains_chain_id_dapps_uniswapv3_day_data_historical_get.ApiResponseFor200) | Success
 
-#### chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get.ApiResponseFor200
+#### chains_chain_id_dapps_uniswapv3_day_data_historical_get.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

@@ -4,19 +4,19 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
 
-## chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv2DayDataHistoricalGet
 
 
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
+ chainsChainIdDappsUniswapv2DayDataHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -46,14 +46,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv3DayDataHistoricalGet
 
 
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
+ chainsChainIdDappsUniswapv3DayDataHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters

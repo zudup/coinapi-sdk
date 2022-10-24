@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { BundlesService } from './api/bundles.service';
 import { BurnsService } from './api/burns.service';
+import { DayDataService } from './api/dayData.service';
 import { FactoryService } from './api/factory.service';
 import { LiquidityPositionService } from './api/liquidityPosition.service';
 import { LiquidityPositionSnapshotsService } from './api/liquidityPositionSnapshots.service';

@@ -6,6 +6,7 @@ config/config.exs
 config/runtime.exs
 lib/on_chain_api/api/bundles.ex
 lib/on_chain_api/api/burns.ex
+lib/on_chain_api/api/day_data.ex
 lib/on_chain_api/api/factory.ex
 lib/on_chain_api/api/liquidity_position.ex
 lib/on_chain_api/api/liquidity_position_snapshots.ex

@@ -4,6 +4,7 @@ API/Client/BundleV3DTO.js
 API/Client/BundlesApi.js
 API/Client/BurnV3DTO.js
 API/Client/BurnsApi.js
+API/Client/DayDataApi.js
 API/Client/ETradeAggressiveSide.js
 API/Client/FactoryApi.js
 API/Client/FactoryV3DTO.js

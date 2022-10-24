@@ -5,6 +5,21 @@ context("Test BurnsApi")
 
 api_instance <- BurnsApi$new()
 
+test_that("ChainsChainIdDappsSushiswapBurnsHistoricalGet", {
+  # tests for ChainsChainIdDappsSushiswapBurnsHistoricalGet
+  # base path: https://onchain.coinapi.io
+  # @param chain_id character 
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("ChainsChainIdDappsUniswapv2BurnsHistoricalGet", {
   # tests for ChainsChainIdDappsUniswapv2BurnsHistoricalGet
   # base path: https://onchain.coinapi.io

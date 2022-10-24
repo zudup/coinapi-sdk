@@ -1,23 +1,23 @@
 -module(openapi_uniswap_day_data_api).
 
--export([chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get/2, chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get/3,
-         chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get/2, chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get/3]).
+-export([chains_chain_id_dapps_uniswapv2_day_data_historical_get/2, chains_chain_id_dapps_uniswapv2_day_data_historical_get/3,
+         chains_chain_id_dapps_uniswapv3_day_data_historical_get/2, chains_chain_id_dapps_uniswapv3_day_data_historical_get/3]).
 
 -define(BASE_URL, <<"">>).
 
 %% @doc 
 %% 
--spec chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(Ctx, ChainId) ->
-    chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(Ctx, ChainId, #{}).
+-spec chains_chain_id_dapps_uniswapv2_day_data_historical_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+chains_chain_id_dapps_uniswapv2_day_data_historical_get(Ctx, ChainId) ->
+    chains_chain_id_dapps_uniswapv2_day_data_historical_get(Ctx, ChainId, #{}).
 
--spec chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(Ctx, ChainId, Optional) ->
+-spec chains_chain_id_dapps_uniswapv2_day_data_historical_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+chains_chain_id_dapps_uniswapv2_day_data_historical_get(Ctx, ChainId, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/chains/", ChainId, "/dapps/uniswapv2/uniswapDayData/historical">>],
+    Path = [<<"/chains/", ChainId, "/dapps/uniswapv2/dayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -28,17 +28,17 @@ chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(Ctx, ChainId, Op
 
 %% @doc 
 %% 
--spec chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(Ctx, ChainId) ->
-    chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(Ctx, ChainId, #{}).
+-spec chains_chain_id_dapps_uniswapv3_day_data_historical_get(ctx:ctx(), binary()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+chains_chain_id_dapps_uniswapv3_day_data_historical_get(Ctx, ChainId) ->
+    chains_chain_id_dapps_uniswapv3_day_data_historical_get(Ctx, ChainId, #{}).
 
--spec chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(Ctx, ChainId, Optional) ->
+-spec chains_chain_id_dapps_uniswapv3_day_data_historical_get(ctx:ctx(), binary(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+chains_chain_id_dapps_uniswapv3_day_data_historical_get(Ctx, ChainId, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/chains/", ChainId, "/dapps/uniswapv3/uniswapDayData/historical">>],
+    Path = [<<"/chains/", ChainId, "/dapps/uniswapv3/dayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],

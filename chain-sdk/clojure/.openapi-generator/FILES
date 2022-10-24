@@ -4,6 +4,7 @@ git_push.sh
 project.clj
 src/on_chain_api/api/bundles.clj
 src/on_chain_api/api/burns.clj
+src/on_chain_api/api/day_data.clj
 src/on_chain_api/api/factory.clj
 src/on_chain_api/api/liquidity_position.clj
 src/on_chain_api/api/liquidity_position_snapshots.clj

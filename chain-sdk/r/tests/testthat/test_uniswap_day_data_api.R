@@ -5,8 +5,8 @@ context("Test UniswapDayDataApi")
 
 api_instance <- UniswapDayDataApi$new()
 
-test_that("ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet", {
-  # tests for ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+test_that("ChainsChainIdDappsUniswapv2DayDataHistoricalGet", {
+  # tests for ChainsChainIdDappsUniswapv2DayDataHistoricalGet
   # base path: https://onchain.coinapi.io
   # @param chain_id character 
   # @param start_block integer  (optional)
@@ -19,8 +19,8 @@ test_that("ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet", {
-  # tests for ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+test_that("ChainsChainIdDappsUniswapv3DayDataHistoricalGet", {
+  # tests for ChainsChainIdDappsUniswapv3DayDataHistoricalGet
   # base path: https://onchain.coinapi.io
   # @param chain_id character 
   # @param start_block integer  (optional)

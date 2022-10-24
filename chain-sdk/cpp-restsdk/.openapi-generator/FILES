@@ -15,6 +15,7 @@ include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
 include/CppRestOpenAPIClient/api/BundlesApi.h
 include/CppRestOpenAPIClient/api/BurnsApi.h
+include/CppRestOpenAPIClient/api/DayDataApi.h
 include/CppRestOpenAPIClient/api/FactoryApi.h
 include/CppRestOpenAPIClient/api/LiquidityPositionApi.h
 include/CppRestOpenAPIClient/api/LiquidityPositionSnapshotsApi.h
@@ -73,6 +74,7 @@ src/MultipartFormData.cpp
 src/Object.cpp
 src/api/BundlesApi.cpp
 src/api/BurnsApi.cpp
+src/api/DayDataApi.cpp
 src/api/FactoryApi.cpp
 src/api/LiquidityPositionApi.cpp
 src/api/LiquidityPositionSnapshotsApi.cpp

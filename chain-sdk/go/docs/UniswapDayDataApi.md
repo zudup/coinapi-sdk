@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **Get** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**ChainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv2DayDataHistoricalGet) | **Get** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**ChainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv3DayDataHistoricalGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
 
-## ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+## ChainsChainIdDappsUniswapv2DayDataHistoricalGet
 
-> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(ctx, chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> ChainsChainIdDappsUniswapv2DayDataHistoricalGet(ctx, chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
 
 
@@ -37,9 +37,9 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapDayDataApi.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(context.Background(), chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    resp, r, err := apiClient.UniswapDayDataApi.ChainsChainIdDappsUniswapv2DayDataHistoricalGet(context.Background(), chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapDayDataApi.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapDayDataApi.ChainsChainIdDappsUniswapv2DayDataHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
 }
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -84,9 +84,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+## ChainsChainIdDappsUniswapv3DayDataHistoricalGet
 
-> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(ctx, chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> ChainsChainIdDappsUniswapv3DayDataHistoricalGet(ctx, chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
 
 
@@ -112,9 +112,9 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapDayDataApi.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(context.Background(), chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    resp, r, err := apiClient.UniswapDayDataApi.ChainsChainIdDappsUniswapv3DayDataHistoricalGet(context.Background(), chainId).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapDayDataApi.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapDayDataApi.ChainsChainIdDappsUniswapv3DayDataHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
 }
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

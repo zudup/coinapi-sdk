@@ -4,13 +4,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-<a name="Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"></a>
-# **Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
-> void Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet<br>
+<a name="Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet"></a>
+# **Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet**
+> void Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChainId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
@@ -28,9 +28,9 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
 try {
-    $Result = Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet -ChainId $ChainId -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet -ChainId $ChainId -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-ChainsChainIdDappsUniswapv2DayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -60,9 +60,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"></a>
-# **Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
-> void Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet<br>
+<a name="Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet"></a>
+# **Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet**
+> void Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChainId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
@@ -80,9 +80,9 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
 try {
-    $Result = Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet -ChainId $ChainId -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet -ChainId $ChainId -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-ChainsChainIdDappsUniswapv3DayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

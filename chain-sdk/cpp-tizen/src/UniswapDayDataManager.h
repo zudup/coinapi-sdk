@@ -35,7 +35,7 @@ public:
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetSync(char * accessToken,
+bool chainsChainIdDappsUniswapv2DayDataHistoricalGetSync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData);
@@ -52,7 +52,7 @@ bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetSync(char * accessTok
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync(char * accessToken,
+bool chainsChainIdDappsUniswapv2DayDataHistoricalGetAsync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData);
@@ -70,7 +70,7 @@ bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync(char * accessTo
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync(char * accessToken,
+bool chainsChainIdDappsUniswapv3DayDataHistoricalGetSync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData);
@@ -87,7 +87,7 @@ bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync(char * accessTok
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync(char * accessToken,
+bool chainsChainIdDappsUniswapv3DayDataHistoricalGetAsync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData);

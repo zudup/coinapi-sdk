@@ -6,6 +6,7 @@ src/Api.elm
 src/Api/Data.elm
 src/Api/Request/Bundles.elm
 src/Api/Request/Burns.elm
+src/Api/Request/DayData.elm
 src/Api/Request/Factory.elm
 src/Api/Request/LiquidityPosition.elm
 src/Api/Request/LiquidityPositionSnapshots.elm

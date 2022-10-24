@@ -7,8 +7,8 @@ class UniswapDayDataApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet ( String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+    def chainsChainIdDappsUniswapv2DayDataHistoricalGet ( String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/chains/${chain_id}/dapps/uniswapv2/dayData/historical"
 
         // params
         def queryParams = [:]
@@ -43,8 +43,8 @@ class UniswapDayDataApi {
 
     }
 
-    def chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet ( String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+    def chainsChainIdDappsUniswapv3DayDataHistoricalGet ( String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/dayData/historical"
 
         // params
         def queryParams = [:]

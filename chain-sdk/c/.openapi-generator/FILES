@@ -6,6 +6,8 @@ api/BundlesAPI.c
 api/BundlesAPI.h
 api/BurnsAPI.c
 api/BurnsAPI.h
+api/DayDataAPI.c
+api/DayDataAPI.h
 api/FactoryAPI.c
 api/FactoryAPI.h
 api/LiquidityPositionAPI.c
@@ -56,6 +58,7 @@ api/UserAPI.c
 api/UserAPI.h
 docs/BundlesAPI.md
 docs/BurnsAPI.md
+docs/DayDataAPI.md
 docs/FactoryAPI.md
 docs/LiquidityPositionAPI.md
 docs/LiquidityPositionSnapshotsAPI.md

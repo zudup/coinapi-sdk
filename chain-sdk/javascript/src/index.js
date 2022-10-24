@@ -39,6 +39,7 @@ import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
 import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
 import BundlesApi from './api/BundlesApi';
 import BurnsApi from './api/BurnsApi';
+import DayDataApi from './api/DayDataApi';
 import FactoryApi from './api/FactoryApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
 import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
@@ -258,6 +259,12 @@ export {
     * @property {module:api/BurnsApi}
     */
     BurnsApi,
+
+    /**
+    * The DayDataApi service constructor.
+    * @property {module:api/DayDataApi}
+    */
+    DayDataApi,
 
     /**
     * The FactoryApi service constructor.

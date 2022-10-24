@@ -4,12 +4,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**ChainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**ChainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#ChainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-# **ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
-> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chain_id, start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **ChainsChainIdDappsUniswapv2DayDataHistoricalGet**
+> ChainsChainIdDappsUniswapv2DayDataHistoricalGet(chain_id, start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
 
 
@@ -25,7 +25,7 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- UniswapDayDataApi$new()
-api_instance$ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+api_instance$ChainsChainIdDappsUniswapv2DayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 ```
 
 ### Parameters
@@ -56,8 +56,8 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-# **ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
-> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chain_id, start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **ChainsChainIdDappsUniswapv3DayDataHistoricalGet**
+> ChainsChainIdDappsUniswapv3DayDataHistoricalGet(chain_id, start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
 
 
@@ -73,7 +73,7 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- UniswapDayDataApi$new()
-api_instance$ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+api_instance$ChainsChainIdDappsUniswapv3DayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 ```
 
 ### Parameters

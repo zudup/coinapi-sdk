@@ -33,8 +33,8 @@ class UniswapDayDataApi(baseUrl: String) {
    * @param startDate 
    * @param endDate 
    */
-  def chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical", "application/json")
+  def chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv2/dayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -53,8 +53,8 @@ class UniswapDayDataApi(baseUrl: String) {
    * @param startDate 
    * @param endDate 
    */
-  def chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical", "application/json")
+  def chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/uniswapv3/dayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)

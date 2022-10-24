@@ -17,7 +17,7 @@ class UniswapDayDataApi {
 
   const UniswapDayDataApi(this._dio, this._serializers);
 
-  /// chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+  /// chainsChainIdDappsUniswapv2DayDataHistoricalGet
   /// 
   ///
   /// Parameters:
@@ -35,7 +35,7 @@ class UniswapDayDataApi {
   ///
   /// Returns a [Future]
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet({ 
+  Future<Response<void>> chainsChainIdDappsUniswapv2DayDataHistoricalGet({ 
     required String chainId,
     int? startBlock,
     int? endBlock,
@@ -48,7 +48,7 @@ class UniswapDayDataApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/chains/{chain_id}/dapps/uniswapv2/dayData/historical'.replaceAll('{' r'chain_id' '}', chainId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -80,7 +80,7 @@ class UniswapDayDataApi {
     return _response;
   }
 
-  /// chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+  /// chainsChainIdDappsUniswapv3DayDataHistoricalGet
   /// 
   ///
   /// Parameters:
@@ -98,7 +98,7 @@ class UniswapDayDataApi {
   ///
   /// Returns a [Future]
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet({ 
+  Future<Response<void>> chainsChainIdDappsUniswapv3DayDataHistoricalGet({ 
     required String chainId,
     int? startBlock,
     int? endBlock,
@@ -111,7 +111,7 @@ class UniswapDayDataApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/chains/{chain_id}/dapps/uniswapv3/dayData/historical'.replaceAll('{' r'chain_id' '}', chainId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

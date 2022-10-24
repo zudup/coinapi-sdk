@@ -36,12 +36,12 @@ UniswapDayDataApi::~UniswapDayDataApi()
 {
 }
 
-pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(utility::string_t chainId, boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2DayDataHistoricalGet(utility::string_t chainId, boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/chains/{chain_id}/dapps/uniswapv2/dayData/historical");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("chain_id") + utility::conversions::to_string_t("}"), ApiClient::parameterToString(chainId));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -70,7 +70,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHis
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv2DayDataHistoricalGet does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -113,7 +113,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHis
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv2DayDataHistoricalGet does not consume any supported media type"));
     }
 
 
@@ -133,7 +133,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHis
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv2DayDataHistoricalGet: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -144,7 +144,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHis
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv2DayDataHistoricalGet: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -156,12 +156,12 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv2UniswapDayDataHis
         return void();
     });
 }
-pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(utility::string_t chainId, boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3DayDataHistoricalGet(utility::string_t chainId, boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/chains/{chain_id}/dapps/uniswapv3/dayData/historical");
     boost::replace_all(localVarPath, utility::conversions::to_string_t("{") + utility::conversions::to_string_t("chain_id") + utility::conversions::to_string_t("}"), ApiClient::parameterToString(chainId));
 
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
@@ -190,7 +190,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3UniswapDayDataHis
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv3DayDataHistoricalGet does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -233,7 +233,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3UniswapDayDataHis
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapDayDataApi->chainsChainIdDappsUniswapv3DayDataHistoricalGet does not consume any supported media type"));
     }
 
 
@@ -253,7 +253,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3UniswapDayDataHis
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv3DayDataHistoricalGet: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -264,7 +264,7 @@ pplx::task<void> UniswapDayDataApi::chainsChainIdDappsUniswapv3UniswapDayDataHis
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling chainsChainIdDappsUniswapv3DayDataHistoricalGet: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }

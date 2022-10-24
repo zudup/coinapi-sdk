@@ -13,6 +13,7 @@ R/bundle_v3_dto.R
 R/bundles_api.R
 R/burn_v3_dto.R
 R/burns_api.R
+R/day_data_api.R
 R/e_trade_aggressive_side.R
 R/factory_api.R
 R/factory_v3_dto.R
@@ -64,6 +65,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -116,6 +118,7 @@ tests/testthat/test_bundle_v3_dto.R
 tests/testthat/test_bundles_api.R
 tests/testthat/test_burn_v3_dto.R
 tests/testthat/test_burns_api.R
+tests/testthat/test_day_data_api.R
 tests/testthat/test_e_trade_aggressive_side.R
 tests/testthat/test_factory_api.R
 tests/testthat/test_factory_v3_dto.R

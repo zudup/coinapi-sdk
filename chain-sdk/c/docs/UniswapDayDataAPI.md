@@ -4,13 +4,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataAPI.md#UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataAPI.md#UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataAPI.md#UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataAPI.md#UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-# **UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
+# **UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet**
 ```c
-void UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
+void UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters
@@ -38,9 +38,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
+# **UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet**
 ```c
-void UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
+void UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters

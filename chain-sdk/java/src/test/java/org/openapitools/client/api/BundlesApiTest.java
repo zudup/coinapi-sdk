@@ -35,6 +35,20 @@ public class BundlesApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsSushiswapBundlesHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        api.chainsChainIdDappsSushiswapBundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv2BundlesHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

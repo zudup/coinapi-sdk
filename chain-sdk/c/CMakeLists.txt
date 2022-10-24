@@ -80,6 +80,7 @@ set(SRCS
     model/uniswap_day_data_v3_dto.c
     api/BundlesAPI.c
     api/BurnsAPI.c
+    api/DayDataAPI.c
     api/FactoryAPI.c
     api/LiquidityPositionAPI.c
     api/LiquidityPositionSnapshotsAPI.c
@@ -140,6 +141,7 @@ set(HDRS
     model/uniswap_day_data_v3_dto.h
     api/BundlesAPI.h
     api/BurnsAPI.h
+    api/DayDataAPI.h
     api/FactoryAPI.h
     api/LiquidityPositionAPI.h
     api/LiquidityPositionSnapshotsAPI.h
@@ -247,6 +249,7 @@ set(HDRS "")
 #set(SRCS
 #    unit-tests/manual-BundlesAPI.c
 #    unit-tests/manual-BurnsAPI.c
+#    unit-tests/manual-DayDataAPI.c
 #    unit-tests/manual-FactoryAPI.c
 #    unit-tests/manual-LiquidityPositionAPI.c
 #    unit-tests/manual-LiquidityPositionSnapshotsAPI.c

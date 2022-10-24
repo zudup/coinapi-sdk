@@ -8,10 +8,10 @@
 
 
 void
-UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 
 void
-UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

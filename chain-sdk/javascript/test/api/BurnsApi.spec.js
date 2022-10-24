@@ -48,6 +48,16 @@
   }
 
   describe('BurnsApi', function() {
+    describe('chainsChainIdDappsSushiswapBurnsHistoricalGet', function() {
+      it('should call chainsChainIdDappsSushiswapBurnsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsSushiswapBurnsHistoricalGet
+        //instance.chainsChainIdDappsSushiswapBurnsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv2BurnsHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv2BurnsHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv2BurnsHistoricalGet

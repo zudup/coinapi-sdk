@@ -73,24 +73,24 @@ class UniswapDayDataApiTest extends TestCase
     }
 
     /**
-     * Test case for chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+     * Test case for chainsChainIdDappsUniswapv2DayDataHistoricalGet
      *
      * .
      *
      */
-    public function testChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet()
+    public function testChainsChainIdDappsUniswapv2DayDataHistoricalGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+     * Test case for chainsChainIdDappsUniswapv3DayDataHistoricalGet
      *
      * .
      *
      */
-    public function testChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet()
+    public function testChainsChainIdDappsUniswapv3DayDataHistoricalGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

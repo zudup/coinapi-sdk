@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'BundlesApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapBundlesHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapBundlesHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapBundlesHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2BundlesHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2BundlesHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2BundlesHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

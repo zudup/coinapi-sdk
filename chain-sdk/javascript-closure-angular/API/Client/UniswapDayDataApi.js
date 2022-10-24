@@ -53,9 +53,9 @@ API.Client.UniswapDayDataApi.$inject = ['$http', '$httpParamSerializer', '$injec
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise}
  */
-API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet = function(chainId, opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv2DayDataHistoricalGet = function(chainId, opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'
+  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'
       .replace('{' + 'chain_id' + '}', String(chainId));
 
   /** @type {!Object} */
@@ -65,7 +65,7 @@ API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv2UniswapDayData
   var headerParams = angular.extend({}, this.defaultHeaders_);
   // verify required parameter 'chainId' is set
   if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet');
+    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet');
   }
   if (opt_startBlock !== undefined) {
     queryParameters['startBlock'] = opt_startBlock;
@@ -110,9 +110,9 @@ API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv2UniswapDayData
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise}
  */
-API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet = function(chainId, opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv3DayDataHistoricalGet = function(chainId, opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'
+  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'
       .replace('{' + 'chain_id' + '}', String(chainId));
 
   /** @type {!Object} */
@@ -122,7 +122,7 @@ API.Client.UniswapDayDataApi.prototype.chainsChainIdDappsUniswapv3UniswapDayData
   var headerParams = angular.extend({}, this.defaultHeaders_);
   // verify required parameter 'chainId' is set
   if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet');
+    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet');
   }
   if (opt_startBlock !== undefined) {
     queryParameters['startBlock'] = opt_startBlock;

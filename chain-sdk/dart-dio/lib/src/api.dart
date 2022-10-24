@@ -11,6 +11,7 @@ import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/bundles_api.dart';
 import 'package:openapi/src/api/burns_api.dart';
+import 'package:openapi/src/api/day_data_api.dart';
 import 'package:openapi/src/api/factory_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
 import 'package:openapi/src/api/liquidity_position_snapshots_api.dart';
@@ -100,6 +101,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   BurnsApi getBurnsApi() {
     return BurnsApi(dio, serializers);
+  }
+
+  /// Get DayDataApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DayDataApi getDayDataApi() {
+    return DayDataApi(dio, serializers);
   }
 
   /// Get FactoryApi instance, base route and serializer can be overridden by a given but be careful,

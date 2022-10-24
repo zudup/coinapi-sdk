@@ -65,16 +65,16 @@ public class UniswapDayDataApi {
    * @param endDate 
    * @return void
   */
-  public void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void chainsChainIdDappsUniswapv2DayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -130,17 +130,17 @@ public class UniswapDayDataApi {
    * 
    * @param chainId    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void chainsChainIdDappsUniswapv2DayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -200,16 +200,16 @@ public class UniswapDayDataApi {
    * @param endDate 
    * @return void
   */
-  public void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void chainsChainIdDappsUniswapv3DayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -265,17 +265,17 @@ public class UniswapDayDataApi {
    * 
    * @param chainId    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void chainsChainIdDappsUniswapv3DayDataHistoricalGet (String chainId, Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

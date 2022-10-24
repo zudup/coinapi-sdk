@@ -4,6 +4,7 @@ git_push.sh
 openapiclient-1.0.0-1.rockspec
 openapiclient/api/bundles_api.lua
 openapiclient/api/burns_api.lua
+openapiclient/api/day_data_api.lua
 openapiclient/api/factory_api.lua
 openapiclient/api/liquidity_position_api.lua
 openapiclient/api/liquidity_position_snapshots_api.lua
@@ -57,6 +58,7 @@ spec/bundle_v3_dto_spec.lua
 spec/bundles_api_spec.lua
 spec/burn_v3_dto_spec.lua
 spec/burns_api_spec.lua
+spec/day_data_api_spec.lua
 spec/e_trade_aggressive_side_spec.lua
 spec/factory_api_spec.lua
 spec/factory_v3_dto_spec.lua

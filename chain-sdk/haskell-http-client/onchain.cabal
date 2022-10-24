@@ -66,6 +66,7 @@ library
       OnChain.API
       OnChain.API.Bundles
       OnChain.API.Burns
+      OnChain.API.DayData
       OnChain.API.Factory
       OnChain.API.LiquidityPosition
       OnChain.API.LiquidityPositionSnapshots

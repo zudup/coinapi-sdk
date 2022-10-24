@@ -6,7 +6,7 @@ private class OASUniswapDayDataApiTest {
      * 
      */
     @isTest
-    private static void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetTest() {
+    private static void chainsChainIdDappsUniswapv2DayDataHistoricalGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -26,7 +26,7 @@ private class OASUniswapDayDataApiTest {
 
         api = new OASUniswapDayDataApi(new OASClient());
 
-        api.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(params);
+        api.chainsChainIdDappsUniswapv2DayDataHistoricalGet(params);
     }
 
     /**
@@ -35,7 +35,7 @@ private class OASUniswapDayDataApiTest {
      * 
      */
     @isTest
-    private static void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetTest() {
+    private static void chainsChainIdDappsUniswapv3DayDataHistoricalGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -55,6 +55,6 @@ private class OASUniswapDayDataApiTest {
 
         api = new OASUniswapDayDataApi(new OASClient());
 
-        api.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(params);
+        api.chainsChainIdDappsUniswapv3DayDataHistoricalGet(params);
     }
 }

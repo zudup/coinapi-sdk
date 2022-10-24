@@ -8,6 +8,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -59,6 +60,7 @@ lib/WWW/OpenAPIClient/ApiFactory.pm
 lib/WWW/OpenAPIClient/BundlesApi.pm
 lib/WWW/OpenAPIClient/BurnsApi.pm
 lib/WWW/OpenAPIClient/Configuration.pm
+lib/WWW/OpenAPIClient/DayDataApi.pm
 lib/WWW/OpenAPIClient/FactoryApi.pm
 lib/WWW/OpenAPIClient/LiquidityPositionApi.pm
 lib/WWW/OpenAPIClient/LiquidityPositionSnapshotsApi.pm
@@ -114,6 +116,7 @@ t/BundleV3DTOTest.t
 t/BundlesApiTest.t
 t/BurnV3DTOTest.t
 t/BurnsApiTest.t
+t/DayDataApiTest.t
 t/ETradeAggressiveSideTest.t
 t/FactoryApiTest.t
 t/FactoryV3DTOTest.t

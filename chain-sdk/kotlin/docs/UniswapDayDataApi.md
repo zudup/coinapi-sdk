@@ -4,13 +4,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-<a name="chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet"></a>
-# **chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
-> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+<a name="chainsChainIdDappsUniswapv2DayDataHistoricalGet"></a>
+# **chainsChainIdDappsUniswapv2DayDataHistoricalGet**
+> chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -27,12 +27,12 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+    apiInstance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet")
+    println("4xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv2DayDataHistoricalGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet")
+    println("5xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv2DayDataHistoricalGet")
     e.printStackTrace()
 }
 ```
@@ -60,9 +60,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet"></a>
-# **chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
-> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+<a name="chainsChainIdDappsUniswapv3DayDataHistoricalGet"></a>
+# **chainsChainIdDappsUniswapv3DayDataHistoricalGet**
+> chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -79,12 +79,12 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+    apiInstance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet")
+    println("4xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv3DayDataHistoricalGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet")
+    println("5xx response calling UniswapDayDataApi#chainsChainIdDappsUniswapv3DayDataHistoricalGet")
     e.printStackTrace()
 }
 ```

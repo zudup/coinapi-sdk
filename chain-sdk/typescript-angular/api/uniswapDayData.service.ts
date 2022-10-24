@@ -98,12 +98,12 @@ export class UniswapDayDataService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -154,7 +154,7 @@ export class UniswapDayDataService {
             }
         }
 
-        let localVarPath = `/chains/${this.configuration.encodeParam({name: "chainId", value: chainId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/dapps/uniswapv2/uniswapDayData/historical`;
+        let localVarPath = `/chains/${this.configuration.encodeParam({name: "chainId", value: chainId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/dapps/uniswapv2/dayData/historical`;
         return this.httpClient.request<any>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -177,12 +177,12 @@ export class UniswapDayDataService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -233,7 +233,7 @@ export class UniswapDayDataService {
             }
         }
 
-        let localVarPath = `/chains/${this.configuration.encodeParam({name: "chainId", value: chainId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/dapps/uniswapv3/uniswapDayData/historical`;
+        let localVarPath = `/chains/${this.configuration.encodeParam({name: "chainId", value: chainId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/dapps/uniswapv3/dayData/historical`;
         return this.httpClient.request<any>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,

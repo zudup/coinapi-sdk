@@ -32,7 +32,7 @@ describe 'UniswapDayDataApi' do
     end
   end
 
-  # unit tests for chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get
+  # unit tests for chains_chain_id_dapps_uniswapv2_day_data_historical_get
   # @param chain_id 
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -40,13 +40,13 @@ describe 'UniswapDayDataApi' do
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @return [nil]
-  describe 'chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get test' do
+  describe 'chains_chain_id_dapps_uniswapv2_day_data_historical_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get
+  # unit tests for chains_chain_id_dapps_uniswapv3_day_data_historical_get
   # @param chain_id 
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -54,7 +54,7 @@ describe 'UniswapDayDataApi' do
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @return [nil]
-  describe 'chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get test' do
+  describe 'chains_chain_id_dapps_uniswapv3_day_data_historical_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
 
-## chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv2DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+> chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -28,9 +28,9 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+    apiInstance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet");
+    System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2DayDataHistoricalGet");
     e.printStackTrace();
 }
 ```
@@ -60,9 +60,9 @@ No authorization required
 - **Accept**: Not defined
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv3DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+> chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -79,9 +79,9 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+    apiInstance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet");
+    System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3DayDataHistoricalGet");
     e.printStackTrace();
 }
 ```

@@ -58,54 +58,54 @@ import qualified Prelude as P
 
 -- ** UniswapDayData
 
--- *** chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+-- *** chainsChainIdDappsUniswapv2DayDataHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/uniswapDayData\/historical@
+-- | @GET \/chains\/{chain_id}\/dapps\/uniswapv2\/dayData\/historical@
 -- 
-chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+chainsChainIdDappsUniswapv2DayDataHistoricalGet
   :: ChainId -- ^ "chainId"
-  -> OnChainRequest ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
-chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv2/uniswapDayData/historical"]
+  -> OnChainRequest ChainsChainIdDappsUniswapv2DayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsUniswapv2DayDataHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv2/dayData/historical"]
 
-data ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet  
-instance HasOptionalParam ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet StartBlock where
+data ChainsChainIdDappsUniswapv2DayDataHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsUniswapv2DayDataHistoricalGet StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet EndBlock where
+instance HasOptionalParam ChainsChainIdDappsUniswapv2DayDataHistoricalGet EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet StartDate where
+instance HasOptionalParam ChainsChainIdDappsUniswapv2DayDataHistoricalGet StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet EndDate where
+instance HasOptionalParam ChainsChainIdDappsUniswapv2DayDataHistoricalGet EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet MimeNoContent
+instance Produces ChainsChainIdDappsUniswapv2DayDataHistoricalGet MimeNoContent
 
 
--- *** chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+-- *** chainsChainIdDappsUniswapv3DayDataHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/uniswapDayData\/historical@
+-- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/dayData\/historical@
 -- 
-chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+chainsChainIdDappsUniswapv3DayDataHistoricalGet
   :: ChainId -- ^ "chainId"
-  -> OnChainRequest ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
-chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/uniswapDayData/historical"]
+  -> OnChainRequest ChainsChainIdDappsUniswapv3DayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsUniswapv3DayDataHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/dayData/historical"]
 
-data ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet  
-instance HasOptionalParam ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet StartBlock where
+data ChainsChainIdDappsUniswapv3DayDataHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsUniswapv3DayDataHistoricalGet StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet EndBlock where
+instance HasOptionalParam ChainsChainIdDappsUniswapv3DayDataHistoricalGet EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet StartDate where
+instance HasOptionalParam ChainsChainIdDappsUniswapv3DayDataHistoricalGet StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet EndDate where
+instance HasOptionalParam ChainsChainIdDappsUniswapv3DayDataHistoricalGet EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet MimeNoContent
+instance Produces ChainsChainIdDappsUniswapv3DayDataHistoricalGet MimeNoContent
 

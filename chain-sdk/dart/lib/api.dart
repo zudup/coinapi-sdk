@@ -29,6 +29,7 @@ part 'auth/http_bearer_auth.dart';
 
 part 'api/bundles_api.dart';
 part 'api/burns_api.dart';
+part 'api/day_data_api.dart';
 part 'api/factory_api.dart';
 part 'api/liquidity_position_api.dart';
 part 'api/liquidity_position_snapshots_api.dart';

@@ -6,6 +6,7 @@ from openapi_client.apis.tags.uniswap_v2_api import UniswapV2Api
 from openapi_client.apis.tags.uniswap_v3_api import UniswapV3Api
 from openapi_client.apis.tags.bundles_api import BundlesApi
 from openapi_client.apis.tags.burns_api import BurnsApi
+from openapi_client.apis.tags.day_data_api import DayDataApi
 from openapi_client.apis.tags.factory_api import FactoryApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
 from openapi_client.apis.tags.liquidity_position_snapshots_api import LiquidityPositionSnapshotsApi
@@ -36,6 +37,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.UNISWAP_V3: UniswapV3Api,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
+        TagValues.DAY_DATA: DayDataApi,
         TagValues.FACTORY: FactoryApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
@@ -67,6 +69,7 @@ tag_to_api = TagToApi(
         TagValues.UNISWAP_V3: UniswapV3Api,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
+        TagValues.DAY_DATA: DayDataApi,
         TagValues.FACTORY: FactoryApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,

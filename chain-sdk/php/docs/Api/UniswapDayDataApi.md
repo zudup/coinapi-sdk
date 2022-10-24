@@ -4,14 +4,14 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet()**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical |  |
-| [**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet()**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical |  |
+| [**chainsChainIdDappsUniswapv2DayDataHistoricalGet()**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical |  |
+| [**chainsChainIdDappsUniswapv3DayDataHistoricalGet()**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical |  |
 
 
-## `chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet()`
+## `chainsChainIdDappsUniswapv2DayDataHistoricalGet()`
 
 ```php
-chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date)
+chainsChainIdDappsUniswapv2DayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date)
 ```
 
 
@@ -36,9 +36,9 @@ $start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 
 try {
-    $apiInstance->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date);
+    $apiInstance->chainsChainIdDappsUniswapv2DayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv2DayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -69,10 +69,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet()`
+## `chainsChainIdDappsUniswapv3DayDataHistoricalGet()`
 
 ```php
-chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date)
+chainsChainIdDappsUniswapv3DayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date)
 ```
 
 
@@ -97,9 +97,9 @@ $start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 
 try {
-    $apiInstance->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date);
+    $apiInstance->chainsChainIdDappsUniswapv3DayDataHistoricalGet($chain_id, $start_block, $end_block, $start_date, $end_date);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv3DayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

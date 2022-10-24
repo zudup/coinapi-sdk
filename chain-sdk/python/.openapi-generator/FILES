@@ -5,6 +5,7 @@
 README.md
 docs/apis/tags/BundlesApi.md
 docs/apis/tags/BurnsApi.md
+docs/apis/tags/DayDataApi.md
 docs/apis/tags/FactoryApi.md
 docs/apis/tags/LiquidityPositionApi.md
 docs/apis/tags/LiquidityPositionSnapshotsApi.md
@@ -59,6 +60,7 @@ openapi_client/api_client.py
 openapi_client/apis/__init__.py
 openapi_client/apis/tags/bundles_api.py
 openapi_client/apis/tags/burns_api.py
+openapi_client/apis/tags/day_data_api.py
 openapi_client/apis/tags/factory_api.py
 openapi_client/apis/tags/liquidity_position_api.py
 openapi_client/apis/tags/liquidity_position_snapshots_api.py

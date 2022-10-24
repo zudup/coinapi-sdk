@@ -6,6 +6,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -56,6 +57,7 @@ project/build.properties
 src/main/resources/reference.conf
 src/main/scala/org/openapitools/client/api/BundlesApi.scala
 src/main/scala/org/openapitools/client/api/BurnsApi.scala
+src/main/scala/org/openapitools/client/api/DayDataApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
 src/main/scala/org/openapitools/client/api/FactoryApi.scala
 src/main/scala/org/openapitools/client/api/LiquidityPositionApi.scala

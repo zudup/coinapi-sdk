@@ -55,6 +55,26 @@ public:
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> chainsChainIdDappsSushiswapBurnsHistoricalGet(
+        utility::string_t chainId,
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="chainId"></param>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<void> chainsChainIdDappsUniswapv2BurnsHistoricalGet(
         utility::string_t chainId,
         boost::optional<int64_t> startBlock,

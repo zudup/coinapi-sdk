@@ -25,7 +25,7 @@ import (
 // UniswapDayDataApiService UniswapDayDataApi service
 type UniswapDayDataApiService service
 
-type ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest struct {
+type ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest struct {
 	ctx context.Context
 	ApiService *UniswapDayDataApiService
 	chainId string
@@ -35,39 +35,39 @@ type ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetExecute(r)
+func (r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ChainsChainIdDappsUniswapv2DayDataHistoricalGetExecute(r)
 }
 
 /*
-ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet Method for ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+ChainsChainIdDappsUniswapv2DayDataHistoricalGet Method for ChainsChainIdDappsUniswapv2DayDataHistoricalGet
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param chainId
- @return ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest
+ @return ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest
 */
-func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
-	return ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest{
+func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2DayDataHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
+	return ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest{
 		ApiService: a,
 		ctx: ctx,
 		chainId: chainId,
@@ -75,19 +75,19 @@ func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2UniswapDayDataHist
 }
 
 // Execute executes the request
-func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest) (*http.Response, error) {
+func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2DayDataHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapDayDataApiService.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapDayDataApiService.ChainsChainIdDappsUniswapv2DayDataHistoricalGet")
 	if err != nil {
 		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv2/dayData/historical"
 	localVarPath = strings.Replace(localVarPath, "{"+"chain_id"+"}", url.PathEscape(parameterToString(r.chainId, "")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -151,7 +151,7 @@ func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv2UniswapDayDataHist
 	return localVarHTTPResponse, nil
 }
 
-type ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest struct {
+type ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest struct {
 	ctx context.Context
 	ApiService *UniswapDayDataApiService
 	chainId string
@@ -161,39 +161,39 @@ type ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
+func (r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetExecute(r)
+func (r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ChainsChainIdDappsUniswapv3DayDataHistoricalGetExecute(r)
 }
 
 /*
-ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet Method for ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+ChainsChainIdDappsUniswapv3DayDataHistoricalGet Method for ChainsChainIdDappsUniswapv3DayDataHistoricalGet
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param chainId
- @return ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest
+ @return ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest
 */
-func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
-	return ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest{
+func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv3DayDataHistoricalGet(ctx context.Context, chainId string) ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
+	return ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest{
 		ApiService: a,
 		ctx: ctx,
 		chainId: chainId,
@@ -201,19 +201,19 @@ func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv3UniswapDayDataHist
 }
 
 // Execute executes the request
-func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest) (*http.Response, error) {
+func (a *UniswapDayDataApiService) ChainsChainIdDappsUniswapv3DayDataHistoricalGetExecute(r ApiChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapDayDataApiService.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapDayDataApiService.ChainsChainIdDappsUniswapv3DayDataHistoricalGet")
 	if err != nil {
 		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+	localVarPath := localBasePath + "/chains/{chain_id}/dapps/uniswapv3/dayData/historical"
 	localVarPath = strings.Replace(localVarPath, "{"+"chain_id"+"}", url.PathEscape(parameterToString(r.chainId, "")), -1)
 
 	localVarHeaderParams := make(map[string]string)

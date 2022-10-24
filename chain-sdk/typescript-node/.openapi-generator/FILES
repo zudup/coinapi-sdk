@@ -4,6 +4,7 @@ api.ts
 api/apis.ts
 api/bundlesApi.ts
 api/burnsApi.ts
+api/dayDataApi.ts
 api/factoryApi.ts
 api/liquidityPositionApi.ts
 api/liquidityPositionSnapshotsApi.ts

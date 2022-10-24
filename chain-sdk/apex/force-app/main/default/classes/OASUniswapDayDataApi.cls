@@ -35,7 +35,7 @@ public class OASUniswapDayDataApi {
      * @param endDate  (optional)
      * @throws OAS.ApiException if fails to make API call
      */
-    public void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(Map<String, Object> params) {
+    public void chainsChainIdDappsUniswapv2DayDataHistoricalGet(Map<String, Object> params) {
         client.assertNotNull(params.get('chainId'), 'chainId');
         List<OAS.Param> query = new List<OAS.Param>();
 
@@ -48,7 +48,7 @@ public class OASUniswapDayDataApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         client.invoke(
-            'GET', '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical', '',
+            'GET', '/chains/{chain_id}/dapps/uniswapv2/dayData/historical', '',
             query, form,
             new Map<String, Object>{
                 'chain_id' => (String) params.get('chainId')
@@ -70,7 +70,7 @@ public class OASUniswapDayDataApi {
      * @param endDate  (optional)
      * @throws OAS.ApiException if fails to make API call
      */
-    public void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(Map<String, Object> params) {
+    public void chainsChainIdDappsUniswapv3DayDataHistoricalGet(Map<String, Object> params) {
         client.assertNotNull(params.get('chainId'), 'chainId');
         List<OAS.Param> query = new List<OAS.Param>();
 
@@ -83,7 +83,7 @@ public class OASUniswapDayDataApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         client.invoke(
-            'GET', '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical', '',
+            'GET', '/chains/{chain_id}/dapps/uniswapv3/dayData/historical', '',
             query, form,
             new Map<String, Object>{
                 'chain_id' => (String) params.get('chainId')

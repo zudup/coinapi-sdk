@@ -35,13 +35,13 @@ public class UniswapDayDataApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetTest() throws ApiException {
+    public void chainsChainIdDappsUniswapv2DayDataHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        api.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
@@ -49,13 +49,13 @@ public class UniswapDayDataApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetTest() throws ApiException {
+    public void chainsChainIdDappsUniswapv3DayDataHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        api.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 

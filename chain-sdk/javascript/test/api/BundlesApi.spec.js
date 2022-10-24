@@ -48,6 +48,16 @@
   }
 
   describe('BundlesApi', function() {
+    describe('chainsChainIdDappsSushiswapBundlesHistoricalGet', function() {
+      it('should call chainsChainIdDappsSushiswapBundlesHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsSushiswapBundlesHistoricalGet
+        //instance.chainsChainIdDappsSushiswapBundlesHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsUniswapv2BundlesHistoricalGet', function() {
       it('should call chainsChainIdDappsUniswapv2BundlesHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsUniswapv2BundlesHistoricalGet

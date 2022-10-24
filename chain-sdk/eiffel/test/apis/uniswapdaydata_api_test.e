@@ -13,7 +13,7 @@ inherit
 feature -- Test routines
 
 
-    test_chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get
+    test_chains_chain_id_dapps_uniswapv2_day_data_historical_get
             -- 
             --
             -- 
@@ -27,11 +27,11 @@ feature -- Test routines
             -- TODO: Initialize required params.
             -- l_chain_id
 
-            -- api.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(l_chain_id, l_start_block, l_end_block, l_start_date, l_end_date)
+            -- api.chains_chain_id_dapps_uniswapv2_day_data_historical_get(l_chain_id, l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 
-    test_chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get
+    test_chains_chain_id_dapps_uniswapv3_day_data_historical_get
             -- 
             --
             -- 
@@ -45,7 +45,7 @@ feature -- Test routines
             -- TODO: Initialize required params.
             -- l_chain_id
 
-            -- api.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(l_chain_id, l_start_block, l_end_block, l_start_date, l_end_date)
+            -- api.chains_chain_id_dapps_uniswapv3_day_data_historical_get(l_chain_id, l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 

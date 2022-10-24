@@ -41,6 +41,7 @@ export(UniswapDayDataV3DTO)
 # APIs
 export(BundlesApi)
 export(BurnsApi)
+export(DayDataApi)
 export(FactoryApi)
 export(LiquidityPositionApi)
 export(LiquidityPositionSnapshotsApi)

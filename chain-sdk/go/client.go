@@ -54,6 +54,8 @@ type APIClient struct {
 
 	BurnsApi *BurnsApiService
 
+	DayDataApi *DayDataApiService
+
 	FactoryApi *FactoryApiService
 
 	LiquidityPositionApi *LiquidityPositionApiService
@@ -121,6 +123,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	// API Services
 	c.BundlesApi = (*BundlesApiService)(&c.common)
 	c.BurnsApi = (*BurnsApiService)(&c.common)
+	c.DayDataApi = (*DayDataApiService)(&c.common)
 	c.FactoryApi = (*FactoryApiService)(&c.common)
 	c.LiquidityPositionApi = (*LiquidityPositionApiService)(&c.common)
 	c.LiquidityPositionSnapshotsApi = (*LiquidityPositionSnapshotsApiService)(&c.common)

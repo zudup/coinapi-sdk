@@ -6,6 +6,7 @@ README.md
 composer.json
 docs/Api/BundlesApi.md
 docs/Api/BurnsApi.md
+docs/Api/DayDataApi.md
 docs/Api/FactoryApi.md
 docs/Api/LiquidityPositionApi.md
 docs/Api/LiquidityPositionSnapshotsApi.md
@@ -57,6 +58,7 @@ docs/Model/UniswapDayDataV3DTO.md
 git_push.sh
 lib/Api/BundlesApi.php
 lib/Api/BurnsApi.php
+lib/Api/DayDataApi.php
 lib/Api/FactoryApi.php
 lib/Api/LiquidityPositionApi.php
 lib/Api/LiquidityPositionSnapshotsApi.php
@@ -113,6 +115,7 @@ lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/BundlesApiTest.php
 test/Api/BurnsApiTest.php
+test/Api/DayDataApiTest.php
 test/Api/FactoryApiTest.php
 test/Api/LiquidityPositionApiTest.php
 test/Api/LiquidityPositionSnapshotsApiTest.php

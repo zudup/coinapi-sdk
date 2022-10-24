@@ -26,8 +26,8 @@ defmodule OnChainAPI.Api.UniswapDayData do
   - `{:ok, nil}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(connection, chain_id, opts \\ []) do
+  @spec chains_chain_id_dapps_uniswapv2_day_data_historical_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  def chains_chain_id_dapps_uniswapv2_day_data_historical_get(connection, chain_id, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -38,7 +38,7 @@ defmodule OnChainAPI.Api.UniswapDayData do
     request =
       %{}
       |> method(:get)
-      |> url("/chains/#{chain_id}/dapps/uniswapv2/uniswapDayData/historical")
+      |> url("/chains/#{chain_id}/dapps/uniswapv2/dayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -66,8 +66,8 @@ defmodule OnChainAPI.Api.UniswapDayData do
   - `{:ok, nil}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(connection, chain_id, opts \\ []) do
+  @spec chains_chain_id_dapps_uniswapv3_day_data_historical_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  def chains_chain_id_dapps_uniswapv3_day_data_historical_get(connection, chain_id, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -78,7 +78,7 @@ defmodule OnChainAPI.Api.UniswapDayData do
     request =
       %{}
       |> method(:get)
-      |> url("/chains/#{chain_id}/dapps/uniswapv3/uniswapDayData/historical")
+      |> url("/chains/#{chain_id}/dapps/uniswapv3/dayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**](UNISWAPDAYDATA_API.md#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**](UNISWAPDAYDATA_API.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chains_chain_id_dapps_uniswapv2_day_data_historical_get**](UNISWAPDAYDATA_API.md#chains_chain_id_dapps_uniswapv2_day_data_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chains_chain_id_dapps_uniswapv3_day_data_historical_get**](UNISWAPDAYDATA_API.md#chains_chain_id_dapps_uniswapv3_day_data_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-# **chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**
-> chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get (chain_id: STRING_32 ; start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+# **chains_chain_id_dapps_uniswapv2_day_data_historical_get**
+> chains_chain_id_dapps_uniswapv2_day_data_historical_get (chain_id: STRING_32 ; start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
 
 
 
@@ -40,8 +40,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**
-> chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get (chain_id: STRING_32 ; start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+# **chains_chain_id_dapps_uniswapv3_day_data_historical_get**
+> chains_chain_id_dapps_uniswapv3_day_data_historical_get (chain_id: STRING_32 ; start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
 
 
 

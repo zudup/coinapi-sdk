@@ -7,6 +7,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -65,6 +66,7 @@ src/main/java/org/openapitools/client/JsonUtil.java
 src/main/java/org/openapitools/client/Pair.java
 src/main/java/org/openapitools/client/api/BundlesApi.java
 src/main/java/org/openapitools/client/api/BurnsApi.java
+src/main/java/org/openapitools/client/api/DayDataApi.java
 src/main/java/org/openapitools/client/api/FactoryApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionSnapshotsApi.java

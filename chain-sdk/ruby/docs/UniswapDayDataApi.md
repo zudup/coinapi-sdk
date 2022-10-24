@@ -4,13 +4,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**](UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical |  |
-| [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**](UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical |  |
+| [**chains_chain_id_dapps_uniswapv2_day_data_historical_get**](UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv2_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical |  |
+| [**chains_chain_id_dapps_uniswapv3_day_data_historical_get**](UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv3_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical |  |
 
 
-## chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get
+## chains_chain_id_dapps_uniswapv2_day_data_historical_get
 
-> chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(chain_id, opts)
+> chains_chain_id_dapps_uniswapv2_day_data_historical_get(chain_id, opts)
 
 
 
@@ -31,27 +31,27 @@ opts = {
 
 begin
   
-  api_instance.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(chain_id, opts)
+  api_instance.chains_chain_id_dapps_uniswapv2_day_data_historical_get(chain_id, opts)
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get: #{e}"
+  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_day_data_historical_get: #{e}"
 end
 ```
 
-#### Using the chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info variant
+#### Using the chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info variant
 
 This returns an Array which contains the response data (`nil` in this case), status code and headers.
 
-> <Array(nil, Integer, Hash)> chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+> <Array(nil, Integer, Hash)> chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info(chain_id, opts)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+  data, status_code, headers = api_instance.chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info(chain_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info: #{e}"
+  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info: #{e}"
 end
 ```
 
@@ -79,9 +79,9 @@ No authorization required
 - **Accept**: Not defined
 
 
-## chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get
+## chains_chain_id_dapps_uniswapv3_day_data_historical_get
 
-> chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(chain_id, opts)
+> chains_chain_id_dapps_uniswapv3_day_data_historical_get(chain_id, opts)
 
 
 
@@ -102,27 +102,27 @@ opts = {
 
 begin
   
-  api_instance.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(chain_id, opts)
+  api_instance.chains_chain_id_dapps_uniswapv3_day_data_historical_get(chain_id, opts)
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get: #{e}"
+  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_day_data_historical_get: #{e}"
 end
 ```
 
-#### Using the chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info variant
+#### Using the chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info variant
 
 This returns an Array which contains the response data (`nil` in this case), status code and headers.
 
-> <Array(nil, Integer, Hash)> chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+> <Array(nil, Integer, Hash)> chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info(chain_id, opts)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+  data, status_code, headers = api_instance.chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info(chain_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info: #{e}"
+  puts "Error when calling UniswapDayDataApi->chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info: #{e}"
 end
 ```
 

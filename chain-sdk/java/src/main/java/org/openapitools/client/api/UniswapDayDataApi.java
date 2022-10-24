@@ -74,7 +74,7 @@ public class UniswapDayDataApi {
     }
 
     /**
-     * Build call for chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+     * Build call for chainsChainIdDappsUniswapv2DayDataHistoricalGet
      * @param chainId  (required)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -89,7 +89,7 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call chainsChainIdDappsUniswapv2DayDataHistoricalGetCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -106,7 +106,7 @@ public class UniswapDayDataApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+        String localVarPath = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical"
             .replaceAll("\\{" + "chain_id" + "\\}", localVarApiClient.escapeString(chainId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -152,15 +152,15 @@ public class UniswapDayDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetValidateBeforeCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call chainsChainIdDappsUniswapv2DayDataHistoricalGetValidateBeforeCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'chainId' is set
         if (chainId == null) {
-            throw new ApiException("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(Async)");
+            throw new ApiException("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet(Async)");
         }
         
 
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2DayDataHistoricalGetCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
         return localVarCall;
 
     }
@@ -180,8 +180,8 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+    public void chainsChainIdDappsUniswapv2DayDataHistoricalGet(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
+        chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
     }
 
     /**
@@ -200,8 +200,8 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, null);
+    public ApiResponse<Void> chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2DayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -222,14 +222,14 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call chainsChainIdDappsUniswapv2DayDataHistoricalGetAsync(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv2DayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+     * Build call for chainsChainIdDappsUniswapv3DayDataHistoricalGet
      * @param chainId  (required)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -244,7 +244,7 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call chainsChainIdDappsUniswapv3DayDataHistoricalGetCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -261,7 +261,7 @@ public class UniswapDayDataApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+        String localVarPath = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical"
             .replaceAll("\\{" + "chain_id" + "\\}", localVarApiClient.escapeString(chainId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -307,15 +307,15 @@ public class UniswapDayDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetValidateBeforeCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call chainsChainIdDappsUniswapv3DayDataHistoricalGetValidateBeforeCall(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'chainId' is set
         if (chainId == null) {
-            throw new ApiException("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(Async)");
+            throw new ApiException("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet(Async)");
         }
         
 
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3DayDataHistoricalGetCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
         return localVarCall;
 
     }
@@ -335,8 +335,8 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+    public void chainsChainIdDappsUniswapv3DayDataHistoricalGet(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
+        chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
     }
 
     /**
@@ -355,8 +355,8 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, null);
+    public ApiResponse<Void> chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3DayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -377,9 +377,9 @@ public class UniswapDayDataApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call chainsChainIdDappsUniswapv3DayDataHistoricalGetAsync(String chainId, Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
+        okhttp3.Call localVarCall = chainsChainIdDappsUniswapv3DayDataHistoricalGetValidateBeforeCall(chainId, startBlock, endBlock, startDate, endDate, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

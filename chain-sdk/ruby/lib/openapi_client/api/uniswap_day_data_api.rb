@@ -26,8 +26,8 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @return [nil]
-    def chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(chain_id, opts = {})
-      chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+    def chains_chain_id_dapps_uniswapv2_day_data_historical_get(chain_id, opts = {})
+      chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info(chain_id, opts)
       nil
     end
 
@@ -38,16 +38,16 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get_with_http_info(chain_id, opts = {})
+    def chains_chain_id_dapps_uniswapv2_day_data_historical_get_with_http_info(chain_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_day_data_historical_get ...'
       end
       # verify the required parameter 'chain_id' is set
       if @api_client.config.client_side_validation && chain_id.nil?
-        fail ArgumentError, "Missing the required parameter 'chain_id' when calling UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get"
+        fail ArgumentError, "Missing the required parameter 'chain_id' when calling UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_day_data_historical_get"
       end
       # resource path
-      local_var_path = '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
+      local_var_path = '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -72,7 +72,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get",
+        :operation => :"UniswapDayDataApi.chains_chain_id_dapps_uniswapv2_day_data_historical_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -83,7 +83,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapDayDataApi#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapDayDataApi#chains_chain_id_dapps_uniswapv2_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -95,8 +95,8 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @return [nil]
-    def chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(chain_id, opts = {})
-      chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info(chain_id, opts)
+    def chains_chain_id_dapps_uniswapv3_day_data_historical_get(chain_id, opts = {})
+      chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info(chain_id, opts)
       nil
     end
 
@@ -107,16 +107,16 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get_with_http_info(chain_id, opts = {})
+    def chains_chain_id_dapps_uniswapv3_day_data_historical_get_with_http_info(chain_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_day_data_historical_get ...'
       end
       # verify the required parameter 'chain_id' is set
       if @api_client.config.client_side_validation && chain_id.nil?
-        fail ArgumentError, "Missing the required parameter 'chain_id' when calling UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get"
+        fail ArgumentError, "Missing the required parameter 'chain_id' when calling UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_day_data_historical_get"
       end
       # resource path
-      local_var_path = '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
+      local_var_path = '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'.sub('{' + 'chain_id' + '}', CGI.escape(chain_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -141,7 +141,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get",
+        :operation => :"UniswapDayDataApi.chains_chain_id_dapps_uniswapv3_day_data_historical_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -152,7 +152,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapDayDataApi#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapDayDataApi#chains_chain_id_dapps_uniswapv3_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

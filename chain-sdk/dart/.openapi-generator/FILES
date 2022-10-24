@@ -8,6 +8,7 @@ doc/BundleV3DTO.md
 doc/BundlesApi.md
 doc/BurnV3DTO.md
 doc/BurnsApi.md
+doc/DayDataApi.md
 doc/ETradeAggressiveSide.md
 doc/FactoryApi.md
 doc/FactoryV3DTO.md
@@ -57,6 +58,7 @@ git_push.sh
 lib/api.dart
 lib/api/bundles_api.dart
 lib/api/burns_api.dart
+lib/api/day_data_api.dart
 lib/api/factory_api.dart
 lib/api/liquidity_position_api.dart
 lib/api/liquidity_position_snapshots_api.dart
@@ -119,6 +121,7 @@ test/bundle_v3_dto_test.dart
 test/bundles_api_test.dart
 test/burn_v3_dto_test.dart
 test/burns_api_test.dart
+test/day_data_api_test.dart
 test/e_trade_aggressive_side_test.dart
 test/factory_api_test.dart
 test/factory_v3_dto_test.dart

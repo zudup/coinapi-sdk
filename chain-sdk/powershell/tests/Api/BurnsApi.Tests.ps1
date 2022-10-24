@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'BurnsApi' {
+    Context 'Invoke-ChainsChainIdDappsSushiswapBurnsHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsSushiswapBurnsHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsSushiswapBurnsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsUniswapv2BurnsHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsUniswapv2BurnsHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsUniswapv2BurnsHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

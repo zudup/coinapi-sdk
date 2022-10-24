@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getBundlesApi();
 
   group(BundlesApi, () {
+    //Future chainsChainIdDappsSushiswapBundlesHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsSushiswapBundlesHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2BundlesHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsUniswapv2BundlesHistoricalGet', () async {
       // TODO

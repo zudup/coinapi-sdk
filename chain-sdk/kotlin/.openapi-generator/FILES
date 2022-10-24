@@ -6,6 +6,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -58,6 +59,7 @@ gradlew.bat
 settings.gradle
 src/main/kotlin/org/openapitools/client/apis/BundlesApi.kt
 src/main/kotlin/org/openapitools/client/apis/BurnsApi.kt
+src/main/kotlin/org/openapitools/client/apis/DayDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/FactoryApi.kt
 src/main/kotlin/org/openapitools/client/apis/LiquidityPositionApi.kt
 src/main/kotlin/org/openapitools/client/apis/LiquidityPositionSnapshotsApi.kt

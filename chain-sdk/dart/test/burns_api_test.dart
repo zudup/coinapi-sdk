@@ -17,6 +17,11 @@ void main() {
   // final instance = BurnsApi();
 
   group('tests for BurnsApi', () {
+    //Future chainsChainIdDappsSushiswapBurnsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test chainsChainIdDappsSushiswapBurnsHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsUniswapv2BurnsHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test chainsChainIdDappsUniswapv2BurnsHistoricalGet', () async {
       // TODO

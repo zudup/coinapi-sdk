@@ -8,6 +8,7 @@ lib/OnChain.hs
 lib/OnChain/API.hs
 lib/OnChain/API/Bundles.hs
 lib/OnChain/API/Burns.hs
+lib/OnChain/API/DayData.hs
 lib/OnChain/API/Factory.hs
 lib/OnChain/API/LiquidityPosition.hs
 lib/OnChain/API/LiquidityPositionSnapshots.hs

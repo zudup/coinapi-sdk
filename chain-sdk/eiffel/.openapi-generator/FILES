@@ -7,6 +7,7 @@ docs/BUNDLES_API.md
 docs/BUNDLE_V3_DTO.md
 docs/BURNS_API.md
 docs/BURN_V3_DTO.md
+docs/DAYDATA_API.md
 docs/E_TRADE_AGGRESSIVE_SIDE.md
 docs/FACTORY_API.md
 docs/FACTORY_V3_DTO.md
@@ -54,6 +55,7 @@ docs/UNISWAP_DAY_DATA_V3_DTO.md
 docs/USER_API.md
 src/api/bundles_api.e
 src/api/burns_api.e
+src/api/day_data_api.e
 src/api/factory_api.e
 src/api/liquidity_position_api.e
 src/api/liquidity_position_snapshots_api.e
@@ -121,6 +123,7 @@ src/framework/serialization/json_type_utilities_ext.e
 test/api_test.ecf
 test/apis/bundles_api_test.e
 test/apis/burns_api_test.e
+test/apis/daydata_api_test.e
 test/apis/factory_api_test.e
 test/apis/liquidityposition_api_test.e
 test/apis/liquiditypositionsnapshots_api_test.e

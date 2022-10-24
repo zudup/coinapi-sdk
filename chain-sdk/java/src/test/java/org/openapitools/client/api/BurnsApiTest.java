@@ -35,6 +35,21 @@ public class BurnsApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsSushiswapBurnsHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        api.chainsChainIdDappsSushiswapBurnsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsUniswapv2BurnsHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

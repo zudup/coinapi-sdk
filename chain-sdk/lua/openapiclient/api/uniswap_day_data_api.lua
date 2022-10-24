@@ -43,12 +43,12 @@ local function new_uniswap_day_data_api(authority, basePath, schemes)
 	}, uniswap_day_data_api_mt)
 end
 
-function uniswap_day_data_api:chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get(chain_id, start_block, end_block, start_date, end_date)
+function uniswap_day_data_api:chains_chain_id_dapps_uniswapv2_day_data_historical_get(chain_id, start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/chains/%s/dapps/uniswapv2/uniswapDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/chains/%s/dapps/uniswapv2/dayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, chain_id, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
@@ -74,12 +74,12 @@ function uniswap_day_data_api:chains_chain_id_dapps_uniswapv2_uniswap_day_data_h
 	end
 end
 
-function uniswap_day_data_api:chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get(chain_id, start_block, end_block, start_date, end_date)
+function uniswap_day_data_api:chains_chain_id_dapps_uniswapv3_day_data_historical_get(chain_id, start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/chains/%s/dapps/uniswapv3/uniswapDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/chains/%s/dapps/uniswapv3/dayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, chain_id, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 

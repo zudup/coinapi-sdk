@@ -54,17 +54,17 @@ export class UniswapDayDataApi {
      * @param startDate 
      * @param endDate 
      */
-    public chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
 
         let queryParameters: any = {};
         let headerParams: any = {};
         // verify required parameter 'chainId' is not null or undefined
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet.');
         }
 
         if (startBlock !== null && startBlock !== undefined) {
@@ -130,17 +130,17 @@ export class UniswapDayDataApi {
      * @param startDate 
      * @param endDate 
      */
-    public chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
 
         let queryParameters: any = {};
         let headerParams: any = {};
         // verify required parameter 'chainId' is not null or undefined
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet.');
         }
 
         if (startBlock !== null && startBlock !== undefined) {

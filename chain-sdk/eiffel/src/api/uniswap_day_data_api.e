@@ -24,7 +24,7 @@ inherit
 feature -- API Access
 
 
-	chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get (chain_id: STRING_32; start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+	chains_chain_id_dapps_uniswapv2_day_data_historical_get (chain_id: STRING_32; start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
 			-- 
 			-- 
 			-- 
@@ -48,7 +48,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+			l_path := "/chains/{chain_id}/dapps/uniswapv2/dayData/historical"
 			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
@@ -67,7 +67,7 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get (chain_id: STRING_32; start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+	chains_chain_id_dapps_uniswapv3_day_data_historical_get (chain_id: STRING_32; start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
 			-- 
 			-- 
 			-- 
@@ -91,7 +91,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+			l_path := "/chains/{chain_id}/dapps/uniswapv3/dayData/historical"
 			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));

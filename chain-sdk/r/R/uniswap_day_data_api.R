@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet } \emph{  }
+#' \strong{ ChainsChainIdDappsUniswapv2DayDataHistoricalGet } \emph{  }
 #'
 #' \itemize{
 #' \item \emph{ @param } chain_id character
@@ -33,7 +33,7 @@
 #' }
 #' }
 #'
-#' \strong{ ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet } \emph{  }
+#' \strong{ ChainsChainIdDappsUniswapv3DayDataHistoricalGet } \emph{  }
 #'
 #' \itemize{
 #' \item \emph{ @param } chain_id character
@@ -57,7 +57,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet  ####################
+#' ####################  ChainsChainIdDappsUniswapv2DayDataHistoricalGet  ####################
 #'
 #' library(openapi)
 #' var_chain_id <- "chain_id_example" # character | 
@@ -68,10 +68,10 @@
 #'
 #' api_instance <- UniswapDayDataApi$new()
 #'
-#' api_instance$ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' api_instance$ChainsChainIdDappsUniswapv2DayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #'
 #'
-#' ####################  ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet  ####################
+#' ####################  ChainsChainIdDappsUniswapv3DayDataHistoricalGet  ####################
 #'
 #' library(openapi)
 #' var_chain_id <- "chain_id_example" # character | 
@@ -82,7 +82,7 @@
 #'
 #' api_instance <- UniswapDayDataApi$new()
 #'
-#' api_instance$ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' api_instance$ChainsChainIdDappsUniswapv3DayDataHistoricalGet(var_chain_id, start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #'
 #'
 #' }
@@ -120,8 +120,8 @@ UniswapDayDataApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chain_id, start_block, end_block, start_date, end_date, ...)
+    ChainsChainIdDappsUniswapv2DayDataHistoricalGet = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+      local_var_response <- self$ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chain_id, start_block, end_block, start_date, end_date, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -145,7 +145,7 @@ UniswapDayDataApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -172,7 +172,7 @@ UniswapDayDataApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
+      local_var_url_path <- "/chains/{chain_id}/dapps/uniswapv2/dayData/historical"
       if (!missing(`chain_id`)) {
         local_var_url_path <- gsub("\\{chain_id\\}", URLencode(as.character(`chain_id`), reserved = TRUE), local_var_url_path)
       }
@@ -224,8 +224,8 @@ UniswapDayDataApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chain_id, start_block, end_block, start_date, end_date, ...)
+    ChainsChainIdDappsUniswapv3DayDataHistoricalGet = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+      local_var_response <- self$ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chain_id, start_block, end_block, start_date, end_date, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -249,7 +249,7 @@ UniswapDayDataApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo = function(chain_id, start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -276,7 +276,7 @@ UniswapDayDataApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
+      local_var_url_path <- "/chains/{chain_id}/dapps/uniswapv3/dayData/historical"
       if (!missing(`chain_id`)) {
         local_var_url_path <- gsub("\\{chain_id\\}", URLencode(as.character(`chain_id`), reserved = TRUE), local_var_url_path)
       }

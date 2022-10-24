@@ -4,12 +4,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv2uniswapdaydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical |  |
-| [**ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv3uniswapdaydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical |  |
+| [**ChainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv2daydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical |  |
+| [**ChainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv3daydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical |  |
 
-<a name="chainschainiddappsuniswapv2uniswapdaydatahistoricalget"></a>
-# **ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
-> void ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (string chainId, long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="chainschainiddappsuniswapv2daydatahistoricalget"></a>
+# **ChainsChainIdDappsUniswapv2DayDataHistoricalGet**
+> void ChainsChainIdDappsUniswapv2DayDataHistoricalGet (string chainId, long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
 
 
@@ -23,7 +23,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetExample
+    public class ChainsChainIdDappsUniswapv2DayDataHistoricalGetExample
     {
         public static void Main()
         {
@@ -38,11 +38,11 @@ namespace Example
 
             try
             {
-                apiInstance.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+                apiInstance.ChainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv2DayDataHistoricalGet: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -51,17 +51,17 @@ namespace Example
 }
 ```
 
-#### Using the ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo variant
+#### Using the ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+    apiInstance.ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -98,9 +98,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="chainschainiddappsuniswapv3uniswapdaydatahistoricalget"></a>
-# **ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
-> void ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (string chainId, long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="chainschainiddappsuniswapv3daydatahistoricalget"></a>
+# **ChainsChainIdDappsUniswapv3DayDataHistoricalGet**
+> void ChainsChainIdDappsUniswapv3DayDataHistoricalGet (string chainId, long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
 
 
@@ -114,7 +114,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetExample
+    public class ChainsChainIdDappsUniswapv3DayDataHistoricalGetExample
     {
         public static void Main()
         {
@@ -129,11 +129,11 @@ namespace Example
 
             try
             {
-                apiInstance.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+                apiInstance.ChainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv3DayDataHistoricalGet: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -142,17 +142,17 @@ namespace Example
 }
 ```
 
-#### Using the ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo variant
+#### Using the ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+    apiInstance.ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapDayDataApi.ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

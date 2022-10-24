@@ -65,8 +65,8 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @throws ServerException If the API returns a server error response
      */
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId: kotlin.String, startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
-        val localVarResponse = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+    fun chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId: kotlin.String, startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -96,8 +96,8 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Throws(IllegalStateException::class, IOException::class)
-    fun chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
-        val localVariableConfig = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequestConfig(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+    fun chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = chainsChainIdDappsUniswapv2DayDataHistoricalGetRequestConfig(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
 
         return request<Unit, Unit>(
             localVariableConfig
@@ -105,7 +105,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     }
 
     /**
-     * To obtain the request config of the operation chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+     * To obtain the request config of the operation chainsChainIdDappsUniswapv2DayDataHistoricalGet
      *
      * @param chainId 
      * @param startBlock  (optional)
@@ -114,7 +114,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param endDate  (optional)
      * @return RequestConfig
      */
-    fun chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequestConfig(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+    fun chainsChainIdDappsUniswapv2DayDataHistoricalGetRequestConfig(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -135,7 +135,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
         
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
+            path = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -158,8 +158,8 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @throws ServerException If the API returns a server error response
      */
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId: kotlin.String, startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
-        val localVarResponse = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+    fun chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId: kotlin.String, startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -189,8 +189,8 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Throws(IllegalStateException::class, IOException::class)
-    fun chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
-        val localVariableConfig = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequestConfig(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+    fun chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = chainsChainIdDappsUniswapv3DayDataHistoricalGetRequestConfig(chainId = chainId, startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
 
         return request<Unit, Unit>(
             localVariableConfig
@@ -198,7 +198,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     }
 
     /**
-     * To obtain the request config of the operation chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+     * To obtain the request config of the operation chainsChainIdDappsUniswapv3DayDataHistoricalGet
      *
      * @param chainId 
      * @param startBlock  (optional)
@@ -207,7 +207,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param endDate  (optional)
      * @return RequestConfig
      */
-    fun chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequestConfig(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+    fun chainsChainIdDappsUniswapv3DayDataHistoricalGetRequestConfig(chainId: kotlin.String, startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -228,7 +228,7 @@ class UniswapDayDataApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
         
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
+            path = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

@@ -8,6 +8,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -59,6 +60,7 @@ package.json
 src/ApiClient.js
 src/api/BundlesApi.js
 src/api/BurnsApi.js
+src/api/DayDataApi.js
 src/api/FactoryApi.js
 src/api/LiquidityPositionApi.js
 src/api/LiquidityPositionSnapshotsApi.js
@@ -110,6 +112,7 @@ src/model/TokenV3DayDataDTO.js
 src/model/UniswapDayDataV3DTO.js
 test/api/BundlesApi.spec.js
 test/api/BurnsApi.spec.js
+test/api/DayDataApi.spec.js
 test/api/FactoryApi.spec.js
 test/api/LiquidityPositionApi.spec.js
 test/api/LiquidityPositionSnapshotsApi.spec.js

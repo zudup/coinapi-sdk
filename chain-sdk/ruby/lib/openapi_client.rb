@@ -45,6 +45,7 @@ require 'openapi_client/models/uniswap_day_data_v3_dto'
 # APIs
 require 'openapi_client/api/bundles_api'
 require 'openapi_client/api/burns_api'
+require 'openapi_client/api/day_data_api'
 require 'openapi_client/api/factory_api'
 require 'openapi_client/api/liquidity_position_api'
 require 'openapi_client/api/liquidity_position_snapshots_api'

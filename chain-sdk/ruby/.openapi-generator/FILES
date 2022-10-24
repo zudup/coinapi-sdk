@@ -12,6 +12,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -61,6 +62,7 @@ git_push.sh
 lib/openapi_client.rb
 lib/openapi_client/api/bundles_api.rb
 lib/openapi_client/api/burns_api.rb
+lib/openapi_client/api/day_data_api.rb
 lib/openapi_client/api/factory_api.rb
 lib/openapi_client/api/liquidity_position_api.rb
 lib/openapi_client/api/liquidity_position_snapshots_api.rb
@@ -116,6 +118,7 @@ lib/openapi_client/version.rb
 openapi_client.gemspec
 spec/api/bundles_api_spec.rb
 spec/api/burns_api_spec.rb
+spec/api/day_data_api_spec.rb
 spec/api/factory_api_spec.rb
 spec/api/liquidity_position_api_spec.rb
 spec/api/liquidity_position_snapshots_api_spec.rb

@@ -34,8 +34,8 @@ export default class UniswapDayDataApi {
 
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet operation.
-     * @callback module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetCallback
+     * Callback function to receive the result of the chainsChainIdDappsUniswapv2DayDataHistoricalGet operation.
+     * @callback module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv2DayDataHistoricalGetCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -48,14 +48,14 @@ export default class UniswapDayDataApi {
      * @param {Number} opts.endBlock 
      * @param {Date} opts.startDate 
      * @param {Date} opts.endDate 
-     * @param {module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv2DayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, opts, callback) {
+    chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'chainId' is set
       if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet");
+        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet");
       }
 
       let pathParams = {
@@ -77,15 +77,15 @@ export default class UniswapDayDataApi {
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical', 'GET',
+        '/chains/{chain_id}/dapps/uniswapv2/dayData/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet operation.
-     * @callback module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetCallback
+     * Callback function to receive the result of the chainsChainIdDappsUniswapv3DayDataHistoricalGet operation.
+     * @callback module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv3DayDataHistoricalGetCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -98,14 +98,14 @@ export default class UniswapDayDataApi {
      * @param {Number} opts.endBlock 
      * @param {Date} opts.startDate 
      * @param {Date} opts.endDate 
-     * @param {module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UniswapDayDataApi~chainsChainIdDappsUniswapv3DayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, opts, callback) {
+    chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'chainId' is set
       if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet");
+        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet");
       }
 
       let pathParams = {
@@ -127,7 +127,7 @@ export default class UniswapDayDataApi {
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical', 'GET',
+        '/chains/{chain_id}/dapps/uniswapv3/dayData/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

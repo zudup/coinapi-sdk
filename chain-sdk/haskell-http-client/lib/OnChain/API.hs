@@ -16,6 +16,7 @@ Module : OnChain.API
 module OnChain.API
   ( module OnChain.API.Bundles
   , module OnChain.API.Burns
+  , module OnChain.API.DayData
   , module OnChain.API.Factory
   , module OnChain.API.LiquidityPosition
   , module OnChain.API.LiquidityPositionSnapshots
@@ -44,6 +45,7 @@ module OnChain.API
 
 import OnChain.API.Bundles
 import OnChain.API.Burns
+import OnChain.API.DayData
 import OnChain.API.Factory
 import OnChain.API.LiquidityPosition
 import OnChain.API.LiquidityPositionSnapshots

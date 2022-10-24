@@ -12,6 +12,8 @@ src/BurnV3DTO.cpp
 src/BurnV3DTO.h
 src/BurnsManager.cpp
 src/BurnsManager.h
+src/DayDataManager.cpp
+src/DayDataManager.h
 src/ETradeAggressiveSide.cpp
 src/ETradeAggressiveSide.h
 src/Error.cpp

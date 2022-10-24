@@ -25,6 +25,7 @@ build = {
 	modules = {
 		["openapiclient.api.bundles_api"] = "openapiclient/api/bundles_api.lua";
 		["openapiclient.api.burns_api"] = "openapiclient/api/burns_api.lua";
+		["openapiclient.api.day_data_api"] = "openapiclient/api/day_data_api.lua";
 		["openapiclient.api.factory_api"] = "openapiclient/api/factory_api.lua";
 		["openapiclient.api.liquidity_position_api"] = "openapiclient/api/liquidity_position_api.lua";
 		["openapiclient.api.liquidity_position_snapshots_api"] = "openapiclient/api/liquidity_position_snapshots_api.lua";

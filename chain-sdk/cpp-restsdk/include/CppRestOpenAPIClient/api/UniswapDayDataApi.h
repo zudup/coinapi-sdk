@@ -54,7 +54,7 @@ public:
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(
+    pplx::task<void> chainsChainIdDappsUniswapv2DayDataHistoricalGet(
         utility::string_t chainId,
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
@@ -72,7 +72,7 @@ public:
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(
+    pplx::task<void> chainsChainIdDappsUniswapv3DayDataHistoricalGet(
         utility::string_t chainId,
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,

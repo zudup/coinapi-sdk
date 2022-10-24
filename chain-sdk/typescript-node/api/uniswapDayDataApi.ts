@@ -93,8 +93,8 @@ export class UniswapDayDataApi {
      * @param startDate 
      * @param endDate 
      */
-    public async chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
-        const localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'
+    public async chainsChainIdDappsUniswapv2DayDataHistoricalGet (chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'
             .replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -102,7 +102,7 @@ export class UniswapDayDataApi {
 
         // verify required parameter 'chainId' is not null or undefined
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2DayDataHistoricalGet.');
         }
 
         if (startBlock !== undefined) {
@@ -173,8 +173,8 @@ export class UniswapDayDataApi {
      * @param startDate 
      * @param endDate 
      */
-    public async chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
-        const localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'
+    public async chainsChainIdDappsUniswapv3DayDataHistoricalGet (chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'
             .replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -182,7 +182,7 @@ export class UniswapDayDataApi {
 
         // verify required parameter 'chainId' is not null or undefined
         if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet.');
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv3DayDataHistoricalGet.');
         }
 
         if (startBlock !== undefined) {

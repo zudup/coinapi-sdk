@@ -8,6 +8,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -56,6 +57,7 @@ docs/UserApi.md
 git_push.sh
 src/CoinAPI.EMS.REST.V1.Test/Api/BundlesApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/BurnsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/DayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/FactoryApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionSnapshotsApiTests.cs
@@ -107,6 +109,7 @@ src/CoinAPI.EMS.REST.V1.Test/Model/TokenV3DayDataDTOTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Model/UniswapDayDataV3DTOTests.cs
 src/CoinAPI.EMS.REST.V1/Api/BundlesApi.cs
 src/CoinAPI.EMS.REST.V1/Api/BurnsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/DayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/FactoryApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionSnapshotsApi.cs

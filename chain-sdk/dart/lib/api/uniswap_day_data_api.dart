@@ -16,7 +16,7 @@ class UniswapDayDataApi {
 
   final ApiClient apiClient;
 
-  /// Performs an HTTP 'GET /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical' operation and returns the [Response].
+  /// Performs an HTTP 'GET /chains/{chain_id}/dapps/uniswapv2/dayData/historical' operation and returns the [Response].
   /// Parameters:
   ///
   /// * [String] chainId (required):
@@ -28,9 +28,9 @@ class UniswapDayDataApi {
   /// * [DateTime] startDate:
   ///
   /// * [DateTime] endDate:
-  Future<Response> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  Future<Response> chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'
+    final path = r'/chains/{chain_id}/dapps/uniswapv2/dayData/historical'
       .replaceAll('{chain_id}', chainId);
 
     // ignore: prefer_final_locals
@@ -78,14 +78,14 @@ class UniswapDayDataApi {
   /// * [DateTime] startDate:
   ///
   /// * [DateTime] endDate:
-  Future<void> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId,  startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  Future<void> chainsChainIdDappsUniswapv2DayDataHistoricalGet(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId,  startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
-  /// Performs an HTTP 'GET /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical' operation and returns the [Response].
+  /// Performs an HTTP 'GET /chains/{chain_id}/dapps/uniswapv3/dayData/historical' operation and returns the [Response].
   /// Parameters:
   ///
   /// * [String] chainId (required):
@@ -97,9 +97,9 @@ class UniswapDayDataApi {
   /// * [DateTime] startDate:
   ///
   /// * [DateTime] endDate:
-  Future<Response> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  Future<Response> chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'
+    final path = r'/chains/{chain_id}/dapps/uniswapv3/dayData/historical'
       .replaceAll('{chain_id}', chainId);
 
     // ignore: prefer_final_locals
@@ -147,8 +147,8 @@ class UniswapDayDataApi {
   /// * [DateTime] startDate:
   ///
   /// * [DateTime] endDate:
-  Future<void> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId,  startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  Future<void> chainsChainIdDappsUniswapv3DayDataHistoricalGet(String chainId, { int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId,  startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

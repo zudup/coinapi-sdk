@@ -7,6 +7,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -54,6 +55,7 @@ docs/UniswapV3Api.md
 docs/UserApi.md
 src/PSOpenAPITools/Api/BundlesApi.ps1
 src/PSOpenAPITools/Api/BurnsApi.ps1
+src/PSOpenAPITools/Api/DayDataApi.ps1
 src/PSOpenAPITools/Api/FactoryApi.ps1
 src/PSOpenAPITools/Api/LiquidityPositionApi.ps1
 src/PSOpenAPITools/Api/LiquidityPositionSnapshotsApi.ps1
@@ -112,6 +114,7 @@ src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
 tests/Api/BundlesApi.Tests.ps1
 tests/Api/BurnsApi.Tests.ps1
+tests/Api/DayDataApi.Tests.ps1
 tests/Api/FactoryApi.Tests.ps1
 tests/Api/LiquidityPositionApi.Tests.ps1
 tests/Api/LiquidityPositionSnapshotsApi.Tests.ps1

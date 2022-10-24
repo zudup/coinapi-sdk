@@ -13,7 +13,7 @@
 
 
 void
-UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate )
+UniswapDayDataAPI_chainsChainIdDappsUniswapv2DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -23,9 +23,9 @@ UniswapDayDataAPI_chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical")+1;
+    long sizeOfPath = strlen("/chains/{chain_id}/dapps/uniswapv2/dayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical");
+    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/uniswapv2/dayData/historical");
 
 
     // Path Params
@@ -119,7 +119,7 @@ end:
 }
 
 void
-UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate )
+UniswapDayDataAPI_chainsChainIdDappsUniswapv3DayDataHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -129,9 +129,9 @@ UniswapDayDataAPI_chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(apiClie
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical")+1;
+    long sizeOfPath = strlen("/chains/{chain_id}/dapps/uniswapv3/dayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical");
+    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/uniswapv3/dayData/historical");
 
 
     // Path Params

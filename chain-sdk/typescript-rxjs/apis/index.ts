@@ -1,5 +1,6 @@
 export * from './BundlesApi';
 export * from './BurnsApi';
+export * from './DayDataApi';
 export * from './FactoryApi';
 export * from './LiquidityPositionApi';
 export * from './LiquidityPositionSnapshotsApi';

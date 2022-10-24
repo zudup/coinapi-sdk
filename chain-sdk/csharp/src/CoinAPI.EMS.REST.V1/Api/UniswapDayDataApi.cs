@@ -37,7 +37,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns></returns>
-        void ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
+        void ChainsChainIdDappsUniswapv2DayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
 
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
+        ApiResponse<Object> ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
         /// <summary>
         /// 
         /// </summary>
@@ -66,7 +66,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns></returns>
-        void ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
+        void ChainsChainIdDappsUniswapv3DayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
 
         /// <summary>
         /// 
@@ -81,7 +81,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
+        ApiResponse<Object> ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -98,7 +98,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task ChainsChainIdDappsUniswapv2DayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -114,7 +114,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -129,7 +129,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task ChainsChainIdDappsUniswapv3DayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -145,7 +145,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -267,9 +267,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns></returns>
-        public void ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
+        public void ChainsChainIdDappsUniswapv2DayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-             ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+             ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
         }
 
         /// <summary>
@@ -282,13 +282,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
+        public ApiResponse<Object> ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet");
+                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv2DayDataHistoricalGet");
 
-            var localVarPath = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical";
+            var localVarPath = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -324,7 +324,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet", localVarResponse);
+                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv2DayDataHistoricalGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -344,9 +344,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task ChainsChainIdDappsUniswapv2DayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             await ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfoAsync(chainId, startBlock, endBlock, startDate, endDate, cancellationToken);
+             await ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfoAsync(chainId, startBlock, endBlock, startDate, endDate, cancellationToken);
 
         }
 
@@ -361,13 +361,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet");
+                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv2DayDataHistoricalGet");
 
-            var localVarPath = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical";
+            var localVarPath = "/chains/{chain_id}/dapps/uniswapv2/dayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -403,7 +403,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet", localVarResponse);
+                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv2DayDataHistoricalGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -422,9 +422,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns></returns>
-        public void ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
+        public void ChainsChainIdDappsUniswapv3DayDataHistoricalGet (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-             ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
+             ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo(chainId, startBlock, endBlock, startDate, endDate);
         }
 
         /// <summary>
@@ -437,13 +437,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate"> (optional)</param>
         /// <param name="endDate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
+        public ApiResponse<Object> ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet");
+                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv3DayDataHistoricalGet");
 
-            var localVarPath = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical";
+            var localVarPath = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -479,7 +479,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet", localVarResponse);
+                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv3DayDataHistoricalGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -499,9 +499,9 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task ChainsChainIdDappsUniswapv3DayDataHistoricalGetAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             await ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfoAsync(chainId, startBlock, endBlock, startDate, endDate, cancellationToken);
+             await ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfoAsync(chainId, startBlock, endBlock, startDate, endDate, cancellationToken);
 
         }
 
@@ -516,13 +516,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfoAsync (string chainId, long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet");
+                throw new ApiException(400, "Missing required parameter 'chainId' when calling UniswapDayDataApi->ChainsChainIdDappsUniswapv3DayDataHistoricalGet");
 
-            var localVarPath = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical";
+            var localVarPath = "/chains/{chain_id}/dapps/uniswapv3/dayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -558,7 +558,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet", localVarResponse);
+                Exception exception = ExceptionFactory("ChainsChainIdDappsUniswapv3DayDataHistoricalGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

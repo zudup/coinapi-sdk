@@ -35,6 +35,41 @@ public class OASBundlesApi {
      * @param endDate  (optional)
      * @throws OAS.ApiException if fails to make API call
      */
+    public void chainsChainIdDappsSushiswapBundlesHistoricalGet(Map<String, Object> params) {
+        client.assertNotNull(params.get('chainId'), 'chainId');
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'GET', '/chains/{chain_id}/dapps/sushiswap/bundles/historical', '',
+            query, form,
+            new Map<String, Object>{
+                'chain_id' => (String) params.get('chainId')
+            },
+            new Map<String, Object>(),
+            new List<String>(),
+            new List<String>(),
+            new List<String>(),
+            null
+        );
+    }
+    /**
+     * 
+     * 
+     * @param chainId  (required)
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @throws OAS.ApiException if fails to make API call
+     */
     public void chainsChainIdDappsUniswapv2BundlesHistoricalGet(Map<String, Object> params) {
         client.assertNotNull(params.get('chainId'), 'chainId');
         List<OAS.Param> query = new List<OAS.Param>();

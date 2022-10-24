@@ -4,16 +4,16 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetWithHttpInfo) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetWithHttpInfo) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv2DayDataHistoricalGetWithHttpInfo) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo**](UniswapDayDataApi.md#chainsChainIdDappsUniswapv3DayDataHistoricalGetWithHttpInfo) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
 
-## chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv2DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest): ApiRequest[Unit]
+> chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainsChainIdDappsUniswapv2DayDataHistoricalGetRequest): ApiRequest[Unit]
 
 
 
@@ -47,7 +47,7 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
     
-    val request = apiInstance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+    val request = apiInstance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -56,14 +56,14 @@ object Example extends App {
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet")
+            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2DayDataHistoricalGet")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet")
+            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv2DayDataHistoricalGet")
             exception.printStackTrace();
     }
 }
@@ -100,9 +100,9 @@ No authorization required
 | **200** | Success |  -  |
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet
+## chainsChainIdDappsUniswapv3DayDataHistoricalGet
 
-> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest): ApiRequest[Unit]
+> chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainsChainIdDappsUniswapv3DayDataHistoricalGetRequest): ApiRequest[Unit]
 
 
 
@@ -136,7 +136,7 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
     
-    val request = apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+    val request = apiInstance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -145,14 +145,14 @@ object Example extends App {
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet")
+            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3DayDataHistoricalGet")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet")
+            System.err.println("Exception when calling UniswapDayDataApi#chainsChainIdDappsUniswapv3DayDataHistoricalGet")
             exception.printStackTrace();
     }
 }

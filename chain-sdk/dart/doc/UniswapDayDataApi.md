@@ -9,12 +9,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv2uniswapdaydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-[**chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv3uniswapdaydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+[**chainsChainIdDappsUniswapv2DayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv2daydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+[**chainsChainIdDappsUniswapv3DayDataHistoricalGet**](UniswapDayDataApi.md#chainschainiddappsuniswapv3daydatahistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 
 
-# **chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet**
-> chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+# **chainsChainIdDappsUniswapv2DayDataHistoricalGet**
+> chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -30,9 +30,9 @@ final startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api_instance.chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+    api_instance.chainsChainIdDappsUniswapv2DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
 } catch (e) {
-    print('Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet: $e\n');
+    print('Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv2DayDataHistoricalGet: $e\n');
 }
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet**
-> chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+# **chainsChainIdDappsUniswapv3DayDataHistoricalGet**
+> chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
 
 
 
@@ -78,9 +78,9 @@ final startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api_instance.chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+    api_instance.chainsChainIdDappsUniswapv3DayDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
 } catch (e) {
-    print('Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet: $e\n');
+    print('Exception when calling UniswapDayDataApi->chainsChainIdDappsUniswapv3DayDataHistoricalGet: $e\n');
 }
 ```
 

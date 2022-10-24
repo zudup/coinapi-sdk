@@ -15,6 +15,13 @@ Please update as you see appropriate
 ]]
 describe("burns_api", function()
   local openapiclient_burns_api = require "openapiclient.api.burns_api"
+  -- unit tests for chains_chain_id_dapps_sushiswap_burns_historical_get
+  describe("chains_chain_id_dapps_sushiswap_burns_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_uniswapv2_burns_historical_get
   describe("chains_chain_id_dapps_uniswapv2_burns_historical_get test", function()
     it("should work", function()

@@ -16,7 +16,7 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
-export interface ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
+export interface ChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
     endBlock?: number;
@@ -24,7 +24,7 @@ export interface ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest {
     endDate?: string;
 }
 
-export interface ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest {
+export interface ChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
     endBlock?: number;
@@ -39,10 +39,10 @@ export class UniswapDayDataApi extends BaseAPI {
 
     /**
      */
-    chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest): Observable<void>
-    chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGet');
+    chainsChainIdDappsUniswapv2DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv2DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv2DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv2DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv2DayDataHistoricalGet');
 
         const query: HttpQuery = {};
 
@@ -52,7 +52,7 @@ export class UniswapDayDataApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
         return this.request<void>({
-            url: '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/chains/{chain_id}/dapps/uniswapv2/dayData/historical'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -60,10 +60,10 @@ export class UniswapDayDataApi extends BaseAPI {
 
     /**
      */
-    chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest): Observable<void>
-    chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGet');
+    chainsChainIdDappsUniswapv3DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsUniswapv3DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsUniswapv3DayDataHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsUniswapv3DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsUniswapv3DayDataHistoricalGet');
 
         const query: HttpQuery = {};
 
@@ -73,7 +73,7 @@ export class UniswapDayDataApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
         return this.request<void>({
-            url: '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/chains/{chain_id}/dapps/uniswapv3/dayData/historical'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
             query,
         }, opts?.responseOpts);

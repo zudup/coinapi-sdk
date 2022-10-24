@@ -48,7 +48,7 @@ static gpointer __UniswapDayDataManagerthreadFunc(gpointer data)
 }
 
 
-static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool chainsChainIdDappsUniswapv2DayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	
@@ -81,7 +81,7 @@ static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetProcessor(Memo
 	}
 }
 
-static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(char * accessToken,
+static bool chainsChainIdDappsUniswapv2DayDataHistoricalGetHelper(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData, bool isAsync)
@@ -131,7 +131,7 @@ static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(char * 
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical");
+	string url("/chains/{chain_id}/dapps/uniswapv2/dayData/historical");
 	int pos;
 
 	string s_chainId("{");
@@ -156,7 +156,7 @@ static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(char * 
 	if(!isAsync){
 		NetClient::easycurl(UniswapDayDataManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = chainsChainIdDappsUniswapv2DayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -174,7 +174,7 @@ static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(char * 
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapDayDataManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv2DayDataHistoricalGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -186,27 +186,27 @@ static bool chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(char * 
 
 
 
-bool UniswapDayDataManager::chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetAsync(char * accessToken,
+bool UniswapDayDataManager::chainsChainIdDappsUniswapv2DayDataHistoricalGetAsync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(accessToken,
+	return chainsChainIdDappsUniswapv2DayDataHistoricalGetHelper(accessToken,
 	chainId, startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool UniswapDayDataManager::chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetSync(char * accessToken,
+bool UniswapDayDataManager::chainsChainIdDappsUniswapv2DayDataHistoricalGetSync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return chainsChainIdDappsUniswapv2UniswapDayDataHistoricalGetHelper(accessToken,
+	return chainsChainIdDappsUniswapv2DayDataHistoricalGetHelper(accessToken,
 	chainId, startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool chainsChainIdDappsUniswapv3DayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	
@@ -239,7 +239,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetProcessor(Memo
 	}
 }
 
-static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(char * accessToken,
+static bool chainsChainIdDappsUniswapv3DayDataHistoricalGetHelper(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData, bool isAsync)
@@ -289,7 +289,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(char * 
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical");
+	string url("/chains/{chain_id}/dapps/uniswapv3/dayData/historical");
 	int pos;
 
 	string s_chainId("{");
@@ -314,7 +314,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(char * 
 	if(!isAsync){
 		NetClient::easycurl(UniswapDayDataManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = chainsChainIdDappsUniswapv3DayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -332,7 +332,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(char * 
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapDayDataManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3DayDataHistoricalGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -344,22 +344,22 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(char * 
 
 
 
-bool UniswapDayDataManager::chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetAsync(char * accessToken,
+bool UniswapDayDataManager::chainsChainIdDappsUniswapv3DayDataHistoricalGetAsync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(accessToken,
+	return chainsChainIdDappsUniswapv3DayDataHistoricalGetHelper(accessToken,
 	chainId, startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool UniswapDayDataManager::chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetSync(char * accessToken,
+bool UniswapDayDataManager::chainsChainIdDappsUniswapv3DayDataHistoricalGetSync(char * accessToken,
 	std::string chainId, long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData)
 {
-	return chainsChainIdDappsUniswapv3UniswapDayDataHistoricalGetHelper(accessToken,
+	return chainsChainIdDappsUniswapv3DayDataHistoricalGetHelper(accessToken,
 	chainId, startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }

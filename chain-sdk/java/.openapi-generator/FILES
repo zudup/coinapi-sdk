@@ -11,6 +11,7 @@ docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
+docs/DayDataApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -80,6 +81,7 @@ src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/StringUtil.java
 src/main/java/org/openapitools/client/api/BundlesApi.java
 src/main/java/org/openapitools/client/api/BurnsApi.java
+src/main/java/org/openapitools/client/api/DayDataApi.java
 src/main/java/org/openapitools/client/api/FactoryApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionSnapshotsApi.java
@@ -135,6 +137,7 @@ src/main/java/org/openapitools/client/model/TokenV3DayDataDTO.java
 src/main/java/org/openapitools/client/model/UniswapDayDataV3DTO.java
 src/test/java/org/openapitools/client/api/BundlesApiTest.java
 src/test/java/org/openapitools/client/api/BurnsApiTest.java
+src/test/java/org/openapitools/client/api/DayDataApiTest.java
 src/test/java/org/openapitools/client/api/FactoryApiTest.java
 src/test/java/org/openapitools/client/api/LiquidityPositionApiTest.java
 src/test/java/org/openapitools/client/api/LiquidityPositionSnapshotsApiTest.java

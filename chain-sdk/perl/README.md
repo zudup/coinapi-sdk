@@ -237,6 +237,7 @@ To load the API packages:
 ```perl
 use WWW::OpenAPIClient::BundlesApi;
 use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::DayDataApi;
 use WWW::OpenAPIClient::FactoryApi;
 use WWW::OpenAPIClient::LiquidityPositionApi;
 use WWW::OpenAPIClient::LiquidityPositionSnapshotsApi;
@@ -303,6 +304,7 @@ use warnings;
 # load the API package
 use WWW::OpenAPIClient::BundlesApi;
 use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::DayDataApi;
 use WWW::OpenAPIClient::FactoryApi;
 use WWW::OpenAPIClient::LiquidityPositionApi;
 use WWW::OpenAPIClient::LiquidityPositionSnapshotsApi;
@@ -368,10 +370,10 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->chains_chain_id_dapps_uniswapv2_bundles_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    $api_instance->chains_chain_id_dapps_sushiswap_bundles_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
 };
 if ($@) {
-    warn "Exception when calling BundlesApi->chains_chain_id_dapps_uniswapv2_bundles_historical_get: $@\n";
+    warn "Exception when calling BundlesApi->chains_chain_id_dapps_sushiswap_bundles_historical_get: $@\n";
 }
 
 ```
@@ -382,10 +384,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BundlesApi* | [**chains_chain_id_dapps_sushiswap_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_sushiswap_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/bundles/historical | 
 *BundlesApi* | [**chains_chain_id_dapps_uniswapv2_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_uniswapv2_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/bundles/historical | 
 *BundlesApi* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
+*BurnsApi* | [**chains_chain_id_dapps_sushiswap_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_sushiswap_burns_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/burns/historical | 
 *BurnsApi* | [**chains_chain_id_dapps_uniswapv2_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv2_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/burns/historical | 
 *BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*DayDataApi* | [**chains_chain_id_dapps_sushiswap_day_data_historical_get**](docs/DayDataApi.md#chains_chain_id_dapps_sushiswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/dayData/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_uniswapv2_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv2_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/factory/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
 *LiquidityPositionApi* | [**chains_chain_id_dapps_uniswapv2_liquidity_position_historical_get**](docs/LiquidityPositionApi.md#chains_chain_id_dapps_uniswapv2_liquidity_position_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical | 
@@ -426,8 +431,8 @@ Class | Method | HTTP request | Description
 *TradesApi* | [**chains_chain_id_dapps_dex_trades_historical_get**](docs/TradesApi.md#chains_chain_id_dapps_dex_trades_historical_get) | **GET** /chains/{chain_id}/dapps/dex/trades/historical | 
 *TransactionsApi* | [**chains_chain_id_dapps_uniswapv2_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_uniswapv2_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/transactions/historical | 
 *TransactionsApi* | [**chains_chain_id_dapps_uniswapv3_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_uniswapv3_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
-*UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical | 
-*UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical | 
+*UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv2_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv2_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
+*UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv3_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv3_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_pools_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_swaps_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_swaps_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/current | GetSwaps
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_tokens_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_tokens_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/tokens/current | GetTokens

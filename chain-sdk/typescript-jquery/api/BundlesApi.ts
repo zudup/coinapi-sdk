@@ -54,6 +54,82 @@ export class BundlesApi {
      * @param startDate 
      * @param endDate 
      */
+    public chainsChainIdDappsSushiswapBundlesHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/sushiswap/bundles/historical'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        // verify required parameter 'chainId' is not null or undefined
+        if (chainId === null || chainId === undefined) {
+            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsSushiswapBundlesHistoricalGet.');
+        }
+
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param chainId 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
     public chainsChainIdDappsUniswapv2BundlesHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }

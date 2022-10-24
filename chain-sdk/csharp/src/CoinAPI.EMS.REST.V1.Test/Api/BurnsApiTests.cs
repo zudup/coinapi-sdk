@@ -63,6 +63,23 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
+        /// Test ChainsChainIdDappsSushiswapBurnsHistoricalGet
+        /// </summary>
+        [Test]
+        public void ChainsChainIdDappsSushiswapBurnsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.ChainsChainIdDappsSushiswapBurnsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
         /// Test ChainsChainIdDappsUniswapv2BurnsHistoricalGet
         /// </summary>
         [Test]

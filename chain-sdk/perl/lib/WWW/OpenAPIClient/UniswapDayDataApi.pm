@@ -49,7 +49,7 @@ sub new {
 
 
 #
-# chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get
+# chains_chain_id_dapps_uniswapv2_day_data_historical_get
 #
 # 
 #
@@ -86,7 +86,7 @@ sub new {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get' } = {
+    __PACKAGE__->method_documentation->{ 'chains_chain_id_dapps_uniswapv2_day_data_historical_get' } = {
         summary => '',
         params => $params,
         returns => undef,
@@ -94,16 +94,16 @@ sub new {
 }
 # @return void
 #
-sub chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get {
+sub chains_chain_id_dapps_uniswapv2_day_data_historical_get {
     my ($self, %args) = @_;
 
     # verify the required parameter 'chain_id' is set
     unless (exists $args{'chain_id'}) {
-      croak("Missing the required parameter 'chain_id' when calling chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get");
+      croak("Missing the required parameter 'chain_id' when calling chains_chain_id_dapps_uniswapv2_day_data_historical_get");
     }
 
     # parse inputs
-    my $_resource_path = '/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical';
+    my $_resource_path = '/chains/{chain_id}/dapps/uniswapv2/dayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -156,7 +156,7 @@ sub chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get {
 }
 
 #
-# chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get
+# chains_chain_id_dapps_uniswapv3_day_data_historical_get
 #
 # 
 #
@@ -193,7 +193,7 @@ sub chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get' } = {
+    __PACKAGE__->method_documentation->{ 'chains_chain_id_dapps_uniswapv3_day_data_historical_get' } = {
         summary => '',
         params => $params,
         returns => undef,
@@ -201,16 +201,16 @@ sub chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical_get {
 }
 # @return void
 #
-sub chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get {
+sub chains_chain_id_dapps_uniswapv3_day_data_historical_get {
     my ($self, %args) = @_;
 
     # verify the required parameter 'chain_id' is set
     unless (exists $args{'chain_id'}) {
-      croak("Missing the required parameter 'chain_id' when calling chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical_get");
+      croak("Missing the required parameter 'chain_id' when calling chains_chain_id_dapps_uniswapv3_day_data_historical_get");
     }
 
     # parse inputs
-    my $_resource_path = '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical';
+    my $_resource_path = '/chains/{chain_id}/dapps/uniswapv3/dayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
