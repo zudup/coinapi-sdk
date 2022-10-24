@@ -86,12 +86,14 @@ set(SRCS
     api/LiquidityPositionAPI.c
     api/LiquidityPositionSnapshotsAPI.c
     api/MintsAPI.c
+    api/OrdersAPI.c
     api/PoiAPI.c
     api/PoolDayDataAPI.c
     api/PoolHourDataAPI.c
     api/PoolsAPI.c
     api/PositionSnapshotAPI.c
     api/PositionsAPI.c
+    api/SettlementAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
     api/TickDayDataAPI.c
@@ -147,12 +149,14 @@ set(HDRS
     api/LiquidityPositionAPI.h
     api/LiquidityPositionSnapshotsAPI.h
     api/MintsAPI.h
+    api/OrdersAPI.h
     api/PoiAPI.h
     api/PoolDayDataAPI.h
     api/PoolHourDataAPI.h
     api/PoolsAPI.h
     api/PositionSnapshotAPI.h
     api/PositionsAPI.h
+    api/SettlementAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
     api/TickDayDataAPI.h
@@ -255,12 +259,14 @@ set(HDRS "")
 #    unit-tests/manual-LiquidityPositionAPI.c
 #    unit-tests/manual-LiquidityPositionSnapshotsAPI.c
 #    unit-tests/manual-MintsAPI.c
+#    unit-tests/manual-OrdersAPI.c
 #    unit-tests/manual-PoiAPI.c
 #    unit-tests/manual-PoolDayDataAPI.c
 #    unit-tests/manual-PoolHourDataAPI.c
 #    unit-tests/manual-PoolsAPI.c
 #    unit-tests/manual-PositionSnapshotAPI.c
 #    unit-tests/manual-PositionsAPI.c
+#    unit-tests/manual-SettlementAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c
 #    unit-tests/manual-TickDayDataAPI.c

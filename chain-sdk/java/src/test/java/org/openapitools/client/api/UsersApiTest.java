@@ -35,6 +35,20 @@ public class UsersApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
+    public void chainsChainIdDappsCowUsersHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        api.chainsChainIdDappsCowUsersHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
     public void chainsChainIdDappsSushiswapUsersHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

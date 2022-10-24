@@ -7,12 +7,14 @@ api/HourDataApi.ts
 api/LiquidityPositionApi.ts
 api/LiquidityPositionSnapshotsApi.ts
 api/MintsApi.ts
+api/OrdersApi.ts
 api/PoiApi.ts
 api/PoolDayDataApi.ts
 api/PoolHourDataApi.ts
 api/PoolsApi.ts
 api/PositionSnapshotApi.ts
 api/PositionsApi.ts
+api/SettlementApi.ts
 api/SushiswapApi.ts
 api/SwapsApi.ts
 api/TickDayDataApi.ts

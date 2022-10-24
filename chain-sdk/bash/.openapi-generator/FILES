@@ -18,6 +18,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -31,6 +32,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md

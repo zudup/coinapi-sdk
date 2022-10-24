@@ -7,6 +7,14 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UsersApi' {
+    Context 'Invoke-ChainsChainIdDappsCowUsersHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsCowUsersHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsCowUsersHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsSushiswapUsersHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsSushiswapUsersHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsSushiswapUsersHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

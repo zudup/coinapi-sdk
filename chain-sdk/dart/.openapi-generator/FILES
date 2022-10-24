@@ -17,6 +17,7 @@ doc/LiquidityPositionApi.md
 doc/LiquidityPositionSnapshotsApi.md
 doc/MintV3DTO.md
 doc/MintsApi.md
+doc/OrdersApi.md
 doc/PairDTO.md
 doc/PairV2DTO.md
 doc/PoiApi.md
@@ -30,6 +31,7 @@ doc/PositionSnapshotApi.md
 doc/PositionSnapshotV3DTO.md
 doc/PositionV3DTO.md
 doc/PositionsApi.md
+doc/SettlementApi.md
 doc/SushiswapApi.md
 doc/SwapDTO.md
 doc/SwapV2DTO.md
@@ -64,12 +66,14 @@ lib/api/hour_data_api.dart
 lib/api/liquidity_position_api.dart
 lib/api/liquidity_position_snapshots_api.dart
 lib/api/mints_api.dart
+lib/api/orders_api.dart
 lib/api/poi_api.dart
 lib/api/pool_day_data_api.dart
 lib/api/pool_hour_data_api.dart
 lib/api/pools_api.dart
 lib/api/position_snapshot_api.dart
 lib/api/positions_api.dart
+lib/api/settlement_api.dart
 lib/api/sushiswap_api.dart
 lib/api/swaps_api.dart
 lib/api/tick_day_data_api.dart
@@ -130,6 +134,7 @@ test/liquidity_position_api_test.dart
 test/liquidity_position_snapshots_api_test.dart
 test/mint_v3_dto_test.dart
 test/mints_api_test.dart
+test/orders_api_test.dart
 test/pair_dto_test.dart
 test/pair_v2_dto_test.dart
 test/poi_api_test.dart
@@ -143,6 +148,7 @@ test/position_snapshot_api_test.dart
 test/position_snapshot_v3_dto_test.dart
 test/position_v3_dto_test.dart
 test/positions_api_test.dart
+test/settlement_api_test.dart
 test/sushiswap_api_test.dart
 test/swap_dto_test.dart
 test/swap_v2_dto_test.dart

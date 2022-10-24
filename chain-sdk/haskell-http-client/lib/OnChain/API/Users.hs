@@ -58,6 +58,32 @@ import qualified Prelude as P
 
 -- ** Users
 
+-- *** chainsChainIdDappsCowUsersHistoricalGet
+
+-- | @GET \/chains\/{chain_id}\/dapps\/cow\/users\/historical@
+-- 
+chainsChainIdDappsCowUsersHistoricalGet
+  :: ChainId -- ^ "chainId"
+  -> OnChainRequest ChainsChainIdDappsCowUsersHistoricalGet MimeNoContent NoContent MimeNoContent
+chainsChainIdDappsCowUsersHistoricalGet (ChainId chainId) =
+  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/cow/users/historical"]
+
+data ChainsChainIdDappsCowUsersHistoricalGet  
+instance HasOptionalParam ChainsChainIdDappsCowUsersHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsCowUsersHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam ChainsChainIdDappsCowUsersHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam ChainsChainIdDappsCowUsersHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces ChainsChainIdDappsCowUsersHistoricalGet MimeNoContent
+
+
 -- *** chainsChainIdDappsSushiswapUsersHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/sushiswap\/users\/historical@

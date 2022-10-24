@@ -33,6 +33,26 @@ class UsersApi(baseUrl: String) {
    * @param startDate 
    * @param endDate 
    */
+  def chainsChainIdDappsCowUsersHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/cow/users/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withPathParam("chain_id", chainId)
+      .withSuccessResponse[Unit](200)
+      
+
+  /**
+   * Expected answers:
+   *   code 200 :  (Success)
+   * 
+   * @param chainId 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   */
   def chainsChainIdDappsSushiswapUsersHistoricalGet(chainId: String, startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/chains/{chain_id}/dapps/sushiswap/users/historical", "application/json")
       .withQueryParam("startBlock", startBlock)

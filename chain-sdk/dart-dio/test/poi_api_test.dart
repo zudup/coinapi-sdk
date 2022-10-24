@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getPoiApi();
 
   group(PoiApi, () {
+    //Future chainsChainIdDappsCowPoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsCowPoiHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsSushiswapPoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsSushiswapPoiHistoricalGet', () async {
       // TODO

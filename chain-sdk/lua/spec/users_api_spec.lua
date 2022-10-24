@@ -15,6 +15,13 @@ Please update as you see appropriate
 ]]
 describe("users_api", function()
   local openapiclient_users_api = require "openapiclient.api.users_api"
+  -- unit tests for chains_chain_id_dapps_cow_users_historical_get
+  describe("chains_chain_id_dapps_cow_users_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_sushiswap_users_historical_get
   describe("chains_chain_id_dapps_sushiswap_users_historical_get test", function()
     it("should work", function()

@@ -13,6 +13,7 @@ API/Client/LiquidityPositionApi.js
 API/Client/LiquidityPositionSnapshotsApi.js
 API/Client/MintV3DTO.js
 API/Client/MintsApi.js
+API/Client/OrdersApi.js
 API/Client/PairDTO.js
 API/Client/PairV2DTO.js
 API/Client/PoiApi.js
@@ -26,6 +27,7 @@ API/Client/PositionSnapshotApi.js
 API/Client/PositionSnapshotV3DTO.js
 API/Client/PositionV3DTO.js
 API/Client/PositionsApi.js
+API/Client/SettlementApi.js
 API/Client/SushiswapApi.js
 API/Client/SwapDTO.js
 API/Client/SwapV2DTO.js

@@ -37,6 +37,8 @@ src/MintsManager.h
 src/NetClient.cpp
 src/NetClient.h
 src/Object.h
+src/OrdersManager.cpp
+src/OrdersManager.h
 src/PairDTO.cpp
 src/PairDTO.h
 src/PairV2DTO.cpp
@@ -64,6 +66,8 @@ src/PositionV3DTO.h
 src/PositionsManager.cpp
 src/PositionsManager.h
 src/RequestInfo.h
+src/SettlementManager.cpp
+src/SettlementManager.h
 src/SushiswapManager.cpp
 src/SushiswapManager.h
 src/SwapDTO.cpp

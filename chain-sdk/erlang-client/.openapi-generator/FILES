@@ -16,6 +16,7 @@ src/openapi_liquidity_position_api.erl
 src/openapi_liquidity_position_snapshots_api.erl
 src/openapi_mint_v3_dto.erl
 src/openapi_mints_api.erl
+src/openapi_orders_api.erl
 src/openapi_pair_dto.erl
 src/openapi_pair_v2_dto.erl
 src/openapi_poi_api.erl
@@ -29,6 +30,7 @@ src/openapi_position_snapshot_api.erl
 src/openapi_position_snapshot_v3_dto.erl
 src/openapi_position_v3_dto.erl
 src/openapi_positions_api.erl
+src/openapi_settlement_api.erl
 src/openapi_sushiswap_api.erl
 src/openapi_swap_dto.erl
 src/openapi_swap_v2_dto.erl

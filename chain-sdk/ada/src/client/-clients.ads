@@ -188,6 +188,24 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Cow_Orders_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Cow_Poi_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Poi_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -333,6 +351,15 @@ package .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Cow_Settlement_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
 
    --  GetPools
    --  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -702,6 +729,15 @@ package .Clients is
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Result : out .Models.UniswapDayDataV3DTO_Type_Vectors.Vector);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Cow_Users_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
 
    --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Users_Historical_Get

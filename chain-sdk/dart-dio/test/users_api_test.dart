@@ -7,6 +7,11 @@ void main() {
   final instance = Openapi().getUsersApi();
 
   group(UsersApi, () {
+    //Future chainsChainIdDappsCowUsersHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsCowUsersHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsSushiswapUsersHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsSushiswapUsersHistoricalGet', () async {
       // TODO

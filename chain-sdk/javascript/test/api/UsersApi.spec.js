@@ -48,6 +48,16 @@
   }
 
   describe('UsersApi', function() {
+    describe('chainsChainIdDappsCowUsersHistoricalGet', function() {
+      it('should call chainsChainIdDappsCowUsersHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsCowUsersHistoricalGet
+        //instance.chainsChainIdDappsCowUsersHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsSushiswapUsersHistoricalGet', function() {
       it('should call chainsChainIdDappsSushiswapUsersHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsSushiswapUsersHistoricalGet

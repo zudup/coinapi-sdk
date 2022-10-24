@@ -22,6 +22,7 @@ R/liquidity_position_api.R
 R/liquidity_position_snapshots_api.R
 R/mint_v3_dto.R
 R/mints_api.R
+R/orders_api.R
 R/pair_dto.R
 R/pair_v2_dto.R
 R/poi_api.R
@@ -35,6 +36,7 @@ R/position_snapshot_api.R
 R/position_snapshot_v3_dto.R
 R/position_v3_dto.R
 R/positions_api.R
+R/settlement_api.R
 R/sushiswap_api.R
 R/swap_dto.R
 R/swap_v2_dto.R
@@ -74,6 +76,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -87,6 +90,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -127,6 +131,7 @@ tests/testthat/test_liquidity_position_api.R
 tests/testthat/test_liquidity_position_snapshots_api.R
 tests/testthat/test_mint_v3_dto.R
 tests/testthat/test_mints_api.R
+tests/testthat/test_orders_api.R
 tests/testthat/test_pair_dto.R
 tests/testthat/test_pair_v2_dto.R
 tests/testthat/test_poi_api.R
@@ -140,6 +145,7 @@ tests/testthat/test_position_snapshot_api.R
 tests/testthat/test_position_snapshot_v3_dto.R
 tests/testthat/test_position_v3_dto.R
 tests/testthat/test_positions_api.R
+tests/testthat/test_settlement_api.R
 tests/testthat/test_sushiswap_api.R
 tests/testthat/test_swap_dto.R
 tests/testthat/test_swap_v2_dto.R

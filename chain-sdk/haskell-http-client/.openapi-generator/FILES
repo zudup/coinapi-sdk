@@ -14,12 +14,14 @@ lib/OnChain/API/HourData.hs
 lib/OnChain/API/LiquidityPosition.hs
 lib/OnChain/API/LiquidityPositionSnapshots.hs
 lib/OnChain/API/Mints.hs
+lib/OnChain/API/Orders.hs
 lib/OnChain/API/Poi.hs
 lib/OnChain/API/PoolDayData.hs
 lib/OnChain/API/PoolHourData.hs
 lib/OnChain/API/Pools.hs
 lib/OnChain/API/PositionSnapshot.hs
 lib/OnChain/API/Positions.hs
+lib/OnChain/API/Settlement.hs
 lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/Swaps.hs
 lib/OnChain/API/TickDayData.hs

@@ -20,6 +20,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -33,6 +34,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -87,12 +89,14 @@ src/main/java/org/openapitools/client/api/HourDataApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionSnapshotsApi.java
 src/main/java/org/openapitools/client/api/MintsApi.java
+src/main/java/org/openapitools/client/api/OrdersApi.java
 src/main/java/org/openapitools/client/api/PoiApi.java
 src/main/java/org/openapitools/client/api/PoolDayDataApi.java
 src/main/java/org/openapitools/client/api/PoolHourDataApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
 src/main/java/org/openapitools/client/api/PositionSnapshotApi.java
 src/main/java/org/openapitools/client/api/PositionsApi.java
+src/main/java/org/openapitools/client/api/SettlementApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
 src/main/java/org/openapitools/client/api/TickDayDataApi.java
@@ -143,12 +147,14 @@ src/test/java/org/openapitools/client/api/HourDataApiTest.java
 src/test/java/org/openapitools/client/api/LiquidityPositionApiTest.java
 src/test/java/org/openapitools/client/api/LiquidityPositionSnapshotsApiTest.java
 src/test/java/org/openapitools/client/api/MintsApiTest.java
+src/test/java/org/openapitools/client/api/OrdersApiTest.java
 src/test/java/org/openapitools/client/api/PoiApiTest.java
 src/test/java/org/openapitools/client/api/PoolDayDataApiTest.java
 src/test/java/org/openapitools/client/api/PoolHourDataApiTest.java
 src/test/java/org/openapitools/client/api/PoolsApiTest.java
 src/test/java/org/openapitools/client/api/PositionSnapshotApiTest.java
 src/test/java/org/openapitools/client/api/PositionsApiTest.java
+src/test/java/org/openapitools/client/api/SettlementApiTest.java
 src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/SwapsApiTest.java
 src/test/java/org/openapitools/client/api/TickDayDataApiTest.java

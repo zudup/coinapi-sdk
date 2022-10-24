@@ -17,12 +17,14 @@ import 'package:openapi/src/api/hour_data_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
 import 'package:openapi/src/api/liquidity_position_snapshots_api.dart';
 import 'package:openapi/src/api/mints_api.dart';
+import 'package:openapi/src/api/orders_api.dart';
 import 'package:openapi/src/api/poi_api.dart';
 import 'package:openapi/src/api/pool_day_data_api.dart';
 import 'package:openapi/src/api/pool_hour_data_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/position_snapshot_api.dart';
 import 'package:openapi/src/api/positions_api.dart';
+import 'package:openapi/src/api/settlement_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
 import 'package:openapi/src/api/tick_day_data_api.dart';
@@ -139,6 +141,12 @@ class Openapi {
     return MintsApi(dio, serializers);
   }
 
+  /// Get OrdersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  OrdersApi getOrdersApi() {
+    return OrdersApi(dio, serializers);
+  }
+
   /// Get PoiApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   PoiApi getPoiApi() {
@@ -173,6 +181,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   PositionsApi getPositionsApi() {
     return PositionsApi(dio, serializers);
+  }
+
+  /// Get SettlementApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  SettlementApi getSettlementApi() {
+    return SettlementApi(dio, serializers);
   }
 
   /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,

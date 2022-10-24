@@ -12,12 +12,14 @@ src/Api/Request/HourData.elm
 src/Api/Request/LiquidityPosition.elm
 src/Api/Request/LiquidityPositionSnapshots.elm
 src/Api/Request/Mints.elm
+src/Api/Request/Orders.elm
 src/Api/Request/Poi.elm
 src/Api/Request/PoolDayData.elm
 src/Api/Request/PoolHourData.elm
 src/Api/Request/Pools.elm
 src/Api/Request/PositionSnapshot.elm
 src/Api/Request/Positions.elm
+src/Api/Request/Settlement.elm
 src/Api/Request/Sushiswap.elm
 src/Api/Request/Swaps.elm
 src/Api/Request/TickDayData.elm

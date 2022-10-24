@@ -72,12 +72,14 @@ library
       OnChain.API.LiquidityPosition
       OnChain.API.LiquidityPositionSnapshots
       OnChain.API.Mints
+      OnChain.API.Orders
       OnChain.API.Poi
       OnChain.API.PoolDayData
       OnChain.API.PoolHourData
       OnChain.API.Pools
       OnChain.API.PositionSnapshot
       OnChain.API.Positions
+      OnChain.API.Settlement
       OnChain.API.Sushiswap
       OnChain.API.Swaps
       OnChain.API.TickDayData

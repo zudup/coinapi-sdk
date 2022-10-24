@@ -17,6 +17,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -30,6 +31,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -90,6 +92,7 @@ lib/WWW/OpenAPIClient/Object/TokenV2DTO.pm
 lib/WWW/OpenAPIClient/Object/TokenV3DTO.pm
 lib/WWW/OpenAPIClient/Object/TokenV3DayDataDTO.pm
 lib/WWW/OpenAPIClient/Object/UniswapDayDataV3DTO.pm
+lib/WWW/OpenAPIClient/OrdersApi.pm
 lib/WWW/OpenAPIClient/PoiApi.pm
 lib/WWW/OpenAPIClient/PoolDayDataApi.pm
 lib/WWW/OpenAPIClient/PoolHourDataApi.pm
@@ -98,6 +101,7 @@ lib/WWW/OpenAPIClient/PositionSnapshotApi.pm
 lib/WWW/OpenAPIClient/PositionsApi.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
+lib/WWW/OpenAPIClient/SettlementApi.pm
 lib/WWW/OpenAPIClient/SushiswapApi.pm
 lib/WWW/OpenAPIClient/SwapsApi.pm
 lib/WWW/OpenAPIClient/TickDayDataApi.pm
@@ -125,6 +129,7 @@ t/LiquidityPositionApiTest.t
 t/LiquidityPositionSnapshotsApiTest.t
 t/MintV3DTOTest.t
 t/MintsApiTest.t
+t/OrdersApiTest.t
 t/PairDTOTest.t
 t/PairV2DTOTest.t
 t/PoiApiTest.t
@@ -138,6 +143,7 @@ t/PositionSnapshotApiTest.t
 t/PositionSnapshotV3DTOTest.t
 t/PositionV3DTOTest.t
 t/PositionsApiTest.t
+t/SettlementApiTest.t
 t/SushiswapApiTest.t
 t/SwapDTOTest.t
 t/SwapV2DTOTest.t

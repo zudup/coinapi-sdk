@@ -73,6 +73,18 @@ class UsersApiTest extends TestCase
     }
 
     /**
+     * Test case for chainsChainIdDappsCowUsersHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsCowUsersHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chainsChainIdDappsSushiswapUsersHistoricalGet
      *
      * .

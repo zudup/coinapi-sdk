@@ -12,12 +12,14 @@ from openapi_client.apis.tags.hour_data_api import HourDataApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
 from openapi_client.apis.tags.liquidity_position_snapshots_api import LiquidityPositionSnapshotsApi
 from openapi_client.apis.tags.mints_api import MintsApi
+from openapi_client.apis.tags.orders_api import OrdersApi
 from openapi_client.apis.tags.poi_api import PoiApi
 from openapi_client.apis.tags.pool_day_data_api import PoolDayDataApi
 from openapi_client.apis.tags.pool_hour_data_api import PoolHourDataApi
 from openapi_client.apis.tags.pools_api import PoolsApi
 from openapi_client.apis.tags.position_snapshot_api import PositionSnapshotApi
 from openapi_client.apis.tags.positions_api import PositionsApi
+from openapi_client.apis.tags.settlement_api import SettlementApi
 from openapi_client.apis.tags.swaps_api import SwapsApi
 from openapi_client.apis.tags.tick_day_data_api import TickDayDataApi
 from openapi_client.apis.tags.ticks_api import TicksApi
@@ -43,12 +45,14 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
         TagValues.MINTS: MintsApi,
+        TagValues.ORDERS: OrdersApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,
         TagValues.POOL_HOUR_DATA: PoolHourDataApi,
         TagValues.POOLS: PoolsApi,
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
+        TagValues.SETTLEMENT: SettlementApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,
@@ -75,12 +79,14 @@ tag_to_api = TagToApi(
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
         TagValues.MINTS: MintsApi,
+        TagValues.ORDERS: OrdersApi,
         TagValues.POI: PoiApi,
         TagValues.POOL_DAY_DATA: PoolDayDataApi,
         TagValues.POOL_HOUR_DATA: PoolHourDataApi,
         TagValues.POOLS: PoolsApi,
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
+        TagValues.SETTLEMENT: SettlementApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,

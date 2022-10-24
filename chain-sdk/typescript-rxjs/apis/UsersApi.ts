@@ -16,6 +16,14 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 
+export interface ChainsChainIdDappsCowUsersHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
 export interface ChainsChainIdDappsSushiswapUsersHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -36,6 +44,27 @@ export interface ChainsChainIdDappsUniswapv2UsersHistoricalGetRequest {
  * no description
  */
 export class UsersApi extends BaseAPI {
+
+    /**
+     */
+    chainsChainIdDappsCowUsersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsCowUsersHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsCowUsersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsCowUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsCowUsersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsCowUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsCowUsersHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/cow/users/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      */

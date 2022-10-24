@@ -19,6 +19,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -32,6 +33,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -66,12 +68,14 @@ src/CoinAPI.EMS.REST.V1.Test/Api/HourDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/LiquidityPositionSnapshotsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/MintsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/OrdersApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoiApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolDayDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolHourDataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PoolsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PositionSnapshotApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/PositionsApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/SettlementApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SwapsApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/TickDayDataApiTests.cs
@@ -119,12 +123,14 @@ src/CoinAPI.EMS.REST.V1/Api/HourDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionApi.cs
 src/CoinAPI.EMS.REST.V1/Api/LiquidityPositionSnapshotsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/MintsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/OrdersApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoiApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolDayDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolHourDataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PoolsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PositionSnapshotApi.cs
 src/CoinAPI.EMS.REST.V1/Api/PositionsApi.cs
+src/CoinAPI.EMS.REST.V1/Api/SettlementApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SwapsApi.cs
 src/CoinAPI.EMS.REST.V1/Api/TickDayDataApi.cs

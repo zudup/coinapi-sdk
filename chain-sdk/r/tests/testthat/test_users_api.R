@@ -5,6 +5,20 @@ context("Test UsersApi")
 
 api_instance <- UsersApi$new()
 
+test_that("ChainsChainIdDappsCowUsersHistoricalGet", {
+  # tests for ChainsChainIdDappsCowUsersHistoricalGet
+  # base path: https://onchain.coinapi.io
+  # @param chain_id character 
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("ChainsChainIdDappsSushiswapUsersHistoricalGet", {
   # tests for ChainsChainIdDappsSushiswapUsersHistoricalGet
   # base path: https://onchain.coinapi.io

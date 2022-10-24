@@ -86,6 +86,8 @@ _()
     operations["chainsChainIdDappsSushiswapMintsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2MintsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3MintsHistoricalGet"]=1
+    operations["chainsChainIdDappsCowOrdersHistoricalGet"]=1
+    operations["chainsChainIdDappsCowPoiHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapPoiHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2PoiHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3PoiHistoricalGet"]=1
@@ -101,6 +103,7 @@ _()
     operations["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3PositionsHistoricalGet"]=1
+    operations["chainsChainIdDappsCowSettlementHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapPoolsCurrentGet"]=1
     operations["chainsChainIdDappsSushiswapSwapsCurrentGet"]=1
     operations["chainsChainIdDappsSushiswapTokensCurrentGet"]=1
@@ -146,6 +149,7 @@ _()
     operations["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsCowUsersHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapUsersHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2UsersHistoricalGet"]=1
 
@@ -170,6 +174,8 @@ _()
     operation_parameters["chainsChainIdDappsSushiswapMintsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2MintsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3MintsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCowOrdersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCowPoiHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapPoiHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2PoiHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3PoiHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
@@ -185,6 +191,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3PoolsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3PositionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCowSettlementHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapPoolsCurrentGet"]="chain_id= "
     operation_parameters["chainsChainIdDappsSushiswapSwapsCurrentGet"]="chain_id= "
     operation_parameters["chainsChainIdDappsSushiswapTokensCurrentGet"]="chain_id= "
@@ -230,6 +237,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsCowUsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapUsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2UsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
 

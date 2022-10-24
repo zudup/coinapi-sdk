@@ -18,6 +18,8 @@ api/LiquidityPositionSnapshotsAPI.c
 api/LiquidityPositionSnapshotsAPI.h
 api/MintsAPI.c
 api/MintsAPI.h
+api/OrdersAPI.c
+api/OrdersAPI.h
 api/PoiAPI.c
 api/PoiAPI.h
 api/PoolDayDataAPI.c
@@ -30,6 +32,8 @@ api/PositionSnapshotAPI.c
 api/PositionSnapshotAPI.h
 api/PositionsAPI.c
 api/PositionsAPI.h
+api/SettlementAPI.c
+api/SettlementAPI.h
 api/SushiswapAPI.c
 api/SushiswapAPI.h
 api/SwapsAPI.c
@@ -64,12 +68,14 @@ docs/HourDataAPI.md
 docs/LiquidityPositionAPI.md
 docs/LiquidityPositionSnapshotsAPI.md
 docs/MintsAPI.md
+docs/OrdersAPI.md
 docs/PoiAPI.md
 docs/PoolDayDataAPI.md
 docs/PoolHourDataAPI.md
 docs/PoolsAPI.md
 docs/PositionSnapshotAPI.md
 docs/PositionsAPI.md
+docs/SettlementAPI.md
 docs/SushiswapAPI.md
 docs/SwapsAPI.md
 docs/TickDayDataAPI.md

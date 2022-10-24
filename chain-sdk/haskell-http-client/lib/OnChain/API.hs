@@ -22,12 +22,14 @@ module OnChain.API
   , module OnChain.API.LiquidityPosition
   , module OnChain.API.LiquidityPositionSnapshots
   , module OnChain.API.Mints
+  , module OnChain.API.Orders
   , module OnChain.API.Poi
   , module OnChain.API.PoolDayData
   , module OnChain.API.PoolHourData
   , module OnChain.API.Pools
   , module OnChain.API.PositionSnapshot
   , module OnChain.API.Positions
+  , module OnChain.API.Settlement
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
   , module OnChain.API.TickDayData
@@ -51,12 +53,14 @@ import OnChain.API.HourData
 import OnChain.API.LiquidityPosition
 import OnChain.API.LiquidityPositionSnapshots
 import OnChain.API.Mints
+import OnChain.API.Orders
 import OnChain.API.Poi
 import OnChain.API.PoolDayData
 import OnChain.API.PoolHourData
 import OnChain.API.Pools
 import OnChain.API.PositionSnapshot
 import OnChain.API.Positions
+import OnChain.API.Settlement
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps
 import OnChain.API.TickDayData

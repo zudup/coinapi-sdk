@@ -21,6 +21,7 @@ docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
+docs/OrdersApi.md
 docs/PairDTO.md
 docs/PairV2DTO.md
 docs/PoiApi.md
@@ -34,6 +35,7 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/SettlementApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -68,12 +70,14 @@ lib/openapi_client/api/hour_data_api.rb
 lib/openapi_client/api/liquidity_position_api.rb
 lib/openapi_client/api/liquidity_position_snapshots_api.rb
 lib/openapi_client/api/mints_api.rb
+lib/openapi_client/api/orders_api.rb
 lib/openapi_client/api/poi_api.rb
 lib/openapi_client/api/pool_day_data_api.rb
 lib/openapi_client/api/pool_hour_data_api.rb
 lib/openapi_client/api/pools_api.rb
 lib/openapi_client/api/position_snapshot_api.rb
 lib/openapi_client/api/positions_api.rb
+lib/openapi_client/api/settlement_api.rb
 lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/swaps_api.rb
 lib/openapi_client/api/tick_day_data_api.rb
@@ -124,12 +128,14 @@ spec/api/hour_data_api_spec.rb
 spec/api/liquidity_position_api_spec.rb
 spec/api/liquidity_position_snapshots_api_spec.rb
 spec/api/mints_api_spec.rb
+spec/api/orders_api_spec.rb
 spec/api/poi_api_spec.rb
 spec/api/pool_day_data_api_spec.rb
 spec/api/pool_hour_data_api_spec.rb
 spec/api/pools_api_spec.rb
 spec/api/position_snapshot_api_spec.rb
 spec/api/positions_api_spec.rb
+spec/api/settlement_api_spec.rb
 spec/api/sushiswap_api_spec.rb
 spec/api/swaps_api_spec.rb
 spec/api/tick_day_data_api_spec.rb

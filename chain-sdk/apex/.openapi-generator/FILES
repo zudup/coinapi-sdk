@@ -61,6 +61,10 @@ force-app/main/default/classes/OASMintsApi.cls
 force-app/main/default/classes/OASMintsApi.cls-meta.xml
 force-app/main/default/classes/OASMintsApiTest.cls
 force-app/main/default/classes/OASMintsApiTest.cls-meta.xml
+force-app/main/default/classes/OASOrdersApi.cls
+force-app/main/default/classes/OASOrdersApi.cls-meta.xml
+force-app/main/default/classes/OASOrdersApiTest.cls
+force-app/main/default/classes/OASOrdersApiTest.cls-meta.xml
 force-app/main/default/classes/OASPairDTO.cls
 force-app/main/default/classes/OASPairDTO.cls-meta.xml
 force-app/main/default/classes/OASPairDTOTest.cls
@@ -115,6 +119,10 @@ force-app/main/default/classes/OASPositionsApiTest.cls
 force-app/main/default/classes/OASPositionsApiTest.cls-meta.xml
 force-app/main/default/classes/OASResponseMock.cls
 force-app/main/default/classes/OASResponseMock.cls-meta.xml
+force-app/main/default/classes/OASSettlementApi.cls
+force-app/main/default/classes/OASSettlementApi.cls-meta.xml
+force-app/main/default/classes/OASSettlementApiTest.cls
+force-app/main/default/classes/OASSettlementApiTest.cls-meta.xml
 force-app/main/default/classes/OASSushiswapApi.cls
 force-app/main/default/classes/OASSushiswapApi.cls-meta.xml
 force-app/main/default/classes/OASSushiswapApiTest.cls

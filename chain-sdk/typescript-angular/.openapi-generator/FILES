@@ -11,12 +11,14 @@ api/hourData.service.ts
 api/liquidityPosition.service.ts
 api/liquidityPositionSnapshots.service.ts
 api/mints.service.ts
+api/orders.service.ts
 api/poi.service.ts
 api/poolDayData.service.ts
 api/poolHourData.service.ts
 api/pools.service.ts
 api/positionSnapshot.service.ts
 api/positions.service.ts
+api/settlement.service.ts
 api/sushiswap.service.ts
 api/swaps.service.ts
 api/tickDayData.service.ts

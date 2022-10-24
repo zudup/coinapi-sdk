@@ -10,12 +10,14 @@ openapiclient/api/hour_data_api.lua
 openapiclient/api/liquidity_position_api.lua
 openapiclient/api/liquidity_position_snapshots_api.lua
 openapiclient/api/mints_api.lua
+openapiclient/api/orders_api.lua
 openapiclient/api/poi_api.lua
 openapiclient/api/pool_day_data_api.lua
 openapiclient/api/pool_hour_data_api.lua
 openapiclient/api/pools_api.lua
 openapiclient/api/position_snapshot_api.lua
 openapiclient/api/positions_api.lua
+openapiclient/api/settlement_api.lua
 openapiclient/api/sushiswap_api.lua
 openapiclient/api/swaps_api.lua
 openapiclient/api/tick_day_data_api.lua
@@ -67,6 +69,7 @@ spec/liquidity_position_api_spec.lua
 spec/liquidity_position_snapshots_api_spec.lua
 spec/mint_v3_dto_spec.lua
 spec/mints_api_spec.lua
+spec/orders_api_spec.lua
 spec/pair_dto_spec.lua
 spec/pair_v2_dto_spec.lua
 spec/poi_api_spec.lua
@@ -80,6 +83,7 @@ spec/position_snapshot_api_spec.lua
 spec/position_snapshot_v3_dto_spec.lua
 spec/position_v3_dto_spec.lua
 spec/positions_api_spec.lua
+spec/settlement_api_spec.lua
 spec/sushiswap_api_spec.lua
 spec/swap_dto_spec.lua
 spec/swap_v2_dto_spec.lua

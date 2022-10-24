@@ -45,12 +45,14 @@ import HourDataApi from './api/HourDataApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
 import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
 import MintsApi from './api/MintsApi';
+import OrdersApi from './api/OrdersApi';
 import PoiApi from './api/PoiApi';
 import PoolDayDataApi from './api/PoolDayDataApi';
 import PoolHourDataApi from './api/PoolHourDataApi';
 import PoolsApi from './api/PoolsApi';
 import PositionSnapshotApi from './api/PositionSnapshotApi';
 import PositionsApi from './api/PositionsApi';
+import SettlementApi from './api/SettlementApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
 import TickDayDataApi from './api/TickDayDataApi';
@@ -297,6 +299,12 @@ export {
     MintsApi,
 
     /**
+    * The OrdersApi service constructor.
+    * @property {module:api/OrdersApi}
+    */
+    OrdersApi,
+
+    /**
     * The PoiApi service constructor.
     * @property {module:api/PoiApi}
     */
@@ -331,6 +339,12 @@ export {
     * @property {module:api/PositionsApi}
     */
     PositionsApi,
+
+    /**
+    * The SettlementApi service constructor.
+    * @property {module:api/SettlementApi}
+    */
+    SettlementApi,
 
     /**
     * The SushiswapApi service constructor.

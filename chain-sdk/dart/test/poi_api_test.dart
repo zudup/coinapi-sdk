@@ -17,6 +17,11 @@ void main() {
   // final instance = PoiApi();
 
   group('tests for PoiApi', () {
+    //Future chainsChainIdDappsCowPoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsCowPoiHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsSushiswapPoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsSushiswapPoiHistoricalGet', () async {
       // TODO

@@ -10,12 +10,14 @@ src/on_chain_api/api/hour_data.clj
 src/on_chain_api/api/liquidity_position.clj
 src/on_chain_api/api/liquidity_position_snapshots.clj
 src/on_chain_api/api/mints.clj
+src/on_chain_api/api/orders.clj
 src/on_chain_api/api/poi.clj
 src/on_chain_api/api/pool_day_data.clj
 src/on_chain_api/api/pool_hour_data.clj
 src/on_chain_api/api/pools.clj
 src/on_chain_api/api/position_snapshot.clj
 src/on_chain_api/api/positions.clj
+src/on_chain_api/api/settlement.clj
 src/on_chain_api/api/sushiswap.clj
 src/on_chain_api/api/swaps.clj
 src/on_chain_api/api/tick_day_data.clj
