@@ -294,6 +294,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData.
 
 
+### UserManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsUniswapv2UsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
+*chainsChainIdDappsUniswapv2UsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
+
+
 ## What are the Model files for the data structures/objects?
 Class | Description
 ------------- | -------------

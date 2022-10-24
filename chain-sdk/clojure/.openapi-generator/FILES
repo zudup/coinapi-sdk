@@ -26,6 +26,7 @@ src/on_chain_api/api/trades.clj
 src/on_chain_api/api/transactions.clj
 src/on_chain_api/api/uniswap_day_data.clj
 src/on_chain_api/api/uniswap_v_.clj
+src/on_chain_api/api/user.clj
 src/on_chain_api/core.clj
 src/on_chain_api/specs/big_integer.clj
 src/on_chain_api/specs/bundle_v3_dto.clj

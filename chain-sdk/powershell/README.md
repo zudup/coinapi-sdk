@@ -121,6 +121,7 @@ Class | Method | HTTP request | Description
 *UniswapV3Api* | [**Invoke-ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](docs/UniswapV3Api.md#Invoke-ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
 *UniswapV3Api* | [**Invoke-ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](docs/UniswapV3Api.md#Invoke-ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
 *UniswapV3Api* | [**Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](docs/UniswapV3Api.md#Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+*UserApi* | [**Invoke-ChainsChainIdDappsUniswapv2UsersHistoricalGet**](docs/UserApi.md#Invoke-ChainsChainIdDappsUniswapv2UsersHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
 
 
 ## Documentation for Models

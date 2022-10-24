@@ -66,6 +66,7 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_transactions_hist
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_uniswap_day_data_historical import ChainsChainIdDappsUniswapv3UniswapDayDataHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_uniswap_day_data_historical import ChainsChainIdDappsUniswapv2UniswapDayDataHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_uniswap_day_data_current import ChainsChainIdDappsUniswapv3UniswapDayDataCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_users_historical import ChainsChainIdDappsUniswapv2UsersHistorical
 
 PathToApi = typing_extensions.TypedDict(
     'PathToApi',
@@ -135,6 +136,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv2UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_USERS_HISTORICAL: ChainsChainIdDappsUniswapv2UsersHistorical,
     }
 )
 
@@ -205,5 +207,6 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv3UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsUniswapv2UniswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT: ChainsChainIdDappsUniswapv3UniswapDayDataCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_USERS_HISTORICAL: ChainsChainIdDappsUniswapv2UsersHistorical,
     }
 )

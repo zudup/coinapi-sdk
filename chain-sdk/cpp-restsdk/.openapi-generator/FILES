@@ -38,6 +38,7 @@ include/CppRestOpenAPIClient/api/TransactionsApi.h
 include/CppRestOpenAPIClient/api/UniswapDayDataApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
 include/CppRestOpenAPIClient/api/UniswapV3Api.h
+include/CppRestOpenAPIClient/api/UserApi.h
 include/CppRestOpenAPIClient/model/BigInteger.h
 include/CppRestOpenAPIClient/model/BundleV3DTO.h
 include/CppRestOpenAPIClient/model/BurnV3DTO.h
@@ -95,6 +96,7 @@ src/api/TransactionsApi.cpp
 src/api/UniswapDayDataApi.cpp
 src/api/UniswapV2Api.cpp
 src/api/UniswapV3Api.cpp
+src/api/UserApi.cpp
 src/model/BigInteger.cpp
 src/model/BundleV3DTO.cpp
 src/model/BurnV3DTO.cpp

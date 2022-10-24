@@ -62,6 +62,7 @@ import TransactionsApi from './api/TransactionsApi';
 import UniswapDayDataApi from './api/UniswapDayDataApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
+import UserApi from './api/UserApi';
 
 
 /**
@@ -394,5 +395,11 @@ export {
     * The UniswapV3Api service constructor.
     * @property {module:api/UniswapV3Api}
     */
-    UniswapV3Api
+    UniswapV3Api,
+
+    /**
+    * The UserApi service constructor.
+    * @property {module:api/UserApi}
+    */
+    UserApi
 };

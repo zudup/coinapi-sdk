@@ -48,4 +48,6 @@ export * from './uniswapV2.service';
 import { UniswapV2Service } from './uniswapV2.service';
 export * from './uniswapV3.service';
 import { UniswapV3Service } from './uniswapV3.service';
-export const APIS = [BundlesService, BurnsService, FactoryService, LiquidityPositionService, LiquidityPositionSnapshotsService, MintService, MintsService, PoiService, PoolDayDataService, PoolHourDataService, PoolsService, PositionSnapshotService, PositionsService, SushiswapService, SwapsService, TickDayDataService, TicksService, TokenDayDataService, TokenHourDataService, TokensService, TradesService, TransactionsService, UniswapDayDataService, UniswapV2Service, UniswapV3Service];
+export * from './user.service';
+import { UserService } from './user.service';
+export const APIS = [BundlesService, BurnsService, FactoryService, LiquidityPositionService, LiquidityPositionSnapshotsService, MintService, MintsService, PoiService, PoolDayDataService, PoolHourDataService, PoolsService, PositionSnapshotService, PositionsService, SushiswapService, SwapsService, TickDayDataService, TicksService, TokenDayDataService, TokenHourDataService, TokensService, TradesService, TransactionsService, UniswapDayDataService, UniswapV2Service, UniswapV3Service, UserService];

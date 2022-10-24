@@ -48,3 +48,4 @@ API/Client/UniswapDayDataApi.js
 API/Client/UniswapDayDataV3DTO.js
 API/Client/UniswapV2Api.js
 API/Client/UniswapV3Api.js
+API/Client/UserApi.js

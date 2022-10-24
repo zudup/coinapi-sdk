@@ -55,6 +55,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
+docs/UserApi.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -102,6 +103,7 @@ src/main/java/org/openapitools/client/api/TransactionsApi.java
 src/main/java/org/openapitools/client/api/UniswapDayDataApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
+src/main/java/org/openapitools/client/api/UserApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java
@@ -156,6 +158,7 @@ src/test/java/org/openapitools/client/api/TransactionsApiTest.java
 src/test/java/org/openapitools/client/api/UniswapDayDataApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2ApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3ApiTest.java
+src/test/java/org/openapitools/client/api/UserApiTest.java
 src/test/java/org/openapitools/client/model/BigIntegerTest.java
 src/test/java/org/openapitools/client/model/BundleV3DTOTest.java
 src/test/java/org/openapitools/client/model/BurnV3DTOTest.java

@@ -31,6 +31,7 @@ lib/OnChain/API/Transactions.hs
 lib/OnChain/API/UniswapDayData.hs
 lib/OnChain/API/UniswapV2.hs
 lib/OnChain/API/UniswapV3.hs
+lib/OnChain/API/User.hs
 lib/OnChain/Client.hs
 lib/OnChain/Core.hs
 lib/OnChain/Logging.hs

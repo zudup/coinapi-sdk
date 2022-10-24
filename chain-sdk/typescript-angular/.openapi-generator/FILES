@@ -28,6 +28,7 @@ api/transactions.service.ts
 api/uniswapDayData.service.ts
 api/uniswapV2.service.ts
 api/uniswapV3.service.ts
+api/user.service.ts
 configuration.ts
 encoder.ts
 git_push.sh

@@ -52,6 +52,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
+docs/UserApi.md
 git_push.sh
 lib/WWW/OpenAPIClient/ApiClient.pm
 lib/WWW/OpenAPIClient/ApiFactory.pm
@@ -107,6 +108,7 @@ lib/WWW/OpenAPIClient/TransactionsApi.pm
 lib/WWW/OpenAPIClient/UniswapDayDataApi.pm
 lib/WWW/OpenAPIClient/UniswapV2Api.pm
 lib/WWW/OpenAPIClient/UniswapV3Api.pm
+lib/WWW/OpenAPIClient/UserApi.pm
 t/BigIntegerTest.t
 t/BundleV3DTOTest.t
 t/BundlesApiTest.t
@@ -156,3 +158,4 @@ t/UniswapDayDataApiTest.t
 t/UniswapDayDataV3DTOTest.t
 t/UniswapV2ApiTest.t
 t/UniswapV3ApiTest.t
+t/UserApiTest.t

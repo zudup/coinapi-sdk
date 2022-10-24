@@ -51,6 +51,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
+docs/UserApi.md
 src/PSOpenAPITools/Api/BundlesApi.ps1
 src/PSOpenAPITools/Api/BurnsApi.ps1
 src/PSOpenAPITools/Api/FactoryApi.ps1
@@ -76,6 +77,7 @@ src/PSOpenAPITools/Api/TransactionsApi.ps1
 src/PSOpenAPITools/Api/UniswapDayDataApi.ps1
 src/PSOpenAPITools/Api/UniswapV2Api.ps1
 src/PSOpenAPITools/Api/UniswapV3Api.ps1
+src/PSOpenAPITools/Api/UserApi.ps1
 src/PSOpenAPITools/Client/Configuration.ps1
 src/PSOpenAPITools/Model/BigInteger.ps1
 src/PSOpenAPITools/Model/BundleV3DTO.ps1
@@ -133,6 +135,7 @@ tests/Api/TransactionsApi.Tests.ps1
 tests/Api/UniswapDayDataApi.Tests.ps1
 tests/Api/UniswapV2Api.Tests.ps1
 tests/Api/UniswapV3Api.Tests.ps1
+tests/Api/UserApi.Tests.ps1
 tests/Model/BigInteger.Tests.ps1
 tests/Model/BundleV3DTO.Tests.ps1
 tests/Model/BurnV3DTO.Tests.ps1

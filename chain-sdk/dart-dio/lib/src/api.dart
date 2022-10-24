@@ -34,6 +34,7 @@ import 'package:openapi/src/api/transactions_api.dart';
 import 'package:openapi/src/api/uniswap_day_data_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
+import 'package:openapi/src/api/user_api.dart';
 
 class Openapi {
   static const String basePath = r'https://onchain.coinapi.io';
@@ -237,5 +238,11 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   UniswapV3Api getUniswapV3Api() {
     return UniswapV3Api(dio, serializers);
+  }
+
+  /// Get UserApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UserApi getUserApi() {
+    return UserApi(dio, serializers);
   }
 }

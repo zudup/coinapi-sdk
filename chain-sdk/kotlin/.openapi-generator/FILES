@@ -50,6 +50,7 @@ docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
+docs/UserApi.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
@@ -80,6 +81,7 @@ src/main/kotlin/org/openapitools/client/apis/TransactionsApi.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapDayDataApi.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV2Api.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV3Api.kt
+src/main/kotlin/org/openapitools/client/apis/UserApi.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiAbstractions.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiClient.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiResponse.kt

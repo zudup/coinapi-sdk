@@ -71,3 +71,4 @@ class PathValues(str, enum.Enum):
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv2/uniswapDayData/historical"
     CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_CURRENT = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current"
+    CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_USERS_HISTORICAL = "/chains/{chain_id}/dapps/uniswapv2/users/historical"

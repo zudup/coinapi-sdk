@@ -579,4 +579,13 @@ package .Clients is
        Chain_Id : in Swagger.UString;
        Result : out .Models.UniswapDayDataV3DTO_Type_Vectors.Vector);
 
+   --  
+   procedure Chains_Chain_Id_Dapps_Uniswapv_2Users_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
 end .Clients;

@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
 *OpenapiClient::UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
 *OpenapiClient::UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
 *OpenapiClient::UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+*OpenapiClient::UserApi* | [**chains_chain_id_dapps_uniswapv2_users_historical_get**](docs/UserApi.md#chains_chain_id_dapps_uniswapv2_users_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
 
 
 ## Documentation for Models

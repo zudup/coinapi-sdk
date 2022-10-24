@@ -376,6 +376,11 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensDayDa
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=0
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -665,6 +670,11 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensDayDa
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
@@ -951,6 +961,11 @@ operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensDayDataCu
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=""
 
 
 ##
@@ -1520,6 +1535,12 @@ read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsUniswapv3TokensDayDataCurrentGet${OFF};GetTokensDayData
   ${CYAN}chainsChainIdDappsUniswapv3TokensHourDataCurrentGet${OFF};GetTokensHourData
   ${CYAN}chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet${OFF};GetUniswapDayData
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[user]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsUniswapv2UsersHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3048,6 +3069,30 @@ print_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsUniswapv2UsersHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsUniswapv2UsersHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsUniswapv2UsersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 
 
@@ -5391,6 +5436,42 @@ call_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet() {
     fi
 }
 
+##############################################################################
+#
+# Call chainsChainIdDappsUniswapv2UsersHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsUniswapv2UsersHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/users/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
 
 
 ##############################################################################
@@ -5683,6 +5764,9 @@ case $key in
     chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet)
     operation="chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"
     ;;
+    chainsChainIdDappsUniswapv2UsersHistoricalGet)
+    operation="chainsChainIdDappsUniswapv2UsersHistoricalGet"
+    ;;
     *==*)
     # Parse body arguments and convert them into top level
     # JSON properties passed in the body content as strings
@@ -5954,6 +6038,9 @@ case $operation in
     ;;
     chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet)
     call_chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+    ;;
+    chainsChainIdDappsUniswapv2UsersHistoricalGet)
+    call_chainsChainIdDappsUniswapv2UsersHistoricalGet
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

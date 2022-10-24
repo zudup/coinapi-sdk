@@ -48,4 +48,6 @@ export * from './UniswapV2Api';
 import { UniswapV2Api } from './UniswapV2Api';
 export * from './UniswapV3Api';
 import { UniswapV3Api } from './UniswapV3Api';
-export const APIS = [BundlesApi, BurnsApi, FactoryApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, MintApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api];
+export * from './UserApi';
+import { UserApi } from './UserApi';
+export const APIS = [BundlesApi, BurnsApi, FactoryApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, MintApi, MintsApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api, UserApi];

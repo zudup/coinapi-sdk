@@ -52,6 +52,7 @@ part 'api/transactions_api.dart';
 part 'api/uniswap_day_data_api.dart';
 part 'api/uniswap_v2_api.dart';
 part 'api/uniswap_v3_api.dart';
+part 'api/user_api.dart';
 
 part 'model/big_integer.dart';
 part 'model/bundle_v3_dto.dart';

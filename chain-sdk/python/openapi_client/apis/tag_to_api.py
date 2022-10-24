@@ -26,6 +26,7 @@ from openapi_client.apis.tags.tokens_api import TokensApi
 from openapi_client.apis.tags.trades_api import TradesApi
 from openapi_client.apis.tags.transactions_api import TransactionsApi
 from openapi_client.apis.tags.uniswap_day_data_api import UniswapDayDataApi
+from openapi_client.apis.tags.user_api import UserApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -55,6 +56,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.TRADES: TradesApi,
         TagValues.TRANSACTIONS: TransactionsApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
+        TagValues.USER: UserApi,
     }
 )
 
@@ -85,5 +87,6 @@ tag_to_api = TagToApi(
         TagValues.TRADES: TradesApi,
         TagValues.TRANSACTIONS: TransactionsApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
+        TagValues.USER: UserApi,
     }
 )

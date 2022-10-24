@@ -133,6 +133,7 @@ _()
     operations["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]=1
     operations["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]=1
+    operations["chainsChainIdDappsUniswapv2UsersHistoricalGet"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
@@ -202,6 +203,7 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"]="chain_id= filter_token_id= "
     operation_parameters["chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"]="chain_id= "
+    operation_parameters["chainsChainIdDappsUniswapv2UsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values

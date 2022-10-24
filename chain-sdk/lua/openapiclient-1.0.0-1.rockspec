@@ -48,6 +48,7 @@ build = {
 		["openapiclient.api.uniswap_day_data_api"] = "openapiclient/api/uniswap_day_data_api.lua";
 		["openapiclient.api.uniswap_v2_api"] = "openapiclient/api/uniswap_v2_api.lua";
 		["openapiclient.api.uniswap_v3_api"] = "openapiclient/api/uniswap_v3_api.lua";
+		["openapiclient.api.user_api"] = "openapiclient/api/user_api.lua";
 		["openapiclient.model.big_integer"] = "openapiclient/model/big_integer.lua";
 		["openapiclient.model.bundle_v3_dto"] = "openapiclient/model/bundle_v3_dto.lua";
 		["openapiclient.model.burn_v3_dto"] = "openapiclient/model/burn_v3_dto.lua";

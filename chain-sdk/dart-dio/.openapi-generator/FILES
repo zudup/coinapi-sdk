@@ -51,6 +51,7 @@ doc/UniswapDayDataApi.md
 doc/UniswapDayDataV3DTO.md
 doc/UniswapV2Api.md
 doc/UniswapV3Api.md
+doc/UserApi.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/bundles_api.dart
@@ -78,6 +79,7 @@ lib/src/api/transactions_api.dart
 lib/src/api/uniswap_day_data_api.dart
 lib/src/api/uniswap_v2_api.dart
 lib/src/api/uniswap_v3_api.dart
+lib/src/api/user_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
@@ -161,3 +163,4 @@ test/uniswap_day_data_api_test.dart
 test/uniswap_day_data_v3_dto_test.dart
 test/uniswap_v2_api_test.dart
 test/uniswap_v3_api_test.dart
+test/user_api_test.dart

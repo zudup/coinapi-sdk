@@ -52,6 +52,8 @@ api/UniswapV2API.c
 api/UniswapV2API.h
 api/UniswapV3API.c
 api/UniswapV3API.h
+api/UserAPI.c
+api/UserAPI.h
 docs/BundlesAPI.md
 docs/BurnsAPI.md
 docs/FactoryAPI.md
@@ -77,6 +79,7 @@ docs/TransactionsAPI.md
 docs/UniswapDayDataAPI.md
 docs/UniswapV2API.md
 docs/UniswapV3API.md
+docs/UserAPI.md
 docs/big_integer.md
 docs/bundle_v3_dto.md
 docs/burn_v3_dto.md

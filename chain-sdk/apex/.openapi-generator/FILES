@@ -205,5 +205,9 @@ force-app/main/default/classes/OASUniswapV3Api.cls
 force-app/main/default/classes/OASUniswapV3Api.cls-meta.xml
 force-app/main/default/classes/OASUniswapV3ApiTest.cls
 force-app/main/default/classes/OASUniswapV3ApiTest.cls-meta.xml
+force-app/main/default/classes/OASUserApi.cls
+force-app/main/default/classes/OASUserApi.cls-meta.xml
+force-app/main/default/classes/OASUserApiTest.cls
+force-app/main/default/classes/OASUserApiTest.cls-meta.xml
 force-app/main/default/namedCredentials/OnChain_API.namedCredential-meta.xml
 sfdx-project.json

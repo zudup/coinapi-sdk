@@ -27,6 +27,7 @@ api/transactionsApi.ts
 api/uniswapDayDataApi.ts
 api/uniswapV2Api.ts
 api/uniswapV3Api.ts
+api/userApi.ts
 git_push.sh
 model/bigInteger.ts
 model/bundleV3DTO.ts

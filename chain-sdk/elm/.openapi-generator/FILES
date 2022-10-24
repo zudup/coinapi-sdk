@@ -29,4 +29,5 @@ src/Api/Request/Transactions.elm
 src/Api/Request/UniswapDayData.elm
 src/Api/Request/UniswapV2.elm
 src/Api/Request/UniswapV3.elm
+src/Api/Request/User.elm
 src/Api/Time.elm

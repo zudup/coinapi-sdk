@@ -260,6 +260,7 @@ use WWW::OpenAPIClient::TransactionsApi;
 use WWW::OpenAPIClient::UniswapDayDataApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
+use WWW::OpenAPIClient::UserApi;
 
 ```
 
@@ -325,6 +326,7 @@ use WWW::OpenAPIClient::TransactionsApi;
 use WWW::OpenAPIClient::UniswapDayDataApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
+use WWW::OpenAPIClient::UserApi;
 
 # load the models
 use WWW::OpenAPIClient::Object::BigInteger;
@@ -445,6 +447,7 @@ Class | Method | HTTP request | Description
 *UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
 *UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
 *UniswapV3Api* | [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](docs/UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+*UserApi* | [**chains_chain_id_dapps_uniswapv2_users_historical_get**](docs/UserApi.md#chains_chain_id_dapps_uniswapv2_users_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
 
 
 # DOCUMENTATION FOR MODELS

@@ -336,7 +336,7 @@ case $state in
             "chainsChainIdDappsUniswapv3TokensCurrentGet[GetTokens]" \
             "chainsChainIdDappsUniswapv3TokensDayDataCurrentGet[GetTokensDayData]" \
             "chainsChainIdDappsUniswapv3TokensHourDataCurrentGet[GetTokensHourData]" \
-            "chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]" \
+            "chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]"             "chainsChainIdDappsUniswapv2UsersHistoricalGet[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -1013,6 +1013,17 @@ case $state in
         _op_arguments=(
           "chain_id=:[PATH] Chain id"
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsUniswapv2UsersHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
     esac

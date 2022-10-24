@@ -29,6 +29,7 @@ docs/Api/TransactionsApi.md
 docs/Api/UniswapDayDataApi.md
 docs/Api/UniswapV2Api.md
 docs/Api/UniswapV3Api.md
+docs/Api/UserApi.md
 docs/Model/BigInteger.md
 docs/Model/BundleV3DTO.md
 docs/Model/BurnV3DTO.md
@@ -79,6 +80,7 @@ lib/Api/TransactionsApi.php
 lib/Api/UniswapDayDataApi.php
 lib/Api/UniswapV2Api.php
 lib/Api/UniswapV3Api.php
+lib/Api/UserApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
@@ -134,6 +136,7 @@ test/Api/TransactionsApiTest.php
 test/Api/UniswapDayDataApiTest.php
 test/Api/UniswapV2ApiTest.php
 test/Api/UniswapV3ApiTest.php
+test/Api/UserApiTest.php
 test/Model/BigIntegerTest.php
 test/Model/BundleV3DTOTest.php
 test/Model/BurnV3DTOTest.php
