@@ -116,11 +116,16 @@ set(SRCS
     api/PositionSnapshotAPI.c
     api/PositionsAPI.c
     api/PricesAPI.c
+    api/ProposalsAPI.c
+    api/ProposalsVoteAPI.c
+    api/RemoveLiquidityEventAPI.c
+    api/RemoveLiquidityOneEventAPI.c
     api/SettlementAPI.c
     api/SolutionAPI.c
     api/StatsAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
+    api/SystemStateAPI.c
     api/TickDayDataAPI.c
     api/TicksAPI.c
     api/TokenDayDataAPI.c
@@ -128,10 +133,14 @@ set(SRCS
     api/TokensAPI.c
     api/TradesAPI.c
     api/TransactionsAPI.c
+    api/TransferOwnershipEventAPI.c
+    api/UnderlyingCoinAPI.c
     api/UniswapDayDataAPI.c
     api/UniswapV2API.c
     api/UniswapV3API.c
     api/UsersAPI.c
+    api/VotingAppAPI.c
+    api/WeeklyVolumeAPI.c
     api/WithdrawAPI.c
     api/WithdrawRequestAPI.c
 
@@ -206,11 +215,16 @@ set(HDRS
     api/PositionSnapshotAPI.h
     api/PositionsAPI.h
     api/PricesAPI.h
+    api/ProposalsAPI.h
+    api/ProposalsVoteAPI.h
+    api/RemoveLiquidityEventAPI.h
+    api/RemoveLiquidityOneEventAPI.h
     api/SettlementAPI.h
     api/SolutionAPI.h
     api/StatsAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
+    api/SystemStateAPI.h
     api/TickDayDataAPI.h
     api/TicksAPI.h
     api/TokenDayDataAPI.h
@@ -218,10 +232,14 @@ set(HDRS
     api/TokensAPI.h
     api/TradesAPI.h
     api/TransactionsAPI.h
+    api/TransferOwnershipEventAPI.h
+    api/UnderlyingCoinAPI.h
     api/UniswapDayDataAPI.h
     api/UniswapV2API.h
     api/UniswapV3API.h
     api/UsersAPI.h
+    api/VotingAppAPI.h
+    api/WeeklyVolumeAPI.h
     api/WithdrawAPI.h
     api/WithdrawRequestAPI.h
 
@@ -343,11 +361,16 @@ set(HDRS "")
 #    unit-tests/manual-PositionSnapshotAPI.c
 #    unit-tests/manual-PositionsAPI.c
 #    unit-tests/manual-PricesAPI.c
+#    unit-tests/manual-ProposalsAPI.c
+#    unit-tests/manual-ProposalsVoteAPI.c
+#    unit-tests/manual-RemoveLiquidityEventAPI.c
+#    unit-tests/manual-RemoveLiquidityOneEventAPI.c
 #    unit-tests/manual-SettlementAPI.c
 #    unit-tests/manual-SolutionAPI.c
 #    unit-tests/manual-StatsAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c
+#    unit-tests/manual-SystemStateAPI.c
 #    unit-tests/manual-TickDayDataAPI.c
 #    unit-tests/manual-TicksAPI.c
 #    unit-tests/manual-TokenDayDataAPI.c
@@ -355,10 +378,14 @@ set(HDRS "")
 #    unit-tests/manual-TokensAPI.c
 #    unit-tests/manual-TradesAPI.c
 #    unit-tests/manual-TransactionsAPI.c
+#    unit-tests/manual-TransferOwnershipEventAPI.c
+#    unit-tests/manual-UnderlyingCoinAPI.c
 #    unit-tests/manual-UniswapDayDataAPI.c
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c
 #    unit-tests/manual-UsersAPI.c
+#    unit-tests/manual-VotingAppAPI.c
+#    unit-tests/manual-WeeklyVolumeAPI.c
 #    unit-tests/manual-WithdrawAPI.c
 #    unit-tests/manual-WithdrawRequestAPI.c
 #)

@@ -351,6 +351,34 @@ Method | HTTP request | Description
 *chainsChainIdDappsDexPricesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/prices/historical | .
 
 
+### ProposalsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveProposalsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/proposals/historical | .
+*chainsChainIdDappsCurveProposalsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/proposals/historical | .
+
+
+### ProposalsVoteManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveProposalsVoteHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/proposalsVote/historical | .
+*chainsChainIdDappsCurveProposalsVoteHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/proposalsVote/historical | .
+
+
+### RemoveLiquidityEventManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveRemoveLiquidityEventHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/removeLiquidityEvent/historical | .
+*chainsChainIdDappsCurveRemoveLiquidityEventHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/removeLiquidityEvent/historical | .
+
+
+### RemoveLiquidityOneEventManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveRemoveLiquidityOneEventHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/removeLiquidityOneEvent/historical | .
+*chainsChainIdDappsCurveRemoveLiquidityOneEventHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/removeLiquidityOneEvent/historical | .
+
+
 ### SettlementManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -394,6 +422,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv2SwapsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/swaps/historical | .
 *chainsChainIdDappsUniswapv3SwapsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/swaps/historical | .
 *chainsChainIdDappsUniswapv3SwapsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/swaps/historical | .
+
+
+### SystemStateManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveSystemStateHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/systemState/historical | .
+*chainsChainIdDappsCurveSystemStateHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/systemState/historical | .
 
 
 ### TickDayDataManager
@@ -461,6 +496,20 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv2TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/transactions/historical | .
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
 *chainsChainIdDappsUniswapv3TransactionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/transactions/historical | .
+
+
+### TransferOwnershipEventManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveTransferOwnershipEventHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/transferOwnershipEvent/historical | .
+*chainsChainIdDappsCurveTransferOwnershipEventHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/transferOwnershipEvent/historical | .
+
+
+### UnderlyingCoinManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveUnderlyingCoinHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/underlyingCoin/historical | .
+*chainsChainIdDappsCurveUnderlyingCoinHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/underlyingCoin/historical | .
 
 
 ### UniswapDayDataManager
@@ -531,6 +580,20 @@ Method | HTTP request | Description
 *chainsChainIdDappsSushiswapUsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
+
+
+### VotingAppManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveVotingAppHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/votingApp/historical | .
+*chainsChainIdDappsCurveVotingAppHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/votingApp/historical | .
+
+
+### WeeklyVolumeManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveWeeklyVolumeHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/weeklyVolume/historical | .
+*chainsChainIdDappsCurveWeeklyVolumeHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/weeklyVolume/historical | .
 
 
 ### WithdrawManager

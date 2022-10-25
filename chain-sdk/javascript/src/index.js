@@ -75,11 +75,16 @@ import PoolsApi from './api/PoolsApi';
 import PositionSnapshotApi from './api/PositionSnapshotApi';
 import PositionsApi from './api/PositionsApi';
 import PricesApi from './api/PricesApi';
+import ProposalsApi from './api/ProposalsApi';
+import ProposalsVoteApi from './api/ProposalsVoteApi';
+import RemoveLiquidityEventApi from './api/RemoveLiquidityEventApi';
+import RemoveLiquidityOneEventApi from './api/RemoveLiquidityOneEventApi';
 import SettlementApi from './api/SettlementApi';
 import SolutionApi from './api/SolutionApi';
 import StatsApi from './api/StatsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
+import SystemStateApi from './api/SystemStateApi';
 import TickDayDataApi from './api/TickDayDataApi';
 import TicksApi from './api/TicksApi';
 import TokenDayDataApi from './api/TokenDayDataApi';
@@ -87,10 +92,14 @@ import TokenHourDataApi from './api/TokenHourDataApi';
 import TokensApi from './api/TokensApi';
 import TradesApi from './api/TradesApi';
 import TransactionsApi from './api/TransactionsApi';
+import TransferOwnershipEventApi from './api/TransferOwnershipEventApi';
+import UnderlyingCoinApi from './api/UnderlyingCoinApi';
 import UniswapDayDataApi from './api/UniswapDayDataApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
 import UsersApi from './api/UsersApi';
+import VotingAppApi from './api/VotingAppApi';
+import WeeklyVolumeApi from './api/WeeklyVolumeApi';
 import WithdrawApi from './api/WithdrawApi';
 import WithdrawRequestApi from './api/WithdrawRequestApi';
 
@@ -506,6 +515,30 @@ export {
     PricesApi,
 
     /**
+    * The ProposalsApi service constructor.
+    * @property {module:api/ProposalsApi}
+    */
+    ProposalsApi,
+
+    /**
+    * The ProposalsVoteApi service constructor.
+    * @property {module:api/ProposalsVoteApi}
+    */
+    ProposalsVoteApi,
+
+    /**
+    * The RemoveLiquidityEventApi service constructor.
+    * @property {module:api/RemoveLiquidityEventApi}
+    */
+    RemoveLiquidityEventApi,
+
+    /**
+    * The RemoveLiquidityOneEventApi service constructor.
+    * @property {module:api/RemoveLiquidityOneEventApi}
+    */
+    RemoveLiquidityOneEventApi,
+
+    /**
     * The SettlementApi service constructor.
     * @property {module:api/SettlementApi}
     */
@@ -534,6 +567,12 @@ export {
     * @property {module:api/SwapsApi}
     */
     SwapsApi,
+
+    /**
+    * The SystemStateApi service constructor.
+    * @property {module:api/SystemStateApi}
+    */
+    SystemStateApi,
 
     /**
     * The TickDayDataApi service constructor.
@@ -578,6 +617,18 @@ export {
     TransactionsApi,
 
     /**
+    * The TransferOwnershipEventApi service constructor.
+    * @property {module:api/TransferOwnershipEventApi}
+    */
+    TransferOwnershipEventApi,
+
+    /**
+    * The UnderlyingCoinApi service constructor.
+    * @property {module:api/UnderlyingCoinApi}
+    */
+    UnderlyingCoinApi,
+
+    /**
     * The UniswapDayDataApi service constructor.
     * @property {module:api/UniswapDayDataApi}
     */
@@ -600,6 +651,18 @@ export {
     * @property {module:api/UsersApi}
     */
     UsersApi,
+
+    /**
+    * The VotingAppApi service constructor.
+    * @property {module:api/VotingAppApi}
+    */
+    VotingAppApi,
+
+    /**
+    * The WeeklyVolumeApi service constructor.
+    * @property {module:api/WeeklyVolumeApi}
+    */
+    WeeklyVolumeApi,
 
     /**
     * The WithdrawApi service constructor.

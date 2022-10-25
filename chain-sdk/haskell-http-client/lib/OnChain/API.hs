@@ -52,11 +52,16 @@ module OnChain.API
   , module OnChain.API.PositionSnapshot
   , module OnChain.API.Positions
   , module OnChain.API.Prices
+  , module OnChain.API.Proposals
+  , module OnChain.API.ProposalsVote
+  , module OnChain.API.RemoveLiquidityEvent
+  , module OnChain.API.RemoveLiquidityOneEvent
   , module OnChain.API.Settlement
   , module OnChain.API.Solution
   , module OnChain.API.Stats
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
+  , module OnChain.API.SystemState
   , module OnChain.API.TickDayData
   , module OnChain.API.Ticks
   , module OnChain.API.TokenDayData
@@ -64,10 +69,14 @@ module OnChain.API
   , module OnChain.API.Tokens
   , module OnChain.API.Trades
   , module OnChain.API.Transactions
+  , module OnChain.API.TransferOwnershipEvent
+  , module OnChain.API.UnderlyingCoin
   , module OnChain.API.UniswapDayData
   , module OnChain.API.UniswapV2
   , module OnChain.API.UniswapV3
   , module OnChain.API.Users
+  , module OnChain.API.VotingApp
+  , module OnChain.API.WeeklyVolume
   , module OnChain.API.Withdraw
   , module OnChain.API.WithdrawRequest
   ) where
@@ -110,11 +119,16 @@ import OnChain.API.Pools
 import OnChain.API.PositionSnapshot
 import OnChain.API.Positions
 import OnChain.API.Prices
+import OnChain.API.Proposals
+import OnChain.API.ProposalsVote
+import OnChain.API.RemoveLiquidityEvent
+import OnChain.API.RemoveLiquidityOneEvent
 import OnChain.API.Settlement
 import OnChain.API.Solution
 import OnChain.API.Stats
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps
+import OnChain.API.SystemState
 import OnChain.API.TickDayData
 import OnChain.API.Ticks
 import OnChain.API.TokenDayData
@@ -122,9 +136,13 @@ import OnChain.API.TokenHourData
 import OnChain.API.Tokens
 import OnChain.API.Trades
 import OnChain.API.Transactions
+import OnChain.API.TransferOwnershipEvent
+import OnChain.API.UnderlyingCoin
 import OnChain.API.UniswapDayData
 import OnChain.API.UniswapV2
 import OnChain.API.UniswapV3
 import OnChain.API.Users
+import OnChain.API.VotingApp
+import OnChain.API.WeeklyVolume
 import OnChain.API.Withdraw
 import OnChain.API.WithdrawRequest

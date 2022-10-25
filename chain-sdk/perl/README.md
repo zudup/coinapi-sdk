@@ -273,11 +273,16 @@ use WWW::OpenAPIClient::PoolsApi;
 use WWW::OpenAPIClient::PositionSnapshotApi;
 use WWW::OpenAPIClient::PositionsApi;
 use WWW::OpenAPIClient::PricesApi;
+use WWW::OpenAPIClient::ProposalsApi;
+use WWW::OpenAPIClient::ProposalsVoteApi;
+use WWW::OpenAPIClient::RemoveLiquidityEventApi;
+use WWW::OpenAPIClient::RemoveLiquidityOneEventApi;
 use WWW::OpenAPIClient::SettlementApi;
 use WWW::OpenAPIClient::SolutionApi;
 use WWW::OpenAPIClient::StatsApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
+use WWW::OpenAPIClient::SystemStateApi;
 use WWW::OpenAPIClient::TickDayDataApi;
 use WWW::OpenAPIClient::TicksApi;
 use WWW::OpenAPIClient::TokenDayDataApi;
@@ -285,10 +290,14 @@ use WWW::OpenAPIClient::TokenHourDataApi;
 use WWW::OpenAPIClient::TokensApi;
 use WWW::OpenAPIClient::TradesApi;
 use WWW::OpenAPIClient::TransactionsApi;
+use WWW::OpenAPIClient::TransferOwnershipEventApi;
+use WWW::OpenAPIClient::UnderlyingCoinApi;
 use WWW::OpenAPIClient::UniswapDayDataApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 use WWW::OpenAPIClient::UsersApi;
+use WWW::OpenAPIClient::VotingAppApi;
+use WWW::OpenAPIClient::WeeklyVolumeApi;
 use WWW::OpenAPIClient::WithdrawApi;
 use WWW::OpenAPIClient::WithdrawRequestApi;
 
@@ -369,11 +378,16 @@ use WWW::OpenAPIClient::PoolsApi;
 use WWW::OpenAPIClient::PositionSnapshotApi;
 use WWW::OpenAPIClient::PositionsApi;
 use WWW::OpenAPIClient::PricesApi;
+use WWW::OpenAPIClient::ProposalsApi;
+use WWW::OpenAPIClient::ProposalsVoteApi;
+use WWW::OpenAPIClient::RemoveLiquidityEventApi;
+use WWW::OpenAPIClient::RemoveLiquidityOneEventApi;
 use WWW::OpenAPIClient::SettlementApi;
 use WWW::OpenAPIClient::SolutionApi;
 use WWW::OpenAPIClient::StatsApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::SwapsApi;
+use WWW::OpenAPIClient::SystemStateApi;
 use WWW::OpenAPIClient::TickDayDataApi;
 use WWW::OpenAPIClient::TicksApi;
 use WWW::OpenAPIClient::TokenDayDataApi;
@@ -381,10 +395,14 @@ use WWW::OpenAPIClient::TokenHourDataApi;
 use WWW::OpenAPIClient::TokensApi;
 use WWW::OpenAPIClient::TradesApi;
 use WWW::OpenAPIClient::TransactionsApi;
+use WWW::OpenAPIClient::TransferOwnershipEventApi;
+use WWW::OpenAPIClient::UnderlyingCoinApi;
 use WWW::OpenAPIClient::UniswapDayDataApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 use WWW::OpenAPIClient::UsersApi;
+use WWW::OpenAPIClient::VotingAppApi;
+use WWW::OpenAPIClient::WeeklyVolumeApi;
 use WWW::OpenAPIClient::WithdrawApi;
 use WWW::OpenAPIClient::WithdrawRequestApi;
 
@@ -503,6 +521,10 @@ Class | Method | HTTP request | Description
 *PositionSnapshotApi* | [**chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get**](docs/PositionSnapshotApi.md#chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | 
 *PositionsApi* | [**chains_chain_id_dapps_uniswapv3_positions_historical_get**](docs/PositionsApi.md#chains_chain_id_dapps_uniswapv3_positions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/historical | 
 *PricesApi* | [**chains_chain_id_dapps_dex_prices_historical_get**](docs/PricesApi.md#chains_chain_id_dapps_dex_prices_historical_get) | **GET** /chains/{chain_id}/dapps/dex/prices/historical | 
+*ProposalsApi* | [**chains_chain_id_dapps_curve_proposals_historical_get**](docs/ProposalsApi.md#chains_chain_id_dapps_curve_proposals_historical_get) | **GET** /chains/{chain_id}/dapps/curve/proposals/historical | 
+*ProposalsVoteApi* | [**chains_chain_id_dapps_curve_proposals_vote_historical_get**](docs/ProposalsVoteApi.md#chains_chain_id_dapps_curve_proposals_vote_historical_get) | **GET** /chains/{chain_id}/dapps/curve/proposalsVote/historical | 
+*RemoveLiquidityEventApi* | [**chains_chain_id_dapps_curve_remove_liquidity_event_historical_get**](docs/RemoveLiquidityEventApi.md#chains_chain_id_dapps_curve_remove_liquidity_event_historical_get) | **GET** /chains/{chain_id}/dapps/curve/removeLiquidityEvent/historical | 
+*RemoveLiquidityOneEventApi* | [**chains_chain_id_dapps_curve_remove_liquidity_one_event_historical_get**](docs/RemoveLiquidityOneEventApi.md#chains_chain_id_dapps_curve_remove_liquidity_one_event_historical_get) | **GET** /chains/{chain_id}/dapps/curve/removeLiquidityOneEvent/historical | 
 *SettlementApi* | [**chains_chain_id_dapps_cow_settlement_historical_get**](docs/SettlementApi.md#chains_chain_id_dapps_cow_settlement_historical_get) | **GET** /chains/{chain_id}/dapps/cow/settlement/historical | 
 *SolutionApi* | [**chains_chain_id_dapps_dex_solution_historical_get**](docs/SolutionApi.md#chains_chain_id_dapps_dex_solution_historical_get) | **GET** /chains/{chain_id}/dapps/dex/solution/historical | 
 *StatsApi* | [**chains_chain_id_dapps_dex_stats_historical_get**](docs/StatsApi.md#chains_chain_id_dapps_dex_stats_historical_get) | **GET** /chains/{chain_id}/dapps/dex/stats/historical | 
@@ -513,6 +535,7 @@ Class | Method | HTTP request | Description
 *SwapsApi* | [**chains_chain_id_dapps_sushiswap_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_sushiswap_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/historical | 
 *SwapsApi* | [**chains_chain_id_dapps_uniswapv2_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_uniswapv2_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/swaps/historical | 
 *SwapsApi* | [**chains_chain_id_dapps_uniswapv3_swaps_historical_get**](docs/SwapsApi.md#chains_chain_id_dapps_uniswapv3_swaps_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/historical | 
+*SystemStateApi* | [**chains_chain_id_dapps_curve_system_state_historical_get**](docs/SystemStateApi.md#chains_chain_id_dapps_curve_system_state_historical_get) | **GET** /chains/{chain_id}/dapps/curve/systemState/historical | 
 *TickDayDataApi* | [**chains_chain_id_dapps_uniswapv3_tick_day_data_historical_get**](docs/TickDayDataApi.md#chains_chain_id_dapps_uniswapv3_tick_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical | 
 *TicksApi* | [**chains_chain_id_dapps_uniswapv3_ticks_historical_get**](docs/TicksApi.md#chains_chain_id_dapps_uniswapv3_ticks_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/historical | 
 *TokenDayDataApi* | [**chains_chain_id_dapps_sushiswap_token_day_data_historical_get**](docs/TokenDayDataApi.md#chains_chain_id_dapps_sushiswap_token_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/tokenDayData/historical | 
@@ -529,6 +552,8 @@ Class | Method | HTTP request | Description
 *TransactionsApi* | [**chains_chain_id_dapps_sushiswap_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_sushiswap_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/transactions/historical | 
 *TransactionsApi* | [**chains_chain_id_dapps_uniswapv2_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_uniswapv2_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/transactions/historical | 
 *TransactionsApi* | [**chains_chain_id_dapps_uniswapv3_transactions_historical_get**](docs/TransactionsApi.md#chains_chain_id_dapps_uniswapv3_transactions_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/transactions/historical | 
+*TransferOwnershipEventApi* | [**chains_chain_id_dapps_curve_transfer_ownership_event_historical_get**](docs/TransferOwnershipEventApi.md#chains_chain_id_dapps_curve_transfer_ownership_event_historical_get) | **GET** /chains/{chain_id}/dapps/curve/transferOwnershipEvent/historical | 
+*UnderlyingCoinApi* | [**chains_chain_id_dapps_curve_underlying_coin_historical_get**](docs/UnderlyingCoinApi.md#chains_chain_id_dapps_curve_underlying_coin_historical_get) | **GET** /chains/{chain_id}/dapps/curve/underlyingCoin/historical | 
 *UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv2_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv2_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/dayData/historical | 
 *UniswapDayDataApi* | [**chains_chain_id_dapps_uniswapv3_day_data_historical_get**](docs/UniswapDayDataApi.md#chains_chain_id_dapps_uniswapv3_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/dayData/historical | 
 *UniswapV2Api* | [**chains_chain_id_dapps_uniswapv2_pools_current_get**](docs/UniswapV2Api.md#chains_chain_id_dapps_uniswapv2_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/pools/current | GetPools
@@ -554,6 +579,8 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**chains_chain_id_dapps_dex_users_historical_get**](docs/UsersApi.md#chains_chain_id_dapps_dex_users_historical_get) | **GET** /chains/{chain_id}/dapps/dex/users/historical | 
 *UsersApi* | [**chains_chain_id_dapps_sushiswap_users_historical_get**](docs/UsersApi.md#chains_chain_id_dapps_sushiswap_users_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/users/historical | 
 *UsersApi* | [**chains_chain_id_dapps_uniswapv2_users_historical_get**](docs/UsersApi.md#chains_chain_id_dapps_uniswapv2_users_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
+*VotingAppApi* | [**chains_chain_id_dapps_curve_voting_app_historical_get**](docs/VotingAppApi.md#chains_chain_id_dapps_curve_voting_app_historical_get) | **GET** /chains/{chain_id}/dapps/curve/votingApp/historical | 
+*WeeklyVolumeApi* | [**chains_chain_id_dapps_curve_weekly_volume_historical_get**](docs/WeeklyVolumeApi.md#chains_chain_id_dapps_curve_weekly_volume_historical_get) | **GET** /chains/{chain_id}/dapps/curve/weeklyVolume/historical | 
 *WithdrawApi* | [**chains_chain_id_dapps_dex_withdraw_historical_get**](docs/WithdrawApi.md#chains_chain_id_dapps_dex_withdraw_historical_get) | **GET** /chains/{chain_id}/dapps/dex/withdraw/historical | 
 *WithdrawRequestApi* | [**chains_chain_id_dapps_dex_withdraw_request_historical_get**](docs/WithdrawRequestApi.md#chains_chain_id_dapps_dex_withdraw_request_historical_get) | **GET** /chains/{chain_id}/dapps/dex/withdrawRequest/historical | 
 

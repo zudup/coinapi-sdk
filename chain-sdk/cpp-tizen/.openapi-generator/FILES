@@ -111,6 +111,14 @@ src/PositionsManager.cpp
 src/PositionsManager.h
 src/PricesManager.cpp
 src/PricesManager.h
+src/ProposalsManager.cpp
+src/ProposalsManager.h
+src/ProposalsVoteManager.cpp
+src/ProposalsVoteManager.h
+src/RemoveLiquidityEventManager.cpp
+src/RemoveLiquidityEventManager.h
+src/RemoveLiquidityOneEventManager.cpp
+src/RemoveLiquidityOneEventManager.h
 src/RequestInfo.h
 src/SettlementManager.cpp
 src/SettlementManager.h
@@ -128,6 +136,8 @@ src/SwapV3DTO.cpp
 src/SwapV3DTO.h
 src/SwapsManager.cpp
 src/SwapsManager.h
+src/SystemStateManager.cpp
+src/SystemStateManager.h
 src/TickDayDataManager.cpp
 src/TickDayDataManager.h
 src/TickDayDataV3DTO.cpp
@@ -156,6 +166,10 @@ src/TradesManager.cpp
 src/TradesManager.h
 src/TransactionsManager.cpp
 src/TransactionsManager.h
+src/TransferOwnershipEventManager.cpp
+src/TransferOwnershipEventManager.h
+src/UnderlyingCoinManager.cpp
+src/UnderlyingCoinManager.h
 src/UniswapDayDataManager.cpp
 src/UniswapDayDataManager.h
 src/UniswapDayDataV3DTO.cpp
@@ -166,6 +180,10 @@ src/UniswapV3Manager.cpp
 src/UniswapV3Manager.h
 src/UsersManager.cpp
 src/UsersManager.h
+src/VotingAppManager.cpp
+src/VotingAppManager.h
+src/WeeklyVolumeManager.cpp
+src/WeeklyVolumeManager.h
 src/WithdrawManager.cpp
 src/WithdrawManager.h
 src/WithdrawRequestManager.cpp

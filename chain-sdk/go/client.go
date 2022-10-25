@@ -126,6 +126,14 @@ type APIClient struct {
 
 	PricesApi *PricesApiService
 
+	ProposalsApi *ProposalsApiService
+
+	ProposalsVoteApi *ProposalsVoteApiService
+
+	RemoveLiquidityEventApi *RemoveLiquidityEventApiService
+
+	RemoveLiquidityOneEventApi *RemoveLiquidityOneEventApiService
+
 	SettlementApi *SettlementApiService
 
 	SolutionApi *SolutionApiService
@@ -135,6 +143,8 @@ type APIClient struct {
 	SushiswapApi *SushiswapApiService
 
 	SwapsApi *SwapsApiService
+
+	SystemStateApi *SystemStateApiService
 
 	TickDayDataApi *TickDayDataApiService
 
@@ -150,6 +160,10 @@ type APIClient struct {
 
 	TransactionsApi *TransactionsApiService
 
+	TransferOwnershipEventApi *TransferOwnershipEventApiService
+
+	UnderlyingCoinApi *UnderlyingCoinApiService
+
 	UniswapDayDataApi *UniswapDayDataApiService
 
 	UniswapV2Api *UniswapV2ApiService
@@ -157,6 +171,10 @@ type APIClient struct {
 	UniswapV3Api *UniswapV3ApiService
 
 	UsersApi *UsersApiService
+
+	VotingAppApi *VotingAppApiService
+
+	WeeklyVolumeApi *WeeklyVolumeApiService
 
 	WithdrawApi *WithdrawApiService
 
@@ -217,11 +235,16 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.PositionSnapshotApi = (*PositionSnapshotApiService)(&c.common)
 	c.PositionsApi = (*PositionsApiService)(&c.common)
 	c.PricesApi = (*PricesApiService)(&c.common)
+	c.ProposalsApi = (*ProposalsApiService)(&c.common)
+	c.ProposalsVoteApi = (*ProposalsVoteApiService)(&c.common)
+	c.RemoveLiquidityEventApi = (*RemoveLiquidityEventApiService)(&c.common)
+	c.RemoveLiquidityOneEventApi = (*RemoveLiquidityOneEventApiService)(&c.common)
 	c.SettlementApi = (*SettlementApiService)(&c.common)
 	c.SolutionApi = (*SolutionApiService)(&c.common)
 	c.StatsApi = (*StatsApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
 	c.SwapsApi = (*SwapsApiService)(&c.common)
+	c.SystemStateApi = (*SystemStateApiService)(&c.common)
 	c.TickDayDataApi = (*TickDayDataApiService)(&c.common)
 	c.TicksApi = (*TicksApiService)(&c.common)
 	c.TokenDayDataApi = (*TokenDayDataApiService)(&c.common)
@@ -229,10 +252,14 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.TokensApi = (*TokensApiService)(&c.common)
 	c.TradesApi = (*TradesApiService)(&c.common)
 	c.TransactionsApi = (*TransactionsApiService)(&c.common)
+	c.TransferOwnershipEventApi = (*TransferOwnershipEventApiService)(&c.common)
+	c.UnderlyingCoinApi = (*UnderlyingCoinApiService)(&c.common)
 	c.UniswapDayDataApi = (*UniswapDayDataApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
 	c.UsersApi = (*UsersApiService)(&c.common)
+	c.VotingAppApi = (*VotingAppApiService)(&c.common)
+	c.WeeklyVolumeApi = (*WeeklyVolumeApiService)(&c.common)
 	c.WithdrawApi = (*WithdrawApiService)(&c.common)
 	c.WithdrawRequestApi = (*WithdrawRequestApiService)(&c.common)
 
