@@ -235,12 +235,27 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 
 To load the API packages:
 ```perl
+use WWW::OpenAPIClient::AccountsApi;
+use WWW::OpenAPIClient::AddLiquidityEventApi;
+use WWW::OpenAPIClient::AdminFeeChangeLogApi;
+use WWW::OpenAPIClient::AmplificationCoeffChangeLogApi;
 use WWW::OpenAPIClient::BatchApi;
 use WWW::OpenAPIClient::BundlesApi;
 use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::CoinsApi;
+use WWW::OpenAPIClient::ContractsApi;
+use WWW::OpenAPIClient::ContractsVersionApi;
+use WWW::OpenAPIClient::DailyVolumeApi;
 use WWW::OpenAPIClient::DayDataApi;
 use WWW::OpenAPIClient::DepositApi;
 use WWW::OpenAPIClient::FactoryApi;
+use WWW::OpenAPIClient::FeeChangeLogApi;
+use WWW::OpenAPIClient::GaugeApi;
+use WWW::OpenAPIClient::GaugeDepositApi;
+use WWW::OpenAPIClient::GaugeLiquidityApi;
+use WWW::OpenAPIClient::GaugeTotalWeightApi;
+use WWW::OpenAPIClient::GaugeTypeApi;
+use WWW::OpenAPIClient::GaugeTypeWeightApi;
 use WWW::OpenAPIClient::HourDataApi;
 use WWW::OpenAPIClient::LiquidityPositionApi;
 use WWW::OpenAPIClient::LiquidityPositionSnapshotsApi;
@@ -311,12 +326,27 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
+use WWW::OpenAPIClient::AccountsApi;
+use WWW::OpenAPIClient::AddLiquidityEventApi;
+use WWW::OpenAPIClient::AdminFeeChangeLogApi;
+use WWW::OpenAPIClient::AmplificationCoeffChangeLogApi;
 use WWW::OpenAPIClient::BatchApi;
 use WWW::OpenAPIClient::BundlesApi;
 use WWW::OpenAPIClient::BurnsApi;
+use WWW::OpenAPIClient::CoinsApi;
+use WWW::OpenAPIClient::ContractsApi;
+use WWW::OpenAPIClient::ContractsVersionApi;
+use WWW::OpenAPIClient::DailyVolumeApi;
 use WWW::OpenAPIClient::DayDataApi;
 use WWW::OpenAPIClient::DepositApi;
 use WWW::OpenAPIClient::FactoryApi;
+use WWW::OpenAPIClient::FeeChangeLogApi;
+use WWW::OpenAPIClient::GaugeApi;
+use WWW::OpenAPIClient::GaugeDepositApi;
+use WWW::OpenAPIClient::GaugeLiquidityApi;
+use WWW::OpenAPIClient::GaugeTotalWeightApi;
+use WWW::OpenAPIClient::GaugeTypeApi;
+use WWW::OpenAPIClient::GaugeTypeWeightApi;
 use WWW::OpenAPIClient::HourDataApi;
 use WWW::OpenAPIClient::LiquidityPositionApi;
 use WWW::OpenAPIClient::LiquidityPositionSnapshotsApi;
@@ -378,7 +408,7 @@ use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
 use Data::Dumper;
 
 
-my $api_instance = WWW::OpenAPIClient::BatchApi->new(
+my $api_instance = WWW::OpenAPIClient::AccountsApi->new(
 );
 
 my $chain_id = "chain_id_example"; # string | 
@@ -388,10 +418,10 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->chains_chain_id_dapps_dex_batch_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    $api_instance->chains_chain_id_dapps_curve_accounts_historical_get(chain_id => $chain_id, start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
 };
 if ($@) {
-    warn "Exception when calling BatchApi->chains_chain_id_dapps_dex_batch_historical_get: $@\n";
+    warn "Exception when calling AccountsApi->chains_chain_id_dapps_curve_accounts_historical_get: $@\n";
 }
 
 ```
@@ -402,6 +432,10 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**chains_chain_id_dapps_curve_accounts_historical_get**](docs/AccountsApi.md#chains_chain_id_dapps_curve_accounts_historical_get) | **GET** /chains/{chain_id}/dapps/curve/accounts/historical | 
+*AddLiquidityEventApi* | [**chains_chain_id_dapps_curve_add_liquidity_event_historical_get**](docs/AddLiquidityEventApi.md#chains_chain_id_dapps_curve_add_liquidity_event_historical_get) | **GET** /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical | 
+*AdminFeeChangeLogApi* | [**chains_chain_id_dapps_curve_admin_fee_change_log_historical_get**](docs/AdminFeeChangeLogApi.md#chains_chain_id_dapps_curve_admin_fee_change_log_historical_get) | **GET** /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical | 
+*AmplificationCoeffChangeLogApi* | [**chains_chain_id_dapps_curve_amplification_coeff_change_log_historical_get**](docs/AmplificationCoeffChangeLogApi.md#chains_chain_id_dapps_curve_amplification_coeff_change_log_historical_get) | **GET** /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical | 
 *BatchApi* | [**chains_chain_id_dapps_dex_batch_historical_get**](docs/BatchApi.md#chains_chain_id_dapps_dex_batch_historical_get) | **GET** /chains/{chain_id}/dapps/dex/batch/historical | 
 *BundlesApi* | [**chains_chain_id_dapps_sushiswap_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_sushiswap_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/bundles/historical | 
 *BundlesApi* | [**chains_chain_id_dapps_uniswapv2_bundles_historical_get**](docs/BundlesApi.md#chains_chain_id_dapps_uniswapv2_bundles_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/bundles/historical | 
@@ -409,11 +443,22 @@ Class | Method | HTTP request | Description
 *BurnsApi* | [**chains_chain_id_dapps_sushiswap_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_sushiswap_burns_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/burns/historical | 
 *BurnsApi* | [**chains_chain_id_dapps_uniswapv2_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv2_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/burns/historical | 
 *BurnsApi* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BurnsApi.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*CoinsApi* | [**chains_chain_id_dapps_curve_coins_historical_get**](docs/CoinsApi.md#chains_chain_id_dapps_curve_coins_historical_get) | **GET** /chains/{chain_id}/dapps/curve/coins/historical | 
+*ContractsApi* | [**chains_chain_id_dapps_curve_contracts_historical_get**](docs/ContractsApi.md#chains_chain_id_dapps_curve_contracts_historical_get) | **GET** /chains/{chain_id}/dapps/curve/contracts/historical | 
+*ContractsVersionApi* | [**chains_chain_id_dapps_curve_contracts_version_historical_get**](docs/ContractsVersionApi.md#chains_chain_id_dapps_curve_contracts_version_historical_get) | **GET** /chains/{chain_id}/dapps/curve/contractsVersion/historical | 
+*DailyVolumeApi* | [**chains_chain_id_dapps_curve_daily_volume_historical_get**](docs/DailyVolumeApi.md#chains_chain_id_dapps_curve_daily_volume_historical_get) | **GET** /chains/{chain_id}/dapps/curve/dailyVolume/historical | 
 *DayDataApi* | [**chains_chain_id_dapps_sushiswap_day_data_historical_get**](docs/DayDataApi.md#chains_chain_id_dapps_sushiswap_day_data_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/dayData/historical | 
 *DepositApi* | [**chains_chain_id_dapps_dex_tokens_historical_get**](docs/DepositApi.md#chains_chain_id_dapps_dex_tokens_historical_get) | **GET** /chains/{chain_id}/dapps/dex/tokens/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_sushiswap_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_sushiswap_factory_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/factory/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_uniswapv2_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv2_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/factory/historical | 
 *FactoryApi* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FactoryApi.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
+*FeeChangeLogApi* | [**chains_chain_id_dapps_curve_fee_change_log_historical_get**](docs/FeeChangeLogApi.md#chains_chain_id_dapps_curve_fee_change_log_historical_get) | **GET** /chains/{chain_id}/dapps/curve/feeChangeLog/historical | 
+*GaugeApi* | [**chains_chain_id_dapps_curve_gauge_historical_get**](docs/GaugeApi.md#chains_chain_id_dapps_curve_gauge_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gauge/historical | 
+*GaugeDepositApi* | [**chains_chain_id_dapps_curve_gauge_deposit_historical_get**](docs/GaugeDepositApi.md#chains_chain_id_dapps_curve_gauge_deposit_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gaugeDeposit/historical | 
+*GaugeLiquidityApi* | [**chains_chain_id_dapps_curve_gauge_liquidity_historical_get**](docs/GaugeLiquidityApi.md#chains_chain_id_dapps_curve_gauge_liquidity_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical | 
+*GaugeTotalWeightApi* | [**chains_chain_id_dapps_curve_gauge_total_weight_historical_get**](docs/GaugeTotalWeightApi.md#chains_chain_id_dapps_curve_gauge_total_weight_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical | 
+*GaugeTypeApi* | [**chains_chain_id_dapps_curve_gauge_type_historical_get**](docs/GaugeTypeApi.md#chains_chain_id_dapps_curve_gauge_type_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gaugeType/historical | 
+*GaugeTypeWeightApi* | [**chains_chain_id_dapps_curve_gauge_type_weight_historical_get**](docs/GaugeTypeWeightApi.md#chains_chain_id_dapps_curve_gauge_type_weight_historical_get) | **GET** /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical | 
 *HourDataApi* | [**chains_chain_id_dapps_sushiswap_hour_data_historical_get**](docs/HourDataApi.md#chains_chain_id_dapps_sushiswap_hour_data_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/hourData/historical | 
 *LiquidityPositionApi* | [**chains_chain_id_dapps_sushiswap_liquidity_position_historical_get**](docs/LiquidityPositionApi.md#chains_chain_id_dapps_sushiswap_liquidity_position_historical_get) | **GET** /chains/{chain_id}/dapps/sushiswap/liquidityPosition/historical | 
 *LiquidityPositionApi* | [**chains_chain_id_dapps_uniswapv2_liquidity_position_historical_get**](docs/LiquidityPositionApi.md#chains_chain_id_dapps_uniswapv2_liquidity_position_historical_get) | **GET** /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical | 

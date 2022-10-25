@@ -78,12 +78,27 @@ set(SRCS
     model/token_v3_day_data_dto.c
     model/token_v3_dto.c
     model/uniswap_day_data_v3_dto.c
+    api/AccountsAPI.c
+    api/AddLiquidityEventAPI.c
+    api/AdminFeeChangeLogAPI.c
+    api/AmplificationCoeffChangeLogAPI.c
     api/BatchAPI.c
     api/BundlesAPI.c
     api/BurnsAPI.c
+    api/CoinsAPI.c
+    api/ContractsAPI.c
+    api/ContractsVersionAPI.c
+    api/DailyVolumeAPI.c
     api/DayDataAPI.c
     api/DepositAPI.c
     api/FactoryAPI.c
+    api/FeeChangeLogAPI.c
+    api/GaugeAPI.c
+    api/GaugeDepositAPI.c
+    api/GaugeLiquidityAPI.c
+    api/GaugeTotalWeightAPI.c
+    api/GaugeTypeAPI.c
+    api/GaugeTypeWeightAPI.c
     api/HourDataAPI.c
     api/LiquidityPositionAPI.c
     api/LiquidityPositionSnapshotsAPI.c
@@ -148,12 +163,27 @@ set(HDRS
     model/token_v3_day_data_dto.h
     model/token_v3_dto.h
     model/uniswap_day_data_v3_dto.h
+    api/AccountsAPI.h
+    api/AddLiquidityEventAPI.h
+    api/AdminFeeChangeLogAPI.h
+    api/AmplificationCoeffChangeLogAPI.h
     api/BatchAPI.h
     api/BundlesAPI.h
     api/BurnsAPI.h
+    api/CoinsAPI.h
+    api/ContractsAPI.h
+    api/ContractsVersionAPI.h
+    api/DailyVolumeAPI.h
     api/DayDataAPI.h
     api/DepositAPI.h
     api/FactoryAPI.h
+    api/FeeChangeLogAPI.h
+    api/GaugeAPI.h
+    api/GaugeDepositAPI.h
+    api/GaugeLiquidityAPI.h
+    api/GaugeTotalWeightAPI.h
+    api/GaugeTypeAPI.h
+    api/GaugeTypeWeightAPI.h
     api/HourDataAPI.h
     api/LiquidityPositionAPI.h
     api/LiquidityPositionSnapshotsAPI.h
@@ -265,12 +295,27 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
+#    unit-tests/manual-AccountsAPI.c
+#    unit-tests/manual-AddLiquidityEventAPI.c
+#    unit-tests/manual-AdminFeeChangeLogAPI.c
+#    unit-tests/manual-AmplificationCoeffChangeLogAPI.c
 #    unit-tests/manual-BatchAPI.c
 #    unit-tests/manual-BundlesAPI.c
 #    unit-tests/manual-BurnsAPI.c
+#    unit-tests/manual-CoinsAPI.c
+#    unit-tests/manual-ContractsAPI.c
+#    unit-tests/manual-ContractsVersionAPI.c
+#    unit-tests/manual-DailyVolumeAPI.c
 #    unit-tests/manual-DayDataAPI.c
 #    unit-tests/manual-DepositAPI.c
 #    unit-tests/manual-FactoryAPI.c
+#    unit-tests/manual-FeeChangeLogAPI.c
+#    unit-tests/manual-GaugeAPI.c
+#    unit-tests/manual-GaugeDepositAPI.c
+#    unit-tests/manual-GaugeLiquidityAPI.c
+#    unit-tests/manual-GaugeTotalWeightAPI.c
+#    unit-tests/manual-GaugeTypeAPI.c
+#    unit-tests/manual-GaugeTypeWeightAPI.c
 #    unit-tests/manual-HourDataAPI.c
 #    unit-tests/manual-LiquidityPositionAPI.c
 #    unit-tests/manual-LiquidityPositionSnapshotsAPI.c

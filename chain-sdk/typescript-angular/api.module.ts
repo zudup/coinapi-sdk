@@ -2,12 +2,27 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
+import { AccountsService } from './api/accounts.service';
+import { AddLiquidityEventService } from './api/addLiquidityEvent.service';
+import { AdminFeeChangeLogService } from './api/adminFeeChangeLog.service';
+import { AmplificationCoeffChangeLogService } from './api/amplificationCoeffChangeLog.service';
 import { BatchService } from './api/batch.service';
 import { BundlesService } from './api/bundles.service';
 import { BurnsService } from './api/burns.service';
+import { CoinsService } from './api/coins.service';
+import { ContractsService } from './api/contracts.service';
+import { ContractsVersionService } from './api/contractsVersion.service';
+import { DailyVolumeService } from './api/dailyVolume.service';
 import { DayDataService } from './api/dayData.service';
 import { DepositService } from './api/deposit.service';
 import { FactoryService } from './api/factory.service';
+import { FeeChangeLogService } from './api/feeChangeLog.service';
+import { GaugeService } from './api/gauge.service';
+import { GaugeDepositService } from './api/gaugeDeposit.service';
+import { GaugeLiquidityService } from './api/gaugeLiquidity.service';
+import { GaugeTotalWeightService } from './api/gaugeTotalWeight.service';
+import { GaugeTypeService } from './api/gaugeType.service';
+import { GaugeTypeWeightService } from './api/gaugeTypeWeight.service';
 import { HourDataService } from './api/hourData.service';
 import { LiquidityPositionService } from './api/liquidityPosition.service';
 import { LiquidityPositionSnapshotsService } from './api/liquidityPositionSnapshots.service';

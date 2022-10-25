@@ -62,6 +62,215 @@ paths:
       summary: GetSwaps
       tags:
       - Sushiswap
+  /chains/{chain_id}/dapps/curve/accounts/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Accounts
+  /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - AddLiquidityEvent
+  /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - AdminFeeChangeLog
+  /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - AmplificationCoeffChangeLog
   /chains/{chain_id}/dapps/dex/batch/historical:
     get:
       parameters:
@@ -486,6 +695,222 @@ paths:
       summary: GetBurns
       tags:
       - UniswapV3
+  /chains/{chain_id}/dapps/curve/coins/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Coins
+  /chains/{chain_id}/dapps/curve/contracts/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Contracts
+  /chains/{chain_id}/dapps/curve/contractsVersion/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - ContractsVersion
+  /chains/{chain_id}/dapps/curve/dailyVolume/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - DailyVolume
   /chains/{chain_id}/dapps/sushiswap/dayData/historical:
     get:
       parameters:
@@ -761,6 +1186,349 @@ paths:
       summary: GetFactory
       tags:
       - UniswapV3
+  /chains/{chain_id}/dapps/curve/feeChangeLog/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - FeeChangeLog
+  /chains/{chain_id}/dapps/curve/gauge/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Gauge
+  /chains/{chain_id}/dapps/curve/gaugeDeposit/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeDeposit
+  /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeLiquidity
+  /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeTotalWeight
+  /chains/{chain_id}/dapps/curve/gaugeType/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeType
+  /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeTypeWeight
   /chains/{chain_id}/dapps/sushiswap/hourData/historical:
     get:
       parameters:

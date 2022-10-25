@@ -9,12 +9,27 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
+import 'package:openapi/src/api/accounts_api.dart';
+import 'package:openapi/src/api/add_liquidity_event_api.dart';
+import 'package:openapi/src/api/admin_fee_change_log_api.dart';
+import 'package:openapi/src/api/amplification_coeff_change_log_api.dart';
 import 'package:openapi/src/api/batch_api.dart';
 import 'package:openapi/src/api/bundles_api.dart';
 import 'package:openapi/src/api/burns_api.dart';
+import 'package:openapi/src/api/coins_api.dart';
+import 'package:openapi/src/api/contracts_api.dart';
+import 'package:openapi/src/api/contracts_version_api.dart';
+import 'package:openapi/src/api/daily_volume_api.dart';
 import 'package:openapi/src/api/day_data_api.dart';
 import 'package:openapi/src/api/deposit_api.dart';
 import 'package:openapi/src/api/factory_api.dart';
+import 'package:openapi/src/api/fee_change_log_api.dart';
+import 'package:openapi/src/api/gauge_api.dart';
+import 'package:openapi/src/api/gauge_deposit_api.dart';
+import 'package:openapi/src/api/gauge_liquidity_api.dart';
+import 'package:openapi/src/api/gauge_total_weight_api.dart';
+import 'package:openapi/src/api/gauge_type_api.dart';
+import 'package:openapi/src/api/gauge_type_weight_api.dart';
 import 'package:openapi/src/api/hour_data_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
 import 'package:openapi/src/api/liquidity_position_snapshots_api.dart';
@@ -100,6 +115,30 @@ class Openapi {
     }
   }
 
+  /// Get AccountsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AccountsApi getAccountsApi() {
+    return AccountsApi(dio, serializers);
+  }
+
+  /// Get AddLiquidityEventApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AddLiquidityEventApi getAddLiquidityEventApi() {
+    return AddLiquidityEventApi(dio, serializers);
+  }
+
+  /// Get AdminFeeChangeLogApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AdminFeeChangeLogApi getAdminFeeChangeLogApi() {
+    return AdminFeeChangeLogApi(dio, serializers);
+  }
+
+  /// Get AmplificationCoeffChangeLogApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AmplificationCoeffChangeLogApi getAmplificationCoeffChangeLogApi() {
+    return AmplificationCoeffChangeLogApi(dio, serializers);
+  }
+
   /// Get BatchApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   BatchApi getBatchApi() {
@@ -118,6 +157,30 @@ class Openapi {
     return BurnsApi(dio, serializers);
   }
 
+  /// Get CoinsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CoinsApi getCoinsApi() {
+    return CoinsApi(dio, serializers);
+  }
+
+  /// Get ContractsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ContractsApi getContractsApi() {
+    return ContractsApi(dio, serializers);
+  }
+
+  /// Get ContractsVersionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ContractsVersionApi getContractsVersionApi() {
+    return ContractsVersionApi(dio, serializers);
+  }
+
+  /// Get DailyVolumeApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DailyVolumeApi getDailyVolumeApi() {
+    return DailyVolumeApi(dio, serializers);
+  }
+
   /// Get DayDataApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   DayDataApi getDayDataApi() {
@@ -134,6 +197,48 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   FactoryApi getFactoryApi() {
     return FactoryApi(dio, serializers);
+  }
+
+  /// Get FeeChangeLogApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  FeeChangeLogApi getFeeChangeLogApi() {
+    return FeeChangeLogApi(dio, serializers);
+  }
+
+  /// Get GaugeApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeApi getGaugeApi() {
+    return GaugeApi(dio, serializers);
+  }
+
+  /// Get GaugeDepositApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeDepositApi getGaugeDepositApi() {
+    return GaugeDepositApi(dio, serializers);
+  }
+
+  /// Get GaugeLiquidityApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeLiquidityApi getGaugeLiquidityApi() {
+    return GaugeLiquidityApi(dio, serializers);
+  }
+
+  /// Get GaugeTotalWeightApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeTotalWeightApi getGaugeTotalWeightApi() {
+    return GaugeTotalWeightApi(dio, serializers);
+  }
+
+  /// Get GaugeTypeApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeTypeApi getGaugeTypeApi() {
+    return GaugeTypeApi(dio, serializers);
+  }
+
+  /// Get GaugeTypeWeightApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeTypeWeightApi getGaugeTypeWeightApi() {
+    return GaugeTypeWeightApi(dio, serializers);
   }
 
   /// Get HourDataApi instance, base route and serializer can be overridden by a given but be careful,

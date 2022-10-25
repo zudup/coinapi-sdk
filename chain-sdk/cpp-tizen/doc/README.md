@@ -39,6 +39,34 @@ Check out [Doxygen](https://www.doxygen.org/) for additional information about t
 All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 
 
+### AccountsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveAccountsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/accounts/historical | .
+*chainsChainIdDappsCurveAccountsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/accounts/historical | .
+
+
+### AddLiquidityEventManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveAddLiquidityEventHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical | .
+*chainsChainIdDappsCurveAddLiquidityEventHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical | .
+
+
+### AdminFeeChangeLogManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveAdminFeeChangeLogHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical | .
+*chainsChainIdDappsCurveAdminFeeChangeLogHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical | .
+
+
+### AmplificationCoeffChangeLogManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveAmplificationCoeffChangeLogHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical | .
+*chainsChainIdDappsCurveAmplificationCoeffChangeLogHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical | .
+
+
 ### BatchManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -68,6 +96,34 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3BurnsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/burns/historical | .
 
 
+### CoinsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveCoinsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/coins/historical | .
+*chainsChainIdDappsCurveCoinsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/coins/historical | .
+
+
+### ContractsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveContractsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/contracts/historical | .
+*chainsChainIdDappsCurveContractsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/contracts/historical | .
+
+
+### ContractsVersionManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveContractsVersionHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/contractsVersion/historical | .
+*chainsChainIdDappsCurveContractsVersionHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/contractsVersion/historical | .
+
+
+### DailyVolumeManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveDailyVolumeHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/dailyVolume/historical | .
+*chainsChainIdDappsCurveDailyVolumeHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/dailyVolume/historical | .
+
+
 ### DayDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -91,6 +147,55 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv2FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/factory/historical | .
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
 *chainsChainIdDappsUniswapv3FactoryHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/factory/historical | .
+
+
+### FeeChangeLogManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveFeeChangeLogHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/feeChangeLog/historical | .
+*chainsChainIdDappsCurveFeeChangeLogHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/feeChangeLog/historical | .
+
+
+### GaugeManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gauge/historical | .
+*chainsChainIdDappsCurveGaugeHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gauge/historical | .
+
+
+### GaugeDepositManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeDepositHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeDeposit/historical | .
+*chainsChainIdDappsCurveGaugeDepositHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeDeposit/historical | .
+
+
+### GaugeLiquidityManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeLiquidityHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical | .
+*chainsChainIdDappsCurveGaugeLiquidityHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical | .
+
+
+### GaugeTotalWeightManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeTotalWeightHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical | .
+*chainsChainIdDappsCurveGaugeTotalWeightHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical | .
+
+
+### GaugeTypeManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeTypeHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeType/historical | .
+*chainsChainIdDappsCurveGaugeTypeHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeType/historical | .
+
+
+### GaugeTypeWeightManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeTypeWeightHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical | .
+*chainsChainIdDappsCurveGaugeTypeWeightHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical | .
 
 
 ### HourDataManager

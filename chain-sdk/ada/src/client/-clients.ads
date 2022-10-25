@@ -16,6 +16,45 @@ package .Clients is
    type Client_Type is new Swagger.Clients.Client_Type with null record;
 
    --  
+   procedure Chains_Chain_Id_Dapps_Curve_Accounts_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Add_Liquidity_Event_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Admin_Fee_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Amplification_Coeff_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Dex_Batch_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -82,6 +121,46 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Curve_Coins_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Contracts_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Contracts_Version_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Daily_Volume_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Day_Data_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -120,6 +199,71 @@ package .Clients is
 
    --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_3Factory_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Fee_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Deposit_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Liquidity_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Total_Weight_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Type_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Type_Weight_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;

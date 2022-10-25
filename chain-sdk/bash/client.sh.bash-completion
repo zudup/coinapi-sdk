@@ -68,6 +68,10 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["chainsChainIdDappsCurveAccountsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveAddLiquidityEventHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveAdminFeeChangeLogHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveAmplificationCoeffChangeLogHistoricalGet"]=1
     operations["chainsChainIdDappsDexBatchHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapBundlesHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2BundlesHistoricalGet"]=1
@@ -75,11 +79,22 @@ _()
     operations["chainsChainIdDappsSushiswapBurnsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2BurnsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveCoinsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveContractsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveContractsVersionHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveDailyVolumeHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsDexTokensHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapFactoryHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2FactoryHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveFeeChangeLogHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeDepositHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeLiquidityHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeTotalWeightHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeTypeHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveGaugeTypeWeightHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapHourDataHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet"]=1
@@ -165,6 +180,10 @@ _()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["chainsChainIdDappsCurveAccountsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveAddLiquidityEventHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveAdminFeeChangeLogHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveAmplificationCoeffChangeLogHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsDexBatchHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapBundlesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2BundlesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
@@ -172,11 +191,22 @@ _()
     operation_parameters["chainsChainIdDappsSushiswapBurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2BurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3BurnsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveCoinsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveContractsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveContractsVersionHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveDailyVolumeHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsSushiswapDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsDexTokensHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsSushiswapFactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2FactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3FactoryHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveFeeChangeLogHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveGaugeHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveGaugeDepositHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveGaugeLiquidityHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveGaugeTotalWeightHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveGaugeTypeHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveGaugeTypeWeightHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapHourDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "

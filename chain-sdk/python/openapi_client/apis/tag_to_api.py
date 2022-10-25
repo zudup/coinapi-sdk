@@ -4,12 +4,27 @@ from openapi_client.apis.tags import TagValues
 from openapi_client.apis.tags.sushiswap_api import SushiswapApi
 from openapi_client.apis.tags.uniswap_v2_api import UniswapV2Api
 from openapi_client.apis.tags.uniswap_v3_api import UniswapV3Api
+from openapi_client.apis.tags.accounts_api import AccountsApi
+from openapi_client.apis.tags.add_liquidity_event_api import AddLiquidityEventApi
+from openapi_client.apis.tags.admin_fee_change_log_api import AdminFeeChangeLogApi
+from openapi_client.apis.tags.amplification_coeff_change_log_api import AmplificationCoeffChangeLogApi
 from openapi_client.apis.tags.batch_api import BatchApi
 from openapi_client.apis.tags.bundles_api import BundlesApi
 from openapi_client.apis.tags.burns_api import BurnsApi
+from openapi_client.apis.tags.coins_api import CoinsApi
+from openapi_client.apis.tags.contracts_api import ContractsApi
+from openapi_client.apis.tags.contracts_version_api import ContractsVersionApi
+from openapi_client.apis.tags.daily_volume_api import DailyVolumeApi
 from openapi_client.apis.tags.day_data_api import DayDataApi
 from openapi_client.apis.tags.deposit_api import DepositApi
 from openapi_client.apis.tags.factory_api import FactoryApi
+from openapi_client.apis.tags.fee_change_log_api import FeeChangeLogApi
+from openapi_client.apis.tags.gauge_api import GaugeApi
+from openapi_client.apis.tags.gauge_deposit_api import GaugeDepositApi
+from openapi_client.apis.tags.gauge_liquidity_api import GaugeLiquidityApi
+from openapi_client.apis.tags.gauge_total_weight_api import GaugeTotalWeightApi
+from openapi_client.apis.tags.gauge_type_api import GaugeTypeApi
+from openapi_client.apis.tags.gauge_type_weight_api import GaugeTypeWeightApi
 from openapi_client.apis.tags.hour_data_api import HourDataApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
 from openapi_client.apis.tags.liquidity_position_snapshots_api import LiquidityPositionSnapshotsApi
@@ -44,12 +59,27 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.SUSHISWAP: SushiswapApi,
         TagValues.UNISWAP_V2: UniswapV2Api,
         TagValues.UNISWAP_V3: UniswapV3Api,
+        TagValues.ACCOUNTS: AccountsApi,
+        TagValues.ADD_LIQUIDITY_EVENT: AddLiquidityEventApi,
+        TagValues.ADMIN_FEE_CHANGE_LOG: AdminFeeChangeLogApi,
+        TagValues.AMPLIFICATION_COEFF_CHANGE_LOG: AmplificationCoeffChangeLogApi,
         TagValues.BATCH: BatchApi,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
+        TagValues.COINS: CoinsApi,
+        TagValues.CONTRACTS: ContractsApi,
+        TagValues.CONTRACTS_VERSION: ContractsVersionApi,
+        TagValues.DAILY_VOLUME: DailyVolumeApi,
         TagValues.DAY_DATA: DayDataApi,
         TagValues.DEPOSIT: DepositApi,
         TagValues.FACTORY: FactoryApi,
+        TagValues.FEE_CHANGE_LOG: FeeChangeLogApi,
+        TagValues.GAUGE: GaugeApi,
+        TagValues.GAUGE_DEPOSIT: GaugeDepositApi,
+        TagValues.GAUGE_LIQUIDITY: GaugeLiquidityApi,
+        TagValues.GAUGE_TOTAL_WEIGHT: GaugeTotalWeightApi,
+        TagValues.GAUGE_TYPE: GaugeTypeApi,
+        TagValues.GAUGE_TYPE_WEIGHT: GaugeTypeWeightApi,
         TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
@@ -85,12 +115,27 @@ tag_to_api = TagToApi(
         TagValues.SUSHISWAP: SushiswapApi,
         TagValues.UNISWAP_V2: UniswapV2Api,
         TagValues.UNISWAP_V3: UniswapV3Api,
+        TagValues.ACCOUNTS: AccountsApi,
+        TagValues.ADD_LIQUIDITY_EVENT: AddLiquidityEventApi,
+        TagValues.ADMIN_FEE_CHANGE_LOG: AdminFeeChangeLogApi,
+        TagValues.AMPLIFICATION_COEFF_CHANGE_LOG: AmplificationCoeffChangeLogApi,
         TagValues.BATCH: BatchApi,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
+        TagValues.COINS: CoinsApi,
+        TagValues.CONTRACTS: ContractsApi,
+        TagValues.CONTRACTS_VERSION: ContractsVersionApi,
+        TagValues.DAILY_VOLUME: DailyVolumeApi,
         TagValues.DAY_DATA: DayDataApi,
         TagValues.DEPOSIT: DepositApi,
         TagValues.FACTORY: FactoryApi,
+        TagValues.FEE_CHANGE_LOG: FeeChangeLogApi,
+        TagValues.GAUGE: GaugeApi,
+        TagValues.GAUGE_DEPOSIT: GaugeDepositApi,
+        TagValues.GAUGE_LIQUIDITY: GaugeLiquidityApi,
+        TagValues.GAUGE_TOTAL_WEIGHT: GaugeTotalWeightApi,
+        TagValues.GAUGE_TYPE: GaugeTypeApi,
+        TagValues.GAUGE_TYPE_WEIGHT: GaugeTypeWeightApi,
         TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,

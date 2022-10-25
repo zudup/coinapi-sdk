@@ -37,12 +37,27 @@ import TokenV2DTO from './model/TokenV2DTO';
 import TokenV3DTO from './model/TokenV3DTO';
 import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
 import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
+import AccountsApi from './api/AccountsApi';
+import AddLiquidityEventApi from './api/AddLiquidityEventApi';
+import AdminFeeChangeLogApi from './api/AdminFeeChangeLogApi';
+import AmplificationCoeffChangeLogApi from './api/AmplificationCoeffChangeLogApi';
 import BatchApi from './api/BatchApi';
 import BundlesApi from './api/BundlesApi';
 import BurnsApi from './api/BurnsApi';
+import CoinsApi from './api/CoinsApi';
+import ContractsApi from './api/ContractsApi';
+import ContractsVersionApi from './api/ContractsVersionApi';
+import DailyVolumeApi from './api/DailyVolumeApi';
 import DayDataApi from './api/DayDataApi';
 import DepositApi from './api/DepositApi';
 import FactoryApi from './api/FactoryApi';
+import FeeChangeLogApi from './api/FeeChangeLogApi';
+import GaugeApi from './api/GaugeApi';
+import GaugeDepositApi from './api/GaugeDepositApi';
+import GaugeLiquidityApi from './api/GaugeLiquidityApi';
+import GaugeTotalWeightApi from './api/GaugeTotalWeightApi';
+import GaugeTypeApi from './api/GaugeTypeApi';
+import GaugeTypeWeightApi from './api/GaugeTypeWeightApi';
 import HourDataApi from './api/HourDataApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
 import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
@@ -258,6 +273,30 @@ export {
     UniswapDayDataV3DTO,
 
     /**
+    * The AccountsApi service constructor.
+    * @property {module:api/AccountsApi}
+    */
+    AccountsApi,
+
+    /**
+    * The AddLiquidityEventApi service constructor.
+    * @property {module:api/AddLiquidityEventApi}
+    */
+    AddLiquidityEventApi,
+
+    /**
+    * The AdminFeeChangeLogApi service constructor.
+    * @property {module:api/AdminFeeChangeLogApi}
+    */
+    AdminFeeChangeLogApi,
+
+    /**
+    * The AmplificationCoeffChangeLogApi service constructor.
+    * @property {module:api/AmplificationCoeffChangeLogApi}
+    */
+    AmplificationCoeffChangeLogApi,
+
+    /**
     * The BatchApi service constructor.
     * @property {module:api/BatchApi}
     */
@@ -276,6 +315,30 @@ export {
     BurnsApi,
 
     /**
+    * The CoinsApi service constructor.
+    * @property {module:api/CoinsApi}
+    */
+    CoinsApi,
+
+    /**
+    * The ContractsApi service constructor.
+    * @property {module:api/ContractsApi}
+    */
+    ContractsApi,
+
+    /**
+    * The ContractsVersionApi service constructor.
+    * @property {module:api/ContractsVersionApi}
+    */
+    ContractsVersionApi,
+
+    /**
+    * The DailyVolumeApi service constructor.
+    * @property {module:api/DailyVolumeApi}
+    */
+    DailyVolumeApi,
+
+    /**
     * The DayDataApi service constructor.
     * @property {module:api/DayDataApi}
     */
@@ -292,6 +355,48 @@ export {
     * @property {module:api/FactoryApi}
     */
     FactoryApi,
+
+    /**
+    * The FeeChangeLogApi service constructor.
+    * @property {module:api/FeeChangeLogApi}
+    */
+    FeeChangeLogApi,
+
+    /**
+    * The GaugeApi service constructor.
+    * @property {module:api/GaugeApi}
+    */
+    GaugeApi,
+
+    /**
+    * The GaugeDepositApi service constructor.
+    * @property {module:api/GaugeDepositApi}
+    */
+    GaugeDepositApi,
+
+    /**
+    * The GaugeLiquidityApi service constructor.
+    * @property {module:api/GaugeLiquidityApi}
+    */
+    GaugeLiquidityApi,
+
+    /**
+    * The GaugeTotalWeightApi service constructor.
+    * @property {module:api/GaugeTotalWeightApi}
+    */
+    GaugeTotalWeightApi,
+
+    /**
+    * The GaugeTypeApi service constructor.
+    * @property {module:api/GaugeTypeApi}
+    */
+    GaugeTypeApi,
+
+    /**
+    * The GaugeTypeWeightApi service constructor.
+    * @property {module:api/GaugeTypeWeightApi}
+    */
+    GaugeTypeWeightApi,
 
     /**
     * The HourDataApi service constructor.

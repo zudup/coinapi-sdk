@@ -14,12 +14,27 @@ Module : OnChain.API
 -}
 
 module OnChain.API
-  ( module OnChain.API.Batch
+  ( module OnChain.API.Accounts
+  , module OnChain.API.AddLiquidityEvent
+  , module OnChain.API.AdminFeeChangeLog
+  , module OnChain.API.AmplificationCoeffChangeLog
+  , module OnChain.API.Batch
   , module OnChain.API.Bundles
   , module OnChain.API.Burns
+  , module OnChain.API.Coins
+  , module OnChain.API.Contracts
+  , module OnChain.API.ContractsVersion
+  , module OnChain.API.DailyVolume
   , module OnChain.API.DayData
   , module OnChain.API.Deposit
   , module OnChain.API.Factory
+  , module OnChain.API.FeeChangeLog
+  , module OnChain.API.Gauge
+  , module OnChain.API.GaugeDeposit
+  , module OnChain.API.GaugeLiquidity
+  , module OnChain.API.GaugeTotalWeight
+  , module OnChain.API.GaugeType
+  , module OnChain.API.GaugeTypeWeight
   , module OnChain.API.HourData
   , module OnChain.API.LiquidityPosition
   , module OnChain.API.LiquidityPositionSnapshots
@@ -52,12 +67,27 @@ module OnChain.API
   , module OnChain.API.WithdrawRequest
   ) where
 
+import OnChain.API.Accounts
+import OnChain.API.AddLiquidityEvent
+import OnChain.API.AdminFeeChangeLog
+import OnChain.API.AmplificationCoeffChangeLog
 import OnChain.API.Batch
 import OnChain.API.Bundles
 import OnChain.API.Burns
+import OnChain.API.Coins
+import OnChain.API.Contracts
+import OnChain.API.ContractsVersion
+import OnChain.API.DailyVolume
 import OnChain.API.DayData
 import OnChain.API.Deposit
 import OnChain.API.Factory
+import OnChain.API.FeeChangeLog
+import OnChain.API.Gauge
+import OnChain.API.GaugeDeposit
+import OnChain.API.GaugeLiquidity
+import OnChain.API.GaugeTotalWeight
+import OnChain.API.GaugeType
+import OnChain.API.GaugeTypeWeight
 import OnChain.API.HourData
 import OnChain.API.LiquidityPosition
 import OnChain.API.LiquidityPositionSnapshots

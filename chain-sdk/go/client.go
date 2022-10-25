@@ -50,17 +50,47 @@ type APIClient struct {
 
 	// API Services
 
+	AccountsApi *AccountsApiService
+
+	AddLiquidityEventApi *AddLiquidityEventApiService
+
+	AdminFeeChangeLogApi *AdminFeeChangeLogApiService
+
+	AmplificationCoeffChangeLogApi *AmplificationCoeffChangeLogApiService
+
 	BatchApi *BatchApiService
 
 	BundlesApi *BundlesApiService
 
 	BurnsApi *BurnsApiService
 
+	CoinsApi *CoinsApiService
+
+	ContractsApi *ContractsApiService
+
+	ContractsVersionApi *ContractsVersionApiService
+
+	DailyVolumeApi *DailyVolumeApiService
+
 	DayDataApi *DayDataApiService
 
 	DepositApi *DepositApiService
 
 	FactoryApi *FactoryApiService
+
+	FeeChangeLogApi *FeeChangeLogApiService
+
+	GaugeApi *GaugeApiService
+
+	GaugeDepositApi *GaugeDepositApiService
+
+	GaugeLiquidityApi *GaugeLiquidityApiService
+
+	GaugeTotalWeightApi *GaugeTotalWeightApiService
+
+	GaugeTypeApi *GaugeTypeApiService
+
+	GaugeTypeWeightApi *GaugeTypeWeightApiService
 
 	HourDataApi *HourDataApiService
 
@@ -139,12 +169,27 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.AccountsApi = (*AccountsApiService)(&c.common)
+	c.AddLiquidityEventApi = (*AddLiquidityEventApiService)(&c.common)
+	c.AdminFeeChangeLogApi = (*AdminFeeChangeLogApiService)(&c.common)
+	c.AmplificationCoeffChangeLogApi = (*AmplificationCoeffChangeLogApiService)(&c.common)
 	c.BatchApi = (*BatchApiService)(&c.common)
 	c.BundlesApi = (*BundlesApiService)(&c.common)
 	c.BurnsApi = (*BurnsApiService)(&c.common)
+	c.CoinsApi = (*CoinsApiService)(&c.common)
+	c.ContractsApi = (*ContractsApiService)(&c.common)
+	c.ContractsVersionApi = (*ContractsVersionApiService)(&c.common)
+	c.DailyVolumeApi = (*DailyVolumeApiService)(&c.common)
 	c.DayDataApi = (*DayDataApiService)(&c.common)
 	c.DepositApi = (*DepositApiService)(&c.common)
 	c.FactoryApi = (*FactoryApiService)(&c.common)
+	c.FeeChangeLogApi = (*FeeChangeLogApiService)(&c.common)
+	c.GaugeApi = (*GaugeApiService)(&c.common)
+	c.GaugeDepositApi = (*GaugeDepositApiService)(&c.common)
+	c.GaugeLiquidityApi = (*GaugeLiquidityApiService)(&c.common)
+	c.GaugeTotalWeightApi = (*GaugeTotalWeightApiService)(&c.common)
+	c.GaugeTypeApi = (*GaugeTypeApiService)(&c.common)
+	c.GaugeTypeWeightApi = (*GaugeTypeWeightApiService)(&c.common)
 	c.HourDataApi = (*HourDataApiService)(&c.common)
 	c.LiquidityPositionApi = (*LiquidityPositionApiService)(&c.common)
 	c.LiquidityPositionSnapshotsApi = (*LiquidityPositionSnapshotsApiService)(&c.common)

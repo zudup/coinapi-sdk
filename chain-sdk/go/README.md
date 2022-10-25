@@ -83,6 +83,10 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountsApi* | [**ChainsChainIdDappsCurveAccountsHistoricalGet**](docs/AccountsApi.md#chainschainiddappscurveaccountshistoricalget) | **Get** /chains/{chain_id}/dapps/curve/accounts/historical | 
+*AddLiquidityEventApi* | [**ChainsChainIdDappsCurveAddLiquidityEventHistoricalGet**](docs/AddLiquidityEventApi.md#chainschainiddappscurveaddliquidityeventhistoricalget) | **Get** /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical | 
+*AdminFeeChangeLogApi* | [**ChainsChainIdDappsCurveAdminFeeChangeLogHistoricalGet**](docs/AdminFeeChangeLogApi.md#chainschainiddappscurveadminfeechangeloghistoricalget) | **Get** /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical | 
+*AmplificationCoeffChangeLogApi* | [**ChainsChainIdDappsCurveAmplificationCoeffChangeLogHistoricalGet**](docs/AmplificationCoeffChangeLogApi.md#chainschainiddappscurveamplificationcoeffchangeloghistoricalget) | **Get** /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical | 
 *BatchApi* | [**ChainsChainIdDappsDexBatchHistoricalGet**](docs/BatchApi.md#chainschainiddappsdexbatchhistoricalget) | **Get** /chains/{chain_id}/dapps/dex/batch/historical | 
 *BundlesApi* | [**ChainsChainIdDappsSushiswapBundlesHistoricalGet**](docs/BundlesApi.md#chainschainiddappssushiswapbundleshistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/bundles/historical | 
 *BundlesApi* | [**ChainsChainIdDappsUniswapv2BundlesHistoricalGet**](docs/BundlesApi.md#chainschainiddappsuniswapv2bundleshistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv2/bundles/historical | 
@@ -90,11 +94,22 @@ Class | Method | HTTP request | Description
 *BurnsApi* | [**ChainsChainIdDappsSushiswapBurnsHistoricalGet**](docs/BurnsApi.md#chainschainiddappssushiswapburnshistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/burns/historical | 
 *BurnsApi* | [**ChainsChainIdDappsUniswapv2BurnsHistoricalGet**](docs/BurnsApi.md#chainschainiddappsuniswapv2burnshistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv2/burns/historical | 
 *BurnsApi* | [**ChainsChainIdDappsUniswapv3BurnsHistoricalGet**](docs/BurnsApi.md#chainschainiddappsuniswapv3burnshistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
+*CoinsApi* | [**ChainsChainIdDappsCurveCoinsHistoricalGet**](docs/CoinsApi.md#chainschainiddappscurvecoinshistoricalget) | **Get** /chains/{chain_id}/dapps/curve/coins/historical | 
+*ContractsApi* | [**ChainsChainIdDappsCurveContractsHistoricalGet**](docs/ContractsApi.md#chainschainiddappscurvecontractshistoricalget) | **Get** /chains/{chain_id}/dapps/curve/contracts/historical | 
+*ContractsVersionApi* | [**ChainsChainIdDappsCurveContractsVersionHistoricalGet**](docs/ContractsVersionApi.md#chainschainiddappscurvecontractsversionhistoricalget) | **Get** /chains/{chain_id}/dapps/curve/contractsVersion/historical | 
+*DailyVolumeApi* | [**ChainsChainIdDappsCurveDailyVolumeHistoricalGet**](docs/DailyVolumeApi.md#chainschainiddappscurvedailyvolumehistoricalget) | **Get** /chains/{chain_id}/dapps/curve/dailyVolume/historical | 
 *DayDataApi* | [**ChainsChainIdDappsSushiswapDayDataHistoricalGet**](docs/DayDataApi.md#chainschainiddappssushiswapdaydatahistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/dayData/historical | 
 *DepositApi* | [**ChainsChainIdDappsDexTokensHistoricalGet**](docs/DepositApi.md#chainschainiddappsdextokenshistoricalget) | **Get** /chains/{chain_id}/dapps/dex/tokens/historical | 
 *FactoryApi* | [**ChainsChainIdDappsSushiswapFactoryHistoricalGet**](docs/FactoryApi.md#chainschainiddappssushiswapfactoryhistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/factory/historical | 
 *FactoryApi* | [**ChainsChainIdDappsUniswapv2FactoryHistoricalGet**](docs/FactoryApi.md#chainschainiddappsuniswapv2factoryhistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv2/factory/historical | 
 *FactoryApi* | [**ChainsChainIdDappsUniswapv3FactoryHistoricalGet**](docs/FactoryApi.md#chainschainiddappsuniswapv3factoryhistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
+*FeeChangeLogApi* | [**ChainsChainIdDappsCurveFeeChangeLogHistoricalGet**](docs/FeeChangeLogApi.md#chainschainiddappscurvefeechangeloghistoricalget) | **Get** /chains/{chain_id}/dapps/curve/feeChangeLog/historical | 
+*GaugeApi* | [**ChainsChainIdDappsCurveGaugeHistoricalGet**](docs/GaugeApi.md#chainschainiddappscurvegaugehistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gauge/historical | 
+*GaugeDepositApi* | [**ChainsChainIdDappsCurveGaugeDepositHistoricalGet**](docs/GaugeDepositApi.md#chainschainiddappscurvegaugedeposithistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gaugeDeposit/historical | 
+*GaugeLiquidityApi* | [**ChainsChainIdDappsCurveGaugeLiquidityHistoricalGet**](docs/GaugeLiquidityApi.md#chainschainiddappscurvegaugeliquidityhistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical | 
+*GaugeTotalWeightApi* | [**ChainsChainIdDappsCurveGaugeTotalWeightHistoricalGet**](docs/GaugeTotalWeightApi.md#chainschainiddappscurvegaugetotalweighthistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical | 
+*GaugeTypeApi* | [**ChainsChainIdDappsCurveGaugeTypeHistoricalGet**](docs/GaugeTypeApi.md#chainschainiddappscurvegaugetypehistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gaugeType/historical | 
+*GaugeTypeWeightApi* | [**ChainsChainIdDappsCurveGaugeTypeWeightHistoricalGet**](docs/GaugeTypeWeightApi.md#chainschainiddappscurvegaugetypeweighthistoricalget) | **Get** /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical | 
 *HourDataApi* | [**ChainsChainIdDappsSushiswapHourDataHistoricalGet**](docs/HourDataApi.md#chainschainiddappssushiswaphourdatahistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/hourData/historical | 
 *LiquidityPositionApi* | [**ChainsChainIdDappsSushiswapLiquidityPositionHistoricalGet**](docs/LiquidityPositionApi.md#chainschainiddappssushiswapliquiditypositionhistoricalget) | **Get** /chains/{chain_id}/dapps/sushiswap/liquidityPosition/historical | 
 *LiquidityPositionApi* | [**ChainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet**](docs/LiquidityPositionApi.md#chainschainiddappsuniswapv2liquiditypositionhistoricalget) | **Get** /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical | 

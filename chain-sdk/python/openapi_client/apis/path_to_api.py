@@ -2,6 +2,10 @@ import typing_extensions
 
 from openapi_client.paths import PathValues
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_swaps_current import ChainsChainIdDappsSushiswapSwapsCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_accounts_historical import ChainsChainIdDappsCurveAccountsHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_add_liquidity_event_historical import ChainsChainIdDappsCurveAddLiquidityEventHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_admin_fee_change_log_historical import ChainsChainIdDappsCurveAdminFeeChangeLogHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_amplification_coeff_change_log_historical import ChainsChainIdDappsCurveAmplificationCoeffChangeLogHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_dex_batch_historical import ChainsChainIdDappsDexBatchHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_bundle_current import ChainsChainIdDappsUniswapv3BundleCurrent
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_bundles_historical import ChainsChainIdDappsUniswapv3BundlesHistorical
@@ -11,12 +15,23 @@ from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_historical 
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_burns_historical import ChainsChainIdDappsUniswapv2BurnsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_burns_historical import ChainsChainIdDappsSushiswapBurnsHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_burns_current import ChainsChainIdDappsUniswapv3BurnsCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_coins_historical import ChainsChainIdDappsCurveCoinsHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_contracts_historical import ChainsChainIdDappsCurveContractsHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_contracts_version_historical import ChainsChainIdDappsCurveContractsVersionHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_daily_volume_historical import ChainsChainIdDappsCurveDailyVolumeHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_day_data_historical import ChainsChainIdDappsSushiswapDayDataHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_dex_tokens_historical import ChainsChainIdDappsDexTokensHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_historical import ChainsChainIdDappsUniswapv3FactoryHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_factory_historical import ChainsChainIdDappsUniswapv2FactoryHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_factory_historical import ChainsChainIdDappsSushiswapFactoryHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv3_factory_current import ChainsChainIdDappsUniswapv3FactoryCurrent
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_fee_change_log_historical import ChainsChainIdDappsCurveFeeChangeLogHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_historical import ChainsChainIdDappsCurveGaugeHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_deposit_historical import ChainsChainIdDappsCurveGaugeDepositHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_liquidity_historical import ChainsChainIdDappsCurveGaugeLiquidityHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_total_weight_historical import ChainsChainIdDappsCurveGaugeTotalWeightHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_type_historical import ChainsChainIdDappsCurveGaugeTypeHistorical
+from openapi_client.apis.paths.chains_chain_id_dapps_curve_gauge_type_weight_historical import ChainsChainIdDappsCurveGaugeTypeWeightHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_hour_data_historical import ChainsChainIdDappsSushiswapHourDataHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_uniswapv2_liquidity_position_historical import ChainsChainIdDappsUniswapv2LiquidityPositionHistorical
 from openapi_client.apis.paths.chains_chain_id_dapps_sushiswap_liquidity_position_historical import ChainsChainIdDappsSushiswapLiquidityPositionHistorical
@@ -99,6 +114,10 @@ PathToApi = typing_extensions.TypedDict(
     'PathToApi',
     {
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_SWAPS_CURRENT: ChainsChainIdDappsSushiswapSwapsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ACCOUNTS_HISTORICAL: ChainsChainIdDappsCurveAccountsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ADD_LIQUIDITY_EVENT_HISTORICAL: ChainsChainIdDappsCurveAddLiquidityEventHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveAdminFeeChangeLogHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveAmplificationCoeffChangeLogHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_BATCH_HISTORICAL: ChainsChainIdDappsDexBatchHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLE_CURRENT: ChainsChainIdDappsUniswapv3BundleCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLES_HISTORICAL: ChainsChainIdDappsUniswapv3BundlesHistorical,
@@ -108,12 +127,23 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv2BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_BURNS_HISTORICAL: ChainsChainIdDappsSushiswapBurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_COINS_HISTORICAL: ChainsChainIdDappsCurveCoinsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_CONTRACTS_HISTORICAL: ChainsChainIdDappsCurveContractsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_CONTRACTS_VERSION_HISTORICAL: ChainsChainIdDappsCurveContractsVersionHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_DAILY_VOLUME_HISTORICAL: ChainsChainIdDappsCurveDailyVolumeHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsSushiswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TOKENS_HISTORICAL: ChainsChainIdDappsDexTokensHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv2FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_FACTORY_HISTORICAL: ChainsChainIdDappsSushiswapFactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_FEE_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveFeeChangeLogHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_HISTORICAL: ChainsChainIdDappsCurveGaugeHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_DEPOSIT_HISTORICAL: ChainsChainIdDappsCurveGaugeDepositHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_LIQUIDITY_HISTORICAL: ChainsChainIdDappsCurveGaugeLiquidityHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TOTAL_WEIGHT_HISTORICAL: ChainsChainIdDappsCurveGaugeTotalWeightHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TYPE_HISTORICAL: ChainsChainIdDappsCurveGaugeTypeHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TYPE_WEIGHT_HISTORICAL: ChainsChainIdDappsCurveGaugeTypeWeightHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_HOUR_DATA_HISTORICAL: ChainsChainIdDappsSushiswapHourDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsSushiswapLiquidityPositionHistorical,
@@ -197,6 +227,10 @@ PathToApi = typing_extensions.TypedDict(
 path_to_api = PathToApi(
     {
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_SWAPS_CURRENT: ChainsChainIdDappsSushiswapSwapsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ACCOUNTS_HISTORICAL: ChainsChainIdDappsCurveAccountsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ADD_LIQUIDITY_EVENT_HISTORICAL: ChainsChainIdDappsCurveAddLiquidityEventHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveAdminFeeChangeLogHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveAmplificationCoeffChangeLogHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_BATCH_HISTORICAL: ChainsChainIdDappsDexBatchHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLE_CURRENT: ChainsChainIdDappsUniswapv3BundleCurrent,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BUNDLES_HISTORICAL: ChainsChainIdDappsUniswapv3BundlesHistorical,
@@ -206,12 +240,23 @@ path_to_api = PathToApi(
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_BURNS_HISTORICAL: ChainsChainIdDappsUniswapv2BurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_BURNS_HISTORICAL: ChainsChainIdDappsSushiswapBurnsHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_BURNS_CURRENT: ChainsChainIdDappsUniswapv3BurnsCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_COINS_HISTORICAL: ChainsChainIdDappsCurveCoinsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_CONTRACTS_HISTORICAL: ChainsChainIdDappsCurveContractsHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_CONTRACTS_VERSION_HISTORICAL: ChainsChainIdDappsCurveContractsVersionHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_DAILY_VOLUME_HISTORICAL: ChainsChainIdDappsCurveDailyVolumeHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_DAY_DATA_HISTORICAL: ChainsChainIdDappsSushiswapDayDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_DEX_TOKENS_HISTORICAL: ChainsChainIdDappsDexTokensHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv3FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_FACTORY_HISTORICAL: ChainsChainIdDappsUniswapv2FactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_FACTORY_HISTORICAL: ChainsChainIdDappsSushiswapFactoryHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV3_FACTORY_CURRENT: ChainsChainIdDappsUniswapv3FactoryCurrent,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_FEE_CHANGE_LOG_HISTORICAL: ChainsChainIdDappsCurveFeeChangeLogHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_HISTORICAL: ChainsChainIdDappsCurveGaugeHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_DEPOSIT_HISTORICAL: ChainsChainIdDappsCurveGaugeDepositHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_LIQUIDITY_HISTORICAL: ChainsChainIdDappsCurveGaugeLiquidityHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TOTAL_WEIGHT_HISTORICAL: ChainsChainIdDappsCurveGaugeTotalWeightHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TYPE_HISTORICAL: ChainsChainIdDappsCurveGaugeTypeHistorical,
+        PathValues.CHAINS_CHAIN_ID_DAPPS_CURVE_GAUGE_TYPE_WEIGHT_HISTORICAL: ChainsChainIdDappsCurveGaugeTypeWeightHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_HOUR_DATA_HISTORICAL: ChainsChainIdDappsSushiswapHourDataHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_UNISWAPV2_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsUniswapv2LiquidityPositionHistorical,
         PathValues.CHAINS_CHAIN_ID_DAPPS_SUSHISWAP_LIQUIDITY_POSITION_HISTORICAL: ChainsChainIdDappsSushiswapLiquidityPositionHistorical,

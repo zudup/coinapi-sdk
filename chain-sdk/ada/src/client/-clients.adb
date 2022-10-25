@@ -14,6 +14,104 @@ package body .Clients is
    pragma Style_Checks ("-mr");
 
    --  
+   procedure Chains_Chain_Id_Dapps_Curve_Accounts_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/accounts/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Accounts_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Add_Liquidity_Event_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/addLiquidityEvent/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Add_Liquidity_Event_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Admin_Fee_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Admin_Fee_Change_Log_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Amplification_Coeff_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Amplification_Coeff_Change_Log_Historical_Get;
+
+   --  
    procedure Chains_Chain_Id_Dapps_Dex_Batch_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -181,6 +279,106 @@ package body .Clients is
    end Chains_Chain_Id_Dapps_Uniswapv_3Burns_Historical_Get;
 
    --  
+   procedure Chains_Chain_Id_Dapps_Curve_Coins_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/coins/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Coins_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Contracts_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/contracts/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Contracts_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Contracts_Version_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/contractsVersion/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Contracts_Version_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Daily_Volume_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/dailyVolume/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Daily_Volume_Historical_Get;
+
+   --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Day_Data_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -296,6 +494,171 @@ package body .Clients is
       URI.Set_Path_Param ("chain_id", Chain_Id);
       Client.Call (Swagger.Clients.GET, URI);
    end Chains_Chain_Id_Dapps_Uniswapv_3Factory_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Fee_Change_Log_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/feeChangeLog/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Fee_Change_Log_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gauge/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Deposit_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gaugeDeposit/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Deposit_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Liquidity_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gaugeLiquidity/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Liquidity_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Total_Weight_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Total_Weight_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Type_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gaugeType/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Type_Historical_Get;
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Type_Weight_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical");
+      URI.Set_Path_Param ("chain_id", Chain_Id);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Chains_Chain_Id_Dapps_Curve_Gauge_Type_Weight_Historical_Get;
 
    --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Hour_Data_Historical_Get
