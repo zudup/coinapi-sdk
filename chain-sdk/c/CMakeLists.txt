@@ -78,9 +78,11 @@ set(SRCS
     model/token_v3_day_data_dto.c
     model/token_v3_dto.c
     model/uniswap_day_data_v3_dto.c
+    api/BatchAPI.c
     api/BundlesAPI.c
     api/BurnsAPI.c
     api/DayDataAPI.c
+    api/DepositAPI.c
     api/FactoryAPI.c
     api/HourDataAPI.c
     api/LiquidityPositionAPI.c
@@ -93,7 +95,10 @@ set(SRCS
     api/PoolsAPI.c
     api/PositionSnapshotAPI.c
     api/PositionsAPI.c
+    api/PricesAPI.c
     api/SettlementAPI.c
+    api/SolutionAPI.c
+    api/StatsAPI.c
     api/SushiswapAPI.c
     api/SwapsAPI.c
     api/TickDayDataAPI.c
@@ -107,6 +112,8 @@ set(SRCS
     api/UniswapV2API.c
     api/UniswapV3API.c
     api/UsersAPI.c
+    api/WithdrawAPI.c
+    api/WithdrawRequestAPI.c
 
 )
 
@@ -141,9 +148,11 @@ set(HDRS
     model/token_v3_day_data_dto.h
     model/token_v3_dto.h
     model/uniswap_day_data_v3_dto.h
+    api/BatchAPI.h
     api/BundlesAPI.h
     api/BurnsAPI.h
     api/DayDataAPI.h
+    api/DepositAPI.h
     api/FactoryAPI.h
     api/HourDataAPI.h
     api/LiquidityPositionAPI.h
@@ -156,7 +165,10 @@ set(HDRS
     api/PoolsAPI.h
     api/PositionSnapshotAPI.h
     api/PositionsAPI.h
+    api/PricesAPI.h
     api/SettlementAPI.h
+    api/SolutionAPI.h
+    api/StatsAPI.h
     api/SushiswapAPI.h
     api/SwapsAPI.h
     api/TickDayDataAPI.h
@@ -170,6 +182,8 @@ set(HDRS
     api/UniswapV2API.h
     api/UniswapV3API.h
     api/UsersAPI.h
+    api/WithdrawAPI.h
+    api/WithdrawRequestAPI.h
 
 )
 
@@ -251,9 +265,11 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
+#    unit-tests/manual-BatchAPI.c
 #    unit-tests/manual-BundlesAPI.c
 #    unit-tests/manual-BurnsAPI.c
 #    unit-tests/manual-DayDataAPI.c
+#    unit-tests/manual-DepositAPI.c
 #    unit-tests/manual-FactoryAPI.c
 #    unit-tests/manual-HourDataAPI.c
 #    unit-tests/manual-LiquidityPositionAPI.c
@@ -266,7 +282,10 @@ set(HDRS "")
 #    unit-tests/manual-PoolsAPI.c
 #    unit-tests/manual-PositionSnapshotAPI.c
 #    unit-tests/manual-PositionsAPI.c
+#    unit-tests/manual-PricesAPI.c
 #    unit-tests/manual-SettlementAPI.c
+#    unit-tests/manual-SolutionAPI.c
+#    unit-tests/manual-StatsAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-SwapsAPI.c
 #    unit-tests/manual-TickDayDataAPI.c
@@ -280,6 +299,8 @@ set(HDRS "")
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c
 #    unit-tests/manual-UsersAPI.c
+#    unit-tests/manual-WithdrawAPI.c
+#    unit-tests/manual-WithdrawRequestAPI.c
 #)
 
 ##set header files

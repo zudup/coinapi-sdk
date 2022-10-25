@@ -45,4 +45,19 @@ public class OrdersApiTest {
         // TODO: test validations
     }
 
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void chainsChainIdDappsDexOrdersHistoricalGetTest() throws ApiException {
+        String chainId = null;
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String tokenId = null;
+        api.chainsChainIdDappsDexOrdersHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId);
+        // TODO: test validations
+    }
+
 }

@@ -3,9 +3,11 @@
 README.md
 api.module.ts
 api/api.ts
+api/batch.service.ts
 api/bundles.service.ts
 api/burns.service.ts
 api/dayData.service.ts
+api/deposit.service.ts
 api/factory.service.ts
 api/hourData.service.ts
 api/liquidityPosition.service.ts
@@ -18,7 +20,10 @@ api/poolHourData.service.ts
 api/pools.service.ts
 api/positionSnapshot.service.ts
 api/positions.service.ts
+api/prices.service.ts
 api/settlement.service.ts
+api/solution.service.ts
+api/stats.service.ts
 api/sushiswap.service.ts
 api/swaps.service.ts
 api/tickDayData.service.ts
@@ -32,6 +37,8 @@ api/uniswapDayData.service.ts
 api/uniswapV2.service.ts
 api/uniswapV3.service.ts
 api/users.service.ts
+api/withdraw.service.ts
+api/withdrawRequest.service.ts
 configuration.ts
 encoder.ts
 git_push.sh

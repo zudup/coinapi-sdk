@@ -65,21 +65,6 @@ public class TokensApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void chainsChainIdDappsDexTokensHistoricalGetTest() throws ApiException {
-        String chainId = null;
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String tokenId = null;
-        api.chainsChainIdDappsDexTokensHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void chainsChainIdDappsSushiswapTokensHistoricalGetTest() throws ApiException {
         String chainId = null;
         Long startBlock = null;

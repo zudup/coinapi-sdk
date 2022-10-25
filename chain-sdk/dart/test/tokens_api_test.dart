@@ -27,11 +27,6 @@ void main() {
       // TODO
     });
 
-    //Future chainsChainIdDappsDexTokensHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test chainsChainIdDappsDexTokensHistoricalGet', () async {
-      // TODO
-    });
-
     //Future chainsChainIdDappsSushiswapTokensHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test chainsChainIdDappsSushiswapTokensHistoricalGet', () async {
       // TODO

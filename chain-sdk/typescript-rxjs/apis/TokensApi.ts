@@ -34,15 +34,6 @@ export interface ChainsChainIdDappsCurveTokensHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface ChainsChainIdDappsDexTokensHistoricalGetRequest {
-    chainId: string;
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-    tokenId?: string;
-}
-
 export interface ChainsChainIdDappsSushiswapTokensHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -114,28 +105,6 @@ export class TokensApi extends BaseAPI {
 
         return this.request<void>({
             url: '/chains/{chain_id}/dapps/curve/tokens/historical'.replace('{chain_id}', encodeURI(chainId)),
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    chainsChainIdDappsDexTokensHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexTokensHistoricalGetRequest): Observable<void>
-    chainsChainIdDappsDexTokensHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    chainsChainIdDappsDexTokensHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsDexTokensHistoricalGet');
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (tokenId != null) { query['tokenId'] = tokenId; }
-
-        return this.request<void>({
-            url: '/chains/{chain_id}/dapps/dex/tokens/historical'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
             query,
         }, opts?.responseOpts);

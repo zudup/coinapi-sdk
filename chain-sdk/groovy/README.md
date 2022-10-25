@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-10-24T10:54:04.288780Z[Etc/UTC]
+- Build date: 2022-10-25T07:37:57.207922Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -37,14 +37,14 @@ Then, run:
 
 
 ```groovy
-def apiInstance = new BundlesApi()
+def apiInstance = new BatchApi()
 def chainId = "chainId_example" // String | 
 def startBlock = 56L // Long | 
 def endBlock = 56L // Long | 
 def startDate = new Date() // Date | 
 def endDate = new Date() // Date | 
 
-apiInstance.chainsChainIdDappsSushiswapBundlesHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+apiInstance.chainsChainIdDappsDexBatchHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
     {
     // on success
         println it

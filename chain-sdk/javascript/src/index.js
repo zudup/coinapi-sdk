@@ -37,9 +37,11 @@ import TokenV2DTO from './model/TokenV2DTO';
 import TokenV3DTO from './model/TokenV3DTO';
 import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
 import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
+import BatchApi from './api/BatchApi';
 import BundlesApi from './api/BundlesApi';
 import BurnsApi from './api/BurnsApi';
 import DayDataApi from './api/DayDataApi';
+import DepositApi from './api/DepositApi';
 import FactoryApi from './api/FactoryApi';
 import HourDataApi from './api/HourDataApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
@@ -52,7 +54,10 @@ import PoolHourDataApi from './api/PoolHourDataApi';
 import PoolsApi from './api/PoolsApi';
 import PositionSnapshotApi from './api/PositionSnapshotApi';
 import PositionsApi from './api/PositionsApi';
+import PricesApi from './api/PricesApi';
 import SettlementApi from './api/SettlementApi';
+import SolutionApi from './api/SolutionApi';
+import StatsApi from './api/StatsApi';
 import SushiswapApi from './api/SushiswapApi';
 import SwapsApi from './api/SwapsApi';
 import TickDayDataApi from './api/TickDayDataApi';
@@ -66,6 +71,8 @@ import UniswapDayDataApi from './api/UniswapDayDataApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
 import UsersApi from './api/UsersApi';
+import WithdrawApi from './api/WithdrawApi';
+import WithdrawRequestApi from './api/WithdrawRequestApi';
 
 
 /**
@@ -251,6 +258,12 @@ export {
     UniswapDayDataV3DTO,
 
     /**
+    * The BatchApi service constructor.
+    * @property {module:api/BatchApi}
+    */
+    BatchApi,
+
+    /**
     * The BundlesApi service constructor.
     * @property {module:api/BundlesApi}
     */
@@ -267,6 +280,12 @@ export {
     * @property {module:api/DayDataApi}
     */
     DayDataApi,
+
+    /**
+    * The DepositApi service constructor.
+    * @property {module:api/DepositApi}
+    */
+    DepositApi,
 
     /**
     * The FactoryApi service constructor.
@@ -341,10 +360,28 @@ export {
     PositionsApi,
 
     /**
+    * The PricesApi service constructor.
+    * @property {module:api/PricesApi}
+    */
+    PricesApi,
+
+    /**
     * The SettlementApi service constructor.
     * @property {module:api/SettlementApi}
     */
     SettlementApi,
+
+    /**
+    * The SolutionApi service constructor.
+    * @property {module:api/SolutionApi}
+    */
+    SolutionApi,
+
+    /**
+    * The StatsApi service constructor.
+    * @property {module:api/StatsApi}
+    */
+    StatsApi,
 
     /**
     * The SushiswapApi service constructor.
@@ -422,5 +459,17 @@ export {
     * The UsersApi service constructor.
     * @property {module:api/UsersApi}
     */
-    UsersApi
+    UsersApi,
+
+    /**
+    * The WithdrawApi service constructor.
+    * @property {module:api/WithdrawApi}
+    */
+    WithdrawApi,
+
+    /**
+    * The WithdrawRequestApi service constructor.
+    * @property {module:api/WithdrawRequestApi}
+    */
+    WithdrawRequestApi
 };

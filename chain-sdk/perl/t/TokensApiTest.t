@@ -54,18 +54,6 @@ isa_ok($api, 'WWW::OpenAPIClient::TokensApi');
 #my $chains_chain_id_dapps_curve_tokens_historical_get_result = $api->chains_chain_id_dapps_curve_tokens_historical_get(chain_id => $chains_chain_id_dapps_curve_tokens_historical_get_chain_id, start_block => $chains_chain_id_dapps_curve_tokens_historical_get_start_block, end_block => $chains_chain_id_dapps_curve_tokens_historical_get_end_block, start_date => $chains_chain_id_dapps_curve_tokens_historical_get_start_date, end_date => $chains_chain_id_dapps_curve_tokens_historical_get_end_date, token_id => $chains_chain_id_dapps_curve_tokens_historical_get_token_id);
 
 #
-# chains_chain_id_dapps_dex_tokens_historical_get test
-#
-# uncomment below and update the test
-#my $chains_chain_id_dapps_dex_tokens_historical_get_chain_id = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_start_block = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_end_block = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_start_date = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_end_date = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_token_id = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_dex_tokens_historical_get_result = $api->chains_chain_id_dapps_dex_tokens_historical_get(chain_id => $chains_chain_id_dapps_dex_tokens_historical_get_chain_id, start_block => $chains_chain_id_dapps_dex_tokens_historical_get_start_block, end_block => $chains_chain_id_dapps_dex_tokens_historical_get_end_block, start_date => $chains_chain_id_dapps_dex_tokens_historical_get_start_date, end_date => $chains_chain_id_dapps_dex_tokens_historical_get_end_date, token_id => $chains_chain_id_dapps_dex_tokens_historical_get_token_id);
-
-#
 # chains_chain_id_dapps_sushiswap_tokens_historical_get test
 #
 # uncomment below and update the test

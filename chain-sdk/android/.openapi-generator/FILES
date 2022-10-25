@@ -2,12 +2,14 @@
 .openapi-generator-ignore
 README.md
 build.gradle
+docs/BatchApi.md
 docs/BigInteger.md
 docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
 docs/DayDataApi.md
+docs/DepositApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -30,7 +32,10 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/PricesApi.md
 docs/SettlementApi.md
+docs/SolutionApi.md
+docs/StatsApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -55,6 +60,8 @@ docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
 docs/UsersApi.md
+docs/WithdrawApi.md
+docs/WithdrawRequestApi.md
 git_push.sh
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -66,9 +73,11 @@ src/main/java/org/openapitools/client/ApiException.java
 src/main/java/org/openapitools/client/ApiInvoker.java
 src/main/java/org/openapitools/client/JsonUtil.java
 src/main/java/org/openapitools/client/Pair.java
+src/main/java/org/openapitools/client/api/BatchApi.java
 src/main/java/org/openapitools/client/api/BundlesApi.java
 src/main/java/org/openapitools/client/api/BurnsApi.java
 src/main/java/org/openapitools/client/api/DayDataApi.java
+src/main/java/org/openapitools/client/api/DepositApi.java
 src/main/java/org/openapitools/client/api/FactoryApi.java
 src/main/java/org/openapitools/client/api/HourDataApi.java
 src/main/java/org/openapitools/client/api/LiquidityPositionApi.java
@@ -81,7 +90,10 @@ src/main/java/org/openapitools/client/api/PoolHourDataApi.java
 src/main/java/org/openapitools/client/api/PoolsApi.java
 src/main/java/org/openapitools/client/api/PositionSnapshotApi.java
 src/main/java/org/openapitools/client/api/PositionsApi.java
+src/main/java/org/openapitools/client/api/PricesApi.java
 src/main/java/org/openapitools/client/api/SettlementApi.java
+src/main/java/org/openapitools/client/api/SolutionApi.java
+src/main/java/org/openapitools/client/api/StatsApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/SwapsApi.java
 src/main/java/org/openapitools/client/api/TickDayDataApi.java
@@ -95,6 +107,8 @@ src/main/java/org/openapitools/client/api/UniswapDayDataApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
 src/main/java/org/openapitools/client/api/UsersApi.java
+src/main/java/org/openapitools/client/api/WithdrawApi.java
+src/main/java/org/openapitools/client/api/WithdrawRequestApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java

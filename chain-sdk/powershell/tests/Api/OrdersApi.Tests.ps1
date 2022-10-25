@@ -15,4 +15,12 @@ Describe -tag 'PSOpenAPITools' -name 'OrdersApi' {
         }
     }
 
+    Context 'Invoke-ChainsChainIdDappsDexOrdersHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsDexOrdersHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsDexOrdersHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
 }

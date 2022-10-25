@@ -23,14 +23,6 @@ Describe -tag 'PSOpenAPITools' -name 'TokensApi' {
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsDexTokensHistoricalGet' {
-        It 'Test Invoke-ChainsChainIdDappsDexTokensHistoricalGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsDexTokensHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-ChainsChainIdDappsSushiswapTokensHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsSushiswapTokensHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsSushiswapTokensHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"

@@ -14,9 +14,11 @@ Module : OnChain.API
 -}
 
 module OnChain.API
-  ( module OnChain.API.Bundles
+  ( module OnChain.API.Batch
+  , module OnChain.API.Bundles
   , module OnChain.API.Burns
   , module OnChain.API.DayData
+  , module OnChain.API.Deposit
   , module OnChain.API.Factory
   , module OnChain.API.HourData
   , module OnChain.API.LiquidityPosition
@@ -29,7 +31,10 @@ module OnChain.API
   , module OnChain.API.Pools
   , module OnChain.API.PositionSnapshot
   , module OnChain.API.Positions
+  , module OnChain.API.Prices
   , module OnChain.API.Settlement
+  , module OnChain.API.Solution
+  , module OnChain.API.Stats
   , module OnChain.API.Sushiswap
   , module OnChain.API.Swaps
   , module OnChain.API.TickDayData
@@ -43,11 +48,15 @@ module OnChain.API
   , module OnChain.API.UniswapV2
   , module OnChain.API.UniswapV3
   , module OnChain.API.Users
+  , module OnChain.API.Withdraw
+  , module OnChain.API.WithdrawRequest
   ) where
 
+import OnChain.API.Batch
 import OnChain.API.Bundles
 import OnChain.API.Burns
 import OnChain.API.DayData
+import OnChain.API.Deposit
 import OnChain.API.Factory
 import OnChain.API.HourData
 import OnChain.API.LiquidityPosition
@@ -60,7 +69,10 @@ import OnChain.API.PoolHourData
 import OnChain.API.Pools
 import OnChain.API.PositionSnapshot
 import OnChain.API.Positions
+import OnChain.API.Prices
 import OnChain.API.Settlement
+import OnChain.API.Solution
+import OnChain.API.Stats
 import OnChain.API.Sushiswap
 import OnChain.API.Swaps
 import OnChain.API.TickDayData
@@ -74,3 +86,5 @@ import OnChain.API.UniswapDayData
 import OnChain.API.UniswapV2
 import OnChain.API.UniswapV3
 import OnChain.API.Users
+import OnChain.API.Withdraw
+import OnChain.API.WithdrawRequest

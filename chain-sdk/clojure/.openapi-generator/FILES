@@ -2,9 +2,11 @@
 .openapi-generator-ignore
 git_push.sh
 project.clj
+src/on_chain_api/api/batch.clj
 src/on_chain_api/api/bundles.clj
 src/on_chain_api/api/burns.clj
 src/on_chain_api/api/day_data.clj
+src/on_chain_api/api/deposit.clj
 src/on_chain_api/api/factory.clj
 src/on_chain_api/api/hour_data.clj
 src/on_chain_api/api/liquidity_position.clj
@@ -17,7 +19,10 @@ src/on_chain_api/api/pool_hour_data.clj
 src/on_chain_api/api/pools.clj
 src/on_chain_api/api/position_snapshot.clj
 src/on_chain_api/api/positions.clj
+src/on_chain_api/api/prices.clj
 src/on_chain_api/api/settlement.clj
+src/on_chain_api/api/solution.clj
+src/on_chain_api/api/stats.clj
 src/on_chain_api/api/sushiswap.clj
 src/on_chain_api/api/swaps.clj
 src/on_chain_api/api/tick_day_data.clj
@@ -30,6 +35,8 @@ src/on_chain_api/api/transactions.clj
 src/on_chain_api/api/uniswap_day_data.clj
 src/on_chain_api/api/uniswap_v_.clj
 src/on_chain_api/api/users.clj
+src/on_chain_api/api/withdraw.clj
+src/on_chain_api/api/withdraw_request.clj
 src/on_chain_api/core.clj
 src/on_chain_api/specs/big_integer.clj
 src/on_chain_api/specs/bundle_v3_dto.clj

@@ -2,9 +2,11 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
+import { BatchService } from './api/batch.service';
 import { BundlesService } from './api/bundles.service';
 import { BurnsService } from './api/burns.service';
 import { DayDataService } from './api/dayData.service';
+import { DepositService } from './api/deposit.service';
 import { FactoryService } from './api/factory.service';
 import { HourDataService } from './api/hourData.service';
 import { LiquidityPositionService } from './api/liquidityPosition.service';
@@ -17,7 +19,10 @@ import { PoolHourDataService } from './api/poolHourData.service';
 import { PoolsService } from './api/pools.service';
 import { PositionSnapshotService } from './api/positionSnapshot.service';
 import { PositionsService } from './api/positions.service';
+import { PricesService } from './api/prices.service';
 import { SettlementService } from './api/settlement.service';
+import { SolutionService } from './api/solution.service';
+import { StatsService } from './api/stats.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { SwapsService } from './api/swaps.service';
 import { TickDayDataService } from './api/tickDayData.service';
@@ -31,6 +36,8 @@ import { UniswapDayDataService } from './api/uniswapDayData.service';
 import { UniswapV2Service } from './api/uniswapV2.service';
 import { UniswapV3Service } from './api/uniswapV3.service';
 import { UsersService } from './api/users.service';
+import { WithdrawService } from './api/withdraw.service';
+import { WithdrawRequestService } from './api/withdrawRequest.service';
 
 @NgModule({
   imports:      [],

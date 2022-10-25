@@ -4,12 +4,14 @@ README.md
 _client.sh
 client.sh
 client.sh.bash-completion
+docs/BatchApi.md
 docs/BigInteger.md
 docs/BundleV3DTO.md
 docs/BundlesApi.md
 docs/BurnV3DTO.md
 docs/BurnsApi.md
 docs/DayDataApi.md
+docs/DepositApi.md
 docs/ETradeAggressiveSide.md
 docs/FactoryApi.md
 docs/FactoryV3DTO.md
@@ -32,7 +34,10 @@ docs/PositionSnapshotApi.md
 docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
+docs/PricesApi.md
 docs/SettlementApi.md
+docs/SolutionApi.md
+docs/StatsApi.md
 docs/SushiswapApi.md
 docs/SwapDTO.md
 docs/SwapV2DTO.md
@@ -57,3 +62,5 @@ docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
 docs/UsersApi.md
+docs/WithdrawApi.md
+docs/WithdrawRequestApi.md

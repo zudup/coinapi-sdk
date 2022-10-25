@@ -1,10 +1,12 @@
 .openapi-generator-ignore
+API/Client/BatchApi.js
 API/Client/BigInteger.js
 API/Client/BundleV3DTO.js
 API/Client/BundlesApi.js
 API/Client/BurnV3DTO.js
 API/Client/BurnsApi.js
 API/Client/DayDataApi.js
+API/Client/DepositApi.js
 API/Client/ETradeAggressiveSide.js
 API/Client/FactoryApi.js
 API/Client/FactoryV3DTO.js
@@ -27,7 +29,10 @@ API/Client/PositionSnapshotApi.js
 API/Client/PositionSnapshotV3DTO.js
 API/Client/PositionV3DTO.js
 API/Client/PositionsApi.js
+API/Client/PricesApi.js
 API/Client/SettlementApi.js
+API/Client/SolutionApi.js
+API/Client/StatsApi.js
 API/Client/SushiswapApi.js
 API/Client/SwapDTO.js
 API/Client/SwapV2DTO.js
@@ -52,3 +57,5 @@ API/Client/UniswapDayDataV3DTO.js
 API/Client/UniswapV2Api.js
 API/Client/UniswapV3Api.js
 API/Client/UsersApi.js
+API/Client/WithdrawApi.js
+API/Client/WithdrawRequestApi.js

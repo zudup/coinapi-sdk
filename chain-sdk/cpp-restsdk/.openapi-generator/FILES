@@ -13,9 +13,11 @@ include/CppRestOpenAPIClient/JsonBody.h
 include/CppRestOpenAPIClient/ModelBase.h
 include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
+include/CppRestOpenAPIClient/api/BatchApi.h
 include/CppRestOpenAPIClient/api/BundlesApi.h
 include/CppRestOpenAPIClient/api/BurnsApi.h
 include/CppRestOpenAPIClient/api/DayDataApi.h
+include/CppRestOpenAPIClient/api/DepositApi.h
 include/CppRestOpenAPIClient/api/FactoryApi.h
 include/CppRestOpenAPIClient/api/HourDataApi.h
 include/CppRestOpenAPIClient/api/LiquidityPositionApi.h
@@ -28,7 +30,10 @@ include/CppRestOpenAPIClient/api/PoolHourDataApi.h
 include/CppRestOpenAPIClient/api/PoolsApi.h
 include/CppRestOpenAPIClient/api/PositionSnapshotApi.h
 include/CppRestOpenAPIClient/api/PositionsApi.h
+include/CppRestOpenAPIClient/api/PricesApi.h
 include/CppRestOpenAPIClient/api/SettlementApi.h
+include/CppRestOpenAPIClient/api/SolutionApi.h
+include/CppRestOpenAPIClient/api/StatsApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/SwapsApi.h
 include/CppRestOpenAPIClient/api/TickDayDataApi.h
@@ -42,6 +47,8 @@ include/CppRestOpenAPIClient/api/UniswapDayDataApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
 include/CppRestOpenAPIClient/api/UniswapV3Api.h
 include/CppRestOpenAPIClient/api/UsersApi.h
+include/CppRestOpenAPIClient/api/WithdrawApi.h
+include/CppRestOpenAPIClient/api/WithdrawRequestApi.h
 include/CppRestOpenAPIClient/model/BigInteger.h
 include/CppRestOpenAPIClient/model/BundleV3DTO.h
 include/CppRestOpenAPIClient/model/BurnV3DTO.h
@@ -74,9 +81,11 @@ src/JsonBody.cpp
 src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
+src/api/BatchApi.cpp
 src/api/BundlesApi.cpp
 src/api/BurnsApi.cpp
 src/api/DayDataApi.cpp
+src/api/DepositApi.cpp
 src/api/FactoryApi.cpp
 src/api/HourDataApi.cpp
 src/api/LiquidityPositionApi.cpp
@@ -89,7 +98,10 @@ src/api/PoolHourDataApi.cpp
 src/api/PoolsApi.cpp
 src/api/PositionSnapshotApi.cpp
 src/api/PositionsApi.cpp
+src/api/PricesApi.cpp
 src/api/SettlementApi.cpp
+src/api/SolutionApi.cpp
+src/api/StatsApi.cpp
 src/api/SushiswapApi.cpp
 src/api/SwapsApi.cpp
 src/api/TickDayDataApi.cpp
@@ -103,6 +115,8 @@ src/api/UniswapDayDataApi.cpp
 src/api/UniswapV2Api.cpp
 src/api/UniswapV3Api.cpp
 src/api/UsersApi.cpp
+src/api/WithdrawApi.cpp
+src/api/WithdrawRequestApi.cpp
 src/model/BigInteger.cpp
 src/model/BundleV3DTO.cpp
 src/model/BurnV3DTO.cpp

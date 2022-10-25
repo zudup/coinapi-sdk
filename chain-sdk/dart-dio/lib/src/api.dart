@@ -9,9 +9,11 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
+import 'package:openapi/src/api/batch_api.dart';
 import 'package:openapi/src/api/bundles_api.dart';
 import 'package:openapi/src/api/burns_api.dart';
 import 'package:openapi/src/api/day_data_api.dart';
+import 'package:openapi/src/api/deposit_api.dart';
 import 'package:openapi/src/api/factory_api.dart';
 import 'package:openapi/src/api/hour_data_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
@@ -24,7 +26,10 @@ import 'package:openapi/src/api/pool_hour_data_api.dart';
 import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/position_snapshot_api.dart';
 import 'package:openapi/src/api/positions_api.dart';
+import 'package:openapi/src/api/prices_api.dart';
 import 'package:openapi/src/api/settlement_api.dart';
+import 'package:openapi/src/api/solution_api.dart';
+import 'package:openapi/src/api/stats_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
 import 'package:openapi/src/api/tick_day_data_api.dart';
@@ -38,6 +43,8 @@ import 'package:openapi/src/api/uniswap_day_data_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
 import 'package:openapi/src/api/users_api.dart';
+import 'package:openapi/src/api/withdraw_api.dart';
+import 'package:openapi/src/api/withdraw_request_api.dart';
 
 class Openapi {
   static const String basePath = r'https://onchain.coinapi.io';
@@ -93,6 +100,12 @@ class Openapi {
     }
   }
 
+  /// Get BatchApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  BatchApi getBatchApi() {
+    return BatchApi(dio, serializers);
+  }
+
   /// Get BundlesApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   BundlesApi getBundlesApi() {
@@ -109,6 +122,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   DayDataApi getDayDataApi() {
     return DayDataApi(dio, serializers);
+  }
+
+  /// Get DepositApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DepositApi getDepositApi() {
+    return DepositApi(dio, serializers);
   }
 
   /// Get FactoryApi instance, base route and serializer can be overridden by a given but be careful,
@@ -183,10 +202,28 @@ class Openapi {
     return PositionsApi(dio, serializers);
   }
 
+  /// Get PricesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PricesApi getPricesApi() {
+    return PricesApi(dio, serializers);
+  }
+
   /// Get SettlementApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   SettlementApi getSettlementApi() {
     return SettlementApi(dio, serializers);
+  }
+
+  /// Get SolutionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  SolutionApi getSolutionApi() {
+    return SolutionApi(dio, serializers);
+  }
+
+  /// Get StatsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  StatsApi getStatsApi() {
+    return StatsApi(dio, serializers);
   }
 
   /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,
@@ -265,5 +302,17 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   UsersApi getUsersApi() {
     return UsersApi(dio, serializers);
+  }
+
+  /// Get WithdrawApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  WithdrawApi getWithdrawApi() {
+    return WithdrawApi(dio, serializers);
+  }
+
+  /// Get WithdrawRequestApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  WithdrawRequestApi getWithdrawRequestApi() {
+    return WithdrawRequestApi(dio, serializers);
   }
 }

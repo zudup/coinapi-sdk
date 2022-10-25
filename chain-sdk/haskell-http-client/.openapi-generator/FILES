@@ -6,9 +6,11 @@ Setup.hs
 git_push.sh
 lib/OnChain.hs
 lib/OnChain/API.hs
+lib/OnChain/API/Batch.hs
 lib/OnChain/API/Bundles.hs
 lib/OnChain/API/Burns.hs
 lib/OnChain/API/DayData.hs
+lib/OnChain/API/Deposit.hs
 lib/OnChain/API/Factory.hs
 lib/OnChain/API/HourData.hs
 lib/OnChain/API/LiquidityPosition.hs
@@ -21,7 +23,10 @@ lib/OnChain/API/PoolHourData.hs
 lib/OnChain/API/Pools.hs
 lib/OnChain/API/PositionSnapshot.hs
 lib/OnChain/API/Positions.hs
+lib/OnChain/API/Prices.hs
 lib/OnChain/API/Settlement.hs
+lib/OnChain/API/Solution.hs
+lib/OnChain/API/Stats.hs
 lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/Swaps.hs
 lib/OnChain/API/TickDayData.hs
@@ -35,6 +40,8 @@ lib/OnChain/API/UniswapDayData.hs
 lib/OnChain/API/UniswapV2.hs
 lib/OnChain/API/UniswapV3.hs
 lib/OnChain/API/Users.hs
+lib/OnChain/API/Withdraw.hs
+lib/OnChain/API/WithdrawRequest.hs
 lib/OnChain/Client.hs
 lib/OnChain/Core.hs
 lib/OnChain/Logging.hs

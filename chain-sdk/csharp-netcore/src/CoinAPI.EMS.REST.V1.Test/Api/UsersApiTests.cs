@@ -69,6 +69,21 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test ChainsChainIdDappsDexUsersHistoricalGet
+        /// </summary>
+        [Fact]
+        public void ChainsChainIdDappsDexUsersHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.ChainsChainIdDappsDexUsersHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+        }
+
+        /// <summary>
         /// Test ChainsChainIdDappsSushiswapUsersHistoricalGet
         /// </summary>
         [Fact]

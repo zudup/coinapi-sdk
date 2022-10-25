@@ -50,11 +50,15 @@ type APIClient struct {
 
 	// API Services
 
+	BatchApi *BatchApiService
+
 	BundlesApi *BundlesApiService
 
 	BurnsApi *BurnsApiService
 
 	DayDataApi *DayDataApiService
+
+	DepositApi *DepositApiService
 
 	FactoryApi *FactoryApiService
 
@@ -80,7 +84,13 @@ type APIClient struct {
 
 	PositionsApi *PositionsApiService
 
+	PricesApi *PricesApiService
+
 	SettlementApi *SettlementApiService
+
+	SolutionApi *SolutionApiService
+
+	StatsApi *StatsApiService
 
 	SushiswapApi *SushiswapApiService
 
@@ -107,6 +117,10 @@ type APIClient struct {
 	UniswapV3Api *UniswapV3ApiService
 
 	UsersApi *UsersApiService
+
+	WithdrawApi *WithdrawApiService
+
+	WithdrawRequestApi *WithdrawRequestApiService
 }
 
 type service struct {
@@ -125,9 +139,11 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.BatchApi = (*BatchApiService)(&c.common)
 	c.BundlesApi = (*BundlesApiService)(&c.common)
 	c.BurnsApi = (*BurnsApiService)(&c.common)
 	c.DayDataApi = (*DayDataApiService)(&c.common)
+	c.DepositApi = (*DepositApiService)(&c.common)
 	c.FactoryApi = (*FactoryApiService)(&c.common)
 	c.HourDataApi = (*HourDataApiService)(&c.common)
 	c.LiquidityPositionApi = (*LiquidityPositionApiService)(&c.common)
@@ -140,7 +156,10 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.PoolsApi = (*PoolsApiService)(&c.common)
 	c.PositionSnapshotApi = (*PositionSnapshotApiService)(&c.common)
 	c.PositionsApi = (*PositionsApiService)(&c.common)
+	c.PricesApi = (*PricesApiService)(&c.common)
 	c.SettlementApi = (*SettlementApiService)(&c.common)
+	c.SolutionApi = (*SolutionApiService)(&c.common)
+	c.StatsApi = (*StatsApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
 	c.SwapsApi = (*SwapsApiService)(&c.common)
 	c.TickDayDataApi = (*TickDayDataApiService)(&c.common)
@@ -154,6 +173,8 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
 	c.UsersApi = (*UsersApiService)(&c.common)
+	c.WithdrawApi = (*WithdrawApiService)(&c.common)
+	c.WithdrawRequestApi = (*WithdrawRequestApiService)(&c.common)
 
 	return c
 }

@@ -4,9 +4,11 @@
 README.md
 config/config.exs
 config/runtime.exs
+lib/on_chain_api/api/batch.ex
 lib/on_chain_api/api/bundles.ex
 lib/on_chain_api/api/burns.ex
 lib/on_chain_api/api/day_data.ex
+lib/on_chain_api/api/deposit.ex
 lib/on_chain_api/api/factory.ex
 lib/on_chain_api/api/hour_data.ex
 lib/on_chain_api/api/liquidity_position.ex
@@ -19,7 +21,10 @@ lib/on_chain_api/api/pool_hour_data.ex
 lib/on_chain_api/api/pools.ex
 lib/on_chain_api/api/position_snapshot.ex
 lib/on_chain_api/api/positions.ex
+lib/on_chain_api/api/prices.ex
 lib/on_chain_api/api/settlement.ex
+lib/on_chain_api/api/solution.ex
+lib/on_chain_api/api/stats.ex
 lib/on_chain_api/api/sushiswap.ex
 lib/on_chain_api/api/swaps.ex
 lib/on_chain_api/api/tick_day_data.ex
@@ -33,6 +38,8 @@ lib/on_chain_api/api/uniswap_day_data.ex
 lib/on_chain_api/api/uniswap_v2.ex
 lib/on_chain_api/api/uniswap_v3.ex
 lib/on_chain_api/api/users.ex
+lib/on_chain_api/api/withdraw.ex
+lib/on_chain_api/api/withdraw_request.ex
 lib/on_chain_api/connection.ex
 lib/on_chain_api/deserializer.ex
 lib/on_chain_api/model/big_integer.ex

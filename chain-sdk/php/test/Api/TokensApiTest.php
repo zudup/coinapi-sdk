@@ -97,18 +97,6 @@ class TokensApiTest extends TestCase
     }
 
     /**
-     * Test case for chainsChainIdDappsDexTokensHistoricalGet
-     *
-     * .
-     *
-     */
-    public function testChainsChainIdDappsDexTokensHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for chainsChainIdDappsSushiswapTokensHistoricalGet
      *
      * .

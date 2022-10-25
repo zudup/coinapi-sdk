@@ -12,6 +12,10 @@ PoiAPI_chainsChainIdDappsCowPoiHistoricalGet(apiClient_t *apiClient, char * chai
 
 
 void
+PoiAPI_chainsChainIdDappsDexPoiHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
 PoiAPI_chainsChainIdDappsSushiswapPoiHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

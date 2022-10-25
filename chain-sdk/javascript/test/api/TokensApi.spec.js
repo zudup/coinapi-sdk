@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('chainsChainIdDappsDexTokensHistoricalGet', function() {
-      it('should call chainsChainIdDappsDexTokensHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsDexTokensHistoricalGet
-        //instance.chainsChainIdDappsDexTokensHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('chainsChainIdDappsSushiswapTokensHistoricalGet', function() {
       it('should call chainsChainIdDappsSushiswapTokensHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsSushiswapTokensHistoricalGet

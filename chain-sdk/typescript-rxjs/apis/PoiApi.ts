@@ -24,6 +24,14 @@ export interface ChainsChainIdDappsCowPoiHistoricalGetRequest {
     endDate?: string;
 }
 
+export interface ChainsChainIdDappsDexPoiHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
 export interface ChainsChainIdDappsSushiswapPoiHistoricalGetRequest {
     chainId: string;
     startBlock?: number;
@@ -69,6 +77,27 @@ export class PoiApi extends BaseAPI {
 
         return this.request<void>({
             url: '/chains/{chain_id}/dapps/cow/poi/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    chainsChainIdDappsDexPoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsDexPoiHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsDexPoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsDexPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsDexPoiHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate }: ChainsChainIdDappsDexPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsDexPoiHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/dex/poi/historical'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
             query,
         }, opts?.responseOpts);

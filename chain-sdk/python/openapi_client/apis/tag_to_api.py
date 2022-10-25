@@ -4,9 +4,11 @@ from openapi_client.apis.tags import TagValues
 from openapi_client.apis.tags.sushiswap_api import SushiswapApi
 from openapi_client.apis.tags.uniswap_v2_api import UniswapV2Api
 from openapi_client.apis.tags.uniswap_v3_api import UniswapV3Api
+from openapi_client.apis.tags.batch_api import BatchApi
 from openapi_client.apis.tags.bundles_api import BundlesApi
 from openapi_client.apis.tags.burns_api import BurnsApi
 from openapi_client.apis.tags.day_data_api import DayDataApi
+from openapi_client.apis.tags.deposit_api import DepositApi
 from openapi_client.apis.tags.factory_api import FactoryApi
 from openapi_client.apis.tags.hour_data_api import HourDataApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
@@ -19,7 +21,10 @@ from openapi_client.apis.tags.pool_hour_data_api import PoolHourDataApi
 from openapi_client.apis.tags.pools_api import PoolsApi
 from openapi_client.apis.tags.position_snapshot_api import PositionSnapshotApi
 from openapi_client.apis.tags.positions_api import PositionsApi
+from openapi_client.apis.tags.prices_api import PricesApi
 from openapi_client.apis.tags.settlement_api import SettlementApi
+from openapi_client.apis.tags.solution_api import SolutionApi
+from openapi_client.apis.tags.stats_api import StatsApi
 from openapi_client.apis.tags.swaps_api import SwapsApi
 from openapi_client.apis.tags.tick_day_data_api import TickDayDataApi
 from openapi_client.apis.tags.ticks_api import TicksApi
@@ -30,6 +35,8 @@ from openapi_client.apis.tags.trades_api import TradesApi
 from openapi_client.apis.tags.transactions_api import TransactionsApi
 from openapi_client.apis.tags.uniswap_day_data_api import UniswapDayDataApi
 from openapi_client.apis.tags.users_api import UsersApi
+from openapi_client.apis.tags.withdraw_api import WithdrawApi
+from openapi_client.apis.tags.withdraw_request_api import WithdrawRequestApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -37,9 +44,11 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.SUSHISWAP: SushiswapApi,
         TagValues.UNISWAP_V2: UniswapV2Api,
         TagValues.UNISWAP_V3: UniswapV3Api,
+        TagValues.BATCH: BatchApi,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
         TagValues.DAY_DATA: DayDataApi,
+        TagValues.DEPOSIT: DepositApi,
         TagValues.FACTORY: FactoryApi,
         TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
@@ -52,7 +61,10 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.POOLS: PoolsApi,
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
+        TagValues.PRICES: PricesApi,
         TagValues.SETTLEMENT: SettlementApi,
+        TagValues.SOLUTION: SolutionApi,
+        TagValues.STATS: StatsApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,
@@ -63,6 +75,8 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.TRANSACTIONS: TransactionsApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
         TagValues.USERS: UsersApi,
+        TagValues.WITHDRAW: WithdrawApi,
+        TagValues.WITHDRAW_REQUEST: WithdrawRequestApi,
     }
 )
 
@@ -71,9 +85,11 @@ tag_to_api = TagToApi(
         TagValues.SUSHISWAP: SushiswapApi,
         TagValues.UNISWAP_V2: UniswapV2Api,
         TagValues.UNISWAP_V3: UniswapV3Api,
+        TagValues.BATCH: BatchApi,
         TagValues.BUNDLES: BundlesApi,
         TagValues.BURNS: BurnsApi,
         TagValues.DAY_DATA: DayDataApi,
+        TagValues.DEPOSIT: DepositApi,
         TagValues.FACTORY: FactoryApi,
         TagValues.HOUR_DATA: HourDataApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
@@ -86,7 +102,10 @@ tag_to_api = TagToApi(
         TagValues.POOLS: PoolsApi,
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
+        TagValues.PRICES: PricesApi,
         TagValues.SETTLEMENT: SettlementApi,
+        TagValues.SOLUTION: SolutionApi,
+        TagValues.STATS: StatsApi,
         TagValues.SWAPS: SwapsApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,
@@ -97,5 +116,7 @@ tag_to_api = TagToApi(
         TagValues.TRANSACTIONS: TransactionsApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
         TagValues.USERS: UsersApi,
+        TagValues.WITHDRAW: WithdrawApi,
+        TagValues.WITHDRAW_REQUEST: WithdrawRequestApi,
     }
 )

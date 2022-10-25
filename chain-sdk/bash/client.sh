@@ -95,6 +95,11 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 0 - optional
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::endBlock"]=0
@@ -133,6 +138,12 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapDayDataHist
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::endBlock"]=0
@@ -200,11 +211,22 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsCowOrdersHistoricalG
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::tokenId"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::endBlock"]=0
@@ -292,11 +314,28 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsHi
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::poolId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::tokenId"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=1
@@ -372,12 +411,6 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistorica
 operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=1
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=0
@@ -468,6 +501,11 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsCowUsersHistoricalGe
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::chain_id"]=1
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::endBlock"]=0
@@ -478,6 +516,18 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistor
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::chain_id"]=1
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endBlock"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::tokenId"]=0
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -486,6 +536,11 @@ operation_parameters_minimum_occurrences["chainsChainIdDappsUniswapv2UsersHistor
 # N - N values
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexBatchHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapBundlesHistoricalGet:::endBlock"]=0
@@ -524,6 +579,12 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapDayDataHist
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapFactoryHistoricalGet:::endBlock"]=0
@@ -591,11 +652,22 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsCowOrdersHistoricalG
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowOrdersHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexOrdersHistoricalGet:::tokenId"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowPoiHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoiHistoricalGet:::endBlock"]=0
@@ -683,11 +755,28 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsHi
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::poolId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexPricesHistoricalGet:::tokenId"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowSettlementHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexSolutionHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexStatsHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=0
@@ -763,12 +852,6 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistorica
 operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=0
@@ -859,6 +942,11 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsCowUsersHistoricalGe
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsCowUsersHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexUsersHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::chain_id"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsSushiswapUsersHistoricalGet:::endBlock"]=0
@@ -869,11 +957,28 @@ operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistor
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::chain_id"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endBlock"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::tokenId"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
+operation_parameters_collection_type["chainsChainIdDappsDexBatchHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexBatchHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexBatchHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexBatchHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexBatchHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapBundlesHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapBundlesHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapBundlesHistoricalGet:::endBlock"]=""
@@ -912,6 +1017,12 @@ operation_parameters_collection_type["chainsChainIdDappsSushiswapDayDataHistoric
 operation_parameters_collection_type["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapDayDataHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapDayDataHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapFactoryHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapFactoryHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapFactoryHistoricalGet:::endBlock"]=""
@@ -979,11 +1090,22 @@ operation_parameters_collection_type["chainsChainIdDappsCowOrdersHistoricalGet::
 operation_parameters_collection_type["chainsChainIdDappsCowOrdersHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowOrdersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowOrdersHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexOrdersHistoricalGet:::tokenId"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowPoiHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowPoiHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowPoiHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowPoiHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowPoiHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPoiHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPoiHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPoiHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPoiHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapPoiHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapPoiHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapPoiHistoricalGet:::endBlock"]=""
@@ -1071,11 +1193,28 @@ operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsHistor
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv3PositionsHistoricalGet:::poolId"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexPricesHistoricalGet:::tokenId"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowSettlementHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowSettlementHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowSettlementHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowSettlementHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowSettlementHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexSolutionHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexStatsHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexStatsHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexStatsHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexStatsHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexStatsHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapPoolsCurrentGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapSwapsCurrentGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensCurrentGet:::chain_id"]=""
@@ -1151,12 +1290,6 @@ operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet
 operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCurveTokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::chain_id"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["chainsChainIdDappsDexTokensHistoricalGet:::tokenId"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapTokensHistoricalGet:::endBlock"]=""
@@ -1247,6 +1380,11 @@ operation_parameters_collection_type["chainsChainIdDappsCowUsersHistoricalGet:::
 operation_parameters_collection_type["chainsChainIdDappsCowUsersHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowUsersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsCowUsersHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexUsersHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexUsersHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexUsersHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexUsersHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexUsersHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapUsersHistoricalGet:::chain_id"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapUsersHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsSushiswapUsersHistoricalGet:::endBlock"]=""
@@ -1257,6 +1395,18 @@ operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistorical
 operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["chainsChainIdDappsUniswapv2UsersHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::chain_id"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endBlock"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::startDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["chainsChainIdDappsDexWithdrawRequestHistoricalGet:::tokenId"]=""
 
 
 ##
@@ -1639,6 +1789,12 @@ ${BOLD}${WHITE}Usage${OFF}
 EOF
     echo -e "${BOLD}${WHITE}Operations (grouped by tags)${OFF}"
     echo ""
+    echo -e "${BOLD}${WHITE}[batch]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexBatchHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[bundles]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsSushiswapBundlesHistoricalGet${OFF};
@@ -1658,6 +1814,12 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[dayData]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsSushiswapDayDataHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[deposit]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexTokensHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1700,12 +1862,14 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[orders]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsCowOrdersHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsDexOrdersHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[poi]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsCowPoiHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsDexPoiHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsSushiswapPoiHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsUniswapv2PoiHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsUniswapv3PoiHistoricalGet${OFF};
@@ -1749,9 +1913,27 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[prices]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexPricesHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[settlement]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsCowSettlementHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[solution]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexSolutionHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[stats]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexStatsHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1802,7 +1984,6 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsCowTokensHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsCurveTokensHistoricalGet${OFF};
-  ${CYAN}chainsChainIdDappsDexTokensHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsSushiswapTokensHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsUniswapv2TokensHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsUniswapv3TokensHistoricalGet${OFF};
@@ -1863,8 +2044,21 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[users]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}chainsChainIdDappsCowUsersHistoricalGet${OFF};
+  ${CYAN}chainsChainIdDappsDexUsersHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsSushiswapUsersHistoricalGet${OFF};
   ${CYAN}chainsChainIdDappsUniswapv2UsersHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[withdraw]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexWithdrawHistoricalGet${OFF};
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[withdrawRequest]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}chainsChainIdDappsDexWithdrawRequestHistoricalGet${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1920,6 +2114,30 @@ print_version() {
     echo ""
 }
 
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexBatchHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexBatchHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexBatchHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
 ##############################################################################
 #
 # Print help for chainsChainIdDappsSushiswapBundlesHistoricalGet operation
@@ -2088,6 +2306,32 @@ print_chainsChainIdDappsSushiswapDayDataHistoricalGet_help() {
     echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexTokensHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexTokensHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2398,12 +2642,62 @@ print_chainsChainIdDappsCowOrdersHistoricalGet_help() {
 }
 ##############################################################################
 #
+# Print help for chainsChainIdDappsDexOrdersHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexOrdersHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexOrdersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for chainsChainIdDappsCowPoiHistoricalGet operation
 #
 ##############################################################################
 print_chainsChainIdDappsCowPoiHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}chainsChainIdDappsCowPoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexPoiHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexPoiHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexPoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2806,12 +3100,88 @@ print_chainsChainIdDappsUniswapv3PositionsHistoricalGet_help() {
 }
 ##############################################################################
 #
+# Print help for chainsChainIdDappsDexPricesHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexPricesHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexPricesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for chainsChainIdDappsCowSettlementHistoricalGet operation
 #
 ##############################################################################
 print_chainsChainIdDappsCowSettlementHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}chainsChainIdDappsCowSettlementHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexSolutionHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexSolutionHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexSolutionHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexStatsHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexStatsHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexStatsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3172,32 +3542,6 @@ print_chainsChainIdDappsCowTokensHistoricalGet_help() {
 print_chainsChainIdDappsCurveTokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}chainsChainIdDappsCurveTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for chainsChainIdDappsDexTokensHistoricalGet operation
-#
-##############################################################################
-print_chainsChainIdDappsDexTokensHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3818,6 +4162,30 @@ print_chainsChainIdDappsCowUsersHistoricalGet_help() {
 }
 ##############################################################################
 #
+# Print help for chainsChainIdDappsDexUsersHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexUsersHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexUsersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for chainsChainIdDappsSushiswapUsersHistoricalGet operation
 #
 ##############################################################################
@@ -3864,7 +4232,95 @@ print_chainsChainIdDappsUniswapv2UsersHistoricalGet_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexWithdrawHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexWithdrawHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexWithdrawHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for chainsChainIdDappsDexWithdrawRequestHistoricalGet operation
+#
+##############################################################################
+print_chainsChainIdDappsDexWithdrawRequestHistoricalGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}chainsChainIdDappsDexWithdrawRequestHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
 
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexBatchHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexBatchHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/batch/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
 
 ##############################################################################
 #
@@ -4097,6 +4553,42 @@ call_chainsChainIdDappsSushiswapDayDataHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/chains/{chain_id}/dapps/sushiswap/dayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexTokensHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexTokensHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/tokens/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -4552,6 +5044,42 @@ call_chainsChainIdDappsCowOrdersHistoricalGet() {
 
 ##############################################################################
 #
+# Call chainsChainIdDappsDexOrdersHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexOrdersHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/orders/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call chainsChainIdDappsCowPoiHistoricalGet operation
 #
 ##############################################################################
@@ -4565,6 +5093,42 @@ call_chainsChainIdDappsCowPoiHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/chains/{chain_id}/dapps/cow/poi/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexPoiHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexPoiHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5128,6 +5692,42 @@ call_chainsChainIdDappsUniswapv3PositionsHistoricalGet() {
 
 ##############################################################################
 #
+# Call chainsChainIdDappsDexPricesHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexPricesHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/prices/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call chainsChainIdDappsCowSettlementHistoricalGet operation
 #
 ##############################################################################
@@ -5141,6 +5741,78 @@ call_chainsChainIdDappsCowSettlementHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/chains/{chain_id}/dapps/cow/settlement/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexSolutionHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexSolutionHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/solution/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexStatsHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexStatsHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/stats/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5681,42 +6353,6 @@ call_chainsChainIdDappsCurveTokensHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/chains/{chain_id}/dapps/curve/tokens/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call chainsChainIdDappsDexTokensHistoricalGet operation
-#
-##############################################################################
-call_chainsChainIdDappsDexTokensHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(chain_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
-    local path
-
-    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/tokens/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6820,6 +7456,42 @@ call_chainsChainIdDappsCowUsersHistoricalGet() {
 
 ##############################################################################
 #
+# Call chainsChainIdDappsDexUsersHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexUsersHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/users/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call chainsChainIdDappsSushiswapUsersHistoricalGet operation
 #
 ##############################################################################
@@ -6869,6 +7541,78 @@ call_chainsChainIdDappsUniswapv2UsersHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/chains/{chain_id}/dapps/uniswapv2/users/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexWithdrawHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexWithdrawHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/withdraw/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call chainsChainIdDappsDexWithdrawRequestHistoricalGet operation
+#
+##############################################################################
+call_chainsChainIdDappsDexWithdrawRequestHistoricalGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(chain_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/chains/{chain_id}/dapps/dex/withdrawRequest/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6987,6 +7731,9 @@ case $key in
         OFF=""
         result_color_table=( "" "" "" "" "" "" "" )
     ;;
+    chainsChainIdDappsDexBatchHistoricalGet)
+    operation="chainsChainIdDappsDexBatchHistoricalGet"
+    ;;
     chainsChainIdDappsSushiswapBundlesHistoricalGet)
     operation="chainsChainIdDappsSushiswapBundlesHistoricalGet"
     ;;
@@ -7007,6 +7754,9 @@ case $key in
     ;;
     chainsChainIdDappsSushiswapDayDataHistoricalGet)
     operation="chainsChainIdDappsSushiswapDayDataHistoricalGet"
+    ;;
+    chainsChainIdDappsDexTokensHistoricalGet)
+    operation="chainsChainIdDappsDexTokensHistoricalGet"
     ;;
     chainsChainIdDappsSushiswapFactoryHistoricalGet)
     operation="chainsChainIdDappsSushiswapFactoryHistoricalGet"
@@ -7044,8 +7794,14 @@ case $key in
     chainsChainIdDappsCowOrdersHistoricalGet)
     operation="chainsChainIdDappsCowOrdersHistoricalGet"
     ;;
+    chainsChainIdDappsDexOrdersHistoricalGet)
+    operation="chainsChainIdDappsDexOrdersHistoricalGet"
+    ;;
     chainsChainIdDappsCowPoiHistoricalGet)
     operation="chainsChainIdDappsCowPoiHistoricalGet"
+    ;;
+    chainsChainIdDappsDexPoiHistoricalGet)
+    operation="chainsChainIdDappsDexPoiHistoricalGet"
     ;;
     chainsChainIdDappsSushiswapPoiHistoricalGet)
     operation="chainsChainIdDappsSushiswapPoiHistoricalGet"
@@ -7092,8 +7848,17 @@ case $key in
     chainsChainIdDappsUniswapv3PositionsHistoricalGet)
     operation="chainsChainIdDappsUniswapv3PositionsHistoricalGet"
     ;;
+    chainsChainIdDappsDexPricesHistoricalGet)
+    operation="chainsChainIdDappsDexPricesHistoricalGet"
+    ;;
     chainsChainIdDappsCowSettlementHistoricalGet)
     operation="chainsChainIdDappsCowSettlementHistoricalGet"
+    ;;
+    chainsChainIdDappsDexSolutionHistoricalGet)
+    operation="chainsChainIdDappsDexSolutionHistoricalGet"
+    ;;
+    chainsChainIdDappsDexStatsHistoricalGet)
+    operation="chainsChainIdDappsDexStatsHistoricalGet"
     ;;
     chainsChainIdDappsSushiswapPoolsCurrentGet)
     operation="chainsChainIdDappsSushiswapPoolsCurrentGet"
@@ -7139,9 +7904,6 @@ case $key in
     ;;
     chainsChainIdDappsCurveTokensHistoricalGet)
     operation="chainsChainIdDappsCurveTokensHistoricalGet"
-    ;;
-    chainsChainIdDappsDexTokensHistoricalGet)
-    operation="chainsChainIdDappsDexTokensHistoricalGet"
     ;;
     chainsChainIdDappsSushiswapTokensHistoricalGet)
     operation="chainsChainIdDappsSushiswapTokensHistoricalGet"
@@ -7233,11 +7995,20 @@ case $key in
     chainsChainIdDappsCowUsersHistoricalGet)
     operation="chainsChainIdDappsCowUsersHistoricalGet"
     ;;
+    chainsChainIdDappsDexUsersHistoricalGet)
+    operation="chainsChainIdDappsDexUsersHistoricalGet"
+    ;;
     chainsChainIdDappsSushiswapUsersHistoricalGet)
     operation="chainsChainIdDappsSushiswapUsersHistoricalGet"
     ;;
     chainsChainIdDappsUniswapv2UsersHistoricalGet)
     operation="chainsChainIdDappsUniswapv2UsersHistoricalGet"
+    ;;
+    chainsChainIdDappsDexWithdrawHistoricalGet)
+    operation="chainsChainIdDappsDexWithdrawHistoricalGet"
+    ;;
+    chainsChainIdDappsDexWithdrawRequestHistoricalGet)
+    operation="chainsChainIdDappsDexWithdrawRequestHistoricalGet"
     ;;
     *==*)
     # Parse body arguments and convert them into top level
@@ -7316,6 +8087,9 @@ fi
 
 # Run cURL command based on the operation ID
 case $operation in
+    chainsChainIdDappsDexBatchHistoricalGet)
+    call_chainsChainIdDappsDexBatchHistoricalGet
+    ;;
     chainsChainIdDappsSushiswapBundlesHistoricalGet)
     call_chainsChainIdDappsSushiswapBundlesHistoricalGet
     ;;
@@ -7336,6 +8110,9 @@ case $operation in
     ;;
     chainsChainIdDappsSushiswapDayDataHistoricalGet)
     call_chainsChainIdDappsSushiswapDayDataHistoricalGet
+    ;;
+    chainsChainIdDappsDexTokensHistoricalGet)
+    call_chainsChainIdDappsDexTokensHistoricalGet
     ;;
     chainsChainIdDappsSushiswapFactoryHistoricalGet)
     call_chainsChainIdDappsSushiswapFactoryHistoricalGet
@@ -7373,8 +8150,14 @@ case $operation in
     chainsChainIdDappsCowOrdersHistoricalGet)
     call_chainsChainIdDappsCowOrdersHistoricalGet
     ;;
+    chainsChainIdDappsDexOrdersHistoricalGet)
+    call_chainsChainIdDappsDexOrdersHistoricalGet
+    ;;
     chainsChainIdDappsCowPoiHistoricalGet)
     call_chainsChainIdDappsCowPoiHistoricalGet
+    ;;
+    chainsChainIdDappsDexPoiHistoricalGet)
+    call_chainsChainIdDappsDexPoiHistoricalGet
     ;;
     chainsChainIdDappsSushiswapPoiHistoricalGet)
     call_chainsChainIdDappsSushiswapPoiHistoricalGet
@@ -7421,8 +8204,17 @@ case $operation in
     chainsChainIdDappsUniswapv3PositionsHistoricalGet)
     call_chainsChainIdDappsUniswapv3PositionsHistoricalGet
     ;;
+    chainsChainIdDappsDexPricesHistoricalGet)
+    call_chainsChainIdDappsDexPricesHistoricalGet
+    ;;
     chainsChainIdDappsCowSettlementHistoricalGet)
     call_chainsChainIdDappsCowSettlementHistoricalGet
+    ;;
+    chainsChainIdDappsDexSolutionHistoricalGet)
+    call_chainsChainIdDappsDexSolutionHistoricalGet
+    ;;
+    chainsChainIdDappsDexStatsHistoricalGet)
+    call_chainsChainIdDappsDexStatsHistoricalGet
     ;;
     chainsChainIdDappsSushiswapPoolsCurrentGet)
     call_chainsChainIdDappsSushiswapPoolsCurrentGet
@@ -7468,9 +8260,6 @@ case $operation in
     ;;
     chainsChainIdDappsCurveTokensHistoricalGet)
     call_chainsChainIdDappsCurveTokensHistoricalGet
-    ;;
-    chainsChainIdDappsDexTokensHistoricalGet)
-    call_chainsChainIdDappsDexTokensHistoricalGet
     ;;
     chainsChainIdDappsSushiswapTokensHistoricalGet)
     call_chainsChainIdDappsSushiswapTokensHistoricalGet
@@ -7562,11 +8351,20 @@ case $operation in
     chainsChainIdDappsCowUsersHistoricalGet)
     call_chainsChainIdDappsCowUsersHistoricalGet
     ;;
+    chainsChainIdDappsDexUsersHistoricalGet)
+    call_chainsChainIdDappsDexUsersHistoricalGet
+    ;;
     chainsChainIdDappsSushiswapUsersHistoricalGet)
     call_chainsChainIdDappsSushiswapUsersHistoricalGet
     ;;
     chainsChainIdDappsUniswapv2UsersHistoricalGet)
     call_chainsChainIdDappsUniswapv2UsersHistoricalGet
+    ;;
+    chainsChainIdDappsDexWithdrawHistoricalGet)
+    call_chainsChainIdDappsDexWithdrawHistoricalGet
+    ;;
+    chainsChainIdDappsDexWithdrawRequestHistoricalGet)
+    call_chainsChainIdDappsDexWithdrawRequestHistoricalGet
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

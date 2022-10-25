@@ -1,9 +1,13 @@
+export * from './batchApi';
+import { BatchApi } from './batchApi';
 export * from './bundlesApi';
 import { BundlesApi } from './bundlesApi';
 export * from './burnsApi';
 import { BurnsApi } from './burnsApi';
 export * from './dayDataApi';
 import { DayDataApi } from './dayDataApi';
+export * from './depositApi';
+import { DepositApi } from './depositApi';
 export * from './factoryApi';
 import { FactoryApi } from './factoryApi';
 export * from './hourDataApi';
@@ -28,8 +32,14 @@ export * from './positionSnapshotApi';
 import { PositionSnapshotApi } from './positionSnapshotApi';
 export * from './positionsApi';
 import { PositionsApi } from './positionsApi';
+export * from './pricesApi';
+import { PricesApi } from './pricesApi';
 export * from './settlementApi';
 import { SettlementApi } from './settlementApi';
+export * from './solutionApi';
+import { SolutionApi } from './solutionApi';
+export * from './statsApi';
+import { StatsApi } from './statsApi';
 export * from './sushiswapApi';
 import { SushiswapApi } from './sushiswapApi';
 export * from './swapsApi';
@@ -56,6 +66,10 @@ export * from './uniswapV3Api';
 import { UniswapV3Api } from './uniswapV3Api';
 export * from './usersApi';
 import { UsersApi } from './usersApi';
+export * from './withdrawApi';
+import { WithdrawApi } from './withdrawApi';
+export * from './withdrawRequestApi';
+import { WithdrawRequestApi } from './withdrawRequestApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -67,4 +81,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [BundlesApi, BurnsApi, DayDataApi, FactoryApi, HourDataApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, MintsApi, OrdersApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, SettlementApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api, UsersApi];
+export const APIS = [BatchApi, BundlesApi, BurnsApi, DayDataApi, DepositApi, FactoryApi, HourDataApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, MintsApi, OrdersApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, PricesApi, SettlementApi, SolutionApi, StatsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api, UsersApi, WithdrawApi, WithdrawRequestApi];

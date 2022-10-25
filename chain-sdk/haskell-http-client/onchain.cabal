@@ -64,9 +64,11 @@ library
   exposed-modules:
       OnChain
       OnChain.API
+      OnChain.API.Batch
       OnChain.API.Bundles
       OnChain.API.Burns
       OnChain.API.DayData
+      OnChain.API.Deposit
       OnChain.API.Factory
       OnChain.API.HourData
       OnChain.API.LiquidityPosition
@@ -79,7 +81,10 @@ library
       OnChain.API.Pools
       OnChain.API.PositionSnapshot
       OnChain.API.Positions
+      OnChain.API.Prices
       OnChain.API.Settlement
+      OnChain.API.Solution
+      OnChain.API.Stats
       OnChain.API.Sushiswap
       OnChain.API.Swaps
       OnChain.API.TickDayData
@@ -93,6 +98,8 @@ library
       OnChain.API.UniswapV2
       OnChain.API.UniswapV3
       OnChain.API.Users
+      OnChain.API.Withdraw
+      OnChain.API.WithdrawRequest
       OnChain.Client
       OnChain.Core
       OnChain.Logging

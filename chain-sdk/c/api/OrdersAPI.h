@@ -11,3 +11,7 @@ void
 OrdersAPI_chainsChainIdDappsCowOrdersHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 
+void
+OrdersAPI_chainsChainIdDappsDexOrdersHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+

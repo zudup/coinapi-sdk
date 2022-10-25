@@ -16,6 +16,7 @@
 
 module Api.Request.Users exposing
     ( chainsChainIdDappsCowUsersHistoricalGet
+    , chainsChainIdDappsDexUsersHistoricalGet
     , chainsChainIdDappsSushiswapUsersHistoricalGet
     , chainsChainIdDappsUniswapv2UsersHistoricalGet
     )
@@ -35,6 +36,19 @@ chainsChainIdDappsCowUsersHistoricalGet chainId_path startBlock_query endBlock_q
     Api.request
         "GET"
         "/chains/{chain_id}/dapps/cow/users/historical"
+        [ ( "chainId", identity chainId_path ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+chainsChainIdDappsDexUsersHistoricalGet : String -> Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+chainsChainIdDappsDexUsersHistoricalGet chainId_path startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/chains/{chain_id}/dapps/dex/users/historical"
         [ ( "chainId", identity chainId_path ) ]
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []

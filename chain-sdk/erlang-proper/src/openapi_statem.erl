@@ -58,32 +58,12 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% chains_chain_id_dapps_cow_users_historical_get
+%% chains_chain_id_dapps_dex_withdraw_request_historical_get
 %%==============================================================================
 
-chains_chain_id_dapps_cow_users_historical_get(ChainId) ->
-  openapi_api:chains_chain_id_dapps_cow_users_historical_get(ChainId).
+chains_chain_id_dapps_dex_withdraw_request_historical_get(ChainId) ->
+  openapi_api:chains_chain_id_dapps_dex_withdraw_request_historical_get(ChainId).
 
-chains_chain_id_dapps_cow_users_historical_get_args(_S) ->
-  [binary()].
-
-%%==============================================================================
-%% chains_chain_id_dapps_sushiswap_users_historical_get
-%%==============================================================================
-
-chains_chain_id_dapps_sushiswap_users_historical_get(ChainId) ->
-  openapi_api:chains_chain_id_dapps_sushiswap_users_historical_get(ChainId).
-
-chains_chain_id_dapps_sushiswap_users_historical_get_args(_S) ->
-  [binary()].
-
-%%==============================================================================
-%% chains_chain_id_dapps_uniswapv2_users_historical_get
-%%==============================================================================
-
-chains_chain_id_dapps_uniswapv2_users_historical_get(ChainId) ->
-  openapi_api:chains_chain_id_dapps_uniswapv2_users_historical_get(ChainId).
-
-chains_chain_id_dapps_uniswapv2_users_historical_get_args(_S) ->
+chains_chain_id_dapps_dex_withdraw_request_historical_get_args(_S) ->
   [binary()].
 

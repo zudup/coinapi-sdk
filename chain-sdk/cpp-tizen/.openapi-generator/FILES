@@ -2,6 +2,8 @@
 doc/Doxyfile
 doc/README.md
 doc/generateDocumentation.sh
+src/BatchManager.cpp
+src/BatchManager.h
 src/BigInteger.cpp
 src/BigInteger.h
 src/BundleV3DTO.cpp
@@ -14,6 +16,8 @@ src/BurnsManager.cpp
 src/BurnsManager.h
 src/DayDataManager.cpp
 src/DayDataManager.h
+src/DepositManager.cpp
+src/DepositManager.h
 src/ETradeAggressiveSide.cpp
 src/ETradeAggressiveSide.h
 src/Error.cpp
@@ -65,9 +69,15 @@ src/PositionV3DTO.cpp
 src/PositionV3DTO.h
 src/PositionsManager.cpp
 src/PositionsManager.h
+src/PricesManager.cpp
+src/PricesManager.h
 src/RequestInfo.h
 src/SettlementManager.cpp
 src/SettlementManager.h
+src/SolutionManager.cpp
+src/SolutionManager.h
+src/StatsManager.cpp
+src/StatsManager.h
 src/SushiswapManager.cpp
 src/SushiswapManager.h
 src/SwapDTO.cpp
@@ -116,3 +126,7 @@ src/UniswapV3Manager.cpp
 src/UniswapV3Manager.h
 src/UsersManager.cpp
 src/UsersManager.h
+src/WithdrawManager.cpp
+src/WithdrawManager.h
+src/WithdrawRequestManager.cpp
+src/WithdrawRequestManager.h

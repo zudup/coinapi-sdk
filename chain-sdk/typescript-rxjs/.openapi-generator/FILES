@@ -1,8 +1,10 @@
 .gitignore
 .openapi-generator-ignore
+apis/BatchApi.ts
 apis/BundlesApi.ts
 apis/BurnsApi.ts
 apis/DayDataApi.ts
+apis/DepositApi.ts
 apis/FactoryApi.ts
 apis/HourDataApi.ts
 apis/LiquidityPositionApi.ts
@@ -15,7 +17,10 @@ apis/PoolHourDataApi.ts
 apis/PoolsApi.ts
 apis/PositionSnapshotApi.ts
 apis/PositionsApi.ts
+apis/PricesApi.ts
 apis/SettlementApi.ts
+apis/SolutionApi.ts
+apis/StatsApi.ts
 apis/SushiswapApi.ts
 apis/SwapsApi.ts
 apis/TickDayDataApi.ts
@@ -29,6 +34,8 @@ apis/UniswapDayDataApi.ts
 apis/UniswapV2Api.ts
 apis/UniswapV3Api.ts
 apis/UsersApi.ts
+apis/WithdrawApi.ts
+apis/WithdrawRequestApi.ts
 apis/index.ts
 index.ts
 models/BigInteger.ts

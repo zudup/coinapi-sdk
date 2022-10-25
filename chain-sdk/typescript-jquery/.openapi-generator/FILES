@@ -1,7 +1,9 @@
 .openapi-generator-ignore
+api/BatchApi.ts
 api/BundlesApi.ts
 api/BurnsApi.ts
 api/DayDataApi.ts
+api/DepositApi.ts
 api/FactoryApi.ts
 api/HourDataApi.ts
 api/LiquidityPositionApi.ts
@@ -14,7 +16,10 @@ api/PoolHourDataApi.ts
 api/PoolsApi.ts
 api/PositionSnapshotApi.ts
 api/PositionsApi.ts
+api/PricesApi.ts
 api/SettlementApi.ts
+api/SolutionApi.ts
+api/StatsApi.ts
 api/SushiswapApi.ts
 api/SwapsApi.ts
 api/TickDayDataApi.ts
@@ -28,6 +33,8 @@ api/UniswapDayDataApi.ts
 api/UniswapV2Api.ts
 api/UniswapV3Api.ts
 api/UsersApi.ts
+api/WithdrawApi.ts
+api/WithdrawRequestApi.ts
 api/api.ts
 configuration.ts
 git_push.sh

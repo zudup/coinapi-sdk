@@ -2,9 +2,11 @@
 README.md
 build.gradle
 src/main/groovy/org/openapitools/api/ApiUtils.groovy
+src/main/groovy/org/openapitools/api/BatchApi.groovy
 src/main/groovy/org/openapitools/api/BundlesApi.groovy
 src/main/groovy/org/openapitools/api/BurnsApi.groovy
 src/main/groovy/org/openapitools/api/DayDataApi.groovy
+src/main/groovy/org/openapitools/api/DepositApi.groovy
 src/main/groovy/org/openapitools/api/FactoryApi.groovy
 src/main/groovy/org/openapitools/api/HourDataApi.groovy
 src/main/groovy/org/openapitools/api/LiquidityPositionApi.groovy
@@ -17,7 +19,10 @@ src/main/groovy/org/openapitools/api/PoolHourDataApi.groovy
 src/main/groovy/org/openapitools/api/PoolsApi.groovy
 src/main/groovy/org/openapitools/api/PositionSnapshotApi.groovy
 src/main/groovy/org/openapitools/api/PositionsApi.groovy
+src/main/groovy/org/openapitools/api/PricesApi.groovy
 src/main/groovy/org/openapitools/api/SettlementApi.groovy
+src/main/groovy/org/openapitools/api/SolutionApi.groovy
+src/main/groovy/org/openapitools/api/StatsApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/SwapsApi.groovy
 src/main/groovy/org/openapitools/api/TickDayDataApi.groovy
@@ -31,6 +36,8 @@ src/main/groovy/org/openapitools/api/UniswapDayDataApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy
 src/main/groovy/org/openapitools/api/UniswapV3Api.groovy
 src/main/groovy/org/openapitools/api/UsersApi.groovy
+src/main/groovy/org/openapitools/api/WithdrawApi.groovy
+src/main/groovy/org/openapitools/api/WithdrawRequestApi.groovy
 src/main/groovy/org/openapitools/model/BigInteger.groovy
 src/main/groovy/org/openapitools/model/BundleV3DTO.groovy
 src/main/groovy/org/openapitools/model/BurnV3DTO.groovy

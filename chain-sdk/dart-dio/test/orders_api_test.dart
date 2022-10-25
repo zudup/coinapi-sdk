@@ -12,5 +12,10 @@ void main() {
       // TODO
     });
 
+    //Future chainsChainIdDappsDexOrdersHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test chainsChainIdDappsDexOrdersHistoricalGet', () async {
+      // TODO
+    });
+
   });
 }

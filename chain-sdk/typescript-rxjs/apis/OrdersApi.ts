@@ -24,6 +24,15 @@ export interface ChainsChainIdDappsCowOrdersHistoricalGetRequest {
     endDate?: string;
 }
 
+export interface ChainsChainIdDappsDexOrdersHistoricalGetRequest {
+    chainId: string;
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    tokenId?: string;
+}
+
 /**
  * no description
  */
@@ -45,6 +54,28 @@ export class OrdersApi extends BaseAPI {
 
         return this.request<void>({
             url: '/chains/{chain_id}/dapps/cow/orders/historical'.replace('{chain_id}', encodeURI(chainId)),
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    chainsChainIdDappsDexOrdersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexOrdersHistoricalGetRequest): Observable<void>
+    chainsChainIdDappsDexOrdersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexOrdersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    chainsChainIdDappsDexOrdersHistoricalGet({ chainId, startBlock, endBlock, startDate, endDate, tokenId }: ChainsChainIdDappsDexOrdersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsDexOrdersHistoricalGet');
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<void>({
+            url: '/chains/{chain_id}/dapps/dex/orders/historical'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
             query,
         }, opts?.responseOpts);

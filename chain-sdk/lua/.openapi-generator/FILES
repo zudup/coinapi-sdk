@@ -2,9 +2,11 @@
 .openapi-generator-ignore
 git_push.sh
 openapiclient-1.0.0-1.rockspec
+openapiclient/api/batch_api.lua
 openapiclient/api/bundles_api.lua
 openapiclient/api/burns_api.lua
 openapiclient/api/day_data_api.lua
+openapiclient/api/deposit_api.lua
 openapiclient/api/factory_api.lua
 openapiclient/api/hour_data_api.lua
 openapiclient/api/liquidity_position_api.lua
@@ -17,7 +19,10 @@ openapiclient/api/pool_hour_data_api.lua
 openapiclient/api/pools_api.lua
 openapiclient/api/position_snapshot_api.lua
 openapiclient/api/positions_api.lua
+openapiclient/api/prices_api.lua
 openapiclient/api/settlement_api.lua
+openapiclient/api/solution_api.lua
+openapiclient/api/stats_api.lua
 openapiclient/api/sushiswap_api.lua
 openapiclient/api/swaps_api.lua
 openapiclient/api/tick_day_data_api.lua
@@ -31,6 +36,8 @@ openapiclient/api/uniswap_day_data_api.lua
 openapiclient/api/uniswap_v2_api.lua
 openapiclient/api/uniswap_v3_api.lua
 openapiclient/api/users_api.lua
+openapiclient/api/withdraw_api.lua
+openapiclient/api/withdraw_request_api.lua
 openapiclient/model/big_integer.lua
 openapiclient/model/bundle_v3_dto.lua
 openapiclient/model/burn_v3_dto.lua
@@ -55,12 +62,14 @@ openapiclient/model/token_v2_dto.lua
 openapiclient/model/token_v3_day_data_dto.lua
 openapiclient/model/token_v3_dto.lua
 openapiclient/model/uniswap_day_data_v3_dto.lua
+spec/batch_api_spec.lua
 spec/big_integer_spec.lua
 spec/bundle_v3_dto_spec.lua
 spec/bundles_api_spec.lua
 spec/burn_v3_dto_spec.lua
 spec/burns_api_spec.lua
 spec/day_data_api_spec.lua
+spec/deposit_api_spec.lua
 spec/e_trade_aggressive_side_spec.lua
 spec/factory_api_spec.lua
 spec/factory_v3_dto_spec.lua
@@ -83,7 +92,10 @@ spec/position_snapshot_api_spec.lua
 spec/position_snapshot_v3_dto_spec.lua
 spec/position_v3_dto_spec.lua
 spec/positions_api_spec.lua
+spec/prices_api_spec.lua
 spec/settlement_api_spec.lua
+spec/solution_api_spec.lua
+spec/stats_api_spec.lua
 spec/sushiswap_api_spec.lua
 spec/swap_dto_spec.lua
 spec/swap_v2_dto_spec.lua
@@ -108,3 +120,5 @@ spec/uniswap_day_data_v3_dto_spec.lua
 spec/uniswap_v2_api_spec.lua
 spec/uniswap_v3_api_spec.lua
 spec/users_api_spec.lua
+spec/withdraw_api_spec.lua
+spec/withdraw_request_api_spec.lua

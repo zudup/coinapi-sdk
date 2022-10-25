@@ -67,5 +67,21 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //instance.ChainsChainIdDappsCowOrdersHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
         }
+
+        /// <summary>
+        /// Test ChainsChainIdDappsDexOrdersHistoricalGet
+        /// </summary>
+        [Fact]
+        public void ChainsChainIdDappsDexOrdersHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.ChainsChainIdDappsDexOrdersHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, tokenId);
+        }
     }
 }

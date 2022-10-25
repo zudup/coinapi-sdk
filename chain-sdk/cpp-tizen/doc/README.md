@@ -39,6 +39,13 @@ Check out [Doxygen](https://www.doxygen.org/) for additional information about t
 All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 
 
+### BatchManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexBatchHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/batch/historical | .
+*chainsChainIdDappsDexBatchHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/batch/historical | .
+
+
 ### BundlesManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -66,6 +73,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsSushiswapDayDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/dayData/historical | .
 *chainsChainIdDappsSushiswapDayDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/dayData/historical | .
+
+
+### DepositManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexTokensHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/tokens/historical | .
+*chainsChainIdDappsDexTokensHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/tokens/historical | .
 
 
 ### FactoryManager
@@ -120,6 +134,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsCowOrdersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/cow/orders/historical | .
 *chainsChainIdDappsCowOrdersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/orders/historical | .
+*chainsChainIdDappsDexOrdersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/orders/historical | .
+*chainsChainIdDappsDexOrdersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/orders/historical | .
 
 
 ### PoiManager
@@ -127,6 +143,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsCowPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/cow/poi/historical | .
 *chainsChainIdDappsCowPoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/poi/historical | .
+*chainsChainIdDappsDexPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/poi/historical | .
+*chainsChainIdDappsDexPoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/poi/historical | .
 *chainsChainIdDappsSushiswapPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/poi/historical | .
 *chainsChainIdDappsSushiswapPoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/poi/historical | .
 *chainsChainIdDappsUniswapv2PoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/poi/historical | .
@@ -184,11 +202,32 @@ Method | HTTP request | Description
 *chainsChainIdDappsUniswapv3PositionsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv3/positions/historical | .
 
 
+### PricesManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexPricesHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/prices/historical | .
+*chainsChainIdDappsDexPricesHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/prices/historical | .
+
+
 ### SettlementManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsCowSettlementHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/cow/settlement/historical | .
 *chainsChainIdDappsCowSettlementHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/settlement/historical | .
+
+
+### SolutionManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexSolutionHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/solution/historical | .
+*chainsChainIdDappsDexSolutionHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/solution/historical | .
+
+
+### StatsManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexStatsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/stats/historical | .
+*chainsChainIdDappsDexStatsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/stats/historical | .
 
 
 ### SushiswapManager
@@ -254,8 +293,6 @@ Method | HTTP request | Description
 *chainsChainIdDappsCowTokensHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/tokens/historical | .
 *chainsChainIdDappsCurveTokensHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/tokens/historical | .
 *chainsChainIdDappsCurveTokensHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/tokens/historical | .
-*chainsChainIdDappsDexTokensHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/tokens/historical | .
-*chainsChainIdDappsDexTokensHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/tokens/historical | .
 *chainsChainIdDappsSushiswapTokensHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/tokens/historical | .
 *chainsChainIdDappsSushiswapTokensHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/tokens/historical | .
 *chainsChainIdDappsUniswapv2TokensHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/tokens/historical | .
@@ -346,10 +383,26 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsCowUsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/cow/users/historical | .
 *chainsChainIdDappsCowUsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/users/historical | .
+*chainsChainIdDappsDexUsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/users/historical | .
+*chainsChainIdDappsDexUsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/users/historical | .
 *chainsChainIdDappsSushiswapUsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/users/historical | .
 *chainsChainIdDappsSushiswapUsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
 *chainsChainIdDappsUniswapv2UsersHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/users/historical | .
+
+
+### WithdrawManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexWithdrawHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/withdraw/historical | .
+*chainsChainIdDappsDexWithdrawHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/withdraw/historical | .
+
+
+### WithdrawRequestManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsDexWithdrawRequestHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/withdrawRequest/historical | .
+*chainsChainIdDappsDexWithdrawRequestHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/withdrawRequest/historical | .
 
 
 ## What are the Model files for the data structures/objects?

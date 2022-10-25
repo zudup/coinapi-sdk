@@ -83,4 +83,16 @@ class OrdersApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for chainsChainIdDappsDexOrdersHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testChainsChainIdDappsDexOrdersHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

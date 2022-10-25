@@ -22,6 +22,13 @@ describe("poi_api", function()
     end)
   end)
 
+  -- unit tests for chains_chain_id_dapps_dex_poi_historical_get
+  describe("chains_chain_id_dapps_dex_poi_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for chains_chain_id_dapps_sushiswap_poi_historical_get
   describe("chains_chain_id_dapps_sushiswap_poi_historical_get test", function()
     it("should work", function()

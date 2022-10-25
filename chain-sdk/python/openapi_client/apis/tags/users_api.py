@@ -11,12 +11,14 @@
 """
 
 from openapi_client.paths.chains_chain_id_dapps_cow_users_historical.get import ChainsChainIdDappsCowUsersHistoricalGet
+from openapi_client.paths.chains_chain_id_dapps_dex_users_historical.get import ChainsChainIdDappsDexUsersHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_sushiswap_users_historical.get import ChainsChainIdDappsSushiswapUsersHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_uniswapv2_users_historical.get import ChainsChainIdDappsUniswapv2UsersHistoricalGet
 
 
 class UsersApi(
     ChainsChainIdDappsCowUsersHistoricalGet,
+    ChainsChainIdDappsDexUsersHistoricalGet,
     ChainsChainIdDappsSushiswapUsersHistoricalGet,
     ChainsChainIdDappsUniswapv2UsersHistoricalGet,
 ):

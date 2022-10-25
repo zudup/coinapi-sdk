@@ -12,6 +12,10 @@ UsersAPI_chainsChainIdDappsCowUsersHistoricalGet(apiClient_t *apiClient, char * 
 
 
 void
+UsersAPI_chainsChainIdDappsDexUsersHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
 UsersAPI_chainsChainIdDappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate );
 
 

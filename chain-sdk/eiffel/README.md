@@ -26,6 +26,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BATCH_API* | [**chains_chain_id_dapps_dex_batch_historical_get**](docs/BATCH_API.md#chains_chain_id_dapps_dex_batch_historical_get) | **Get** /chains/{chain_id}/dapps/dex/batch/historical | 
 *BUNDLES_API* | [**chains_chain_id_dapps_sushiswap_bundles_historical_get**](docs/BUNDLES_API.md#chains_chain_id_dapps_sushiswap_bundles_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/bundles/historical | 
 *BUNDLES_API* | [**chains_chain_id_dapps_uniswapv2_bundles_historical_get**](docs/BUNDLES_API.md#chains_chain_id_dapps_uniswapv2_bundles_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/bundles/historical | 
 *BUNDLES_API* | [**chains_chain_id_dapps_uniswapv3_bundles_historical_get**](docs/BUNDLES_API.md#chains_chain_id_dapps_uniswapv3_bundles_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/bundles/historical | 
@@ -33,6 +34,7 @@ Class | Method | HTTP request | Description
 *BURNS_API* | [**chains_chain_id_dapps_uniswapv2_burns_historical_get**](docs/BURNS_API.md#chains_chain_id_dapps_uniswapv2_burns_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/burns/historical | 
 *BURNS_API* | [**chains_chain_id_dapps_uniswapv3_burns_historical_get**](docs/BURNS_API.md#chains_chain_id_dapps_uniswapv3_burns_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/burns/historical | 
 *DAYDATA_API* | [**chains_chain_id_dapps_sushiswap_day_data_historical_get**](docs/DAYDATA_API.md#chains_chain_id_dapps_sushiswap_day_data_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/dayData/historical | 
+*DEPOSIT_API* | [**chains_chain_id_dapps_dex_tokens_historical_get**](docs/DEPOSIT_API.md#chains_chain_id_dapps_dex_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/dex/tokens/historical | 
 *FACTORY_API* | [**chains_chain_id_dapps_sushiswap_factory_historical_get**](docs/FACTORY_API.md#chains_chain_id_dapps_sushiswap_factory_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/factory/historical | 
 *FACTORY_API* | [**chains_chain_id_dapps_uniswapv2_factory_historical_get**](docs/FACTORY_API.md#chains_chain_id_dapps_uniswapv2_factory_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/factory/historical | 
 *FACTORY_API* | [**chains_chain_id_dapps_uniswapv3_factory_historical_get**](docs/FACTORY_API.md#chains_chain_id_dapps_uniswapv3_factory_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/factory/historical | 
@@ -45,7 +47,9 @@ Class | Method | HTTP request | Description
 *MINTS_API* | [**chains_chain_id_dapps_uniswapv2_mints_historical_get**](docs/MINTS_API.md#chains_chain_id_dapps_uniswapv2_mints_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/mints/historical | 
 *MINTS_API* | [**chains_chain_id_dapps_uniswapv3_mints_historical_get**](docs/MINTS_API.md#chains_chain_id_dapps_uniswapv3_mints_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/mints/historical | 
 *ORDERS_API* | [**chains_chain_id_dapps_cow_orders_historical_get**](docs/ORDERS_API.md#chains_chain_id_dapps_cow_orders_historical_get) | **Get** /chains/{chain_id}/dapps/cow/orders/historical | 
+*ORDERS_API* | [**chains_chain_id_dapps_dex_orders_historical_get**](docs/ORDERS_API.md#chains_chain_id_dapps_dex_orders_historical_get) | **Get** /chains/{chain_id}/dapps/dex/orders/historical | 
 *POI_API* | [**chains_chain_id_dapps_cow_poi_historical_get**](docs/POI_API.md#chains_chain_id_dapps_cow_poi_historical_get) | **Get** /chains/{chain_id}/dapps/cow/poi/historical | 
+*POI_API* | [**chains_chain_id_dapps_dex_poi_historical_get**](docs/POI_API.md#chains_chain_id_dapps_dex_poi_historical_get) | **Get** /chains/{chain_id}/dapps/dex/poi/historical | 
 *POI_API* | [**chains_chain_id_dapps_sushiswap_poi_historical_get**](docs/POI_API.md#chains_chain_id_dapps_sushiswap_poi_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/poi/historical | 
 *POI_API* | [**chains_chain_id_dapps_uniswapv2_poi_historical_get**](docs/POI_API.md#chains_chain_id_dapps_uniswapv2_poi_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/poi/historical | 
 *POI_API* | [**chains_chain_id_dapps_uniswapv3_poi_historical_get**](docs/POI_API.md#chains_chain_id_dapps_uniswapv3_poi_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/poi/historical | 
@@ -61,7 +65,10 @@ Class | Method | HTTP request | Description
 *POOLS_API* | [**chains_chain_id_dapps_uniswapv3_pools_historical_get**](docs/POOLS_API.md#chains_chain_id_dapps_uniswapv3_pools_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/pools/historical | 
 *POSITIONSNAPSHOT_API* | [**chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get**](docs/POSITIONSNAPSHOT_API.md#chains_chain_id_dapps_uniswapv3_position_snapshot_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical | 
 *POSITIONS_API* | [**chains_chain_id_dapps_uniswapv3_positions_historical_get**](docs/POSITIONS_API.md#chains_chain_id_dapps_uniswapv3_positions_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/positions/historical | 
+*PRICES_API* | [**chains_chain_id_dapps_dex_prices_historical_get**](docs/PRICES_API.md#chains_chain_id_dapps_dex_prices_historical_get) | **Get** /chains/{chain_id}/dapps/dex/prices/historical | 
 *SETTLEMENT_API* | [**chains_chain_id_dapps_cow_settlement_historical_get**](docs/SETTLEMENT_API.md#chains_chain_id_dapps_cow_settlement_historical_get) | **Get** /chains/{chain_id}/dapps/cow/settlement/historical | 
+*SOLUTION_API* | [**chains_chain_id_dapps_dex_solution_historical_get**](docs/SOLUTION_API.md#chains_chain_id_dapps_dex_solution_historical_get) | **Get** /chains/{chain_id}/dapps/dex/solution/historical | 
+*STATS_API* | [**chains_chain_id_dapps_dex_stats_historical_get**](docs/STATS_API.md#chains_chain_id_dapps_dex_stats_historical_get) | **Get** /chains/{chain_id}/dapps/dex/stats/historical | 
 *SUSHISWAP_API* | [**chains_chain_id_dapps_sushiswap_pools_current_get**](docs/SUSHISWAP_API.md#chains_chain_id_dapps_sushiswap_pools_current_get) | **Get** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools
 *SUSHISWAP_API* | [**chains_chain_id_dapps_sushiswap_swaps_current_get**](docs/SUSHISWAP_API.md#chains_chain_id_dapps_sushiswap_swaps_current_get) | **Get** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps
 *SUSHISWAP_API* | [**chains_chain_id_dapps_sushiswap_tokens_current_get**](docs/SUSHISWAP_API.md#chains_chain_id_dapps_sushiswap_tokens_current_get) | **Get** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens
@@ -77,7 +84,6 @@ Class | Method | HTTP request | Description
 *TOKENHOURDATA_API* | [**chains_chain_id_dapps_uniswapv3_token_hour_data_historical_get**](docs/TOKENHOURDATA_API.md#chains_chain_id_dapps_uniswapv3_token_hour_data_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical | 
 *TOKENS_API* | [**chains_chain_id_dapps_cow_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_cow_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/cow/tokens/historical | 
 *TOKENS_API* | [**chains_chain_id_dapps_curve_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_curve_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/curve/tokens/historical | 
-*TOKENS_API* | [**chains_chain_id_dapps_dex_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_dex_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/dex/tokens/historical | 
 *TOKENS_API* | [**chains_chain_id_dapps_sushiswap_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_sushiswap_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/tokens/historical | 
 *TOKENS_API* | [**chains_chain_id_dapps_uniswapv2_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_uniswapv2_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/tokens/historical | 
 *TOKENS_API* | [**chains_chain_id_dapps_uniswapv3_tokens_historical_get**](docs/TOKENS_API.md#chains_chain_id_dapps_uniswapv3_tokens_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokens/historical | 
@@ -108,8 +114,11 @@ Class | Method | HTTP request | Description
 *UNISWAPV3_API* | [**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](docs/UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
 *UNISWAPV3_API* | [**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](docs/UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 *USERS_API* | [**chains_chain_id_dapps_cow_users_historical_get**](docs/USERS_API.md#chains_chain_id_dapps_cow_users_historical_get) | **Get** /chains/{chain_id}/dapps/cow/users/historical | 
+*USERS_API* | [**chains_chain_id_dapps_dex_users_historical_get**](docs/USERS_API.md#chains_chain_id_dapps_dex_users_historical_get) | **Get** /chains/{chain_id}/dapps/dex/users/historical | 
 *USERS_API* | [**chains_chain_id_dapps_sushiswap_users_historical_get**](docs/USERS_API.md#chains_chain_id_dapps_sushiswap_users_historical_get) | **Get** /chains/{chain_id}/dapps/sushiswap/users/historical | 
 *USERS_API* | [**chains_chain_id_dapps_uniswapv2_users_historical_get**](docs/USERS_API.md#chains_chain_id_dapps_uniswapv2_users_historical_get) | **Get** /chains/{chain_id}/dapps/uniswapv2/users/historical | 
+*WITHDRAW_API* | [**chains_chain_id_dapps_dex_withdraw_historical_get**](docs/WITHDRAW_API.md#chains_chain_id_dapps_dex_withdraw_historical_get) | **Get** /chains/{chain_id}/dapps/dex/withdraw/historical | 
+*WITHDRAWREQUEST_API* | [**chains_chain_id_dapps_dex_withdraw_request_historical_get**](docs/WITHDRAWREQUEST_API.md#chains_chain_id_dapps_dex_withdraw_request_historical_get) | **Get** /chains/{chain_id}/dapps/dex/withdrawRequest/historical | 
 
 
 ## Documentation For Models

@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('chainsChainIdDappsDexOrdersHistoricalGet', function() {
+      it('should call chainsChainIdDappsDexOrdersHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsDexOrdersHistoricalGet
+        //instance.chainsChainIdDappsDexOrdersHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

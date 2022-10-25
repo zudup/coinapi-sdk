@@ -16,10 +16,6 @@ TokensAPI_chainsChainIdDappsCurveTokensHistoricalGet(apiClient_t *apiClient, cha
 
 
 void
-TokensAPI_chainsChainIdDappsDexTokensHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
-
-
-void
 TokensAPI_chainsChainIdDappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, char * chain_id , long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 

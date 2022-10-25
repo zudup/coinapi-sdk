@@ -116,35 +116,6 @@ instance HasOptionalParam ChainsChainIdDappsCurveTokensHistoricalGet TokenId whe
 instance Produces ChainsChainIdDappsCurveTokensHistoricalGet MimeNoContent
 
 
--- *** chainsChainIdDappsDexTokensHistoricalGet
-
--- | @GET \/chains\/{chain_id}\/dapps\/dex\/tokens\/historical@
--- 
-chainsChainIdDappsDexTokensHistoricalGet
-  :: ChainId -- ^ "chainId"
-  -> OnChainRequest ChainsChainIdDappsDexTokensHistoricalGet MimeNoContent NoContent MimeNoContent
-chainsChainIdDappsDexTokensHistoricalGet (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/dex/tokens/historical"]
-
-data ChainsChainIdDappsDexTokensHistoricalGet  
-instance HasOptionalParam ChainsChainIdDappsDexTokensHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsDexTokensHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam ChainsChainIdDappsDexTokensHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam ChainsChainIdDappsDexTokensHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam ChainsChainIdDappsDexTokensHistoricalGet TokenId where
-  applyOptionalParam req (TokenId xs) =
-    req `addQuery` toQuery ("tokenId", Just xs)
-instance Produces ChainsChainIdDappsDexTokensHistoricalGet MimeNoContent
-
-
 -- *** chainsChainIdDappsSushiswapTokensHistoricalGet
 
 -- | @GET \/chains\/{chain_id}\/dapps\/sushiswap\/tokens\/historical@

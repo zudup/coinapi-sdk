@@ -3,9 +3,11 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
+docs/apis/tags/BatchApi.md
 docs/apis/tags/BundlesApi.md
 docs/apis/tags/BurnsApi.md
 docs/apis/tags/DayDataApi.md
+docs/apis/tags/DepositApi.md
 docs/apis/tags/FactoryApi.md
 docs/apis/tags/HourDataApi.md
 docs/apis/tags/LiquidityPositionApi.md
@@ -18,7 +20,10 @@ docs/apis/tags/PoolHourDataApi.md
 docs/apis/tags/PoolsApi.md
 docs/apis/tags/PositionSnapshotApi.md
 docs/apis/tags/PositionsApi.md
+docs/apis/tags/PricesApi.md
 docs/apis/tags/SettlementApi.md
+docs/apis/tags/SolutionApi.md
+docs/apis/tags/StatsApi.md
 docs/apis/tags/SushiswapApi.md
 docs/apis/tags/SwapsApi.md
 docs/apis/tags/TickDayDataApi.md
@@ -32,6 +37,8 @@ docs/apis/tags/UniswapDayDataApi.md
 docs/apis/tags/UniswapV2Api.md
 docs/apis/tags/UniswapV3Api.md
 docs/apis/tags/UsersApi.md
+docs/apis/tags/WithdrawApi.md
+docs/apis/tags/WithdrawRequestApi.md
 docs/models/BigInteger.md
 docs/models/BundleV3DTO.md
 docs/models/BurnV3DTO.md
@@ -60,9 +67,11 @@ git_push.sh
 openapi_client/__init__.py
 openapi_client/api_client.py
 openapi_client/apis/__init__.py
+openapi_client/apis/tags/batch_api.py
 openapi_client/apis/tags/bundles_api.py
 openapi_client/apis/tags/burns_api.py
 openapi_client/apis/tags/day_data_api.py
+openapi_client/apis/tags/deposit_api.py
 openapi_client/apis/tags/factory_api.py
 openapi_client/apis/tags/hour_data_api.py
 openapi_client/apis/tags/liquidity_position_api.py
@@ -75,7 +84,10 @@ openapi_client/apis/tags/pool_hour_data_api.py
 openapi_client/apis/tags/pools_api.py
 openapi_client/apis/tags/position_snapshot_api.py
 openapi_client/apis/tags/positions_api.py
+openapi_client/apis/tags/prices_api.py
 openapi_client/apis/tags/settlement_api.py
+openapi_client/apis/tags/solution_api.py
+openapi_client/apis/tags/stats_api.py
 openapi_client/apis/tags/sushiswap_api.py
 openapi_client/apis/tags/swaps_api.py
 openapi_client/apis/tags/tick_day_data_api.py
@@ -89,6 +101,8 @@ openapi_client/apis/tags/uniswap_day_data_api.py
 openapi_client/apis/tags/uniswap_v2_api.py
 openapi_client/apis/tags/uniswap_v3_api.py
 openapi_client/apis/tags/users_api.py
+openapi_client/apis/tags/withdraw_api.py
+openapi_client/apis/tags/withdraw_request_api.py
 openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/model/__init__.py

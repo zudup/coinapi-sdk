@@ -12,7 +12,6 @@
 
 from openapi_client.paths.chains_chain_id_dapps_cow_tokens_historical.get import ChainsChainIdDappsCowTokensHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_curve_tokens_historical.get import ChainsChainIdDappsCurveTokensHistoricalGet
-from openapi_client.paths.chains_chain_id_dapps_dex_tokens_historical.get import ChainsChainIdDappsDexTokensHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_sushiswap_tokens_historical.get import ChainsChainIdDappsSushiswapTokensHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_uniswapv2_tokens_historical.get import ChainsChainIdDappsUniswapv2TokensHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_uniswapv3_tokens_historical.get import ChainsChainIdDappsUniswapv3TokensHistoricalGet
@@ -21,7 +20,6 @@ from openapi_client.paths.chains_chain_id_dapps_uniswapv3_tokens_historical.get 
 class TokensApi(
     ChainsChainIdDappsCowTokensHistoricalGet,
     ChainsChainIdDappsCurveTokensHistoricalGet,
-    ChainsChainIdDappsDexTokensHistoricalGet,
     ChainsChainIdDappsSushiswapTokensHistoricalGet,
     ChainsChainIdDappsUniswapv2TokensHistoricalGet,
     ChainsChainIdDappsUniswapv3TokensHistoricalGet,
