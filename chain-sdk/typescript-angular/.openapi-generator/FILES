@@ -24,9 +24,14 @@ api/gaugeLiquidity.service.ts
 api/gaugeTotalWeight.service.ts
 api/gaugeType.service.ts
 api/gaugeTypeWeight.service.ts
+api/gaugeWeight.service.ts
+api/gaugeWeightVote.service.ts
+api/gaugeWithdraw.service.ts
 api/hourData.service.ts
+api/hourlyVolume.service.ts
 api/liquidityPosition.service.ts
 api/liquidityPositionSnapshots.service.ts
+api/lpToken.service.ts
 api/mints.service.ts
 api/orders.service.ts
 api/poi.service.ts

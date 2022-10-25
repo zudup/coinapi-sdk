@@ -30,9 +30,14 @@ import 'package:openapi/src/api/gauge_liquidity_api.dart';
 import 'package:openapi/src/api/gauge_total_weight_api.dart';
 import 'package:openapi/src/api/gauge_type_api.dart';
 import 'package:openapi/src/api/gauge_type_weight_api.dart';
+import 'package:openapi/src/api/gauge_weight_api.dart';
+import 'package:openapi/src/api/gauge_weight_vote_api.dart';
+import 'package:openapi/src/api/gauge_withdraw_api.dart';
 import 'package:openapi/src/api/hour_data_api.dart';
+import 'package:openapi/src/api/hourly_volume_api.dart';
 import 'package:openapi/src/api/liquidity_position_api.dart';
 import 'package:openapi/src/api/liquidity_position_snapshots_api.dart';
+import 'package:openapi/src/api/lp_token_api.dart';
 import 'package:openapi/src/api/mints_api.dart';
 import 'package:openapi/src/api/orders_api.dart';
 import 'package:openapi/src/api/poi_api.dart';
@@ -241,10 +246,34 @@ class Openapi {
     return GaugeTypeWeightApi(dio, serializers);
   }
 
+  /// Get GaugeWeightApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeWeightApi getGaugeWeightApi() {
+    return GaugeWeightApi(dio, serializers);
+  }
+
+  /// Get GaugeWeightVoteApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeWeightVoteApi getGaugeWeightVoteApi() {
+    return GaugeWeightVoteApi(dio, serializers);
+  }
+
+  /// Get GaugeWithdrawApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  GaugeWithdrawApi getGaugeWithdrawApi() {
+    return GaugeWithdrawApi(dio, serializers);
+  }
+
   /// Get HourDataApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   HourDataApi getHourDataApi() {
     return HourDataApi(dio, serializers);
+  }
+
+  /// Get HourlyVolumeApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  HourlyVolumeApi getHourlyVolumeApi() {
+    return HourlyVolumeApi(dio, serializers);
   }
 
   /// Get LiquidityPositionApi instance, base route and serializer can be overridden by a given but be careful,
@@ -257,6 +286,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   LiquidityPositionSnapshotsApi getLiquidityPositionSnapshotsApi() {
     return LiquidityPositionSnapshotsApi(dio, serializers);
+  }
+
+  /// Get LpTokenApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  LpTokenApi getLpTokenApi() {
+    return LpTokenApi(dio, serializers);
   }
 
   /// Get MintsApi instance, base route and serializer can be overridden by a given but be careful,

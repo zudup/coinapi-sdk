@@ -5,6 +5,7 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**chainsChainIdDappsCowPoiHistoricalGet**](PoiApi.md#chainsChainIdDappsCowPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/cow/poi/historical | 
+[**chainsChainIdDappsCurvePoiHistoricalGet**](PoiApi.md#chainsChainIdDappsCurvePoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/poi/historical | 
 [**chainsChainIdDappsDexPoiHistoricalGet**](PoiApi.md#chainsChainIdDappsDexPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/dex/poi/historical | 
 [**chainsChainIdDappsSushiswapPoiHistoricalGet**](PoiApi.md#chainsChainIdDappsSushiswapPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/poi/historical | 
 [**chainsChainIdDappsUniswapv2PoiHistoricalGet**](PoiApi.md#chainsChainIdDappsUniswapv2PoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/poi/historical | 
@@ -20,6 +21,43 @@ Method | HTTP request | Description
 
 ```bash
  chainsChainIdDappsCowPoiHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chainId** | **string** |  | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## chainsChainIdDappsCurvePoiHistoricalGet
+
+
+
+### Example
+
+```bash
+ chainsChainIdDappsCurvePoiHistoricalGet chain_id=value  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters

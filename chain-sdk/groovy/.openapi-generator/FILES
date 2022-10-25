@@ -23,9 +23,14 @@ src/main/groovy/org/openapitools/api/GaugeLiquidityApi.groovy
 src/main/groovy/org/openapitools/api/GaugeTotalWeightApi.groovy
 src/main/groovy/org/openapitools/api/GaugeTypeApi.groovy
 src/main/groovy/org/openapitools/api/GaugeTypeWeightApi.groovy
+src/main/groovy/org/openapitools/api/GaugeWeightApi.groovy
+src/main/groovy/org/openapitools/api/GaugeWeightVoteApi.groovy
+src/main/groovy/org/openapitools/api/GaugeWithdrawApi.groovy
 src/main/groovy/org/openapitools/api/HourDataApi.groovy
+src/main/groovy/org/openapitools/api/HourlyVolumeApi.groovy
 src/main/groovy/org/openapitools/api/LiquidityPositionApi.groovy
 src/main/groovy/org/openapitools/api/LiquidityPositionSnapshotsApi.groovy
+src/main/groovy/org/openapitools/api/LpTokenApi.groovy
 src/main/groovy/org/openapitools/api/MintsApi.groovy
 src/main/groovy/org/openapitools/api/OrdersApi.groovy
 src/main/groovy/org/openapitools/api/PoiApi.groovy

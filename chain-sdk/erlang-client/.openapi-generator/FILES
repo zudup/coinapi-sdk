@@ -28,9 +28,14 @@ src/openapi_gauge_liquidity_api.erl
 src/openapi_gauge_total_weight_api.erl
 src/openapi_gauge_type_api.erl
 src/openapi_gauge_type_weight_api.erl
+src/openapi_gauge_weight_api.erl
+src/openapi_gauge_weight_vote_api.erl
+src/openapi_gauge_withdraw_api.erl
 src/openapi_hour_data_api.erl
+src/openapi_hourly_volume_api.erl
 src/openapi_liquidity_position_api.erl
 src/openapi_liquidity_position_snapshots_api.erl
+src/openapi_lp_token_api.erl
 src/openapi_mint_v3_dto.erl
 src/openapi_mints_api.erl
 src/openapi_orders_api.erl

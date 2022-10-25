@@ -15,6 +15,14 @@ Describe -tag 'PSOpenAPITools' -name 'PoiApi' {
         }
     }
 
+    Context 'Invoke-ChainsChainIdDappsCurvePoiHistoricalGet' {
+        It 'Test Invoke-ChainsChainIdDappsCurvePoiHistoricalGet' {
+            #$TestResult = Invoke-ChainsChainIdDappsCurvePoiHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-ChainsChainIdDappsDexPoiHistoricalGet' {
         It 'Test Invoke-ChainsChainIdDappsDexPoiHistoricalGet' {
             #$TestResult = Invoke-ChainsChainIdDappsDexPoiHistoricalGet -ChainId "TEST_VALUE" -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

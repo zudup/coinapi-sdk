@@ -21,9 +21,14 @@ apis/GaugeLiquidityApi.ts
 apis/GaugeTotalWeightApi.ts
 apis/GaugeTypeApi.ts
 apis/GaugeTypeWeightApi.ts
+apis/GaugeWeightApi.ts
+apis/GaugeWeightVoteApi.ts
+apis/GaugeWithdrawApi.ts
 apis/HourDataApi.ts
+apis/HourlyVolumeApi.ts
 apis/LiquidityPositionApi.ts
 apis/LiquidityPositionSnapshotsApi.ts
+apis/LpTokenApi.ts
 apis/MintsApi.ts
 apis/OrdersApi.ts
 apis/PoiApi.ts

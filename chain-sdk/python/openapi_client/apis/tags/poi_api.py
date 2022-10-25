@@ -11,6 +11,7 @@
 """
 
 from openapi_client.paths.chains_chain_id_dapps_cow_poi_historical.get import ChainsChainIdDappsCowPoiHistoricalGet
+from openapi_client.paths.chains_chain_id_dapps_curve_poi_historical.get import ChainsChainIdDappsCurvePoiHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_dex_poi_historical.get import ChainsChainIdDappsDexPoiHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_sushiswap_poi_historical.get import ChainsChainIdDappsSushiswapPoiHistoricalGet
 from openapi_client.paths.chains_chain_id_dapps_uniswapv2_poi_historical.get import ChainsChainIdDappsUniswapv2PoiHistoricalGet
@@ -19,6 +20,7 @@ from openapi_client.paths.chains_chain_id_dapps_uniswapv3_poi_historical.get imp
 
 class PoiApi(
     ChainsChainIdDappsCowPoiHistoricalGet,
+    ChainsChainIdDappsCurvePoiHistoricalGet,
     ChainsChainIdDappsDexPoiHistoricalGet,
     ChainsChainIdDappsSushiswapPoiHistoricalGet,
     ChainsChainIdDappsUniswapv2PoiHistoricalGet,

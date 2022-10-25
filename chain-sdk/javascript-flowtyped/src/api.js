@@ -5002,6 +5002,246 @@ export const GaugeTypeWeightApi = function(configuration?: Configuration, fetch:
 
 
 /**
+ * GaugeWeightApi - fetch parameter creator
+ * @export
+ */
+export const GaugeWeightApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWeightHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurveGaugeWeightHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/gaugeWeight/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type GaugeWeightApiType = { 
+    chainsChainIdDappsCurveGaugeWeightHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * GaugeWeightApi - factory function to inject configuration 
+ * @export
+ */
+export const GaugeWeightApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): GaugeWeightApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWeightHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = GaugeWeightApiFetchParamCreator(configuration).chainsChainIdDappsCurveGaugeWeightHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * GaugeWeightVoteApi - fetch parameter creator
+ * @export
+ */
+export const GaugeWeightVoteApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/gaugeWeightVote/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type GaugeWeightVoteApiType = { 
+    chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * GaugeWeightVoteApi - factory function to inject configuration 
+ * @export
+ */
+export const GaugeWeightVoteApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): GaugeWeightVoteApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = GaugeWeightVoteApiFetchParamCreator(configuration).chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * GaugeWithdrawApi - fetch parameter creator
+ * @export
+ */
+export const GaugeWithdrawApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWithdrawHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurveGaugeWithdrawHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/gaugeWithdraw/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type GaugeWithdrawApiType = { 
+    chainsChainIdDappsCurveGaugeWithdrawHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * GaugeWithdrawApi - factory function to inject configuration 
+ * @export
+ */
+export const GaugeWithdrawApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): GaugeWithdrawApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveGaugeWithdrawHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = GaugeWithdrawApiFetchParamCreator(configuration).chainsChainIdDappsCurveGaugeWithdrawHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
  * HourDataApi - fetch parameter creator
  * @export
  */
@@ -5069,6 +5309,90 @@ export const HourDataApi = function(configuration?: Configuration, fetch: FetchA
          */
         chainsChainIdDappsSushiswapHourDataHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = HourDataApiFetchParamCreator(configuration).chainsChainIdDappsSushiswapHourDataHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * HourlyVolumeApi - fetch parameter creator
+ * @export
+ */
+export const HourlyVolumeApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveHourlyVolumeHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurveHourlyVolumeHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/hourlyVolume/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type HourlyVolumeApiType = { 
+    chainsChainIdDappsCurveHourlyVolumeHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * HourlyVolumeApi - factory function to inject configuration 
+ * @export
+ */
+export const HourlyVolumeApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): HourlyVolumeApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveHourlyVolumeHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = HourlyVolumeApiFetchParamCreator(configuration).chainsChainIdDappsCurveHourlyVolumeHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -5361,6 +5685,90 @@ export const LiquidityPositionSnapshotsApi = function(configuration?: Configurat
          */
         chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = LiquidityPositionSnapshotsApiFetchParamCreator(configuration).chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * LpTokenApi - fetch parameter creator
+ * @export
+ */
+export const LpTokenApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveLpTokenHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurveLpTokenHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/lpToken/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type LpTokenApiType = { 
+    chainsChainIdDappsCurveLpTokenHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * LpTokenApi - factory function to inject configuration 
+ * @export
+ */
+export const LpTokenApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): LpTokenApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurveLpTokenHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = LpTokenApiFetchParamCreator(configuration).chainsChainIdDappsCurveLpTokenHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -5775,6 +6183,48 @@ export const PoiApiFetchParamCreator = function (configuration?: Configuration) 
          * 
          * @throws {RequiredError}
          */
+        chainsChainIdDappsCurvePoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            // verify required parameter 'chainId' is not null or undefined
+            if (chainId === null || chainId === undefined) {
+                throw new RequiredError('chainId','Required parameter chainId was null or undefined when calling chainsChainIdDappsCurvePoiHistoricalGet.');
+            }
+            const localVarPath = `/chains/{chain_id}/dapps/curve/poi/historical`
+                .replace(`{${"chain_id"}}`, encodeURIComponent(String(chainId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @throws {RequiredError}
+         */
         chainsChainIdDappsDexPoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             // verify required parameter 'chainId' is not null or undefined
             if (chainId === null || chainId === undefined) {
@@ -5945,6 +6395,8 @@ export const PoiApiFetchParamCreator = function (configuration?: Configuration) 
 export type PoiApiType = { 
     chainsChainIdDappsCowPoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
+    chainsChainIdDappsCurvePoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+
     chainsChainIdDappsDexPoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
     chainsChainIdDappsSushiswapPoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
@@ -5967,6 +6419,20 @@ export const PoiApi = function(configuration?: Configuration, fetch: FetchAPI = 
          */
         chainsChainIdDappsCowPoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = PoiApiFetchParamCreator(configuration).chainsChainIdDappsCowPoiHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * 
+         * @throws {RequiredError}
+         */
+        chainsChainIdDappsCurvePoiHistoricalGet(chainId: string, startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = PoiApiFetchParamCreator(configuration).chainsChainIdDappsCurvePoiHistoricalGet(chainId, startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -10302,11 +10768,21 @@ export type ApiTypes = {
 
     GaugeTypeWeightApi: GaugeTypeWeightApiType,
 
+    GaugeWeightApi: GaugeWeightApiType,
+
+    GaugeWeightVoteApi: GaugeWeightVoteApiType,
+
+    GaugeWithdrawApi: GaugeWithdrawApiType,
+
     HourDataApi: HourDataApiType,
+
+    HourlyVolumeApi: HourlyVolumeApiType,
 
     LiquidityPositionApi: LiquidityPositionApiType,
 
     LiquidityPositionSnapshotsApi: LiquidityPositionSnapshotsApiType,
+
+    LpTokenApi: LpTokenApiType,
 
     MintsApi: MintsApiType,
 

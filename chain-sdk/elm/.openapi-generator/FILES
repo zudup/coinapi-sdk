@@ -25,9 +25,14 @@ src/Api/Request/GaugeLiquidity.elm
 src/Api/Request/GaugeTotalWeight.elm
 src/Api/Request/GaugeType.elm
 src/Api/Request/GaugeTypeWeight.elm
+src/Api/Request/GaugeWeight.elm
+src/Api/Request/GaugeWeightVote.elm
+src/Api/Request/GaugeWithdraw.elm
 src/Api/Request/HourData.elm
+src/Api/Request/HourlyVolume.elm
 src/Api/Request/LiquidityPosition.elm
 src/Api/Request/LiquidityPositionSnapshots.elm
+src/Api/Request/LpToken.elm
 src/Api/Request/Mints.elm
 src/Api/Request/Orders.elm
 src/Api/Request/Poi.elm

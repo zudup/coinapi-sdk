@@ -30,9 +30,14 @@ docs/GaugeLiquidityApi.md
 docs/GaugeTotalWeightApi.md
 docs/GaugeTypeApi.md
 docs/GaugeTypeWeightApi.md
+docs/GaugeWeightApi.md
+docs/GaugeWeightVoteApi.md
+docs/GaugeWithdrawApi.md
 docs/HourDataApi.md
+docs/HourlyVolumeApi.md
 docs/LiquidityPositionApi.md
 docs/LiquidityPositionSnapshotsApi.md
+docs/LpTokenApi.md
 docs/MintV3DTO.md
 docs/MintsApi.md
 docs/OrdersApi.md

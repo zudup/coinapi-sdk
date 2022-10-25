@@ -25,9 +25,14 @@ from openapi_client.apis.tags.gauge_liquidity_api import GaugeLiquidityApi
 from openapi_client.apis.tags.gauge_total_weight_api import GaugeTotalWeightApi
 from openapi_client.apis.tags.gauge_type_api import GaugeTypeApi
 from openapi_client.apis.tags.gauge_type_weight_api import GaugeTypeWeightApi
+from openapi_client.apis.tags.gauge_weight_api import GaugeWeightApi
+from openapi_client.apis.tags.gauge_weight_vote_api import GaugeWeightVoteApi
+from openapi_client.apis.tags.gauge_withdraw_api import GaugeWithdrawApi
 from openapi_client.apis.tags.hour_data_api import HourDataApi
+from openapi_client.apis.tags.hourly_volume_api import HourlyVolumeApi
 from openapi_client.apis.tags.liquidity_position_api import LiquidityPositionApi
 from openapi_client.apis.tags.liquidity_position_snapshots_api import LiquidityPositionSnapshotsApi
+from openapi_client.apis.tags.lp_token_api import LpTokenApi
 from openapi_client.apis.tags.mints_api import MintsApi
 from openapi_client.apis.tags.orders_api import OrdersApi
 from openapi_client.apis.tags.poi_api import PoiApi
@@ -80,9 +85,14 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.GAUGE_TOTAL_WEIGHT: GaugeTotalWeightApi,
         TagValues.GAUGE_TYPE: GaugeTypeApi,
         TagValues.GAUGE_TYPE_WEIGHT: GaugeTypeWeightApi,
+        TagValues.GAUGE_WEIGHT: GaugeWeightApi,
+        TagValues.GAUGE_WEIGHT_VOTE: GaugeWeightVoteApi,
+        TagValues.GAUGE_WITHDRAW: GaugeWithdrawApi,
         TagValues.HOUR_DATA: HourDataApi,
+        TagValues.HOURLY_VOLUME: HourlyVolumeApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
+        TagValues.LP_TOKEN: LpTokenApi,
         TagValues.MINTS: MintsApi,
         TagValues.ORDERS: OrdersApi,
         TagValues.POI: PoiApi,
@@ -136,9 +146,14 @@ tag_to_api = TagToApi(
         TagValues.GAUGE_TOTAL_WEIGHT: GaugeTotalWeightApi,
         TagValues.GAUGE_TYPE: GaugeTypeApi,
         TagValues.GAUGE_TYPE_WEIGHT: GaugeTypeWeightApi,
+        TagValues.GAUGE_WEIGHT: GaugeWeightApi,
+        TagValues.GAUGE_WEIGHT_VOTE: GaugeWeightVoteApi,
+        TagValues.GAUGE_WITHDRAW: GaugeWithdrawApi,
         TagValues.HOUR_DATA: HourDataApi,
+        TagValues.HOURLY_VOLUME: HourlyVolumeApi,
         TagValues.LIQUIDITY_POSITION: LiquidityPositionApi,
         TagValues.LIQUIDITY_POSITION_SNAPSHOTS: LiquidityPositionSnapshotsApi,
+        TagValues.LP_TOKEN: LpTokenApi,
         TagValues.MINTS: MintsApi,
         TagValues.ORDERS: OrdersApi,
         TagValues.POI: PoiApi,

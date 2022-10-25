@@ -1560,6 +1560,150 @@ paths:
       tags:
       - GaugeTypeWeight
       x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/gaugeWeight/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeWeight
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/gaugeWeightVote/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeWeightVote
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/gaugeWithdraw/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - GaugeWithdraw
+      x-accepts: application/json
   /chains/{chain_id}/dapps/sushiswap/hourData/historical:
     get:
       parameters:
@@ -1607,6 +1751,61 @@ paths:
           description: Success
       tags:
       - HourData
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/hourlyVolume/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - HourlyVolume
       x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical:
     get:
@@ -1827,6 +2026,61 @@ paths:
           description: Success
       tags:
       - LiquidityPositionSnapshots
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/lpToken/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - LpToken
       x-accepts: application/json
   /chains/{chain_id}/dapps/uniswapv3/mints/historical:
     get:
@@ -2283,6 +2537,54 @@ paths:
       - Poi
       x-accepts: application/json
   /chains/{chain_id}/dapps/dex/poi/historical:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: chain_id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Poi
+      x-accepts: application/json
+  /chains/{chain_id}/dapps/curve/poi/historical:
     get:
       parameters:
       - explode: false

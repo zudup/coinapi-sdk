@@ -35,9 +35,14 @@ module OnChain.API
   , module OnChain.API.GaugeTotalWeight
   , module OnChain.API.GaugeType
   , module OnChain.API.GaugeTypeWeight
+  , module OnChain.API.GaugeWeight
+  , module OnChain.API.GaugeWeightVote
+  , module OnChain.API.GaugeWithdraw
   , module OnChain.API.HourData
+  , module OnChain.API.HourlyVolume
   , module OnChain.API.LiquidityPosition
   , module OnChain.API.LiquidityPositionSnapshots
+  , module OnChain.API.LpToken
   , module OnChain.API.Mints
   , module OnChain.API.Orders
   , module OnChain.API.Poi
@@ -88,9 +93,14 @@ import OnChain.API.GaugeLiquidity
 import OnChain.API.GaugeTotalWeight
 import OnChain.API.GaugeType
 import OnChain.API.GaugeTypeWeight
+import OnChain.API.GaugeWeight
+import OnChain.API.GaugeWeightVote
+import OnChain.API.GaugeWithdraw
 import OnChain.API.HourData
+import OnChain.API.HourlyVolume
 import OnChain.API.LiquidityPosition
 import OnChain.API.LiquidityPositionSnapshots
+import OnChain.API.LpToken
 import OnChain.API.Mints
 import OnChain.API.Orders
 import OnChain.API.Poi

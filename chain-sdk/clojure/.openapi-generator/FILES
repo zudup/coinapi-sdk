@@ -23,9 +23,14 @@ src/on_chain_api/api/gauge_liquidity.clj
 src/on_chain_api/api/gauge_total_weight.clj
 src/on_chain_api/api/gauge_type.clj
 src/on_chain_api/api/gauge_type_weight.clj
+src/on_chain_api/api/gauge_weight.clj
+src/on_chain_api/api/gauge_weight_vote.clj
+src/on_chain_api/api/gauge_withdraw.clj
 src/on_chain_api/api/hour_data.clj
+src/on_chain_api/api/hourly_volume.clj
 src/on_chain_api/api/liquidity_position.clj
 src/on_chain_api/api/liquidity_position_snapshots.clj
+src/on_chain_api/api/lp_token.clj
 src/on_chain_api/api/mints.clj
 src/on_chain_api/api/orders.clj
 src/on_chain_api/api/poi.clj

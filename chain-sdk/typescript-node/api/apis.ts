@@ -40,12 +40,22 @@ export * from './gaugeTypeApi';
 import { GaugeTypeApi } from './gaugeTypeApi';
 export * from './gaugeTypeWeightApi';
 import { GaugeTypeWeightApi } from './gaugeTypeWeightApi';
+export * from './gaugeWeightApi';
+import { GaugeWeightApi } from './gaugeWeightApi';
+export * from './gaugeWeightVoteApi';
+import { GaugeWeightVoteApi } from './gaugeWeightVoteApi';
+export * from './gaugeWithdrawApi';
+import { GaugeWithdrawApi } from './gaugeWithdrawApi';
 export * from './hourDataApi';
 import { HourDataApi } from './hourDataApi';
+export * from './hourlyVolumeApi';
+import { HourlyVolumeApi } from './hourlyVolumeApi';
 export * from './liquidityPositionApi';
 import { LiquidityPositionApi } from './liquidityPositionApi';
 export * from './liquidityPositionSnapshotsApi';
 import { LiquidityPositionSnapshotsApi } from './liquidityPositionSnapshotsApi';
+export * from './lpTokenApi';
+import { LpTokenApi } from './lpTokenApi';
 export * from './mintsApi';
 import { MintsApi } from './mintsApi';
 export * from './ordersApi';
@@ -111,4 +121,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AccountsApi, AddLiquidityEventApi, AdminFeeChangeLogApi, AmplificationCoeffChangeLogApi, BatchApi, BundlesApi, BurnsApi, CoinsApi, ContractsApi, ContractsVersionApi, DailyVolumeApi, DayDataApi, DepositApi, FactoryApi, FeeChangeLogApi, GaugeApi, GaugeDepositApi, GaugeLiquidityApi, GaugeTotalWeightApi, GaugeTypeApi, GaugeTypeWeightApi, HourDataApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, MintsApi, OrdersApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, PricesApi, SettlementApi, SolutionApi, StatsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api, UsersApi, WithdrawApi, WithdrawRequestApi];
+export const APIS = [AccountsApi, AddLiquidityEventApi, AdminFeeChangeLogApi, AmplificationCoeffChangeLogApi, BatchApi, BundlesApi, BurnsApi, CoinsApi, ContractsApi, ContractsVersionApi, DailyVolumeApi, DayDataApi, DepositApi, FactoryApi, FeeChangeLogApi, GaugeApi, GaugeDepositApi, GaugeLiquidityApi, GaugeTotalWeightApi, GaugeTypeApi, GaugeTypeWeightApi, GaugeWeightApi, GaugeWeightVoteApi, GaugeWithdrawApi, HourDataApi, HourlyVolumeApi, LiquidityPositionApi, LiquidityPositionSnapshotsApi, LpTokenApi, MintsApi, OrdersApi, PoiApi, PoolDayDataApi, PoolHourDataApi, PoolsApi, PositionSnapshotApi, PositionsApi, PricesApi, SettlementApi, SolutionApi, StatsApi, SushiswapApi, SwapsApi, TickDayDataApi, TicksApi, TokenDayDataApi, TokenHourDataApi, TokensApi, TradesApi, TransactionsApi, UniswapDayDataApi, UniswapV2Api, UniswapV3Api, UsersApi, WithdrawApi, WithdrawRequestApi];

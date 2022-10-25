@@ -302,12 +302,13 @@ case $state in
             "chainsChainIdDappsUniswapv2BurnsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3BurnsHistoricalGet[]"             "chainsChainIdDappsCurveCoinsHistoricalGet[]"             "chainsChainIdDappsCurveContractsHistoricalGet[]"             "chainsChainIdDappsCurveContractsVersionHistoricalGet[]"             "chainsChainIdDappsCurveDailyVolumeHistoricalGet[]"             "chainsChainIdDappsSushiswapDayDataHistoricalGet[]"             "chainsChainIdDappsDexTokensHistoricalGet[]"             "chainsChainIdDappsSushiswapFactoryHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2FactoryHistoricalGet[]" \
-            "chainsChainIdDappsUniswapv3FactoryHistoricalGet[]"             "chainsChainIdDappsCurveFeeChangeLogHistoricalGet[]"             "chainsChainIdDappsCurveGaugeHistoricalGet[]"             "chainsChainIdDappsCurveGaugeDepositHistoricalGet[]"             "chainsChainIdDappsCurveGaugeLiquidityHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTotalWeightHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTypeHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTypeWeightHistoricalGet[]"             "chainsChainIdDappsSushiswapHourDataHistoricalGet[]"             "chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv3FactoryHistoricalGet[]"             "chainsChainIdDappsCurveFeeChangeLogHistoricalGet[]"             "chainsChainIdDappsCurveGaugeHistoricalGet[]"             "chainsChainIdDappsCurveGaugeDepositHistoricalGet[]"             "chainsChainIdDappsCurveGaugeLiquidityHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTotalWeightHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTypeHistoricalGet[]"             "chainsChainIdDappsCurveGaugeTypeWeightHistoricalGet[]"             "chainsChainIdDappsCurveGaugeWeightHistoricalGet[]"             "chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet[]"             "chainsChainIdDappsCurveGaugeWithdrawHistoricalGet[]"             "chainsChainIdDappsSushiswapHourDataHistoricalGet[]"             "chainsChainIdDappsCurveHourlyVolumeHistoricalGet[]"             "chainsChainIdDappsSushiswapLiquidityPositionHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2LiquidityPositionHistoricalGet[]"             "chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGet[]" \
-            "chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet[]"             "chainsChainIdDappsSushiswapMintsHistoricalGet[]" \
+            "chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet[]"             "chainsChainIdDappsCurveLpTokenHistoricalGet[]"             "chainsChainIdDappsSushiswapMintsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2MintsHistoricalGet[]" \
             "chainsChainIdDappsUniswapv3MintsHistoricalGet[]"             "chainsChainIdDappsCowOrdersHistoricalGet[]" \
             "chainsChainIdDappsDexOrdersHistoricalGet[]"             "chainsChainIdDappsCowPoiHistoricalGet[]" \
+            "chainsChainIdDappsCurvePoiHistoricalGet[]" \
             "chainsChainIdDappsDexPoiHistoricalGet[]" \
             "chainsChainIdDappsSushiswapPoiHistoricalGet[]" \
             "chainsChainIdDappsUniswapv2PoiHistoricalGet[]" \
@@ -671,6 +672,39 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      chainsChainIdDappsCurveGaugeWeightHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveGaugeWeightVoteHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveGaugeWithdrawHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       chainsChainIdDappsSushiswapHourDataHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
@@ -679,6 +713,18 @@ case $state in
 "endBlock=:[QUERY] "
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveHourlyVolumeHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -719,6 +765,18 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurveLpTokenHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
           "chain_id=:[PATH] "
@@ -790,6 +848,17 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       chainsChainIdDappsCowPoiHistoricalGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "chain_id=:[PATH] "
+          "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      chainsChainIdDappsCurvePoiHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
           "chain_id=:[PATH] "

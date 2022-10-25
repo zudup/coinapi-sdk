@@ -19,6 +19,20 @@ test_that("ChainsChainIdDappsCowPoiHistoricalGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("ChainsChainIdDappsCurvePoiHistoricalGet", {
+  # tests for ChainsChainIdDappsCurvePoiHistoricalGet
+  # base path: https://onchain.coinapi.io
+  # @param chain_id character 
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("ChainsChainIdDappsDexPoiHistoricalGet", {
   # tests for ChainsChainIdDappsDexPoiHistoricalGet
   # base path: https://onchain.coinapi.io

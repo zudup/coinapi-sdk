@@ -25,9 +25,14 @@ API/Client/GaugeLiquidityApi.js
 API/Client/GaugeTotalWeightApi.js
 API/Client/GaugeTypeApi.js
 API/Client/GaugeTypeWeightApi.js
+API/Client/GaugeWeightApi.js
+API/Client/GaugeWeightVoteApi.js
+API/Client/GaugeWithdrawApi.js
 API/Client/HourDataApi.js
+API/Client/HourlyVolumeApi.js
 API/Client/LiquidityPositionApi.js
 API/Client/LiquidityPositionSnapshotsApi.js
+API/Client/LpTokenApi.js
 API/Client/MintV3DTO.js
 API/Client/MintsApi.js
 API/Client/OrdersApi.js

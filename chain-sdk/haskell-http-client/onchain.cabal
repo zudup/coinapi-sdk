@@ -85,9 +85,14 @@ library
       OnChain.API.GaugeTotalWeight
       OnChain.API.GaugeType
       OnChain.API.GaugeTypeWeight
+      OnChain.API.GaugeWeight
+      OnChain.API.GaugeWeightVote
+      OnChain.API.GaugeWithdraw
       OnChain.API.HourData
+      OnChain.API.HourlyVolume
       OnChain.API.LiquidityPosition
       OnChain.API.LiquidityPositionSnapshots
+      OnChain.API.LpToken
       OnChain.API.Mints
       OnChain.API.Orders
       OnChain.API.Poi

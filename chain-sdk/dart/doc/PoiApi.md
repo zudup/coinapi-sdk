@@ -10,6 +10,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**chainsChainIdDappsCowPoiHistoricalGet**](PoiApi.md#chainschainiddappscowpoihistoricalget) | **GET** /chains/{chain_id}/dapps/cow/poi/historical | 
+[**chainsChainIdDappsCurvePoiHistoricalGet**](PoiApi.md#chainschainiddappscurvepoihistoricalget) | **GET** /chains/{chain_id}/dapps/curve/poi/historical | 
 [**chainsChainIdDappsDexPoiHistoricalGet**](PoiApi.md#chainschainiddappsdexpoihistoricalget) | **GET** /chains/{chain_id}/dapps/dex/poi/historical | 
 [**chainsChainIdDappsSushiswapPoiHistoricalGet**](PoiApi.md#chainschainiddappssushiswappoihistoricalget) | **GET** /chains/{chain_id}/dapps/sushiswap/poi/historical | 
 [**chainsChainIdDappsUniswapv2PoiHistoricalGet**](PoiApi.md#chainschainiddappsuniswapv2poihistoricalget) | **GET** /chains/{chain_id}/dapps/uniswapv2/poi/historical | 
@@ -36,6 +37,54 @@ try {
     api_instance.chainsChainIdDappsCowPoiHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
 } catch (e) {
     print('Exception when calling PoiApi->chainsChainIdDappsCowPoiHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chainId** | **String**|  | 
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **chainsChainIdDappsCurvePoiHistoricalGet**
+> chainsChainIdDappsCurvePoiHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = PoiApi();
+final chainId = chainId_example; // String | 
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.chainsChainIdDappsCurvePoiHistoricalGet(chainId, startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling PoiApi->chainsChainIdDappsCurvePoiHistoricalGet: $e\n');
 }
 ```
 

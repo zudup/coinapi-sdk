@@ -22,6 +22,11 @@ void main() {
       // TODO
     });
 
+    //Future chainsChainIdDappsCurvePoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test chainsChainIdDappsCurvePoiHistoricalGet', () async {
+      // TODO
+    });
+
     //Future chainsChainIdDappsDexPoiHistoricalGet(String chainId, { int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test chainsChainIdDappsDexPoiHistoricalGet', () async {
       // TODO

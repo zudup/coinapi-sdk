@@ -25,9 +25,14 @@ lib/on_chain_api/api/gauge_liquidity.ex
 lib/on_chain_api/api/gauge_total_weight.ex
 lib/on_chain_api/api/gauge_type.ex
 lib/on_chain_api/api/gauge_type_weight.ex
+lib/on_chain_api/api/gauge_weight.ex
+lib/on_chain_api/api/gauge_weight_vote.ex
+lib/on_chain_api/api/gauge_withdraw.ex
 lib/on_chain_api/api/hour_data.ex
+lib/on_chain_api/api/hourly_volume.ex
 lib/on_chain_api/api/liquidity_position.ex
 lib/on_chain_api/api/liquidity_position_snapshots.ex
+lib/on_chain_api/api/lp_token.ex
 lib/on_chain_api/api/mints.ex
 lib/on_chain_api/api/orders.ex
 lib/on_chain_api/api/poi.ex

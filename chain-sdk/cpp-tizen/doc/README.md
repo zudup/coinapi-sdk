@@ -198,11 +198,39 @@ Method | HTTP request | Description
 *chainsChainIdDappsCurveGaugeTypeWeightHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical | .
 
 
+### GaugeWeightManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeWeightHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWeight/historical | .
+*chainsChainIdDappsCurveGaugeWeightHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWeight/historical | .
+
+
+### GaugeWeightVoteManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeWeightVoteHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWeightVote/historical | .
+*chainsChainIdDappsCurveGaugeWeightVoteHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWeightVote/historical | .
+
+
+### GaugeWithdrawManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveGaugeWithdrawHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWithdraw/historical | .
+*chainsChainIdDappsCurveGaugeWithdrawHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/gaugeWithdraw/historical | .
+
+
 ### HourDataManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsSushiswapHourDataHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/hourData/historical | .
 *chainsChainIdDappsSushiswapHourDataHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/hourData/historical | .
+
+
+### HourlyVolumeManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveHourlyVolumeHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/hourlyVolume/historical | .
+*chainsChainIdDappsCurveHourlyVolumeHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/hourlyVolume/historical | .
 
 
 ### LiquidityPositionManager
@@ -221,6 +249,13 @@ Method | HTTP request | Description
 *chainsChainIdDappsSushiswapLiquidityPositionSnapshotsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical | .
 *chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical | .
 *chainsChainIdDappsUniswapv2LiquidityPositionSnapshotsHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical | .
+
+
+### LpTokenManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*chainsChainIdDappsCurveLpTokenHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/lpToken/historical | .
+*chainsChainIdDappsCurveLpTokenHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/lpToken/historical | .
 
 
 ### MintsManager
@@ -248,6 +283,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *chainsChainIdDappsCowPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/cow/poi/historical | .
 *chainsChainIdDappsCowPoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/cow/poi/historical | .
+*chainsChainIdDappsCurvePoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/curve/poi/historical | .
+*chainsChainIdDappsCurvePoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/curve/poi/historical | .
 *chainsChainIdDappsDexPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/dex/poi/historical | .
 *chainsChainIdDappsDexPoiHistoricalGetASync* | *GET* /chains/{chain_id}/dapps/dex/poi/historical | .
 *chainsChainIdDappsSushiswapPoiHistoricalGetSync* | *GET* /chains/{chain_id}/dapps/sushiswap/poi/historical | .

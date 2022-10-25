@@ -92,11 +92,21 @@ type APIClient struct {
 
 	GaugeTypeWeightApi *GaugeTypeWeightApiService
 
+	GaugeWeightApi *GaugeWeightApiService
+
+	GaugeWeightVoteApi *GaugeWeightVoteApiService
+
+	GaugeWithdrawApi *GaugeWithdrawApiService
+
 	HourDataApi *HourDataApiService
+
+	HourlyVolumeApi *HourlyVolumeApiService
 
 	LiquidityPositionApi *LiquidityPositionApiService
 
 	LiquidityPositionSnapshotsApi *LiquidityPositionSnapshotsApiService
+
+	LpTokenApi *LpTokenApiService
 
 	MintsApi *MintsApiService
 
@@ -190,9 +200,14 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.GaugeTotalWeightApi = (*GaugeTotalWeightApiService)(&c.common)
 	c.GaugeTypeApi = (*GaugeTypeApiService)(&c.common)
 	c.GaugeTypeWeightApi = (*GaugeTypeWeightApiService)(&c.common)
+	c.GaugeWeightApi = (*GaugeWeightApiService)(&c.common)
+	c.GaugeWeightVoteApi = (*GaugeWeightVoteApiService)(&c.common)
+	c.GaugeWithdrawApi = (*GaugeWithdrawApiService)(&c.common)
 	c.HourDataApi = (*HourDataApiService)(&c.common)
+	c.HourlyVolumeApi = (*HourlyVolumeApiService)(&c.common)
 	c.LiquidityPositionApi = (*LiquidityPositionApiService)(&c.common)
 	c.LiquidityPositionSnapshotsApi = (*LiquidityPositionSnapshotsApiService)(&c.common)
+	c.LpTokenApi = (*LpTokenApiService)(&c.common)
 	c.MintsApi = (*MintsApiService)(&c.common)
 	c.OrdersApi = (*OrdersApiService)(&c.common)
 	c.PoiApi = (*PoiApiService)(&c.common)

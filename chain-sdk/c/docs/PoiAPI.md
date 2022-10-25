@@ -5,6 +5,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**PoiAPI_chainsChainIdDappsCowPoiHistoricalGet**](PoiAPI.md#PoiAPI_chainsChainIdDappsCowPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/cow/poi/historical | 
+[**PoiAPI_chainsChainIdDappsCurvePoiHistoricalGet**](PoiAPI.md#PoiAPI_chainsChainIdDappsCurvePoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/curve/poi/historical | 
 [**PoiAPI_chainsChainIdDappsDexPoiHistoricalGet**](PoiAPI.md#PoiAPI_chainsChainIdDappsDexPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/dex/poi/historical | 
 [**PoiAPI_chainsChainIdDappsSushiswapPoiHistoricalGet**](PoiAPI.md#PoiAPI_chainsChainIdDappsSushiswapPoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/sushiswap/poi/historical | 
 [**PoiAPI_chainsChainIdDappsUniswapv2PoiHistoricalGet**](PoiAPI.md#PoiAPI_chainsChainIdDappsUniswapv2PoiHistoricalGet) | **GET** /chains/{chain_id}/dapps/uniswapv2/poi/historical | 
@@ -14,6 +15,36 @@ Method | HTTP request | Description
 # **PoiAPI_chainsChainIdDappsCowPoiHistoricalGet**
 ```c
 void PoiAPI_chainsChainIdDappsCowPoiHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
+```
+
+### Parameters
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**apiClient** | **apiClient_t \*** | context containing the client configuration |
+**chain_id** | **char \*** |  | 
+**startBlock** | **long** |  | [optional] 
+**endBlock** | **long** |  | [optional] 
+**startDate** | **char** |  | [optional] 
+**endDate** | **char** |  | [optional] 
+
+### Return type
+
+void
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **PoiAPI_chainsChainIdDappsCurvePoiHistoricalGet**
+```c
+void PoiAPI_chainsChainIdDappsCurvePoiHistoricalGet(apiClient_t *apiClient, char * chain_id, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters

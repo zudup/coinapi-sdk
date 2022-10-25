@@ -272,6 +272,33 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date);
 
    --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Weight_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Weight_Vote_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Gauge_Withdraw_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Hour_Data_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
@@ -279,6 +306,16 @@ package .Clients is
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Hourly_Volume_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
 
    --  
    procedure Chains_Chain_Id_Dapps_Sushiswap_Liquidity_Position_Historical_Get
@@ -312,6 +349,16 @@ package .Clients is
 
    --  
    procedure Chains_Chain_Id_Dapps_Uniswapv_2Liquidity_Position_Snapshots_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Lp_Token_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;
@@ -371,6 +418,15 @@ package .Clients is
 
    --  
    procedure Chains_Chain_Id_Dapps_Cow_Poi_Historical_Get
+      (Client : in out Client_Type;
+       Chain_Id : in Swagger.UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date);
+
+   --  
+   procedure Chains_Chain_Id_Dapps_Curve_Poi_Historical_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
        Start_Block : in Swagger.Nullable_Long;

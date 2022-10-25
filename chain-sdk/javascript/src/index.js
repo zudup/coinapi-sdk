@@ -58,9 +58,14 @@ import GaugeLiquidityApi from './api/GaugeLiquidityApi';
 import GaugeTotalWeightApi from './api/GaugeTotalWeightApi';
 import GaugeTypeApi from './api/GaugeTypeApi';
 import GaugeTypeWeightApi from './api/GaugeTypeWeightApi';
+import GaugeWeightApi from './api/GaugeWeightApi';
+import GaugeWeightVoteApi from './api/GaugeWeightVoteApi';
+import GaugeWithdrawApi from './api/GaugeWithdrawApi';
 import HourDataApi from './api/HourDataApi';
+import HourlyVolumeApi from './api/HourlyVolumeApi';
 import LiquidityPositionApi from './api/LiquidityPositionApi';
 import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
+import LpTokenApi from './api/LpTokenApi';
 import MintsApi from './api/MintsApi';
 import OrdersApi from './api/OrdersApi';
 import PoiApi from './api/PoiApi';
@@ -399,10 +404,34 @@ export {
     GaugeTypeWeightApi,
 
     /**
+    * The GaugeWeightApi service constructor.
+    * @property {module:api/GaugeWeightApi}
+    */
+    GaugeWeightApi,
+
+    /**
+    * The GaugeWeightVoteApi service constructor.
+    * @property {module:api/GaugeWeightVoteApi}
+    */
+    GaugeWeightVoteApi,
+
+    /**
+    * The GaugeWithdrawApi service constructor.
+    * @property {module:api/GaugeWithdrawApi}
+    */
+    GaugeWithdrawApi,
+
+    /**
     * The HourDataApi service constructor.
     * @property {module:api/HourDataApi}
     */
     HourDataApi,
+
+    /**
+    * The HourlyVolumeApi service constructor.
+    * @property {module:api/HourlyVolumeApi}
+    */
+    HourlyVolumeApi,
 
     /**
     * The LiquidityPositionApi service constructor.
@@ -415,6 +444,12 @@ export {
     * @property {module:api/LiquidityPositionSnapshotsApi}
     */
     LiquidityPositionSnapshotsApi,
+
+    /**
+    * The LpTokenApi service constructor.
+    * @property {module:api/LpTokenApi}
+    */
+    LpTokenApi,
 
     /**
     * The MintsApi service constructor.

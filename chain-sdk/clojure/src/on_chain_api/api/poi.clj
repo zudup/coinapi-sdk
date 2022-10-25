@@ -55,6 +55,30 @@
         res))))
 
 
+(defn-spec chains-chain-id-dapps-curve-poi-historical-get-with-http-info any?
+  ""
+  ([chain_id string?, ] (chains-chain-id-dapps-curve-poi-historical-get-with-http-info chain_id nil))
+  ([chain_id string?, {:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (check-required-params chain_id)
+   (call-api "/chains/{chain_id}/dapps/curve/poi/historical" :get
+             {:path-params   {"chain_id" chain_id }
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec chains-chain-id-dapps-curve-poi-historical-get any?
+  ""
+  ([chain_id string?, ] (chains-chain-id-dapps-curve-poi-historical-get chain_id nil))
+  ([chain_id string?, optional-params any?]
+   (let [res (:data (chains-chain-id-dapps-curve-poi-historical-get-with-http-info chain_id optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
 (defn-spec chains-chain-id-dapps-dex-poi-historical-get-with-http-info any?
   ""
   ([chain_id string?, ] (chains-chain-id-dapps-dex-poi-historical-get-with-http-info chain_id nil))

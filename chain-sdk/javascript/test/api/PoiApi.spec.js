@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('chainsChainIdDappsCurvePoiHistoricalGet', function() {
+      it('should call chainsChainIdDappsCurvePoiHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test chainsChainIdDappsCurvePoiHistoricalGet
+        //instance.chainsChainIdDappsCurvePoiHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chainsChainIdDappsDexPoiHistoricalGet', function() {
       it('should call chainsChainIdDappsDexPoiHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test chainsChainIdDappsDexPoiHistoricalGet

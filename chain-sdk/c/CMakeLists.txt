@@ -99,9 +99,14 @@ set(SRCS
     api/GaugeTotalWeightAPI.c
     api/GaugeTypeAPI.c
     api/GaugeTypeWeightAPI.c
+    api/GaugeWeightAPI.c
+    api/GaugeWeightVoteAPI.c
+    api/GaugeWithdrawAPI.c
     api/HourDataAPI.c
+    api/HourlyVolumeAPI.c
     api/LiquidityPositionAPI.c
     api/LiquidityPositionSnapshotsAPI.c
+    api/LpTokenAPI.c
     api/MintsAPI.c
     api/OrdersAPI.c
     api/PoiAPI.c
@@ -184,9 +189,14 @@ set(HDRS
     api/GaugeTotalWeightAPI.h
     api/GaugeTypeAPI.h
     api/GaugeTypeWeightAPI.h
+    api/GaugeWeightAPI.h
+    api/GaugeWeightVoteAPI.h
+    api/GaugeWithdrawAPI.h
     api/HourDataAPI.h
+    api/HourlyVolumeAPI.h
     api/LiquidityPositionAPI.h
     api/LiquidityPositionSnapshotsAPI.h
+    api/LpTokenAPI.h
     api/MintsAPI.h
     api/OrdersAPI.h
     api/PoiAPI.h
@@ -316,9 +326,14 @@ set(HDRS "")
 #    unit-tests/manual-GaugeTotalWeightAPI.c
 #    unit-tests/manual-GaugeTypeAPI.c
 #    unit-tests/manual-GaugeTypeWeightAPI.c
+#    unit-tests/manual-GaugeWeightAPI.c
+#    unit-tests/manual-GaugeWeightVoteAPI.c
+#    unit-tests/manual-GaugeWithdrawAPI.c
 #    unit-tests/manual-HourDataAPI.c
+#    unit-tests/manual-HourlyVolumeAPI.c
 #    unit-tests/manual-LiquidityPositionAPI.c
 #    unit-tests/manual-LiquidityPositionSnapshotsAPI.c
+#    unit-tests/manual-LpTokenAPI.c
 #    unit-tests/manual-MintsAPI.c
 #    unit-tests/manual-OrdersAPI.c
 #    unit-tests/manual-PoiAPI.c
