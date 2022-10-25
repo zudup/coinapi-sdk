@@ -47,11 +47,16 @@ import 'package:openapi/src/api/pools_api.dart';
 import 'package:openapi/src/api/position_snapshot_api.dart';
 import 'package:openapi/src/api/positions_api.dart';
 import 'package:openapi/src/api/prices_api.dart';
+import 'package:openapi/src/api/proposals_api.dart';
+import 'package:openapi/src/api/proposals_vote_api.dart';
+import 'package:openapi/src/api/remove_liquidity_event_api.dart';
+import 'package:openapi/src/api/remove_liquidity_one_event_api.dart';
 import 'package:openapi/src/api/settlement_api.dart';
 import 'package:openapi/src/api/solution_api.dart';
 import 'package:openapi/src/api/stats_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/swaps_api.dart';
+import 'package:openapi/src/api/system_state_api.dart';
 import 'package:openapi/src/api/tick_day_data_api.dart';
 import 'package:openapi/src/api/ticks_api.dart';
 import 'package:openapi/src/api/token_day_data_api.dart';
@@ -59,10 +64,14 @@ import 'package:openapi/src/api/token_hour_data_api.dart';
 import 'package:openapi/src/api/tokens_api.dart';
 import 'package:openapi/src/api/trades_api.dart';
 import 'package:openapi/src/api/transactions_api.dart';
+import 'package:openapi/src/api/transfer_ownership_event_api.dart';
+import 'package:openapi/src/api/underlying_coin_api.dart';
 import 'package:openapi/src/api/uniswap_day_data_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
 import 'package:openapi/src/api/users_api.dart';
+import 'package:openapi/src/api/voting_app_api.dart';
+import 'package:openapi/src/api/weekly_volume_api.dart';
 import 'package:openapi/src/api/withdraw_api.dart';
 import 'package:openapi/src/api/withdraw_request_api.dart';
 
@@ -348,6 +357,30 @@ class Openapi {
     return PricesApi(dio, serializers);
   }
 
+  /// Get ProposalsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ProposalsApi getProposalsApi() {
+    return ProposalsApi(dio, serializers);
+  }
+
+  /// Get ProposalsVoteApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ProposalsVoteApi getProposalsVoteApi() {
+    return ProposalsVoteApi(dio, serializers);
+  }
+
+  /// Get RemoveLiquidityEventApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  RemoveLiquidityEventApi getRemoveLiquidityEventApi() {
+    return RemoveLiquidityEventApi(dio, serializers);
+  }
+
+  /// Get RemoveLiquidityOneEventApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  RemoveLiquidityOneEventApi getRemoveLiquidityOneEventApi() {
+    return RemoveLiquidityOneEventApi(dio, serializers);
+  }
+
   /// Get SettlementApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   SettlementApi getSettlementApi() {
@@ -376,6 +409,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   SwapsApi getSwapsApi() {
     return SwapsApi(dio, serializers);
+  }
+
+  /// Get SystemStateApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  SystemStateApi getSystemStateApi() {
+    return SystemStateApi(dio, serializers);
   }
 
   /// Get TickDayDataApi instance, base route and serializer can be overridden by a given but be careful,
@@ -420,6 +459,18 @@ class Openapi {
     return TransactionsApi(dio, serializers);
   }
 
+  /// Get TransferOwnershipEventApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TransferOwnershipEventApi getTransferOwnershipEventApi() {
+    return TransferOwnershipEventApi(dio, serializers);
+  }
+
+  /// Get UnderlyingCoinApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UnderlyingCoinApi getUnderlyingCoinApi() {
+    return UnderlyingCoinApi(dio, serializers);
+  }
+
   /// Get UniswapDayDataApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   UniswapDayDataApi getUniswapDayDataApi() {
@@ -442,6 +493,18 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   UsersApi getUsersApi() {
     return UsersApi(dio, serializers);
+  }
+
+  /// Get VotingAppApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  VotingAppApi getVotingAppApi() {
+    return VotingAppApi(dio, serializers);
+  }
+
+  /// Get WeeklyVolumeApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  WeeklyVolumeApi getWeeklyVolumeApi() {
+    return WeeklyVolumeApi(dio, serializers);
   }
 
   /// Get WithdrawApi instance, base route and serializer can be overridden by a given but be careful,

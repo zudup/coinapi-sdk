@@ -42,10 +42,15 @@ from openapi_client.apis.tags.pools_api import PoolsApi
 from openapi_client.apis.tags.position_snapshot_api import PositionSnapshotApi
 from openapi_client.apis.tags.positions_api import PositionsApi
 from openapi_client.apis.tags.prices_api import PricesApi
+from openapi_client.apis.tags.proposals_api import ProposalsApi
+from openapi_client.apis.tags.proposals_vote_api import ProposalsVoteApi
+from openapi_client.apis.tags.remove_liquidity_event_api import RemoveLiquidityEventApi
+from openapi_client.apis.tags.remove_liquidity_one_event_api import RemoveLiquidityOneEventApi
 from openapi_client.apis.tags.settlement_api import SettlementApi
 from openapi_client.apis.tags.solution_api import SolutionApi
 from openapi_client.apis.tags.stats_api import StatsApi
 from openapi_client.apis.tags.swaps_api import SwapsApi
+from openapi_client.apis.tags.system_state_api import SystemStateApi
 from openapi_client.apis.tags.tick_day_data_api import TickDayDataApi
 from openapi_client.apis.tags.ticks_api import TicksApi
 from openapi_client.apis.tags.token_day_data_api import TokenDayDataApi
@@ -53,8 +58,12 @@ from openapi_client.apis.tags.token_hour_data_api import TokenHourDataApi
 from openapi_client.apis.tags.tokens_api import TokensApi
 from openapi_client.apis.tags.trades_api import TradesApi
 from openapi_client.apis.tags.transactions_api import TransactionsApi
+from openapi_client.apis.tags.transfer_ownership_event_api import TransferOwnershipEventApi
+from openapi_client.apis.tags.underlying_coin_api import UnderlyingCoinApi
 from openapi_client.apis.tags.uniswap_day_data_api import UniswapDayDataApi
 from openapi_client.apis.tags.users_api import UsersApi
+from openapi_client.apis.tags.voting_app_api import VotingAppApi
+from openapi_client.apis.tags.weekly_volume_api import WeeklyVolumeApi
 from openapi_client.apis.tags.withdraw_api import WithdrawApi
 from openapi_client.apis.tags.withdraw_request_api import WithdrawRequestApi
 
@@ -102,10 +111,15 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
         TagValues.PRICES: PricesApi,
+        TagValues.PROPOSALS: ProposalsApi,
+        TagValues.PROPOSALS_VOTE: ProposalsVoteApi,
+        TagValues.REMOVE_LIQUIDITY_EVENT: RemoveLiquidityEventApi,
+        TagValues.REMOVE_LIQUIDITY_ONE_EVENT: RemoveLiquidityOneEventApi,
         TagValues.SETTLEMENT: SettlementApi,
         TagValues.SOLUTION: SolutionApi,
         TagValues.STATS: StatsApi,
         TagValues.SWAPS: SwapsApi,
+        TagValues.SYSTEM_STATE: SystemStateApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,
         TagValues.TOKEN_DAY_DATA: TokenDayDataApi,
@@ -113,8 +127,12 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.TOKENS: TokensApi,
         TagValues.TRADES: TradesApi,
         TagValues.TRANSACTIONS: TransactionsApi,
+        TagValues.TRANSFER_OWNERSHIP_EVENT: TransferOwnershipEventApi,
+        TagValues.UNDERLYING_COIN: UnderlyingCoinApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
         TagValues.USERS: UsersApi,
+        TagValues.VOTING_APP: VotingAppApi,
+        TagValues.WEEKLY_VOLUME: WeeklyVolumeApi,
         TagValues.WITHDRAW: WithdrawApi,
         TagValues.WITHDRAW_REQUEST: WithdrawRequestApi,
     }
@@ -163,10 +181,15 @@ tag_to_api = TagToApi(
         TagValues.POSITION_SNAPSHOT: PositionSnapshotApi,
         TagValues.POSITIONS: PositionsApi,
         TagValues.PRICES: PricesApi,
+        TagValues.PROPOSALS: ProposalsApi,
+        TagValues.PROPOSALS_VOTE: ProposalsVoteApi,
+        TagValues.REMOVE_LIQUIDITY_EVENT: RemoveLiquidityEventApi,
+        TagValues.REMOVE_LIQUIDITY_ONE_EVENT: RemoveLiquidityOneEventApi,
         TagValues.SETTLEMENT: SettlementApi,
         TagValues.SOLUTION: SolutionApi,
         TagValues.STATS: StatsApi,
         TagValues.SWAPS: SwapsApi,
+        TagValues.SYSTEM_STATE: SystemStateApi,
         TagValues.TICK_DAY_DATA: TickDayDataApi,
         TagValues.TICKS: TicksApi,
         TagValues.TOKEN_DAY_DATA: TokenDayDataApi,
@@ -174,8 +197,12 @@ tag_to_api = TagToApi(
         TagValues.TOKENS: TokensApi,
         TagValues.TRADES: TradesApi,
         TagValues.TRANSACTIONS: TransactionsApi,
+        TagValues.TRANSFER_OWNERSHIP_EVENT: TransferOwnershipEventApi,
+        TagValues.UNDERLYING_COIN: UnderlyingCoinApi,
         TagValues.UNISWAP_DAY_DATA: UniswapDayDataApi,
         TagValues.USERS: UsersApi,
+        TagValues.VOTING_APP: VotingAppApi,
+        TagValues.WEEKLY_VOLUME: WeeklyVolumeApi,
         TagValues.WITHDRAW: WithdrawApi,
         TagValues.WITHDRAW_REQUEST: WithdrawRequestApi,
     }

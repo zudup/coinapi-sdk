@@ -50,6 +50,10 @@ API/Client/PositionSnapshotV3DTO.js
 API/Client/PositionV3DTO.js
 API/Client/PositionsApi.js
 API/Client/PricesApi.js
+API/Client/ProposalsApi.js
+API/Client/ProposalsVoteApi.js
+API/Client/RemoveLiquidityEventApi.js
+API/Client/RemoveLiquidityOneEventApi.js
 API/Client/SettlementApi.js
 API/Client/SolutionApi.js
 API/Client/StatsApi.js
@@ -58,6 +62,7 @@ API/Client/SwapDTO.js
 API/Client/SwapV2DTO.js
 API/Client/SwapV3DTO.js
 API/Client/SwapsApi.js
+API/Client/SystemStateApi.js
 API/Client/TickDayDataApi.js
 API/Client/TickDayDataV3DTO.js
 API/Client/TickV3DTO.js
@@ -72,10 +77,14 @@ API/Client/TokenV3DayDataDTO.js
 API/Client/TokensApi.js
 API/Client/TradesApi.js
 API/Client/TransactionsApi.js
+API/Client/TransferOwnershipEventApi.js
+API/Client/UnderlyingCoinApi.js
 API/Client/UniswapDayDataApi.js
 API/Client/UniswapDayDataV3DTO.js
 API/Client/UniswapV2Api.js
 API/Client/UniswapV3Api.js
 API/Client/UsersApi.js
+API/Client/VotingAppApi.js
+API/Client/WeeklyVolumeApi.js
 API/Client/WithdrawApi.js
 API/Client/WithdrawRequestApi.js

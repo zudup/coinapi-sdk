@@ -55,6 +55,10 @@ docs/PositionSnapshotV3DTO.md
 docs/PositionV3DTO.md
 docs/PositionsApi.md
 docs/PricesApi.md
+docs/ProposalsApi.md
+docs/ProposalsVoteApi.md
+docs/RemoveLiquidityEventApi.md
+docs/RemoveLiquidityOneEventApi.md
 docs/SettlementApi.md
 docs/SolutionApi.md
 docs/StatsApi.md
@@ -63,6 +67,7 @@ docs/SwapDTO.md
 docs/SwapV2DTO.md
 docs/SwapV3DTO.md
 docs/SwapsApi.md
+docs/SystemStateApi.md
 docs/TickDayDataApi.md
 docs/TickDayDataV3DTO.md
 docs/TickV3DTO.md
@@ -77,10 +82,14 @@ docs/TokenV3DayDataDTO.md
 docs/TokensApi.md
 docs/TradesApi.md
 docs/TransactionsApi.md
+docs/TransferOwnershipEventApi.md
+docs/UnderlyingCoinApi.md
 docs/UniswapDayDataApi.md
 docs/UniswapDayDataV3DTO.md
 docs/UniswapV2Api.md
 docs/UniswapV3Api.md
 docs/UsersApi.md
+docs/VotingAppApi.md
+docs/WeeklyVolumeApi.md
 docs/WithdrawApi.md
 docs/WithdrawRequestApi.md

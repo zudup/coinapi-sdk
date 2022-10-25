@@ -102,11 +102,16 @@ library
       OnChain.API.PositionSnapshot
       OnChain.API.Positions
       OnChain.API.Prices
+      OnChain.API.Proposals
+      OnChain.API.ProposalsVote
+      OnChain.API.RemoveLiquidityEvent
+      OnChain.API.RemoveLiquidityOneEvent
       OnChain.API.Settlement
       OnChain.API.Solution
       OnChain.API.Stats
       OnChain.API.Sushiswap
       OnChain.API.Swaps
+      OnChain.API.SystemState
       OnChain.API.TickDayData
       OnChain.API.Ticks
       OnChain.API.TokenDayData
@@ -114,10 +119,14 @@ library
       OnChain.API.Tokens
       OnChain.API.Trades
       OnChain.API.Transactions
+      OnChain.API.TransferOwnershipEvent
+      OnChain.API.UnderlyingCoin
       OnChain.API.UniswapDayData
       OnChain.API.UniswapV2
       OnChain.API.UniswapV3
       OnChain.API.Users
+      OnChain.API.VotingApp
+      OnChain.API.WeeklyVolume
       OnChain.API.Withdraw
       OnChain.API.WithdrawRequest
       OnChain.Client

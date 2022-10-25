@@ -129,6 +129,10 @@ _()
     operations["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3PositionsHistoricalGet"]=1
     operations["chainsChainIdDappsDexPricesHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveProposalsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveProposalsVoteHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveRemoveLiquidityEventHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveRemoveLiquidityOneEventHistoricalGet"]=1
     operations["chainsChainIdDappsCowSettlementHistoricalGet"]=1
     operations["chainsChainIdDappsDexSolutionHistoricalGet"]=1
     operations["chainsChainIdDappsDexStatsHistoricalGet"]=1
@@ -139,6 +143,7 @@ _()
     operations["chainsChainIdDappsSushiswapSwapsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2SwapsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveSystemStateHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TicksHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapTokenDayDataHistoricalGet"]=1
@@ -155,6 +160,8 @@ _()
     operations["chainsChainIdDappsSushiswapTransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveTransferOwnershipEventHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveUnderlyingCoinHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2DayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv3DayDataHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2PoolsCurrentGet"]=1
@@ -180,6 +187,8 @@ _()
     operations["chainsChainIdDappsDexUsersHistoricalGet"]=1
     operations["chainsChainIdDappsSushiswapUsersHistoricalGet"]=1
     operations["chainsChainIdDappsUniswapv2UsersHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveVotingAppHistoricalGet"]=1
+    operations["chainsChainIdDappsCurveWeeklyVolumeHistoricalGet"]=1
     operations["chainsChainIdDappsDexWithdrawHistoricalGet"]=1
     operations["chainsChainIdDappsDexWithdrawRequestHistoricalGet"]=1
 
@@ -247,6 +256,10 @@ _()
     operation_parameters["chainsChainIdDappsUniswapv3PositionSnapshotHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3PositionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsDexPricesHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["chainsChainIdDappsCurveProposalsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveProposalsVoteHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveRemoveLiquidityEventHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveRemoveLiquidityOneEventHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsCowSettlementHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsDexSolutionHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsDexStatsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
@@ -257,6 +270,7 @@ _()
     operation_parameters["chainsChainIdDappsSushiswapSwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3SwapsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveSystemStateHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3TickDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv3TicksHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsSushiswapTokenDayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
@@ -273,6 +287,8 @@ _()
     operation_parameters["chainsChainIdDappsSushiswapTransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3TransactionsHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveTransferOwnershipEventHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["chainsChainIdDappsCurveUnderlyingCoinHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsUniswapv2DayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv3DayDataHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2PoolsCurrentGet"]="chain_id= "
@@ -298,6 +314,8 @@ _()
     operation_parameters["chainsChainIdDappsDexUsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsSushiswapUsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
     operation_parameters["chainsChainIdDappsUniswapv2UsersHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveVotingAppHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= "
+    operation_parameters["chainsChainIdDappsCurveWeeklyVolumeHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["chainsChainIdDappsDexWithdrawHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["chainsChainIdDappsDexWithdrawRequestHistoricalGet"]="chain_id= startBlock= endBlock= startDate= endDate= tokenId= "
 
