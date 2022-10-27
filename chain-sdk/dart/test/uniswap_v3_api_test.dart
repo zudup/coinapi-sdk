@@ -19,113 +19,203 @@ void main() {
   group('tests for UniswapV3Api', () {
     // GetBundles
     //
-    //Future<List<BundleV3DTO>> chainsChainIdDappsUniswapv3BundleCurrentGet(String chainId) async
-    test('test chainsChainIdDappsUniswapv3BundleCurrentGet', () async {
+    //Future<List<BundleV3DTO>> dappsUniswapv3BundleCurrentGet() async
+    test('test dappsUniswapv3BundleCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3BundlesHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dappsUniswapv3BundlesHistoricalGet', () async {
       // TODO
     });
 
     // GetBurns
     //
-    //Future<List<BurnV3DTO>> chainsChainIdDappsUniswapv3BurnsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3BurnsCurrentGet', () async {
+    //Future<List<BurnV3DTO>> dappsUniswapv3BurnsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3BurnsCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3BurnsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3BurnsHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3DayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dappsUniswapv3DayDataHistoricalGet', () async {
       // TODO
     });
 
     // GetFactory
     //
-    //Future<List<FactoryV3DTO>> chainsChainIdDappsUniswapv3FactoryCurrentGet(String chainId) async
-    test('test chainsChainIdDappsUniswapv3FactoryCurrentGet', () async {
+    //Future<List<FactoryV3DTO>> dappsUniswapv3FactoryCurrentGet(String chainId) async
+    test('test dappsUniswapv3FactoryCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3FactoryHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dappsUniswapv3FactoryHistoricalGet', () async {
       // TODO
     });
 
     // GetMints
     //
-    //Future<List<MintV3DTO>> chainsChainIdDappsUniswapv3MintsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3MintsCurrentGet', () async {
+    //Future<List<MintV3DTO>> dappsUniswapv3MintsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3MintsCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3MintsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3MintsHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dappsUniswapv3PoiHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PoolDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3PoolDayDataHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PoolHourDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3PoolHourDataHistoricalGet', () async {
       // TODO
     });
 
     // GetPools
     //
-    //Future<List<PoolV3DTO>> chainsChainIdDappsUniswapv3PoolsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3PoolsCurrentGet', () async {
+    //Future<List<PoolV3DTO>> dappsUniswapv3PoolsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3PoolsCurrentGet', () async {
       // TODO
     });
 
     // GetPoolsDayData
     //
-    //Future<List<PoolDayDataV3DTO>> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet', () async {
+    //Future<List<PoolDayDataV3DTO>> dappsUniswapv3PoolsDayDataCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3PoolsDayDataCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3PoolsHistoricalGet', () async {
       // TODO
     });
 
     // GetPoolsHourData
     //
-    //Future<List<PoolHourDataV3DTO>> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet', () async {
+    //Future<List<PoolHourDataV3DTO>> dappsUniswapv3PoolsHourDataCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3PoolsHourDataCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PositionSnapshotHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3PositionSnapshotHistoricalGet', () async {
       // TODO
     });
 
     // GetPositionSnapshot
     //
-    //Future<List<PositionSnapshotV3DTO>> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet', () async {
+    //Future<List<PositionSnapshotV3DTO>> dappsUniswapv3PositionSnapshotsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3PositionSnapshotsCurrentGet', () async {
       // TODO
     });
 
     // GetPositions
     //
-    //Future<List<PositionV3DTO>> chainsChainIdDappsUniswapv3PositionsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3PositionsCurrentGet', () async {
+    //Future<List<PositionV3DTO>> dappsUniswapv3PositionsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3PositionsCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3PositionsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3PositionsHistoricalGet', () async {
       // TODO
     });
 
     // GetSwaps
     //
-    //Future<List<SwapV3DTO>> chainsChainIdDappsUniswapv3SwapsCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3SwapsCurrentGet', () async {
+    //Future<List<SwapV3DTO>> dappsUniswapv3SwapsCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3SwapsCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3SwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3SwapsHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TickDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3TickDayDataHistoricalGet', () async {
       // TODO
     });
 
     // GetTicks
     //
-    //Future<List<TickV3DTO>> chainsChainIdDappsUniswapv3TicksCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3TicksCurrentGet', () async {
+    //Future<List<TickV3DTO>> dappsUniswapv3TicksCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3TicksCurrentGet', () async {
       // TODO
     });
 
     // GetTicksDayData
     //
-    //Future<List<TickDayDataV3DTO>> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(String chainId, { String filterPoolId }) async
-    test('test chainsChainIdDappsUniswapv3TicksDayDataCurrentGet', () async {
+    //Future<List<TickDayDataV3DTO>> dappsUniswapv3TicksDayDataCurrentGet({ String filterPoolId }) async
+    test('test dappsUniswapv3TicksDayDataCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TicksHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test dappsUniswapv3TicksHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TokenDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dappsUniswapv3TokenDayDataHistoricalGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TokenHourDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dappsUniswapv3TokenHourDataHistoricalGet', () async {
       // TODO
     });
 
     // GetTokens
     //
-    //Future<List<TokenV3DTO>> chainsChainIdDappsUniswapv3TokensCurrentGet(String chainId, { String filterTokenId }) async
-    test('test chainsChainIdDappsUniswapv3TokensCurrentGet', () async {
+    //Future<List<TokenV3DTO>> dappsUniswapv3TokensCurrentGet({ String filterTokenId }) async
+    test('test dappsUniswapv3TokensCurrentGet', () async {
       // TODO
     });
 
     // GetTokensDayData
     //
-    //Future<List<TokenV3DayDataDTO>> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(String chainId, { String filterTokenId }) async
-    test('test chainsChainIdDappsUniswapv3TokensDayDataCurrentGet', () async {
+    //Future<List<TokenV3DayDataDTO>> dappsUniswapv3TokensDayDataCurrentGet({ String filterTokenId }) async
+    test('test dappsUniswapv3TokensDayDataCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dappsUniswapv3TokensHistoricalGet', () async {
       // TODO
     });
 
     // GetTokensHourData
     //
-    //Future<List<TokenHourDataV3DTO>> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(String chainId, { String filterTokenId }) async
-    test('test chainsChainIdDappsUniswapv3TokensHourDataCurrentGet', () async {
+    //Future<List<TokenHourDataV3DTO>> dappsUniswapv3TokensHourDataCurrentGet({ String filterTokenId }) async
+    test('test dappsUniswapv3TokensHourDataCurrentGet', () async {
+      // TODO
+    });
+
+    //Future dappsUniswapv3TransactionsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dappsUniswapv3TransactionsHistoricalGet', () async {
       // TODO
     });
 
     // GetUniswapDayData
     //
-    //Future<List<UniswapDayDataV3DTO>> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(String chainId) async
-    test('test chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet', () async {
+    //Future<List<UniswapDayDataV3DTO>> dappsUniswapv3UniswapDayDataCurrentGet() async
+    test('test dappsUniswapv3UniswapDayDataCurrentGet', () async {
       // TODO
     });
 

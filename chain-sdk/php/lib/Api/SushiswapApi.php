@@ -117,36 +117,2995 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapPoolsCurrentGet
+     * Operation dappsSushiswapBundlesHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapBundlesHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapBundlesHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapBundlesHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapBundlesHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapBundlesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapBundlesHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapBundlesHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapBundlesHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapBundlesHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapBundlesHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapBundlesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapBundlesHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapBundlesHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/bundles/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapBurnsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapBurnsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapBurnsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapBurnsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapBurnsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapBurnsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapBurnsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapBurnsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapBurnsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapBurnsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapBurnsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapBurnsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapBurnsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapBurnsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/burns/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/dayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapFactoryHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapFactoryHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapFactoryHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapFactoryHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapFactoryHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapFactoryHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapFactoryHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapFactoryHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapFactoryHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapFactoryHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapFactoryHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapFactoryHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapFactoryHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapFactoryHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/factory/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapHourDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapHourDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapHourDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapHourDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapHourDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapHourDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapHourDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapHourDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapHourDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapHourDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapHourDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapHourDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/hourData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapLiquidityPositionHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapLiquidityPositionHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapLiquidityPositionHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapLiquidityPositionHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapLiquidityPositionHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapLiquidityPositionHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapLiquidityPositionHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapLiquidityPositionHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapLiquidityPositionHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapLiquidityPositionHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/liquidityPosition/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapLiquidityPositionSnapshotsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionSnapshotsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapLiquidityPositionSnapshotsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapLiquidityPositionSnapshotsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapLiquidityPositionSnapshotsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapLiquidityPositionSnapshotsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapLiquidityPositionSnapshotsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/liquidityPositionSnapshots/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapMintsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapMintsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapMintsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapMintsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapMintsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapMintsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapMintsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapMintsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapMintsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapMintsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapMintsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapMintsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapMintsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapMintsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/mints/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapPoiHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapPoiHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapPoiHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapPoiHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapPoiHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapPoiHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapPoiHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoiHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapPoiHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapPoiHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoiHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapPoiHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapPoiHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapPoiHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/poi/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapPoolDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapPoolDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapPoolDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapPoolDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapPoolDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapPoolDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/poolDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolHourDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapPoolHourDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapPoolHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapPoolHourDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolHourDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapPoolHourDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolHourDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolHourDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapPoolHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapPoolHourDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapPoolHourDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/poolHourData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolsCurrentGet
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PairDTO[]
      */
-    public function chainsChainIdDappsSushiswapPoolsCurrentGet($chain_id)
+    public function dappsSushiswapPoolsCurrentGet()
     {
-        list($response) = $this->chainsChainIdDappsSushiswapPoolsCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsSushiswapPoolsCurrentGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapPoolsCurrentGetWithHttpInfo
+     * Operation dappsSushiswapPoolsCurrentGetWithHttpInfo
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PairDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsSushiswapPoolsCurrentGetWithHttpInfo($chain_id)
+    public function dappsSushiswapPoolsCurrentGetWithHttpInfo()
     {
-        $request = $this->chainsChainIdDappsSushiswapPoolsCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapPoolsCurrentGetRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -237,18 +3196,17 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapPoolsCurrentGetAsync
+     * Operation dappsSushiswapPoolsCurrentGetAsync
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapPoolsCurrentGetAsync($chain_id)
+    public function dappsSushiswapPoolsCurrentGetAsync()
     {
-        return $this->chainsChainIdDappsSushiswapPoolsCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -257,19 +3215,18 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapPoolsCurrentGetAsyncWithHttpInfo
+     * Operation dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapPoolsCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo()
     {
         $returnType = '\OpenAPI\Client\Model\PairDTO[]';
-        $request = $this->chainsChainIdDappsSushiswapPoolsCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapPoolsCurrentGetRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -308,24 +3265,16 @@ class SushiswapApi
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsSushiswapPoolsCurrentGet'
+     * Create request for operation 'dappsSushiswapPoolsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsSushiswapPoolsCurrentGetRequest($chain_id)
+    public function dappsSushiswapPoolsCurrentGetRequest()
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsSushiswapPoolsCurrentGet'
-            );
-        }
-
-        $resourcePath = '/chains/{chain_id}/dapps/sushiswap/pools/current';
+        $resourcePath = '/dapps/sushiswap/pools/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -334,14 +3283,6 @@ class SushiswapApi
 
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -403,36 +3344,310 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapSwapsCurrentGet
+     * Operation dappsSushiswapPoolsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapPoolsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapPoolsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapPoolsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapPoolsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapPoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapPoolsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapPoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapPoolsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapPoolsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/pools/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapSwapsCurrentGet
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\SwapDTO[]
      */
-    public function chainsChainIdDappsSushiswapSwapsCurrentGet($chain_id)
+    public function dappsSushiswapSwapsCurrentGet()
     {
-        list($response) = $this->chainsChainIdDappsSushiswapSwapsCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsSushiswapSwapsCurrentGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapSwapsCurrentGetWithHttpInfo
+     * Operation dappsSushiswapSwapsCurrentGetWithHttpInfo
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\SwapDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsSushiswapSwapsCurrentGetWithHttpInfo($chain_id)
+    public function dappsSushiswapSwapsCurrentGetWithHttpInfo()
     {
-        $request = $this->chainsChainIdDappsSushiswapSwapsCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapSwapsCurrentGetRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -523,18 +3738,17 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapSwapsCurrentGetAsync
+     * Operation dappsSushiswapSwapsCurrentGetAsync
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapSwapsCurrentGetAsync($chain_id)
+    public function dappsSushiswapSwapsCurrentGetAsync()
     {
-        return $this->chainsChainIdDappsSushiswapSwapsCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -543,19 +3757,18 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapSwapsCurrentGetAsyncWithHttpInfo
+     * Operation dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapSwapsCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo()
     {
         $returnType = '\OpenAPI\Client\Model\SwapDTO[]';
-        $request = $this->chainsChainIdDappsSushiswapSwapsCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapSwapsCurrentGetRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -594,24 +3807,16 @@ class SushiswapApi
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsSushiswapSwapsCurrentGet'
+     * Create request for operation 'dappsSushiswapSwapsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsSushiswapSwapsCurrentGetRequest($chain_id)
+    public function dappsSushiswapSwapsCurrentGetRequest()
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsSushiswapSwapsCurrentGet'
-            );
-        }
-
-        $resourcePath = '/chains/{chain_id}/dapps/sushiswap/swaps/current';
+        $resourcePath = '/dapps/sushiswap/swaps/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -620,14 +3825,6 @@ class SushiswapApi
 
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -689,36 +3886,586 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapTokensCurrentGet
+     * Operation dappsSushiswapSwapsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapSwapsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsSushiswapSwapsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsSushiswapSwapsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapSwapsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsSushiswapSwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapSwapsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapSwapsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapSwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapSwapsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapSwapsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/swaps/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapTokenDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapTokenDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $this->dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id);
+    }
+
+    /**
+     * Operation dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $request = $this->dappsSushiswapTokenDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapTokenDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTokenDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        return $this->dappsSushiswapTokenDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapTokenDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTokenDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapTokenDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapTokenDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapTokenDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/tokenDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapTokensCurrentGet
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TokenDTO[]
      */
-    public function chainsChainIdDappsSushiswapTokensCurrentGet($chain_id)
+    public function dappsSushiswapTokensCurrentGet()
     {
-        list($response) = $this->chainsChainIdDappsSushiswapTokensCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsSushiswapTokensCurrentGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapTokensCurrentGetWithHttpInfo
+     * Operation dappsSushiswapTokensCurrentGetWithHttpInfo
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsSushiswapTokensCurrentGetWithHttpInfo($chain_id)
+    public function dappsSushiswapTokensCurrentGetWithHttpInfo()
     {
-        $request = $this->chainsChainIdDappsSushiswapTokensCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapTokensCurrentGetRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -809,18 +4556,17 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapTokensCurrentGetAsync
+     * Operation dappsSushiswapTokensCurrentGetAsync
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapTokensCurrentGetAsync($chain_id)
+    public function dappsSushiswapTokensCurrentGetAsync()
     {
-        return $this->chainsChainIdDappsSushiswapTokensCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsSushiswapTokensCurrentGetAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -829,19 +4575,18 @@ class SushiswapApi
     }
 
     /**
-     * Operation chainsChainIdDappsSushiswapTokensCurrentGetAsyncWithHttpInfo
+     * Operation dappsSushiswapTokensCurrentGetAsyncWithHttpInfo
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsSushiswapTokensCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsSushiswapTokensCurrentGetAsyncWithHttpInfo()
     {
         $returnType = '\OpenAPI\Client\Model\TokenDTO[]';
-        $request = $this->chainsChainIdDappsSushiswapTokensCurrentGetRequest($chain_id);
+        $request = $this->dappsSushiswapTokensCurrentGetRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -880,24 +4625,16 @@ class SushiswapApi
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsSushiswapTokensCurrentGet'
+     * Create request for operation 'dappsSushiswapTokensCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsSushiswapTokensCurrentGetRequest($chain_id)
+    public function dappsSushiswapTokensCurrentGetRequest()
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsSushiswapTokensCurrentGet'
-            );
-        }
-
-        $resourcePath = '/chains/{chain_id}/dapps/sushiswap/tokens/current';
+        $resourcePath = '/dapps/sushiswap/tokens/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -906,14 +4643,6 @@ class SushiswapApi
 
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -923,6 +4652,804 @@ class SushiswapApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['text/plain', 'application/json', 'text/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapTokensHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapTokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $this->dappsSushiswapTokensHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id);
+    }
+
+    /**
+     * Operation dappsSushiswapTokensHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapTokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $request = $this->dappsSushiswapTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapTokensHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTokensHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        return $this->dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapTokensHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapTokensHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/tokens/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapTransactionsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapTransactionsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapTransactionsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapTransactionsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapTransactionsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapTransactionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapTransactionsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTransactionsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapTransactionsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapTransactionsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapTransactionsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapTransactionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapTransactionsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapTransactionsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/transactions/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsSushiswapUsersHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsSushiswapUsersHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsSushiswapUsersHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsSushiswapUsersHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsSushiswapUsersHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsSushiswapUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsSushiswapUsersHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapUsersHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsSushiswapUsersHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsSushiswapUsersHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsSushiswapUsersHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsSushiswapUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsSushiswapUsersHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsSushiswapUsersHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/users/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
                 []
             );
         }

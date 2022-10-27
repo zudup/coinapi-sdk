@@ -38,7 +38,6 @@ class UniswapV3Api {
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -48,8 +47,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<BundleV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<BundleV3DTO>>> chainsChainIdDappsUniswapv3BundleCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<BundleV3DTO>>> dappsUniswapv3BundleCurrentGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -57,7 +55,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/bundle/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/bundle/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -108,11 +106,71 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3BundlesHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3BundlesHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/bundles/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetBurns
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -123,8 +181,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<BurnV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<BurnV3DTO>>> chainsChainIdDappsUniswapv3BurnsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<BurnV3DTO>>> dappsUniswapv3BurnsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -133,7 +190,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/burns/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/burns/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -189,11 +246,136 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3BurnsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3BurnsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/burns/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3DayDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3DayDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/dayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetFactory
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
+  /// * [chainId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -203,7 +385,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<FactoryV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<FactoryV3DTO>>> chainsChainIdDappsUniswapv3FactoryCurrentGet({ 
+  Future<Response<BuiltList<FactoryV3DTO>>> dappsUniswapv3FactoryCurrentGet({ 
     required String chainId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -212,7 +394,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/factory/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/factory/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -263,11 +445,71 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3FactoryHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3FactoryHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/factory/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetMints
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -278,8 +520,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<MintV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<MintV3DTO>>> chainsChainIdDappsUniswapv3MintsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<MintV3DTO>>> dappsUniswapv3MintsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -288,7 +529,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/mints/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/mints/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -344,11 +585,263 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3MintsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3MintsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/mints/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3PoiHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PoiHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/poi/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3PoolDayDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PoolDayDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/poolDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3PoolHourDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PoolHourDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/poolHourData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetPools
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -359,8 +852,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<PoolV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<PoolV3DTO>>> chainsChainIdDappsUniswapv3PoolsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<PoolV3DTO>>> dappsUniswapv3PoolsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -369,7 +861,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/pools/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/pools/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -429,7 +921,6 @@ class UniswapV3Api {
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -440,8 +931,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<PoolDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<PoolDayDataV3DTO>>> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<PoolDayDataV3DTO>>> dappsUniswapv3PoolsDayDataCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -450,7 +940,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/poolsDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -506,11 +996,74 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3PoolsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PoolsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/pools/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetPoolsHourData
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -521,8 +1074,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<PoolHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<PoolHourDataV3DTO>>> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<PoolHourDataV3DTO>>> dappsUniswapv3PoolsHourDataCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -531,7 +1083,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/poolsHourData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -587,11 +1139,74 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3PositionSnapshotHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PositionSnapshotHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/positionSnapshot/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetPositionSnapshot
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -602,8 +1217,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<PositionSnapshotV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<PositionSnapshotV3DTO>>> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<PositionSnapshotV3DTO>>> dappsUniswapv3PositionSnapshotsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -612,7 +1226,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/positionSnapshots/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -672,7 +1286,6 @@ class UniswapV3Api {
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -683,8 +1296,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<PositionV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<PositionV3DTO>>> chainsChainIdDappsUniswapv3PositionsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<PositionV3DTO>>> dappsUniswapv3PositionsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -693,7 +1305,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/positions/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/positions/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -749,11 +1361,74 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3PositionsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3PositionsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/positions/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetSwaps
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -764,8 +1439,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SwapV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SwapV3DTO>>> chainsChainIdDappsUniswapv3SwapsCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<SwapV3DTO>>> dappsUniswapv3SwapsCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -774,7 +1448,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/swaps/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/swaps/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -830,11 +1504,138 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3SwapsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3SwapsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/swaps/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3TickDayDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TickDayDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tickDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetTicks
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -845,8 +1646,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TickV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TickV3DTO>>> chainsChainIdDappsUniswapv3TicksCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<TickV3DTO>>> dappsUniswapv3TicksCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -855,7 +1655,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/ticks/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/ticks/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -915,7 +1715,6 @@ class UniswapV3Api {
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterPoolId] - Filter pool id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -926,8 +1725,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TickDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TickDayDataV3DTO>>> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<TickDayDataV3DTO>>> dappsUniswapv3TicksDayDataCurrentGet({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -936,7 +1734,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/ticksDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -992,11 +1790,202 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3TicksHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TicksHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/ticks/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3TokenDayDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [tokenId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TokenDayDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tokenDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// dappsUniswapv3TokenHourDataHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [tokenId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TokenHourDataHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tokenHourData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetTokens
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterTokenId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -1007,8 +1996,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TokenV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TokenV3DTO>>> chainsChainIdDappsUniswapv3TokensCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<TokenV3DTO>>> dappsUniswapv3TokensCurrentGet({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1017,7 +2005,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/tokens/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/tokens/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1077,7 +2065,6 @@ class UniswapV3Api {
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterTokenId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -1088,8 +2075,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TokenV3DayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TokenV3DayDataDTO>>> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<TokenV3DayDataDTO>>> dappsUniswapv3TokensDayDataCurrentGet({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1098,7 +2084,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/tokensDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1154,11 +2140,74 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3TokensHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [tokenId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TokensHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tokens/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetTokensHourData
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [filterTokenId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -1169,8 +2218,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TokenHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TokenHourDataV3DTO>>> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<TokenHourDataV3DTO>>> dappsUniswapv3TokensHourDataCurrentGet({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1179,7 +2227,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/tokensHourData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1235,11 +2283,71 @@ class UniswapV3Api {
     );
   }
 
+  /// dappsUniswapv3TransactionsHistoricalGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> dappsUniswapv3TransactionsHistoricalGet({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/transactions/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// GetUniswapDayData
   /// 
   ///
   /// Parameters:
-  /// * [chainId] - Chain id
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1249,8 +2357,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapDayDataV3DTO>>> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<UniswapDayDataV3DTO>>> dappsUniswapv3UniswapDayDataCurrentGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1258,7 +2365,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/uniswapDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

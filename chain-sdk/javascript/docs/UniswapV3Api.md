@@ -4,28 +4,46 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BundleCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chainsChainIdDappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BurnsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chainsChainIdDappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3FactoryCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chainsChainIdDappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3MintsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chainsChainIdDappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chainsChainIdDappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chainsChainIdDappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3SwapsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chainsChainIdDappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chainsChainIdDappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#dappsUniswapv3BundleCurrentGet) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
+[**dappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BundlesHistoricalGet) | **GET** /dapps/uniswapv3/bundles/historical | 
+[**dappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#dappsUniswapv3BurnsCurrentGet) | **GET** /dapps/uniswapv3/burns/current | GetBurns
+[**dappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BurnsHistoricalGet) | **GET** /dapps/uniswapv3/burns/historical | 
+[**dappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3DayDataHistoricalGet) | **GET** /dapps/uniswapv3/dayData/historical | 
+[**dappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#dappsUniswapv3FactoryCurrentGet) | **GET** /dapps/uniswapv3/factory/current | GetFactory
+[**dappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
+[**dappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
+[**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
+[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
+[**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
+[**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
+[**dappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
+[**dappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsDayDataCurrentGet) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolsHistoricalGet) | **GET** /dapps/uniswapv3/pools/historical | 
+[**dappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsHourDataCurrentGet) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotHistoricalGet) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionsCurrentGet) | **GET** /dapps/uniswapv3/positions/current | GetPositions
+[**dappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionsHistoricalGet) | **GET** /dapps/uniswapv3/positions/historical | 
+[**dappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#dappsUniswapv3SwapsCurrentGet) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3SwapsHistoricalGet) | **GET** /dapps/uniswapv3/swaps/historical | 
+[**dappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TickDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tickDayData/historical | 
+[**dappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksCurrentGet) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
+[**dappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksDayDataCurrentGet) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TicksHistoricalGet) | **GET** /dapps/uniswapv3/ticks/historical | 
+[**dappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
+[**dappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenHourDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
+[**dappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensCurrentGet) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
+[**dappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensDayDataCurrentGet) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokensHistoricalGet) | **GET** /dapps/uniswapv3/tokens/historical | 
+[**dappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensHourDataCurrentGet) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TransactionsHistoricalGet) | **GET** /dapps/uniswapv3/transactions/historical | 
+[**dappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3UniswapDayDataCurrentGet) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
 
-## chainsChainIdDappsUniswapv3BundleCurrentGet
+## dappsUniswapv3BundleCurrentGet
 
-> [BundleV3DTO] chainsChainIdDappsUniswapv3BundleCurrentGet(chainId)
+> [BundleV3DTO] dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -35,8 +53,7 @@ GetBundles
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
-apiInstance.chainsChainIdDappsUniswapv3BundleCurrentGet(chainId, (error, data, response) => {
+apiInstance.dappsUniswapv3BundleCurrentGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -47,10 +64,7 @@ apiInstance.chainsChainIdDappsUniswapv3BundleCurrentGet(chainId, (error, data, r
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -66,9 +80,60 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3BurnsCurrentGet
+## dappsUniswapv3BundlesHistoricalGet
 
-> [BurnV3DTO] chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, opts)
+> dappsUniswapv3BundlesHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.dappsUniswapv3BundlesHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3BurnsCurrentGet
+
+> [BurnV3DTO] dappsUniswapv3BurnsCurrentGet(opts)
 
 GetBurns
 
@@ -78,11 +143,10 @@ GetBurns
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3BurnsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -96,7 +160,6 @@ apiInstance.chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -113,9 +176,113 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3FactoryCurrentGet
+## dappsUniswapv3BurnsHistoricalGet
 
-> [FactoryV3DTO] chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId)
+> dappsUniswapv3BurnsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3BurnsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3DayDataHistoricalGet
+
+> dappsUniswapv3DayDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.dappsUniswapv3DayDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3FactoryCurrentGet
+
+> [FactoryV3DTO] dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -125,8 +292,8 @@ GetFactory
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
-apiInstance.chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId, (error, data, response) => {
+let chainId = "chainId_example"; // String | 
+apiInstance.dappsUniswapv3FactoryCurrentGet(chainId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -140,7 +307,7 @@ apiInstance.chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId, (error, data, 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+ **chainId** | **String**|  | 
 
 ### Return type
 
@@ -156,9 +323,60 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3MintsCurrentGet
+## dappsUniswapv3FactoryHistoricalGet
 
-> [MintV3DTO] chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, opts)
+> dappsUniswapv3FactoryHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.dappsUniswapv3FactoryHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3MintsCurrentGet
+
+> [MintV3DTO] dappsUniswapv3MintsCurrentGet(opts)
 
 GetMints
 
@@ -168,11 +386,10 @@ GetMints
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3MintsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -186,7 +403,6 @@ apiInstance.chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -203,9 +419,219 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3PoolsCurrentGet
+## dappsUniswapv3MintsHistoricalGet
 
-> [PoolV3DTO] chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, opts)
+> dappsUniswapv3MintsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3MintsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PoiHistoricalGet
+
+> dappsUniswapv3PoiHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.dappsUniswapv3PoiHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PoolDayDataHistoricalGet
+
+> dappsUniswapv3PoolDayDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3PoolDayDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PoolHourDataHistoricalGet
+
+> dappsUniswapv3PoolHourDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3PoolHourDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PoolsCurrentGet
+
+> [PoolV3DTO] dappsUniswapv3PoolsCurrentGet(opts)
 
 GetPools
 
@@ -215,11 +641,10 @@ GetPools
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3PoolsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -233,7 +658,6 @@ apiInstance.chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -250,9 +674,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+## dappsUniswapv3PoolsDayDataCurrentGet
 
-> [PoolDayDataV3DTO] chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, opts)
+> [PoolDayDataV3DTO] dappsUniswapv3PoolsDayDataCurrentGet(opts)
 
 GetPoolsDayData
 
@@ -262,11 +686,10 @@ GetPoolsDayData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -280,7 +703,6 @@ apiInstance.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, opts, (er
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -297,9 +719,62 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+## dappsUniswapv3PoolsHistoricalGet
 
-> [PoolHourDataV3DTO] chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, opts)
+> dappsUniswapv3PoolsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3PoolsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PoolsHourDataCurrentGet
+
+> [PoolHourDataV3DTO] dappsUniswapv3PoolsHourDataCurrentGet(opts)
 
 GetPoolsHourData
 
@@ -309,11 +784,10 @@ GetPoolsHourData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -327,7 +801,6 @@ apiInstance.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, opts, (e
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -344,9 +817,62 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+## dappsUniswapv3PositionSnapshotHistoricalGet
 
-> [PositionSnapshotV3DTO] chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, opts)
+> dappsUniswapv3PositionSnapshotHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3PositionSnapshotHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3PositionSnapshotsCurrentGet
+
+> [PositionSnapshotV3DTO] dappsUniswapv3PositionSnapshotsCurrentGet(opts)
 
 GetPositionSnapshot
 
@@ -356,11 +882,10 @@ GetPositionSnapshot
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -374,7 +899,6 @@ apiInstance.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, opts
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -391,9 +915,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3PositionsCurrentGet
+## dappsUniswapv3PositionsCurrentGet
 
-> [PositionV3DTO] chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, opts)
+> [PositionV3DTO] dappsUniswapv3PositionsCurrentGet(opts)
 
 GetPositions
 
@@ -403,11 +927,10 @@ GetPositions
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3PositionsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -421,7 +944,6 @@ apiInstance.chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, opts, (error
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -438,9 +960,62 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3SwapsCurrentGet
+## dappsUniswapv3PositionsHistoricalGet
 
-> [SwapV3DTO] chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, opts)
+> dappsUniswapv3PositionsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3PositionsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3SwapsCurrentGet
+
+> [SwapV3DTO] dappsUniswapv3SwapsCurrentGet(opts)
 
 GetSwaps
 
@@ -450,11 +1025,10 @@ GetSwaps
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3SwapsCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -468,7 +1042,6 @@ apiInstance.chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -485,9 +1058,115 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3TicksCurrentGet
+## dappsUniswapv3SwapsHistoricalGet
 
-> [TickV3DTO] chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, opts)
+> dappsUniswapv3SwapsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3SwapsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TickDayDataHistoricalGet
+
+> dappsUniswapv3TickDayDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3TickDayDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TicksCurrentGet
+
+> [TickV3DTO] dappsUniswapv3TicksCurrentGet(opts)
 
 GetTicks
 
@@ -497,11 +1176,10 @@ GetTicks
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3TicksCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -515,7 +1193,6 @@ apiInstance.chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -532,9 +1209,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+## dappsUniswapv3TicksDayDataCurrentGet
 
-> [TickDayDataV3DTO] chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, opts)
+> [TickDayDataV3DTO] dappsUniswapv3TicksDayDataCurrentGet(opts)
 
 GetTicksDayData
 
@@ -544,11 +1221,10 @@ GetTicksDayData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterPoolId': "filterPoolId_example" // String | Filter pool id
 };
-apiInstance.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3TicksDayDataCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -562,7 +1238,6 @@ apiInstance.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, opts, (er
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -579,9 +1254,168 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3TokensCurrentGet
+## dappsUniswapv3TicksHistoricalGet
 
-> [TokenV3DTO] chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, opts)
+> dappsUniswapv3TicksHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.dappsUniswapv3TicksHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TokenDayDataHistoricalGet
+
+> dappsUniswapv3TokenDayDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.dappsUniswapv3TokenDayDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TokenHourDataHistoricalGet
+
+> dappsUniswapv3TokenHourDataHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.dappsUniswapv3TokenHourDataHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TokensCurrentGet
+
+> [TokenV3DTO] dappsUniswapv3TokensCurrentGet(opts)
 
 GetTokens
 
@@ -591,11 +1425,10 @@ GetTokens
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterTokenId': "filterTokenId_example" // String | 
 };
-apiInstance.chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3TokensCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -609,7 +1442,6 @@ apiInstance.chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, opts, (error, d
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -626,9 +1458,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+## dappsUniswapv3TokensDayDataCurrentGet
 
-> [TokenV3DayDataDTO] chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, opts)
+> [TokenV3DayDataDTO] dappsUniswapv3TokensDayDataCurrentGet(opts)
 
 GetTokensDayData
 
@@ -638,11 +1470,10 @@ GetTokensDayData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterTokenId': "filterTokenId_example" // String | 
 };
-apiInstance.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3TokensDayDataCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -656,7 +1487,6 @@ apiInstance.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, opts, (e
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -673,9 +1503,62 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+## dappsUniswapv3TokensHistoricalGet
 
-> [TokenHourDataV3DTO] chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, opts)
+> dappsUniswapv3TokensHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.dappsUniswapv3TokensHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3TokensHourDataCurrentGet
+
+> [TokenHourDataV3DTO] dappsUniswapv3TokensHourDataCurrentGet(opts)
 
 GetTokensHourData
 
@@ -685,11 +1568,10 @@ GetTokensHourData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
 let opts = {
   'filterTokenId': "filterTokenId_example" // String | 
 };
-apiInstance.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, opts, (error, data, response) => {
+apiInstance.dappsUniswapv3TokensHourDataCurrentGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -703,7 +1585,6 @@ apiInstance.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, opts, (
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -720,9 +1601,60 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+## dappsUniswapv3TransactionsHistoricalGet
 
-> [UniswapDayDataV3DTO] chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId)
+> dappsUniswapv3TransactionsHistoricalGet(opts)
+
+
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.dappsUniswapv3TransactionsHistoricalGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dappsUniswapv3UniswapDayDataCurrentGet
+
+> [UniswapDayDataV3DTO] dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -732,8 +1664,7 @@ GetUniswapDayData
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-let chainId = "chainId_example"; // String | Chain id
-apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId, (error, data, response) => {
+apiInstance.dappsUniswapv3UniswapDayDataCurrentGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -744,10 +1675,7 @@ apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId, (error,
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -15,13 +15,31 @@
 
 
 module Api.Request.Sushiswap exposing
-    ( chainsChainIdDappsSushiswapPoolsCurrentGet
-    , chainsChainIdDappsSushiswapSwapsCurrentGet
-    , chainsChainIdDappsSushiswapTokensCurrentGet
+    ( dappsSushiswapBundlesHistoricalGet
+    , dappsSushiswapBurnsHistoricalGet
+    , dappsSushiswapDayDataHistoricalGet
+    , dappsSushiswapFactoryHistoricalGet
+    , dappsSushiswapHourDataHistoricalGet
+    , dappsSushiswapLiquidityPositionHistoricalGet
+    , dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+    , dappsSushiswapMintsHistoricalGet
+    , dappsSushiswapPoiHistoricalGet
+    , dappsSushiswapPoolDayDataHistoricalGet
+    , dappsSushiswapPoolHourDataHistoricalGet
+    , dappsSushiswapPoolsCurrentGet
+    , dappsSushiswapPoolsHistoricalGet
+    , dappsSushiswapSwapsCurrentGet
+    , dappsSushiswapSwapsHistoricalGet
+    , dappsSushiswapTokenDayDataHistoricalGet
+    , dappsSushiswapTokensCurrentGet
+    , dappsSushiswapTokensHistoricalGet
+    , dappsSushiswapTransactionsHistoricalGet
+    , dappsSushiswapUsersHistoricalGet
     )
 
 import Api
 import Api.Data
+import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
@@ -29,14 +47,157 @@ import Json.Encode
 
 
 
-{-| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
--}
-chainsChainIdDappsSushiswapPoolsCurrentGet : String -> Api.Request (List Api.Data.PairDTO)
-chainsChainIdDappsSushiswapPoolsCurrentGet chainId_path =
+dappsSushiswapBundlesHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapBundlesHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/chains/{chain_id}/dapps/sushiswap/pools/current"
-        [ ( "chainId", identity chainId_path ) ]
+        "/dapps/sushiswap/bundles/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapBurnsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapBurnsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/burns/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapDayDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapDayDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/dayData/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapFactoryHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapFactoryHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/factory/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapHourDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapHourDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/hourData/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapLiquidityPositionHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapLiquidityPositionHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/liquidityPosition/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapLiquidityPositionSnapshotsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapLiquidityPositionSnapshotsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/liquidityPositionSnapshots/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapMintsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapMintsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/mints/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapPoiHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapPoiHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/poi/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapPoolDayDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapPoolDayDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/poolDayData/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapPoolHourDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapPoolHourDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/poolHourData/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+{-| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+-}
+dappsSushiswapPoolsCurrentGet : Api.Request (List Api.Data.PairDTO)
+dappsSushiswapPoolsCurrentGet =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/pools/current"
+        []
         []
         []
         Nothing
@@ -44,12 +205,25 @@ chainsChainIdDappsSushiswapPoolsCurrentGet chainId_path =
 
 
 
-chainsChainIdDappsSushiswapSwapsCurrentGet : String -> Api.Request (List Api.Data.SwapDTO)
-chainsChainIdDappsSushiswapSwapsCurrentGet chainId_path =
+dappsSushiswapPoolsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapPoolsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/chains/{chain_id}/dapps/sushiswap/swaps/current"
-        [ ( "chainId", identity chainId_path ) ]
+        "/dapps/sushiswap/pools/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapSwapsCurrentGet : Api.Request (List Api.Data.SwapDTO)
+dappsSushiswapSwapsCurrentGet =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/swaps/current"
+        []
         []
         []
         Nothing
@@ -57,13 +231,78 @@ chainsChainIdDappsSushiswapSwapsCurrentGet chainId_path =
 
 
 
-chainsChainIdDappsSushiswapTokensCurrentGet : String -> Api.Request (List Api.Data.TokenDTO)
-chainsChainIdDappsSushiswapTokensCurrentGet chainId_path =
+dappsSushiswapSwapsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapSwapsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/chains/{chain_id}/dapps/sushiswap/tokens/current"
-        [ ( "chainId", identity chainId_path ) ]
+        "/dapps/sushiswap/swaps/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapTokenDayDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapTokenDayDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/tokenDayData/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapTokensCurrentGet : Api.Request (List Api.Data.TokenDTO)
+dappsSushiswapTokensCurrentGet =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/tokens/current"
+        []
         []
         []
         Nothing
         (Json.Decode.list Api.Data.tokenDTODecoder)
+
+
+
+dappsSushiswapTokensHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
+dappsSushiswapTokensHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/tokens/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapTransactionsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapTransactionsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/transactions/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+dappsSushiswapUsersHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
+dappsSushiswapUsersHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/users/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.succeed ())

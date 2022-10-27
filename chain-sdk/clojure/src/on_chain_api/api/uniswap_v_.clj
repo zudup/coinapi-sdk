@@ -31,12 +31,287 @@
   (:import (java.io File)))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv2-pools-current-get-with-http-info any?
+(defn-spec dapps-uniswapv2-bundles-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-bundles-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/bundles/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-bundles-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-bundles-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-bundles-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-burns-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-burns-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/burns/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-burns-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-burns-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-burns-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/dayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-factory-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-factory-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/factory/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-factory-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-factory-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-factory-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-liquidity-position-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-liquidity-position-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/liquidityPosition/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-liquidity-position-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-liquidity-position-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-liquidity-position-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-liquidity-position-snapshots-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-liquidity-position-snapshots-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/liquidityPositionSnapshots/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-liquidity-position-snapshots-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-liquidity-position-snapshots-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-liquidity-position-snapshots-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-mints-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-mints-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/mints/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-mints-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-mints-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-mints-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-poi-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-poi-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/poi/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-poi-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-poi-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-poi-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-pool-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-pool-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/poolDayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-pool-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-pool-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-pool-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-pool-hour-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-pool-hour-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/poolHourData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-pool-hour-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-pool-hour-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-pool-hour-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-pools-current-get-with-http-info any?
   "GetPools"
-  [chain_id string?]
-  (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv2/pools/current" :get
-            {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv2-pools-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/pools/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"filter_pool_id" filter_pool_id }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-pools-current-get (s/coll-of pair-v2-dto-spec)
+  "GetPools"
+  ([] (dapps-uniswapv2-pools-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-pools-current-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of pair-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-pools-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-pools-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/pools/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-pools-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-pools-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-pools-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-swaps-current-get-with-http-info any?
+  "GetSwaps"
+  []
+  (call-api "/dapps/uniswapv2/swaps/current" :get
+            {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
@@ -44,43 +319,66 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec chains-chain-id-dapps-uniswapv2-pools-current-get (s/coll-of pair-v2-dto-spec)
-  "GetPools"
-  [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv2-pools-current-get-with-http-info chain_id))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of pair-v2-dto-spec) res st/string-transformer)
-       res)))
-
-
-(defn-spec chains-chain-id-dapps-uniswapv2-swaps-current-get-with-http-info any?
+(defn-spec dapps-uniswapv2-swaps-current-get (s/coll-of swap-v2-dto-spec)
   "GetSwaps"
-  [chain_id string?]
-  (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv2/swaps/current" :get
-            {:path-params   {"chain_id" chain_id }
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec chains-chain-id-dapps-uniswapv2-swaps-current-get (s/coll-of swap-v2-dto-spec)
-  "GetSwaps"
-  [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv2-swaps-current-get-with-http-info chain_id))]
+  []
+  (let [res (:data (dapps-uniswapv2-swaps-current-get-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of swap-v2-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv2-tokens-current-get-with-http-info any?
+(defn-spec dapps-uniswapv2-swaps-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-swaps-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/swaps/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-swaps-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-swaps-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-swaps-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-token-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-token-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/tokenDayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-token-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-token-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-token-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-tokens-current-get-with-http-info any?
   "GetTokens"
-  [chain_id string?]
-  (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv2/tokens/current" :get
-            {:path-params   {"chain_id" chain_id }
+  []
+  (call-api "/dapps/uniswapv2/tokens/current" :get
+            {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
@@ -88,21 +386,89 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec chains-chain-id-dapps-uniswapv2-tokens-current-get (s/coll-of token-v2-dto-spec)
+(defn-spec dapps-uniswapv2-tokens-current-get (s/coll-of token-v2-dto-spec)
   "GetTokens"
-  [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv2-tokens-current-get-with-http-info chain_id))]
+  []
+  (let [res (:data (dapps-uniswapv2-tokens-current-get-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of token-v2-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-bundle-current-get-with-http-info any?
+(defn-spec dapps-uniswapv2-tokens-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-tokens-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/tokens/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-tokens-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-tokens-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-tokens-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-transactions-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-transactions-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/transactions/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-transactions-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-transactions-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-transactions-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv2-users-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv2-users-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/users/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv2-users-historical-get any?
+  ""
+  ([] (dapps-uniswapv2-users-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv2-users-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-bundle-current-get-with-http-info any?
   "GetBundles"
-  [chain_id string?]
-  (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv3/bundle/current" :get
-            {:path-params   {"chain_id" chain_id }
+  []
+  (call-api "/dapps/uniswapv3/bundle/current" :get
+            {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
@@ -110,22 +476,44 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-bundle-current-get (s/coll-of bundle-v3-dto-spec)
+(defn-spec dapps-uniswapv3-bundle-current-get (s/coll-of bundle-v3-dto-spec)
   "GetBundles"
-  [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv3-bundle-current-get-with-http-info chain_id))]
+  []
+  (let [res (:data (dapps-uniswapv3-bundle-current-get-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of bundle-v3-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-burns-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-bundles-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-bundles-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/bundles/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-bundles-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-bundles-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-bundles-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-burns-current-get-with-http-info any?
   "GetBurns"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-burns-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/burns/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-burns-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/burns/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -133,21 +521,67 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-burns-current-get (s/coll-of burn-v3-dto-spec)
+(defn-spec dapps-uniswapv3-burns-current-get (s/coll-of burn-v3-dto-spec)
   "GetBurns"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-burns-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-burns-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-burns-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-burns-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of burn-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-factory-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-burns-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-burns-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/burns/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-burns-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-burns-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-burns-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/dayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-factory-current-get-with-http-info any?
   "GetFactory"
   [chain_id string?]
   (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv3/factory/current" :get
+  (call-api "/dapps/uniswapv3/factory/current" :get
             {:path-params   {"chain_id" chain_id }
              :header-params {}
              :query-params  {}
@@ -156,22 +590,44 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-factory-current-get (s/coll-of factory-v3-dto-spec)
+(defn-spec dapps-uniswapv3-factory-current-get (s/coll-of factory-v3-dto-spec)
   "GetFactory"
   [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv3-factory-current-get-with-http-info chain_id))]
+  (let [res (:data (dapps-uniswapv3-factory-current-get-with-http-info chain_id))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of factory-v3-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-mints-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-factory-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-factory-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/factory/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-factory-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-factory-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-factory-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-mints-current-get-with-http-info any?
   "GetMints"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-mints-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/mints/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-mints-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/mints/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -179,23 +635,114 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-mints-current-get (s/coll-of mint-v3-dto-spec)
+(defn-spec dapps-uniswapv3-mints-current-get (s/coll-of mint-v3-dto-spec)
   "GetMints"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-mints-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-mints-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-mints-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-mints-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of mint-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-mints-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-mints-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/mints/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-mints-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-mints-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-mints-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-poi-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-poi-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/poi/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-poi-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-poi-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-poi-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-pool-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-pool-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/poolDayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-pool-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-pool-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pool-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-pool-hour-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-pool-hour-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/poolHourData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-pool-hour-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-pool-hour-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pool-hour-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-pools-current-get-with-http-info any?
   "GetPools"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/pools/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-pools-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/pools/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -203,23 +750,22 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-current-get (s/coll-of pool-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-current-get (s/coll-of pool-v3-dto-spec)
   "GetPools"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-pools-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-pools-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pools-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of pool-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-day-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-pools-day-data-current-get-with-http-info any?
   "GetPoolsDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-day-data-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-pools-day-data-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/poolsDayData/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -227,23 +773,45 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-day-data-current-get (s/coll-of pool-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-day-data-current-get (s/coll-of pool-day-data-v3-dto-spec)
   "GetPoolsDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-day-data-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-pools-day-data-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-pools-day-data-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pools-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of pool-day-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-hour-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-pools-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-pools-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/pools/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-pools-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-pools-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pools-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-pools-hour-data-current-get-with-http-info any?
   "GetPoolsHourData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-hour-data-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-pools-hour-data-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/poolsHourData/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -251,23 +819,45 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-pools-hour-data-current-get (s/coll-of pool-hour-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-hour-data-current-get (s/coll-of pool-hour-data-v3-dto-spec)
   "GetPoolsHourData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-pools-hour-data-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-pools-hour-data-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-pools-hour-data-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-pools-hour-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of pool-hour-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-position-snapshots-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-position-snapshot-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-position-snapshot-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/positionSnapshot/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-position-snapshot-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-position-snapshot-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-position-snapshot-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-position-snapshots-current-get-with-http-info any?
   "GetPositionSnapshot"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-position-snapshots-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-position-snapshots-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/positionSnapshots/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -275,23 +865,22 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-position-snapshots-current-get (s/coll-of position-snapshot-v3-dto-spec)
+(defn-spec dapps-uniswapv3-position-snapshots-current-get (s/coll-of position-snapshot-v3-dto-spec)
   "GetPositionSnapshot"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-position-snapshots-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-position-snapshots-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-position-snapshots-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-position-snapshots-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of position-snapshot-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-positions-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-positions-current-get-with-http-info any?
   "GetPositions"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-positions-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/positions/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-positions-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/positions/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -299,23 +888,45 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-positions-current-get (s/coll-of position-v3-dto-spec)
+(defn-spec dapps-uniswapv3-positions-current-get (s/coll-of position-v3-dto-spec)
   "GetPositions"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-positions-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-positions-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-positions-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-positions-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of position-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-swaps-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-positions-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-positions-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/positions/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-positions-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-positions-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-positions-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-swaps-current-get-with-http-info any?
   "GetSwaps"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-swaps-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/swaps/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-swaps-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/swaps/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -323,23 +934,68 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-swaps-current-get (s/coll-of swap-v3-dto-spec)
+(defn-spec dapps-uniswapv3-swaps-current-get (s/coll-of swap-v3-dto-spec)
   "GetSwaps"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-swaps-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-swaps-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-swaps-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-swaps-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of swap-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-ticks-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-swaps-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-swaps-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/swaps/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-swaps-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-swaps-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-swaps-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-tick-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-tick-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tickDayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-tick-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-tick-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-tick-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-ticks-current-get-with-http-info any?
   "GetTicks"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-ticks-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/ticks/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-ticks-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/ticks/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -347,23 +1003,22 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-ticks-current-get (s/coll-of tick-v3-dto-spec)
+(defn-spec dapps-uniswapv3-ticks-current-get (s/coll-of tick-v3-dto-spec)
   "GetTicks"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-ticks-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-ticks-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-ticks-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-ticks-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of tick-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-ticks-day-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-ticks-day-data-current-get-with-http-info any?
   "GetTicksDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-ticks-day-data-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-ticks-day-data-current-get-with-http-info nil))
+  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/ticksDayData/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_pool_id" filter_pool_id }
               :form-params   {}
@@ -371,23 +1026,91 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-ticks-day-data-current-get (s/coll-of tick-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-ticks-day-data-current-get (s/coll-of tick-day-data-v3-dto-spec)
   "GetTicksDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-ticks-day-data-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-ticks-day-data-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-ticks-day-data-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-ticks-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of tick-day-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-ticks-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-ticks-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/ticks/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-ticks-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-ticks-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-ticks-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-token-day-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-token-day-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokenDayData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-token-day-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-token-day-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-token-day-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-token-hour-data-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-token-hour-data-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokenHourData/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-token-hour-data-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-token-hour-data-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-token-hour-data-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-tokens-current-get-with-http-info any?
   "GetTokens"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_token_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/tokens/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-tokens-current-get-with-http-info nil))
+  ([{:keys [filter_token_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokens/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_token_id" filter_token_id }
               :form-params   {}
@@ -395,23 +1118,22 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-current-get (s/coll-of token-v3-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-current-get (s/coll-of token-v3-dto-spec)
   "GetTokens"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-tokens-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-tokens-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-tokens-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of token-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-day-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-tokens-day-data-current-get-with-http-info any?
   "GetTokensDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-day-data-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_token_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-tokens-day-data-current-get-with-http-info nil))
+  ([{:keys [filter_token_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokensDayData/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_token_id" filter_token_id }
               :form-params   {}
@@ -419,23 +1141,45 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-day-data-current-get (s/coll-of token-v3-day-data-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-day-data-current-get (s/coll-of token-v3-day-data-dto-spec)
   "GetTokensDayData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-day-data-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-tokens-day-data-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-tokens-day-data-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-tokens-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of token-v3-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-hour-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-tokens-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-tokens-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokens/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-tokens-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-tokens-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-tokens-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-tokens-hour-data-current-get-with-http-info any?
   "GetTokensHourData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-hour-data-current-get-with-http-info chain_id nil))
-  ([chain_id string?, {:keys [filter_token_id]} (s/map-of keyword? any?)]
-   (check-required-params chain_id)
-   (call-api "/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current" :get
-             {:path-params   {"chain_id" chain_id }
+  ([] (dapps-uniswapv3-tokens-hour-data-current-get-with-http-info nil))
+  ([{:keys [filter_token_id]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/tokensHourData/current" :get
+             {:path-params   {}
               :header-params {}
               :query-params  {"filter_token_id" filter_token_id }
               :form-params   {}
@@ -443,22 +1187,44 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-tokens-hour-data-current-get (s/coll-of token-hour-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-hour-data-current-get (s/coll-of token-hour-data-v3-dto-spec)
   "GetTokensHourData"
-  ([chain_id string?, ] (chains-chain-id-dapps-uniswapv3-tokens-hour-data-current-get chain_id nil))
-  ([chain_id string?, optional-params any?]
-   (let [res (:data (chains-chain-id-dapps-uniswapv3-tokens-hour-data-current-get-with-http-info chain_id optional-params))]
+  ([] (dapps-uniswapv3-tokens-hour-data-current-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-tokens-hour-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of token-hour-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec chains-chain-id-dapps-uniswapv3-uniswap-day-data-current-get-with-http-info any?
+(defn-spec dapps-uniswapv3-transactions-historical-get-with-http-info any?
+  ""
+  ([] (dapps-uniswapv3-transactions-historical-get-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/transactions/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
+              :form-params   {}
+              :content-types []
+              :accepts       []
+              :auth-names    []})))
+
+(defn-spec dapps-uniswapv3-transactions-historical-get any?
+  ""
+  ([] (dapps-uniswapv3-transactions-historical-get nil))
+  ([optional-params any?]
+   (let [res (:data (dapps-uniswapv3-transactions-historical-get-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode any? res st/string-transformer)
+        res))))
+
+
+(defn-spec dapps-uniswapv3-uniswap-day-data-current-get-with-http-info any?
   "GetUniswapDayData"
-  [chain_id string?]
-  (check-required-params chain_id)
-  (call-api "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current" :get
-            {:path-params   {"chain_id" chain_id }
+  []
+  (call-api "/dapps/uniswapv3/uniswapDayData/current" :get
+            {:path-params   {}
              :header-params {}
              :query-params  {}
              :form-params   {}
@@ -466,10 +1232,10 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec chains-chain-id-dapps-uniswapv3-uniswap-day-data-current-get (s/coll-of uniswap-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-uniswap-day-data-current-get (s/coll-of uniswap-day-data-v3-dto-spec)
   "GetUniswapDayData"
-  [chain_id string?]
-  (let [res (:data (chains-chain-id-dapps-uniswapv3-uniswap-day-data-current-get-with-http-info chain_id))]
+  []
+  (let [res (:data (dapps-uniswapv3-uniswap-day-data-current-get-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-day-data-v3-dto-spec) res st/string-transformer)
        res)))

@@ -48,22 +48,744 @@ export class UniswapV2Api {
 
     /**
      * 
-     * @summary GetPools
-     * @param chainId Chain id
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
      */
-    public chainsChainIdDappsUniswapv2PoolsCurrentGet(chainId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PairV2DTO>;  },
+    public dappsUniswapv2BundlesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/pools/current'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+        let localVarPath = this.basePath + '/dapps/uniswapv2/bundles/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        // verify required parameter 'chainId' is not null or undefined
-        if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2PoolsCurrentGet.');
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
         }
 
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2BurnsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/burns/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
+    public dappsUniswapv2DayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/dayData/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
+    public dappsUniswapv2FactoryHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/factory/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2LiquidityPositionHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPosition/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositionSnapshots/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/mints/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
+    public dappsUniswapv2PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/poi/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2PoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/poolDayData/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
+     */
+    public dappsUniswapv2PoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/poolHourData/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @summary GetPools
+     * @param filterPoolId Filter pool id
+     */
+    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.PairV2DTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/pools/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (filterPoolId !== null && filterPoolId !== undefined) {
+            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
+        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -112,22 +834,90 @@ export class UniswapV2Api {
 
     /**
      * 
-     * @summary GetSwaps
-     * @param chainId Chain id
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
      */
-    public chainsChainIdDappsUniswapv2SwapsCurrentGet(chainId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SwapV2DTO>;  },
+    public dappsUniswapv2PoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/swaps/current'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+        let localVarPath = this.basePath + '/dapps/uniswapv2/pools/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        // verify required parameter 'chainId' is not null or undefined
-        if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2SwapsCurrentGet.');
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
         }
 
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @summary GetSwaps
+     */
+    public dappsUniswapv2SwapsCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.SwapV2DTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/swaps/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -176,22 +966,164 @@ export class UniswapV2Api {
 
     /**
      * 
-     * @summary GetTokens
-     * @param chainId Chain id
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param poolId 
      */
-    public chainsChainIdDappsUniswapv2TokensCurrentGet(chainId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenV2DTO>;  },
+    public dappsUniswapv2SwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/chains/{chain_id}/dapps/uniswapv2/tokens/current'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
+        let localVarPath = this.basePath + '/dapps/uniswapv2/swaps/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        // verify required parameter 'chainId' is not null or undefined
-        if (chainId === null || chainId === undefined) {
-            throw new Error('Required parameter chainId was null or undefined when calling chainsChainIdDappsUniswapv2TokensCurrentGet.');
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (poolId !== null && poolId !== undefined) {
+            queryParameters['poolId'] = <string><any>poolId;
         }
 
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param tokenId 
+     */
+    public dappsUniswapv2TokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayData/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (tokenId !== null && tokenId !== undefined) {
+            queryParameters['tokenId'] = <string><any>tokenId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @summary GetTokens
+     */
+    public dappsUniswapv2TokensCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.TokenV2DTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/tokens/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -231,6 +1163,220 @@ export class UniswapV2Api {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.TokenV2DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param tokenId 
+     */
+    public dappsUniswapv2TokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/tokens/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (tokenId !== null && tokenId !== undefined) {
+            queryParameters['tokenId'] = <string><any>tokenId;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
+    public dappsUniswapv2TransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/transactions/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     */
+    public dappsUniswapv2UsersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv2/users/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

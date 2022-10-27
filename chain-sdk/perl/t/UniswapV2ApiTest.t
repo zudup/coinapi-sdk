@@ -30,23 +30,191 @@ my $api = WWW::OpenAPIClient::UniswapV2Api->new();
 isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 
 #
-# chains_chain_id_dapps_uniswapv2_pools_current_get test
+# dapps_uniswapv2_bundles_historical_get test
 #
 # uncomment below and update the test
-#my $chains_chain_id_dapps_uniswapv2_pools_current_get_chain_id = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_uniswapv2_pools_current_get_result = $api->chains_chain_id_dapps_uniswapv2_pools_current_get(chain_id => $chains_chain_id_dapps_uniswapv2_pools_current_get_chain_id);
+#my $dapps_uniswapv2_bundles_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_bundles_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_bundles_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_bundles_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_bundles_historical_get_result = $api->dapps_uniswapv2_bundles_historical_get(start_block => $dapps_uniswapv2_bundles_historical_get_start_block, end_block => $dapps_uniswapv2_bundles_historical_get_end_block, start_date => $dapps_uniswapv2_bundles_historical_get_start_date, end_date => $dapps_uniswapv2_bundles_historical_get_end_date);
 
 #
-# chains_chain_id_dapps_uniswapv2_swaps_current_get test
+# dapps_uniswapv2_burns_historical_get test
 #
 # uncomment below and update the test
-#my $chains_chain_id_dapps_uniswapv2_swaps_current_get_chain_id = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_uniswapv2_swaps_current_get_result = $api->chains_chain_id_dapps_uniswapv2_swaps_current_get(chain_id => $chains_chain_id_dapps_uniswapv2_swaps_current_get_chain_id);
+#my $dapps_uniswapv2_burns_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_burns_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_burns_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_burns_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_burns_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_burns_historical_get_result = $api->dapps_uniswapv2_burns_historical_get(start_block => $dapps_uniswapv2_burns_historical_get_start_block, end_block => $dapps_uniswapv2_burns_historical_get_end_block, start_date => $dapps_uniswapv2_burns_historical_get_start_date, end_date => $dapps_uniswapv2_burns_historical_get_end_date, pool_id => $dapps_uniswapv2_burns_historical_get_pool_id);
 
 #
-# chains_chain_id_dapps_uniswapv2_tokens_current_get test
+# dapps_uniswapv2_day_data_historical_get test
 #
 # uncomment below and update the test
-#my $chains_chain_id_dapps_uniswapv2_tokens_current_get_chain_id = undef; # replace NULL with a proper value
-#my $chains_chain_id_dapps_uniswapv2_tokens_current_get_result = $api->chains_chain_id_dapps_uniswapv2_tokens_current_get(chain_id => $chains_chain_id_dapps_uniswapv2_tokens_current_get_chain_id);
+#my $dapps_uniswapv2_day_data_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_day_data_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_day_data_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_day_data_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_day_data_historical_get_result = $api->dapps_uniswapv2_day_data_historical_get(start_block => $dapps_uniswapv2_day_data_historical_get_start_block, end_block => $dapps_uniswapv2_day_data_historical_get_end_block, start_date => $dapps_uniswapv2_day_data_historical_get_start_date, end_date => $dapps_uniswapv2_day_data_historical_get_end_date);
+
+#
+# dapps_uniswapv2_factory_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_factory_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_factory_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_factory_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_factory_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_factory_historical_get_result = $api->dapps_uniswapv2_factory_historical_get(start_block => $dapps_uniswapv2_factory_historical_get_start_block, end_block => $dapps_uniswapv2_factory_historical_get_end_block, start_date => $dapps_uniswapv2_factory_historical_get_start_date, end_date => $dapps_uniswapv2_factory_historical_get_end_date);
+
+#
+# dapps_uniswapv2_liquidity_position_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_liquidity_position_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_historical_get_result = $api->dapps_uniswapv2_liquidity_position_historical_get(start_block => $dapps_uniswapv2_liquidity_position_historical_get_start_block, end_block => $dapps_uniswapv2_liquidity_position_historical_get_end_block, start_date => $dapps_uniswapv2_liquidity_position_historical_get_start_date, end_date => $dapps_uniswapv2_liquidity_position_historical_get_end_date, pool_id => $dapps_uniswapv2_liquidity_position_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_liquidity_position_snapshots_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_liquidity_position_snapshots_historical_get_result = $api->dapps_uniswapv2_liquidity_position_snapshots_historical_get(start_block => $dapps_uniswapv2_liquidity_position_snapshots_historical_get_start_block, end_block => $dapps_uniswapv2_liquidity_position_snapshots_historical_get_end_block, start_date => $dapps_uniswapv2_liquidity_position_snapshots_historical_get_start_date, end_date => $dapps_uniswapv2_liquidity_position_snapshots_historical_get_end_date, pool_id => $dapps_uniswapv2_liquidity_position_snapshots_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_mints_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_mints_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_mints_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_mints_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_mints_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_mints_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_mints_historical_get_result = $api->dapps_uniswapv2_mints_historical_get(start_block => $dapps_uniswapv2_mints_historical_get_start_block, end_block => $dapps_uniswapv2_mints_historical_get_end_block, start_date => $dapps_uniswapv2_mints_historical_get_start_date, end_date => $dapps_uniswapv2_mints_historical_get_end_date, pool_id => $dapps_uniswapv2_mints_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_poi_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_poi_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_poi_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_poi_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_poi_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_poi_historical_get_result = $api->dapps_uniswapv2_poi_historical_get(start_block => $dapps_uniswapv2_poi_historical_get_start_block, end_block => $dapps_uniswapv2_poi_historical_get_end_block, start_date => $dapps_uniswapv2_poi_historical_get_start_date, end_date => $dapps_uniswapv2_poi_historical_get_end_date);
+
+#
+# dapps_uniswapv2_pool_day_data_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_pool_day_data_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_day_data_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_day_data_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_day_data_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_day_data_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_day_data_historical_get_result = $api->dapps_uniswapv2_pool_day_data_historical_get(start_block => $dapps_uniswapv2_pool_day_data_historical_get_start_block, end_block => $dapps_uniswapv2_pool_day_data_historical_get_end_block, start_date => $dapps_uniswapv2_pool_day_data_historical_get_start_date, end_date => $dapps_uniswapv2_pool_day_data_historical_get_end_date, pool_id => $dapps_uniswapv2_pool_day_data_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_pool_hour_data_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_pool_hour_data_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_hour_data_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_hour_data_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_hour_data_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_hour_data_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pool_hour_data_historical_get_result = $api->dapps_uniswapv2_pool_hour_data_historical_get(start_block => $dapps_uniswapv2_pool_hour_data_historical_get_start_block, end_block => $dapps_uniswapv2_pool_hour_data_historical_get_end_block, start_date => $dapps_uniswapv2_pool_hour_data_historical_get_start_date, end_date => $dapps_uniswapv2_pool_hour_data_historical_get_end_date, pool_id => $dapps_uniswapv2_pool_hour_data_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_pools_current_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_pools_current_get_filter_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_current_get_result = $api->dapps_uniswapv2_pools_current_get(filter_pool_id => $dapps_uniswapv2_pools_current_get_filter_pool_id);
+
+#
+# dapps_uniswapv2_pools_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_pools_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_pools_historical_get_result = $api->dapps_uniswapv2_pools_historical_get(start_block => $dapps_uniswapv2_pools_historical_get_start_block, end_block => $dapps_uniswapv2_pools_historical_get_end_block, start_date => $dapps_uniswapv2_pools_historical_get_start_date, end_date => $dapps_uniswapv2_pools_historical_get_end_date, pool_id => $dapps_uniswapv2_pools_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_swaps_current_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_swaps_current_get_result = $api->dapps_uniswapv2_swaps_current_get();
+
+#
+# dapps_uniswapv2_swaps_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_swaps_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_swaps_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_swaps_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_swaps_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_swaps_historical_get_pool_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_swaps_historical_get_result = $api->dapps_uniswapv2_swaps_historical_get(start_block => $dapps_uniswapv2_swaps_historical_get_start_block, end_block => $dapps_uniswapv2_swaps_historical_get_end_block, start_date => $dapps_uniswapv2_swaps_historical_get_start_date, end_date => $dapps_uniswapv2_swaps_historical_get_end_date, pool_id => $dapps_uniswapv2_swaps_historical_get_pool_id);
+
+#
+# dapps_uniswapv2_token_day_data_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_token_day_data_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_token_day_data_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_token_day_data_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_token_day_data_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_token_day_data_historical_get_token_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_token_day_data_historical_get_result = $api->dapps_uniswapv2_token_day_data_historical_get(start_block => $dapps_uniswapv2_token_day_data_historical_get_start_block, end_block => $dapps_uniswapv2_token_day_data_historical_get_end_block, start_date => $dapps_uniswapv2_token_day_data_historical_get_start_date, end_date => $dapps_uniswapv2_token_day_data_historical_get_end_date, token_id => $dapps_uniswapv2_token_day_data_historical_get_token_id);
+
+#
+# dapps_uniswapv2_tokens_current_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_tokens_current_get_result = $api->dapps_uniswapv2_tokens_current_get();
+
+#
+# dapps_uniswapv2_tokens_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_tokens_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_tokens_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_tokens_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_tokens_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_tokens_historical_get_token_id = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_tokens_historical_get_result = $api->dapps_uniswapv2_tokens_historical_get(start_block => $dapps_uniswapv2_tokens_historical_get_start_block, end_block => $dapps_uniswapv2_tokens_historical_get_end_block, start_date => $dapps_uniswapv2_tokens_historical_get_start_date, end_date => $dapps_uniswapv2_tokens_historical_get_end_date, token_id => $dapps_uniswapv2_tokens_historical_get_token_id);
+
+#
+# dapps_uniswapv2_transactions_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_transactions_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_transactions_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_transactions_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_transactions_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_transactions_historical_get_result = $api->dapps_uniswapv2_transactions_historical_get(start_block => $dapps_uniswapv2_transactions_historical_get_start_block, end_block => $dapps_uniswapv2_transactions_historical_get_end_block, start_date => $dapps_uniswapv2_transactions_historical_get_start_date, end_date => $dapps_uniswapv2_transactions_historical_get_end_date);
+
+#
+# dapps_uniswapv2_users_historical_get test
+#
+# uncomment below and update the test
+#my $dapps_uniswapv2_users_historical_get_start_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_users_historical_get_end_block = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_users_historical_get_start_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_users_historical_get_end_date = undef; # replace NULL with a proper value
+#my $dapps_uniswapv2_users_historical_get_result = $api->dapps_uniswapv2_users_historical_get(start_block => $dapps_uniswapv2_users_historical_get_start_block, end_block => $dapps_uniswapv2_users_historical_get_end_block, start_date => $dapps_uniswapv2_users_historical_get_start_date, end_date => $dapps_uniswapv2_users_historical_get_end_date);
 

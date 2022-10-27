@@ -23,8 +23,8 @@ class UniswapV3Api {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def chainsChainIdDappsUniswapv3BundleCurrentGet ( String chainId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/bundle/current"
+    def dappsUniswapv3BundleCurrentGet ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/bundle/current"
 
         // params
         def queryParams = [:]
@@ -32,10 +32,6 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
-        }
 
 
 
@@ -47,8 +43,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3BurnsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/burns/current"
+    def dappsUniswapv3BundlesHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/bundles/historical"
 
         // params
         def queryParams = [:]
@@ -56,10 +52,38 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3BurnsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/burns/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -74,8 +98,75 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3FactoryCurrentGet ( String chainId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/factory/current"
+    def dappsUniswapv3BurnsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/burns/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3DayDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/dayData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3FactoryCurrentGet ( String chainId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/factory/current"
 
         // params
         def queryParams = [:]
@@ -98,8 +189,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3MintsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/mints/current"
+    def dappsUniswapv3FactoryHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/factory/historical"
 
         // params
         def queryParams = [:]
@@ -107,10 +198,38 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3MintsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/mints/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -125,8 +244,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3PoolsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/pools/current"
+    def dappsUniswapv3MintsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/mints/historical"
 
         // params
         def queryParams = [:]
@@ -134,10 +253,143 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PoiHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poi/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PoolDayDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolDayData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PoolHourDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolHourData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PoolsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/pools/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -152,8 +404,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/poolsDayData/current"
+    def dappsUniswapv3PoolsDayDataCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolsDayData/current"
 
         // params
         def queryParams = [:]
@@ -161,10 +413,6 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
-        }
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -179,8 +427,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/poolsHourData/current"
+    def dappsUniswapv3PoolsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/pools/historical"
 
         // params
         def queryParams = [:]
@@ -188,10 +436,41 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PoolsHourDataCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolsHourData/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -206,8 +485,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/positionSnapshots/current"
+    def dappsUniswapv3PositionSnapshotHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/positionSnapshot/historical"
 
         // params
         def queryParams = [:]
@@ -215,10 +494,41 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3PositionSnapshotsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/positionSnapshots/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -233,8 +543,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3PositionsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/positions/current"
+    def dappsUniswapv3PositionsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/positions/current"
 
         // params
         def queryParams = [:]
@@ -242,10 +552,6 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
-        }
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -260,8 +566,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3SwapsCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/swaps/current"
+    def dappsUniswapv3PositionsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/positions/historical"
 
         // params
         def queryParams = [:]
@@ -269,10 +575,41 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3SwapsCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/swaps/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -287,8 +624,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3TicksCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/ticks/current"
+    def dappsUniswapv3SwapsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/swaps/historical"
 
         // params
         def queryParams = [:]
@@ -296,10 +633,76 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TickDayDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tickDayData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TicksCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/ticks/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -314,8 +717,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3TicksDayDataCurrentGet ( String chainId, String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/ticksDayData/current"
+    def dappsUniswapv3TicksDayDataCurrentGet ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/ticksDayData/current"
 
         // params
         def queryParams = [:]
@@ -323,10 +726,6 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
-        }
 
         if (filterPoolId != null) {
             queryParams.put("filter_pool_id", filterPoolId)
@@ -341,8 +740,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3TokensCurrentGet ( String chainId, String filterTokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/tokens/current"
+    def dappsUniswapv3TicksHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/ticks/historical"
 
         // params
         def queryParams = [:]
@@ -350,10 +749,111 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TokenDayDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenDayData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (tokenId != null) {
+            queryParams.put("tokenId", tokenId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TokenHourDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenHourData/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (tokenId != null) {
+            queryParams.put("tokenId", tokenId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TokensCurrentGet ( String filterTokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokens/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterTokenId != null) {
             queryParams.put("filter_token_id", filterTokenId)
@@ -368,8 +868,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3TokensDayDataCurrentGet ( String chainId, String filterTokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/tokensDayData/current"
+    def dappsUniswapv3TokensDayDataCurrentGet ( String filterTokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokensDayData/current"
 
         // params
         def queryParams = [:]
@@ -377,10 +877,6 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
-        }
 
         if (filterTokenId != null) {
             queryParams.put("filter_token_id", filterTokenId)
@@ -395,8 +891,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3TokensHourDataCurrentGet ( String chainId, String filterTokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/tokensHourData/current"
+    def dappsUniswapv3TokensHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokens/historical"
 
         // params
         def queryParams = [:]
@@ -404,10 +900,41 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (tokenId != null) {
+            queryParams.put("tokenId", tokenId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3TokensHourDataCurrentGet ( String filterTokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokensHourData/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
         if (filterTokenId != null) {
             queryParams.put("filter_token_id", filterTokenId)
@@ -422,8 +949,8 @@ class UniswapV3Api {
 
     }
 
-    def chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet ( String chainId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/chains/${chain_id}/dapps/uniswapv3/uniswapDayData/current"
+    def dappsUniswapv3TransactionsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/transactions/historical"
 
         // params
         def queryParams = [:]
@@ -431,10 +958,38 @@ class UniswapV3Api {
         def bodyParams
         def contentType
 
-        // verify required params are set
-        if (chainId == null) {
-            throw new RuntimeException("missing required params chainId")
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
         }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def dappsUniswapv3UniswapDayDataCurrentGet ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/uniswapDayData/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
 
 
 

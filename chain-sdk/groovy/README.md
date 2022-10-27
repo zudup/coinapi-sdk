@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-10-25T09:48:26.506142Z[Etc/UTC]
+- Build date: 2022-10-27T13:16:43.971345Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -37,14 +37,13 @@ Then, run:
 
 
 ```groovy
-def apiInstance = new AccountsApi()
-def chainId = "chainId_example" // String | 
+def apiInstance = new CowApi()
 def startBlock = 56L // Long | 
 def endBlock = 56L // Long | 
 def startDate = new Date() // Date | 
 def endDate = new Date() // Date | 
 
-apiInstance.chainsChainIdDappsCurveAccountsHistoricalGet(chainId, startBlock, endBlock, startDate, endDate)
+apiInstance.dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate)
     {
     // on success
         println it

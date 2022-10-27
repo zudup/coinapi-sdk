@@ -46,26 +46,621 @@ API.Client.UniswapV2Api = function($http, $httpParamSerializer, $injector) {
 API.Client.UniswapV2Api.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetPools
  * 
- * @param {!string} chainId Chain id
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PairV2DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV2Api.prototype.chainsChainIdDappsUniswapv2PoolsCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.dappsUniswapv2BundlesHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv2/pools/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv2/bundles/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv2PoolsCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2BurnsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/burns/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2DayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/dayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2FactoryHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/factory/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2LiquidityPositionHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/liquidityPosition/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/liquidityPositionSnapshots/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2MintsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/mints/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2PoiHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/poi/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolDayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/poolDayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolHourDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/poolHourData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetPools
+ * 
+ * @param {!string=} opt_filterPoolId Filter pool id
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.PairV2DTO>>}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/pools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_filterPoolId !== undefined) {
+    queryParameters['filter_pool_id'] = opt_filterPoolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/pools/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -85,24 +680,130 @@ API.Client.UniswapV2Api.prototype.chainsChainIdDappsUniswapv2PoolsCurrentGet = f
 /**
  * GetSwaps
  * 
- * @param {!string} chainId Chain id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.SwapV2DTO>>}
  */
-API.Client.UniswapV2Api.prototype.chainsChainIdDappsUniswapv2SwapsCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.dappsUniswapv2SwapsCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv2/swaps/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv2/swaps/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv2SwapsCurrentGet');
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
   }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2SwapsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/swaps/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2TokenDayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/tokenDayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -122,24 +823,176 @@ API.Client.UniswapV2Api.prototype.chainsChainIdDappsUniswapv2SwapsCurrentGet = f
 /**
  * GetTokens
  * 
- * @param {!string} chainId Chain id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.TokenV2DTO>>}
  */
-API.Client.UniswapV2Api.prototype.chainsChainIdDappsUniswapv2TokensCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.dappsUniswapv2TokensCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv2/tokens/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv2/tokens/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv2TokensCurrentGet');
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
   }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2TokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/tokens/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2TransactionsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/transactions/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV2Api.prototype.dappsUniswapv2UsersHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/users/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

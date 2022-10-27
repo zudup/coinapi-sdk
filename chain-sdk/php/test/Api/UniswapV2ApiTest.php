@@ -73,36 +73,228 @@ class UniswapV2ApiTest extends TestCase
     }
 
     /**
-     * Test case for chainsChainIdDappsUniswapv2PoolsCurrentGet
+     * Test case for dappsUniswapv2BundlesHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2BundlesHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2BurnsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2BurnsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2DayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2DayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2FactoryHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2FactoryHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2LiquidityPositionHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2LiquidityPositionHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2LiquidityPositionSnapshotsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2MintsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2MintsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2PoiHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2PoiHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2PoolDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2PoolDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2PoolHourDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2PoolHourDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2PoolsCurrentGet
      *
      * GetPools.
      *
      */
-    public function testChainsChainIdDappsUniswapv2PoolsCurrentGet()
+    public function testDappsUniswapv2PoolsCurrentGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for chainsChainIdDappsUniswapv2SwapsCurrentGet
+     * Test case for dappsUniswapv2PoolsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2PoolsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2SwapsCurrentGet
      *
      * GetSwaps.
      *
      */
-    public function testChainsChainIdDappsUniswapv2SwapsCurrentGet()
+    public function testDappsUniswapv2SwapsCurrentGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for chainsChainIdDappsUniswapv2TokensCurrentGet
+     * Test case for dappsUniswapv2SwapsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2SwapsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2TokenDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2TokenDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2TokensCurrentGet
      *
      * GetTokens.
      *
      */
-    public function testChainsChainIdDappsUniswapv2TokensCurrentGet()
+    public function testDappsUniswapv2TokensCurrentGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2TokensHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2TokensHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2TransactionsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2TransactionsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsUniswapv2UsersHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsUniswapv2UsersHistoricalGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

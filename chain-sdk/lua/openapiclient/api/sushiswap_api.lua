@@ -46,13 +46,354 @@ local function new_sushiswap_api(authority, basePath, schemes)
 	}, sushiswap_api_mt)
 end
 
-function sushiswap_api:chains_chain_id_dapps_sushiswap_pools_current_get(chain_id)
+function sushiswap_api:dapps_sushiswap_bundles_historical_get(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/chains/%s/dapps/sushiswap/pools/current",
-			self.basePath, chain_id);
+		path = string.format("%s/dapps/sushiswap/bundles/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_burns_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/burns/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_day_data_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/dayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_factory_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/factory/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_hour_data_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/hourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_liquidity_position_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/liquidityPosition/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_liquidity_position_snapshots_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/liquidityPositionSnapshots/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_mints_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/mints/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_poi_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/poi/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_pool_day_data_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/poolDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_pool_hour_data_historical_get(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/poolHourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_pools_current_get()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/pools/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb
@@ -95,13 +436,44 @@ function sushiswap_api:chains_chain_id_dapps_sushiswap_pools_current_get(chain_i
 	end
 end
 
-function sushiswap_api:chains_chain_id_dapps_sushiswap_swaps_current_get(chain_id)
+function sushiswap_api:dapps_sushiswap_pools_historical_get(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/chains/%s/dapps/sushiswap/swaps/current",
-			self.basePath, chain_id);
+		path = string.format("%s/dapps/sushiswap/pools/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_swaps_current_get()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/swaps/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb
@@ -144,13 +516,75 @@ function sushiswap_api:chains_chain_id_dapps_sushiswap_swaps_current_get(chain_i
 	end
 end
 
-function sushiswap_api:chains_chain_id_dapps_sushiswap_tokens_current_get(chain_id)
+function sushiswap_api:dapps_sushiswap_swaps_historical_get(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/chains/%s/dapps/sushiswap/tokens/current",
-			self.basePath, chain_id);
+		path = string.format("%s/dapps/sushiswap/swaps/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_token_day_data_historical_get(start_block, end_block, start_date, end_date, token_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/tokenDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_tokens_current_get()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/tokens/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb
@@ -182,6 +616,99 @@ function sushiswap_api:chains_chain_id_dapps_sushiswap_tokens_current_get(chain_
 			openapiclient_token_dto.cast(ob)
 		end
 		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_tokens_historical_get(start_block, end_block, start_date, end_date, token_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/tokens/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_transactions_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/transactions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:dapps_sushiswap_users_historical_get(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/users/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		return nil, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

@@ -64,39 +64,287 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv2PoolsCurrentGet
+        /// Test DappsUniswapv2BundlesHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv2PoolsCurrentGetTest()
+        public void DappsUniswapv2BundlesHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv2PoolsCurrentGet(chainId);
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2BundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2BurnsHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2BurnsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2DayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2DayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2DayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2FactoryHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2FactoryHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2FactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2LiquidityPositionHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2LiquidityPositionHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2LiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2LiquidityPositionSnapshotsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2MintsHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2MintsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2PoiHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2PoiHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2PoolDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2PoolDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2PoolHourDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2PoolHourDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2PoolsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2PoolsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string filterPoolId = null;
+            //var response = instance.DappsUniswapv2PoolsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PairV2DTO>), response, "response is List<PairV2DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv2SwapsCurrentGet
+        /// Test DappsUniswapv2PoolsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv2SwapsCurrentGetTest()
+        public void DappsUniswapv2PoolsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv2SwapsCurrentGet(chainId);
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2SwapsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2SwapsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DappsUniswapv2SwapsCurrentGet();
             //Assert.IsInstanceOf(typeof(List<SwapV2DTO>), response, "response is List<SwapV2DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv2TokensCurrentGet
+        /// Test DappsUniswapv2SwapsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv2TokensCurrentGetTest()
+        public void DappsUniswapv2SwapsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv2TokensCurrentGet(chainId);
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv2SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2TokenDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2TokenDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.DappsUniswapv2TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2TokensCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2TokensCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DappsUniswapv2TokensCurrentGet();
             //Assert.IsInstanceOf(typeof(List<TokenV2DTO>), response, "response is List<TokenV2DTO>");
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2TokensHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2TokensHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.DappsUniswapv2TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2TransactionsHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2TransactionsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv2UsersHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv2UsersHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv2UsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
         }
         
     }

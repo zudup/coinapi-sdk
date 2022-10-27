@@ -13,24 +13,141 @@
 
 import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
-import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
-import type { OperationOpts } from '../runtime';
+import { BaseAPI } from '../runtime';
+import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
     PairDTO,
     SwapDTO,
     TokenDTO,
 } from '../models';
 
-export interface ChainsChainIdDappsSushiswapPoolsCurrentGetRequest {
-    chainId: string;
+export interface DappsSushiswapBundlesHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
 }
 
-export interface ChainsChainIdDappsSushiswapSwapsCurrentGetRequest {
-    chainId: string;
+export interface DappsSushiswapBurnsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
-export interface ChainsChainIdDappsSushiswapTokensCurrentGetRequest {
-    chainId: string;
+export interface DappsSushiswapDayDataHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
+export interface DappsSushiswapFactoryHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
+export interface DappsSushiswapHourDataHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
+export interface DappsSushiswapLiquidityPositionHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapMintsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapPoiHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
+export interface DappsSushiswapPoolDayDataHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapPoolHourDataHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapPoolsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapSwapsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DappsSushiswapTokenDayDataHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    tokenId?: string;
+}
+
+export interface DappsSushiswapTokensHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    tokenId?: string;
+}
+
+export interface DappsSushiswapTransactionsHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+}
+
+export interface DappsSushiswapUsersHistoricalGetRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
 }
 
 /**
@@ -39,45 +156,389 @@ export interface ChainsChainIdDappsSushiswapTokensCurrentGetRequest {
 export class SushiswapApi extends BaseAPI {
 
     /**
+     */
+    dappsSushiswapBundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapBundlesHistoricalGetRequest): Observable<void>
+    dappsSushiswapBundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapBundlesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapBundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapBundlesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/bundles/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapBurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapBurnsHistoricalGetRequest): Observable<void>
+    dappsSushiswapBurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapBurnsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapBurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapBurnsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/burns/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapDayDataHistoricalGetRequest): Observable<void>
+    dappsSushiswapDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/dayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapFactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapFactoryHistoricalGetRequest): Observable<void>
+    dappsSushiswapFactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapFactoryHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapFactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapFactoryHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/factory/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapHourDataHistoricalGetRequest): Observable<void>
+    dappsSushiswapHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/hourData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapLiquidityPositionHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionHistoricalGetRequest): Observable<void>
+    dappsSushiswapLiquidityPositionHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapLiquidityPositionHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/liquidityPosition/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest): Observable<void>
+    dappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/liquidityPositionSnapshots/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapMintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapMintsHistoricalGetRequest): Observable<void>
+    dappsSushiswapMintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapMintsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapMintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapMintsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/mints/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest): Observable<void>
+    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/poi/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest): Observable<void>
+    dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/poolDayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapPoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolHourDataHistoricalGetRequest): Observable<void>
+    dappsSushiswapPoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapPoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/poolHourData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.
      * GetPools
      */
-    chainsChainIdDappsSushiswapPoolsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapPoolsCurrentGetRequest): Observable<Array<PairDTO>>
-    chainsChainIdDappsSushiswapPoolsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapPoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PairDTO>>>
-    chainsChainIdDappsSushiswapPoolsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapPoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<PairDTO> | AjaxResponse<Array<PairDTO>>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsSushiswapPoolsCurrentGet');
-
+    dappsSushiswapPoolsCurrentGet(): Observable<Array<PairDTO>>
+    dappsSushiswapPoolsCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<PairDTO>>>
+    dappsSushiswapPoolsCurrentGet(opts?: OperationOpts): Observable<Array<PairDTO> | AjaxResponse<Array<PairDTO>>> {
         return this.request<Array<PairDTO>>({
-            url: '/chains/{chain_id}/dapps/sushiswap/pools/current'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/dapps/sushiswap/pools/current',
             method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest): Observable<void>
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/pools/historical',
+            method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 
     /**
      * GetSwaps
      */
-    chainsChainIdDappsSushiswapSwapsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapSwapsCurrentGetRequest): Observable<Array<SwapDTO>>
-    chainsChainIdDappsSushiswapSwapsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapSwapsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SwapDTO>>>
-    chainsChainIdDappsSushiswapSwapsCurrentGet({ chainId }: ChainsChainIdDappsSushiswapSwapsCurrentGetRequest, opts?: OperationOpts): Observable<Array<SwapDTO> | AjaxResponse<Array<SwapDTO>>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsSushiswapSwapsCurrentGet');
-
+    dappsSushiswapSwapsCurrentGet(): Observable<Array<SwapDTO>>
+    dappsSushiswapSwapsCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<SwapDTO>>>
+    dappsSushiswapSwapsCurrentGet(opts?: OperationOpts): Observable<Array<SwapDTO> | AjaxResponse<Array<SwapDTO>>> {
         return this.request<Array<SwapDTO>>({
-            url: '/chains/{chain_id}/dapps/sushiswap/swaps/current'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/dapps/sushiswap/swaps/current',
             method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest): Observable<void>
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/swaps/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapTokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokenDayDataHistoricalGetRequest): Observable<void>
+    dappsSushiswapTokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapTokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/tokenDayData/historical',
+            method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 
     /**
      * GetTokens
      */
-    chainsChainIdDappsSushiswapTokensCurrentGet({ chainId }: ChainsChainIdDappsSushiswapTokensCurrentGetRequest): Observable<Array<TokenDTO>>
-    chainsChainIdDappsSushiswapTokensCurrentGet({ chainId }: ChainsChainIdDappsSushiswapTokensCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenDTO>>>
-    chainsChainIdDappsSushiswapTokensCurrentGet({ chainId }: ChainsChainIdDappsSushiswapTokensCurrentGetRequest, opts?: OperationOpts): Observable<Array<TokenDTO> | AjaxResponse<Array<TokenDTO>>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'chainsChainIdDappsSushiswapTokensCurrentGet');
-
+    dappsSushiswapTokensCurrentGet(): Observable<Array<TokenDTO>>
+    dappsSushiswapTokensCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<TokenDTO>>>
+    dappsSushiswapTokensCurrentGet(opts?: OperationOpts): Observable<Array<TokenDTO> | AjaxResponse<Array<TokenDTO>>> {
         return this.request<Array<TokenDTO>>({
-            url: '/chains/{chain_id}/dapps/sushiswap/tokens/current'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/dapps/sushiswap/tokens/current',
             method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest): Observable<void>
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/tokens/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapTransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapTransactionsHistoricalGetRequest): Observable<void>
+    dappsSushiswapTransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapTransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapTransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapTransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/transactions/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     */
+    dappsSushiswapUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapUsersHistoricalGetRequest): Observable<void>
+    dappsSushiswapUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    dappsSushiswapUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+
+        return this.request<void>({
+            url: '/dapps/sushiswap/users/historical',
+            method: 'GET',
+            query,
         }, opts?.responseOpts);
     };
 

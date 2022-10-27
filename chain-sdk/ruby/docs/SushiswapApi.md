@@ -4,14 +4,802 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**chains_chain_id_dapps_sushiswap_pools_current_get**](SushiswapApi.md#chains_chain_id_dapps_sushiswap_pools_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/pools/current | GetPools |
-| [**chains_chain_id_dapps_sushiswap_swaps_current_get**](SushiswapApi.md#chains_chain_id_dapps_sushiswap_swaps_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/swaps/current | GetSwaps |
-| [**chains_chain_id_dapps_sushiswap_tokens_current_get**](SushiswapApi.md#chains_chain_id_dapps_sushiswap_tokens_current_get) | **GET** /chains/{chain_id}/dapps/sushiswap/tokens/current | GetTokens |
+| [**dapps_sushiswap_bundles_historical_get**](SushiswapApi.md#dapps_sushiswap_bundles_historical_get) | **GET** /dapps/sushiswap/bundles/historical |  |
+| [**dapps_sushiswap_burns_historical_get**](SushiswapApi.md#dapps_sushiswap_burns_historical_get) | **GET** /dapps/sushiswap/burns/historical |  |
+| [**dapps_sushiswap_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_day_data_historical_get) | **GET** /dapps/sushiswap/dayData/historical |  |
+| [**dapps_sushiswap_factory_historical_get**](SushiswapApi.md#dapps_sushiswap_factory_historical_get) | **GET** /dapps/sushiswap/factory/historical |  |
+| [**dapps_sushiswap_hour_data_historical_get**](SushiswapApi.md#dapps_sushiswap_hour_data_historical_get) | **GET** /dapps/sushiswap/hourData/historical |  |
+| [**dapps_sushiswap_liquidity_position_historical_get**](SushiswapApi.md#dapps_sushiswap_liquidity_position_historical_get) | **GET** /dapps/sushiswap/liquidityPosition/historical |  |
+| [**dapps_sushiswap_liquidity_position_snapshots_historical_get**](SushiswapApi.md#dapps_sushiswap_liquidity_position_snapshots_historical_get) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical |  |
+| [**dapps_sushiswap_mints_historical_get**](SushiswapApi.md#dapps_sushiswap_mints_historical_get) | **GET** /dapps/sushiswap/mints/historical |  |
+| [**dapps_sushiswap_poi_historical_get**](SushiswapApi.md#dapps_sushiswap_poi_historical_get) | **GET** /dapps/sushiswap/poi/historical |  |
+| [**dapps_sushiswap_pool_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_pool_day_data_historical_get) | **GET** /dapps/sushiswap/poolDayData/historical |  |
+| [**dapps_sushiswap_pool_hour_data_historical_get**](SushiswapApi.md#dapps_sushiswap_pool_hour_data_historical_get) | **GET** /dapps/sushiswap/poolHourData/historical |  |
+| [**dapps_sushiswap_pools_current_get**](SushiswapApi.md#dapps_sushiswap_pools_current_get) | **GET** /dapps/sushiswap/pools/current | GetPools |
+| [**dapps_sushiswap_pools_historical_get**](SushiswapApi.md#dapps_sushiswap_pools_historical_get) | **GET** /dapps/sushiswap/pools/historical |  |
+| [**dapps_sushiswap_swaps_current_get**](SushiswapApi.md#dapps_sushiswap_swaps_current_get) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
+| [**dapps_sushiswap_swaps_historical_get**](SushiswapApi.md#dapps_sushiswap_swaps_historical_get) | **GET** /dapps/sushiswap/swaps/historical |  |
+| [**dapps_sushiswap_token_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
+| [**dapps_sushiswap_tokens_current_get**](SushiswapApi.md#dapps_sushiswap_tokens_current_get) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
+| [**dapps_sushiswap_tokens_historical_get**](SushiswapApi.md#dapps_sushiswap_tokens_historical_get) | **GET** /dapps/sushiswap/tokens/historical |  |
+| [**dapps_sushiswap_transactions_historical_get**](SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical |  |
+| [**dapps_sushiswap_users_historical_get**](SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical |  |
 
 
-## chains_chain_id_dapps_sushiswap_pools_current_get
+## dapps_sushiswap_bundles_historical_get
 
-> <Array<PairDTO>> chains_chain_id_dapps_sushiswap_pools_current_get(chain_id)
+> dapps_sushiswap_bundles_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_bundles_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_bundles_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_bundles_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_bundles_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_bundles_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_bundles_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_burns_historical_get
+
+> dapps_sushiswap_burns_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_burns_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_burns_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_burns_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_burns_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_burns_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_burns_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_day_data_historical_get
+
+> dapps_sushiswap_day_data_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_day_data_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_day_data_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_day_data_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_day_data_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_day_data_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_day_data_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_factory_historical_get
+
+> dapps_sushiswap_factory_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_factory_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_factory_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_factory_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_factory_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_factory_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_factory_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_hour_data_historical_get
+
+> dapps_sushiswap_hour_data_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_hour_data_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_hour_data_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_hour_data_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_hour_data_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_hour_data_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_hour_data_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_liquidity_position_historical_get
+
+> dapps_sushiswap_liquidity_position_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_liquidity_position_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_liquidity_position_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_liquidity_position_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_liquidity_position_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_liquidity_position_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_liquidity_position_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_liquidity_position_snapshots_historical_get
+
+> dapps_sushiswap_liquidity_position_snapshots_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_liquidity_position_snapshots_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_liquidity_position_snapshots_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_liquidity_position_snapshots_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_liquidity_position_snapshots_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_liquidity_position_snapshots_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_liquidity_position_snapshots_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_mints_historical_get
+
+> dapps_sushiswap_mints_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_mints_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_mints_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_mints_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_mints_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_mints_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_mints_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_poi_historical_get
+
+> dapps_sushiswap_poi_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_poi_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_poi_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_poi_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_poi_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_poi_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_poi_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_pool_day_data_historical_get
+
+> dapps_sushiswap_pool_day_data_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_pool_day_data_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pool_day_data_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_pool_day_data_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_pool_day_data_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_pool_day_data_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pool_day_data_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_pool_hour_data_historical_get
+
+> dapps_sushiswap_pool_hour_data_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_pool_hour_data_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pool_hour_data_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_pool_hour_data_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_pool_hour_data_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_pool_hour_data_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pool_hour_data_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_pools_current_get
+
+> <Array<PairDTO>> dapps_sushiswap_pools_current_get
 
 GetPools
 
@@ -24,40 +812,37 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
-chain_id = 'chain_id_example' # String | Chain id
 
 begin
   # GetPools
-  result = api_instance.chains_chain_id_dapps_sushiswap_pools_current_get(chain_id)
+  result = api_instance.dapps_sushiswap_pools_current_get
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_pools_current_get: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pools_current_get: #{e}"
 end
 ```
 
-#### Using the chains_chain_id_dapps_sushiswap_pools_current_get_with_http_info variant
+#### Using the dapps_sushiswap_pools_current_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PairDTO>>, Integer, Hash)> chains_chain_id_dapps_sushiswap_pools_current_get_with_http_info(chain_id)
+> <Array(<Array<PairDTO>>, Integer, Hash)> dapps_sushiswap_pools_current_get_with_http_info
 
 ```ruby
 begin
   # GetPools
-  data, status_code, headers = api_instance.chains_chain_id_dapps_sushiswap_pools_current_get_with_http_info(chain_id)
+  data, status_code, headers = api_instance.dapps_sushiswap_pools_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<PairDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_pools_current_get_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pools_current_get_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **chain_id** | **String** | Chain id |  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -73,9 +858,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chains_chain_id_dapps_sushiswap_swaps_current_get
+## dapps_sushiswap_pools_historical_get
 
-> <Array<SwapDTO>> chains_chain_id_dapps_sushiswap_swaps_current_get(chain_id)
+> dapps_sushiswap_pools_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_pools_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pools_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_pools_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_pools_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_pools_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_pools_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_swaps_current_get
+
+> <Array<SwapDTO>> dapps_sushiswap_swaps_current_get
 
 GetSwaps
 
@@ -86,40 +942,37 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
-chain_id = 'chain_id_example' # String | Chain id
 
 begin
   # GetSwaps
-  result = api_instance.chains_chain_id_dapps_sushiswap_swaps_current_get(chain_id)
+  result = api_instance.dapps_sushiswap_swaps_current_get
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_swaps_current_get: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_current_get: #{e}"
 end
 ```
 
-#### Using the chains_chain_id_dapps_sushiswap_swaps_current_get_with_http_info variant
+#### Using the dapps_sushiswap_swaps_current_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SwapDTO>>, Integer, Hash)> chains_chain_id_dapps_sushiswap_swaps_current_get_with_http_info(chain_id)
+> <Array(<Array<SwapDTO>>, Integer, Hash)> dapps_sushiswap_swaps_current_get_with_http_info
 
 ```ruby
 begin
   # GetSwaps
-  data, status_code, headers = api_instance.chains_chain_id_dapps_sushiswap_swaps_current_get_with_http_info(chain_id)
+  data, status_code, headers = api_instance.dapps_sushiswap_swaps_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SwapDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_swaps_current_get_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_current_get_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **chain_id** | **String** | Chain id |  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -135,9 +988,151 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## chains_chain_id_dapps_sushiswap_tokens_current_get
+## dapps_sushiswap_swaps_historical_get
 
-> <Array<TokenDTO>> chains_chain_id_dapps_sushiswap_tokens_current_get(chain_id)
+> dapps_sushiswap_swaps_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_swaps_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_swaps_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_swaps_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_swaps_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_token_day_data_historical_get
+
+> dapps_sushiswap_token_day_data_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  token_id: 'token_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_token_day_data_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_token_day_data_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_token_day_data_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_token_day_data_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_token_day_data_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_token_day_data_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **token_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_tokens_current_get
+
+> <Array<TokenDTO>> dapps_sushiswap_tokens_current_get
 
 GetTokens
 
@@ -148,40 +1143,37 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
-chain_id = 'chain_id_example' # String | Chain id
 
 begin
   # GetTokens
-  result = api_instance.chains_chain_id_dapps_sushiswap_tokens_current_get(chain_id)
+  result = api_instance.dapps_sushiswap_tokens_current_get
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_tokens_current_get: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_current_get: #{e}"
 end
 ```
 
-#### Using the chains_chain_id_dapps_sushiswap_tokens_current_get_with_http_info variant
+#### Using the dapps_sushiswap_tokens_current_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenDTO>>, Integer, Hash)> chains_chain_id_dapps_sushiswap_tokens_current_get_with_http_info(chain_id)
+> <Array(<Array<TokenDTO>>, Integer, Hash)> dapps_sushiswap_tokens_current_get_with_http_info
 
 ```ruby
 begin
   # GetTokens
-  data, status_code, headers = api_instance.chains_chain_id_dapps_sushiswap_tokens_current_get_with_http_info(chain_id)
+  data, status_code, headers = api_instance.dapps_sushiswap_tokens_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->chains_chain_id_dapps_sushiswap_tokens_current_get_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_current_get_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **chain_id** | **String** | Chain id |  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -195,4 +1187,213 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
+
+
+## dapps_sushiswap_tokens_historical_get
+
+> dapps_sushiswap_tokens_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  token_id: 'token_id_example' # String | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_tokens_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_tokens_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_tokens_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_tokens_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **token_id** | **String** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_transactions_historical_get
+
+> dapps_sushiswap_transactions_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_transactions_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_transactions_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_transactions_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_transactions_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_transactions_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_transactions_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## dapps_sushiswap_users_historical_get
+
+> dapps_sushiswap_users_historical_get(opts)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  
+  api_instance.dapps_sushiswap_users_historical_get(opts)
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_users_historical_get: #{e}"
+end
+```
+
+#### Using the dapps_sushiswap_users_historical_get_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> dapps_sushiswap_users_historical_get_with_http_info(opts)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.dapps_sushiswap_users_historical_get_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dapps_sushiswap_users_historical_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 

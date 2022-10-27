@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.BundleV3DTO;
 import org.openapitools.client.model.BurnV3DTO;
+import java.util.Date;
 import org.openapitools.client.model.FactoryV3DTO;
 import org.openapitools.client.model.MintV3DTO;
 import org.openapitools.client.model.PoolDayDataV3DTO;
@@ -73,19 +74,13 @@ public class UniswapV3Api {
   /**
   * GetBundles
   * 
-   * @param chainId Chain id
    * @return List<BundleV3DTO>
   */
-  public List<BundleV3DTO> chainsChainIdDappsUniswapv3BundleCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<BundleV3DTO> dappsUniswapv3BundleCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BundleCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BundleCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/bundle/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/bundle/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -135,19 +130,14 @@ public class UniswapV3Api {
       /**
    * GetBundles
    * 
-   * @param chainId Chain id
+
   */
-  public void chainsChainIdDappsUniswapv3BundleCurrentGet (String chainId, final Response.Listener<List<BundleV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3BundleCurrentGet (final Response.Listener<List<BundleV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BundleCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BundleCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/bundle/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/bundle/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -198,22 +188,140 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @return void
+  */
+  public void dappsUniswapv3BundlesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/bundles/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+  */
+  public void dappsUniswapv3BundlesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/bundles/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetBurns
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<BurnV3DTO>
   */
-  public List<BurnV3DTO> chainsChainIdDappsUniswapv3BurnsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<BurnV3DTO> dappsUniswapv3BurnsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BurnsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BurnsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/burns/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/burns/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -264,19 +372,14 @@ public class UniswapV3Api {
       /**
    * GetBurns
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3BurnsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<BurnV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3BurnsCurrentGet (String filterPoolId, final Response.Listener<List<BurnV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BurnsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3BurnsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/burns/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/burns/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -328,21 +431,272 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3BurnsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/burns/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3BurnsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/burns/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @return void
+  */
+  public void dappsUniswapv3DayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/dayData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+  */
+  public void dappsUniswapv3DayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/dayData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetFactory
   * 
-   * @param chainId Chain id
+   * @param chainId 
    * @return List<FactoryV3DTO>
   */
-  public List<FactoryV3DTO> chainsChainIdDappsUniswapv3FactoryCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<FactoryV3DTO> dappsUniswapv3FactoryCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3FactoryCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3FactoryCurrentGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling dappsUniswapv3FactoryCurrentGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling dappsUniswapv3FactoryCurrentGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/factory/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/factory/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -392,19 +746,19 @@ public class UniswapV3Api {
       /**
    * GetFactory
    * 
-   * @param chainId Chain id
+   * @param chainId 
   */
-  public void chainsChainIdDappsUniswapv3FactoryCurrentGet (String chainId, final Response.Listener<List<FactoryV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3FactoryCurrentGet (String chainId, final Response.Listener<List<FactoryV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3FactoryCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3FactoryCurrentGet"));
+      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling dappsUniswapv3FactoryCurrentGet",
+        new ApiException(400, "Missing the required parameter 'chainId' when calling dappsUniswapv3FactoryCurrentGet"));
     }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/factory/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/factory/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -455,22 +809,140 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @return void
+  */
+  public void dappsUniswapv3FactoryHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/factory/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+  */
+  public void dappsUniswapv3FactoryHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/factory/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetMints
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<MintV3DTO>
   */
-  public List<MintV3DTO> chainsChainIdDappsUniswapv3MintsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<MintV3DTO> dappsUniswapv3MintsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3MintsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3MintsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/mints/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/mints/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -521,19 +993,14 @@ public class UniswapV3Api {
       /**
    * GetMints
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3MintsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<MintV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3MintsCurrentGet (String filterPoolId, final Response.Listener<List<MintV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3MintsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3MintsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/mints/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/mints/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -585,22 +1052,521 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3MintsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/mints/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3MintsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/mints/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @return void
+  */
+  public void dappsUniswapv3PoiHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poi/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+  */
+  public void dappsUniswapv3PoiHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poi/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3PoolDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poolDayData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3PoolDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poolDayData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3PoolHourDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poolHourData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3PoolHourDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/poolHourData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetPools
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<PoolV3DTO>
   */
-  public List<PoolV3DTO> chainsChainIdDappsUniswapv3PoolsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PoolV3DTO> dappsUniswapv3PoolsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/pools/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/pools/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -651,19 +1617,14 @@ public class UniswapV3Api {
       /**
    * GetPools
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3PoolsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<PoolV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsCurrentGet (String filterPoolId, final Response.Listener<List<PoolV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/pools/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/pools/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -717,20 +1678,14 @@ public class UniswapV3Api {
   /**
   * GetPoolsDayData
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<PoolDayDataV3DTO>
   */
-  public List<PoolDayDataV3DTO> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/poolsDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -781,19 +1736,14 @@ public class UniswapV3Api {
       /**
    * GetPoolsDayData
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<PoolDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId, final Response.Listener<List<PoolDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/poolsDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -845,22 +1795,143 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3PoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/pools/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3PoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/pools/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetPoolsHourData
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<PoolHourDataV3DTO>
   */
-  public List<PoolHourDataV3DTO> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/poolsHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -911,19 +1982,14 @@ public class UniswapV3Api {
       /**
    * GetPoolsHourData
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<PoolHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId, final Response.Listener<List<PoolHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/poolsHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -975,22 +2041,143 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3PositionSnapshotHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/positionSnapshot/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3PositionSnapshotHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/positionSnapshot/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetPositionSnapshot
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<PositionSnapshotV3DTO>
   */
-  public List<PositionSnapshotV3DTO> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/positionSnapshots/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1041,19 +2228,14 @@ public class UniswapV3Api {
       /**
    * GetPositionSnapshot
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<PositionSnapshotV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId, final Response.Listener<List<PositionSnapshotV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/positionSnapshots/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1107,20 +2289,14 @@ public class UniswapV3Api {
   /**
   * GetPositions
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<PositionV3DTO>
   */
-  public List<PositionV3DTO> chainsChainIdDappsUniswapv3PositionsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<PositionV3DTO> dappsUniswapv3PositionsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/positions/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/positions/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1171,19 +2347,14 @@ public class UniswapV3Api {
       /**
    * GetPositions
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3PositionsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<PositionV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PositionsCurrentGet (String filterPoolId, final Response.Listener<List<PositionV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3PositionsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/positions/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/positions/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1235,22 +2406,143 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3PositionsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/positions/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3PositionsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/positions/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetSwaps
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<SwapV3DTO>
   */
-  public List<SwapV3DTO> chainsChainIdDappsUniswapv3SwapsCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SwapV3DTO> dappsUniswapv3SwapsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3SwapsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3SwapsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/swaps/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/swaps/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1301,19 +2593,14 @@ public class UniswapV3Api {
       /**
    * GetSwaps
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3SwapsCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<SwapV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3SwapsCurrentGet (String filterPoolId, final Response.Listener<List<SwapV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3SwapsCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3SwapsCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/swaps/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/swaps/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1365,22 +2652,270 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3SwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/swaps/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3SwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/swaps/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3TickDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tickDayData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3TickDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tickDayData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetTicks
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<TickV3DTO>
   */
-  public List<TickV3DTO> chainsChainIdDappsUniswapv3TicksCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<TickV3DTO> dappsUniswapv3TicksCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/ticks/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/ticks/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1431,19 +2966,14 @@ public class UniswapV3Api {
       /**
    * GetTicks
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3TicksCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<TickV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TicksCurrentGet (String filterPoolId, final Response.Listener<List<TickV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/ticks/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/ticks/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1497,20 +3027,14 @@ public class UniswapV3Api {
   /**
   * GetTicksDayData
   * 
-   * @param chainId Chain id
    * @param filterPoolId Filter pool id
    * @return List<TickDayDataV3DTO>
   */
-  public List<TickDayDataV3DTO> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet (String chainId, String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/ticksDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1561,19 +3085,14 @@ public class UniswapV3Api {
       /**
    * GetTicksDayData
    * 
-   * @param chainId Chain id   * @param filterPoolId Filter pool id
+   * @param filterPoolId Filter pool id
   */
-  public void chainsChainIdDappsUniswapv3TicksDayDataCurrentGet (String chainId, String filterPoolId, final Response.Listener<List<TickDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId, final Response.Listener<List<TickDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/ticksDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1625,22 +3144,397 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   * @return void
+  */
+  public void dappsUniswapv3TicksHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/ticks/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+  */
+  public void dappsUniswapv3TicksHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/ticks/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "poolId", poolId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param tokenId 
+   * @return void
+  */
+  public void dappsUniswapv3TokenDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokenDayData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
+  */
+  public void dappsUniswapv3TokenDayDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokenDayData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param tokenId 
+   * @return void
+  */
+  public void dappsUniswapv3TokenHourDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokenHourData/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
+  */
+  public void dappsUniswapv3TokenHourDataHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokenHourData/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetTokens
   * 
-   * @param chainId Chain id
    * @param filterTokenId 
    * @return List<TokenV3DTO>
   */
-  public List<TokenV3DTO> chainsChainIdDappsUniswapv3TokensCurrentGet (String chainId, String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<TokenV3DTO> dappsUniswapv3TokensCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokens/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokens/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1691,19 +3585,14 @@ public class UniswapV3Api {
       /**
    * GetTokens
    * 
-   * @param chainId Chain id   * @param filterTokenId 
+   * @param filterTokenId 
   */
-  public void chainsChainIdDappsUniswapv3TokensCurrentGet (String chainId, String filterTokenId, final Response.Listener<List<TokenV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensCurrentGet (String filterTokenId, final Response.Listener<List<TokenV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokens/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokens/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1757,20 +3646,14 @@ public class UniswapV3Api {
   /**
   * GetTokensDayData
   * 
-   * @param chainId Chain id
    * @param filterTokenId 
    * @return List<TokenV3DayDataDTO>
   */
-  public List<TokenV3DayDataDTO> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet (String chainId, String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokensDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1821,19 +3704,14 @@ public class UniswapV3Api {
       /**
    * GetTokensDayData
    * 
-   * @param chainId Chain id   * @param filterTokenId 
+   * @param filterTokenId 
   */
-  public void chainsChainIdDappsUniswapv3TokensDayDataCurrentGet (String chainId, String filterTokenId, final Response.Listener<List<TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId, final Response.Listener<List<TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokensDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1885,22 +3763,143 @@ public class UniswapV3Api {
     }
   }
   /**
+  * 
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param tokenId 
+   * @return void
+  */
+  public void dappsUniswapv3TokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokens/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
+  */
+  public void dappsUniswapv3TokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/tokens/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetTokensHourData
   * 
-   * @param chainId Chain id
    * @param filterTokenId 
    * @return List<TokenHourDataV3DTO>
   */
-  public List<TokenHourDataV3DTO> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet (String chainId, String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokensHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1951,19 +3950,14 @@ public class UniswapV3Api {
       /**
    * GetTokensHourData
    * 
-   * @param chainId Chain id   * @param filterTokenId 
+   * @param filterTokenId 
   */
-  public void chainsChainIdDappsUniswapv3TokensHourDataCurrentGet (String chainId, String filterTokenId, final Response.Listener<List<TokenHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId, final Response.Listener<List<TokenHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/tokensHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2015,21 +4009,139 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetUniswapDayData
   * 
-   * @param chainId Chain id
-   * @return List<UniswapDayDataV3DTO>
+  * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @return void
   */
-  public List<UniswapDayDataV3DTO> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void dappsUniswapv3TransactionsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current".replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/transactions/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return ;
+      } else {
+         return ;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * 
+   * 
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+  */
+  public void dappsUniswapv3TransactionsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/transactions/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+              responseListener.onResponse(localVarResponse);
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GetUniswapDayData
+  * 
+   * @return List<UniswapDayDataV3DTO>
+  */
+  public List<UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/uniswapv3/uniswapDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2079,19 +4191,14 @@ public class UniswapV3Api {
       /**
    * GetUniswapDayData
    * 
-   * @param chainId Chain id
+
   */
-  public void chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet (String chainId, final Response.Listener<List<UniswapDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3UniswapDayDataCurrentGet (final Response.Listener<List<UniswapDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'chainId' is set
-    if (chainId == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet",
-        new ApiException(400, "Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"));
-    }
 
     // create path and map variables
-    String path = "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current".replaceAll("\\{format\\}","json").replaceAll("\\{" + "chain_id" + "\\}", apiInvoker.escapeString(chainId.toString()));
+    String path = "/dapps/uniswapv3/uniswapDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

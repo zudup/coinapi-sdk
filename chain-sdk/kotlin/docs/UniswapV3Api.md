@@ -4,27 +4,45 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BundleCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chainsChainIdDappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BurnsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chainsChainIdDappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3FactoryCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chainsChainIdDappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3MintsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chainsChainIdDappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chainsChainIdDappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chainsChainIdDappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3SwapsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chainsChainIdDappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chainsChainIdDappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#dappsUniswapv3BundleCurrentGet) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
+[**dappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BundlesHistoricalGet) | **GET** /dapps/uniswapv3/bundles/historical | 
+[**dappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#dappsUniswapv3BurnsCurrentGet) | **GET** /dapps/uniswapv3/burns/current | GetBurns
+[**dappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BurnsHistoricalGet) | **GET** /dapps/uniswapv3/burns/historical | 
+[**dappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3DayDataHistoricalGet) | **GET** /dapps/uniswapv3/dayData/historical | 
+[**dappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#dappsUniswapv3FactoryCurrentGet) | **GET** /dapps/uniswapv3/factory/current | GetFactory
+[**dappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
+[**dappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
+[**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
+[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
+[**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
+[**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
+[**dappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
+[**dappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsDayDataCurrentGet) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolsHistoricalGet) | **GET** /dapps/uniswapv3/pools/historical | 
+[**dappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsHourDataCurrentGet) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotHistoricalGet) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionsCurrentGet) | **GET** /dapps/uniswapv3/positions/current | GetPositions
+[**dappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionsHistoricalGet) | **GET** /dapps/uniswapv3/positions/historical | 
+[**dappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#dappsUniswapv3SwapsCurrentGet) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3SwapsHistoricalGet) | **GET** /dapps/uniswapv3/swaps/historical | 
+[**dappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TickDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tickDayData/historical | 
+[**dappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksCurrentGet) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
+[**dappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksDayDataCurrentGet) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TicksHistoricalGet) | **GET** /dapps/uniswapv3/ticks/historical | 
+[**dappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
+[**dappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenHourDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
+[**dappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensCurrentGet) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
+[**dappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensDayDataCurrentGet) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokensHistoricalGet) | **GET** /dapps/uniswapv3/tokens/historical | 
+[**dappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensHourDataCurrentGet) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TransactionsHistoricalGet) | **GET** /dapps/uniswapv3/transactions/historical | 
+[**dappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3UniswapDayDataCurrentGet) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
-<a name="chainsChainIdDappsUniswapv3BundleCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3BundleCurrentGet**
-> kotlin.collections.List&lt;BundleV3DTO&gt; chainsChainIdDappsUniswapv3BundleCurrentGet(chainId)
+<a name="dappsUniswapv3BundleCurrentGet"></a>
+# **dappsUniswapv3BundleCurrentGet**
+> kotlin.collections.List&lt;BundleV3DTO&gt; dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -35,24 +53,20 @@ GetBundles
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 try {
-    val result : kotlin.collections.List<BundleV3DTO> = apiInstance.chainsChainIdDappsUniswapv3BundleCurrentGet(chainId)
+    val result : kotlin.collections.List<BundleV3DTO> = apiInstance.dappsUniswapv3BundleCurrentGet()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3BundleCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3BundleCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3BundleCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3BundleCurrentGet")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -67,9 +81,59 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3BurnsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3BurnsCurrentGet**
-> kotlin.collections.List&lt;BurnV3DTO&gt; chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3BundlesHistoricalGet"></a>
+# **dappsUniswapv3BundlesHistoricalGet**
+> dappsUniswapv3BundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    apiInstance.dappsUniswapv3BundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3BundlesHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3BundlesHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3BurnsCurrentGet"></a>
+# **dappsUniswapv3BurnsCurrentGet**
+> kotlin.collections.List&lt;BurnV3DTO&gt; dappsUniswapv3BurnsCurrentGet(filterPoolId)
 
 GetBurns
 
@@ -80,16 +144,15 @@ GetBurns
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<BurnV3DTO> = apiInstance.chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<BurnV3DTO> = apiInstance.dappsUniswapv3BurnsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3BurnsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3BurnsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3BurnsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3BurnsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -98,7 +161,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -114,9 +176,111 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3FactoryCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3FactoryCurrentGet**
-> kotlin.collections.List&lt;FactoryV3DTO&gt; chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId)
+<a name="dappsUniswapv3BurnsHistoricalGet"></a>
+# **dappsUniswapv3BurnsHistoricalGet**
+> dappsUniswapv3BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3BurnsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3BurnsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3DayDataHistoricalGet"></a>
+# **dappsUniswapv3DayDataHistoricalGet**
+> dappsUniswapv3DayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    apiInstance.dappsUniswapv3DayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3DayDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3DayDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3FactoryCurrentGet"></a>
+# **dappsUniswapv3FactoryCurrentGet**
+> kotlin.collections.List&lt;FactoryV3DTO&gt; dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -127,15 +291,15 @@ GetFactory
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
+val chainId : kotlin.String = chainId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<FactoryV3DTO> = apiInstance.chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId)
+    val result : kotlin.collections.List<FactoryV3DTO> = apiInstance.dappsUniswapv3FactoryCurrentGet(chainId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3FactoryCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3FactoryCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3FactoryCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3FactoryCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -144,7 +308,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
+ **chainId** | **kotlin.String**|  |
 
 ### Return type
 
@@ -159,9 +323,59 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3MintsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3MintsCurrentGet**
-> kotlin.collections.List&lt;MintV3DTO&gt; chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3FactoryHistoricalGet"></a>
+# **dappsUniswapv3FactoryHistoricalGet**
+> dappsUniswapv3FactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    apiInstance.dappsUniswapv3FactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3FactoryHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3FactoryHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3MintsCurrentGet"></a>
+# **dappsUniswapv3MintsCurrentGet**
+> kotlin.collections.List&lt;MintV3DTO&gt; dappsUniswapv3MintsCurrentGet(filterPoolId)
 
 GetMints
 
@@ -172,16 +386,15 @@ GetMints
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<MintV3DTO> = apiInstance.chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<MintV3DTO> = apiInstance.dappsUniswapv3MintsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3MintsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3MintsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3MintsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3MintsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -190,7 +403,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -206,9 +418,215 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3PoolsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3PoolsCurrentGet**
-> kotlin.collections.List&lt;PoolV3DTO&gt; chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3MintsHistoricalGet"></a>
+# **dappsUniswapv3MintsHistoricalGet**
+> dappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3MintsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3MintsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PoiHistoricalGet"></a>
+# **dappsUniswapv3PoiHistoricalGet**
+> dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    apiInstance.dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PoolDayDataHistoricalGet"></a>
+# **dappsUniswapv3PoolDayDataHistoricalGet**
+> dappsUniswapv3PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolDayDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolDayDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PoolHourDataHistoricalGet"></a>
+# **dappsUniswapv3PoolHourDataHistoricalGet**
+> dappsUniswapv3PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolHourDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolHourDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PoolsCurrentGet"></a>
+# **dappsUniswapv3PoolsCurrentGet**
+> kotlin.collections.List&lt;PoolV3DTO&gt; dappsUniswapv3PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -219,16 +637,15 @@ GetPools
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolV3DTO> = apiInstance.chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<PoolV3DTO> = apiInstance.dappsUniswapv3PoolsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -237,7 +654,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -253,9 +669,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**
-> kotlin.collections.List&lt;PoolDayDataV3DTO&gt; chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3PoolsDayDataCurrentGet"></a>
+# **dappsUniswapv3PoolsDayDataCurrentGet**
+> kotlin.collections.List&lt;PoolDayDataV3DTO&gt; dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
 
 GetPoolsDayData
 
@@ -266,16 +682,15 @@ GetPoolsDayData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolDayDataV3DTO> = apiInstance.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<PoolDayDataV3DTO> = apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsDayDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolsDayDataCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -284,7 +699,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -300,9 +714,61 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**
-> kotlin.collections.List&lt;PoolHourDataV3DTO&gt; chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3PoolsHistoricalGet"></a>
+# **dappsUniswapv3PoolsHistoricalGet**
+> dappsUniswapv3PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PoolsHourDataCurrentGet"></a>
+# **dappsUniswapv3PoolsHourDataCurrentGet**
+> kotlin.collections.List&lt;PoolHourDataV3DTO&gt; dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
 
 GetPoolsHourData
 
@@ -313,16 +779,15 @@ GetPoolsHourData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolHourDataV3DTO> = apiInstance.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<PoolHourDataV3DTO> = apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsHourDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PoolsHourDataCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -331,7 +796,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -347,9 +811,61 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**
-> kotlin.collections.List&lt;PositionSnapshotV3DTO&gt; chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3PositionSnapshotHistoricalGet"></a>
+# **dappsUniswapv3PositionSnapshotHistoricalGet**
+> dappsUniswapv3PositionSnapshotHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3PositionSnapshotHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PositionSnapshotHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PositionSnapshotHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3PositionSnapshotsCurrentGet"></a>
+# **dappsUniswapv3PositionSnapshotsCurrentGet**
+> kotlin.collections.List&lt;PositionSnapshotV3DTO&gt; dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
 
 GetPositionSnapshot
 
@@ -360,16 +876,15 @@ GetPositionSnapshot
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PositionSnapshotV3DTO> = apiInstance.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<PositionSnapshotV3DTO> = apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PositionSnapshotsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PositionSnapshotsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -378,7 +893,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -394,9 +908,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3PositionsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3PositionsCurrentGet**
-> kotlin.collections.List&lt;PositionV3DTO&gt; chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3PositionsCurrentGet"></a>
+# **dappsUniswapv3PositionsCurrentGet**
+> kotlin.collections.List&lt;PositionV3DTO&gt; dappsUniswapv3PositionsCurrentGet(filterPoolId)
 
 GetPositions
 
@@ -407,16 +921,15 @@ GetPositions
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PositionV3DTO> = apiInstance.chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<PositionV3DTO> = apiInstance.dappsUniswapv3PositionsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PositionsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PositionsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3PositionsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PositionsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -425,7 +938,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -441,9 +953,61 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3SwapsCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3SwapsCurrentGet**
-> kotlin.collections.List&lt;SwapV3DTO&gt; chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3PositionsHistoricalGet"></a>
+# **dappsUniswapv3PositionsHistoricalGet**
+> dappsUniswapv3PositionsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3PositionsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3PositionsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3PositionsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3SwapsCurrentGet"></a>
+# **dappsUniswapv3SwapsCurrentGet**
+> kotlin.collections.List&lt;SwapV3DTO&gt; dappsUniswapv3SwapsCurrentGet(filterPoolId)
 
 GetSwaps
 
@@ -454,16 +1018,15 @@ GetSwaps
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<SwapV3DTO> = apiInstance.chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<SwapV3DTO> = apiInstance.dappsUniswapv3SwapsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3SwapsCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3SwapsCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3SwapsCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3SwapsCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -472,7 +1035,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -488,9 +1050,113 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3TicksCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3TicksCurrentGet**
-> kotlin.collections.List&lt;TickV3DTO&gt; chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3SwapsHistoricalGet"></a>
+# **dappsUniswapv3SwapsHistoricalGet**
+> dappsUniswapv3SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3SwapsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3SwapsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TickDayDataHistoricalGet"></a>
+# **dappsUniswapv3TickDayDataHistoricalGet**
+> dappsUniswapv3TickDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3TickDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TickDayDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TickDayDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TicksCurrentGet"></a>
+# **dappsUniswapv3TicksCurrentGet**
+> kotlin.collections.List&lt;TickV3DTO&gt; dappsUniswapv3TicksCurrentGet(filterPoolId)
 
 GetTicks
 
@@ -501,16 +1167,15 @@ GetTicks
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<TickV3DTO> = apiInstance.chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<TickV3DTO> = apiInstance.dappsUniswapv3TicksCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TicksCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TicksCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TicksCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TicksCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -519,7 +1184,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -535,9 +1199,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3TicksDayDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**
-> kotlin.collections.List&lt;TickDayDataV3DTO&gt; chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, filterPoolId)
+<a name="dappsUniswapv3TicksDayDataCurrentGet"></a>
+# **dappsUniswapv3TicksDayDataCurrentGet**
+> kotlin.collections.List&lt;TickDayDataV3DTO&gt; dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
 
 GetTicksDayData
 
@@ -548,16 +1212,15 @@ GetTicksDayData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<TickDayDataV3DTO> = apiInstance.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, filterPoolId)
+    val result : kotlin.collections.List<TickDayDataV3DTO> = apiInstance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TicksDayDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TicksDayDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TicksDayDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TicksDayDataCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -566,7 +1229,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterPoolId** | **kotlin.String**| Filter pool id | [optional]
 
 ### Return type
@@ -582,9 +1244,165 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3TokensCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3TokensCurrentGet**
-> kotlin.collections.List&lt;TokenV3DTO&gt; chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, filterTokenId)
+<a name="dappsUniswapv3TicksHistoricalGet"></a>
+# **dappsUniswapv3TicksHistoricalGet**
+> dappsUniswapv3TicksHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val poolId : kotlin.String = poolId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3TicksHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TicksHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TicksHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **poolId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TokenDayDataHistoricalGet"></a>
+# **dappsUniswapv3TokenDayDataHistoricalGet**
+> dappsUniswapv3TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val tokenId : kotlin.String = tokenId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokenDayDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokenDayDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **tokenId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TokenHourDataHistoricalGet"></a>
+# **dappsUniswapv3TokenHourDataHistoricalGet**
+> dappsUniswapv3TokenHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val tokenId : kotlin.String = tokenId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3TokenHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokenHourDataHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokenHourDataHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **tokenId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TokensCurrentGet"></a>
+# **dappsUniswapv3TokensCurrentGet**
+> kotlin.collections.List&lt;TokenV3DTO&gt; dappsUniswapv3TokensCurrentGet(filterTokenId)
 
 GetTokens
 
@@ -595,16 +1413,15 @@ GetTokens
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenV3DTO> = apiInstance.chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, filterTokenId)
+    val result : kotlin.collections.List<TokenV3DTO> = apiInstance.dappsUniswapv3TokensCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokensCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokensCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -613,7 +1430,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterTokenId** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -629,9 +1445,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3TokensDayDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**
-> kotlin.collections.List&lt;TokenV3DayDataDTO&gt; chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, filterTokenId)
+<a name="dappsUniswapv3TokensDayDataCurrentGet"></a>
+# **dappsUniswapv3TokensDayDataCurrentGet**
+> kotlin.collections.List&lt;TokenV3DayDataDTO&gt; dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
 
 GetTokensDayData
 
@@ -642,16 +1458,15 @@ GetTokensDayData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenV3DayDataDTO> = apiInstance.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, filterTokenId)
+    val result : kotlin.collections.List<TokenV3DayDataDTO> = apiInstance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensDayDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokensDayDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensDayDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokensDayDataCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -660,7 +1475,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterTokenId** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -676,9 +1490,61 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3TokensHourDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**
-> kotlin.collections.List&lt;TokenHourDataV3DTO&gt; chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, filterTokenId)
+<a name="dappsUniswapv3TokensHistoricalGet"></a>
+# **dappsUniswapv3TokensHistoricalGet**
+> dappsUniswapv3TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val tokenId : kotlin.String = tokenId_example // kotlin.String | 
+try {
+    apiInstance.dappsUniswapv3TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokensHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokensHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **tokenId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3TokensHourDataCurrentGet"></a>
+# **dappsUniswapv3TokensHourDataCurrentGet**
+> kotlin.collections.List&lt;TokenHourDataV3DTO&gt; dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
 
 GetTokensHourData
 
@@ -689,16 +1555,15 @@ GetTokensHourData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenHourDataV3DTO> = apiInstance.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, filterTokenId)
+    val result : kotlin.collections.List<TokenHourDataV3DTO> = apiInstance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensHourDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TokensHourDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3TokensHourDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TokensHourDataCurrentGet")
     e.printStackTrace()
 }
 ```
@@ -707,7 +1572,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
  **filterTokenId** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -723,9 +1587,59 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet"></a>
-# **chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**
-> kotlin.collections.List&lt;UniswapDayDataV3DTO&gt; chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId)
+<a name="dappsUniswapv3TransactionsHistoricalGet"></a>
+# **dappsUniswapv3TransactionsHistoricalGet**
+> dappsUniswapv3TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = UniswapV3Api()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    apiInstance.dappsUniswapv3TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
+} catch (e: ClientException) {
+    println("4xx response calling UniswapV3Api#dappsUniswapv3TransactionsHistoricalGet")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UniswapV3Api#dappsUniswapv3TransactionsHistoricalGet")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="dappsUniswapv3UniswapDayDataCurrentGet"></a>
+# **dappsUniswapv3UniswapDayDataCurrentGet**
+> kotlin.collections.List&lt;UniswapDayDataV3DTO&gt; dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -736,24 +1650,20 @@ GetUniswapDayData
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val chainId : kotlin.String = chainId_example // kotlin.String | Chain id
 try {
-    val result : kotlin.collections.List<UniswapDayDataV3DTO> = apiInstance.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId)
+    val result : kotlin.collections.List<UniswapDayDataV3DTO> = apiInstance.dappsUniswapv3UniswapDayDataCurrentGet()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet")
+    println("4xx response calling UniswapV3Api#dappsUniswapv3UniswapDayDataCurrentGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet")
+    println("5xx response calling UniswapV3Api#dappsUniswapv3UniswapDayDataCurrentGet")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **kotlin.String**| Chain id |
+This endpoint does not need any parameter.
 
 ### Return type
 

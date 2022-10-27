@@ -78,71 +78,12 @@ set(SRCS
     model/token_v3_day_data_dto.c
     model/token_v3_dto.c
     model/uniswap_day_data_v3_dto.c
-    api/AccountsAPI.c
-    api/AddLiquidityEventAPI.c
-    api/AdminFeeChangeLogAPI.c
-    api/AmplificationCoeffChangeLogAPI.c
-    api/BatchAPI.c
-    api/BundlesAPI.c
-    api/BurnsAPI.c
-    api/CoinsAPI.c
-    api/ContractsAPI.c
-    api/ContractsVersionAPI.c
-    api/DailyVolumeAPI.c
-    api/DayDataAPI.c
-    api/DepositAPI.c
-    api/FactoryAPI.c
-    api/FeeChangeLogAPI.c
-    api/GaugeAPI.c
-    api/GaugeDepositAPI.c
-    api/GaugeLiquidityAPI.c
-    api/GaugeTotalWeightAPI.c
-    api/GaugeTypeAPI.c
-    api/GaugeTypeWeightAPI.c
-    api/GaugeWeightAPI.c
-    api/GaugeWeightVoteAPI.c
-    api/GaugeWithdrawAPI.c
-    api/HourDataAPI.c
-    api/HourlyVolumeAPI.c
-    api/LiquidityPositionAPI.c
-    api/LiquidityPositionSnapshotsAPI.c
-    api/LpTokenAPI.c
-    api/MintsAPI.c
-    api/OrdersAPI.c
-    api/PoiAPI.c
-    api/PoolDayDataAPI.c
-    api/PoolHourDataAPI.c
-    api/PoolsAPI.c
-    api/PositionSnapshotAPI.c
-    api/PositionsAPI.c
-    api/PricesAPI.c
-    api/ProposalsAPI.c
-    api/ProposalsVoteAPI.c
-    api/RemoveLiquidityEventAPI.c
-    api/RemoveLiquidityOneEventAPI.c
-    api/SettlementAPI.c
-    api/SolutionAPI.c
-    api/StatsAPI.c
+    api/CowAPI.c
+    api/CurveAPI.c
+    api/DexAPI.c
     api/SushiswapAPI.c
-    api/SwapsAPI.c
-    api/SystemStateAPI.c
-    api/TickDayDataAPI.c
-    api/TicksAPI.c
-    api/TokenDayDataAPI.c
-    api/TokenHourDataAPI.c
-    api/TokensAPI.c
-    api/TradesAPI.c
-    api/TransactionsAPI.c
-    api/TransferOwnershipEventAPI.c
-    api/UnderlyingCoinAPI.c
-    api/UniswapDayDataAPI.c
     api/UniswapV2API.c
     api/UniswapV3API.c
-    api/UsersAPI.c
-    api/VotingAppAPI.c
-    api/WeeklyVolumeAPI.c
-    api/WithdrawAPI.c
-    api/WithdrawRequestAPI.c
 
 )
 
@@ -177,71 +118,12 @@ set(HDRS
     model/token_v3_day_data_dto.h
     model/token_v3_dto.h
     model/uniswap_day_data_v3_dto.h
-    api/AccountsAPI.h
-    api/AddLiquidityEventAPI.h
-    api/AdminFeeChangeLogAPI.h
-    api/AmplificationCoeffChangeLogAPI.h
-    api/BatchAPI.h
-    api/BundlesAPI.h
-    api/BurnsAPI.h
-    api/CoinsAPI.h
-    api/ContractsAPI.h
-    api/ContractsVersionAPI.h
-    api/DailyVolumeAPI.h
-    api/DayDataAPI.h
-    api/DepositAPI.h
-    api/FactoryAPI.h
-    api/FeeChangeLogAPI.h
-    api/GaugeAPI.h
-    api/GaugeDepositAPI.h
-    api/GaugeLiquidityAPI.h
-    api/GaugeTotalWeightAPI.h
-    api/GaugeTypeAPI.h
-    api/GaugeTypeWeightAPI.h
-    api/GaugeWeightAPI.h
-    api/GaugeWeightVoteAPI.h
-    api/GaugeWithdrawAPI.h
-    api/HourDataAPI.h
-    api/HourlyVolumeAPI.h
-    api/LiquidityPositionAPI.h
-    api/LiquidityPositionSnapshotsAPI.h
-    api/LpTokenAPI.h
-    api/MintsAPI.h
-    api/OrdersAPI.h
-    api/PoiAPI.h
-    api/PoolDayDataAPI.h
-    api/PoolHourDataAPI.h
-    api/PoolsAPI.h
-    api/PositionSnapshotAPI.h
-    api/PositionsAPI.h
-    api/PricesAPI.h
-    api/ProposalsAPI.h
-    api/ProposalsVoteAPI.h
-    api/RemoveLiquidityEventAPI.h
-    api/RemoveLiquidityOneEventAPI.h
-    api/SettlementAPI.h
-    api/SolutionAPI.h
-    api/StatsAPI.h
+    api/CowAPI.h
+    api/CurveAPI.h
+    api/DexAPI.h
     api/SushiswapAPI.h
-    api/SwapsAPI.h
-    api/SystemStateAPI.h
-    api/TickDayDataAPI.h
-    api/TicksAPI.h
-    api/TokenDayDataAPI.h
-    api/TokenHourDataAPI.h
-    api/TokensAPI.h
-    api/TradesAPI.h
-    api/TransactionsAPI.h
-    api/TransferOwnershipEventAPI.h
-    api/UnderlyingCoinAPI.h
-    api/UniswapDayDataAPI.h
     api/UniswapV2API.h
     api/UniswapV3API.h
-    api/UsersAPI.h
-    api/VotingAppAPI.h
-    api/WeeklyVolumeAPI.h
-    api/WithdrawAPI.h
-    api/WithdrawRequestAPI.h
 
 )
 
@@ -323,71 +205,12 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
-#    unit-tests/manual-AccountsAPI.c
-#    unit-tests/manual-AddLiquidityEventAPI.c
-#    unit-tests/manual-AdminFeeChangeLogAPI.c
-#    unit-tests/manual-AmplificationCoeffChangeLogAPI.c
-#    unit-tests/manual-BatchAPI.c
-#    unit-tests/manual-BundlesAPI.c
-#    unit-tests/manual-BurnsAPI.c
-#    unit-tests/manual-CoinsAPI.c
-#    unit-tests/manual-ContractsAPI.c
-#    unit-tests/manual-ContractsVersionAPI.c
-#    unit-tests/manual-DailyVolumeAPI.c
-#    unit-tests/manual-DayDataAPI.c
-#    unit-tests/manual-DepositAPI.c
-#    unit-tests/manual-FactoryAPI.c
-#    unit-tests/manual-FeeChangeLogAPI.c
-#    unit-tests/manual-GaugeAPI.c
-#    unit-tests/manual-GaugeDepositAPI.c
-#    unit-tests/manual-GaugeLiquidityAPI.c
-#    unit-tests/manual-GaugeTotalWeightAPI.c
-#    unit-tests/manual-GaugeTypeAPI.c
-#    unit-tests/manual-GaugeTypeWeightAPI.c
-#    unit-tests/manual-GaugeWeightAPI.c
-#    unit-tests/manual-GaugeWeightVoteAPI.c
-#    unit-tests/manual-GaugeWithdrawAPI.c
-#    unit-tests/manual-HourDataAPI.c
-#    unit-tests/manual-HourlyVolumeAPI.c
-#    unit-tests/manual-LiquidityPositionAPI.c
-#    unit-tests/manual-LiquidityPositionSnapshotsAPI.c
-#    unit-tests/manual-LpTokenAPI.c
-#    unit-tests/manual-MintsAPI.c
-#    unit-tests/manual-OrdersAPI.c
-#    unit-tests/manual-PoiAPI.c
-#    unit-tests/manual-PoolDayDataAPI.c
-#    unit-tests/manual-PoolHourDataAPI.c
-#    unit-tests/manual-PoolsAPI.c
-#    unit-tests/manual-PositionSnapshotAPI.c
-#    unit-tests/manual-PositionsAPI.c
-#    unit-tests/manual-PricesAPI.c
-#    unit-tests/manual-ProposalsAPI.c
-#    unit-tests/manual-ProposalsVoteAPI.c
-#    unit-tests/manual-RemoveLiquidityEventAPI.c
-#    unit-tests/manual-RemoveLiquidityOneEventAPI.c
-#    unit-tests/manual-SettlementAPI.c
-#    unit-tests/manual-SolutionAPI.c
-#    unit-tests/manual-StatsAPI.c
+#    unit-tests/manual-CowAPI.c
+#    unit-tests/manual-CurveAPI.c
+#    unit-tests/manual-DexAPI.c
 #    unit-tests/manual-SushiswapAPI.c
-#    unit-tests/manual-SwapsAPI.c
-#    unit-tests/manual-SystemStateAPI.c
-#    unit-tests/manual-TickDayDataAPI.c
-#    unit-tests/manual-TicksAPI.c
-#    unit-tests/manual-TokenDayDataAPI.c
-#    unit-tests/manual-TokenHourDataAPI.c
-#    unit-tests/manual-TokensAPI.c
-#    unit-tests/manual-TradesAPI.c
-#    unit-tests/manual-TransactionsAPI.c
-#    unit-tests/manual-TransferOwnershipEventAPI.c
-#    unit-tests/manual-UnderlyingCoinAPI.c
-#    unit-tests/manual-UniswapDayDataAPI.c
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c
-#    unit-tests/manual-UsersAPI.c
-#    unit-tests/manual-VotingAppAPI.c
-#    unit-tests/manual-WeeklyVolumeAPI.c
-#    unit-tests/manual-WithdrawAPI.c
-#    unit-tests/manual-WithdrawRequestAPI.c
 #)
 
 ##set header files

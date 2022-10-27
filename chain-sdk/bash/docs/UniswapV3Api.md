@@ -4,41 +4,56 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BundleCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chainsChainIdDappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3BurnsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chainsChainIdDappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3FactoryCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chainsChainIdDappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3MintsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chainsChainIdDappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chainsChainIdDappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3PositionsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chainsChainIdDappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3SwapsCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chainsChainIdDappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TicksDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chainsChainIdDappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#dappsUniswapv3BundleCurrentGet) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
+[**dappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BundlesHistoricalGet) | **GET** /dapps/uniswapv3/bundles/historical | 
+[**dappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#dappsUniswapv3BurnsCurrentGet) | **GET** /dapps/uniswapv3/burns/current | GetBurns
+[**dappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3BurnsHistoricalGet) | **GET** /dapps/uniswapv3/burns/historical | 
+[**dappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3DayDataHistoricalGet) | **GET** /dapps/uniswapv3/dayData/historical | 
+[**dappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#dappsUniswapv3FactoryCurrentGet) | **GET** /dapps/uniswapv3/factory/current | GetFactory
+[**dappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
+[**dappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
+[**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
+[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
+[**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
+[**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
+[**dappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
+[**dappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsDayDataCurrentGet) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolsHistoricalGet) | **GET** /dapps/uniswapv3/pools/historical | 
+[**dappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsHourDataCurrentGet) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotHistoricalGet) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PositionsCurrentGet) | **GET** /dapps/uniswapv3/positions/current | GetPositions
+[**dappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PositionsHistoricalGet) | **GET** /dapps/uniswapv3/positions/historical | 
+[**dappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#dappsUniswapv3SwapsCurrentGet) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3SwapsHistoricalGet) | **GET** /dapps/uniswapv3/swaps/historical | 
+[**dappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TickDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tickDayData/historical | 
+[**dappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksCurrentGet) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
+[**dappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TicksDayDataCurrentGet) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TicksHistoricalGet) | **GET** /dapps/uniswapv3/ticks/historical | 
+[**dappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
+[**dappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokenHourDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
+[**dappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensCurrentGet) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
+[**dappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensDayDataCurrentGet) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TokensHistoricalGet) | **GET** /dapps/uniswapv3/tokens/historical | 
+[**dappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3TokensHourDataCurrentGet) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3TransactionsHistoricalGet) | **GET** /dapps/uniswapv3/transactions/historical | 
+[**dappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#dappsUniswapv3UniswapDayDataCurrentGet) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
 
-## chainsChainIdDappsUniswapv3BundleCurrentGet
+## dappsUniswapv3BundleCurrentGet
 
 GetBundles
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3BundleCurrentGet chain_id=value
+ dappsUniswapv3BundleCurrentGet
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -56,14 +71,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3BurnsCurrentGet
+## dappsUniswapv3BundlesHistoricalGet
 
-GetBurns
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3BurnsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3BundlesHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -71,7 +86,42 @@ GetBurns
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3BurnsCurrentGet
+
+GetBurns
+
+### Example
+
+```bash
+ dappsUniswapv3BurnsCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -90,14 +140,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3FactoryCurrentGet
+## dappsUniswapv3BurnsHistoricalGet
 
-GetFactory
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3FactoryCurrentGet chain_id=value
+ dappsUniswapv3BurnsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -105,7 +155,80 @@ GetFactory
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3DayDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3DayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3FactoryCurrentGet
+
+GetFactory
+
+### Example
+
+```bash
+ dappsUniswapv3FactoryCurrentGet chain_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chainId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -123,14 +246,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3MintsCurrentGet
+## dappsUniswapv3FactoryHistoricalGet
 
-GetMints
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3MintsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3FactoryHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -138,7 +261,42 @@ GetMints
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3MintsCurrentGet
+
+GetMints
+
+### Example
+
+```bash
+ dappsUniswapv3MintsCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -157,14 +315,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3PoolsCurrentGet
+## dappsUniswapv3MintsHistoricalGet
 
-GetPools
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3PoolsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3MintsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -172,7 +330,153 @@ GetPools
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PoiHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3PoiHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PoolDayDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3PoolDayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PoolHourDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3PoolHourDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PoolsCurrentGet
+
+GetPools
+
+### Example
+
+```bash
+ dappsUniswapv3PoolsCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -191,14 +495,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+## dappsUniswapv3PoolsDayDataCurrentGet
 
 GetPoolsDayData
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3PoolsDayDataCurrentGet  filter_pool_id=value
 ```
 
 ### Parameters
@@ -206,7 +510,6 @@ GetPoolsDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -225,14 +528,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+## dappsUniswapv3PoolsHistoricalGet
 
-GetPoolsHourData
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3PoolsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -240,7 +543,43 @@ GetPoolsHourData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PoolsHourDataCurrentGet
+
+GetPoolsHourData
+
+### Example
+
+```bash
+ dappsUniswapv3PoolsHourDataCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -259,14 +598,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+## dappsUniswapv3PositionSnapshotHistoricalGet
 
-GetPositionSnapshot
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3PositionSnapshotHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -274,7 +613,43 @@ GetPositionSnapshot
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3PositionSnapshotsCurrentGet
+
+GetPositionSnapshot
+
+### Example
+
+```bash
+ dappsUniswapv3PositionSnapshotsCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -293,14 +668,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3PositionsCurrentGet
+## dappsUniswapv3PositionsCurrentGet
 
 GetPositions
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3PositionsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3PositionsCurrentGet  filter_pool_id=value
 ```
 
 ### Parameters
@@ -308,7 +683,6 @@ GetPositions
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -327,14 +701,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3SwapsCurrentGet
+## dappsUniswapv3PositionsHistoricalGet
 
-GetSwaps
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3SwapsCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3PositionsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -342,7 +716,43 @@ GetSwaps
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3SwapsCurrentGet
+
+GetSwaps
+
+### Example
+
+```bash
+ dappsUniswapv3SwapsCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -361,14 +771,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3TicksCurrentGet
+## dappsUniswapv3SwapsHistoricalGet
 
-GetTicks
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3TicksCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3SwapsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -376,7 +786,80 @@ GetTicks
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TickDayDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3TickDayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TicksCurrentGet
+
+GetTicks
+
+### Example
+
+```bash
+ dappsUniswapv3TicksCurrentGet  filter_pool_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -395,14 +878,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+## dappsUniswapv3TicksDayDataCurrentGet
 
 GetTicksDayData
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3TicksDayDataCurrentGet chain_id=value  filter_pool_id=value
+ dappsUniswapv3TicksDayDataCurrentGet  filter_pool_id=value
 ```
 
 ### Parameters
@@ -410,7 +893,6 @@ GetTicksDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
  **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -429,14 +911,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3TokensCurrentGet
+## dappsUniswapv3TicksHistoricalGet
 
-GetTokens
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3TokensCurrentGet chain_id=value  filter_token_id=value
+ dappsUniswapv3TicksHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -444,7 +926,117 @@ GetTokens
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TokenDayDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3TokenDayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TokenHourDataHistoricalGet
+
+
+
+### Example
+
+```bash
+ dappsUniswapv3TokenHourDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TokensCurrentGet
+
+GetTokens
+
+### Example
+
+```bash
+ dappsUniswapv3TokensCurrentGet  filter_token_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterTokenId** | **string** |  | [optional] [default to null]
 
 ### Return type
@@ -463,14 +1055,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+## dappsUniswapv3TokensDayDataCurrentGet
 
 GetTokensDayData
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3TokensDayDataCurrentGet chain_id=value  filter_token_id=value
+ dappsUniswapv3TokensDayDataCurrentGet  filter_token_id=value
 ```
 
 ### Parameters
@@ -478,7 +1070,6 @@ GetTokensDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
  **filterTokenId** | **string** |  | [optional] [default to null]
 
 ### Return type
@@ -497,14 +1088,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+## dappsUniswapv3TokensHistoricalGet
 
-GetTokensHourData
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3TokensHourDataCurrentGet chain_id=value  filter_token_id=value
+ dappsUniswapv3TokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -512,7 +1103,43 @@ GetTokensHourData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3TokensHourDataCurrentGet
+
+GetTokensHourData
+
+### Example
+
+```bash
+ dappsUniswapv3TokensHourDataCurrentGet  filter_token_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **filterTokenId** | **string** |  | [optional] [default to null]
 
 ### Return type
@@ -531,14 +1158,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+## dappsUniswapv3TransactionsHistoricalGet
 
-GetUniswapDayData
+
 
 ### Example
 
 ```bash
- chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet chain_id=value
+ dappsUniswapv3TransactionsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -546,7 +1173,40 @@ GetUniswapDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **string** | Chain id | [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dappsUniswapv3UniswapDayDataCurrentGet
+
+GetUniswapDayData
+
+### Example
+
+```bash
+ dappsUniswapv3UniswapDayDataCurrentGet
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

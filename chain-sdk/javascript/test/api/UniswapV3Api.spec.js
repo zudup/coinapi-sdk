@@ -48,160 +48,340 @@
   }
 
   describe('UniswapV3Api', function() {
-    describe('chainsChainIdDappsUniswapv3BundleCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3BundleCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3BundleCurrentGet
-        //instance.chainsChainIdDappsUniswapv3BundleCurrentGet(function(error) {
+    describe('dappsUniswapv3BundleCurrentGet', function() {
+      it('should call dappsUniswapv3BundleCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3BundleCurrentGet
+        //instance.dappsUniswapv3BundleCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3BurnsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3BurnsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3BurnsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3BurnsCurrentGet(function(error) {
+    describe('dappsUniswapv3BundlesHistoricalGet', function() {
+      it('should call dappsUniswapv3BundlesHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3BundlesHistoricalGet
+        //instance.dappsUniswapv3BundlesHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3FactoryCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3FactoryCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3FactoryCurrentGet
-        //instance.chainsChainIdDappsUniswapv3FactoryCurrentGet(function(error) {
+    describe('dappsUniswapv3BurnsCurrentGet', function() {
+      it('should call dappsUniswapv3BurnsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3BurnsCurrentGet
+        //instance.dappsUniswapv3BurnsCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3MintsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3MintsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3MintsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3MintsCurrentGet(function(error) {
+    describe('dappsUniswapv3BurnsHistoricalGet', function() {
+      it('should call dappsUniswapv3BurnsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3BurnsHistoricalGet
+        //instance.dappsUniswapv3BurnsHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3PoolsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3PoolsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoolsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3PoolsCurrentGet(function(error) {
+    describe('dappsUniswapv3DayDataHistoricalGet', function() {
+      it('should call dappsUniswapv3DayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3DayDataHistoricalGet
+        //instance.dappsUniswapv3DayDataHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(function(error) {
+    describe('dappsUniswapv3FactoryCurrentGet', function() {
+      it('should call dappsUniswapv3FactoryCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3FactoryCurrentGet
+        //instance.dappsUniswapv3FactoryCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(function(error) {
+    describe('dappsUniswapv3FactoryHistoricalGet', function() {
+      it('should call dappsUniswapv3FactoryHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3FactoryHistoricalGet
+        //instance.dappsUniswapv3FactoryHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(function(error) {
+    describe('dappsUniswapv3MintsCurrentGet', function() {
+      it('should call dappsUniswapv3MintsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3MintsCurrentGet
+        //instance.dappsUniswapv3MintsCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3PositionsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3PositionsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3PositionsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3PositionsCurrentGet(function(error) {
+    describe('dappsUniswapv3MintsHistoricalGet', function() {
+      it('should call dappsUniswapv3MintsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3MintsHistoricalGet
+        //instance.dappsUniswapv3MintsHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3SwapsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3SwapsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3SwapsCurrentGet
-        //instance.chainsChainIdDappsUniswapv3SwapsCurrentGet(function(error) {
+    describe('dappsUniswapv3PoiHistoricalGet', function() {
+      it('should call dappsUniswapv3PoiHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoiHistoricalGet
+        //instance.dappsUniswapv3PoiHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3TicksCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3TicksCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3TicksCurrentGet
-        //instance.chainsChainIdDappsUniswapv3TicksCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolDayDataHistoricalGet', function() {
+      it('should call dappsUniswapv3PoolDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolDayDataHistoricalGet
+        //instance.dappsUniswapv3PoolDayDataHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3TicksDayDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3TicksDayDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolHourDataHistoricalGet', function() {
+      it('should call dappsUniswapv3PoolHourDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolHourDataHistoricalGet
+        //instance.dappsUniswapv3PoolHourDataHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3TokensCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3TokensCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3TokensCurrentGet
-        //instance.chainsChainIdDappsUniswapv3TokensCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolsCurrentGet', function() {
+      it('should call dappsUniswapv3PoolsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolsCurrentGet
+        //instance.dappsUniswapv3PoolsCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3TokensDayDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3TokensDayDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolsDayDataCurrentGet', function() {
+      it('should call dappsUniswapv3PoolsDayDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolsDayDataCurrentGet
+        //instance.dappsUniswapv3PoolsDayDataCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3TokensHourDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3TokensHourDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolsHistoricalGet', function() {
+      it('should call dappsUniswapv3PoolsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolsHistoricalGet
+        //instance.dappsUniswapv3PoolsHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
-        //instance.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(function(error) {
+    describe('dappsUniswapv3PoolsHourDataCurrentGet', function() {
+      it('should call dappsUniswapv3PoolsHourDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PoolsHourDataCurrentGet
+        //instance.dappsUniswapv3PoolsHourDataCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3PositionSnapshotHistoricalGet', function() {
+      it('should call dappsUniswapv3PositionSnapshotHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PositionSnapshotHistoricalGet
+        //instance.dappsUniswapv3PositionSnapshotHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3PositionSnapshotsCurrentGet', function() {
+      it('should call dappsUniswapv3PositionSnapshotsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PositionSnapshotsCurrentGet
+        //instance.dappsUniswapv3PositionSnapshotsCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3PositionsCurrentGet', function() {
+      it('should call dappsUniswapv3PositionsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PositionsCurrentGet
+        //instance.dappsUniswapv3PositionsCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3PositionsHistoricalGet', function() {
+      it('should call dappsUniswapv3PositionsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3PositionsHistoricalGet
+        //instance.dappsUniswapv3PositionsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3SwapsCurrentGet', function() {
+      it('should call dappsUniswapv3SwapsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3SwapsCurrentGet
+        //instance.dappsUniswapv3SwapsCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3SwapsHistoricalGet', function() {
+      it('should call dappsUniswapv3SwapsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3SwapsHistoricalGet
+        //instance.dappsUniswapv3SwapsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TickDayDataHistoricalGet', function() {
+      it('should call dappsUniswapv3TickDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TickDayDataHistoricalGet
+        //instance.dappsUniswapv3TickDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TicksCurrentGet', function() {
+      it('should call dappsUniswapv3TicksCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TicksCurrentGet
+        //instance.dappsUniswapv3TicksCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TicksDayDataCurrentGet', function() {
+      it('should call dappsUniswapv3TicksDayDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TicksDayDataCurrentGet
+        //instance.dappsUniswapv3TicksDayDataCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TicksHistoricalGet', function() {
+      it('should call dappsUniswapv3TicksHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TicksHistoricalGet
+        //instance.dappsUniswapv3TicksHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokenDayDataHistoricalGet', function() {
+      it('should call dappsUniswapv3TokenDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokenDayDataHistoricalGet
+        //instance.dappsUniswapv3TokenDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokenHourDataHistoricalGet', function() {
+      it('should call dappsUniswapv3TokenHourDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokenHourDataHistoricalGet
+        //instance.dappsUniswapv3TokenHourDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokensCurrentGet', function() {
+      it('should call dappsUniswapv3TokensCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokensCurrentGet
+        //instance.dappsUniswapv3TokensCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokensDayDataCurrentGet', function() {
+      it('should call dappsUniswapv3TokensDayDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokensDayDataCurrentGet
+        //instance.dappsUniswapv3TokensDayDataCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokensHistoricalGet', function() {
+      it('should call dappsUniswapv3TokensHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokensHistoricalGet
+        //instance.dappsUniswapv3TokensHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TokensHourDataCurrentGet', function() {
+      it('should call dappsUniswapv3TokensHourDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TokensHourDataCurrentGet
+        //instance.dappsUniswapv3TokensHourDataCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3TransactionsHistoricalGet', function() {
+      it('should call dappsUniswapv3TransactionsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3TransactionsHistoricalGet
+        //instance.dappsUniswapv3TransactionsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv3UniswapDayDataCurrentGet', function() {
+      it('should call dappsUniswapv3UniswapDayDataCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv3UniswapDayDataCurrentGet
+        //instance.dappsUniswapv3UniswapDayDataCurrentGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

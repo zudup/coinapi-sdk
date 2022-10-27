@@ -10,23 +10,91 @@
 #include "../model/token_dto.h"
 
 
+void
+SushiswapAPI_dappsSushiswapBundlesHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapBurnsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapFactoryHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapHourDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapLiquidityPositionHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapMintsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapPoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapPoolHourDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // GetPools
 //
 // Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapPoolsCurrentGet(apiClient_t *apiClient, char * chain_id );
+SushiswapAPI_dappsSushiswapPoolsCurrentGet(apiClient_t *apiClient);
+
+
+void
+SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // GetSwaps
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapSwapsCurrentGet(apiClient_t *apiClient, char * chain_id );
+SushiswapAPI_dappsSushiswapSwapsCurrentGet(apiClient_t *apiClient);
+
+
+void
+SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+void
+SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
 // GetTokens
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapTokensCurrentGet(apiClient_t *apiClient, char * chain_id );
+SushiswapAPI_dappsSushiswapTokensCurrentGet(apiClient_t *apiClient);
+
+
+void
+SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+
+void
+SushiswapAPI_dappsSushiswapTransactionsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+void
+SushiswapAPI_dappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 

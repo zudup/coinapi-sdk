@@ -37,71 +37,12 @@ import TokenV2DTO from './model/TokenV2DTO';
 import TokenV3DTO from './model/TokenV3DTO';
 import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
 import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
-import AccountsApi from './api/AccountsApi';
-import AddLiquidityEventApi from './api/AddLiquidityEventApi';
-import AdminFeeChangeLogApi from './api/AdminFeeChangeLogApi';
-import AmplificationCoeffChangeLogApi from './api/AmplificationCoeffChangeLogApi';
-import BatchApi from './api/BatchApi';
-import BundlesApi from './api/BundlesApi';
-import BurnsApi from './api/BurnsApi';
-import CoinsApi from './api/CoinsApi';
-import ContractsApi from './api/ContractsApi';
-import ContractsVersionApi from './api/ContractsVersionApi';
-import DailyVolumeApi from './api/DailyVolumeApi';
-import DayDataApi from './api/DayDataApi';
-import DepositApi from './api/DepositApi';
-import FactoryApi from './api/FactoryApi';
-import FeeChangeLogApi from './api/FeeChangeLogApi';
-import GaugeApi from './api/GaugeApi';
-import GaugeDepositApi from './api/GaugeDepositApi';
-import GaugeLiquidityApi from './api/GaugeLiquidityApi';
-import GaugeTotalWeightApi from './api/GaugeTotalWeightApi';
-import GaugeTypeApi from './api/GaugeTypeApi';
-import GaugeTypeWeightApi from './api/GaugeTypeWeightApi';
-import GaugeWeightApi from './api/GaugeWeightApi';
-import GaugeWeightVoteApi from './api/GaugeWeightVoteApi';
-import GaugeWithdrawApi from './api/GaugeWithdrawApi';
-import HourDataApi from './api/HourDataApi';
-import HourlyVolumeApi from './api/HourlyVolumeApi';
-import LiquidityPositionApi from './api/LiquidityPositionApi';
-import LiquidityPositionSnapshotsApi from './api/LiquidityPositionSnapshotsApi';
-import LpTokenApi from './api/LpTokenApi';
-import MintsApi from './api/MintsApi';
-import OrdersApi from './api/OrdersApi';
-import PoiApi from './api/PoiApi';
-import PoolDayDataApi from './api/PoolDayDataApi';
-import PoolHourDataApi from './api/PoolHourDataApi';
-import PoolsApi from './api/PoolsApi';
-import PositionSnapshotApi from './api/PositionSnapshotApi';
-import PositionsApi from './api/PositionsApi';
-import PricesApi from './api/PricesApi';
-import ProposalsApi from './api/ProposalsApi';
-import ProposalsVoteApi from './api/ProposalsVoteApi';
-import RemoveLiquidityEventApi from './api/RemoveLiquidityEventApi';
-import RemoveLiquidityOneEventApi from './api/RemoveLiquidityOneEventApi';
-import SettlementApi from './api/SettlementApi';
-import SolutionApi from './api/SolutionApi';
-import StatsApi from './api/StatsApi';
+import CowApi from './api/CowApi';
+import CurveApi from './api/CurveApi';
+import DexApi from './api/DexApi';
 import SushiswapApi from './api/SushiswapApi';
-import SwapsApi from './api/SwapsApi';
-import SystemStateApi from './api/SystemStateApi';
-import TickDayDataApi from './api/TickDayDataApi';
-import TicksApi from './api/TicksApi';
-import TokenDayDataApi from './api/TokenDayDataApi';
-import TokenHourDataApi from './api/TokenHourDataApi';
-import TokensApi from './api/TokensApi';
-import TradesApi from './api/TradesApi';
-import TransactionsApi from './api/TransactionsApi';
-import TransferOwnershipEventApi from './api/TransferOwnershipEventApi';
-import UnderlyingCoinApi from './api/UnderlyingCoinApi';
-import UniswapDayDataApi from './api/UniswapDayDataApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
-import UsersApi from './api/UsersApi';
-import VotingAppApi from './api/VotingAppApi';
-import WeeklyVolumeApi from './api/WeeklyVolumeApi';
-import WithdrawApi from './api/WithdrawApi';
-import WithdrawRequestApi from './api/WithdrawRequestApi';
 
 
 /**
@@ -287,352 +228,28 @@ export {
     UniswapDayDataV3DTO,
 
     /**
-    * The AccountsApi service constructor.
-    * @property {module:api/AccountsApi}
+    * The CowApi service constructor.
+    * @property {module:api/CowApi}
     */
-    AccountsApi,
+    CowApi,
 
     /**
-    * The AddLiquidityEventApi service constructor.
-    * @property {module:api/AddLiquidityEventApi}
+    * The CurveApi service constructor.
+    * @property {module:api/CurveApi}
     */
-    AddLiquidityEventApi,
+    CurveApi,
 
     /**
-    * The AdminFeeChangeLogApi service constructor.
-    * @property {module:api/AdminFeeChangeLogApi}
+    * The DexApi service constructor.
+    * @property {module:api/DexApi}
     */
-    AdminFeeChangeLogApi,
-
-    /**
-    * The AmplificationCoeffChangeLogApi service constructor.
-    * @property {module:api/AmplificationCoeffChangeLogApi}
-    */
-    AmplificationCoeffChangeLogApi,
-
-    /**
-    * The BatchApi service constructor.
-    * @property {module:api/BatchApi}
-    */
-    BatchApi,
-
-    /**
-    * The BundlesApi service constructor.
-    * @property {module:api/BundlesApi}
-    */
-    BundlesApi,
-
-    /**
-    * The BurnsApi service constructor.
-    * @property {module:api/BurnsApi}
-    */
-    BurnsApi,
-
-    /**
-    * The CoinsApi service constructor.
-    * @property {module:api/CoinsApi}
-    */
-    CoinsApi,
-
-    /**
-    * The ContractsApi service constructor.
-    * @property {module:api/ContractsApi}
-    */
-    ContractsApi,
-
-    /**
-    * The ContractsVersionApi service constructor.
-    * @property {module:api/ContractsVersionApi}
-    */
-    ContractsVersionApi,
-
-    /**
-    * The DailyVolumeApi service constructor.
-    * @property {module:api/DailyVolumeApi}
-    */
-    DailyVolumeApi,
-
-    /**
-    * The DayDataApi service constructor.
-    * @property {module:api/DayDataApi}
-    */
-    DayDataApi,
-
-    /**
-    * The DepositApi service constructor.
-    * @property {module:api/DepositApi}
-    */
-    DepositApi,
-
-    /**
-    * The FactoryApi service constructor.
-    * @property {module:api/FactoryApi}
-    */
-    FactoryApi,
-
-    /**
-    * The FeeChangeLogApi service constructor.
-    * @property {module:api/FeeChangeLogApi}
-    */
-    FeeChangeLogApi,
-
-    /**
-    * The GaugeApi service constructor.
-    * @property {module:api/GaugeApi}
-    */
-    GaugeApi,
-
-    /**
-    * The GaugeDepositApi service constructor.
-    * @property {module:api/GaugeDepositApi}
-    */
-    GaugeDepositApi,
-
-    /**
-    * The GaugeLiquidityApi service constructor.
-    * @property {module:api/GaugeLiquidityApi}
-    */
-    GaugeLiquidityApi,
-
-    /**
-    * The GaugeTotalWeightApi service constructor.
-    * @property {module:api/GaugeTotalWeightApi}
-    */
-    GaugeTotalWeightApi,
-
-    /**
-    * The GaugeTypeApi service constructor.
-    * @property {module:api/GaugeTypeApi}
-    */
-    GaugeTypeApi,
-
-    /**
-    * The GaugeTypeWeightApi service constructor.
-    * @property {module:api/GaugeTypeWeightApi}
-    */
-    GaugeTypeWeightApi,
-
-    /**
-    * The GaugeWeightApi service constructor.
-    * @property {module:api/GaugeWeightApi}
-    */
-    GaugeWeightApi,
-
-    /**
-    * The GaugeWeightVoteApi service constructor.
-    * @property {module:api/GaugeWeightVoteApi}
-    */
-    GaugeWeightVoteApi,
-
-    /**
-    * The GaugeWithdrawApi service constructor.
-    * @property {module:api/GaugeWithdrawApi}
-    */
-    GaugeWithdrawApi,
-
-    /**
-    * The HourDataApi service constructor.
-    * @property {module:api/HourDataApi}
-    */
-    HourDataApi,
-
-    /**
-    * The HourlyVolumeApi service constructor.
-    * @property {module:api/HourlyVolumeApi}
-    */
-    HourlyVolumeApi,
-
-    /**
-    * The LiquidityPositionApi service constructor.
-    * @property {module:api/LiquidityPositionApi}
-    */
-    LiquidityPositionApi,
-
-    /**
-    * The LiquidityPositionSnapshotsApi service constructor.
-    * @property {module:api/LiquidityPositionSnapshotsApi}
-    */
-    LiquidityPositionSnapshotsApi,
-
-    /**
-    * The LpTokenApi service constructor.
-    * @property {module:api/LpTokenApi}
-    */
-    LpTokenApi,
-
-    /**
-    * The MintsApi service constructor.
-    * @property {module:api/MintsApi}
-    */
-    MintsApi,
-
-    /**
-    * The OrdersApi service constructor.
-    * @property {module:api/OrdersApi}
-    */
-    OrdersApi,
-
-    /**
-    * The PoiApi service constructor.
-    * @property {module:api/PoiApi}
-    */
-    PoiApi,
-
-    /**
-    * The PoolDayDataApi service constructor.
-    * @property {module:api/PoolDayDataApi}
-    */
-    PoolDayDataApi,
-
-    /**
-    * The PoolHourDataApi service constructor.
-    * @property {module:api/PoolHourDataApi}
-    */
-    PoolHourDataApi,
-
-    /**
-    * The PoolsApi service constructor.
-    * @property {module:api/PoolsApi}
-    */
-    PoolsApi,
-
-    /**
-    * The PositionSnapshotApi service constructor.
-    * @property {module:api/PositionSnapshotApi}
-    */
-    PositionSnapshotApi,
-
-    /**
-    * The PositionsApi service constructor.
-    * @property {module:api/PositionsApi}
-    */
-    PositionsApi,
-
-    /**
-    * The PricesApi service constructor.
-    * @property {module:api/PricesApi}
-    */
-    PricesApi,
-
-    /**
-    * The ProposalsApi service constructor.
-    * @property {module:api/ProposalsApi}
-    */
-    ProposalsApi,
-
-    /**
-    * The ProposalsVoteApi service constructor.
-    * @property {module:api/ProposalsVoteApi}
-    */
-    ProposalsVoteApi,
-
-    /**
-    * The RemoveLiquidityEventApi service constructor.
-    * @property {module:api/RemoveLiquidityEventApi}
-    */
-    RemoveLiquidityEventApi,
-
-    /**
-    * The RemoveLiquidityOneEventApi service constructor.
-    * @property {module:api/RemoveLiquidityOneEventApi}
-    */
-    RemoveLiquidityOneEventApi,
-
-    /**
-    * The SettlementApi service constructor.
-    * @property {module:api/SettlementApi}
-    */
-    SettlementApi,
-
-    /**
-    * The SolutionApi service constructor.
-    * @property {module:api/SolutionApi}
-    */
-    SolutionApi,
-
-    /**
-    * The StatsApi service constructor.
-    * @property {module:api/StatsApi}
-    */
-    StatsApi,
+    DexApi,
 
     /**
     * The SushiswapApi service constructor.
     * @property {module:api/SushiswapApi}
     */
     SushiswapApi,
-
-    /**
-    * The SwapsApi service constructor.
-    * @property {module:api/SwapsApi}
-    */
-    SwapsApi,
-
-    /**
-    * The SystemStateApi service constructor.
-    * @property {module:api/SystemStateApi}
-    */
-    SystemStateApi,
-
-    /**
-    * The TickDayDataApi service constructor.
-    * @property {module:api/TickDayDataApi}
-    */
-    TickDayDataApi,
-
-    /**
-    * The TicksApi service constructor.
-    * @property {module:api/TicksApi}
-    */
-    TicksApi,
-
-    /**
-    * The TokenDayDataApi service constructor.
-    * @property {module:api/TokenDayDataApi}
-    */
-    TokenDayDataApi,
-
-    /**
-    * The TokenHourDataApi service constructor.
-    * @property {module:api/TokenHourDataApi}
-    */
-    TokenHourDataApi,
-
-    /**
-    * The TokensApi service constructor.
-    * @property {module:api/TokensApi}
-    */
-    TokensApi,
-
-    /**
-    * The TradesApi service constructor.
-    * @property {module:api/TradesApi}
-    */
-    TradesApi,
-
-    /**
-    * The TransactionsApi service constructor.
-    * @property {module:api/TransactionsApi}
-    */
-    TransactionsApi,
-
-    /**
-    * The TransferOwnershipEventApi service constructor.
-    * @property {module:api/TransferOwnershipEventApi}
-    */
-    TransferOwnershipEventApi,
-
-    /**
-    * The UnderlyingCoinApi service constructor.
-    * @property {module:api/UnderlyingCoinApi}
-    */
-    UnderlyingCoinApi,
-
-    /**
-    * The UniswapDayDataApi service constructor.
-    * @property {module:api/UniswapDayDataApi}
-    */
-    UniswapDayDataApi,
 
     /**
     * The UniswapV2Api service constructor.
@@ -644,35 +261,5 @@ export {
     * The UniswapV3Api service constructor.
     * @property {module:api/UniswapV3Api}
     */
-    UniswapV3Api,
-
-    /**
-    * The UsersApi service constructor.
-    * @property {module:api/UsersApi}
-    */
-    UsersApi,
-
-    /**
-    * The VotingAppApi service constructor.
-    * @property {module:api/VotingAppApi}
-    */
-    VotingAppApi,
-
-    /**
-    * The WeeklyVolumeApi service constructor.
-    * @property {module:api/WeeklyVolumeApi}
-    */
-    WeeklyVolumeApi,
-
-    /**
-    * The WithdrawApi service constructor.
-    * @property {module:api/WithdrawApi}
-    */
-    WithdrawApi,
-
-    /**
-    * The WithdrawRequestApi service constructor.
-    * @property {module:api/WithdrawRequestApi}
-    */
-    WithdrawRequestApi
+    UniswapV3Api
 };

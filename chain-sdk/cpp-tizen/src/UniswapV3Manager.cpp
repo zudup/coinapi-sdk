@@ -48,7 +48,7 @@ static gpointer __UniswapV3ManagerthreadFunc(gpointer data)
 }
 
 
-static bool chainsChainIdDappsUniswapv3BundleCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3BundleCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<BundleV3DTO>, Error, void* )
@@ -95,8 +95,8 @@ static bool chainsChainIdDappsUniswapv3BundleCurrentGetProcessor(MemoryStruct_s 
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3BundleCurrentGetHelper(char * accessToken,
-	std::string chainId, 
+static bool dappsUniswapv3BundleCurrentGetHelper(char * accessToken,
+	
 	void(* handler)(std::list<BundleV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -117,15 +117,9 @@ static bool chainsChainIdDappsUniswapv3BundleCurrentGetHelper(char * accessToken
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/bundle/current");
+	string url("/dapps/uniswapv3/bundle/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -142,7 +136,7 @@ static bool chainsChainIdDappsUniswapv3BundleCurrentGetHelper(char * accessToken
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3BundleCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3BundleCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -160,7 +154,7 @@ static bool chainsChainIdDappsUniswapv3BundleCurrentGetHelper(char * accessToken
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3BundleCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3BundleCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -172,27 +166,179 @@ static bool chainsChainIdDappsUniswapv3BundleCurrentGetHelper(char * accessToken
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3BundleCurrentGetAsync(char * accessToken,
-	std::string chainId, 
+bool UniswapV3Manager::dappsUniswapv3BundleCurrentGetAsync(char * accessToken,
+	
 	void(* handler)(std::list<BundleV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3BundleCurrentGetHelper(accessToken,
-	chainId, 
+	return dappsUniswapv3BundleCurrentGetHelper(accessToken,
+	
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3BundleCurrentGetSync(char * accessToken,
-	std::string chainId, 
+bool UniswapV3Manager::dappsUniswapv3BundleCurrentGetSync(char * accessToken,
+	
 	void(* handler)(std::list<BundleV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3BundleCurrentGetHelper(accessToken,
-	chainId, 
+	return dappsUniswapv3BundleCurrentGetHelper(accessToken,
+	
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3BurnsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3BundlesHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3BundlesHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/bundles/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3BundlesHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3BundlesHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3BundlesHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3BundlesHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3BundlesHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3BundlesHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3BurnsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<BurnV3DTO>, Error, void* )
@@ -239,8 +385,8 @@ static bool chainsChainIdDappsUniswapv3BurnsCurrentGetProcessor(MemoryStruct_s p
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<BurnV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -268,15 +414,9 @@ static bool chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/burns/current");
+	string url("/dapps/uniswapv3/burns/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -293,7 +433,7 @@ static bool chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3BurnsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3BurnsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -311,7 +451,7 @@ static bool chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3BurnsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3BurnsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -323,27 +463,338 @@ static bool chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(char * accessToken,
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3BurnsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3BurnsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<BurnV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3BurnsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3BurnsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3BurnsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<BurnV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3BurnsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3BurnsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3FactoryCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3BurnsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3BurnsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/burns/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3BurnsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3BurnsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3BurnsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3BurnsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3BurnsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3BurnsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3DayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3DayDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/dayData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3DayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3DayDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3DayDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3DayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3DayDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3DayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3FactoryCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<FactoryV3DTO>, Error, void* )
@@ -390,7 +841,7 @@ static bool chainsChainIdDappsUniswapv3FactoryCurrentGetProcessor(MemoryStruct_s
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(char * accessToken,
+static bool dappsUniswapv3FactoryCurrentGetHelper(char * accessToken,
 	std::string chainId, 
 	void(* handler)(std::list<FactoryV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -412,7 +863,7 @@ static bool chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(char * accessToke
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/factory/current");
+	string url("/dapps/uniswapv3/factory/current");
 	int pos;
 
 	string s_chainId("{");
@@ -437,7 +888,7 @@ static bool chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(char * accessToke
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3FactoryCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3FactoryCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -455,7 +906,7 @@ static bool chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(char * accessToke
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3FactoryCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3FactoryCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -467,27 +918,179 @@ static bool chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(char * accessToke
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3FactoryCurrentGetAsync(char * accessToken,
+bool UniswapV3Manager::dappsUniswapv3FactoryCurrentGetAsync(char * accessToken,
 	std::string chainId, 
 	void(* handler)(std::list<FactoryV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(accessToken,
+	return dappsUniswapv3FactoryCurrentGetHelper(accessToken,
 	chainId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3FactoryCurrentGetSync(char * accessToken,
+bool UniswapV3Manager::dappsUniswapv3FactoryCurrentGetSync(char * accessToken,
 	std::string chainId, 
 	void(* handler)(std::list<FactoryV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3FactoryCurrentGetHelper(accessToken,
+	return dappsUniswapv3FactoryCurrentGetHelper(accessToken,
 	chainId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3MintsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3FactoryHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3FactoryHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/factory/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3FactoryHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3FactoryHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3FactoryHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3FactoryHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3FactoryHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3FactoryHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3MintsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<MintV3DTO>, Error, void* )
@@ -534,8 +1137,8 @@ static bool chainsChainIdDappsUniswapv3MintsCurrentGetProcessor(MemoryStruct_s p
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3MintsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3MintsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<MintV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -563,15 +1166,9 @@ static bool chainsChainIdDappsUniswapv3MintsCurrentGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/mints/current");
+	string url("/dapps/uniswapv3/mints/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -588,7 +1185,7 @@ static bool chainsChainIdDappsUniswapv3MintsCurrentGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3MintsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3MintsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -606,7 +1203,7 @@ static bool chainsChainIdDappsUniswapv3MintsCurrentGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3MintsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3MintsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -618,27 +1215,656 @@ static bool chainsChainIdDappsUniswapv3MintsCurrentGetHelper(char * accessToken,
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3MintsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3MintsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<MintV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3MintsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3MintsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3MintsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3MintsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<MintV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3MintsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3MintsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3MintsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3MintsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/mints/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3MintsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3MintsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3MintsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3MintsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3MintsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3MintsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PoiHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PoiHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/poi/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PoiHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoiHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PoiHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoiHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PoiHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoiHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PoolDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PoolDayDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/poolDayData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PoolDayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolDayDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PoolDayDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PoolDayDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PoolHourDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PoolHourDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/poolHourData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PoolHourDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolHourDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PoolHourDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolHourDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PoolHourDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolHourDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<PoolV3DTO>, Error, void* )
@@ -685,8 +1911,8 @@ static bool chainsChainIdDappsUniswapv3PoolsCurrentGetProcessor(MemoryStruct_s p
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -714,15 +1940,9 @@ static bool chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/pools/current");
+	string url("/dapps/uniswapv3/pools/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -739,7 +1959,7 @@ static bool chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3PoolsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3PoolsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -757,7 +1977,7 @@ static bool chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3PoolsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -769,27 +1989,27 @@ static bool chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(char * accessToken,
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3PoolsDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<PoolDayDataV3DTO>, Error, void* )
@@ -836,8 +2056,8 @@ static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetProcessor(MemoryStr
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3PoolsDayDataCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolDayDataV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -865,15 +2085,9 @@ static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(char * acces
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current");
+	string url("/dapps/uniswapv3/poolsDayData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -890,7 +2104,7 @@ static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(char * acces
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3PoolsDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -908,7 +2122,7 @@ static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(char * acces
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolsDayDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -920,27 +2134,186 @@ static bool chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(char * acces
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsDayDataCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsDayDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsDayDataCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsDayDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3PoolsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PoolsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/pools/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PoolsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PoolsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PoolsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PoolsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PoolsHourDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<PoolHourDataV3DTO>, Error, void* )
@@ -987,8 +2360,8 @@ static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetProcessor(MemorySt
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3PoolsHourDataCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolHourDataV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1016,15 +2389,9 @@ static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(char * acce
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current");
+	string url("/dapps/uniswapv3/poolsHourData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1041,7 +2408,7 @@ static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(char * acce
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3PoolsHourDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1059,7 +2426,7 @@ static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(char * acce
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PoolsHourDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1071,27 +2438,186 @@ static bool chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(char * acce
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsHourDataCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolHourDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsHourDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PoolsHourDataCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PoolHourDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PoolsHourDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3PositionSnapshotHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PositionSnapshotHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/positionSnapshot/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PositionSnapshotHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PositionSnapshotHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PositionSnapshotHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PositionSnapshotHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PositionSnapshotHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PositionSnapshotHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3PositionSnapshotsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<PositionSnapshotV3DTO>, Error, void* )
@@ -1138,8 +2664,8 @@ static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetProcessor(Memo
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3PositionSnapshotsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionSnapshotV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1167,15 +2693,9 @@ static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(char * 
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current");
+	string url("/dapps/uniswapv3/positionSnapshots/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1192,7 +2712,7 @@ static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(char * 
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3PositionSnapshotsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1210,7 +2730,7 @@ static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(char * 
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PositionSnapshotsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1222,27 +2742,27 @@ static bool chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(char * 
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PositionSnapshotsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionSnapshotV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PositionSnapshotsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PositionSnapshotsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionSnapshotV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PositionSnapshotsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3PositionsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3PositionsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<PositionV3DTO>, Error, void* )
@@ -1289,8 +2809,8 @@ static bool chainsChainIdDappsUniswapv3PositionsCurrentGetProcessor(MemoryStruct
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3PositionsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1318,15 +2838,9 @@ static bool chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(char * accessTo
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/positions/current");
+	string url("/dapps/uniswapv3/positions/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1343,7 +2857,7 @@ static bool chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(char * accessTo
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3PositionsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3PositionsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1361,7 +2875,7 @@ static bool chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(char * accessTo
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3PositionsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PositionsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1373,27 +2887,186 @@ static bool chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(char * accessTo
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PositionsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PositionsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PositionsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3PositionsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3PositionsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<PositionV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3PositionsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3PositionsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3SwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3PositionsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3PositionsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/positions/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3PositionsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3PositionsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3PositionsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PositionsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3PositionsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3PositionsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3SwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<SwapV3DTO>, Error, void* )
@@ -1440,8 +3113,8 @@ static bool chainsChainIdDappsUniswapv3SwapsCurrentGetProcessor(MemoryStruct_s p
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<SwapV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1469,15 +3142,9 @@ static bool chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/swaps/current");
+	string url("/dapps/uniswapv3/swaps/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1494,7 +3161,7 @@ static bool chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3SwapsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3SwapsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1512,7 +3179,7 @@ static bool chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3SwapsCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3SwapsCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1524,27 +3191,345 @@ static bool chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(char * accessToken,
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3SwapsCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3SwapsCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<SwapV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3SwapsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3SwapsCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3SwapsCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<SwapV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3SwapsCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3SwapsCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3TicksCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3SwapsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3SwapsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/swaps/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3SwapsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3SwapsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3SwapsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3SwapsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3SwapsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3SwapsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TickDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TickDayDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/tickDayData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TickDayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TickDayDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TickDayDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TickDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TickDayDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TickDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TicksCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<TickV3DTO>, Error, void* )
@@ -1591,8 +3576,8 @@ static bool chainsChainIdDappsUniswapv3TicksCurrentGetProcessor(MemoryStruct_s p
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3TicksCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3TicksCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1620,15 +3605,9 @@ static bool chainsChainIdDappsUniswapv3TicksCurrentGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/ticks/current");
+	string url("/dapps/uniswapv3/ticks/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1645,7 +3624,7 @@ static bool chainsChainIdDappsUniswapv3TicksCurrentGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3TicksCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3TicksCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1663,7 +3642,7 @@ static bool chainsChainIdDappsUniswapv3TicksCurrentGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3TicksCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TicksCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1675,27 +3654,27 @@ static bool chainsChainIdDappsUniswapv3TicksCurrentGetHelper(char * accessToken,
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TicksCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3TicksCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TicksCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3TicksCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TicksCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3TicksCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TicksCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3TicksCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3TicksDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<TickDayDataV3DTO>, Error, void* )
@@ -1742,8 +3721,8 @@ static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetProcessor(MemoryStr
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+static bool dappsUniswapv3TicksDayDataCurrentGetHelper(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickDayDataV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1771,15 +3750,9 @@ static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(char * acces
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current");
+	string url("/dapps/uniswapv3/ticksDayData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1796,7 +3769,7 @@ static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(char * acces
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3TicksDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3TicksDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1814,7 +3787,7 @@ static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(char * acces
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3TicksDayDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TicksDayDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1826,27 +3799,504 @@ static bool chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(char * acces
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3TicksDayDataCurrentGetAsync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3TicksDayDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TicksDayDataCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterPoolId, 
+bool UniswapV3Manager::dappsUniswapv3TicksDayDataCurrentGetSync(char * accessToken,
+	std::string filterPoolId, 
 	void(* handler)(std::list<TickDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TicksDayDataCurrentGetHelper(accessToken,
-	chainId, filterPoolId, 
+	return dappsUniswapv3TicksDayDataCurrentGetHelper(accessToken,
+	filterPoolId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3TokensCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3TicksHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TicksHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/ticks/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TicksHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TicksHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TicksHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TicksHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TicksHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TicksHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TokenDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TokenDayDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&tokenId, "std::string");
+	queryParams.insert(pair<string, string>("tokenId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("tokenId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/tokenDayData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TokenDayDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokenDayDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TokenDayDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokenDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TokenDayDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokenDayDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TokenHourDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TokenHourDataHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&tokenId, "std::string");
+	queryParams.insert(pair<string, string>("tokenId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("tokenId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/tokenHourData/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TokenHourDataHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokenHourDataHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TokenHourDataHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokenHourDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TokenHourDataHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokenHourDataHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TokensCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<TokenV3DTO>, Error, void* )
@@ -1893,8 +4343,8 @@ static bool chainsChainIdDappsUniswapv3TokensCurrentGetProcessor(MemoryStruct_s 
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3TokensCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+static bool dappsUniswapv3TokensCurrentGetHelper(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -1922,15 +4372,9 @@ static bool chainsChainIdDappsUniswapv3TokensCurrentGetHelper(char * accessToken
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/tokens/current");
+	string url("/dapps/uniswapv3/tokens/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -1947,7 +4391,7 @@ static bool chainsChainIdDappsUniswapv3TokensCurrentGetHelper(char * accessToken
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3TokensCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3TokensCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1965,7 +4409,7 @@ static bool chainsChainIdDappsUniswapv3TokensCurrentGetHelper(char * accessToken
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3TokensCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokensCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1977,27 +4421,27 @@ static bool chainsChainIdDappsUniswapv3TokensCurrentGetHelper(char * accessToken
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensCurrentGetAsync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensCurrentGetSync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3TokensDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<TokenV3DayDataDTO>, Error, void* )
@@ -2044,8 +4488,8 @@ static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetProcessor(MemorySt
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+static bool dappsUniswapv3TokensDayDataCurrentGetHelper(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2073,15 +4517,9 @@ static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(char * acce
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current");
+	string url("/dapps/uniswapv3/tokensDayData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -2098,7 +4536,7 @@ static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(char * acce
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3TokensDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3TokensDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2116,7 +4554,7 @@ static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(char * acce
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3TokensDayDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokensDayDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2128,27 +4566,186 @@ static bool chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(char * acce
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensDayDataCurrentGetAsync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensDayDataCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensDayDataCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensDayDataCurrentGetSync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenV3DayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensDayDataCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensDayDataCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3TokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TokensHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&tokenId, "std::string");
+	queryParams.insert(pair<string, string>("tokenId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("tokenId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/tokens/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TokensHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokensHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TokensHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokensHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TokensHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TokensHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3TokensHourDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<TokenHourDataV3DTO>, Error, void* )
@@ -2195,8 +4792,8 @@ static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetProcessor(MemoryS
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+static bool dappsUniswapv3TokensHourDataCurrentGetHelper(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenHourDataV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2224,15 +4821,9 @@ static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(char * acc
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current");
+	string url("/dapps/uniswapv3/tokensHourData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -2249,7 +4840,7 @@ static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(char * acc
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3TokensHourDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3TokensHourDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2267,7 +4858,7 @@ static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(char * acc
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3TokensHourDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TokensHourDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2279,27 +4870,179 @@ static bool chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(char * acc
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensHourDataCurrentGetAsync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenHourDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensHourDataCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3TokensHourDataCurrentGetSync(char * accessToken,
-	std::string chainId, std::string filterTokenId, 
+bool UniswapV3Manager::dappsUniswapv3TokensHourDataCurrentGetSync(char * accessToken,
+	std::string filterTokenId, 
 	void(* handler)(std::list<TokenHourDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3TokensHourDataCurrentGetHelper(accessToken,
-	chainId, filterTokenId, 
+	return dappsUniswapv3TokensHourDataCurrentGetHelper(accessToken,
+	filterTokenId, 
 	handler, userData, false);
 }
 
-static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dappsUniswapv3TransactionsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	
+	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+		handler(error, userData);
+		return true;
+
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		handler(error, userData);
+		return false;
+	}
+}
+
+static bool dappsUniswapv3TransactionsHistoricalGetHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/uniswapv3/transactions/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dappsUniswapv3TransactionsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3TransactionsHistoricalGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __UniswapV3ManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool UniswapV3Manager::dappsUniswapv3TransactionsHistoricalGetAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TransactionsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, true);
+}
+
+bool UniswapV3Manager::dappsUniswapv3TransactionsHistoricalGetSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	
+	void(* handler)(Error, void* ) , void* userData)
+{
+	return dappsUniswapv3TransactionsHistoricalGetHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool dappsUniswapv3UniswapDayDataCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapDayDataV3DTO>, Error, void* )
@@ -2346,8 +5089,8 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetProcessor(MemoryS
 			}
 }
 
-static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(char * accessToken,
-	std::string chainId, 
+static bool dappsUniswapv3UniswapDayDataCurrentGetHelper(char * accessToken,
+	
 	void(* handler)(std::list<UniswapDayDataV3DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
@@ -2368,15 +5111,9 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(char * acc
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current");
+	string url("/dapps/uniswapv3/uniswapDayData/current");
 	int pos;
 
-	string s_chainId("{");
-	s_chainId.append("chain_id");
-	s_chainId.append("}");
-	pos = url.find(s_chainId);
-	url.erase(pos, s_chainId.length());
-	url.insert(pos, stringify(&chainId, "std::string"));
 
 	//TODO: free memory of errormsg, memorystruct
 	MemoryStruct_s* p_chunk = new MemoryStruct_s();
@@ -2393,7 +5130,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(char * acc
 	if(!isAsync){
 		NetClient::easycurl(UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dappsUniswapv3UniswapDayDataCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2411,7 +5148,7 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(char * acc
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV3Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsUniswapv3UniswapDayDataCurrentGetProcessor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2423,23 +5160,23 @@ static bool chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(char * acc
 
 
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsync(char * accessToken,
-	std::string chainId, 
+bool UniswapV3Manager::dappsUniswapv3UniswapDayDataCurrentGetAsync(char * accessToken,
+	
 	void(* handler)(std::list<UniswapDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(accessToken,
-	chainId, 
+	return dappsUniswapv3UniswapDayDataCurrentGetHelper(accessToken,
+	
 	handler, userData, true);
 }
 
-bool UniswapV3Manager::chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetSync(char * accessToken,
-	std::string chainId, 
+bool UniswapV3Manager::dappsUniswapv3UniswapDayDataCurrentGetSync(char * accessToken,
+	
 	void(* handler)(std::list<UniswapDayDataV3DTO>, Error, void* )
 	, void* userData)
 {
-	return chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetHelper(accessToken,
-	chainId, 
+	return dappsUniswapv3UniswapDayDataCurrentGetHelper(accessToken,
+	
 	handler, userData, false);
 }
 

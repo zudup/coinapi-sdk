@@ -4,36 +4,51 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**chains_chain_id_dapps_uniswapv3_bundle_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_bundle_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chains_chain_id_dapps_uniswapv3_burns_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_burns_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chains_chain_id_dapps_uniswapv3_factory_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_factory_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chains_chain_id_dapps_uniswapv3_mints_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_mints_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chains_chain_id_dapps_uniswapv3_pools_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_pools_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chains_chain_id_dapps_uniswapv3_pools_day_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_pools_day_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chains_chain_id_dapps_uniswapv3_position_snapshots_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_position_snapshots_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chains_chain_id_dapps_uniswapv3_positions_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_positions_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chains_chain_id_dapps_uniswapv3_swaps_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_swaps_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chains_chain_id_dapps_uniswapv3_ticks_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_ticks_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chains_chain_id_dapps_uniswapv3_tokens_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_tokens_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](UNISWAPV3_API.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **Get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dapps_uniswapv3_bundle_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_bundle_current_get) | **Get** /dapps/uniswapv3/bundle/current | GetBundles
+[**dapps_uniswapv3_bundles_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_bundles_historical_get) | **Get** /dapps/uniswapv3/bundles/historical | 
+[**dapps_uniswapv3_burns_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_burns_current_get) | **Get** /dapps/uniswapv3/burns/current | GetBurns
+[**dapps_uniswapv3_burns_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_burns_historical_get) | **Get** /dapps/uniswapv3/burns/historical | 
+[**dapps_uniswapv3_day_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_day_data_historical_get) | **Get** /dapps/uniswapv3/dayData/historical | 
+[**dapps_uniswapv3_factory_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_factory_current_get) | **Get** /dapps/uniswapv3/factory/current | GetFactory
+[**dapps_uniswapv3_factory_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_factory_historical_get) | **Get** /dapps/uniswapv3/factory/historical | 
+[**dapps_uniswapv3_mints_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_mints_current_get) | **Get** /dapps/uniswapv3/mints/current | GetMints
+[**dapps_uniswapv3_mints_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_mints_historical_get) | **Get** /dapps/uniswapv3/mints/historical | 
+[**dapps_uniswapv3_poi_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_poi_historical_get) | **Get** /dapps/uniswapv3/poi/historical | 
+[**dapps_uniswapv3_pool_day_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_pool_day_data_historical_get) | **Get** /dapps/uniswapv3/poolDayData/historical | 
+[**dapps_uniswapv3_pool_hour_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_pool_hour_data_historical_get) | **Get** /dapps/uniswapv3/poolHourData/historical | 
+[**dapps_uniswapv3_pools_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_pools_current_get) | **Get** /dapps/uniswapv3/pools/current | GetPools
+[**dapps_uniswapv3_pools_day_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_pools_day_data_current_get) | **Get** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dapps_uniswapv3_pools_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_pools_historical_get) | **Get** /dapps/uniswapv3/pools/historical | 
+[**dapps_uniswapv3_pools_hour_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_pools_hour_data_current_get) | **Get** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dapps_uniswapv3_position_snapshot_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_position_snapshot_historical_get) | **Get** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dapps_uniswapv3_position_snapshots_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_position_snapshots_current_get) | **Get** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dapps_uniswapv3_positions_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_positions_current_get) | **Get** /dapps/uniswapv3/positions/current | GetPositions
+[**dapps_uniswapv3_positions_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_positions_historical_get) | **Get** /dapps/uniswapv3/positions/historical | 
+[**dapps_uniswapv3_swaps_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_swaps_current_get) | **Get** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dapps_uniswapv3_swaps_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_swaps_historical_get) | **Get** /dapps/uniswapv3/swaps/historical | 
+[**dapps_uniswapv3_tick_day_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_tick_day_data_historical_get) | **Get** /dapps/uniswapv3/tickDayData/historical | 
+[**dapps_uniswapv3_ticks_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_ticks_current_get) | **Get** /dapps/uniswapv3/ticks/current | GetTicks
+[**dapps_uniswapv3_ticks_day_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_ticks_day_data_current_get) | **Get** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dapps_uniswapv3_ticks_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_ticks_historical_get) | **Get** /dapps/uniswapv3/ticks/historical | 
+[**dapps_uniswapv3_token_day_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_token_day_data_historical_get) | **Get** /dapps/uniswapv3/tokenDayData/historical | 
+[**dapps_uniswapv3_token_hour_data_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_token_hour_data_historical_get) | **Get** /dapps/uniswapv3/tokenHourData/historical | 
+[**dapps_uniswapv3_tokens_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_tokens_current_get) | **Get** /dapps/uniswapv3/tokens/current | GetTokens
+[**dapps_uniswapv3_tokens_day_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_tokens_day_data_current_get) | **Get** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dapps_uniswapv3_tokens_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_tokens_historical_get) | **Get** /dapps/uniswapv3/tokens/historical | 
+[**dapps_uniswapv3_tokens_hour_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_tokens_hour_data_current_get) | **Get** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dapps_uniswapv3_transactions_historical_get**](UNISWAPV3_API.md#dapps_uniswapv3_transactions_historical_get) | **Get** /dapps/uniswapv3/transactions/historical | 
+[**dapps_uniswapv3_uniswap_day_data_current_get**](UNISWAPV3_API.md#dapps_uniswapv3_uniswap_day_data_current_get) | **Get** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
-# **chains_chain_id_dapps_uniswapv3_bundle_current_get**
-> chains_chain_id_dapps_uniswapv3_bundle_current_get (chain_id: STRING_32 ): detachable LIST [BUNDLE_V3_DTO]
+# **dapps_uniswapv3_bundle_current_get**
+> dapps_uniswapv3_bundle_current_get : detachable LIST [BUNDLE_V3_DTO]
 
 
 GetBundles
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -50,8 +65,39 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_burns_current_get**
-> chains_chain_id_dapps_uniswapv3_burns_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [BURN_V3_DTO]
+# **dapps_uniswapv3_bundles_historical_get**
+> dapps_uniswapv3_bundles_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_burns_current_get**
+> dapps_uniswapv3_burns_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [BURN_V3_DTO]
 
 
 GetBurns
@@ -61,7 +107,6 @@ GetBurns
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -79,8 +124,71 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_factory_current_get**
-> chains_chain_id_dapps_uniswapv3_factory_current_get (chain_id: STRING_32 ): detachable LIST [FACTORY_V3_DTO]
+# **dapps_uniswapv3_burns_historical_get**
+> dapps_uniswapv3_burns_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_day_data_historical_get**
+> dapps_uniswapv3_day_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_factory_current_get**
+> dapps_uniswapv3_factory_current_get (chain_id: STRING_32 ): detachable LIST [FACTORY_V3_DTO]
 
 
 GetFactory
@@ -90,7 +198,7 @@ GetFactory
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
+ **chain_id** | **STRING_32**|  | [default to null]
 
 ### Return type
 
@@ -107,8 +215,39 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_mints_current_get**
-> chains_chain_id_dapps_uniswapv3_mints_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [MINT_V3_DTO]
+# **dapps_uniswapv3_factory_historical_get**
+> dapps_uniswapv3_factory_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_mints_current_get**
+> dapps_uniswapv3_mints_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [MINT_V3_DTO]
 
 
 GetMints
@@ -118,7 +257,6 @@ GetMints
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -136,8 +274,135 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_current_get**
-> chains_chain_id_dapps_uniswapv3_pools_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_V3_DTO]
+# **dapps_uniswapv3_mints_historical_get**
+> dapps_uniswapv3_mints_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_poi_historical_get**
+> dapps_uniswapv3_poi_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pool_day_data_historical_get**
+> dapps_uniswapv3_pool_day_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pool_hour_data_historical_get**
+> dapps_uniswapv3_pool_hour_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pools_current_get**
+> dapps_uniswapv3_pools_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_V3_DTO]
 
 
 GetPools
@@ -147,7 +412,6 @@ GetPools
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -165,8 +429,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_day_data_current_get**
-> chains_chain_id_dapps_uniswapv3_pools_day_data_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_DAY_DATA_V3_DTO]
+# **dapps_uniswapv3_pools_day_data_current_get**
+> dapps_uniswapv3_pools_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_DAY_DATA_V3_DTO]
 
 
 GetPoolsDayData
@@ -176,7 +440,6 @@ GetPoolsDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -194,8 +457,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get**
-> chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_HOUR_DATA_V3_DTO]
+# **dapps_uniswapv3_pools_historical_get**
+> dapps_uniswapv3_pools_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pools_hour_data_current_get**
+> dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_HOUR_DATA_V3_DTO]
 
 
 GetPoolsHourData
@@ -205,7 +500,6 @@ GetPoolsHourData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -223,8 +517,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_position_snapshots_current_get**
-> chains_chain_id_dapps_uniswapv3_position_snapshots_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
+# **dapps_uniswapv3_position_snapshot_historical_get**
+> dapps_uniswapv3_position_snapshot_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_position_snapshots_current_get**
+> dapps_uniswapv3_position_snapshots_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
 
 
 GetPositionSnapshot
@@ -234,7 +560,6 @@ GetPositionSnapshot
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -252,8 +577,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_positions_current_get**
-> chains_chain_id_dapps_uniswapv3_positions_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_V3_DTO]
+# **dapps_uniswapv3_positions_current_get**
+> dapps_uniswapv3_positions_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_V3_DTO]
 
 
 GetPositions
@@ -263,7 +588,6 @@ GetPositions
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -281,8 +605,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_swaps_current_get**
-> chains_chain_id_dapps_uniswapv3_swaps_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [SWAP_V3_DTO]
+# **dapps_uniswapv3_positions_historical_get**
+> dapps_uniswapv3_positions_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_swaps_current_get**
+> dapps_uniswapv3_swaps_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [SWAP_V3_DTO]
 
 
 GetSwaps
@@ -292,7 +648,6 @@ GetSwaps
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -310,8 +665,72 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_ticks_current_get**
-> chains_chain_id_dapps_uniswapv3_ticks_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_V3_DTO]
+# **dapps_uniswapv3_swaps_historical_get**
+> dapps_uniswapv3_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tick_day_data_historical_get**
+> dapps_uniswapv3_tick_day_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_ticks_current_get**
+> dapps_uniswapv3_ticks_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_V3_DTO]
 
 
 GetTicks
@@ -321,7 +740,6 @@ GetTicks
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -339,8 +757,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get**
-> chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get (chain_id: STRING_32 ; filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_DAY_DATA_V3_DTO]
+# **dapps_uniswapv3_ticks_day_data_current_get**
+> dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_DAY_DATA_V3_DTO]
 
 
 GetTicksDayData
@@ -350,7 +768,6 @@ GetTicksDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_pool_id** | **STRING_32**| Filter pool id | [optional] [default to null]
 
 ### Return type
@@ -368,8 +785,104 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_current_get**
-> chains_chain_id_dapps_uniswapv3_tokens_current_get (chain_id: STRING_32 ; filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DTO]
+# **dapps_uniswapv3_ticks_historical_get**
+> dapps_uniswapv3_ticks_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **pool_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_token_day_data_historical_get**
+> dapps_uniswapv3_token_day_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **token_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_token_hour_data_historical_get**
+> dapps_uniswapv3_token_hour_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **token_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tokens_current_get**
+> dapps_uniswapv3_tokens_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DTO]
 
 
 GetTokens
@@ -379,7 +892,6 @@ GetTokens
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_token_id** | **STRING_32**|  | [optional] [default to null]
 
 ### Return type
@@ -397,8 +909,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**
-> chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get (chain_id: STRING_32 ; filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
+# **dapps_uniswapv3_tokens_day_data_current_get**
+> dapps_uniswapv3_tokens_day_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
 
 
 GetTokensDayData
@@ -408,7 +920,6 @@ GetTokensDayData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_token_id** | **STRING_32**|  | [optional] [default to null]
 
 ### Return type
@@ -426,8 +937,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**
-> chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get (chain_id: STRING_32 ; filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
+# **dapps_uniswapv3_tokens_historical_get**
+> dapps_uniswapv3_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 )
+
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+ **token_id** | **STRING_32**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tokens_hour_data_current_get**
+> dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
 
 
 GetTokensHourData
@@ -437,7 +980,6 @@ GetTokensHourData
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
  **filter_token_id** | **STRING_32**|  | [optional] [default to null]
 
 ### Return type
@@ -455,18 +997,46 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**
-> chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get (chain_id: STRING_32 ): detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
+# **dapps_uniswapv3_transactions_historical_get**
+> dapps_uniswapv3_transactions_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
 
 
-GetUniswapDayData
+
 
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **STRING_32**| Chain id | [default to null]
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+{empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_uniswap_day_data_current_get**
+> dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
+
+
+GetUniswapDayData
+
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

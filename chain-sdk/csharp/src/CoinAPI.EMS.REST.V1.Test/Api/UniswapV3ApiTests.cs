@@ -64,207 +64,475 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3BundleCurrentGet
+        /// Test DappsUniswapv3BundleCurrentGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3BundleCurrentGetTest()
+        public void DappsUniswapv3BundleCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3BundleCurrentGet(chainId);
+            //var response = instance.DappsUniswapv3BundleCurrentGet();
             //Assert.IsInstanceOf(typeof(List<BundleV3DTO>), response, "response is List<BundleV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3BurnsCurrentGet
+        /// Test DappsUniswapv3BundlesHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3BurnsCurrentGetTest()
+        public void DappsUniswapv3BundlesHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv3BundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3BurnsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3BurnsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3BurnsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<BurnV3DTO>), response, "response is List<BurnV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3FactoryCurrentGet
+        /// Test DappsUniswapv3BurnsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3FactoryCurrentGetTest()
+        public void DappsUniswapv3BurnsHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3DayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3DayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv3DayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3FactoryCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3FactoryCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3FactoryCurrentGet(chainId);
+            //var response = instance.DappsUniswapv3FactoryCurrentGet(chainId);
             //Assert.IsInstanceOf(typeof(List<FactoryV3DTO>), response, "response is List<FactoryV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3MintsCurrentGet
+        /// Test DappsUniswapv3FactoryHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3MintsCurrentGetTest()
+        public void DappsUniswapv3FactoryHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv3FactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3MintsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3MintsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3MintsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3MintsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<MintV3DTO>), response, "response is List<MintV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3PoolsCurrentGet
+        /// Test DappsUniswapv3MintsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3PoolsCurrentGetTest()
+        public void DappsUniswapv3MintsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PoiHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PoiHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PoolDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PoolDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PoolHourDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PoolHourDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PoolsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PoolsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3PoolsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PoolV3DTO>), response, "response is List<PoolV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+        /// Test DappsUniswapv3PoolsDayDataCurrentGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGetTest()
+        public void DappsUniswapv3PoolsDayDataCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PoolDayDataV3DTO>), response, "response is List<PoolDayDataV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+        /// Test DappsUniswapv3PoolsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGetTest()
+        public void DappsUniswapv3PoolsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PoolsHourDataCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PoolsHourDataCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PoolHourDataV3DTO>), response, "response is List<PoolHourDataV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+        /// Test DappsUniswapv3PositionSnapshotHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetTest()
+        public void DappsUniswapv3PositionSnapshotHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3PositionSnapshotHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3PositionSnapshotsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3PositionSnapshotsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PositionSnapshotV3DTO>), response, "response is List<PositionSnapshotV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3PositionsCurrentGet
+        /// Test DappsUniswapv3PositionsCurrentGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3PositionsCurrentGetTest()
+        public void DappsUniswapv3PositionsCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3PositionsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<PositionV3DTO>), response, "response is List<PositionV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3SwapsCurrentGet
+        /// Test DappsUniswapv3PositionsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3SwapsCurrentGetTest()
+        public void DappsUniswapv3PositionsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3PositionsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3SwapsCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3SwapsCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3SwapsCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<SwapV3DTO>), response, "response is List<SwapV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3TicksCurrentGet
+        /// Test DappsUniswapv3SwapsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3TicksCurrentGetTest()
+        public void DappsUniswapv3SwapsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TickDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TickDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3TickDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TicksCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TicksCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3TicksCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3TicksCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<TickV3DTO>), response, "response is List<TickV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+        /// Test DappsUniswapv3TicksDayDataCurrentGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3TicksDayDataCurrentGetTest()
+        public void DappsUniswapv3TicksDayDataCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
             //string filterPoolId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, filterPoolId);
+            //var response = instance.DappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
             //Assert.IsInstanceOf(typeof(List<TickDayDataV3DTO>), response, "response is List<TickDayDataV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3TokensCurrentGet
+        /// Test DappsUniswapv3TicksHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3TokensCurrentGetTest()
+        public void DappsUniswapv3TicksHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string poolId = null;
+            //instance.DappsUniswapv3TicksHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TokenDayDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TokenDayDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.DappsUniswapv3TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TokenHourDataHistoricalGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TokenHourDataHistoricalGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.DappsUniswapv3TokenHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TokensCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TokensCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3TokensCurrentGet(chainId, filterTokenId);
+            //var response = instance.DappsUniswapv3TokensCurrentGet(filterTokenId);
             //Assert.IsInstanceOf(typeof(List<TokenV3DTO>), response, "response is List<TokenV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+        /// Test DappsUniswapv3TokensDayDataCurrentGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3TokensDayDataCurrentGetTest()
+        public void DappsUniswapv3TokensDayDataCurrentGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
             //string filterTokenId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, filterTokenId);
+            //var response = instance.DappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
             //Assert.IsInstanceOf(typeof(List<TokenV3DayDataDTO>), response, "response is List<TokenV3DayDataDTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+        /// Test DappsUniswapv3TokensHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3TokensHourDataCurrentGetTest()
+        public void DappsUniswapv3TokensHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string tokenId = null;
+            //instance.DappsUniswapv3TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3TokensHourDataCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3TokensHourDataCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, filterTokenId);
+            //var response = instance.DappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
             //Assert.IsInstanceOf(typeof(List<TokenHourDataV3DTO>), response, "response is List<TokenHourDataV3DTO>");
         }
         
         /// <summary>
-        /// Test ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+        /// Test DappsUniswapv3TransactionsHistoricalGet
         /// </summary>
         [Test]
-        public void ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGetTest()
+        public void DappsUniswapv3TransactionsHistoricalGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string chainId = null;
-            //var response = instance.ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId);
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //instance.DappsUniswapv3TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
+            
+        }
+        
+        /// <summary>
+        /// Test DappsUniswapv3UniswapDayDataCurrentGet
+        /// </summary>
+        [Test]
+        public void DappsUniswapv3UniswapDayDataCurrentGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DappsUniswapv3UniswapDayDataCurrentGet();
             //Assert.IsInstanceOf(typeof(List<UniswapDayDataV3DTO>), response, "response is List<UniswapDayDataV3DTO>");
         }
         

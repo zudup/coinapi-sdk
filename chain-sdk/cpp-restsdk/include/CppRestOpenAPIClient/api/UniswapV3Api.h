@@ -65,9 +65,23 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
-    pplx::task<std::vector<std::shared_ptr<BundleV3DTO>>> chainsChainIdDappsUniswapv3BundleCurrentGet(
-        utility::string_t chainId
+    pplx::task<std::vector<std::shared_ptr<BundleV3DTO>>> dappsUniswapv3BundleCurrentGet(
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<void> dappsUniswapv3BundlesHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
     /// GetBurns
@@ -75,11 +89,43 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<BurnV3DTO>>> chainsChainIdDappsUniswapv3BurnsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<BurnV3DTO>>> dappsUniswapv3BurnsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3BurnsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<void> dappsUniswapv3DayDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
     /// GetFactory
@@ -87,9 +133,25 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
-    pplx::task<std::vector<std::shared_ptr<FactoryV3DTO>>> chainsChainIdDappsUniswapv3FactoryCurrentGet(
+    /// <param name="chainId"></param>
+    pplx::task<std::vector<std::shared_ptr<FactoryV3DTO>>> dappsUniswapv3FactoryCurrentGet(
         utility::string_t chainId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<void> dappsUniswapv3FactoryHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
     /// GetMints
@@ -97,11 +159,79 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<MintV3DTO>>> chainsChainIdDappsUniswapv3MintsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<MintV3DTO>>> dappsUniswapv3MintsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3MintsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<void> dappsUniswapv3PoiHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3PoolDayDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3PoolHourDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// GetPools
@@ -109,10 +239,8 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PoolV3DTO>>> chainsChainIdDappsUniswapv3PoolsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<PoolV3DTO>>> dappsUniswapv3PoolsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -121,11 +249,27 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PoolDayDataV3DTO>>> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<PoolDayDataV3DTO>>> dappsUniswapv3PoolsDayDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3PoolsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// GetPoolsHourData
@@ -133,11 +277,27 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PoolHourDataV3DTO>>> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<PoolHourDataV3DTO>>> dappsUniswapv3PoolsHourDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3PositionSnapshotHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// GetPositionSnapshot
@@ -145,10 +305,8 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PositionSnapshotV3DTO>>> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<PositionSnapshotV3DTO>>> dappsUniswapv3PositionSnapshotsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -157,11 +315,27 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PositionV3DTO>>> chainsChainIdDappsUniswapv3PositionsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<PositionV3DTO>>> dappsUniswapv3PositionsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3PositionsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// GetSwaps
@@ -169,11 +343,45 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<SwapV3DTO>>> chainsChainIdDappsUniswapv3SwapsCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<SwapV3DTO>>> dappsUniswapv3SwapsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3SwapsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3TickDayDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// GetTicks
@@ -181,10 +389,8 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TickV3DTO>>> chainsChainIdDappsUniswapv3TicksCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<TickV3DTO>>> dappsUniswapv3TicksCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -193,11 +399,63 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TickDayDataV3DTO>>> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<TickDayDataV3DTO>>> dappsUniswapv3TicksDayDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3TicksHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3TokenDayDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> tokenId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3TokenHourDataHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
     /// GetTokens
@@ -205,10 +463,8 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TokenV3DTO>>> chainsChainIdDappsUniswapv3TokensCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<TokenV3DTO>>> dappsUniswapv3TokensCurrentGet(
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
@@ -217,11 +473,27 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TokenV3DayDataDTO>>> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<TokenV3DayDataDTO>>> dappsUniswapv3TokensDayDataCurrentGet(
         boost::optional<utility::string_t> filterTokenId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<void> dappsUniswapv3TokensHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
     /// GetTokensHourData
@@ -229,11 +501,25 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TokenHourDataV3DTO>>> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(
-        utility::string_t chainId,
+    pplx::task<std::vector<std::shared_ptr<TokenHourDataV3DTO>>> dappsUniswapv3TokensHourDataCurrentGet(
         boost::optional<utility::string_t> filterTokenId
+    ) const;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<void> dappsUniswapv3TransactionsHistoricalGet(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
     /// GetUniswapDayData
@@ -241,9 +527,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    /// <param name="chainId">Chain id</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapDayDataV3DTO>>> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(
-        utility::string_t chainId
+    pplx::task<std::vector<std::shared_ptr<UniswapDayDataV3DTO>>> dappsUniswapv3UniswapDayDataCurrentGet(
     ) const;
 
 protected:

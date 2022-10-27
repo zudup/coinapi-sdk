@@ -15,113 +15,239 @@ Please update as you see appropriate
 ]]
 describe("uniswap_v3_api", function()
   local openapiclient_uniswap_v3_api = require "openapiclient.api.uniswap_v3_api"
-  -- unit tests for chains_chain_id_dapps_uniswapv3_bundle_current_get
-  describe("chains_chain_id_dapps_uniswapv3_bundle_current_get test", function()
+  -- unit tests for dapps_uniswapv3_bundle_current_get
+  describe("dapps_uniswapv3_bundle_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_burns_current_get
-  describe("chains_chain_id_dapps_uniswapv3_burns_current_get test", function()
+  -- unit tests for dapps_uniswapv3_bundles_historical_get
+  describe("dapps_uniswapv3_bundles_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_factory_current_get
-  describe("chains_chain_id_dapps_uniswapv3_factory_current_get test", function()
+  -- unit tests for dapps_uniswapv3_burns_current_get
+  describe("dapps_uniswapv3_burns_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_mints_current_get
-  describe("chains_chain_id_dapps_uniswapv3_mints_current_get test", function()
+  -- unit tests for dapps_uniswapv3_burns_historical_get
+  describe("dapps_uniswapv3_burns_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_pools_current_get
-  describe("chains_chain_id_dapps_uniswapv3_pools_current_get test", function()
+  -- unit tests for dapps_uniswapv3_day_data_historical_get
+  describe("dapps_uniswapv3_day_data_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_pools_day_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_pools_day_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_factory_current_get
+  describe("dapps_uniswapv3_factory_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_factory_historical_get
+  describe("dapps_uniswapv3_factory_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_position_snapshots_current_get
-  describe("chains_chain_id_dapps_uniswapv3_position_snapshots_current_get test", function()
+  -- unit tests for dapps_uniswapv3_mints_current_get
+  describe("dapps_uniswapv3_mints_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_positions_current_get
-  describe("chains_chain_id_dapps_uniswapv3_positions_current_get test", function()
+  -- unit tests for dapps_uniswapv3_mints_historical_get
+  describe("dapps_uniswapv3_mints_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_swaps_current_get
-  describe("chains_chain_id_dapps_uniswapv3_swaps_current_get test", function()
+  -- unit tests for dapps_uniswapv3_poi_historical_get
+  describe("dapps_uniswapv3_poi_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_ticks_current_get
-  describe("chains_chain_id_dapps_uniswapv3_ticks_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pool_day_data_historical_get
+  describe("dapps_uniswapv3_pool_day_data_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pool_hour_data_historical_get
+  describe("dapps_uniswapv3_pool_hour_data_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_tokens_current_get
-  describe("chains_chain_id_dapps_uniswapv3_tokens_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pools_current_get
+  describe("dapps_uniswapv3_pools_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pools_day_data_current_get
+  describe("dapps_uniswapv3_pools_day_data_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pools_historical_get
+  describe("dapps_uniswapv3_pools_historical_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get
-  describe("chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get test", function()
+  -- unit tests for dapps_uniswapv3_pools_hour_data_current_get
+  describe("dapps_uniswapv3_pools_hour_data_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_position_snapshot_historical_get
+  describe("dapps_uniswapv3_position_snapshot_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_position_snapshots_current_get
+  describe("dapps_uniswapv3_position_snapshots_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_positions_current_get
+  describe("dapps_uniswapv3_positions_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_positions_historical_get
+  describe("dapps_uniswapv3_positions_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_swaps_current_get
+  describe("dapps_uniswapv3_swaps_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_swaps_historical_get
+  describe("dapps_uniswapv3_swaps_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_tick_day_data_historical_get
+  describe("dapps_uniswapv3_tick_day_data_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_ticks_current_get
+  describe("dapps_uniswapv3_ticks_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_ticks_day_data_current_get
+  describe("dapps_uniswapv3_ticks_day_data_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_ticks_historical_get
+  describe("dapps_uniswapv3_ticks_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_token_day_data_historical_get
+  describe("dapps_uniswapv3_token_day_data_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_token_hour_data_historical_get
+  describe("dapps_uniswapv3_token_hour_data_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_tokens_current_get
+  describe("dapps_uniswapv3_tokens_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_tokens_day_data_current_get
+  describe("dapps_uniswapv3_tokens_day_data_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_tokens_historical_get
+  describe("dapps_uniswapv3_tokens_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_tokens_hour_data_current_get
+  describe("dapps_uniswapv3_tokens_hour_data_current_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_transactions_historical_get
+  describe("dapps_uniswapv3_transactions_historical_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dapps_uniswapv3_uniswap_day_data_current_get
+  describe("dapps_uniswapv3_uniswap_day_data_current_get test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

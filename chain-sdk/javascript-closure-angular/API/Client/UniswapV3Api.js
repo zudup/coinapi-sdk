@@ -61,24 +61,69 @@ API.Client.UniswapV3Api.$inject = ['$http', '$httpParamSerializer', '$injector']
 /**
  * GetBundles
  * 
- * @param {!string} chainId Chain id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.BundleV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3BundleCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3BundleCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/bundle/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/bundle/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3BundleCurrentGet');
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
   }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3BundlesHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/bundles/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -98,27 +143,128 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3BundleCurrentGet = 
 /**
  * GetBurns
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.BurnV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3BurnsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3BurnsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/burns/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/burns/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3BurnsCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3BurnsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/burns/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3DayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/dayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
   }
 
   /** @type {!Object} */
@@ -140,13 +286,13 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3BurnsCurrentGet = f
 /**
  * GetFactory
  * 
- * @param {!string} chainId Chain id
+ * @param {!string} chainId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.FactoryV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3FactoryCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3FactoryCurrentGet = function(chainId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/factory/current'
+  var path = this.basePath_ + '/dapps/uniswapv3/factory/current'
       .replace('{' + 'chain_id' + '}', String(chainId));
 
   /** @type {!Object} */
@@ -156,8 +302,59 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3FactoryCurrentGet =
   var headerParams = angular.extend({}, this.defaultHeaders_);
   // verify required parameter 'chainId' is set
   if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3FactoryCurrentGet');
+    throw new Error('Missing required parameter chainId when calling dappsUniswapv3FactoryCurrentGet');
   }
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3FactoryHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/factory/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -177,25 +374,19 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3FactoryCurrentGet =
 /**
  * GetMints
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.MintV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3MintsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3MintsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/mints/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/mints/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3MintsCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -217,27 +408,240 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3MintsCurrentGet = f
 }
 
 /**
- * GetPools
  * 
- * @param {!string} chainId Chain id
- * @param {!string=} opt_filterPoolId Filter pool id
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PoolV3DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3MintsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/pools/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/mints/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3PoolsCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoiHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/poi/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolDayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/poolDayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolHourDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/poolHourData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetPools
+ * 
+ * @param {!string=} opt_filterPoolId Filter pool id
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.PoolV3DTO>>}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/pools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -261,27 +665,77 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsCurrentGet = f
 /**
  * GetPoolsDayData
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.PoolDayDataV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsDayDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/poolsDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/pools/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -303,25 +757,19 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsDayDataCurrent
 /**
  * GetPoolsHourData
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.PoolHourDataV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsHourDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/poolsHourData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -343,27 +791,77 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PoolsHourDataCurren
 }
 
 /**
- * GetPositionSnapshot
  * 
- * @param {!string} chainId Chain id
- * @param {!string=} opt_filterPoolId Filter pool id
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PositionSnapshotV3DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionSnapshotHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/positionSnapshot/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetPositionSnapshot
+ * 
+ * @param {!string=} opt_filterPoolId Filter pool id
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.PositionSnapshotV3DTO>>}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionSnapshotsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/positionSnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -387,27 +885,77 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PositionSnapshotsCu
 /**
  * GetPositions
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.PositionV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PositionsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/positions/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/positions/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3PositionsCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/positions/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -429,25 +977,19 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3PositionsCurrentGet
 /**
  * GetSwaps
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.SwapV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3SwapsCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3SwapsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/swaps/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/swaps/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3SwapsCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -469,27 +1011,133 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3SwapsCurrentGet = f
 }
 
 /**
- * GetTicks
  * 
- * @param {!string} chainId Chain id
- * @param {!string=} opt_filterPoolId Filter pool id
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TickV3DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TicksCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3SwapsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/ticks/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/swaps/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3TicksCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TickDayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/tickDayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetTicks
+ * 
+ * @param {!string=} opt_filterPoolId Filter pool id
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.TickV3DTO>>}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/ticks/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -513,25 +1161,19 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TicksCurrentGet = f
 /**
  * GetTicksDayData
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.TickDayDataV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet = function(chainId, opt_filterPoolId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksDayDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/ticksDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet');
-  }
   if (opt_filterPoolId !== undefined) {
     queryParameters['filter_pool_id'] = opt_filterPoolId;
   }
@@ -553,27 +1195,189 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TicksDayDataCurrent
 }
 
 /**
- * GetTokens
  * 
- * @param {!string} chainId Chain id
- * @param {!string=} opt_filterTokenId 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenV3DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensCurrentGet = function(chainId, opt_filterTokenId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/tokens/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/ticks/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3TokensCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_poolId !== undefined) {
+    queryParameters['poolId'] = opt_poolId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokenDayDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/tokenDayData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokenHourDataHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/tokenHourData/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetTokens
+ * 
+ * @param {!string=} opt_filterTokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.TokenV3DTO>>}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   if (opt_filterTokenId !== undefined) {
     queryParameters['filter_token_id'] = opt_filterTokenId;
   }
@@ -597,27 +1401,77 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensCurrentGet = 
 /**
  * GetTokensDayData
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.TokenV3DayDataDTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet = function(chainId, opt_filterTokenId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensDayDataCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/tokensDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet');
-  }
   if (opt_filterTokenId !== undefined) {
     queryParameters['filter_token_id'] = opt_filterTokenId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * 
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/tokens/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
   }
 
   /** @type {!Object} */
@@ -639,25 +1493,19 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensDayDataCurren
 /**
  * GetTokensHourData
  * 
- * @param {!string} chainId Chain id
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.TokenHourDataV3DTO>>}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet = function(chainId, opt_filterTokenId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensHourDataCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/tokensHourData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet');
-  }
   if (opt_filterTokenId !== undefined) {
     queryParameters['filter_token_id'] = opt_filterTokenId;
   }
@@ -679,26 +1527,71 @@ API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3TokensHourDataCurre
 }
 
 /**
- * GetUniswapDayData
  * 
- * @param {!string} chainId Chain id
+ * 
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.UniswapDayDataV3DTO>>}
+ * @return {!angular.$q.Promise}
  */
-API.Client.UniswapV3Api.prototype.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet = function(chainId, opt_extraHttpRequestParams) {
+API.Client.UniswapV3Api.prototype.dappsUniswapv3TransactionsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current'
-      .replace('{' + 'chain_id' + '}', String(chainId));
+  var path = this.basePath_ + '/dapps/uniswapv3/transactions/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'chainId' is set
-  if (!chainId) {
-    throw new Error('Missing required parameter chainId when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet');
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
   }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetUniswapDayData
+ * 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapDayDataV3DTO>>}
+ */
+API.Client.UniswapV3Api.prototype.dappsUniswapv3UniswapDayDataCurrentGet = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv3/uniswapDayData/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

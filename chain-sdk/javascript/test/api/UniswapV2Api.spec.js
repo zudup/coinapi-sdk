@@ -48,30 +48,190 @@
   }
 
   describe('UniswapV2Api', function() {
-    describe('chainsChainIdDappsUniswapv2PoolsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv2PoolsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv2PoolsCurrentGet
-        //instance.chainsChainIdDappsUniswapv2PoolsCurrentGet(function(error) {
+    describe('dappsUniswapv2BundlesHistoricalGet', function() {
+      it('should call dappsUniswapv2BundlesHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2BundlesHistoricalGet
+        //instance.dappsUniswapv2BundlesHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv2SwapsCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv2SwapsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv2SwapsCurrentGet
-        //instance.chainsChainIdDappsUniswapv2SwapsCurrentGet(function(error) {
+    describe('dappsUniswapv2BurnsHistoricalGet', function() {
+      it('should call dappsUniswapv2BurnsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2BurnsHistoricalGet
+        //instance.dappsUniswapv2BurnsHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chainsChainIdDappsUniswapv2TokensCurrentGet', function() {
-      it('should call chainsChainIdDappsUniswapv2TokensCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test chainsChainIdDappsUniswapv2TokensCurrentGet
-        //instance.chainsChainIdDappsUniswapv2TokensCurrentGet(function(error) {
+    describe('dappsUniswapv2DayDataHistoricalGet', function() {
+      it('should call dappsUniswapv2DayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2DayDataHistoricalGet
+        //instance.dappsUniswapv2DayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2FactoryHistoricalGet', function() {
+      it('should call dappsUniswapv2FactoryHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2FactoryHistoricalGet
+        //instance.dappsUniswapv2FactoryHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2LiquidityPositionHistoricalGet', function() {
+      it('should call dappsUniswapv2LiquidityPositionHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2LiquidityPositionHistoricalGet
+        //instance.dappsUniswapv2LiquidityPositionHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet', function() {
+      it('should call dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+        //instance.dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2MintsHistoricalGet', function() {
+      it('should call dappsUniswapv2MintsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2MintsHistoricalGet
+        //instance.dappsUniswapv2MintsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2PoiHistoricalGet', function() {
+      it('should call dappsUniswapv2PoiHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2PoiHistoricalGet
+        //instance.dappsUniswapv2PoiHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2PoolDayDataHistoricalGet', function() {
+      it('should call dappsUniswapv2PoolDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2PoolDayDataHistoricalGet
+        //instance.dappsUniswapv2PoolDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2PoolHourDataHistoricalGet', function() {
+      it('should call dappsUniswapv2PoolHourDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2PoolHourDataHistoricalGet
+        //instance.dappsUniswapv2PoolHourDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2PoolsCurrentGet', function() {
+      it('should call dappsUniswapv2PoolsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2PoolsCurrentGet
+        //instance.dappsUniswapv2PoolsCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2PoolsHistoricalGet', function() {
+      it('should call dappsUniswapv2PoolsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2PoolsHistoricalGet
+        //instance.dappsUniswapv2PoolsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2SwapsCurrentGet', function() {
+      it('should call dappsUniswapv2SwapsCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2SwapsCurrentGet
+        //instance.dappsUniswapv2SwapsCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2SwapsHistoricalGet', function() {
+      it('should call dappsUniswapv2SwapsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2SwapsHistoricalGet
+        //instance.dappsUniswapv2SwapsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2TokenDayDataHistoricalGet', function() {
+      it('should call dappsUniswapv2TokenDayDataHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2TokenDayDataHistoricalGet
+        //instance.dappsUniswapv2TokenDayDataHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2TokensCurrentGet', function() {
+      it('should call dappsUniswapv2TokensCurrentGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2TokensCurrentGet
+        //instance.dappsUniswapv2TokensCurrentGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2TokensHistoricalGet', function() {
+      it('should call dappsUniswapv2TokensHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2TokensHistoricalGet
+        //instance.dappsUniswapv2TokensHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2TransactionsHistoricalGet', function() {
+      it('should call dappsUniswapv2TransactionsHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2TransactionsHistoricalGet
+        //instance.dappsUniswapv2TransactionsHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dappsUniswapv2UsersHistoricalGet', function() {
+      it('should call dappsUniswapv2UsersHistoricalGet successfully', function(done) {
+        //uncomment below and update the code to test dappsUniswapv2UsersHistoricalGet
+        //instance.dappsUniswapv2UsersHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

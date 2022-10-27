@@ -7,129 +7,273 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
-    Context 'Invoke-ChainsChainIdDappsUniswapv3BundleCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3BundleCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3BundleCurrentGet -ChainId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3BundleCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3BundleCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3BundleCurrentGet
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3BurnsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3BurnsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3BurnsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3BundlesHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3BundlesHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3BundlesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3FactoryCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3FactoryCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3FactoryCurrentGet -ChainId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3BurnsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3BurnsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3BurnsCurrentGet -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3MintsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3MintsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3MintsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3BurnsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3BurnsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3BurnsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3PoolsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3PoolsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PoolsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3DayDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3DayDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3DayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3FactoryCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3FactoryCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3FactoryCurrentGet -ChainId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3FactoryHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3FactoryHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3FactoryHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3MintsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3MintsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3MintsCurrentGet -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3PositionsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3PositionsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3PositionsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3MintsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3MintsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3MintsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3SwapsCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3SwapsCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3SwapsCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoiHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PoiHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3TicksCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3TicksCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3TicksCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolDayDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PoolDayDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet -ChainId "TEST_VALUE" -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolHourDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PoolHourDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolHourDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3TokensCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3TokensCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3TokensCurrentGet -ChainId "TEST_VALUE" -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3PoolsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolsCurrentGet -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet -ChainId "TEST_VALUE" -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolsDayDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3PoolsDayDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolsDayDataCurrentGet -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet -ChainId "TEST_VALUE" -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PoolsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet' {
-        It 'Test Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet' {
-            #$TestResult = Invoke-ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet -ChainId "TEST_VALUE"
+    Context 'Invoke-DappsUniswapv3PoolsHourDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3PoolsHourDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3PoolsHourDataCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3PositionSnapshotHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PositionSnapshotHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PositionSnapshotHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3PositionSnapshotsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3PositionSnapshotsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3PositionSnapshotsCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3PositionsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3PositionsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3PositionsCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3PositionsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3PositionsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3PositionsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3SwapsCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3SwapsCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3SwapsCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3SwapsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3SwapsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3SwapsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TickDayDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TickDayDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TickDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TicksCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3TicksCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3TicksCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TicksDayDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3TicksDayDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3TicksDayDataCurrentGet -FilterPoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TicksHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TicksHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TicksHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokenDayDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TokenDayDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokenDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokenHourDataHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TokenHourDataHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokenHourDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokensCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3TokensCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokensCurrentGet -FilterTokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokensDayDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3TokensDayDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokensDayDataCurrentGet -FilterTokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokensHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TokensHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokensHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TokensHourDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3TokensHourDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3TokensHourDataCurrentGet -FilterTokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3TransactionsHistoricalGet' {
+        It 'Test Invoke-DappsUniswapv3TransactionsHistoricalGet' {
+            #$TestResult = Invoke-DappsUniswapv3TransactionsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DappsUniswapv3UniswapDayDataCurrentGet' {
+        It 'Test Invoke-DappsUniswapv3UniswapDayDataCurrentGet' {
+            #$TestResult = Invoke-DappsUniswapv3UniswapDayDataCurrentGet
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

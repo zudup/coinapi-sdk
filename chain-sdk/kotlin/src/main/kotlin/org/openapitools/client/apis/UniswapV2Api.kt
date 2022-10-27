@@ -53,9 +53,945 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2BundlesHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2BundlesHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2BundlesHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2BundlesHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2BundlesHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2BundlesHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/bundles/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2BurnsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2BurnsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2BurnsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2BurnsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2BurnsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2BurnsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/burns/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2DayDataHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2DayDataHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2DayDataHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2DayDataHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2DayDataHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2DayDataHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/dayData/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2FactoryHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2FactoryHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2FactoryHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2FactoryHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2FactoryHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2FactoryHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/factory/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2LiquidityPositionHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2LiquidityPositionHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2LiquidityPositionHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2LiquidityPositionHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2LiquidityPositionHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2LiquidityPositionHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/liquidityPosition/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/liquidityPositionSnapshots/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2MintsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2MintsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2MintsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2MintsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2MintsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2MintsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/mints/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2PoiHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2PoiHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2PoiHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2PoiHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2PoiHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2PoiHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/poi/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2PoolDayDataHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2PoolDayDataHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2PoolDayDataHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2PoolDayDataHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/poolDayData/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2PoolHourDataHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2PoolHourDataHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2PoolHourDataHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2PoolHourDataHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2PoolHourDataHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2PoolHourDataHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/poolHourData/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * GetPools
      * 
-     * @param chainId Chain id
+     * @param filterPoolId Filter pool id (optional)
      * @return kotlin.collections.List<PairV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -65,8 +1001,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun chainsChainIdDappsUniswapv2PoolsCurrentGet(chainId: kotlin.String) : kotlin.collections.List<PairV2DTO> {
-        val localVarResponse = chainsChainIdDappsUniswapv2PoolsCurrentGetWithHttpInfo(chainId = chainId)
+    fun dappsUniswapv2PoolsCurrentGet(filterPoolId: kotlin.String? = null) : kotlin.collections.List<PairV2DTO> {
+        val localVarResponse = dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId = filterPoolId)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PairV2DTO>
@@ -86,15 +1022,15 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetPools
      * 
-     * @param chainId Chain id
+     * @param filterPoolId Filter pool id (optional)
      * @return ApiResponse<kotlin.collections.List<PairV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun chainsChainIdDappsUniswapv2PoolsCurrentGetWithHttpInfo(chainId: kotlin.String) : ApiResponse<kotlin.collections.List<PairV2DTO>?> {
-        val localVariableConfig = chainsChainIdDappsUniswapv2PoolsCurrentGetRequestConfig(chainId = chainId)
+    fun dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId: kotlin.String?) : ApiResponse<kotlin.collections.List<PairV2DTO>?> {
+        val localVariableConfig = dappsUniswapv2PoolsCurrentGetRequestConfig(filterPoolId = filterPoolId)
 
         return request<Unit, kotlin.collections.List<PairV2DTO>>(
             localVariableConfig
@@ -102,20 +1038,121 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation chainsChainIdDappsUniswapv2PoolsCurrentGet
+     * To obtain the request config of the operation dappsUniswapv2PoolsCurrentGet
      *
-     * @param chainId Chain id
+     * @param filterPoolId Filter pool id (optional)
      * @return RequestConfig
      */
-    fun chainsChainIdDappsUniswapv2PoolsCurrentGetRequestConfig(chainId: kotlin.String) : RequestConfig<Unit> {
+    fun dappsUniswapv2PoolsCurrentGetRequestConfig(filterPoolId: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (filterPoolId != null) {
+                    put("filter_pool_id", listOf(filterPoolId.toString()))
+                }
+            }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/chains/{chain_id}/dapps/uniswapv2/pools/current".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
+            path = "/dapps/uniswapv2/pools/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2PoolsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2PoolsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2PoolsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2PoolsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2PoolsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2PoolsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/pools/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -125,7 +1162,6 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @param chainId Chain id
      * @return kotlin.collections.List<SwapV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -135,8 +1171,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun chainsChainIdDappsUniswapv2SwapsCurrentGet(chainId: kotlin.String) : kotlin.collections.List<SwapV2DTO> {
-        val localVarResponse = chainsChainIdDappsUniswapv2SwapsCurrentGetWithHttpInfo(chainId = chainId)
+    fun dappsUniswapv2SwapsCurrentGet() : kotlin.collections.List<SwapV2DTO> {
+        val localVarResponse = dappsUniswapv2SwapsCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SwapV2DTO>
@@ -156,15 +1192,14 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @param chainId Chain id
      * @return ApiResponse<kotlin.collections.List<SwapV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun chainsChainIdDappsUniswapv2SwapsCurrentGetWithHttpInfo(chainId: kotlin.String) : ApiResponse<kotlin.collections.List<SwapV2DTO>?> {
-        val localVariableConfig = chainsChainIdDappsUniswapv2SwapsCurrentGetRequestConfig(chainId = chainId)
+    fun dappsUniswapv2SwapsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SwapV2DTO>?> {
+        val localVariableConfig = dappsUniswapv2SwapsCurrentGetRequestConfig()
 
         return request<Unit, kotlin.collections.List<SwapV2DTO>>(
             localVariableConfig
@@ -172,12 +1207,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation chainsChainIdDappsUniswapv2SwapsCurrentGet
+     * To obtain the request config of the operation dappsUniswapv2SwapsCurrentGet
      *
-     * @param chainId Chain id
      * @return RequestConfig
      */
-    fun chainsChainIdDappsUniswapv2SwapsCurrentGetRequestConfig(chainId: kotlin.String) : RequestConfig<Unit> {
+    fun dappsUniswapv2SwapsCurrentGetRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -185,7 +1219,199 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/chains/{chain_id}/dapps/uniswapv2/swaps/current".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
+            path = "/dapps/uniswapv2/swaps/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2SwapsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2SwapsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2SwapsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2SwapsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2SwapsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2SwapsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (poolId != null) {
+                    put("poolId", listOf(poolId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/swaps/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2TokenDayDataHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, tokenId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2TokenDayDataHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2TokenDayDataHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2TokenDayDataHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2TokenDayDataHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2TokenDayDataHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (tokenId != null) {
+                    put("tokenId", listOf(tokenId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/tokenDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -195,7 +1421,6 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @param chainId Chain id
      * @return kotlin.collections.List<TokenV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -205,8 +1430,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun chainsChainIdDappsUniswapv2TokensCurrentGet(chainId: kotlin.String) : kotlin.collections.List<TokenV2DTO> {
-        val localVarResponse = chainsChainIdDappsUniswapv2TokensCurrentGetWithHttpInfo(chainId = chainId)
+    fun dappsUniswapv2TokensCurrentGet() : kotlin.collections.List<TokenV2DTO> {
+        val localVarResponse = dappsUniswapv2TokensCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<TokenV2DTO>
@@ -226,15 +1451,14 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @param chainId Chain id
      * @return ApiResponse<kotlin.collections.List<TokenV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun chainsChainIdDappsUniswapv2TokensCurrentGetWithHttpInfo(chainId: kotlin.String) : ApiResponse<kotlin.collections.List<TokenV2DTO>?> {
-        val localVariableConfig = chainsChainIdDappsUniswapv2TokensCurrentGetRequestConfig(chainId = chainId)
+    fun dappsUniswapv2TokensCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<TokenV2DTO>?> {
+        val localVariableConfig = dappsUniswapv2TokensCurrentGetRequestConfig()
 
         return request<Unit, kotlin.collections.List<TokenV2DTO>>(
             localVariableConfig
@@ -242,12 +1466,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation chainsChainIdDappsUniswapv2TokensCurrentGet
+     * To obtain the request config of the operation dappsUniswapv2TokensCurrentGet
      *
-     * @param chainId Chain id
      * @return RequestConfig
      */
-    fun chainsChainIdDappsUniswapv2TokensCurrentGetRequestConfig(chainId: kotlin.String) : RequestConfig<Unit> {
+    fun dappsUniswapv2TokensCurrentGetRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -255,7 +1478,283 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/chains/{chain_id}/dapps/uniswapv2/tokens/current".replace("{"+"chain_id"+"}", encodeURIComponent(chainId.toString())),
+            path = "/dapps/uniswapv2/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2TokensHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, tokenId: kotlin.String? = null) : Unit {
+        val localVarResponse = dappsUniswapv2TokensHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2TokensHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2TokensHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2TokensHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param tokenId  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2TokensHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+                if (tokenId != null) {
+                    put("tokenId", listOf(tokenId.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/tokens/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2TransactionsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2TransactionsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2TransactionsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2TransactionsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2TransactionsHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2TransactionsHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/transactions/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dappsUniswapv2UsersHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null) : Unit {
+        val localVarResponse = dappsUniswapv2UsersHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * 
+     * 
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dappsUniswapv2UsersHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : ApiResponse<Unit?> {
+        val localVariableConfig = dappsUniswapv2UsersHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dappsUniswapv2UsersHistoricalGet
+     *
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return RequestConfig
+     */
+    fun dappsUniswapv2UsersHistoricalGetRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (startBlock != null) {
+                    put("startBlock", listOf(startBlock.toString()))
+                }
+                if (endBlock != null) {
+                    put("endBlock", listOf(endBlock.toString()))
+                }
+                if (startDate != null) {
+                    put("startDate", listOf(parseDateToQueryString(startDate)))
+                }
+                if (endDate != null) {
+                    put("endDate", listOf(parseDateToQueryString(endDate)))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/uniswapv2/users/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

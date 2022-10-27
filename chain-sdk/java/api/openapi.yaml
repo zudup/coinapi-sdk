@@ -28,18 +28,15 @@ tags:
   name: UniswapV2
 - description: UniswapV3 tag descriptor ...
   name: UniswapV3
+- description: Curve tag descriptor ...
+  name: Curve
+- description: Cow tag descriptor ...
+  name: Cow
+- description: Dex tag descriptor ...
+  name: Dex
 paths:
-  /chains/{chain_id}/dapps/sushiswap/swaps/current:
+  /dapps/sushiswap/swaps/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -63,16 +60,9 @@ paths:
       tags:
       - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/accounts/historical:
+  /dapps/curve/accounts/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -109,73 +99,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Accounts
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/addLiquidityEvent/historical:
+  /dapps/curve/addLiquidityEvent/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - AddLiquidityEvent
-      x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/adminFeeChangeLog/historical:
-    get:
-      parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -219,18 +147,11 @@ paths:
         "200":
           description: Success
       tags:
-      - AdminFeeChangeLog
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/amplificationCoeffChangeLog/historical:
+  /dapps/curve/adminFeeChangeLog/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -274,18 +195,59 @@ paths:
         "200":
           description: Success
       tags:
-      - AmplificationCoeffChangeLog
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/batch/historical:
+  /dapps/curve/amplificationCoeffChangeLog/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Curve
+      x-accepts: application/json
+  /dapps/dex/batch/historical:
+    get:
+      parameters:
       - explode: true
         in: query
         name: startBlock
@@ -322,19 +284,10 @@ paths:
         "200":
           description: Success
       tags:
-      - Batch
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/bundle/current:
+  /dapps/uniswapv3/bundle/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -358,16 +311,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/bundles/historical:
+  /dapps/uniswapv3/bundles/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -404,18 +350,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Bundles
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/bundles/historical:
+  /dapps/uniswapv2/bundles/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -452,18 +391,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Bundles
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/bundles/historical:
+  /dapps/sushiswap/bundles/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -500,73 +432,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Bundles
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/burns/historical:
+  /dapps/uniswapv3/burns/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Burns
-      x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/burns/historical:
-    get:
-      parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -610,18 +480,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Burns
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/burns/historical:
+  /dapps/uniswapv2/burns/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -665,19 +528,59 @@ paths:
         "200":
           description: Success
       tags:
-      - Burns
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/burns/current:
+  /dapps/sushiswap/burns/historical:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/uniswapv3/burns/current:
+    get:
+      parameters:
       - description: Filter pool id
         explode: true
         in: query
@@ -709,16 +612,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/coins/historical:
+  /dapps/curve/coins/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -762,18 +658,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Coins
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/contracts/historical:
+  /dapps/curve/contracts/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -817,18 +706,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Contracts
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/contractsVersion/historical:
+  /dapps/curve/contractsVersion/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -872,18 +754,11 @@ paths:
         "200":
           description: Success
       tags:
-      - ContractsVersion
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/dailyVolume/historical:
+  /dapps/curve/dailyVolume/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -927,18 +802,11 @@ paths:
         "200":
           description: Success
       tags:
-      - DailyVolume
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/dayData/historical:
+  /dapps/sushiswap/dayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -975,18 +843,11 @@ paths:
         "200":
           description: Success
       tags:
-      - DayData
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/tokens/historical:
+  /dapps/dex/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1030,18 +891,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Deposit
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/factory/historical:
+  /dapps/uniswapv3/factory/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1078,18 +932,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Factory
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/factory/historical:
+  /dapps/uniswapv2/factory/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1126,18 +973,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Factory
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/factory/historical:
+  /dapps/sushiswap/factory/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1174,13 +1014,12 @@ paths:
         "200":
           description: Success
       tags:
-      - Factory
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/factory/current:
+  /dapps/uniswapv3/factory/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
+      - explode: false
         in: path
         name: chain_id
         required: true
@@ -1210,16 +1049,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/feeChangeLog/historical:
+  /dapps/curve/feeChangeLog/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1263,18 +1095,11 @@ paths:
         "200":
           description: Success
       tags:
-      - FeeChangeLog
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gauge/historical:
+  /dapps/curve/gauge/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1318,18 +1143,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Gauge
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeDeposit/historical:
+  /dapps/curve/gaugeDeposit/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1366,18 +1184,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeDeposit
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeLiquidity/historical:
+  /dapps/curve/gaugeLiquidity/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1414,18 +1225,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeLiquidity
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeTotalWeight/historical:
+  /dapps/curve/gaugeTotalWeight/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1462,18 +1266,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeTotalWeight
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeType/historical:
+  /dapps/curve/gaugeType/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1510,18 +1307,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeType
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeTypeWeight/historical:
+  /dapps/curve/gaugeTypeWeight/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1558,18 +1348,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeTypeWeight
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeWeight/historical:
+  /dapps/curve/gaugeWeight/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1606,18 +1389,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeWeight
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeWeightVote/historical:
+  /dapps/curve/gaugeWeightVote/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1654,18 +1430,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeWeightVote
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/gaugeWithdraw/historical:
+  /dapps/curve/gaugeWithdraw/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1702,18 +1471,11 @@ paths:
         "200":
           description: Success
       tags:
-      - GaugeWithdraw
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/hourData/historical:
+  /dapps/sushiswap/hourData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1750,18 +1512,11 @@ paths:
         "200":
           description: Success
       tags:
-      - HourData
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/hourlyVolume/historical:
+  /dapps/curve/hourlyVolume/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1805,18 +1560,11 @@ paths:
         "200":
           description: Success
       tags:
-      - HourlyVolume
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/liquidityPosition/historical:
+  /dapps/uniswapv2/liquidityPosition/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1860,18 +1608,11 @@ paths:
         "200":
           description: Success
       tags:
-      - LiquidityPosition
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/liquidityPosition/historical:
+  /dapps/sushiswap/liquidityPosition/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1915,18 +1656,11 @@ paths:
         "200":
           description: Success
       tags:
-      - LiquidityPosition
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/liquidityPositionSnapshots/historical:
+  /dapps/uniswapv2/liquidityPositionSnapshots/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -1970,18 +1704,11 @@ paths:
         "200":
           description: Success
       tags:
-      - LiquidityPositionSnapshots
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/liquidityPositionSnapshots/historical:
+  /dapps/sushiswap/liquidityPositionSnapshots/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2025,18 +1752,11 @@ paths:
         "200":
           description: Success
       tags:
-      - LiquidityPositionSnapshots
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/lpToken/historical:
+  /dapps/curve/lpToken/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2080,18 +1800,11 @@ paths:
         "200":
           description: Success
       tags:
-      - LpToken
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/mints/historical:
+  /dapps/uniswapv3/mints/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2135,18 +1848,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Mints
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/mints/historical:
+  /dapps/uniswapv2/mints/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2190,18 +1896,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Mints
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/mints/historical:
+  /dapps/sushiswap/mints/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2245,19 +1944,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Mints
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/mints/current:
+  /dapps/uniswapv3/mints/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -2289,16 +1980,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/orders/historical:
+  /dapps/dex/orders/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2342,18 +2026,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Orders
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/orders/historical:
+  /dapps/cow/orders/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2390,18 +2067,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Orders
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/poi/historical:
+  /dapps/uniswapv3/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2438,18 +2108,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/poi/historical:
+  /dapps/uniswapv2/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2486,18 +2149,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/poi/historical:
+  /dapps/sushiswap/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2534,18 +2190,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/poi/historical:
+  /dapps/dex/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2582,18 +2231,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/poi/historical:
+  /dapps/curve/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2630,18 +2272,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/poi/historical:
+  /dapps/cow/poi/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2678,18 +2313,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Poi
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/poolDayData/historical:
+  /dapps/uniswapv3/poolDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2733,18 +2361,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolDayData
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/poolDayData/historical:
+  /dapps/uniswapv2/poolDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2788,18 +2409,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolDayData
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/poolDayData/historical:
+  /dapps/sushiswap/poolDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2843,18 +2457,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolDayData
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/poolHourData/historical:
+  /dapps/uniswapv3/poolHourData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2898,18 +2505,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolHourData
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/poolHourData/historical:
+  /dapps/uniswapv2/poolHourData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -2953,18 +2553,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolHourData
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/poolHourData/historical:
+  /dapps/sushiswap/poolHourData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3008,18 +2601,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PoolHourData
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/pools/historical:
+  /dapps/uniswapv3/pools/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3063,18 +2649,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Pools
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/pools/historical:
+  /dapps/uniswapv2/pools/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3118,18 +2697,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Pools
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/pools/historical:
+  /dapps/sushiswap/pools/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3173,18 +2745,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Pools
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/pools/historical:
+  /dapps/curve/pools/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3228,19 +2793,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Pools
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/pools/current:
+  /dapps/uniswapv3/pools/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -3272,17 +2829,17 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/pools/current:
+  /dapps/uniswapv2/pools/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
+      - description: Filter pool id
+        explode: true
+        in: query
+        name: filter_pool_id
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
       responses:
         "200":
           content:
@@ -3306,20 +2863,11 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/pools/current:
+  /dapps/sushiswap/pools/current:
     get:
       description: Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever since
         the 1500s.
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -3343,17 +2891,9 @@ paths:
       tags:
       - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current:
+  /dapps/uniswapv3/poolsDayData/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -3385,17 +2925,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current:
+  /dapps/uniswapv3/poolsHourData/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -3427,16 +2959,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/positions/historical:
+  /dapps/uniswapv3/positions/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3480,19 +3005,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Positions
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/positions/current:
+  /dapps/uniswapv3/positions/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -3524,16 +3041,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/positionSnapshot/historical:
+  /dapps/uniswapv3/positionSnapshot/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3577,19 +3087,11 @@ paths:
         "200":
           description: Success
       tags:
-      - PositionSnapshot
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current:
+  /dapps/uniswapv3/positionSnapshots/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -3621,16 +3123,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/prices/historical:
+  /dapps/dex/prices/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3674,18 +3169,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Prices
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/proposals/historical:
+  /dapps/curve/proposals/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3722,18 +3210,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Proposals
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/proposalsVote/historical:
+  /dapps/curve/proposalsVote/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3770,73 +3251,11 @@ paths:
         "200":
           description: Success
       tags:
-      - ProposalsVote
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/removeLiquidityEvent/historical:
+  /dapps/curve/removeLiquidityEvent/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - RemoveLiquidityEvent
-      x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/removeLiquidityOneEvent/historical:
-    get:
-      parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3880,18 +3299,59 @@ paths:
         "200":
           description: Success
       tags:
-      - RemoveLiquidityOneEvent
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/settlement/historical:
+  /dapps/curve/removeLiquidityOneEvent/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Curve
+      x-accepts: application/json
+  /dapps/cow/settlement/historical:
+    get:
+      parameters:
       - explode: true
         in: query
         name: startBlock
@@ -3928,18 +3388,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Settlement
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/solution/historical:
+  /dapps/dex/solution/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -3983,18 +3436,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Solution
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/stats/historical:
+  /dapps/dex/stats/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4031,73 +3477,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Stats
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/swaps/historical:
+  /dapps/uniswapv3/swaps/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Swaps
-      x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/swaps/historical:
-    get:
-      parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4141,18 +3525,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Swaps
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/swaps/historical:
+  /dapps/uniswapv2/swaps/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4196,18 +3573,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Swaps
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/swaps/historical:
+  /dapps/sushiswap/swaps/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4251,19 +3621,59 @@ paths:
         "200":
           description: Success
       tags:
-      - Swaps
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/swaps/current:
+  /dapps/curve/swaps/historical:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - Curve
+      x-accepts: application/json
+  /dapps/uniswapv3/swaps/current:
+    get:
+      parameters:
       - description: Filter pool id
         explode: true
         in: query
@@ -4295,17 +3705,8 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/swaps/current:
+  /dapps/uniswapv2/swaps/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -4329,16 +3730,9 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/systemState/historical:
+  /dapps/curve/systemState/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4375,73 +3769,11 @@ paths:
         "200":
           description: Success
       tags:
-      - SystemState
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tickDayData/historical:
+  /dapps/uniswapv3/tickDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - TickDayData
-      x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/ticks/historical:
-    get:
-      parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4485,19 +3817,59 @@ paths:
         "200":
           description: Success
       tags:
-      - Ticks
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/ticks/current:
+  /dapps/uniswapv3/ticks/historical:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
         schema:
           type: string
-        style: simple
+        style: form
+      responses:
+        "200":
+          description: Success
+      tags:
+      - UniswapV3
+      x-accepts: application/json
+  /dapps/uniswapv3/ticks/current:
+    get:
+      parameters:
       - description: Filter pool id
         explode: true
         in: query
@@ -4529,17 +3901,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current:
+  /dapps/uniswapv3/ticksDayData/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - description: Filter pool id
         explode: true
         in: query
@@ -4571,16 +3935,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokenDayData/historical:
+  /dapps/uniswapv3/tokenDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4624,18 +3981,11 @@ paths:
         "200":
           description: Success
       tags:
-      - TokenDayData
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/tokenDayData/historical:
+  /dapps/uniswapv2/tokenDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4679,18 +4029,11 @@ paths:
         "200":
           description: Success
       tags:
-      - TokenDayData
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/tokenDayData/historical:
+  /dapps/sushiswap/tokenDayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4734,18 +4077,11 @@ paths:
         "200":
           description: Success
       tags:
-      - TokenDayData
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokenHourData/historical:
+  /dapps/uniswapv3/tokenHourData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4789,18 +4125,11 @@ paths:
         "200":
           description: Success
       tags:
-      - TokenHourData
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokens/historical:
+  /dapps/uniswapv3/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4844,18 +4173,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Tokens
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/tokens/historical:
+  /dapps/uniswapv2/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4899,18 +4221,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Tokens
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/tokens/historical:
+  /dapps/sushiswap/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -4954,18 +4269,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Tokens
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/tokens/historical:
+  /dapps/curve/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5009,18 +4317,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Tokens
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/tokens/historical:
+  /dapps/cow/tokens/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5064,19 +4365,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Tokens
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokens/current:
+  /dapps/uniswapv3/tokens/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: filter_token_id
@@ -5107,17 +4400,8 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/tokens/current:
+  /dapps/uniswapv2/tokens/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -5141,17 +4425,8 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/tokens/current:
+  /dapps/sushiswap/tokens/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -5175,17 +4450,9 @@ paths:
       tags:
       - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current:
+  /dapps/uniswapv3/tokensDayData/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: filter_token_id
@@ -5216,17 +4483,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current:
+  /dapps/uniswapv3/tokensHourData/current:
     get:
       parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: filter_token_id
@@ -5257,16 +4516,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/trades/historical:
+  /dapps/dex/trades/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5303,18 +4555,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Trades
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/trades/historical:
+  /dapps/cow/trades/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5351,18 +4596,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Trades
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/transactions/historical:
+  /dapps/uniswapv3/transactions/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5399,18 +4637,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Transactions
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/transactions/historical:
+  /dapps/uniswapv2/transactions/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5447,18 +4678,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Transactions
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/transactions/historical:
+  /dapps/sushiswap/transactions/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5495,18 +4719,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Transactions
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/transferOwnershipEvent/historical:
+  /dapps/curve/transferOwnershipEvent/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5550,18 +4767,11 @@ paths:
         "200":
           description: Success
       tags:
-      - TransferOwnershipEvent
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/underlyingCoin/historical:
+  /dapps/curve/underlyingCoin/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5605,18 +4815,11 @@ paths:
         "200":
           description: Success
       tags:
-      - UnderlyingCoin
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/dayData/historical:
+  /dapps/uniswapv3/dayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5653,18 +4856,11 @@ paths:
         "200":
           description: Success
       tags:
-      - UniswapDayData
+      - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/dayData/historical:
+  /dapps/uniswapv2/dayData/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5701,19 +4897,10 @@ paths:
         "200":
           description: Success
       tags:
-      - UniswapDayData
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current:
+  /dapps/uniswapv3/uniswapDayData/current:
     get:
-      parameters:
-      - description: Chain id
-        explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:
@@ -5737,16 +4924,9 @@ paths:
       tags:
       - UniswapV3
       x-accepts: application/json
-  /chains/{chain_id}/dapps/uniswapv2/users/historical:
+  /dapps/uniswapv2/users/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5783,18 +4963,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Users
+      - UniswapV2
       x-accepts: application/json
-  /chains/{chain_id}/dapps/sushiswap/users/historical:
+  /dapps/sushiswap/users/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5831,18 +5004,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Users
+      - Sushiswap
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/users/historical:
+  /dapps/dex/users/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5879,18 +5045,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Users
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/cow/users/historical:
+  /dapps/cow/users/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5927,18 +5086,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Users
+      - Cow
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/votingApp/historical:
+  /dapps/curve/votingApp/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -5975,18 +5127,11 @@ paths:
         "200":
           description: Success
       tags:
-      - VotingApp
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/curve/weeklyVolume/historical:
+  /dapps/curve/weeklyVolume/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -6030,18 +5175,11 @@ paths:
         "200":
           description: Success
       tags:
-      - WeeklyVolume
+      - Curve
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/withdraw/historical:
+  /dapps/dex/withdraw/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -6085,18 +5223,11 @@ paths:
         "200":
           description: Success
       tags:
-      - Withdraw
+      - Dex
       x-accepts: application/json
-  /chains/{chain_id}/dapps/dex/withdrawRequest/historical:
+  /dapps/dex/withdrawRequest/historical:
     get:
       parameters:
-      - explode: false
-        in: path
-        name: chain_id
-        required: true
-        schema:
-          type: string
-        style: simple
       - explode: true
         in: query
         name: startBlock
@@ -6140,7 +5271,7 @@ paths:
         "200":
           description: Success
       tags:
-      - WithdrawRequest
+      - Dex
       x-accepts: application/json
 components:
   schemas:

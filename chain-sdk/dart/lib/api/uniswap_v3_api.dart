@@ -19,15 +19,9 @@ class UniswapV3Api {
   /// GetBundles
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  Future<Response> chainsChainIdDappsUniswapv3BundleCurrentGetWithHttpInfo(String chainId,) async {
+  Future<Response> dappsUniswapv3BundleCurrentGetWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/bundle/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/bundle/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -51,13 +45,8 @@ class UniswapV3Api {
   }
 
   /// GetBundles
-  ///
-  /// Parameters:
-  ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  Future<List<BundleV3DTO>?> chainsChainIdDappsUniswapv3BundleCurrentGet(String chainId,) async {
-    final response = await chainsChainIdDappsUniswapv3BundleCurrentGetWithHttpInfo(chainId,);
+  Future<List<BundleV3DTO>?> dappsUniswapv3BundleCurrentGet() async {
+    final response = await dappsUniswapv3BundleCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -74,21 +63,81 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/bundles/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<Response> dappsUniswapv3BundlesHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/bundles/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<void> dappsUniswapv3BundlesHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dappsUniswapv3BundlesHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetBurns
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3BurnsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3BurnsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/burns/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/burns/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -119,13 +168,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<BurnV3DTO>?> chainsChainIdDappsUniswapv3BurnsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3BurnsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<BurnV3DTO>?> dappsUniswapv3BurnsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3BurnsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -142,6 +188,141 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/burns/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3BurnsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/burns/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3BurnsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3BurnsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/dayData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<Response> dappsUniswapv3DayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/dayData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<void> dappsUniswapv3DayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dappsUniswapv3DayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetFactory
   ///
   /// Note: This method returns the HTTP [Response].
@@ -149,10 +330,9 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] chainId (required):
-  ///   Chain id
-  Future<Response> chainsChainIdDappsUniswapv3FactoryCurrentGetWithHttpInfo(String chainId,) async {
+  Future<Response> dappsUniswapv3FactoryCurrentGetWithHttpInfo(String chainId,) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/factory/current'
+    final path = r'/dapps/uniswapv3/factory/current'
       .replaceAll('{chain_id}', chainId);
 
     // ignore: prefer_final_locals
@@ -181,9 +361,8 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] chainId (required):
-  ///   Chain id
-  Future<List<FactoryV3DTO>?> chainsChainIdDappsUniswapv3FactoryCurrentGet(String chainId,) async {
-    final response = await chainsChainIdDappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId,);
+  Future<List<FactoryV3DTO>?> dappsUniswapv3FactoryCurrentGet(String chainId,) async {
+    final response = await dappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -200,21 +379,81 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/factory/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<Response> dappsUniswapv3FactoryHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/factory/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<void> dappsUniswapv3FactoryHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dappsUniswapv3FactoryHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetMints
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3MintsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3MintsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/mints/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/mints/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -245,13 +484,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<MintV3DTO>?> chainsChainIdDappsUniswapv3MintsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3MintsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<MintV3DTO>?> dappsUniswapv3MintsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3MintsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -268,21 +504,294 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/mints/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3MintsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/mints/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3MintsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3MintsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/poi/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<Response> dappsUniswapv3PoiHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/poi/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<void> dappsUniswapv3PoiHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dappsUniswapv3PoiHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/poolDayData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/poolDayData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3PoolDayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/poolHourData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/poolHourData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3PoolHourDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetPools
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3PoolsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3PoolsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/pools/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/pools/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -313,13 +822,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolV3DTO>?> chainsChainIdDappsUniswapv3PoolsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3PoolsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<PoolV3DTO>?> dappsUniswapv3PoolsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3PoolsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -342,15 +848,11 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/poolsDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -381,13 +883,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolDayDataV3DTO>?> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<PoolDayDataV3DTO>?> dappsUniswapv3PoolsDayDataCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -404,21 +903,88 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/pools/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3PoolsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/pools/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3PoolsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3PoolsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetPoolsHourData
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/poolsHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -449,13 +1015,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolHourDataV3DTO>?> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<PoolHourDataV3DTO>?> dappsUniswapv3PoolsHourDataCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -472,21 +1035,88 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/positionSnapshot/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/positionSnapshot/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3PositionSnapshotHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetPositionSnapshot
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/positionSnapshots/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -517,13 +1147,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PositionSnapshotV3DTO>?> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<PositionSnapshotV3DTO>?> dappsUniswapv3PositionSnapshotsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -546,15 +1173,11 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3PositionsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3PositionsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/positions/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/positions/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -585,13 +1208,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PositionV3DTO>?> chainsChainIdDappsUniswapv3PositionsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3PositionsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<PositionV3DTO>?> dappsUniswapv3PositionsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3PositionsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -608,21 +1228,88 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/positions/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3PositionsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/positions/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3PositionsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3PositionsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetSwaps
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3SwapsCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3SwapsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/swaps/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/swaps/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -653,13 +1340,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<SwapV3DTO>?> chainsChainIdDappsUniswapv3SwapsCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3SwapsCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<SwapV3DTO>?> dappsUniswapv3SwapsCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3SwapsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -676,21 +1360,159 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/swaps/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3SwapsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/swaps/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3SwapsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3SwapsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/tickDayData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3TickDayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tickDayData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3TickDayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3TickDayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetTicks
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3TicksCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3TicksCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/ticks/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/ticks/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -721,13 +1543,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<TickV3DTO>?> chainsChainIdDappsUniswapv3TicksCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3TicksCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<TickV3DTO>?> dappsUniswapv3TicksCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3TicksCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -750,15 +1569,11 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<Response> chainsChainIdDappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(String chainId, { String? filterPoolId, }) async {
+  Future<Response> dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/ticksDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -789,13 +1604,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<TickDayDataV3DTO>?> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(String chainId, { String? filterPoolId, }) async {
-    final response = await chainsChainIdDappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(chainId,  filterPoolId: filterPoolId, );
+  Future<List<TickDayDataV3DTO>?> dappsUniswapv3TicksDayDataCurrentGet({ String? filterPoolId, }) async {
+    final response = await dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -812,20 +1624,229 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/ticks/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> dappsUniswapv3TicksHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/ticks/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<void> dappsUniswapv3TicksHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dappsUniswapv3TicksHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/tokenDayData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<Response> dappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokenDayData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (tokenId != null) {
+      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<void> dappsUniswapv3TokenDayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /dapps/uniswapv3/tokenHourData/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<Response> dappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokenHourData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (tokenId != null) {
+      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<void> dappsUniswapv3TokenHourDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetTokens
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<Response> chainsChainIdDappsUniswapv3TokensCurrentGetWithHttpInfo(String chainId, { String? filterTokenId, }) async {
+  Future<Response> dappsUniswapv3TokensCurrentGetWithHttpInfo({ String? filterTokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/tokens/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/tokens/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -856,12 +1877,9 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<List<TokenV3DTO>?> chainsChainIdDappsUniswapv3TokensCurrentGet(String chainId, { String? filterTokenId, }) async {
-    final response = await chainsChainIdDappsUniswapv3TokensCurrentGetWithHttpInfo(chainId,  filterTokenId: filterTokenId, );
+  Future<List<TokenV3DTO>?> dappsUniswapv3TokensCurrentGet({ String? filterTokenId, }) async {
+    final response = await dappsUniswapv3TokensCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -884,14 +1902,10 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<Response> chainsChainIdDappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(String chainId, { String? filterTokenId, }) async {
+  Future<Response> dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo({ String? filterTokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/tokensDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -922,12 +1936,9 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<List<TokenV3DayDataDTO>?> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(String chainId, { String? filterTokenId, }) async {
-    final response = await chainsChainIdDappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(chainId,  filterTokenId: filterTokenId, );
+  Future<List<TokenV3DayDataDTO>?> dappsUniswapv3TokensDayDataCurrentGet({ String? filterTokenId, }) async {
+    final response = await dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -944,20 +1955,87 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/tokens/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<Response> dappsUniswapv3TokensHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokens/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (tokenId != null) {
+      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<void> dappsUniswapv3TokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dappsUniswapv3TokensHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetTokensHourData
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<Response> chainsChainIdDappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(String chainId, { String? filterTokenId, }) async {
+  Future<Response> dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo({ String? filterTokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/tokensHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -988,12 +2066,9 @@ class UniswapV3Api {
   ///
   /// Parameters:
   ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  ///
   /// * [String] filterTokenId:
-  Future<List<TokenHourDataV3DTO>?> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(String chainId, { String? filterTokenId, }) async {
-    final response = await chainsChainIdDappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(chainId,  filterTokenId: filterTokenId, );
+  Future<List<TokenHourDataV3DTO>?> dappsUniswapv3TokensHourDataCurrentGet({ String? filterTokenId, }) async {
+    final response = await dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1010,18 +2085,76 @@ class UniswapV3Api {
     return null;
   }
 
+  /// Performs an HTTP 'GET /dapps/uniswapv3/transactions/historical' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<Response> dappsUniswapv3TransactionsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/transactions/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  Future<void> dappsUniswapv3TransactionsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dappsUniswapv3TransactionsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// GetUniswapDayData
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  Future<Response> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(String chainId,) async {
+  Future<Response> dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current'
-      .replaceAll('{chain_id}', chainId);
+    final path = r'/dapps/uniswapv3/uniswapDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1045,13 +2178,8 @@ class UniswapV3Api {
   }
 
   /// GetUniswapDayData
-  ///
-  /// Parameters:
-  ///
-  /// * [String] chainId (required):
-  ///   Chain id
-  Future<List<UniswapDayDataV3DTO>?> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(String chainId,) async {
-    final response = await chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(chainId,);
+  Future<List<UniswapDayDataV3DTO>?> dappsUniswapv3UniswapDayDataCurrentGet() async {
+    final response = await dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

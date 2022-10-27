@@ -37,8 +37,504 @@ export default class SushiswapApi {
 
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsSushiswapPoolsCurrentGet operation.
-     * @callback module:api/SushiswapApi~chainsChainIdDappsSushiswapPoolsCurrentGetCallback
+     * Callback function to receive the result of the dappsSushiswapBundlesHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapBundlesHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapBundlesHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapBundlesHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/bundles/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapBurnsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapBurnsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapBurnsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapBurnsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/burns/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapDayDataHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapDayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapDayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/dayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapFactoryHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapFactoryHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapFactoryHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapFactoryHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/factory/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapHourDataHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapHourDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapHourDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapHourDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/hourData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapLiquidityPositionHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapLiquidityPositionHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapLiquidityPositionHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapLiquidityPositionHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/liquidityPosition/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapLiquidityPositionSnapshotsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapLiquidityPositionSnapshotsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapLiquidityPositionSnapshotsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/liquidityPositionSnapshots/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapMintsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapMintsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapMintsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapMintsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/mints/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapPoiHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapPoiHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapPoiHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapPoiHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/poi/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapPoolDayDataHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapPoolDayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapPoolDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapPoolDayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/poolDayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapPoolHourDataHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapPoolHourDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapPoolHourDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapPoolHourDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/poolHourData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapPoolsCurrentGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapPoolsCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/PairDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -47,19 +543,13 @@ export default class SushiswapApi {
     /**
      * GetPools
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-     * @param {String} chainId Chain id
-     * @param {module:api/SushiswapApi~chainsChainIdDappsSushiswapPoolsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SushiswapApi~dappsSushiswapPoolsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/PairDTO>}
      */
-    chainsChainIdDappsSushiswapPoolsCurrentGet(chainId, callback) {
+    dappsSushiswapPoolsCurrentGet(callback) {
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsSushiswapPoolsCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
       };
@@ -73,15 +563,61 @@ export default class SushiswapApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [PairDTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/sushiswap/pools/current', 'GET',
+        '/dapps/sushiswap/pools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsSushiswapSwapsCurrentGet operation.
-     * @callback module:api/SushiswapApi~chainsChainIdDappsSushiswapSwapsCurrentGetCallback
+     * Callback function to receive the result of the dappsSushiswapPoolsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapPoolsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapPoolsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapPoolsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/pools/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapSwapsCurrentGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapSwapsCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/SwapDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -89,19 +625,13 @@ export default class SushiswapApi {
 
     /**
      * GetSwaps
-     * @param {String} chainId Chain id
-     * @param {module:api/SushiswapApi~chainsChainIdDappsSushiswapSwapsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SushiswapApi~dappsSushiswapSwapsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SwapDTO>}
      */
-    chainsChainIdDappsSushiswapSwapsCurrentGet(chainId, callback) {
+    dappsSushiswapSwapsCurrentGet(callback) {
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsSushiswapSwapsCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
       };
@@ -115,15 +645,107 @@ export default class SushiswapApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [SwapDTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/sushiswap/swaps/current', 'GET',
+        '/dapps/sushiswap/swaps/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsSushiswapTokensCurrentGet operation.
-     * @callback module:api/SushiswapApi~chainsChainIdDappsSushiswapTokensCurrentGetCallback
+     * Callback function to receive the result of the dappsSushiswapSwapsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapSwapsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/SushiswapApi~dappsSushiswapSwapsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapSwapsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/swaps/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapTokenDayDataHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapTokenDayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.tokenId 
+     * @param {module:api/SushiswapApi~dappsSushiswapTokenDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapTokenDayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'tokenId': opts['tokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/tokenDayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapTokensCurrentGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapTokensCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/TokenDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -131,19 +753,13 @@ export default class SushiswapApi {
 
     /**
      * GetTokens
-     * @param {String} chainId Chain id
-     * @param {module:api/SushiswapApi~chainsChainIdDappsSushiswapTokensCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SushiswapApi~dappsSushiswapTokensCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/TokenDTO>}
      */
-    chainsChainIdDappsSushiswapTokensCurrentGet(chainId, callback) {
+    dappsSushiswapTokensCurrentGet(callback) {
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsSushiswapTokensCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
       };
@@ -157,7 +773,141 @@ export default class SushiswapApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [TokenDTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/sushiswap/tokens/current', 'GET',
+        '/dapps/sushiswap/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapTokensHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapTokensHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.tokenId 
+     * @param {module:api/SushiswapApi~dappsSushiswapTokensHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapTokensHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'tokenId': opts['tokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/tokens/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapTransactionsHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapTransactionsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapTransactionsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapTransactionsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/transactions/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsSushiswapUsersHistoricalGet operation.
+     * @callback module:api/SushiswapApi~dappsSushiswapUsersHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/SushiswapApi~dappsSushiswapUsersHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsSushiswapUsersHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/users/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

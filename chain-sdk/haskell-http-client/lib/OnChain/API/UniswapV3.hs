@@ -58,413 +58,887 @@ import qualified Prelude as P
 
 -- ** UniswapV3
 
--- *** chainsChainIdDappsUniswapv3BundleCurrentGet
+-- *** dappsUniswapv3BundleCurrentGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/bundle\/current@
+-- | @GET \/dapps\/uniswapv3\/bundle\/current@
 -- 
 -- GetBundles
 -- 
-chainsChainIdDappsUniswapv3BundleCurrentGet
+dappsUniswapv3BundleCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3BundleCurrentGet MimeNoContent [BundleV3DTO] accept
-chainsChainIdDappsUniswapv3BundleCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/bundle/current"]
+  -> OnChainRequest DappsUniswapv3BundleCurrentGet MimeNoContent [BundleV3DTO] accept
+dappsUniswapv3BundleCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/bundle/current"]
 
-data ChainsChainIdDappsUniswapv3BundleCurrentGet  
+data DappsUniswapv3BundleCurrentGet  
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3BundleCurrentGet MimeJSON
+instance Produces DappsUniswapv3BundleCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3BundleCurrentGet MimeTextJson
+instance Produces DappsUniswapv3BundleCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3BundleCurrentGet MimePlainText
+instance Produces DappsUniswapv3BundleCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3BurnsCurrentGet
+-- *** dappsUniswapv3BundlesHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/burns\/current@
+-- | @GET \/dapps\/uniswapv3\/bundles\/historical@
+-- 
+dappsUniswapv3BundlesHistoricalGet
+  :: OnChainRequest DappsUniswapv3BundlesHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3BundlesHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/bundles/historical"]
+
+data DappsUniswapv3BundlesHistoricalGet  
+instance HasOptionalParam DappsUniswapv3BundlesHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3BundlesHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3BundlesHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3BundlesHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces DappsUniswapv3BundlesHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3BurnsCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/burns\/current@
 -- 
 -- GetBurns
 -- 
-chainsChainIdDappsUniswapv3BurnsCurrentGet
+dappsUniswapv3BurnsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3BurnsCurrentGet MimeNoContent [BurnV3DTO] accept
-chainsChainIdDappsUniswapv3BurnsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/burns/current"]
+  -> OnChainRequest DappsUniswapv3BurnsCurrentGet MimeNoContent [BurnV3DTO] accept
+dappsUniswapv3BurnsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/burns/current"]
 
-data ChainsChainIdDappsUniswapv3BurnsCurrentGet  
+data DappsUniswapv3BurnsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3BurnsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3BurnsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3BurnsCurrentGet MimeJSON
+instance Produces DappsUniswapv3BurnsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3BurnsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3BurnsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3BurnsCurrentGet MimePlainText
+instance Produces DappsUniswapv3BurnsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3FactoryCurrentGet
+-- *** dappsUniswapv3BurnsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/factory\/current@
+-- | @GET \/dapps\/uniswapv3\/burns\/historical@
+-- 
+dappsUniswapv3BurnsHistoricalGet
+  :: OnChainRequest DappsUniswapv3BurnsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3BurnsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/burns/historical"]
+
+data DappsUniswapv3BurnsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3BurnsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3BurnsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3BurnsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3BurnsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3BurnsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3BurnsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3DayDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/dayData\/historical@
+-- 
+dappsUniswapv3DayDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3DayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3DayDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/dayData/historical"]
+
+data DappsUniswapv3DayDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3DayDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3DayDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3DayDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3DayDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces DappsUniswapv3DayDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3FactoryCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/factory\/current@
 -- 
 -- GetFactory
 -- 
-chainsChainIdDappsUniswapv3FactoryCurrentGet
+dappsUniswapv3FactoryCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3FactoryCurrentGet MimeNoContent [FactoryV3DTO] accept
-chainsChainIdDappsUniswapv3FactoryCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/factory/current"]
+  -> ChainId -- ^ "chainId"
+  -> OnChainRequest DappsUniswapv3FactoryCurrentGet MimeNoContent [FactoryV3DTO] accept
+dappsUniswapv3FactoryCurrentGet  _ (ChainId chainId) =
+  _mkRequest "GET" ["/dapps/uniswapv3/factory/current"]
 
-data ChainsChainIdDappsUniswapv3FactoryCurrentGet  
+data DappsUniswapv3FactoryCurrentGet  
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3FactoryCurrentGet MimeJSON
+instance Produces DappsUniswapv3FactoryCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3FactoryCurrentGet MimeTextJson
+instance Produces DappsUniswapv3FactoryCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3FactoryCurrentGet MimePlainText
+instance Produces DappsUniswapv3FactoryCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3MintsCurrentGet
+-- *** dappsUniswapv3FactoryHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/mints\/current@
+-- | @GET \/dapps\/uniswapv3\/factory\/historical@
+-- 
+dappsUniswapv3FactoryHistoricalGet
+  :: OnChainRequest DappsUniswapv3FactoryHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3FactoryHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/factory/historical"]
+
+data DappsUniswapv3FactoryHistoricalGet  
+instance HasOptionalParam DappsUniswapv3FactoryHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3FactoryHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3FactoryHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3FactoryHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces DappsUniswapv3FactoryHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3MintsCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/mints\/current@
 -- 
 -- GetMints
 -- 
-chainsChainIdDappsUniswapv3MintsCurrentGet
+dappsUniswapv3MintsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3MintsCurrentGet MimeNoContent [MintV3DTO] accept
-chainsChainIdDappsUniswapv3MintsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/mints/current"]
+  -> OnChainRequest DappsUniswapv3MintsCurrentGet MimeNoContent [MintV3DTO] accept
+dappsUniswapv3MintsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/mints/current"]
 
-data ChainsChainIdDappsUniswapv3MintsCurrentGet  
+data DappsUniswapv3MintsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3MintsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3MintsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3MintsCurrentGet MimeJSON
+instance Produces DappsUniswapv3MintsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3MintsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3MintsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3MintsCurrentGet MimePlainText
+instance Produces DappsUniswapv3MintsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3PoolsCurrentGet
+-- *** dappsUniswapv3MintsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/pools\/current@
+-- | @GET \/dapps\/uniswapv3\/mints\/historical@
+-- 
+dappsUniswapv3MintsHistoricalGet
+  :: OnChainRequest DappsUniswapv3MintsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3MintsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/mints/historical"]
+
+data DappsUniswapv3MintsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3MintsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3MintsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3MintsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3MintsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3MintsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3MintsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PoiHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/poi\/historical@
+-- 
+dappsUniswapv3PoiHistoricalGet
+  :: OnChainRequest DappsUniswapv3PoiHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PoiHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/poi/historical"]
+
+data DappsUniswapv3PoiHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PoiHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoiHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoiHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoiHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces DappsUniswapv3PoiHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PoolDayDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/poolDayData\/historical@
+-- 
+dappsUniswapv3PoolDayDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3PoolDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PoolDayDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolDayData/historical"]
+
+data DappsUniswapv3PoolDayDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PoolDayDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolDayDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolDayDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolDayDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolDayDataHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3PoolDayDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PoolHourDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/poolHourData\/historical@
+-- 
+dappsUniswapv3PoolHourDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3PoolHourDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PoolHourDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolHourData/historical"]
+
+data DappsUniswapv3PoolHourDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PoolHourDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolHourDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolHourDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolHourDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolHourDataHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3PoolHourDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PoolsCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/pools\/current@
 -- 
 -- GetPools
 -- 
-chainsChainIdDappsUniswapv3PoolsCurrentGet
+dappsUniswapv3PoolsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3PoolsCurrentGet MimeNoContent [PoolV3DTO] accept
-chainsChainIdDappsUniswapv3PoolsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/pools/current"]
+  -> OnChainRequest DappsUniswapv3PoolsCurrentGet MimeNoContent [PoolV3DTO] accept
+dappsUniswapv3PoolsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/pools/current"]
 
-data ChainsChainIdDappsUniswapv3PoolsCurrentGet  
+data DappsUniswapv3PoolsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3PoolsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3PoolsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsCurrentGet MimeJSON
+instance Produces DappsUniswapv3PoolsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3PoolsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3PoolsCurrentGet MimePlainText
+instance Produces DappsUniswapv3PoolsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+-- *** dappsUniswapv3PoolsDayDataCurrentGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/poolsDayData\/current@
+-- | @GET \/dapps\/uniswapv3\/poolsDayData\/current@
 -- 
 -- GetPoolsDayData
 -- 
-chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+dappsUniswapv3PoolsDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet MimeNoContent [PoolDayDataV3DTO] accept
-chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/poolsDayData/current"]
+  -> OnChainRequest DappsUniswapv3PoolsDayDataCurrentGet MimeNoContent [PoolDayDataV3DTO] accept
+dappsUniswapv3PoolsDayDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolsDayData/current"]
 
-data ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet  
+data DappsUniswapv3PoolsDayDataCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3PoolsDayDataCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3PoolsDayDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3PoolsDayDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3PoolsDayDataCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+-- *** dappsUniswapv3PoolsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/poolsHourData\/current@
+-- | @GET \/dapps\/uniswapv3\/pools\/historical@
+-- 
+dappsUniswapv3PoolsHistoricalGet
+  :: OnChainRequest DappsUniswapv3PoolsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PoolsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/pools/historical"]
+
+data DappsUniswapv3PoolsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PoolsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PoolsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3PoolsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PoolsHourDataCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/poolsHourData\/current@
 -- 
 -- GetPoolsHourData
 -- 
-chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+dappsUniswapv3PoolsHourDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet MimeNoContent [PoolHourDataV3DTO] accept
-chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/poolsHourData/current"]
+  -> OnChainRequest DappsUniswapv3PoolsHourDataCurrentGet MimeNoContent [PoolHourDataV3DTO] accept
+dappsUniswapv3PoolsHourDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolsHourData/current"]
 
-data ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet  
+data DappsUniswapv3PoolsHourDataCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3PoolsHourDataCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3PoolsHourDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3PoolsHourDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3PoolsHourDataCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+-- *** dappsUniswapv3PositionSnapshotHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/positionSnapshots\/current@
+-- | @GET \/dapps\/uniswapv3\/positionSnapshot\/historical@
+-- 
+dappsUniswapv3PositionSnapshotHistoricalGet
+  :: OnChainRequest DappsUniswapv3PositionSnapshotHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PositionSnapshotHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/positionSnapshot/historical"]
+
+data DappsUniswapv3PositionSnapshotHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PositionSnapshotHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionSnapshotHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionSnapshotHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionSnapshotHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionSnapshotHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3PositionSnapshotHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3PositionSnapshotsCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/positionSnapshots\/current@
 -- 
 -- GetPositionSnapshot
 -- 
-chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+dappsUniswapv3PositionSnapshotsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet MimeNoContent [PositionSnapshotV3DTO] accept
-chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/positionSnapshots/current"]
+  -> OnChainRequest DappsUniswapv3PositionSnapshotsCurrentGet MimeNoContent [PositionSnapshotV3DTO] accept
+dappsUniswapv3PositionSnapshotsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/positionSnapshots/current"]
 
-data ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet  
+data DappsUniswapv3PositionSnapshotsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3PositionSnapshotsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet MimeJSON
+instance Produces DappsUniswapv3PositionSnapshotsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3PositionSnapshotsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet MimePlainText
+instance Produces DappsUniswapv3PositionSnapshotsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3PositionsCurrentGet
+-- *** dappsUniswapv3PositionsCurrentGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/positions\/current@
+-- | @GET \/dapps\/uniswapv3\/positions\/current@
 -- 
 -- GetPositions
 -- 
-chainsChainIdDappsUniswapv3PositionsCurrentGet
+dappsUniswapv3PositionsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3PositionsCurrentGet MimeNoContent [PositionV3DTO] accept
-chainsChainIdDappsUniswapv3PositionsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/positions/current"]
+  -> OnChainRequest DappsUniswapv3PositionsCurrentGet MimeNoContent [PositionV3DTO] accept
+dappsUniswapv3PositionsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/positions/current"]
 
-data ChainsChainIdDappsUniswapv3PositionsCurrentGet  
+data DappsUniswapv3PositionsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3PositionsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3PositionsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3PositionsCurrentGet MimeJSON
+instance Produces DappsUniswapv3PositionsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3PositionsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3PositionsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3PositionsCurrentGet MimePlainText
+instance Produces DappsUniswapv3PositionsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3SwapsCurrentGet
+-- *** dappsUniswapv3PositionsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/swaps\/current@
+-- | @GET \/dapps\/uniswapv3\/positions\/historical@
+-- 
+dappsUniswapv3PositionsHistoricalGet
+  :: OnChainRequest DappsUniswapv3PositionsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3PositionsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/positions/historical"]
+
+data DappsUniswapv3PositionsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3PositionsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3PositionsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3PositionsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3SwapsCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/swaps\/current@
 -- 
 -- GetSwaps
 -- 
-chainsChainIdDappsUniswapv3SwapsCurrentGet
+dappsUniswapv3SwapsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3SwapsCurrentGet MimeNoContent [SwapV3DTO] accept
-chainsChainIdDappsUniswapv3SwapsCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/swaps/current"]
+  -> OnChainRequest DappsUniswapv3SwapsCurrentGet MimeNoContent [SwapV3DTO] accept
+dappsUniswapv3SwapsCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/swaps/current"]
 
-data ChainsChainIdDappsUniswapv3SwapsCurrentGet  
+data DappsUniswapv3SwapsCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3SwapsCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3SwapsCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3SwapsCurrentGet MimeJSON
+instance Produces DappsUniswapv3SwapsCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3SwapsCurrentGet MimeTextJson
+instance Produces DappsUniswapv3SwapsCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3SwapsCurrentGet MimePlainText
+instance Produces DappsUniswapv3SwapsCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3TicksCurrentGet
+-- *** dappsUniswapv3SwapsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/ticks\/current@
+-- | @GET \/dapps\/uniswapv3\/swaps\/historical@
+-- 
+dappsUniswapv3SwapsHistoricalGet
+  :: OnChainRequest DappsUniswapv3SwapsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3SwapsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/swaps/historical"]
+
+data DappsUniswapv3SwapsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3SwapsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3SwapsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3SwapsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3SwapsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3SwapsHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3SwapsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TickDayDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/tickDayData\/historical@
+-- 
+dappsUniswapv3TickDayDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3TickDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TickDayDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/tickDayData/historical"]
+
+data DappsUniswapv3TickDayDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TickDayDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TickDayDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TickDayDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TickDayDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TickDayDataHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3TickDayDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TicksCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/ticks\/current@
 -- 
 -- GetTicks
 -- 
-chainsChainIdDappsUniswapv3TicksCurrentGet
+dappsUniswapv3TicksCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3TicksCurrentGet MimeNoContent [TickV3DTO] accept
-chainsChainIdDappsUniswapv3TicksCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/ticks/current"]
+  -> OnChainRequest DappsUniswapv3TicksCurrentGet MimeNoContent [TickV3DTO] accept
+dappsUniswapv3TicksCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/ticks/current"]
 
-data ChainsChainIdDappsUniswapv3TicksCurrentGet  
+data DappsUniswapv3TicksCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3TicksCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3TicksCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3TicksCurrentGet MimeJSON
+instance Produces DappsUniswapv3TicksCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3TicksCurrentGet MimeTextJson
+instance Produces DappsUniswapv3TicksCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3TicksCurrentGet MimePlainText
+instance Produces DappsUniswapv3TicksCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+-- *** dappsUniswapv3TicksDayDataCurrentGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/ticksDayData\/current@
+-- | @GET \/dapps\/uniswapv3\/ticksDayData\/current@
 -- 
 -- GetTicksDayData
 -- 
-chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+dappsUniswapv3TicksDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet MimeNoContent [TickDayDataV3DTO] accept
-chainsChainIdDappsUniswapv3TicksDayDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/ticksDayData/current"]
+  -> OnChainRequest DappsUniswapv3TicksDayDataCurrentGet MimeNoContent [TickDayDataV3DTO] accept
+dappsUniswapv3TicksDayDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/ticksDayData/current"]
 
-data ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet  
+data DappsUniswapv3TicksDayDataCurrentGet  
 
 -- | /Optional Param/ "filter_pool_id" - Filter pool id
-instance HasOptionalParam ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet FilterPoolId where
+instance HasOptionalParam DappsUniswapv3TicksDayDataCurrentGet FilterPoolId where
   applyOptionalParam req (FilterPoolId xs) =
     req `addQuery` toQuery ("filter_pool_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3TicksDayDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3TicksDayDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3TicksDayDataCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3TokensCurrentGet
+-- *** dappsUniswapv3TicksHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/tokens\/current@
+-- | @GET \/dapps\/uniswapv3\/ticks\/historical@
+-- 
+dappsUniswapv3TicksHistoricalGet
+  :: OnChainRequest DappsUniswapv3TicksHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TicksHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/ticks/historical"]
+
+data DappsUniswapv3TicksHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TicksHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TicksHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TicksHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TicksHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TicksHistoricalGet PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+instance Produces DappsUniswapv3TicksHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TokenDayDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/tokenDayData\/historical@
+-- 
+dappsUniswapv3TokenDayDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3TokenDayDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TokenDayDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenDayData/historical"]
+
+data DappsUniswapv3TokenDayDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TokenDayDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenDayDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenDayDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenDayDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenDayDataHistoricalGet TokenId where
+  applyOptionalParam req (TokenId xs) =
+    req `addQuery` toQuery ("tokenId", Just xs)
+instance Produces DappsUniswapv3TokenDayDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TokenHourDataHistoricalGet
+
+-- | @GET \/dapps\/uniswapv3\/tokenHourData\/historical@
+-- 
+dappsUniswapv3TokenHourDataHistoricalGet
+  :: OnChainRequest DappsUniswapv3TokenHourDataHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TokenHourDataHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenHourData/historical"]
+
+data DappsUniswapv3TokenHourDataHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TokenHourDataHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenHourDataHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenHourDataHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenHourDataHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokenHourDataHistoricalGet TokenId where
+  applyOptionalParam req (TokenId xs) =
+    req `addQuery` toQuery ("tokenId", Just xs)
+instance Produces DappsUniswapv3TokenHourDataHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TokensCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/tokens\/current@
 -- 
 -- GetTokens
 -- 
-chainsChainIdDappsUniswapv3TokensCurrentGet
+dappsUniswapv3TokensCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3TokensCurrentGet MimeNoContent [TokenV3DTO] accept
-chainsChainIdDappsUniswapv3TokensCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/tokens/current"]
+  -> OnChainRequest DappsUniswapv3TokensCurrentGet MimeNoContent [TokenV3DTO] accept
+dappsUniswapv3TokensCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokens/current"]
 
-data ChainsChainIdDappsUniswapv3TokensCurrentGet  
-instance HasOptionalParam ChainsChainIdDappsUniswapv3TokensCurrentGet FilterTokenId where
+data DappsUniswapv3TokensCurrentGet  
+instance HasOptionalParam DappsUniswapv3TokensCurrentGet FilterTokenId where
   applyOptionalParam req (FilterTokenId xs) =
     req `addQuery` toQuery ("filter_token_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensCurrentGet MimeJSON
+instance Produces DappsUniswapv3TokensCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensCurrentGet MimeTextJson
+instance Produces DappsUniswapv3TokensCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3TokensCurrentGet MimePlainText
+instance Produces DappsUniswapv3TokensCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+-- *** dappsUniswapv3TokensDayDataCurrentGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/tokensDayData\/current@
+-- | @GET \/dapps\/uniswapv3\/tokensDayData\/current@
 -- 
 -- GetTokensDayData
 -- 
-chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+dappsUniswapv3TokensDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet MimeNoContent [TokenV3DayDataDTO] accept
-chainsChainIdDappsUniswapv3TokensDayDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/tokensDayData/current"]
+  -> OnChainRequest DappsUniswapv3TokensDayDataCurrentGet MimeNoContent [TokenV3DayDataDTO] accept
+dappsUniswapv3TokensDayDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokensDayData/current"]
 
-data ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet  
-instance HasOptionalParam ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet FilterTokenId where
+data DappsUniswapv3TokensDayDataCurrentGet  
+instance HasOptionalParam DappsUniswapv3TokensDayDataCurrentGet FilterTokenId where
   applyOptionalParam req (FilterTokenId xs) =
     req `addQuery` toQuery ("filter_token_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3TokensDayDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3TokensDayDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3TokensDayDataCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+-- *** dappsUniswapv3TokensHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/tokensHourData\/current@
+-- | @GET \/dapps\/uniswapv3\/tokens\/historical@
+-- 
+dappsUniswapv3TokensHistoricalGet
+  :: OnChainRequest DappsUniswapv3TokensHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TokensHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokens/historical"]
+
+data DappsUniswapv3TokensHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TokensHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokensHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TokensHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokensHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TokensHistoricalGet TokenId where
+  applyOptionalParam req (TokenId xs) =
+    req `addQuery` toQuery ("tokenId", Just xs)
+instance Produces DappsUniswapv3TokensHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3TokensHourDataCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/tokensHourData\/current@
 -- 
 -- GetTokensHourData
 -- 
-chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+dappsUniswapv3TokensHourDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet MimeNoContent [TokenHourDataV3DTO] accept
-chainsChainIdDappsUniswapv3TokensHourDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/tokensHourData/current"]
+  -> OnChainRequest DappsUniswapv3TokensHourDataCurrentGet MimeNoContent [TokenHourDataV3DTO] accept
+dappsUniswapv3TokensHourDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokensHourData/current"]
 
-data ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet  
-instance HasOptionalParam ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet FilterTokenId where
+data DappsUniswapv3TokensHourDataCurrentGet  
+instance HasOptionalParam DappsUniswapv3TokensHourDataCurrentGet FilterTokenId where
   applyOptionalParam req (FilterTokenId xs) =
     req `addQuery` toQuery ("filter_token_id", Just xs)
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3TokensHourDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3TokensHourDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3TokensHourDataCurrentGet MimePlainText
 
 
--- *** chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+-- *** dappsUniswapv3TransactionsHistoricalGet
 
--- | @GET \/chains\/{chain_id}\/dapps\/uniswapv3\/uniswapDayData\/current@
+-- | @GET \/dapps\/uniswapv3\/transactions\/historical@
+-- 
+dappsUniswapv3TransactionsHistoricalGet
+  :: OnChainRequest DappsUniswapv3TransactionsHistoricalGet MimeNoContent NoContent MimeNoContent
+dappsUniswapv3TransactionsHistoricalGet =
+  _mkRequest "GET" ["/dapps/uniswapv3/transactions/historical"]
+
+data DappsUniswapv3TransactionsHistoricalGet  
+instance HasOptionalParam DappsUniswapv3TransactionsHistoricalGet StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TransactionsHistoricalGet EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+instance HasOptionalParam DappsUniswapv3TransactionsHistoricalGet StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+instance HasOptionalParam DappsUniswapv3TransactionsHistoricalGet EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+instance Produces DappsUniswapv3TransactionsHistoricalGet MimeNoContent
+
+
+-- *** dappsUniswapv3UniswapDayDataCurrentGet
+
+-- | @GET \/dapps\/uniswapv3\/uniswapDayData\/current@
 -- 
 -- GetUniswapDayData
 -- 
-chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+dappsUniswapv3UniswapDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> ChainId -- ^ "chainId" -  Chain id
-  -> OnChainRequest ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet MimeNoContent [UniswapDayDataV3DTO] accept
-chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet  _ (ChainId chainId) =
-  _mkRequest "GET" ["/chains/",toPath chainId,"/dapps/uniswapv3/uniswapDayData/current"]
+  -> OnChainRequest DappsUniswapv3UniswapDayDataCurrentGet MimeNoContent [UniswapDayDataV3DTO] accept
+dappsUniswapv3UniswapDayDataCurrentGet  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayData/current"]
 
-data ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet  
+data DappsUniswapv3UniswapDayDataCurrentGet  
 -- | @application/json@
-instance Produces ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet MimeJSON
+instance Produces DappsUniswapv3UniswapDayDataCurrentGet MimeJSON
 -- | @text/json@
-instance Produces ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet MimeTextJson
+instance Produces DappsUniswapv3UniswapDayDataCurrentGet MimeTextJson
 -- | @text/plain@
-instance Produces ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet MimePlainText
+instance Produces DappsUniswapv3UniswapDayDataCurrentGet MimePlainText
 

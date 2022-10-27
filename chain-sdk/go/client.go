@@ -50,135 +50,17 @@ type APIClient struct {
 
 	// API Services
 
-	AccountsApi *AccountsApiService
+	CowApi *CowApiService
 
-	AddLiquidityEventApi *AddLiquidityEventApiService
+	CurveApi *CurveApiService
 
-	AdminFeeChangeLogApi *AdminFeeChangeLogApiService
-
-	AmplificationCoeffChangeLogApi *AmplificationCoeffChangeLogApiService
-
-	BatchApi *BatchApiService
-
-	BundlesApi *BundlesApiService
-
-	BurnsApi *BurnsApiService
-
-	CoinsApi *CoinsApiService
-
-	ContractsApi *ContractsApiService
-
-	ContractsVersionApi *ContractsVersionApiService
-
-	DailyVolumeApi *DailyVolumeApiService
-
-	DayDataApi *DayDataApiService
-
-	DepositApi *DepositApiService
-
-	FactoryApi *FactoryApiService
-
-	FeeChangeLogApi *FeeChangeLogApiService
-
-	GaugeApi *GaugeApiService
-
-	GaugeDepositApi *GaugeDepositApiService
-
-	GaugeLiquidityApi *GaugeLiquidityApiService
-
-	GaugeTotalWeightApi *GaugeTotalWeightApiService
-
-	GaugeTypeApi *GaugeTypeApiService
-
-	GaugeTypeWeightApi *GaugeTypeWeightApiService
-
-	GaugeWeightApi *GaugeWeightApiService
-
-	GaugeWeightVoteApi *GaugeWeightVoteApiService
-
-	GaugeWithdrawApi *GaugeWithdrawApiService
-
-	HourDataApi *HourDataApiService
-
-	HourlyVolumeApi *HourlyVolumeApiService
-
-	LiquidityPositionApi *LiquidityPositionApiService
-
-	LiquidityPositionSnapshotsApi *LiquidityPositionSnapshotsApiService
-
-	LpTokenApi *LpTokenApiService
-
-	MintsApi *MintsApiService
-
-	OrdersApi *OrdersApiService
-
-	PoiApi *PoiApiService
-
-	PoolDayDataApi *PoolDayDataApiService
-
-	PoolHourDataApi *PoolHourDataApiService
-
-	PoolsApi *PoolsApiService
-
-	PositionSnapshotApi *PositionSnapshotApiService
-
-	PositionsApi *PositionsApiService
-
-	PricesApi *PricesApiService
-
-	ProposalsApi *ProposalsApiService
-
-	ProposalsVoteApi *ProposalsVoteApiService
-
-	RemoveLiquidityEventApi *RemoveLiquidityEventApiService
-
-	RemoveLiquidityOneEventApi *RemoveLiquidityOneEventApiService
-
-	SettlementApi *SettlementApiService
-
-	SolutionApi *SolutionApiService
-
-	StatsApi *StatsApiService
+	DexApi *DexApiService
 
 	SushiswapApi *SushiswapApiService
-
-	SwapsApi *SwapsApiService
-
-	SystemStateApi *SystemStateApiService
-
-	TickDayDataApi *TickDayDataApiService
-
-	TicksApi *TicksApiService
-
-	TokenDayDataApi *TokenDayDataApiService
-
-	TokenHourDataApi *TokenHourDataApiService
-
-	TokensApi *TokensApiService
-
-	TradesApi *TradesApiService
-
-	TransactionsApi *TransactionsApiService
-
-	TransferOwnershipEventApi *TransferOwnershipEventApiService
-
-	UnderlyingCoinApi *UnderlyingCoinApiService
-
-	UniswapDayDataApi *UniswapDayDataApiService
 
 	UniswapV2Api *UniswapV2ApiService
 
 	UniswapV3Api *UniswapV3ApiService
-
-	UsersApi *UsersApiService
-
-	VotingAppApi *VotingAppApiService
-
-	WeeklyVolumeApi *WeeklyVolumeApiService
-
-	WithdrawApi *WithdrawApiService
-
-	WithdrawRequestApi *WithdrawRequestApiService
 }
 
 type service struct {
@@ -197,71 +79,12 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.AccountsApi = (*AccountsApiService)(&c.common)
-	c.AddLiquidityEventApi = (*AddLiquidityEventApiService)(&c.common)
-	c.AdminFeeChangeLogApi = (*AdminFeeChangeLogApiService)(&c.common)
-	c.AmplificationCoeffChangeLogApi = (*AmplificationCoeffChangeLogApiService)(&c.common)
-	c.BatchApi = (*BatchApiService)(&c.common)
-	c.BundlesApi = (*BundlesApiService)(&c.common)
-	c.BurnsApi = (*BurnsApiService)(&c.common)
-	c.CoinsApi = (*CoinsApiService)(&c.common)
-	c.ContractsApi = (*ContractsApiService)(&c.common)
-	c.ContractsVersionApi = (*ContractsVersionApiService)(&c.common)
-	c.DailyVolumeApi = (*DailyVolumeApiService)(&c.common)
-	c.DayDataApi = (*DayDataApiService)(&c.common)
-	c.DepositApi = (*DepositApiService)(&c.common)
-	c.FactoryApi = (*FactoryApiService)(&c.common)
-	c.FeeChangeLogApi = (*FeeChangeLogApiService)(&c.common)
-	c.GaugeApi = (*GaugeApiService)(&c.common)
-	c.GaugeDepositApi = (*GaugeDepositApiService)(&c.common)
-	c.GaugeLiquidityApi = (*GaugeLiquidityApiService)(&c.common)
-	c.GaugeTotalWeightApi = (*GaugeTotalWeightApiService)(&c.common)
-	c.GaugeTypeApi = (*GaugeTypeApiService)(&c.common)
-	c.GaugeTypeWeightApi = (*GaugeTypeWeightApiService)(&c.common)
-	c.GaugeWeightApi = (*GaugeWeightApiService)(&c.common)
-	c.GaugeWeightVoteApi = (*GaugeWeightVoteApiService)(&c.common)
-	c.GaugeWithdrawApi = (*GaugeWithdrawApiService)(&c.common)
-	c.HourDataApi = (*HourDataApiService)(&c.common)
-	c.HourlyVolumeApi = (*HourlyVolumeApiService)(&c.common)
-	c.LiquidityPositionApi = (*LiquidityPositionApiService)(&c.common)
-	c.LiquidityPositionSnapshotsApi = (*LiquidityPositionSnapshotsApiService)(&c.common)
-	c.LpTokenApi = (*LpTokenApiService)(&c.common)
-	c.MintsApi = (*MintsApiService)(&c.common)
-	c.OrdersApi = (*OrdersApiService)(&c.common)
-	c.PoiApi = (*PoiApiService)(&c.common)
-	c.PoolDayDataApi = (*PoolDayDataApiService)(&c.common)
-	c.PoolHourDataApi = (*PoolHourDataApiService)(&c.common)
-	c.PoolsApi = (*PoolsApiService)(&c.common)
-	c.PositionSnapshotApi = (*PositionSnapshotApiService)(&c.common)
-	c.PositionsApi = (*PositionsApiService)(&c.common)
-	c.PricesApi = (*PricesApiService)(&c.common)
-	c.ProposalsApi = (*ProposalsApiService)(&c.common)
-	c.ProposalsVoteApi = (*ProposalsVoteApiService)(&c.common)
-	c.RemoveLiquidityEventApi = (*RemoveLiquidityEventApiService)(&c.common)
-	c.RemoveLiquidityOneEventApi = (*RemoveLiquidityOneEventApiService)(&c.common)
-	c.SettlementApi = (*SettlementApiService)(&c.common)
-	c.SolutionApi = (*SolutionApiService)(&c.common)
-	c.StatsApi = (*StatsApiService)(&c.common)
+	c.CowApi = (*CowApiService)(&c.common)
+	c.CurveApi = (*CurveApiService)(&c.common)
+	c.DexApi = (*DexApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
-	c.SwapsApi = (*SwapsApiService)(&c.common)
-	c.SystemStateApi = (*SystemStateApiService)(&c.common)
-	c.TickDayDataApi = (*TickDayDataApiService)(&c.common)
-	c.TicksApi = (*TicksApiService)(&c.common)
-	c.TokenDayDataApi = (*TokenDayDataApiService)(&c.common)
-	c.TokenHourDataApi = (*TokenHourDataApiService)(&c.common)
-	c.TokensApi = (*TokensApiService)(&c.common)
-	c.TradesApi = (*TradesApiService)(&c.common)
-	c.TransactionsApi = (*TransactionsApiService)(&c.common)
-	c.TransferOwnershipEventApi = (*TransferOwnershipEventApiService)(&c.common)
-	c.UnderlyingCoinApi = (*UnderlyingCoinApiService)(&c.common)
-	c.UniswapDayDataApi = (*UniswapDayDataApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)
-	c.UsersApi = (*UsersApiService)(&c.common)
-	c.VotingAppApi = (*VotingAppApiService)(&c.common)
-	c.WeeklyVolumeApi = (*WeeklyVolumeApiService)(&c.common)
-	c.WithdrawApi = (*WithdrawApiService)(&c.common)
-	c.WithdrawRequestApi = (*WithdrawRequestApiService)(&c.common)
 
 	return c
 }

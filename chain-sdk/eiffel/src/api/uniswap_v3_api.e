@@ -24,11 +24,9 @@ inherit
 feature -- API Access
 
 
-	chains_chain_id_dapps_uniswapv3_bundle_current_get (chain_id: STRING_32): detachable LIST [BUNDLE_V3_DTO]
+	dapps_uniswapv3_bundle_current_get : detachable LIST [BUNDLE_V3_DTO]
 			-- GetBundles
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- 
 			-- Result LIST [BUNDLE_V3_DTO]
@@ -41,8 +39,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/bundle/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/bundle/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -60,11 +57,49 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_burns_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [BURN_V3_DTO]
+	dapps_uniswapv3_bundles_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/bundles/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_burns_current_get (filter_pool_id: STRING_32): detachable LIST [BURN_V3_DTO]
 			-- GetBurns
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -79,8 +114,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/burns/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/burns/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -99,11 +133,94 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_factory_current_get (chain_id: STRING_32): detachable LIST [FACTORY_V3_DTO]
+	dapps_uniswapv3_burns_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/burns/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_day_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/dayData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_factory_current_get (chain_id: STRING_32): detachable LIST [FACTORY_V3_DTO]
 			-- GetFactory
 			-- 
 			-- 
-			-- argument: chain_id Chain id (required)
+			-- argument: chain_id  (required)
 			-- 
 			-- 
 			-- Result LIST [FACTORY_V3_DTO]
@@ -116,7 +233,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/factory/current"
+			l_path := "/dapps/uniswapv3/factory/current"
 			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
 
 
@@ -135,11 +252,49 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_mints_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [MINT_V3_DTO]
+	dapps_uniswapv3_factory_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/factory/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_mints_current_get (filter_pool_id: STRING_32): detachable LIST [MINT_V3_DTO]
 			-- GetMints
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -154,8 +309,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/mints/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/mints/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -174,11 +328,178 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_pools_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [POOL_V3_DTO]
+	dapps_uniswapv3_mints_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/mints/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_poi_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/poi/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_pool_day_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/poolDayData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_pool_hour_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/poolHourData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_pools_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_V3_DTO]
 			-- GetPools
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -193,8 +514,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/pools/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/pools/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -213,11 +533,9 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_pools_day_data_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [POOL_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_pools_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_DAY_DATA_V3_DTO]
 			-- GetPoolsDayData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -232,8 +550,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/poolsDayData/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -252,11 +569,52 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [POOL_HOUR_DATA_V3_DTO]
+	dapps_uniswapv3_pools_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/pools/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_HOUR_DATA_V3_DTO]
 			-- GetPoolsHourData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -271,8 +629,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/poolsHourData/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -291,11 +648,52 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_position_snapshots_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
+	dapps_uniswapv3_position_snapshot_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/positionSnapshot/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_position_snapshots_current_get (filter_pool_id: STRING_32): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
 			-- GetPositionSnapshot
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -310,8 +708,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/positionSnapshots/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -330,11 +727,9 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_positions_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [POSITION_V3_DTO]
+	dapps_uniswapv3_positions_current_get (filter_pool_id: STRING_32): detachable LIST [POSITION_V3_DTO]
 			-- GetPositions
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -349,8 +744,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/positions/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/positions/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -369,11 +763,52 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_swaps_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [SWAP_V3_DTO]
+	dapps_uniswapv3_positions_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/positions/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_swaps_current_get (filter_pool_id: STRING_32): detachable LIST [SWAP_V3_DTO]
 			-- GetSwaps
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -388,8 +823,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/swaps/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/swaps/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -408,11 +842,95 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_ticks_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [TICK_V3_DTO]
+	dapps_uniswapv3_swaps_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/swaps/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_tick_day_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/tickDayData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_ticks_current_get (filter_pool_id: STRING_32): detachable LIST [TICK_V3_DTO]
 			-- GetTicks
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -427,8 +945,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/ticks/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/ticks/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -447,11 +964,9 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get (chain_id: STRING_32; filter_pool_id: STRING_32): detachable LIST [TICK_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [TICK_DAY_DATA_V3_DTO]
 			-- GetTicksDayData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
@@ -466,8 +981,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/ticksDayData/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_pool_id", filter_pool_id));
 
 
@@ -486,11 +1000,138 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_tokens_current_get (chain_id: STRING_32; filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DTO]
+	dapps_uniswapv3_ticks_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: pool_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/ticks/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_token_day_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: token_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/tokenDayData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_token_hour_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: token_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/tokenHourData/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_tokens_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DTO]
 			-- GetTokens
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
@@ -505,8 +1146,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/tokens/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/tokens/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_token_id", filter_token_id));
 
 
@@ -525,11 +1165,9 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get (chain_id: STRING_32; filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
+	dapps_uniswapv3_tokens_day_data_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
 			-- GetTokensDayData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
@@ -544,8 +1182,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/tokensDayData/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_token_id", filter_token_id));
 
 
@@ -564,11 +1201,52 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get (chain_id: STRING_32; filter_token_id: STRING_32): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
+	dapps_uniswapv3_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: token_id  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/tokens/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
 			-- GetTokensHourData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
@@ -583,8 +1261,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/tokensHourData/current"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "filter_token_id", filter_token_id));
 
 
@@ -603,11 +1280,49 @@ feature -- API Access
 			end
 		end
 
-	chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get (chain_id: STRING_32): detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_transactions_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
+			-- 
+			-- 
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- 
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/uniswapv3/transactions/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			if l_response.has_error then
+				last_error := l_response.error
+			end
+		end
+
+	dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
 			-- GetUniswapDayData
 			-- 
-			-- 
-			-- argument: chain_id Chain id (required)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_DAY_DATA_V3_DTO]
@@ -620,8 +1335,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current"
-			l_path.replace_substring_all ("{"+"chain_id"+"}", api_client.url_encode (chain_id.out))
+			l_path := "/dapps/uniswapv3/uniswapDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

@@ -117,36 +117,34 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BundleCurrentGet
+     * Operation dappsUniswapv3BundleCurrentGet
      *
      * GetBundles
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\BundleV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3BundleCurrentGet($chain_id)
+    public function dappsUniswapv3BundleCurrentGet()
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3BundleCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsUniswapv3BundleCurrentGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BundleCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3BundleCurrentGetWithHttpInfo
      *
      * GetBundles
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\BundleV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3BundleCurrentGetWithHttpInfo($chain_id)
+    public function dappsUniswapv3BundleCurrentGetWithHttpInfo()
     {
-        $request = $this->chainsChainIdDappsUniswapv3BundleCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3BundleCurrentGetRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -237,18 +235,17 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BundleCurrentGetAsync
+     * Operation dappsUniswapv3BundleCurrentGetAsync
      *
      * GetBundles
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3BundleCurrentGetAsync($chain_id)
+    public function dappsUniswapv3BundleCurrentGetAsync()
     {
-        return $this->chainsChainIdDappsUniswapv3BundleCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsUniswapv3BundleCurrentGetAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -257,19 +254,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BundleCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3BundleCurrentGetAsyncWithHttpInfo
      *
      * GetBundles
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3BundleCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsUniswapv3BundleCurrentGetAsyncWithHttpInfo()
     {
         $returnType = '\OpenAPI\Client\Model\BundleV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3BundleCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3BundleCurrentGetRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -308,24 +304,16 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3BundleCurrentGet'
+     * Create request for operation 'dappsUniswapv3BundleCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3BundleCurrentGetRequest($chain_id)
+    public function dappsUniswapv3BundleCurrentGetRequest()
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3BundleCurrentGet'
-            );
-        }
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/bundle/current';
+        $resourcePath = '/dapps/uniswapv3/bundle/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -334,14 +322,6 @@ class UniswapV3Api
 
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -403,38 +383,297 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BurnsCurrentGet
+     * Operation dappsUniswapv3BundlesHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3BundlesHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsUniswapv3BundlesHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsUniswapv3BundlesHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3BundlesHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsUniswapv3BundlesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3BundlesHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3BundlesHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsUniswapv3BundlesHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3BundlesHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3BundlesHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3BundlesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3BundlesHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3BundlesHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/bundles/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3BurnsCurrentGet
      *
      * GetBurns
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\BurnV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3BurnsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3BurnsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3BurnsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3BurnsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BurnsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3BurnsCurrentGetWithHttpInfo
      *
      * GetBurns
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\BurnV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3BurnsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3BurnsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3BurnsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3BurnsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -525,19 +764,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BurnsCurrentGetAsync
+     * Operation dappsUniswapv3BurnsCurrentGetAsync
      *
      * GetBurns
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3BurnsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3BurnsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -546,20 +784,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo
      *
      * GetBurns
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\BurnV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3BurnsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3BurnsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -598,26 +835,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3BurnsCurrentGet'
+     * Create request for operation 'dappsUniswapv3BurnsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3BurnsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3BurnsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3BurnsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/burns/current';
+        $resourcePath = '/dapps/uniswapv3/burns/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -635,14 +864,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -704,36 +925,573 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3FactoryCurrentGet
+     * Operation dappsUniswapv3BurnsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3BurnsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3BurnsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3BurnsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3BurnsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3BurnsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3BurnsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3BurnsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3BurnsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3BurnsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3BurnsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3BurnsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3BurnsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3BurnsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/burns/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3DayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3DayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsUniswapv3DayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsUniswapv3DayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3DayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsUniswapv3DayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3DayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3DayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3DayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3DayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3DayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3DayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/dayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3FactoryCurrentGet
      *
      * GetFactory
      *
-     * @param  string $chain_id Chain id (required)
+     * @param  string $chain_id chain_id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\FactoryV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3FactoryCurrentGet($chain_id)
+    public function dappsUniswapv3FactoryCurrentGet($chain_id)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3FactoryCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsUniswapv3FactoryCurrentGetWithHttpInfo($chain_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3FactoryCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3FactoryCurrentGetWithHttpInfo
      *
      * GetFactory
      *
-     * @param  string $chain_id Chain id (required)
+     * @param  string $chain_id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\FactoryV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3FactoryCurrentGetWithHttpInfo($chain_id)
+    public function dappsUniswapv3FactoryCurrentGetWithHttpInfo($chain_id)
     {
-        $request = $this->chainsChainIdDappsUniswapv3FactoryCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3FactoryCurrentGetRequest($chain_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -824,18 +1582,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3FactoryCurrentGetAsync
+     * Operation dappsUniswapv3FactoryCurrentGetAsync
      *
      * GetFactory
      *
-     * @param  string $chain_id Chain id (required)
+     * @param  string $chain_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3FactoryCurrentGetAsync($chain_id)
+    public function dappsUniswapv3FactoryCurrentGetAsync($chain_id)
     {
-        return $this->chainsChainIdDappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo($chain_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -844,19 +1602,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo
      *
      * GetFactory
      *
-     * @param  string $chain_id Chain id (required)
+     * @param  string $chain_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo($chain_id)
     {
         $returnType = '\OpenAPI\Client\Model\FactoryV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3FactoryCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3FactoryCurrentGetRequest($chain_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -895,24 +1653,24 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3FactoryCurrentGet'
+     * Create request for operation 'dappsUniswapv3FactoryCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
+     * @param  string $chain_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3FactoryCurrentGetRequest($chain_id)
+    public function dappsUniswapv3FactoryCurrentGetRequest($chain_id)
     {
 
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3FactoryCurrentGet'
+                'Missing the required parameter $chain_id when calling dappsUniswapv3FactoryCurrentGet'
             );
         }
 
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/factory/current';
+        $resourcePath = '/dapps/uniswapv3/factory/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -990,38 +1748,297 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3MintsCurrentGet
+     * Operation dappsUniswapv3FactoryHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3FactoryHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsUniswapv3FactoryHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsUniswapv3FactoryHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3FactoryHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsUniswapv3FactoryHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3FactoryHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3FactoryHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsUniswapv3FactoryHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3FactoryHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3FactoryHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3FactoryHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3FactoryHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3FactoryHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/factory/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3MintsCurrentGet
      *
      * GetMints
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\MintV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3MintsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3MintsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3MintsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3MintsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3MintsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3MintsCurrentGetWithHttpInfo
      *
      * GetMints
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\MintV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3MintsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3MintsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3MintsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3MintsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1112,19 +2129,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3MintsCurrentGetAsync
+     * Operation dappsUniswapv3MintsCurrentGetAsync
      *
      * GetMints
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3MintsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3MintsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3MintsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3MintsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1133,20 +2149,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3MintsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3MintsCurrentGetAsyncWithHttpInfo
      *
      * GetMints
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3MintsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3MintsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\MintV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3MintsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3MintsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1185,26 +2200,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3MintsCurrentGet'
+     * Create request for operation 'dappsUniswapv3MintsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3MintsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3MintsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3MintsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/mints/current';
+        $resourcePath = '/dapps/uniswapv3/mints/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1222,14 +2229,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -1291,38 +2290,1125 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsCurrentGet
+     * Operation dappsUniswapv3MintsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3MintsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3MintsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3MintsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3MintsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3MintsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3MintsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3MintsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3MintsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3MintsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3MintsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3MintsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3MintsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3MintsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/mints/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoiHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PoiHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsUniswapv3PoiHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsUniswapv3PoiHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PoiHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsUniswapv3PoiHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PoiHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoiHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsUniswapv3PoiHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoiHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoiHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PoiHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PoiHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PoiHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/poi/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PoolDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3PoolDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3PoolDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PoolDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PoolDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PoolDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/poolDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolHourDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PoolHourDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3PoolHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolHourDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolHourDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3PoolHourDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolHourDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolHourDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PoolHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PoolHourDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PoolHourDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/poolHourData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolsCurrentGet
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PoolV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3PoolsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3PoolsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3PoolsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3PoolsCurrentGetWithHttpInfo
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PoolV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3PoolsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3PoolsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1413,19 +3499,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsCurrentGetAsync
+     * Operation dappsUniswapv3PoolsCurrentGetAsync
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1434,20 +3519,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo
      *
      * GetPools
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\PoolV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3PoolsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1486,26 +3570,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3PoolsCurrentGet'
+     * Create request for operation 'dappsUniswapv3PoolsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3PoolsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3PoolsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/pools/current';
+        $resourcePath = '/dapps/uniswapv3/pools/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1523,14 +3599,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -1592,38 +3660,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+     * Operation dappsUniswapv3PoolsDayDataCurrentGet
      *
      * GetPoolsDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PoolDayDataV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo
      *
      * GetPoolsDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PoolDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsDayDataCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1714,19 +3780,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsync
+     * Operation dappsUniswapv3PoolsDayDataCurrentGetAsync
      *
      * GetPoolsDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsDayDataCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1735,20 +3800,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo
      *
      * GetPoolsDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\PoolDayDataV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsDayDataCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1787,26 +3851,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3PoolsDayDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3PoolsDayDataCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsDayDataCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/poolsDayData/current';
+        $resourcePath = '/dapps/uniswapv3/poolsDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1824,14 +3880,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -1893,38 +3941,312 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+     * Operation dappsUniswapv3PoolsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PoolsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3PoolsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PoolsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3PoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3PoolsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PoolsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PoolsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PoolsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/pools/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PoolsHourDataCurrentGet
      *
      * GetPoolsHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PoolHourDataV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo
      *
      * GetPoolsHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PoolHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsHourDataCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2015,19 +4337,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsync
+     * Operation dappsUniswapv3PoolsHourDataCurrentGetAsync
      *
      * GetPoolsHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsHourDataCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2036,20 +4357,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo
      *
      * GetPoolsHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\PoolHourDataV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PoolsHourDataCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2088,26 +4408,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3PoolsHourDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3PoolsHourDataCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PoolsHourDataCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/poolsHourData/current';
+        $resourcePath = '/dapps/uniswapv3/poolsHourData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2125,14 +4437,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -2194,38 +4498,312 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+     * Operation dappsUniswapv3PositionSnapshotHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PositionSnapshotHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3PositionSnapshotHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionSnapshotHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PositionSnapshotHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3PositionSnapshotHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionSnapshotHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PositionSnapshotHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PositionSnapshotHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PositionSnapshotHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PositionSnapshotHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/positionSnapshot/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionSnapshotsCurrentGet
      *
      * GetPositionSnapshot
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PositionSnapshotV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo
      *
      * GetPositionSnapshot
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PositionSnapshotV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PositionSnapshotsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2316,19 +4894,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsync
+     * Operation dappsUniswapv3PositionSnapshotsCurrentGetAsync
      *
      * GetPositionSnapshot
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionSnapshotsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2337,20 +4914,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo
      *
      * GetPositionSnapshot
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\PositionSnapshotV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PositionSnapshotsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2389,26 +4965,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet'
+     * Create request for operation 'dappsUniswapv3PositionSnapshotsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionSnapshotsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current';
+        $resourcePath = '/dapps/uniswapv3/positionSnapshots/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2426,14 +4994,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -2495,38 +5055,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionsCurrentGet
+     * Operation dappsUniswapv3PositionsCurrentGet
      *
      * GetPositions
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\PositionV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3PositionsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3PositionsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3PositionsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3PositionsCurrentGetWithHttpInfo
      *
      * GetPositions
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\PositionV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3PositionsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3PositionsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PositionsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2617,19 +5175,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionsCurrentGetAsync
+     * Operation dappsUniswapv3PositionsCurrentGetAsync
      *
      * GetPositions
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PositionsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2638,20 +5195,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo
      *
      * GetPositions
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\PositionV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3PositionsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3PositionsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2690,26 +5246,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3PositionsCurrentGet'
+     * Create request for operation 'dappsUniswapv3PositionsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3PositionsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3PositionsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3PositionsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/positions/current';
+        $resourcePath = '/dapps/uniswapv3/positions/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2727,14 +5275,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -2796,38 +5336,312 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3SwapsCurrentGet
+     * Operation dappsUniswapv3PositionsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3PositionsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3PositionsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3PositionsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3PositionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PositionsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3PositionsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3PositionsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3PositionsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3PositionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3PositionsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3PositionsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/positions/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3SwapsCurrentGet
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\SwapV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3SwapsCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3SwapsCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3SwapsCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3SwapsCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3SwapsCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3SwapsCurrentGetWithHttpInfo
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\SwapV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3SwapsCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3SwapsCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3SwapsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3SwapsCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2918,19 +5732,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3SwapsCurrentGetAsync
+     * Operation dappsUniswapv3SwapsCurrentGetAsync
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3SwapsCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3SwapsCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2939,20 +5752,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo
      *
      * GetSwaps
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\SwapV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3SwapsCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3SwapsCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2991,26 +5803,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3SwapsCurrentGet'
+     * Create request for operation 'dappsUniswapv3SwapsCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3SwapsCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3SwapsCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3SwapsCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/swaps/current';
+        $resourcePath = '/dapps/uniswapv3/swaps/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3028,14 +5832,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -3097,38 +5893,588 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksCurrentGet
+     * Operation dappsUniswapv3SwapsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3SwapsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3SwapsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3SwapsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3SwapsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3SwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3SwapsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3SwapsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3SwapsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3SwapsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3SwapsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3SwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3SwapsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3SwapsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/swaps/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TickDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TickDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3TickDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3TickDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TickDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3TickDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TickDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TickDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3TickDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TickDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TickDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TickDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TickDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TickDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/tickDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TicksCurrentGet
      *
      * GetTicks
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TickV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3TicksCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3TicksCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3TicksCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3TicksCurrentGetWithHttpInfo
      *
      * GetTicks
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TickV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3TicksCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3TicksCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3TicksCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3219,19 +6565,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksCurrentGetAsync
+     * Operation dappsUniswapv3TicksCurrentGetAsync
      *
      * GetTicks
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TicksCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3TicksCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3TicksCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3240,20 +6585,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3TicksCurrentGetAsyncWithHttpInfo
      *
      * GetTicks
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TicksCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\TickV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3TicksCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3TicksCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3292,26 +6636,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3TicksCurrentGet'
+     * Create request for operation 'dappsUniswapv3TicksCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3TicksCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3TicksCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/ticks/current';
+        $resourcePath = '/dapps/uniswapv3/ticks/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3329,14 +6665,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -3398,38 +6726,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+     * Operation dappsUniswapv3TicksDayDataCurrentGet
      *
      * GetTicksDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TickDayDataV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3TicksDayDataCurrentGet($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3TicksDayDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id);
+        list($response) = $this->dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo($filter_pool_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksDayDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo
      *
      * GetTicksDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TickDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3TicksDayDataCurrentGetWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo($filter_pool_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3TicksDayDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3TicksDayDataCurrentGetRequest($filter_pool_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3520,19 +6846,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsync
+     * Operation dappsUniswapv3TicksDayDataCurrentGetAsync
      *
      * GetTicksDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsync($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksDayDataCurrentGetAsync($filter_pool_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id)
+        return $this->dappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3541,20 +6866,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo
      *
      * GetTicksDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\TickDayDataV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3TicksDayDataCurrentGetRequest($chain_id, $filter_pool_id);
+        $request = $this->dappsUniswapv3TicksDayDataCurrentGetRequest($filter_pool_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3593,26 +6917,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3TicksDayDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3TicksDayDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_pool_id Filter pool id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3TicksDayDataCurrentGetRequest($chain_id, $filter_pool_id = null)
+    public function dappsUniswapv3TicksDayDataCurrentGetRequest($filter_pool_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3TicksDayDataCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/ticksDayData/current';
+        $resourcePath = '/dapps/uniswapv3/ticksDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3630,14 +6946,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -3699,38 +7007,864 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensCurrentGet
+     * Operation dappsUniswapv3TicksHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TicksHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $this->dappsUniswapv3TicksHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3TicksHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TicksHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $request = $this->dappsUniswapv3TicksHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TicksHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TicksHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        return $this->dappsUniswapv3TicksHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TicksHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TicksHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TicksHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TicksHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TicksHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/ticks/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenDayDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TokenDayDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $this->dappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $request = $this->dappsUniswapv3TokenDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenDayDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokenDayDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        return $this->dappsUniswapv3TokenDayDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenDayDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokenDayDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TokenDayDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TokenDayDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TokenDayDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/tokenDayData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenHourDataHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TokenHourDataHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $this->dappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $request = $this->dappsUniswapv3TokenHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenHourDataHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokenHourDataHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        return $this->dappsUniswapv3TokenHourDataHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokenHourDataHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokenHourDataHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TokenHourDataHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TokenHourDataHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TokenHourDataHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/tokenHourData/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokensCurrentGet
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TokenV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3TokensCurrentGet($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensCurrentGet($filter_token_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3TokensCurrentGetWithHttpInfo($chain_id, $filter_token_id);
+        list($response) = $this->dappsUniswapv3TokensCurrentGetWithHttpInfo($filter_token_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3TokensCurrentGetWithHttpInfo
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TokenV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3TokensCurrentGetWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensCurrentGetWithHttpInfo($filter_token_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3TokensCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensCurrentGetRequest($filter_token_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3821,19 +7955,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensCurrentGetAsync
+     * Operation dappsUniswapv3TokensCurrentGetAsync
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensCurrentGetAsync($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensCurrentGetAsync($filter_token_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3TokensCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id)
+        return $this->dappsUniswapv3TokensCurrentGetAsyncWithHttpInfo($filter_token_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3842,20 +7975,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3TokensCurrentGetAsyncWithHttpInfo
      *
      * GetTokens
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensCurrentGetAsyncWithHttpInfo($filter_token_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\TokenV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3TokensCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensCurrentGetRequest($filter_token_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3894,26 +8026,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3TokensCurrentGet'
+     * Create request for operation 'dappsUniswapv3TokensCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3TokensCurrentGetRequest($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensCurrentGetRequest($filter_token_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3TokensCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/tokens/current';
+        $resourcePath = '/dapps/uniswapv3/tokens/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3931,14 +8055,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -4000,38 +8116,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+     * Operation dappsUniswapv3TokensDayDataCurrentGet
      *
      * GetTokensDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TokenV3DayDataDTO[]
      */
-    public function chainsChainIdDappsUniswapv3TokensDayDataCurrentGet($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensDayDataCurrentGet($filter_token_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3TokensDayDataCurrentGetWithHttpInfo($chain_id, $filter_token_id);
+        list($response) = $this->dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo($filter_token_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensDayDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo
      *
      * GetTokensDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3TokensDayDataCurrentGetWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo($filter_token_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3TokensDayDataCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensDayDataCurrentGetRequest($filter_token_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4122,19 +8236,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsync
+     * Operation dappsUniswapv3TokensDayDataCurrentGetAsync
      *
      * GetTokensDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsync($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensDayDataCurrentGetAsync($filter_token_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id)
+        return $this->dappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo($filter_token_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4143,20 +8256,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo
      *
      * GetTokensDayData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo($filter_token_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\TokenV3DayDataDTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3TokensDayDataCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensDayDataCurrentGetRequest($filter_token_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4195,26 +8307,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3TokensDayDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3TokensDayDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3TokensDayDataCurrentGetRequest($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensDayDataCurrentGetRequest($filter_token_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3TokensDayDataCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/tokensDayData/current';
+        $resourcePath = '/dapps/uniswapv3/tokensDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4232,14 +8336,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -4301,38 +8397,312 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+     * Operation dappsUniswapv3TokensHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $this->dappsUniswapv3TokensHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id);
+    }
+
+    /**
+     * Operation dappsUniswapv3TokensHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $request = $this->dappsUniswapv3TokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TokensHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokensHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        return $this->dappsUniswapv3TokensHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokensHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TokensHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TokensHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null)
+    {
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/tokens/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3TokensHourDataCurrentGet
      *
      * GetTokensHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\TokenHourDataV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3TokensHourDataCurrentGet($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensHourDataCurrentGet($filter_token_id = null)
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3TokensHourDataCurrentGetWithHttpInfo($chain_id, $filter_token_id);
+        list($response) = $this->dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo($filter_token_id);
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensHourDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo
      *
      * GetTokensHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\TokenHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3TokensHourDataCurrentGetWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo($filter_token_id = null)
     {
-        $request = $this->chainsChainIdDappsUniswapv3TokensHourDataCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensHourDataCurrentGetRequest($filter_token_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4423,19 +8793,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsync
+     * Operation dappsUniswapv3TokensHourDataCurrentGetAsync
      *
      * GetTokensHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsync($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensHourDataCurrentGetAsync($filter_token_id = null)
     {
-        return $this->chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id)
+        return $this->dappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo($filter_token_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4444,20 +8813,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo
      *
      * GetTokensHourData
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo($filter_token_id = null)
     {
         $returnType = '\OpenAPI\Client\Model\TokenHourDataV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3TokensHourDataCurrentGetRequest($chain_id, $filter_token_id);
+        $request = $this->dappsUniswapv3TokensHourDataCurrentGetRequest($filter_token_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4496,26 +8864,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3TokensHourDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3TokensHourDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      * @param  string $filter_token_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3TokensHourDataCurrentGetRequest($chain_id, $filter_token_id = null)
+    public function dappsUniswapv3TokensHourDataCurrentGetRequest($filter_token_id = null)
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3TokensHourDataCurrentGet'
-            );
-        }
 
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/tokensHourData/current';
+        $resourcePath = '/dapps/uniswapv3/tokensHourData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4533,14 +8893,6 @@ class UniswapV3Api
         ) ?? []);
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
@@ -4602,36 +8954,295 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+     * Operation dappsUniswapv3TransactionsHistoricalGet
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function dappsUniswapv3TransactionsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $this->dappsUniswapv3TransactionsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date);
+    }
+
+    /**
+     * Operation dappsUniswapv3TransactionsHistoricalGetWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dappsUniswapv3TransactionsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $request = $this->dappsUniswapv3TransactionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dappsUniswapv3TransactionsHistoricalGetAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TransactionsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        return $this->dappsUniswapv3TransactionsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dappsUniswapv3TransactionsHistoricalGetAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dappsUniswapv3TransactionsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+        $returnType = '';
+        $request = $this->dappsUniswapv3TransactionsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dappsUniswapv3TransactionsHistoricalGet'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dappsUniswapv3TransactionsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null)
+    {
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/transactions/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dappsUniswapv3UniswapDayDataCurrentGet
      *
      * GetUniswapDayData
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapDayDataV3DTO[]
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet($chain_id)
+    public function dappsUniswapv3UniswapDayDataCurrentGet()
     {
-        list($response) = $this->chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo($chain_id);
+        list($response) = $this->dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo
+     * Operation dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo
      *
      * GetUniswapDayData
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo($chain_id)
+    public function dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo()
     {
-        $request = $this->chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3UniswapDayDataCurrentGetRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -4722,18 +9333,17 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsync
+     * Operation dappsUniswapv3UniswapDayDataCurrentGetAsync
      *
      * GetUniswapDayData
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsync($chain_id)
+    public function dappsUniswapv3UniswapDayDataCurrentGetAsync()
     {
-        return $this->chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo($chain_id)
+        return $this->dappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4742,19 +9352,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo
+     * Operation dappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo
      *
      * GetUniswapDayData
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo($chain_id)
+    public function dappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo()
     {
         $returnType = '\OpenAPI\Client\Model\UniswapDayDataV3DTO[]';
-        $request = $this->chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetRequest($chain_id);
+        $request = $this->dappsUniswapv3UniswapDayDataCurrentGetRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4793,24 +9402,16 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet'
+     * Create request for operation 'dappsUniswapv3UniswapDayDataCurrentGet'
      *
-     * @param  string $chain_id Chain id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function chainsChainIdDappsUniswapv3UniswapDayDataCurrentGetRequest($chain_id)
+    public function dappsUniswapv3UniswapDayDataCurrentGetRequest()
     {
 
-        // verify the required parameter 'chain_id' is set
-        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet'
-            );
-        }
-
-        $resourcePath = '/chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current';
+        $resourcePath = '/dapps/uniswapv3/uniswapDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4819,14 +9420,6 @@ class UniswapV3Api
 
 
 
-        // path params
-        if ($chain_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'chain_id' . '}',
-                ObjectSerializer::toPathValue($chain_id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {

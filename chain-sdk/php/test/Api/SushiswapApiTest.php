@@ -73,36 +73,240 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for chainsChainIdDappsSushiswapPoolsCurrentGet
+     * Test case for dappsSushiswapBundlesHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapBundlesHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapBurnsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapBurnsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapFactoryHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapFactoryHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapHourDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapHourDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapLiquidityPositionHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapLiquidityPositionHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapLiquidityPositionSnapshotsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapMintsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapMintsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapPoiHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapPoiHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapPoolDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapPoolDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapPoolHourDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapPoolHourDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapPoolsCurrentGet
      *
      * GetPools.
      *
      */
-    public function testChainsChainIdDappsSushiswapPoolsCurrentGet()
+    public function testDappsSushiswapPoolsCurrentGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for chainsChainIdDappsSushiswapSwapsCurrentGet
+     * Test case for dappsSushiswapPoolsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapPoolsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapSwapsCurrentGet
      *
      * GetSwaps.
      *
      */
-    public function testChainsChainIdDappsSushiswapSwapsCurrentGet()
+    public function testDappsSushiswapSwapsCurrentGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for chainsChainIdDappsSushiswapTokensCurrentGet
+     * Test case for dappsSushiswapSwapsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapSwapsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapTokenDayDataHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapTokenDayDataHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapTokensCurrentGet
      *
      * GetTokens.
      *
      */
-    public function testChainsChainIdDappsSushiswapTokensCurrentGet()
+    public function testDappsSushiswapTokensCurrentGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapTokensHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapTokensHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapTransactionsHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapTransactionsHistoricalGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dappsSushiswapUsersHistoricalGet
+     *
+     * .
+     *
+     */
+    public function testDappsSushiswapUsersHistoricalGet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

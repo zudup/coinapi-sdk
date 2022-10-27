@@ -4,28 +4,46 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChainsChainIdDappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3BundleCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**ChainsChainIdDappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3BurnsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**ChainsChainIdDappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3FactoryCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**ChainsChainIdDappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3MintsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**ChainsChainIdDappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3PoolsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**ChainsChainIdDappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3PositionsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**ChainsChainIdDappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3SwapsCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**ChainsChainIdDappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3TicksCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**ChainsChainIdDappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3TokensCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet) | **Get** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**DappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#DappsUniswapv3BundleCurrentGet) | **Get** /dapps/uniswapv3/bundle/current | GetBundles
+[**DappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#DappsUniswapv3BundlesHistoricalGet) | **Get** /dapps/uniswapv3/bundles/historical | 
+[**DappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#DappsUniswapv3BurnsCurrentGet) | **Get** /dapps/uniswapv3/burns/current | GetBurns
+[**DappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3BurnsHistoricalGet) | **Get** /dapps/uniswapv3/burns/historical | 
+[**DappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3DayDataHistoricalGet) | **Get** /dapps/uniswapv3/dayData/historical | 
+[**DappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#DappsUniswapv3FactoryCurrentGet) | **Get** /dapps/uniswapv3/factory/current | GetFactory
+[**DappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#DappsUniswapv3FactoryHistoricalGet) | **Get** /dapps/uniswapv3/factory/historical | 
+[**DappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#DappsUniswapv3MintsCurrentGet) | **Get** /dapps/uniswapv3/mints/current | GetMints
+[**DappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3MintsHistoricalGet) | **Get** /dapps/uniswapv3/mints/historical | 
+[**DappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoiHistoricalGet) | **Get** /dapps/uniswapv3/poi/historical | 
+[**DappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoolDayDataHistoricalGet) | **Get** /dapps/uniswapv3/poolDayData/historical | 
+[**DappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoolHourDataHistoricalGet) | **Get** /dapps/uniswapv3/poolHourData/historical | 
+[**DappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#DappsUniswapv3PoolsCurrentGet) | **Get** /dapps/uniswapv3/pools/current | GetPools
+[**DappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3PoolsDayDataCurrentGet) | **Get** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**DappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoolsHistoricalGet) | **Get** /dapps/uniswapv3/pools/historical | 
+[**DappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3PoolsHourDataCurrentGet) | **Get** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**DappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PositionSnapshotHistoricalGet) | **Get** /dapps/uniswapv3/positionSnapshot/historical | 
+[**DappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#DappsUniswapv3PositionSnapshotsCurrentGet) | **Get** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**DappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#DappsUniswapv3PositionsCurrentGet) | **Get** /dapps/uniswapv3/positions/current | GetPositions
+[**DappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PositionsHistoricalGet) | **Get** /dapps/uniswapv3/positions/historical | 
+[**DappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#DappsUniswapv3SwapsCurrentGet) | **Get** /dapps/uniswapv3/swaps/current | GetSwaps
+[**DappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3SwapsHistoricalGet) | **Get** /dapps/uniswapv3/swaps/historical | 
+[**DappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TickDayDataHistoricalGet) | **Get** /dapps/uniswapv3/tickDayData/historical | 
+[**DappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#DappsUniswapv3TicksCurrentGet) | **Get** /dapps/uniswapv3/ticks/current | GetTicks
+[**DappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3TicksDayDataCurrentGet) | **Get** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**DappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TicksHistoricalGet) | **Get** /dapps/uniswapv3/ticks/historical | 
+[**DappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TokenDayDataHistoricalGet) | **Get** /dapps/uniswapv3/tokenDayData/historical | 
+[**DappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TokenHourDataHistoricalGet) | **Get** /dapps/uniswapv3/tokenHourData/historical | 
+[**DappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#DappsUniswapv3TokensCurrentGet) | **Get** /dapps/uniswapv3/tokens/current | GetTokens
+[**DappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3TokensDayDataCurrentGet) | **Get** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**DappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TokensHistoricalGet) | **Get** /dapps/uniswapv3/tokens/historical | 
+[**DappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3TokensHourDataCurrentGet) | **Get** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**DappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3TransactionsHistoricalGet) | **Get** /dapps/uniswapv3/transactions/historical | 
+[**DappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#DappsUniswapv3UniswapDayDataCurrentGet) | **Get** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
 
-## ChainsChainIdDappsUniswapv3BundleCurrentGet
+## DappsUniswapv3BundleCurrentGet
 
-> []BundleV3DTO ChainsChainIdDappsUniswapv3BundleCurrentGet(ctx, chainId).Execute()
+> []BundleV3DTO DappsUniswapv3BundleCurrentGet(ctx).Execute()
 
 GetBundles
 
@@ -42,35 +60,26 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3BundleCurrentGet(context.Background(), chainId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3BundleCurrentGet(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3BundleCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BundleCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3BundleCurrentGet`: []BundleV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3BundleCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3BundleCurrentGet`: []BundleV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3BundleCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3BundleCurrentGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Other parameters are passed through a pointer to a apiDappsUniswapv3BundleCurrentGetRequest struct via the builder pattern
 
 
 ### Return type
@@ -91,9 +100,78 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3BurnsCurrentGet
+## DappsUniswapv3BundlesHistoricalGet
 
-> []BurnV3DTO ChainsChainIdDappsUniswapv3BurnsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3BundlesHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3BundlesHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BundlesHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3BundlesHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3BurnsCurrentGet
+
+> []BurnV3DTO DappsUniswapv3BurnsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetBurns
 
@@ -110,37 +188,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3BurnsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3BurnsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3BurnsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BurnsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3BurnsCurrentGet`: []BurnV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3BurnsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3BurnsCurrentGet`: []BurnV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3BurnsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3BurnsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3BurnsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -161,9 +233,149 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3FactoryCurrentGet
+## DappsUniswapv3BurnsHistoricalGet
 
-> []FactoryV3DTO ChainsChainIdDappsUniswapv3FactoryCurrentGet(ctx, chainId).Execute()
+> DappsUniswapv3BurnsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3BurnsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BurnsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3BurnsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3DayDataHistoricalGet
+
+> DappsUniswapv3DayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3DayDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3DayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3DayDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3FactoryCurrentGet
+
+> []FactoryV3DTO DappsUniswapv3FactoryCurrentGet(ctx, chainId).Execute()
 
 GetFactory
 
@@ -180,17 +392,17 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
+    chainId := "chainId_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3FactoryCurrentGet(context.Background(), chainId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3FactoryCurrentGet(context.Background(), chainId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3FactoryCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3FactoryCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3FactoryCurrentGet`: []FactoryV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3FactoryCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3FactoryCurrentGet`: []FactoryV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3FactoryCurrentGet`: %v\n", resp)
 }
 ```
 
@@ -200,11 +412,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
+**chainId** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3FactoryCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3FactoryCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -229,9 +441,78 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3MintsCurrentGet
+## DappsUniswapv3FactoryHistoricalGet
 
-> []MintV3DTO ChainsChainIdDappsUniswapv3MintsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3FactoryHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3FactoryHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3FactoryHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3FactoryHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3MintsCurrentGet
+
+> []MintV3DTO DappsUniswapv3MintsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetMints
 
@@ -248,37 +529,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3MintsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3MintsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3MintsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3MintsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3MintsCurrentGet`: []MintV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3MintsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3MintsCurrentGet`: []MintV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3MintsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3MintsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3MintsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -299,9 +574,291 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3PoolsCurrentGet
+## DappsUniswapv3MintsHistoricalGet
 
-> []PoolV3DTO ChainsChainIdDappsUniswapv3PoolsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3MintsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3MintsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3MintsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3MintsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PoiHistoricalGet
+
+> DappsUniswapv3PoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoiHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoiHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PoolDayDataHistoricalGet
+
+> DappsUniswapv3PoolDayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolDayDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolDayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolDayDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PoolHourDataHistoricalGet
+
+> DappsUniswapv3PoolHourDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolHourDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolHourDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolHourDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PoolsCurrentGet
+
+> []PoolV3DTO DappsUniswapv3PoolsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPools
 
@@ -318,37 +875,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3PoolsCurrentGet`: []PoolV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3PoolsCurrentGet`: []PoolV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3PoolsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -369,9 +920,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet
+## DappsUniswapv3PoolsDayDataCurrentGet
 
-> []PoolDayDataV3DTO ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> []PoolDayDataV3DTO DappsUniswapv3PoolsDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPoolsDayData
 
@@ -388,37 +939,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolsDayDataCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet`: []PoolDayDataV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsDayDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3PoolsDayDataCurrentGet`: []PoolDayDataV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsDayDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3PoolsDayDataCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolsDayDataCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -439,9 +984,80 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet
+## DappsUniswapv3PoolsHistoricalGet
 
-> []PoolHourDataV3DTO ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3PoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PoolsHourDataCurrentGet
+
+> []PoolHourDataV3DTO DappsUniswapv3PoolsHourDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPoolsHourData
 
@@ -458,37 +1074,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoolsHourDataCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsHourDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet`: []PoolHourDataV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3PoolsHourDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3PoolsHourDataCurrentGet`: []PoolHourDataV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsHourDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3PoolsHourDataCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3PoolsHourDataCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -509,9 +1119,80 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet
+## DappsUniswapv3PositionSnapshotHistoricalGet
 
-> []PositionSnapshotV3DTO ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3PositionSnapshotHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PositionSnapshotHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionSnapshotHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PositionSnapshotHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3PositionSnapshotsCurrentGet
+
+> []PositionSnapshotV3DTO DappsUniswapv3PositionSnapshotsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPositionSnapshot
 
@@ -528,37 +1209,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PositionSnapshotsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionSnapshotsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet`: []PositionSnapshotV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3PositionSnapshotsCurrentGet`: []PositionSnapshotV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PositionSnapshotsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3PositionSnapshotsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3PositionSnapshotsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -579,9 +1254,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3PositionsCurrentGet
+## DappsUniswapv3PositionsCurrentGet
 
-> []PositionV3DTO ChainsChainIdDappsUniswapv3PositionsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> []PositionV3DTO DappsUniswapv3PositionsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPositions
 
@@ -598,37 +1273,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3PositionsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PositionsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3PositionsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3PositionsCurrentGet`: []PositionV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3PositionsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3PositionsCurrentGet`: []PositionV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PositionsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3PositionsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3PositionsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -649,9 +1318,80 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3SwapsCurrentGet
+## DappsUniswapv3PositionsHistoricalGet
 
-> []SwapV3DTO ChainsChainIdDappsUniswapv3SwapsCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3PositionsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PositionsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3PositionsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3SwapsCurrentGet
+
+> []SwapV3DTO DappsUniswapv3SwapsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetSwaps
 
@@ -668,37 +1408,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3SwapsCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3SwapsCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3SwapsCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3SwapsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3SwapsCurrentGet`: []SwapV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3SwapsCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3SwapsCurrentGet`: []SwapV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3SwapsCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3SwapsCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3SwapsCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -719,9 +1453,151 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3TicksCurrentGet
+## DappsUniswapv3SwapsHistoricalGet
 
-> []TickV3DTO ChainsChainIdDappsUniswapv3TicksCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> DappsUniswapv3SwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3SwapsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3SwapsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3SwapsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TickDayDataHistoricalGet
+
+> DappsUniswapv3TickDayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TickDayDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TickDayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TickDayDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TicksCurrentGet
+
+> []TickV3DTO DappsUniswapv3TicksCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetTicks
 
@@ -738,37 +1614,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3TicksCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TicksCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3TicksCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TicksCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3TicksCurrentGet`: []TickV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3TicksCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3TicksCurrentGet`: []TickV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TicksCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3TicksCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3TicksCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -789,9 +1659,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet
+## DappsUniswapv3TicksDayDataCurrentGet
 
-> []TickDayDataV3DTO ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet(ctx, chainId).FilterPoolId(filterPoolId).Execute()
+> []TickDayDataV3DTO DappsUniswapv3TicksDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetTicksDayData
 
@@ -808,37 +1678,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterPoolId := "filterPoolId_example" // string | Filter pool id (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet(context.Background(), chainId).FilterPoolId(filterPoolId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TicksDayDataCurrentGet(context.Background()).FilterPoolId(filterPoolId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TicksDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet`: []TickDayDataV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3TicksDayDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3TicksDayDataCurrentGet`: []TickDayDataV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TicksDayDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3TicksDayDataCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3TicksDayDataCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterPoolId** | **string** | Filter pool id | 
 
 ### Return type
@@ -859,9 +1723,222 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3TokensCurrentGet
+## DappsUniswapv3TicksHistoricalGet
 
-> []TokenV3DTO ChainsChainIdDappsUniswapv3TokensCurrentGet(ctx, chainId).FilterTokenId(filterTokenId).Execute()
+> DappsUniswapv3TicksHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TicksHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TicksHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TicksHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TokenDayDataHistoricalGet
+
+> DappsUniswapv3TokenDayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    tokenId := "tokenId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokenDayDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokenDayDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokenDayDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **tokenId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TokenHourDataHistoricalGet
+
+> DappsUniswapv3TokenHourDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    tokenId := "tokenId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokenHourDataHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokenHourDataHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokenHourDataHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **tokenId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TokensCurrentGet
+
+> []TokenV3DTO DappsUniswapv3TokensCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokens
 
@@ -878,37 +1955,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterTokenId := "filterTokenId_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3TokensCurrentGet(context.Background(), chainId).FilterTokenId(filterTokenId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokensCurrentGet(context.Background()).FilterTokenId(filterTokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3TokensCurrentGet`: []TokenV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3TokensCurrentGet`: []TokenV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3TokensCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokensCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterTokenId** | **string** |  | 
 
 ### Return type
@@ -929,9 +2000,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet
+## DappsUniswapv3TokensDayDataCurrentGet
 
-> []TokenV3DayDataDTO ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet(ctx, chainId).FilterTokenId(filterTokenId).Execute()
+> []TokenV3DayDataDTO DappsUniswapv3TokensDayDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokensDayData
 
@@ -948,37 +2019,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterTokenId := "filterTokenId_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet(context.Background(), chainId).FilterTokenId(filterTokenId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokensDayDataCurrentGet(context.Background()).FilterTokenId(filterTokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet`: []TokenV3DayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensDayDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3TokensDayDataCurrentGet`: []TokenV3DayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensDayDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3TokensDayDataCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokensDayDataCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterTokenId** | **string** |  | 
 
 ### Return type
@@ -999,9 +2064,80 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet
+## DappsUniswapv3TokensHistoricalGet
 
-> []TokenHourDataV3DTO ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet(ctx, chainId).FilterTokenId(filterTokenId).Execute()
+> DappsUniswapv3TokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    tokenId := "tokenId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokensHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokensHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **tokenId** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3TokensHourDataCurrentGet
+
+> []TokenHourDataV3DTO DappsUniswapv3TokensHourDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokensHourData
 
@@ -1018,37 +2154,31 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
     filterTokenId := "filterTokenId_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet(context.Background(), chainId).FilterTokenId(filterTokenId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TokensHourDataCurrentGet(context.Background()).FilterTokenId(filterTokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensHourDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet`: []TokenHourDataV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3TokensHourDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3TokensHourDataCurrentGet`: []TokenHourDataV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensHourDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3TokensHourDataCurrentGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDappsUniswapv3TokensHourDataCurrentGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **filterTokenId** | **string** |  | 
 
 ### Return type
@@ -1069,9 +2199,78 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet
+## DappsUniswapv3TransactionsHistoricalGet
 
-> []UniswapDayDataV3DTO ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(ctx, chainId).Execute()
+> DappsUniswapv3TransactionsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3TransactionsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TransactionsHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDappsUniswapv3TransactionsHistoricalGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DappsUniswapv3UniswapDayDataCurrentGet
+
+> []UniswapDayDataV3DTO DappsUniswapv3UniswapDayDataCurrentGet(ctx).Execute()
 
 GetUniswapDayData
 
@@ -1088,35 +2287,26 @@ import (
 )
 
 func main() {
-    chainId := "chainId_example" // string | Chain id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(context.Background(), chainId).Execute()
+    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3UniswapDayDataCurrentGet(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3UniswapDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet`: []UniswapDayDataV3DTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.ChainsChainIdDappsUniswapv3UniswapDayDataCurrentGet`: %v\n", resp)
+    // response from `DappsUniswapv3UniswapDayDataCurrentGet`: []UniswapDayDataV3DTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3UniswapDayDataCurrentGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**chainId** | **string** | Chain id | 
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiChainsChainIdDappsUniswapv3UniswapDayDataCurrentGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Other parameters are passed through a pointer to a apiDappsUniswapv3UniswapDayDataCurrentGetRequest struct via the builder pattern
 
 
 ### Return type

@@ -9,26 +9,44 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chainsChainIdDappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3bundlecurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chainsChainIdDappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3burnscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chainsChainIdDappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3factorycurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chainsChainIdDappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3mintscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chainsChainIdDappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3poolscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3poolsdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3poolshourdatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3positionsnapshotscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chainsChainIdDappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3positionscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chainsChainIdDappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3swapscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chainsChainIdDappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3tickscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3ticksdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chainsChainIdDappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3tokenscurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3tokensdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3tokenshourdatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#chainschainiddappsuniswapv3uniswapdaydatacurrentget) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#dappsuniswapv3bundlecurrentget) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
+[**dappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#dappsuniswapv3bundleshistoricalget) | **GET** /dapps/uniswapv3/bundles/historical | 
+[**dappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#dappsuniswapv3burnscurrentget) | **GET** /dapps/uniswapv3/burns/current | GetBurns
+[**dappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3burnshistoricalget) | **GET** /dapps/uniswapv3/burns/historical | 
+[**dappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3daydatahistoricalget) | **GET** /dapps/uniswapv3/dayData/historical | 
+[**dappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#dappsuniswapv3factorycurrentget) | **GET** /dapps/uniswapv3/factory/current | GetFactory
+[**dappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#dappsuniswapv3factoryhistoricalget) | **GET** /dapps/uniswapv3/factory/historical | 
+[**dappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#dappsuniswapv3mintscurrentget) | **GET** /dapps/uniswapv3/mints/current | GetMints
+[**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3mintshistoricalget) | **GET** /dapps/uniswapv3/mints/historical | 
+[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsuniswapv3poihistoricalget) | **GET** /dapps/uniswapv3/poi/historical | 
+[**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3pooldaydatahistoricalget) | **GET** /dapps/uniswapv3/poolDayData/historical | 
+[**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3poolhourdatahistoricalget) | **GET** /dapps/uniswapv3/poolHourData/historical | 
+[**dappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#dappsuniswapv3poolscurrentget) | **GET** /dapps/uniswapv3/pools/current | GetPools
+[**dappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3poolsdaydatacurrentget) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3poolshistoricalget) | **GET** /dapps/uniswapv3/pools/historical | 
+[**dappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3poolshourdatacurrentget) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#dappsuniswapv3positionsnapshothistoricalget) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#dappsuniswapv3positionsnapshotscurrentget) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#dappsuniswapv3positionscurrentget) | **GET** /dapps/uniswapv3/positions/current | GetPositions
+[**dappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3positionshistoricalget) | **GET** /dapps/uniswapv3/positions/historical | 
+[**dappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#dappsuniswapv3swapscurrentget) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3swapshistoricalget) | **GET** /dapps/uniswapv3/swaps/historical | 
+[**dappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3tickdaydatahistoricalget) | **GET** /dapps/uniswapv3/tickDayData/historical | 
+[**dappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#dappsuniswapv3tickscurrentget) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
+[**dappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3ticksdaydatacurrentget) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#dappsuniswapv3tickshistoricalget) | **GET** /dapps/uniswapv3/ticks/historical | 
+[**dappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3tokendaydatahistoricalget) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
+[**dappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#dappsuniswapv3tokenhourdatahistoricalget) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
+[**dappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#dappsuniswapv3tokenscurrentget) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
+[**dappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3tokensdaydatacurrentget) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#dappsuniswapv3tokenshistoricalget) | **GET** /dapps/uniswapv3/tokens/historical | 
+[**dappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3tokenshourdatacurrentget) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#dappsuniswapv3transactionshistoricalget) | **GET** /dapps/uniswapv3/transactions/historical | 
+[**dappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#dappsuniswapv3uniswapdaydatacurrentget) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
-# **chainsChainIdDappsUniswapv3BundleCurrentGet**
-> List<BundleV3DTO> chainsChainIdDappsUniswapv3BundleCurrentGet(chainId)
+# **dappsUniswapv3BundleCurrentGet**
+> List<BundleV3DTO> dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -37,21 +55,17 @@ GetBundles
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3BundleCurrentGet(chainId);
+    final result = api_instance.dappsUniswapv3BundleCurrentGet();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3BundleCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3BundleCurrentGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -68,8 +82,54 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3BurnsCurrentGet**
-> List<BurnV3DTO> chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3BundlesHistoricalGet**
+> dappsUniswapv3BundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.dappsUniswapv3BundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3BundlesHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3BurnsCurrentGet**
+> List<BurnV3DTO> dappsUniswapv3BurnsCurrentGet(filterPoolId)
 
 GetBurns
 
@@ -78,14 +138,13 @@ GetBurns
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3BurnsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3BurnsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3BurnsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3BurnsCurrentGet: $e\n');
 }
 ```
 
@@ -93,7 +152,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -111,8 +169,102 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3FactoryCurrentGet**
-> List<FactoryV3DTO> chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId)
+# **dappsUniswapv3BurnsHistoricalGet**
+> dappsUniswapv3BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3BurnsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3DayDataHistoricalGet**
+> dappsUniswapv3DayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.dappsUniswapv3DayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3DayDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3FactoryCurrentGet**
+> List<FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -121,13 +273,13 @@ GetFactory
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
+final chainId = chainId_example; // String | 
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3FactoryCurrentGet(chainId);
+    final result = api_instance.dappsUniswapv3FactoryCurrentGet(chainId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3FactoryCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3FactoryCurrentGet: $e\n');
 }
 ```
 
@@ -135,7 +287,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+ **chainId** | **String**|  | 
 
 ### Return type
 
@@ -152,8 +304,54 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3MintsCurrentGet**
-> List<MintV3DTO> chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3FactoryHistoricalGet**
+> dappsUniswapv3FactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.dappsUniswapv3FactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3FactoryHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3MintsCurrentGet**
+> List<MintV3DTO> dappsUniswapv3MintsCurrentGet(filterPoolId)
 
 GetMints
 
@@ -162,14 +360,13 @@ GetMints
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3MintsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3MintsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3MintsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3MintsCurrentGet: $e\n');
 }
 ```
 
@@ -177,7 +374,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -195,8 +391,198 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3PoolsCurrentGet**
-> List<PoolV3DTO> chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3MintsHistoricalGet**
+> dappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3MintsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PoiHistoricalGet**
+> dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoiHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PoolDayDataHistoricalGet**
+> dappsUniswapv3PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolDayDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PoolHourDataHistoricalGet**
+> dappsUniswapv3PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolHourDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PoolsCurrentGet**
+> List<PoolV3DTO> dappsUniswapv3PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -205,14 +591,13 @@ GetPools
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3PoolsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3PoolsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3PoolsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolsCurrentGet: $e\n');
 }
 ```
 
@@ -220,7 +605,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -238,8 +622,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet**
-> List<PoolDayDataV3DTO> chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3PoolsDayDataCurrentGet**
+> List<PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
 
 GetPoolsDayData
 
@@ -248,14 +632,13 @@ GetPoolsDayData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3PoolsDayDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolsDayDataCurrentGet: $e\n');
 }
 ```
 
@@ -263,7 +646,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -281,8 +663,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet**
-> List<PoolHourDataV3DTO> chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3PoolsHistoricalGet**
+> dappsUniswapv3PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PoolsHourDataCurrentGet**
+> List<PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
 
 GetPoolsHourData
 
@@ -291,14 +721,13 @@ GetPoolsHourData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3PoolsHourDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PoolsHourDataCurrentGet: $e\n');
 }
 ```
 
@@ -306,7 +735,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -324,8 +752,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet**
-> List<PositionSnapshotV3DTO> chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3PositionSnapshotHistoricalGet**
+> dappsUniswapv3PositionSnapshotHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3PositionSnapshotHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PositionSnapshotHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3PositionSnapshotsCurrentGet**
+> List<PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
 
 GetPositionSnapshot
 
@@ -334,14 +810,13 @@ GetPositionSnapshot
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3PositionSnapshotsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PositionSnapshotsCurrentGet: $e\n');
 }
 ```
 
@@ -349,7 +824,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -367,8 +841,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3PositionsCurrentGet**
-> List<PositionV3DTO> chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3PositionsCurrentGet**
+> List<PositionV3DTO> dappsUniswapv3PositionsCurrentGet(filterPoolId)
 
 GetPositions
 
@@ -377,14 +851,13 @@ GetPositions
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3PositionsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3PositionsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3PositionsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PositionsCurrentGet: $e\n');
 }
 ```
 
@@ -392,7 +865,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -410,8 +882,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3SwapsCurrentGet**
-> List<SwapV3DTO> chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3PositionsHistoricalGet**
+> dappsUniswapv3PositionsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3PositionsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3PositionsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3SwapsCurrentGet**
+> List<SwapV3DTO> dappsUniswapv3SwapsCurrentGet(filterPoolId)
 
 GetSwaps
 
@@ -420,14 +940,13 @@ GetSwaps
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3SwapsCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3SwapsCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3SwapsCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3SwapsCurrentGet: $e\n');
 }
 ```
 
@@ -435,7 +954,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -453,8 +971,104 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3TicksCurrentGet**
-> List<TickV3DTO> chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3SwapsHistoricalGet**
+> dappsUniswapv3SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3SwapsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TickDayDataHistoricalGet**
+> dappsUniswapv3TickDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3TickDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TickDayDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TicksCurrentGet**
+> List<TickV3DTO> dappsUniswapv3TicksCurrentGet(filterPoolId)
 
 GetTicks
 
@@ -463,14 +1077,13 @@ GetTicks
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3TicksCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3TicksCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3TicksCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TicksCurrentGet: $e\n');
 }
 ```
 
@@ -478,7 +1091,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -496,8 +1108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3TicksDayDataCurrentGet**
-> List<TickDayDataV3DTO> chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, filterPoolId)
+# **dappsUniswapv3TicksDayDataCurrentGet**
+> List<TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
 
 GetTicksDayData
 
@@ -506,14 +1118,13 @@ GetTicksDayData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterPoolId = filterPoolId_example; // String | Filter pool id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3TicksDayDataCurrentGet(chainId, filterPoolId);
+    final result = api_instance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3TicksDayDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TicksDayDataCurrentGet: $e\n');
 }
 ```
 
@@ -521,7 +1132,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterPoolId** | **String**| Filter pool id | [optional] 
 
 ### Return type
@@ -539,8 +1149,152 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3TokensCurrentGet**
-> List<TokenV3DTO> chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, filterTokenId)
+# **dappsUniswapv3TicksHistoricalGet**
+> dappsUniswapv3TicksHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final poolId = poolId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3TicksHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TicksHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TokenDayDataHistoricalGet**
+> dappsUniswapv3TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final tokenId = tokenId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokenDayDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TokenHourDataHistoricalGet**
+> dappsUniswapv3TokenHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final tokenId = tokenId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3TokenHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokenHourDataHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TokensCurrentGet**
+> List<TokenV3DTO> dappsUniswapv3TokensCurrentGet(filterTokenId)
 
 GetTokens
 
@@ -549,14 +1303,13 @@ GetTokens
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterTokenId = filterTokenId_example; // String | 
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3TokensCurrentGet(chainId, filterTokenId);
+    final result = api_instance.dappsUniswapv3TokensCurrentGet(filterTokenId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3TokensCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokensCurrentGet: $e\n');
 }
 ```
 
@@ -564,7 +1317,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -582,8 +1334,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3TokensDayDataCurrentGet**
-> List<TokenV3DayDataDTO> chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, filterTokenId)
+# **dappsUniswapv3TokensDayDataCurrentGet**
+> List<TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
 
 GetTokensDayData
 
@@ -592,14 +1344,13 @@ GetTokensDayData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterTokenId = filterTokenId_example; // String | 
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3TokensDayDataCurrentGet(chainId, filterTokenId);
+    final result = api_instance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3TokensDayDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokensDayDataCurrentGet: $e\n');
 }
 ```
 
@@ -607,7 +1358,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -625,8 +1375,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3TokensHourDataCurrentGet**
-> List<TokenHourDataV3DTO> chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, filterTokenId)
+# **dappsUniswapv3TokensHistoricalGet**
+> dappsUniswapv3TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final tokenId = tokenId_example; // String | 
+
+try {
+    api_instance.dappsUniswapv3TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokensHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3TokensHourDataCurrentGet**
+> List<TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
 
 GetTokensHourData
 
@@ -635,14 +1433,13 @@ GetTokensHourData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 final filterTokenId = filterTokenId_example; // String | 
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3TokensHourDataCurrentGet(chainId, filterTokenId);
+    final result = api_instance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3TokensHourDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TokensHourDataCurrentGet: $e\n');
 }
 ```
 
@@ -650,7 +1447,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
  **filterTokenId** | **String**|  | [optional] 
 
 ### Return type
@@ -668,8 +1464,54 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet**
-> List<UniswapDayDataV3DTO> chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId)
+# **dappsUniswapv3TransactionsHistoricalGet**
+> dappsUniswapv3TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV3Api();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    api_instance.dappsUniswapv3TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
+} catch (e) {
+    print('Exception when calling UniswapV3Api->dappsUniswapv3TransactionsHistoricalGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dappsUniswapv3UniswapDayDataCurrentGet**
+> List<UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -678,21 +1520,17 @@ GetUniswapDayData
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final chainId = chainId_example; // String | Chain id
 
 try {
-    final result = api_instance.chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet(chainId);
+    final result = api_instance.dappsUniswapv3UniswapDayDataCurrentGet();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV3Api->chainsChainIdDappsUniswapv3UniswapDayDataCurrentGet: $e\n');
+    print('Exception when calling UniswapV3Api->dappsUniswapv3UniswapDayDataCurrentGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chainId** | **String**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 

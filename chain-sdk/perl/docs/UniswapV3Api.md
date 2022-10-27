@@ -9,26 +9,44 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chains_chain_id_dapps_uniswapv3_bundle_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_bundle_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/bundle/current | GetBundles
-[**chains_chain_id_dapps_uniswapv3_burns_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_burns_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/burns/current | GetBurns
-[**chains_chain_id_dapps_uniswapv3_factory_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_factory_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/factory/current | GetFactory
-[**chains_chain_id_dapps_uniswapv3_mints_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_mints_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/mints/current | GetMints
-[**chains_chain_id_dapps_uniswapv3_pools_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/pools/current | GetPools
-[**chains_chain_id_dapps_uniswapv3_pools_day_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**chains_chain_id_dapps_uniswapv3_position_snapshots_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_position_snapshots_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**chains_chain_id_dapps_uniswapv3_positions_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_positions_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/positions/current | GetPositions
-[**chains_chain_id_dapps_uniswapv3_swaps_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_swaps_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/swaps/current | GetSwaps
-[**chains_chain_id_dapps_uniswapv3_ticks_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_ticks_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticks/current | GetTicks
-[**chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**chains_chain_id_dapps_uniswapv3_tokens_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokens/current | GetTokens
-[**chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**](UniswapV3Api.md#chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get) | **GET** /chains/{chain_id}/dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**dapps_uniswapv3_bundle_current_get**](UniswapV3Api.md#dapps_uniswapv3_bundle_current_get) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
+[**dapps_uniswapv3_bundles_historical_get**](UniswapV3Api.md#dapps_uniswapv3_bundles_historical_get) | **GET** /dapps/uniswapv3/bundles/historical | 
+[**dapps_uniswapv3_burns_current_get**](UniswapV3Api.md#dapps_uniswapv3_burns_current_get) | **GET** /dapps/uniswapv3/burns/current | GetBurns
+[**dapps_uniswapv3_burns_historical_get**](UniswapV3Api.md#dapps_uniswapv3_burns_historical_get) | **GET** /dapps/uniswapv3/burns/historical | 
+[**dapps_uniswapv3_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_day_data_historical_get) | **GET** /dapps/uniswapv3/dayData/historical | 
+[**dapps_uniswapv3_factory_current_get**](UniswapV3Api.md#dapps_uniswapv3_factory_current_get) | **GET** /dapps/uniswapv3/factory/current | GetFactory
+[**dapps_uniswapv3_factory_historical_get**](UniswapV3Api.md#dapps_uniswapv3_factory_historical_get) | **GET** /dapps/uniswapv3/factory/historical | 
+[**dapps_uniswapv3_mints_current_get**](UniswapV3Api.md#dapps_uniswapv3_mints_current_get) | **GET** /dapps/uniswapv3/mints/current | GetMints
+[**dapps_uniswapv3_mints_historical_get**](UniswapV3Api.md#dapps_uniswapv3_mints_historical_get) | **GET** /dapps/uniswapv3/mints/historical | 
+[**dapps_uniswapv3_poi_historical_get**](UniswapV3Api.md#dapps_uniswapv3_poi_historical_get) | **GET** /dapps/uniswapv3/poi/historical | 
+[**dapps_uniswapv3_pool_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_day_data_historical_get) | **GET** /dapps/uniswapv3/poolDayData/historical | 
+[**dapps_uniswapv3_pool_hour_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_hour_data_historical_get) | **GET** /dapps/uniswapv3/poolHourData/historical | 
+[**dapps_uniswapv3_pools_current_get**](UniswapV3Api.md#dapps_uniswapv3_pools_current_get) | **GET** /dapps/uniswapv3/pools/current | GetPools
+[**dapps_uniswapv3_pools_day_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_pools_day_data_current_get) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
+[**dapps_uniswapv3_pools_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pools_historical_get) | **GET** /dapps/uniswapv3/pools/historical | 
+[**dapps_uniswapv3_pools_hour_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_pools_hour_data_current_get) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
+[**dapps_uniswapv3_position_snapshot_historical_get**](UniswapV3Api.md#dapps_uniswapv3_position_snapshot_historical_get) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
+[**dapps_uniswapv3_position_snapshots_current_get**](UniswapV3Api.md#dapps_uniswapv3_position_snapshots_current_get) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
+[**dapps_uniswapv3_positions_current_get**](UniswapV3Api.md#dapps_uniswapv3_positions_current_get) | **GET** /dapps/uniswapv3/positions/current | GetPositions
+[**dapps_uniswapv3_positions_historical_get**](UniswapV3Api.md#dapps_uniswapv3_positions_historical_get) | **GET** /dapps/uniswapv3/positions/historical | 
+[**dapps_uniswapv3_swaps_current_get**](UniswapV3Api.md#dapps_uniswapv3_swaps_current_get) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
+[**dapps_uniswapv3_swaps_historical_get**](UniswapV3Api.md#dapps_uniswapv3_swaps_historical_get) | **GET** /dapps/uniswapv3/swaps/historical | 
+[**dapps_uniswapv3_tick_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_tick_day_data_historical_get) | **GET** /dapps/uniswapv3/tickDayData/historical | 
+[**dapps_uniswapv3_ticks_current_get**](UniswapV3Api.md#dapps_uniswapv3_ticks_current_get) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
+[**dapps_uniswapv3_ticks_day_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_ticks_day_data_current_get) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
+[**dapps_uniswapv3_ticks_historical_get**](UniswapV3Api.md#dapps_uniswapv3_ticks_historical_get) | **GET** /dapps/uniswapv3/ticks/historical | 
+[**dapps_uniswapv3_token_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_token_day_data_historical_get) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
+[**dapps_uniswapv3_token_hour_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_token_hour_data_historical_get) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
+[**dapps_uniswapv3_tokens_current_get**](UniswapV3Api.md#dapps_uniswapv3_tokens_current_get) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
+[**dapps_uniswapv3_tokens_day_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_tokens_day_data_current_get) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
+[**dapps_uniswapv3_tokens_historical_get**](UniswapV3Api.md#dapps_uniswapv3_tokens_historical_get) | **GET** /dapps/uniswapv3/tokens/historical | 
+[**dapps_uniswapv3_tokens_hour_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_tokens_hour_data_current_get) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
+[**dapps_uniswapv3_transactions_historical_get**](UniswapV3Api.md#dapps_uniswapv3_transactions_historical_get) | **GET** /dapps/uniswapv3/transactions/historical | 
+[**dapps_uniswapv3_uniswap_day_data_current_get**](UniswapV3Api.md#dapps_uniswapv3_uniswap_day_data_current_get) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
 
 
-# **chains_chain_id_dapps_uniswapv3_bundle_current_get**
-> ARRAY[BundleV3DTO] chains_chain_id_dapps_uniswapv3_bundle_current_get(chain_id => $chain_id)
+# **dapps_uniswapv3_bundle_current_get**
+> ARRAY[BundleV3DTO] dapps_uniswapv3_bundle_current_get()
 
 GetBundles
 
@@ -39,22 +57,18 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_bundle_current_get(chain_id => $chain_id);
+    my $result = $api_instance->dapps_uniswapv3_bundle_current_get();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_bundle_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_bundle_current_get: $@\n";
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -71,8 +85,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_burns_current_get**
-> ARRAY[BurnV3DTO] chains_chain_id_dapps_uniswapv3_burns_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_bundles_historical_get**
+> dapps_uniswapv3_bundles_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    $api_instance->dapps_uniswapv3_bundles_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_bundles_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_burns_current_get**
+> ARRAY[BurnV3DTO] dapps_uniswapv3_burns_current_get(filter_pool_id => $filter_pool_id)
 
 GetBurns
 
@@ -83,15 +146,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_burns_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_burns_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_burns_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_burns_current_get: $@\n";
 }
 ```
 
@@ -99,7 +161,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -117,8 +178,108 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_factory_current_get**
-> ARRAY[FactoryV3DTO] chains_chain_id_dapps_uniswapv3_factory_current_get(chain_id => $chain_id)
+# **dapps_uniswapv3_burns_historical_get**
+> dapps_uniswapv3_burns_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_burns_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_burns_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_day_data_historical_get**
+> dapps_uniswapv3_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    $api_instance->dapps_uniswapv3_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_day_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_factory_current_get**
+> ARRAY[FactoryV3DTO] dapps_uniswapv3_factory_current_get(chain_id => $chain_id)
 
 GetFactory
 
@@ -129,14 +290,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
+my $chain_id = "chain_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_factory_current_get(chain_id => $chain_id);
+    my $result = $api_instance->dapps_uniswapv3_factory_current_get(chain_id => $chain_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_factory_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_factory_current_get: $@\n";
 }
 ```
 
@@ -144,7 +305,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
+ **chain_id** | **string**|  | 
 
 ### Return type
 
@@ -161,8 +322,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_mints_current_get**
-> ARRAY[MintV3DTO] chains_chain_id_dapps_uniswapv3_mints_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_factory_historical_get**
+> dapps_uniswapv3_factory_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    $api_instance->dapps_uniswapv3_factory_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_factory_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_mints_current_get**
+> ARRAY[MintV3DTO] dapps_uniswapv3_mints_current_get(filter_pool_id => $filter_pool_id)
 
 GetMints
 
@@ -173,15 +383,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_mints_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_mints_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_mints_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_mints_current_get: $@\n";
 }
 ```
 
@@ -189,7 +398,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -207,8 +415,210 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_current_get**
-> ARRAY[PoolV3DTO] chains_chain_id_dapps_uniswapv3_pools_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_mints_historical_get**
+> dapps_uniswapv3_mints_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_mints_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_mints_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_poi_historical_get**
+> dapps_uniswapv3_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    $api_instance->dapps_uniswapv3_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_poi_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pool_day_data_historical_get**
+> dapps_uniswapv3_pool_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_pool_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pool_day_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pool_hour_data_historical_get**
+> dapps_uniswapv3_pool_hour_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_pool_hour_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pool_hour_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pools_current_get**
+> ARRAY[PoolV3DTO] dapps_uniswapv3_pools_current_get(filter_pool_id => $filter_pool_id)
 
 GetPools
 
@@ -219,15 +629,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_pools_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_pools_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_pools_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pools_current_get: $@\n";
 }
 ```
 
@@ -235,7 +644,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -253,8 +661,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_day_data_current_get**
-> ARRAY[PoolDayDataV3DTO] chains_chain_id_dapps_uniswapv3_pools_day_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_pools_day_data_current_get**
+> ARRAY[PoolDayDataV3DTO] dapps_uniswapv3_pools_day_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetPoolsDayData
 
@@ -265,15 +673,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_pools_day_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_pools_day_data_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_pools_day_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pools_day_data_current_get: $@\n";
 }
 ```
 
@@ -281,7 +688,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -299,8 +705,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get**
-> ARRAY[PoolHourDataV3DTO] chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_pools_historical_get**
+> dapps_uniswapv3_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pools_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_pools_hour_data_current_get**
+> ARRAY[PoolHourDataV3DTO] dapps_uniswapv3_pools_hour_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetPoolsHourData
 
@@ -311,15 +768,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_pools_hour_data_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_pools_hour_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_pools_hour_data_current_get: $@\n";
 }
 ```
 
@@ -327,7 +783,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -345,8 +800,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_position_snapshots_current_get**
-> ARRAY[PositionSnapshotV3DTO] chains_chain_id_dapps_uniswapv3_position_snapshots_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_position_snapshot_historical_get**
+> dapps_uniswapv3_position_snapshot_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_position_snapshot_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_position_snapshot_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_position_snapshots_current_get**
+> ARRAY[PositionSnapshotV3DTO] dapps_uniswapv3_position_snapshots_current_get(filter_pool_id => $filter_pool_id)
 
 GetPositionSnapshot
 
@@ -357,15 +863,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_position_snapshots_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_position_snapshots_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_position_snapshots_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_position_snapshots_current_get: $@\n";
 }
 ```
 
@@ -373,7 +878,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -391,8 +895,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_positions_current_get**
-> ARRAY[PositionV3DTO] chains_chain_id_dapps_uniswapv3_positions_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_positions_current_get**
+> ARRAY[PositionV3DTO] dapps_uniswapv3_positions_current_get(filter_pool_id => $filter_pool_id)
 
 GetPositions
 
@@ -403,15 +907,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_positions_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_positions_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_positions_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_positions_current_get: $@\n";
 }
 ```
 
@@ -419,7 +922,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -437,8 +939,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_swaps_current_get**
-> ARRAY[SwapV3DTO] chains_chain_id_dapps_uniswapv3_swaps_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_positions_historical_get**
+> dapps_uniswapv3_positions_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_positions_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_positions_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_swaps_current_get**
+> ARRAY[SwapV3DTO] dapps_uniswapv3_swaps_current_get(filter_pool_id => $filter_pool_id)
 
 GetSwaps
 
@@ -449,15 +1002,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_swaps_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_swaps_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_swaps_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_swaps_current_get: $@\n";
 }
 ```
 
@@ -465,7 +1017,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -483,8 +1034,110 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_ticks_current_get**
-> ARRAY[TickV3DTO] chains_chain_id_dapps_uniswapv3_ticks_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_swaps_historical_get**
+> dapps_uniswapv3_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_swaps_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tick_day_data_historical_get**
+> dapps_uniswapv3_tick_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_tick_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_tick_day_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_ticks_current_get**
+> ARRAY[TickV3DTO] dapps_uniswapv3_ticks_current_get(filter_pool_id => $filter_pool_id)
 
 GetTicks
 
@@ -495,15 +1148,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_ticks_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_ticks_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_ticks_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_ticks_current_get: $@\n";
 }
 ```
 
@@ -511,7 +1163,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -529,8 +1180,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get**
-> ARRAY[TickDayDataV3DTO] chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id)
+# **dapps_uniswapv3_ticks_day_data_current_get**
+> ARRAY[TickDayDataV3DTO] dapps_uniswapv3_ticks_day_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetTicksDayData
 
@@ -541,15 +1192,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_pool_id = "filter_pool_id_example"; # string | Filter pool id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get(chain_id => $chain_id, filter_pool_id => $filter_pool_id);
+    my $result = $api_instance->dapps_uniswapv3_ticks_day_data_current_get(filter_pool_id => $filter_pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_ticks_day_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_ticks_day_data_current_get: $@\n";
 }
 ```
 
@@ -557,7 +1207,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_pool_id** | **string**| Filter pool id | [optional] 
 
 ### Return type
@@ -575,8 +1224,161 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_current_get**
-> ARRAY[TokenV3DTO] chains_chain_id_dapps_uniswapv3_tokens_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id)
+# **dapps_uniswapv3_ticks_historical_get**
+> dapps_uniswapv3_ticks_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_ticks_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_ticks_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_token_day_data_historical_get**
+> dapps_uniswapv3_token_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $token_id = "token_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_token_day_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_token_day_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **token_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_token_hour_data_historical_get**
+> dapps_uniswapv3_token_hour_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $token_id = "token_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_token_hour_data_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_token_hour_data_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **token_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tokens_current_get**
+> ARRAY[TokenV3DTO] dapps_uniswapv3_tokens_current_get(filter_token_id => $filter_token_id)
 
 GetTokens
 
@@ -587,15 +1389,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_token_id = "filter_token_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_tokens_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id);
+    my $result = $api_instance->dapps_uniswapv3_tokens_current_get(filter_token_id => $filter_token_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_tokens_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_tokens_current_get: $@\n";
 }
 ```
 
@@ -603,7 +1404,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_token_id** | **string**|  | [optional] 
 
 ### Return type
@@ -621,8 +1421,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get**
-> ARRAY[TokenV3DayDataDTO] chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id)
+# **dapps_uniswapv3_tokens_day_data_current_get**
+> ARRAY[TokenV3DayDataDTO] dapps_uniswapv3_tokens_day_data_current_get(filter_token_id => $filter_token_id)
 
 GetTokensDayData
 
@@ -633,15 +1433,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_token_id = "filter_token_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id);
+    my $result = $api_instance->dapps_uniswapv3_tokens_day_data_current_get(filter_token_id => $filter_token_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_tokens_day_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_tokens_day_data_current_get: $@\n";
 }
 ```
 
@@ -649,7 +1448,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_token_id** | **string**|  | [optional] 
 
 ### Return type
@@ -667,8 +1465,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get**
-> ARRAY[TokenHourDataV3DTO] chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id)
+# **dapps_uniswapv3_tokens_historical_get**
+> dapps_uniswapv3_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $token_id = "token_id_example"; # string | 
+
+eval {
+    $api_instance->dapps_uniswapv3_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_tokens_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **token_id** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_tokens_hour_data_current_get**
+> ARRAY[TokenHourDataV3DTO] dapps_uniswapv3_tokens_hour_data_current_get(filter_token_id => $filter_token_id)
 
 GetTokensHourData
 
@@ -679,15 +1528,14 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 my $filter_token_id = "filter_token_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get(chain_id => $chain_id, filter_token_id => $filter_token_id);
+    my $result = $api_instance->dapps_uniswapv3_tokens_hour_data_current_get(filter_token_id => $filter_token_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_tokens_hour_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_tokens_hour_data_current_get: $@\n";
 }
 ```
 
@@ -695,7 +1543,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
  **filter_token_id** | **string**|  | [optional] 
 
 ### Return type
@@ -713,8 +1560,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get**
-> ARRAY[UniswapDayDataV3DTO] chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get(chain_id => $chain_id)
+# **dapps_uniswapv3_transactions_historical_get**
+> dapps_uniswapv3_transactions_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV3Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    $api_instance->dapps_uniswapv3_transactions_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+};
+if ($@) {
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_transactions_historical_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dapps_uniswapv3_uniswap_day_data_current_get**
+> ARRAY[UniswapDayDataV3DTO] dapps_uniswapv3_uniswap_day_data_current_get()
 
 GetUniswapDayData
 
@@ -725,22 +1621,18 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $chain_id = "chain_id_example"; # string | Chain id
 
 eval {
-    my $result = $api_instance->chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get(chain_id => $chain_id);
+    my $result = $api_instance->dapps_uniswapv3_uniswap_day_data_current_get();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->chains_chain_id_dapps_uniswapv3_uniswap_day_data_current_get: $@\n";
+    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_uniswap_day_data_current_get: $@\n";
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chain_id** | **string**| Chain id | 
+This endpoint does not need any parameter.
 
 ### Return type
 

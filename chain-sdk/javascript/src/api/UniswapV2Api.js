@@ -37,8 +37,460 @@ export default class UniswapV2Api {
 
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsUniswapv2PoolsCurrentGet operation.
-     * @callback module:api/UniswapV2Api~chainsChainIdDappsUniswapv2PoolsCurrentGetCallback
+     * Callback function to receive the result of the dappsUniswapv2BundlesHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2BundlesHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2BundlesHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2BundlesHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/bundles/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2BurnsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2BurnsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2BurnsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2BurnsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/burns/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2DayDataHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2DayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2DayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2DayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/dayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2FactoryHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2FactoryHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2FactoryHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2FactoryHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/factory/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2LiquidityPositionHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2LiquidityPositionHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2LiquidityPositionHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2LiquidityPositionHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/liquidityPosition/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/liquidityPositionSnapshots/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2MintsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2MintsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2MintsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2MintsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/mints/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2PoiHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2PoiHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2PoiHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2PoiHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/poi/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2PoolDayDataHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2PoolDayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2PoolDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2PoolDayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/poolDayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2PoolHourDataHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2PoolHourDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2PoolHourDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2PoolHourDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/poolHourData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2PoolsCurrentGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2PoolsCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/PairV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -46,21 +498,19 @@ export default class UniswapV2Api {
 
     /**
      * GetPools
-     * @param {String} chainId Chain id
-     * @param {module:api/UniswapV2Api~chainsChainIdDappsUniswapv2PoolsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filterPoolId Filter pool id
+     * @param {module:api/UniswapV2Api~dappsUniswapv2PoolsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/PairV2DTO>}
      */
-    chainsChainIdDappsUniswapv2PoolsCurrentGet(chainId, callback) {
+    dappsUniswapv2PoolsCurrentGet(opts, callback) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2PoolsCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
+        'filter_pool_id': opts['filterPoolId']
       };
       let headerParams = {
       };
@@ -72,15 +522,61 @@ export default class UniswapV2Api {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [PairV2DTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/uniswapv2/pools/current', 'GET',
+        '/dapps/uniswapv2/pools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsUniswapv2SwapsCurrentGet operation.
-     * @callback module:api/UniswapV2Api~chainsChainIdDappsUniswapv2SwapsCurrentGetCallback
+     * Callback function to receive the result of the dappsUniswapv2PoolsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2PoolsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2PoolsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2PoolsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/pools/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2SwapsCurrentGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2SwapsCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/SwapV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -88,19 +584,13 @@ export default class UniswapV2Api {
 
     /**
      * GetSwaps
-     * @param {String} chainId Chain id
-     * @param {module:api/UniswapV2Api~chainsChainIdDappsUniswapv2SwapsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UniswapV2Api~dappsUniswapv2SwapsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SwapV2DTO>}
      */
-    chainsChainIdDappsUniswapv2SwapsCurrentGet(chainId, callback) {
+    dappsUniswapv2SwapsCurrentGet(callback) {
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2SwapsCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
       };
@@ -114,15 +604,107 @@ export default class UniswapV2Api {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [SwapV2DTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/uniswapv2/swaps/current', 'GET',
+        '/dapps/uniswapv2/swaps/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the chainsChainIdDappsUniswapv2TokensCurrentGet operation.
-     * @callback module:api/UniswapV2Api~chainsChainIdDappsUniswapv2TokensCurrentGetCallback
+     * Callback function to receive the result of the dappsUniswapv2SwapsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2SwapsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2SwapsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2SwapsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/swaps/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2TokenDayDataHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2TokenDayDataHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.tokenId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2TokenDayDataHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2TokenDayDataHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'tokenId': opts['tokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/tokenDayData/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2TokensCurrentGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2TokensCurrentGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/TokenV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -130,19 +712,13 @@ export default class UniswapV2Api {
 
     /**
      * GetTokens
-     * @param {String} chainId Chain id
-     * @param {module:api/UniswapV2Api~chainsChainIdDappsUniswapv2TokensCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UniswapV2Api~dappsUniswapv2TokensCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/TokenV2DTO>}
      */
-    chainsChainIdDappsUniswapv2TokensCurrentGet(chainId, callback) {
+    dappsUniswapv2TokensCurrentGet(callback) {
       let postBody = null;
-      // verify the required parameter 'chainId' is set
-      if (chainId === undefined || chainId === null) {
-        throw new Error("Missing the required parameter 'chainId' when calling chainsChainIdDappsUniswapv2TokensCurrentGet");
-      }
 
       let pathParams = {
-        'chain_id': chainId
       };
       let queryParams = {
       };
@@ -156,7 +732,141 @@ export default class UniswapV2Api {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [TokenV2DTO];
       return this.apiClient.callApi(
-        '/chains/{chain_id}/dapps/uniswapv2/tokens/current', 'GET',
+        '/dapps/uniswapv2/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2TokensHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2TokensHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.tokenId 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2TokensHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2TokensHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'tokenId': opts['tokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/tokens/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2TransactionsHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2TransactionsHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2TransactionsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2TransactionsHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/transactions/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dappsUniswapv2UsersHistoricalGet operation.
+     * @callback module:api/UniswapV2Api~dappsUniswapv2UsersHistoricalGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {module:api/UniswapV2Api~dappsUniswapv2UsersHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    dappsUniswapv2UsersHistoricalGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/users/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

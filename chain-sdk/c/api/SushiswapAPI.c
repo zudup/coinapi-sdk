@@ -12,12 +12,1249 @@
 }while(0)
 
 
+void
+SushiswapAPI_dappsSushiswapBundlesHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/bundles/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/bundles/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapBurnsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/burns/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/burns/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/dayData/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayData/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapFactoryHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/factory/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factory/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapHourDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/hourData/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourData/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapLiquidityPositionHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPosition/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPosition/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPositionSnapshots/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPositionSnapshots/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapMintsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/mints/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/mints/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapPoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/poi/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/poi/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/poolDayData/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/poolDayData/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapPoolHourDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/poolHourData/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/poolHourData/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
 // GetPools
 //
 // Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapPoolsCurrentGet(apiClient_t *apiClient, char * chain_id )
+SushiswapAPI_dappsSushiswapPoolsCurrentGet(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -27,20 +1264,10 @@ SushiswapAPI_chainsChainIdDappsSushiswapPoolsCurrentGet(apiClient_t *apiClient, 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/chains/{chain_id}/dapps/sushiswap/pools/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pools/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/sushiswap/pools/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pools/current");
 
-
-    // Path Params
-    long sizeOfPathParams_chain_id = strlen(chain_id)+3 + strlen("{ chain_id }");
-    if(chain_id == NULL) {
-        goto end;
-    }
-    char* localVarToReplace_chain_id = malloc(sizeOfPathParams_chain_id);
-    sprintf(localVarToReplace_chain_id, "{%s}", "chain_id");
-
-    localVarPath = strReplace(localVarPath, localVarToReplace_chain_id, chain_id);
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
@@ -90,18 +1317,144 @@ SushiswapAPI_chainsChainIdDappsSushiswapPoolsCurrentGet(apiClient_t *apiClient, 
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    free(localVarToReplace_chain_id);
     return elementToReturn;
 end:
     free(localVarPath);
     return NULL;
+
+}
+
+void
+SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/pools/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pools/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
 
 }
 
 // GetSwaps
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapSwapsCurrentGet(apiClient_t *apiClient, char * chain_id )
+SushiswapAPI_dappsSushiswapSwapsCurrentGet(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -111,20 +1464,10 @@ SushiswapAPI_chainsChainIdDappsSushiswapSwapsCurrentGet(apiClient_t *apiClient, 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/chains/{chain_id}/dapps/sushiswap/swaps/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/swaps/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/sushiswap/swaps/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/swaps/current");
 
-
-    // Path Params
-    long sizeOfPathParams_chain_id = strlen(chain_id)+3 + strlen("{ chain_id }");
-    if(chain_id == NULL) {
-        goto end;
-    }
-    char* localVarToReplace_chain_id = malloc(sizeOfPathParams_chain_id);
-    sprintf(localVarToReplace_chain_id, "{%s}", "chain_id");
-
-    localVarPath = strReplace(localVarPath, localVarToReplace_chain_id, chain_id);
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
@@ -174,7 +1517,6 @@ SushiswapAPI_chainsChainIdDappsSushiswapSwapsCurrentGet(apiClient_t *apiClient, 
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    free(localVarToReplace_chain_id);
     return elementToReturn;
 end:
     free(localVarPath);
@@ -182,10 +1524,264 @@ end:
 
 }
 
+void
+SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/swaps/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/swaps/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayData/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayData/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_tokenId = NULL;
+    char * valueQuery_tokenId = NULL;
+    keyValuePair_t *keyPairQuery_tokenId = 0;
+    if (tokenId)
+    {
+        keyQuery_tokenId = strdup("tokenId");
+        valueQuery_tokenId = strdup((tokenId));
+        keyPairQuery_tokenId = keyValuePair_create(keyQuery_tokenId, valueQuery_tokenId);
+        list_addElement(localVarQueryParameters,keyPairQuery_tokenId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_tokenId){
+        free(keyQuery_tokenId);
+        keyQuery_tokenId = NULL;
+    }
+    if(valueQuery_tokenId){
+        free(valueQuery_tokenId);
+        valueQuery_tokenId = NULL;
+    }
+    if(keyPairQuery_tokenId){
+        keyValuePair_free(keyPairQuery_tokenId);
+        keyPairQuery_tokenId = NULL;
+    }
+    if(keyQuery_tokenId){
+        free(keyQuery_tokenId);
+        keyQuery_tokenId = NULL;
+    }
+    if(keyPairQuery_tokenId){
+        keyValuePair_free(keyPairQuery_tokenId);
+        keyPairQuery_tokenId = NULL;
+    }
+
+}
+
 // GetTokens
 //
 list_t*
-SushiswapAPI_chainsChainIdDappsSushiswapTokensCurrentGet(apiClient_t *apiClient, char * chain_id )
+SushiswapAPI_dappsSushiswapTokensCurrentGet(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -195,20 +1791,10 @@ SushiswapAPI_chainsChainIdDappsSushiswapTokensCurrentGet(apiClient_t *apiClient,
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/chains/{chain_id}/dapps/sushiswap/tokens/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/tokens/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/chains/{chain_id}/dapps/sushiswap/tokens/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokens/current");
 
-
-    // Path Params
-    long sizeOfPathParams_chain_id = strlen(chain_id)+3 + strlen("{ chain_id }");
-    if(chain_id == NULL) {
-        goto end;
-    }
-    char* localVarToReplace_chain_id = malloc(sizeOfPathParams_chain_id);
-    sprintf(localVarToReplace_chain_id, "{%s}", "chain_id");
-
-    localVarPath = strReplace(localVarPath, localVarToReplace_chain_id, chain_id);
 
 
     list_addElement(localVarHeaderType,"text/plain"); //produces
@@ -258,11 +1844,327 @@ SushiswapAPI_chainsChainIdDappsSushiswapTokensCurrentGet(apiClient_t *apiClient,
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    free(localVarToReplace_chain_id);
     return elementToReturn;
 end:
     free(localVarPath);
     return NULL;
+
+}
+
+void
+SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/tokens/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokens/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_tokenId = NULL;
+    char * valueQuery_tokenId = NULL;
+    keyValuePair_t *keyPairQuery_tokenId = 0;
+    if (tokenId)
+    {
+        keyQuery_tokenId = strdup("tokenId");
+        valueQuery_tokenId = strdup((tokenId));
+        keyPairQuery_tokenId = keyValuePair_create(keyQuery_tokenId, valueQuery_tokenId);
+        list_addElement(localVarQueryParameters,keyPairQuery_tokenId);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+    if(keyQuery_tokenId){
+        free(keyQuery_tokenId);
+        keyQuery_tokenId = NULL;
+    }
+    if(valueQuery_tokenId){
+        free(valueQuery_tokenId);
+        valueQuery_tokenId = NULL;
+    }
+    if(keyPairQuery_tokenId){
+        keyValuePair_free(keyPairQuery_tokenId);
+        keyPairQuery_tokenId = NULL;
+    }
+    if(keyQuery_tokenId){
+        free(keyQuery_tokenId);
+        keyQuery_tokenId = NULL;
+    }
+    if(keyPairQuery_tokenId){
+        keyValuePair_free(keyPairQuery_tokenId);
+        keyPairQuery_tokenId = NULL;
+    }
+
+}
+
+void
+SushiswapAPI_dappsSushiswapTransactionsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/transactions/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/transactions/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
+
+}
+
+void
+SushiswapAPI_dappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = NULL;
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/users/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/users/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Success");
+    //}
+    //No return type
+end:
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    
+    
+    free(localVarPath);
 
 }
 
