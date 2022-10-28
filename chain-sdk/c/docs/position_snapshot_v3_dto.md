@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** |  | [optional] 
 **id** | **char \*** |  | [optional] 
-**owner** | **char \*** |  | [optional] 
+**owner** | **char \*** | THIS IS SUPER OWNER | [optional] 
 **pool** | **char \*** |  | [optional] 
 **position** | **char \*** |  | [optional] 
 **timestamp** | **char \*** |  | [optional] 

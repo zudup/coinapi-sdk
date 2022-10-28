@@ -1358,7 +1358,7 @@ export type PositionSnapshotV3DTO = {
      */
     id?: string;
     /**
-     * 
+     * THIS IS SUPER OWNER
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */

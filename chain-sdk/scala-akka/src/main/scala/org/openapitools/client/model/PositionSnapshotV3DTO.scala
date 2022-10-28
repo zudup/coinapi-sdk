@@ -19,6 +19,7 @@ case class PositionSnapshotV3DTO (
   recvTime: Option[OffsetDateTime] = None,
   blockNumber: Option[Long] = None,
   id: Option[String] = None,
+  /* THIS IS SUPER OWNER */
   owner: Option[String] = None,
   pool: Option[String] = None,
   position: Option[String] = None,

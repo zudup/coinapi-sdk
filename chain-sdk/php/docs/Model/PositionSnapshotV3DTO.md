@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recv_time** | **\DateTime** |  | [optional]
 **block_number** | **int** |  | [optional]
 **id** | **string** |  | [optional]
-**owner** | **string** |  | [optional]
+**owner** | **string** | THIS IS SUPER OWNER | [optional]
 **pool** | **string** |  | [optional]
 **position** | **string** |  | [optional]
 **timestamp** | **string** |  | [optional]

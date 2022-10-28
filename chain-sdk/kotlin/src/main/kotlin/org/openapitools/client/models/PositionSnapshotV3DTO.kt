@@ -30,7 +30,7 @@ import com.squareup.moshi.Json
  * @param recvTime 
  * @param blockNumber 
  * @param id 
- * @param owner 
+ * @param owner THIS IS SUPER OWNER
  * @param pool 
  * @param position 
  * @param timestamp 
@@ -61,6 +61,7 @@ data class PositionSnapshotV3DTO (
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /* THIS IS SUPER OWNER */
     @Json(name = "owner")
     val owner: kotlin.String? = null,
 

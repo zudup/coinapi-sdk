@@ -11,7 +11,7 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field id  character [optional]
-#' @field owner  character [optional]
+#' @field owner THIS IS SUPER OWNER character [optional]
 #' @field pool  character [optional]
 #' @field position  character [optional]
 #' @field timestamp  character [optional]
@@ -60,7 +60,7 @@ PositionSnapshotV3DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number block_number
     #' @param id id
-    #' @param owner owner
+    #' @param owner THIS IS SUPER OWNER
     #' @param pool pool
     #' @param position position
     #' @param timestamp timestamp

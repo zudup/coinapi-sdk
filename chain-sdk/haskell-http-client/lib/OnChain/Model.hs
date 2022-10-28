@@ -1132,7 +1132,7 @@ data PositionSnapshotV3DTO = PositionSnapshotV3DTO
   , positionSnapshotV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , positionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
   , positionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id"
-  , positionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner"
+  , positionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner" - THIS IS SUPER OWNER
   , positionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool"
   , positionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position"
   , positionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp"

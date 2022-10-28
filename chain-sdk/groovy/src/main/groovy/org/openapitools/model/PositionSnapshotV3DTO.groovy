@@ -15,7 +15,7 @@ class PositionSnapshotV3DTO {
     Long blockNumber
     
     String id
-    
+    /* THIS IS SUPER OWNER */
     String owner
     
     String pool

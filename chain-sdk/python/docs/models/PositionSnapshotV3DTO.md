@@ -12,7 +12,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  |  | [optional] 
-**owner** | None, str,  | NoneClass, str,  |  | [optional] 
+**owner** | str,  | str,  | THIS IS SUPER OWNER | [optional] 
 **pool** | None, str,  | NoneClass, str,  |  | [optional] 
 **position** | None, str,  | NoneClass, str,  |  | [optional] 
 **timestamp** | None, str,  | NoneClass, str,  |  | [optional] 

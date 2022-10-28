@@ -39,7 +39,7 @@ public class OASPositionSnapshotV3DTO implements OAS.MappedProperties {
     public String id { get; set; }
 
     /**
-     * Get owner
+     * THIS IS SUPER OWNER
      * @return owner
      */
     public String owner { get; set; }

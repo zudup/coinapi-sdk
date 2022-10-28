@@ -17,7 +17,10 @@ export class PositionSnapshotV3DTO {
     'recvTime'?: Date;
     'blockNumber'?: number;
     'id'?: string | null;
-    'owner'?: string | null;
+    /**
+    * THIS IS SUPER OWNER
+    */
+    'owner'?: string;
     'pool'?: string | null;
     'position'?: string | null;
     'timestamp'?: string | null;

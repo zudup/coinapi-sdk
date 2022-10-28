@@ -6074,7 +6074,9 @@ components:
           nullable: true
           type: string
         owner:
-          nullable: true
+          description: THIS IS SUPER OWNER
+          format: FORMATTTTTTTTTTT
+          title: OWNERINHO
           type: string
         pool:
           nullable: true

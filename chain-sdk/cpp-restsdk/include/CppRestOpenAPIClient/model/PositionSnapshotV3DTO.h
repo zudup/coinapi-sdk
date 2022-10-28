@@ -91,7 +91,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// THIS IS SUPER OWNER
     /// </summary>
     utility::string_t getOwner() const;
     bool ownerIsSet() const;

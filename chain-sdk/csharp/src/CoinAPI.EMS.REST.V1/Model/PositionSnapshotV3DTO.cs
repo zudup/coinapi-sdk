@@ -37,7 +37,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="id">id.</param>
-        /// <param name="owner">owner.</param>
+        /// <param name="owner">THIS IS SUPER OWNER.</param>
         /// <param name="pool">pool.</param>
         /// <param name="position">position.</param>
         /// <param name="timestamp">timestamp.</param>
@@ -55,7 +55,6 @@ namespace CoinAPI.EMS.REST.V1.Model
         public PositionSnapshotV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string owner = default(string), string pool = default(string), string position = default(string), string timestamp = default(string), string liquidity = default(string), string depositedToken0 = default(string), string depositedToken1 = default(string), string withdrawnToken0 = default(string), string withdrawnToken1 = default(string), string collectedFeesToken0 = default(string), string collectedFeesToken1 = default(string), string transaction = default(string), string feeGrowthInside0LastX128 = default(string), string feeGrowthInside1LastX128 = default(string), long vid = default(long))
         {
             this.Id = id;
-            this.Owner = owner;
             this.Pool = pool;
             this.Position = position;
             this.Timestamp = timestamp;
@@ -115,9 +114,10 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// THIS IS SUPER OWNER
         /// </summary>
-        [DataMember(Name="owner", EmitDefaultValue=true)]
+        /// <value>THIS IS SUPER OWNER</value>
+        [DataMember(Name="owner", EmitDefaultValue=false)]
         public string Owner { get; set; }
 
         /// <summary>

@@ -16,7 +16,10 @@ export interface PositionSnapshotV3DTO {
     recv_time?: string;
     block_number?: number;
     id?: string | null;
-    owner?: string | null;
+    /**
+     * THIS IS SUPER OWNER
+     */
+    owner?: string;
     pool?: string | null;
     position?: string | null;
     timestamp?: string | null;

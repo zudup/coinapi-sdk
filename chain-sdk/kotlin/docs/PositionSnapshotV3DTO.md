@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** |  |  [optional]
-**owner** | **kotlin.String** |  |  [optional]
+**owner** | **kotlin.String** | THIS IS SUPER OWNER |  [optional]
 **pool** | **kotlin.String** |  |  [optional]
 **position** | **kotlin.String** |  |  [optional]
 **timestamp** | **kotlin.String** |  |  [optional]

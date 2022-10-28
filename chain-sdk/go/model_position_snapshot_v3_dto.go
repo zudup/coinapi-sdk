@@ -22,7 +22,8 @@ type PositionSnapshotV3DTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	Id NullableString `json:"id,omitempty"`
-	Owner NullableString `json:"owner,omitempty"`
+	// THIS IS SUPER OWNER
+	Owner *string `json:"owner,omitempty"`
 	Pool NullableString `json:"pool,omitempty"`
 	Position NullableString `json:"position,omitempty"`
 	Timestamp NullableString `json:"timestamp,omitempty"`
@@ -194,46 +195,36 @@ func (o *PositionSnapshotV3DTO) UnsetId() {
 	o.Id.Unset()
 }
 
-// GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetOwner returns the Owner field value if set, zero value otherwise.
 func (o *PositionSnapshotV3DTO) GetOwner() string {
-	if o == nil || o.Owner.Get() == nil {
+	if o == nil || o.Owner == nil {
 		var ret string
 		return ret
 	}
-	return *o.Owner.Get()
+	return *o.Owner
 }
 
 // GetOwnerOk returns a tuple with the Owner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetOwnerOk() (*string, bool) {
-	if o == nil {
+	if o == nil || o.Owner == nil {
 		return nil, false
 	}
-	return o.Owner.Get(), o.Owner.IsSet()
+	return o.Owner, true
 }
 
 // HasOwner returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasOwner() bool {
-	if o != nil && o.Owner.IsSet() {
+	if o != nil && o.Owner != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetOwner gets a reference to the given NullableString and assigns it to the Owner field.
+// SetOwner gets a reference to the given string and assigns it to the Owner field.
 func (o *PositionSnapshotV3DTO) SetOwner(v string) {
-	o.Owner.Set(&v)
-}
-// SetOwnerNil sets the value for Owner to be an explicit nil
-func (o *PositionSnapshotV3DTO) SetOwnerNil() {
-	o.Owner.Set(nil)
-}
-
-// UnsetOwner ensures that no value is present for Owner, not even an explicit nil
-func (o *PositionSnapshotV3DTO) UnsetOwner() {
-	o.Owner.Unset()
+	o.Owner = &v
 }
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -828,8 +819,8 @@ func (o PositionSnapshotV3DTO) MarshalJSON() ([]byte, error) {
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()
 	}
-	if o.Owner.IsSet() {
-		toSerialize["owner"] = o.Owner.Get()
+	if o.Owner != nil {
+		toSerialize["owner"] = o.Owner
 	}
 	if o.Pool.IsSet() {
 		toSerialize["pool"] = o.Pool.Get()

@@ -37,10 +37,11 @@ export interface PositionSnapshotV3DTO {
      */
     id?: string | null;
     /**
+     * THIS IS SUPER OWNER
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
-    owner?: string | null;
+    owner?: string;
     /**
      * @type {string}
      * @memberof PositionSnapshotV3DTO

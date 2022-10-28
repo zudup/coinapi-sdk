@@ -21,6 +21,9 @@ export interface PositionSnapshotV3DTO {
 
     id?: string;
 
+    /**
+     * THIS IS SUPER OWNER
+     */
     owner?: string;
 
     pool?: string;

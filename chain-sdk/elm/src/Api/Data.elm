@@ -1088,7 +1088,7 @@ encodePositionSnapshotV3DTOPairs model =
             , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
             , maybeEncode "block_number" Json.Encode.int model.blockNumber
             , maybeEncodeNullable "id" Json.Encode.string model.id
-            , maybeEncodeNullable "owner" Json.Encode.string model.owner
+            , maybeEncode "owner" Json.Encode.string model.owner
             , maybeEncodeNullable "pool" Json.Encode.string model.pool
             , maybeEncodeNullable "position" Json.Encode.string model.position
             , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
@@ -1850,7 +1850,7 @@ positionSnapshotV3DTODecoder =
         |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
         |> maybeDecode "block_number" Json.Decode.int Nothing
         |> maybeDecodeNullable "id" Json.Decode.string Nothing
-        |> maybeDecodeNullable "owner" Json.Decode.string Nothing
+        |> maybeDecode "owner" Json.Decode.string Nothing
         |> maybeDecodeNullable "pool" Json.Decode.string Nothing
         |> maybeDecodeNullable "position" Json.Decode.string Nothing
         |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing

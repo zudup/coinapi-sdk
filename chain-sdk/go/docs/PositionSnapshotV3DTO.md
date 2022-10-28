@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **NullableString** |  | [optional] 
-**Owner** | Pointer to **NullableString** |  | [optional] 
+**Owner** | Pointer to **string** | THIS IS SUPER OWNER | [optional] 
 **Pool** | Pointer to **NullableString** |  | [optional] 
 **Position** | Pointer to **NullableString** |  | [optional] 
 **Timestamp** | Pointer to **NullableString** |  | [optional] 
@@ -178,16 +178,6 @@ SetOwner sets Owner field to given value.
 
 HasOwner returns a boolean if a field has been set.
 
-### SetOwnerNil
-
-`func (o *PositionSnapshotV3DTO) SetOwnerNil(b bool)`
-
- SetOwnerNil sets the value for Owner to be an explicit nil
-
-### UnsetOwner
-`func (o *PositionSnapshotV3DTO) UnsetOwner()`
-
-UnsetOwner ensures that no value is present for Owner, not even an explicit nil
 ### GetPool
 
 `func (o *PositionSnapshotV3DTO) GetPool() string`

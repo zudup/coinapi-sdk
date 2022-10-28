@@ -35,6 +35,7 @@ test_that("id", {
 
 test_that("owner", {
   # tests for the property `owner` (character)
+  # THIS IS SUPER OWNER
 
   # uncomment below to test the property
   #expect_equal(model.instance$`owner`, "EXPECTED_RESULT")

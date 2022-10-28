@@ -30,6 +30,7 @@ API.Client.PositionSnapshotV3DTO.prototype.blockNumber;
 API.Client.PositionSnapshotV3DTO.prototype.id;
 
 /**
+ * THIS IS SUPER OWNER
  * @type {!string}
  * @export
  */

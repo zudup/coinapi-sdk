@@ -132,6 +132,7 @@ PositionSnapshotV3DTO.prototype['block_number'] = undefined;
 PositionSnapshotV3DTO.prototype['id'] = undefined;
 
 /**
+ * THIS IS SUPER OWNER
  * @member {String} owner
  */
 PositionSnapshotV3DTO.prototype['owner'] = undefined;

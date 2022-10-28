@@ -15,7 +15,7 @@ part 'position_snapshot_v3_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] 
 /// * [id] 
-/// * [owner] 
+/// * [owner] - THIS IS SUPER OWNER
 /// * [pool] 
 /// * [position] 
 /// * [timestamp] 
@@ -44,6 +44,7 @@ abstract class PositionSnapshotV3DTO implements Built<PositionSnapshotV3DTO, Pos
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// THIS IS SUPER OWNER
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
@@ -144,7 +145,7 @@ class _$PositionSnapshotV3DTOSerializer implements PrimitiveSerializer<PositionS
       yield r'owner';
       yield serializers.serialize(
         object.owner,
-        specifiedType: const FullType.nullable(String),
+        specifiedType: const FullType(String),
       );
     }
     if (object.pool != null) {
@@ -300,9 +301,8 @@ class _$PositionSnapshotV3DTOSerializer implements PrimitiveSerializer<PositionS
         case r'owner':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(String),
+          ) as String;
           result.owner = valueDes;
           break;
         case r'pool':

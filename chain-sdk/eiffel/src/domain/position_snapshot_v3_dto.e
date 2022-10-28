@@ -28,7 +28,7 @@ feature --Access
     id: detachable STRING_32
       
     owner: detachable STRING_32
-      
+      -- THIS IS SUPER OWNER
     pool: detachable STRING_32
       
     position: detachable STRING_32

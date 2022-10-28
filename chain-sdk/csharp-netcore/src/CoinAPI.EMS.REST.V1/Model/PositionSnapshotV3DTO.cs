@@ -39,7 +39,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="id">id.</param>
-        /// <param name="owner">owner.</param>
+        /// <param name="owner">THIS IS SUPER OWNER.</param>
         /// <param name="pool">pool.</param>
         /// <param name="position">position.</param>
         /// <param name="timestamp">timestamp.</param>
@@ -102,9 +102,10 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// THIS IS SUPER OWNER
         /// </summary>
-        [DataMember(Name = "owner", EmitDefaultValue = true)]
+        /// <value>THIS IS SUPER OWNER</value>
+        [DataMember(Name = "owner", EmitDefaultValue = false)]
         public string Owner { get; set; }
 
         /// <summary>

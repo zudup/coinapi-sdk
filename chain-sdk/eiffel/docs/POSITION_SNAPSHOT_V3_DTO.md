@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]
-**owner** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]
+**owner** | [**STRING_32**](STRING_32.md) | THIS IS SUPER OWNER | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]
 **position** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]
 **timestamp** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]

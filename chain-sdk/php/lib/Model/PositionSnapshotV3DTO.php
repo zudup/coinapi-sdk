@@ -91,7 +91,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
         'recv_time' => 'date-time',
         'block_number' => 'int64',
         'id' => null,
-        'owner' => null,
+        'owner' => 'FORMATTTTTTTTTTT',
         'pool' => null,
         'position' => null,
         'timestamp' => null,
@@ -118,7 +118,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
 		'recv_time' => false,
 		'block_number' => false,
 		'id' => true,
-		'owner' => true,
+		'owner' => false,
 		'pool' => true,
 		'position' => true,
 		'timestamp' => true,
@@ -542,7 +542,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param string|null $owner THIS IS SUPER OWNER
      *
      * @return self
      */
@@ -550,14 +550,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     {
 
         if (is_null($owner)) {
-            array_push($this->openAPINullablesSetToNull, 'owner');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('owner', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable owner cannot be null');
         }
 
         $this->container['owner'] = $owner;

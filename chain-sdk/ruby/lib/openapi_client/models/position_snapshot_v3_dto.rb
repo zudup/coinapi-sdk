@@ -23,6 +23,7 @@ module OpenapiClient
 
     attr_accessor :id
 
+    # THIS IS SUPER OWNER
     attr_accessor :owner
 
     attr_accessor :pool
@@ -112,7 +113,6 @@ module OpenapiClient
     def self.openapi_nullable
       Set.new([
         :'id',
-        :'owner',
         :'pool',
         :'position',
         :'timestamp',

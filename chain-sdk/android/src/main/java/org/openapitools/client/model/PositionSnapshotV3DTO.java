@@ -99,8 +99,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * THIS IS SUPER OWNER
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "THIS IS SUPER OWNER")
   public String getOwner() {
     return owner;
   }

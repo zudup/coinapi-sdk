@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **recvTime** | [**Date**](Date.md) |  |  [optional]
 **blockNumber** | **Long** |  |  [optional]
 **id** | **String** |  |  [optional]
-**owner** | **String** |  |  [optional]
+**owner** | **String** | THIS IS SUPER OWNER |  [optional]
 **pool** | **String** |  |  [optional]
 **position** | **String** |  |  [optional]
 **timestamp** | **String** |  |  [optional]

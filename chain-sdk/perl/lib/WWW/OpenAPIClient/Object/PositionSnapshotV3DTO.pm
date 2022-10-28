@@ -250,7 +250,7 @@ __PACKAGE__->method_documentation({
     'owner' => {
         datatype => 'string',
         base_name => 'owner',
-        description => '',
+        description => 'THIS IS SUPER OWNER',
         format => '',
         read_only => '',
             },

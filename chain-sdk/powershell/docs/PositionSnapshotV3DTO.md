@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** |  | [optional] 
 **Id** | **String** |  | [optional] 
-**Owner** | **String** |  | [optional] 
+**Owner** | **String** | THIS IS SUPER OWNER | [optional] 
 **Pool** | **String** |  | [optional] 
 **Position** | **String** |  | [optional] 
 **Timestamp** | **String** |  | [optional] 

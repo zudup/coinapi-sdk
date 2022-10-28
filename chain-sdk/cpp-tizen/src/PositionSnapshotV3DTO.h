@@ -73,11 +73,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get THIS IS SUPER OWNER
 	 */
 	std::string getOwner();
 
-	/*! \brief Set 
+	/*! \brief Set THIS IS SUPER OWNER
 	 */
 	void setOwner(std::string  owner);
 	/*! \brief Get 

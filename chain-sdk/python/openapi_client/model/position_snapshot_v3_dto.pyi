@@ -60,26 +60,7 @@ class PositionSnapshotV3DTO(
                         *args,
                         _configuration=_configuration,
                     )
-            
-            
-            class owner(
-                schemas.StrBase,
-                schemas.NoneBase,
-                schemas.Schema,
-                schemas.NoneStrMixin
-            ):
-            
-            
-                def __new__(
-                    cls,
-                    *args: typing.Union[None, str, ],
-                    _configuration: typing.Optional[schemas.Configuration] = None,
-                ) -> 'owner':
-                    return super().__new__(
-                        cls,
-                        *args,
-                        _configuration=_configuration,
-                    )
+            owner = schemas.StrSchema
             
             
             class pool(
@@ -492,7 +473,7 @@ class PositionSnapshotV3DTO(
         recv_time: typing.Union[MetaOapg.properties.recv_time, str, datetime, schemas.Unset] = schemas.unset,
         block_number: typing.Union[MetaOapg.properties.block_number, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         id: typing.Union[MetaOapg.properties.id, None, str, schemas.Unset] = schemas.unset,
-        owner: typing.Union[MetaOapg.properties.owner, None, str, schemas.Unset] = schemas.unset,
+        owner: typing.Union[MetaOapg.properties.owner, str, schemas.Unset] = schemas.unset,
         pool: typing.Union[MetaOapg.properties.pool, None, str, schemas.Unset] = schemas.unset,
         position: typing.Union[MetaOapg.properties.position, None, str, schemas.Unset] = schemas.unset,
         timestamp: typing.Union[MetaOapg.properties.timestamp, None, str, schemas.Unset] = schemas.unset,
