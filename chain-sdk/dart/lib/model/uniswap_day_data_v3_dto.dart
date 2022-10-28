@@ -61,10 +61,10 @@ class UniswapDayDataV3DTO {
   ///
   int? vid;
 
-  /// 
+  /// timestamp rounded to current day by dividing by 86400
   String? id;
 
-  /// 
+  /// timestamp rounded to current day by dividing by 86400
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -73,16 +73,16 @@ class UniswapDayDataV3DTO {
   ///
   int? date;
 
-  /// 
+  /// total volume across all pairs on this day, stored as a derived amount of ETH
   String? volumeEth;
 
-  /// 
+  /// total volume across all pairs on this day, stored as a derived amount of USD
   String? volumeUsd;
 
-  /// 
+  /// total daily volume in Uniswap derived in terms of USD untracked
   String? volumeUsdUntracked;
 
-  /// 
+  /// fees in USD
   String? feesUsd;
 
   ///
@@ -93,7 +93,7 @@ class UniswapDayDataV3DTO {
   ///
   BigInteger? txCount;
 
-  /// 
+  /// tvl in terms of USD
   String? tvlUsd;
 
   @override

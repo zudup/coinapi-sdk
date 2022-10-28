@@ -14,6 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Token data aggregated across all pairs that include token.
   class TokenV3DayDataDTO
     attr_accessor :entry_time
 
@@ -25,46 +26,46 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # 
+    # token address concatendated with date
     attr_accessor :id
 
-    # 
+    # timestamp rounded to current day by dividing by 86400
     attr_accessor :date
 
-    # 
+    # pointer to token
     attr_accessor :token
 
-    # 
+    # volume in token units
     attr_accessor :volume
 
-    # 
+    # volume in derived USD
     attr_accessor :volume_usd
 
-    # 
+    # volume in USD even on pools with less reliable USD values
     attr_accessor :untracked_volume_usd
 
-    # 
+    # liquidity across all pools in token units
     attr_accessor :total_value_locked
 
-    # 
+    # liquidity across all pools in derived USD
     attr_accessor :total_value_locked_usd
 
-    # 
+    # price at end of period in USD
     attr_accessor :price_usd
 
-    # 
+    # fees in USD
     attr_accessor :fees_usd
 
-    # 
+    # opening price USD
     attr_accessor :open
 
-    # 
+    # high price USD
     attr_accessor :high
 
-    # 
+    # low price USD
     attr_accessor :low
 
-    # 
+    # close price USD
     attr_accessor :close
 
     # Attribute mapping from ruby-style variable name to JSON key.

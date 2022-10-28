@@ -551,6 +551,8 @@ type alias TokenDTO =
     }
 
 
+{-| Token data aggregated across all pairs that include token.
+-}
 type alias TokenHourDataV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -595,6 +597,8 @@ type alias TokenV2DTO =
     }
 
 
+{-| Stores aggregated information for a specific token across all pairs that token is included in.
+-}
 type alias TokenV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -620,6 +624,8 @@ type alias TokenV3DTO =
     }
 
 
+{-| Token data aggregated across all pairs that include token.
+-}
 type alias TokenV3DayDataDTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -642,6 +648,8 @@ type alias TokenV3DayDataDTO =
     }
 
 
+{-| Data accumulated and condensed into day stats for all of Uniswap
+-}
 type alias UniswapDayDataV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix

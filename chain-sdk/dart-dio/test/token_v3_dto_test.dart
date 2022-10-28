@@ -29,25 +29,25 @@ void main() {
       // TODO
     });
 
-    // 
+    // token address
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
-    // 
+    // token symbol
     // String symbol
     test('to test the property `symbol`', () async {
       // TODO
     });
 
-    // 
+    // token name
     // String name
     test('to test the property `name`', () async {
       // TODO
     });
 
-    // 
+    // token decimals
     // int decimals
     test('to test the property `decimals`', () async {
       // TODO
@@ -58,25 +58,25 @@ void main() {
       // TODO
     });
 
-    // 
+    // volume in token units
     // String volume
     test('to test the property `volume`', () async {
       // TODO
     });
 
-    // 
+    // volume in derived USD
     // String volumeUsd
     test('to test the property `volumeUsd`', () async {
       // TODO
     });
 
-    // 
+    // volume in USD even on pools with less reliable USD values
     // String untrackedVolumeUsd
     test('to test the property `untrackedVolumeUsd`', () async {
       // TODO
     });
 
-    // 
+    // fees in USD
     // String feesUsd
     test('to test the property `feesUsd`', () async {
       // TODO
@@ -92,31 +92,31 @@ void main() {
       // TODO
     });
 
-    // 
+    // liquidity across all pools in token units
     // String totalValueLocked
     test('to test the property `totalValueLocked`', () async {
       // TODO
     });
 
-    // 
+    // liquidity across all pools in derived USD
     // String totalValueLockedUsd
     test('to test the property `totalValueLockedUsd`', () async {
       // TODO
     });
 
-    // 
+    // TVL derived in USD untracked
     // String totalValueLockedUsdUntracked
     test('to test the property `totalValueLockedUsdUntracked`', () async {
       // TODO
     });
 
-    // 
+    // derived price in ETH
     // String derivedEth
     test('to test the property `derivedEth`', () async {
       // TODO
     });
 
-    // 
+    // pools token is in that are white listed for USD pricing
     // BuiltList<String> whitelistPools
     test('to test the property `whitelistPools`', () async {
       // TODO

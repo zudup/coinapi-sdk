@@ -1,7 +1,7 @@
 #' Create a new TokenHourDataV3DTO
 #'
 #' @description
-#' TokenHourDataV3DTO Class
+#' Token data aggregated across all pairs that include token.
 #'
 #' @docType class
 #' @title TokenHourDataV3DTO
@@ -10,20 +10,20 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
-#' @field id  character [optional]
-#' @field period_start_unix  integer [optional]
-#' @field token  character [optional]
-#' @field volume  character [optional]
-#' @field volume_usd  character [optional]
-#' @field untracked_volume_usd  character [optional]
-#' @field total_value_locked  character [optional]
-#' @field total_value_locked_usd  character [optional]
-#' @field price_usd  character [optional]
-#' @field fees_usd  character [optional]
-#' @field open  character [optional]
-#' @field high  character [optional]
-#' @field low  character [optional]
-#' @field close  character [optional]
+#' @field id token address concatendated with date character [optional]
+#' @field period_start_unix unix timestamp for start of hour integer [optional]
+#' @field token pointer to token character [optional]
+#' @field volume volume in token units character [optional]
+#' @field volume_usd volume in derived USD character [optional]
+#' @field untracked_volume_usd volume in USD even on pools with less reliable USD values character [optional]
+#' @field total_value_locked liquidity across all pools in token units character [optional]
+#' @field total_value_locked_usd liquidity across all pools in derived USD character [optional]
+#' @field price_usd price at end of period in USD character [optional]
+#' @field fees_usd fees in USD character [optional]
+#' @field open opening price USD character [optional]
+#' @field high high price USD character [optional]
+#' @field low low price USD character [optional]
+#' @field close close price USD character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -57,20 +57,20 @@ TokenHourDataV3DTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number 
-    #' @param id 
-    #' @param period_start_unix 
-    #' @param token 
-    #' @param volume 
-    #' @param volume_usd 
-    #' @param untracked_volume_usd 
-    #' @param total_value_locked 
-    #' @param total_value_locked_usd 
-    #' @param price_usd 
-    #' @param fees_usd 
-    #' @param open 
-    #' @param high 
-    #' @param low 
-    #' @param close 
+    #' @param id token address concatendated with date
+    #' @param period_start_unix unix timestamp for start of hour
+    #' @param token pointer to token
+    #' @param volume volume in token units
+    #' @param volume_usd volume in derived USD
+    #' @param untracked_volume_usd volume in USD even on pools with less reliable USD values
+    #' @param total_value_locked liquidity across all pools in token units
+    #' @param total_value_locked_usd liquidity across all pools in derived USD
+    #' @param price_usd price at end of period in USD
+    #' @param fees_usd fees in USD
+    #' @param open opening price USD
+    #' @param high high price USD
+    #' @param low low price USD
+    #' @param close close price USD
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export

@@ -1,7 +1,7 @@
 /*
  * TokenV3DTO.h
  *
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
 #ifndef _TokenV3DTO_H_
@@ -22,7 +22,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Stores aggregated information for a specific token across all pairs that token is included in.
  *
  *  \ingroup Models
  *
@@ -75,32 +75,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get token address
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set token address
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get token symbol
 	 */
 	std::string getSymbol();
 
-	/*! \brief Set 
+	/*! \brief Set token symbol
 	 */
 	void setSymbol(std::string  symbol);
-	/*! \brief Get 
+	/*! \brief Get token name
 	 */
 	std::string getName();
 
-	/*! \brief Set 
+	/*! \brief Set token name
 	 */
 	void setName(std::string  name);
-	/*! \brief Get 
+	/*! \brief Get token decimals
 	 */
 	int getDecimals();
 
-	/*! \brief Set 
+	/*! \brief Set token decimals
 	 */
 	void setDecimals(int  decimals);
 	/*! \brief Get 
@@ -110,32 +110,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setTotalSupply(BigInteger  total_supply);
-	/*! \brief Get 
+	/*! \brief Get volume in token units
 	 */
 	std::string getVolume();
 
-	/*! \brief Set 
+	/*! \brief Set volume in token units
 	 */
 	void setVolume(std::string  volume);
-	/*! \brief Get 
+	/*! \brief Get volume in derived USD
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set volume in derived USD
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get volume in USD even on pools with less reliable USD values
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set volume in USD even on pools with less reliable USD values
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get fees in USD
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set fees in USD
 	 */
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
@@ -152,39 +152,39 @@ public:
 	/*! \brief Set 
 	 */
 	void setPoolCount(BigInteger  pool_count);
-	/*! \brief Get 
+	/*! \brief Get liquidity across all pools in token units
 	 */
 	std::string getTotalValueLocked();
 
-	/*! \brief Set 
+	/*! \brief Set liquidity across all pools in token units
 	 */
 	void setTotalValueLocked(std::string  total_value_locked);
-	/*! \brief Get 
+	/*! \brief Get liquidity across all pools in derived USD
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set 
+	/*! \brief Set liquidity across all pools in derived USD
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get 
+	/*! \brief Get TVL derived in USD untracked
 	 */
 	std::string getTotalValueLockedUsdUntracked();
 
-	/*! \brief Set 
+	/*! \brief Set TVL derived in USD untracked
 	 */
 	void setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked);
-	/*! \brief Get 
+	/*! \brief Get derived price in ETH
 	 */
 	std::string getDerivedEth();
 
-	/*! \brief Set 
+	/*! \brief Set derived price in ETH
 	 */
 	void setDerivedEth(std::string  derived_eth);
-	/*! \brief Get 
+	/*! \brief Get pools token is in that are white listed for USD pricing
 	 */
 	std::list<std::string> getWhitelistPools();
 
-	/*! \brief Set 
+	/*! \brief Set pools token is in that are white listed for USD pricing
 	 */
 	void setWhitelistPools(std::list <std::string> whitelist_pools);
 	/*! \brief Get 

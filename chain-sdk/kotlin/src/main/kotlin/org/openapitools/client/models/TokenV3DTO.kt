@@ -25,28 +25,28 @@ import org.openapitools.client.models.BigInteger
 import com.squareup.moshi.Json
 
 /**
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  *
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber 
  * @param vid 
- * @param id 
- * @param symbol 
- * @param name 
- * @param decimals 
+ * @param id token address
+ * @param symbol token symbol
+ * @param name token name
+ * @param decimals token decimals
  * @param totalSupply 
- * @param volume 
- * @param volumeUsd 
- * @param untrackedVolumeUsd 
- * @param feesUsd 
+ * @param volume volume in token units
+ * @param volumeUsd volume in derived USD
+ * @param untrackedVolumeUsd volume in USD even on pools with less reliable USD values
+ * @param feesUsd fees in USD
  * @param txCount 
  * @param poolCount 
- * @param totalValueLocked 
- * @param totalValueLockedUsd 
- * @param totalValueLockedUsdUntracked 
- * @param derivedEth 
- * @param whitelistPools 
+ * @param totalValueLocked liquidity across all pools in token units
+ * @param totalValueLockedUsd liquidity across all pools in derived USD
+ * @param totalValueLockedUsdUntracked TVL derived in USD untracked
+ * @param derivedEth derived price in ETH
+ * @param whitelistPools pools token is in that are white listed for USD pricing
  * @param tokenSymbol 
  */
 
@@ -66,38 +66,38 @@ data class TokenV3DTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /*  */
+    /* token address */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /*  */
+    /* token symbol */
     @Json(name = "symbol")
     val symbol: kotlin.String? = null,
 
-    /*  */
+    /* token name */
     @Json(name = "name")
     val name: kotlin.String? = null,
 
-    /*  */
+    /* token decimals */
     @Json(name = "decimals")
     val decimals: kotlin.Int? = null,
 
     @Json(name = "total_supply")
     val totalSupply: BigInteger? = null,
 
-    /*  */
+    /* volume in token units */
     @Json(name = "volume")
     val volume: kotlin.String? = null,
 
-    /*  */
+    /* volume in derived USD */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
-    /*  */
+    /* volume in USD even on pools with less reliable USD values */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
-    /*  */
+    /* fees in USD */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
@@ -107,23 +107,23 @@ data class TokenV3DTO (
     @Json(name = "pool_count")
     val poolCount: BigInteger? = null,
 
-    /*  */
+    /* liquidity across all pools in token units */
     @Json(name = "total_value_locked")
     val totalValueLocked: kotlin.String? = null,
 
-    /*  */
+    /* liquidity across all pools in derived USD */
     @Json(name = "total_value_locked_usd")
     val totalValueLockedUsd: kotlin.String? = null,
 
-    /*  */
+    /* TVL derived in USD untracked */
     @Json(name = "total_value_locked_usd_untracked")
     val totalValueLockedUsdUntracked: kotlin.String? = null,
 
-    /*  */
+    /* derived price in ETH */
     @Json(name = "derived_eth")
     val derivedEth: kotlin.String? = null,
 
-    /*  */
+    /* pools token is in that are white listed for USD pricing */
     @Json(name = "whitelist_pools")
     val whitelistPools: kotlin.collections.List<kotlin.String>? = null,
 

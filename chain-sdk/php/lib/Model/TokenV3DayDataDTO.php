@@ -36,6 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * TokenV3DayDataDTO Class Doc Comment
  *
  * @category Class
+ * @description Token data aggregated across all pairs that include token.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -528,7 +529,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id token address concatendated with date
      *
      * @return self
      */
@@ -564,7 +565,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets date
      *
-     * @param int|null $date 
+     * @param int|null $date timestamp rounded to current day by dividing by 86400
      *
      * @return self
      */
@@ -593,7 +594,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets token
      *
-     * @param string|null $token 
+     * @param string|null $token pointer to token
      *
      * @return self
      */
@@ -629,7 +630,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume
      *
-     * @param string|null $volume 
+     * @param string|null $volume volume in token units
      *
      * @return self
      */
@@ -665,7 +666,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd 
+     * @param string|null $volume_usd volume in derived USD
      *
      * @return self
      */
@@ -701,7 +702,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd 
+     * @param string|null $untracked_volume_usd volume in USD even on pools with less reliable USD values
      *
      * @return self
      */
@@ -737,7 +738,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked 
+     * @param string|null $total_value_locked liquidity across all pools in token units
      *
      * @return self
      */
@@ -773,7 +774,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd 
+     * @param string|null $total_value_locked_usd liquidity across all pools in derived USD
      *
      * @return self
      */
@@ -809,7 +810,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets price_usd
      *
-     * @param string|null $price_usd 
+     * @param string|null $price_usd price at end of period in USD
      *
      * @return self
      */
@@ -845,7 +846,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd 
+     * @param string|null $fees_usd fees in USD
      *
      * @return self
      */
@@ -881,7 +882,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets open
      *
-     * @param string|null $open 
+     * @param string|null $open opening price USD
      *
      * @return self
      */
@@ -917,7 +918,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets high
      *
-     * @param string|null $high 
+     * @param string|null $high high price USD
      *
      * @return self
      */
@@ -953,7 +954,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets low
      *
-     * @param string|null $low 
+     * @param string|null $low low price USD
      *
      * @return self
      */
@@ -989,7 +990,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets close
      *
-     * @param string|null $close 
+     * @param string|null $close close price USD
      *
      * @return self
      */

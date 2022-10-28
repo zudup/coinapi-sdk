@@ -31,6 +31,8 @@ class UniswapDayDataV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Data accumulated and condensed into day stats for all of Uniswap
     """
 
 

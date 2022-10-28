@@ -21,20 +21,20 @@ case class UniswapDayDataV3DTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /*  */
+  /* timestamp rounded to current day by dividing by 86400 */
   id: Option[String] = None,
-  /*  */
+  /* timestamp rounded to current day by dividing by 86400 */
   date: Option[Int] = None,
-  /*  */
+  /* total volume across all pairs on this day, stored as a derived amount of ETH */
   volumeEth: Option[String] = None,
-  /*  */
+  /* total volume across all pairs on this day, stored as a derived amount of USD */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* total daily volume in Uniswap derived in terms of USD untracked */
   volumeUsdUntracked: Option[String] = None,
-  /*  */
+  /* fees in USD */
   feesUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
-  /*  */
+  /* tvl in terms of USD */
   tvlUsd: Option[String] = None
 ) extends ApiModel
 

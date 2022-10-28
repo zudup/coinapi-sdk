@@ -14,6 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Data accumulated and condensed into day stats for all of Uniswap
   class UniswapDayDataV3DTO
     attr_accessor :entry_time
 
@@ -25,27 +26,27 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # 
+    # timestamp rounded to current day by dividing by 86400
     attr_accessor :id
 
-    # 
+    # timestamp rounded to current day by dividing by 86400
     attr_accessor :date
 
-    # 
+    # total volume across all pairs on this day, stored as a derived amount of ETH
     attr_accessor :volume_eth
 
-    # 
+    # total volume across all pairs on this day, stored as a derived amount of USD
     attr_accessor :volume_usd
 
-    # 
+    # total daily volume in Uniswap derived in terms of USD untracked
     attr_accessor :volume_usd_untracked
 
-    # 
+    # fees in USD
     attr_accessor :fees_usd
 
     attr_accessor :tx_count
 
-    # 
+    # tvl in terms of USD
     attr_accessor :tvl_usd
 
     # Attribute mapping from ruby-style variable name to JSON key.

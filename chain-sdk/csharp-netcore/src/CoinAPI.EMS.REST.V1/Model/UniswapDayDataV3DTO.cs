@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// UniswapDayDataV3DTO
+    /// Data accumulated and condensed into day stats for all of Uniswap
     /// </summary>
     [DataContract(Name = "UniswapDayDataV3DTO")]
     public partial class UniswapDayDataV3DTO : IEquatable<UniswapDayDataV3DTO>, IValidatableObject
@@ -39,14 +39,14 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">id.</param>
-        /// <param name="date">date.</param>
-        /// <param name="volumeEth">volumeEth.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="volumeUsdUntracked">volumeUsdUntracked.</param>
-        /// <param name="feesUsd">feesUsd.</param>
+        /// <param name="id">timestamp rounded to current day by dividing by 86400.</param>
+        /// <param name="date">timestamp rounded to current day by dividing by 86400.</param>
+        /// <param name="volumeEth">total volume across all pairs on this day, stored as a derived amount of ETH.</param>
+        /// <param name="volumeUsd">total volume across all pairs on this day, stored as a derived amount of USD.</param>
+        /// <param name="volumeUsdUntracked">total daily volume in Uniswap derived in terms of USD untracked.</param>
+        /// <param name="feesUsd">fees in USD.</param>
         /// <param name="txCount">txCount.</param>
-        /// <param name="tvlUsd">tvlUsd.</param>
+        /// <param name="tvlUsd">tvl in terms of USD.</param>
         public UniswapDayDataV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), int date = default(int), string volumeEth = default(string), string volumeUsd = default(string), string volumeUsdUntracked = default(string), string feesUsd = default(string), BigInteger txCount = default(BigInteger), string tvlUsd = default(string))
         {
             this.EntryTime = entryTime;
@@ -88,38 +88,44 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// timestamp rounded to current day by dividing by 86400
         /// </summary>
+        /// <value>timestamp rounded to current day by dividing by 86400</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// timestamp rounded to current day by dividing by 86400
         /// </summary>
+        /// <value>timestamp rounded to current day by dividing by 86400</value>
         [DataMember(Name = "date", EmitDefaultValue = false)]
         public int Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeEth
+        /// total volume across all pairs on this day, stored as a derived amount of ETH
         /// </summary>
+        /// <value>total volume across all pairs on this day, stored as a derived amount of ETH</value>
         [DataMember(Name = "volume_eth", EmitDefaultValue = true)]
         public string VolumeEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// total volume across all pairs on this day, stored as a derived amount of USD
         /// </summary>
+        /// <value>total volume across all pairs on this day, stored as a derived amount of USD</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsdUntracked
+        /// total daily volume in Uniswap derived in terms of USD untracked
         /// </summary>
+        /// <value>total daily volume in Uniswap derived in terms of USD untracked</value>
         [DataMember(Name = "volume_usd_untracked", EmitDefaultValue = true)]
         public string VolumeUsdUntracked { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// fees in USD
         /// </summary>
+        /// <value>fees in USD</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
@@ -130,8 +136,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TxCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TvlUsd
+        /// tvl in terms of USD
         /// </summary>
+        /// <value>tvl in terms of USD</value>
         [DataMember(Name = "tvl_usd", EmitDefaultValue = true)]
         public string TvlUsd { get; set; }
 

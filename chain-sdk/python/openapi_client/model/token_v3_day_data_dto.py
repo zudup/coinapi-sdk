@@ -31,6 +31,8 @@ class TokenV3DayDataDTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Token data aggregated across all pairs that include token.
     """
 
 

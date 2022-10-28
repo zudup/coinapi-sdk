@@ -12,6 +12,7 @@
  */
 
 /**
+ * Token data aggregated across all pairs that include token.
  * @export
  * @interface TokenV3DayDataDTO
  */
@@ -39,85 +40,85 @@ export interface TokenV3DayDataDTO {
      */
     vid?: number;
     /**
-     * 
+     * token address concatendated with date
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     id?: string | null;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     date?: number;
     /**
-     * 
+     * pointer to token
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     token?: string | null;
     /**
-     * 
+     * volume in token units
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume?: string | null;
     /**
-     * 
+     * volume in derived USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * liquidity across all pools in token units
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked?: string | null;
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * price at end of period in USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     price_usd?: string | null;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     fees_usd?: string | null;
     /**
-     * 
+     * opening price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     open?: string | null;
     /**
-     * 
+     * high price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     high?: string | null;
     /**
-     * 
+     * low price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     low?: string | null;
     /**
-     * 
+     * close price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */

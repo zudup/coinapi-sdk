@@ -1,7 +1,7 @@
 #' Create a new TokenV3DTO
 #'
 #' @description
-#' TokenV3DTO Class
+#' Stores aggregated information for a specific token across all pairs that token is included in.
 #'
 #' @docType class
 #' @title TokenV3DTO
@@ -11,22 +11,22 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field vid  integer [optional]
-#' @field id  character [optional]
-#' @field symbol  character [optional]
-#' @field name  character [optional]
-#' @field decimals  integer [optional]
+#' @field id token address character [optional]
+#' @field symbol token symbol character [optional]
+#' @field name token name character [optional]
+#' @field decimals token decimals integer [optional]
 #' @field total_supply  \link{BigInteger} [optional]
-#' @field volume  character [optional]
-#' @field volume_usd  character [optional]
-#' @field untracked_volume_usd  character [optional]
-#' @field fees_usd  character [optional]
+#' @field volume volume in token units character [optional]
+#' @field volume_usd volume in derived USD character [optional]
+#' @field untracked_volume_usd volume in USD even on pools with less reliable USD values character [optional]
+#' @field fees_usd fees in USD character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
 #' @field pool_count  \link{BigInteger} [optional]
-#' @field total_value_locked  character [optional]
-#' @field total_value_locked_usd  character [optional]
-#' @field total_value_locked_usd_untracked  character [optional]
-#' @field derived_eth  character [optional]
-#' @field whitelist_pools  list(character) [optional]
+#' @field total_value_locked liquidity across all pools in token units character [optional]
+#' @field total_value_locked_usd liquidity across all pools in derived USD character [optional]
+#' @field total_value_locked_usd_untracked TVL derived in USD untracked character [optional]
+#' @field derived_eth derived price in ETH character [optional]
+#' @field whitelist_pools pools token is in that are white listed for USD pricing list(character) [optional]
 #' @field token_symbol  character [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -64,22 +64,22 @@ TokenV3DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number 
     #' @param vid 
-    #' @param id 
-    #' @param symbol 
-    #' @param name 
-    #' @param decimals 
+    #' @param id token address
+    #' @param symbol token symbol
+    #' @param name token name
+    #' @param decimals token decimals
     #' @param total_supply total_supply
-    #' @param volume 
-    #' @param volume_usd 
-    #' @param untracked_volume_usd 
-    #' @param fees_usd 
+    #' @param volume volume in token units
+    #' @param volume_usd volume in derived USD
+    #' @param untracked_volume_usd volume in USD even on pools with less reliable USD values
+    #' @param fees_usd fees in USD
     #' @param tx_count tx_count
     #' @param pool_count pool_count
-    #' @param total_value_locked 
-    #' @param total_value_locked_usd 
-    #' @param total_value_locked_usd_untracked 
-    #' @param derived_eth 
-    #' @param whitelist_pools 
+    #' @param total_value_locked liquidity across all pools in token units
+    #' @param total_value_locked_usd liquidity across all pools in derived USD
+    #' @param total_value_locked_usd_untracked TVL derived in USD untracked
+    #' @param derived_eth derived price in ETH
+    #' @param whitelist_pools pools token is in that are white listed for USD pricing
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export

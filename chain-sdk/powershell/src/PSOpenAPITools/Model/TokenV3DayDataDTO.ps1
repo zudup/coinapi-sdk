@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Token data aggregated across all pairs that include token.
 
 .PARAMETER EntryTime
 No description available.
@@ -24,33 +24,33 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+token address concatendated with date
 .PARAMETER Date
-
+timestamp rounded to current day by dividing by 86400
 .PARAMETER Token
-
+pointer to token
 .PARAMETER Volume
-
+volume in token units
 .PARAMETER VolumeUsd
-
+volume in derived USD
 .PARAMETER UntrackedVolumeUsd
-
+volume in USD even on pools with less reliable USD values
 .PARAMETER TotalValueLocked
-
+liquidity across all pools in token units
 .PARAMETER TotalValueLockedUsd
-
+liquidity across all pools in derived USD
 .PARAMETER PriceUsd
-
+price at end of period in USD
 .PARAMETER FeesUsd
-
+fees in USD
 .PARAMETER Open
-
+opening price USD
 .PARAMETER High
-
+high price USD
 .PARAMETER Low
-
+low price USD
 .PARAMETER Close
-
+close price USD
 .OUTPUTS
 
 TokenV3DayDataDTO<PSCustomObject>

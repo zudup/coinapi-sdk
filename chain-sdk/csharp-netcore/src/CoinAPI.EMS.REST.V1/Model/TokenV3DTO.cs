@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TokenV3DTO
+    /// Stores aggregated information for a specific token across all pairs that token is included in.
     /// </summary>
     [DataContract(Name = "TokenV3DTO")]
     public partial class TokenV3DTO : IEquatable<TokenV3DTO>, IValidatableObject
@@ -39,22 +39,22 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">id.</param>
-        /// <param name="symbol">symbol.</param>
-        /// <param name="name">name.</param>
-        /// <param name="decimals">decimals.</param>
+        /// <param name="id">token address.</param>
+        /// <param name="symbol">token symbol.</param>
+        /// <param name="name">token name.</param>
+        /// <param name="decimals">token decimals.</param>
         /// <param name="totalSupply">totalSupply.</param>
-        /// <param name="volume">volume.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
-        /// <param name="feesUsd">feesUsd.</param>
+        /// <param name="volume">volume in token units.</param>
+        /// <param name="volumeUsd">volume in derived USD.</param>
+        /// <param name="untrackedVolumeUsd">volume in USD even on pools with less reliable USD values.</param>
+        /// <param name="feesUsd">fees in USD.</param>
         /// <param name="txCount">txCount.</param>
         /// <param name="poolCount">poolCount.</param>
-        /// <param name="totalValueLocked">totalValueLocked.</param>
-        /// <param name="totalValueLockedUsd">totalValueLockedUsd.</param>
-        /// <param name="totalValueLockedUsdUntracked">totalValueLockedUsdUntracked.</param>
-        /// <param name="derivedEth">derivedEth.</param>
-        /// <param name="whitelistPools">whitelistPools.</param>
+        /// <param name="totalValueLocked">liquidity across all pools in token units.</param>
+        /// <param name="totalValueLockedUsd">liquidity across all pools in derived USD.</param>
+        /// <param name="totalValueLockedUsdUntracked">TVL derived in USD untracked.</param>
+        /// <param name="derivedEth">derived price in ETH.</param>
+        /// <param name="whitelistPools">pools token is in that are white listed for USD pricing.</param>
         public TokenV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), string symbol = default(string), string name = default(string), int decimals = default(int), BigInteger totalSupply = default(BigInteger), string volume = default(string), string volumeUsd = default(string), string untrackedVolumeUsd = default(string), string feesUsd = default(string), BigInteger txCount = default(BigInteger), BigInteger poolCount = default(BigInteger), string totalValueLocked = default(string), string totalValueLockedUsd = default(string), string totalValueLockedUsdUntracked = default(string), string derivedEth = default(string), List<string> whitelistPools = default(List<string>))
         {
             this.EntryTime = entryTime;
@@ -104,26 +104,30 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// token address
         /// </summary>
+        /// <value>token address</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Symbol
+        /// token symbol
         /// </summary>
+        /// <value>token symbol</value>
         [DataMember(Name = "symbol", EmitDefaultValue = true)]
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// token name
         /// </summary>
+        /// <value>token name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Decimals
+        /// token decimals
         /// </summary>
+        /// <value>token decimals</value>
         [DataMember(Name = "decimals", EmitDefaultValue = false)]
         public int Decimals { get; set; }
 
@@ -134,26 +138,30 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TotalSupply { get; set; }
 
         /// <summary>
-        /// Gets or Sets Volume
+        /// volume in token units
         /// </summary>
+        /// <value>volume in token units</value>
         [DataMember(Name = "volume", EmitDefaultValue = true)]
         public string Volume { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// volume in derived USD
         /// </summary>
+        /// <value>volume in derived USD</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// volume in USD even on pools with less reliable USD values
         /// </summary>
+        /// <value>volume in USD even on pools with less reliable USD values</value>
         [DataMember(Name = "untracked_volume_usd", EmitDefaultValue = true)]
         public string UntrackedVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// fees in USD
         /// </summary>
+        /// <value>fees in USD</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
@@ -170,32 +178,37 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger PoolCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLocked
+        /// liquidity across all pools in token units
         /// </summary>
+        /// <value>liquidity across all pools in token units</value>
         [DataMember(Name = "total_value_locked", EmitDefaultValue = true)]
         public string TotalValueLocked { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsd
+        /// liquidity across all pools in derived USD
         /// </summary>
+        /// <value>liquidity across all pools in derived USD</value>
         [DataMember(Name = "total_value_locked_usd", EmitDefaultValue = true)]
         public string TotalValueLockedUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsdUntracked
+        /// TVL derived in USD untracked
         /// </summary>
+        /// <value>TVL derived in USD untracked</value>
         [DataMember(Name = "total_value_locked_usd_untracked", EmitDefaultValue = true)]
         public string TotalValueLockedUsdUntracked { get; set; }
 
         /// <summary>
-        /// Gets or Sets DerivedEth
+        /// derived price in ETH
         /// </summary>
+        /// <value>derived price in ETH</value>
         [DataMember(Name = "derived_eth", EmitDefaultValue = true)]
         public string DerivedEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets WhitelistPools
+        /// pools token is in that are white listed for USD pricing
         /// </summary>
+        /// <value>pools token is in that are white listed for USD pricing</value>
         [DataMember(Name = "whitelist_pools", EmitDefaultValue = true)]
         public List<string> WhitelistPools { get; set; }
 

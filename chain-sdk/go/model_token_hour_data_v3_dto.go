@@ -16,39 +16,39 @@ import (
 	"time"
 )
 
-// TokenHourDataV3DTO struct for TokenHourDataV3DTO
+// TokenHourDataV3DTO Token data aggregated across all pairs that include token.
 type TokenHourDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// token address concatendated with date
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// unix timestamp for start of hour
 	PeriodStartUnix *int32 `json:"period_start_unix,omitempty"`
-	// 
+	// pointer to token
 	Token NullableString `json:"token,omitempty"`
-	// 
+	// volume in token units
 	Volume NullableString `json:"volume,omitempty"`
-	// 
+	// volume in derived USD
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// 
+	// volume in USD even on pools with less reliable USD values
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// 
+	// liquidity across all pools in token units
 	TotalValueLocked NullableString `json:"total_value_locked,omitempty"`
-	// 
+	// liquidity across all pools in derived USD
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// 
+	// price at end of period in USD
 	PriceUsd NullableString `json:"price_usd,omitempty"`
-	// 
+	// fees in USD
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
-	// 
+	// opening price USD
 	Open NullableString `json:"open,omitempty"`
-	// 
+	// high price USD
 	High NullableString `json:"high,omitempty"`
-	// 
+	// low price USD
 	Low NullableString `json:"low,omitempty"`
-	// 
+	// close price USD
 	Close NullableString `json:"close,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`

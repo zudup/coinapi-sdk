@@ -36,6 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * TokenV3DTO Class Doc Comment
  *
  * @category Class
+ * @description Stores aggregated information for a specific token across all pairs that token is included in.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -549,7 +550,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id token address
      *
      * @return self
      */
@@ -585,7 +586,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol 
+     * @param string|null $symbol token symbol
      *
      * @return self
      */
@@ -621,7 +622,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name 
+     * @param string|null $name token name
      *
      * @return self
      */
@@ -657,7 +658,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param int|null $decimals 
+     * @param int|null $decimals token decimals
      *
      * @return self
      */
@@ -715,7 +716,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume
      *
-     * @param string|null $volume 
+     * @param string|null $volume volume in token units
      *
      * @return self
      */
@@ -751,7 +752,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd 
+     * @param string|null $volume_usd volume in derived USD
      *
      * @return self
      */
@@ -787,7 +788,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd 
+     * @param string|null $untracked_volume_usd volume in USD even on pools with less reliable USD values
      *
      * @return self
      */
@@ -823,7 +824,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd 
+     * @param string|null $fees_usd fees in USD
      *
      * @return self
      */
@@ -917,7 +918,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked 
+     * @param string|null $total_value_locked liquidity across all pools in token units
      *
      * @return self
      */
@@ -953,7 +954,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd 
+     * @param string|null $total_value_locked_usd liquidity across all pools in derived USD
      *
      * @return self
      */
@@ -989,7 +990,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd_untracked
      *
-     * @param string|null $total_value_locked_usd_untracked 
+     * @param string|null $total_value_locked_usd_untracked TVL derived in USD untracked
      *
      * @return self
      */
@@ -1025,7 +1026,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth 
+     * @param string|null $derived_eth derived price in ETH
      *
      * @return self
      */
@@ -1061,7 +1062,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets whitelist_pools
      *
-     * @param string[]|null $whitelist_pools 
+     * @param string[]|null $whitelist_pools pools token is in that are white listed for USD pricing
      *
      * @return self
      */

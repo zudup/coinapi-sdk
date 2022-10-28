@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** |  | [optional] 
 **Vid** | **Int64** |  | [optional] 
-**Id** | **String** |  | [optional] 
-**Date** | **Int32** |  | [optional] 
-**VolumeEth** | **String** |  | [optional] 
-**VolumeUsd** | **String** |  | [optional] 
-**VolumeUsdUntracked** | **String** |  | [optional] 
-**FeesUsd** | **String** |  | [optional] 
+**Id** | **String** | timestamp rounded to current day by dividing by 86400 | [optional] 
+**Date** | **Int32** | timestamp rounded to current day by dividing by 86400 | [optional] 
+**VolumeEth** | **String** | total volume across all pairs on this day, stored as a derived amount of ETH | [optional] 
+**VolumeUsd** | **String** | total volume across all pairs on this day, stored as a derived amount of USD | [optional] 
+**VolumeUsdUntracked** | **String** | total daily volume in Uniswap derived in terms of USD untracked | [optional] 
+**FeesUsd** | **String** | fees in USD | [optional] 
 **TxCount** | [**BigInteger**](BigInteger.md) |  | [optional] 
-**TvlUsd** | **String** |  | [optional] 
+**TvlUsd** | **String** | tvl in terms of USD | [optional] 
 
 ## Examples
 

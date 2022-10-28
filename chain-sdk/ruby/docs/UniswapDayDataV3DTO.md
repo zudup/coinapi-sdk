@@ -8,14 +8,14 @@
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** |  | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **date** | **Integer** |  | [optional] |
-| **volume_eth** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **volume_usd_untracked** | **String** |  | [optional] |
-| **fees_usd** | **String** |  | [optional] |
+| **id** | **String** | timestamp rounded to current day by dividing by 86400 | [optional] |
+| **date** | **Integer** | timestamp rounded to current day by dividing by 86400 | [optional] |
+| **volume_eth** | **String** | total volume across all pairs on this day, stored as a derived amount of ETH | [optional] |
+| **volume_usd** | **String** | total volume across all pairs on this day, stored as a derived amount of USD | [optional] |
+| **volume_usd_untracked** | **String** | total daily volume in Uniswap derived in terms of USD untracked | [optional] |
+| **fees_usd** | **String** | fees in USD | [optional] |
 | **tx_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **tvl_usd** | **String** |  | [optional] |
+| **tvl_usd** | **String** | tvl in terms of USD | [optional] |
 
 ## Example
 

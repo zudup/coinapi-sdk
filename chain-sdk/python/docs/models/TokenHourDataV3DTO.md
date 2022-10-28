@@ -1,9 +1,11 @@
 # openapi_client.model.token_hour_data_v3_dto.TokenHourDataV3DTO
 
+Token data aggregated across all pairs that include token.
+
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+dict, frozendict.frozendict,  | frozendict.frozendict,  | Token data aggregated across all pairs that include token. | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
@@ -11,20 +13,20 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  |  | [optional] 
-**period_start_unix** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
-**token** | None, str,  | NoneClass, str,  |  | [optional] 
-**volume** | None, str,  | NoneClass, str,  |  | [optional] 
-**volume_usd** | None, str,  | NoneClass, str,  |  | [optional] 
-**untracked_volume_usd** | None, str,  | NoneClass, str,  |  | [optional] 
-**total_value_locked** | None, str,  | NoneClass, str,  |  | [optional] 
-**total_value_locked_usd** | None, str,  | NoneClass, str,  |  | [optional] 
-**price_usd** | None, str,  | NoneClass, str,  |  | [optional] 
-**fees_usd** | None, str,  | NoneClass, str,  |  | [optional] 
-**open** | None, str,  | NoneClass, str,  |  | [optional] 
-**high** | None, str,  | NoneClass, str,  |  | [optional] 
-**low** | None, str,  | NoneClass, str,  |  | [optional] 
-**close** | None, str,  | NoneClass, str,  |  | [optional] 
+**id** | None, str,  | NoneClass, str,  | token address concatendated with date | [optional] 
+**period_start_unix** | decimal.Decimal, int,  | decimal.Decimal,  | unix timestamp for start of hour | [optional] value must be a 32 bit integer
+**token** | None, str,  | NoneClass, str,  | pointer to token | [optional] 
+**volume** | None, str,  | NoneClass, str,  | volume in token units | [optional] 
+**volume_usd** | None, str,  | NoneClass, str,  | volume in derived USD | [optional] 
+**untracked_volume_usd** | None, str,  | NoneClass, str,  | volume in USD even on pools with less reliable USD values | [optional] 
+**total_value_locked** | None, str,  | NoneClass, str,  | liquidity across all pools in token units | [optional] 
+**total_value_locked_usd** | None, str,  | NoneClass, str,  | liquidity across all pools in derived USD | [optional] 
+**price_usd** | None, str,  | NoneClass, str,  | price at end of period in USD | [optional] 
+**fees_usd** | None, str,  | NoneClass, str,  | fees in USD | [optional] 
+**open** | None, str,  | NoneClass, str,  | opening price USD | [optional] 
+**high** | None, str,  | NoneClass, str,  | high price USD | [optional] 
+**low** | None, str,  | NoneClass, str,  | low price USD | [optional] 
+**close** | None, str,  | NoneClass, str,  | close price USD | [optional] 
 **vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

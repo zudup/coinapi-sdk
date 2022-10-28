@@ -1,7 +1,7 @@
 /*
  * token_v3_day_data_dto.h
  *
- * 
+ * Token data aggregated across all pairs that include token.
  */
 
 #ifndef _token_v3_day_data_dto_H_

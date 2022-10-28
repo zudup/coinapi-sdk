@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class TokenHourDataV3DTO {
     /**
      * Constructs a new <code>TokenHourDataV3DTO</code>.
+     * Token data aggregated across all pairs that include token.
      * @alias module:model/TokenHourDataV3DTO
      */
     constructor() { 
@@ -125,85 +126,85 @@ TokenHourDataV3DTO.prototype['recv_time'] = undefined;
 TokenHourDataV3DTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * token address concatendated with date
  * @member {String} id
  */
 TokenHourDataV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * unix timestamp for start of hour
  * @member {Number} period_start_unix
  */
 TokenHourDataV3DTO.prototype['period_start_unix'] = undefined;
 
 /**
- * 
+ * pointer to token
  * @member {String} token
  */
 TokenHourDataV3DTO.prototype['token'] = undefined;
 
 /**
- * 
+ * volume in token units
  * @member {String} volume
  */
 TokenHourDataV3DTO.prototype['volume'] = undefined;
 
 /**
- * 
+ * volume in derived USD
  * @member {String} volume_usd
  */
 TokenHourDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * volume in USD even on pools with less reliable USD values
  * @member {String} untracked_volume_usd
  */
 TokenHourDataV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in token units
  * @member {String} total_value_locked
  */
 TokenHourDataV3DTO.prototype['total_value_locked'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in derived USD
  * @member {String} total_value_locked_usd
  */
 TokenHourDataV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
- * 
+ * price at end of period in USD
  * @member {String} price_usd
  */
 TokenHourDataV3DTO.prototype['price_usd'] = undefined;
 
 /**
- * 
+ * fees in USD
  * @member {String} fees_usd
  */
 TokenHourDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
- * 
+ * opening price USD
  * @member {String} open
  */
 TokenHourDataV3DTO.prototype['open'] = undefined;
 
 /**
- * 
+ * high price USD
  * @member {String} high
  */
 TokenHourDataV3DTO.prototype['high'] = undefined;
 
 /**
- * 
+ * low price USD
  * @member {String} low
  */
 TokenHourDataV3DTO.prototype['low'] = undefined;
 
 /**
- * 
+ * close price USD
  * @member {String} close
  */
 TokenHourDataV3DTO.prototype['close'] = undefined;

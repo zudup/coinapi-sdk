@@ -8,26 +8,26 @@ import 'package:built_value/serializer.dart';
 
 part 'token_hour_data_v3_dto.g.dart';
 
-/// TokenHourDataV3DTO
+/// Token data aggregated across all pairs that include token.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - 
-/// * [id] - 
-/// * [periodStartUnix] - 
-/// * [token] - 
-/// * [volume] - 
-/// * [volumeUsd] - 
-/// * [untrackedVolumeUsd] - 
-/// * [totalValueLocked] - 
-/// * [totalValueLockedUsd] - 
-/// * [priceUsd] - 
-/// * [feesUsd] - 
-/// * [open] - 
-/// * [high] - 
-/// * [low] - 
-/// * [close] - 
+/// * [id] - token address concatendated with date
+/// * [periodStartUnix] - unix timestamp for start of hour
+/// * [token] - pointer to token
+/// * [volume] - volume in token units
+/// * [volumeUsd] - volume in derived USD
+/// * [untrackedVolumeUsd] - volume in USD even on pools with less reliable USD values
+/// * [totalValueLocked] - liquidity across all pools in token units
+/// * [totalValueLockedUsd] - liquidity across all pools in derived USD
+/// * [priceUsd] - price at end of period in USD
+/// * [feesUsd] - fees in USD
+/// * [open] - opening price USD
+/// * [high] - high price USD
+/// * [low] - low price USD
+/// * [close] - close price USD
 /// * [vid] - 
 @BuiltValue()
 abstract class TokenHourDataV3DTO implements Built<TokenHourDataV3DTO, TokenHourDataV3DTOBuilder> {
@@ -41,59 +41,59 @@ abstract class TokenHourDataV3DTO implements Built<TokenHourDataV3DTO, TokenHour
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// token address concatendated with date
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// unix timestamp for start of hour
   @BuiltValueField(wireName: r'period_start_unix')
   int? get periodStartUnix;
 
-  /// 
+  /// pointer to token
   @BuiltValueField(wireName: r'token')
   String? get token;
 
-  /// 
+  /// volume in token units
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
-  /// 
+  /// volume in derived USD
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// volume in USD even on pools with less reliable USD values
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// liquidity across all pools in token units
   @BuiltValueField(wireName: r'total_value_locked')
   String? get totalValueLocked;
 
-  /// 
+  /// liquidity across all pools in derived USD
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// 
+  /// price at end of period in USD
   @BuiltValueField(wireName: r'price_usd')
   String? get priceUsd;
 
-  /// 
+  /// fees in USD
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
-  /// 
+  /// opening price USD
   @BuiltValueField(wireName: r'open')
   String? get open;
 
-  /// 
+  /// high price USD
   @BuiltValueField(wireName: r'high')
   String? get high;
 
-  /// 
+  /// low price USD
   @BuiltValueField(wireName: r'low')
   String? get low;
 
-  /// 
+  /// close price USD
   @BuiltValueField(wireName: r'close')
   String? get close;
 

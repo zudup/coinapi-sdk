@@ -47,9 +47,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TokenHourDataV3DTO
+ * Token data aggregated across all pairs that include token.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:12:53.009082Z[Etc/UTC]")
+@ApiModel(description = "Token data aggregated across all pairs that include token.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
 public class TokenHourDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -202,11 +203,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * token address concatendated with date
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address concatendated with date")
 
   public String getId() {
     return id;
@@ -225,11 +226,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * unix timestamp for start of hour
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "unix timestamp for start of hour")
 
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
@@ -248,11 +249,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * pointer to token
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "pointer to token")
 
   public String getToken() {
     return token;
@@ -271,11 +272,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * volume in token units
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in token units")
 
   public String getVolume() {
     return volume;
@@ -294,11 +295,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * volume in derived USD
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in derived USD")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -317,11 +318,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * volume in USD even on pools with less reliable USD values
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -340,11 +341,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * liquidity across all pools in token units
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in token units")
 
   public String getTotalValueLocked() {
     return totalValueLocked;
@@ -363,11 +364,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * liquidity across all pools in derived USD
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in derived USD")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -386,11 +387,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * price at end of period in USD
    * @return priceUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "price at end of period in USD")
 
   public String getPriceUsd() {
     return priceUsd;
@@ -409,11 +410,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * fees in USD
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "fees in USD")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -432,11 +433,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * opening price USD
    * @return open
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "opening price USD")
 
   public String getOpen() {
     return open;
@@ -455,11 +456,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * high price USD
    * @return high
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "high price USD")
 
   public String getHigh() {
     return high;
@@ -478,11 +479,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * low price USD
    * @return low
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "low price USD")
 
   public String getLow() {
     return low;
@@ -501,11 +502,11 @@ public class TokenHourDataV3DTO {
   }
 
    /**
-   * 
+   * close price USD
    * @return close
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "close price USD")
 
   public String getClose() {
     return close;

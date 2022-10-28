@@ -28,37 +28,37 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- 
+      -- token address
     symbol: detachable STRING_32
-      -- 
+      -- token symbol
     name: detachable STRING_32
-      -- 
+      -- token name
  	decimals: INTEGER_32
-    	 -- 
+    	 -- token decimals
     total_supply: detachable BIG_INTEGER
       
     volume: detachable STRING_32
-      -- 
+      -- volume in token units
     volume_usd: detachable STRING_32
-      -- 
+      -- volume in derived USD
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- volume in USD even on pools with less reliable USD values
     fees_usd: detachable STRING_32
-      -- 
+      -- fees in USD
     tx_count: detachable BIG_INTEGER
       
     pool_count: detachable BIG_INTEGER
       
     total_value_locked: detachable STRING_32
-      -- 
+      -- liquidity across all pools in token units
     total_value_locked_usd: detachable STRING_32
-      -- 
+      -- liquidity across all pools in derived USD
     total_value_locked_usd_untracked: detachable STRING_32
-      -- 
+      -- TVL derived in USD untracked
     derived_eth: detachable STRING_32
-      -- 
+      -- derived price in ETH
     whitelist_pools: detachable LIST [STRING_32]
-      -- 
+      -- pools token is in that are white listed for USD pricing
     token_symbol: detachable STRING_32
       
 

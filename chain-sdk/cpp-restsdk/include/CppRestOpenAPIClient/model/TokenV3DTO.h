@@ -13,7 +13,7 @@
 /*
  * TokenV3DTO.h
  *
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_TokenV3DTO_H_
@@ -34,7 +34,7 @@ namespace model {
 class BigInteger;
 
 /// <summary>
-/// 
+/// Stores aggregated information for a specific token across all pairs that token is included in.
 /// </summary>
 class  TokenV3DTO
     : public ModelBase
@@ -94,7 +94,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// token address
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -103,7 +103,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token symbol
     /// </summary>
     utility::string_t getSymbol() const;
     bool symbolIsSet() const;
@@ -112,7 +112,7 @@ public:
     void setSymbol(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token name
     /// </summary>
     utility::string_t getName() const;
     bool nameIsSet() const;
@@ -121,7 +121,7 @@ public:
     void setName(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token decimals
     /// </summary>
     int32_t getDecimals() const;
     bool decimalsIsSet() const;
@@ -139,7 +139,7 @@ public:
     void setTotalSupply(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// volume in token units
     /// </summary>
     utility::string_t getVolume() const;
     bool volumeIsSet() const;
@@ -148,7 +148,7 @@ public:
     void setVolume(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// volume in derived USD
     /// </summary>
     utility::string_t getVolumeUsd() const;
     bool volumeUsdIsSet() const;
@@ -157,7 +157,7 @@ public:
     void setVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// volume in USD even on pools with less reliable USD values
     /// </summary>
     utility::string_t getUntrackedVolumeUsd() const;
     bool untrackedVolumeUsdIsSet() const;
@@ -166,7 +166,7 @@ public:
     void setUntrackedVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// fees in USD
     /// </summary>
     utility::string_t getFeesUsd() const;
     bool feesUsdIsSet() const;
@@ -193,7 +193,7 @@ public:
     void setPoolCount(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// liquidity across all pools in token units
     /// </summary>
     utility::string_t getTotalValueLocked() const;
     bool totalValueLockedIsSet() const;
@@ -202,7 +202,7 @@ public:
     void setTotalValueLocked(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// liquidity across all pools in derived USD
     /// </summary>
     utility::string_t getTotalValueLockedUsd() const;
     bool totalValueLockedUsdIsSet() const;
@@ -211,7 +211,7 @@ public:
     void setTotalValueLockedUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// TVL derived in USD untracked
     /// </summary>
     utility::string_t getTotalValueLockedUsdUntracked() const;
     bool totalValueLockedUsdUntrackedIsSet() const;
@@ -220,7 +220,7 @@ public:
     void setTotalValueLockedUsdUntracked(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// derived price in ETH
     /// </summary>
     utility::string_t getDerivedEth() const;
     bool derivedEthIsSet() const;
@@ -229,7 +229,7 @@ public:
     void setDerivedEth(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// pools token is in that are white listed for USD pricing
     /// </summary>
     std::vector<utility::string_t>& getWhitelistPools();
     bool whitelistPoolsIsSet() const;

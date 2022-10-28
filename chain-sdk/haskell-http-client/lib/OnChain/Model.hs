@@ -1979,24 +1979,25 @@ mkTokenDTO =
 
 -- ** TokenHourDataV3DTO
 -- | TokenHourDataV3DTO
+-- Token data aggregated across all pairs that include token.
 data TokenHourDataV3DTO = TokenHourDataV3DTO
   { tokenHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , tokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , tokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , tokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - 
-  , tokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token" - 
-  , tokenHourDataV3DTOVolume :: !(Maybe Text) -- ^ "volume" - 
-  , tokenHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tokenHourDataV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , tokenHourDataV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
-  , tokenHourDataV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
-  , tokenHourDataV3DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - 
-  , tokenHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , tokenHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
-  , tokenHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
-  , tokenHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
-  , tokenHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , tokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - token address concatendated with date
+  , tokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - unix timestamp for start of hour
+  , tokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token" - pointer to token
+  , tokenHourDataV3DTOVolume :: !(Maybe Text) -- ^ "volume" - volume in token units
+  , tokenHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - volume in derived USD
+  , tokenHourDataV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - volume in USD even on pools with less reliable USD values
+  , tokenHourDataV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - liquidity across all pools in token units
+  , tokenHourDataV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - liquidity across all pools in derived USD
+  , tokenHourDataV3DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - price at end of period in USD
+  , tokenHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - fees in USD
+  , tokenHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - opening price USD
+  , tokenHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - high price USD
+  , tokenHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - low price USD
+  , tokenHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - close price USD
   , tokenHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -2164,27 +2165,28 @@ mkTokenV2DTO =
 
 -- ** TokenV3DTO
 -- | TokenV3DTO
+-- Stores aggregated information for a specific token across all pairs that token is included in.
 data TokenV3DTO = TokenV3DTO
   { tokenV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , tokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
   , tokenV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , tokenV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , tokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol" - 
-  , tokenV3DTOName :: !(Maybe Text) -- ^ "name" - 
-  , tokenV3DTODecimals :: !(Maybe Int) -- ^ "decimals" - 
+  , tokenV3DTOId :: !(Maybe Text) -- ^ "id" - token address
+  , tokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol" - token symbol
+  , tokenV3DTOName :: !(Maybe Text) -- ^ "name" - token name
+  , tokenV3DTODecimals :: !(Maybe Int) -- ^ "decimals" - token decimals
   , tokenV3DTOTotalSupply :: !(Maybe BigInteger) -- ^ "total_supply"
-  , tokenV3DTOVolume :: !(Maybe Text) -- ^ "volume" - 
-  , tokenV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tokenV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , tokenV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , tokenV3DTOVolume :: !(Maybe Text) -- ^ "volume" - volume in token units
+  , tokenV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - volume in derived USD
+  , tokenV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - volume in USD even on pools with less reliable USD values
+  , tokenV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - fees in USD
   , tokenV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
   , tokenV3DTOPoolCount :: !(Maybe BigInteger) -- ^ "pool_count"
-  , tokenV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
-  , tokenV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
-  , tokenV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
-  , tokenV3DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - 
-  , tokenV3DTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - 
+  , tokenV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - liquidity across all pools in token units
+  , tokenV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - liquidity across all pools in derived USD
+  , tokenV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - TVL derived in USD untracked
+  , tokenV3DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - derived price in ETH
+  , tokenV3DTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - pools token is in that are white listed for USD pricing
   , tokenV3DTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -2272,25 +2274,26 @@ mkTokenV3DTO =
 
 -- ** TokenV3DayDataDTO
 -- | TokenV3DayDataDTO
+-- Token data aggregated across all pairs that include token.
 data TokenV3DayDataDTO = TokenV3DayDataDTO
   { tokenV3DayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , tokenV3DayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
   , tokenV3DayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , tokenV3DayDataDTOId :: !(Maybe Text) -- ^ "id" - 
-  , tokenV3DayDataDTODate :: !(Maybe Int) -- ^ "date" - 
-  , tokenV3DayDataDTOToken :: !(Maybe Text) -- ^ "token" - 
-  , tokenV3DayDataDTOVolume :: !(Maybe Text) -- ^ "volume" - 
-  , tokenV3DayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tokenV3DayDataDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , tokenV3DayDataDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
-  , tokenV3DayDataDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
-  , tokenV3DayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - 
-  , tokenV3DayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , tokenV3DayDataDTOOpen :: !(Maybe Text) -- ^ "open" - 
-  , tokenV3DayDataDTOHigh :: !(Maybe Text) -- ^ "high" - 
-  , tokenV3DayDataDTOLow :: !(Maybe Text) -- ^ "low" - 
-  , tokenV3DayDataDTOClose :: !(Maybe Text) -- ^ "close" - 
+  , tokenV3DayDataDTOId :: !(Maybe Text) -- ^ "id" - token address concatendated with date
+  , tokenV3DayDataDTODate :: !(Maybe Int) -- ^ "date" - timestamp rounded to current day by dividing by 86400
+  , tokenV3DayDataDTOToken :: !(Maybe Text) -- ^ "token" - pointer to token
+  , tokenV3DayDataDTOVolume :: !(Maybe Text) -- ^ "volume" - volume in token units
+  , tokenV3DayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - volume in derived USD
+  , tokenV3DayDataDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - volume in USD even on pools with less reliable USD values
+  , tokenV3DayDataDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - liquidity across all pools in token units
+  , tokenV3DayDataDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - liquidity across all pools in derived USD
+  , tokenV3DayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - price at end of period in USD
+  , tokenV3DayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - fees in USD
+  , tokenV3DayDataDTOOpen :: !(Maybe Text) -- ^ "open" - opening price USD
+  , tokenV3DayDataDTOHigh :: !(Maybe Text) -- ^ "high" - high price USD
+  , tokenV3DayDataDTOLow :: !(Maybe Text) -- ^ "low" - low price USD
+  , tokenV3DayDataDTOClose :: !(Maybe Text) -- ^ "close" - close price USD
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON TokenV3DayDataDTO
@@ -2368,19 +2371,20 @@ mkTokenV3DayDataDTO =
 
 -- ** UniswapDayDataV3DTO
 -- | UniswapDayDataV3DTO
+-- Data accumulated and condensed into day stats for all of Uniswap
 data UniswapDayDataV3DTO = UniswapDayDataV3DTO
   { uniswapDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
   , uniswapDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , uniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
-  , uniswapDayDataV3DTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - 
-  , uniswapDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , uniswapDayDataV3DTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked" - 
-  , uniswapDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , uniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - timestamp rounded to current day by dividing by 86400
+  , uniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - timestamp rounded to current day by dividing by 86400
+  , uniswapDayDataV3DTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - total volume across all pairs on this day, stored as a derived amount of ETH
+  , uniswapDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - total volume across all pairs on this day, stored as a derived amount of USD
+  , uniswapDayDataV3DTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked" - total daily volume in Uniswap derived in terms of USD untracked
+  , uniswapDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - fees in USD
   , uniswapDayDataV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , uniswapDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
+  , uniswapDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - tvl in terms of USD
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON UniswapDayDataV3DTO

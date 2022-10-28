@@ -22,6 +22,7 @@ import BigInteger from './BigInteger';
 class TokenV3DTO {
     /**
      * Constructs a new <code>TokenV3DTO</code>.
+     * Stores aggregated information for a specific token across all pairs that token is included in.
      * @alias module:model/TokenV3DTO
      */
     constructor() { 
@@ -141,25 +142,25 @@ TokenV3DTO.prototype['block_number'] = undefined;
 TokenV3DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * token address
  * @member {String} id
  */
 TokenV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * token symbol
  * @member {String} symbol
  */
 TokenV3DTO.prototype['symbol'] = undefined;
 
 /**
- * 
+ * token name
  * @member {String} name
  */
 TokenV3DTO.prototype['name'] = undefined;
 
 /**
- * 
+ * token decimals
  * @member {Number} decimals
  */
 TokenV3DTO.prototype['decimals'] = undefined;
@@ -170,25 +171,25 @@ TokenV3DTO.prototype['decimals'] = undefined;
 TokenV3DTO.prototype['total_supply'] = undefined;
 
 /**
- * 
+ * volume in token units
  * @member {String} volume
  */
 TokenV3DTO.prototype['volume'] = undefined;
 
 /**
- * 
+ * volume in derived USD
  * @member {String} volume_usd
  */
 TokenV3DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * volume in USD even on pools with less reliable USD values
  * @member {String} untracked_volume_usd
  */
 TokenV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * fees in USD
  * @member {String} fees_usd
  */
 TokenV3DTO.prototype['fees_usd'] = undefined;
@@ -204,31 +205,31 @@ TokenV3DTO.prototype['tx_count'] = undefined;
 TokenV3DTO.prototype['pool_count'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in token units
  * @member {String} total_value_locked
  */
 TokenV3DTO.prototype['total_value_locked'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in derived USD
  * @member {String} total_value_locked_usd
  */
 TokenV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
- * 
+ * TVL derived in USD untracked
  * @member {String} total_value_locked_usd_untracked
  */
 TokenV3DTO.prototype['total_value_locked_usd_untracked'] = undefined;
 
 /**
- * 
+ * derived price in ETH
  * @member {String} derived_eth
  */
 TokenV3DTO.prototype['derived_eth'] = undefined;
 
 /**
- * 
+ * pools token is in that are white listed for USD pricing
  * @member {Array.<String>} whitelist_pools
  */
 TokenV3DTO.prototype['whitelist_pools'] = undefined;

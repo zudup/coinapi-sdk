@@ -18,7 +18,10 @@ import org.openapitools.client.model.BigInteger;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ **/
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
 public class TokenV3DTO {
   
   @SerializedName("entry_time")
@@ -107,9 +110,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * token address
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address")
   public String getId() {
     return id;
   }
@@ -118,9 +121,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * token symbol
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token symbol")
   public String getSymbol() {
     return symbol;
   }
@@ -129,9 +132,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * token name
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token name")
   public String getName() {
     return name;
   }
@@ -140,9 +143,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * token decimals
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token decimals")
   public Integer getDecimals() {
     return decimals;
   }
@@ -161,9 +164,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * volume in token units
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in token units")
   public String getVolume() {
     return volume;
   }
@@ -172,9 +175,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * volume in derived USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in derived USD")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -183,9 +186,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * volume in USD even on pools with less reliable USD values
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -194,9 +197,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * fees in USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "fees in USD")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -225,9 +228,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * liquidity across all pools in token units
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in token units")
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -236,9 +239,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * liquidity across all pools in derived USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in derived USD")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -247,9 +250,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * TVL derived in USD untracked
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TVL derived in USD untracked")
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -258,9 +261,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * derived price in ETH
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "derived price in ETH")
   public String getDerivedEth() {
     return derivedEth;
   }
@@ -269,9 +272,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * 
+   * pools token is in that are white listed for USD pricing
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "pools token is in that are white listed for USD pricing")
   public List<String> getWhitelistPools() {
     return whitelistPools;
   }

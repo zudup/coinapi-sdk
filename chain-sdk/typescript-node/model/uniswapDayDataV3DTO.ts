@@ -13,6 +13,9 @@
 import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 
+/**
+* Data accumulated and condensed into day stats for all of Uniswap
+*/
 export class UniswapDayDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
@@ -25,32 +28,32 @@ export class UniswapDayDataV3DTO {
     */
     'vid'?: number;
     /**
-    * 
+    * timestamp rounded to current day by dividing by 86400
     */
     'id'?: string | null;
     /**
-    * 
+    * timestamp rounded to current day by dividing by 86400
     */
     'date'?: number;
     /**
-    * 
+    * total volume across all pairs on this day, stored as a derived amount of ETH
     */
     'volumeEth'?: string | null;
     /**
-    * 
+    * total volume across all pairs on this day, stored as a derived amount of USD
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * total daily volume in Uniswap derived in terms of USD untracked
     */
     'volumeUsdUntracked'?: string | null;
     /**
-    * 
+    * fees in USD
     */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
     /**
-    * 
+    * tvl in terms of USD
     */
     'tvlUsd'?: string | null;
 

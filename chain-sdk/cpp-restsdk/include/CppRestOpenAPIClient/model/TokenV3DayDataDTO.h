@@ -13,7 +13,7 @@
 /*
  * TokenV3DayDataDTO.h
  *
- * 
+ * Token data aggregated across all pairs that include token.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_TokenV3DayDataDTO_H_
@@ -31,7 +31,7 @@ namespace model {
 
 
 /// <summary>
-/// 
+/// Token data aggregated across all pairs that include token.
 /// </summary>
 class  TokenV3DayDataDTO
     : public ModelBase
@@ -91,7 +91,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// token address concatendated with date
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -100,7 +100,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// timestamp rounded to current day by dividing by 86400
     /// </summary>
     int32_t getDate() const;
     bool dateIsSet() const;
@@ -109,7 +109,7 @@ public:
     void setDate(int32_t value);
 
     /// <summary>
-    /// 
+    /// pointer to token
     /// </summary>
     utility::string_t getToken() const;
     bool tokenIsSet() const;
@@ -118,7 +118,7 @@ public:
     void setToken(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// volume in token units
     /// </summary>
     utility::string_t getVolume() const;
     bool volumeIsSet() const;
@@ -127,7 +127,7 @@ public:
     void setVolume(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// volume in derived USD
     /// </summary>
     utility::string_t getVolumeUsd() const;
     bool volumeUsdIsSet() const;
@@ -136,7 +136,7 @@ public:
     void setVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// volume in USD even on pools with less reliable USD values
     /// </summary>
     utility::string_t getUntrackedVolumeUsd() const;
     bool untrackedVolumeUsdIsSet() const;
@@ -145,7 +145,7 @@ public:
     void setUntrackedVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// liquidity across all pools in token units
     /// </summary>
     utility::string_t getTotalValueLocked() const;
     bool totalValueLockedIsSet() const;
@@ -154,7 +154,7 @@ public:
     void setTotalValueLocked(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// liquidity across all pools in derived USD
     /// </summary>
     utility::string_t getTotalValueLockedUsd() const;
     bool totalValueLockedUsdIsSet() const;
@@ -163,7 +163,7 @@ public:
     void setTotalValueLockedUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// price at end of period in USD
     /// </summary>
     utility::string_t getPriceUsd() const;
     bool priceUsdIsSet() const;
@@ -172,7 +172,7 @@ public:
     void setPriceUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// fees in USD
     /// </summary>
     utility::string_t getFeesUsd() const;
     bool feesUsdIsSet() const;
@@ -181,7 +181,7 @@ public:
     void setFeesUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// opening price USD
     /// </summary>
     utility::string_t getOpen() const;
     bool openIsSet() const;
@@ -190,7 +190,7 @@ public:
     void setOpen(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// high price USD
     /// </summary>
     utility::string_t getHigh() const;
     bool highIsSet() const;
@@ -199,7 +199,7 @@ public:
     void setHigh(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// low price USD
     /// </summary>
     utility::string_t getLow() const;
     bool lowIsSet() const;
@@ -208,7 +208,7 @@ public:
     void setLow(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// close price USD
     /// </summary>
     utility::string_t getClose() const;
     bool closeIsSet() const;

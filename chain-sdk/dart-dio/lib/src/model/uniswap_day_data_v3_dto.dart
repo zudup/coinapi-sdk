@@ -9,21 +9,21 @@ import 'package:built_value/serializer.dart';
 
 part 'uniswap_day_data_v3_dto.g.dart';
 
-/// UniswapDayDataV3DTO
+/// Data accumulated and condensed into day stats for all of Uniswap
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - 
 /// * [vid] - 
-/// * [id] - 
-/// * [date] - 
-/// * [volumeEth] - 
-/// * [volumeUsd] - 
-/// * [volumeUsdUntracked] - 
-/// * [feesUsd] - 
+/// * [id] - timestamp rounded to current day by dividing by 86400
+/// * [date] - timestamp rounded to current day by dividing by 86400
+/// * [volumeEth] - total volume across all pairs on this day, stored as a derived amount of ETH
+/// * [volumeUsd] - total volume across all pairs on this day, stored as a derived amount of USD
+/// * [volumeUsdUntracked] - total daily volume in Uniswap derived in terms of USD untracked
+/// * [feesUsd] - fees in USD
 /// * [txCount] 
-/// * [tvlUsd] - 
+/// * [tvlUsd] - tvl in terms of USD
 @BuiltValue()
 abstract class UniswapDayDataV3DTO implements Built<UniswapDayDataV3DTO, UniswapDayDataV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -40,34 +40,34 @@ abstract class UniswapDayDataV3DTO implements Built<UniswapDayDataV3DTO, Uniswap
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// 
+  /// timestamp rounded to current day by dividing by 86400
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// timestamp rounded to current day by dividing by 86400
   @BuiltValueField(wireName: r'date')
   int? get date;
 
-  /// 
+  /// total volume across all pairs on this day, stored as a derived amount of ETH
   @BuiltValueField(wireName: r'volume_eth')
   String? get volumeEth;
 
-  /// 
+  /// total volume across all pairs on this day, stored as a derived amount of USD
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// total daily volume in Uniswap derived in terms of USD untracked
   @BuiltValueField(wireName: r'volume_usd_untracked')
   String? get volumeUsdUntracked;
 
-  /// 
+  /// fees in USD
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
-  /// 
+  /// tvl in terms of USD
   @BuiltValueField(wireName: r'tvl_usd')
   String? get tvlUsd;
 

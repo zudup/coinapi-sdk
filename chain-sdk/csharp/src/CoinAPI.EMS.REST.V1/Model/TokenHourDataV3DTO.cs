@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TokenHourDataV3DTO
+    /// Token data aggregated across all pairs that include token.
     /// </summary>
     [DataContract]
     public partial class TokenHourDataV3DTO :  IEquatable<TokenHourDataV3DTO>, IValidatableObject
@@ -36,20 +36,20 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="periodStartUnix">periodStartUnix.</param>
-        /// <param name="token">token.</param>
-        /// <param name="volume">volume.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
-        /// <param name="totalValueLocked">totalValueLocked.</param>
-        /// <param name="totalValueLockedUsd">totalValueLockedUsd.</param>
-        /// <param name="priceUsd">priceUsd.</param>
-        /// <param name="feesUsd">feesUsd.</param>
-        /// <param name="open">open.</param>
-        /// <param name="high">high.</param>
-        /// <param name="low">low.</param>
-        /// <param name="close">close.</param>
+        /// <param name="id">token address concatendated with date.</param>
+        /// <param name="periodStartUnix">unix timestamp for start of hour.</param>
+        /// <param name="token">pointer to token.</param>
+        /// <param name="volume">volume in token units.</param>
+        /// <param name="volumeUsd">volume in derived USD.</param>
+        /// <param name="untrackedVolumeUsd">volume in USD even on pools with less reliable USD values.</param>
+        /// <param name="totalValueLocked">liquidity across all pools in token units.</param>
+        /// <param name="totalValueLockedUsd">liquidity across all pools in derived USD.</param>
+        /// <param name="priceUsd">price at end of period in USD.</param>
+        /// <param name="feesUsd">fees in USD.</param>
+        /// <param name="open">opening price USD.</param>
+        /// <param name="high">high price USD.</param>
+        /// <param name="low">low price USD.</param>
+        /// <param name="close">close price USD.</param>
         /// <param name="vid">vid.</param>
         public TokenHourDataV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), int periodStartUnix = default(int), string token = default(string), string volume = default(string), string volumeUsd = default(string), string untrackedVolumeUsd = default(string), string totalValueLocked = default(string), string totalValueLockedUsd = default(string), string priceUsd = default(string), string feesUsd = default(string), string open = default(string), string high = default(string), string low = default(string), string close = default(string), long vid = default(long))
         {
@@ -105,86 +105,100 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// token address concatendated with date
         /// </summary>
+        /// <value>token address concatendated with date</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets PeriodStartUnix
+        /// unix timestamp for start of hour
         /// </summary>
+        /// <value>unix timestamp for start of hour</value>
         [DataMember(Name="period_start_unix", EmitDefaultValue=false)]
         public int PeriodStartUnix { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token
+        /// pointer to token
         /// </summary>
+        /// <value>pointer to token</value>
         [DataMember(Name="token", EmitDefaultValue=true)]
         public string Token { get; set; }
 
         /// <summary>
-        /// Gets or Sets Volume
+        /// volume in token units
         /// </summary>
+        /// <value>volume in token units</value>
         [DataMember(Name="volume", EmitDefaultValue=true)]
         public string Volume { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// volume in derived USD
         /// </summary>
+        /// <value>volume in derived USD</value>
         [DataMember(Name="volume_usd", EmitDefaultValue=true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// volume in USD even on pools with less reliable USD values
         /// </summary>
+        /// <value>volume in USD even on pools with less reliable USD values</value>
         [DataMember(Name="untracked_volume_usd", EmitDefaultValue=true)]
         public string UntrackedVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLocked
+        /// liquidity across all pools in token units
         /// </summary>
+        /// <value>liquidity across all pools in token units</value>
         [DataMember(Name="total_value_locked", EmitDefaultValue=true)]
         public string TotalValueLocked { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsd
+        /// liquidity across all pools in derived USD
         /// </summary>
+        /// <value>liquidity across all pools in derived USD</value>
         [DataMember(Name="total_value_locked_usd", EmitDefaultValue=true)]
         public string TotalValueLockedUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets PriceUsd
+        /// price at end of period in USD
         /// </summary>
+        /// <value>price at end of period in USD</value>
         [DataMember(Name="price_usd", EmitDefaultValue=true)]
         public string PriceUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// fees in USD
         /// </summary>
+        /// <value>fees in USD</value>
         [DataMember(Name="fees_usd", EmitDefaultValue=true)]
         public string FeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets Open
+        /// opening price USD
         /// </summary>
+        /// <value>opening price USD</value>
         [DataMember(Name="open", EmitDefaultValue=true)]
         public string Open { get; set; }
 
         /// <summary>
-        /// Gets or Sets High
+        /// high price USD
         /// </summary>
+        /// <value>high price USD</value>
         [DataMember(Name="high", EmitDefaultValue=true)]
         public string High { get; set; }
 
         /// <summary>
-        /// Gets or Sets Low
+        /// low price USD
         /// </summary>
+        /// <value>low price USD</value>
         [DataMember(Name="low", EmitDefaultValue=true)]
         public string Low { get; set; }
 
         /// <summary>
-        /// Gets or Sets Close
+        /// close price USD
         /// </summary>
+        /// <value>close price USD</value>
         [DataMember(Name="close", EmitDefaultValue=true)]
         public string Close { get; set; }
 

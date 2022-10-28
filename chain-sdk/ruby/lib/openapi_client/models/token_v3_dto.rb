@@ -14,6 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Stores aggregated information for a specific token across all pairs that token is included in.
   class TokenV3DTO
     attr_accessor :entry_time
 
@@ -25,49 +26,49 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # 
+    # token address
     attr_accessor :id
 
-    # 
+    # token symbol
     attr_accessor :symbol
 
-    # 
+    # token name
     attr_accessor :name
 
-    # 
+    # token decimals
     attr_accessor :decimals
 
     attr_accessor :total_supply
 
-    # 
+    # volume in token units
     attr_accessor :volume
 
-    # 
+    # volume in derived USD
     attr_accessor :volume_usd
 
-    # 
+    # volume in USD even on pools with less reliable USD values
     attr_accessor :untracked_volume_usd
 
-    # 
+    # fees in USD
     attr_accessor :fees_usd
 
     attr_accessor :tx_count
 
     attr_accessor :pool_count
 
-    # 
+    # liquidity across all pools in token units
     attr_accessor :total_value_locked
 
-    # 
+    # liquidity across all pools in derived USD
     attr_accessor :total_value_locked_usd
 
-    # 
+    # TVL derived in USD untracked
     attr_accessor :total_value_locked_usd_untracked
 
-    # 
+    # derived price in ETH
     attr_accessor :derived_eth
 
-    # 
+    # pools token is in that are white listed for USD pricing
     attr_accessor :whitelist_pools
 
     attr_accessor :token_symbol

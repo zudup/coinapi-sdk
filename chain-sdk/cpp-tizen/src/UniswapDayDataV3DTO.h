@@ -1,7 +1,7 @@
 /*
  * UniswapDayDataV3DTO.h
  *
- * 
+ * Data accumulated and condensed into day stats for all of Uniswap
  */
 
 #ifndef _UniswapDayDataV3DTO_H_
@@ -21,7 +21,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Data accumulated and condensed into day stats for all of Uniswap
  *
  *  \ingroup Models
  *
@@ -74,46 +74,46 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get timestamp rounded to current day by dividing by 86400
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set timestamp rounded to current day by dividing by 86400
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get timestamp rounded to current day by dividing by 86400
 	 */
 	int getDate();
 
-	/*! \brief Set 
+	/*! \brief Set timestamp rounded to current day by dividing by 86400
 	 */
 	void setDate(int  date);
-	/*! \brief Get 
+	/*! \brief Get total volume across all pairs on this day, stored as a derived amount of ETH
 	 */
 	std::string getVolumeEth();
 
-	/*! \brief Set 
+	/*! \brief Set total volume across all pairs on this day, stored as a derived amount of ETH
 	 */
 	void setVolumeEth(std::string  volume_eth);
-	/*! \brief Get 
+	/*! \brief Get total volume across all pairs on this day, stored as a derived amount of USD
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set total volume across all pairs on this day, stored as a derived amount of USD
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get total daily volume in Uniswap derived in terms of USD untracked
 	 */
 	std::string getVolumeUsdUntracked();
 
-	/*! \brief Set 
+	/*! \brief Set total daily volume in Uniswap derived in terms of USD untracked
 	 */
 	void setVolumeUsdUntracked(std::string  volume_usd_untracked);
-	/*! \brief Get 
+	/*! \brief Get fees in USD
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set fees in USD
 	 */
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
@@ -123,11 +123,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setTxCount(BigInteger  tx_count);
-	/*! \brief Get 
+	/*! \brief Get tvl in terms of USD
 	 */
 	std::string getTvlUsd();
 
-	/*! \brief Set 
+	/*! \brief Set tvl in terms of USD
 	 */
 	void setTvlUsd(std::string  tvl_usd);
 

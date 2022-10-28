@@ -2375,7 +2375,7 @@ export type TokenDTO = {
 }
 
 /**
- * 
+ * Token data aggregated across all pairs that include token.
  * @export
  */
 export type TokenHourDataV3DTO = {
@@ -2398,85 +2398,85 @@ export type TokenHourDataV3DTO = {
      */
     block_number?: number;
     /**
-     * 
+     * token address concatendated with date
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     id?: string;
     /**
-     * 
+     * unix timestamp for start of hour
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
     period_start_unix?: number;
     /**
-     * 
+     * pointer to token
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     token?: string;
     /**
-     * 
+     * volume in token units
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume?: string;
     /**
-     * 
+     * volume in derived USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * liquidity across all pools in token units
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked?: string;
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * 
+     * price at end of period in USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     price_usd?: string;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     fees_usd?: string;
     /**
-     * 
+     * opening price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     open?: string;
     /**
-     * 
+     * high price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     high?: string;
     /**
-     * 
+     * low price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     low?: string;
     /**
-     * 
+     * close price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
@@ -2593,7 +2593,7 @@ export type TokenV2DTO = {
 }
 
 /**
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
 export type TokenV3DTO = {
@@ -2622,25 +2622,25 @@ export type TokenV3DTO = {
      */
     vid?: number;
     /**
-     * 
+     * token address
      * @type {string}
      * @memberof TokenV3DTO
      */
     id?: string;
     /**
-     * 
+     * token symbol
      * @type {string}
      * @memberof TokenV3DTO
      */
     symbol?: string;
     /**
-     * 
+     * token name
      * @type {string}
      * @memberof TokenV3DTO
      */
     name?: string;
     /**
-     * 
+     * token decimals
      * @type {number}
      * @memberof TokenV3DTO
      */
@@ -2652,25 +2652,25 @@ export type TokenV3DTO = {
      */
     total_supply?: BigInteger;
     /**
-     * 
+     * volume in token units
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume?: string;
     /**
-     * 
+     * volume in derived USD
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @type {string}
      * @memberof TokenV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof TokenV3DTO
      */
@@ -2688,31 +2688,31 @@ export type TokenV3DTO = {
      */
     pool_count?: BigInteger;
     /**
-     * 
+     * liquidity across all pools in token units
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked?: string;
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * 
+     * TVL derived in USD untracked
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
-     * 
+     * derived price in ETH
      * @type {string}
      * @memberof TokenV3DTO
      */
     derived_eth?: string;
     /**
-     * 
+     * pools token is in that are white listed for USD pricing
      * @type {Array<string>}
      * @memberof TokenV3DTO
      */
@@ -2726,7 +2726,7 @@ export type TokenV3DTO = {
 }
 
 /**
- * 
+ * Token data aggregated across all pairs that include token.
  * @export
  */
 export type TokenV3DayDataDTO = {
@@ -2755,85 +2755,85 @@ export type TokenV3DayDataDTO = {
      */
     vid?: number;
     /**
-     * 
+     * token address concatendated with date
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     id?: string;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     _date?: number;
     /**
-     * 
+     * pointer to token
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     token?: string;
     /**
-     * 
+     * volume in token units
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume?: string;
     /**
-     * 
+     * volume in derived USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume_usd?: string;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * liquidity across all pools in token units
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked?: string;
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked_usd?: string;
     /**
-     * 
+     * price at end of period in USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     price_usd?: string;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     fees_usd?: string;
     /**
-     * 
+     * opening price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     open?: string;
     /**
-     * 
+     * high price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     high?: string;
     /**
-     * 
+     * low price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     low?: string;
     /**
-     * 
+     * close price USD
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
@@ -2841,7 +2841,7 @@ export type TokenV3DayDataDTO = {
 }
 
 /**
- * 
+ * Data accumulated and condensed into day stats for all of Uniswap
  * @export
  */
 export type UniswapDayDataV3DTO = {
@@ -2870,37 +2870,37 @@ export type UniswapDayDataV3DTO = {
      */
     vid?: number;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     id?: string;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     _date?: number;
     /**
-     * 
+     * total volume across all pairs on this day, stored as a derived amount of ETH
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_eth?: string;
     /**
-     * 
+     * total volume across all pairs on this day, stored as a derived amount of USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * total daily volume in Uniswap derived in terms of USD untracked
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd_untracked?: string;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
@@ -2912,7 +2912,7 @@ export type UniswapDayDataV3DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * tvl in terms of USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */

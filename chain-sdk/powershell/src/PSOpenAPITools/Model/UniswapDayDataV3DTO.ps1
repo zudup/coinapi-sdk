@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Data accumulated and condensed into day stats for all of Uniswap
 
 .PARAMETER EntryTime
 No description available.
@@ -24,21 +24,21 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+timestamp rounded to current day by dividing by 86400
 .PARAMETER Date
-
+timestamp rounded to current day by dividing by 86400
 .PARAMETER VolumeEth
-
+total volume across all pairs on this day, stored as a derived amount of ETH
 .PARAMETER VolumeUsd
-
+total volume across all pairs on this day, stored as a derived amount of USD
 .PARAMETER VolumeUsdUntracked
-
+total daily volume in Uniswap derived in terms of USD untracked
 .PARAMETER FeesUsd
-
+fees in USD
 .PARAMETER TxCount
 No description available.
 .PARAMETER TvlUsd
-
+tvl in terms of USD
 .OUTPUTS
 
 UniswapDayDataV3DTO<PSCustomObject>

@@ -13,7 +13,7 @@
 /*
  * UniswapDayDataV3DTO.h
  *
- * 
+ * Data accumulated and condensed into day stats for all of Uniswap
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_UniswapDayDataV3DTO_H_
@@ -33,7 +33,7 @@ namespace model {
 class BigInteger;
 
 /// <summary>
-/// 
+/// Data accumulated and condensed into day stats for all of Uniswap
 /// </summary>
 class  UniswapDayDataV3DTO
     : public ModelBase
@@ -93,7 +93,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// timestamp rounded to current day by dividing by 86400
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -102,7 +102,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// timestamp rounded to current day by dividing by 86400
     /// </summary>
     int32_t getDate() const;
     bool dateIsSet() const;
@@ -111,7 +111,7 @@ public:
     void setDate(int32_t value);
 
     /// <summary>
-    /// 
+    /// total volume across all pairs on this day, stored as a derived amount of ETH
     /// </summary>
     utility::string_t getVolumeEth() const;
     bool volumeEthIsSet() const;
@@ -120,7 +120,7 @@ public:
     void setVolumeEth(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// total volume across all pairs on this day, stored as a derived amount of USD
     /// </summary>
     utility::string_t getVolumeUsd() const;
     bool volumeUsdIsSet() const;
@@ -129,7 +129,7 @@ public:
     void setVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// total daily volume in Uniswap derived in terms of USD untracked
     /// </summary>
     utility::string_t getVolumeUsdUntracked() const;
     bool volumeUsdUntrackedIsSet() const;
@@ -138,7 +138,7 @@ public:
     void setVolumeUsdUntracked(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// fees in USD
     /// </summary>
     utility::string_t getFeesUsd() const;
     bool feesUsdIsSet() const;
@@ -156,7 +156,7 @@ public:
     void setTxCount(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// tvl in terms of USD
     /// </summary>
     utility::string_t getTvlUsd() const;
     bool tvlUsdIsSet() const;

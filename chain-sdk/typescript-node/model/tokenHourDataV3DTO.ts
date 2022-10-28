@@ -12,6 +12,9 @@
 
 import { RequestFile } from './models';
 
+/**
+* Token data aggregated across all pairs that include token.
+*/
 export class TokenHourDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
@@ -20,59 +23,59 @@ export class TokenHourDataV3DTO {
     */
     'blockNumber'?: number;
     /**
-    * 
+    * token address concatendated with date
     */
     'id'?: string | null;
     /**
-    * 
+    * unix timestamp for start of hour
     */
     'periodStartUnix'?: number;
     /**
-    * 
+    * pointer to token
     */
     'token'?: string | null;
     /**
-    * 
+    * volume in token units
     */
     'volume'?: string | null;
     /**
-    * 
+    * volume in derived USD
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * volume in USD even on pools with less reliable USD values
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * 
+    * liquidity across all pools in token units
     */
     'totalValueLocked'?: string | null;
     /**
-    * 
+    * liquidity across all pools in derived USD
     */
     'totalValueLockedUsd'?: string | null;
     /**
-    * 
+    * price at end of period in USD
     */
     'priceUsd'?: string | null;
     /**
-    * 
+    * fees in USD
     */
     'feesUsd'?: string | null;
     /**
-    * 
+    * opening price USD
     */
     'open'?: string | null;
     /**
-    * 
+    * high price USD
     */
     'high'?: string | null;
     /**
-    * 
+    * low price USD
     */
     'low'?: string | null;
     /**
-    * 
+    * close price USD
     */
     'close'?: string | null;
     /**

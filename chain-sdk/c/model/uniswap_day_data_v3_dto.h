@@ -1,7 +1,7 @@
 /*
  * uniswap_day_data_v3_dto.h
  *
- * 
+ * Data accumulated and condensed into day stats for all of Uniswap
  */
 
 #ifndef _uniswap_day_data_v3_dto_H_

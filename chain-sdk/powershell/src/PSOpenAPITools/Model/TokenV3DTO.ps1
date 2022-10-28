@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Stores aggregated information for a specific token across all pairs that token is included in.
 
 .PARAMETER EntryTime
 No description available.
@@ -24,37 +24,37 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+token address
 .PARAMETER Symbol
-
+token symbol
 .PARAMETER Name
-
+token name
 .PARAMETER Decimals
-
+token decimals
 .PARAMETER TotalSupply
 No description available.
 .PARAMETER Volume
-
+volume in token units
 .PARAMETER VolumeUsd
-
+volume in derived USD
 .PARAMETER UntrackedVolumeUsd
-
+volume in USD even on pools with less reliable USD values
 .PARAMETER FeesUsd
-
+fees in USD
 .PARAMETER TxCount
 No description available.
 .PARAMETER PoolCount
 No description available.
 .PARAMETER TotalValueLocked
-
+liquidity across all pools in token units
 .PARAMETER TotalValueLockedUsd
-
+liquidity across all pools in derived USD
 .PARAMETER TotalValueLockedUsdUntracked
-
+TVL derived in USD untracked
 .PARAMETER DerivedEth
-
+derived price in ETH
 .PARAMETER WhitelistPools
-
+pools token is in that are white listed for USD pricing
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

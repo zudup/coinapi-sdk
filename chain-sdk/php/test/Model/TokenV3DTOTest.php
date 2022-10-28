@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * TokenV3DTOTest Class Doc Comment
  *
  * @category    Class
- * @description TokenV3DTO
+ * @description Stores aggregated information for a specific token across all pairs that token is included in.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

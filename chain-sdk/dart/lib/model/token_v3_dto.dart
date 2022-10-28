@@ -70,16 +70,16 @@ class TokenV3DTO {
   ///
   int? vid;
 
-  /// 
+  /// token address
   String? id;
 
-  /// 
+  /// token symbol
   String? symbol;
 
-  /// 
+  /// token name
   String? name;
 
-  /// 
+  /// token decimals
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -96,16 +96,16 @@ class TokenV3DTO {
   ///
   BigInteger? totalSupply;
 
-  /// 
+  /// volume in token units
   String? volume;
 
-  /// 
+  /// volume in derived USD
   String? volumeUsd;
 
-  /// 
+  /// volume in USD even on pools with less reliable USD values
   String? untrackedVolumeUsd;
 
-  /// 
+  /// fees in USD
   String? feesUsd;
 
   ///
@@ -124,19 +124,19 @@ class TokenV3DTO {
   ///
   BigInteger? poolCount;
 
-  /// 
+  /// liquidity across all pools in token units
   String? totalValueLocked;
 
-  /// 
+  /// liquidity across all pools in derived USD
   String? totalValueLockedUsd;
 
-  /// 
+  /// TVL derived in USD untracked
   String? totalValueLockedUsdUntracked;
 
-  /// 
+  /// derived price in ETH
   String? derivedEth;
 
-  /// 
+  /// pools token is in that are white listed for USD pricing
   List<String>? whitelistPools;
 
   String? tokenSymbol;

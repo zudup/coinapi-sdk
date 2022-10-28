@@ -3,7 +3,7 @@
 
 defmodule OnChainAPI.Model.UniswapDayDataV3Dto do
   @moduledoc """
-  
+  Data accumulated and condensed into day stats for all of Uniswap
   """
 
   @derive [Poison.Encoder]

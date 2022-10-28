@@ -12,6 +12,7 @@
  */
 
 /**
+ * Token data aggregated across all pairs that include token.
  * @export
  * @interface TokenHourDataV3DTO
  */
@@ -33,85 +34,85 @@ export interface TokenHourDataV3DTO {
      */
     block_number?: number;
     /**
-     * 
+     * token address concatendated with date
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * unix timestamp for start of hour
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
     period_start_unix?: number;
     /**
-     * 
+     * pointer to token
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     token?: string | null;
     /**
-     * 
+     * volume in token units
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume?: string | null;
     /**
-     * 
+     * volume in derived USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * liquidity across all pools in token units
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked?: string | null;
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * price at end of period in USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     price_usd?: string | null;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     fees_usd?: string | null;
     /**
-     * 
+     * opening price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     open?: string | null;
     /**
-     * 
+     * high price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     high?: string | null;
     /**
-     * 
+     * low price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     low?: string | null;
     /**
-     * 
+     * close price USD
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */

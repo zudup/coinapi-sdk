@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * TokenHourDataV3DTOTest Class Doc Comment
  *
  * @category    Class
- * @description TokenHourDataV3DTO
+ * @description Token data aggregated across all pairs that include token.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

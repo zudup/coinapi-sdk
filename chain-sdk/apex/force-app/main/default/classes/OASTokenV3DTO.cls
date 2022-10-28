@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTokenV3DTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 public class OASTokenV3DTO implements OAS.MappedProperties {
     /**
@@ -39,25 +39,25 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * 
+     * token address
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * token symbol
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * 
+     * token name
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * 
+     * token decimals
      * @return decimals
      */
     public Integer decimals { get; set; }
@@ -69,25 +69,25 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public OASBigInteger totalSupply { get; set; }
 
     /**
-     * 
+     * volume in token units
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * 
+     * volume in derived USD
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * fees in USD
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -105,31 +105,31 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public OASBigInteger poolCount { get; set; }
 
     /**
-     * 
+     * liquidity across all pools in token units
      * @return totalValueLocked
      */
     public String totalValueLocked { get; set; }
 
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * 
+     * TVL derived in USD untracked
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * 
+     * derived price in ETH
      * @return derivedEth
      */
     public String derivedEth { get; set; }
 
     /**
-     * 
+     * pools token is in that are white listed for USD pricing
      * @return whitelistPools
      */
     public List<String> whitelistPools { get; set; }

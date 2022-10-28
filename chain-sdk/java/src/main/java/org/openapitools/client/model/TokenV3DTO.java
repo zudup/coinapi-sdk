@@ -50,9 +50,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TokenV3DTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:12:53.009082Z[Etc/UTC]")
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
 public class TokenV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -248,11 +249,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * token address
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address")
 
   public String getId() {
     return id;
@@ -271,11 +272,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * token symbol
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token symbol")
 
   public String getSymbol() {
     return symbol;
@@ -294,11 +295,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * token name
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token name")
 
   public String getName() {
     return name;
@@ -317,11 +318,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * token decimals
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token decimals")
 
   public Integer getDecimals() {
     return decimals;
@@ -363,11 +364,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * volume in token units
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in token units")
 
   public String getVolume() {
     return volume;
@@ -386,11 +387,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * volume in derived USD
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in derived USD")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -409,11 +410,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * volume in USD even on pools with less reliable USD values
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -432,11 +433,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * fees in USD
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "fees in USD")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -501,11 +502,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * liquidity across all pools in token units
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in token units")
 
   public String getTotalValueLocked() {
     return totalValueLocked;
@@ -524,11 +525,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * liquidity across all pools in derived USD
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in derived USD")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -547,11 +548,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * TVL derived in USD untracked
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TVL derived in USD untracked")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -570,11 +571,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * derived price in ETH
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "derived price in ETH")
 
   public String getDerivedEth() {
     return derivedEth;
@@ -601,11 +602,11 @@ public class TokenV3DTO {
   }
 
    /**
-   * 
+   * pools token is in that are white listed for USD pricing
    * @return whitelistPools
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "pools token is in that are white listed for USD pricing")
 
   public List<String> getWhitelistPools() {
     return whitelistPools;

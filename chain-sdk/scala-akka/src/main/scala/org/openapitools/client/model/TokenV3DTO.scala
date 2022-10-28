@@ -21,34 +21,34 @@ case class TokenV3DTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /*  */
+  /* token address */
   id: Option[String] = None,
-  /*  */
+  /* token symbol */
   symbol: Option[String] = None,
-  /*  */
+  /* token name */
   name: Option[String] = None,
-  /*  */
+  /* token decimals */
   decimals: Option[Int] = None,
   totalSupply: Option[BigInteger] = None,
-  /*  */
+  /* volume in token units */
   volume: Option[String] = None,
-  /*  */
+  /* volume in derived USD */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* volume in USD even on pools with less reliable USD values */
   untrackedVolumeUsd: Option[String] = None,
-  /*  */
+  /* fees in USD */
   feesUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
   poolCount: Option[BigInteger] = None,
-  /*  */
+  /* liquidity across all pools in token units */
   totalValueLocked: Option[String] = None,
-  /*  */
+  /* liquidity across all pools in derived USD */
   totalValueLockedUsd: Option[String] = None,
-  /*  */
+  /* TVL derived in USD untracked */
   totalValueLockedUsdUntracked: Option[String] = None,
-  /*  */
+  /* derived price in ETH */
   derivedEth: Option[String] = None,
-  /*  */
+  /* pools token is in that are white listed for USD pricing */
   whitelistPools: Option[Seq[String]] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel

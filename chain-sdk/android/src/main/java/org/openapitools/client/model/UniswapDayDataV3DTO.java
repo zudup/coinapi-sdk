@@ -17,7 +17,10 @@ import org.openapitools.client.model.BigInteger;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Data accumulated and condensed into day stats for all of Uniswap
+ **/
+@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap")
 public class UniswapDayDataV3DTO {
   
   @SerializedName("entry_time")
@@ -88,9 +91,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * timestamp rounded to current day by dividing by 86400
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
   public String getId() {
     return id;
   }
@@ -99,9 +102,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * timestamp rounded to current day by dividing by 86400
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
   public Integer getDate() {
     return date;
   }
@@ -110,9 +113,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * total volume across all pairs on this day, stored as a derived amount of ETH
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of ETH")
   public String getVolumeEth() {
     return volumeEth;
   }
@@ -121,9 +124,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * total volume across all pairs on this day, stored as a derived amount of USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of USD")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -132,9 +135,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * total daily volume in Uniswap derived in terms of USD untracked
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "total daily volume in Uniswap derived in terms of USD untracked")
   public String getVolumeUsdUntracked() {
     return volumeUsdUntracked;
   }
@@ -143,9 +146,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * fees in USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "fees in USD")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -164,9 +167,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * 
+   * tvl in terms of USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "tvl in terms of USD")
   public String getTvlUsd() {
     return tvlUsd;
   }

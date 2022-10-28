@@ -12,6 +12,9 @@
 import { BigInteger } from './bigInteger';
 
 
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ */
 export interface TokenV3DTO { 
     entry_time?: string;
     recv_time?: string;
@@ -24,58 +27,58 @@ export interface TokenV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * token address
      */
     id?: string | null;
     /**
-     * 
+     * token symbol
      */
     symbol?: string | null;
     /**
-     * 
+     * token name
      */
     name?: string | null;
     /**
-     * 
+     * token decimals
      */
     decimals?: number;
     total_supply?: BigInteger;
     /**
-     * 
+     * volume in token units
      */
     volume?: string | null;
     /**
-     * 
+     * volume in derived USD
      */
     volume_usd?: string | null;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * fees in USD
      */
     fees_usd?: string | null;
     tx_count?: BigInteger;
     pool_count?: BigInteger;
     /**
-     * 
+     * liquidity across all pools in token units
      */
     total_value_locked?: string | null;
     /**
-     * 
+     * liquidity across all pools in derived USD
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * TVL derived in USD untracked
      */
     total_value_locked_usd_untracked?: string | null;
     /**
-     * 
+     * derived price in ETH
      */
     derived_eth?: string | null;
     /**
-     * 
+     * pools token is in that are white listed for USD pricing
      */
     whitelist_pools?: Array<string> | null;
     readonly token_symbol?: string | null;

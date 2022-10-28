@@ -1,7 +1,7 @@
 /*
  * token_v3_dto.h
  *
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
 #ifndef _token_v3_dto_H_

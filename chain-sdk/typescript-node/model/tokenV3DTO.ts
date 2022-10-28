@@ -13,6 +13,9 @@
 import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 
+/**
+* Stores aggregated information for a specific token across all pairs that token is included in.
+*/
 export class TokenV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
@@ -25,58 +28,58 @@ export class TokenV3DTO {
     */
     'vid'?: number;
     /**
-    * 
+    * token address
     */
     'id'?: string | null;
     /**
-    * 
+    * token symbol
     */
     'symbol'?: string | null;
     /**
-    * 
+    * token name
     */
     'name'?: string | null;
     /**
-    * 
+    * token decimals
     */
     'decimals'?: number;
     'totalSupply'?: BigInteger;
     /**
-    * 
+    * volume in token units
     */
     'volume'?: string | null;
     /**
-    * 
+    * volume in derived USD
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * volume in USD even on pools with less reliable USD values
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * 
+    * fees in USD
     */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
     'poolCount'?: BigInteger;
     /**
-    * 
+    * liquidity across all pools in token units
     */
     'totalValueLocked'?: string | null;
     /**
-    * 
+    * liquidity across all pools in derived USD
     */
     'totalValueLockedUsd'?: string | null;
     /**
-    * 
+    * TVL derived in USD untracked
     */
     'totalValueLockedUsdUntracked'?: string | null;
     /**
-    * 
+    * derived price in ETH
     */
     'derivedEth'?: string | null;
     /**
-    * 
+    * pools token is in that are white listed for USD pricing
     */
     'whitelistPools'?: Array<string> | null;
     'tokenSymbol'?: string | null;

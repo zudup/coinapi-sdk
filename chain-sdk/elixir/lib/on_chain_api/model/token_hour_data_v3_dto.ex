@@ -3,7 +3,7 @@
 
 defmodule OnChainAPI.Model.TokenHourDataV3Dto do
   @moduledoc """
-  
+  Token data aggregated across all pairs that include token.
   """
 
   @derive [Poison.Encoder]

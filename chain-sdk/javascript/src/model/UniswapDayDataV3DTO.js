@@ -22,6 +22,7 @@ import BigInteger from './BigInteger';
 class UniswapDayDataV3DTO {
     /**
      * Constructs a new <code>UniswapDayDataV3DTO</code>.
+     * Data accumulated and condensed into day stats for all of Uniswap
      * @alias module:model/UniswapDayDataV3DTO
      */
     constructor() { 
@@ -114,37 +115,37 @@ UniswapDayDataV3DTO.prototype['block_number'] = undefined;
 UniswapDayDataV3DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * timestamp rounded to current day by dividing by 86400
  * @member {String} id
  */
 UniswapDayDataV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * timestamp rounded to current day by dividing by 86400
  * @member {Number} date
  */
 UniswapDayDataV3DTO.prototype['date'] = undefined;
 
 /**
- * 
+ * total volume across all pairs on this day, stored as a derived amount of ETH
  * @member {String} volume_eth
  */
 UniswapDayDataV3DTO.prototype['volume_eth'] = undefined;
 
 /**
- * 
+ * total volume across all pairs on this day, stored as a derived amount of USD
  * @member {String} volume_usd
  */
 UniswapDayDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * total daily volume in Uniswap derived in terms of USD untracked
  * @member {String} volume_usd_untracked
  */
 UniswapDayDataV3DTO.prototype['volume_usd_untracked'] = undefined;
 
 /**
- * 
+ * fees in USD
  * @member {String} fees_usd
  */
 UniswapDayDataV3DTO.prototype['fees_usd'] = undefined;
@@ -155,7 +156,7 @@ UniswapDayDataV3DTO.prototype['fees_usd'] = undefined;
 UniswapDayDataV3DTO.prototype['tx_count'] = undefined;
 
 /**
- * 
+ * tvl in terms of USD
  * @member {String} tvl_usd
  */
 UniswapDayDataV3DTO.prototype['tvl_usd'] = undefined;

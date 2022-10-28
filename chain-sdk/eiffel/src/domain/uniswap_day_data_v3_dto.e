@@ -28,21 +28,21 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- 
+      -- timestamp rounded to current day by dividing by 86400
  	date: INTEGER_32
-    	 -- 
+    	 -- timestamp rounded to current day by dividing by 86400
     volume_eth: detachable STRING_32
-      -- 
+      -- total volume across all pairs on this day, stored as a derived amount of ETH
     volume_usd: detachable STRING_32
-      -- 
+      -- total volume across all pairs on this day, stored as a derived amount of USD
     volume_usd_untracked: detachable STRING_32
-      -- 
+      -- total daily volume in Uniswap derived in terms of USD untracked
     fees_usd: detachable STRING_32
-      -- 
+      -- fees in USD
     tx_count: detachable BIG_INTEGER
       
     tvl_usd: detachable STRING_32
-      -- 
+      -- tvl in terms of USD
 
 feature -- Change Element
 

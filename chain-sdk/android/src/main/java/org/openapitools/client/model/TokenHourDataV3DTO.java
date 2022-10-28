@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Token data aggregated across all pairs that include token.
+ **/
+@ApiModel(description = "Token data aggregated across all pairs that include token.")
 public class TokenHourDataV3DTO {
   
   @SerializedName("entry_time")
@@ -88,9 +91,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * token address concatendated with date
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address concatendated with date")
   public String getId() {
     return id;
   }
@@ -99,9 +102,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * unix timestamp for start of hour
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "unix timestamp for start of hour")
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
   }
@@ -110,9 +113,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * pointer to token
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "pointer to token")
   public String getToken() {
     return token;
   }
@@ -121,9 +124,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * volume in token units
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in token units")
   public String getVolume() {
     return volume;
   }
@@ -132,9 +135,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * volume in derived USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in derived USD")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -143,9 +146,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * volume in USD even on pools with less reliable USD values
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -154,9 +157,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * liquidity across all pools in token units
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in token units")
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -165,9 +168,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * liquidity across all pools in derived USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "liquidity across all pools in derived USD")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -176,9 +179,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * price at end of period in USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "price at end of period in USD")
   public String getPriceUsd() {
     return priceUsd;
   }
@@ -187,9 +190,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * fees in USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "fees in USD")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -198,9 +201,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * opening price USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "opening price USD")
   public String getOpen() {
     return open;
   }
@@ -209,9 +212,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * high price USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "high price USD")
   public String getHigh() {
     return high;
   }
@@ -220,9 +223,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * low price USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "low price USD")
   public String getLow() {
     return low;
   }
@@ -231,9 +234,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * 
+   * close price USD
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "close price USD")
   public String getClose() {
     return close;
   }

@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class TokenV3DayDataDTO {
     /**
      * Constructs a new <code>TokenV3DayDataDTO</code>.
+     * Token data aggregated across all pairs that include token.
      * @alias module:model/TokenV3DayDataDTO
      */
     constructor() { 
@@ -131,85 +132,85 @@ TokenV3DayDataDTO.prototype['block_number'] = undefined;
 TokenV3DayDataDTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * token address concatendated with date
  * @member {String} id
  */
 TokenV3DayDataDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * timestamp rounded to current day by dividing by 86400
  * @member {Number} date
  */
 TokenV3DayDataDTO.prototype['date'] = undefined;
 
 /**
- * 
+ * pointer to token
  * @member {String} token
  */
 TokenV3DayDataDTO.prototype['token'] = undefined;
 
 /**
- * 
+ * volume in token units
  * @member {String} volume
  */
 TokenV3DayDataDTO.prototype['volume'] = undefined;
 
 /**
- * 
+ * volume in derived USD
  * @member {String} volume_usd
  */
 TokenV3DayDataDTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * volume in USD even on pools with less reliable USD values
  * @member {String} untracked_volume_usd
  */
 TokenV3DayDataDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in token units
  * @member {String} total_value_locked
  */
 TokenV3DayDataDTO.prototype['total_value_locked'] = undefined;
 
 /**
- * 
+ * liquidity across all pools in derived USD
  * @member {String} total_value_locked_usd
  */
 TokenV3DayDataDTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
- * 
+ * price at end of period in USD
  * @member {String} price_usd
  */
 TokenV3DayDataDTO.prototype['price_usd'] = undefined;
 
 /**
- * 
+ * fees in USD
  * @member {String} fees_usd
  */
 TokenV3DayDataDTO.prototype['fees_usd'] = undefined;
 
 /**
- * 
+ * opening price USD
  * @member {String} open
  */
 TokenV3DayDataDTO.prototype['open'] = undefined;
 
 /**
- * 
+ * high price USD
  * @member {String} high
  */
 TokenV3DayDataDTO.prototype['high'] = undefined;
 
 /**
- * 
+ * low price USD
  * @member {String} low
  */
 TokenV3DayDataDTO.prototype['low'] = undefined;
 
 /**
- * 
+ * close price USD
  * @member {String} close
  */
 TokenV3DayDataDTO.prototype['close'] = undefined;

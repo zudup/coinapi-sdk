@@ -16,6 +16,7 @@ import type {
 } from './';
 
 /**
+ * Data accumulated and condensed into day stats for all of Uniswap
  * @export
  * @interface UniswapDayDataV3DTO
  */
@@ -43,37 +44,37 @@ export interface UniswapDayDataV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * timestamp rounded to current day by dividing by 86400
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     date?: number;
     /**
-     * 
+     * total volume across all pairs on this day, stored as a derived amount of ETH
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_eth?: string | null;
     /**
-     * 
+     * total volume across all pairs on this day, stored as a derived amount of USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * total daily volume in Uniswap derived in terms of USD untracked
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd_untracked?: string | null;
     /**
-     * 
+     * fees in USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
@@ -84,7 +85,7 @@ export interface UniswapDayDataV3DTO {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * tvl in terms of USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */

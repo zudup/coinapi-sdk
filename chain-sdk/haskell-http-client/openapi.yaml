@@ -7080,6 +7080,7 @@ components:
       type: object
     TokenHourDataV3DTO:
       additionalProperties: false
+      description: Token data aggregated across all pairs that include token.
       example:
         price_usd: price_usd
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -7111,59 +7112,59 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: token address concatendated with date
           nullable: true
           type: string
         period_start_unix:
-          description: ""
+          description: unix timestamp for start of hour
           format: int32
           type: integer
         token:
-          description: ""
+          description: pointer to token
           nullable: true
           type: string
         volume:
-          description: ""
+          description: volume in token units
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: volume in derived USD
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: volume in USD even on pools with less reliable USD values
           nullable: true
           type: string
         total_value_locked:
-          description: ""
+          description: liquidity across all pools in token units
           nullable: true
           type: string
         total_value_locked_usd:
-          description: ""
+          description: liquidity across all pools in derived USD
           nullable: true
           type: string
         price_usd:
-          description: ""
+          description: price at end of period in USD
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: fees in USD
           nullable: true
           type: string
         open:
-          description: ""
+          description: opening price USD
           nullable: true
           type: string
         high:
-          description: ""
+          description: high price USD
           nullable: true
           type: string
         low:
-          description: ""
+          description: low price USD
           nullable: true
           type: string
         close:
-          description: ""
+          description: close price USD
           nullable: true
           type: string
         vid:
@@ -7266,6 +7267,8 @@ components:
       type: object
     TokenV3DTO:
       additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
       example:
         entry_time: 2000-01-23T04:56:07.000+00:00
         symbol: symbol
@@ -7321,37 +7324,37 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: token address
           nullable: true
           type: string
         symbol:
-          description: ""
+          description: token symbol
           nullable: true
           type: string
         name:
-          description: ""
+          description: token name
           nullable: true
           type: string
         decimals:
-          description: ""
+          description: token decimals
           format: int32
           type: integer
         total_supply:
           $ref: '#/components/schemas/BigInteger'
         volume:
-          description: ""
+          description: volume in token units
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: volume in derived USD
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: volume in USD even on pools with less reliable USD values
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: fees in USD
           nullable: true
           type: string
         tx_count:
@@ -7359,23 +7362,23 @@ components:
         pool_count:
           $ref: '#/components/schemas/BigInteger'
         total_value_locked:
-          description: ""
+          description: liquidity across all pools in token units
           nullable: true
           type: string
         total_value_locked_usd:
-          description: ""
+          description: liquidity across all pools in derived USD
           nullable: true
           type: string
         total_value_locked_usd_untracked:
-          description: ""
+          description: TVL derived in USD untracked
           nullable: true
           type: string
         derived_eth:
-          description: ""
+          description: derived price in ETH
           nullable: true
           type: string
         whitelist_pools:
-          description: ""
+          description: pools token is in that are white listed for USD pricing
           items:
             type: string
           nullable: true
@@ -7387,6 +7390,7 @@ components:
       type: object
     TokenV3DayDataDTO:
       additionalProperties: false
+      description: Token data aggregated across all pairs that include token.
       example:
         date: 1
         price_usd: price_usd
@@ -7422,64 +7426,65 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: token address concatendated with date
           nullable: true
           type: string
         date:
-          description: ""
+          description: timestamp rounded to current day by dividing by 86400
           format: int32
           type: integer
         token:
-          description: ""
+          description: pointer to token
           nullable: true
           type: string
         volume:
-          description: ""
+          description: volume in token units
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: volume in derived USD
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: volume in USD even on pools with less reliable USD values
           nullable: true
           type: string
         total_value_locked:
-          description: ""
+          description: liquidity across all pools in token units
           nullable: true
           type: string
         total_value_locked_usd:
-          description: ""
+          description: liquidity across all pools in derived USD
           nullable: true
           type: string
         price_usd:
-          description: ""
+          description: price at end of period in USD
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: fees in USD
           nullable: true
           type: string
         open:
-          description: ""
+          description: opening price USD
           nullable: true
           type: string
         high:
-          description: ""
+          description: high price USD
           nullable: true
           type: string
         low:
-          description: ""
+          description: low price USD
           nullable: true
           type: string
         close:
-          description: ""
+          description: close price USD
           nullable: true
           type: string
       type: object
     UniswapDayDataV3DTO:
       additionalProperties: false
+      description: Data accumulated and condensed into day stats for all of Uniswap
       example:
         vid: 6
         date: 1
@@ -7514,33 +7519,35 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: timestamp rounded to current day by dividing by 86400
           nullable: true
           type: string
         date:
-          description: ""
+          description: timestamp rounded to current day by dividing by 86400
           format: int32
           type: integer
         volume_eth:
-          description: ""
+          description: "total volume across all pairs on this day, stored as a derived\
+            \ amount of ETH"
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: "total volume across all pairs on this day, stored as a derived\
+            \ amount of USD"
           nullable: true
           type: string
         volume_usd_untracked:
-          description: ""
+          description: total daily volume in Uniswap derived in terms of USD untracked
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: fees in USD
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         tvl_usd:
-          description: ""
+          description: tvl in terms of USD
           nullable: true
           type: string
       type: object

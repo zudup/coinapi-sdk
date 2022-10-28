@@ -11,6 +11,9 @@
  */
 
 
+/**
+ * Token data aggregated across all pairs that include token.
+ */
 export interface TokenHourDataV3DTO { 
     entry_time?: string;
     recv_time?: string;
@@ -19,59 +22,59 @@ export interface TokenHourDataV3DTO {
      */
     block_number?: number;
     /**
-     * 
+     * token address concatendated with date
      */
     id?: string | null;
     /**
-     * 
+     * unix timestamp for start of hour
      */
     period_start_unix?: number;
     /**
-     * 
+     * pointer to token
      */
     token?: string | null;
     /**
-     * 
+     * volume in token units
      */
     volume?: string | null;
     /**
-     * 
+     * volume in derived USD
      */
     volume_usd?: string | null;
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * liquidity across all pools in token units
      */
     total_value_locked?: string | null;
     /**
-     * 
+     * liquidity across all pools in derived USD
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * price at end of period in USD
      */
     price_usd?: string | null;
     /**
-     * 
+     * fees in USD
      */
     fees_usd?: string | null;
     /**
-     * 
+     * opening price USD
      */
     open?: string | null;
     /**
-     * 
+     * high price USD
      */
     high?: string | null;
     /**
-     * 
+     * low price USD
      */
     low?: string | null;
     /**
-     * 
+     * close price USD
      */
     close?: string | null;
     /**

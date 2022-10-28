@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTokenHourDataV3DTO
+ * Token data aggregated across all pairs that include token.
  */
 public class OASTokenHourDataV3DTO implements OAS.MappedProperties {
     /**
@@ -33,85 +33,85 @@ public class OASTokenHourDataV3DTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * token address concatendated with date
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * unix timestamp for start of hour
      * @return periodStartUnix
      */
     public Integer periodStartUnix { get; set; }
 
     /**
-     * 
+     * pointer to token
      * @return token
      */
     public String token { get; set; }
 
     /**
-     * 
+     * volume in token units
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * 
+     * volume in derived USD
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * volume in USD even on pools with less reliable USD values
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * liquidity across all pools in token units
      * @return totalValueLocked
      */
     public String totalValueLocked { get; set; }
 
     /**
-     * 
+     * liquidity across all pools in derived USD
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * 
+     * price at end of period in USD
      * @return priceUsd
      */
     public String priceUsd { get; set; }
 
     /**
-     * 
+     * fees in USD
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * 
+     * opening price USD
      * @return open
      */
     public String open { get; set; }
 
     /**
-     * 
+     * high price USD
      * @return high
      */
     public String high { get; set; }
 
     /**
-     * 
+     * low price USD
      * @return low
      */
     public String low { get; set; }
 
     /**
-     * 
+     * close price USD
      * @return close
      */
     public String close { get; set; }
