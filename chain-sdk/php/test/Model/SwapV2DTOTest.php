@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * SwapV2DTOTest Class Doc Comment
  *
  * @category    Class
- * @description SwapV2DTO
+ * @description Swap are created for each token swap within a pair.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

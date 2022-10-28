@@ -677,7 +677,7 @@ export type PairDTO = {
 }
 
 /**
- * 
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @export
  */
 export type PairV2DTO = {
@@ -706,91 +706,91 @@ export type PairV2DTO = {
      */
     vid?: number;
     /**
-     * 
+     * Pair contract address.
      * @type {string}
      * @memberof PairV2DTO
      */
     id?: string;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1?: string;
     /**
-     * 
+     * Reserve of token0.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_0?: string;
     /**
-     * 
+     * Reserve of token1.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_1?: string;
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      * @type {string}
      * @memberof PairV2DTO
      */
     total_supply?: string;
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_eth?: string;
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_usd?: string;
     /**
-     * 
+     * Total liquidity with only tracked amount (see tracked amounts).
      * @type {string}
      * @memberof PairV2DTO
      */
     tracked_reserve_eth?: string;
     /**
-     * 
+     * Token0 per token1.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0_price?: string;
     /**
-     * 
+     * Token1 per token0.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1_price?: string;
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -802,7 +802,7 @@ export type PairV2DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * Timestamp contract was created.
      * @type {Date}
      * @memberof PairV2DTO
      */
@@ -1716,7 +1716,7 @@ export type SwapDTO = {
 }
 
 /**
- * 
+ * Swap are created for each token swap within a pair.
  * @export
  */
 export type SwapV2DTO = {
@@ -1745,67 +1745,67 @@ export type SwapV2DTO = {
      */
     vid?: number;
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @type {string}
      * @memberof SwapV2DTO
      */
     id?: string;
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @type {string}
      * @memberof SwapV2DTO
      */
     transaction?: string;
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @type {Date}
      * @memberof SwapV2DTO
      */
     timestamp?: Date;
     /**
-     * 
+     * Reference to pair.
      * @type {string}
      * @memberof SwapV2DTO
      */
     pair?: string;
     /**
-     * 
+     * Address that initiated the swap.
      * @type {string}
      * @memberof SwapV2DTO
      */
     sender?: string;
     /**
-     * 
+     * The EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
      * @memberof SwapV2DTO
      */
     from?: string;
     /**
-     * 
+     * Amount of token0 sold.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_in?: string;
     /**
-     * 
+     * Amount of token1 sold.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_in?: string;
     /**
-     * 
+     * Amount of token0 received.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_out?: string;
     /**
-     * 
+     * Amount of token1 received.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_out?: string;
     /**
-     * 
+     * Recipient of output tokens.
      * @type {string}
      * @memberof SwapV2DTO
      */
@@ -1817,7 +1817,7 @@ export type SwapV2DTO = {
      */
     log_index?: BigInteger;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapV2DTO
      */
@@ -2398,85 +2398,85 @@ export type TokenHourDataV3DTO = {
      */
     block_number?: number;
     /**
-     * token address concatendated with date
+     * Token address concatendated with date.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     id?: string;
     /**
-     * unix timestamp for start of hour
+     * Unix timestamp for start of hour.
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
     period_start_unix?: number;
     /**
-     * pointer to token
+     * Pointer to token.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     token?: string;
     /**
-     * volume in token units
+     * Volume in token units.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume?: string;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume_usd?: string;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked?: string;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * price at end of period in USD
+     * Price at end of period in USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     price_usd?: string;
     /**
-     * fees in USD
+     * Fees in USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     fees_usd?: string;
     /**
-     * opening price USD
+     * Opening price USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     open?: string;
     /**
-     * high price USD
+     * High price USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     high?: string;
     /**
-     * low price USD
+     * Low price USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     low?: string;
     /**
-     * close price USD
+     * Close price USD.
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
@@ -2519,25 +2519,25 @@ export type TokenV2DTO = {
      */
     vid?: number;
     /**
-     * token address
+     * Token address.
      * @type {string}
      * @memberof TokenV2DTO
      */
     id?: string;
     /**
-     * token symbol
+     * Token symbol.
      * @type {string}
      * @memberof TokenV2DTO
      */
     symbol?: string;
     /**
-     * token name
+     * Token name.
      * @type {string}
      * @memberof TokenV2DTO
      */
     name?: string;
     /**
-     * token decimals
+     * Token decimals.
      * @type {number}
      * @memberof TokenV2DTO
      */
@@ -2549,19 +2549,19 @@ export type TokenV2DTO = {
      */
     total_supply?: BigInteger;
     /**
-     * amount of token traded all time across all pairs
+     * Amount of token traded all time across all pairs.
      * @type {string}
      * @memberof TokenV2DTO
      */
     trade_volume?: string;
     /**
-     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @type {string}
      * @memberof TokenV2DTO
      */
     trade_volume_usd?: string;
     /**
-     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @type {string}
      * @memberof TokenV2DTO
      */
@@ -2573,13 +2573,13 @@ export type TokenV2DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * total amount of token provided as liquidity across all pairs
+     * Total amount of token provided as liquidity across all pairs.
      * @type {string}
      * @memberof TokenV2DTO
      */
     total_liquidity?: string;
     /**
-     * ETH per token
+     * ETH per token.
      * @type {string}
      * @memberof TokenV2DTO
      */
@@ -2622,25 +2622,25 @@ export type TokenV3DTO = {
      */
     vid?: number;
     /**
-     * token address
+     * Token address.
      * @type {string}
      * @memberof TokenV3DTO
      */
     id?: string;
     /**
-     * token symbol
+     * Token symbol.
      * @type {string}
      * @memberof TokenV3DTO
      */
     symbol?: string;
     /**
-     * token name
+     * Token name.
      * @type {string}
      * @memberof TokenV3DTO
      */
     name?: string;
     /**
-     * token decimals
+     * Token decimals.
      * @type {number}
      * @memberof TokenV3DTO
      */
@@ -2652,25 +2652,25 @@ export type TokenV3DTO = {
      */
     total_supply?: BigInteger;
     /**
-     * volume in token units
+     * Volume in token units.
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume?: string;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume_usd?: string;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      * @type {string}
      * @memberof TokenV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * fees in USD
+     * Fees in USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
@@ -2688,31 +2688,31 @@ export type TokenV3DTO = {
      */
     pool_count?: BigInteger;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked?: string;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * TVL derived in USD untracked
+     * TVL derived in USD untracked.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
-     * derived price in ETH
+     * Derived price in ETH.
      * @type {string}
      * @memberof TokenV3DTO
      */
     derived_eth?: string;
     /**
-     * pools token is in that are white listed for USD pricing
+     * Pools token is in that are white listed for USD pricing.
      * @type {Array<string>}
      * @memberof TokenV3DTO
      */
@@ -2755,85 +2755,85 @@ export type TokenV3DayDataDTO = {
      */
     vid?: number;
     /**
-     * token address concatendated with date
+     * Token address concatendated with date.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     id?: string;
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     _date?: number;
     /**
-     * pointer to token
+     * Pointer to token.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     token?: string;
     /**
-     * volume in token units
+     * Volume in token units.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume?: string;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume_usd?: string;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     untracked_volume_usd?: string;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked?: string;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked_usd?: string;
     /**
-     * price at end of period in USD
+     * Price at end of period in USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     price_usd?: string;
     /**
-     * fees in USD
+     * Fees in USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     fees_usd?: string;
     /**
-     * opening price USD
+     * Opening price USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     open?: string;
     /**
-     * high price USD
+     * High price USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     high?: string;
     /**
-     * low price USD
+     * Low price USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     low?: string;
     /**
-     * close price USD
+     * Close price USD.
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
@@ -2841,7 +2841,7 @@ export type TokenV3DayDataDTO = {
 }
 
 /**
- * Data accumulated and condensed into day stats for all of Uniswap
+ * Data accumulated and condensed into day stats for all of Uniswap.
  * @export
  */
 export type UniswapDayDataV3DTO = {
@@ -2870,37 +2870,37 @@ export type UniswapDayDataV3DTO = {
      */
     vid?: number;
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     id?: string;
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     _date?: number;
     /**
-     * total volume across all pairs on this day, stored as a derived amount of ETH
+     * Total volume across all pairs on this day, stored as a derived amount of ETH.
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_eth?: string;
     /**
-     * total volume across all pairs on this day, stored as a derived amount of USD
+     * Total volume across all pairs on this day, stored as a derived amount of USD.
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd?: string;
     /**
-     * total daily volume in Uniswap derived in terms of USD untracked
+     * Total daily volume in Uniswap derived in terms of USD untracked.
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd_untracked?: string;
     /**
-     * fees in USD
+     * Fees in USD
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
@@ -2912,7 +2912,7 @@ export type UniswapDayDataV3DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * tvl in terms of USD
+     * Tvl in terms of USD.
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */

@@ -26,35 +26,35 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # token address
+    # Token address.
     attr_accessor :id
 
-    # token symbol
+    # Token symbol.
     attr_accessor :symbol
 
-    # token name
+    # Token name.
     attr_accessor :name
 
-    # token decimals
+    # Token decimals.
     attr_accessor :decimals
 
     attr_accessor :total_supply
 
-    # amount of token traded all time across all pairs
+    # Amount of token traded all time across all pairs.
     attr_accessor :trade_volume
 
-    # amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+    # Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
     attr_accessor :trade_volume_usd
 
-    # amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+    # Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     attr_accessor :untracked_volume_usd
 
     attr_accessor :tx_count
 
-    # total amount of token provided as liquidity across all pairs
+    # Total amount of token provided as liquidity across all pairs.
     attr_accessor :total_liquidity
 
-    # ETH per token
+    # ETH per token.
     attr_accessor :derived_eth
 
     attr_accessor :token_symbol

@@ -24,34 +24,34 @@ type TokenV3DTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// token address
+	// Token address.
 	Id NullableString `json:"id,omitempty"`
-	// token symbol
+	// Token symbol.
 	Symbol NullableString `json:"symbol,omitempty"`
-	// token name
+	// Token name.
 	Name NullableString `json:"name,omitempty"`
-	// token decimals
+	// Token decimals.
 	Decimals *int32 `json:"decimals,omitempty"`
 	TotalSupply *BigInteger `json:"total_supply,omitempty"`
-	// volume in token units
+	// Volume in token units.
 	Volume NullableString `json:"volume,omitempty"`
-	// volume in derived USD
+	// Volume in derived USD.
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// volume in USD even on pools with less reliable USD values
+	// Volume in USD even on pools with less reliable USD values.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// fees in USD
+	// Fees in USD.
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
 	PoolCount *BigInteger `json:"pool_count,omitempty"`
-	// liquidity across all pools in token units
+	// Liquidity across all pools in token units.
 	TotalValueLocked NullableString `json:"total_value_locked,omitempty"`
-	// liquidity across all pools in derived USD
+	// Liquidity across all pools in derived USD.
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// TVL derived in USD untracked
+	// TVL derived in USD untracked.
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
-	// derived price in ETH
+	// Derived price in ETH.
 	DerivedEth NullableString `json:"derived_eth,omitempty"`
-	// pools token is in that are white listed for USD pricing
+	// Pools token is in that are white listed for USD pricing.
 	WhitelistPools []string `json:"whitelist_pools,omitempty"`
 	TokenSymbol NullableString `json:"token_symbol,omitempty"`
 }

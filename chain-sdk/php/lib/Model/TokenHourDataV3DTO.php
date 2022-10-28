@@ -500,7 +500,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets id
      *
-     * @param string|null $id token address concatendated with date
+     * @param string|null $id Token address concatendated with date.
      *
      * @return self
      */
@@ -536,7 +536,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets period_start_unix
      *
-     * @param int|null $period_start_unix unix timestamp for start of hour
+     * @param int|null $period_start_unix Unix timestamp for start of hour.
      *
      * @return self
      */
@@ -565,7 +565,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets token
      *
-     * @param string|null $token pointer to token
+     * @param string|null $token Pointer to token.
      *
      * @return self
      */
@@ -601,7 +601,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets volume
      *
-     * @param string|null $volume volume in token units
+     * @param string|null $volume Volume in token units.
      *
      * @return self
      */
@@ -637,7 +637,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume in derived USD
+     * @param string|null $volume_usd Volume in derived USD.
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd volume in USD even on pools with less reliable USD values
+     * @param string|null $untracked_volume_usd Volume in USD even on pools with less reliable USD values.
      *
      * @return self
      */
@@ -709,7 +709,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked liquidity across all pools in token units
+     * @param string|null $total_value_locked Liquidity across all pools in token units.
      *
      * @return self
      */
@@ -745,7 +745,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd liquidity across all pools in derived USD
+     * @param string|null $total_value_locked_usd Liquidity across all pools in derived USD.
      *
      * @return self
      */
@@ -781,7 +781,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets price_usd
      *
-     * @param string|null $price_usd price at end of period in USD
+     * @param string|null $price_usd Price at end of period in USD.
      *
      * @return self
      */
@@ -817,7 +817,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees in USD
+     * @param string|null $fees_usd Fees in USD.
      *
      * @return self
      */
@@ -853,7 +853,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets open
      *
-     * @param string|null $open opening price USD
+     * @param string|null $open Opening price USD.
      *
      * @return self
      */
@@ -889,7 +889,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets high
      *
-     * @param string|null $high high price USD
+     * @param string|null $high High price USD.
      *
      * @return self
      */
@@ -925,7 +925,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets low
      *
-     * @param string|null $low low price USD
+     * @param string|null $low Low price USD.
      *
      * @return self
      */
@@ -961,7 +961,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets close
      *
-     * @param string|null $close close price USD
+     * @param string|null $close Close price USD.
      *
      * @return self
      */

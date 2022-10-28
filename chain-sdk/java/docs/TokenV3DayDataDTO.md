@@ -12,20 +12,20 @@ Token data aggregated across all pairs that include token.
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** |  |  [optional] |
 |**vid** | **Long** |  |  [optional] |
-|**id** | **String** | token address concatendated with date |  [optional] |
-|**date** | **Integer** | timestamp rounded to current day by dividing by 86400 |  [optional] |
-|**token** | **String** | pointer to token |  [optional] |
-|**volume** | **String** | volume in token units |  [optional] |
-|**volumeUsd** | **String** | volume in derived USD |  [optional] |
-|**untrackedVolumeUsd** | **String** | volume in USD even on pools with less reliable USD values |  [optional] |
-|**totalValueLocked** | **String** | liquidity across all pools in token units |  [optional] |
-|**totalValueLockedUsd** | **String** | liquidity across all pools in derived USD |  [optional] |
-|**priceUsd** | **String** | price at end of period in USD |  [optional] |
-|**feesUsd** | **String** | fees in USD |  [optional] |
-|**open** | **String** | opening price USD |  [optional] |
-|**high** | **String** | high price USD |  [optional] |
-|**low** | **String** | low price USD |  [optional] |
-|**close** | **String** | close price USD |  [optional] |
+|**id** | **String** | Token address concatendated with date. |  [optional] |
+|**date** | **Integer** | Timestamp rounded to current day by dividing by 86400. |  [optional] |
+|**token** | **String** | Pointer to token. |  [optional] |
+|**volume** | **String** | Volume in token units. |  [optional] |
+|**volumeUsd** | **String** | Volume in derived USD. |  [optional] |
+|**untrackedVolumeUsd** | **String** | Volume in USD even on pools with less reliable USD values. |  [optional] |
+|**totalValueLocked** | **String** | Liquidity across all pools in token units. |  [optional] |
+|**totalValueLockedUsd** | **String** | Liquidity across all pools in derived USD. |  [optional] |
+|**priceUsd** | **String** | Price at end of period in USD. |  [optional] |
+|**feesUsd** | **String** | Fees in USD. |  [optional] |
+|**open** | **String** | Opening price USD. |  [optional] |
+|**high** | **String** | High price USD. |  [optional] |
+|**low** | **String** | Low price USD. |  [optional] |
+|**close** | **String** | Close price USD. |  [optional] |
 
 
 

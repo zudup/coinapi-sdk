@@ -14,6 +14,9 @@ import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 import { ETradeAggressiveSide } from './eTradeAggressiveSide';
 
+/**
+* Swap are created for each token swap within a pair.
+*/
 export class SwapV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
@@ -26,52 +29,52 @@ export class SwapV2DTO {
     */
     'vid'?: number;
     /**
-    * 
+    * Transaction hash plus index in Transaction swap array.
     */
     'id'?: string | null;
     /**
-    * 
+    * Reference to transaction swap was included in.
     */
     'transaction'?: string | null;
     /**
-    * 
+    * Timestamp of swap, used for sorted lookups.
     */
     'timestamp'?: Date;
     /**
-    * 
+    * Reference to pair.
     */
     'pair'?: string | null;
     /**
-    * 
+    * Address that initiated the swap.
     */
     'sender'?: string | null;
     /**
-    * 
+    * The EOA (Externally Owned Account) that initiated the transaction.
     */
     'from'?: string | null;
     /**
-    * 
+    * Amount of token0 sold.
     */
     'amount0In'?: string | null;
     /**
-    * 
+    * Amount of token1 sold.
     */
     'amount1In'?: string | null;
     /**
-    * 
+    * Amount of token0 received.
     */
     'amount0Out'?: string | null;
     /**
-    * 
+    * Amount of token1 received.
     */
     'amount1Out'?: string | null;
     /**
-    * 
+    * Recipient of output tokens.
     */
     'to'?: string | null;
     'logIndex'?: BigInteger;
     /**
-    * 
+    * Derived amount of tokens sold in USD.
     */
     'amountUsd'?: string | null;
     'evaluatedPrice'?: number;

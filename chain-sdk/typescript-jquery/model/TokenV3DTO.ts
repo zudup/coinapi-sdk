@@ -31,44 +31,44 @@ export interface TokenV3DTO {
     vid?: number;
 
     /**
-     * token address
+     * Token address.
      */
     id?: string;
 
     /**
-     * token symbol
+     * Token symbol.
      */
     symbol?: string;
 
     /**
-     * token name
+     * Token name.
      */
     name?: string;
 
     /**
-     * token decimals
+     * Token decimals.
      */
     decimals?: number;
 
     total_supply?: models.BigInteger;
 
     /**
-     * volume in token units
+     * Volume in token units.
      */
     volume?: string;
 
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      */
     volume_usd?: string;
 
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      */
     untracked_volume_usd?: string;
 
     /**
-     * fees in USD
+     * Fees in USD.
      */
     fees_usd?: string;
 
@@ -77,27 +77,27 @@ export interface TokenV3DTO {
     pool_count?: models.BigInteger;
 
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      */
     total_value_locked?: string;
 
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      */
     total_value_locked_usd?: string;
 
     /**
-     * TVL derived in USD untracked
+     * TVL derived in USD untracked.
      */
     total_value_locked_usd_untracked?: string;
 
     /**
-     * derived price in ETH
+     * Derived price in ETH.
      */
     derived_eth?: string;
 
     /**
-     * pools token is in that are white listed for USD pricing
+     * Pools token is in that are white listed for USD pricing.
      */
     whitelist_pools?: Array<string>;
 

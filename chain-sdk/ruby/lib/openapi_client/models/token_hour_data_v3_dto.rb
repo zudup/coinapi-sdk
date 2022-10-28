@@ -23,46 +23,46 @@ module OpenapiClient
     # 
     attr_accessor :block_number
 
-    # token address concatendated with date
+    # Token address concatendated with date.
     attr_accessor :id
 
-    # unix timestamp for start of hour
+    # Unix timestamp for start of hour.
     attr_accessor :period_start_unix
 
-    # pointer to token
+    # Pointer to token.
     attr_accessor :token
 
-    # volume in token units
+    # Volume in token units.
     attr_accessor :volume
 
-    # volume in derived USD
+    # Volume in derived USD.
     attr_accessor :volume_usd
 
-    # volume in USD even on pools with less reliable USD values
+    # Volume in USD even on pools with less reliable USD values.
     attr_accessor :untracked_volume_usd
 
-    # liquidity across all pools in token units
+    # Liquidity across all pools in token units.
     attr_accessor :total_value_locked
 
-    # liquidity across all pools in derived USD
+    # Liquidity across all pools in derived USD.
     attr_accessor :total_value_locked_usd
 
-    # price at end of period in USD
+    # Price at end of period in USD.
     attr_accessor :price_usd
 
-    # fees in USD
+    # Fees in USD.
     attr_accessor :fees_usd
 
-    # opening price USD
+    # Opening price USD.
     attr_accessor :open
 
-    # high price USD
+    # High price USD.
     attr_accessor :high
 
-    # low price USD
+    # Low price USD.
     attr_accessor :low
 
-    # close price USD
+    # Close price USD.
     attr_accessor :close
 
     # 

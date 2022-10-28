@@ -28,58 +28,58 @@ export class TokenV3DTO {
     */
     'vid'?: number;
     /**
-    * token address
+    * Token address.
     */
     'id'?: string | null;
     /**
-    * token symbol
+    * Token symbol.
     */
     'symbol'?: string | null;
     /**
-    * token name
+    * Token name.
     */
     'name'?: string | null;
     /**
-    * token decimals
+    * Token decimals.
     */
     'decimals'?: number;
     'totalSupply'?: BigInteger;
     /**
-    * volume in token units
+    * Volume in token units.
     */
     'volume'?: string | null;
     /**
-    * volume in derived USD
+    * Volume in derived USD.
     */
     'volumeUsd'?: string | null;
     /**
-    * volume in USD even on pools with less reliable USD values
+    * Volume in USD even on pools with less reliable USD values.
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * fees in USD
+    * Fees in USD.
     */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
     'poolCount'?: BigInteger;
     /**
-    * liquidity across all pools in token units
+    * Liquidity across all pools in token units.
     */
     'totalValueLocked'?: string | null;
     /**
-    * liquidity across all pools in derived USD
+    * Liquidity across all pools in derived USD.
     */
     'totalValueLockedUsd'?: string | null;
     /**
-    * TVL derived in USD untracked
+    * TVL derived in USD untracked.
     */
     'totalValueLockedUsdUntracked'?: string | null;
     /**
-    * derived price in ETH
+    * Derived price in ETH.
     */
     'derivedEth'?: string | null;
     /**
-    * pools token is in that are white listed for USD pricing
+    * Pools token is in that are white listed for USD pricing.
     */
     'whitelistPools'?: Array<string> | null;
     'tokenSymbol'?: string | null;

@@ -36,6 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * SwapV2DTO Class Doc Comment
  *
  * @category Class
+ * @description Swap are created for each token swap within a pair.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -556,7 +557,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id Transaction hash plus index in Transaction swap array.
      *
      * @return self
      */
@@ -592,7 +593,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param string|null $transaction 
+     * @param string|null $transaction Reference to transaction swap was included in.
      *
      * @return self
      */
@@ -628,7 +629,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param \DateTime|null $timestamp 
+     * @param \DateTime|null $timestamp Timestamp of swap, used for sorted lookups.
      *
      * @return self
      */
@@ -657,7 +658,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pair
      *
-     * @param string|null $pair 
+     * @param string|null $pair Reference to pair.
      *
      * @return self
      */
@@ -693,7 +694,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sender
      *
-     * @param string|null $sender 
+     * @param string|null $sender Address that initiated the swap.
      *
      * @return self
      */
@@ -729,7 +730,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets from
      *
-     * @param string|null $from 
+     * @param string|null $from The EOA (Externally Owned Account) that initiated the transaction.
      *
      * @return self
      */
@@ -765,7 +766,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0_in
      *
-     * @param string|null $amount_0_in 
+     * @param string|null $amount_0_in Amount of token0 sold.
      *
      * @return self
      */
@@ -801,7 +802,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1_in
      *
-     * @param string|null $amount_1_in 
+     * @param string|null $amount_1_in Amount of token1 sold.
      *
      * @return self
      */
@@ -837,7 +838,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0_out
      *
-     * @param string|null $amount_0_out 
+     * @param string|null $amount_0_out Amount of token0 received.
      *
      * @return self
      */
@@ -873,7 +874,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1_out
      *
-     * @param string|null $amount_1_out 
+     * @param string|null $amount_1_out Amount of token1 received.
      *
      * @return self
      */
@@ -909,7 +910,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets to
      *
-     * @param string|null $to 
+     * @param string|null $to Recipient of output tokens.
      *
      * @return self
      */
@@ -974,7 +975,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_usd
      *
-     * @param string|null $amount_usd 
+     * @param string|null $amount_usd Derived amount of tokens sold in USD.
      *
      * @return self
      */

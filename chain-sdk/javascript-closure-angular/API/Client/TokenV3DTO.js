@@ -33,28 +33,28 @@ API.Client.TokenV3DTO.prototype.blockNumber;
 API.Client.TokenV3DTO.prototype.vid;
 
 /**
- * token address
+ * Token address.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.id;
 
 /**
- * token symbol
+ * Token symbol.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.symbol;
 
 /**
- * token name
+ * Token name.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.name;
 
 /**
- * token decimals
+ * Token decimals.
  * @type {!number}
  * @export
  */
@@ -67,28 +67,28 @@ API.Client.TokenV3DTO.prototype.decimals;
 API.Client.TokenV3DTO.prototype.totalSupply;
 
 /**
- * volume in token units
+ * Volume in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.volume;
 
 /**
- * volume in derived USD
+ * Volume in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.volumeUsd;
 
 /**
- * volume in USD even on pools with less reliable USD values
+ * Volume in USD even on pools with less reliable USD values.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.untrackedVolumeUsd;
 
 /**
- * fees in USD
+ * Fees in USD.
  * @type {!string}
  * @export
  */
@@ -107,35 +107,35 @@ API.Client.TokenV3DTO.prototype.txCount;
 API.Client.TokenV3DTO.prototype.poolCount;
 
 /**
- * liquidity across all pools in token units
+ * Liquidity across all pools in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.totalValueLocked;
 
 /**
- * liquidity across all pools in derived USD
+ * Liquidity across all pools in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.totalValueLockedUsd;
 
 /**
- * TVL derived in USD untracked
+ * TVL derived in USD untracked.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.totalValueLockedUsdUntracked;
 
 /**
- * derived price in ETH
+ * Derived price in ETH.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DTO.prototype.derivedEth;
 
 /**
- * pools token is in that are white listed for USD pricing
+ * Pools token is in that are white listed for USD pricing.
  * @type {!Array<!string>}
  * @export
  */

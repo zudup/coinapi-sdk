@@ -18,9 +18,9 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Data accumulated and condensed into day stats for all of Uniswap
+ * Data accumulated and condensed into day stats for all of Uniswap.
  **/
-@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap")
+@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap.")
 public class UniswapDayDataV3DTO {
   
   @SerializedName("entry_time")
@@ -91,9 +91,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * timestamp rounded to current day by dividing by 86400
+   * Timestamp rounded to current day by dividing by 86400.
    **/
-  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
   public String getId() {
     return id;
   }
@@ -102,9 +102,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * timestamp rounded to current day by dividing by 86400
+   * Timestamp rounded to current day by dividing by 86400.
    **/
-  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
   public Integer getDate() {
     return date;
   }
@@ -113,9 +113,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * total volume across all pairs on this day, stored as a derived amount of ETH
+   * Total volume across all pairs on this day, stored as a derived amount of ETH.
    **/
-  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of ETH")
+  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of ETH.")
   public String getVolumeEth() {
     return volumeEth;
   }
@@ -124,9 +124,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * total volume across all pairs on this day, stored as a derived amount of USD
+   * Total volume across all pairs on this day, stored as a derived amount of USD.
    **/
-  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of USD")
+  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of USD.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -135,9 +135,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * total daily volume in Uniswap derived in terms of USD untracked
+   * Total daily volume in Uniswap derived in terms of USD untracked.
    **/
-  @ApiModelProperty(value = "total daily volume in Uniswap derived in terms of USD untracked")
+  @ApiModelProperty(value = "Total daily volume in Uniswap derived in terms of USD untracked.")
   public String getVolumeUsdUntracked() {
     return volumeUsdUntracked;
   }
@@ -146,9 +146,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * fees in USD
+   * Fees in USD
    **/
-  @ApiModelProperty(value = "fees in USD")
+  @ApiModelProperty(value = "Fees in USD")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -167,9 +167,9 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
-   * tvl in terms of USD
+   * Tvl in terms of USD.
    **/
-  @ApiModelProperty(value = "tvl in terms of USD")
+  @ApiModelProperty(value = "Tvl in terms of USD.")
   public String getTvlUsd() {
     return tvlUsd;
   }

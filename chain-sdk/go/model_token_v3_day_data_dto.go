@@ -24,33 +24,33 @@ type TokenV3DayDataDTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// token address concatendated with date
+	// Token address concatendated with date.
 	Id NullableString `json:"id,omitempty"`
-	// timestamp rounded to current day by dividing by 86400
+	// Timestamp rounded to current day by dividing by 86400.
 	Date *int32 `json:"date,omitempty"`
-	// pointer to token
+	// Pointer to token.
 	Token NullableString `json:"token,omitempty"`
-	// volume in token units
+	// Volume in token units.
 	Volume NullableString `json:"volume,omitempty"`
-	// volume in derived USD
+	// Volume in derived USD.
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// volume in USD even on pools with less reliable USD values
+	// Volume in USD even on pools with less reliable USD values.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// liquidity across all pools in token units
+	// Liquidity across all pools in token units.
 	TotalValueLocked NullableString `json:"total_value_locked,omitempty"`
-	// liquidity across all pools in derived USD
+	// Liquidity across all pools in derived USD.
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// price at end of period in USD
+	// Price at end of period in USD.
 	PriceUsd NullableString `json:"price_usd,omitempty"`
-	// fees in USD
+	// Fees in USD.
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
-	// opening price USD
+	// Opening price USD.
 	Open NullableString `json:"open,omitempty"`
-	// high price USD
+	// High price USD.
 	High NullableString `json:"high,omitempty"`
-	// low price USD
+	// Low price USD.
 	Low NullableString `json:"low,omitempty"`
-	// close price USD
+	// Close price USD.
 	Close NullableString `json:"close,omitempty"`
 }
 

@@ -13,7 +13,7 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Swap are created for each token swap within a pair.
 
 .PARAMETER EntryTime
 No description available.
@@ -24,31 +24,31 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+Transaction hash plus index in Transaction swap array.
 .PARAMETER Transaction
-
+Reference to transaction swap was included in.
 .PARAMETER Timestamp
-
+Timestamp of swap, used for sorted lookups.
 .PARAMETER Pair
-
+Reference to pair.
 .PARAMETER VarSender
-
+Address that initiated the swap.
 .PARAMETER VarFrom
-
+The EOA (Externally Owned Account) that initiated the transaction.
 .PARAMETER Amount0In
-
+Amount of token0 sold.
 .PARAMETER Amount1In
-
+Amount of token1 sold.
 .PARAMETER Amount0Out
-
+Amount of token0 received.
 .PARAMETER Amount1Out
-
+Amount of token1 received.
 .PARAMETER To
-
+Recipient of output tokens.
 .PARAMETER LogIndex
 No description available.
 .PARAMETER AmountUsd
-
+Derived amount of tokens sold in USD.
 .PARAMETER EvaluatedPrice
 No description available.
 .PARAMETER EvaluatedAmount

@@ -25,20 +25,20 @@ import org.openapitools.client.models.BigInteger
 import com.squareup.moshi.Json
 
 /**
- * Data accumulated and condensed into day stats for all of Uniswap
+ * Data accumulated and condensed into day stats for all of Uniswap.
  *
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber 
  * @param vid 
- * @param id timestamp rounded to current day by dividing by 86400
- * @param date timestamp rounded to current day by dividing by 86400
- * @param volumeEth total volume across all pairs on this day, stored as a derived amount of ETH
- * @param volumeUsd total volume across all pairs on this day, stored as a derived amount of USD
- * @param volumeUsdUntracked total daily volume in Uniswap derived in terms of USD untracked
- * @param feesUsd fees in USD
+ * @param id Timestamp rounded to current day by dividing by 86400.
+ * @param date Timestamp rounded to current day by dividing by 86400.
+ * @param volumeEth Total volume across all pairs on this day, stored as a derived amount of ETH.
+ * @param volumeUsd Total volume across all pairs on this day, stored as a derived amount of USD.
+ * @param volumeUsdUntracked Total daily volume in Uniswap derived in terms of USD untracked.
+ * @param feesUsd Fees in USD
  * @param txCount 
- * @param tvlUsd tvl in terms of USD
+ * @param tvlUsd Tvl in terms of USD.
  */
 
 data class UniswapDayDataV3DTO (
@@ -57,34 +57,34 @@ data class UniswapDayDataV3DTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
-    /* total volume across all pairs on this day, stored as a derived amount of ETH */
+    /* Total volume across all pairs on this day, stored as a derived amount of ETH. */
     @Json(name = "volume_eth")
     val volumeEth: kotlin.String? = null,
 
-    /* total volume across all pairs on this day, stored as a derived amount of USD */
+    /* Total volume across all pairs on this day, stored as a derived amount of USD. */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
-    /* total daily volume in Uniswap derived in terms of USD untracked */
+    /* Total daily volume in Uniswap derived in terms of USD untracked. */
     @Json(name = "volume_usd_untracked")
     val volumeUsdUntracked: kotlin.String? = null,
 
-    /* fees in USD */
+    /* Fees in USD */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
     @Json(name = "tx_count")
     val txCount: BigInteger? = null,
 
-    /* tvl in terms of USD */
+    /* Tvl in terms of USD. */
     @Json(name = "tvl_usd")
     val tvlUsd: kotlin.String? = null
 

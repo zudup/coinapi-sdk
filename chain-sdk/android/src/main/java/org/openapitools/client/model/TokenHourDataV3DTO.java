@@ -91,9 +91,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * token address concatendated with date
+   * Token address concatendated with date.
    **/
-  @ApiModelProperty(value = "token address concatendated with date")
+  @ApiModelProperty(value = "Token address concatendated with date.")
   public String getId() {
     return id;
   }
@@ -102,9 +102,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * unix timestamp for start of hour
+   * Unix timestamp for start of hour.
    **/
-  @ApiModelProperty(value = "unix timestamp for start of hour")
+  @ApiModelProperty(value = "Unix timestamp for start of hour.")
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
   }
@@ -113,9 +113,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * pointer to token
+   * Pointer to token.
    **/
-  @ApiModelProperty(value = "pointer to token")
+  @ApiModelProperty(value = "Pointer to token.")
   public String getToken() {
     return token;
   }
@@ -124,9 +124,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * volume in token units
+   * Volume in token units.
    **/
-  @ApiModelProperty(value = "volume in token units")
+  @ApiModelProperty(value = "Volume in token units.")
   public String getVolume() {
     return volume;
   }
@@ -135,9 +135,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * volume in derived USD
+   * Volume in derived USD.
    **/
-  @ApiModelProperty(value = "volume in derived USD")
+  @ApiModelProperty(value = "Volume in derived USD.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -146,9 +146,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * volume in USD even on pools with less reliable USD values
+   * Volume in USD even on pools with less reliable USD values.
    **/
-  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
+  @ApiModelProperty(value = "Volume in USD even on pools with less reliable USD values.")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -157,9 +157,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * liquidity across all pools in token units
+   * Liquidity across all pools in token units.
    **/
-  @ApiModelProperty(value = "liquidity across all pools in token units")
+  @ApiModelProperty(value = "Liquidity across all pools in token units.")
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -168,9 +168,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * liquidity across all pools in derived USD
+   * Liquidity across all pools in derived USD.
    **/
-  @ApiModelProperty(value = "liquidity across all pools in derived USD")
+  @ApiModelProperty(value = "Liquidity across all pools in derived USD.")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -179,9 +179,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * price at end of period in USD
+   * Price at end of period in USD.
    **/
-  @ApiModelProperty(value = "price at end of period in USD")
+  @ApiModelProperty(value = "Price at end of period in USD.")
   public String getPriceUsd() {
     return priceUsd;
   }
@@ -190,9 +190,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * fees in USD
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "fees in USD")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -201,9 +201,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * opening price USD
+   * Opening price USD.
    **/
-  @ApiModelProperty(value = "opening price USD")
+  @ApiModelProperty(value = "Opening price USD.")
   public String getOpen() {
     return open;
   }
@@ -212,9 +212,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * high price USD
+   * High price USD.
    **/
-  @ApiModelProperty(value = "high price USD")
+  @ApiModelProperty(value = "High price USD.")
   public String getHigh() {
     return high;
   }
@@ -223,9 +223,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * low price USD
+   * Low price USD.
    **/
-  @ApiModelProperty(value = "low price USD")
+  @ApiModelProperty(value = "Low price USD.")
   public String getLow() {
     return low;
   }
@@ -234,9 +234,9 @@ public class TokenHourDataV3DTO {
   }
 
   /**
-   * close price USD
+   * Close price USD.
    **/
-  @ApiModelProperty(value = "close price USD")
+  @ApiModelProperty(value = "Close price USD.")
   public String getClose() {
     return close;
   }

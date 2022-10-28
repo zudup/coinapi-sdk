@@ -24,33 +24,33 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-token address concatendated with date
+Token address concatendated with date.
 .PARAMETER Date
-timestamp rounded to current day by dividing by 86400
+Timestamp rounded to current day by dividing by 86400.
 .PARAMETER Token
-pointer to token
+Pointer to token.
 .PARAMETER Volume
-volume in token units
+Volume in token units.
 .PARAMETER VolumeUsd
-volume in derived USD
+Volume in derived USD.
 .PARAMETER UntrackedVolumeUsd
-volume in USD even on pools with less reliable USD values
+Volume in USD even on pools with less reliable USD values.
 .PARAMETER TotalValueLocked
-liquidity across all pools in token units
+Liquidity across all pools in token units.
 .PARAMETER TotalValueLockedUsd
-liquidity across all pools in derived USD
+Liquidity across all pools in derived USD.
 .PARAMETER PriceUsd
-price at end of period in USD
+Price at end of period in USD.
 .PARAMETER FeesUsd
-fees in USD
+Fees in USD.
 .PARAMETER Open
-opening price USD
+Opening price USD.
 .PARAMETER High
-high price USD
+High price USD.
 .PARAMETER Low
-low price USD
+Low price USD.
 .PARAMETER Close
-close price USD
+Close price USD.
 .OUTPUTS
 
 TokenV3DayDataDTO<PSCustomObject>

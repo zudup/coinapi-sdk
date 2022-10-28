@@ -13,7 +13,7 @@
 /*
  * PairV2DTO.h
  *
- * 
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_PairV2DTO_H_
@@ -33,7 +33,7 @@ namespace model {
 class BigInteger;
 
 /// <summary>
-/// 
+/// Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 /// </summary>
 class  PairV2DTO
     : public ModelBase
@@ -93,7 +93,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// Pair contract address.
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -102,7 +102,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Reference to token0 as stored in pair contract.
     /// </summary>
     utility::string_t getToken0() const;
     bool token0IsSet() const;
@@ -111,7 +111,7 @@ public:
     void setToken0(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Reference to token1 as stored in pair contract.
     /// </summary>
     utility::string_t getToken1() const;
     bool token1IsSet() const;
@@ -120,7 +120,7 @@ public:
     void setToken1(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Reserve of token0.
     /// </summary>
     utility::string_t getReserve0() const;
     bool reserve0IsSet() const;
@@ -129,7 +129,7 @@ public:
     void setReserve0(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Reserve of token1.
     /// </summary>
     utility::string_t getReserve1() const;
     bool reserve1IsSet() const;
@@ -138,7 +138,7 @@ public:
     void setReserve1(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total supply of liquidity token distributed to LPs.
     /// </summary>
     utility::string_t getTotalSupply() const;
     bool totalSupplyIsSet() const;
@@ -147,7 +147,7 @@ public:
     void setTotalSupply(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total liquidity in pair stored as an amount of ETH.
     /// </summary>
     utility::string_t getReserveEth() const;
     bool reserveEthIsSet() const;
@@ -156,7 +156,7 @@ public:
     void setReserveEth(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total liquidity amount in pair stored as an amount of USD.
     /// </summary>
     utility::string_t getReserveUsd() const;
     bool reserveUsdIsSet() const;
@@ -165,7 +165,7 @@ public:
     void setReserveUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total liquidity with only tracked amount (see tracked amounts).
     /// </summary>
     utility::string_t getTrackedReserveEth() const;
     bool trackedReserveEthIsSet() const;
@@ -174,7 +174,7 @@ public:
     void setTrackedReserveEth(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Token0 per token1.
     /// </summary>
     utility::string_t getToken0Price() const;
     bool token0PriceIsSet() const;
@@ -183,7 +183,7 @@ public:
     void setToken0Price(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Token1 per token0.
     /// </summary>
     utility::string_t getToken1Price() const;
     bool token1PriceIsSet() const;
@@ -192,7 +192,7 @@ public:
     void setToken1Price(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token0 swapped on this pair.
     /// </summary>
     utility::string_t getVolumeToken0() const;
     bool volumeToken0IsSet() const;
@@ -201,7 +201,7 @@ public:
     void setVolumeToken0(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token1 swapped on this pair.
     /// </summary>
     utility::string_t getVolumeToken1() const;
     bool volumeToken1IsSet() const;
@@ -210,7 +210,7 @@ public:
     void setVolumeToken1(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
     /// </summary>
     utility::string_t getVolumeUsd() const;
     bool volumeUsdIsSet() const;
@@ -219,7 +219,7 @@ public:
     void setVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     /// </summary>
     utility::string_t getUntrackedVolumeUsd() const;
     bool untrackedVolumeUsdIsSet() const;
@@ -237,7 +237,7 @@ public:
     void setTxCount(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// Timestamp contract was created.
     /// </summary>
     utility::datetime getCreatedAtTimestamp() const;
     bool createdAtTimestampIsSet() const;

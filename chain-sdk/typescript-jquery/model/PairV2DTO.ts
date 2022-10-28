@@ -12,6 +12,9 @@
 
 import * as models from './models';
 
+/**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ */
 export interface PairV2DTO {
     entry_time?: string;
 
@@ -28,84 +31,84 @@ export interface PairV2DTO {
     vid?: number;
 
     /**
-     * 
+     * Pair contract address.
      */
     id?: string;
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      */
     token_0?: string;
 
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      */
     token_1?: string;
 
     /**
-     * 
+     * Reserve of token0.
      */
     reserve_0?: string;
 
     /**
-     * 
+     * Reserve of token1.
      */
     reserve_1?: string;
 
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      */
     total_supply?: string;
 
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      */
     reserve_eth?: string;
 
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      */
     reserve_usd?: string;
 
     /**
-     * 
+     * Total liquidity with only tracked amount (see tracked amounts).
      */
     tracked_reserve_eth?: string;
 
     /**
-     * 
+     * Token0 per token1.
      */
     token_0_price?: string;
 
     /**
-     * 
+     * Token1 per token0.
      */
     token_1_price?: string;
 
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      */
     volume_token_0?: string;
 
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      */
     volume_token_1?: string;
 
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      */
     volume_usd?: string;
 
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      */
     untracked_volume_usd?: string;
 
     tx_count?: models.BigInteger;
 
     /**
-     * 
+     * Timestamp contract was created.
      */
     created_at_timestamp?: string;
 

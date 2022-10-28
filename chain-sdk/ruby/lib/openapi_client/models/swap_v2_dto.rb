@@ -14,6 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Swap are created for each token swap within a pair.
   class SwapV2DTO
     attr_accessor :entry_time
 
@@ -25,42 +26,42 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # 
+    # Transaction hash plus index in Transaction swap array.
     attr_accessor :id
 
-    # 
+    # Reference to transaction swap was included in.
     attr_accessor :transaction
 
-    # 
+    # Timestamp of swap, used for sorted lookups.
     attr_accessor :timestamp
 
-    # 
+    # Reference to pair.
     attr_accessor :pair
 
-    # 
+    # Address that initiated the swap.
     attr_accessor :sender
 
-    # 
+    # The EOA (Externally Owned Account) that initiated the transaction.
     attr_accessor :from
 
-    # 
+    # Amount of token0 sold.
     attr_accessor :amount_0_in
 
-    # 
+    # Amount of token1 sold.
     attr_accessor :amount_1_in
 
-    # 
+    # Amount of token0 received.
     attr_accessor :amount_0_out
 
-    # 
+    # Amount of token1 received.
     attr_accessor :amount_1_out
 
-    # 
+    # Recipient of output tokens.
     attr_accessor :to
 
     attr_accessor :log_index
 
-    # 
+    # Derived amount of tokens sold in USD.
     attr_accessor :amount_usd
 
     attr_accessor :evaluated_price

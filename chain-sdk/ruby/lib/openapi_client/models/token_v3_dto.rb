@@ -26,49 +26,49 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # token address
+    # Token address.
     attr_accessor :id
 
-    # token symbol
+    # Token symbol.
     attr_accessor :symbol
 
-    # token name
+    # Token name.
     attr_accessor :name
 
-    # token decimals
+    # Token decimals.
     attr_accessor :decimals
 
     attr_accessor :total_supply
 
-    # volume in token units
+    # Volume in token units.
     attr_accessor :volume
 
-    # volume in derived USD
+    # Volume in derived USD.
     attr_accessor :volume_usd
 
-    # volume in USD even on pools with less reliable USD values
+    # Volume in USD even on pools with less reliable USD values.
     attr_accessor :untracked_volume_usd
 
-    # fees in USD
+    # Fees in USD.
     attr_accessor :fees_usd
 
     attr_accessor :tx_count
 
     attr_accessor :pool_count
 
-    # liquidity across all pools in token units
+    # Liquidity across all pools in token units.
     attr_accessor :total_value_locked
 
-    # liquidity across all pools in derived USD
+    # Liquidity across all pools in derived USD.
     attr_accessor :total_value_locked_usd
 
-    # TVL derived in USD untracked
+    # TVL derived in USD untracked.
     attr_accessor :total_value_locked_usd_untracked
 
-    # derived price in ETH
+    # Derived price in ETH.
     attr_accessor :derived_eth
 
-    # pools token is in that are white listed for USD pricing
+    # Pools token is in that are white listed for USD pricing.
     attr_accessor :whitelist_pools
 
     attr_accessor :token_symbol

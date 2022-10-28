@@ -13,7 +13,7 @@
 /*
  * SwapV2DTO.h
  *
- * 
+ * Swap are created for each token swap within a pair.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_SwapV2DTO_H_
@@ -34,7 +34,7 @@ namespace model {
 class BigInteger;
 
 /// <summary>
-/// 
+/// Swap are created for each token swap within a pair.
 /// </summary>
 class  SwapV2DTO
     : public ModelBase
@@ -94,7 +94,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// Transaction hash plus index in Transaction swap array.
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -103,7 +103,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Reference to transaction swap was included in.
     /// </summary>
     utility::string_t getTransaction() const;
     bool transactionIsSet() const;
@@ -112,7 +112,7 @@ public:
     void setTransaction(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Timestamp of swap, used for sorted lookups.
     /// </summary>
     utility::datetime getTimestamp() const;
     bool timestampIsSet() const;
@@ -121,7 +121,7 @@ public:
     void setTimestamp(const utility::datetime& value);
 
     /// <summary>
-    /// 
+    /// Reference to pair.
     /// </summary>
     utility::string_t getPair() const;
     bool pairIsSet() const;
@@ -130,7 +130,7 @@ public:
     void setPair(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Address that initiated the swap.
     /// </summary>
     utility::string_t getSender() const;
     bool senderIsSet() const;
@@ -139,7 +139,7 @@ public:
     void setSender(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// The EOA (Externally Owned Account) that initiated the transaction.
     /// </summary>
     utility::string_t getFrom() const;
     bool fromIsSet() const;
@@ -148,7 +148,7 @@ public:
     void setFrom(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token0 sold.
     /// </summary>
     utility::string_t getAmount0In() const;
     bool amount0InIsSet() const;
@@ -157,7 +157,7 @@ public:
     void setAmount0In(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token1 sold.
     /// </summary>
     utility::string_t getAmount1In() const;
     bool amount1InIsSet() const;
@@ -166,7 +166,7 @@ public:
     void setAmount1In(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token0 received.
     /// </summary>
     utility::string_t getAmount0Out() const;
     bool amount0OutIsSet() const;
@@ -175,7 +175,7 @@ public:
     void setAmount0Out(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Amount of token1 received.
     /// </summary>
     utility::string_t getAmount1Out() const;
     bool amount1OutIsSet() const;
@@ -184,7 +184,7 @@ public:
     void setAmount1Out(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// Recipient of output tokens.
     /// </summary>
     utility::string_t getTo() const;
     bool toIsSet() const;
@@ -202,7 +202,7 @@ public:
     void setLogIndex(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// Derived amount of tokens sold in USD.
     /// </summary>
     utility::string_t getAmountUsd() const;
     bool amountUsdIsSet() const;

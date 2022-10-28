@@ -27,58 +27,58 @@ export interface TokenV3DTO {
      */
     vid?: number;
     /**
-     * token address
+     * Token address.
      */
     id?: string | null;
     /**
-     * token symbol
+     * Token symbol.
      */
     symbol?: string | null;
     /**
-     * token name
+     * Token name.
      */
     name?: string | null;
     /**
-     * token decimals
+     * Token decimals.
      */
     decimals?: number;
     total_supply?: BigInteger;
     /**
-     * volume in token units
+     * Volume in token units.
      */
     volume?: string | null;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      */
     volume_usd?: string | null;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      */
     untracked_volume_usd?: string | null;
     /**
-     * fees in USD
+     * Fees in USD.
      */
     fees_usd?: string | null;
     tx_count?: BigInteger;
     pool_count?: BigInteger;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      */
     total_value_locked?: string | null;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      */
     total_value_locked_usd?: string | null;
     /**
-     * TVL derived in USD untracked
+     * TVL derived in USD untracked.
      */
     total_value_locked_usd_untracked?: string | null;
     /**
-     * derived price in ETH
+     * Derived price in ETH.
      */
     derived_eth?: string | null;
     /**
-     * pools token is in that are white listed for USD pricing
+     * Pools token is in that are white listed for USD pricing.
      */
     whitelist_pools?: Array<string> | null;
     readonly token_symbol?: string | null;

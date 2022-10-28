@@ -28,27 +28,27 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- token address
+      -- Token address.
     symbol: detachable STRING_32
-      -- token symbol
+      -- Token symbol.
     name: detachable STRING_32
-      -- token name
+      -- Token name.
  	decimals: INTEGER_32
-    	 -- token decimals
+    	 -- Token decimals.
     total_supply: detachable BIG_INTEGER
       
     trade_volume: detachable STRING_32
-      -- amount of token traded all time across all pairs
+      -- Amount of token traded all time across all pairs.
     trade_volume_usd: detachable STRING_32
-      -- amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+      -- Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
     untracked_volume_usd: detachable STRING_32
-      -- amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+      -- Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     tx_count: detachable BIG_INTEGER
       
     total_liquidity: detachable STRING_32
-      -- total amount of token provided as liquidity across all pairs
+      -- Total amount of token provided as liquidity across all pairs.
     derived_eth: detachable STRING_32
-      -- ETH per token
+      -- ETH per token.
     token_symbol: detachable STRING_32
       
 

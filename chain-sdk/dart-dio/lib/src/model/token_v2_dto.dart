@@ -16,17 +16,17 @@ part 'token_v2_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] - 
 /// * [vid] - 
-/// * [id] - token address
-/// * [symbol] - token symbol
-/// * [name] - token name
-/// * [decimals] - token decimals
+/// * [id] - Token address.
+/// * [symbol] - Token symbol.
+/// * [name] - Token name.
+/// * [decimals] - Token decimals.
 /// * [totalSupply] 
-/// * [tradeVolume] - amount of token traded all time across all pairs
-/// * [tradeVolumeUsd] - amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
-/// * [untrackedVolumeUsd] - amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+/// * [tradeVolume] - Amount of token traded all time across all pairs.
+/// * [tradeVolumeUsd] - Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+/// * [untrackedVolumeUsd] - Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 /// * [txCount] 
-/// * [totalLiquidity] - total amount of token provided as liquidity across all pairs
-/// * [derivedEth] - ETH per token
+/// * [totalLiquidity] - Total amount of token provided as liquidity across all pairs.
+/// * [derivedEth] - ETH per token.
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class TokenV2DTO implements Built<TokenV2DTO, TokenV2DTOBuilder> {
@@ -44,45 +44,45 @@ abstract class TokenV2DTO implements Built<TokenV2DTO, TokenV2DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// token address
+  /// Token address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// token symbol
+  /// Token symbol.
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
-  /// token name
+  /// Token name.
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// token decimals
+  /// Token decimals.
   @BuiltValueField(wireName: r'decimals')
   int? get decimals;
 
   @BuiltValueField(wireName: r'total_supply')
   BigInteger? get totalSupply;
 
-  /// amount of token traded all time across all pairs
+  /// Amount of token traded all time across all pairs.
   @BuiltValueField(wireName: r'trade_volume')
   String? get tradeVolume;
 
-  /// amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+  /// Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
   @BuiltValueField(wireName: r'trade_volume_usd')
   String? get tradeVolumeUsd;
 
-  /// amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+  /// Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
-  /// total amount of token provided as liquidity across all pairs
+  /// Total amount of token provided as liquidity across all pairs.
   @BuiltValueField(wireName: r'total_liquidity')
   String? get totalLiquidity;
 
-  /// ETH per token
+  /// ETH per token.
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 

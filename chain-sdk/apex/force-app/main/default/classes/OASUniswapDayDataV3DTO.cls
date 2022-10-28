@@ -11,7 +11,7 @@
  */
 
 /**
- * Data accumulated and condensed into day stats for all of Uniswap
+ * Data accumulated and condensed into day stats for all of Uniswap.
  */
 public class OASUniswapDayDataV3DTO implements OAS.MappedProperties {
     /**
@@ -39,37 +39,37 @@ public class OASUniswapDayDataV3DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * total volume across all pairs on this day, stored as a derived amount of ETH
+     * Total volume across all pairs on this day, stored as a derived amount of ETH.
      * @return volumeEth
      */
     public String volumeEth { get; set; }
 
     /**
-     * total volume across all pairs on this day, stored as a derived amount of USD
+     * Total volume across all pairs on this day, stored as a derived amount of USD.
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * total daily volume in Uniswap derived in terms of USD untracked
+     * Total daily volume in Uniswap derived in terms of USD untracked.
      * @return volumeUsdUntracked
      */
     public String volumeUsdUntracked { get; set; }
 
     /**
-     * fees in USD
+     * Fees in USD
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -81,7 +81,7 @@ public class OASUniswapDayDataV3DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * tvl in terms of USD
+     * Tvl in terms of USD.
      * @return tvlUsd
      */
     public String tvlUsd { get; set; }

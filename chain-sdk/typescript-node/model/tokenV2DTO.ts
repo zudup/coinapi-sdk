@@ -28,41 +28,41 @@ export class TokenV2DTO {
     */
     'vid'?: number;
     /**
-    * token address
+    * Token address.
     */
     'id'?: string | null;
     /**
-    * token symbol
+    * Token symbol.
     */
     'symbol'?: string | null;
     /**
-    * token name
+    * Token name.
     */
     'name'?: string | null;
     /**
-    * token decimals
+    * Token decimals.
     */
     'decimals'?: number;
     'totalSupply'?: BigInteger;
     /**
-    * amount of token traded all time across all pairs
+    * Amount of token traded all time across all pairs.
     */
     'tradeVolume'?: string | null;
     /**
-    * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+    * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
     */
     'tradeVolumeUsd'?: string | null;
     /**
-    * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+    * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     */
     'untrackedVolumeUsd'?: string | null;
     'txCount'?: BigInteger;
     /**
-    * total amount of token provided as liquidity across all pairs
+    * Total amount of token provided as liquidity across all pairs.
     */
     'totalLiquidity'?: string | null;
     /**
-    * ETH per token
+    * ETH per token.
     */
     'derivedEth'?: string | null;
     'tokenSymbol'?: string | null;

@@ -5766,6 +5766,10 @@ components:
       type: object
     PairV2DTO:
       additionalProperties: false
+      description: "Information about a pair. Includes references to each token within\
+        \ the pair, volume information, liquidity information, and more. The pair\
+        \ entity mirrors the pair smart contract, and also contains aggregated information\
+        \ about use."
       example:
         token_0_price: token_0_price
         volume_token_1: volume_token_1
@@ -5811,69 +5815,71 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: Pair contract address.
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pair contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pair contract.
           nullable: true
           type: string
         reserve_0:
-          description: ""
+          description: Reserve of token0.
           nullable: true
           type: string
         reserve_1:
-          description: ""
+          description: Reserve of token1.
           nullable: true
           type: string
         total_supply:
-          description: ""
+          description: Total supply of liquidity token distributed to LPs.
           nullable: true
           type: string
         reserve_eth:
-          description: ""
+          description: Total liquidity in pair stored as an amount of ETH.
           nullable: true
           type: string
         reserve_usd:
-          description: ""
+          description: Total liquidity amount in pair stored as an amount of USD.
           nullable: true
           type: string
         tracked_reserve_eth:
-          description: ""
+          description: Total liquidity with only tracked amount (see tracked amounts).
           nullable: true
           type: string
         token_0_price:
-          description: ""
+          description: Token0 per token1.
           nullable: true
           type: string
         token_1_price:
-          description: ""
+          description: Token1 per token0.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Amount of token0 swapped on this pair.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Amount of token1 swapped on this pair.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Total amount swapped all time in this pair stored in USD (only
+            tracked if USD liquidity is above minimum threshold).
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: "Total amount swapped all time in this pair stored in USD,\
+            \ no minimum liquidity threshold."
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         created_at_timestamp:
-          description: ""
+          description: Timestamp contract was created.
           format: date-time
           type: string
         liquidity_provider_count:
@@ -6638,6 +6644,7 @@ components:
       type: object
     SwapV2DTO:
       additionalProperties: false
+      description: Swap are created for each token swap within a pair.
       example:
         transaction_id: transaction_id
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -6682,53 +6689,53 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: Transaction hash plus index in Transaction swap array.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Reference to transaction swap was included in.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: "Timestamp of swap, used for sorted lookups."
           format: date-time
           type: string
         pair:
-          description: ""
+          description: Reference to pair.
           nullable: true
           type: string
         sender:
-          description: ""
+          description: Address that initiated the swap.
           nullable: true
           type: string
         from:
-          description: ""
+          description: The EOA (Externally Owned Account) that initiated the transaction.
           nullable: true
           type: string
         amount_0_in:
-          description: ""
+          description: Amount of token0 sold.
           nullable: true
           type: string
         amount_1_in:
-          description: ""
+          description: Amount of token1 sold.
           nullable: true
           type: string
         amount_0_out:
-          description: ""
+          description: Amount of token0 received.
           nullable: true
           type: string
         amount_1_out:
-          description: ""
+          description: Amount of token1 received.
           nullable: true
           type: string
         to:
-          description: ""
+          description: Recipient of output tokens.
           nullable: true
           type: string
         log_index:
           $ref: '#/components/schemas/BigInteger'
         amount_usd:
-          description: ""
+          description: Derived amount of tokens sold in USD.
           nullable: true
           type: string
         evaluated_price:
@@ -7235,59 +7242,59 @@ components:
           format: int64
           type: integer
         id:
-          description: token address concatendated with date
+          description: Token address concatendated with date.
           nullable: true
           type: string
         period_start_unix:
-          description: unix timestamp for start of hour
+          description: Unix timestamp for start of hour.
           format: int32
           type: integer
         token:
-          description: pointer to token
+          description: Pointer to token.
           nullable: true
           type: string
         volume:
-          description: volume in token units
+          description: Volume in token units.
           nullable: true
           type: string
         volume_usd:
-          description: volume in derived USD
+          description: Volume in derived USD.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: volume in USD even on pools with less reliable USD values
+          description: Volume in USD even on pools with less reliable USD values.
           nullable: true
           type: string
         total_value_locked:
-          description: liquidity across all pools in token units
+          description: Liquidity across all pools in token units.
           nullable: true
           type: string
         total_value_locked_usd:
-          description: liquidity across all pools in derived USD
+          description: Liquidity across all pools in derived USD.
           nullable: true
           type: string
         price_usd:
-          description: price at end of period in USD
+          description: Price at end of period in USD.
           nullable: true
           type: string
         fees_usd:
-          description: fees in USD
+          description: Fees in USD.
           nullable: true
           type: string
         open:
-          description: opening price USD
+          description: Opening price USD.
           nullable: true
           type: string
         high:
-          description: high price USD
+          description: High price USD.
           nullable: true
           type: string
         low:
-          description: low price USD
+          description: Low price USD.
           nullable: true
           type: string
         close:
-          description: close price USD
+          description: Close price USD.
           nullable: true
           type: string
         vid:
@@ -7342,45 +7349,45 @@ components:
           format: int64
           type: integer
         id:
-          description: token address
+          description: Token address.
           nullable: true
           type: string
         symbol:
-          description: token symbol
+          description: Token symbol.
           nullable: true
           type: string
         name:
-          description: token name
+          description: Token name.
           nullable: true
           type: string
         decimals:
-          description: token decimals
+          description: Token decimals.
           format: int32
           type: integer
         total_supply:
           $ref: '#/components/schemas/BigInteger'
         trade_volume:
-          description: amount of token traded all time across all pairs
+          description: Amount of token traded all time across all pairs.
           nullable: true
           type: string
         trade_volume_usd:
-          description: amount of token in USD traded all time across pairs (only for
-            tokens with liquidity above minimum threshold)
+          description: Amount of token in USD traded all time across pairs (only for
+            tokens with liquidity above minimum threshold).
           nullable: true
           type: string
         untracked_volume_usd:
-          description: amount of token in USD traded all time across pairs (no minimum
-            liquidity threshold)
+          description: Amount of token in USD traded all time across pairs (no minimum
+            liquidity threshold).
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         total_liquidity:
-          description: total amount of token provided as liquidity across all pairs
+          description: Total amount of token provided as liquidity across all pairs.
           nullable: true
           type: string
         derived_eth:
-          description: ETH per token
+          description: ETH per token.
           nullable: true
           type: string
         token_symbol:
@@ -7447,37 +7454,37 @@ components:
           format: int64
           type: integer
         id:
-          description: token address
+          description: Token address.
           nullable: true
           type: string
         symbol:
-          description: token symbol
+          description: Token symbol.
           nullable: true
           type: string
         name:
-          description: token name
+          description: Token name.
           nullable: true
           type: string
         decimals:
-          description: token decimals
+          description: Token decimals.
           format: int32
           type: integer
         total_supply:
           $ref: '#/components/schemas/BigInteger'
         volume:
-          description: volume in token units
+          description: Volume in token units.
           nullable: true
           type: string
         volume_usd:
-          description: volume in derived USD
+          description: Volume in derived USD.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: volume in USD even on pools with less reliable USD values
+          description: Volume in USD even on pools with less reliable USD values.
           nullable: true
           type: string
         fees_usd:
-          description: fees in USD
+          description: Fees in USD.
           nullable: true
           type: string
         tx_count:
@@ -7485,23 +7492,23 @@ components:
         pool_count:
           $ref: '#/components/schemas/BigInteger'
         total_value_locked:
-          description: liquidity across all pools in token units
+          description: Liquidity across all pools in token units.
           nullable: true
           type: string
         total_value_locked_usd:
-          description: liquidity across all pools in derived USD
+          description: Liquidity across all pools in derived USD.
           nullable: true
           type: string
         total_value_locked_usd_untracked:
-          description: TVL derived in USD untracked
+          description: TVL derived in USD untracked.
           nullable: true
           type: string
         derived_eth:
-          description: derived price in ETH
+          description: Derived price in ETH.
           nullable: true
           type: string
         whitelist_pools:
-          description: pools token is in that are white listed for USD pricing
+          description: Pools token is in that are white listed for USD pricing.
           items:
             type: string
           nullable: true
@@ -7549,65 +7556,65 @@ components:
           format: int64
           type: integer
         id:
-          description: token address concatendated with date
+          description: Token address concatendated with date.
           nullable: true
           type: string
         date:
-          description: timestamp rounded to current day by dividing by 86400
+          description: Timestamp rounded to current day by dividing by 86400.
           format: int32
           type: integer
         token:
-          description: pointer to token
+          description: Pointer to token.
           nullable: true
           type: string
         volume:
-          description: volume in token units
+          description: Volume in token units.
           nullable: true
           type: string
         volume_usd:
-          description: volume in derived USD
+          description: Volume in derived USD.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: volume in USD even on pools with less reliable USD values
+          description: Volume in USD even on pools with less reliable USD values.
           nullable: true
           type: string
         total_value_locked:
-          description: liquidity across all pools in token units
+          description: Liquidity across all pools in token units.
           nullable: true
           type: string
         total_value_locked_usd:
-          description: liquidity across all pools in derived USD
+          description: Liquidity across all pools in derived USD.
           nullable: true
           type: string
         price_usd:
-          description: price at end of period in USD
+          description: Price at end of period in USD.
           nullable: true
           type: string
         fees_usd:
-          description: fees in USD
+          description: Fees in USD.
           nullable: true
           type: string
         open:
-          description: opening price USD
+          description: Opening price USD.
           nullable: true
           type: string
         high:
-          description: high price USD
+          description: High price USD.
           nullable: true
           type: string
         low:
-          description: low price USD
+          description: Low price USD.
           nullable: true
           type: string
         close:
-          description: close price USD
+          description: Close price USD.
           nullable: true
           type: string
       type: object
     UniswapDayDataV3DTO:
       additionalProperties: false
-      description: Data accumulated and condensed into day stats for all of Uniswap
+      description: Data accumulated and condensed into day stats for all of Uniswap.
       example:
         vid: 6
         date: 1
@@ -7642,35 +7649,35 @@ components:
           format: int64
           type: integer
         id:
-          description: timestamp rounded to current day by dividing by 86400
+          description: Timestamp rounded to current day by dividing by 86400.
           nullable: true
           type: string
         date:
-          description: timestamp rounded to current day by dividing by 86400
+          description: Timestamp rounded to current day by dividing by 86400.
           format: int32
           type: integer
         volume_eth:
-          description: "total volume across all pairs on this day, stored as a derived\
-            \ amount of ETH"
+          description: "Total volume across all pairs on this day, stored as a derived\
+            \ amount of ETH."
           nullable: true
           type: string
         volume_usd:
-          description: "total volume across all pairs on this day, stored as a derived\
-            \ amount of USD"
+          description: "Total volume across all pairs on this day, stored as a derived\
+            \ amount of USD."
           nullable: true
           type: string
         volume_usd_untracked:
-          description: total daily volume in Uniswap derived in terms of USD untracked
+          description: Total daily volume in Uniswap derived in terms of USD untracked.
           nullable: true
           type: string
         fees_usd:
-          description: fees in USD
+          description: Fees in USD
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         tvl_usd:
-          description: tvl in terms of USD
+          description: Tvl in terms of USD.
           nullable: true
           type: string
       type: object

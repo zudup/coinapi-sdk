@@ -16,20 +16,20 @@ class UniswapDayDataV3DTO {
     Long blockNumber
     /*  */
     Long vid
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     String id
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     Integer date
-    /* total volume across all pairs on this day, stored as a derived amount of ETH */
+    /* Total volume across all pairs on this day, stored as a derived amount of ETH. */
     String volumeEth
-    /* total volume across all pairs on this day, stored as a derived amount of USD */
+    /* Total volume across all pairs on this day, stored as a derived amount of USD. */
     String volumeUsd
-    /* total daily volume in Uniswap derived in terms of USD untracked */
+    /* Total daily volume in Uniswap derived in terms of USD untracked. */
     String volumeUsdUntracked
-    /* fees in USD */
+    /* Fees in USD */
     String feesUsd
     
     BigInteger txCount
-    /* tvl in terms of USD */
+    /* Tvl in terms of USD. */
     String tvlUsd
 }

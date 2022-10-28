@@ -13,6 +13,9 @@
 import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 
+/**
+* Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+*/
 export class PairV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
@@ -25,68 +28,68 @@ export class PairV2DTO {
     */
     'vid'?: number;
     /**
-    * 
+    * Pair contract address.
     */
     'id'?: string | null;
     /**
-    * 
+    * Reference to token0 as stored in pair contract.
     */
     'token0'?: string | null;
     /**
-    * 
+    * Reference to token1 as stored in pair contract.
     */
     'token1'?: string | null;
     /**
-    * 
+    * Reserve of token0.
     */
     'reserve0'?: string | null;
     /**
-    * 
+    * Reserve of token1.
     */
     'reserve1'?: string | null;
     /**
-    * 
+    * Total supply of liquidity token distributed to LPs.
     */
     'totalSupply'?: string | null;
     /**
-    * 
+    * Total liquidity in pair stored as an amount of ETH.
     */
     'reserveEth'?: string | null;
     /**
-    * 
+    * Total liquidity amount in pair stored as an amount of USD.
     */
     'reserveUsd'?: string | null;
     /**
-    * 
+    * Total liquidity with only tracked amount (see tracked amounts).
     */
     'trackedReserveEth'?: string | null;
     /**
-    * 
+    * Token0 per token1.
     */
     'token0Price'?: string | null;
     /**
-    * 
+    * Token1 per token0.
     */
     'token1Price'?: string | null;
     /**
-    * 
+    * Amount of token0 swapped on this pair.
     */
     'volumeToken0'?: string | null;
     /**
-    * 
+    * Amount of token1 swapped on this pair.
     */
     'volumeToken1'?: string | null;
     /**
-    * 
+    * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     */
     'untrackedVolumeUsd'?: string | null;
     'txCount'?: BigInteger;
     /**
-    * 
+    * Timestamp contract was created.
     */
     'createdAtTimestamp'?: Date;
     /**

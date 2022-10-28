@@ -15,32 +15,32 @@ class TokenV3DayDataDTO {
     Long blockNumber
     /*  */
     Long vid
-    /* token address concatendated with date */
+    /* Token address concatendated with date. */
     String id
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     Integer date
-    /* pointer to token */
+    /* Pointer to token. */
     String token
-    /* volume in token units */
+    /* Volume in token units. */
     String volume
-    /* volume in derived USD */
+    /* Volume in derived USD. */
     String volumeUsd
-    /* volume in USD even on pools with less reliable USD values */
+    /* Volume in USD even on pools with less reliable USD values. */
     String untrackedVolumeUsd
-    /* liquidity across all pools in token units */
+    /* Liquidity across all pools in token units. */
     String totalValueLocked
-    /* liquidity across all pools in derived USD */
+    /* Liquidity across all pools in derived USD. */
     String totalValueLockedUsd
-    /* price at end of period in USD */
+    /* Price at end of period in USD. */
     String priceUsd
-    /* fees in USD */
+    /* Fees in USD. */
     String feesUsd
-    /* opening price USD */
+    /* Opening price USD. */
     String open
-    /* high price USD */
+    /* High price USD. */
     String high
-    /* low price USD */
+    /* Low price USD. */
     String low
-    /* close price USD */
+    /* Close price USD. */
     String close
 }

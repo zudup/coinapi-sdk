@@ -22,59 +22,59 @@ export interface TokenHourDataV3DTO {
      */
     block_number?: number;
     /**
-     * token address concatendated with date
+     * Token address concatendated with date.
      */
     id?: string | null;
     /**
-     * unix timestamp for start of hour
+     * Unix timestamp for start of hour.
      */
     period_start_unix?: number;
     /**
-     * pointer to token
+     * Pointer to token.
      */
     token?: string | null;
     /**
-     * volume in token units
+     * Volume in token units.
      */
     volume?: string | null;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      */
     volume_usd?: string | null;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      */
     untracked_volume_usd?: string | null;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      */
     total_value_locked?: string | null;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      */
     total_value_locked_usd?: string | null;
     /**
-     * price at end of period in USD
+     * Price at end of period in USD.
      */
     price_usd?: string | null;
     /**
-     * fees in USD
+     * Fees in USD.
      */
     fees_usd?: string | null;
     /**
-     * opening price USD
+     * Opening price USD.
      */
     open?: string | null;
     /**
-     * high price USD
+     * High price USD.
      */
     high?: string | null;
     /**
-     * low price USD
+     * Low price USD.
      */
     low?: string | null;
     /**
-     * close price USD
+     * Close price USD.
      */
     close?: string | null;
     /**

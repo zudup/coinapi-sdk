@@ -1,7 +1,7 @@
 #' Create a new PairV2DTO
 #'
 #' @description
-#' PairV2DTO Class
+#' Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 #'
 #' @docType class
 #' @title PairV2DTO
@@ -11,23 +11,23 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field vid  integer [optional]
-#' @field id  character [optional]
-#' @field token_0  character [optional]
-#' @field token_1  character [optional]
-#' @field reserve_0  character [optional]
-#' @field reserve_1  character [optional]
-#' @field total_supply  character [optional]
-#' @field reserve_eth  character [optional]
-#' @field reserve_usd  character [optional]
-#' @field tracked_reserve_eth  character [optional]
-#' @field token_0_price  character [optional]
-#' @field token_1_price  character [optional]
-#' @field volume_token_0  character [optional]
-#' @field volume_token_1  character [optional]
-#' @field volume_usd  character [optional]
-#' @field untracked_volume_usd  character [optional]
+#' @field id Pair contract address. character [optional]
+#' @field token_0 Reference to token0 as stored in pair contract. character [optional]
+#' @field token_1 Reference to token1 as stored in pair contract. character [optional]
+#' @field reserve_0 Reserve of token0. character [optional]
+#' @field reserve_1 Reserve of token1. character [optional]
+#' @field total_supply Total supply of liquidity token distributed to LPs. character [optional]
+#' @field reserve_eth Total liquidity in pair stored as an amount of ETH. character [optional]
+#' @field reserve_usd Total liquidity amount in pair stored as an amount of USD. character [optional]
+#' @field tracked_reserve_eth Total liquidity with only tracked amount (see tracked amounts). character [optional]
+#' @field token_0_price Token0 per token1. character [optional]
+#' @field token_1_price Token1 per token0. character [optional]
+#' @field volume_token_0 Amount of token0 swapped on this pair. character [optional]
+#' @field volume_token_1 Amount of token1 swapped on this pair. character [optional]
+#' @field volume_usd Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). character [optional]
+#' @field untracked_volume_usd Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
-#' @field created_at_timestamp  character [optional]
+#' @field created_at_timestamp Timestamp contract was created. character [optional]
 #' @field liquidity_provider_count  character [optional]
 #' @field evaluated_ask  numeric [optional]
 #' @importFrom R6 R6Class
@@ -68,23 +68,23 @@ PairV2DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number 
     #' @param vid 
-    #' @param id 
-    #' @param token_0 
-    #' @param token_1 
-    #' @param reserve_0 
-    #' @param reserve_1 
-    #' @param total_supply 
-    #' @param reserve_eth 
-    #' @param reserve_usd 
-    #' @param tracked_reserve_eth 
-    #' @param token_0_price 
-    #' @param token_1_price 
-    #' @param volume_token_0 
-    #' @param volume_token_1 
-    #' @param volume_usd 
-    #' @param untracked_volume_usd 
+    #' @param id Pair contract address.
+    #' @param token_0 Reference to token0 as stored in pair contract.
+    #' @param token_1 Reference to token1 as stored in pair contract.
+    #' @param reserve_0 Reserve of token0.
+    #' @param reserve_1 Reserve of token1.
+    #' @param total_supply Total supply of liquidity token distributed to LPs.
+    #' @param reserve_eth Total liquidity in pair stored as an amount of ETH.
+    #' @param reserve_usd Total liquidity amount in pair stored as an amount of USD.
+    #' @param tracked_reserve_eth Total liquidity with only tracked amount (see tracked amounts).
+    #' @param token_0_price Token0 per token1.
+    #' @param token_1_price Token1 per token0.
+    #' @param volume_token_0 Amount of token0 swapped on this pair.
+    #' @param volume_token_1 Amount of token1 swapped on this pair.
+    #' @param volume_usd Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+    #' @param untracked_volume_usd Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     #' @param tx_count tx_count
-    #' @param created_at_timestamp 
+    #' @param created_at_timestamp Timestamp contract was created.
     #' @param liquidity_provider_count 
     #' @param evaluated_ask evaluated_ask
     #' @param ... Other optional arguments.

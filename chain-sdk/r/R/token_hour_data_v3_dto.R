@@ -10,20 +10,20 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
-#' @field id token address concatendated with date character [optional]
-#' @field period_start_unix unix timestamp for start of hour integer [optional]
-#' @field token pointer to token character [optional]
-#' @field volume volume in token units character [optional]
-#' @field volume_usd volume in derived USD character [optional]
-#' @field untracked_volume_usd volume in USD even on pools with less reliable USD values character [optional]
-#' @field total_value_locked liquidity across all pools in token units character [optional]
-#' @field total_value_locked_usd liquidity across all pools in derived USD character [optional]
-#' @field price_usd price at end of period in USD character [optional]
-#' @field fees_usd fees in USD character [optional]
-#' @field open opening price USD character [optional]
-#' @field high high price USD character [optional]
-#' @field low low price USD character [optional]
-#' @field close close price USD character [optional]
+#' @field id Token address concatendated with date. character [optional]
+#' @field period_start_unix Unix timestamp for start of hour. integer [optional]
+#' @field token Pointer to token. character [optional]
+#' @field volume Volume in token units. character [optional]
+#' @field volume_usd Volume in derived USD. character [optional]
+#' @field untracked_volume_usd Volume in USD even on pools with less reliable USD values. character [optional]
+#' @field total_value_locked Liquidity across all pools in token units. character [optional]
+#' @field total_value_locked_usd Liquidity across all pools in derived USD. character [optional]
+#' @field price_usd Price at end of period in USD. character [optional]
+#' @field fees_usd Fees in USD. character [optional]
+#' @field open Opening price USD. character [optional]
+#' @field high High price USD. character [optional]
+#' @field low Low price USD. character [optional]
+#' @field close Close price USD. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -57,20 +57,20 @@ TokenHourDataV3DTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number 
-    #' @param id token address concatendated with date
-    #' @param period_start_unix unix timestamp for start of hour
-    #' @param token pointer to token
-    #' @param volume volume in token units
-    #' @param volume_usd volume in derived USD
-    #' @param untracked_volume_usd volume in USD even on pools with less reliable USD values
-    #' @param total_value_locked liquidity across all pools in token units
-    #' @param total_value_locked_usd liquidity across all pools in derived USD
-    #' @param price_usd price at end of period in USD
-    #' @param fees_usd fees in USD
-    #' @param open opening price USD
-    #' @param high high price USD
-    #' @param low low price USD
-    #' @param close close price USD
+    #' @param id Token address concatendated with date.
+    #' @param period_start_unix Unix timestamp for start of hour.
+    #' @param token Pointer to token.
+    #' @param volume Volume in token units.
+    #' @param volume_usd Volume in derived USD.
+    #' @param untracked_volume_usd Volume in USD even on pools with less reliable USD values.
+    #' @param total_value_locked Liquidity across all pools in token units.
+    #' @param total_value_locked_usd Liquidity across all pools in derived USD.
+    #' @param price_usd Price at end of period in USD.
+    #' @param fees_usd Fees in USD.
+    #' @param open Opening price USD.
+    #' @param high High price USD.
+    #' @param low Low price USD.
+    #' @param close Close price USD.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export

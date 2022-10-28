@@ -48,10 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * Data accumulated and condensed into day stats for all of Uniswap
+ * Data accumulated and condensed into day stats for all of Uniswap.
  */
-@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
+@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:08:43.190592Z[Etc/UTC]")
 public class UniswapDayDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -203,11 +203,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * timestamp rounded to current day by dividing by 86400
+   * Timestamp rounded to current day by dividing by 86400.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public String getId() {
     return id;
@@ -226,11 +226,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * timestamp rounded to current day by dividing by 86400
+   * Timestamp rounded to current day by dividing by 86400.
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "timestamp rounded to current day by dividing by 86400")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public Integer getDate() {
     return date;
@@ -249,11 +249,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * total volume across all pairs on this day, stored as a derived amount of ETH
+   * Total volume across all pairs on this day, stored as a derived amount of ETH.
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of ETH")
+  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of ETH.")
 
   public String getVolumeEth() {
     return volumeEth;
@@ -272,11 +272,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * total volume across all pairs on this day, stored as a derived amount of USD
+   * Total volume across all pairs on this day, stored as a derived amount of USD.
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "total volume across all pairs on this day, stored as a derived amount of USD")
+  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -295,11 +295,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * total daily volume in Uniswap derived in terms of USD untracked
+   * Total daily volume in Uniswap derived in terms of USD untracked.
    * @return volumeUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "total daily volume in Uniswap derived in terms of USD untracked")
+  @ApiModelProperty(value = "Total daily volume in Uniswap derived in terms of USD untracked.")
 
   public String getVolumeUsdUntracked() {
     return volumeUsdUntracked;
@@ -318,11 +318,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * fees in USD
+   * Fees in USD
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "fees in USD")
+  @ApiModelProperty(value = "Fees in USD")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -364,11 +364,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * tvl in terms of USD
+   * Tvl in terms of USD.
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "tvl in terms of USD")
+  @ApiModelProperty(value = "Tvl in terms of USD.")
 
   public String getTvlUsd() {
     return tvlUsd;

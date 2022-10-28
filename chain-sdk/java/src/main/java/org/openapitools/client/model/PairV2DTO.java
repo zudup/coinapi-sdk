@@ -48,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * PairV2DTO
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
+@ApiModel(description = "Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:08:43.190592Z[Etc/UTC]")
 public class PairV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -254,11 +255,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Pair contract address.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pair contract address.")
 
   public String getId() {
     return id;
@@ -277,11 +278,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Reference to token0 as stored in pair contract.
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pair contract.")
 
   public String getToken0() {
     return token0;
@@ -300,11 +301,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Reference to token1 as stored in pair contract.
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pair contract.")
 
   public String getToken1() {
     return token1;
@@ -323,11 +324,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Reserve of token0.
    * @return reserve0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reserve of token0.")
 
   public String getReserve0() {
     return reserve0;
@@ -346,11 +347,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Reserve of token1.
    * @return reserve1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reserve of token1.")
 
   public String getReserve1() {
     return reserve1;
@@ -369,11 +370,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total supply of liquidity token distributed to LPs.
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total supply of liquidity token distributed to LPs.")
 
   public String getTotalSupply() {
     return totalSupply;
@@ -392,11 +393,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total liquidity in pair stored as an amount of ETH.
    * @return reserveEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total liquidity in pair stored as an amount of ETH.")
 
   public String getReserveEth() {
     return reserveEth;
@@ -415,11 +416,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total liquidity amount in pair stored as an amount of USD.
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total liquidity amount in pair stored as an amount of USD.")
 
   public String getReserveUsd() {
     return reserveUsd;
@@ -438,11 +439,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total liquidity with only tracked amount (see tracked amounts).
    * @return trackedReserveEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total liquidity with only tracked amount (see tracked amounts).")
 
   public String getTrackedReserveEth() {
     return trackedReserveEth;
@@ -461,11 +462,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Token0 per token1.
    * @return token0Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token0 per token1.")
 
   public String getToken0Price() {
     return token0Price;
@@ -484,11 +485,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Token1 per token0.
    * @return token1Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token1 per token0.")
 
   public String getToken1Price() {
     return token1Price;
@@ -507,11 +508,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Amount of token0 swapped on this pair.
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token0 swapped on this pair.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -530,11 +531,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Amount of token1 swapped on this pair.
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token1 swapped on this pair.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -553,11 +554,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -576,11 +577,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -622,11 +623,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Timestamp contract was created.
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp contract was created.")
 
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;

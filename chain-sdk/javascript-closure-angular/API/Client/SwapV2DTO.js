@@ -1,6 +1,7 @@
 goog.provide('API.Client.SwapV2DTO');
 
 /**
+ * Swap are created for each token swap within a pair.
  * @record
  */
 API.Client.SwapV2DTO = function() {}
@@ -32,77 +33,77 @@ API.Client.SwapV2DTO.prototype.blockNumber;
 API.Client.SwapV2DTO.prototype.vid;
 
 /**
- * 
+ * Transaction hash plus index in Transaction swap array.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.id;
 
 /**
- * 
+ * Reference to transaction swap was included in.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.transaction;
 
 /**
- * 
+ * Timestamp of swap, used for sorted lookups.
  * @type {!Date}
  * @export
  */
 API.Client.SwapV2DTO.prototype.timestamp;
 
 /**
- * 
+ * Reference to pair.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.pair;
 
 /**
- * 
+ * Address that initiated the swap.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.sender;
 
 /**
- * 
+ * The EOA (Externally Owned Account) that initiated the transaction.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.from;
 
 /**
- * 
+ * Amount of token0 sold.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.amount0In;
 
 /**
- * 
+ * Amount of token1 sold.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.amount1In;
 
 /**
- * 
+ * Amount of token0 received.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.amount0Out;
 
 /**
- * 
+ * Amount of token1 received.
  * @type {!string}
  * @export
  */
 API.Client.SwapV2DTO.prototype.amount1Out;
 
 /**
- * 
+ * Recipient of output tokens.
  * @type {!string}
  * @export
  */
@@ -115,7 +116,7 @@ API.Client.SwapV2DTO.prototype.to;
 API.Client.SwapV2DTO.prototype.logIndex;
 
 /**
- * 
+ * Derived amount of tokens sold in USD.
  * @type {!string}
  * @export
  */

@@ -30,20 +30,20 @@ import com.squareup.moshi.Json
  * @param recvTime 
  * @param blockNumber 
  * @param vid 
- * @param id token address concatendated with date
- * @param date timestamp rounded to current day by dividing by 86400
- * @param token pointer to token
- * @param volume volume in token units
- * @param volumeUsd volume in derived USD
- * @param untrackedVolumeUsd volume in USD even on pools with less reliable USD values
- * @param totalValueLocked liquidity across all pools in token units
- * @param totalValueLockedUsd liquidity across all pools in derived USD
- * @param priceUsd price at end of period in USD
- * @param feesUsd fees in USD
- * @param `open` opening price USD
- * @param high high price USD
- * @param low low price USD
- * @param close close price USD
+ * @param id Token address concatendated with date.
+ * @param date Timestamp rounded to current day by dividing by 86400.
+ * @param token Pointer to token.
+ * @param volume Volume in token units.
+ * @param volumeUsd Volume in derived USD.
+ * @param untrackedVolumeUsd Volume in USD even on pools with less reliable USD values.
+ * @param totalValueLocked Liquidity across all pools in token units.
+ * @param totalValueLockedUsd Liquidity across all pools in derived USD.
+ * @param priceUsd Price at end of period in USD.
+ * @param feesUsd Fees in USD.
+ * @param `open` Opening price USD.
+ * @param high High price USD.
+ * @param low Low price USD.
+ * @param close Close price USD.
  */
 
 data class TokenV3DayDataDTO (
@@ -62,59 +62,59 @@ data class TokenV3DayDataDTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /* token address concatendated with date */
+    /* Token address concatendated with date. */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /* timestamp rounded to current day by dividing by 86400 */
+    /* Timestamp rounded to current day by dividing by 86400. */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
-    /* pointer to token */
+    /* Pointer to token. */
     @Json(name = "token")
     val token: kotlin.String? = null,
 
-    /* volume in token units */
+    /* Volume in token units. */
     @Json(name = "volume")
     val volume: kotlin.String? = null,
 
-    /* volume in derived USD */
+    /* Volume in derived USD. */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
-    /* volume in USD even on pools with less reliable USD values */
+    /* Volume in USD even on pools with less reliable USD values. */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
-    /* liquidity across all pools in token units */
+    /* Liquidity across all pools in token units. */
     @Json(name = "total_value_locked")
     val totalValueLocked: kotlin.String? = null,
 
-    /* liquidity across all pools in derived USD */
+    /* Liquidity across all pools in derived USD. */
     @Json(name = "total_value_locked_usd")
     val totalValueLockedUsd: kotlin.String? = null,
 
-    /* price at end of period in USD */
+    /* Price at end of period in USD. */
     @Json(name = "price_usd")
     val priceUsd: kotlin.String? = null,
 
-    /* fees in USD */
+    /* Fees in USD. */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
-    /* opening price USD */
+    /* Opening price USD. */
     @Json(name = "open")
     val `open`: kotlin.String? = null,
 
-    /* high price USD */
+    /* High price USD. */
     @Json(name = "high")
     val high: kotlin.String? = null,
 
-    /* low price USD */
+    /* Low price USD. */
     @Json(name = "low")
     val low: kotlin.String? = null,
 
-    /* close price USD */
+    /* Close price USD. */
     @Json(name = "close")
     val close: kotlin.String? = null
 

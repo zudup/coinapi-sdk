@@ -1,7 +1,7 @@
 #' Create a new SwapV2DTO
 #'
 #' @description
-#' SwapV2DTO Class
+#' Swap are created for each token swap within a pair.
 #'
 #' @docType class
 #' @title SwapV2DTO
@@ -11,19 +11,19 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field vid  integer [optional]
-#' @field id  character [optional]
-#' @field transaction  character [optional]
-#' @field timestamp  character [optional]
-#' @field pair  character [optional]
-#' @field sender  character [optional]
-#' @field from  character [optional]
-#' @field amount_0_in  character [optional]
-#' @field amount_1_in  character [optional]
-#' @field amount_0_out  character [optional]
-#' @field amount_1_out  character [optional]
-#' @field to  character [optional]
+#' @field id Transaction hash plus index in Transaction swap array. character [optional]
+#' @field transaction Reference to transaction swap was included in. character [optional]
+#' @field timestamp Timestamp of swap, used for sorted lookups. character [optional]
+#' @field pair Reference to pair. character [optional]
+#' @field sender Address that initiated the swap. character [optional]
+#' @field from The EOA (Externally Owned Account) that initiated the transaction. character [optional]
+#' @field amount_0_in Amount of token0 sold. character [optional]
+#' @field amount_1_in Amount of token1 sold. character [optional]
+#' @field amount_0_out Amount of token0 received. character [optional]
+#' @field amount_1_out Amount of token1 received. character [optional]
+#' @field to Recipient of output tokens. character [optional]
 #' @field log_index  \link{BigInteger} [optional]
-#' @field amount_usd  character [optional]
+#' @field amount_usd Derived amount of tokens sold in USD. character [optional]
 #' @field evaluated_price  numeric [optional]
 #' @field evaluated_amount  numeric [optional]
 #' @field evaluated_aggressor  \link{ETradeAggressiveSide} [optional]
@@ -66,19 +66,19 @@ SwapV2DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number 
     #' @param vid 
-    #' @param id 
-    #' @param transaction 
-    #' @param timestamp 
-    #' @param pair 
-    #' @param sender 
-    #' @param from 
-    #' @param amount_0_in 
-    #' @param amount_1_in 
-    #' @param amount_0_out 
-    #' @param amount_1_out 
-    #' @param to 
+    #' @param id Transaction hash plus index in Transaction swap array.
+    #' @param transaction Reference to transaction swap was included in.
+    #' @param timestamp Timestamp of swap, used for sorted lookups.
+    #' @param pair Reference to pair.
+    #' @param sender Address that initiated the swap.
+    #' @param from The EOA (Externally Owned Account) that initiated the transaction.
+    #' @param amount_0_in Amount of token0 sold.
+    #' @param amount_1_in Amount of token1 sold.
+    #' @param amount_0_out Amount of token0 received.
+    #' @param amount_1_out Amount of token1 received.
+    #' @param to Recipient of output tokens.
     #' @param log_index log_index
-    #' @param amount_usd 
+    #' @param amount_usd Derived amount of tokens sold in USD.
     #' @param evaluated_price evaluated_price
     #' @param evaluated_amount evaluated_amount
     #' @param evaluated_aggressor evaluated_aggressor

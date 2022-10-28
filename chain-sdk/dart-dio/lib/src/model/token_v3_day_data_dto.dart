@@ -15,20 +15,20 @@ part 'token_v3_day_data_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] - 
 /// * [vid] - 
-/// * [id] - token address concatendated with date
-/// * [date] - timestamp rounded to current day by dividing by 86400
-/// * [token] - pointer to token
-/// * [volume] - volume in token units
-/// * [volumeUsd] - volume in derived USD
-/// * [untrackedVolumeUsd] - volume in USD even on pools with less reliable USD values
-/// * [totalValueLocked] - liquidity across all pools in token units
-/// * [totalValueLockedUsd] - liquidity across all pools in derived USD
-/// * [priceUsd] - price at end of period in USD
-/// * [feesUsd] - fees in USD
-/// * [open] - opening price USD
-/// * [high] - high price USD
-/// * [low] - low price USD
-/// * [close] - close price USD
+/// * [id] - Token address concatendated with date.
+/// * [date] - Timestamp rounded to current day by dividing by 86400.
+/// * [token] - Pointer to token.
+/// * [volume] - Volume in token units.
+/// * [volumeUsd] - Volume in derived USD.
+/// * [untrackedVolumeUsd] - Volume in USD even on pools with less reliable USD values.
+/// * [totalValueLocked] - Liquidity across all pools in token units.
+/// * [totalValueLockedUsd] - Liquidity across all pools in derived USD.
+/// * [priceUsd] - Price at end of period in USD.
+/// * [feesUsd] - Fees in USD.
+/// * [open] - Opening price USD.
+/// * [high] - High price USD.
+/// * [low] - Low price USD.
+/// * [close] - Close price USD.
 @BuiltValue()
 abstract class TokenV3DayDataDTO implements Built<TokenV3DayDataDTO, TokenV3DayDataDTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -45,59 +45,59 @@ abstract class TokenV3DayDataDTO implements Built<TokenV3DayDataDTO, TokenV3DayD
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// token address concatendated with date
+  /// Token address concatendated with date.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// timestamp rounded to current day by dividing by 86400
+  /// Timestamp rounded to current day by dividing by 86400.
   @BuiltValueField(wireName: r'date')
   int? get date;
 
-  /// pointer to token
+  /// Pointer to token.
   @BuiltValueField(wireName: r'token')
   String? get token;
 
-  /// volume in token units
+  /// Volume in token units.
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
-  /// volume in derived USD
+  /// Volume in derived USD.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// volume in USD even on pools with less reliable USD values
+  /// Volume in USD even on pools with less reliable USD values.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// liquidity across all pools in token units
+  /// Liquidity across all pools in token units.
   @BuiltValueField(wireName: r'total_value_locked')
   String? get totalValueLocked;
 
-  /// liquidity across all pools in derived USD
+  /// Liquidity across all pools in derived USD.
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// price at end of period in USD
+  /// Price at end of period in USD.
   @BuiltValueField(wireName: r'price_usd')
   String? get priceUsd;
 
-  /// fees in USD
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
-  /// opening price USD
+  /// Opening price USD.
   @BuiltValueField(wireName: r'open')
   String? get open;
 
-  /// high price USD
+  /// High price USD.
   @BuiltValueField(wireName: r'high')
   String? get high;
 
-  /// low price USD
+  /// Low price USD.
   @BuiltValueField(wireName: r'low')
   String? get low;
 
-  /// close price USD
+  /// Close price USD.
   @BuiltValueField(wireName: r'close')
   String? get close;
 

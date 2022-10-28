@@ -28,31 +28,31 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- 
+      -- Transaction hash plus index in Transaction swap array.
     transaction: detachable STRING_32
-      -- 
+      -- Reference to transaction swap was included in.
     timestamp: detachable DATE_TIME
-      -- 
+      -- Timestamp of swap, used for sorted lookups.
     pair: detachable STRING_32
-      -- 
+      -- Reference to pair.
     sender: detachable STRING_32
-      -- 
+      -- Address that initiated the swap.
     var_from: detachable STRING_32
-      -- 
+      -- The EOA (Externally Owned Account) that initiated the transaction.
     amount_0_in: detachable STRING_32
-      -- 
+      -- Amount of token0 sold.
     amount_1_in: detachable STRING_32
-      -- 
+      -- Amount of token1 sold.
     amount_0_out: detachable STRING_32
-      -- 
+      -- Amount of token0 received.
     amount_1_out: detachable STRING_32
-      -- 
+      -- Amount of token1 received.
     to: detachable STRING_32
-      -- 
+      -- Recipient of output tokens.
     log_index: detachable BIG_INTEGER
       
     amount_usd: detachable STRING_32
-      -- 
+      -- Derived amount of tokens sold in USD.
  	evaluated_price: REAL_64
     	 
  	evaluated_amount: REAL_64

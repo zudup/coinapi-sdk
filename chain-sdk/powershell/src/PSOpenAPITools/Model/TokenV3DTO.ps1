@@ -24,37 +24,37 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-token address
+Token address.
 .PARAMETER Symbol
-token symbol
+Token symbol.
 .PARAMETER Name
-token name
+Token name.
 .PARAMETER Decimals
-token decimals
+Token decimals.
 .PARAMETER TotalSupply
 No description available.
 .PARAMETER Volume
-volume in token units
+Volume in token units.
 .PARAMETER VolumeUsd
-volume in derived USD
+Volume in derived USD.
 .PARAMETER UntrackedVolumeUsd
-volume in USD even on pools with less reliable USD values
+Volume in USD even on pools with less reliable USD values.
 .PARAMETER FeesUsd
-fees in USD
+Fees in USD.
 .PARAMETER TxCount
 No description available.
 .PARAMETER PoolCount
 No description available.
 .PARAMETER TotalValueLocked
-liquidity across all pools in token units
+Liquidity across all pools in token units.
 .PARAMETER TotalValueLockedUsd
-liquidity across all pools in derived USD
+Liquidity across all pools in derived USD.
 .PARAMETER TotalValueLockedUsdUntracked
-TVL derived in USD untracked
+TVL derived in USD untracked.
 .PARAMETER DerivedEth
-derived price in ETH
+Derived price in ETH.
 .PARAMETER WhitelistPools
-pools token is in that are white listed for USD pricing
+Pools token is in that are white listed for USD pricing.
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

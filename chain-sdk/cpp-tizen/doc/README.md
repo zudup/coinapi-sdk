@@ -325,14 +325,14 @@ Class | Description
  *FactoryV3DTO* | 
  *MintV3DTO* | 
  *PairDTO* | 
- *PairV2DTO* | 
+ *PairV2DTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  *PoolDayDataV3DTO* | 
  *PoolHourDataV3DTO* | 
  *PoolV3DTO* | 
  *PositionSnapshotV3DTO* | 
  *PositionV3DTO* | 
  *SwapDTO* | 
- *SwapV2DTO* | 
+ *SwapV2DTO* | Swap are created for each token swap within a pair.
  *SwapV3DTO* | 
  *TickDayDataV3DTO* | 
  *TickV3DTO* | 
@@ -341,5 +341,5 @@ Class | Description
  *TokenV2DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *TokenV3DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *TokenV3DayDataDTO* | Token data aggregated across all pairs that include token.
- *UniswapDayDataV3DTO* | Data accumulated and condensed into day stats for all of Uniswap
+ *UniswapDayDataV3DTO* | Data accumulated and condensed into day stats for all of Uniswap.
 

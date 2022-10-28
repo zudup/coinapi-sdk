@@ -75,32 +75,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get token address
+	/*! \brief Get Token address.
 	 */
 	std::string getId();
 
-	/*! \brief Set token address
+	/*! \brief Set Token address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get token symbol
+	/*! \brief Get Token symbol.
 	 */
 	std::string getSymbol();
 
-	/*! \brief Set token symbol
+	/*! \brief Set Token symbol.
 	 */
 	void setSymbol(std::string  symbol);
-	/*! \brief Get token name
+	/*! \brief Get Token name.
 	 */
 	std::string getName();
 
-	/*! \brief Set token name
+	/*! \brief Set Token name.
 	 */
 	void setName(std::string  name);
-	/*! \brief Get token decimals
+	/*! \brief Get Token decimals.
 	 */
 	int getDecimals();
 
-	/*! \brief Set token decimals
+	/*! \brief Set Token decimals.
 	 */
 	void setDecimals(int  decimals);
 	/*! \brief Get 
@@ -110,32 +110,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setTotalSupply(BigInteger  total_supply);
-	/*! \brief Get volume in token units
+	/*! \brief Get Volume in token units.
 	 */
 	std::string getVolume();
 
-	/*! \brief Set volume in token units
+	/*! \brief Set Volume in token units.
 	 */
 	void setVolume(std::string  volume);
-	/*! \brief Get volume in derived USD
+	/*! \brief Get Volume in derived USD.
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set volume in derived USD
+	/*! \brief Set Volume in derived USD.
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get volume in USD even on pools with less reliable USD values
+	/*! \brief Get Volume in USD even on pools with less reliable USD values.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set volume in USD even on pools with less reliable USD values
+	/*! \brief Set Volume in USD even on pools with less reliable USD values.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get fees in USD
+	/*! \brief Get Fees in USD.
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set fees in USD
+	/*! \brief Set Fees in USD.
 	 */
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
@@ -152,39 +152,39 @@ public:
 	/*! \brief Set 
 	 */
 	void setPoolCount(BigInteger  pool_count);
-	/*! \brief Get liquidity across all pools in token units
+	/*! \brief Get Liquidity across all pools in token units.
 	 */
 	std::string getTotalValueLocked();
 
-	/*! \brief Set liquidity across all pools in token units
+	/*! \brief Set Liquidity across all pools in token units.
 	 */
 	void setTotalValueLocked(std::string  total_value_locked);
-	/*! \brief Get liquidity across all pools in derived USD
+	/*! \brief Get Liquidity across all pools in derived USD.
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set liquidity across all pools in derived USD
+	/*! \brief Set Liquidity across all pools in derived USD.
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get TVL derived in USD untracked
+	/*! \brief Get TVL derived in USD untracked.
 	 */
 	std::string getTotalValueLockedUsdUntracked();
 
-	/*! \brief Set TVL derived in USD untracked
+	/*! \brief Set TVL derived in USD untracked.
 	 */
 	void setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked);
-	/*! \brief Get derived price in ETH
+	/*! \brief Get Derived price in ETH.
 	 */
 	std::string getDerivedEth();
 
-	/*! \brief Set derived price in ETH
+	/*! \brief Set Derived price in ETH.
 	 */
 	void setDerivedEth(std::string  derived_eth);
-	/*! \brief Get pools token is in that are white listed for USD pricing
+	/*! \brief Get Pools token is in that are white listed for USD pricing.
 	 */
 	std::list<std::string> getWhitelistPools();
 
-	/*! \brief Set pools token is in that are white listed for USD pricing
+	/*! \brief Set Pools token is in that are white listed for USD pricing.
 	 */
 	void setWhitelistPools(std::list <std::string> whitelist_pools);
 	/*! \brief Get 

@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-// SwapV2DTO struct for SwapV2DTO
+// SwapV2DTO Swap are created for each token swap within a pair.
 type SwapV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
@@ -24,30 +24,30 @@ type SwapV2DTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// 
+	// Transaction hash plus index in Transaction swap array.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Reference to transaction swap was included in.
 	Transaction NullableString `json:"transaction,omitempty"`
-	// 
+	// Timestamp of swap, used for sorted lookups.
 	Timestamp *time.Time `json:"timestamp,omitempty"`
-	// 
+	// Reference to pair.
 	Pair NullableString `json:"pair,omitempty"`
-	// 
+	// Address that initiated the swap.
 	Sender NullableString `json:"sender,omitempty"`
-	// 
+	// The EOA (Externally Owned Account) that initiated the transaction.
 	From NullableString `json:"from,omitempty"`
-	// 
+	// Amount of token0 sold.
 	Amount0In NullableString `json:"amount_0_in,omitempty"`
-	// 
+	// Amount of token1 sold.
 	Amount1In NullableString `json:"amount_1_in,omitempty"`
-	// 
+	// Amount of token0 received.
 	Amount0Out NullableString `json:"amount_0_out,omitempty"`
-	// 
+	// Amount of token1 received.
 	Amount1Out NullableString `json:"amount_1_out,omitempty"`
-	// 
+	// Recipient of output tokens.
 	To NullableString `json:"to,omitempty"`
 	LogIndex *BigInteger `json:"log_index,omitempty"`
-	// 
+	// Derived amount of tokens sold in USD.
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
 	EvaluatedPrice *float64 `json:"evaluated_price,omitempty"`
 	EvaluatedAmount *float64 `json:"evaluated_amount,omitempty"`

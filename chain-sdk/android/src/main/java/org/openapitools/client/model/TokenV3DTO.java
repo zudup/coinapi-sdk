@@ -110,9 +110,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * token address
+   * Token address.
    **/
-  @ApiModelProperty(value = "token address")
+  @ApiModelProperty(value = "Token address.")
   public String getId() {
     return id;
   }
@@ -121,9 +121,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * token symbol
+   * Token symbol.
    **/
-  @ApiModelProperty(value = "token symbol")
+  @ApiModelProperty(value = "Token symbol.")
   public String getSymbol() {
     return symbol;
   }
@@ -132,9 +132,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * token name
+   * Token name.
    **/
-  @ApiModelProperty(value = "token name")
+  @ApiModelProperty(value = "Token name.")
   public String getName() {
     return name;
   }
@@ -143,9 +143,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * token decimals
+   * Token decimals.
    **/
-  @ApiModelProperty(value = "token decimals")
+  @ApiModelProperty(value = "Token decimals.")
   public Integer getDecimals() {
     return decimals;
   }
@@ -164,9 +164,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * volume in token units
+   * Volume in token units.
    **/
-  @ApiModelProperty(value = "volume in token units")
+  @ApiModelProperty(value = "Volume in token units.")
   public String getVolume() {
     return volume;
   }
@@ -175,9 +175,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * volume in derived USD
+   * Volume in derived USD.
    **/
-  @ApiModelProperty(value = "volume in derived USD")
+  @ApiModelProperty(value = "Volume in derived USD.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -186,9 +186,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * volume in USD even on pools with less reliable USD values
+   * Volume in USD even on pools with less reliable USD values.
    **/
-  @ApiModelProperty(value = "volume in USD even on pools with less reliable USD values")
+  @ApiModelProperty(value = "Volume in USD even on pools with less reliable USD values.")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -197,9 +197,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * fees in USD
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "fees in USD")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -228,9 +228,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * liquidity across all pools in token units
+   * Liquidity across all pools in token units.
    **/
-  @ApiModelProperty(value = "liquidity across all pools in token units")
+  @ApiModelProperty(value = "Liquidity across all pools in token units.")
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -239,9 +239,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * liquidity across all pools in derived USD
+   * Liquidity across all pools in derived USD.
    **/
-  @ApiModelProperty(value = "liquidity across all pools in derived USD")
+  @ApiModelProperty(value = "Liquidity across all pools in derived USD.")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -250,9 +250,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * TVL derived in USD untracked
+   * TVL derived in USD untracked.
    **/
-  @ApiModelProperty(value = "TVL derived in USD untracked")
+  @ApiModelProperty(value = "TVL derived in USD untracked.")
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -261,9 +261,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * derived price in ETH
+   * Derived price in ETH.
    **/
-  @ApiModelProperty(value = "derived price in ETH")
+  @ApiModelProperty(value = "Derived price in ETH.")
   public String getDerivedEth() {
     return derivedEth;
   }
@@ -272,9 +272,9 @@ public class TokenV3DTO {
   }
 
   /**
-   * pools token is in that are white listed for USD pricing
+   * Pools token is in that are white listed for USD pricing.
    **/
-  @ApiModelProperty(value = "pools token is in that are white listed for USD pricing")
+  @ApiModelProperty(value = "Pools token is in that are white listed for USD pricing.")
   public List<String> getWhitelistPools() {
     return whitelistPools;
   }

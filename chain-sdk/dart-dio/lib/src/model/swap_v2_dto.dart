@@ -10,26 +10,26 @@ import 'package:built_value/serializer.dart';
 
 part 'swap_v2_dto.g.dart';
 
-/// SwapV2DTO
+/// Swap are created for each token swap within a pair.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - 
 /// * [vid] - 
-/// * [id] - 
-/// * [transaction] - 
-/// * [timestamp] - 
-/// * [pair] - 
-/// * [sender] - 
-/// * [from] - 
-/// * [amount0In] - 
-/// * [amount1In] - 
-/// * [amount0Out] - 
-/// * [amount1Out] - 
-/// * [to] - 
+/// * [id] - Transaction hash plus index in Transaction swap array.
+/// * [transaction] - Reference to transaction swap was included in.
+/// * [timestamp] - Timestamp of swap, used for sorted lookups.
+/// * [pair] - Reference to pair.
+/// * [sender] - Address that initiated the swap.
+/// * [from] - The EOA (Externally Owned Account) that initiated the transaction.
+/// * [amount0In] - Amount of token0 sold.
+/// * [amount1In] - Amount of token1 sold.
+/// * [amount0Out] - Amount of token0 received.
+/// * [amount1Out] - Amount of token1 received.
+/// * [to] - Recipient of output tokens.
 /// * [logIndex] 
-/// * [amountUsd] - 
+/// * [amountUsd] - Derived amount of tokens sold in USD.
 /// * [evaluatedPrice] 
 /// * [evaluatedAmount] 
 /// * [evaluatedAggressor] 
@@ -51,54 +51,54 @@ abstract class SwapV2DTO implements Built<SwapV2DTO, SwapV2DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// 
+  /// Transaction hash plus index in Transaction swap array.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Reference to transaction swap was included in.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Timestamp of swap, used for sorted lookups.
   @BuiltValueField(wireName: r'timestamp')
   DateTime? get timestamp;
 
-  /// 
+  /// Reference to pair.
   @BuiltValueField(wireName: r'pair')
   String? get pair;
 
-  /// 
+  /// Address that initiated the swap.
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
-  /// 
+  /// The EOA (Externally Owned Account) that initiated the transaction.
   @BuiltValueField(wireName: r'from')
   String? get from;
 
-  /// 
+  /// Amount of token0 sold.
   @BuiltValueField(wireName: r'amount_0_in')
   String? get amount0In;
 
-  /// 
+  /// Amount of token1 sold.
   @BuiltValueField(wireName: r'amount_1_in')
   String? get amount1In;
 
-  /// 
+  /// Amount of token0 received.
   @BuiltValueField(wireName: r'amount_0_out')
   String? get amount0Out;
 
-  /// 
+  /// Amount of token1 received.
   @BuiltValueField(wireName: r'amount_1_out')
   String? get amount1Out;
 
-  /// 
+  /// Recipient of output tokens.
   @BuiltValueField(wireName: r'to')
   String? get to;
 
   @BuiltValueField(wireName: r'log_index')
   BigInteger? get logIndex;
 
-  /// 
+  /// Derived amount of tokens sold in USD.
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 

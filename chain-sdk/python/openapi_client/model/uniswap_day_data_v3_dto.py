@@ -32,7 +32,7 @@ class UniswapDayDataV3DTO(
 
     Do not edit the class manually.
 
-    Data accumulated and condensed into day stats for all of Uniswap
+    Data accumulated and condensed into day stats for all of Uniswap.
     """
 
 

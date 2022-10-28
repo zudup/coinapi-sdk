@@ -11,7 +11,7 @@
  */
 
 /**
- * OASSwapV2DTO
+ * Swap are created for each token swap within a pair.
  */
 public class OASSwapV2DTO implements OAS.MappedProperties {
     /**
@@ -39,67 +39,67 @@ public class OASSwapV2DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @return timestamp
      */
     public Datetime timestamp { get; set; }
 
     /**
-     * 
+     * Reference to pair.
      * @return pair
      */
     public String pair { get; set; }
 
     /**
-     * 
+     * Address that initiated the swap.
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * 
+     * The EOA (Externally Owned Account) that initiated the transaction.
      * @return r_from
      */
     public String r_from { get; set; }
 
     /**
-     * 
+     * Amount of token0 sold.
      * @return amount0In
      */
     public String amount0In { get; set; }
 
     /**
-     * 
+     * Amount of token1 sold.
      * @return amount1In
      */
     public String amount1In { get; set; }
 
     /**
-     * 
+     * Amount of token0 received.
      * @return amount0Out
      */
     public String amount0Out { get; set; }
 
     /**
-     * 
+     * Amount of token1 received.
      * @return amount1Out
      */
     public String amount1Out { get; set; }
 
     /**
-     * 
+     * Recipient of output tokens.
      * @return to
      */
     public String to { get; set; }
@@ -111,7 +111,7 @@ public class OASSwapV2DTO implements OAS.MappedProperties {
     public OASBigInteger logIndex { get; set; }
 
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @return amountUsd
      */
     public String amountUsd { get; set; }

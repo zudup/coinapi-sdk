@@ -12,6 +12,9 @@
 
 import * as models from './models';
 
+/**
+ * Swap are created for each token swap within a pair.
+ */
 export interface SwapV2DTO {
     entry_time?: string;
 
@@ -28,64 +31,64 @@ export interface SwapV2DTO {
     vid?: number;
 
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      */
     id?: string;
 
     /**
-     * 
+     * Reference to transaction swap was included in.
      */
     transaction?: string;
 
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      */
     timestamp?: string;
 
     /**
-     * 
+     * Reference to pair.
      */
     pair?: string;
 
     /**
-     * 
+     * Address that initiated the swap.
      */
     sender?: string;
 
     /**
-     * 
+     * The EOA (Externally Owned Account) that initiated the transaction.
      */
     from?: string;
 
     /**
-     * 
+     * Amount of token0 sold.
      */
     amount_0_in?: string;
 
     /**
-     * 
+     * Amount of token1 sold.
      */
     amount_1_in?: string;
 
     /**
-     * 
+     * Amount of token0 received.
      */
     amount_0_out?: string;
 
     /**
-     * 
+     * Amount of token1 received.
      */
     amount_1_out?: string;
 
     /**
-     * 
+     * Recipient of output tokens.
      */
     to?: string;
 
     log_index?: models.BigInteger;
 
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      */
     amount_usd?: string;
 

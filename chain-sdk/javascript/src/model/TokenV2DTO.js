@@ -127,25 +127,25 @@ TokenV2DTO.prototype['block_number'] = undefined;
 TokenV2DTO.prototype['vid'] = undefined;
 
 /**
- * token address
+ * Token address.
  * @member {String} id
  */
 TokenV2DTO.prototype['id'] = undefined;
 
 /**
- * token symbol
+ * Token symbol.
  * @member {String} symbol
  */
 TokenV2DTO.prototype['symbol'] = undefined;
 
 /**
- * token name
+ * Token name.
  * @member {String} name
  */
 TokenV2DTO.prototype['name'] = undefined;
 
 /**
- * token decimals
+ * Token decimals.
  * @member {Number} decimals
  */
 TokenV2DTO.prototype['decimals'] = undefined;
@@ -156,19 +156,19 @@ TokenV2DTO.prototype['decimals'] = undefined;
 TokenV2DTO.prototype['total_supply'] = undefined;
 
 /**
- * amount of token traded all time across all pairs
+ * Amount of token traded all time across all pairs.
  * @member {String} trade_volume
  */
 TokenV2DTO.prototype['trade_volume'] = undefined;
 
 /**
- * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+ * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
  * @member {String} trade_volume_usd
  */
 TokenV2DTO.prototype['trade_volume_usd'] = undefined;
 
 /**
- * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+ * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
  * @member {String} untracked_volume_usd
  */
 TokenV2DTO.prototype['untracked_volume_usd'] = undefined;
@@ -179,13 +179,13 @@ TokenV2DTO.prototype['untracked_volume_usd'] = undefined;
 TokenV2DTO.prototype['tx_count'] = undefined;
 
 /**
- * total amount of token provided as liquidity across all pairs
+ * Total amount of token provided as liquidity across all pairs.
  * @member {String} total_liquidity
  */
 TokenV2DTO.prototype['total_liquidity'] = undefined;
 
 /**
- * ETH per token
+ * ETH per token.
  * @member {String} derived_eth
  */
 TokenV2DTO.prototype['derived_eth'] = undefined;

@@ -74,32 +74,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get token address
+	/*! \brief Get Token address.
 	 */
 	std::string getId();
 
-	/*! \brief Set token address
+	/*! \brief Set Token address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get token symbol
+	/*! \brief Get Token symbol.
 	 */
 	std::string getSymbol();
 
-	/*! \brief Set token symbol
+	/*! \brief Set Token symbol.
 	 */
 	void setSymbol(std::string  symbol);
-	/*! \brief Get token name
+	/*! \brief Get Token name.
 	 */
 	std::string getName();
 
-	/*! \brief Set token name
+	/*! \brief Set Token name.
 	 */
 	void setName(std::string  name);
-	/*! \brief Get token decimals
+	/*! \brief Get Token decimals.
 	 */
 	int getDecimals();
 
-	/*! \brief Set token decimals
+	/*! \brief Set Token decimals.
 	 */
 	void setDecimals(int  decimals);
 	/*! \brief Get 
@@ -109,25 +109,25 @@ public:
 	/*! \brief Set 
 	 */
 	void setTotalSupply(BigInteger  total_supply);
-	/*! \brief Get amount of token traded all time across all pairs
+	/*! \brief Get Amount of token traded all time across all pairs.
 	 */
 	std::string getTradeVolume();
 
-	/*! \brief Set amount of token traded all time across all pairs
+	/*! \brief Set Amount of token traded all time across all pairs.
 	 */
 	void setTradeVolume(std::string  trade_volume);
-	/*! \brief Get amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+	/*! \brief Get Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 	 */
 	std::string getTradeVolumeUsd();
 
-	/*! \brief Set amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+	/*! \brief Set Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 	 */
 	void setTradeVolumeUsd(std::string  trade_volume_usd);
-	/*! \brief Get amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+	/*! \brief Get Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+	/*! \brief Set Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
 	/*! \brief Get 
@@ -137,18 +137,18 @@ public:
 	/*! \brief Set 
 	 */
 	void setTxCount(BigInteger  tx_count);
-	/*! \brief Get total amount of token provided as liquidity across all pairs
+	/*! \brief Get Total amount of token provided as liquidity across all pairs.
 	 */
 	std::string getTotalLiquidity();
 
-	/*! \brief Set total amount of token provided as liquidity across all pairs
+	/*! \brief Set Total amount of token provided as liquidity across all pairs.
 	 */
 	void setTotalLiquidity(std::string  total_liquidity);
-	/*! \brief Get ETH per token
+	/*! \brief Get ETH per token.
 	 */
 	std::string getDerivedEth();
 
-	/*! \brief Set ETH per token
+	/*! \brief Set ETH per token.
 	 */
 	void setDerivedEth(std::string  derived_eth);
 	/*! \brief Get 

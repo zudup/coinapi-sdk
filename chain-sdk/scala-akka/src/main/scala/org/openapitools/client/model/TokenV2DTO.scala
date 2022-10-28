@@ -21,25 +21,25 @@ case class TokenV2DTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /* token address */
+  /* Token address. */
   id: Option[String] = None,
-  /* token symbol */
+  /* Token symbol. */
   symbol: Option[String] = None,
-  /* token name */
+  /* Token name. */
   name: Option[String] = None,
-  /* token decimals */
+  /* Token decimals. */
   decimals: Option[Int] = None,
   totalSupply: Option[BigInteger] = None,
-  /* amount of token traded all time across all pairs */
+  /* Amount of token traded all time across all pairs. */
   tradeVolume: Option[String] = None,
-  /* amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) */
+  /* Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). */
   tradeVolumeUsd: Option[String] = None,
-  /* amount of token in USD traded all time across pairs (no minimum liquidity threshold) */
+  /* Amount of token in USD traded all time across pairs (no minimum liquidity threshold). */
   untrackedVolumeUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
-  /* total amount of token provided as liquidity across all pairs */
+  /* Total amount of token provided as liquidity across all pairs. */
   totalLiquidity: Option[String] = None,
-  /* ETH per token */
+  /* ETH per token. */
   derivedEth: Option[String] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel

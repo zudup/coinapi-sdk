@@ -33,28 +33,28 @@ API.Client.TokenV2DTO.prototype.blockNumber;
 API.Client.TokenV2DTO.prototype.vid;
 
 /**
- * token address
+ * Token address.
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.id;
 
 /**
- * token symbol
+ * Token symbol.
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.symbol;
 
 /**
- * token name
+ * Token name.
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.name;
 
 /**
- * token decimals
+ * Token decimals.
  * @type {!number}
  * @export
  */
@@ -67,21 +67,21 @@ API.Client.TokenV2DTO.prototype.decimals;
 API.Client.TokenV2DTO.prototype.totalSupply;
 
 /**
- * amount of token traded all time across all pairs
+ * Amount of token traded all time across all pairs.
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.tradeVolume;
 
 /**
- * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+ * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.tradeVolumeUsd;
 
 /**
- * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+ * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
  * @type {!string}
  * @export
  */
@@ -94,14 +94,14 @@ API.Client.TokenV2DTO.prototype.untrackedVolumeUsd;
 API.Client.TokenV2DTO.prototype.txCount;
 
 /**
- * total amount of token provided as liquidity across all pairs
+ * Total amount of token provided as liquidity across all pairs.
  * @type {!string}
  * @export
  */
 API.Client.TokenV2DTO.prototype.totalLiquidity;
 
 /**
- * ETH per token
+ * ETH per token.
  * @type {!string}
  * @export
  */

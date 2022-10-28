@@ -31,72 +31,72 @@ export interface TokenV3DayDataDTO {
     vid?: number;
 
     /**
-     * token address concatendated with date
+     * Token address concatendated with date.
      */
     id?: string;
 
     /**
-     * timestamp rounded to current day by dividing by 86400
+     * Timestamp rounded to current day by dividing by 86400.
      */
     date?: number;
 
     /**
-     * pointer to token
+     * Pointer to token.
      */
     token?: string;
 
     /**
-     * volume in token units
+     * Volume in token units.
      */
     volume?: string;
 
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      */
     volume_usd?: string;
 
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      */
     untracked_volume_usd?: string;
 
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      */
     total_value_locked?: string;
 
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      */
     total_value_locked_usd?: string;
 
     /**
-     * price at end of period in USD
+     * Price at end of period in USD.
      */
     price_usd?: string;
 
     /**
-     * fees in USD
+     * Fees in USD.
      */
     fees_usd?: string;
 
     /**
-     * opening price USD
+     * Opening price USD.
      */
     open?: string;
 
     /**
-     * high price USD
+     * High price USD.
      */
     high?: string;
 
     /**
-     * low price USD
+     * Low price USD.
      */
     low?: string;
 
     /**
-     * close price USD
+     * Close price USD.
      */
     close?: string;
 

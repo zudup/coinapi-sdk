@@ -24,27 +24,27 @@ No description available.
 .PARAMETER Vid
 
 .PARAMETER Id
-token address
+Token address.
 .PARAMETER Symbol
-token symbol
+Token symbol.
 .PARAMETER Name
-token name
+Token name.
 .PARAMETER Decimals
-token decimals
+Token decimals.
 .PARAMETER TotalSupply
 No description available.
 .PARAMETER TradeVolume
-amount of token traded all time across all pairs
+Amount of token traded all time across all pairs.
 .PARAMETER TradeVolumeUsd
-amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 .PARAMETER UntrackedVolumeUsd
-amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 .PARAMETER TxCount
 No description available.
 .PARAMETER TotalLiquidity
-total amount of token provided as liquidity across all pairs
+Total amount of token provided as liquidity across all pairs.
 .PARAMETER DerivedEth
-ETH per token
+ETH per token.
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

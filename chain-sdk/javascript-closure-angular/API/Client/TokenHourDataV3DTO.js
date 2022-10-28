@@ -26,98 +26,98 @@ API.Client.TokenHourDataV3DTO.prototype.recvTime;
 API.Client.TokenHourDataV3DTO.prototype.blockNumber;
 
 /**
- * token address concatendated with date
+ * Token address concatendated with date.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.id;
 
 /**
- * unix timestamp for start of hour
+ * Unix timestamp for start of hour.
  * @type {!number}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.periodStartUnix;
 
 /**
- * pointer to token
+ * Pointer to token.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.token;
 
 /**
- * volume in token units
+ * Volume in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.volume;
 
 /**
- * volume in derived USD
+ * Volume in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.volumeUsd;
 
 /**
- * volume in USD even on pools with less reliable USD values
+ * Volume in USD even on pools with less reliable USD values.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.untrackedVolumeUsd;
 
 /**
- * liquidity across all pools in token units
+ * Liquidity across all pools in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.totalValueLocked;
 
 /**
- * liquidity across all pools in derived USD
+ * Liquidity across all pools in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.totalValueLockedUsd;
 
 /**
- * price at end of period in USD
+ * Price at end of period in USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.priceUsd;
 
 /**
- * fees in USD
+ * Fees in USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.feesUsd;
 
 /**
- * opening price USD
+ * Opening price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.open;
 
 /**
- * high price USD
+ * High price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.high;
 
 /**
- * low price USD
+ * Low price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenHourDataV3DTO.prototype.low;
 
 /**
- * close price USD
+ * Close price USD.
  * @type {!string}
  * @export
  */

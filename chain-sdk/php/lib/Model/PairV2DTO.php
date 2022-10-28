@@ -36,6 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * PairV2DTO Class Doc Comment
  *
  * @category Class
+ * @description Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -563,7 +564,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id 
+     * @param string|null $id Pair contract address.
      *
      * @return self
      */
@@ -599,7 +600,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 
+     * @param string|null $token_0 Reference to token0 as stored in pair contract.
      *
      * @return self
      */
@@ -635,7 +636,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 
+     * @param string|null $token_1 Reference to token1 as stored in pair contract.
      *
      * @return self
      */
@@ -671,7 +672,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_0
      *
-     * @param string|null $reserve_0 
+     * @param string|null $reserve_0 Reserve of token0.
      *
      * @return self
      */
@@ -707,7 +708,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_1
      *
-     * @param string|null $reserve_1 
+     * @param string|null $reserve_1 Reserve of token1.
      *
      * @return self
      */
@@ -743,7 +744,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_supply
      *
-     * @param string|null $total_supply 
+     * @param string|null $total_supply Total supply of liquidity token distributed to LPs.
      *
      * @return self
      */
@@ -779,7 +780,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_eth
      *
-     * @param string|null $reserve_eth 
+     * @param string|null $reserve_eth Total liquidity in pair stored as an amount of ETH.
      *
      * @return self
      */
@@ -815,7 +816,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_usd
      *
-     * @param string|null $reserve_usd 
+     * @param string|null $reserve_usd Total liquidity amount in pair stored as an amount of USD.
      *
      * @return self
      */
@@ -851,7 +852,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracked_reserve_eth
      *
-     * @param string|null $tracked_reserve_eth 
+     * @param string|null $tracked_reserve_eth Total liquidity with only tracked amount (see tracked amounts).
      *
      * @return self
      */
@@ -887,7 +888,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0_price
      *
-     * @param string|null $token_0_price 
+     * @param string|null $token_0_price Token0 per token1.
      *
      * @return self
      */
@@ -923,7 +924,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1_price
      *
-     * @param string|null $token_1_price 
+     * @param string|null $token_1_price Token1 per token0.
      *
      * @return self
      */
@@ -959,7 +960,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 
+     * @param string|null $volume_token_0 Amount of token0 swapped on this pair.
      *
      * @return self
      */
@@ -995,7 +996,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 
+     * @param string|null $volume_token_1 Amount of token1 swapped on this pair.
      *
      * @return self
      */
@@ -1031,7 +1032,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd 
+     * @param string|null $volume_usd Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      *
      * @return self
      */
@@ -1067,7 +1068,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd 
+     * @param string|null $untracked_volume_usd Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      *
      * @return self
      */
@@ -1132,7 +1133,7 @@ class PairV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at_timestamp
      *
-     * @param \DateTime|null $created_at_timestamp 
+     * @param \DateTime|null $created_at_timestamp Timestamp contract was created.
      *
      * @return self
      */

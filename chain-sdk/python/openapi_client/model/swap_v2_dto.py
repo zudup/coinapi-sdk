@@ -31,6 +31,8 @@ class SwapV2DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Swap are created for each token swap within a pair.
     """
 
 

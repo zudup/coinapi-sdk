@@ -26,33 +26,33 @@ feature --Access
  	block_number: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- token address concatendated with date
+      -- Token address concatendated with date.
  	period_start_unix: INTEGER_32
-    	 -- unix timestamp for start of hour
+    	 -- Unix timestamp for start of hour.
     token: detachable STRING_32
-      -- pointer to token
+      -- Pointer to token.
     volume: detachable STRING_32
-      -- volume in token units
+      -- Volume in token units.
     volume_usd: detachable STRING_32
-      -- volume in derived USD
+      -- Volume in derived USD.
     untracked_volume_usd: detachable STRING_32
-      -- volume in USD even on pools with less reliable USD values
+      -- Volume in USD even on pools with less reliable USD values.
     total_value_locked: detachable STRING_32
-      -- liquidity across all pools in token units
+      -- Liquidity across all pools in token units.
     total_value_locked_usd: detachable STRING_32
-      -- liquidity across all pools in derived USD
+      -- Liquidity across all pools in derived USD.
     price_usd: detachable STRING_32
-      -- price at end of period in USD
+      -- Price at end of period in USD.
     fees_usd: detachable STRING_32
-      -- fees in USD
+      -- Fees in USD.
     open: detachable STRING_32
-      -- opening price USD
+      -- Opening price USD.
     high: detachable STRING_32
-      -- high price USD
+      -- High price USD.
     low: detachable STRING_32
-      -- low price USD
+      -- Low price USD.
     close: detachable STRING_32
-      -- close price USD
+      -- Close price USD.
  	vid: INTEGER_64
     	 -- 
 

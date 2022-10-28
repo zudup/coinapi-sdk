@@ -21,30 +21,30 @@ case class SwapV2DTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /*  */
+  /* Transaction hash plus index in Transaction swap array. */
   id: Option[String] = None,
-  /*  */
+  /* Reference to transaction swap was included in. */
   transaction: Option[String] = None,
-  /*  */
+  /* Timestamp of swap, used for sorted lookups. */
   timestamp: Option[OffsetDateTime] = None,
-  /*  */
+  /* Reference to pair. */
   pair: Option[String] = None,
-  /*  */
+  /* Address that initiated the swap. */
   sender: Option[String] = None,
-  /*  */
+  /* The EOA (Externally Owned Account) that initiated the transaction. */
   from: Option[String] = None,
-  /*  */
+  /* Amount of token0 sold. */
   amount0In: Option[String] = None,
-  /*  */
+  /* Amount of token1 sold. */
   amount1In: Option[String] = None,
-  /*  */
+  /* Amount of token0 received. */
   amount0Out: Option[String] = None,
-  /*  */
+  /* Amount of token1 received. */
   amount1Out: Option[String] = None,
-  /*  */
+  /* Recipient of output tokens. */
   to: Option[String] = None,
   logIndex: Option[BigInteger] = None,
-  /*  */
+  /* Derived amount of tokens sold in USD. */
   amountUsd: Option[String] = None,
   evaluatedPrice: Option[Double] = None,
   evaluatedAmount: Option[Double] = None,

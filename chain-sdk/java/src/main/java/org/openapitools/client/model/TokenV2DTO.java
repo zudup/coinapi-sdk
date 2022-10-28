@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 @ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:08:43.190592Z[Etc/UTC]")
 public class TokenV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -227,11 +227,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * token address
+   * Token address.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "token address")
+  @ApiModelProperty(value = "Token address.")
 
   public String getId() {
     return id;
@@ -250,11 +250,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * token symbol
+   * Token symbol.
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "token symbol")
+  @ApiModelProperty(value = "Token symbol.")
 
   public String getSymbol() {
     return symbol;
@@ -273,11 +273,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * token name
+   * Token name.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "token name")
+  @ApiModelProperty(value = "Token name.")
 
   public String getName() {
     return name;
@@ -296,11 +296,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * token decimals
+   * Token decimals.
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "token decimals")
+  @ApiModelProperty(value = "Token decimals.")
 
   public Integer getDecimals() {
     return decimals;
@@ -342,11 +342,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * amount of token traded all time across all pairs
+   * Amount of token traded all time across all pairs.
    * @return tradeVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "amount of token traded all time across all pairs")
+  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
 
   public String getTradeVolume() {
     return tradeVolume;
@@ -365,11 +365,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+   * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
    * @return tradeVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
 
   public String getTradeVolumeUsd() {
     return tradeVolumeUsd;
@@ -388,11 +388,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+   * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (no minimum liquidity threshold)")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -434,11 +434,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * total amount of token provided as liquidity across all pairs
+   * Total amount of token provided as liquidity across all pairs.
    * @return totalLiquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "total amount of token provided as liquidity across all pairs")
+  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
 
   public String getTotalLiquidity() {
     return totalLiquidity;
@@ -457,11 +457,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * ETH per token
+   * ETH per token.
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ETH per token")
+  @ApiModelProperty(value = "ETH per token.")
 
   public String getDerivedEth() {
     return derivedEth;

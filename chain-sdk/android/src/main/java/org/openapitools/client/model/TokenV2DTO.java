@@ -99,9 +99,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * token address
+   * Token address.
    **/
-  @ApiModelProperty(value = "token address")
+  @ApiModelProperty(value = "Token address.")
   public String getId() {
     return id;
   }
@@ -110,9 +110,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * token symbol
+   * Token symbol.
    **/
-  @ApiModelProperty(value = "token symbol")
+  @ApiModelProperty(value = "Token symbol.")
   public String getSymbol() {
     return symbol;
   }
@@ -121,9 +121,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * token name
+   * Token name.
    **/
-  @ApiModelProperty(value = "token name")
+  @ApiModelProperty(value = "Token name.")
   public String getName() {
     return name;
   }
@@ -132,9 +132,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * token decimals
+   * Token decimals.
    **/
-  @ApiModelProperty(value = "token decimals")
+  @ApiModelProperty(value = "Token decimals.")
   public Integer getDecimals() {
     return decimals;
   }
@@ -153,9 +153,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * amount of token traded all time across all pairs
+   * Amount of token traded all time across all pairs.
    **/
-  @ApiModelProperty(value = "amount of token traded all time across all pairs")
+  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
   public String getTradeVolume() {
     return tradeVolume;
   }
@@ -164,9 +164,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+   * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
    **/
-  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
   public String getTradeVolumeUsd() {
     return tradeVolumeUsd;
   }
@@ -175,9 +175,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+   * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
    **/
-  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (no minimum liquidity threshold)")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -196,9 +196,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * total amount of token provided as liquidity across all pairs
+   * Total amount of token provided as liquidity across all pairs.
    **/
-  @ApiModelProperty(value = "total amount of token provided as liquidity across all pairs")
+  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
   public String getTotalLiquidity() {
     return totalLiquidity;
   }
@@ -207,9 +207,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * ETH per token
+   * ETH per token.
    **/
-  @ApiModelProperty(value = "ETH per token")
+  @ApiModelProperty(value = "ETH per token.")
   public String getDerivedEth() {
     return derivedEth;
   }

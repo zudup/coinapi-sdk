@@ -12,17 +12,17 @@ Stores aggregated information for a specific token across all pairs that token i
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** |  |  [optional] |
 |**vid** | **Long** |  |  [optional] |
-|**id** | **String** | token address |  [optional] |
-|**symbol** | **String** | token symbol |  [optional] |
-|**name** | **String** | token name |  [optional] |
-|**decimals** | **Integer** | token decimals |  [optional] |
+|**id** | **String** | Token address. |  [optional] |
+|**symbol** | **String** | Token symbol. |  [optional] |
+|**name** | **String** | Token name. |  [optional] |
+|**decimals** | **Integer** | Token decimals. |  [optional] |
 |**totalSupply** | [**BigInteger**](BigInteger.md) |  |  [optional] |
-|**tradeVolume** | **String** | amount of token traded all time across all pairs |  [optional] |
-|**tradeVolumeUsd** | **String** | amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) |  [optional] |
-|**untrackedVolumeUsd** | **String** | amount of token in USD traded all time across pairs (no minimum liquidity threshold) |  [optional] |
+|**tradeVolume** | **String** | Amount of token traded all time across all pairs. |  [optional] |
+|**tradeVolumeUsd** | **String** | Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). |  [optional] |
+|**untrackedVolumeUsd** | **String** | Amount of token in USD traded all time across pairs (no minimum liquidity threshold). |  [optional] |
 |**txCount** | [**BigInteger**](BigInteger.md) |  |  [optional] |
-|**totalLiquidity** | **String** | total amount of token provided as liquidity across all pairs |  [optional] |
-|**derivedEth** | **String** | ETH per token |  [optional] |
+|**totalLiquidity** | **String** | Total amount of token provided as liquidity across all pairs. |  [optional] |
+|**derivedEth** | **String** | ETH per token. |  [optional] |
 |**tokenSymbol** | **String** |  |  [optional] [readonly] |
 
 

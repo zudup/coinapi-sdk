@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** |  | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
-**Id** | Pointer to **NullableString** | timestamp rounded to current day by dividing by 86400 | [optional] 
-**Date** | Pointer to **int32** | timestamp rounded to current day by dividing by 86400 | [optional] 
-**VolumeEth** | Pointer to **NullableString** | total volume across all pairs on this day, stored as a derived amount of ETH | [optional] 
-**VolumeUsd** | Pointer to **NullableString** | total volume across all pairs on this day, stored as a derived amount of USD | [optional] 
-**VolumeUsdUntracked** | Pointer to **NullableString** | total daily volume in Uniswap derived in terms of USD untracked | [optional] 
-**FeesUsd** | Pointer to **NullableString** | fees in USD | [optional] 
+**Id** | Pointer to **NullableString** | Timestamp rounded to current day by dividing by 86400. | [optional] 
+**Date** | Pointer to **int32** | Timestamp rounded to current day by dividing by 86400. | [optional] 
+**VolumeEth** | Pointer to **NullableString** | Total volume across all pairs on this day, stored as a derived amount of ETH. | [optional] 
+**VolumeUsd** | Pointer to **NullableString** | Total volume across all pairs on this day, stored as a derived amount of USD. | [optional] 
+**VolumeUsdUntracked** | Pointer to **NullableString** | Total daily volume in Uniswap derived in terms of USD untracked. | [optional] 
+**FeesUsd** | Pointer to **NullableString** | Fees in USD | [optional] 
 **TxCount** | Pointer to [**BigInteger**](BigInteger.md) |  | [optional] 
-**TvlUsd** | Pointer to **NullableString** | tvl in terms of USD | [optional] 
+**TvlUsd** | Pointer to **NullableString** | Tvl in terms of USD. | [optional] 
 
 ## Methods
 

@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-// UniswapDayDataV3DTO Data accumulated and condensed into day stats for all of Uniswap
+// UniswapDayDataV3DTO Data accumulated and condensed into day stats for all of Uniswap.
 type UniswapDayDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
@@ -24,20 +24,20 @@ type UniswapDayDataV3DTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// timestamp rounded to current day by dividing by 86400
+	// Timestamp rounded to current day by dividing by 86400.
 	Id NullableString `json:"id,omitempty"`
-	// timestamp rounded to current day by dividing by 86400
+	// Timestamp rounded to current day by dividing by 86400.
 	Date *int32 `json:"date,omitempty"`
-	// total volume across all pairs on this day, stored as a derived amount of ETH
+	// Total volume across all pairs on this day, stored as a derived amount of ETH.
 	VolumeEth NullableString `json:"volume_eth,omitempty"`
-	// total volume across all pairs on this day, stored as a derived amount of USD
+	// Total volume across all pairs on this day, stored as a derived amount of USD.
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// total daily volume in Uniswap derived in terms of USD untracked
+	// Total daily volume in Uniswap derived in terms of USD untracked.
 	VolumeUsdUntracked NullableString `json:"volume_usd_untracked,omitempty"`
-	// fees in USD
+	// Fees in USD
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
-	// tvl in terms of USD
+	// Tvl in terms of USD.
 	TvlUsd NullableString `json:"tvl_usd,omitempty"`
 }
 

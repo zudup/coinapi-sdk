@@ -8,22 +8,22 @@
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** |  | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** | token address | [optional] |
-| **symbol** | **String** | token symbol | [optional] |
-| **name** | **String** | token name | [optional] |
-| **decimals** | **Integer** | token decimals | [optional] |
+| **id** | **String** | Token address. | [optional] |
+| **symbol** | **String** | Token symbol. | [optional] |
+| **name** | **String** | Token name. | [optional] |
+| **decimals** | **Integer** | Token decimals. | [optional] |
 | **total_supply** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **volume** | **String** | volume in token units | [optional] |
-| **volume_usd** | **String** | volume in derived USD | [optional] |
-| **untracked_volume_usd** | **String** | volume in USD even on pools with less reliable USD values | [optional] |
-| **fees_usd** | **String** | fees in USD | [optional] |
+| **volume** | **String** | Volume in token units. | [optional] |
+| **volume_usd** | **String** | Volume in derived USD. | [optional] |
+| **untracked_volume_usd** | **String** | Volume in USD even on pools with less reliable USD values. | [optional] |
+| **fees_usd** | **String** | Fees in USD. | [optional] |
 | **tx_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **pool_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **total_value_locked** | **String** | liquidity across all pools in token units | [optional] |
-| **total_value_locked_usd** | **String** | liquidity across all pools in derived USD | [optional] |
-| **total_value_locked_usd_untracked** | **String** | TVL derived in USD untracked | [optional] |
-| **derived_eth** | **String** | derived price in ETH | [optional] |
-| **whitelist_pools** | **Array&lt;String&gt;** | pools token is in that are white listed for USD pricing | [optional] |
+| **total_value_locked** | **String** | Liquidity across all pools in token units. | [optional] |
+| **total_value_locked_usd** | **String** | Liquidity across all pools in derived USD. | [optional] |
+| **total_value_locked_usd_untracked** | **String** | TVL derived in USD untracked. | [optional] |
+| **derived_eth** | **String** | Derived price in ETH. | [optional] |
+| **whitelist_pools** | **Array&lt;String&gt;** | Pools token is in that are white listed for USD pricing. | [optional] |
 | **token_symbol** | **String** |  | [optional][readonly] |
 
 ## Example

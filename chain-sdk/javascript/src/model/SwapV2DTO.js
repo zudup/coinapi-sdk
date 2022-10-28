@@ -23,6 +23,7 @@ import ETradeAggressiveSide from './ETradeAggressiveSide';
 class SwapV2DTO {
     /**
      * Constructs a new <code>SwapV2DTO</code>.
+     * Swap are created for each token swap within a pair.
      * @alias module:model/SwapV2DTO
      */
     constructor() { 
@@ -145,67 +146,67 @@ SwapV2DTO.prototype['block_number'] = undefined;
 SwapV2DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * Transaction hash plus index in Transaction swap array.
  * @member {String} id
  */
 SwapV2DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Reference to transaction swap was included in.
  * @member {String} transaction
  */
 SwapV2DTO.prototype['transaction'] = undefined;
 
 /**
- * 
+ * Timestamp of swap, used for sorted lookups.
  * @member {Date} timestamp
  */
 SwapV2DTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Reference to pair.
  * @member {String} pair
  */
 SwapV2DTO.prototype['pair'] = undefined;
 
 /**
- * 
+ * Address that initiated the swap.
  * @member {String} sender
  */
 SwapV2DTO.prototype['sender'] = undefined;
 
 /**
- * 
+ * The EOA (Externally Owned Account) that initiated the transaction.
  * @member {String} from
  */
 SwapV2DTO.prototype['from'] = undefined;
 
 /**
- * 
+ * Amount of token0 sold.
  * @member {String} amount_0_in
  */
 SwapV2DTO.prototype['amount_0_in'] = undefined;
 
 /**
- * 
+ * Amount of token1 sold.
  * @member {String} amount_1_in
  */
 SwapV2DTO.prototype['amount_1_in'] = undefined;
 
 /**
- * 
+ * Amount of token0 received.
  * @member {String} amount_0_out
  */
 SwapV2DTO.prototype['amount_0_out'] = undefined;
 
 /**
- * 
+ * Amount of token1 received.
  * @member {String} amount_1_out
  */
 SwapV2DTO.prototype['amount_1_out'] = undefined;
 
 /**
- * 
+ * Recipient of output tokens.
  * @member {String} to
  */
 SwapV2DTO.prototype['to'] = undefined;
@@ -216,7 +217,7 @@ SwapV2DTO.prototype['to'] = undefined;
 SwapV2DTO.prototype['log_index'] = undefined;
 
 /**
- * 
+ * Derived amount of tokens sold in USD.
  * @member {String} amount_usd
  */
 SwapV2DTO.prototype['amount_usd'] = undefined;

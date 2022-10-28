@@ -2,6 +2,7 @@
 
 # SwapV2DTO
 
+Swap are created for each token swap within a pair.
 
 ## Properties
 
@@ -11,19 +12,19 @@
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** |  |  [optional] |
 |**vid** | **Long** |  |  [optional] |
-|**id** | **String** |  |  [optional] |
-|**transaction** | **String** |  |  [optional] |
-|**timestamp** | **OffsetDateTime** |  |  [optional] |
-|**pair** | **String** |  |  [optional] |
-|**sender** | **String** |  |  [optional] |
-|**from** | **String** |  |  [optional] |
-|**amount0In** | **String** |  |  [optional] |
-|**amount1In** | **String** |  |  [optional] |
-|**amount0Out** | **String** |  |  [optional] |
-|**amount1Out** | **String** |  |  [optional] |
-|**to** | **String** |  |  [optional] |
+|**id** | **String** | Transaction hash plus index in Transaction swap array. |  [optional] |
+|**transaction** | **String** | Reference to transaction swap was included in. |  [optional] |
+|**timestamp** | **OffsetDateTime** | Timestamp of swap, used for sorted lookups. |  [optional] |
+|**pair** | **String** | Reference to pair. |  [optional] |
+|**sender** | **String** | Address that initiated the swap. |  [optional] |
+|**from** | **String** | The EOA (Externally Owned Account) that initiated the transaction. |  [optional] |
+|**amount0In** | **String** | Amount of token0 sold. |  [optional] |
+|**amount1In** | **String** | Amount of token1 sold. |  [optional] |
+|**amount0Out** | **String** | Amount of token0 received. |  [optional] |
+|**amount1Out** | **String** | Amount of token1 received. |  [optional] |
+|**to** | **String** | Recipient of output tokens. |  [optional] |
 |**logIndex** | [**BigInteger**](BigInteger.md) |  |  [optional] |
-|**amountUsd** | **String** |  |  [optional] |
+|**amountUsd** | **String** | Derived amount of tokens sold in USD. |  [optional] |
 |**evaluatedPrice** | **Double** |  |  [optional] [readonly] |
 |**evaluatedAmount** | **Double** |  |  [optional] [readonly] |
 |**evaluatedAggressor** | **ETradeAggressiveSide** |  |  [optional] |

@@ -16,6 +16,7 @@ import type {
 } from './';
 
 /**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @export
  * @interface PairV2DTO
  */
@@ -43,91 +44,91 @@ export interface PairV2DTO {
      */
     vid?: number;
     /**
-     * 
+     * Pair contract address.
      * @type {string}
      * @memberof PairV2DTO
      */
     id?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1?: string | null;
     /**
-     * 
+     * Reserve of token0.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_0?: string | null;
     /**
-     * 
+     * Reserve of token1.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_1?: string | null;
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      * @type {string}
      * @memberof PairV2DTO
      */
     total_supply?: string | null;
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_eth?: string | null;
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_usd?: string | null;
     /**
-     * 
+     * Total liquidity with only tracked amount (see tracked amounts).
      * @type {string}
      * @memberof PairV2DTO
      */
     tracked_reserve_eth?: string | null;
     /**
-     * 
+     * Token0 per token1.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0_price?: string | null;
     /**
-     * 
+     * Token1 per token0.
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1_price?: string | null;
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -138,7 +139,7 @@ export interface PairV2DTO {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * Timestamp contract was created.
      * @type {string}
      * @memberof PairV2DTO
      */

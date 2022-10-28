@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// Data accumulated and condensed into day stats for all of Uniswap
+    /// Data accumulated and condensed into day stats for all of Uniswap.
     /// </summary>
     [DataContract(Name = "UniswapDayDataV3DTO")]
     public partial class UniswapDayDataV3DTO : IEquatable<UniswapDayDataV3DTO>, IValidatableObject
@@ -39,14 +39,14 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">timestamp rounded to current day by dividing by 86400.</param>
-        /// <param name="date">timestamp rounded to current day by dividing by 86400.</param>
-        /// <param name="volumeEth">total volume across all pairs on this day, stored as a derived amount of ETH.</param>
-        /// <param name="volumeUsd">total volume across all pairs on this day, stored as a derived amount of USD.</param>
-        /// <param name="volumeUsdUntracked">total daily volume in Uniswap derived in terms of USD untracked.</param>
-        /// <param name="feesUsd">fees in USD.</param>
+        /// <param name="id">Timestamp rounded to current day by dividing by 86400..</param>
+        /// <param name="date">Timestamp rounded to current day by dividing by 86400..</param>
+        /// <param name="volumeEth">Total volume across all pairs on this day, stored as a derived amount of ETH..</param>
+        /// <param name="volumeUsd">Total volume across all pairs on this day, stored as a derived amount of USD..</param>
+        /// <param name="volumeUsdUntracked">Total daily volume in Uniswap derived in terms of USD untracked..</param>
+        /// <param name="feesUsd">Fees in USD.</param>
         /// <param name="txCount">txCount.</param>
-        /// <param name="tvlUsd">tvl in terms of USD.</param>
+        /// <param name="tvlUsd">Tvl in terms of USD..</param>
         public UniswapDayDataV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), int date = default(int), string volumeEth = default(string), string volumeUsd = default(string), string volumeUsdUntracked = default(string), string feesUsd = default(string), BigInteger txCount = default(BigInteger), string tvlUsd = default(string))
         {
             this.EntryTime = entryTime;
@@ -88,44 +88,44 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// timestamp rounded to current day by dividing by 86400
+        /// Timestamp rounded to current day by dividing by 86400.
         /// </summary>
-        /// <value>timestamp rounded to current day by dividing by 86400</value>
+        /// <value>Timestamp rounded to current day by dividing by 86400.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// timestamp rounded to current day by dividing by 86400
+        /// Timestamp rounded to current day by dividing by 86400.
         /// </summary>
-        /// <value>timestamp rounded to current day by dividing by 86400</value>
+        /// <value>Timestamp rounded to current day by dividing by 86400.</value>
         [DataMember(Name = "date", EmitDefaultValue = false)]
         public int Date { get; set; }
 
         /// <summary>
-        /// total volume across all pairs on this day, stored as a derived amount of ETH
+        /// Total volume across all pairs on this day, stored as a derived amount of ETH.
         /// </summary>
-        /// <value>total volume across all pairs on this day, stored as a derived amount of ETH</value>
+        /// <value>Total volume across all pairs on this day, stored as a derived amount of ETH.</value>
         [DataMember(Name = "volume_eth", EmitDefaultValue = true)]
         public string VolumeEth { get; set; }
 
         /// <summary>
-        /// total volume across all pairs on this day, stored as a derived amount of USD
+        /// Total volume across all pairs on this day, stored as a derived amount of USD.
         /// </summary>
-        /// <value>total volume across all pairs on this day, stored as a derived amount of USD</value>
+        /// <value>Total volume across all pairs on this day, stored as a derived amount of USD.</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// total daily volume in Uniswap derived in terms of USD untracked
+        /// Total daily volume in Uniswap derived in terms of USD untracked.
         /// </summary>
-        /// <value>total daily volume in Uniswap derived in terms of USD untracked</value>
+        /// <value>Total daily volume in Uniswap derived in terms of USD untracked.</value>
         [DataMember(Name = "volume_usd_untracked", EmitDefaultValue = true)]
         public string VolumeUsdUntracked { get; set; }
 
         /// <summary>
-        /// fees in USD
+        /// Fees in USD
         /// </summary>
-        /// <value>fees in USD</value>
+        /// <value>Fees in USD</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
@@ -136,9 +136,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TxCount { get; set; }
 
         /// <summary>
-        /// tvl in terms of USD
+        /// Tvl in terms of USD.
         /// </summary>
-        /// <value>tvl in terms of USD</value>
+        /// <value>Tvl in terms of USD.</value>
         [DataMember(Name = "tvl_usd", EmitDefaultValue = true)]
         public string TvlUsd { get; set; }
 

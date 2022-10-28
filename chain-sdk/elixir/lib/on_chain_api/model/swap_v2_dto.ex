@@ -3,7 +3,7 @@
 
 defmodule OnChainAPI.Model.SwapV2Dto do
   @moduledoc """
-  
+  Swap are created for each token swap within a pair.
   """
 
   @derive [Poison.Encoder]

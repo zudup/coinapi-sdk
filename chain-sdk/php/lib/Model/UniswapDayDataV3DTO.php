@@ -36,7 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * UniswapDayDataV3DTO Class Doc Comment
  *
  * @category Class
- * @description Data accumulated and condensed into day stats for all of Uniswap
+ * @description Data accumulated and condensed into day stats for all of Uniswap.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -487,7 +487,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param string|null $id timestamp rounded to current day by dividing by 86400
+     * @param string|null $id Timestamp rounded to current day by dividing by 86400.
      *
      * @return self
      */
@@ -523,7 +523,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets date
      *
-     * @param int|null $date timestamp rounded to current day by dividing by 86400
+     * @param int|null $date Timestamp rounded to current day by dividing by 86400.
      *
      * @return self
      */
@@ -552,7 +552,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_eth
      *
-     * @param string|null $volume_eth total volume across all pairs on this day, stored as a derived amount of ETH
+     * @param string|null $volume_eth Total volume across all pairs on this day, stored as a derived amount of ETH.
      *
      * @return self
      */
@@ -588,7 +588,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd total volume across all pairs on this day, stored as a derived amount of USD
+     * @param string|null $volume_usd Total volume across all pairs on this day, stored as a derived amount of USD.
      *
      * @return self
      */
@@ -624,7 +624,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_usd_untracked
      *
-     * @param string|null $volume_usd_untracked total daily volume in Uniswap derived in terms of USD untracked
+     * @param string|null $volume_usd_untracked Total daily volume in Uniswap derived in terms of USD untracked.
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees in USD
+     * @param string|null $fees_usd Fees in USD
      *
      * @return self
      */
@@ -725,7 +725,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets tvl_usd
      *
-     * @param string|null $tvl_usd tvl in terms of USD
+     * @param string|null $tvl_usd Tvl in terms of USD.
      *
      * @return self
      */

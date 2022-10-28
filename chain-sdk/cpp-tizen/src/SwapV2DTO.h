@@ -1,7 +1,7 @@
 /*
  * SwapV2DTO.h
  *
- * 
+ * Swap are created for each token swap within a pair.
  */
 
 #ifndef _SwapV2DTO_H_
@@ -22,7 +22,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Swap are created for each token swap within a pair.
  *
  *  \ingroup Models
  *
@@ -75,81 +75,81 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get Transaction hash plus index in Transaction swap array.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction hash plus index in Transaction swap array.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Reference to transaction swap was included in.
 	 */
 	std::string getTransaction();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to transaction swap was included in.
 	 */
 	void setTransaction(std::string  transaction);
-	/*! \brief Get 
+	/*! \brief Get Timestamp of swap, used for sorted lookups.
 	 */
 	std::string getTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp of swap, used for sorted lookups.
 	 */
 	void setTimestamp(std::string  timestamp);
-	/*! \brief Get 
+	/*! \brief Get Reference to pair.
 	 */
 	std::string getPair();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to pair.
 	 */
 	void setPair(std::string  pair);
-	/*! \brief Get 
+	/*! \brief Get Address that initiated the swap.
 	 */
 	std::string getSender();
 
-	/*! \brief Set 
+	/*! \brief Set Address that initiated the swap.
 	 */
 	void setSender(std::string  sender);
-	/*! \brief Get 
+	/*! \brief Get The EOA (Externally Owned Account) that initiated the transaction.
 	 */
 	std::string getFrom();
 
-	/*! \brief Set 
+	/*! \brief Set The EOA (Externally Owned Account) that initiated the transaction.
 	 */
 	void setFrom(std::string  from);
-	/*! \brief Get 
+	/*! \brief Get Amount of token0 sold.
 	 */
 	std::string getAmount0In();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token0 sold.
 	 */
 	void setAmount0In(std::string  amount_0_in);
-	/*! \brief Get 
+	/*! \brief Get Amount of token1 sold.
 	 */
 	std::string getAmount1In();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token1 sold.
 	 */
 	void setAmount1In(std::string  amount_1_in);
-	/*! \brief Get 
+	/*! \brief Get Amount of token0 received.
 	 */
 	std::string getAmount0Out();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token0 received.
 	 */
 	void setAmount0Out(std::string  amount_0_out);
-	/*! \brief Get 
+	/*! \brief Get Amount of token1 received.
 	 */
 	std::string getAmount1Out();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token1 received.
 	 */
 	void setAmount1Out(std::string  amount_1_out);
-	/*! \brief Get 
+	/*! \brief Get Recipient of output tokens.
 	 */
 	std::string getTo();
 
-	/*! \brief Set 
+	/*! \brief Set Recipient of output tokens.
 	 */
 	void setTo(std::string  to);
 	/*! \brief Get 
@@ -159,11 +159,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setLogIndex(BigInteger  log_index);
-	/*! \brief Get 
+	/*! \brief Get Derived amount of tokens sold in USD.
 	 */
 	std::string getAmountUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Derived amount of tokens sold in USD.
 	 */
 	void setAmountUsd(std::string  amount_usd);
 	/*! \brief Get 

@@ -26,25 +26,25 @@ import org.openapitools.client.models.ETradeAggressiveSide
 import com.squareup.moshi.Json
 
 /**
- * 
+ * Swap are created for each token swap within a pair.
  *
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber 
  * @param vid 
- * @param id 
- * @param transaction 
- * @param timestamp 
- * @param pair 
- * @param sender 
- * @param from 
- * @param amount0In 
- * @param amount1In 
- * @param amount0Out 
- * @param amount1Out 
- * @param to 
+ * @param id Transaction hash plus index in Transaction swap array.
+ * @param transaction Reference to transaction swap was included in.
+ * @param timestamp Timestamp of swap, used for sorted lookups.
+ * @param pair Reference to pair.
+ * @param sender Address that initiated the swap.
+ * @param from The EOA (Externally Owned Account) that initiated the transaction.
+ * @param amount0In Amount of token0 sold.
+ * @param amount1In Amount of token1 sold.
+ * @param amount0Out Amount of token0 received.
+ * @param amount1Out Amount of token1 received.
+ * @param to Recipient of output tokens.
  * @param logIndex 
- * @param amountUsd 
+ * @param amountUsd Derived amount of tokens sold in USD.
  * @param evaluatedPrice 
  * @param evaluatedAmount 
  * @param evaluatedAggressor 
@@ -68,54 +68,54 @@ data class SwapV2DTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /*  */
+    /* Transaction hash plus index in Transaction swap array. */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
-    /*  */
+    /* Reference to transaction swap was included in. */
     @Json(name = "transaction")
     val transaction: kotlin.String? = null,
 
-    /*  */
+    /* Timestamp of swap, used for sorted lookups. */
     @Json(name = "timestamp")
     val timestamp: java.time.OffsetDateTime? = null,
 
-    /*  */
+    /* Reference to pair. */
     @Json(name = "pair")
     val pair: kotlin.String? = null,
 
-    /*  */
+    /* Address that initiated the swap. */
     @Json(name = "sender")
     val sender: kotlin.String? = null,
 
-    /*  */
+    /* The EOA (Externally Owned Account) that initiated the transaction. */
     @Json(name = "from")
     val from: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token0 sold. */
     @Json(name = "amount_0_in")
     val amount0In: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token1 sold. */
     @Json(name = "amount_1_in")
     val amount1In: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token0 received. */
     @Json(name = "amount_0_out")
     val amount0Out: kotlin.String? = null,
 
-    /*  */
+    /* Amount of token1 received. */
     @Json(name = "amount_1_out")
     val amount1Out: kotlin.String? = null,
 
-    /*  */
+    /* Recipient of output tokens. */
     @Json(name = "to")
     val to: kotlin.String? = null,
 
     @Json(name = "log_index")
     val logIndex: BigInteger? = null,
 
-    /*  */
+    /* Derived amount of tokens sold in USD. */
     @Json(name = "amount_usd")
     val amountUsd: kotlin.String? = null,
 

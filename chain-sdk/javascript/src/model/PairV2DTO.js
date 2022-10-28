@@ -22,6 +22,7 @@ import BigInteger from './BigInteger';
 class PairV2DTO {
     /**
      * Constructs a new <code>PairV2DTO</code>.
+     * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
      * @alias module:model/PairV2DTO
      */
     constructor() { 
@@ -147,91 +148,91 @@ PairV2DTO.prototype['block_number'] = undefined;
 PairV2DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * Pair contract address.
  * @member {String} id
  */
 PairV2DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Reference to token0 as stored in pair contract.
  * @member {String} token_0
  */
 PairV2DTO.prototype['token_0'] = undefined;
 
 /**
- * 
+ * Reference to token1 as stored in pair contract.
  * @member {String} token_1
  */
 PairV2DTO.prototype['token_1'] = undefined;
 
 /**
- * 
+ * Reserve of token0.
  * @member {String} reserve_0
  */
 PairV2DTO.prototype['reserve_0'] = undefined;
 
 /**
- * 
+ * Reserve of token1.
  * @member {String} reserve_1
  */
 PairV2DTO.prototype['reserve_1'] = undefined;
 
 /**
- * 
+ * Total supply of liquidity token distributed to LPs.
  * @member {String} total_supply
  */
 PairV2DTO.prototype['total_supply'] = undefined;
 
 /**
- * 
+ * Total liquidity in pair stored as an amount of ETH.
  * @member {String} reserve_eth
  */
 PairV2DTO.prototype['reserve_eth'] = undefined;
 
 /**
- * 
+ * Total liquidity amount in pair stored as an amount of USD.
  * @member {String} reserve_usd
  */
 PairV2DTO.prototype['reserve_usd'] = undefined;
 
 /**
- * 
+ * Total liquidity with only tracked amount (see tracked amounts).
  * @member {String} tracked_reserve_eth
  */
 PairV2DTO.prototype['tracked_reserve_eth'] = undefined;
 
 /**
- * 
+ * Token0 per token1.
  * @member {String} token_0_price
  */
 PairV2DTO.prototype['token_0_price'] = undefined;
 
 /**
- * 
+ * Token1 per token0.
  * @member {String} token_1_price
  */
 PairV2DTO.prototype['token_1_price'] = undefined;
 
 /**
- * 
+ * Amount of token0 swapped on this pair.
  * @member {String} volume_token_0
  */
 PairV2DTO.prototype['volume_token_0'] = undefined;
 
 /**
- * 
+ * Amount of token1 swapped on this pair.
  * @member {String} volume_token_1
  */
 PairV2DTO.prototype['volume_token_1'] = undefined;
 
 /**
- * 
+ * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
  * @member {String} volume_usd
  */
 PairV2DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
  * @member {String} untracked_volume_usd
  */
 PairV2DTO.prototype['untracked_volume_usd'] = undefined;
@@ -242,7 +243,7 @@ PairV2DTO.prototype['untracked_volume_usd'] = undefined;
 PairV2DTO.prototype['tx_count'] = undefined;
 
 /**
- * 
+ * Timestamp contract was created.
  * @member {Date} created_at_timestamp
  */
 PairV2DTO.prototype['created_at_timestamp'] = undefined;

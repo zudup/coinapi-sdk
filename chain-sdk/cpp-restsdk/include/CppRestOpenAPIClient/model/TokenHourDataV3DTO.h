@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// token address concatendated with date
+    /// Token address concatendated with date.
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -91,7 +91,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// unix timestamp for start of hour
+    /// Unix timestamp for start of hour.
     /// </summary>
     int32_t getPeriodStartUnix() const;
     bool periodStartUnixIsSet() const;
@@ -100,7 +100,7 @@ public:
     void setPeriodStartUnix(int32_t value);
 
     /// <summary>
-    /// pointer to token
+    /// Pointer to token.
     /// </summary>
     utility::string_t getToken() const;
     bool tokenIsSet() const;
@@ -109,7 +109,7 @@ public:
     void setToken(const utility::string_t& value);
 
     /// <summary>
-    /// volume in token units
+    /// Volume in token units.
     /// </summary>
     utility::string_t getVolume() const;
     bool volumeIsSet() const;
@@ -118,7 +118,7 @@ public:
     void setVolume(const utility::string_t& value);
 
     /// <summary>
-    /// volume in derived USD
+    /// Volume in derived USD.
     /// </summary>
     utility::string_t getVolumeUsd() const;
     bool volumeUsdIsSet() const;
@@ -127,7 +127,7 @@ public:
     void setVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// volume in USD even on pools with less reliable USD values
+    /// Volume in USD even on pools with less reliable USD values.
     /// </summary>
     utility::string_t getUntrackedVolumeUsd() const;
     bool untrackedVolumeUsdIsSet() const;
@@ -136,7 +136,7 @@ public:
     void setUntrackedVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// liquidity across all pools in token units
+    /// Liquidity across all pools in token units.
     /// </summary>
     utility::string_t getTotalValueLocked() const;
     bool totalValueLockedIsSet() const;
@@ -145,7 +145,7 @@ public:
     void setTotalValueLocked(const utility::string_t& value);
 
     /// <summary>
-    /// liquidity across all pools in derived USD
+    /// Liquidity across all pools in derived USD.
     /// </summary>
     utility::string_t getTotalValueLockedUsd() const;
     bool totalValueLockedUsdIsSet() const;
@@ -154,7 +154,7 @@ public:
     void setTotalValueLockedUsd(const utility::string_t& value);
 
     /// <summary>
-    /// price at end of period in USD
+    /// Price at end of period in USD.
     /// </summary>
     utility::string_t getPriceUsd() const;
     bool priceUsdIsSet() const;
@@ -163,7 +163,7 @@ public:
     void setPriceUsd(const utility::string_t& value);
 
     /// <summary>
-    /// fees in USD
+    /// Fees in USD.
     /// </summary>
     utility::string_t getFeesUsd() const;
     bool feesUsdIsSet() const;
@@ -172,7 +172,7 @@ public:
     void setFeesUsd(const utility::string_t& value);
 
     /// <summary>
-    /// opening price USD
+    /// Opening price USD.
     /// </summary>
     utility::string_t getOpen() const;
     bool openIsSet() const;
@@ -181,7 +181,7 @@ public:
     void setOpen(const utility::string_t& value);
 
     /// <summary>
-    /// high price USD
+    /// High price USD.
     /// </summary>
     utility::string_t getHigh() const;
     bool highIsSet() const;
@@ -190,7 +190,7 @@ public:
     void setHigh(const utility::string_t& value);
 
     /// <summary>
-    /// low price USD
+    /// Low price USD.
     /// </summary>
     utility::string_t getLow() const;
     bool lowIsSet() const;
@@ -199,7 +199,7 @@ public:
     void setLow(const utility::string_t& value);
 
     /// <summary>
-    /// close price USD
+    /// Close price USD.
     /// </summary>
     utility::string_t getClose() const;
     bool closeIsSet() const;

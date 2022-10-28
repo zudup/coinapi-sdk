@@ -11,17 +11,17 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field vid  integer [optional]
-#' @field id token address character [optional]
-#' @field symbol token symbol character [optional]
-#' @field name token name character [optional]
-#' @field decimals token decimals integer [optional]
+#' @field id Token address. character [optional]
+#' @field symbol Token symbol. character [optional]
+#' @field name Token name. character [optional]
+#' @field decimals Token decimals. integer [optional]
 #' @field total_supply  \link{BigInteger} [optional]
-#' @field trade_volume amount of token traded all time across all pairs character [optional]
-#' @field trade_volume_usd amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) character [optional]
-#' @field untracked_volume_usd amount of token in USD traded all time across pairs (no minimum liquidity threshold) character [optional]
+#' @field trade_volume Amount of token traded all time across all pairs. character [optional]
+#' @field trade_volume_usd Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). character [optional]
+#' @field untracked_volume_usd Amount of token in USD traded all time across pairs (no minimum liquidity threshold). character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
-#' @field total_liquidity total amount of token provided as liquidity across all pairs character [optional]
-#' @field derived_eth ETH per token character [optional]
+#' @field total_liquidity Total amount of token provided as liquidity across all pairs. character [optional]
+#' @field derived_eth ETH per token. character [optional]
 #' @field token_symbol  character [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -54,17 +54,17 @@ TokenV2DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number 
     #' @param vid 
-    #' @param id token address
-    #' @param symbol token symbol
-    #' @param name token name
-    #' @param decimals token decimals
+    #' @param id Token address.
+    #' @param symbol Token symbol.
+    #' @param name Token name.
+    #' @param decimals Token decimals.
     #' @param total_supply total_supply
-    #' @param trade_volume amount of token traded all time across all pairs
-    #' @param trade_volume_usd amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
-    #' @param untracked_volume_usd amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+    #' @param trade_volume Amount of token traded all time across all pairs.
+    #' @param trade_volume_usd Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+    #' @param untracked_volume_usd Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     #' @param tx_count tx_count
-    #' @param total_liquidity total amount of token provided as liquidity across all pairs
-    #' @param derived_eth ETH per token
+    #' @param total_liquidity Total amount of token provided as liquidity across all pairs.
+    #' @param derived_eth ETH per token.
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export

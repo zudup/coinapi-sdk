@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * UniswapDayDataV3DTOTest Class Doc Comment
  *
  * @category    Class
- * @description Data accumulated and condensed into day stats for all of Uniswap
+ * @description Data accumulated and condensed into day stats for all of Uniswap.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -17,6 +17,7 @@ import type {
 } from './';
 
 /**
+ * Swap are created for each token swap within a pair.
  * @export
  * @interface SwapV2DTO
  */
@@ -44,67 +45,67 @@ export interface SwapV2DTO {
      */
     vid?: number;
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @type {string}
      * @memberof SwapV2DTO
      */
     id?: string | null;
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @type {string}
      * @memberof SwapV2DTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @type {string}
      * @memberof SwapV2DTO
      */
     timestamp?: string;
     /**
-     * 
+     * Reference to pair.
      * @type {string}
      * @memberof SwapV2DTO
      */
     pair?: string | null;
     /**
-     * 
+     * Address that initiated the swap.
      * @type {string}
      * @memberof SwapV2DTO
      */
     sender?: string | null;
     /**
-     * 
+     * The EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
      * @memberof SwapV2DTO
      */
     from?: string | null;
     /**
-     * 
+     * Amount of token0 sold.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_in?: string | null;
     /**
-     * 
+     * Amount of token1 sold.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_in?: string | null;
     /**
-     * 
+     * Amount of token0 received.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_out?: string | null;
     /**
-     * 
+     * Amount of token1 received.
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_out?: string | null;
     /**
-     * 
+     * Recipient of output tokens.
      * @type {string}
      * @memberof SwapV2DTO
      */
@@ -115,7 +116,7 @@ export interface SwapV2DTO {
      */
     log_index?: BigInteger;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapV2DTO
      */

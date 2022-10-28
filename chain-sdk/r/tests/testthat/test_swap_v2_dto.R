@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Transaction hash plus index in Transaction swap array.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("id", {
 
 test_that("transaction", {
   # tests for the property `transaction` (character)
-  # 
+  # Reference to transaction swap was included in.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`transaction`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("transaction", {
 
 test_that("timestamp", {
   # tests for the property `timestamp` (character)
-  # 
+  # Timestamp of swap, used for sorted lookups.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`timestamp`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("timestamp", {
 
 test_that("pair", {
   # tests for the property `pair` (character)
-  # 
+  # Reference to pair.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pair`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("pair", {
 
 test_that("sender", {
   # tests for the property `sender` (character)
-  # 
+  # Address that initiated the swap.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`sender`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("sender", {
 
 test_that("from", {
   # tests for the property `from` (character)
-  # 
+  # The EOA (Externally Owned Account) that initiated the transaction.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`from`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("from", {
 
 test_that("amount_0_in", {
   # tests for the property `amount_0_in` (character)
-  # 
+  # Amount of token0 sold.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_0_in`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("amount_0_in", {
 
 test_that("amount_1_in", {
   # tests for the property `amount_1_in` (character)
-  # 
+  # Amount of token1 sold.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_1_in`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("amount_1_in", {
 
 test_that("amount_0_out", {
   # tests for the property `amount_0_out` (character)
-  # 
+  # Amount of token0 received.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_0_out`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("amount_0_out", {
 
 test_that("amount_1_out", {
   # tests for the property `amount_1_out` (character)
-  # 
+  # Amount of token1 received.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_1_out`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("amount_1_out", {
 
 test_that("to", {
   # tests for the property `to` (character)
-  # 
+  # Recipient of output tokens.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`to`, "EXPECTED_RESULT")
@@ -132,7 +132,7 @@ test_that("log_index", {
 
 test_that("amount_usd", {
   # tests for the property `amount_usd` (character)
-  # 
+  # Derived amount of tokens sold in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_usd`, "EXPECTED_RESULT")

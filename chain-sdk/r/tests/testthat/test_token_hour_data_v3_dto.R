@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # token address concatendated with date
+  # Token address concatendated with date.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("id", {
 
 test_that("period_start_unix", {
   # tests for the property `period_start_unix` (integer)
-  # unix timestamp for start of hour
+  # Unix timestamp for start of hour.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`period_start_unix`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("period_start_unix", {
 
 test_that("token", {
   # tests for the property `token` (character)
-  # pointer to token
+  # Pointer to token.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("token", {
 
 test_that("volume", {
   # tests for the property `volume` (character)
-  # volume in token units
+  # Volume in token units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("volume", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # volume in derived USD
+  # Volume in derived USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
-  # volume in USD even on pools with less reliable USD values
+  # Volume in USD even on pools with less reliable USD values.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("untracked_volume_usd", {
 
 test_that("total_value_locked", {
   # tests for the property `total_value_locked` (character)
-  # liquidity across all pools in token units
+  # Liquidity across all pools in token units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("total_value_locked", {
 
 test_that("total_value_locked_usd", {
   # tests for the property `total_value_locked_usd` (character)
-  # liquidity across all pools in derived USD
+  # Liquidity across all pools in derived USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("total_value_locked_usd", {
 
 test_that("price_usd", {
   # tests for the property `price_usd` (character)
-  # price at end of period in USD
+  # Price at end of period in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`price_usd`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("price_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # fees in USD
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("fees_usd", {
 
 test_that("open", {
   # tests for the property `open` (character)
-  # opening price USD
+  # Opening price USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`open`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("open", {
 
 test_that("high", {
   # tests for the property `high` (character)
-  # high price USD
+  # High price USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`high`, "EXPECTED_RESULT")
@@ -125,7 +125,7 @@ test_that("high", {
 
 test_that("low", {
   # tests for the property `low` (character)
-  # low price USD
+  # Low price USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`low`, "EXPECTED_RESULT")
@@ -133,7 +133,7 @@ test_that("low", {
 
 test_that("close", {
   # tests for the property `close` (character)
-  # close price USD
+  # Close price USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`close`, "EXPECTED_RESULT")

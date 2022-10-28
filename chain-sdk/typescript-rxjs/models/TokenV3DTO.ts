@@ -44,25 +44,25 @@ export interface TokenV3DTO {
      */
     vid?: number;
     /**
-     * token address
+     * Token address.
      * @type {string}
      * @memberof TokenV3DTO
      */
     id?: string | null;
     /**
-     * token symbol
+     * Token symbol.
      * @type {string}
      * @memberof TokenV3DTO
      */
     symbol?: string | null;
     /**
-     * token name
+     * Token name.
      * @type {string}
      * @memberof TokenV3DTO
      */
     name?: string | null;
     /**
-     * token decimals
+     * Token decimals.
      * @type {number}
      * @memberof TokenV3DTO
      */
@@ -73,25 +73,25 @@ export interface TokenV3DTO {
      */
     total_supply?: BigInteger;
     /**
-     * volume in token units
+     * Volume in token units.
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume?: string | null;
     /**
-     * volume in derived USD
+     * Volume in derived USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume_usd?: string | null;
     /**
-     * volume in USD even on pools with less reliable USD values
+     * Volume in USD even on pools with less reliable USD values.
      * @type {string}
      * @memberof TokenV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * fees in USD
+     * Fees in USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
@@ -107,31 +107,31 @@ export interface TokenV3DTO {
      */
     pool_count?: BigInteger;
     /**
-     * liquidity across all pools in token units
+     * Liquidity across all pools in token units.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked?: string | null;
     /**
-     * liquidity across all pools in derived USD
+     * Liquidity across all pools in derived USD.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
-     * TVL derived in USD untracked
+     * TVL derived in USD untracked.
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd_untracked?: string | null;
     /**
-     * derived price in ETH
+     * Derived price in ETH.
      * @type {string}
      * @memberof TokenV3DTO
      */
     derived_eth?: string | null;
     /**
-     * pools token is in that are white listed for USD pricing
+     * Pools token is in that are white listed for USD pricing.
      * @type {Array<string>}
      * @memberof TokenV3DTO
      */

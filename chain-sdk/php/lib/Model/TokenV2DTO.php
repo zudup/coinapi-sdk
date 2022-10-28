@@ -515,7 +515,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id token address
+     * @param string|null $id Token address.
      *
      * @return self
      */
@@ -551,7 +551,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol token symbol
+     * @param string|null $symbol Token symbol.
      *
      * @return self
      */
@@ -587,7 +587,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name token name
+     * @param string|null $name Token name.
      *
      * @return self
      */
@@ -623,7 +623,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param int|null $decimals token decimals
+     * @param int|null $decimals Token decimals.
      *
      * @return self
      */
@@ -681,7 +681,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets trade_volume
      *
-     * @param string|null $trade_volume amount of token traded all time across all pairs
+     * @param string|null $trade_volume Amount of token traded all time across all pairs.
      *
      * @return self
      */
@@ -717,7 +717,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets trade_volume_usd
      *
-     * @param string|null $trade_volume_usd amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+     * @param string|null $trade_volume_usd Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      *
      * @return self
      */
@@ -753,7 +753,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+     * @param string|null $untracked_volume_usd Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      *
      * @return self
      */
@@ -818,7 +818,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_liquidity
      *
-     * @param string|null $total_liquidity total amount of token provided as liquidity across all pairs
+     * @param string|null $total_liquidity Total amount of token provided as liquidity across all pairs.
      *
      * @return self
      */
@@ -854,7 +854,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth ETH per token
+     * @param string|null $derived_eth ETH per token.
      *
      * @return self
      */

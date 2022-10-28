@@ -1,7 +1,7 @@
 #' Create a new UniswapDayDataV3DTO
 #'
 #' @description
-#' Data accumulated and condensed into day stats for all of Uniswap
+#' Data accumulated and condensed into day stats for all of Uniswap.
 #'
 #' @docType class
 #' @title UniswapDayDataV3DTO
@@ -11,14 +11,14 @@
 #' @field recv_time  character [optional]
 #' @field block_number  integer [optional]
 #' @field vid  integer [optional]
-#' @field id timestamp rounded to current day by dividing by 86400 character [optional]
-#' @field date timestamp rounded to current day by dividing by 86400 integer [optional]
-#' @field volume_eth total volume across all pairs on this day, stored as a derived amount of ETH character [optional]
-#' @field volume_usd total volume across all pairs on this day, stored as a derived amount of USD character [optional]
-#' @field volume_usd_untracked total daily volume in Uniswap derived in terms of USD untracked character [optional]
-#' @field fees_usd fees in USD character [optional]
+#' @field id Timestamp rounded to current day by dividing by 86400. character [optional]
+#' @field date Timestamp rounded to current day by dividing by 86400. integer [optional]
+#' @field volume_eth Total volume across all pairs on this day, stored as a derived amount of ETH. character [optional]
+#' @field volume_usd Total volume across all pairs on this day, stored as a derived amount of USD. character [optional]
+#' @field volume_usd_untracked Total daily volume in Uniswap derived in terms of USD untracked. character [optional]
+#' @field fees_usd Fees in USD character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
-#' @field tvl_usd tvl in terms of USD character [optional]
+#' @field tvl_usd Tvl in terms of USD. character [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -46,14 +46,14 @@ UniswapDayDataV3DTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number 
     #' @param vid 
-    #' @param id timestamp rounded to current day by dividing by 86400
-    #' @param date timestamp rounded to current day by dividing by 86400
-    #' @param volume_eth total volume across all pairs on this day, stored as a derived amount of ETH
-    #' @param volume_usd total volume across all pairs on this day, stored as a derived amount of USD
-    #' @param volume_usd_untracked total daily volume in Uniswap derived in terms of USD untracked
-    #' @param fees_usd fees in USD
+    #' @param id Timestamp rounded to current day by dividing by 86400.
+    #' @param date Timestamp rounded to current day by dividing by 86400.
+    #' @param volume_eth Total volume across all pairs on this day, stored as a derived amount of ETH.
+    #' @param volume_usd Total volume across all pairs on this day, stored as a derived amount of USD.
+    #' @param volume_usd_untracked Total daily volume in Uniswap derived in terms of USD untracked.
+    #' @param fees_usd Fees in USD
     #' @param tx_count tx_count
-    #' @param tvl_usd tvl in terms of USD
+    #' @param tvl_usd Tvl in terms of USD.
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

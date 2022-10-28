@@ -14,6 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
   class PairV2DTO
     attr_accessor :entry_time
 
@@ -25,54 +26,54 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # 
+    # Pair contract address.
     attr_accessor :id
 
-    # 
+    # Reference to token0 as stored in pair contract.
     attr_accessor :token_0
 
-    # 
+    # Reference to token1 as stored in pair contract.
     attr_accessor :token_1
 
-    # 
+    # Reserve of token0.
     attr_accessor :reserve_0
 
-    # 
+    # Reserve of token1.
     attr_accessor :reserve_1
 
-    # 
+    # Total supply of liquidity token distributed to LPs.
     attr_accessor :total_supply
 
-    # 
+    # Total liquidity in pair stored as an amount of ETH.
     attr_accessor :reserve_eth
 
-    # 
+    # Total liquidity amount in pair stored as an amount of USD.
     attr_accessor :reserve_usd
 
-    # 
+    # Total liquidity with only tracked amount (see tracked amounts).
     attr_accessor :tracked_reserve_eth
 
-    # 
+    # Token0 per token1.
     attr_accessor :token_0_price
 
-    # 
+    # Token1 per token0.
     attr_accessor :token_1_price
 
-    # 
+    # Amount of token0 swapped on this pair.
     attr_accessor :volume_token_0
 
-    # 
+    # Amount of token1 swapped on this pair.
     attr_accessor :volume_token_1
 
-    # 
+    # Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
     attr_accessor :volume_usd
 
-    # 
+    # Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     attr_accessor :untracked_volume_usd
 
     attr_accessor :tx_count
 
-    # 
+    # Timestamp contract was created.
     attr_accessor :created_at_timestamp
 
     # 

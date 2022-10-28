@@ -16,27 +16,27 @@ class TokenV2DTO {
     Long blockNumber
     /*  */
     Long vid
-    /* token address */
+    /* Token address. */
     String id
-    /* token symbol */
+    /* Token symbol. */
     String symbol
-    /* token name */
+    /* Token name. */
     String name
-    /* token decimals */
+    /* Token decimals. */
     Integer decimals
     
     BigInteger totalSupply
-    /* amount of token traded all time across all pairs */
+    /* Amount of token traded all time across all pairs. */
     String tradeVolume
-    /* amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) */
+    /* Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). */
     String tradeVolumeUsd
-    /* amount of token in USD traded all time across pairs (no minimum liquidity threshold) */
+    /* Amount of token in USD traded all time across pairs (no minimum liquidity threshold). */
     String untrackedVolumeUsd
     
     BigInteger txCount
-    /* total amount of token provided as liquidity across all pairs */
+    /* Total amount of token provided as liquidity across all pairs. */
     String totalLiquidity
-    /* ETH per token */
+    /* ETH per token. */
     String derivedEth
     
     String tokenSymbol

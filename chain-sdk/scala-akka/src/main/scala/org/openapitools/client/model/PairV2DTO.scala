@@ -21,38 +21,38 @@ case class PairV2DTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /*  */
+  /* Pair contract address. */
   id: Option[String] = None,
-  /*  */
+  /* Reference to token0 as stored in pair contract. */
   token0: Option[String] = None,
-  /*  */
+  /* Reference to token1 as stored in pair contract. */
   token1: Option[String] = None,
-  /*  */
+  /* Reserve of token0. */
   reserve0: Option[String] = None,
-  /*  */
+  /* Reserve of token1. */
   reserve1: Option[String] = None,
-  /*  */
+  /* Total supply of liquidity token distributed to LPs. */
   totalSupply: Option[String] = None,
-  /*  */
+  /* Total liquidity in pair stored as an amount of ETH. */
   reserveEth: Option[String] = None,
-  /*  */
+  /* Total liquidity amount in pair stored as an amount of USD. */
   reserveUsd: Option[String] = None,
-  /*  */
+  /* Total liquidity with only tracked amount (see tracked amounts). */
   trackedReserveEth: Option[String] = None,
-  /*  */
+  /* Token0 per token1. */
   token0Price: Option[String] = None,
-  /*  */
+  /* Token1 per token0. */
   token1Price: Option[String] = None,
-  /*  */
+  /* Amount of token0 swapped on this pair. */
   volumeToken0: Option[String] = None,
-  /*  */
+  /* Amount of token1 swapped on this pair. */
   volumeToken1: Option[String] = None,
-  /*  */
+  /* Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. */
   untrackedVolumeUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
-  /*  */
+  /* Timestamp contract was created. */
   createdAtTimestamp: Option[OffsetDateTime] = None,
   /*  */
   liquidityProviderCount: Option[String] = None,

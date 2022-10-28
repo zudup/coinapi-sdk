@@ -18,7 +18,10 @@ import org.openapitools.client.model.ETradeAggressiveSide;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Swap are created for each token swap within a pair.
+ **/
+@ApiModel(description = "Swap are created for each token swap within a pair.")
 public class SwapV2DTO {
   
   @SerializedName("entry_time")
@@ -109,9 +112,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Transaction hash plus index in Transaction swap array.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash plus index in Transaction swap array.")
   public String getId() {
     return id;
   }
@@ -120,9 +123,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Reference to transaction swap was included in.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to transaction swap was included in.")
   public String getTransaction() {
     return transaction;
   }
@@ -131,9 +134,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Timestamp of swap, used for sorted lookups.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp of swap, used for sorted lookups.")
   public Date getTimestamp() {
     return timestamp;
   }
@@ -142,9 +145,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Reference to pair.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to pair.")
   public String getPair() {
     return pair;
   }
@@ -153,9 +156,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Address that initiated the swap.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address that initiated the swap.")
   public String getSender() {
     return sender;
   }
@@ -164,9 +167,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * The EOA (Externally Owned Account) that initiated the transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The EOA (Externally Owned Account) that initiated the transaction.")
   public String getFrom() {
     return from;
   }
@@ -175,9 +178,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Amount of token0 sold.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token0 sold.")
   public String getAmount0In() {
     return amount0In;
   }
@@ -186,9 +189,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Amount of token1 sold.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token1 sold.")
   public String getAmount1In() {
     return amount1In;
   }
@@ -197,9 +200,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Amount of token0 received.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token0 received.")
   public String getAmount0Out() {
     return amount0Out;
   }
@@ -208,9 +211,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Amount of token1 received.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token1 received.")
   public String getAmount1Out() {
     return amount1Out;
   }
@@ -219,9 +222,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Recipient of output tokens.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Recipient of output tokens.")
   public String getTo() {
     return to;
   }
@@ -240,9 +243,9 @@ public class SwapV2DTO {
   }
 
   /**
-   * 
+   * Derived amount of tokens sold in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount of tokens sold in USD.")
   public String getAmountUsd() {
     return amountUsd;
   }

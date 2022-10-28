@@ -39,25 +39,25 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * token address
+     * Token address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * token symbol
+     * Token symbol.
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * token name
+     * Token name.
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * token decimals
+     * Token decimals.
      * @return decimals
      */
     public Integer decimals { get; set; }
@@ -69,19 +69,19 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public OASBigInteger totalSupply { get; set; }
 
     /**
-     * amount of token traded all time across all pairs
+     * Amount of token traded all time across all pairs.
      * @return tradeVolume
      */
     public String tradeVolume { get; set; }
 
     /**
-     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @return tradeVolumeUsd
      */
     public String tradeVolumeUsd { get; set; }
 
     /**
-     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
@@ -93,13 +93,13 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * total amount of token provided as liquidity across all pairs
+     * Total amount of token provided as liquidity across all pairs.
      * @return totalLiquidity
      */
     public String totalLiquidity { get; set; }
 
     /**
-     * ETH per token
+     * ETH per token.
      * @return derivedEth
      */
     public String derivedEth { get; set; }

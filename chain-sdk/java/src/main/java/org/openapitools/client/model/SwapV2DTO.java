@@ -49,9 +49,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * SwapV2DTO
+ * Swap are created for each token swap within a pair.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:40:30.040165Z[Etc/UTC]")
+@ApiModel(description = "Swap are created for each token swap within a pair.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:08:43.190592Z[Etc/UTC]")
 public class SwapV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -257,11 +258,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Transaction hash plus index in Transaction swap array.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash plus index in Transaction swap array.")
 
   public String getId() {
     return id;
@@ -280,11 +281,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Reference to transaction swap was included in.
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to transaction swap was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -303,11 +304,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Timestamp of swap, used for sorted lookups.
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp of swap, used for sorted lookups.")
 
   public OffsetDateTime getTimestamp() {
     return timestamp;
@@ -326,11 +327,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Reference to pair.
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -349,11 +350,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Address that initiated the swap.
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address that initiated the swap.")
 
   public String getSender() {
     return sender;
@@ -372,11 +373,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * The EOA (Externally Owned Account) that initiated the transaction.
    * @return from
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The EOA (Externally Owned Account) that initiated the transaction.")
 
   public String getFrom() {
     return from;
@@ -395,11 +396,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Amount of token0 sold.
    * @return amount0In
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token0 sold.")
 
   public String getAmount0In() {
     return amount0In;
@@ -418,11 +419,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Amount of token1 sold.
    * @return amount1In
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token1 sold.")
 
   public String getAmount1In() {
     return amount1In;
@@ -441,11 +442,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Amount of token0 received.
    * @return amount0Out
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token0 received.")
 
   public String getAmount0Out() {
     return amount0Out;
@@ -464,11 +465,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Amount of token1 received.
    * @return amount1Out
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token1 received.")
 
   public String getAmount1Out() {
     return amount1Out;
@@ -487,11 +488,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Recipient of output tokens.
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Recipient of output tokens.")
 
   public String getTo() {
     return to;
@@ -533,11 +534,11 @@ public class SwapV2DTO {
   }
 
    /**
-   * 
+   * Derived amount of tokens sold in USD.
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount of tokens sold in USD.")
 
   public String getAmountUsd() {
     return amountUsd;

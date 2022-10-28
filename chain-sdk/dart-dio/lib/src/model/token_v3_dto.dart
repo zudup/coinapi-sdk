@@ -17,22 +17,22 @@ part 'token_v3_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] - 
 /// * [vid] - 
-/// * [id] - token address
-/// * [symbol] - token symbol
-/// * [name] - token name
-/// * [decimals] - token decimals
+/// * [id] - Token address.
+/// * [symbol] - Token symbol.
+/// * [name] - Token name.
+/// * [decimals] - Token decimals.
 /// * [totalSupply] 
-/// * [volume] - volume in token units
-/// * [volumeUsd] - volume in derived USD
-/// * [untrackedVolumeUsd] - volume in USD even on pools with less reliable USD values
-/// * [feesUsd] - fees in USD
+/// * [volume] - Volume in token units.
+/// * [volumeUsd] - Volume in derived USD.
+/// * [untrackedVolumeUsd] - Volume in USD even on pools with less reliable USD values.
+/// * [feesUsd] - Fees in USD.
 /// * [txCount] 
 /// * [poolCount] 
-/// * [totalValueLocked] - liquidity across all pools in token units
-/// * [totalValueLockedUsd] - liquidity across all pools in derived USD
-/// * [totalValueLockedUsdUntracked] - TVL derived in USD untracked
-/// * [derivedEth] - derived price in ETH
-/// * [whitelistPools] - pools token is in that are white listed for USD pricing
+/// * [totalValueLocked] - Liquidity across all pools in token units.
+/// * [totalValueLockedUsd] - Liquidity across all pools in derived USD.
+/// * [totalValueLockedUsdUntracked] - TVL derived in USD untracked.
+/// * [derivedEth] - Derived price in ETH.
+/// * [whitelistPools] - Pools token is in that are white listed for USD pricing.
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
@@ -50,38 +50,38 @@ abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// token address
+  /// Token address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// token symbol
+  /// Token symbol.
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
-  /// token name
+  /// Token name.
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// token decimals
+  /// Token decimals.
   @BuiltValueField(wireName: r'decimals')
   int? get decimals;
 
   @BuiltValueField(wireName: r'total_supply')
   BigInteger? get totalSupply;
 
-  /// volume in token units
+  /// Volume in token units.
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
-  /// volume in derived USD
+  /// Volume in derived USD.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// volume in USD even on pools with less reliable USD values
+  /// Volume in USD even on pools with less reliable USD values.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// fees in USD
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
@@ -91,23 +91,23 @@ abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
   @BuiltValueField(wireName: r'pool_count')
   BigInteger? get poolCount;
 
-  /// liquidity across all pools in token units
+  /// Liquidity across all pools in token units.
   @BuiltValueField(wireName: r'total_value_locked')
   String? get totalValueLocked;
 
-  /// liquidity across all pools in derived USD
+  /// Liquidity across all pools in derived USD.
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// TVL derived in USD untracked
+  /// TVL derived in USD untracked.
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
-  /// derived price in ETH
+  /// Derived price in ETH.
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 
-  /// pools token is in that are white listed for USD pricing
+  /// Pools token is in that are white listed for USD pricing.
   @BuiltValueField(wireName: r'whitelist_pools')
   BuiltList<String>? get whitelistPools;
 

@@ -19,33 +19,33 @@ case class TokenHourDataV3DTO (
   recvTime: Option[OffsetDateTime] = None,
   /*  */
   blockNumber: Option[Long] = None,
-  /* token address concatendated with date */
+  /* Token address concatendated with date. */
   id: Option[String] = None,
-  /* unix timestamp for start of hour */
+  /* Unix timestamp for start of hour. */
   periodStartUnix: Option[Int] = None,
-  /* pointer to token */
+  /* Pointer to token. */
   token: Option[String] = None,
-  /* volume in token units */
+  /* Volume in token units. */
   volume: Option[String] = None,
-  /* volume in derived USD */
+  /* Volume in derived USD. */
   volumeUsd: Option[String] = None,
-  /* volume in USD even on pools with less reliable USD values */
+  /* Volume in USD even on pools with less reliable USD values. */
   untrackedVolumeUsd: Option[String] = None,
-  /* liquidity across all pools in token units */
+  /* Liquidity across all pools in token units. */
   totalValueLocked: Option[String] = None,
-  /* liquidity across all pools in derived USD */
+  /* Liquidity across all pools in derived USD. */
   totalValueLockedUsd: Option[String] = None,
-  /* price at end of period in USD */
+  /* Price at end of period in USD. */
   priceUsd: Option[String] = None,
-  /* fees in USD */
+  /* Fees in USD. */
   feesUsd: Option[String] = None,
-  /* opening price USD */
+  /* Opening price USD. */
   open: Option[String] = None,
-  /* high price USD */
+  /* High price USD. */
   high: Option[String] = None,
-  /* low price USD */
+  /* Low price USD. */
   low: Option[String] = None,
-  /* close price USD */
+  /* Close price USD. */
   close: Option[String] = None,
   /*  */
   vid: Option[Long] = None

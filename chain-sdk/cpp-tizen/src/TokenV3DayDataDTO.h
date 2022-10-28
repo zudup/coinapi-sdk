@@ -73,102 +73,102 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get token address concatendated with date
+	/*! \brief Get Token address concatendated with date.
 	 */
 	std::string getId();
 
-	/*! \brief Set token address concatendated with date
+	/*! \brief Set Token address concatendated with date.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get timestamp rounded to current day by dividing by 86400
+	/*! \brief Get Timestamp rounded to current day by dividing by 86400.
 	 */
 	int getDate();
 
-	/*! \brief Set timestamp rounded to current day by dividing by 86400
+	/*! \brief Set Timestamp rounded to current day by dividing by 86400.
 	 */
 	void setDate(int  date);
-	/*! \brief Get pointer to token
+	/*! \brief Get Pointer to token.
 	 */
 	std::string getToken();
 
-	/*! \brief Set pointer to token
+	/*! \brief Set Pointer to token.
 	 */
 	void setToken(std::string  token);
-	/*! \brief Get volume in token units
+	/*! \brief Get Volume in token units.
 	 */
 	std::string getVolume();
 
-	/*! \brief Set volume in token units
+	/*! \brief Set Volume in token units.
 	 */
 	void setVolume(std::string  volume);
-	/*! \brief Get volume in derived USD
+	/*! \brief Get Volume in derived USD.
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set volume in derived USD
+	/*! \brief Set Volume in derived USD.
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get volume in USD even on pools with less reliable USD values
+	/*! \brief Get Volume in USD even on pools with less reliable USD values.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set volume in USD even on pools with less reliable USD values
+	/*! \brief Set Volume in USD even on pools with less reliable USD values.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get liquidity across all pools in token units
+	/*! \brief Get Liquidity across all pools in token units.
 	 */
 	std::string getTotalValueLocked();
 
-	/*! \brief Set liquidity across all pools in token units
+	/*! \brief Set Liquidity across all pools in token units.
 	 */
 	void setTotalValueLocked(std::string  total_value_locked);
-	/*! \brief Get liquidity across all pools in derived USD
+	/*! \brief Get Liquidity across all pools in derived USD.
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set liquidity across all pools in derived USD
+	/*! \brief Set Liquidity across all pools in derived USD.
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get price at end of period in USD
+	/*! \brief Get Price at end of period in USD.
 	 */
 	std::string getPriceUsd();
 
-	/*! \brief Set price at end of period in USD
+	/*! \brief Set Price at end of period in USD.
 	 */
 	void setPriceUsd(std::string  price_usd);
-	/*! \brief Get fees in USD
+	/*! \brief Get Fees in USD.
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set fees in USD
+	/*! \brief Set Fees in USD.
 	 */
 	void setFeesUsd(std::string  fees_usd);
-	/*! \brief Get opening price USD
+	/*! \brief Get Opening price USD.
 	 */
 	std::string getOpen();
 
-	/*! \brief Set opening price USD
+	/*! \brief Set Opening price USD.
 	 */
 	void setOpen(std::string  open);
-	/*! \brief Get high price USD
+	/*! \brief Get High price USD.
 	 */
 	std::string getHigh();
 
-	/*! \brief Set high price USD
+	/*! \brief Set High price USD.
 	 */
 	void setHigh(std::string  high);
-	/*! \brief Get low price USD
+	/*! \brief Get Low price USD.
 	 */
 	std::string getLow();
 
-	/*! \brief Set low price USD
+	/*! \brief Set Low price USD.
 	 */
 	void setLow(std::string  low);
-	/*! \brief Get close price USD
+	/*! \brief Get Close price USD.
 	 */
 	std::string getClose();
 
-	/*! \brief Set close price USD
+	/*! \brief Set Close price USD.
 	 */
 	void setClose(std::string  close);
 

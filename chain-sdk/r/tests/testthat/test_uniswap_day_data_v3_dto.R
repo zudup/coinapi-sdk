@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # timestamp rounded to current day by dividing by 86400
+  # Timestamp rounded to current day by dividing by 86400.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("id", {
 
 test_that("date", {
   # tests for the property `date` (integer)
-  # timestamp rounded to current day by dividing by 86400
+  # Timestamp rounded to current day by dividing by 86400.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`date`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("date", {
 
 test_that("volume_eth", {
   # tests for the property `volume_eth` (character)
-  # total volume across all pairs on this day, stored as a derived amount of ETH
+  # Total volume across all pairs on this day, stored as a derived amount of ETH.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_eth`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("volume_eth", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # total volume across all pairs on this day, stored as a derived amount of USD
+  # Total volume across all pairs on this day, stored as a derived amount of USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("volume_usd", {
 
 test_that("volume_usd_untracked", {
   # tests for the property `volume_usd_untracked` (character)
-  # total daily volume in Uniswap derived in terms of USD untracked
+  # Total daily volume in Uniswap derived in terms of USD untracked.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd_untracked`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("volume_usd_untracked", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # fees in USD
+  # Fees in USD
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -92,7 +92,7 @@ test_that("tx_count", {
 
 test_that("tvl_usd", {
   # tests for the property `tvl_usd` (character)
-  # tvl in terms of USD
+  # Tvl in terms of USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tvl_usd`, "EXPECTED_RESULT")

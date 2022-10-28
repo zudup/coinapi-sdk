@@ -550,7 +550,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id token address
+     * @param string|null $id Token address.
      *
      * @return self
      */
@@ -586,7 +586,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol token symbol
+     * @param string|null $symbol Token symbol.
      *
      * @return self
      */
@@ -622,7 +622,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name token name
+     * @param string|null $name Token name.
      *
      * @return self
      */
@@ -658,7 +658,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param int|null $decimals token decimals
+     * @param int|null $decimals Token decimals.
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume
      *
-     * @param string|null $volume volume in token units
+     * @param string|null $volume Volume in token units.
      *
      * @return self
      */
@@ -752,7 +752,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume in derived USD
+     * @param string|null $volume_usd Volume in derived USD.
      *
      * @return self
      */
@@ -788,7 +788,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd volume in USD even on pools with less reliable USD values
+     * @param string|null $untracked_volume_usd Volume in USD even on pools with less reliable USD values.
      *
      * @return self
      */
@@ -824,7 +824,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees in USD
+     * @param string|null $fees_usd Fees in USD.
      *
      * @return self
      */
@@ -918,7 +918,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked liquidity across all pools in token units
+     * @param string|null $total_value_locked Liquidity across all pools in token units.
      *
      * @return self
      */
@@ -954,7 +954,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd liquidity across all pools in derived USD
+     * @param string|null $total_value_locked_usd Liquidity across all pools in derived USD.
      *
      * @return self
      */
@@ -990,7 +990,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd_untracked
      *
-     * @param string|null $total_value_locked_usd_untracked TVL derived in USD untracked
+     * @param string|null $total_value_locked_usd_untracked TVL derived in USD untracked.
      *
      * @return self
      */
@@ -1026,7 +1026,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth derived price in ETH
+     * @param string|null $derived_eth Derived price in ETH.
      *
      * @return self
      */
@@ -1062,7 +1062,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets whitelist_pools
      *
-     * @param string[]|null $whitelist_pools pools token is in that are white listed for USD pricing
+     * @param string[]|null $whitelist_pools Pools token is in that are white listed for USD pricing.
      *
      * @return self
      */

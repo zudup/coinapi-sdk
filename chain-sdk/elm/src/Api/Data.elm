@@ -234,6 +234,8 @@ type alias PairDTO =
     }
 
 
+{-| Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+-}
 type alias PairV2DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -427,6 +429,8 @@ type alias SwapDTO =
     }
 
 
+{-| Swap are created for each token swap within a pair.
+-}
 type alias SwapV2DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -648,7 +652,7 @@ type alias TokenV3DayDataDTO =
     }
 
 
-{-| Data accumulated and condensed into day stats for all of Uniswap
+{-| Data accumulated and condensed into day stats for all of Uniswap.
 -}
 type alias UniswapDayDataV3DTO =
     { entryTime : Maybe Posix

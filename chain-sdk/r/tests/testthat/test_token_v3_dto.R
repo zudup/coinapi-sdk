@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # token address
+  # Token address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("id", {
 
 test_that("symbol", {
   # tests for the property `symbol` (character)
-  # token symbol
+  # Token symbol.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`symbol`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("symbol", {
 
 test_that("name", {
   # tests for the property `name` (character)
-  # token name
+  # Token name.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`name`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("name", {
 
 test_that("decimals", {
   # tests for the property `decimals` (integer)
-  # token decimals
+  # Token decimals.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`decimals`, "EXPECTED_RESULT")
@@ -76,7 +76,7 @@ test_that("total_supply", {
 
 test_that("volume", {
   # tests for the property `volume` (character)
-  # volume in token units
+  # Volume in token units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume`, "EXPECTED_RESULT")
@@ -84,7 +84,7 @@ test_that("volume", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # volume in derived USD
+  # Volume in derived USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -92,7 +92,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
-  # volume in USD even on pools with less reliable USD values
+  # Volume in USD even on pools with less reliable USD values.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -100,7 +100,7 @@ test_that("untracked_volume_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # fees in USD
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -122,7 +122,7 @@ test_that("pool_count", {
 
 test_that("total_value_locked", {
   # tests for the property `total_value_locked` (character)
-  # liquidity across all pools in token units
+  # Liquidity across all pools in token units.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked`, "EXPECTED_RESULT")
@@ -130,7 +130,7 @@ test_that("total_value_locked", {
 
 test_that("total_value_locked_usd", {
   # tests for the property `total_value_locked_usd` (character)
-  # liquidity across all pools in derived USD
+  # Liquidity across all pools in derived USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd`, "EXPECTED_RESULT")
@@ -138,7 +138,7 @@ test_that("total_value_locked_usd", {
 
 test_that("total_value_locked_usd_untracked", {
   # tests for the property `total_value_locked_usd_untracked` (character)
-  # TVL derived in USD untracked
+  # TVL derived in USD untracked.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd_untracked`, "EXPECTED_RESULT")
@@ -146,7 +146,7 @@ test_that("total_value_locked_usd_untracked", {
 
 test_that("derived_eth", {
   # tests for the property `derived_eth` (character)
-  # derived price in ETH
+  # Derived price in ETH.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`derived_eth`, "EXPECTED_RESULT")
@@ -154,7 +154,7 @@ test_that("derived_eth", {
 
 test_that("whitelist_pools", {
   # tests for the property `whitelist_pools` (array[character])
-  # pools token is in that are white listed for USD pricing
+  # Pools token is in that are white listed for USD pricing.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`whitelist_pools`, "EXPECTED_RESULT")

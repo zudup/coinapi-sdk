@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-// PairV2DTO struct for PairV2DTO
+// PairV2DTO Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 type PairV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
@@ -24,38 +24,38 @@ type PairV2DTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// 
+	// Pair contract address.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Reference to token0 as stored in pair contract.
 	Token0 NullableString `json:"token_0,omitempty"`
-	// 
+	// Reference to token1 as stored in pair contract.
 	Token1 NullableString `json:"token_1,omitempty"`
-	// 
+	// Reserve of token0.
 	Reserve0 NullableString `json:"reserve_0,omitempty"`
-	// 
+	// Reserve of token1.
 	Reserve1 NullableString `json:"reserve_1,omitempty"`
-	// 
+	// Total supply of liquidity token distributed to LPs.
 	TotalSupply NullableString `json:"total_supply,omitempty"`
-	// 
+	// Total liquidity in pair stored as an amount of ETH.
 	ReserveEth NullableString `json:"reserve_eth,omitempty"`
-	// 
+	// Total liquidity amount in pair stored as an amount of USD.
 	ReserveUsd NullableString `json:"reserve_usd,omitempty"`
-	// 
+	// Total liquidity with only tracked amount (see tracked amounts).
 	TrackedReserveEth NullableString `json:"tracked_reserve_eth,omitempty"`
-	// 
+	// Token0 per token1.
 	Token0Price NullableString `json:"token_0_price,omitempty"`
-	// 
+	// Token1 per token0.
 	Token1Price NullableString `json:"token_1_price,omitempty"`
-	// 
+	// Amount of token0 swapped on this pair.
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
-	// 
+	// Amount of token1 swapped on this pair.
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
-	// 
+	// Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// 
+	// Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
-	// 
+	// Timestamp contract was created.
 	CreatedAtTimestamp *time.Time `json:"created_at_timestamp,omitempty"`
 	// 
 	LiquidityProviderCount NullableString `json:"liquidity_provider_count,omitempty"`

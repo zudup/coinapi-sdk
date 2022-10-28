@@ -33,98 +33,98 @@ API.Client.TokenV3DayDataDTO.prototype.blockNumber;
 API.Client.TokenV3DayDataDTO.prototype.vid;
 
 /**
- * token address concatendated with date
+ * Token address concatendated with date.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.id;
 
 /**
- * timestamp rounded to current day by dividing by 86400
+ * Timestamp rounded to current day by dividing by 86400.
  * @type {!number}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.date;
 
 /**
- * pointer to token
+ * Pointer to token.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.token;
 
 /**
- * volume in token units
+ * Volume in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.volume;
 
 /**
- * volume in derived USD
+ * Volume in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.volumeUsd;
 
 /**
- * volume in USD even on pools with less reliable USD values
+ * Volume in USD even on pools with less reliable USD values.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.untrackedVolumeUsd;
 
 /**
- * liquidity across all pools in token units
+ * Liquidity across all pools in token units.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.totalValueLocked;
 
 /**
- * liquidity across all pools in derived USD
+ * Liquidity across all pools in derived USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.totalValueLockedUsd;
 
 /**
- * price at end of period in USD
+ * Price at end of period in USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.priceUsd;
 
 /**
- * fees in USD
+ * Fees in USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.feesUsd;
 
 /**
- * opening price USD
+ * Opening price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.open;
 
 /**
- * high price USD
+ * High price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.high;
 
 /**
- * low price USD
+ * Low price USD.
  * @type {!string}
  * @export
  */
 API.Client.TokenV3DayDataDTO.prototype.low;
 
 /**
- * close price USD
+ * Close price USD.
  * @type {!string}
  * @export
  */

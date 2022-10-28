@@ -8,19 +8,19 @@
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** |  | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **transaction** | **String** |  | [optional] |
-| **timestamp** | **Time** |  | [optional] |
-| **pair** | **String** |  | [optional] |
-| **sender** | **String** |  | [optional] |
-| **from** | **String** |  | [optional] |
-| **amount_0_in** | **String** |  | [optional] |
-| **amount_1_in** | **String** |  | [optional] |
-| **amount_0_out** | **String** |  | [optional] |
-| **amount_1_out** | **String** |  | [optional] |
-| **to** | **String** |  | [optional] |
+| **id** | **String** | Transaction hash plus index in Transaction swap array. | [optional] |
+| **transaction** | **String** | Reference to transaction swap was included in. | [optional] |
+| **timestamp** | **Time** | Timestamp of swap, used for sorted lookups. | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
+| **sender** | **String** | Address that initiated the swap. | [optional] |
+| **from** | **String** | The EOA (Externally Owned Account) that initiated the transaction. | [optional] |
+| **amount_0_in** | **String** | Amount of token0 sold. | [optional] |
+| **amount_1_in** | **String** | Amount of token1 sold. | [optional] |
+| **amount_0_out** | **String** | Amount of token0 received. | [optional] |
+| **amount_1_out** | **String** | Amount of token1 received. | [optional] |
+| **to** | **String** | Recipient of output tokens. | [optional] |
 | **log_index** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **amount_usd** | **String** |  | [optional] |
+| **amount_usd** | **String** | Derived amount of tokens sold in USD. | [optional] |
 | **evaluated_price** | **Float** |  | [optional][readonly] |
 | **evaluated_amount** | **Float** |  | [optional][readonly] |
 | **evaluated_aggressor** | [**ETradeAggressiveSide**](ETradeAggressiveSide.md) |  | [optional] |
