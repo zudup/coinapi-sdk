@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
  * Token data aggregated across all pairs that include token.
  */
 @ApiModel(description = "Token data aggregated across all pairs that include token.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:39:58.138617Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
 public class TokenV3DayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

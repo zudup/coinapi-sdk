@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 @ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:39:58.138617Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
 public class TokenV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
