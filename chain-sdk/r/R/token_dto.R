@@ -56,21 +56,21 @@ TokenDTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
-    #' @param factory factory
-    #' @param symbol symbol
-    #' @param name name
-    #' @param decimals decimals
-    #' @param total_supply total_supply
-    #' @param volume volume
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param tx_count tx_count
-    #' @param liquidity liquidity
-    #' @param derived_eth derived_eth
-    #' @param whitelist_pairs whitelist_pairs
-    #' @param vid vid
+    #' @param block_number 
+    #' @param id 
+    #' @param factory 
+    #' @param symbol 
+    #' @param name 
+    #' @param decimals 
+    #' @param total_supply 
+    #' @param volume 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
+    #' @param tx_count 
+    #' @param liquidity 
+    #' @param derived_eth 
+    #' @param whitelist_pairs 
+    #' @param vid 
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export

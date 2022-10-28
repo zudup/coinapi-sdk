@@ -165,31 +165,37 @@ PoolV3DTO.prototype['entry_time'] = undefined;
 PoolV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PoolV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PoolV3DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PoolV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Date} created_at_timestamp
  */
 PoolV3DTO.prototype['created_at_timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 PoolV3DTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 PoolV3DTO.prototype['token_1'] = undefined;
@@ -220,11 +226,13 @@ PoolV3DTO.prototype['fee_growth_global_0x128'] = undefined;
 PoolV3DTO.prototype['fee_growth_global_1x128'] = undefined;
 
 /**
+ * 
  * @member {String} token_0_price
  */
 PoolV3DTO.prototype['token_0_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_1_price
  */
 PoolV3DTO.prototype['token_1_price'] = undefined;
@@ -240,26 +248,31 @@ PoolV3DTO.prototype['tick'] = undefined;
 PoolV3DTO.prototype['observation_index'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 PoolV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 PoolV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 PoolV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 PoolV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 PoolV3DTO.prototype['fees_usd'] = undefined;
@@ -270,46 +283,55 @@ PoolV3DTO.prototype['fees_usd'] = undefined;
 PoolV3DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_0
  */
 PoolV3DTO.prototype['collected_fees_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_1
  */
 PoolV3DTO.prototype['collected_fees_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_usd
  */
 PoolV3DTO.prototype['collected_fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_token_0
  */
 PoolV3DTO.prototype['total_value_locked_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_token_1
  */
 PoolV3DTO.prototype['total_value_locked_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_eth
  */
 PoolV3DTO.prototype['total_value_locked_eth'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd
  */
 PoolV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd_untracked
  */
 PoolV3DTO.prototype['total_value_locked_usd_untracked'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity_provider_count
  */
 PoolV3DTO.prototype['liquidity_provider_count'] = undefined;

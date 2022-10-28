@@ -17,38 +17,89 @@ export interface BurnV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     pool?: string;
 
+    /**
+     * 
+     */
     token_0?: string;
 
+    /**
+     * 
+     */
     token_1?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     owner?: string;
 
+    /**
+     * 
+     */
     origin?: string;
 
+    /**
+     * 
+     */
     amount?: string;
 
+    /**
+     * 
+     */
     amount_0?: string;
 
+    /**
+     * 
+     */
     amount_1?: string;
 
+    /**
+     * 
+     */
     amount_usd?: string;
 
+    /**
+     * 
+     */
     tick_lower?: string;
 
+    /**
+     * 
+     */
     tick_upper?: string;
 
+    /**
+     * 
+     */
     log_index?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
 }

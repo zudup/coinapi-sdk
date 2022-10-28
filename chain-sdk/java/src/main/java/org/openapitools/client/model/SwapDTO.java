@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * SwapDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class SwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -206,7 +206,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -252,7 +252,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get transaction
+   * 
    * @return transaction
   **/
   @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get timestamp
+   * 
    * @return timestamp
   **/
   @javax.annotation.Nullable
@@ -298,7 +298,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get pair
+   * 
    * @return pair
   **/
   @javax.annotation.Nullable
@@ -321,7 +321,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get sender
+   * 
    * @return sender
   **/
   @javax.annotation.Nullable
@@ -344,7 +344,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get amount0In
+   * 
    * @return amount0In
   **/
   @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get amount1In
+   * 
    * @return amount1In
   **/
   @javax.annotation.Nullable
@@ -390,7 +390,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get amount0Out
+   * 
    * @return amount0Out
   **/
   @javax.annotation.Nullable
@@ -413,7 +413,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get amount1Out
+   * 
    * @return amount1Out
   **/
   @javax.annotation.Nullable
@@ -436,7 +436,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get to
+   * 
    * @return to
   **/
   @javax.annotation.Nullable
@@ -459,7 +459,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get logIndex
+   * 
    * @return logIndex
   **/
   @javax.annotation.Nullable
@@ -482,7 +482,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get amountUsd
+   * 
    * @return amountUsd
   **/
   @javax.annotation.Nullable
@@ -505,7 +505,7 @@ public class SwapDTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

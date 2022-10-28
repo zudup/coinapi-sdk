@@ -14,26 +14,26 @@ part 'pair_v2_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [token0] 
-/// * [token1] 
-/// * [reserve0] 
-/// * [reserve1] 
-/// * [totalSupply] 
-/// * [reserveEth] 
-/// * [reserveUsd] 
-/// * [trackedReserveEth] 
-/// * [token0Price] 
-/// * [token1Price] 
-/// * [volumeToken0] 
-/// * [volumeToken1] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [token0] - 
+/// * [token1] - 
+/// * [reserve0] - 
+/// * [reserve1] - 
+/// * [totalSupply] - 
+/// * [reserveEth] - 
+/// * [reserveUsd] - 
+/// * [trackedReserveEth] - 
+/// * [token0Price] - 
+/// * [token1Price] - 
+/// * [volumeToken0] - 
+/// * [volumeToken1] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
 /// * [txCount] 
-/// * [createdAtTimestamp] 
-/// * [liquidityProviderCount] 
+/// * [createdAtTimestamp] - 
+/// * [liquidityProviderCount] - 
 /// * [evaluatedAsk] 
 @BuiltValue()
 abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
@@ -43,63 +43,82 @@ abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
+  /// 
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
+  /// 
   @BuiltValueField(wireName: r'reserve_0')
   String? get reserve0;
 
+  /// 
   @BuiltValueField(wireName: r'reserve_1')
   String? get reserve1;
 
+  /// 
   @BuiltValueField(wireName: r'total_supply')
   String? get totalSupply;
 
+  /// 
   @BuiltValueField(wireName: r'reserve_eth')
   String? get reserveEth;
 
+  /// 
   @BuiltValueField(wireName: r'reserve_usd')
   String? get reserveUsd;
 
+  /// 
   @BuiltValueField(wireName: r'tracked_reserve_eth')
   String? get trackedReserveEth;
 
+  /// 
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
+  /// 
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity_provider_count')
   String? get liquidityProviderCount;
 

@@ -13,28 +13,28 @@ part 'pool_hour_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [periodStartUnix] 
-/// * [pool] 
-/// * [liquidity] 
-/// * [sqrtPrice] 
-/// * [token0Price] 
-/// * [token1Price] 
-/// * [tick] 
-/// * [feeGrowthGlobal0x128] 
-/// * [feeGrowthGlobal1x128] 
-/// * [tvlUsd] 
-/// * [volumeToken0] 
-/// * [volumeToken1] 
-/// * [volumeUsd] 
-/// * [feesUsd] 
-/// * [txCount] 
-/// * [open] 
-/// * [high] 
-/// * [low] 
-/// * [close] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [periodStartUnix] - 
+/// * [pool] - 
+/// * [liquidity] - 
+/// * [sqrtPrice] - 
+/// * [token0Price] - 
+/// * [token1Price] - 
+/// * [tick] - 
+/// * [feeGrowthGlobal0x128] - 
+/// * [feeGrowthGlobal1x128] - 
+/// * [tvlUsd] - 
+/// * [volumeToken0] - 
+/// * [volumeToken1] - 
+/// * [volumeUsd] - 
+/// * [feesUsd] - 
+/// * [txCount] - 
+/// * [open] - 
+/// * [high] - 
+/// * [low] - 
+/// * [close] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class PoolHourDataV3DTO implements Built<PoolHourDataV3DTO, PoolHourDataV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -43,69 +43,91 @@ abstract class PoolHourDataV3DTO implements Built<PoolHourDataV3DTO, PoolHourDat
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'period_start_unix')
   int? get periodStartUnix;
 
+  /// 
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
+  /// 
   @BuiltValueField(wireName: r'sqrt_price')
   String? get sqrtPrice;
 
+  /// 
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
+  /// 
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
+  /// 
   @BuiltValueField(wireName: r'tick')
   String? get tick;
 
+  /// 
   @BuiltValueField(wireName: r'fee_growth_global_0x128')
   String? get feeGrowthGlobal0x128;
 
+  /// 
   @BuiltValueField(wireName: r'fee_growth_global_1x128')
   String? get feeGrowthGlobal1x128;
 
+  /// 
   @BuiltValueField(wireName: r'tvl_usd')
   String? get tvlUsd;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'open')
   String? get open;
 
+  /// 
   @BuiltValueField(wireName: r'high')
   String? get high;
 
+  /// 
   @BuiltValueField(wireName: r'low')
   String? get low;
 
+  /// 
   @BuiltValueField(wireName: r'close')
   String? get close;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

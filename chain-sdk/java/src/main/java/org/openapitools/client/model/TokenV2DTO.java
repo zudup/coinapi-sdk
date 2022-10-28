@@ -48,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TokenV2DTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class TokenV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -180,7 +181,7 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -203,7 +204,7 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -226,11 +227,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get id
+   * token address
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address")
 
   public String getId() {
     return id;
@@ -249,11 +250,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get symbol
+   * token symbol
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token symbol")
 
   public String getSymbol() {
     return symbol;
@@ -272,11 +273,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get name
+   * token name
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token name")
 
   public String getName() {
     return name;
@@ -295,11 +296,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get decimals
+   * token decimals
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token decimals")
 
   public Integer getDecimals() {
     return decimals;
@@ -341,11 +342,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get tradeVolume
+   * amount of token traded all time across all pairs
    * @return tradeVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token traded all time across all pairs")
 
   public String getTradeVolume() {
     return tradeVolume;
@@ -364,11 +365,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get tradeVolumeUsd
+   * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
    * @return tradeVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)")
 
   public String getTradeVolumeUsd() {
     return tradeVolumeUsd;
@@ -387,11 +388,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (no minimum liquidity threshold)")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -433,11 +434,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get totalLiquidity
+   * total amount of token provided as liquidity across all pairs
    * @return totalLiquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "total amount of token provided as liquidity across all pairs")
 
   public String getTotalLiquidity() {
     return totalLiquidity;
@@ -456,11 +457,11 @@ public class TokenV2DTO {
   }
 
    /**
-   * Get derivedEth
+   * ETH per token
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ETH per token")
 
   public String getDerivedEth() {
     return derivedEth;

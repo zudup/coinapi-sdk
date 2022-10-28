@@ -16,24 +16,72 @@ import { BigInteger } from './bigInteger';
 export class TickV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'poolAddress'?: string | null;
     'tickIdx'?: BigInteger;
+    /**
+    * 
+    */
     'pool'?: string | null;
     'liquidityGross'?: BigInteger;
     'liquidityNet'?: BigInteger;
+    /**
+    * 
+    */
     'price0'?: string | null;
+    /**
+    * 
+    */
     'price1'?: string | null;
+    /**
+    * 
+    */
     'volumeToken0'?: string | null;
+    /**
+    * 
+    */
     'volumeToken1'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesToken0'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesToken1'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesUsd'?: string | null;
+    /**
+    * 
+    */
     'createdAtTimestamp'?: Date;
     'liquidityProviderCount'?: BigInteger;
     'feeGrowthOutside0x128'?: BigInteger;

@@ -13,7 +13,7 @@
 /*
  * TokenV2DTO.h
  *
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
 #ifndef ORG_OPENAPITOOLS_CLIENT_MODEL_TokenV2DTO_H_
@@ -33,7 +33,7 @@ namespace model {
 class BigInteger;
 
 /// <summary>
-/// 
+/// Stores aggregated information for a specific token across all pairs that token is included in.
 /// </summary>
 class  TokenV2DTO
     : public ModelBase
@@ -93,7 +93,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// 
+    /// token address
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
@@ -102,7 +102,7 @@ public:
     void setId(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token symbol
     /// </summary>
     utility::string_t getSymbol() const;
     bool symbolIsSet() const;
@@ -111,7 +111,7 @@ public:
     void setSymbol(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token name
     /// </summary>
     utility::string_t getName() const;
     bool nameIsSet() const;
@@ -120,7 +120,7 @@ public:
     void setName(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// token decimals
     /// </summary>
     int32_t getDecimals() const;
     bool decimalsIsSet() const;
@@ -138,7 +138,7 @@ public:
     void setTotalSupply(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// amount of token traded all time across all pairs
     /// </summary>
     utility::string_t getTradeVolume() const;
     bool tradeVolumeIsSet() const;
@@ -147,7 +147,7 @@ public:
     void setTradeVolume(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
     /// </summary>
     utility::string_t getTradeVolumeUsd() const;
     bool tradeVolumeUsdIsSet() const;
@@ -156,7 +156,7 @@ public:
     void setTradeVolumeUsd(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// amount of token in USD traded all time across pairs (no minimum liquidity threshold)
     /// </summary>
     utility::string_t getUntrackedVolumeUsd() const;
     bool untrackedVolumeUsdIsSet() const;
@@ -174,7 +174,7 @@ public:
     void setTxCount(const std::shared_ptr<BigInteger>& value);
 
     /// <summary>
-    /// 
+    /// total amount of token provided as liquidity across all pairs
     /// </summary>
     utility::string_t getTotalLiquidity() const;
     bool totalLiquidityIsSet() const;
@@ -183,7 +183,7 @@ public:
     void setTotalLiquidity(const utility::string_t& value);
 
     /// <summary>
-    /// 
+    /// ETH per token
     /// </summary>
     utility::string_t getDerivedEth() const;
     bool derivedEthIsSet() const;

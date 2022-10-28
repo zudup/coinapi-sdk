@@ -14,21 +14,21 @@ part 'token_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [factory_] 
-/// * [symbol] 
-/// * [name] 
-/// * [decimals] 
-/// * [totalSupply] 
-/// * [volume] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
-/// * [txCount] 
-/// * [liquidity] 
-/// * [derivedEth] 
-/// * [whitelistPairs] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [factory_] - 
+/// * [symbol] - 
+/// * [name] - 
+/// * [decimals] - 
+/// * [totalSupply] - 
+/// * [volume] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
+/// * [txCount] - 
+/// * [liquidity] - 
+/// * [derivedEth] - 
+/// * [whitelistPairs] - 
+/// * [vid] - 
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class TokenDTO implements Built<TokenDTO, TokenDTOBuilder> {
@@ -38,48 +38,63 @@ abstract class TokenDTO implements Built<TokenDTO, TokenDTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'factory')
   String? get factory_;
 
+  /// 
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
+  /// 
   @BuiltValueField(wireName: r'name')
   String? get name;
 
+  /// 
   @BuiltValueField(wireName: r'decimals')
   String? get decimals;
 
+  /// 
   @BuiltValueField(wireName: r'total_supply')
   String? get totalSupply;
 
+  /// 
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
+  /// 
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 
+  /// 
   @BuiltValueField(wireName: r'whitelist_pairs')
   BuiltList<String>? get whitelistPairs;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

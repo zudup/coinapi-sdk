@@ -143,116 +143,139 @@ PairDTO.prototype['entry_time'] = undefined;
 PairDTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PairDTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PairDTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} factory
  */
 PairDTO.prototype['factory'] = undefined;
 
 /**
+ * 
  * @member {String} name
  */
 PairDTO.prototype['name'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 PairDTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 PairDTO.prototype['token_1'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_0
  */
 PairDTO.prototype['reserve_0'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_1
  */
 PairDTO.prototype['reserve_1'] = undefined;
 
 /**
+ * 
  * @member {String} total_supply
  */
 PairDTO.prototype['total_supply'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_eth
  */
 PairDTO.prototype['reserve_eth'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_usd
  */
 PairDTO.prototype['reserve_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tracked_reserve_eth
  */
 PairDTO.prototype['tracked_reserve_eth'] = undefined;
 
 /**
+ * 
  * @member {String} token_0_price
  */
 PairDTO.prototype['token_0_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_1_price
  */
 PairDTO.prototype['token_1_price'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 PairDTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 PairDTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 PairDTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 PairDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tx_count
  */
 PairDTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity_provider_count
  */
 PairDTO.prototype['liquidity_provider_count'] = undefined;
 
 /**
+ * 
  * @member {String} timestamp
  */
 PairDTO.prototype['timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} block
  */
 PairDTO.prototype['block'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PairDTO.prototype['vid'] = undefined;

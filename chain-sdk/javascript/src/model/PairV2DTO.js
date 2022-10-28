@@ -135,86 +135,103 @@ PairV2DTO.prototype['entry_time'] = undefined;
 PairV2DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PairV2DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PairV2DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PairV2DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 PairV2DTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 PairV2DTO.prototype['token_1'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_0
  */
 PairV2DTO.prototype['reserve_0'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_1
  */
 PairV2DTO.prototype['reserve_1'] = undefined;
 
 /**
+ * 
  * @member {String} total_supply
  */
 PairV2DTO.prototype['total_supply'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_eth
  */
 PairV2DTO.prototype['reserve_eth'] = undefined;
 
 /**
+ * 
  * @member {String} reserve_usd
  */
 PairV2DTO.prototype['reserve_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tracked_reserve_eth
  */
 PairV2DTO.prototype['tracked_reserve_eth'] = undefined;
 
 /**
+ * 
  * @member {String} token_0_price
  */
 PairV2DTO.prototype['token_0_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_1_price
  */
 PairV2DTO.prototype['token_1_price'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 PairV2DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 PairV2DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 PairV2DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 PairV2DTO.prototype['untracked_volume_usd'] = undefined;
@@ -225,11 +242,13 @@ PairV2DTO.prototype['untracked_volume_usd'] = undefined;
 PairV2DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {Date} created_at_timestamp
  */
 PairV2DTO.prototype['created_at_timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity_provider_count
  */
 PairV2DTO.prototype['liquidity_provider_count'] = undefined;

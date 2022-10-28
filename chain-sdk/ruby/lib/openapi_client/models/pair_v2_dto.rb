@@ -19,44 +19,63 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :vid
 
+    # 
     attr_accessor :id
 
+    # 
     attr_accessor :token_0
 
+    # 
     attr_accessor :token_1
 
+    # 
     attr_accessor :reserve_0
 
+    # 
     attr_accessor :reserve_1
 
+    # 
     attr_accessor :total_supply
 
+    # 
     attr_accessor :reserve_eth
 
+    # 
     attr_accessor :reserve_usd
 
+    # 
     attr_accessor :tracked_reserve_eth
 
+    # 
     attr_accessor :token_0_price
 
+    # 
     attr_accessor :token_1_price
 
+    # 
     attr_accessor :volume_token_0
 
+    # 
     attr_accessor :volume_token_1
 
+    # 
     attr_accessor :volume_usd
 
+    # 
     attr_accessor :untracked_volume_usd
 
     attr_accessor :tx_count
 
+    # 
     attr_accessor :created_at_timestamp
 
+    # 
     attr_accessor :liquidity_provider_count
 
     attr_accessor :evaluated_ask

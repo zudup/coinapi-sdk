@@ -2490,7 +2490,7 @@ export type TokenHourDataV3DTO = {
 }
 
 /**
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
 export type TokenV2DTO = {
@@ -2519,25 +2519,25 @@ export type TokenV2DTO = {
      */
     vid?: number;
     /**
-     * 
+     * token address
      * @type {string}
      * @memberof TokenV2DTO
      */
     id?: string;
     /**
-     * 
+     * token symbol
      * @type {string}
      * @memberof TokenV2DTO
      */
     symbol?: string;
     /**
-     * 
+     * token name
      * @type {string}
      * @memberof TokenV2DTO
      */
     name?: string;
     /**
-     * 
+     * token decimals
      * @type {number}
      * @memberof TokenV2DTO
      */
@@ -2549,19 +2549,19 @@ export type TokenV2DTO = {
      */
     total_supply?: BigInteger;
     /**
-     * 
+     * amount of token traded all time across all pairs
      * @type {string}
      * @memberof TokenV2DTO
      */
     trade_volume?: string;
     /**
-     * 
+     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
      * @type {string}
      * @memberof TokenV2DTO
      */
     trade_volume_usd?: string;
     /**
-     * 
+     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
      * @type {string}
      * @memberof TokenV2DTO
      */
@@ -2573,13 +2573,13 @@ export type TokenV2DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * total amount of token provided as liquidity across all pairs
      * @type {string}
      * @memberof TokenV2DTO
      */
     total_liquidity?: string;
     /**
-     * 
+     * ETH per token
      * @type {string}
      * @memberof TokenV2DTO
      */

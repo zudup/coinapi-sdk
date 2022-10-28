@@ -428,7 +428,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -457,7 +457,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -486,7 +486,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -522,7 +522,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets date
      *
-     * @param int|null $date date
+     * @param int|null $date 
      *
      * @return self
      */
@@ -551,7 +551,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_eth
      *
-     * @param string|null $volume_eth volume_eth
+     * @param string|null $volume_eth 
      *
      * @return self
      */
@@ -587,7 +587,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -623,7 +623,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets volume_usd_untracked
      *
-     * @param string|null $volume_usd_untracked volume_usd_untracked
+     * @param string|null $volume_usd_untracked 
      *
      * @return self
      */
@@ -659,7 +659,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -724,7 +724,7 @@ class UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets tvl_usd
      *
-     * @param string|null $tvl_usd tvl_usd
+     * @param string|null $tvl_usd 
      *
      * @return self
      */

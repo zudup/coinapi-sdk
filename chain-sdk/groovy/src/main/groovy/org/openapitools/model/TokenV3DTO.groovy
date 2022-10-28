@@ -14,41 +14,41 @@ class TokenV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     Long vid
-    
+    /*  */
     String id
-    
+    /*  */
     String symbol
-    
+    /*  */
     String name
-    
+    /*  */
     Integer decimals
     
     BigInteger totalSupply
-    
+    /*  */
     String volume
-    
+    /*  */
     String volumeUsd
-    
+    /*  */
     String untrackedVolumeUsd
-    
+    /*  */
     String feesUsd
     
     BigInteger txCount
     
     BigInteger poolCount
-    
+    /*  */
     String totalValueLocked
-    
+    /*  */
     String totalValueLockedUsd
-    
+    /*  */
     String totalValueLockedUsdUntracked
-    
+    /*  */
     String derivedEth
-    
+    /*  */
     List<String> whitelistPools = new ArrayList<>()
     
     String tokenSymbol

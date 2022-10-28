@@ -79,6 +79,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -89,6 +90,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -99,6 +101,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -109,6 +112,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -119,6 +123,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -129,6 +134,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -139,6 +145,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
@@ -149,6 +156,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOwner() {
@@ -159,6 +167,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOrigin() {
@@ -169,6 +178,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount() {
@@ -179,6 +189,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount0() {
@@ -189,6 +200,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount1() {
@@ -199,6 +211,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmountUsd() {
@@ -209,6 +222,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickLower() {
@@ -219,6 +233,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickUpper() {
@@ -229,6 +244,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLogIndex() {
@@ -239,6 +255,7 @@ public class BurnV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

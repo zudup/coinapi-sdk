@@ -11,42 +11,42 @@ class PositionV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     String id
-    
+    /*  */
     String owner
-    
+    /*  */
     String pool
-    
+    /*  */
     String token0
-    
+    /*  */
     String token1
-    
+    /*  */
     String tickLower
-    
+    /*  */
     String tickUpper
-    
+    /*  */
     String liquidity
-    
+    /*  */
     String depositedToken0
-    
+    /*  */
     String depositedToken1
-    
+    /*  */
     String withdrawnToken0
-    
+    /*  */
     String withdrawnToken1
-    
+    /*  */
     String collectedFeesToken0
-    
+    /*  */
     String collectedFeesToken1
-    
+    /*  */
     String transaction
-    
+    /*  */
     String feeGrowthInside0LastX128
-    
+    /*  */
     String feeGrowthInside1LastX128
-    
+    /*  */
     Long vid
 }

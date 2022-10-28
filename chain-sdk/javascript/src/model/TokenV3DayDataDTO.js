@@ -119,81 +119,97 @@ TokenV3DayDataDTO.prototype['entry_time'] = undefined;
 TokenV3DayDataDTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TokenV3DayDataDTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TokenV3DayDataDTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TokenV3DayDataDTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} date
  */
 TokenV3DayDataDTO.prototype['date'] = undefined;
 
 /**
+ * 
  * @member {String} token
  */
 TokenV3DayDataDTO.prototype['token'] = undefined;
 
 /**
+ * 
  * @member {String} volume
  */
 TokenV3DayDataDTO.prototype['volume'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TokenV3DayDataDTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 TokenV3DayDataDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked
  */
 TokenV3DayDataDTO.prototype['total_value_locked'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd
  */
 TokenV3DayDataDTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
+ * 
  * @member {String} price_usd
  */
 TokenV3DayDataDTO.prototype['price_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 TokenV3DayDataDTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} open
  */
 TokenV3DayDataDTO.prototype['open'] = undefined;
 
 /**
+ * 
  * @member {String} high
  */
 TokenV3DayDataDTO.prototype['high'] = undefined;
 
 /**
+ * 
  * @member {String} low
  */
 TokenV3DayDataDTO.prototype['low'] = undefined;
 
 /**
+ * 
  * @member {String} close
  */
 TokenV3DayDataDTO.prototype['close'] = undefined;

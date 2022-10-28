@@ -14,20 +14,65 @@
 export interface FactoryV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     pool_count?: string | null;
+    /**
+     * 
+     */
     tx_count?: string | null;
+    /**
+     * 
+     */
     total_volume_usd?: string | null;
+    /**
+     * 
+     */
     total_volume_eth?: string | null;
+    /**
+     * 
+     */
     total_fees_usd?: string | null;
+    /**
+     * 
+     */
     total_fees_eth?: string | null;
+    /**
+     * 
+     */
     untracked_volume_usd?: string | null;
+    /**
+     * 
+     */
     total_value_locked_usd?: string | null;
+    /**
+     * 
+     */
     total_value_locked_eth?: string | null;
+    /**
+     * 
+     */
     total_value_locked_usd_untracked?: string | null;
+    /**
+     * 
+     */
     total_value_locked_eth_untracked?: string | null;
+    /**
+     * 
+     */
     owner?: string | null;
+    /**
+     * 
+     */
     vid?: number;
 }
 

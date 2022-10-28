@@ -78,6 +78,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -88,6 +89,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -98,6 +100,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFactory() {
@@ -108,6 +111,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getSymbol() {
@@ -118,6 +122,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getName() {
@@ -128,6 +133,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDecimals() {
@@ -138,6 +144,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalSupply() {
@@ -148,6 +155,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolume() {
@@ -158,6 +166,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -168,6 +177,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -178,6 +188,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTxCount() {
@@ -188,6 +199,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidity() {
@@ -198,6 +210,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDerivedEth() {
@@ -208,6 +221,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public List<String> getWhitelistPairs() {
@@ -218,6 +232,7 @@ public class TokenDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

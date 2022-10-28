@@ -20,13 +20,13 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER EthPriceUsd
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 BundleV3DTO<PSCustomObject>

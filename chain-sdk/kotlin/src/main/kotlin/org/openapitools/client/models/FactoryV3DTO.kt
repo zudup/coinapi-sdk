@@ -53,48 +53,63 @@ data class FactoryV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "pool_count")
     val poolCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tx_count")
     val txCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_volume_usd")
     val totalVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_volume_eth")
     val totalVolumeEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_fees_usd")
     val totalFeesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_fees_eth")
     val totalFeesEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_usd")
     val totalValueLockedUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_eth")
     val totalValueLockedEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_usd_untracked")
     val totalValueLockedUsdUntracked: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_eth_untracked")
     val totalValueLockedEthUntracked: kotlin.String? = null,
 
+    /*  */
     @Json(name = "owner")
     val owner: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

@@ -56,22 +56,22 @@ TokenV3DayDataDTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param date date
-    #' @param token token
-    #' @param volume volume
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param total_value_locked total_value_locked
-    #' @param total_value_locked_usd total_value_locked_usd
-    #' @param price_usd price_usd
-    #' @param fees_usd fees_usd
-    #' @param open open
-    #' @param high high
-    #' @param low low
-    #' @param close close
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param date 
+    #' @param token 
+    #' @param volume 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
+    #' @param total_value_locked 
+    #' @param total_value_locked_usd 
+    #' @param price_usd 
+    #' @param fees_usd 
+    #' @param open 
+    #' @param high 
+    #' @param low 
+    #' @param close 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

@@ -15,19 +15,61 @@ import { RequestFile } from './models';
 export class TickDayDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'date'?: number;
+    /**
+    * 
+    */
     'pool'?: string | null;
+    /**
+    * 
+    */
     'tick'?: string | null;
+    /**
+    * 
+    */
     'liquidityGross'?: string | null;
+    /**
+    * 
+    */
     'liquidityNet'?: string | null;
+    /**
+    * 
+    */
     'volumeToken0'?: string | null;
+    /**
+    * 
+    */
     'volumeToken1'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthOutside0x128'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthOutside1x128'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

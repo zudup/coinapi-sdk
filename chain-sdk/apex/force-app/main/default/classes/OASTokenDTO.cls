@@ -27,91 +27,91 @@ public class OASTokenDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get factory
+     * 
      * @return factory
      */
     public String factory { get; set; }
 
     /**
-     * Get symbol
+     * 
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * Get name
+     * 
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * Get decimals
+     * 
      * @return decimals
      */
     public String decimals { get; set; }
 
     /**
-     * Get totalSupply
+     * 
      * @return totalSupply
      */
     public String totalSupply { get; set; }
 
     /**
-     * Get volume
+     * 
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get txCount
+     * 
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * Get liquidity
+     * 
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * Get derivedEth
+     * 
      * @return derivedEth
      */
     public String derivedEth { get; set; }
 
     /**
-     * Get whitelistPairs
+     * 
      * @return whitelistPairs
      */
     public List<String> whitelistPairs { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

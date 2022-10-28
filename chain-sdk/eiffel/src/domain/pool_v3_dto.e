@@ -24,17 +24,17 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     created_at_timestamp: detachable DATE_TIME
-      
+      -- 
     token_0: detachable STRING_32
-      
+      -- 
     token_1: detachable STRING_32
-      
+      -- 
     fee_tier: detachable BIG_INTEGER
       
     liquidity: detachable BIG_INTEGER
@@ -46,43 +46,43 @@ feature --Access
     fee_growth_global_1x128: detachable BIG_INTEGER
       
     token_0_price: detachable STRING_32
-      
+      -- 
     token_1_price: detachable STRING_32
-      
+      -- 
     tick: detachable BIG_INTEGER
       
     observation_index: detachable BIG_INTEGER
       
     volume_token_0: detachable STRING_32
-      
+      -- 
     volume_token_1: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     tx_count: detachable BIG_INTEGER
       
     collected_fees_token_0: detachable STRING_32
-      
+      -- 
     collected_fees_token_1: detachable STRING_32
-      
+      -- 
     collected_fees_usd: detachable STRING_32
-      
+      -- 
     total_value_locked_token_0: detachable STRING_32
-      
+      -- 
     total_value_locked_token_1: detachable STRING_32
-      
+      -- 
     total_value_locked_eth: detachable STRING_32
-      
+      -- 
     total_value_locked_usd: detachable STRING_32
-      
+      -- 
     total_value_locked_usd_untracked: detachable STRING_32
-      
+      -- 
     liquidity_provider_count: detachable STRING_32
-      
+      -- 
  	evaluated_ask: REAL_64
     	 
 

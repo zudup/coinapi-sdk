@@ -128,96 +128,115 @@ PositionV3DTO.prototype['entry_time'] = undefined;
 PositionV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PositionV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PositionV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} owner
  */
 PositionV3DTO.prototype['owner'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 PositionV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 PositionV3DTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 PositionV3DTO.prototype['token_1'] = undefined;
 
 /**
+ * 
  * @member {String} tick_lower
  */
 PositionV3DTO.prototype['tick_lower'] = undefined;
 
 /**
+ * 
  * @member {String} tick_upper
  */
 PositionV3DTO.prototype['tick_upper'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity
  */
 PositionV3DTO.prototype['liquidity'] = undefined;
 
 /**
+ * 
  * @member {String} deposited_token_0
  */
 PositionV3DTO.prototype['deposited_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} deposited_token_1
  */
 PositionV3DTO.prototype['deposited_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} withdrawn_token_0
  */
 PositionV3DTO.prototype['withdrawn_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} withdrawn_token_1
  */
 PositionV3DTO.prototype['withdrawn_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_0
  */
 PositionV3DTO.prototype['collected_fees_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_1
  */
 PositionV3DTO.prototype['collected_fees_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} transaction
  */
 PositionV3DTO.prototype['transaction'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_inside_0_last_x128
  */
 PositionV3DTO.prototype['fee_growth_inside_0_last_x128'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_inside_1_last_x128
  */
 PositionV3DTO.prototype['fee_growth_inside_1_last_x128'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PositionV3DTO.prototype['vid'] = undefined;

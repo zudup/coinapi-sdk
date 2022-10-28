@@ -17,24 +17,40 @@ import org.openapitools.client.core.ApiModel
 case class TickV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   poolAddress: Option[String] = None,
   tickIdx: Option[BigInteger] = None,
+  /*  */
   pool: Option[String] = None,
   liquidityGross: Option[BigInteger] = None,
   liquidityNet: Option[BigInteger] = None,
+  /*  */
   price0: Option[String] = None,
+  /*  */
   price1: Option[String] = None,
+  /*  */
   volumeToken0: Option[String] = None,
+  /*  */
   volumeToken1: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
+  /*  */
   collectedFeesToken0: Option[String] = None,
+  /*  */
   collectedFeesToken1: Option[String] = None,
+  /*  */
   collectedFeesUsd: Option[String] = None,
+  /*  */
   createdAtTimestamp: Option[OffsetDateTime] = None,
   liquidityProviderCount: Option[BigInteger] = None,
   feeGrowthOutside0x128: Option[BigInteger] = None,

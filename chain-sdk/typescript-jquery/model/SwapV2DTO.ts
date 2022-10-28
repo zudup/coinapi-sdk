@@ -17,34 +17,76 @@ export interface SwapV2DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     pair?: string;
 
+    /**
+     * 
+     */
     sender?: string;
 
+    /**
+     * 
+     */
     from?: string;
 
+    /**
+     * 
+     */
     amount_0_in?: string;
 
+    /**
+     * 
+     */
     amount_1_in?: string;
 
+    /**
+     * 
+     */
     amount_0_out?: string;
 
+    /**
+     * 
+     */
     amount_1_out?: string;
 
+    /**
+     * 
+     */
     to?: string;
 
     log_index?: models.BigInteger;
 
+    /**
+     * 
+     */
     amount_usd?: string;
 
     evaluated_price?: number;

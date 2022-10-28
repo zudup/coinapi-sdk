@@ -11,36 +11,36 @@ class TokenHourDataV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     String id
-    
+    /*  */
     Integer periodStartUnix
-    
+    /*  */
     String token
-    
+    /*  */
     String volume
-    
+    /*  */
     String volumeUsd
-    
+    /*  */
     String untrackedVolumeUsd
-    
+    /*  */
     String totalValueLocked
-    
+    /*  */
     String totalValueLockedUsd
-    
+    /*  */
     String priceUsd
-    
+    /*  */
     String feesUsd
-    
+    /*  */
     String open
-    
+    /*  */
     String high
-    
+    /*  */
     String low
-    
+    /*  */
     String close
-    
+    /*  */
     Long vid
 }

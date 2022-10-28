@@ -52,6 +52,7 @@ class TokenV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -60,6 +61,7 @@ class TokenV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -68,12 +70,16 @@ class TokenV3DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   String? symbol;
 
+  /// 
   String? name;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -90,12 +96,16 @@ class TokenV3DTO {
   ///
   BigInteger? totalSupply;
 
+  /// 
   String? volume;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? feesUsd;
 
   ///
@@ -114,14 +124,19 @@ class TokenV3DTO {
   ///
   BigInteger? poolCount;
 
+  /// 
   String? totalValueLocked;
 
+  /// 
   String? totalValueLockedUsd;
 
+  /// 
   String? totalValueLockedUsdUntracked;
 
+  /// 
   String? derivedEth;
 
+  /// 
   List<String>? whitelistPools;
 
   String? tokenSymbol;

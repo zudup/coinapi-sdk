@@ -20,35 +20,35 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Factory
-No description available.
+
 .PARAMETER Symbol
-No description available.
+
 .PARAMETER Name
-No description available.
+
 .PARAMETER Decimals
-No description available.
+
 .PARAMETER TotalSupply
-No description available.
+
 .PARAMETER Volume
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER TxCount
-No description available.
+
 .PARAMETER Liquidity
-No description available.
+
 .PARAMETER DerivedEth
-No description available.
+
 .PARAMETER WhitelistPairs
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

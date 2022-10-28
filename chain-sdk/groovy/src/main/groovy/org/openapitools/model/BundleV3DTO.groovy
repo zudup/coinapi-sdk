@@ -11,12 +11,12 @@ class BundleV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     String id
-    
+    /*  */
     String ethPriceUsd
-    
+    /*  */
     Long vid
 }

@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * SwapV2DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class SwapV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -211,7 +211,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -234,7 +234,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -280,7 +280,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get transaction
+   * 
    * @return transaction
   **/
   @javax.annotation.Nullable
@@ -303,7 +303,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get timestamp
+   * 
    * @return timestamp
   **/
   @javax.annotation.Nullable
@@ -326,7 +326,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get pair
+   * 
    * @return pair
   **/
   @javax.annotation.Nullable
@@ -349,7 +349,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get sender
+   * 
    * @return sender
   **/
   @javax.annotation.Nullable
@@ -372,7 +372,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get from
+   * 
    * @return from
   **/
   @javax.annotation.Nullable
@@ -395,7 +395,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get amount0In
+   * 
    * @return amount0In
   **/
   @javax.annotation.Nullable
@@ -418,7 +418,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get amount1In
+   * 
    * @return amount1In
   **/
   @javax.annotation.Nullable
@@ -441,7 +441,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get amount0Out
+   * 
    * @return amount0Out
   **/
   @javax.annotation.Nullable
@@ -464,7 +464,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get amount1Out
+   * 
    * @return amount1Out
   **/
   @javax.annotation.Nullable
@@ -487,7 +487,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get to
+   * 
    * @return to
   **/
   @javax.annotation.Nullable
@@ -533,7 +533,7 @@ public class SwapV2DTO {
   }
 
    /**
-   * Get amountUsd
+   * 
    * @return amountUsd
   **/
   @javax.annotation.Nullable

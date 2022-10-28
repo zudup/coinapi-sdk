@@ -17,20 +17,62 @@ import { ETradeAggressiveSide } from './eTradeAggressiveSide';
 export class SwapV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'transaction'?: string | null;
+    /**
+    * 
+    */
     'timestamp'?: Date;
+    /**
+    * 
+    */
     'pair'?: string | null;
+    /**
+    * 
+    */
     'sender'?: string | null;
+    /**
+    * 
+    */
     'from'?: string | null;
+    /**
+    * 
+    */
     'amount0In'?: string | null;
+    /**
+    * 
+    */
     'amount1In'?: string | null;
+    /**
+    * 
+    */
     'amount0Out'?: string | null;
+    /**
+    * 
+    */
     'amount1Out'?: string | null;
+    /**
+    * 
+    */
     'to'?: string | null;
     'logIndex'?: BigInteger;
+    /**
+    * 
+    */
     'amountUsd'?: string | null;
     'evaluatedPrice'?: number;
     'evaluatedAmount'?: number;

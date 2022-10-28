@@ -119,76 +119,91 @@ TokenDTO.prototype['entry_time'] = undefined;
 TokenDTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TokenDTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TokenDTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} factory
  */
 TokenDTO.prototype['factory'] = undefined;
 
 /**
+ * 
  * @member {String} symbol
  */
 TokenDTO.prototype['symbol'] = undefined;
 
 /**
+ * 
  * @member {String} name
  */
 TokenDTO.prototype['name'] = undefined;
 
 /**
+ * 
  * @member {String} decimals
  */
 TokenDTO.prototype['decimals'] = undefined;
 
 /**
+ * 
  * @member {String} total_supply
  */
 TokenDTO.prototype['total_supply'] = undefined;
 
 /**
+ * 
  * @member {String} volume
  */
 TokenDTO.prototype['volume'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TokenDTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 TokenDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tx_count
  */
 TokenDTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity
  */
 TokenDTO.prototype['liquidity'] = undefined;
 
 /**
+ * 
  * @member {String} derived_eth
  */
 TokenDTO.prototype['derived_eth'] = undefined;
 
 /**
+ * 
  * @member {Array.<String>} whitelist_pairs
  */
 TokenDTO.prototype['whitelist_pairs'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TokenDTO.prototype['vid'] = undefined;

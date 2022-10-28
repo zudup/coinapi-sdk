@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * TickV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class TickV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -204,7 +204,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -250,7 +250,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -273,7 +273,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get poolAddress
+   * 
    * @return poolAddress
   **/
   @javax.annotation.Nullable
@@ -319,7 +319,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get pool
+   * 
    * @return pool
   **/
   @javax.annotation.Nullable
@@ -388,7 +388,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get price0
+   * 
    * @return price0
   **/
   @javax.annotation.Nullable
@@ -411,7 +411,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get price1
+   * 
    * @return price1
   **/
   @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get volumeToken0
+   * 
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
@@ -457,7 +457,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get volumeToken1
+   * 
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
@@ -480,7 +480,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -503,7 +503,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -526,7 +526,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -549,7 +549,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get collectedFeesToken0
+   * 
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
@@ -572,7 +572,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get collectedFeesToken1
+   * 
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
@@ -595,7 +595,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get collectedFeesUsd
+   * 
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
@@ -618,7 +618,7 @@ public class TickV3DTO {
   }
 
    /**
-   * Get createdAtTimestamp
+   * 
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable

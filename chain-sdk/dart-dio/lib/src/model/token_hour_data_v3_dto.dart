@@ -13,22 +13,22 @@ part 'token_hour_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [periodStartUnix] 
-/// * [token] 
-/// * [volume] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
-/// * [totalValueLocked] 
-/// * [totalValueLockedUsd] 
-/// * [priceUsd] 
-/// * [feesUsd] 
-/// * [open] 
-/// * [high] 
-/// * [low] 
-/// * [close] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [periodStartUnix] - 
+/// * [token] - 
+/// * [volume] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
+/// * [totalValueLocked] - 
+/// * [totalValueLockedUsd] - 
+/// * [priceUsd] - 
+/// * [feesUsd] - 
+/// * [open] - 
+/// * [high] - 
+/// * [low] - 
+/// * [close] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class TokenHourDataV3DTO implements Built<TokenHourDataV3DTO, TokenHourDataV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -37,51 +37,67 @@ abstract class TokenHourDataV3DTO implements Built<TokenHourDataV3DTO, TokenHour
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'period_start_unix')
   int? get periodStartUnix;
 
+  /// 
   @BuiltValueField(wireName: r'token')
   String? get token;
 
+  /// 
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked')
   String? get totalValueLocked;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
+  /// 
   @BuiltValueField(wireName: r'price_usd')
   String? get priceUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'open')
   String? get open;
 
+  /// 
   @BuiltValueField(wireName: r'high')
   String? get high;
 
+  /// 
   @BuiltValueField(wireName: r'low')
   String? get low;
 
+  /// 
   @BuiltValueField(wireName: r'close')
   String? get close;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

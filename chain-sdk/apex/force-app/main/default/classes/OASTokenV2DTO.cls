@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTokenV2DTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 public class OASTokenV2DTO implements OAS.MappedProperties {
     /**
@@ -27,37 +27,37 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * token address
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get symbol
+     * token symbol
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * Get name
+     * token name
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * Get decimals
+     * token decimals
      * @return decimals
      */
     public Integer decimals { get; set; }
@@ -69,19 +69,19 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public OASBigInteger totalSupply { get; set; }
 
     /**
-     * Get tradeVolume
+     * amount of token traded all time across all pairs
      * @return tradeVolume
      */
     public String tradeVolume { get; set; }
 
     /**
-     * Get tradeVolumeUsd
+     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
      * @return tradeVolumeUsd
      */
     public String tradeVolumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
@@ -93,13 +93,13 @@ public class OASTokenV2DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * Get totalLiquidity
+     * total amount of token provided as liquidity across all pairs
      * @return totalLiquidity
      */
     public String totalLiquidity { get; set; }
 
     /**
-     * Get derivedEth
+     * ETH per token
      * @return derivedEth
      */
     public String derivedEth { get; set; }

@@ -526,7 +526,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -555,7 +555,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -591,7 +591,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets factory
      *
-     * @param string|null $factory factory
+     * @param string|null $factory 
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name 
      *
      * @return self
      */
@@ -663,7 +663,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 token_0
+     * @param string|null $token_0 
      *
      * @return self
      */
@@ -699,7 +699,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 token_1
+     * @param string|null $token_1 
      *
      * @return self
      */
@@ -735,7 +735,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_0
      *
-     * @param string|null $reserve_0 reserve_0
+     * @param string|null $reserve_0 
      *
      * @return self
      */
@@ -771,7 +771,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_1
      *
-     * @param string|null $reserve_1 reserve_1
+     * @param string|null $reserve_1 
      *
      * @return self
      */
@@ -807,7 +807,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_supply
      *
-     * @param string|null $total_supply total_supply
+     * @param string|null $total_supply 
      *
      * @return self
      */
@@ -843,7 +843,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_eth
      *
-     * @param string|null $reserve_eth reserve_eth
+     * @param string|null $reserve_eth 
      *
      * @return self
      */
@@ -879,7 +879,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reserve_usd
      *
-     * @param string|null $reserve_usd reserve_usd
+     * @param string|null $reserve_usd 
      *
      * @return self
      */
@@ -915,7 +915,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracked_reserve_eth
      *
-     * @param string|null $tracked_reserve_eth tracked_reserve_eth
+     * @param string|null $tracked_reserve_eth 
      *
      * @return self
      */
@@ -951,7 +951,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0_price
      *
-     * @param string|null $token_0_price token_0_price
+     * @param string|null $token_0_price 
      *
      * @return self
      */
@@ -987,7 +987,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1_price
      *
-     * @param string|null $token_1_price token_1_price
+     * @param string|null $token_1_price 
      *
      * @return self
      */
@@ -1023,7 +1023,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 volume_token_0
+     * @param string|null $volume_token_0 
      *
      * @return self
      */
@@ -1059,7 +1059,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 volume_token_1
+     * @param string|null $volume_token_1 
      *
      * @return self
      */
@@ -1095,7 +1095,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -1131,7 +1131,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -1167,7 +1167,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tx_count
      *
-     * @param string|null $tx_count tx_count
+     * @param string|null $tx_count 
      *
      * @return self
      */
@@ -1203,7 +1203,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity_provider_count
      *
-     * @param string|null $liquidity_provider_count liquidity_provider_count
+     * @param string|null $liquidity_provider_count 
      *
      * @return self
      */
@@ -1239,7 +1239,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param string|null $timestamp timestamp
+     * @param string|null $timestamp 
      *
      * @return self
      */
@@ -1275,7 +1275,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block
      *
-     * @param string|null $block block
+     * @param string|null $block 
      *
      * @return self
      */
@@ -1311,7 +1311,7 @@ class PairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

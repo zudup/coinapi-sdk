@@ -125,91 +125,109 @@ MintV3DTO.prototype['entry_time'] = undefined;
 MintV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 MintV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 MintV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} transaction
  */
 MintV3DTO.prototype['transaction'] = undefined;
 
 /**
+ * 
  * @member {String} timestamp
  */
 MintV3DTO.prototype['timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 MintV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 MintV3DTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 MintV3DTO.prototype['token_1'] = undefined;
 
 /**
+ * 
  * @member {String} owner
  */
 MintV3DTO.prototype['owner'] = undefined;
 
 /**
+ * 
  * @member {String} sender
  */
 MintV3DTO.prototype['sender'] = undefined;
 
 /**
+ * 
  * @member {String} origin
  */
 MintV3DTO.prototype['origin'] = undefined;
 
 /**
+ * 
  * @member {String} amount
  */
 MintV3DTO.prototype['amount'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0
  */
 MintV3DTO.prototype['amount_0'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1
  */
 MintV3DTO.prototype['amount_1'] = undefined;
 
 /**
+ * 
  * @member {String} amount_usd
  */
 MintV3DTO.prototype['amount_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tick_lower
  */
 MintV3DTO.prototype['tick_lower'] = undefined;
 
 /**
+ * 
  * @member {String} tick_upper
  */
 MintV3DTO.prototype['tick_upper'] = undefined;
 
 /**
+ * 
  * @member {String} log_index
  */
 MintV3DTO.prototype['log_index'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 MintV3DTO.prototype['vid'] = undefined;

@@ -20,25 +20,44 @@ import (
 type PairV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Token0 NullableString `json:"token_0,omitempty"`
+	// 
 	Token1 NullableString `json:"token_1,omitempty"`
+	// 
 	Reserve0 NullableString `json:"reserve_0,omitempty"`
+	// 
 	Reserve1 NullableString `json:"reserve_1,omitempty"`
+	// 
 	TotalSupply NullableString `json:"total_supply,omitempty"`
+	// 
 	ReserveEth NullableString `json:"reserve_eth,omitempty"`
+	// 
 	ReserveUsd NullableString `json:"reserve_usd,omitempty"`
+	// 
 	TrackedReserveEth NullableString `json:"tracked_reserve_eth,omitempty"`
+	// 
 	Token0Price NullableString `json:"token_0_price,omitempty"`
+	// 
 	Token1Price NullableString `json:"token_1_price,omitempty"`
+	// 
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
+	// 
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
+	// 
 	CreatedAtTimestamp *time.Time `json:"created_at_timestamp,omitempty"`
+	// 
 	LiquidityProviderCount NullableString `json:"liquidity_provider_count,omitempty"`
 	EvaluatedAsk *float64 `json:"evaluated_ask,omitempty"`
 }

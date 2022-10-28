@@ -27,81 +27,97 @@ export interface TokenV3DayDataDTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     id?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
     date?: number;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     token?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     total_value_locked_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     price_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     open?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     high?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */
     low?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DayDataDTO
      */

@@ -20,33 +20,33 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Date
-No description available.
+
 .PARAMETER Pool
-No description available.
+
 .PARAMETER Tick
-No description available.
+
 .PARAMETER LiquidityGross
-No description available.
+
 .PARAMETER LiquidityNet
-No description available.
+
 .PARAMETER VolumeToken0
-No description available.
+
 .PARAMETER VolumeToken1
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER FeeGrowthOutside0x128
-No description available.
+
 .PARAMETER FeeGrowthOutside1x128
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 TickDayDataV3DTO<PSCustomObject>

@@ -19,32 +19,46 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :vid
 
+    # 
     attr_accessor :id
 
+    # 
     attr_accessor :transaction
 
+    # 
     attr_accessor :timestamp
 
+    # 
     attr_accessor :pool
 
+    # 
     attr_accessor :token_0
 
+    # 
     attr_accessor :token_1
 
+    # 
     attr_accessor :sender
 
+    # 
     attr_accessor :recipient
 
+    # 
     attr_accessor :origin
 
+    # 
     attr_accessor :amount_0
 
+    # 
     attr_accessor :amount_1
 
+    # 
     attr_accessor :amount_usd
 
     attr_accessor :sqrt_price_x96

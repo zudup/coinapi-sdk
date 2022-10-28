@@ -24,43 +24,43 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     pool_address: detachable STRING_32
-      
+      -- 
     tick_idx: detachable BIG_INTEGER
       
     pool: detachable STRING_32
-      
+      -- 
     liquidity_gross: detachable BIG_INTEGER
       
     liquidity_net: detachable BIG_INTEGER
       
     price_0: detachable STRING_32
-      
+      -- 
     price_1: detachable STRING_32
-      
+      -- 
     volume_token_0: detachable STRING_32
-      
+      -- 
     volume_token_1: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     collected_fees_token_0: detachable STRING_32
-      
+      -- 
     collected_fees_token_1: detachable STRING_32
-      
+      -- 
     collected_fees_usd: detachable STRING_32
-      
+      -- 
     created_at_timestamp: detachable DATE_TIME
-      
+      -- 
     liquidity_provider_count: detachable BIG_INTEGER
       
     fee_growth_outside_0x128: detachable BIG_INTEGER

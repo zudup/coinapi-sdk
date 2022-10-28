@@ -31,71 +31,85 @@ export interface SwapDTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof SwapDTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     transaction?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     timestamp?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     pair?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     sender?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_in?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_in?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_out?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_out?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     to?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     log_index?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapDTO
      */
     amount_usd?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof SwapDTO
      */

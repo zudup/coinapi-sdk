@@ -31,86 +31,103 @@ export interface PairV2DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PairV2DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof PairV2DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     total_supply?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     reserve_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     tracked_reserve_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     token_0_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     token_1_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -121,11 +138,13 @@ export interface PairV2DTO {
      */
     tx_count?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */
     created_at_timestamp?: string;
     /**
+     * 
      * @type {string}
      * @memberof PairV2DTO
      */

@@ -24,25 +24,25 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
  	date: INTEGER_32
-    	 
+    	 -- 
     volume_eth: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     volume_usd_untracked: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     tx_count: detachable BIG_INTEGER
       
     tvl_usd: detachable STRING_32
-      
+      -- 
 
 feature -- Change Element
 

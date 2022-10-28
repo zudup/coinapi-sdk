@@ -20,39 +20,39 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Transaction
-No description available.
+
 .PARAMETER Pool
-No description available.
+
 .PARAMETER Token0
-No description available.
+
 .PARAMETER Token1
-No description available.
+
 .PARAMETER Timestamp
-No description available.
+
 .PARAMETER Owner
-No description available.
+
 .PARAMETER Origin
-No description available.
+
 .PARAMETER Amount
-No description available.
+
 .PARAMETER Amount0
-No description available.
+
 .PARAMETER Amount1
-No description available.
+
 .PARAMETER AmountUsd
-No description available.
+
 .PARAMETER TickLower
-No description available.
+
 .PARAMETER TickUpper
-No description available.
+
 .PARAMETER LogIndex
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 BurnV3DTO<PSCustomObject>

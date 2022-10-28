@@ -17,15 +17,24 @@ import org.openapitools.client.core.ApiModel
 case class UniswapDayDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   date: Option[Int] = None,
+  /*  */
   volumeEth: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   volumeUsdUntracked: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
+  /*  */
   tvlUsd: Option[String] = None
 ) extends ApiModel
 

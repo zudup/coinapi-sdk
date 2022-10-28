@@ -52,6 +52,7 @@ class SwapDTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -60,30 +61,43 @@ class SwapDTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? transaction;
 
+  /// 
   String? timestamp;
 
+  /// 
   String? pair;
 
+  /// 
   String? sender;
 
+  /// 
   String? amount0In;
 
+  /// 
   String? amount1In;
 
+  /// 
   String? amount0Out;
 
+  /// 
   String? amount1Out;
 
+  /// 
   String? to;
 
+  /// 
   String? logIndex;
 
+  /// 
   String? amountUsd;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

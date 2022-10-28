@@ -386,7 +386,7 @@ class BundleV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -415,7 +415,7 @@ class BundleV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -451,7 +451,7 @@ class BundleV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets eth_price_usd
      *
-     * @param string|null $eth_price_usd eth_price_usd
+     * @param string|null $eth_price_usd 
      *
      * @return self
      */
@@ -487,7 +487,7 @@ class BundleV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

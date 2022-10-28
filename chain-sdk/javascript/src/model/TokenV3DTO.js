@@ -129,31 +129,37 @@ TokenV3DTO.prototype['entry_time'] = undefined;
 TokenV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TokenV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TokenV3DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TokenV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} symbol
  */
 TokenV3DTO.prototype['symbol'] = undefined;
 
 /**
+ * 
  * @member {String} name
  */
 TokenV3DTO.prototype['name'] = undefined;
 
 /**
+ * 
  * @member {Number} decimals
  */
 TokenV3DTO.prototype['decimals'] = undefined;
@@ -164,21 +170,25 @@ TokenV3DTO.prototype['decimals'] = undefined;
 TokenV3DTO.prototype['total_supply'] = undefined;
 
 /**
+ * 
  * @member {String} volume
  */
 TokenV3DTO.prototype['volume'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TokenV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 TokenV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 TokenV3DTO.prototype['fees_usd'] = undefined;
@@ -194,26 +204,31 @@ TokenV3DTO.prototype['tx_count'] = undefined;
 TokenV3DTO.prototype['pool_count'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked
  */
 TokenV3DTO.prototype['total_value_locked'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd
  */
 TokenV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd_untracked
  */
 TokenV3DTO.prototype['total_value_locked_usd_untracked'] = undefined;
 
 /**
+ * 
  * @member {String} derived_eth
  */
 TokenV3DTO.prototype['derived_eth'] = undefined;
 
 /**
+ * 
  * @member {Array.<String>} whitelist_pools
  */
 TokenV3DTO.prototype['whitelist_pools'] = undefined;

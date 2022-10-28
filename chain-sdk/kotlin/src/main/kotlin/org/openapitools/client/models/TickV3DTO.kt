@@ -61,21 +61,26 @@ data class TickV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "pool_address")
     val poolAddress: kotlin.String? = null,
 
     @Json(name = "tick_idx")
     val tickIdx: BigInteger? = null,
 
+    /*  */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
@@ -85,36 +90,47 @@ data class TickV3DTO (
     @Json(name = "liquidity_net")
     val liquidityNet: BigInteger? = null,
 
+    /*  */
     @Json(name = "price_0")
     val price0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "price_1")
     val price1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_0")
     val volumeToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_1")
     val volumeToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_0")
     val collectedFeesToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_1")
     val collectedFeesToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_usd")
     val collectedFeesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "created_at_timestamp")
     val createdAtTimestamp: java.time.OffsetDateTime? = null,
 

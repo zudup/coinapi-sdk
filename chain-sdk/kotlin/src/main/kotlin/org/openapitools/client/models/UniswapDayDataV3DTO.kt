@@ -49,33 +49,42 @@ data class UniswapDayDataV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
+    /*  */
     @Json(name = "volume_eth")
     val volumeEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd_untracked")
     val volumeUsdUntracked: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
     @Json(name = "tx_count")
     val txCount: BigInteger? = null,
 
+    /*  */
     @Json(name = "tvl_usd")
     val tvlUsd: kotlin.String? = null
 

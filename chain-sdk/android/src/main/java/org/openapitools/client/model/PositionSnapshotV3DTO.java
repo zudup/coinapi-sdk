@@ -79,6 +79,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -89,6 +90,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -110,6 +112,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -120,6 +123,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPosition() {
@@ -130,6 +134,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
@@ -140,6 +145,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidity() {
@@ -150,6 +156,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDepositedToken0() {
@@ -160,6 +167,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDepositedToken1() {
@@ -170,6 +178,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getWithdrawnToken0() {
@@ -180,6 +189,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getWithdrawnToken1() {
@@ -190,6 +200,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken0() {
@@ -200,6 +211,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken1() {
@@ -210,6 +222,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -220,6 +233,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthInside0LastX128() {
@@ -230,6 +244,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthInside1LastX128() {
@@ -240,6 +255,7 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

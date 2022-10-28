@@ -60,24 +60,24 @@ MintV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
-    #' @param transaction transaction
-    #' @param timestamp timestamp
-    #' @param pool pool
-    #' @param token_0 token_0
-    #' @param token_1 token_1
-    #' @param owner owner
-    #' @param sender sender
-    #' @param origin origin
-    #' @param amount amount
-    #' @param amount_0 amount_0
-    #' @param amount_1 amount_1
-    #' @param amount_usd amount_usd
-    #' @param tick_lower tick_lower
-    #' @param tick_upper tick_upper
-    #' @param log_index log_index
-    #' @param vid vid
+    #' @param block_number 
+    #' @param id 
+    #' @param transaction 
+    #' @param timestamp 
+    #' @param pool 
+    #' @param token_0 
+    #' @param token_1 
+    #' @param owner 
+    #' @param sender 
+    #' @param origin 
+    #' @param amount 
+    #' @param amount_0 
+    #' @param amount_1 
+    #' @param amount_usd 
+    #' @param tick_lower 
+    #' @param tick_upper 
+    #' @param log_index 
+    #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

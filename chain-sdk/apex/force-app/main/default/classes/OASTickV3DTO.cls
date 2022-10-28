@@ -27,25 +27,25 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get poolAddress
+     * 
      * @return poolAddress
      */
     public String poolAddress { get; set; }
@@ -57,7 +57,7 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public OASBigInteger tickIdx { get; set; }
 
     /**
-     * Get pool
+     * 
      * @return pool
      */
     public String pool { get; set; }
@@ -75,67 +75,67 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public OASBigInteger liquidityNet { get; set; }
 
     /**
-     * Get price0
+     * 
      * @return price0
      */
     public String price0 { get; set; }
 
     /**
-     * Get price1
+     * 
      * @return price1
      */
     public String price1 { get; set; }
 
     /**
-     * Get volumeToken0
+     * 
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * Get volumeToken1
+     * 
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * Get collectedFeesToken0
+     * 
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * Get collectedFeesToken1
+     * 
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * Get collectedFeesUsd
+     * 
      * @return collectedFeesUsd
      */
     public String collectedFeesUsd { get; set; }
 
     /**
-     * Get createdAtTimestamp
+     * 
      * @return createdAtTimestamp
      */
     public Datetime createdAtTimestamp { get; set; }

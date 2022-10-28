@@ -512,7 +512,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -577,7 +577,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets period_start_unix
      *
-     * @param int|null $period_start_unix period_start_unix
+     * @param int|null $period_start_unix 
      *
      * @return self
      */
@@ -606,7 +606,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -642,7 +642,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets liquidity
      *
-     * @param string|null $liquidity liquidity
+     * @param string|null $liquidity 
      *
      * @return self
      */
@@ -678,7 +678,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets sqrt_price
      *
-     * @param string|null $sqrt_price sqrt_price
+     * @param string|null $sqrt_price 
      *
      * @return self
      */
@@ -714,7 +714,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets token_0_price
      *
-     * @param string|null $token_0_price token_0_price
+     * @param string|null $token_0_price 
      *
      * @return self
      */
@@ -750,7 +750,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets token_1_price
      *
-     * @param string|null $token_1_price token_1_price
+     * @param string|null $token_1_price 
      *
      * @return self
      */
@@ -786,7 +786,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets tick
      *
-     * @param string|null $tick tick
+     * @param string|null $tick 
      *
      * @return self
      */
@@ -822,7 +822,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fee_growth_global_0x128
      *
-     * @param string|null $fee_growth_global_0x128 fee_growth_global_0x128
+     * @param string|null $fee_growth_global_0x128 
      *
      * @return self
      */
@@ -858,7 +858,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fee_growth_global_1x128
      *
-     * @param string|null $fee_growth_global_1x128 fee_growth_global_1x128
+     * @param string|null $fee_growth_global_1x128 
      *
      * @return self
      */
@@ -894,7 +894,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets tvl_usd
      *
-     * @param string|null $tvl_usd tvl_usd
+     * @param string|null $tvl_usd 
      *
      * @return self
      */
@@ -930,7 +930,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 volume_token_0
+     * @param string|null $volume_token_0 
      *
      * @return self
      */
@@ -966,7 +966,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 volume_token_1
+     * @param string|null $volume_token_1 
      *
      * @return self
      */
@@ -1002,7 +1002,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -1038,7 +1038,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -1074,7 +1074,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets tx_count
      *
-     * @param string|null $tx_count tx_count
+     * @param string|null $tx_count 
      *
      * @return self
      */
@@ -1110,7 +1110,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets open
      *
-     * @param string|null $open open
+     * @param string|null $open 
      *
      * @return self
      */
@@ -1146,7 +1146,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets high
      *
-     * @param string|null $high high
+     * @param string|null $high 
      *
      * @return self
      */
@@ -1182,7 +1182,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets low
      *
-     * @param string|null $low low
+     * @param string|null $low 
      *
      * @return self
      */
@@ -1218,7 +1218,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets close
      *
-     * @param string|null $close close
+     * @param string|null $close 
      *
      * @return self
      */
@@ -1254,7 +1254,7 @@ class PoolHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

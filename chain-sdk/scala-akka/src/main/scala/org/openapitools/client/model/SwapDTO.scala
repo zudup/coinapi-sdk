@@ -17,19 +17,33 @@ import org.openapitools.client.core.ApiModel
 case class SwapDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   transaction: Option[String] = None,
+  /*  */
   timestamp: Option[String] = None,
+  /*  */
   pair: Option[String] = None,
+  /*  */
   sender: Option[String] = None,
+  /*  */
   amount0In: Option[String] = None,
+  /*  */
   amount1In: Option[String] = None,
+  /*  */
   amount0Out: Option[String] = None,
+  /*  */
   amount1Out: Option[String] = None,
+  /*  */
   to: Option[String] = None,
+  /*  */
   logIndex: Option[String] = None,
+  /*  */
   amountUsd: Option[String] = None,
+  /*  */
   vid: Option[Long] = None,
   poolId: Option[String] = None,
   transactionId: Option[String] = None,

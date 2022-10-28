@@ -484,7 +484,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -513,7 +513,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -549,7 +549,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param string|null $transaction transaction
+     * @param string|null $transaction 
      *
      * @return self
      */
@@ -585,7 +585,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param string|null $timestamp timestamp
+     * @param string|null $timestamp 
      *
      * @return self
      */
@@ -621,7 +621,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -657,7 +657,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 token_0
+     * @param string|null $token_0 
      *
      * @return self
      */
@@ -693,7 +693,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 token_1
+     * @param string|null $token_1 
      *
      * @return self
      */
@@ -729,7 +729,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param string|null $owner 
      *
      * @return self
      */
@@ -765,7 +765,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sender
      *
-     * @param string|null $sender sender
+     * @param string|null $sender 
      *
      * @return self
      */
@@ -801,7 +801,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets origin
      *
-     * @param string|null $origin origin
+     * @param string|null $origin 
      *
      * @return self
      */
@@ -837,7 +837,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param string|null $amount amount
+     * @param string|null $amount 
      *
      * @return self
      */
@@ -873,7 +873,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0
      *
-     * @param string|null $amount_0 amount_0
+     * @param string|null $amount_0 
      *
      * @return self
      */
@@ -909,7 +909,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1
      *
-     * @param string|null $amount_1 amount_1
+     * @param string|null $amount_1 
      *
      * @return self
      */
@@ -945,7 +945,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_usd
      *
-     * @param string|null $amount_usd amount_usd
+     * @param string|null $amount_usd 
      *
      * @return self
      */
@@ -981,7 +981,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tick_lower
      *
-     * @param string|null $tick_lower tick_lower
+     * @param string|null $tick_lower 
      *
      * @return self
      */
@@ -1017,7 +1017,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tick_upper
      *
-     * @param string|null $tick_upper tick_upper
+     * @param string|null $tick_upper 
      *
      * @return self
      */
@@ -1053,7 +1053,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets log_index
      *
-     * @param string|null $log_index log_index
+     * @param string|null $log_index 
      *
      * @return self
      */
@@ -1089,7 +1089,7 @@ class MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

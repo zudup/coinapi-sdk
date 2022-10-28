@@ -17,20 +17,35 @@ import org.openapitools.client.core.ApiModel
 case class FactoryV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   poolCount: Option[String] = None,
+  /*  */
   txCount: Option[String] = None,
+  /*  */
   totalVolumeUsd: Option[String] = None,
+  /*  */
   totalVolumeEth: Option[String] = None,
+  /*  */
   totalFeesUsd: Option[String] = None,
+  /*  */
   totalFeesEth: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   totalValueLockedUsd: Option[String] = None,
+  /*  */
   totalValueLockedEth: Option[String] = None,
+  /*  */
   totalValueLockedUsdUntracked: Option[String] = None,
+  /*  */
   totalValueLockedEthUntracked: Option[String] = None,
+  /*  */
   owner: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

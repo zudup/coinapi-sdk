@@ -477,7 +477,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -506,7 +506,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -607,7 +607,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets position
      *
-     * @param string|null $position position
+     * @param string|null $position 
      *
      * @return self
      */
@@ -643,7 +643,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets timestamp
      *
-     * @param string|null $timestamp timestamp
+     * @param string|null $timestamp 
      *
      * @return self
      */
@@ -679,7 +679,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets liquidity
      *
-     * @param string|null $liquidity liquidity
+     * @param string|null $liquidity 
      *
      * @return self
      */
@@ -715,7 +715,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets deposited_token_0
      *
-     * @param string|null $deposited_token_0 deposited_token_0
+     * @param string|null $deposited_token_0 
      *
      * @return self
      */
@@ -751,7 +751,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets deposited_token_1
      *
-     * @param string|null $deposited_token_1 deposited_token_1
+     * @param string|null $deposited_token_1 
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets withdrawn_token_0
      *
-     * @param string|null $withdrawn_token_0 withdrawn_token_0
+     * @param string|null $withdrawn_token_0 
      *
      * @return self
      */
@@ -823,7 +823,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets withdrawn_token_1
      *
-     * @param string|null $withdrawn_token_1 withdrawn_token_1
+     * @param string|null $withdrawn_token_1 
      *
      * @return self
      */
@@ -859,7 +859,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets collected_fees_token_0
      *
-     * @param string|null $collected_fees_token_0 collected_fees_token_0
+     * @param string|null $collected_fees_token_0 
      *
      * @return self
      */
@@ -895,7 +895,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets collected_fees_token_1
      *
-     * @param string|null $collected_fees_token_1 collected_fees_token_1
+     * @param string|null $collected_fees_token_1 
      *
      * @return self
      */
@@ -931,7 +931,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets transaction
      *
-     * @param string|null $transaction transaction
+     * @param string|null $transaction 
      *
      * @return self
      */
@@ -967,7 +967,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets fee_growth_inside_0_last_x128
      *
-     * @param string|null $fee_growth_inside_0_last_x128 fee_growth_inside_0_last_x128
+     * @param string|null $fee_growth_inside_0_last_x128 
      *
      * @return self
      */
@@ -1003,7 +1003,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets fee_growth_inside_1_last_x128
      *
-     * @param string|null $fee_growth_inside_1_last_x128 fee_growth_inside_1_last_x128
+     * @param string|null $fee_growth_inside_1_last_x128 
      *
      * @return self
      */
@@ -1039,7 +1039,7 @@ class PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

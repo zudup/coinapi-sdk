@@ -27,81 +27,97 @@ export interface TokenHourDataV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
     period_start_unix?: number;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     token?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     price_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     open?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     high?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     low?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenHourDataV3DTO
      */
     close?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */

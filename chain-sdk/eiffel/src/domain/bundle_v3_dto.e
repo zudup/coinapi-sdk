@@ -24,13 +24,13 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     eth_price_usd: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

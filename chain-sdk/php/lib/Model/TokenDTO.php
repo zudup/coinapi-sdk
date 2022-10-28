@@ -470,7 +470,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -535,7 +535,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets factory
      *
-     * @param string|null $factory factory
+     * @param string|null $factory 
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol symbol
+     * @param string|null $symbol 
      *
      * @return self
      */
@@ -607,7 +607,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name 
      *
      * @return self
      */
@@ -643,7 +643,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param string|null $decimals decimals
+     * @param string|null $decimals 
      *
      * @return self
      */
@@ -679,7 +679,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_supply
      *
-     * @param string|null $total_supply total_supply
+     * @param string|null $total_supply 
      *
      * @return self
      */
@@ -715,7 +715,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume
      *
-     * @param string|null $volume volume
+     * @param string|null $volume 
      *
      * @return self
      */
@@ -751,7 +751,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -823,7 +823,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tx_count
      *
-     * @param string|null $tx_count tx_count
+     * @param string|null $tx_count 
      *
      * @return self
      */
@@ -859,7 +859,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity
      *
-     * @param string|null $liquidity liquidity
+     * @param string|null $liquidity 
      *
      * @return self
      */
@@ -895,7 +895,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth derived_eth
+     * @param string|null $derived_eth 
      *
      * @return self
      */
@@ -931,7 +931,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets whitelist_pairs
      *
-     * @param string[]|null $whitelist_pairs whitelist_pairs
+     * @param string[]|null $whitelist_pairs 
      *
      * @return self
      */
@@ -967,7 +967,7 @@ class TokenDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

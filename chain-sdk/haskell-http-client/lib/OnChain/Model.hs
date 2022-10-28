@@ -146,10 +146,10 @@ mkBigInteger =
 data BundleV3DTO = BundleV3DTO
   { bundleV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , bundleV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , bundleV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , bundleV3DTOId :: !(Maybe Text) -- ^ "id"
-  , bundleV3DTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd"
-  , bundleV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , bundleV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , bundleV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , bundleV3DTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd" - 
+  , bundleV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON BundleV3DTO
@@ -194,23 +194,23 @@ mkBundleV3DTO =
 data BurnV3DTO = BurnV3DTO
   { burnV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , burnV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , burnV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , burnV3DTOId :: !(Maybe Text) -- ^ "id"
-  , burnV3DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , burnV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , burnV3DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , burnV3DTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , burnV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp"
-  , burnV3DTOOwner :: !(Maybe Text) -- ^ "owner"
-  , burnV3DTOOrigin :: !(Maybe Text) -- ^ "origin"
-  , burnV3DTOAmount :: !(Maybe Text) -- ^ "amount"
-  , burnV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0"
-  , burnV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1"
-  , burnV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd"
-  , burnV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower"
-  , burnV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper"
-  , burnV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index"
-  , burnV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , burnV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , burnV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , burnV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , burnV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , burnV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , burnV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , burnV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , burnV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
+  , burnV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
+  , burnV3DTOAmount :: !(Maybe Text) -- ^ "amount" - 
+  , burnV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
+  , burnV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
+  , burnV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
+  , burnV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
+  , burnV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
+  , burnV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
+  , burnV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON BurnV3DTO
@@ -294,21 +294,21 @@ mkBurnV3DTO =
 data FactoryV3DTO = FactoryV3DTO
   { factoryV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , factoryV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , factoryV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , factoryV3DTOId :: !(Maybe Text) -- ^ "id"
-  , factoryV3DTOPoolCount :: !(Maybe Text) -- ^ "pool_count"
-  , factoryV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count"
-  , factoryV3DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd"
-  , factoryV3DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth"
-  , factoryV3DTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd"
-  , factoryV3DTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth"
-  , factoryV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , factoryV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd"
-  , factoryV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth"
-  , factoryV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked"
-  , factoryV3DTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked"
-  , factoryV3DTOOwner :: !(Maybe Text) -- ^ "owner"
-  , factoryV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , factoryV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , factoryV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , factoryV3DTOPoolCount :: !(Maybe Text) -- ^ "pool_count" - 
+  , factoryV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , factoryV3DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - 
+  , factoryV3DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - 
+  , factoryV3DTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd" - 
+  , factoryV3DTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth" - 
+  , factoryV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , factoryV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
+  , factoryV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - 
+  , factoryV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
+  , factoryV3DTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked" - 
+  , factoryV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
+  , factoryV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON FactoryV3DTO
@@ -386,24 +386,24 @@ mkFactoryV3DTO =
 data MintV3DTO = MintV3DTO
   { mintV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , mintV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , mintV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , mintV3DTOId :: !(Maybe Text) -- ^ "id"
-  , mintV3DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , mintV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp"
-  , mintV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , mintV3DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , mintV3DTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , mintV3DTOOwner :: !(Maybe Text) -- ^ "owner"
-  , mintV3DTOSender :: !(Maybe Text) -- ^ "sender"
-  , mintV3DTOOrigin :: !(Maybe Text) -- ^ "origin"
-  , mintV3DTOAmount :: !(Maybe Text) -- ^ "amount"
-  , mintV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0"
-  , mintV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1"
-  , mintV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd"
-  , mintV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower"
-  , mintV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper"
-  , mintV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index"
-  , mintV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , mintV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , mintV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , mintV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , mintV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , mintV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , mintV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , mintV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , mintV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
+  , mintV3DTOSender :: !(Maybe Text) -- ^ "sender" - 
+  , mintV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
+  , mintV3DTOAmount :: !(Maybe Text) -- ^ "amount" - 
+  , mintV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
+  , mintV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
+  , mintV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
+  , mintV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
+  , mintV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
+  , mintV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
+  , mintV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON MintV3DTO
@@ -490,29 +490,29 @@ mkMintV3DTO =
 data PairDTO = PairDTO
   { pairDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pairDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , pairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , pairDTOId :: !(Maybe Text) -- ^ "id"
-  , pairDTOFactory :: !(Maybe Text) -- ^ "factory"
-  , pairDTOName :: !(Maybe Text) -- ^ "name"
-  , pairDTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , pairDTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , pairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0"
-  , pairDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1"
-  , pairDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply"
-  , pairDTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth"
-  , pairDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd"
-  , pairDTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth"
-  , pairDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price"
-  , pairDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price"
-  , pairDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , pairDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , pairDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , pairDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , pairDTOTxCount :: !(Maybe Text) -- ^ "tx_count"
-  , pairDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count"
-  , pairDTOTimestamp :: !(Maybe Text) -- ^ "timestamp"
-  , pairDTOBlock :: !(Maybe Text) -- ^ "block"
-  , pairDTOVid :: !(Maybe Integer) -- ^ "vid"
+  , pairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , pairDTOId :: !(Maybe Text) -- ^ "id" - 
+  , pairDTOFactory :: !(Maybe Text) -- ^ "factory" - 
+  , pairDTOName :: !(Maybe Text) -- ^ "name" - 
+  , pairDTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , pairDTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , pairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - 
+  , pairDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - 
+  , pairDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
+  , pairDTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - 
+  , pairDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - 
+  , pairDTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - 
+  , pairDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
+  , pairDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
+  , pairDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , pairDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , pairDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , pairDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , pairDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , pairDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
+  , pairDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , pairDTOBlock :: !(Maybe Text) -- ^ "block" - 
+  , pairDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pairDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -618,26 +618,26 @@ mkPairDTO =
 data PairV2DTO = PairV2DTO
   { pairV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pairV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , pairV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , pairV2DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , pairV2DTOId :: !(Maybe Text) -- ^ "id"
-  , pairV2DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , pairV2DTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , pairV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0"
-  , pairV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1"
-  , pairV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply"
-  , pairV2DTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth"
-  , pairV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd"
-  , pairV2DTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth"
-  , pairV2DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price"
-  , pairV2DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price"
-  , pairV2DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , pairV2DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , pairV2DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , pairV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
+  , pairV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , pairV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , pairV2DTOId :: !(Maybe Text) -- ^ "id" - 
+  , pairV2DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , pairV2DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , pairV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - 
+  , pairV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - 
+  , pairV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
+  , pairV2DTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - 
+  , pairV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - 
+  , pairV2DTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - 
+  , pairV2DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
+  , pairV2DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
+  , pairV2DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , pairV2DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , pairV2DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , pairV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
   , pairV2DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , pairV2DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp"
-  , pairV2DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count"
+  , pairV2DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - 
+  , pairV2DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
   , pairV2DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -734,28 +734,28 @@ mkPairV2DTO =
 data PoolDayDataV3DTO = PoolDayDataV3DTO
   { poolDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , poolDayDataV3DTOId :: !(Maybe Text) -- ^ "id"
-  , poolDayDataV3DTODate :: !(Maybe Int) -- ^ "date"
-  , poolDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , poolDayDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity"
-  , poolDayDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price"
-  , poolDayDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price"
-  , poolDayDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price"
-  , poolDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick"
-  , poolDayDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128"
-  , poolDayDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128"
-  , poolDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd"
-  , poolDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , poolDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , poolDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , poolDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , poolDayDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count"
-  , poolDayDataV3DTOOpen :: !(Maybe Text) -- ^ "open"
-  , poolDayDataV3DTOHigh :: !(Maybe Text) -- ^ "high"
-  , poolDayDataV3DTOLow :: !(Maybe Text) -- ^ "low"
-  , poolDayDataV3DTOClose :: !(Maybe Text) -- ^ "close"
-  , poolDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , poolDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , poolDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , poolDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
+  , poolDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , poolDayDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  , poolDayDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - 
+  , poolDayDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
+  , poolDayDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
+  , poolDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
+  , poolDayDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - 
+  , poolDayDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - 
+  , poolDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
+  , poolDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , poolDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , poolDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , poolDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , poolDayDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , poolDayDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
+  , poolDayDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
+  , poolDayDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
+  , poolDayDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , poolDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON PoolDayDataV3DTO
@@ -854,28 +854,28 @@ mkPoolDayDataV3DTO =
 data PoolHourDataV3DTO = PoolHourDataV3DTO
   { poolHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , poolHourDataV3DTOId :: !(Maybe Text) -- ^ "id"
-  , poolHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix"
-  , poolHourDataV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , poolHourDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity"
-  , poolHourDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price"
-  , poolHourDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price"
-  , poolHourDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price"
-  , poolHourDataV3DTOTick :: !(Maybe Text) -- ^ "tick"
-  , poolHourDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128"
-  , poolHourDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128"
-  , poolHourDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd"
-  , poolHourDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , poolHourDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , poolHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , poolHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , poolHourDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count"
-  , poolHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open"
-  , poolHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high"
-  , poolHourDataV3DTOLow :: !(Maybe Text) -- ^ "low"
-  , poolHourDataV3DTOClose :: !(Maybe Text) -- ^ "close"
-  , poolHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , poolHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , poolHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , poolHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - 
+  , poolHourDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , poolHourDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  , poolHourDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - 
+  , poolHourDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
+  , poolHourDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
+  , poolHourDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
+  , poolHourDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - 
+  , poolHourDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - 
+  , poolHourDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
+  , poolHourDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , poolHourDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , poolHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , poolHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , poolHourDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , poolHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
+  , poolHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
+  , poolHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
+  , poolHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , poolHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON PoolHourDataV3DTO
@@ -974,36 +974,36 @@ mkPoolHourDataV3DTO =
 data PoolV3DTO = PoolV3DTO
   { poolV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , poolV3DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , poolV3DTOId :: !(Maybe Text) -- ^ "id"
-  , poolV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp"
-  , poolV3DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , poolV3DTOToken1 :: !(Maybe Text) -- ^ "token_1"
+  , poolV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , poolV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , poolV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , poolV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - 
+  , poolV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , poolV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
   , poolV3DTOFeeTier :: !(Maybe BigInteger) -- ^ "fee_tier"
   , poolV3DTOLiquidity :: !(Maybe BigInteger) -- ^ "liquidity"
   , poolV3DTOSqrtPrice :: !(Maybe BigInteger) -- ^ "sqrt_price"
   , poolV3DTOFeeGrowthGlobal0x128 :: !(Maybe BigInteger) -- ^ "fee_growth_global_0x128"
   , poolV3DTOFeeGrowthGlobal1x128 :: !(Maybe BigInteger) -- ^ "fee_growth_global_1x128"
-  , poolV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price"
-  , poolV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price"
+  , poolV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
+  , poolV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
   , poolV3DTOTick :: !(Maybe BigInteger) -- ^ "tick"
   , poolV3DTOObservationIndex :: !(Maybe BigInteger) -- ^ "observation_index"
-  , poolV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , poolV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , poolV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , poolV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , poolV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
+  , poolV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , poolV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , poolV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , poolV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , poolV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
   , poolV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , poolV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0"
-  , poolV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1"
-  , poolV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd"
-  , poolV3DTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0"
-  , poolV3DTOTotalValueLockedToken1 :: !(Maybe Text) -- ^ "total_value_locked_token_1"
-  , poolV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth"
-  , poolV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd"
-  , poolV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked"
-  , poolV3DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count"
+  , poolV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
+  , poolV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
+  , poolV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - 
+  , poolV3DTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0" - 
+  , poolV3DTOTotalValueLockedToken1 :: !(Maybe Text) -- ^ "total_value_locked_token_1" - 
+  , poolV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - 
+  , poolV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
+  , poolV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
+  , poolV3DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
   , poolV3DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1130,23 +1130,23 @@ mkPoolV3DTO =
 data PositionSnapshotV3DTO = PositionSnapshotV3DTO
   { positionSnapshotV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , positionSnapshotV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , positionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , positionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id"
+  , positionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , positionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id" - 
   , positionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner" - THIS IS SUPER OWNER
-  , positionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , positionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position"
-  , positionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp"
-  , positionSnapshotV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity"
-  , positionSnapshotV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0"
-  , positionSnapshotV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1"
-  , positionSnapshotV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0"
-  , positionSnapshotV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1"
-  , positionSnapshotV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0"
-  , positionSnapshotV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1"
-  , positionSnapshotV3DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , positionSnapshotV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128"
-  , positionSnapshotV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128"
-  , positionSnapshotV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , positionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , positionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position" - 
+  , positionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , positionSnapshotV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  , positionSnapshotV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - 
+  , positionSnapshotV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - 
+  , positionSnapshotV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - 
+  , positionSnapshotV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - 
+  , positionSnapshotV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
+  , positionSnapshotV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
+  , positionSnapshotV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , positionSnapshotV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - 
+  , positionSnapshotV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - 
+  , positionSnapshotV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON PositionSnapshotV3DTO
@@ -1230,25 +1230,25 @@ mkPositionSnapshotV3DTO =
 data PositionV3DTO = PositionV3DTO
   { positionV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , positionV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , positionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , positionV3DTOId :: !(Maybe Text) -- ^ "id"
-  , positionV3DTOOwner :: !(Maybe Text) -- ^ "owner"
-  , positionV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , positionV3DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , positionV3DTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , positionV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower"
-  , positionV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper"
-  , positionV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity"
-  , positionV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0"
-  , positionV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1"
-  , positionV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0"
-  , positionV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1"
-  , positionV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0"
-  , positionV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1"
-  , positionV3DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , positionV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128"
-  , positionV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128"
-  , positionV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , positionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , positionV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , positionV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
+  , positionV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , positionV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , positionV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , positionV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
+  , positionV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
+  , positionV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  , positionV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - 
+  , positionV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - 
+  , positionV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - 
+  , positionV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - 
+  , positionV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
+  , positionV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
+  , positionV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , positionV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - 
+  , positionV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - 
+  , positionV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON PositionV3DTO
@@ -1338,20 +1338,20 @@ mkPositionV3DTO =
 data SwapDTO = SwapDTO
   { swapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , swapDTOId :: !(Maybe Text) -- ^ "id"
-  , swapDTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , swapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp"
-  , swapDTOPair :: !(Maybe Text) -- ^ "pair"
-  , swapDTOSender :: !(Maybe Text) -- ^ "sender"
-  , swapDTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in"
-  , swapDTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in"
-  , swapDTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out"
-  , swapDTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out"
-  , swapDTOTo :: !(Maybe Text) -- ^ "to"
-  , swapDTOLogIndex :: !(Maybe Text) -- ^ "log_index"
-  , swapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd"
-  , swapDTOVid :: !(Maybe Integer) -- ^ "vid"
+  , swapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , swapDTOId :: !(Maybe Text) -- ^ "id" - 
+  , swapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , swapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , swapDTOPair :: !(Maybe Text) -- ^ "pair" - 
+  , swapDTOSender :: !(Maybe Text) -- ^ "sender" - 
+  , swapDTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - 
+  , swapDTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - 
+  , swapDTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - 
+  , swapDTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - 
+  , swapDTOTo :: !(Maybe Text) -- ^ "to" - 
+  , swapDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
+  , swapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
+  , swapDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , swapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
   , swapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
   , swapDTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
@@ -1446,21 +1446,21 @@ mkSwapDTO =
 data SwapV2DTO = SwapV2DTO
   { swapV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , swapV2DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , swapV2DTOId :: !(Maybe Text) -- ^ "id"
-  , swapV2DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , swapV2DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp"
-  , swapV2DTOPair :: !(Maybe Text) -- ^ "pair"
-  , swapV2DTOSender :: !(Maybe Text) -- ^ "sender"
-  , swapV2DTOFrom :: !(Maybe Text) -- ^ "from"
-  , swapV2DTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in"
-  , swapV2DTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in"
-  , swapV2DTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out"
-  , swapV2DTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out"
-  , swapV2DTOTo :: !(Maybe Text) -- ^ "to"
+  , swapV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , swapV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , swapV2DTOId :: !(Maybe Text) -- ^ "id" - 
+  , swapV2DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , swapV2DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - 
+  , swapV2DTOPair :: !(Maybe Text) -- ^ "pair" - 
+  , swapV2DTOSender :: !(Maybe Text) -- ^ "sender" - 
+  , swapV2DTOFrom :: !(Maybe Text) -- ^ "from" - 
+  , swapV2DTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - 
+  , swapV2DTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - 
+  , swapV2DTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - 
+  , swapV2DTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - 
+  , swapV2DTOTo :: !(Maybe Text) -- ^ "to" - 
   , swapV2DTOLogIndex :: !(Maybe BigInteger) -- ^ "log_index"
-  , swapV2DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd"
+  , swapV2DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
   , swapV2DTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
   , swapV2DTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
   , swapV2DTOEvaluatedAggressor :: !(Maybe ETradeAggressiveSide) -- ^ "evaluated_aggressor"
@@ -1558,20 +1558,20 @@ mkSwapV2DTO =
 data SwapV3DTO = SwapV3DTO
   { swapV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , swapV3DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , swapV3DTOId :: !(Maybe Text) -- ^ "id"
-  , swapV3DTOTransaction :: !(Maybe Text) -- ^ "transaction"
-  , swapV3DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp"
-  , swapV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , swapV3DTOToken0 :: !(Maybe Text) -- ^ "token_0"
-  , swapV3DTOToken1 :: !(Maybe Text) -- ^ "token_1"
-  , swapV3DTOSender :: !(Maybe Text) -- ^ "sender"
-  , swapV3DTORecipient :: !(Maybe Text) -- ^ "recipient"
-  , swapV3DTOOrigin :: !(Maybe Text) -- ^ "origin"
-  , swapV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0"
-  , swapV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1"
-  , swapV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd"
+  , swapV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , swapV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , swapV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , swapV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
+  , swapV3DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - 
+  , swapV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , swapV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
+  , swapV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , swapV3DTOSender :: !(Maybe Text) -- ^ "sender" - 
+  , swapV3DTORecipient :: !(Maybe Text) -- ^ "recipient" - 
+  , swapV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
+  , swapV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
+  , swapV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
+  , swapV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
   , swapV3DTOSqrtPriceX96 :: !(Maybe BigInteger) -- ^ "sqrt_price_x96"
   , swapV3DTOTick :: !(Maybe BigInteger) -- ^ "tick"
   , swapV3DTOLogIndex :: !(Maybe BigInteger) -- ^ "log_index"
@@ -1678,20 +1678,20 @@ mkSwapV3DTO =
 data TickDayDataV3DTO = TickDayDataV3DTO
   { tickDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tickDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tickDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tickDayDataV3DTOId :: !(Maybe Text) -- ^ "id"
-  , tickDayDataV3DTODate :: !(Maybe Int) -- ^ "date"
-  , tickDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool"
-  , tickDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick"
-  , tickDayDataV3DTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross"
-  , tickDayDataV3DTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net"
-  , tickDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , tickDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , tickDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tickDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , tickDayDataV3DTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128"
-  , tickDayDataV3DTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128"
-  , tickDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , tickDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tickDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , tickDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
+  , tickDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , tickDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
+  , tickDayDataV3DTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - 
+  , tickDayDataV3DTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - 
+  , tickDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , tickDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , tickDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tickDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , tickDayDataV3DTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128" - 
+  , tickDayDataV3DTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128" - 
+  , tickDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON TickDayDataV3DTO
@@ -1766,25 +1766,25 @@ mkTickDayDataV3DTO =
 data TickV3DTO = TickV3DTO
   { tickV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tickV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tickV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tickV3DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , tickV3DTOId :: !(Maybe Text) -- ^ "id"
-  , tickV3DTOPoolAddress :: !(Maybe Text) -- ^ "pool_address"
+  , tickV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tickV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , tickV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , tickV3DTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - 
   , tickV3DTOTickIdx :: !(Maybe BigInteger) -- ^ "tick_idx"
-  , tickV3DTOPool :: !(Maybe Text) -- ^ "pool"
+  , tickV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
   , tickV3DTOLiquidityGross :: !(Maybe BigInteger) -- ^ "liquidity_gross"
   , tickV3DTOLiquidityNet :: !(Maybe BigInteger) -- ^ "liquidity_net"
-  , tickV3DTOPrice0 :: !(Maybe Text) -- ^ "price_0"
-  , tickV3DTOPrice1 :: !(Maybe Text) -- ^ "price_1"
-  , tickV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0"
-  , tickV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1"
-  , tickV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tickV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , tickV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , tickV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0"
-  , tickV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1"
-  , tickV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd"
-  , tickV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp"
+  , tickV3DTOPrice0 :: !(Maybe Text) -- ^ "price_0" - 
+  , tickV3DTOPrice1 :: !(Maybe Text) -- ^ "price_1" - 
+  , tickV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
+  , tickV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
+  , tickV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tickV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , tickV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , tickV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
+  , tickV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
+  , tickV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - 
+  , tickV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - 
   , tickV3DTOLiquidityProviderCount :: !(Maybe BigInteger) -- ^ "liquidity_provider_count"
   , tickV3DTOFeeGrowthOutside0x128 :: !(Maybe BigInteger) -- ^ "fee_growth_outside_0x128"
   , tickV3DTOFeeGrowthOutside1x128 :: !(Maybe BigInteger) -- ^ "fee_growth_outside_1x128"
@@ -1886,21 +1886,21 @@ mkTickV3DTO =
 data TokenDTO = TokenDTO
   { tokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tokenDTOId :: !(Maybe Text) -- ^ "id"
-  , tokenDTOFactory :: !(Maybe Text) -- ^ "factory"
-  , tokenDTOSymbol :: !(Maybe Text) -- ^ "symbol"
-  , tokenDTOName :: !(Maybe Text) -- ^ "name"
-  , tokenDTODecimals :: !(Maybe Text) -- ^ "decimals"
-  , tokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply"
-  , tokenDTOVolume :: !(Maybe Text) -- ^ "volume"
-  , tokenDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , tokenDTOTxCount :: !(Maybe Text) -- ^ "tx_count"
-  , tokenDTOLiquidity :: !(Maybe Text) -- ^ "liquidity"
-  , tokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth"
-  , tokenDTOWhitelistPairs :: !(Maybe [Text]) -- ^ "whitelist_pairs"
-  , tokenDTOVid :: !(Maybe Integer) -- ^ "vid"
+  , tokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenDTOId :: !(Maybe Text) -- ^ "id" - 
+  , tokenDTOFactory :: !(Maybe Text) -- ^ "factory" - 
+  , tokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - 
+  , tokenDTOName :: !(Maybe Text) -- ^ "name" - 
+  , tokenDTODecimals :: !(Maybe Text) -- ^ "decimals" - 
+  , tokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
+  , tokenDTOVolume :: !(Maybe Text) -- ^ "volume" - 
+  , tokenDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , tokenDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , tokenDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
+  , tokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - 
+  , tokenDTOWhitelistPairs :: !(Maybe [Text]) -- ^ "whitelist_pairs" - 
+  , tokenDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , tokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1982,22 +1982,22 @@ mkTokenDTO =
 data TokenHourDataV3DTO = TokenHourDataV3DTO
   { tokenHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id"
-  , tokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix"
-  , tokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token"
-  , tokenHourDataV3DTOVolume :: !(Maybe Text) -- ^ "volume"
-  , tokenHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tokenHourDataV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , tokenHourDataV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked"
-  , tokenHourDataV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd"
-  , tokenHourDataV3DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd"
-  , tokenHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , tokenHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open"
-  , tokenHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high"
-  , tokenHourDataV3DTOLow :: !(Maybe Text) -- ^ "low"
-  , tokenHourDataV3DTOClose :: !(Maybe Text) -- ^ "close"
-  , tokenHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid"
+  , tokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , tokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - 
+  , tokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token" - 
+  , tokenHourDataV3DTOVolume :: !(Maybe Text) -- ^ "volume" - 
+  , tokenHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tokenHourDataV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , tokenHourDataV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
+  , tokenHourDataV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
+  , tokenHourDataV3DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - 
+  , tokenHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , tokenHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
+  , tokenHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
+  , tokenHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
+  , tokenHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , tokenHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON TokenHourDataV3DTO
@@ -2075,22 +2075,23 @@ mkTokenHourDataV3DTO =
 
 -- ** TokenV2DTO
 -- | TokenV2DTO
+-- Stores aggregated information for a specific token across all pairs that token is included in.
 data TokenV2DTO = TokenV2DTO
   { tokenV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tokenV2DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , tokenV2DTOId :: !(Maybe Text) -- ^ "id"
-  , tokenV2DTOSymbol :: !(Maybe Text) -- ^ "symbol"
-  , tokenV2DTOName :: !(Maybe Text) -- ^ "name"
-  , tokenV2DTODecimals :: !(Maybe Int) -- ^ "decimals"
+  , tokenV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , tokenV2DTOId :: !(Maybe Text) -- ^ "id" - token address
+  , tokenV2DTOSymbol :: !(Maybe Text) -- ^ "symbol" - token symbol
+  , tokenV2DTOName :: !(Maybe Text) -- ^ "name" - token name
+  , tokenV2DTODecimals :: !(Maybe Int) -- ^ "decimals" - token decimals
   , tokenV2DTOTotalSupply :: !(Maybe BigInteger) -- ^ "total_supply"
-  , tokenV2DTOTradeVolume :: !(Maybe Text) -- ^ "trade_volume"
-  , tokenV2DTOTradeVolumeUsd :: !(Maybe Text) -- ^ "trade_volume_usd"
-  , tokenV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
+  , tokenV2DTOTradeVolume :: !(Maybe Text) -- ^ "trade_volume" - amount of token traded all time across all pairs
+  , tokenV2DTOTradeVolumeUsd :: !(Maybe Text) -- ^ "trade_volume_usd" - amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+  , tokenV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - amount of token in USD traded all time across pairs (no minimum liquidity threshold)
   , tokenV2DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , tokenV2DTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity"
-  , tokenV2DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth"
+  , tokenV2DTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - total amount of token provided as liquidity across all pairs
+  , tokenV2DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - ETH per token
   , tokenV2DTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -2166,24 +2167,24 @@ mkTokenV2DTO =
 data TokenV3DTO = TokenV3DTO
   { tokenV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tokenV3DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , tokenV3DTOId :: !(Maybe Text) -- ^ "id"
-  , tokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol"
-  , tokenV3DTOName :: !(Maybe Text) -- ^ "name"
-  , tokenV3DTODecimals :: !(Maybe Int) -- ^ "decimals"
+  , tokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , tokenV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , tokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol" - 
+  , tokenV3DTOName :: !(Maybe Text) -- ^ "name" - 
+  , tokenV3DTODecimals :: !(Maybe Int) -- ^ "decimals" - 
   , tokenV3DTOTotalSupply :: !(Maybe BigInteger) -- ^ "total_supply"
-  , tokenV3DTOVolume :: !(Maybe Text) -- ^ "volume"
-  , tokenV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tokenV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , tokenV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
+  , tokenV3DTOVolume :: !(Maybe Text) -- ^ "volume" - 
+  , tokenV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tokenV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , tokenV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
   , tokenV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
   , tokenV3DTOPoolCount :: !(Maybe BigInteger) -- ^ "pool_count"
-  , tokenV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked"
-  , tokenV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd"
-  , tokenV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked"
-  , tokenV3DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth"
-  , tokenV3DTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools"
+  , tokenV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
+  , tokenV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
+  , tokenV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
+  , tokenV3DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - 
+  , tokenV3DTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - 
   , tokenV3DTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -2274,22 +2275,22 @@ mkTokenV3DTO =
 data TokenV3DayDataDTO = TokenV3DayDataDTO
   { tokenV3DayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV3DayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , tokenV3DayDataDTOVid :: !(Maybe Integer) -- ^ "vid"
-  , tokenV3DayDataDTOId :: !(Maybe Text) -- ^ "id"
-  , tokenV3DayDataDTODate :: !(Maybe Int) -- ^ "date"
-  , tokenV3DayDataDTOToken :: !(Maybe Text) -- ^ "token"
-  , tokenV3DayDataDTOVolume :: !(Maybe Text) -- ^ "volume"
-  , tokenV3DayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , tokenV3DayDataDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd"
-  , tokenV3DayDataDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked"
-  , tokenV3DayDataDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd"
-  , tokenV3DayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd"
-  , tokenV3DayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
-  , tokenV3DayDataDTOOpen :: !(Maybe Text) -- ^ "open"
-  , tokenV3DayDataDTOHigh :: !(Maybe Text) -- ^ "high"
-  , tokenV3DayDataDTOLow :: !(Maybe Text) -- ^ "low"
-  , tokenV3DayDataDTOClose :: !(Maybe Text) -- ^ "close"
+  , tokenV3DayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV3DayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , tokenV3DayDataDTOId :: !(Maybe Text) -- ^ "id" - 
+  , tokenV3DayDataDTODate :: !(Maybe Int) -- ^ "date" - 
+  , tokenV3DayDataDTOToken :: !(Maybe Text) -- ^ "token" - 
+  , tokenV3DayDataDTOVolume :: !(Maybe Text) -- ^ "volume" - 
+  , tokenV3DayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , tokenV3DayDataDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
+  , tokenV3DayDataDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - 
+  , tokenV3DayDataDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
+  , tokenV3DayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - 
+  , tokenV3DayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , tokenV3DayDataDTOOpen :: !(Maybe Text) -- ^ "open" - 
+  , tokenV3DayDataDTOHigh :: !(Maybe Text) -- ^ "high" - 
+  , tokenV3DayDataDTOLow :: !(Maybe Text) -- ^ "low" - 
+  , tokenV3DayDataDTOClose :: !(Maybe Text) -- ^ "close" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON TokenV3DayDataDTO
@@ -2370,16 +2371,16 @@ mkTokenV3DayDataDTO =
 data UniswapDayDataV3DTO = UniswapDayDataV3DTO
   { uniswapDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number"
-  , uniswapDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid"
-  , uniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id"
-  , uniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date"
-  , uniswapDayDataV3DTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth"
-  , uniswapDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd"
-  , uniswapDayDataV3DTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked"
-  , uniswapDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd"
+  , uniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , uniswapDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
+  , uniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
+  , uniswapDayDataV3DTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - 
+  , uniswapDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , uniswapDayDataV3DTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked" - 
+  , uniswapDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
   , uniswapDayDataV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , uniswapDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd"
+  , uniswapDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON UniswapDayDataV3DTO

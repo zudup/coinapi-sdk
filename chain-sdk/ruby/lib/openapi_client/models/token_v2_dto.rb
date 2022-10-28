@@ -14,35 +14,47 @@ require 'date'
 require 'time'
 
 module OpenapiClient
+  # Stores aggregated information for a specific token across all pairs that token is included in.
   class TokenV2DTO
     attr_accessor :entry_time
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :vid
 
+    # token address
     attr_accessor :id
 
+    # token symbol
     attr_accessor :symbol
 
+    # token name
     attr_accessor :name
 
+    # token decimals
     attr_accessor :decimals
 
     attr_accessor :total_supply
 
+    # amount of token traded all time across all pairs
     attr_accessor :trade_volume
 
+    # amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
     attr_accessor :trade_volume_usd
 
+    # amount of token in USD traded all time across pairs (no minimum liquidity threshold)
     attr_accessor :untracked_volume_usd
 
     attr_accessor :tx_count
 
+    # total amount of token provided as liquidity across all pairs
     attr_accessor :total_liquidity
 
+    # ETH per token
     attr_accessor :derived_eth
 
     attr_accessor :token_symbol

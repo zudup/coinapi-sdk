@@ -3,7 +3,7 @@
 
 defmodule OnChainAPI.Model.TokenV2Dto do
   @moduledoc """
-  
+  Stores aggregated information for a specific token across all pairs that token is included in.
   """
 
   @derive [Poison.Encoder]

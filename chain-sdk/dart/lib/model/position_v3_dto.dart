@@ -52,6 +52,7 @@ class PositionV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -60,40 +61,58 @@ class PositionV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? owner;
 
+  /// 
   String? pool;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
+  /// 
   String? tickLower;
 
+  /// 
   String? tickUpper;
 
+  /// 
   String? liquidity;
 
+  /// 
   String? depositedToken0;
 
+  /// 
   String? depositedToken1;
 
+  /// 
   String? withdrawnToken0;
 
+  /// 
   String? withdrawnToken1;
 
+  /// 
   String? collectedFeesToken0;
 
+  /// 
   String? collectedFeesToken1;
 
+  /// 
   String? transaction;
 
+  /// 
   String? feeGrowthInside0LastX128;
 
+  /// 
   String? feeGrowthInside1LastX128;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

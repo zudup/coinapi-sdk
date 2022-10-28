@@ -17,19 +17,33 @@ import org.openapitools.client.core.ApiModel
 case class TickDayDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   date: Option[Int] = None,
+  /*  */
   pool: Option[String] = None,
+  /*  */
   tick: Option[String] = None,
+  /*  */
   liquidityGross: Option[String] = None,
+  /*  */
   liquidityNet: Option[String] = None,
+  /*  */
   volumeToken0: Option[String] = None,
+  /*  */
   volumeToken1: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
+  /*  */
   feeGrowthOutside0x128: Option[String] = None,
+  /*  */
   feeGrowthOutside1x128: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

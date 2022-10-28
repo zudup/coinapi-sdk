@@ -491,7 +491,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -520,7 +520,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -549,7 +549,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -585,7 +585,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol symbol
+     * @param string|null $symbol 
      *
      * @return self
      */
@@ -621,7 +621,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name 
      *
      * @return self
      */
@@ -657,7 +657,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param int|null $decimals decimals
+     * @param int|null $decimals 
      *
      * @return self
      */
@@ -715,7 +715,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume
      *
-     * @param string|null $volume volume
+     * @param string|null $volume 
      *
      * @return self
      */
@@ -751,7 +751,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -823,7 +823,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -917,7 +917,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked total_value_locked
+     * @param string|null $total_value_locked 
      *
      * @return self
      */
@@ -953,7 +953,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd total_value_locked_usd
+     * @param string|null $total_value_locked_usd 
      *
      * @return self
      */
@@ -989,7 +989,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd_untracked
      *
-     * @param string|null $total_value_locked_usd_untracked total_value_locked_usd_untracked
+     * @param string|null $total_value_locked_usd_untracked 
      *
      * @return self
      */
@@ -1025,7 +1025,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth derived_eth
+     * @param string|null $derived_eth 
      *
      * @return self
      */
@@ -1061,7 +1061,7 @@ class TokenV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets whitelist_pools
      *
-     * @param string[]|null $whitelist_pools whitelist_pools
+     * @param string[]|null $whitelist_pools 
      *
      * @return self
      */

@@ -13,21 +13,21 @@ part 'factory_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [poolCount] 
-/// * [txCount] 
-/// * [totalVolumeUsd] 
-/// * [totalVolumeEth] 
-/// * [totalFeesUsd] 
-/// * [totalFeesEth] 
-/// * [untrackedVolumeUsd] 
-/// * [totalValueLockedUsd] 
-/// * [totalValueLockedEth] 
-/// * [totalValueLockedUsdUntracked] 
-/// * [totalValueLockedEthUntracked] 
-/// * [owner] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [poolCount] - 
+/// * [txCount] - 
+/// * [totalVolumeUsd] - 
+/// * [totalVolumeEth] - 
+/// * [totalFeesUsd] - 
+/// * [totalFeesEth] - 
+/// * [untrackedVolumeUsd] - 
+/// * [totalValueLockedUsd] - 
+/// * [totalValueLockedEth] - 
+/// * [totalValueLockedUsdUntracked] - 
+/// * [totalValueLockedEthUntracked] - 
+/// * [owner] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class FactoryV3DTO implements Built<FactoryV3DTO, FactoryV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -36,48 +36,63 @@ abstract class FactoryV3DTO implements Built<FactoryV3DTO, FactoryV3DTOBuilder> 
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'pool_count')
   String? get poolCount;
 
+  /// 
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'total_volume_usd')
   String? get totalVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_volume_eth')
   String? get totalVolumeEth;
 
+  /// 
   @BuiltValueField(wireName: r'total_fees_usd')
   String? get totalFeesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_fees_eth')
   String? get totalFeesEth;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_eth')
   String? get totalValueLockedEth;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_eth_untracked')
   String? get totalValueLockedEthUntracked;
 
+  /// 
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

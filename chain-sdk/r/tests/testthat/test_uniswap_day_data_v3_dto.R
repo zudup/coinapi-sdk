@@ -21,6 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -28,6 +29,7 @@ test_that("block_number", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
@@ -35,6 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -42,6 +45,7 @@ test_that("id", {
 
 test_that("date", {
   # tests for the property `date` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`date`, "EXPECTED_RESULT")
@@ -49,6 +53,7 @@ test_that("date", {
 
 test_that("volume_eth", {
   # tests for the property `volume_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_eth`, "EXPECTED_RESULT")
@@ -56,6 +61,7 @@ test_that("volume_eth", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -63,6 +69,7 @@ test_that("volume_usd", {
 
 test_that("volume_usd_untracked", {
   # tests for the property `volume_usd_untracked` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd_untracked`, "EXPECTED_RESULT")
@@ -70,6 +77,7 @@ test_that("volume_usd_untracked", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -84,6 +92,7 @@ test_that("tx_count", {
 
 test_that("tvl_usd", {
   # tests for the property `tvl_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tvl_usd`, "EXPECTED_RESULT")

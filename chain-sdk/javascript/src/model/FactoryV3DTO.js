@@ -116,76 +116,91 @@ FactoryV3DTO.prototype['entry_time'] = undefined;
 FactoryV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 FactoryV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 FactoryV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} pool_count
  */
 FactoryV3DTO.prototype['pool_count'] = undefined;
 
 /**
+ * 
  * @member {String} tx_count
  */
 FactoryV3DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} total_volume_usd
  */
 FactoryV3DTO.prototype['total_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_volume_eth
  */
 FactoryV3DTO.prototype['total_volume_eth'] = undefined;
 
 /**
+ * 
  * @member {String} total_fees_usd
  */
 FactoryV3DTO.prototype['total_fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_fees_eth
  */
 FactoryV3DTO.prototype['total_fees_eth'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 FactoryV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd
  */
 FactoryV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_eth
  */
 FactoryV3DTO.prototype['total_value_locked_eth'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd_untracked
  */
 FactoryV3DTO.prototype['total_value_locked_usd_untracked'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_eth_untracked
  */
 FactoryV3DTO.prototype['total_value_locked_eth_untracked'] = undefined;
 
 /**
+ * 
  * @member {String} owner
  */
 FactoryV3DTO.prototype['owner'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 FactoryV3DTO.prototype['vid'] = undefined;

@@ -32,71 +32,85 @@ export interface SwapV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof SwapV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof SwapV3DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     transaction?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     timestamp?: string;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     pool?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     sender?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     recipient?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     origin?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV3DTO
      */

@@ -113,71 +113,85 @@ TickDayDataV3DTO.prototype['entry_time'] = undefined;
 TickDayDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TickDayDataV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TickDayDataV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} date
  */
 TickDayDataV3DTO.prototype['date'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 TickDayDataV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} tick
  */
 TickDayDataV3DTO.prototype['tick'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity_gross
  */
 TickDayDataV3DTO.prototype['liquidity_gross'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity_net
  */
 TickDayDataV3DTO.prototype['liquidity_net'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 TickDayDataV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 TickDayDataV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TickDayDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 TickDayDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_outside_0x128
  */
 TickDayDataV3DTO.prototype['fee_growth_outside_0x128'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_outside_1x128
  */
 TickDayDataV3DTO.prototype['fee_growth_outside_1x128'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TickDayDataV3DTO.prototype['vid'] = undefined;

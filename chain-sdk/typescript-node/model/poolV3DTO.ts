@@ -16,35 +16,101 @@ import { BigInteger } from './bigInteger';
 export class PoolV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'createdAtTimestamp'?: Date;
+    /**
+    * 
+    */
     'token0'?: string | null;
+    /**
+    * 
+    */
     'token1'?: string | null;
     'feeTier'?: BigInteger;
     'liquidity'?: BigInteger;
     'sqrtPrice'?: BigInteger;
     'feeGrowthGlobal0x128'?: BigInteger;
     'feeGrowthGlobal1x128'?: BigInteger;
+    /**
+    * 
+    */
     'token0Price'?: string | null;
+    /**
+    * 
+    */
     'token1Price'?: string | null;
     'tick'?: BigInteger;
     'observationIndex'?: BigInteger;
+    /**
+    * 
+    */
     'volumeToken0'?: string | null;
+    /**
+    * 
+    */
     'volumeToken1'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
+    /**
+    * 
+    */
     'collectedFeesToken0'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesToken1'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedToken0'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedToken1'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedEth'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsdUntracked'?: string | null;
+    /**
+    * 
+    */
     'liquidityProviderCount'?: string | null;
     'evaluatedAsk'?: number;
 

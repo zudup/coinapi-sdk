@@ -27,76 +27,91 @@ export interface FactoryV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof FactoryV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     pool_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     tx_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd_untracked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth_untracked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof FactoryV3DTO
      */
     owner?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof FactoryV3DTO
      */

@@ -66,6 +66,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -76,6 +77,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -86,6 +88,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -96,6 +99,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Integer getDate() {
@@ -106,6 +110,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeEth() {
@@ -116,6 +121,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -126,6 +132,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsdUntracked() {
@@ -136,6 +143,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -156,6 +164,7 @@ public class UniswapDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTvlUsd() {

@@ -21,6 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -28,6 +29,7 @@ test_that("block_number", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
@@ -35,6 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -42,6 +45,7 @@ test_that("id", {
 
 test_that("token_0", {
   # tests for the property `token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0`, "EXPECTED_RESULT")
@@ -49,6 +53,7 @@ test_that("token_0", {
 
 test_that("token_1", {
   # tests for the property `token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1`, "EXPECTED_RESULT")
@@ -56,6 +61,7 @@ test_that("token_1", {
 
 test_that("reserve_0", {
   # tests for the property `reserve_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`reserve_0`, "EXPECTED_RESULT")
@@ -63,6 +69,7 @@ test_that("reserve_0", {
 
 test_that("reserve_1", {
   # tests for the property `reserve_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`reserve_1`, "EXPECTED_RESULT")
@@ -70,6 +77,7 @@ test_that("reserve_1", {
 
 test_that("total_supply", {
   # tests for the property `total_supply` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_supply`, "EXPECTED_RESULT")
@@ -77,6 +85,7 @@ test_that("total_supply", {
 
 test_that("reserve_eth", {
   # tests for the property `reserve_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`reserve_eth`, "EXPECTED_RESULT")
@@ -84,6 +93,7 @@ test_that("reserve_eth", {
 
 test_that("reserve_usd", {
   # tests for the property `reserve_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`reserve_usd`, "EXPECTED_RESULT")
@@ -91,6 +101,7 @@ test_that("reserve_usd", {
 
 test_that("tracked_reserve_eth", {
   # tests for the property `tracked_reserve_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tracked_reserve_eth`, "EXPECTED_RESULT")
@@ -98,6 +109,7 @@ test_that("tracked_reserve_eth", {
 
 test_that("token_0_price", {
   # tests for the property `token_0_price` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0_price`, "EXPECTED_RESULT")
@@ -105,6 +117,7 @@ test_that("token_0_price", {
 
 test_that("token_1_price", {
   # tests for the property `token_1_price` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1_price`, "EXPECTED_RESULT")
@@ -112,6 +125,7 @@ test_that("token_1_price", {
 
 test_that("volume_token_0", {
   # tests for the property `volume_token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_0`, "EXPECTED_RESULT")
@@ -119,6 +133,7 @@ test_that("volume_token_0", {
 
 test_that("volume_token_1", {
   # tests for the property `volume_token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_1`, "EXPECTED_RESULT")
@@ -126,6 +141,7 @@ test_that("volume_token_1", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -133,6 +149,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -147,6 +164,7 @@ test_that("tx_count", {
 
 test_that("created_at_timestamp", {
   # tests for the property `created_at_timestamp` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`created_at_timestamp`, "EXPECTED_RESULT")
@@ -154,6 +172,7 @@ test_that("created_at_timestamp", {
 
 test_that("liquidity_provider_count", {
   # tests for the property `liquidity_provider_count` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity_provider_count`, "EXPECTED_RESULT")

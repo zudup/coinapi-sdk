@@ -49,6 +49,7 @@ class TokenDTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -57,32 +58,46 @@ class TokenDTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? factory_;
 
+  /// 
   String? symbol;
 
+  /// 
   String? name;
 
+  /// 
   String? decimals;
 
+  /// 
   String? totalSupply;
 
+  /// 
   String? volume;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? txCount;
 
+  /// 
   String? liquidity;
 
+  /// 
   String? derivedEth;
 
+  /// 
   List<String>? whitelistPairs;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

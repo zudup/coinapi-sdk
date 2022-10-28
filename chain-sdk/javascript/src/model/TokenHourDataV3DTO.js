@@ -119,81 +119,97 @@ TokenHourDataV3DTO.prototype['entry_time'] = undefined;
 TokenHourDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TokenHourDataV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TokenHourDataV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} period_start_unix
  */
 TokenHourDataV3DTO.prototype['period_start_unix'] = undefined;
 
 /**
+ * 
  * @member {String} token
  */
 TokenHourDataV3DTO.prototype['token'] = undefined;
 
 /**
+ * 
  * @member {String} volume
  */
 TokenHourDataV3DTO.prototype['volume'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TokenHourDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 TokenHourDataV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked
  */
 TokenHourDataV3DTO.prototype['total_value_locked'] = undefined;
 
 /**
+ * 
  * @member {String} total_value_locked_usd
  */
 TokenHourDataV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
+ * 
  * @member {String} price_usd
  */
 TokenHourDataV3DTO.prototype['price_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 TokenHourDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} open
  */
 TokenHourDataV3DTO.prototype['open'] = undefined;
 
 /**
+ * 
  * @member {String} high
  */
 TokenHourDataV3DTO.prototype['high'] = undefined;
 
 /**
+ * 
  * @member {String} low
  */
 TokenHourDataV3DTO.prototype['low'] = undefined;
 
 /**
+ * 
  * @member {String} close
  */
 TokenHourDataV3DTO.prototype['close'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TokenHourDataV3DTO.prototype['vid'] = undefined;

@@ -27,37 +27,37 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get createdAtTimestamp
+     * 
      * @return createdAtTimestamp
      */
     public Datetime createdAtTimestamp { get; set; }
 
     /**
-     * Get token0
+     * 
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * Get token1
+     * 
      * @return token1
      */
     public String token1 { get; set; }
@@ -93,13 +93,13 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger feeGrowthGlobal1x128 { get; set; }
 
     /**
-     * Get token0Price
+     * 
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * Get token1Price
+     * 
      * @return token1Price
      */
     public String token1Price { get; set; }
@@ -117,31 +117,31 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger observationIndex { get; set; }
 
     /**
-     * Get volumeToken0
+     * 
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * Get volumeToken1
+     * 
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -153,55 +153,55 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * Get collectedFeesToken0
+     * 
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * Get collectedFeesToken1
+     * 
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * Get collectedFeesUsd
+     * 
      * @return collectedFeesUsd
      */
     public String collectedFeesUsd { get; set; }
 
     /**
-     * Get totalValueLockedToken0
+     * 
      * @return totalValueLockedToken0
      */
     public String totalValueLockedToken0 { get; set; }
 
     /**
-     * Get totalValueLockedToken1
+     * 
      * @return totalValueLockedToken1
      */
     public String totalValueLockedToken1 { get; set; }
 
     /**
-     * Get totalValueLockedEth
+     * 
      * @return totalValueLockedEth
      */
     public String totalValueLockedEth { get; set; }
 
     /**
-     * Get totalValueLockedUsd
+     * 
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * Get totalValueLockedUsdUntracked
+     * 
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * Get liquidityProviderCount
+     * 
      * @return liquidityProviderCount
      */
     public String liquidityProviderCount { get; set; }

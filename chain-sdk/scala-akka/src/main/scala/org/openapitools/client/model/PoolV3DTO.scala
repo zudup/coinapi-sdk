@@ -17,35 +17,57 @@ import org.openapitools.client.core.ApiModel
 case class PoolV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   createdAtTimestamp: Option[OffsetDateTime] = None,
+  /*  */
   token0: Option[String] = None,
+  /*  */
   token1: Option[String] = None,
   feeTier: Option[BigInteger] = None,
   liquidity: Option[BigInteger] = None,
   sqrtPrice: Option[BigInteger] = None,
   feeGrowthGlobal0x128: Option[BigInteger] = None,
   feeGrowthGlobal1x128: Option[BigInteger] = None,
+  /*  */
   token0Price: Option[String] = None,
+  /*  */
   token1Price: Option[String] = None,
   tick: Option[BigInteger] = None,
   observationIndex: Option[BigInteger] = None,
+  /*  */
   volumeToken0: Option[String] = None,
+  /*  */
   volumeToken1: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
+  /*  */
   collectedFeesToken0: Option[String] = None,
+  /*  */
   collectedFeesToken1: Option[String] = None,
+  /*  */
   collectedFeesUsd: Option[String] = None,
+  /*  */
   totalValueLockedToken0: Option[String] = None,
+  /*  */
   totalValueLockedToken1: Option[String] = None,
+  /*  */
   totalValueLockedEth: Option[String] = None,
+  /*  */
   totalValueLockedUsd: Option[String] = None,
+  /*  */
   totalValueLockedUsdUntracked: Option[String] = None,
+  /*  */
   liquidityProviderCount: Option[String] = None,
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel

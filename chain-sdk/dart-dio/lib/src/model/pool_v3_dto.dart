@@ -14,36 +14,36 @@ part 'pool_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [createdAtTimestamp] 
-/// * [token0] 
-/// * [token1] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [createdAtTimestamp] - 
+/// * [token0] - 
+/// * [token1] - 
 /// * [feeTier] 
 /// * [liquidity] 
 /// * [sqrtPrice] 
 /// * [feeGrowthGlobal0x128] 
 /// * [feeGrowthGlobal1x128] 
-/// * [token0Price] 
-/// * [token1Price] 
+/// * [token0Price] - 
+/// * [token1Price] - 
 /// * [tick] 
 /// * [observationIndex] 
-/// * [volumeToken0] 
-/// * [volumeToken1] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
-/// * [feesUsd] 
+/// * [volumeToken0] - 
+/// * [volumeToken1] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
+/// * [feesUsd] - 
 /// * [txCount] 
-/// * [collectedFeesToken0] 
-/// * [collectedFeesToken1] 
-/// * [collectedFeesUsd] 
-/// * [totalValueLockedToken0] 
-/// * [totalValueLockedToken1] 
-/// * [totalValueLockedEth] 
-/// * [totalValueLockedUsd] 
-/// * [totalValueLockedUsdUntracked] 
-/// * [liquidityProviderCount] 
+/// * [collectedFeesToken0] - 
+/// * [collectedFeesToken1] - 
+/// * [collectedFeesUsd] - 
+/// * [totalValueLockedToken0] - 
+/// * [totalValueLockedToken1] - 
+/// * [totalValueLockedEth] - 
+/// * [totalValueLockedUsd] - 
+/// * [totalValueLockedUsdUntracked] - 
+/// * [liquidityProviderCount] - 
 /// * [evaluatedAsk] 
 @BuiltValue()
 abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
@@ -53,21 +53,27 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 
+  /// 
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
+  /// 
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
@@ -86,9 +92,11 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'fee_growth_global_1x128')
   BigInteger? get feeGrowthGlobal1x128;
 
+  /// 
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
+  /// 
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
@@ -98,48 +106,62 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'observation_index')
   BigInteger? get observationIndex;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_usd')
   String? get collectedFeesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_token_0')
   String? get totalValueLockedToken0;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_token_1')
   String? get totalValueLockedToken1;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_eth')
   String? get totalValueLockedEth;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity_provider_count')
   String? get liquidityProviderCount;
 

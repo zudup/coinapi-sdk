@@ -16,15 +16,42 @@ import { BigInteger } from './bigInteger';
 export class UniswapDayDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'date'?: number;
+    /**
+    * 
+    */
     'volumeEth'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'volumeUsdUntracked'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
+    /**
+    * 
+    */
     'tvlUsd'?: string | null;
 
     static discriminator: string | undefined = undefined;

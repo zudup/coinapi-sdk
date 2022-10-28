@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * BundleV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class BundleV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -131,7 +131,7 @@ public class BundleV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class BundleV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class BundleV3DTO {
   }
 
    /**
-   * Get ethPriceUsd
+   * 
    * @return ethPriceUsd
   **/
   @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class BundleV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

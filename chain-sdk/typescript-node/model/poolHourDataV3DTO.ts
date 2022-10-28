@@ -15,27 +15,93 @@ import { RequestFile } from './models';
 export class PoolHourDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'periodStartUnix'?: number;
+    /**
+    * 
+    */
     'pool'?: string | null;
+    /**
+    * 
+    */
     'liquidity'?: string | null;
+    /**
+    * 
+    */
     'sqrtPrice'?: string | null;
+    /**
+    * 
+    */
     'token0Price'?: string | null;
+    /**
+    * 
+    */
     'token1Price'?: string | null;
+    /**
+    * 
+    */
     'tick'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthGlobal0x128'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthGlobal1x128'?: string | null;
+    /**
+    * 
+    */
     'tvlUsd'?: string | null;
+    /**
+    * 
+    */
     'volumeToken0'?: string | null;
+    /**
+    * 
+    */
     'volumeToken1'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
+    /**
+    * 
+    */
     'txCount'?: string | null;
+    /**
+    * 
+    */
     'open'?: string | null;
+    /**
+    * 
+    */
     'high'?: string | null;
+    /**
+    * 
+    */
     'low'?: string | null;
+    /**
+    * 
+    */
     'close'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

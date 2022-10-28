@@ -512,7 +512,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -570,7 +570,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -606,7 +606,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param string|null $transaction transaction
+     * @param string|null $transaction 
      *
      * @return self
      */
@@ -642,7 +642,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param \DateTime|null $timestamp timestamp
+     * @param \DateTime|null $timestamp 
      *
      * @return self
      */
@@ -671,7 +671,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -707,7 +707,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 token_0
+     * @param string|null $token_0 
      *
      * @return self
      */
@@ -743,7 +743,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 token_1
+     * @param string|null $token_1 
      *
      * @return self
      */
@@ -779,7 +779,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sender
      *
-     * @param string|null $sender sender
+     * @param string|null $sender 
      *
      * @return self
      */
@@ -815,7 +815,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recipient
      *
-     * @param string|null $recipient recipient
+     * @param string|null $recipient 
      *
      * @return self
      */
@@ -851,7 +851,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets origin
      *
-     * @param string|null $origin origin
+     * @param string|null $origin 
      *
      * @return self
      */
@@ -887,7 +887,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0
      *
-     * @param string|null $amount_0 amount_0
+     * @param string|null $amount_0 
      *
      * @return self
      */
@@ -923,7 +923,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1
      *
-     * @param string|null $amount_1 amount_1
+     * @param string|null $amount_1 
      *
      * @return self
      */
@@ -959,7 +959,7 @@ class SwapV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_usd
      *
-     * @param string|null $amount_usd amount_usd
+     * @param string|null $amount_usd 
      *
      * @return self
      */

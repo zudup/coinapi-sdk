@@ -53,6 +53,7 @@ class SwapV2DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -61,6 +62,7 @@ class SwapV2DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -69,10 +71,13 @@ class SwapV2DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   String? transaction;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -81,20 +86,28 @@ class SwapV2DTO {
   ///
   DateTime? timestamp;
 
+  /// 
   String? pair;
 
+  /// 
   String? sender;
 
+  /// 
   String? from;
 
+  /// 
   String? amount0In;
 
+  /// 
   String? amount1In;
 
+  /// 
   String? amount0Out;
 
+  /// 
   String? amount1Out;
 
+  /// 
   String? to;
 
   ///
@@ -105,6 +118,7 @@ class SwapV2DTO {
   ///
   BigInteger? logIndex;
 
+  /// 
   String? amountUsd;
 
   ///

@@ -36,6 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * TokenV2DTO Class Doc Comment
  *
  * @category Class
+ * @description Stores aggregated information for a specific token across all pairs that token is included in.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -456,7 +457,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -485,7 +486,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -514,7 +515,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id token address
      *
      * @return self
      */
@@ -550,7 +551,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets symbol
      *
-     * @param string|null $symbol symbol
+     * @param string|null $symbol token symbol
      *
      * @return self
      */
@@ -586,7 +587,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name token name
      *
      * @return self
      */
@@ -622,7 +623,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets decimals
      *
-     * @param int|null $decimals decimals
+     * @param int|null $decimals token decimals
      *
      * @return self
      */
@@ -680,7 +681,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets trade_volume
      *
-     * @param string|null $trade_volume trade_volume
+     * @param string|null $trade_volume amount of token traded all time across all pairs
      *
      * @return self
      */
@@ -716,7 +717,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets trade_volume_usd
      *
-     * @param string|null $trade_volume_usd trade_volume_usd
+     * @param string|null $trade_volume_usd amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
      *
      * @return self
      */
@@ -752,7 +753,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd amount of token in USD traded all time across pairs (no minimum liquidity threshold)
      *
      * @return self
      */
@@ -817,7 +818,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_liquidity
      *
-     * @param string|null $total_liquidity total_liquidity
+     * @param string|null $total_liquidity total amount of token provided as liquidity across all pairs
      *
      * @return self
      */
@@ -853,7 +854,7 @@ class TokenV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets derived_eth
      *
-     * @param string|null $derived_eth derived_eth
+     * @param string|null $derived_eth ETH per token
      *
      * @return self
      */

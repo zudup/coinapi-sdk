@@ -338,7 +338,7 @@ Class | Description
  *TickV3DTO* | 
  *TokenDTO* | 
  *TokenHourDataV3DTO* | 
- *TokenV2DTO* | 
+ *TokenV2DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *TokenV3DTO* | 
  *TokenV3DayDataDTO* | 
  *UniswapDayDataV3DTO* | 

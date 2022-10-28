@@ -89,6 +89,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -99,6 +100,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -109,6 +111,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Integer getDate() {
@@ -119,6 +122,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -129,6 +133,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidity() {
@@ -139,6 +144,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getSqrtPrice() {
@@ -149,6 +155,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0Price() {
@@ -159,6 +166,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1Price() {
@@ -169,6 +177,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTick() {
@@ -179,6 +188,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthGlobal0x128() {
@@ -189,6 +199,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthGlobal1x128() {
@@ -199,6 +210,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTvlUsd() {
@@ -209,6 +221,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -219,6 +232,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -229,6 +243,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -239,6 +254,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -249,6 +265,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTxCount() {
@@ -259,6 +276,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOpen() {
@@ -269,6 +287,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getHigh() {
@@ -279,6 +298,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLow() {
@@ -289,6 +309,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getClose() {
@@ -299,6 +320,7 @@ public class PoolDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

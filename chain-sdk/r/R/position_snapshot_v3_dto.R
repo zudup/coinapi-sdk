@@ -58,23 +58,23 @@ PositionSnapshotV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
+    #' @param block_number 
+    #' @param id 
     #' @param owner THIS IS SUPER OWNER
-    #' @param pool pool
-    #' @param position position
-    #' @param timestamp timestamp
-    #' @param liquidity liquidity
-    #' @param deposited_token_0 deposited_token_0
-    #' @param deposited_token_1 deposited_token_1
-    #' @param withdrawn_token_0 withdrawn_token_0
-    #' @param withdrawn_token_1 withdrawn_token_1
-    #' @param collected_fees_token_0 collected_fees_token_0
-    #' @param collected_fees_token_1 collected_fees_token_1
-    #' @param transaction transaction
-    #' @param fee_growth_inside_0_last_x128 fee_growth_inside_0_last_x128
-    #' @param fee_growth_inside_1_last_x128 fee_growth_inside_1_last_x128
-    #' @param vid vid
+    #' @param pool 
+    #' @param position 
+    #' @param timestamp 
+    #' @param liquidity 
+    #' @param deposited_token_0 
+    #' @param deposited_token_1 
+    #' @param withdrawn_token_0 
+    #' @param withdrawn_token_1 
+    #' @param collected_fees_token_0 
+    #' @param collected_fees_token_1 
+    #' @param transaction 
+    #' @param fee_growth_inside_0_last_x128 
+    #' @param fee_growth_inside_1_last_x128 
+    #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

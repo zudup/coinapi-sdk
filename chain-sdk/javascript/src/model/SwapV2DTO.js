@@ -133,66 +133,79 @@ SwapV2DTO.prototype['entry_time'] = undefined;
 SwapV2DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 SwapV2DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 SwapV2DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 SwapV2DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} transaction
  */
 SwapV2DTO.prototype['transaction'] = undefined;
 
 /**
+ * 
  * @member {Date} timestamp
  */
 SwapV2DTO.prototype['timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} pair
  */
 SwapV2DTO.prototype['pair'] = undefined;
 
 /**
+ * 
  * @member {String} sender
  */
 SwapV2DTO.prototype['sender'] = undefined;
 
 /**
+ * 
  * @member {String} from
  */
 SwapV2DTO.prototype['from'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0_in
  */
 SwapV2DTO.prototype['amount_0_in'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1_in
  */
 SwapV2DTO.prototype['amount_1_in'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0_out
  */
 SwapV2DTO.prototype['amount_0_out'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1_out
  */
 SwapV2DTO.prototype['amount_1_out'] = undefined;
 
 /**
+ * 
  * @member {String} to
  */
 SwapV2DTO.prototype['to'] = undefined;
@@ -203,6 +216,7 @@ SwapV2DTO.prototype['to'] = undefined;
 SwapV2DTO.prototype['log_index'] = undefined;
 
 /**
+ * 
  * @member {String} amount_usd
  */
 SwapV2DTO.prototype['amount_usd'] = undefined;

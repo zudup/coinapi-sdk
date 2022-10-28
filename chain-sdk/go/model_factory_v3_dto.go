@@ -20,20 +20,35 @@ import (
 type FactoryV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	PoolCount NullableString `json:"pool_count,omitempty"`
+	// 
 	TxCount NullableString `json:"tx_count,omitempty"`
+	// 
 	TotalVolumeUsd NullableString `json:"total_volume_usd,omitempty"`
+	// 
 	TotalVolumeEth NullableString `json:"total_volume_eth,omitempty"`
+	// 
 	TotalFeesUsd NullableString `json:"total_fees_usd,omitempty"`
+	// 
 	TotalFeesEth NullableString `json:"total_fees_eth,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
+	// 
 	TotalValueLockedEth NullableString `json:"total_value_locked_eth,omitempty"`
+	// 
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
+	// 
 	TotalValueLockedEthUntracked NullableString `json:"total_value_locked_eth_untracked,omitempty"`
+	// 
 	Owner NullableString `json:"owner,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

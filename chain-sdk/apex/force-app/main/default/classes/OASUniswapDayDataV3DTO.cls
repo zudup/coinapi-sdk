@@ -27,49 +27,49 @@ public class OASUniswapDayDataV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get r_date
+     * 
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * Get volumeEth
+     * 
      * @return volumeEth
      */
     public String volumeEth { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get volumeUsdUntracked
+     * 
      * @return volumeUsdUntracked
      */
     public String volumeUsdUntracked { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -81,7 +81,7 @@ public class OASUniswapDayDataV3DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * Get tvlUsd
+     * 
      * @return tvlUsd
      */
     public String tvlUsd { get; set; }

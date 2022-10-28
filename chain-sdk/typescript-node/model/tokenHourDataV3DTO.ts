@@ -15,21 +15,69 @@ import { RequestFile } from './models';
 export class TokenHourDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'periodStartUnix'?: number;
+    /**
+    * 
+    */
     'token'?: string | null;
+    /**
+    * 
+    */
     'volume'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLocked'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsd'?: string | null;
+    /**
+    * 
+    */
     'priceUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
+    /**
+    * 
+    */
     'open'?: string | null;
+    /**
+    * 
+    */
     'high'?: string | null;
+    /**
+    * 
+    */
     'low'?: string | null;
+    /**
+    * 
+    */
     'close'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

@@ -27,96 +27,115 @@ export interface PositionV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PositionV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     owner?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     pool?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_lower?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_upper?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     liquidity?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     transaction?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     fee_growth_inside_0_last_x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionV3DTO
      */
     fee_growth_inside_1_last_x128?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PositionV3DTO
      */

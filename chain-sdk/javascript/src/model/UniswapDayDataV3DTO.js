@@ -102,41 +102,49 @@ UniswapDayDataV3DTO.prototype['entry_time'] = undefined;
 UniswapDayDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 UniswapDayDataV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 UniswapDayDataV3DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 UniswapDayDataV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} date
  */
 UniswapDayDataV3DTO.prototype['date'] = undefined;
 
 /**
+ * 
  * @member {String} volume_eth
  */
 UniswapDayDataV3DTO.prototype['volume_eth'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 UniswapDayDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd_untracked
  */
 UniswapDayDataV3DTO.prototype['volume_usd_untracked'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 UniswapDayDataV3DTO.prototype['fees_usd'] = undefined;
@@ -147,6 +155,7 @@ UniswapDayDataV3DTO.prototype['fees_usd'] = undefined;
 UniswapDayDataV3DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} tvl_usd
  */
 UniswapDayDataV3DTO.prototype['tvl_usd'] = undefined;

@@ -512,7 +512,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -570,7 +570,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -606,7 +606,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool_address
      *
-     * @param string|null $pool_address pool_address
+     * @param string|null $pool_address 
      *
      * @return self
      */
@@ -671,7 +671,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -765,7 +765,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price_0
      *
-     * @param string|null $price_0 price_0
+     * @param string|null $price_0 
      *
      * @return self
      */
@@ -801,7 +801,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price_1
      *
-     * @param string|null $price_1 price_1
+     * @param string|null $price_1 
      *
      * @return self
      */
@@ -837,7 +837,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 volume_token_0
+     * @param string|null $volume_token_0 
      *
      * @return self
      */
@@ -873,7 +873,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 volume_token_1
+     * @param string|null $volume_token_1 
      *
      * @return self
      */
@@ -909,7 +909,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -945,7 +945,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -981,7 +981,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -1017,7 +1017,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_0
      *
-     * @param string|null $collected_fees_token_0 collected_fees_token_0
+     * @param string|null $collected_fees_token_0 
      *
      * @return self
      */
@@ -1053,7 +1053,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_1
      *
-     * @param string|null $collected_fees_token_1 collected_fees_token_1
+     * @param string|null $collected_fees_token_1 
      *
      * @return self
      */
@@ -1089,7 +1089,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_usd
      *
-     * @param string|null $collected_fees_usd collected_fees_usd
+     * @param string|null $collected_fees_usd 
      *
      * @return self
      */
@@ -1125,7 +1125,7 @@ class TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at_timestamp
      *
-     * @param \DateTime|null $created_at_timestamp created_at_timestamp
+     * @param \DateTime|null $created_at_timestamp 
      *
      * @return self
      */

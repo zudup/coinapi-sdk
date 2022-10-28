@@ -43,6 +43,7 @@ class UniswapDayDataV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -51,6 +52,7 @@ class UniswapDayDataV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -59,8 +61,10 @@ class UniswapDayDataV3DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -69,12 +73,16 @@ class UniswapDayDataV3DTO {
   ///
   int? date;
 
+  /// 
   String? volumeEth;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? volumeUsdUntracked;
 
+  /// 
   String? feesUsd;
 
   ///
@@ -85,6 +93,7 @@ class UniswapDayDataV3DTO {
   ///
   BigInteger? txCount;
 
+  /// 
   String? tvlUsd;
 
   @override

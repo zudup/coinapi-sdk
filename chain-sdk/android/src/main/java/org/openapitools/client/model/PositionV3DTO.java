@@ -83,6 +83,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -93,6 +94,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -103,6 +105,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOwner() {
@@ -113,6 +116,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -123,6 +127,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -133,6 +138,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -143,6 +149,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickLower() {
@@ -153,6 +160,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickUpper() {
@@ -163,6 +171,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidity() {
@@ -173,6 +182,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDepositedToken0() {
@@ -183,6 +193,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getDepositedToken1() {
@@ -193,6 +204,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getWithdrawnToken0() {
@@ -203,6 +215,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getWithdrawnToken1() {
@@ -213,6 +226,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken0() {
@@ -223,6 +237,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken1() {
@@ -233,6 +248,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -243,6 +259,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthInside0LastX128() {
@@ -253,6 +270,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthInside1LastX128() {
@@ -263,6 +281,7 @@ public class PositionV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

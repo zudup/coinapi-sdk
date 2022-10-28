@@ -20,21 +20,37 @@ import (
 type TokenHourDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	PeriodStartUnix *int32 `json:"period_start_unix,omitempty"`
+	// 
 	Token NullableString `json:"token,omitempty"`
+	// 
 	Volume NullableString `json:"volume,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	TotalValueLocked NullableString `json:"total_value_locked,omitempty"`
+	// 
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
+	// 
 	PriceUsd NullableString `json:"price_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
+	// 
 	Open NullableString `json:"open,omitempty"`
+	// 
 	High NullableString `json:"high,omitempty"`
+	// 
 	Low NullableString `json:"low,omitempty"`
+	// 
 	Close NullableString `json:"close,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

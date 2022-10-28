@@ -27,85 +27,85 @@ public class OASSwapDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get r_transaction
+     * 
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * Get timestamp
+     * 
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * Get pair
+     * 
      * @return pair
      */
     public String pair { get; set; }
 
     /**
-     * Get sender
+     * 
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * Get amount0In
+     * 
      * @return amount0In
      */
     public String amount0In { get; set; }
 
     /**
-     * Get amount1In
+     * 
      * @return amount1In
      */
     public String amount1In { get; set; }
 
     /**
-     * Get amount0Out
+     * 
      * @return amount0Out
      */
     public String amount0Out { get; set; }
 
     /**
-     * Get amount1Out
+     * 
      * @return amount1Out
      */
     public String amount1Out { get; set; }
 
     /**
-     * Get to
+     * 
      * @return to
      */
     public String to { get; set; }
 
     /**
-     * Get logIndex
+     * 
      * @return logIndex
      */
     public String logIndex { get; set; }
 
     /**
-     * Get amountUsd
+     * 
      * @return amountUsd
      */
     public String amountUsd { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

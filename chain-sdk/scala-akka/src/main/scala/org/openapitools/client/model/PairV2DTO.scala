@@ -17,25 +17,44 @@ import org.openapitools.client.core.ApiModel
 case class PairV2DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   token0: Option[String] = None,
+  /*  */
   token1: Option[String] = None,
+  /*  */
   reserve0: Option[String] = None,
+  /*  */
   reserve1: Option[String] = None,
+  /*  */
   totalSupply: Option[String] = None,
+  /*  */
   reserveEth: Option[String] = None,
+  /*  */
   reserveUsd: Option[String] = None,
+  /*  */
   trackedReserveEth: Option[String] = None,
+  /*  */
   token0Price: Option[String] = None,
+  /*  */
   token1Price: Option[String] = None,
+  /*  */
   volumeToken0: Option[String] = None,
+  /*  */
   volumeToken1: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
+  /*  */
   createdAtTimestamp: Option[OffsetDateTime] = None,
+  /*  */
   liquidityProviderCount: Option[String] = None,
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel

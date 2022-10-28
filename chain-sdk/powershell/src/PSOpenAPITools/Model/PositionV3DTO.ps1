@@ -20,43 +20,43 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Owner
-No description available.
+
 .PARAMETER Pool
-No description available.
+
 .PARAMETER Token0
-No description available.
+
 .PARAMETER Token1
-No description available.
+
 .PARAMETER TickLower
-No description available.
+
 .PARAMETER TickUpper
-No description available.
+
 .PARAMETER Liquidity
-No description available.
+
 .PARAMETER DepositedToken0
-No description available.
+
 .PARAMETER DepositedToken1
-No description available.
+
 .PARAMETER WithdrawnToken0
-No description available.
+
 .PARAMETER WithdrawnToken1
-No description available.
+
 .PARAMETER CollectedFeesToken0
-No description available.
+
 .PARAMETER CollectedFeesToken1
-No description available.
+
 .PARAMETER Transaction
-No description available.
+
 .PARAMETER FeeGrowthInside0LastX128
-No description available.
+
 .PARAMETER FeeGrowthInside1LastX128
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 PositionV3DTO<PSCustomObject>

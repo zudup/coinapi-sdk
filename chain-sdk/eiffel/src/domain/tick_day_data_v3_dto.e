@@ -24,33 +24,33 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
  	date: INTEGER_32
-    	 
+    	 -- 
     pool: detachable STRING_32
-      
+      -- 
     tick: detachable STRING_32
-      
+      -- 
     liquidity_gross: detachable STRING_32
-      
+      -- 
     liquidity_net: detachable STRING_32
-      
+      -- 
     volume_token_0: detachable STRING_32
-      
+      -- 
     volume_token_1: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     fee_growth_outside_0x128: detachable STRING_32
-      
+      -- 
     fee_growth_outside_1x128: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

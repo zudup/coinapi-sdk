@@ -14,21 +14,69 @@
 export interface TokenHourDataV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     period_start_unix?: number;
+    /**
+     * 
+     */
     token?: string | null;
+    /**
+     * 
+     */
     volume?: string | null;
+    /**
+     * 
+     */
     volume_usd?: string | null;
+    /**
+     * 
+     */
     untracked_volume_usd?: string | null;
+    /**
+     * 
+     */
     total_value_locked?: string | null;
+    /**
+     * 
+     */
     total_value_locked_usd?: string | null;
+    /**
+     * 
+     */
     price_usd?: string | null;
+    /**
+     * 
+     */
     fees_usd?: string | null;
+    /**
+     * 
+     */
     open?: string | null;
+    /**
+     * 
+     */
     high?: string | null;
+    /**
+     * 
+     */
     low?: string | null;
+    /**
+     * 
+     */
     close?: string | null;
+    /**
+     * 
+     */
     vid?: number;
 }
 

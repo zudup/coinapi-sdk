@@ -137,111 +137,133 @@ PoolDayDataV3DTO.prototype['entry_time'] = undefined;
 PoolDayDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PoolDayDataV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PoolDayDataV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} date
  */
 PoolDayDataV3DTO.prototype['date'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 PoolDayDataV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity
  */
 PoolDayDataV3DTO.prototype['liquidity'] = undefined;
 
 /**
+ * 
  * @member {String} sqrt_price
  */
 PoolDayDataV3DTO.prototype['sqrt_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_0_price
  */
 PoolDayDataV3DTO.prototype['token_0_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_1_price
  */
 PoolDayDataV3DTO.prototype['token_1_price'] = undefined;
 
 /**
+ * 
  * @member {String} tick
  */
 PoolDayDataV3DTO.prototype['tick'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_global_0x128
  */
 PoolDayDataV3DTO.prototype['fee_growth_global_0x128'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_global_1x128
  */
 PoolDayDataV3DTO.prototype['fee_growth_global_1x128'] = undefined;
 
 /**
+ * 
  * @member {String} tvl_usd
  */
 PoolDayDataV3DTO.prototype['tvl_usd'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 PoolDayDataV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 PoolDayDataV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 PoolDayDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 PoolDayDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tx_count
  */
 PoolDayDataV3DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} open
  */
 PoolDayDataV3DTO.prototype['open'] = undefined;
 
 /**
+ * 
  * @member {String} high
  */
 PoolDayDataV3DTO.prototype['high'] = undefined;
 
 /**
+ * 
  * @member {String} low
  */
 PoolDayDataV3DTO.prototype['low'] = undefined;
 
 /**
+ * 
  * @member {String} close
  */
 PoolDayDataV3DTO.prototype['close'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PoolDayDataV3DTO.prototype['vid'] = undefined;

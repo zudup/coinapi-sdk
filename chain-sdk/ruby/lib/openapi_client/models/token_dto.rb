@@ -19,34 +19,49 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :id
 
+    # 
     attr_accessor :factory
 
+    # 
     attr_accessor :symbol
 
+    # 
     attr_accessor :name
 
+    # 
     attr_accessor :decimals
 
+    # 
     attr_accessor :total_supply
 
+    # 
     attr_accessor :volume
 
+    # 
     attr_accessor :volume_usd
 
+    # 
     attr_accessor :untracked_volume_usd
 
+    # 
     attr_accessor :tx_count
 
+    # 
     attr_accessor :liquidity
 
+    # 
     attr_accessor :derived_eth
 
+    # 
     attr_accessor :whitelist_pairs
 
+    # 
     attr_accessor :vid
 
     attr_accessor :token_symbol

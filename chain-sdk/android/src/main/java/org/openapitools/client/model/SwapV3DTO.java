@@ -91,6 +91,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -101,6 +102,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -111,6 +113,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -121,6 +124,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -131,6 +135,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Date getTimestamp() {
@@ -141,6 +146,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -151,6 +157,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -161,6 +168,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -171,6 +179,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getSender() {
@@ -181,6 +190,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getRecipient() {
@@ -191,6 +201,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOrigin() {
@@ -201,6 +212,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount0() {
@@ -211,6 +223,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount1() {
@@ -221,6 +234,7 @@ public class SwapV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmountUsd() {

@@ -491,7 +491,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -520,7 +520,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -556,7 +556,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param string|null $owner 
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -628,7 +628,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 token_0
+     * @param string|null $token_0 
      *
      * @return self
      */
@@ -664,7 +664,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 token_1
+     * @param string|null $token_1 
      *
      * @return self
      */
@@ -700,7 +700,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tick_lower
      *
-     * @param string|null $tick_lower tick_lower
+     * @param string|null $tick_lower 
      *
      * @return self
      */
@@ -736,7 +736,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tick_upper
      *
-     * @param string|null $tick_upper tick_upper
+     * @param string|null $tick_upper 
      *
      * @return self
      */
@@ -772,7 +772,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity
      *
-     * @param string|null $liquidity liquidity
+     * @param string|null $liquidity 
      *
      * @return self
      */
@@ -808,7 +808,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deposited_token_0
      *
-     * @param string|null $deposited_token_0 deposited_token_0
+     * @param string|null $deposited_token_0 
      *
      * @return self
      */
@@ -844,7 +844,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deposited_token_1
      *
-     * @param string|null $deposited_token_1 deposited_token_1
+     * @param string|null $deposited_token_1 
      *
      * @return self
      */
@@ -880,7 +880,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets withdrawn_token_0
      *
-     * @param string|null $withdrawn_token_0 withdrawn_token_0
+     * @param string|null $withdrawn_token_0 
      *
      * @return self
      */
@@ -916,7 +916,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets withdrawn_token_1
      *
-     * @param string|null $withdrawn_token_1 withdrawn_token_1
+     * @param string|null $withdrawn_token_1 
      *
      * @return self
      */
@@ -952,7 +952,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_0
      *
-     * @param string|null $collected_fees_token_0 collected_fees_token_0
+     * @param string|null $collected_fees_token_0 
      *
      * @return self
      */
@@ -988,7 +988,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_1
      *
-     * @param string|null $collected_fees_token_1 collected_fees_token_1
+     * @param string|null $collected_fees_token_1 
      *
      * @return self
      */
@@ -1024,7 +1024,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param string|null $transaction transaction
+     * @param string|null $transaction 
      *
      * @return self
      */
@@ -1060,7 +1060,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fee_growth_inside_0_last_x128
      *
-     * @param string|null $fee_growth_inside_0_last_x128 fee_growth_inside_0_last_x128
+     * @param string|null $fee_growth_inside_0_last_x128 
      *
      * @return self
      */
@@ -1096,7 +1096,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fee_growth_inside_1_last_x128
      *
-     * @param string|null $fee_growth_inside_1_last_x128 fee_growth_inside_1_last_x128
+     * @param string|null $fee_growth_inside_1_last_x128 
      *
      * @return self
      */
@@ -1132,7 +1132,7 @@ class PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

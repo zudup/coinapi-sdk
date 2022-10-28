@@ -77,6 +77,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -87,6 +88,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -97,6 +99,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Integer getPeriodStartUnix() {
@@ -107,6 +110,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken() {
@@ -117,6 +121,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolume() {
@@ -127,6 +132,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -137,6 +143,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -147,6 +154,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLocked() {
@@ -157,6 +165,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsd() {
@@ -167,6 +176,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPriceUsd() {
@@ -177,6 +187,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -187,6 +198,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOpen() {
@@ -197,6 +209,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getHigh() {
@@ -207,6 +220,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLow() {
@@ -217,6 +231,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getClose() {
@@ -227,6 +242,7 @@ public class TokenHourDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

@@ -90,6 +90,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -100,6 +101,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -110,6 +112,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -120,6 +123,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPoolAddress() {
@@ -140,6 +144,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -170,6 +175,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPrice0() {
@@ -180,6 +186,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPrice1() {
@@ -190,6 +197,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -200,6 +208,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -210,6 +219,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -220,6 +230,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -230,6 +241,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -240,6 +252,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken0() {
@@ -250,6 +263,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken1() {
@@ -260,6 +274,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesUsd() {
@@ -270,6 +285,7 @@ public class TickV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Date getCreatedAtTimestamp() {

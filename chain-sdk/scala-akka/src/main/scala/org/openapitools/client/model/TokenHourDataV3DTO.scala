@@ -17,21 +17,37 @@ import org.openapitools.client.core.ApiModel
 case class TokenHourDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   periodStartUnix: Option[Int] = None,
+  /*  */
   token: Option[String] = None,
+  /*  */
   volume: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   totalValueLocked: Option[String] = None,
+  /*  */
   totalValueLockedUsd: Option[String] = None,
+  /*  */
   priceUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
+  /*  */
   open: Option[String] = None,
+  /*  */
   high: Option[String] = None,
+  /*  */
   low: Option[String] = None,
+  /*  */
   close: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

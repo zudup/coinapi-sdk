@@ -17,42 +17,90 @@ export interface TickV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     pool_address?: string;
 
     tick_idx?: models.BigInteger;
 
+    /**
+     * 
+     */
     pool?: string;
 
     liquidity_gross?: models.BigInteger;
 
     liquidity_net?: models.BigInteger;
 
+    /**
+     * 
+     */
     price_0?: string;
 
+    /**
+     * 
+     */
     price_1?: string;
 
+    /**
+     * 
+     */
     volume_token_0?: string;
 
+    /**
+     * 
+     */
     volume_token_1?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     untracked_volume_usd?: string;
 
+    /**
+     * 
+     */
     fees_usd?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_0?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_1?: string;
 
+    /**
+     * 
+     */
     collected_fees_usd?: string;
 
+    /**
+     * 
+     */
     created_at_timestamp?: string;
 
     liquidity_provider_count?: models.BigInteger;

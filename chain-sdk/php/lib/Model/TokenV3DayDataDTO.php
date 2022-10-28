@@ -470,7 +470,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -528,7 +528,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets date
      *
-     * @param int|null $date date
+     * @param int|null $date 
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets token
      *
-     * @param string|null $token token
+     * @param string|null $token 
      *
      * @return self
      */
@@ -629,7 +629,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume
      *
-     * @param string|null $volume volume
+     * @param string|null $volume 
      *
      * @return self
      */
@@ -665,7 +665,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -701,7 +701,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -737,7 +737,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked total_value_locked
+     * @param string|null $total_value_locked 
      *
      * @return self
      */
@@ -773,7 +773,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd total_value_locked_usd
+     * @param string|null $total_value_locked_usd 
      *
      * @return self
      */
@@ -809,7 +809,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets price_usd
      *
-     * @param string|null $price_usd price_usd
+     * @param string|null $price_usd 
      *
      * @return self
      */
@@ -845,7 +845,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -881,7 +881,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets open
      *
-     * @param string|null $open open
+     * @param string|null $open 
      *
      * @return self
      */
@@ -917,7 +917,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets high
      *
-     * @param string|null $high high
+     * @param string|null $high 
      *
      * @return self
      */
@@ -953,7 +953,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets low
      *
-     * @param string|null $low low
+     * @param string|null $low 
      *
      * @return self
      */
@@ -989,7 +989,7 @@ class TokenV3DayDataDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets close
      *
-     * @param string|null $close close
+     * @param string|null $close 
      *
      * @return self
      */

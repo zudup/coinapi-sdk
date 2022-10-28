@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TokenV2DTO
+    /// Stores aggregated information for a specific token across all pairs that token is included in.
     /// </summary>
     [DataContract]
     public partial class TokenV2DTO :  IEquatable<TokenV2DTO>, IValidatableObject
@@ -37,17 +37,17 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">blockNumber.</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">id.</param>
-        /// <param name="symbol">symbol.</param>
-        /// <param name="name">name.</param>
-        /// <param name="decimals">decimals.</param>
+        /// <param name="id">token address.</param>
+        /// <param name="symbol">token symbol.</param>
+        /// <param name="name">token name.</param>
+        /// <param name="decimals">token decimals.</param>
         /// <param name="totalSupply">totalSupply.</param>
-        /// <param name="tradeVolume">tradeVolume.</param>
-        /// <param name="tradeVolumeUsd">tradeVolumeUsd.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
+        /// <param name="tradeVolume">amount of token traded all time across all pairs.</param>
+        /// <param name="tradeVolumeUsd">amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).</param>
+        /// <param name="untrackedVolumeUsd">amount of token in USD traded all time across pairs (no minimum liquidity threshold).</param>
         /// <param name="txCount">txCount.</param>
-        /// <param name="totalLiquidity">totalLiquidity.</param>
-        /// <param name="derivedEth">derivedEth.</param>
+        /// <param name="totalLiquidity">total amount of token provided as liquidity across all pairs.</param>
+        /// <param name="derivedEth">ETH per token.</param>
         public TokenV2DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), string symbol = default(string), string name = default(string), int decimals = default(int), BigInteger totalSupply = default(BigInteger), string tradeVolume = default(string), string tradeVolumeUsd = default(string), string untrackedVolumeUsd = default(string), BigInteger txCount = default(BigInteger), string totalLiquidity = default(string), string derivedEth = default(string))
         {
             this.Id = id;
@@ -100,26 +100,30 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// token address
         /// </summary>
+        /// <value>token address</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Symbol
+        /// token symbol
         /// </summary>
+        /// <value>token symbol</value>
         [DataMember(Name="symbol", EmitDefaultValue=true)]
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// token name
         /// </summary>
+        /// <value>token name</value>
         [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Decimals
+        /// token decimals
         /// </summary>
+        /// <value>token decimals</value>
         [DataMember(Name="decimals", EmitDefaultValue=false)]
         public int Decimals { get; set; }
 
@@ -130,20 +134,23 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TotalSupply { get; set; }
 
         /// <summary>
-        /// Gets or Sets TradeVolume
+        /// amount of token traded all time across all pairs
         /// </summary>
+        /// <value>amount of token traded all time across all pairs</value>
         [DataMember(Name="trade_volume", EmitDefaultValue=true)]
         public string TradeVolume { get; set; }
 
         /// <summary>
-        /// Gets or Sets TradeVolumeUsd
+        /// amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
         /// </summary>
+        /// <value>amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)</value>
         [DataMember(Name="trade_volume_usd", EmitDefaultValue=true)]
         public string TradeVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// amount of token in USD traded all time across pairs (no minimum liquidity threshold)
         /// </summary>
+        /// <value>amount of token in USD traded all time across pairs (no minimum liquidity threshold)</value>
         [DataMember(Name="untracked_volume_usd", EmitDefaultValue=true)]
         public string UntrackedVolumeUsd { get; set; }
 
@@ -154,14 +161,16 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TxCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalLiquidity
+        /// total amount of token provided as liquidity across all pairs
         /// </summary>
+        /// <value>total amount of token provided as liquidity across all pairs</value>
         [DataMember(Name="total_liquidity", EmitDefaultValue=true)]
         public string TotalLiquidity { get; set; }
 
         /// <summary>
-        /// Gets or Sets DerivedEth
+        /// ETH per token
         /// </summary>
+        /// <value>ETH per token</value>
         [DataMember(Name="derived_eth", EmitDefaultValue=true)]
         public string DerivedEth { get; set; }
 

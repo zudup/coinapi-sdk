@@ -50,6 +50,7 @@ class BurnV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -58,36 +59,52 @@ class BurnV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? transaction;
 
+  /// 
   String? pool;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
+  /// 
   String? timestamp;
 
+  /// 
   String? owner;
 
+  /// 
   String? origin;
 
+  /// 
   String? amount;
 
+  /// 
   String? amount0;
 
+  /// 
   String? amount1;
 
+  /// 
   String? amountUsd;
 
+  /// 
   String? tickLower;
 
+  /// 
   String? tickUpper;
 
+  /// 
   String? logIndex;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

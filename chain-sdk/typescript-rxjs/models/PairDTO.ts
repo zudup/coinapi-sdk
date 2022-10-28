@@ -27,116 +27,139 @@ export interface PairDTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PairDTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     factory?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     name?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     reserve_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     reserve_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     total_supply?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     reserve_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     reserve_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     tracked_reserve_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     token_0_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     token_1_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     tx_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     liquidity_provider_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     timestamp?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PairDTO
      */
     block?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PairDTO
      */

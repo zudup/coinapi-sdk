@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * TokenV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class TokenV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -202,7 +202,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -271,7 +271,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get symbol
+   * 
    * @return symbol
   **/
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get name
+   * 
    * @return name
   **/
   @javax.annotation.Nullable
@@ -317,7 +317,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get decimals
+   * 
    * @return decimals
   **/
   @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get volume
+   * 
    * @return volume
   **/
   @javax.annotation.Nullable
@@ -386,7 +386,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -409,7 +409,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -432,7 +432,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -501,7 +501,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get totalValueLocked
+   * 
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
@@ -524,7 +524,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsd
+   * 
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
@@ -547,7 +547,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsdUntracked
+   * 
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
@@ -570,7 +570,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get derivedEth
+   * 
    * @return derivedEth
   **/
   @javax.annotation.Nullable
@@ -601,7 +601,7 @@ public class TokenV3DTO {
   }
 
    /**
-   * Get whitelistPools
+   * 
    * @return whitelistPools
   **/
   @javax.annotation.Nullable

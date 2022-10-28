@@ -24,31 +24,31 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- token address
     symbol: detachable STRING_32
-      
+      -- token symbol
     name: detachable STRING_32
-      
+      -- token name
  	decimals: INTEGER_32
-    	 
+    	 -- token decimals
     total_supply: detachable BIG_INTEGER
       
     trade_volume: detachable STRING_32
-      
+      -- amount of token traded all time across all pairs
     trade_volume_usd: detachable STRING_32
-      
+      -- amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
     untracked_volume_usd: detachable STRING_32
-      
+      -- amount of token in USD traded all time across pairs (no minimum liquidity threshold)
     tx_count: detachable BIG_INTEGER
       
     total_liquidity: detachable STRING_32
-      
+      -- total amount of token provided as liquidity across all pairs
     derived_eth: detachable STRING_32
-      
+      -- ETH per token
     token_symbol: detachable STRING_32
       
 

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * UniswapDayDataV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class UniswapDayDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -156,7 +156,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get date
+   * 
    * @return date
   **/
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get volumeEth
+   * 
    * @return volumeEth
   **/
   @javax.annotation.Nullable
@@ -271,7 +271,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get volumeUsdUntracked
+   * 
    * @return volumeUsdUntracked
   **/
   @javax.annotation.Nullable
@@ -317,7 +317,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * Get tvlUsd
+   * 
    * @return tvlUsd
   **/
   @javax.annotation.Nullable

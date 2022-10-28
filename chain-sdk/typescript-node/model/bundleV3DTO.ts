@@ -15,9 +15,21 @@ import { RequestFile } from './models';
 export class BundleV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'ethPriceUsd'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

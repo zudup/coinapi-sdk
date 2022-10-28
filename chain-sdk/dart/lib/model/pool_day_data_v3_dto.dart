@@ -55,6 +55,7 @@ class PoolDayDataV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -63,8 +64,10 @@ class PoolDayDataV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -73,42 +76,61 @@ class PoolDayDataV3DTO {
   ///
   int? date;
 
+  /// 
   String? pool;
 
+  /// 
   String? liquidity;
 
+  /// 
   String? sqrtPrice;
 
+  /// 
   String? token0Price;
 
+  /// 
   String? token1Price;
 
+  /// 
   String? tick;
 
+  /// 
   String? feeGrowthGlobal0x128;
 
+  /// 
   String? feeGrowthGlobal1x128;
 
+  /// 
   String? tvlUsd;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? feesUsd;
 
+  /// 
   String? txCount;
 
+  /// 
   String? open;
 
+  /// 
   String? high;
 
+  /// 
   String? low;
 
+  /// 
   String? close;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

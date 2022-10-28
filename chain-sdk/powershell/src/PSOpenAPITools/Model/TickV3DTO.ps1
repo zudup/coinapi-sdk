@@ -20,43 +20,43 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER PoolAddress
-No description available.
+
 .PARAMETER TickIdx
 No description available.
 .PARAMETER Pool
-No description available.
+
 .PARAMETER LiquidityGross
 No description available.
 .PARAMETER LiquidityNet
 No description available.
 .PARAMETER Price0
-No description available.
+
 .PARAMETER Price1
-No description available.
+
 .PARAMETER VolumeToken0
-No description available.
+
 .PARAMETER VolumeToken1
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER CollectedFeesToken0
-No description available.
+
 .PARAMETER CollectedFeesToken1
-No description available.
+
 .PARAMETER CollectedFeesUsd
-No description available.
+
 .PARAMETER CreatedAtTimestamp
-No description available.
+
 .PARAMETER LiquidityProviderCount
 No description available.
 .PARAMETER FeeGrowthOutside0x128

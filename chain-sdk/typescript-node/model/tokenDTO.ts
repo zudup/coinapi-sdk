@@ -15,20 +15,65 @@ import { RequestFile } from './models';
 export class TokenDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'factory'?: string | null;
+    /**
+    * 
+    */
     'symbol'?: string | null;
+    /**
+    * 
+    */
     'name'?: string | null;
+    /**
+    * 
+    */
     'decimals'?: string | null;
+    /**
+    * 
+    */
     'totalSupply'?: string | null;
+    /**
+    * 
+    */
     'volume'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'txCount'?: string | null;
+    /**
+    * 
+    */
     'liquidity'?: string | null;
+    /**
+    * 
+    */
     'derivedEth'?: string | null;
+    /**
+    * 
+    */
     'whitelistPairs'?: Array<string> | null;
+    /**
+    * 
+    */
     'vid'?: number;
     'tokenSymbol'?: string | null;
 

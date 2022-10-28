@@ -75,6 +75,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -85,6 +86,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -95,6 +97,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPoolCount() {
@@ -105,6 +108,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTxCount() {
@@ -115,6 +119,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalVolumeUsd() {
@@ -125,6 +130,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalVolumeEth() {
@@ -135,6 +141,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalFeesUsd() {
@@ -145,6 +152,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalFeesEth() {
@@ -155,6 +163,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -165,6 +174,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsd() {
@@ -175,6 +185,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedEth() {
@@ -185,6 +196,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsdUntracked() {
@@ -195,6 +207,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedEthUntracked() {
@@ -205,6 +218,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOwner() {
@@ -215,6 +229,7 @@ public class FactoryV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

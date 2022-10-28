@@ -13,24 +13,24 @@ part 'mint_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [transaction] 
-/// * [timestamp] 
-/// * [pool] 
-/// * [token0] 
-/// * [token1] 
-/// * [owner] 
-/// * [sender] 
-/// * [origin] 
-/// * [amount] 
-/// * [amount0] 
-/// * [amount1] 
-/// * [amountUsd] 
-/// * [tickLower] 
-/// * [tickUpper] 
-/// * [logIndex] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [transaction] - 
+/// * [timestamp] - 
+/// * [pool] - 
+/// * [token0] - 
+/// * [token1] - 
+/// * [owner] - 
+/// * [sender] - 
+/// * [origin] - 
+/// * [amount] - 
+/// * [amount0] - 
+/// * [amount1] - 
+/// * [amountUsd] - 
+/// * [tickLower] - 
+/// * [tickUpper] - 
+/// * [logIndex] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class MintV3DTO implements Built<MintV3DTO, MintV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -39,57 +39,75 @@ abstract class MintV3DTO implements Built<MintV3DTO, MintV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
+  /// 
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
+  /// 
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
+  /// 
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
+  /// 
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
+  /// 
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
+  /// 
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
+  /// 
   @BuiltValueField(wireName: r'origin')
   String? get origin;
 
+  /// 
   @BuiltValueField(wireName: r'amount')
   String? get amount;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0')
   String? get amount0;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1')
   String? get amount1;
 
+  /// 
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 
+  /// 
   @BuiltValueField(wireName: r'tick_lower')
   String? get tickLower;
 
+  /// 
   @BuiltValueField(wireName: r'tick_upper')
   String? get tickUpper;
 
+  /// 
   @BuiltValueField(wireName: r'log_index')
   String? get logIndex;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

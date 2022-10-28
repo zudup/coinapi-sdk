@@ -17,12 +17,24 @@ export interface BundleV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     eth_price_usd?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
 }

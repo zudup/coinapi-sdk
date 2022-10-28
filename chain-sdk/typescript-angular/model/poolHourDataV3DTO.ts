@@ -14,27 +14,93 @@
 export interface PoolHourDataV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     period_start_unix?: number;
+    /**
+     * 
+     */
     pool?: string | null;
+    /**
+     * 
+     */
     liquidity?: string | null;
+    /**
+     * 
+     */
     sqrt_price?: string | null;
+    /**
+     * 
+     */
     token_0_price?: string | null;
+    /**
+     * 
+     */
     token_1_price?: string | null;
+    /**
+     * 
+     */
     tick?: string | null;
+    /**
+     * 
+     */
     fee_growth_global_0x128?: string | null;
+    /**
+     * 
+     */
     fee_growth_global_1x128?: string | null;
+    /**
+     * 
+     */
     tvl_usd?: string | null;
+    /**
+     * 
+     */
     volume_token_0?: string | null;
+    /**
+     * 
+     */
     volume_token_1?: string | null;
+    /**
+     * 
+     */
     volume_usd?: string | null;
+    /**
+     * 
+     */
     fees_usd?: string | null;
+    /**
+     * 
+     */
     tx_count?: string | null;
+    /**
+     * 
+     */
     open?: string | null;
+    /**
+     * 
+     */
     high?: string | null;
+    /**
+     * 
+     */
     low?: string | null;
+    /**
+     * 
+     */
     close?: string | null;
+    /**
+     * 
+     */
     vid?: number;
 }
 

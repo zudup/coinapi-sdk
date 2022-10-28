@@ -27,111 +27,133 @@ export interface PoolDayDataV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PoolDayDataV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PoolDayDataV3DTO
      */
     date?: number;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     pool?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     liquidity?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     sqrt_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     token_0_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     token_1_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tick?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fee_growth_global_0x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fee_growth_global_1x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tvl_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tx_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     open?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     high?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     low?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     close?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PoolDayDataV3DTO
      */

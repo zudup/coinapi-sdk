@@ -54,21 +54,21 @@ FactoryV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
-    #' @param pool_count pool_count
-    #' @param tx_count tx_count
-    #' @param total_volume_usd total_volume_usd
-    #' @param total_volume_eth total_volume_eth
-    #' @param total_fees_usd total_fees_usd
-    #' @param total_fees_eth total_fees_eth
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param total_value_locked_usd total_value_locked_usd
-    #' @param total_value_locked_eth total_value_locked_eth
-    #' @param total_value_locked_usd_untracked total_value_locked_usd_untracked
-    #' @param total_value_locked_eth_untracked total_value_locked_eth_untracked
-    #' @param owner owner
-    #' @param vid vid
+    #' @param block_number 
+    #' @param id 
+    #' @param pool_count 
+    #' @param tx_count 
+    #' @param total_volume_usd 
+    #' @param total_volume_eth 
+    #' @param total_fees_usd 
+    #' @param total_fees_eth 
+    #' @param untracked_volume_usd 
+    #' @param total_value_locked_usd 
+    #' @param total_value_locked_eth 
+    #' @param total_value_locked_usd_untracked 
+    #' @param total_value_locked_eth_untracked 
+    #' @param owner 
+    #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

@@ -88,6 +88,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -98,6 +99,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -108,6 +110,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -118,6 +121,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -128,6 +132,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -138,6 +143,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserve0() {
@@ -148,6 +154,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserve1() {
@@ -158,6 +165,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalSupply() {
@@ -168,6 +176,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserveEth() {
@@ -178,6 +187,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserveUsd() {
@@ -188,6 +198,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTrackedReserveEth() {
@@ -198,6 +209,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0Price() {
@@ -208,6 +220,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1Price() {
@@ -218,6 +231,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -228,6 +242,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -238,6 +253,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -248,6 +264,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -268,6 +285,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Date getCreatedAtTimestamp() {
@@ -278,6 +296,7 @@ public class PairV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidityProviderCount() {

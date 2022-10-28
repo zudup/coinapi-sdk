@@ -8,17 +8,17 @@
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** |  | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **symbol** | **String** |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **decimals** | **Integer** |  | [optional] |
+| **id** | **String** | token address | [optional] |
+| **symbol** | **String** | token symbol | [optional] |
+| **name** | **String** | token name | [optional] |
+| **decimals** | **Integer** | token decimals | [optional] |
 | **total_supply** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **trade_volume** | **String** |  | [optional] |
-| **trade_volume_usd** | **String** |  | [optional] |
-| **untracked_volume_usd** | **String** |  | [optional] |
+| **trade_volume** | **String** | amount of token traded all time across all pairs | [optional] |
+| **trade_volume_usd** | **String** | amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) | [optional] |
+| **untracked_volume_usd** | **String** | amount of token in USD traded all time across pairs (no minimum liquidity threshold) | [optional] |
 | **tx_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **total_liquidity** | **String** |  | [optional] |
-| **derived_eth** | **String** |  | [optional] |
+| **total_liquidity** | **String** | total amount of token provided as liquidity across all pairs | [optional] |
+| **derived_eth** | **String** | ETH per token | [optional] |
 | **token_symbol** | **String** |  | [optional][readonly] |
 
 ## Example

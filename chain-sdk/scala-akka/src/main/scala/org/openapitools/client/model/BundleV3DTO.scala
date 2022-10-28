@@ -17,9 +17,13 @@ import org.openapitools.client.core.ApiModel
 case class BundleV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   ethPriceUsd: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

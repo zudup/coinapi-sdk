@@ -573,6 +573,8 @@ type alias TokenHourDataV3DTO =
     }
 
 
+{-| Stores aggregated information for a specific token across all pairs that token is included in.
+-}
 type alias TokenV2DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix

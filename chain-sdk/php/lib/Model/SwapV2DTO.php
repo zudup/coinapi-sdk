@@ -498,7 +498,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -527,7 +527,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -556,7 +556,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param string|null $transaction transaction
+     * @param string|null $transaction 
      *
      * @return self
      */
@@ -628,7 +628,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param \DateTime|null $timestamp timestamp
+     * @param \DateTime|null $timestamp 
      *
      * @return self
      */
@@ -657,7 +657,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pair
      *
-     * @param string|null $pair pair
+     * @param string|null $pair 
      *
      * @return self
      */
@@ -693,7 +693,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sender
      *
-     * @param string|null $sender sender
+     * @param string|null $sender 
      *
      * @return self
      */
@@ -729,7 +729,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets from
      *
-     * @param string|null $from from
+     * @param string|null $from 
      *
      * @return self
      */
@@ -765,7 +765,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0_in
      *
-     * @param string|null $amount_0_in amount_0_in
+     * @param string|null $amount_0_in 
      *
      * @return self
      */
@@ -801,7 +801,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1_in
      *
-     * @param string|null $amount_1_in amount_1_in
+     * @param string|null $amount_1_in 
      *
      * @return self
      */
@@ -837,7 +837,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_0_out
      *
-     * @param string|null $amount_0_out amount_0_out
+     * @param string|null $amount_0_out 
      *
      * @return self
      */
@@ -873,7 +873,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_1_out
      *
-     * @param string|null $amount_1_out amount_1_out
+     * @param string|null $amount_1_out 
      *
      * @return self
      */
@@ -909,7 +909,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets to
      *
-     * @param string|null $to to
+     * @param string|null $to 
      *
      * @return self
      */
@@ -974,7 +974,7 @@ class SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_usd
      *
-     * @param string|null $amount_usd amount_usd
+     * @param string|null $amount_usd 
      *
      * @return self
      */

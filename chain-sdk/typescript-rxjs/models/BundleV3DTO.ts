@@ -27,21 +27,25 @@ export interface BundleV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof BundleV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof BundleV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof BundleV3DTO
      */
     eth_price_usd?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof BundleV3DTO
      */

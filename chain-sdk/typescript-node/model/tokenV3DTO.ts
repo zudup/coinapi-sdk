@@ -16,23 +16,68 @@ import { BigInteger } from './bigInteger';
 export class TokenV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'symbol'?: string | null;
+    /**
+    * 
+    */
     'name'?: string | null;
+    /**
+    * 
+    */
     'decimals'?: number;
     'totalSupply'?: BigInteger;
+    /**
+    * 
+    */
     'volume'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
     'txCount'?: BigInteger;
     'poolCount'?: BigInteger;
+    /**
+    * 
+    */
     'totalValueLocked'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsdUntracked'?: string | null;
+    /**
+    * 
+    */
     'derivedEth'?: string | null;
+    /**
+    * 
+    */
     'whitelistPools'?: Array<string> | null;
     'tokenSymbol'?: string | null;
 

@@ -31,41 +31,49 @@ export interface UniswapDayDataV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
     date?: number;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
     volume_usd_untracked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */
@@ -76,6 +84,7 @@ export interface UniswapDayDataV3DTO {
      */
     tx_count?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof UniswapDayDataV3DTO
      */

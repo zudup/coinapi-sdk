@@ -463,7 +463,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -528,7 +528,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool_count
      *
-     * @param string|null $pool_count pool_count
+     * @param string|null $pool_count 
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tx_count
      *
-     * @param string|null $tx_count tx_count
+     * @param string|null $tx_count 
      *
      * @return self
      */
@@ -600,7 +600,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_volume_usd
      *
-     * @param string|null $total_volume_usd total_volume_usd
+     * @param string|null $total_volume_usd 
      *
      * @return self
      */
@@ -636,7 +636,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_volume_eth
      *
-     * @param string|null $total_volume_eth total_volume_eth
+     * @param string|null $total_volume_eth 
      *
      * @return self
      */
@@ -672,7 +672,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_fees_usd
      *
-     * @param string|null $total_fees_usd total_fees_usd
+     * @param string|null $total_fees_usd 
      *
      * @return self
      */
@@ -708,7 +708,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_fees_eth
      *
-     * @param string|null $total_fees_eth total_fees_eth
+     * @param string|null $total_fees_eth 
      *
      * @return self
      */
@@ -744,7 +744,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -780,7 +780,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd total_value_locked_usd
+     * @param string|null $total_value_locked_usd 
      *
      * @return self
      */
@@ -816,7 +816,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_eth
      *
-     * @param string|null $total_value_locked_eth total_value_locked_eth
+     * @param string|null $total_value_locked_eth 
      *
      * @return self
      */
@@ -852,7 +852,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd_untracked
      *
-     * @param string|null $total_value_locked_usd_untracked total_value_locked_usd_untracked
+     * @param string|null $total_value_locked_usd_untracked 
      *
      * @return self
      */
@@ -888,7 +888,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_eth_untracked
      *
-     * @param string|null $total_value_locked_eth_untracked total_value_locked_eth_untracked
+     * @param string|null $total_value_locked_eth_untracked 
      *
      * @return self
      */
@@ -924,7 +924,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param string|null $owner 
      *
      * @return self
      */
@@ -960,7 +960,7 @@ class FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

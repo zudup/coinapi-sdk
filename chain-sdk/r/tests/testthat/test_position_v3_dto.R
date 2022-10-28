@@ -21,6 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -28,6 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -35,6 +37,7 @@ test_that("id", {
 
 test_that("owner", {
   # tests for the property `owner` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`owner`, "EXPECTED_RESULT")
@@ -42,6 +45,7 @@ test_that("owner", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -49,6 +53,7 @@ test_that("pool", {
 
 test_that("token_0", {
   # tests for the property `token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0`, "EXPECTED_RESULT")
@@ -56,6 +61,7 @@ test_that("token_0", {
 
 test_that("token_1", {
   # tests for the property `token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1`, "EXPECTED_RESULT")
@@ -63,6 +69,7 @@ test_that("token_1", {
 
 test_that("tick_lower", {
   # tests for the property `tick_lower` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tick_lower`, "EXPECTED_RESULT")
@@ -70,6 +77,7 @@ test_that("tick_lower", {
 
 test_that("tick_upper", {
   # tests for the property `tick_upper` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tick_upper`, "EXPECTED_RESULT")
@@ -77,6 +85,7 @@ test_that("tick_upper", {
 
 test_that("liquidity", {
   # tests for the property `liquidity` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity`, "EXPECTED_RESULT")
@@ -84,6 +93,7 @@ test_that("liquidity", {
 
 test_that("deposited_token_0", {
   # tests for the property `deposited_token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`deposited_token_0`, "EXPECTED_RESULT")
@@ -91,6 +101,7 @@ test_that("deposited_token_0", {
 
 test_that("deposited_token_1", {
   # tests for the property `deposited_token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`deposited_token_1`, "EXPECTED_RESULT")
@@ -98,6 +109,7 @@ test_that("deposited_token_1", {
 
 test_that("withdrawn_token_0", {
   # tests for the property `withdrawn_token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`withdrawn_token_0`, "EXPECTED_RESULT")
@@ -105,6 +117,7 @@ test_that("withdrawn_token_0", {
 
 test_that("withdrawn_token_1", {
   # tests for the property `withdrawn_token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`withdrawn_token_1`, "EXPECTED_RESULT")
@@ -112,6 +125,7 @@ test_that("withdrawn_token_1", {
 
 test_that("collected_fees_token_0", {
   # tests for the property `collected_fees_token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_0`, "EXPECTED_RESULT")
@@ -119,6 +133,7 @@ test_that("collected_fees_token_0", {
 
 test_that("collected_fees_token_1", {
   # tests for the property `collected_fees_token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_1`, "EXPECTED_RESULT")
@@ -126,6 +141,7 @@ test_that("collected_fees_token_1", {
 
 test_that("transaction", {
   # tests for the property `transaction` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`transaction`, "EXPECTED_RESULT")
@@ -133,6 +149,7 @@ test_that("transaction", {
 
 test_that("fee_growth_inside_0_last_x128", {
   # tests for the property `fee_growth_inside_0_last_x128` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_inside_0_last_x128`, "EXPECTED_RESULT")
@@ -140,6 +157,7 @@ test_that("fee_growth_inside_0_last_x128", {
 
 test_that("fee_growth_inside_1_last_x128", {
   # tests for the property `fee_growth_inside_1_last_x128` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_inside_1_last_x128`, "EXPECTED_RESULT")
@@ -147,6 +165,7 @@ test_that("fee_growth_inside_1_last_x128", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")

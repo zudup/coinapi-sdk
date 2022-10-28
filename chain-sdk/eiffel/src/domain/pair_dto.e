@@ -24,51 +24,51 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     factory: detachable STRING_32
-      
+      -- 
     name: detachable STRING_32
-      
+      -- 
     token_0: detachable STRING_32
-      
+      -- 
     token_1: detachable STRING_32
-      
+      -- 
     reserve_0: detachable STRING_32
-      
+      -- 
     reserve_1: detachable STRING_32
-      
+      -- 
     total_supply: detachable STRING_32
-      
+      -- 
     reserve_eth: detachable STRING_32
-      
+      -- 
     reserve_usd: detachable STRING_32
-      
+      -- 
     tracked_reserve_eth: detachable STRING_32
-      
+      -- 
     token_0_price: detachable STRING_32
-      
+      -- 
     token_1_price: detachable STRING_32
-      
+      -- 
     volume_token_0: detachable STRING_32
-      
+      -- 
     volume_token_1: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     tx_count: detachable STRING_32
-      
+      -- 
     liquidity_provider_count: detachable STRING_32
-      
+      -- 
     timestamp: detachable STRING_32
-      
+      -- 
     block: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
  	evaluated_ask: REAL_64
     	 
 

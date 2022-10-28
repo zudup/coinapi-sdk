@@ -13,38 +13,38 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Stores aggregated information for a specific token across all pairs that token is included in.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+token address
 .PARAMETER Symbol
-No description available.
+token symbol
 .PARAMETER Name
-No description available.
+token name
 .PARAMETER Decimals
-No description available.
+token decimals
 .PARAMETER TotalSupply
 No description available.
 .PARAMETER TradeVolume
-No description available.
+amount of token traded all time across all pairs
 .PARAMETER TradeVolumeUsd
-No description available.
+amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
 .PARAMETER UntrackedVolumeUsd
-No description available.
+amount of token in USD traded all time across pairs (no minimum liquidity threshold)
 .PARAMETER TxCount
 No description available.
 .PARAMETER TotalLiquidity
-No description available.
+total amount of token provided as liquidity across all pairs
 .PARAMETER DerivedEth
-No description available.
+ETH per token
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

@@ -24,35 +24,35 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     transaction: detachable STRING_32
-      
+      -- 
     timestamp: detachable DATE_TIME
-      
+      -- 
     pair: detachable STRING_32
-      
+      -- 
     sender: detachable STRING_32
-      
+      -- 
     var_from: detachable STRING_32
-      
+      -- 
     amount_0_in: detachable STRING_32
-      
+      -- 
     amount_1_in: detachable STRING_32
-      
+      -- 
     amount_0_out: detachable STRING_32
-      
+      -- 
     amount_1_out: detachable STRING_32
-      
+      -- 
     to: detachable STRING_32
-      
+      -- 
     log_index: detachable BIG_INTEGER
       
     amount_usd: detachable STRING_32
-      
+      -- 
  	evaluated_price: REAL_64
     	 
  	evaluated_amount: REAL_64

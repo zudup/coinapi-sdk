@@ -44,16 +44,16 @@ UniswapDayDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param date date
-    #' @param volume_eth volume_eth
-    #' @param volume_usd volume_usd
-    #' @param volume_usd_untracked volume_usd_untracked
-    #' @param fees_usd fees_usd
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param date 
+    #' @param volume_eth 
+    #' @param volume_usd 
+    #' @param volume_usd_untracked 
+    #' @param fees_usd 
     #' @param tx_count tx_count
-    #' @param tvl_usd tvl_usd
+    #' @param tvl_usd 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

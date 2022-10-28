@@ -15,20 +15,65 @@ import { RequestFile } from './models';
 export class FactoryV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'poolCount'?: string | null;
+    /**
+    * 
+    */
     'txCount'?: string | null;
+    /**
+    * 
+    */
     'totalVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'totalVolumeEth'?: string | null;
+    /**
+    * 
+    */
     'totalFeesUsd'?: string | null;
+    /**
+    * 
+    */
     'totalFeesEth'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedEth'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsdUntracked'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedEthUntracked'?: string | null;
+    /**
+    * 
+    */
     'owner'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

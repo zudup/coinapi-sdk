@@ -18,24 +18,28 @@ API.Client.BundleV3DTO.prototype.entryTime;
 API.Client.BundleV3DTO.prototype.recvTime;
 
 /**
+ * 
  * @type {!number}
  * @export
  */
 API.Client.BundleV3DTO.prototype.blockNumber;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.BundleV3DTO.prototype.id;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.BundleV3DTO.prototype.ethPriceUsd;
 
 /**
+ * 
  * @type {!number}
  * @export
  */

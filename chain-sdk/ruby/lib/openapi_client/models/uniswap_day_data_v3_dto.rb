@@ -19,24 +19,33 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :vid
 
+    # 
     attr_accessor :id
 
+    # 
     attr_accessor :date
 
+    # 
     attr_accessor :volume_eth
 
+    # 
     attr_accessor :volume_usd
 
+    # 
     attr_accessor :volume_usd_untracked
 
+    # 
     attr_accessor :fees_usd
 
     attr_accessor :tx_count
 
+    # 
     attr_accessor :tvl_usd
 
     # Attribute mapping from ruby-style variable name to JSON key.

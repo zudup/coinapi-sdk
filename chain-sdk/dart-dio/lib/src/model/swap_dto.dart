@@ -14,20 +14,20 @@ part 'swap_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [transaction] 
-/// * [timestamp] 
-/// * [pair] 
-/// * [sender] 
-/// * [amount0In] 
-/// * [amount1In] 
-/// * [amount0Out] 
-/// * [amount1Out] 
-/// * [to] 
-/// * [logIndex] 
-/// * [amountUsd] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [transaction] - 
+/// * [timestamp] - 
+/// * [pair] - 
+/// * [sender] - 
+/// * [amount0In] - 
+/// * [amount1In] - 
+/// * [amount0Out] - 
+/// * [amount1Out] - 
+/// * [to] - 
+/// * [logIndex] - 
+/// * [amountUsd] - 
+/// * [vid] - 
 /// * [poolId] 
 /// * [transactionId] 
 /// * [evaluatedPrice] 
@@ -41,45 +41,59 @@ abstract class SwapDTO implements Built<SwapDTO, SwapDTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
+  /// 
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
+  /// 
   @BuiltValueField(wireName: r'pair')
   String? get pair;
 
+  /// 
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0_in')
   String? get amount0In;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1_in')
   String? get amount1In;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0_out')
   String? get amount0Out;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1_out')
   String? get amount1Out;
 
+  /// 
   @BuiltValueField(wireName: r'to')
   String? get to;
 
+  /// 
   @BuiltValueField(wireName: r'log_index')
   String? get logIndex;
 
+  /// 
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

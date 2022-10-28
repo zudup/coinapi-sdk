@@ -14,16 +14,16 @@ part 'uniswap_day_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [date] 
-/// * [volumeEth] 
-/// * [volumeUsd] 
-/// * [volumeUsdUntracked] 
-/// * [feesUsd] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [date] - 
+/// * [volumeEth] - 
+/// * [volumeUsd] - 
+/// * [volumeUsdUntracked] - 
+/// * [feesUsd] - 
 /// * [txCount] 
-/// * [tvlUsd] 
+/// * [tvlUsd] - 
 @BuiltValue()
 abstract class UniswapDayDataV3DTO implements Built<UniswapDayDataV3DTO, UniswapDayDataV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -32,33 +32,42 @@ abstract class UniswapDayDataV3DTO implements Built<UniswapDayDataV3DTO, Uniswap
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'date')
   int? get date;
 
+  /// 
   @BuiltValueField(wireName: r'volume_eth')
   String? get volumeEth;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd_untracked')
   String? get volumeUsdUntracked;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
+  /// 
   @BuiltValueField(wireName: r'tvl_usd')
   String? get tvlUsd;
 

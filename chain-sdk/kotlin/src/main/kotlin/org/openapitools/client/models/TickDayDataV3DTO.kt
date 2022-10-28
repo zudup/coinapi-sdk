@@ -52,45 +52,59 @@ data class TickDayDataV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
+    /*  */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick")
     val tick: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity_gross")
     val liquidityGross: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity_net")
     val liquidityNet: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_0")
     val volumeToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_1")
     val volumeToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_outside_0x128")
     val feeGrowthOutside0x128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_outside_1x128")
     val feeGrowthOutside1x128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

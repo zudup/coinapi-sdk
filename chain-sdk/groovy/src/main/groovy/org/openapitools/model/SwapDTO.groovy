@@ -12,33 +12,33 @@ class SwapDTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     String id
-    
+    /*  */
     String transaction
-    
+    /*  */
     String timestamp
-    
+    /*  */
     String pair
-    
+    /*  */
     String sender
-    
+    /*  */
     String amount0In
-    
+    /*  */
     String amount1In
-    
+    /*  */
     String amount0Out
-    
+    /*  */
     String amount1Out
-    
+    /*  */
     String to
-    
+    /*  */
     String logIndex
-    
+    /*  */
     String amountUsd
-    
+    /*  */
     Long vid
     
     String poolId

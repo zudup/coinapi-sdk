@@ -27,11 +27,13 @@ export interface PositionSnapshotV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PositionSnapshotV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
@@ -43,71 +45,85 @@ export interface PositionSnapshotV3DTO {
      */
     owner?: string;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     pool?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     position?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     timestamp?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     liquidity?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     transaction?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     fee_growth_inside_0_last_x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     fee_growth_inside_1_last_x128?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PositionSnapshotV3DTO
      */

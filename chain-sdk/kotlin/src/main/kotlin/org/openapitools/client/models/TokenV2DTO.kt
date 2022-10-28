@@ -25,23 +25,23 @@ import org.openapitools.client.models.BigInteger
 import com.squareup.moshi.Json
 
 /**
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  *
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber 
  * @param vid 
- * @param id 
- * @param symbol 
- * @param name 
- * @param decimals 
+ * @param id token address
+ * @param symbol token symbol
+ * @param name token name
+ * @param decimals token decimals
  * @param totalSupply 
- * @param tradeVolume 
- * @param tradeVolumeUsd 
- * @param untrackedVolumeUsd 
+ * @param tradeVolume amount of token traded all time across all pairs
+ * @param tradeVolumeUsd amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+ * @param untrackedVolumeUsd amount of token in USD traded all time across pairs (no minimum liquidity threshold)
  * @param txCount 
- * @param totalLiquidity 
- * @param derivedEth 
+ * @param totalLiquidity total amount of token provided as liquidity across all pairs
+ * @param derivedEth ETH per token
  * @param tokenSymbol 
  */
 
@@ -53,42 +53,53 @@ data class TokenV2DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
+    /* token address */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /* token symbol */
     @Json(name = "symbol")
     val symbol: kotlin.String? = null,
 
+    /* token name */
     @Json(name = "name")
     val name: kotlin.String? = null,
 
+    /* token decimals */
     @Json(name = "decimals")
     val decimals: kotlin.Int? = null,
 
     @Json(name = "total_supply")
     val totalSupply: BigInteger? = null,
 
+    /* amount of token traded all time across all pairs */
     @Json(name = "trade_volume")
     val tradeVolume: kotlin.String? = null,
 
+    /* amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) */
     @Json(name = "trade_volume_usd")
     val tradeVolumeUsd: kotlin.String? = null,
 
+    /* amount of token in USD traded all time across pairs (no minimum liquidity threshold) */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
     @Json(name = "tx_count")
     val txCount: BigInteger? = null,
 
+    /* total amount of token provided as liquidity across all pairs */
     @Json(name = "total_liquidity")
     val totalLiquidity: kotlin.String? = null,
 
+    /* ETH per token */
     @Json(name = "derived_eth")
     val derivedEth: kotlin.String? = null,
 

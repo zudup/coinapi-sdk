@@ -21,6 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -28,6 +29,7 @@ test_that("block_number", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")
@@ -35,6 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -42,6 +45,7 @@ test_that("id", {
 
 test_that("transaction", {
   # tests for the property `transaction` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`transaction`, "EXPECTED_RESULT")
@@ -49,6 +53,7 @@ test_that("transaction", {
 
 test_that("timestamp", {
   # tests for the property `timestamp` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`timestamp`, "EXPECTED_RESULT")
@@ -56,6 +61,7 @@ test_that("timestamp", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -63,6 +69,7 @@ test_that("pool", {
 
 test_that("token_0", {
   # tests for the property `token_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0`, "EXPECTED_RESULT")
@@ -70,6 +77,7 @@ test_that("token_0", {
 
 test_that("token_1", {
   # tests for the property `token_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1`, "EXPECTED_RESULT")
@@ -77,6 +85,7 @@ test_that("token_1", {
 
 test_that("sender", {
   # tests for the property `sender` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`sender`, "EXPECTED_RESULT")
@@ -84,6 +93,7 @@ test_that("sender", {
 
 test_that("recipient", {
   # tests for the property `recipient` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`recipient`, "EXPECTED_RESULT")
@@ -91,6 +101,7 @@ test_that("recipient", {
 
 test_that("origin", {
   # tests for the property `origin` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`origin`, "EXPECTED_RESULT")
@@ -98,6 +109,7 @@ test_that("origin", {
 
 test_that("amount_0", {
   # tests for the property `amount_0` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_0`, "EXPECTED_RESULT")
@@ -105,6 +117,7 @@ test_that("amount_0", {
 
 test_that("amount_1", {
   # tests for the property `amount_1` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_1`, "EXPECTED_RESULT")
@@ -112,6 +125,7 @@ test_that("amount_1", {
 
 test_that("amount_usd", {
   # tests for the property `amount_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`amount_usd`, "EXPECTED_RESULT")

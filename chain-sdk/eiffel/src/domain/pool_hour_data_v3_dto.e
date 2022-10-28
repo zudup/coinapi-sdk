@@ -24,49 +24,49 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
  	period_start_unix: INTEGER_32
-    	 
+    	 -- 
     pool: detachable STRING_32
-      
+      -- 
     liquidity: detachable STRING_32
-      
+      -- 
     sqrt_price: detachable STRING_32
-      
+      -- 
     token_0_price: detachable STRING_32
-      
+      -- 
     token_1_price: detachable STRING_32
-      
+      -- 
     tick: detachable STRING_32
-      
+      -- 
     fee_growth_global_0x128: detachable STRING_32
-      
+      -- 
     fee_growth_global_1x128: detachable STRING_32
-      
+      -- 
     tvl_usd: detachable STRING_32
-      
+      -- 
     volume_token_0: detachable STRING_32
-      
+      -- 
     volume_token_1: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     tx_count: detachable STRING_32
-      
+      -- 
     open: detachable STRING_32
-      
+      -- 
     high: detachable STRING_32
-      
+      -- 
     low: detachable STRING_32
-      
+      -- 
     close: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

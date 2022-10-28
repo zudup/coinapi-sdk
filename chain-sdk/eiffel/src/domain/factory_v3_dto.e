@@ -24,35 +24,35 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     pool_count: detachable STRING_32
-      
+      -- 
     tx_count: detachable STRING_32
-      
+      -- 
     total_volume_usd: detachable STRING_32
-      
+      -- 
     total_volume_eth: detachable STRING_32
-      
+      -- 
     total_fees_usd: detachable STRING_32
-      
+      -- 
     total_fees_eth: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     total_value_locked_usd: detachable STRING_32
-      
+      -- 
     total_value_locked_eth: detachable STRING_32
-      
+      -- 
     total_value_locked_usd_untracked: detachable STRING_32
-      
+      -- 
     total_value_locked_eth_untracked: detachable STRING_32
-      
+      -- 
     owner: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

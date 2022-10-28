@@ -20,23 +20,39 @@ import (
 type PositionSnapshotV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
 	// THIS IS SUPER OWNER
 	Owner *string `json:"owner,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
+	// 
 	Position NullableString `json:"position,omitempty"`
+	// 
 	Timestamp NullableString `json:"timestamp,omitempty"`
+	// 
 	Liquidity NullableString `json:"liquidity,omitempty"`
+	// 
 	DepositedToken0 NullableString `json:"deposited_token_0,omitempty"`
+	// 
 	DepositedToken1 NullableString `json:"deposited_token_1,omitempty"`
+	// 
 	WithdrawnToken0 NullableString `json:"withdrawn_token_0,omitempty"`
+	// 
 	WithdrawnToken1 NullableString `json:"withdrawn_token_1,omitempty"`
+	// 
 	CollectedFeesToken0 NullableString `json:"collected_fees_token_0,omitempty"`
+	// 
 	CollectedFeesToken1 NullableString `json:"collected_fees_token_1,omitempty"`
+	// 
 	Transaction NullableString `json:"transaction,omitempty"`
+	// 
 	FeeGrowthInside0LastX128 NullableString `json:"fee_growth_inside_0_last_x128,omitempty"`
+	// 
 	FeeGrowthInside1LastX128 NullableString `json:"fee_growth_inside_1_last_x128,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

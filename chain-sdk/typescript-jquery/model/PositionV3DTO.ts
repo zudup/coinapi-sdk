@@ -17,42 +17,99 @@ export interface PositionV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     owner?: string;
 
+    /**
+     * 
+     */
     pool?: string;
 
+    /**
+     * 
+     */
     token_0?: string;
 
+    /**
+     * 
+     */
     token_1?: string;
 
+    /**
+     * 
+     */
     tick_lower?: string;
 
+    /**
+     * 
+     */
     tick_upper?: string;
 
+    /**
+     * 
+     */
     liquidity?: string;
 
+    /**
+     * 
+     */
     deposited_token_0?: string;
 
+    /**
+     * 
+     */
     deposited_token_1?: string;
 
+    /**
+     * 
+     */
     withdrawn_token_0?: string;
 
+    /**
+     * 
+     */
     withdrawn_token_1?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_0?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_1?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     fee_growth_inside_0_last_x128?: string;
 
+    /**
+     * 
+     */
     fee_growth_inside_1_last_x128?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
 }

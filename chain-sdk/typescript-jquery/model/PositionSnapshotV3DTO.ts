@@ -17,8 +17,14 @@ export interface PositionSnapshotV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
     /**
@@ -26,32 +32,74 @@ export interface PositionSnapshotV3DTO {
      */
     owner?: string;
 
+    /**
+     * 
+     */
     pool?: string;
 
+    /**
+     * 
+     */
     position?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     liquidity?: string;
 
+    /**
+     * 
+     */
     deposited_token_0?: string;
 
+    /**
+     * 
+     */
     deposited_token_1?: string;
 
+    /**
+     * 
+     */
     withdrawn_token_0?: string;
 
+    /**
+     * 
+     */
     withdrawn_token_1?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_0?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_1?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     fee_growth_inside_0_last_x128?: string;
 
+    /**
+     * 
+     */
     fee_growth_inside_1_last_x128?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
 }

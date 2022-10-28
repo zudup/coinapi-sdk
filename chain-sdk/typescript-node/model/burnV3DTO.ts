@@ -15,22 +15,73 @@ import { RequestFile } from './models';
 export class BurnV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'transaction'?: string | null;
+    /**
+    * 
+    */
     'pool'?: string | null;
+    /**
+    * 
+    */
     'token0'?: string | null;
+    /**
+    * 
+    */
     'token1'?: string | null;
+    /**
+    * 
+    */
     'timestamp'?: string | null;
+    /**
+    * 
+    */
     'owner'?: string | null;
+    /**
+    * 
+    */
     'origin'?: string | null;
+    /**
+    * 
+    */
     'amount'?: string | null;
+    /**
+    * 
+    */
     'amount0'?: string | null;
+    /**
+    * 
+    */
     'amount1'?: string | null;
+    /**
+    * 
+    */
     'amountUsd'?: string | null;
+    /**
+    * 
+    */
     'tickLower'?: string | null;
+    /**
+    * 
+    */
     'tickUpper'?: string | null;
+    /**
+    * 
+    */
     'logIndex'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

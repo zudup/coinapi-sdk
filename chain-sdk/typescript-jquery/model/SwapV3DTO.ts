@@ -17,32 +17,74 @@ export interface SwapV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     pool?: string;
 
+    /**
+     * 
+     */
     token_0?: string;
 
+    /**
+     * 
+     */
     token_1?: string;
 
+    /**
+     * 
+     */
     sender?: string;
 
+    /**
+     * 
+     */
     recipient?: string;
 
+    /**
+     * 
+     */
     origin?: string;
 
+    /**
+     * 
+     */
     amount_0?: string;
 
+    /**
+     * 
+     */
     amount_1?: string;
 
+    /**
+     * 
+     */
     amount_usd?: string;
 
     sqrt_price_x96?: models.BigInteger;

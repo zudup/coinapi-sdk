@@ -81,6 +81,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -91,6 +92,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -101,6 +103,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -111,6 +114,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
@@ -121,6 +125,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -131,6 +136,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -141,6 +147,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -151,6 +158,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOwner() {
@@ -161,6 +169,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getSender() {
@@ -171,6 +180,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOrigin() {
@@ -181,6 +191,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount() {
@@ -191,6 +202,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount0() {
@@ -201,6 +213,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount1() {
@@ -211,6 +224,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmountUsd() {
@@ -221,6 +235,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickLower() {
@@ -231,6 +246,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTickUpper() {
@@ -241,6 +257,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLogIndex() {
@@ -251,6 +268,7 @@ public class MintV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

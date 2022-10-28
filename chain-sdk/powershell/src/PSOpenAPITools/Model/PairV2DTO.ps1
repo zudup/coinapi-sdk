@@ -20,45 +20,45 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Token0
-No description available.
+
 .PARAMETER Token1
-No description available.
+
 .PARAMETER Reserve0
-No description available.
+
 .PARAMETER Reserve1
-No description available.
+
 .PARAMETER TotalSupply
-No description available.
+
 .PARAMETER ReserveEth
-No description available.
+
 .PARAMETER ReserveUsd
-No description available.
+
 .PARAMETER TrackedReserveEth
-No description available.
+
 .PARAMETER Token0Price
-No description available.
+
 .PARAMETER Token1Price
-No description available.
+
 .PARAMETER VolumeToken0
-No description available.
+
 .PARAMETER VolumeToken1
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER TxCount
 No description available.
 .PARAMETER CreatedAtTimestamp
-No description available.
+
 .PARAMETER LiquidityProviderCount
-No description available.
+
 .PARAMETER EvaluatedAsk
 No description available.
 .OUTPUTS

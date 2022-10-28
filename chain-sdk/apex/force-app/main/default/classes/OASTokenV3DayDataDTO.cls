@@ -27,97 +27,97 @@ public class OASTokenV3DayDataDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get r_date
+     * 
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * Get token
+     * 
      * @return token
      */
     public String token { get; set; }
 
     /**
-     * Get volume
+     * 
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get totalValueLocked
+     * 
      * @return totalValueLocked
      */
     public String totalValueLocked { get; set; }
 
     /**
-     * Get totalValueLockedUsd
+     * 
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * Get priceUsd
+     * 
      * @return priceUsd
      */
     public String priceUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * Get open
+     * 
      * @return open
      */
     public String open { get; set; }
 
     /**
-     * Get high
+     * 
      * @return high
      */
     public String high { get; set; }
 
     /**
-     * Get low
+     * 
      * @return low
      */
     public String low { get; set; }
 
     /**
-     * Get close
+     * 
      * @return close
      */
     public String close { get; set; }

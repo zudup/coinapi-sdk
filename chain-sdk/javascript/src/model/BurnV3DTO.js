@@ -122,86 +122,103 @@ BurnV3DTO.prototype['entry_time'] = undefined;
 BurnV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 BurnV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 BurnV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} transaction
  */
 BurnV3DTO.prototype['transaction'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 BurnV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} token_0
  */
 BurnV3DTO.prototype['token_0'] = undefined;
 
 /**
+ * 
  * @member {String} token_1
  */
 BurnV3DTO.prototype['token_1'] = undefined;
 
 /**
+ * 
  * @member {String} timestamp
  */
 BurnV3DTO.prototype['timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} owner
  */
 BurnV3DTO.prototype['owner'] = undefined;
 
 /**
+ * 
  * @member {String} origin
  */
 BurnV3DTO.prototype['origin'] = undefined;
 
 /**
+ * 
  * @member {String} amount
  */
 BurnV3DTO.prototype['amount'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0
  */
 BurnV3DTO.prototype['amount_0'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1
  */
 BurnV3DTO.prototype['amount_1'] = undefined;
 
 /**
+ * 
  * @member {String} amount_usd
  */
 BurnV3DTO.prototype['amount_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tick_lower
  */
 BurnV3DTO.prototype['tick_lower'] = undefined;
 
 /**
+ * 
  * @member {String} tick_upper
  */
 BurnV3DTO.prototype['tick_upper'] = undefined;
 
 /**
+ * 
  * @member {String} log_index
  */
 BurnV3DTO.prototype['log_index'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 BurnV3DTO.prototype['vid'] = undefined;

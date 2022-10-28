@@ -20,39 +20,39 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Owner
 THIS IS SUPER OWNER
 .PARAMETER Pool
-No description available.
+
 .PARAMETER Position
-No description available.
+
 .PARAMETER Timestamp
-No description available.
+
 .PARAMETER Liquidity
-No description available.
+
 .PARAMETER DepositedToken0
-No description available.
+
 .PARAMETER DepositedToken1
-No description available.
+
 .PARAMETER WithdrawnToken0
-No description available.
+
 .PARAMETER WithdrawnToken1
-No description available.
+
 .PARAMETER CollectedFeesToken0
-No description available.
+
 .PARAMETER CollectedFeesToken1
-No description available.
+
 .PARAMETER Transaction
-No description available.
+
 .PARAMETER FeeGrowthInside0LastX128
-No description available.
+
 .PARAMETER FeeGrowthInside1LastX128
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 PositionSnapshotV3DTO<PSCustomObject>

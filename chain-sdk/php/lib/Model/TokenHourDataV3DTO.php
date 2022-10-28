@@ -470,7 +470,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -535,7 +535,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets period_start_unix
      *
-     * @param int|null $period_start_unix period_start_unix
+     * @param int|null $period_start_unix 
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets token
      *
-     * @param string|null $token token
+     * @param string|null $token 
      *
      * @return self
      */
@@ -600,7 +600,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets volume
      *
-     * @param string|null $volume volume
+     * @param string|null $volume 
      *
      * @return self
      */
@@ -636,7 +636,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -672,7 +672,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -708,7 +708,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets total_value_locked
      *
-     * @param string|null $total_value_locked total_value_locked
+     * @param string|null $total_value_locked 
      *
      * @return self
      */
@@ -744,7 +744,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd total_value_locked_usd
+     * @param string|null $total_value_locked_usd 
      *
      * @return self
      */
@@ -780,7 +780,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets price_usd
      *
-     * @param string|null $price_usd price_usd
+     * @param string|null $price_usd 
      *
      * @return self
      */
@@ -816,7 +816,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -852,7 +852,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets open
      *
-     * @param string|null $open open
+     * @param string|null $open 
      *
      * @return self
      */
@@ -888,7 +888,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets high
      *
-     * @param string|null $high high
+     * @param string|null $high 
      *
      * @return self
      */
@@ -924,7 +924,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets low
      *
-     * @param string|null $low low
+     * @param string|null $low 
      *
      * @return self
      */
@@ -960,7 +960,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets close
      *
-     * @param string|null $close close
+     * @param string|null $close 
      *
      * @return self
      */
@@ -996,7 +996,7 @@ class TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

@@ -16,22 +16,33 @@ import (
 	"time"
 )
 
-// TokenV2DTO struct for TokenV2DTO
+// TokenV2DTO Stores aggregated information for a specific token across all pairs that token is included in.
 type TokenV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// token address
 	Id NullableString `json:"id,omitempty"`
+	// token symbol
 	Symbol NullableString `json:"symbol,omitempty"`
+	// token name
 	Name NullableString `json:"name,omitempty"`
+	// token decimals
 	Decimals *int32 `json:"decimals,omitempty"`
 	TotalSupply *BigInteger `json:"total_supply,omitempty"`
+	// amount of token traded all time across all pairs
 	TradeVolume NullableString `json:"trade_volume,omitempty"`
+	// amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
 	TradeVolumeUsd NullableString `json:"trade_volume_usd,omitempty"`
+	// amount of token in USD traded all time across pairs (no minimum liquidity threshold)
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
+	// total amount of token provided as liquidity across all pairs
 	TotalLiquidity NullableString `json:"total_liquidity,omitempty"`
+	// ETH per token
 	DerivedEth NullableString `json:"derived_eth,omitempty"`
 	TokenSymbol NullableString `json:"token_symbol,omitempty"`
 }

@@ -14,25 +14,73 @@
 export interface PositionSnapshotV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
     /**
      * THIS IS SUPER OWNER
      */
     owner?: string;
+    /**
+     * 
+     */
     pool?: string | null;
+    /**
+     * 
+     */
     position?: string | null;
+    /**
+     * 
+     */
     timestamp?: string | null;
+    /**
+     * 
+     */
     liquidity?: string | null;
+    /**
+     * 
+     */
     deposited_token_0?: string | null;
+    /**
+     * 
+     */
     deposited_token_1?: string | null;
+    /**
+     * 
+     */
     withdrawn_token_0?: string | null;
+    /**
+     * 
+     */
     withdrawn_token_1?: string | null;
+    /**
+     * 
+     */
     collected_fees_token_0?: string | null;
+    /**
+     * 
+     */
     collected_fees_token_1?: string | null;
+    /**
+     * 
+     */
     transaction?: string | null;
+    /**
+     * 
+     */
     fee_growth_inside_0_last_x128?: string | null;
+    /**
+     * 
+     */
     fee_growth_inside_1_last_x128?: string | null;
+    /**
+     * 
+     */
     vid?: number;
 }
 

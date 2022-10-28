@@ -5318,15 +5318,19 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         eth_price_usd:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -5360,54 +5364,71 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         pool:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           nullable: true
           type: string
         owner:
+          description: ""
           nullable: true
           type: string
         origin:
+          description: ""
           nullable: true
           type: string
         amount:
+          description: ""
           nullable: true
           type: string
         amount_0:
+          description: ""
           nullable: true
           type: string
         amount_1:
+          description: ""
           nullable: true
           type: string
         amount_usd:
+          description: ""
           nullable: true
           type: string
         tick_lower:
+          description: ""
           nullable: true
           type: string
         tick_upper:
+          description: ""
           nullable: true
           type: string
         log_index:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -5447,48 +5468,63 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         pool_count:
+          description: ""
           nullable: true
           type: string
         tx_count:
+          description: ""
           nullable: true
           type: string
         total_volume_usd:
+          description: ""
           nullable: true
           type: string
         total_volume_eth:
+          description: ""
           nullable: true
           type: string
         total_fees_usd:
+          description: ""
           nullable: true
           type: string
         total_fees_eth:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked_eth:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd_untracked:
+          description: ""
           nullable: true
           type: string
         total_value_locked_eth_untracked:
+          description: ""
           nullable: true
           type: string
         owner:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -5523,57 +5559,75 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           nullable: true
           type: string
         pool:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         owner:
+          description: ""
           nullable: true
           type: string
         sender:
+          description: ""
           nullable: true
           type: string
         origin:
+          description: ""
           nullable: true
           type: string
         amount:
+          description: ""
           nullable: true
           type: string
         amount_0:
+          description: ""
           nullable: true
           type: string
         amount_1:
+          description: ""
           nullable: true
           type: string
         amount_usd:
+          description: ""
           nullable: true
           type: string
         tick_lower:
+          description: ""
           nullable: true
           type: string
         tick_upper:
+          description: ""
           nullable: true
           type: string
         log_index:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -5614,72 +5668,95 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         factory:
+          description: ""
           nullable: true
           type: string
         name:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         reserve_0:
+          description: ""
           nullable: true
           type: string
         reserve_1:
+          description: ""
           nullable: true
           type: string
         total_supply:
+          description: ""
           nullable: true
           type: string
         reserve_eth:
+          description: ""
           nullable: true
           type: string
         reserve_usd:
+          description: ""
           nullable: true
           type: string
         tracked_reserve_eth:
+          description: ""
           nullable: true
           type: string
         token_0_price:
+          description: ""
           nullable: true
           type: string
         token_1_price:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
+          description: ""
           nullable: true
           type: string
         liquidity_provider_count:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           nullable: true
           type: string
         block:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
         evaluated_ask:
@@ -5726,62 +5803,81 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         reserve_0:
+          description: ""
           nullable: true
           type: string
         reserve_1:
+          description: ""
           nullable: true
           type: string
         total_supply:
+          description: ""
           nullable: true
           type: string
         reserve_eth:
+          description: ""
           nullable: true
           type: string
         reserve_usd:
+          description: ""
           nullable: true
           type: string
         tracked_reserve_eth:
+          description: ""
           nullable: true
           type: string
         token_0_price:
+          description: ""
           nullable: true
           type: string
         token_1_price:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         created_at_timestamp:
+          description: ""
           format: date-time
           type: string
         liquidity_provider_count:
+          description: ""
           nullable: true
           type: string
         evaluated_ask:
@@ -5824,69 +5920,91 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         date:
+          description: ""
           format: int32
           type: integer
         pool:
+          description: ""
           nullable: true
           type: string
         liquidity:
+          description: ""
           nullable: true
           type: string
         sqrt_price:
+          description: ""
           nullable: true
           type: string
         token_0_price:
+          description: ""
           nullable: true
           type: string
         token_1_price:
+          description: ""
           nullable: true
           type: string
         tick:
+          description: ""
           nullable: true
           type: string
         fee_growth_global_0x128:
+          description: ""
           nullable: true
           type: string
         fee_growth_global_1x128:
+          description: ""
           nullable: true
           type: string
         tvl_usd:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
+          description: ""
           nullable: true
           type: string
         open:
+          description: ""
           nullable: true
           type: string
         high:
+          description: ""
           nullable: true
           type: string
         low:
+          description: ""
           nullable: true
           type: string
         close:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -5925,69 +6043,91 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         period_start_unix:
+          description: ""
           format: int32
           type: integer
         pool:
+          description: ""
           nullable: true
           type: string
         liquidity:
+          description: ""
           nullable: true
           type: string
         sqrt_price:
+          description: ""
           nullable: true
           type: string
         token_0_price:
+          description: ""
           nullable: true
           type: string
         token_1_price:
+          description: ""
           nullable: true
           type: string
         tick:
+          description: ""
           nullable: true
           type: string
         fee_growth_global_0x128:
+          description: ""
           nullable: true
           type: string
         fee_growth_global_1x128:
+          description: ""
           nullable: true
           type: string
         tvl_usd:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
+          description: ""
           nullable: true
           type: string
         open:
+          description: ""
           nullable: true
           type: string
         high:
+          description: ""
           nullable: true
           type: string
         low:
+          description: ""
           nullable: true
           type: string
         close:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -6075,21 +6215,27 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         created_at_timestamp:
+          description: ""
           format: date-time
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         fee_tier:
@@ -6103,9 +6249,11 @@ components:
         fee_growth_global_1x128:
           $ref: '#/components/schemas/BigInteger'
         token_0_price:
+          description: ""
           nullable: true
           type: string
         token_1_price:
+          description: ""
           nullable: true
           type: string
         tick:
@@ -6113,47 +6261,61 @@ components:
         observation_index:
           $ref: '#/components/schemas/BigInteger'
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         collected_fees_token_0:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_1:
+          description: ""
           nullable: true
           type: string
         collected_fees_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked_token_0:
+          description: ""
           nullable: true
           type: string
         total_value_locked_token_1:
+          description: ""
           nullable: true
           type: string
         total_value_locked_eth:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd_untracked:
+          description: ""
           nullable: true
           type: string
         liquidity_provider_count:
+          description: ""
           nullable: true
           type: string
         evaluated_ask:
@@ -6191,9 +6353,11 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         owner:
@@ -6202,45 +6366,59 @@ components:
           title: OWNERINHO
           type: string
         pool:
+          description: ""
           nullable: true
           type: string
         position:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           nullable: true
           type: string
         liquidity:
+          description: ""
           nullable: true
           type: string
         deposited_token_0:
+          description: ""
           nullable: true
           type: string
         deposited_token_1:
+          description: ""
           nullable: true
           type: string
         withdrawn_token_0:
+          description: ""
           nullable: true
           type: string
         withdrawn_token_1:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_0:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_1:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         fee_growth_inside_0_last_x128:
+          description: ""
           nullable: true
           type: string
         fee_growth_inside_1_last_x128:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -6276,60 +6454,79 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         owner:
+          description: ""
           nullable: true
           type: string
         pool:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         tick_lower:
+          description: ""
           nullable: true
           type: string
         tick_upper:
+          description: ""
           nullable: true
           type: string
         liquidity:
+          description: ""
           nullable: true
           type: string
         deposited_token_0:
+          description: ""
           nullable: true
           type: string
         deposited_token_1:
+          description: ""
           nullable: true
           type: string
         withdrawn_token_0:
+          description: ""
           nullable: true
           type: string
         withdrawn_token_1:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_0:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_1:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         fee_growth_inside_0_last_x128:
+          description: ""
           nullable: true
           type: string
         fee_growth_inside_1_last_x128:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -6365,45 +6562,59 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           nullable: true
           type: string
         pair:
+          description: ""
           nullable: true
           type: string
         sender:
+          description: ""
           nullable: true
           type: string
         amount_0_in:
+          description: ""
           nullable: true
           type: string
         amount_1_in:
+          description: ""
           nullable: true
           type: string
         amount_0_out:
+          description: ""
           nullable: true
           type: string
         amount_1_out:
+          description: ""
           nullable: true
           type: string
         to:
+          description: ""
           nullable: true
           type: string
         log_index:
+          description: ""
           nullable: true
           type: string
         amount_usd:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
         pool_id:
@@ -6463,47 +6674,61 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           format: date-time
           type: string
         pair:
+          description: ""
           nullable: true
           type: string
         sender:
+          description: ""
           nullable: true
           type: string
         from:
+          description: ""
           nullable: true
           type: string
         amount_0_in:
+          description: ""
           nullable: true
           type: string
         amount_1_in:
+          description: ""
           nullable: true
           type: string
         amount_0_out:
+          description: ""
           nullable: true
           type: string
         amount_1_out:
+          description: ""
           nullable: true
           type: string
         to:
+          description: ""
           nullable: true
           type: string
         log_index:
           $ref: '#/components/schemas/BigInteger'
         amount_usd:
+          description: ""
           nullable: true
           type: string
         evaluated_price:
@@ -6575,45 +6800,59 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         transaction:
+          description: ""
           nullable: true
           type: string
         timestamp:
+          description: ""
           format: date-time
           type: string
         pool:
+          description: ""
           nullable: true
           type: string
         token_0:
+          description: ""
           nullable: true
           type: string
         token_1:
+          description: ""
           nullable: true
           type: string
         sender:
+          description: ""
           nullable: true
           type: string
         recipient:
+          description: ""
           nullable: true
           type: string
         origin:
+          description: ""
           nullable: true
           type: string
         amount_0:
+          description: ""
           nullable: true
           type: string
         amount_1:
+          description: ""
           nullable: true
           type: string
         amount_usd:
+          description: ""
           nullable: true
           type: string
         sqrt_price_x96:
@@ -6668,45 +6907,59 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         date:
+          description: ""
           format: int32
           type: integer
         pool:
+          description: ""
           nullable: true
           type: string
         tick:
+          description: ""
           nullable: true
           type: string
         liquidity_gross:
+          description: ""
           nullable: true
           type: string
         liquidity_net:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         fee_growth_outside_0x128:
+          description: ""
           nullable: true
           type: string
         fee_growth_outside_1x128:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
@@ -6775,20 +7028,25 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         pool_address:
+          description: ""
           nullable: true
           type: string
         tick_idx:
           $ref: '#/components/schemas/BigInteger'
         pool:
+          description: ""
           nullable: true
           type: string
         liquidity_gross:
@@ -6796,36 +7054,47 @@ components:
         liquidity_net:
           $ref: '#/components/schemas/BigInteger'
         price_0:
+          description: ""
           nullable: true
           type: string
         price_1:
+          description: ""
           nullable: true
           type: string
         volume_token_0:
+          description: ""
           nullable: true
           type: string
         volume_token_1:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_0:
+          description: ""
           nullable: true
           type: string
         collected_fees_token_1:
+          description: ""
           nullable: true
           type: string
         collected_fees_usd:
+          description: ""
           nullable: true
           type: string
         created_at_timestamp:
+          description: ""
           format: date-time
           type: string
         liquidity_provider_count:
@@ -6866,50 +7135,65 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         factory:
+          description: ""
           nullable: true
           type: string
         symbol:
+          description: ""
           nullable: true
           type: string
         name:
+          description: ""
           nullable: true
           type: string
         decimals:
+          description: ""
           nullable: true
           type: string
         total_supply:
+          description: ""
           nullable: true
           type: string
         volume:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
+          description: ""
           nullable: true
           type: string
         liquidity:
+          description: ""
           nullable: true
           type: string
         derived_eth:
+          description: ""
           nullable: true
           type: string
         whitelist_pairs:
+          description: ""
           items:
             type: string
           nullable: true
           type: array
         vid:
+          description: ""
           format: int64
           type: integer
         token_symbol:
@@ -6946,56 +7230,74 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         period_start_unix:
+          description: ""
           format: int32
           type: integer
         token:
+          description: ""
           nullable: true
           type: string
         volume:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd:
+          description: ""
           nullable: true
           type: string
         price_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         open:
+          description: ""
           nullable: true
           type: string
         high:
+          description: ""
           nullable: true
           type: string
         low:
+          description: ""
           nullable: true
           type: string
         close:
+          description: ""
           nullable: true
           type: string
         vid:
+          description: ""
           format: int64
           type: integer
       type: object
     TokenV2DTO:
       additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
       example:
         entry_time: 2000-01-23T04:56:07.000+00:00
         symbol: symbol
@@ -7031,40 +7333,53 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: token address
           nullable: true
           type: string
         symbol:
+          description: token symbol
           nullable: true
           type: string
         name:
+          description: token name
           nullable: true
           type: string
         decimals:
+          description: token decimals
           format: int32
           type: integer
         total_supply:
           $ref: '#/components/schemas/BigInteger'
         trade_volume:
+          description: amount of token traded all time across all pairs
           nullable: true
           type: string
         trade_volume_usd:
+          description: amount of token in USD traded all time across pairs (only for
+            tokens with liquidity above minimum threshold)
           nullable: true
           type: string
         untracked_volume_usd:
+          description: amount of token in USD traded all time across pairs (no minimum
+            liquidity threshold)
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         total_liquidity:
+          description: total amount of token provided as liquidity across all pairs
           nullable: true
           type: string
         derived_eth:
+          description: ETH per token
           nullable: true
           type: string
         token_symbol:
@@ -7121,35 +7436,45 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         symbol:
+          description: ""
           nullable: true
           type: string
         name:
+          description: ""
           nullable: true
           type: string
         decimals:
+          description: ""
           format: int32
           type: integer
         total_supply:
           $ref: '#/components/schemas/BigInteger'
         volume:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
@@ -7157,18 +7482,23 @@ components:
         pool_count:
           $ref: '#/components/schemas/BigInteger'
         total_value_locked:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd_untracked:
+          description: ""
           nullable: true
           type: string
         derived_eth:
+          description: ""
           nullable: true
           type: string
         whitelist_pools:
+          description: ""
           items:
             type: string
           nullable: true
@@ -7207,51 +7537,67 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         date:
+          description: ""
           format: int32
           type: integer
         token:
+          description: ""
           nullable: true
           type: string
         volume:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         untracked_volume_usd:
+          description: ""
           nullable: true
           type: string
         total_value_locked:
+          description: ""
           nullable: true
           type: string
         total_value_locked_usd:
+          description: ""
           nullable: true
           type: string
         price_usd:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         open:
+          description: ""
           nullable: true
           type: string
         high:
+          description: ""
           nullable: true
           type: string
         low:
+          description: ""
           nullable: true
           type: string
         close:
+          description: ""
           nullable: true
           type: string
       type: object
@@ -7283,32 +7629,41 @@ components:
           format: date-time
           type: string
         block_number:
+          description: ""
           format: int64
           type: integer
         vid:
+          description: ""
           format: int64
           type: integer
         id:
+          description: ""
           nullable: true
           type: string
         date:
+          description: ""
           format: int32
           type: integer
         volume_eth:
+          description: ""
           nullable: true
           type: string
         volume_usd:
+          description: ""
           nullable: true
           type: string
         volume_usd_untracked:
+          description: ""
           nullable: true
           type: string
         fees_usd:
+          description: ""
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         tvl_usd:
+          description: ""
           nullable: true
           type: string
       type: object

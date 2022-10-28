@@ -24,37 +24,37 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
  	period_start_unix: INTEGER_32
-    	 
+    	 -- 
     token: detachable STRING_32
-      
+      -- 
     volume: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     total_value_locked: detachable STRING_32
-      
+      -- 
     total_value_locked_usd: detachable STRING_32
-      
+      -- 
     price_usd: detachable STRING_32
-      
+      -- 
     fees_usd: detachable STRING_32
-      
+      -- 
     open: detachable STRING_32
-      
+      -- 
     high: detachable STRING_32
-      
+      -- 
     low: detachable STRING_32
-      
+      -- 
     close: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

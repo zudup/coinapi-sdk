@@ -42,15 +42,19 @@ data class BundleV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "eth_price_usd")
     val ethPriceUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

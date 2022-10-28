@@ -17,32 +17,74 @@ export interface SwapDTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     transaction?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     pair?: string;
 
+    /**
+     * 
+     */
     sender?: string;
 
+    /**
+     * 
+     */
     amount_0_in?: string;
 
+    /**
+     * 
+     */
     amount_1_in?: string;
 
+    /**
+     * 
+     */
     amount_0_out?: string;
 
+    /**
+     * 
+     */
     amount_1_out?: string;
 
+    /**
+     * 
+     */
     to?: string;
 
+    /**
+     * 
+     */
     log_index?: string;
 
+    /**
+     * 
+     */
     amount_usd?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
     pool_id?: string;

@@ -54,6 +54,7 @@ class PairV2DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -62,6 +63,7 @@ class PairV2DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -70,34 +72,49 @@ class PairV2DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
+  /// 
   String? reserve0;
 
+  /// 
   String? reserve1;
 
+  /// 
   String? totalSupply;
 
+  /// 
   String? reserveEth;
 
+  /// 
   String? reserveUsd;
 
+  /// 
   String? trackedReserveEth;
 
+  /// 
   String? token0Price;
 
+  /// 
   String? token1Price;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
   ///
@@ -108,6 +125,7 @@ class PairV2DTO {
   ///
   BigInteger? txCount;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -116,6 +134,7 @@ class PairV2DTO {
   ///
   DateTime? createdAtTimestamp;
 
+  /// 
   String? liquidityProviderCount;
 
   ///

@@ -66,26 +66,26 @@ PairV2DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param token_0 token_0
-    #' @param token_1 token_1
-    #' @param reserve_0 reserve_0
-    #' @param reserve_1 reserve_1
-    #' @param total_supply total_supply
-    #' @param reserve_eth reserve_eth
-    #' @param reserve_usd reserve_usd
-    #' @param tracked_reserve_eth tracked_reserve_eth
-    #' @param token_0_price token_0_price
-    #' @param token_1_price token_1_price
-    #' @param volume_token_0 volume_token_0
-    #' @param volume_token_1 volume_token_1
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param token_0 
+    #' @param token_1 
+    #' @param reserve_0 
+    #' @param reserve_1 
+    #' @param total_supply 
+    #' @param reserve_eth 
+    #' @param reserve_usd 
+    #' @param tracked_reserve_eth 
+    #' @param token_0_price 
+    #' @param token_1_price 
+    #' @param volume_token_0 
+    #' @param volume_token_1 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
     #' @param tx_count tx_count
-    #' @param created_at_timestamp created_at_timestamp
-    #' @param liquidity_provider_count liquidity_provider_count
+    #' @param created_at_timestamp 
+    #' @param liquidity_provider_count 
     #' @param evaluated_ask evaluated_ask
     #' @param ... Other optional arguments.
     #' @export

@@ -456,7 +456,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -485,7 +485,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -521,7 +521,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date
      *
-     * @param int|null $date date
+     * @param int|null $date 
      *
      * @return self
      */
@@ -550,7 +550,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pool
      *
-     * @param string|null $pool pool
+     * @param string|null $pool 
      *
      * @return self
      */
@@ -586,7 +586,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tick
      *
-     * @param string|null $tick tick
+     * @param string|null $tick 
      *
      * @return self
      */
@@ -622,7 +622,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity_gross
      *
-     * @param string|null $liquidity_gross liquidity_gross
+     * @param string|null $liquidity_gross 
      *
      * @return self
      */
@@ -658,7 +658,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity_net
      *
-     * @param string|null $liquidity_net liquidity_net
+     * @param string|null $liquidity_net 
      *
      * @return self
      */
@@ -694,7 +694,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 volume_token_0
+     * @param string|null $volume_token_0 
      *
      * @return self
      */
@@ -730,7 +730,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 volume_token_1
+     * @param string|null $volume_token_1 
      *
      * @return self
      */
@@ -766,7 +766,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -802,7 +802,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -838,7 +838,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fee_growth_outside_0x128
      *
-     * @param string|null $fee_growth_outside_0x128 fee_growth_outside_0x128
+     * @param string|null $fee_growth_outside_0x128 
      *
      * @return self
      */
@@ -874,7 +874,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fee_growth_outside_1x128
      *
-     * @param string|null $fee_growth_outside_1x128 fee_growth_outside_1x128
+     * @param string|null $fee_growth_outside_1x128 
      *
      * @return self
      */
@@ -910,7 +910,7 @@ class TickDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */

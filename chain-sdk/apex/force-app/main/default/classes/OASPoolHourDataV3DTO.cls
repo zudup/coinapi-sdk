@@ -27,133 +27,133 @@ public class OASPoolHourDataV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get periodStartUnix
+     * 
      * @return periodStartUnix
      */
     public Integer periodStartUnix { get; set; }
 
     /**
-     * Get pool
+     * 
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * Get liquidity
+     * 
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * Get sqrtPrice
+     * 
      * @return sqrtPrice
      */
     public String sqrtPrice { get; set; }
 
     /**
-     * Get token0Price
+     * 
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * Get token1Price
+     * 
      * @return token1Price
      */
     public String token1Price { get; set; }
 
     /**
-     * Get tick
+     * 
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * Get feeGrowthGlobal0x128
+     * 
      * @return feeGrowthGlobal0x128
      */
     public String feeGrowthGlobal0x128 { get; set; }
 
     /**
-     * Get feeGrowthGlobal1x128
+     * 
      * @return feeGrowthGlobal1x128
      */
     public String feeGrowthGlobal1x128 { get; set; }
 
     /**
-     * Get tvlUsd
+     * 
      * @return tvlUsd
      */
     public String tvlUsd { get; set; }
 
     /**
-     * Get volumeToken0
+     * 
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * Get volumeToken1
+     * 
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * Get txCount
+     * 
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * Get open
+     * 
      * @return open
      */
     public String open { get; set; }
 
     /**
-     * Get high
+     * 
      * @return high
      */
     public String high { get; set; }
 
     /**
-     * Get low
+     * 
      * @return low
      */
     public String low { get; set; }
 
     /**
-     * Get close
+     * 
      * @return close
      */
     public String close { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

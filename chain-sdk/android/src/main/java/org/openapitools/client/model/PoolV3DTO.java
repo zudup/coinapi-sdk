@@ -108,6 +108,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -118,6 +119,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -128,6 +130,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -138,6 +141,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Date getCreatedAtTimestamp() {
@@ -148,6 +152,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -158,6 +163,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -218,6 +224,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0Price() {
@@ -228,6 +235,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1Price() {
@@ -258,6 +266,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -268,6 +277,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -278,6 +288,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -288,6 +299,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -298,6 +310,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -318,6 +331,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken0() {
@@ -328,6 +342,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesToken1() {
@@ -338,6 +353,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getCollectedFeesUsd() {
@@ -348,6 +364,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedToken0() {
@@ -358,6 +375,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedToken1() {
@@ -368,6 +386,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedEth() {
@@ -378,6 +397,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsd() {
@@ -388,6 +408,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsdUntracked() {
@@ -398,6 +419,7 @@ public class PoolV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidityProviderCount() {

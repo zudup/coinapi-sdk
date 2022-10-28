@@ -20,37 +20,37 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER PeriodStartUnix
-No description available.
+
 .PARAMETER Token
-No description available.
+
 .PARAMETER Volume
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER TotalValueLocked
-No description available.
+
 .PARAMETER TotalValueLockedUsd
-No description available.
+
 .PARAMETER PriceUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER Open
-No description available.
+
 .PARAMETER High
-No description available.
+
 .PARAMETER Low
-No description available.
+
 .PARAMETER Close
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 TokenHourDataV3DTO<PSCustomObject>

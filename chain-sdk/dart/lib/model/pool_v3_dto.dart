@@ -64,6 +64,7 @@ class PoolV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -72,6 +73,7 @@ class PoolV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -80,8 +82,10 @@ class PoolV3DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -90,8 +94,10 @@ class PoolV3DTO {
   ///
   DateTime? createdAtTimestamp;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
   ///
@@ -134,8 +140,10 @@ class PoolV3DTO {
   ///
   BigInteger? feeGrowthGlobal1x128;
 
+  /// 
   String? token0Price;
 
+  /// 
   String? token1Price;
 
   ///
@@ -154,14 +162,19 @@ class PoolV3DTO {
   ///
   BigInteger? observationIndex;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? feesUsd;
 
   ///
@@ -172,22 +185,31 @@ class PoolV3DTO {
   ///
   BigInteger? txCount;
 
+  /// 
   String? collectedFeesToken0;
 
+  /// 
   String? collectedFeesToken1;
 
+  /// 
   String? collectedFeesUsd;
 
+  /// 
   String? totalValueLockedToken0;
 
+  /// 
   String? totalValueLockedToken1;
 
+  /// 
   String? totalValueLockedEth;
 
+  /// 
   String? totalValueLockedUsd;
 
+  /// 
   String? totalValueLockedUsdUntracked;
 
+  /// 
   String? liquidityProviderCount;
 
   ///

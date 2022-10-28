@@ -15,28 +15,97 @@ import { RequestFile } from './models';
 export class PairDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'factory'?: string | null;
+    /**
+    * 
+    */
     'name'?: string | null;
+    /**
+    * 
+    */
     'token0'?: string | null;
+    /**
+    * 
+    */
     'token1'?: string | null;
+    /**
+    * 
+    */
     'reserve0'?: string | null;
+    /**
+    * 
+    */
     'reserve1'?: string | null;
+    /**
+    * 
+    */
     'totalSupply'?: string | null;
+    /**
+    * 
+    */
     'reserveEth'?: string | null;
+    /**
+    * 
+    */
     'reserveUsd'?: string | null;
+    /**
+    * 
+    */
     'trackedReserveEth'?: string | null;
+    /**
+    * 
+    */
     'token0Price'?: string | null;
+    /**
+    * 
+    */
     'token1Price'?: string | null;
+    /**
+    * 
+    */
     'volumeToken0'?: string | null;
+    /**
+    * 
+    */
     'volumeToken1'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'txCount'?: string | null;
+    /**
+    * 
+    */
     'liquidityProviderCount'?: string | null;
+    /**
+    * 
+    */
     'timestamp'?: string | null;
+    /**
+    * 
+    */
     'block'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
     'evaluatedAsk'?: number;
 

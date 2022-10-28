@@ -12,35 +12,71 @@
 
 import * as models from './models';
 
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ */
 export interface TokenV2DTO {
     entry_time?: string;
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * token address
+     */
     id?: string;
 
+    /**
+     * token symbol
+     */
     symbol?: string;
 
+    /**
+     * token name
+     */
     name?: string;
 
+    /**
+     * token decimals
+     */
     decimals?: number;
 
     total_supply?: models.BigInteger;
 
+    /**
+     * amount of token traded all time across all pairs
+     */
     trade_volume?: string;
 
+    /**
+     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+     */
     trade_volume_usd?: string;
 
+    /**
+     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+     */
     untracked_volume_usd?: string;
 
     tx_count?: models.BigInteger;
 
+    /**
+     * total amount of token provided as liquidity across all pairs
+     */
     total_liquidity?: string;
 
+    /**
+     * ETH per token
+     */
     derived_eth?: string;
 
     token_symbol?: string;

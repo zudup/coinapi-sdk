@@ -32,10 +32,10 @@ BundleV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
-    #' @param eth_price_usd eth_price_usd
-    #' @param vid vid
+    #' @param block_number 
+    #' @param id 
+    #' @param eth_price_usd 
+    #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

@@ -22,6 +22,7 @@ import BigInteger from './BigInteger';
 class TokenV2DTO {
     /**
      * Constructs a new <code>TokenV2DTO</code>.
+     * Stores aggregated information for a specific token across all pairs that token is included in.
      * @alias module:model/TokenV2DTO
      */
     constructor() { 
@@ -114,31 +115,37 @@ TokenV2DTO.prototype['entry_time'] = undefined;
 TokenV2DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TokenV2DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TokenV2DTO.prototype['vid'] = undefined;
 
 /**
+ * token address
  * @member {String} id
  */
 TokenV2DTO.prototype['id'] = undefined;
 
 /**
+ * token symbol
  * @member {String} symbol
  */
 TokenV2DTO.prototype['symbol'] = undefined;
 
 /**
+ * token name
  * @member {String} name
  */
 TokenV2DTO.prototype['name'] = undefined;
 
 /**
+ * token decimals
  * @member {Number} decimals
  */
 TokenV2DTO.prototype['decimals'] = undefined;
@@ -149,16 +156,19 @@ TokenV2DTO.prototype['decimals'] = undefined;
 TokenV2DTO.prototype['total_supply'] = undefined;
 
 /**
+ * amount of token traded all time across all pairs
  * @member {String} trade_volume
  */
 TokenV2DTO.prototype['trade_volume'] = undefined;
 
 /**
+ * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
  * @member {String} trade_volume_usd
  */
 TokenV2DTO.prototype['trade_volume_usd'] = undefined;
 
 /**
+ * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
  * @member {String} untracked_volume_usd
  */
 TokenV2DTO.prototype['untracked_volume_usd'] = undefined;
@@ -169,11 +179,13 @@ TokenV2DTO.prototype['untracked_volume_usd'] = undefined;
 TokenV2DTO.prototype['tx_count'] = undefined;
 
 /**
+ * total amount of token provided as liquidity across all pairs
  * @member {String} total_liquidity
  */
 TokenV2DTO.prototype['total_liquidity'] = undefined;
 
 /**
+ * ETH per token
  * @member {String} derived_eth
  */
 TokenV2DTO.prototype['derived_eth'] = undefined;

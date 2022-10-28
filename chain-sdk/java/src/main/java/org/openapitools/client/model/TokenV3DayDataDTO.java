@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * TokenV3DayDataDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class TokenV3DayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -179,7 +179,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get date
+   * 
    * @return date
   **/
   @javax.annotation.Nullable
@@ -271,7 +271,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get token
+   * 
    * @return token
   **/
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get volume
+   * 
    * @return volume
   **/
   @javax.annotation.Nullable
@@ -317,7 +317,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -340,7 +340,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get totalValueLocked
+   * 
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
@@ -386,7 +386,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get totalValueLockedUsd
+   * 
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
@@ -409,7 +409,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get priceUsd
+   * 
    * @return priceUsd
   **/
   @javax.annotation.Nullable
@@ -432,7 +432,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -455,7 +455,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get open
+   * 
    * @return open
   **/
   @javax.annotation.Nullable
@@ -478,7 +478,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get high
+   * 
    * @return high
   **/
   @javax.annotation.Nullable
@@ -501,7 +501,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get low
+   * 
    * @return low
   **/
   @javax.annotation.Nullable
@@ -524,7 +524,7 @@ public class TokenV3DayDataDTO {
   }
 
    /**
-   * Get close
+   * 
    * @return close
   **/
   @javax.annotation.Nullable

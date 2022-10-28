@@ -15,21 +15,69 @@ import { RequestFile } from './models';
 export class TokenV3DayDataDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
+    /**
+    * 
+    */
     'date'?: number;
+    /**
+    * 
+    */
     'token'?: string | null;
+    /**
+    * 
+    */
     'volume'?: string | null;
+    /**
+    * 
+    */
     'volumeUsd'?: string | null;
+    /**
+    * 
+    */
     'untrackedVolumeUsd'?: string | null;
+    /**
+    * 
+    */
     'totalValueLocked'?: string | null;
+    /**
+    * 
+    */
     'totalValueLockedUsd'?: string | null;
+    /**
+    * 
+    */
     'priceUsd'?: string | null;
+    /**
+    * 
+    */
     'feesUsd'?: string | null;
+    /**
+    * 
+    */
     'open'?: string | null;
+    /**
+    * 
+    */
     'high'?: string | null;
+    /**
+    * 
+    */
     'low'?: string | null;
+    /**
+    * 
+    */
     'close'?: string | null;
 
     static discriminator: string | undefined = undefined;

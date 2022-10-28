@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * PositionV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class PositionV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -191,7 +191,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -237,7 +237,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get owner
+   * 
    * @return owner
   **/
   @javax.annotation.Nullable
@@ -260,7 +260,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get pool
+   * 
    * @return pool
   **/
   @javax.annotation.Nullable
@@ -283,7 +283,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get token0
+   * 
    * @return token0
   **/
   @javax.annotation.Nullable
@@ -306,7 +306,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get token1
+   * 
    * @return token1
   **/
   @javax.annotation.Nullable
@@ -329,7 +329,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get tickLower
+   * 
    * @return tickLower
   **/
   @javax.annotation.Nullable
@@ -352,7 +352,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get tickUpper
+   * 
    * @return tickUpper
   **/
   @javax.annotation.Nullable
@@ -375,7 +375,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get liquidity
+   * 
    * @return liquidity
   **/
   @javax.annotation.Nullable
@@ -398,7 +398,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get depositedToken0
+   * 
    * @return depositedToken0
   **/
   @javax.annotation.Nullable
@@ -421,7 +421,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get depositedToken1
+   * 
    * @return depositedToken1
   **/
   @javax.annotation.Nullable
@@ -444,7 +444,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get withdrawnToken0
+   * 
    * @return withdrawnToken0
   **/
   @javax.annotation.Nullable
@@ -467,7 +467,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get withdrawnToken1
+   * 
    * @return withdrawnToken1
   **/
   @javax.annotation.Nullable
@@ -490,7 +490,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get collectedFeesToken0
+   * 
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
@@ -513,7 +513,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get collectedFeesToken1
+   * 
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
@@ -536,7 +536,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get transaction
+   * 
    * @return transaction
   **/
   @javax.annotation.Nullable
@@ -559,7 +559,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get feeGrowthInside0LastX128
+   * 
    * @return feeGrowthInside0LastX128
   **/
   @javax.annotation.Nullable
@@ -582,7 +582,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get feeGrowthInside1LastX128
+   * 
    * @return feeGrowthInside1LastX128
   **/
   @javax.annotation.Nullable
@@ -605,7 +605,7 @@ public class PositionV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

@@ -12,24 +12,24 @@ class UniswapDayDataV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     Long vid
-    
+    /*  */
     String id
-    
+    /*  */
     Integer date
-    
+    /*  */
     String volumeEth
-    
+    /*  */
     String volumeUsd
-    
+    /*  */
     String volumeUsdUntracked
-    
+    /*  */
     String feesUsd
     
     BigInteger txCount
-    
+    /*  */
     String tvlUsd
 }

@@ -15,23 +15,68 @@ import { BigInteger } from './bigInteger';
 export interface TokenV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     vid?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     symbol?: string | null;
+    /**
+     * 
+     */
     name?: string | null;
+    /**
+     * 
+     */
     decimals?: number;
     total_supply?: BigInteger;
+    /**
+     * 
+     */
     volume?: string | null;
+    /**
+     * 
+     */
     volume_usd?: string | null;
+    /**
+     * 
+     */
     untracked_volume_usd?: string | null;
+    /**
+     * 
+     */
     fees_usd?: string | null;
     tx_count?: BigInteger;
     pool_count?: BigInteger;
+    /**
+     * 
+     */
     total_value_locked?: string | null;
+    /**
+     * 
+     */
     total_value_locked_usd?: string | null;
+    /**
+     * 
+     */
     total_value_locked_usd_untracked?: string | null;
+    /**
+     * 
+     */
     derived_eth?: string | null;
+    /**
+     * 
+     */
     whitelist_pools?: Array<string> | null;
     readonly token_symbol?: string | null;
 }

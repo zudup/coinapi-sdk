@@ -27,37 +27,37 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get symbol
+     * 
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * Get name
+     * 
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * Get decimals
+     * 
      * @return decimals
      */
     public Integer decimals { get; set; }
@@ -69,25 +69,25 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public OASBigInteger totalSupply { get; set; }
 
     /**
-     * Get volume
+     * 
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -105,31 +105,31 @@ public class OASTokenV3DTO implements OAS.MappedProperties {
     public OASBigInteger poolCount { get; set; }
 
     /**
-     * Get totalValueLocked
+     * 
      * @return totalValueLocked
      */
     public String totalValueLocked { get; set; }
 
     /**
-     * Get totalValueLockedUsd
+     * 
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * Get totalValueLockedUsdUntracked
+     * 
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * Get derivedEth
+     * 
      * @return derivedEth
      */
     public String derivedEth { get; set; }
 
     /**
-     * Get whitelistPools
+     * 
      * @return whitelistPools
      */
     public List<String> whitelistPools { get; set; }

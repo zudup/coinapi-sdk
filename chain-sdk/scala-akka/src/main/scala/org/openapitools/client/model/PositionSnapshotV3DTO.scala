@@ -17,23 +17,39 @@ import org.openapitools.client.core.ApiModel
 case class PositionSnapshotV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
   /* THIS IS SUPER OWNER */
   owner: Option[String] = None,
+  /*  */
   pool: Option[String] = None,
+  /*  */
   position: Option[String] = None,
+  /*  */
   timestamp: Option[String] = None,
+  /*  */
   liquidity: Option[String] = None,
+  /*  */
   depositedToken0: Option[String] = None,
+  /*  */
   depositedToken1: Option[String] = None,
+  /*  */
   withdrawnToken0: Option[String] = None,
+  /*  */
   withdrawnToken1: Option[String] = None,
+  /*  */
   collectedFeesToken0: Option[String] = None,
+  /*  */
   collectedFeesToken1: Option[String] = None,
+  /*  */
   transaction: Option[String] = None,
+  /*  */
   feeGrowthInside0LastX128: Option[String] = None,
+  /*  */
   feeGrowthInside1LastX128: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

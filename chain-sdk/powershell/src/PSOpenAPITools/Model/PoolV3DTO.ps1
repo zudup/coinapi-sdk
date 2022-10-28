@@ -20,17 +20,17 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER CreatedAtTimestamp
-No description available.
+
 .PARAMETER Token0
-No description available.
+
 .PARAMETER Token1
-No description available.
+
 .PARAMETER FeeTier
 No description available.
 .PARAMETER Liquidity
@@ -42,43 +42,43 @@ No description available.
 .PARAMETER FeeGrowthGlobal1x128
 No description available.
 .PARAMETER Token0Price
-No description available.
+
 .PARAMETER Token1Price
-No description available.
+
 .PARAMETER Tick
 No description available.
 .PARAMETER ObservationIndex
 No description available.
 .PARAMETER VolumeToken0
-No description available.
+
 .PARAMETER VolumeToken1
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER TxCount
 No description available.
 .PARAMETER CollectedFeesToken0
-No description available.
+
 .PARAMETER CollectedFeesToken1
-No description available.
+
 .PARAMETER CollectedFeesUsd
-No description available.
+
 .PARAMETER TotalValueLockedToken0
-No description available.
+
 .PARAMETER TotalValueLockedToken1
-No description available.
+
 .PARAMETER TotalValueLockedEth
-No description available.
+
 .PARAMETER TotalValueLockedUsd
-No description available.
+
 .PARAMETER TotalValueLockedUsdUntracked
-No description available.
+
 .PARAMETER LiquidityProviderCount
-No description available.
+
 .PARAMETER EvaluatedAsk
 No description available.
 .OUTPUTS

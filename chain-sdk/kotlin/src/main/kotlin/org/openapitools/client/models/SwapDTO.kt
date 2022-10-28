@@ -58,45 +58,59 @@ data class SwapDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "transaction")
     val transaction: kotlin.String? = null,
 
+    /*  */
     @Json(name = "timestamp")
     val timestamp: kotlin.String? = null,
 
+    /*  */
     @Json(name = "pair")
     val pair: kotlin.String? = null,
 
+    /*  */
     @Json(name = "sender")
     val sender: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_0_in")
     val amount0In: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_1_in")
     val amount1In: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_0_out")
     val amount0Out: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_1_out")
     val amount1Out: kotlin.String? = null,
 
+    /*  */
     @Json(name = "to")
     val to: kotlin.String? = null,
 
+    /*  */
     @Json(name = "log_index")
     val logIndex: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_usd")
     val amountUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 

@@ -17,27 +17,49 @@ import org.openapitools.client.core.ApiModel
 case class PoolDayDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   date: Option[Int] = None,
+  /*  */
   pool: Option[String] = None,
+  /*  */
   liquidity: Option[String] = None,
+  /*  */
   sqrtPrice: Option[String] = None,
+  /*  */
   token0Price: Option[String] = None,
+  /*  */
   token1Price: Option[String] = None,
+  /*  */
   tick: Option[String] = None,
+  /*  */
   feeGrowthGlobal0x128: Option[String] = None,
+  /*  */
   feeGrowthGlobal1x128: Option[String] = None,
+  /*  */
   tvlUsd: Option[String] = None,
+  /*  */
   volumeToken0: Option[String] = None,
+  /*  */
   volumeToken1: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
+  /*  */
   txCount: Option[String] = None,
+  /*  */
   open: Option[String] = None,
+  /*  */
   high: Option[String] = None,
+  /*  */
   low: Option[String] = None,
+  /*  */
   close: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

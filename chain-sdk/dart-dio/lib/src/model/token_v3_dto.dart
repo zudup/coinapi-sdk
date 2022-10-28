@@ -15,24 +15,24 @@ part 'token_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [symbol] 
-/// * [name] 
-/// * [decimals] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [symbol] - 
+/// * [name] - 
+/// * [decimals] - 
 /// * [totalSupply] 
-/// * [volume] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
-/// * [feesUsd] 
+/// * [volume] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
+/// * [feesUsd] - 
 /// * [txCount] 
 /// * [poolCount] 
-/// * [totalValueLocked] 
-/// * [totalValueLockedUsd] 
-/// * [totalValueLockedUsdUntracked] 
-/// * [derivedEth] 
-/// * [whitelistPools] 
+/// * [totalValueLocked] - 
+/// * [totalValueLockedUsd] - 
+/// * [totalValueLockedUsdUntracked] - 
+/// * [derivedEth] - 
+/// * [whitelistPools] - 
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
@@ -42,36 +42,46 @@ abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
+  /// 
   @BuiltValueField(wireName: r'name')
   String? get name;
 
+  /// 
   @BuiltValueField(wireName: r'decimals')
   int? get decimals;
 
   @BuiltValueField(wireName: r'total_supply')
   BigInteger? get totalSupply;
 
+  /// 
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
@@ -81,18 +91,23 @@ abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
   @BuiltValueField(wireName: r'pool_count')
   BigInteger? get poolCount;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked')
   String? get totalValueLocked;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
+  /// 
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
+  /// 
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 
+  /// 
   @BuiltValueField(wireName: r'whitelist_pools')
   BuiltList<String>? get whitelistPools;
 

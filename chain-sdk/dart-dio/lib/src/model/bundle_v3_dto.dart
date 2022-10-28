@@ -13,10 +13,10 @@ part 'bundle_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [ethPriceUsd] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [ethPriceUsd] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class BundleV3DTO implements Built<BundleV3DTO, BundleV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -25,15 +25,19 @@ abstract class BundleV3DTO implements Built<BundleV3DTO, BundleV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'eth_price_usd')
   String? get ethPriceUsd;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

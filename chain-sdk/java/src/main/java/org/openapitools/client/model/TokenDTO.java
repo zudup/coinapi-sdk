@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * TokenDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -189,7 +189,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -212,7 +212,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get factory
+   * 
    * @return factory
   **/
   @javax.annotation.Nullable
@@ -258,7 +258,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get symbol
+   * 
    * @return symbol
   **/
   @javax.annotation.Nullable
@@ -281,7 +281,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get name
+   * 
    * @return name
   **/
   @javax.annotation.Nullable
@@ -304,7 +304,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get decimals
+   * 
    * @return decimals
   **/
   @javax.annotation.Nullable
@@ -327,7 +327,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get totalSupply
+   * 
    * @return totalSupply
   **/
   @javax.annotation.Nullable
@@ -350,7 +350,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get volume
+   * 
    * @return volume
   **/
   @javax.annotation.Nullable
@@ -373,7 +373,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -396,7 +396,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -419,7 +419,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get txCount
+   * 
    * @return txCount
   **/
   @javax.annotation.Nullable
@@ -442,7 +442,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get liquidity
+   * 
    * @return liquidity
   **/
   @javax.annotation.Nullable
@@ -465,7 +465,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get derivedEth
+   * 
    * @return derivedEth
   **/
   @javax.annotation.Nullable
@@ -496,7 +496,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get whitelistPairs
+   * 
    * @return whitelistPairs
   **/
   @javax.annotation.Nullable
@@ -519,7 +519,7 @@ public class TokenDTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

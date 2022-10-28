@@ -20,23 +20,41 @@ import (
 type MintV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Transaction NullableString `json:"transaction,omitempty"`
+	// 
 	Timestamp NullableString `json:"timestamp,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
+	// 
 	Token0 NullableString `json:"token_0,omitempty"`
+	// 
 	Token1 NullableString `json:"token_1,omitempty"`
+	// 
 	Owner NullableString `json:"owner,omitempty"`
+	// 
 	Sender NullableString `json:"sender,omitempty"`
+	// 
 	Origin NullableString `json:"origin,omitempty"`
+	// 
 	Amount NullableString `json:"amount,omitempty"`
+	// 
 	Amount0 NullableString `json:"amount_0,omitempty"`
+	// 
 	Amount1 NullableString `json:"amount_1,omitempty"`
+	// 
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
+	// 
 	TickLower NullableString `json:"tick_lower,omitempty"`
+	// 
 	TickUpper NullableString `json:"tick_upper,omitempty"`
+	// 
 	LogIndex NullableString `json:"log_index,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

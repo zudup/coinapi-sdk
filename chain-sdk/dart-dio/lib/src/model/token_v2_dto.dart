@@ -9,24 +9,24 @@ import 'package:built_value/serializer.dart';
 
 part 'token_v2_dto.g.dart';
 
-/// TokenV2DTO
+/// Stores aggregated information for a specific token across all pairs that token is included in.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [symbol] 
-/// * [name] 
-/// * [decimals] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - token address
+/// * [symbol] - token symbol
+/// * [name] - token name
+/// * [decimals] - token decimals
 /// * [totalSupply] 
-/// * [tradeVolume] 
-/// * [tradeVolumeUsd] 
-/// * [untrackedVolumeUsd] 
+/// * [tradeVolume] - amount of token traded all time across all pairs
+/// * [tradeVolumeUsd] - amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+/// * [untrackedVolumeUsd] - amount of token in USD traded all time across pairs (no minimum liquidity threshold)
 /// * [txCount] 
-/// * [totalLiquidity] 
-/// * [derivedEth] 
+/// * [totalLiquidity] - total amount of token provided as liquidity across all pairs
+/// * [derivedEth] - ETH per token
 /// * [tokenSymbol] 
 @BuiltValue()
 abstract class TokenV2DTO implements Built<TokenV2DTO, TokenV2DTOBuilder> {
@@ -36,42 +36,53 @@ abstract class TokenV2DTO implements Built<TokenV2DTO, TokenV2DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// token address
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// token symbol
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
+  /// token name
   @BuiltValueField(wireName: r'name')
   String? get name;
 
+  /// token decimals
   @BuiltValueField(wireName: r'decimals')
   int? get decimals;
 
   @BuiltValueField(wireName: r'total_supply')
   BigInteger? get totalSupply;
 
+  /// amount of token traded all time across all pairs
   @BuiltValueField(wireName: r'trade_volume')
   String? get tradeVolume;
 
+  /// amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
   @BuiltValueField(wireName: r'trade_volume_usd')
   String? get tradeVolumeUsd;
 
+  /// amount of token in USD traded all time across pairs (no minimum liquidity threshold)
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
+  /// total amount of token provided as liquidity across all pairs
   @BuiltValueField(wireName: r'total_liquidity')
   String? get totalLiquidity;
 
+  /// ETH per token
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 

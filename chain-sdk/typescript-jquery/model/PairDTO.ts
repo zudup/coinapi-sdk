@@ -17,50 +17,119 @@ export interface PairDTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     factory?: string;
 
+    /**
+     * 
+     */
     name?: string;
 
+    /**
+     * 
+     */
     token_0?: string;
 
+    /**
+     * 
+     */
     token_1?: string;
 
+    /**
+     * 
+     */
     reserve_0?: string;
 
+    /**
+     * 
+     */
     reserve_1?: string;
 
+    /**
+     * 
+     */
     total_supply?: string;
 
+    /**
+     * 
+     */
     reserve_eth?: string;
 
+    /**
+     * 
+     */
     reserve_usd?: string;
 
+    /**
+     * 
+     */
     tracked_reserve_eth?: string;
 
+    /**
+     * 
+     */
     token_0_price?: string;
 
+    /**
+     * 
+     */
     token_1_price?: string;
 
+    /**
+     * 
+     */
     volume_token_0?: string;
 
+    /**
+     * 
+     */
     volume_token_1?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     untracked_volume_usd?: string;
 
+    /**
+     * 
+     */
     tx_count?: string;
 
+    /**
+     * 
+     */
     liquidity_provider_count?: string;
 
+    /**
+     * 
+     */
     timestamp?: string;
 
+    /**
+     * 
+     */
     block?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
     evaluated_ask?: number;

@@ -20,41 +20,41 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Symbol
-No description available.
+
 .PARAMETER Name
-No description available.
+
 .PARAMETER Decimals
-No description available.
+
 .PARAMETER TotalSupply
 No description available.
 .PARAMETER Volume
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER TxCount
 No description available.
 .PARAMETER PoolCount
 No description available.
 .PARAMETER TotalValueLocked
-No description available.
+
 .PARAMETER TotalValueLockedUsd
-No description available.
+
 .PARAMETER TotalValueLockedUsdUntracked
-No description available.
+
 .PARAMETER DerivedEth
-No description available.
+
 .PARAMETER WhitelistPools
-No description available.
+
 .PARAMETER TokenSymbol
 No description available.
 .OUTPUTS

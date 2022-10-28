@@ -575,7 +575,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_number
      *
-     * @param int|null $block_number block_number
+     * @param int|null $block_number 
      *
      * @return self
      */
@@ -604,7 +604,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vid
      *
-     * @param int|null $vid vid
+     * @param int|null $vid 
      *
      * @return self
      */
@@ -633,7 +633,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id 
      *
      * @return self
      */
@@ -669,7 +669,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at_timestamp
      *
-     * @param \DateTime|null $created_at_timestamp created_at_timestamp
+     * @param \DateTime|null $created_at_timestamp 
      *
      * @return self
      */
@@ -698,7 +698,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0
      *
-     * @param string|null $token_0 token_0
+     * @param string|null $token_0 
      *
      * @return self
      */
@@ -734,7 +734,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1
      *
-     * @param string|null $token_1 token_1
+     * @param string|null $token_1 
      *
      * @return self
      */
@@ -915,7 +915,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_0_price
      *
-     * @param string|null $token_0_price token_0_price
+     * @param string|null $token_0_price 
      *
      * @return self
      */
@@ -951,7 +951,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets token_1_price
      *
-     * @param string|null $token_1_price token_1_price
+     * @param string|null $token_1_price 
      *
      * @return self
      */
@@ -1045,7 +1045,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_0
      *
-     * @param string|null $volume_token_0 volume_token_0
+     * @param string|null $volume_token_0 
      *
      * @return self
      */
@@ -1081,7 +1081,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_token_1
      *
-     * @param string|null $volume_token_1 volume_token_1
+     * @param string|null $volume_token_1 
      *
      * @return self
      */
@@ -1117,7 +1117,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets volume_usd
      *
-     * @param string|null $volume_usd volume_usd
+     * @param string|null $volume_usd 
      *
      * @return self
      */
@@ -1153,7 +1153,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets untracked_volume_usd
      *
-     * @param string|null $untracked_volume_usd untracked_volume_usd
+     * @param string|null $untracked_volume_usd 
      *
      * @return self
      */
@@ -1189,7 +1189,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fees_usd
      *
-     * @param string|null $fees_usd fees_usd
+     * @param string|null $fees_usd 
      *
      * @return self
      */
@@ -1254,7 +1254,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_0
      *
-     * @param string|null $collected_fees_token_0 collected_fees_token_0
+     * @param string|null $collected_fees_token_0 
      *
      * @return self
      */
@@ -1290,7 +1290,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_token_1
      *
-     * @param string|null $collected_fees_token_1 collected_fees_token_1
+     * @param string|null $collected_fees_token_1 
      *
      * @return self
      */
@@ -1326,7 +1326,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets collected_fees_usd
      *
-     * @param string|null $collected_fees_usd collected_fees_usd
+     * @param string|null $collected_fees_usd 
      *
      * @return self
      */
@@ -1362,7 +1362,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_token_0
      *
-     * @param string|null $total_value_locked_token_0 total_value_locked_token_0
+     * @param string|null $total_value_locked_token_0 
      *
      * @return self
      */
@@ -1398,7 +1398,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_token_1
      *
-     * @param string|null $total_value_locked_token_1 total_value_locked_token_1
+     * @param string|null $total_value_locked_token_1 
      *
      * @return self
      */
@@ -1434,7 +1434,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_eth
      *
-     * @param string|null $total_value_locked_eth total_value_locked_eth
+     * @param string|null $total_value_locked_eth 
      *
      * @return self
      */
@@ -1470,7 +1470,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd
      *
-     * @param string|null $total_value_locked_usd total_value_locked_usd
+     * @param string|null $total_value_locked_usd 
      *
      * @return self
      */
@@ -1506,7 +1506,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_value_locked_usd_untracked
      *
-     * @param string|null $total_value_locked_usd_untracked total_value_locked_usd_untracked
+     * @param string|null $total_value_locked_usd_untracked 
      *
      * @return self
      */
@@ -1542,7 +1542,7 @@ class PoolV3DTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets liquidity_provider_count
      *
-     * @param string|null $liquidity_provider_count liquidity_provider_count
+     * @param string|null $liquidity_provider_count 
      *
      * @return self
      */

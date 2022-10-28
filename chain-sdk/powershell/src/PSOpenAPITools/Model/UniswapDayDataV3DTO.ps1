@@ -20,25 +20,25 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Date
-No description available.
+
 .PARAMETER VolumeEth
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER VolumeUsdUntracked
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER TxCount
 No description available.
 .PARAMETER TvlUsd
-No description available.
+
 .OUTPUTS
 
 UniswapDayDataV3DTO<PSCustomObject>

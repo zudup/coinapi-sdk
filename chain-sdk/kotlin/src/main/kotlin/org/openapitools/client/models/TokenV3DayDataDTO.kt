@@ -54,51 +54,67 @@ data class TokenV3DayDataDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
+    /*  */
     @Json(name = "token")
     val token: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume")
     val volume: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked")
     val totalValueLocked: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_usd")
     val totalValueLockedUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "price_usd")
     val priceUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "open")
     val `open`: kotlin.String? = null,
 
+    /*  */
     @Json(name = "high")
     val high: kotlin.String? = null,
 
+    /*  */
     @Json(name = "low")
     val low: kotlin.String? = null,
 
+    /*  */
     @Json(name = "close")
     val close: kotlin.String? = null
 

@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * FactoryV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class FactoryV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -175,7 +175,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -221,7 +221,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get poolCount
+   * 
    * @return poolCount
   **/
   @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get txCount
+   * 
    * @return txCount
   **/
   @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalVolumeUsd
+   * 
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -290,7 +290,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalVolumeEth
+   * 
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
@@ -313,7 +313,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalFeesUsd
+   * 
    * @return totalFeesUsd
   **/
   @javax.annotation.Nullable
@@ -336,7 +336,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalFeesEth
+   * 
    * @return totalFeesEth
   **/
   @javax.annotation.Nullable
@@ -359,7 +359,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -382,7 +382,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsd
+   * 
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
@@ -405,7 +405,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalValueLockedEth
+   * 
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
@@ -428,7 +428,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsdUntracked
+   * 
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
@@ -451,7 +451,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get totalValueLockedEthUntracked
+   * 
    * @return totalValueLockedEthUntracked
   **/
   @javax.annotation.Nullable
@@ -474,7 +474,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get owner
+   * 
    * @return owner
   **/
   @javax.annotation.Nullable
@@ -497,7 +497,7 @@ public class FactoryV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

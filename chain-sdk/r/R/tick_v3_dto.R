@@ -68,25 +68,25 @@ TickV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param pool_address pool_address
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param pool_address 
     #' @param tick_idx tick_idx
-    #' @param pool pool
+    #' @param pool 
     #' @param liquidity_gross liquidity_gross
     #' @param liquidity_net liquidity_net
-    #' @param price_0 price_0
-    #' @param price_1 price_1
-    #' @param volume_token_0 volume_token_0
-    #' @param volume_token_1 volume_token_1
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param fees_usd fees_usd
-    #' @param collected_fees_token_0 collected_fees_token_0
-    #' @param collected_fees_token_1 collected_fees_token_1
-    #' @param collected_fees_usd collected_fees_usd
-    #' @param created_at_timestamp created_at_timestamp
+    #' @param price_0 
+    #' @param price_1 
+    #' @param volume_token_0 
+    #' @param volume_token_1 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
+    #' @param fees_usd 
+    #' @param collected_fees_token_0 
+    #' @param collected_fees_token_1 
+    #' @param collected_fees_usd 
+    #' @param created_at_timestamp 
     #' @param liquidity_provider_count liquidity_provider_count
     #' @param fee_growth_outside_0x128 fee_growth_outside_0x128
     #' @param fee_growth_outside_1x128 fee_growth_outside_1x128

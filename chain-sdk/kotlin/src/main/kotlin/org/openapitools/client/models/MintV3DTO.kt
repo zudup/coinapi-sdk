@@ -56,57 +56,75 @@ data class MintV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "transaction")
     val transaction: kotlin.String? = null,
 
+    /*  */
     @Json(name = "timestamp")
     val timestamp: kotlin.String? = null,
 
+    /*  */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_0")
     val token0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1")
     val token1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "owner")
     val owner: kotlin.String? = null,
 
+    /*  */
     @Json(name = "sender")
     val sender: kotlin.String? = null,
 
+    /*  */
     @Json(name = "origin")
     val origin: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount")
     val amount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_0")
     val amount0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_1")
     val amount1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "amount_usd")
     val amountUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick_lower")
     val tickLower: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick_upper")
     val tickUpper: kotlin.String? = null,
 
+    /*  */
     @Json(name = "log_index")
     val logIndex: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

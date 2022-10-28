@@ -31,31 +31,37 @@ export interface TokenV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     symbol?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     name?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof TokenV3DTO
      */
@@ -66,21 +72,25 @@ export interface TokenV3DTO {
      */
     total_supply?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
@@ -96,26 +106,31 @@ export interface TokenV3DTO {
      */
     pool_count?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     total_value_locked_usd_untracked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TokenV3DTO
      */
     derived_eth?: string | null;
     /**
+     * 
      * @type {Array<string>}
      * @memberof TokenV3DTO
      */

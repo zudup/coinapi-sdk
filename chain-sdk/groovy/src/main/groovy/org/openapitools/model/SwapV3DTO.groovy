@@ -13,33 +13,33 @@ class SwapV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     Long vid
-    
+    /*  */
     String id
-    
+    /*  */
     String transaction
-    
+    /*  */
     Date timestamp
-    
+    /*  */
     String pool
-    
+    /*  */
     String token0
-    
+    /*  */
     String token1
-    
+    /*  */
     String sender
-    
+    /*  */
     String recipient
-    
+    /*  */
     String origin
-    
+    /*  */
     String amount0
-    
+    /*  */
     String amount1
-    
+    /*  */
     String amountUsd
     
     BigInteger sqrtPriceX96

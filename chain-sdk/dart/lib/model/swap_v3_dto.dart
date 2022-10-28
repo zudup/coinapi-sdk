@@ -55,6 +55,7 @@ class SwapV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -63,6 +64,7 @@ class SwapV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -71,10 +73,13 @@ class SwapV3DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   String? transaction;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -83,22 +88,31 @@ class SwapV3DTO {
   ///
   DateTime? timestamp;
 
+  /// 
   String? pool;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
+  /// 
   String? sender;
 
+  /// 
   String? recipient;
 
+  /// 
   String? origin;
 
+  /// 
   String? amount0;
 
+  /// 
   String? amount1;
 
+  /// 
   String? amountUsd;
 
   ///

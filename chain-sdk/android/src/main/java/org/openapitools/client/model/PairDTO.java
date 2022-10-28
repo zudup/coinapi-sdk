@@ -93,6 +93,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -103,6 +104,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -113,6 +115,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFactory() {
@@ -123,6 +126,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getName() {
@@ -133,6 +137,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0() {
@@ -143,6 +148,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1() {
@@ -153,6 +159,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserve0() {
@@ -163,6 +170,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserve1() {
@@ -173,6 +181,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalSupply() {
@@ -183,6 +192,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserveEth() {
@@ -193,6 +203,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getReserveUsd() {
@@ -203,6 +214,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTrackedReserveEth() {
@@ -213,6 +225,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken0Price() {
@@ -223,6 +236,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken1Price() {
@@ -233,6 +247,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -243,6 +258,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -253,6 +269,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -263,6 +280,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -273,6 +291,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTxCount() {
@@ -283,6 +302,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidityProviderCount() {
@@ -293,6 +313,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
@@ -303,6 +324,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getBlock() {
@@ -313,6 +335,7 @@ public class PairDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

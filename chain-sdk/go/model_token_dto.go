@@ -20,20 +20,35 @@ import (
 type TokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Factory NullableString `json:"factory,omitempty"`
+	// 
 	Symbol NullableString `json:"symbol,omitempty"`
+	// 
 	Name NullableString `json:"name,omitempty"`
+	// 
 	Decimals NullableString `json:"decimals,omitempty"`
+	// 
 	TotalSupply NullableString `json:"total_supply,omitempty"`
+	// 
 	Volume NullableString `json:"volume,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	TxCount NullableString `json:"tx_count,omitempty"`
+	// 
 	Liquidity NullableString `json:"liquidity,omitempty"`
+	// 
 	DerivedEth NullableString `json:"derived_eth,omitempty"`
+	// 
 	WhitelistPairs []string `json:"whitelist_pairs,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 	TokenSymbol NullableString `json:"token_symbol,omitempty"`
 }

@@ -60,69 +60,91 @@ data class PoolDayDataV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "date")
     val date: kotlin.Int? = null,
 
+    /*  */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity")
     val liquidity: kotlin.String? = null,
 
+    /*  */
     @Json(name = "sqrt_price")
     val sqrtPrice: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_0_price")
     val token0Price: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1_price")
     val token1Price: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick")
     val tick: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_global_0x128")
     val feeGrowthGlobal0x128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_global_1x128")
     val feeGrowthGlobal1x128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tvl_usd")
     val tvlUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_0")
     val volumeToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_1")
     val volumeToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tx_count")
     val txCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "open")
     val `open`: kotlin.String? = null,
 
+    /*  */
     @Json(name = "high")
     val high: kotlin.String? = null,
 
+    /*  */
     @Json(name = "low")
     val low: kotlin.String? = null,
 
+    /*  */
     @Json(name = "close")
     val close: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

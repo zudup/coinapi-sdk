@@ -17,40 +17,85 @@ export interface TokenV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     symbol?: string;
 
+    /**
+     * 
+     */
     name?: string;
 
+    /**
+     * 
+     */
     decimals?: number;
 
     total_supply?: models.BigInteger;
 
+    /**
+     * 
+     */
     volume?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     untracked_volume_usd?: string;
 
+    /**
+     * 
+     */
     fees_usd?: string;
 
     tx_count?: models.BigInteger;
 
     pool_count?: models.BigInteger;
 
+    /**
+     * 
+     */
     total_value_locked?: string;
 
+    /**
+     * 
+     */
     total_value_locked_usd?: string;
 
+    /**
+     * 
+     */
     total_value_locked_usd_untracked?: string;
 
+    /**
+     * 
+     */
     derived_eth?: string;
 
+    /**
+     * 
+     */
     whitelist_pools?: Array<string>;
 
     token_symbol?: string;

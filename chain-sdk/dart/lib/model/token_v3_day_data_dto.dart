@@ -49,6 +49,7 @@ class TokenV3DayDataDTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -57,6 +58,7 @@ class TokenV3DayDataDTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -65,8 +67,10 @@ class TokenV3DayDataDTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -75,28 +79,40 @@ class TokenV3DayDataDTO {
   ///
   int? date;
 
+  /// 
   String? token;
 
+  /// 
   String? volume;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? totalValueLocked;
 
+  /// 
   String? totalValueLockedUsd;
 
+  /// 
   String? priceUsd;
 
+  /// 
   String? feesUsd;
 
+  /// 
   String? open;
 
+  /// 
   String? high;
 
+  /// 
   String? low;
 
+  /// 
   String? close;
 
   @override

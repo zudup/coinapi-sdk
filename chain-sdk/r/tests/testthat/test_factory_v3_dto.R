@@ -21,6 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -28,6 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -35,6 +37,7 @@ test_that("id", {
 
 test_that("pool_count", {
   # tests for the property `pool_count` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool_count`, "EXPECTED_RESULT")
@@ -42,6 +45,7 @@ test_that("pool_count", {
 
 test_that("tx_count", {
   # tests for the property `tx_count` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tx_count`, "EXPECTED_RESULT")
@@ -49,6 +53,7 @@ test_that("tx_count", {
 
 test_that("total_volume_usd", {
   # tests for the property `total_volume_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_volume_usd`, "EXPECTED_RESULT")
@@ -56,6 +61,7 @@ test_that("total_volume_usd", {
 
 test_that("total_volume_eth", {
   # tests for the property `total_volume_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_volume_eth`, "EXPECTED_RESULT")
@@ -63,6 +69,7 @@ test_that("total_volume_eth", {
 
 test_that("total_fees_usd", {
   # tests for the property `total_fees_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_fees_usd`, "EXPECTED_RESULT")
@@ -70,6 +77,7 @@ test_that("total_fees_usd", {
 
 test_that("total_fees_eth", {
   # tests for the property `total_fees_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_fees_eth`, "EXPECTED_RESULT")
@@ -77,6 +85,7 @@ test_that("total_fees_eth", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -84,6 +93,7 @@ test_that("untracked_volume_usd", {
 
 test_that("total_value_locked_usd", {
   # tests for the property `total_value_locked_usd` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd`, "EXPECTED_RESULT")
@@ -91,6 +101,7 @@ test_that("total_value_locked_usd", {
 
 test_that("total_value_locked_eth", {
   # tests for the property `total_value_locked_eth` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_eth`, "EXPECTED_RESULT")
@@ -98,6 +109,7 @@ test_that("total_value_locked_eth", {
 
 test_that("total_value_locked_usd_untracked", {
   # tests for the property `total_value_locked_usd_untracked` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd_untracked`, "EXPECTED_RESULT")
@@ -105,6 +117,7 @@ test_that("total_value_locked_usd_untracked", {
 
 test_that("total_value_locked_eth_untracked", {
   # tests for the property `total_value_locked_eth_untracked` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_eth_untracked`, "EXPECTED_RESULT")
@@ -112,6 +125,7 @@ test_that("total_value_locked_eth_untracked", {
 
 test_that("owner", {
   # tests for the property `owner` (character)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`owner`, "EXPECTED_RESULT")
@@ -119,6 +133,7 @@ test_that("owner", {
 
 test_that("vid", {
   # tests for the property `vid` (integer)
+  # 
 
   # uncomment below to test the property
   #expect_equal(model.instance$`vid`, "EXPECTED_RESULT")

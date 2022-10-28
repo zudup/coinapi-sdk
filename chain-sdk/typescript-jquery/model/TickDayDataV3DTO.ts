@@ -17,32 +17,74 @@ export interface TickDayDataV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     date?: number;
 
+    /**
+     * 
+     */
     pool?: string;
 
+    /**
+     * 
+     */
     tick?: string;
 
+    /**
+     * 
+     */
     liquidity_gross?: string;
 
+    /**
+     * 
+     */
     liquidity_net?: string;
 
+    /**
+     * 
+     */
     volume_token_0?: string;
 
+    /**
+     * 
+     */
     volume_token_1?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     fees_usd?: string;
 
+    /**
+     * 
+     */
     fee_growth_outside_0x128?: string;
 
+    /**
+     * 
+     */
     fee_growth_outside_1x128?: string;
 
+    /**
+     * 
+     */
     vid?: number;
 
 }

@@ -14,9 +14,21 @@
 export interface BundleV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     eth_price_usd?: string | null;
+    /**
+     * 
+     */
     vid?: number;
 }
 

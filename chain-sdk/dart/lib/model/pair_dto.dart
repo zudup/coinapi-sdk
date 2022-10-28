@@ -57,6 +57,7 @@ class PairDTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -65,48 +66,70 @@ class PairDTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? factory_;
 
+  /// 
   String? name;
 
+  /// 
   String? token0;
 
+  /// 
   String? token1;
 
+  /// 
   String? reserve0;
 
+  /// 
   String? reserve1;
 
+  /// 
   String? totalSupply;
 
+  /// 
   String? reserveEth;
 
+  /// 
   String? reserveUsd;
 
+  /// 
   String? trackedReserveEth;
 
+  /// 
   String? token0Price;
 
+  /// 
   String? token1Price;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? txCount;
 
+  /// 
   String? liquidityProviderCount;
 
+  /// 
   String? timestamp;
 
+  /// 
   String? block;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

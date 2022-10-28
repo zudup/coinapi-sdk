@@ -20,15 +20,24 @@ import (
 type UniswapDayDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Date *int32 `json:"date,omitempty"`
+	// 
 	VolumeEth NullableString `json:"volume_eth,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	VolumeUsdUntracked NullableString `json:"volume_usd_untracked,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
+	// 
 	TvlUsd NullableString `json:"tvl_usd,omitempty"`
 }
 

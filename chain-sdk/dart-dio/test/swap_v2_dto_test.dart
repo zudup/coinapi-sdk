@@ -17,66 +17,79 @@ void main() {
       // TODO
     });
 
+    // 
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
     });
 
+    // 
     // int vid
     test('to test the property `vid`', () async {
       // TODO
     });
 
+    // 
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
+    // 
     // String transaction
     test('to test the property `transaction`', () async {
       // TODO
     });
 
+    // 
     // DateTime timestamp
     test('to test the property `timestamp`', () async {
       // TODO
     });
 
+    // 
     // String pair
     test('to test the property `pair`', () async {
       // TODO
     });
 
+    // 
     // String sender
     test('to test the property `sender`', () async {
       // TODO
     });
 
+    // 
     // String from
     test('to test the property `from`', () async {
       // TODO
     });
 
+    // 
     // String amount0In
     test('to test the property `amount0In`', () async {
       // TODO
     });
 
+    // 
     // String amount1In
     test('to test the property `amount1In`', () async {
       // TODO
     });
 
+    // 
     // String amount0Out
     test('to test the property `amount0Out`', () async {
       // TODO
     });
 
+    // 
     // String amount1Out
     test('to test the property `amount1Out`', () async {
       // TODO
     });
 
+    // 
     // String to
     test('to test the property `to`', () async {
       // TODO
@@ -87,6 +100,7 @@ void main() {
       // TODO
     });
 
+    // 
     // String amountUsd
     test('to test the property `amountUsd`', () async {
       // TODO

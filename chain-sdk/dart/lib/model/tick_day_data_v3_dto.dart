@@ -47,6 +47,7 @@ class TickDayDataV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -55,8 +56,10 @@ class TickDayDataV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -65,26 +68,37 @@ class TickDayDataV3DTO {
   ///
   int? date;
 
+  /// 
   String? pool;
 
+  /// 
   String? tick;
 
+  /// 
   String? liquidityGross;
 
+  /// 
   String? liquidityNet;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? feesUsd;
 
+  /// 
   String? feeGrowthOutside0x128;
 
+  /// 
   String? feeGrowthOutside1x128;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

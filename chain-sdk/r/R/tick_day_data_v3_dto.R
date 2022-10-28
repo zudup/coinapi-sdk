@@ -52,20 +52,20 @@ TickDayDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param id id
-    #' @param date date
-    #' @param pool pool
-    #' @param tick tick
-    #' @param liquidity_gross liquidity_gross
-    #' @param liquidity_net liquidity_net
-    #' @param volume_token_0 volume_token_0
-    #' @param volume_token_1 volume_token_1
-    #' @param volume_usd volume_usd
-    #' @param fees_usd fees_usd
-    #' @param fee_growth_outside_0x128 fee_growth_outside_0x128
-    #' @param fee_growth_outside_1x128 fee_growth_outside_1x128
-    #' @param vid vid
+    #' @param block_number 
+    #' @param id 
+    #' @param date 
+    #' @param pool 
+    #' @param tick 
+    #' @param liquidity_gross 
+    #' @param liquidity_net 
+    #' @param volume_token_0 
+    #' @param volume_token_1 
+    #' @param volume_usd 
+    #' @param fees_usd 
+    #' @param fee_growth_outside_0x128 
+    #' @param fee_growth_outside_1x128 
+    #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
     initialize = function(

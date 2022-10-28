@@ -17,24 +17,51 @@ export interface UniswapDayDataV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     date?: number;
 
+    /**
+     * 
+     */
     volume_eth?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     volume_usd_untracked?: string;
 
+    /**
+     * 
+     */
     fees_usd?: string;
 
     tx_count?: models.BigInteger;
 
+    /**
+     * 
+     */
     tvl_usd?: string;
 
 }

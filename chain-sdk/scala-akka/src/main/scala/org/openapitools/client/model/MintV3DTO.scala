@@ -17,23 +17,41 @@ import org.openapitools.client.core.ApiModel
 case class MintV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   transaction: Option[String] = None,
+  /*  */
   timestamp: Option[String] = None,
+  /*  */
   pool: Option[String] = None,
+  /*  */
   token0: Option[String] = None,
+  /*  */
   token1: Option[String] = None,
+  /*  */
   owner: Option[String] = None,
+  /*  */
   sender: Option[String] = None,
+  /*  */
   origin: Option[String] = None,
+  /*  */
   amount: Option[String] = None,
+  /*  */
   amount0: Option[String] = None,
+  /*  */
   amount1: Option[String] = None,
+  /*  */
   amountUsd: Option[String] = None,
+  /*  */
   tickLower: Option[String] = None,
+  /*  */
   tickUpper: Option[String] = None,
+  /*  */
   logIndex: Option[String] = None,
+  /*  */
   vid: Option[Long] = None
 ) extends ApiModel
 

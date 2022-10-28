@@ -137,111 +137,133 @@ PoolHourDataV3DTO.prototype['entry_time'] = undefined;
 PoolHourDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 PoolHourDataV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 PoolHourDataV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {Number} period_start_unix
  */
 PoolHourDataV3DTO.prototype['period_start_unix'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 PoolHourDataV3DTO.prototype['pool'] = undefined;
 
 /**
+ * 
  * @member {String} liquidity
  */
 PoolHourDataV3DTO.prototype['liquidity'] = undefined;
 
 /**
+ * 
  * @member {String} sqrt_price
  */
 PoolHourDataV3DTO.prototype['sqrt_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_0_price
  */
 PoolHourDataV3DTO.prototype['token_0_price'] = undefined;
 
 /**
+ * 
  * @member {String} token_1_price
  */
 PoolHourDataV3DTO.prototype['token_1_price'] = undefined;
 
 /**
+ * 
  * @member {String} tick
  */
 PoolHourDataV3DTO.prototype['tick'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_global_0x128
  */
 PoolHourDataV3DTO.prototype['fee_growth_global_0x128'] = undefined;
 
 /**
+ * 
  * @member {String} fee_growth_global_1x128
  */
 PoolHourDataV3DTO.prototype['fee_growth_global_1x128'] = undefined;
 
 /**
+ * 
  * @member {String} tvl_usd
  */
 PoolHourDataV3DTO.prototype['tvl_usd'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 PoolHourDataV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 PoolHourDataV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 PoolHourDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 PoolHourDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} tx_count
  */
 PoolHourDataV3DTO.prototype['tx_count'] = undefined;
 
 /**
+ * 
  * @member {String} open
  */
 PoolHourDataV3DTO.prototype['open'] = undefined;
 
 /**
+ * 
  * @member {String} high
  */
 PoolHourDataV3DTO.prototype['high'] = undefined;
 
 /**
+ * 
  * @member {String} low
  */
 PoolHourDataV3DTO.prototype['low'] = undefined;
 
 /**
+ * 
  * @member {String} close
  */
 PoolHourDataV3DTO.prototype['close'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 PoolHourDataV3DTO.prototype['vid'] = undefined;

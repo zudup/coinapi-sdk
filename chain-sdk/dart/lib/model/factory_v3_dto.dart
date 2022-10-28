@@ -48,6 +48,7 @@ class FactoryV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -56,32 +57,46 @@ class FactoryV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   String? poolCount;
 
+  /// 
   String? txCount;
 
+  /// 
   String? totalVolumeUsd;
 
+  /// 
   String? totalVolumeEth;
 
+  /// 
   String? totalFeesUsd;
 
+  /// 
   String? totalFeesEth;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? totalValueLockedUsd;
 
+  /// 
   String? totalValueLockedEth;
 
+  /// 
   String? totalValueLockedUsdUntracked;
 
+  /// 
   String? totalValueLockedEthUntracked;
 
+  /// 
   String? owner;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

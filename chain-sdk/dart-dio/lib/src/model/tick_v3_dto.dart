@@ -14,25 +14,25 @@ part 'tick_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [poolAddress] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [poolAddress] - 
 /// * [tickIdx] 
-/// * [pool] 
+/// * [pool] - 
 /// * [liquidityGross] 
 /// * [liquidityNet] 
-/// * [price0] 
-/// * [price1] 
-/// * [volumeToken0] 
-/// * [volumeToken1] 
-/// * [volumeUsd] 
-/// * [untrackedVolumeUsd] 
-/// * [feesUsd] 
-/// * [collectedFeesToken0] 
-/// * [collectedFeesToken1] 
-/// * [collectedFeesUsd] 
-/// * [createdAtTimestamp] 
+/// * [price0] - 
+/// * [price1] - 
+/// * [volumeToken0] - 
+/// * [volumeToken1] - 
+/// * [volumeUsd] - 
+/// * [untrackedVolumeUsd] - 
+/// * [feesUsd] - 
+/// * [collectedFeesToken0] - 
+/// * [collectedFeesToken1] - 
+/// * [collectedFeesUsd] - 
+/// * [createdAtTimestamp] - 
 /// * [liquidityProviderCount] 
 /// * [feeGrowthOutside0x128] 
 /// * [feeGrowthOutside1x128] 
@@ -44,21 +44,26 @@ abstract class TickV3DTO implements Built<TickV3DTO, TickV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'pool_address')
   String? get poolAddress;
 
   @BuiltValueField(wireName: r'tick_idx')
   BigInteger? get tickIdx;
 
+  /// 
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
@@ -68,36 +73,47 @@ abstract class TickV3DTO implements Built<TickV3DTO, TickV3DTOBuilder> {
   @BuiltValueField(wireName: r'liquidity_net')
   BigInteger? get liquidityNet;
 
+  /// 
   @BuiltValueField(wireName: r'price_0')
   String? get price0;
 
+  /// 
   @BuiltValueField(wireName: r'price_1')
   String? get price1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
+  /// 
   @BuiltValueField(wireName: r'collected_fees_usd')
   String? get collectedFeesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 

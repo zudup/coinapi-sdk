@@ -17,7 +17,10 @@ import org.openapitools.client.model.BigInteger;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ **/
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
 public class TokenV2DTO {
   
   @SerializedName("entry_time")
@@ -74,6 +77,7 @@ public class TokenV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -84,6 +88,7 @@ public class TokenV2DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -94,8 +99,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * token address
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token address")
   public String getId() {
     return id;
   }
@@ -104,8 +110,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * token symbol
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token symbol")
   public String getSymbol() {
     return symbol;
   }
@@ -114,8 +121,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * token name
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token name")
   public String getName() {
     return name;
   }
@@ -124,8 +132,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * token decimals
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "token decimals")
   public Integer getDecimals() {
     return decimals;
   }
@@ -144,8 +153,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * amount of token traded all time across all pairs
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token traded all time across all pairs")
   public String getTradeVolume() {
     return tradeVolume;
   }
@@ -154,8 +164,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)")
   public String getTradeVolumeUsd() {
     return tradeVolumeUsd;
   }
@@ -164,8 +175,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "amount of token in USD traded all time across pairs (no minimum liquidity threshold)")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -184,8 +196,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * total amount of token provided as liquidity across all pairs
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "total amount of token provided as liquidity across all pairs")
   public String getTotalLiquidity() {
     return totalLiquidity;
   }
@@ -194,8 +207,9 @@ public class TokenV2DTO {
   }
 
   /**
+   * ETH per token
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ETH per token")
   public String getDerivedEth() {
     return derivedEth;
   }

@@ -31,31 +31,37 @@ export interface PoolV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PoolV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof PoolV3DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     created_at_timestamp?: string;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -86,11 +92,13 @@ export interface PoolV3DTO {
      */
     fee_growth_global_1x128?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     token_0_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -106,26 +114,31 @@ export interface PoolV3DTO {
      */
     observation_index?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -136,46 +149,55 @@ export interface PoolV3DTO {
      */
     tx_count?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_eth?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_usd_untracked?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolV3DTO
      */

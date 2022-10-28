@@ -20,19 +20,33 @@ import (
 type SwapV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Transaction NullableString `json:"transaction,omitempty"`
+	// 
 	Timestamp *time.Time `json:"timestamp,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
+	// 
 	Token0 NullableString `json:"token_0,omitempty"`
+	// 
 	Token1 NullableString `json:"token_1,omitempty"`
+	// 
 	Sender NullableString `json:"sender,omitempty"`
+	// 
 	Recipient NullableString `json:"recipient,omitempty"`
+	// 
 	Origin NullableString `json:"origin,omitempty"`
+	// 
 	Amount0 NullableString `json:"amount_0,omitempty"`
+	// 
 	Amount1 NullableString `json:"amount_1,omitempty"`
+	// 
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
 	SqrtPriceX96 *BigInteger `json:"sqrt_price_x96,omitempty"`
 	Tick *BigInteger `json:"tick,omitempty"`

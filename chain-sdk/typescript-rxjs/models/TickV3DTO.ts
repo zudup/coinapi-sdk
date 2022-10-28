@@ -31,21 +31,25 @@ export interface TickV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof TickV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof TickV3DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -56,6 +60,7 @@ export interface TickV3DTO {
      */
     tick_idx?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -71,56 +76,67 @@ export interface TickV3DTO {
      */
     liquidity_net?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     price_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     price_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof TickV3DTO
      */

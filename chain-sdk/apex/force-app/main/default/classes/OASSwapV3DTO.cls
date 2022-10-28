@@ -27,85 +27,85 @@ public class OASSwapV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get r_transaction
+     * 
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * Get timestamp
+     * 
      * @return timestamp
      */
     public Datetime timestamp { get; set; }
 
     /**
-     * Get pool
+     * 
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * Get token0
+     * 
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * Get token1
+     * 
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * Get sender
+     * 
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * Get recipient
+     * 
      * @return recipient
      */
     public String recipient { get; set; }
 
     /**
-     * Get origin
+     * 
      * @return origin
      */
     public String origin { get; set; }
 
     /**
-     * Get amount0
+     * 
      * @return amount0
      */
     public String amount0 { get; set; }
 
     /**
-     * Get amount1
+     * 
      * @return amount1
      */
     public String amount1 { get; set; }
 
     /**
-     * Get amountUsd
+     * 
      * @return amountUsd
      */
     public String amountUsd { get; set; }

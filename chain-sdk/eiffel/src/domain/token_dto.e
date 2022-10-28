@@ -24,35 +24,35 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     factory: detachable STRING_32
-      
+      -- 
     symbol: detachable STRING_32
-      
+      -- 
     name: detachable STRING_32
-      
+      -- 
     decimals: detachable STRING_32
-      
+      -- 
     total_supply: detachable STRING_32
-      
+      -- 
     volume: detachable STRING_32
-      
+      -- 
     volume_usd: detachable STRING_32
-      
+      -- 
     untracked_volume_usd: detachable STRING_32
-      
+      -- 
     tx_count: detachable STRING_32
-      
+      -- 
     liquidity: detachable STRING_32
-      
+      -- 
     derived_eth: detachable STRING_32
-      
+      -- 
     whitelist_pairs: detachable LIST [STRING_32]
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
     token_symbol: detachable STRING_32
       
 

@@ -20,9 +20,13 @@ import (
 type BundleV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	EthPriceUsd NullableString `json:"eth_price_usd,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

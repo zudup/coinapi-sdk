@@ -83,21 +83,25 @@ BundleV3DTO.prototype['entry_time'] = undefined;
 BundleV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 BundleV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 BundleV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} eth_price_usd
  */
 BundleV3DTO.prototype['eth_price_usd'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 BundleV3DTO.prototype['vid'] = undefined;

@@ -18,48 +18,56 @@ API.Client.UniswapDayDataV3DTO.prototype.entryTime;
 API.Client.UniswapDayDataV3DTO.prototype.recvTime;
 
 /**
+ * 
  * @type {!number}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.blockNumber;
 
 /**
+ * 
  * @type {!number}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.vid;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.id;
 
 /**
+ * 
  * @type {!number}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.date;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.volumeEth;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.volumeUsd;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
 API.Client.UniswapDayDataV3DTO.prototype.volumeUsdUntracked;
 
 /**
+ * 
  * @type {!string}
  * @export
  */
@@ -72,6 +80,7 @@ API.Client.UniswapDayDataV3DTO.prototype.feesUsd;
 API.Client.UniswapDayDataV3DTO.prototype.txCount;
 
 /**
+ * 
  * @type {!string}
  * @export
  */

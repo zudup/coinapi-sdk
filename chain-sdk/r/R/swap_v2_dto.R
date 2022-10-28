@@ -64,21 +64,21 @@ SwapV2DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param transaction transaction
-    #' @param timestamp timestamp
-    #' @param pair pair
-    #' @param sender sender
-    #' @param from from
-    #' @param amount_0_in amount_0_in
-    #' @param amount_1_in amount_1_in
-    #' @param amount_0_out amount_0_out
-    #' @param amount_1_out amount_1_out
-    #' @param to to
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param transaction 
+    #' @param timestamp 
+    #' @param pair 
+    #' @param sender 
+    #' @param from 
+    #' @param amount_0_in 
+    #' @param amount_1_in 
+    #' @param amount_0_out 
+    #' @param amount_1_out 
+    #' @param to 
     #' @param log_index log_index
-    #' @param amount_usd amount_usd
+    #' @param amount_usd 
     #' @param evaluated_price evaluated_price
     #' @param evaluated_amount evaluated_amount
     #' @param evaluated_aggressor evaluated_aggressor

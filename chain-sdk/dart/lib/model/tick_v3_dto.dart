@@ -55,6 +55,7 @@ class TickV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -63,6 +64,7 @@ class TickV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -71,8 +73,10 @@ class TickV3DTO {
   ///
   int? vid;
 
+  /// 
   String? id;
 
+  /// 
   String? poolAddress;
 
   ///
@@ -83,6 +87,7 @@ class TickV3DTO {
   ///
   BigInteger? tickIdx;
 
+  /// 
   String? pool;
 
   ///
@@ -101,26 +106,37 @@ class TickV3DTO {
   ///
   BigInteger? liquidityNet;
 
+  /// 
   String? price0;
 
+  /// 
   String? price1;
 
+  /// 
   String? volumeToken0;
 
+  /// 
   String? volumeToken1;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? feesUsd;
 
+  /// 
   String? collectedFeesToken0;
 
+  /// 
   String? collectedFeesToken1;
 
+  /// 
   String? collectedFeesUsd;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

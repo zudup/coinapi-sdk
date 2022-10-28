@@ -27,91 +27,91 @@ public class OASFactoryV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get poolCount
+     * 
      * @return poolCount
      */
     public String poolCount { get; set; }
 
     /**
-     * Get txCount
+     * 
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * Get totalVolumeUsd
+     * 
      * @return totalVolumeUsd
      */
     public String totalVolumeUsd { get; set; }
 
     /**
-     * Get totalVolumeEth
+     * 
      * @return totalVolumeEth
      */
     public String totalVolumeEth { get; set; }
 
     /**
-     * Get totalFeesUsd
+     * 
      * @return totalFeesUsd
      */
     public String totalFeesUsd { get; set; }
 
     /**
-     * Get totalFeesEth
+     * 
      * @return totalFeesEth
      */
     public String totalFeesEth { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get totalValueLockedUsd
+     * 
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * Get totalValueLockedEth
+     * 
      * @return totalValueLockedEth
      */
     public String totalValueLockedEth { get; set; }
 
     /**
-     * Get totalValueLockedUsdUntracked
+     * 
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * Get totalValueLockedEthUntracked
+     * 
      * @return totalValueLockedEthUntracked
      */
     public String totalValueLockedEthUntracked { get; set; }
 
     /**
-     * Get owner
+     * 
      * @return owner
      */
     public String owner { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

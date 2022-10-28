@@ -24,41 +24,41 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 
+    	 -- 
     id: detachable STRING_32
-      
+      -- 
     transaction: detachable STRING_32
-      
+      -- 
     timestamp: detachable STRING_32
-      
+      -- 
     pool: detachable STRING_32
-      
+      -- 
     token_0: detachable STRING_32
-      
+      -- 
     token_1: detachable STRING_32
-      
+      -- 
     owner: detachable STRING_32
-      
+      -- 
     sender: detachable STRING_32
-      
+      -- 
     origin: detachable STRING_32
-      
+      -- 
     amount: detachable STRING_32
-      
+      -- 
     amount_0: detachable STRING_32
-      
+      -- 
     amount_1: detachable STRING_32
-      
+      -- 
     amount_usd: detachable STRING_32
-      
+      -- 
     tick_lower: detachable STRING_32
-      
+      -- 
     tick_upper: detachable STRING_32
-      
+      -- 
     log_index: detachable STRING_32
-      
+      -- 
  	vid: INTEGER_64
-    	 
+    	 -- 
 
 feature -- Change Element
 

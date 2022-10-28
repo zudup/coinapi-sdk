@@ -17,23 +17,38 @@ import org.openapitools.client.core.ApiModel
 case class TokenV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   symbol: Option[String] = None,
+  /*  */
   name: Option[String] = None,
+  /*  */
   decimals: Option[Int] = None,
   totalSupply: Option[BigInteger] = None,
+  /*  */
   volume: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   feesUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
   poolCount: Option[BigInteger] = None,
+  /*  */
   totalValueLocked: Option[String] = None,
+  /*  */
   totalValueLockedUsd: Option[String] = None,
+  /*  */
   totalValueLockedUsdUntracked: Option[String] = None,
+  /*  */
   derivedEth: Option[String] = None,
+  /*  */
   whitelistPools: Option[Seq[String]] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel

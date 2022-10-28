@@ -13,20 +13,20 @@ part 'tick_day_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [id] 
-/// * [date] 
-/// * [pool] 
-/// * [tick] 
-/// * [liquidityGross] 
-/// * [liquidityNet] 
-/// * [volumeToken0] 
-/// * [volumeToken1] 
-/// * [volumeUsd] 
-/// * [feesUsd] 
-/// * [feeGrowthOutside0x128] 
-/// * [feeGrowthOutside1x128] 
-/// * [vid] 
+/// * [blockNumber] - 
+/// * [id] - 
+/// * [date] - 
+/// * [pool] - 
+/// * [tick] - 
+/// * [liquidityGross] - 
+/// * [liquidityNet] - 
+/// * [volumeToken0] - 
+/// * [volumeToken1] - 
+/// * [volumeUsd] - 
+/// * [feesUsd] - 
+/// * [feeGrowthOutside0x128] - 
+/// * [feeGrowthOutside1x128] - 
+/// * [vid] - 
 @BuiltValue()
 abstract class TickDayDataV3DTO implements Built<TickDayDataV3DTO, TickDayDataV3DTOBuilder> {
   @BuiltValueField(wireName: r'entry_time')
@@ -35,45 +35,59 @@ abstract class TickDayDataV3DTO implements Built<TickDayDataV3DTO, TickDayDataV3
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'date')
   int? get date;
 
+  /// 
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
+  /// 
   @BuiltValueField(wireName: r'tick')
   String? get tick;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity_gross')
   String? get liquidityGross;
 
+  /// 
   @BuiltValueField(wireName: r'liquidity_net')
   String? get liquidityNet;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
+  /// 
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
+  /// 
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
+  /// 
   @BuiltValueField(wireName: r'fee_growth_outside_0x128')
   String? get feeGrowthOutside0x128;
 
+  /// 
   @BuiltValueField(wireName: r'fee_growth_outside_1x128')
   String? get feeGrowthOutside1x128;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 

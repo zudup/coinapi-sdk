@@ -19,16 +19,22 @@ module OpenapiClient
 
     attr_accessor :recv_time
 
+    # 
     attr_accessor :block_number
 
+    # 
     attr_accessor :vid
 
+    # 
     attr_accessor :id
 
+    # 
     attr_accessor :created_at_timestamp
 
+    # 
     attr_accessor :token_0
 
+    # 
     attr_accessor :token_1
 
     attr_accessor :fee_tier
@@ -41,42 +47,58 @@ module OpenapiClient
 
     attr_accessor :fee_growth_global_1x128
 
+    # 
     attr_accessor :token_0_price
 
+    # 
     attr_accessor :token_1_price
 
     attr_accessor :tick
 
     attr_accessor :observation_index
 
+    # 
     attr_accessor :volume_token_0
 
+    # 
     attr_accessor :volume_token_1
 
+    # 
     attr_accessor :volume_usd
 
+    # 
     attr_accessor :untracked_volume_usd
 
+    # 
     attr_accessor :fees_usd
 
     attr_accessor :tx_count
 
+    # 
     attr_accessor :collected_fees_token_0
 
+    # 
     attr_accessor :collected_fees_token_1
 
+    # 
     attr_accessor :collected_fees_usd
 
+    # 
     attr_accessor :total_value_locked_token_0
 
+    # 
     attr_accessor :total_value_locked_token_1
 
+    # 
     attr_accessor :total_value_locked_eth
 
+    # 
     attr_accessor :total_value_locked_usd
 
+    # 
     attr_accessor :total_value_locked_usd_untracked
 
+    # 
     attr_accessor :liquidity_provider_count
 
     attr_accessor :evaluated_ask

@@ -20,27 +20,49 @@ import (
 type PoolDayDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Date *int32 `json:"date,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
+	// 
 	Liquidity NullableString `json:"liquidity,omitempty"`
+	// 
 	SqrtPrice NullableString `json:"sqrt_price,omitempty"`
+	// 
 	Token0Price NullableString `json:"token_0_price,omitempty"`
+	// 
 	Token1Price NullableString `json:"token_1_price,omitempty"`
+	// 
 	Tick NullableString `json:"tick,omitempty"`
+	// 
 	FeeGrowthGlobal0x128 NullableString `json:"fee_growth_global_0x128,omitempty"`
+	// 
 	FeeGrowthGlobal1x128 NullableString `json:"fee_growth_global_1x128,omitempty"`
+	// 
 	TvlUsd NullableString `json:"tvl_usd,omitempty"`
+	// 
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
+	// 
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
+	// 
 	TxCount NullableString `json:"tx_count,omitempty"`
+	// 
 	Open NullableString `json:"open,omitempty"`
+	// 
 	High NullableString `json:"high,omitempty"`
+	// 
 	Low NullableString `json:"low,omitempty"`
+	// 
 	Close NullableString `json:"close,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

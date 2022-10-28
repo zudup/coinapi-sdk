@@ -13,21 +13,57 @@
 import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 
+/**
+* Stores aggregated information for a specific token across all pairs that token is included in.
+*/
 export class TokenV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'vid'?: number;
+    /**
+    * token address
+    */
     'id'?: string | null;
+    /**
+    * token symbol
+    */
     'symbol'?: string | null;
+    /**
+    * token name
+    */
     'name'?: string | null;
+    /**
+    * token decimals
+    */
     'decimals'?: number;
     'totalSupply'?: BigInteger;
+    /**
+    * amount of token traded all time across all pairs
+    */
     'tradeVolume'?: string | null;
+    /**
+    * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+    */
     'tradeVolumeUsd'?: string | null;
+    /**
+    * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+    */
     'untrackedVolumeUsd'?: string | null;
     'txCount'?: BigInteger;
+    /**
+    * total amount of token provided as liquidity across all pairs
+    */
     'totalLiquidity'?: string | null;
+    /**
+    * ETH per token
+    */
     'derivedEth'?: string | null;
     'tokenSymbol'?: string | null;
 

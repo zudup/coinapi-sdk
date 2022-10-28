@@ -17,21 +17,25 @@ void main() {
       // TODO
     });
 
+    // 
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
     });
 
+    // 
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
+    // 
     // String ethPriceUsd
     test('to test the property `ethPriceUsd`', () async {
       // TODO
     });
 
+    // 
     // int vid
     test('to test the property `vid`', () async {
       // TODO

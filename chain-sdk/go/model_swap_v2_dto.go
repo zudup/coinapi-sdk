@@ -20,20 +20,34 @@ import (
 type SwapV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Transaction NullableString `json:"transaction,omitempty"`
+	// 
 	Timestamp *time.Time `json:"timestamp,omitempty"`
+	// 
 	Pair NullableString `json:"pair,omitempty"`
+	// 
 	Sender NullableString `json:"sender,omitempty"`
+	// 
 	From NullableString `json:"from,omitempty"`
+	// 
 	Amount0In NullableString `json:"amount_0_in,omitempty"`
+	// 
 	Amount1In NullableString `json:"amount_1_in,omitempty"`
+	// 
 	Amount0Out NullableString `json:"amount_0_out,omitempty"`
+	// 
 	Amount1Out NullableString `json:"amount_1_out,omitempty"`
+	// 
 	To NullableString `json:"to,omitempty"`
 	LogIndex *BigInteger `json:"log_index,omitempty"`
+	// 
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
 	EvaluatedPrice *float64 `json:"evaluated_price,omitempty"`
 	EvaluatedAmount *float64 `json:"evaluated_amount,omitempty"`

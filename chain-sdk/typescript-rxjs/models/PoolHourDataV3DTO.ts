@@ -27,111 +27,133 @@ export interface PoolHourDataV3DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     period_start_unix?: number;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     pool?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     liquidity?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     sqrt_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_0_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_1_price?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tick?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_0x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_1x128?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tvl_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_0?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_1?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fees_usd?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tx_count?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     open?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     high?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     low?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     close?: string | null;
     /**
+     * 
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */

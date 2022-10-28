@@ -20,23 +20,38 @@ import (
 type TokenV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Symbol NullableString `json:"symbol,omitempty"`
+	// 
 	Name NullableString `json:"name,omitempty"`
+	// 
 	Decimals *int32 `json:"decimals,omitempty"`
 	TotalSupply *BigInteger `json:"total_supply,omitempty"`
+	// 
 	Volume NullableString `json:"volume,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
 	PoolCount *BigInteger `json:"pool_count,omitempty"`
+	// 
 	TotalValueLocked NullableString `json:"total_value_locked,omitempty"`
+	// 
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
+	// 
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
+	// 
 	DerivedEth NullableString `json:"derived_eth,omitempty"`
+	// 
 	WhitelistPools []string `json:"whitelist_pools,omitempty"`
 	TokenSymbol NullableString `json:"token_symbol,omitempty"`
 }

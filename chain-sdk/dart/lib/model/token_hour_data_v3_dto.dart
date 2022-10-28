@@ -49,6 +49,7 @@ class TokenHourDataV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -57,8 +58,10 @@ class TokenHourDataV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -67,30 +70,43 @@ class TokenHourDataV3DTO {
   ///
   int? periodStartUnix;
 
+  /// 
   String? token;
 
+  /// 
   String? volume;
 
+  /// 
   String? volumeUsd;
 
+  /// 
   String? untrackedVolumeUsd;
 
+  /// 
   String? totalValueLocked;
 
+  /// 
   String? totalValueLockedUsd;
 
+  /// 
   String? priceUsd;
 
+  /// 
   String? feesUsd;
 
+  /// 
   String? open;
 
+  /// 
   String? high;
 
+  /// 
   String? low;
 
+  /// 
   String? close;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

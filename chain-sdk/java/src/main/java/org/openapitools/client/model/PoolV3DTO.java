@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * PoolV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class PoolV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -248,7 +248,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -271,7 +271,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -317,7 +317,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get createdAtTimestamp
+   * 
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
@@ -340,7 +340,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get token0
+   * 
    * @return token0
   **/
   @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get token1
+   * 
    * @return token1
   **/
   @javax.annotation.Nullable
@@ -501,7 +501,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get token0Price
+   * 
    * @return token0Price
   **/
   @javax.annotation.Nullable
@@ -524,7 +524,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get token1Price
+   * 
    * @return token1Price
   **/
   @javax.annotation.Nullable
@@ -593,7 +593,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get volumeToken0
+   * 
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
@@ -616,7 +616,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get volumeToken1
+   * 
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
@@ -639,7 +639,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -662,7 +662,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -685,7 +685,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -731,7 +731,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get collectedFeesToken0
+   * 
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
@@ -754,7 +754,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get collectedFeesToken1
+   * 
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
@@ -777,7 +777,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get collectedFeesUsd
+   * 
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
@@ -800,7 +800,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get totalValueLockedToken0
+   * 
    * @return totalValueLockedToken0
   **/
   @javax.annotation.Nullable
@@ -823,7 +823,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get totalValueLockedToken1
+   * 
    * @return totalValueLockedToken1
   **/
   @javax.annotation.Nullable
@@ -846,7 +846,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get totalValueLockedEth
+   * 
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
@@ -869,7 +869,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsd
+   * 
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
@@ -892,7 +892,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get totalValueLockedUsdUntracked
+   * 
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
@@ -915,7 +915,7 @@ public class PoolV3DTO {
   }
 
    /**
-   * Get liquidityProviderCount
+   * 
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable

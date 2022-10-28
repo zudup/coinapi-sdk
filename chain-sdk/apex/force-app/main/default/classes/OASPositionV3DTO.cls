@@ -27,115 +27,115 @@ public class OASPositionV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get owner
+     * 
      * @return owner
      */
     public String owner { get; set; }
 
     /**
-     * Get pool
+     * 
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * Get token0
+     * 
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * Get token1
+     * 
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * Get tickLower
+     * 
      * @return tickLower
      */
     public String tickLower { get; set; }
 
     /**
-     * Get tickUpper
+     * 
      * @return tickUpper
      */
     public String tickUpper { get; set; }
 
     /**
-     * Get liquidity
+     * 
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * Get depositedToken0
+     * 
      * @return depositedToken0
      */
     public String depositedToken0 { get; set; }
 
     /**
-     * Get depositedToken1
+     * 
      * @return depositedToken1
      */
     public String depositedToken1 { get; set; }
 
     /**
-     * Get withdrawnToken0
+     * 
      * @return withdrawnToken0
      */
     public String withdrawnToken0 { get; set; }
 
     /**
-     * Get withdrawnToken1
+     * 
      * @return withdrawnToken1
      */
     public String withdrawnToken1 { get; set; }
 
     /**
-     * Get collectedFeesToken0
+     * 
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * Get collectedFeesToken1
+     * 
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * Get r_transaction
+     * 
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * Get feeGrowthInside0LastX128
+     * 
      * @return feeGrowthInside0LastX128
      */
     public String feeGrowthInside0LastX128 { get; set; }
 
     /**
-     * Get feeGrowthInside1LastX128
+     * 
      * @return feeGrowthInside1LastX128
      */
     public String feeGrowthInside1LastX128 { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

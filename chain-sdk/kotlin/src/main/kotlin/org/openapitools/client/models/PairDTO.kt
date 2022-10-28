@@ -62,72 +62,95 @@ data class PairDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "factory")
     val factory: kotlin.String? = null,
 
+    /*  */
     @Json(name = "name")
     val name: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_0")
     val token0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1")
     val token1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "reserve_0")
     val reserve0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "reserve_1")
     val reserve1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_supply")
     val totalSupply: kotlin.String? = null,
 
+    /*  */
     @Json(name = "reserve_eth")
     val reserveEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "reserve_usd")
     val reserveUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tracked_reserve_eth")
     val trackedReserveEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_0_price")
     val token0Price: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1_price")
     val token1Price: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_0")
     val volumeToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_1")
     val volumeToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tx_count")
     val txCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity_provider_count")
     val liquidityProviderCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "timestamp")
     val timestamp: kotlin.String? = null,
 
+    /*  */
     @Json(name = "block")
     val block: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 

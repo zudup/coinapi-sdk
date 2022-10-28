@@ -20,35 +20,57 @@ import (
 type PoolV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	CreatedAtTimestamp *time.Time `json:"created_at_timestamp,omitempty"`
+	// 
 	Token0 NullableString `json:"token_0,omitempty"`
+	// 
 	Token1 NullableString `json:"token_1,omitempty"`
 	FeeTier *BigInteger `json:"fee_tier,omitempty"`
 	Liquidity *BigInteger `json:"liquidity,omitempty"`
 	SqrtPrice *BigInteger `json:"sqrt_price,omitempty"`
 	FeeGrowthGlobal0x128 *BigInteger `json:"fee_growth_global_0x128,omitempty"`
 	FeeGrowthGlobal1x128 *BigInteger `json:"fee_growth_global_1x128,omitempty"`
+	// 
 	Token0Price NullableString `json:"token_0_price,omitempty"`
+	// 
 	Token1Price NullableString `json:"token_1_price,omitempty"`
 	Tick *BigInteger `json:"tick,omitempty"`
 	ObservationIndex *BigInteger `json:"observation_index,omitempty"`
+	// 
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
+	// 
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
+	// 
 	CollectedFeesToken0 NullableString `json:"collected_fees_token_0,omitempty"`
+	// 
 	CollectedFeesToken1 NullableString `json:"collected_fees_token_1,omitempty"`
+	// 
 	CollectedFeesUsd NullableString `json:"collected_fees_usd,omitempty"`
+	// 
 	TotalValueLockedToken0 NullableString `json:"total_value_locked_token_0,omitempty"`
+	// 
 	TotalValueLockedToken1 NullableString `json:"total_value_locked_token_1,omitempty"`
+	// 
 	TotalValueLockedEth NullableString `json:"total_value_locked_eth,omitempty"`
+	// 
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
+	// 
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
+	// 
 	LiquidityProviderCount NullableString `json:"liquidity_provider_count,omitempty"`
 	EvaluatedAsk *float64 `json:"evaluated_ask,omitempty"`
 }

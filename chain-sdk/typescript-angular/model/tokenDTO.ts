@@ -14,20 +14,65 @@
 export interface TokenDTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     factory?: string | null;
+    /**
+     * 
+     */
     symbol?: string | null;
+    /**
+     * 
+     */
     name?: string | null;
+    /**
+     * 
+     */
     decimals?: string | null;
+    /**
+     * 
+     */
     total_supply?: string | null;
+    /**
+     * 
+     */
     volume?: string | null;
+    /**
+     * 
+     */
     volume_usd?: string | null;
+    /**
+     * 
+     */
     untracked_volume_usd?: string | null;
+    /**
+     * 
+     */
     tx_count?: string | null;
+    /**
+     * 
+     */
     liquidity?: string | null;
+    /**
+     * 
+     */
     derived_eth?: string | null;
+    /**
+     * 
+     */
     whitelist_pairs?: Array<string> | null;
+    /**
+     * 
+     */
     vid?: number;
     readonly token_symbol?: string | null;
 }

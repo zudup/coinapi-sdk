@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * PairDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class PairDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -219,7 +219,7 @@ public class PairDTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -242,7 +242,7 @@ public class PairDTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -265,7 +265,7 @@ public class PairDTO {
   }
 
    /**
-   * Get factory
+   * 
    * @return factory
   **/
   @javax.annotation.Nullable
@@ -288,7 +288,7 @@ public class PairDTO {
   }
 
    /**
-   * Get name
+   * 
    * @return name
   **/
   @javax.annotation.Nullable
@@ -311,7 +311,7 @@ public class PairDTO {
   }
 
    /**
-   * Get token0
+   * 
    * @return token0
   **/
   @javax.annotation.Nullable
@@ -334,7 +334,7 @@ public class PairDTO {
   }
 
    /**
-   * Get token1
+   * 
    * @return token1
   **/
   @javax.annotation.Nullable
@@ -357,7 +357,7 @@ public class PairDTO {
   }
 
    /**
-   * Get reserve0
+   * 
    * @return reserve0
   **/
   @javax.annotation.Nullable
@@ -380,7 +380,7 @@ public class PairDTO {
   }
 
    /**
-   * Get reserve1
+   * 
    * @return reserve1
   **/
   @javax.annotation.Nullable
@@ -403,7 +403,7 @@ public class PairDTO {
   }
 
    /**
-   * Get totalSupply
+   * 
    * @return totalSupply
   **/
   @javax.annotation.Nullable
@@ -426,7 +426,7 @@ public class PairDTO {
   }
 
    /**
-   * Get reserveEth
+   * 
    * @return reserveEth
   **/
   @javax.annotation.Nullable
@@ -449,7 +449,7 @@ public class PairDTO {
   }
 
    /**
-   * Get reserveUsd
+   * 
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
@@ -472,7 +472,7 @@ public class PairDTO {
   }
 
    /**
-   * Get trackedReserveEth
+   * 
    * @return trackedReserveEth
   **/
   @javax.annotation.Nullable
@@ -495,7 +495,7 @@ public class PairDTO {
   }
 
    /**
-   * Get token0Price
+   * 
    * @return token0Price
   **/
   @javax.annotation.Nullable
@@ -518,7 +518,7 @@ public class PairDTO {
   }
 
    /**
-   * Get token1Price
+   * 
    * @return token1Price
   **/
   @javax.annotation.Nullable
@@ -541,7 +541,7 @@ public class PairDTO {
   }
 
    /**
-   * Get volumeToken0
+   * 
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
@@ -564,7 +564,7 @@ public class PairDTO {
   }
 
    /**
-   * Get volumeToken1
+   * 
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
@@ -587,7 +587,7 @@ public class PairDTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -610,7 +610,7 @@ public class PairDTO {
   }
 
    /**
-   * Get untrackedVolumeUsd
+   * 
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
@@ -633,7 +633,7 @@ public class PairDTO {
   }
 
    /**
-   * Get txCount
+   * 
    * @return txCount
   **/
   @javax.annotation.Nullable
@@ -656,7 +656,7 @@ public class PairDTO {
   }
 
    /**
-   * Get liquidityProviderCount
+   * 
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
@@ -679,7 +679,7 @@ public class PairDTO {
   }
 
    /**
-   * Get timestamp
+   * 
    * @return timestamp
   **/
   @javax.annotation.Nullable
@@ -702,7 +702,7 @@ public class PairDTO {
   }
 
    /**
-   * Get block
+   * 
    * @return block
   **/
   @javax.annotation.Nullable
@@ -725,7 +725,7 @@ public class PairDTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

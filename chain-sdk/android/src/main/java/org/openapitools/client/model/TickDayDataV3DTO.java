@@ -73,6 +73,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -83,6 +84,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -93,6 +95,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Integer getDate() {
@@ -103,6 +106,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPool() {
@@ -113,6 +117,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTick() {
@@ -123,6 +128,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidityGross() {
@@ -133,6 +139,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLiquidityNet() {
@@ -143,6 +150,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken0() {
@@ -153,6 +161,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeToken1() {
@@ -163,6 +172,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -173,6 +183,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -183,6 +194,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthOutside0x128() {
@@ -193,6 +205,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeeGrowthOutside1x128() {
@@ -203,6 +216,7 @@ public class TickDayDataV3DTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

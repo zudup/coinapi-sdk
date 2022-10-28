@@ -15,20 +15,20 @@ part 'swap_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [transaction] 
-/// * [timestamp] 
-/// * [pool] 
-/// * [token0] 
-/// * [token1] 
-/// * [sender] 
-/// * [recipient] 
-/// * [origin] 
-/// * [amount0] 
-/// * [amount1] 
-/// * [amountUsd] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [transaction] - 
+/// * [timestamp] - 
+/// * [pool] - 
+/// * [token0] - 
+/// * [token1] - 
+/// * [sender] - 
+/// * [recipient] - 
+/// * [origin] - 
+/// * [amount0] - 
+/// * [amount1] - 
+/// * [amountUsd] - 
 /// * [sqrtPriceX96] 
 /// * [tick] 
 /// * [logIndex] 
@@ -45,45 +45,59 @@ abstract class SwapV3DTO implements Built<SwapV3DTO, SwapV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
+  /// 
   @BuiltValueField(wireName: r'timestamp')
   DateTime? get timestamp;
 
+  /// 
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
+  /// 
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
+  /// 
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
+  /// 
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
+  /// 
   @BuiltValueField(wireName: r'recipient')
   String? get recipient;
 
+  /// 
   @BuiltValueField(wireName: r'origin')
   String? get origin;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0')
   String? get amount0;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1')
   String? get amount1;
 
+  /// 
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 

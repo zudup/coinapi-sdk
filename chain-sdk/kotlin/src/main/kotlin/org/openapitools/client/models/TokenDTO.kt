@@ -54,48 +54,63 @@ data class TokenDTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "factory")
     val factory: kotlin.String? = null,
 
+    /*  */
     @Json(name = "symbol")
     val symbol: kotlin.String? = null,
 
+    /*  */
     @Json(name = "name")
     val name: kotlin.String? = null,
 
+    /*  */
     @Json(name = "decimals")
     val decimals: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_supply")
     val totalSupply: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume")
     val volume: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tx_count")
     val txCount: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity")
     val liquidity: kotlin.String? = null,
 
+    /*  */
     @Json(name = "derived_eth")
     val derivedEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "whitelist_pairs")
     val whitelistPairs: kotlin.collections.List<kotlin.String>? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 

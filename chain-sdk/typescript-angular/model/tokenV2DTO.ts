@@ -12,21 +12,57 @@
 import { BigInteger } from './bigInteger';
 
 
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ */
 export interface TokenV2DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     vid?: number;
+    /**
+     * token address
+     */
     id?: string | null;
+    /**
+     * token symbol
+     */
     symbol?: string | null;
+    /**
+     * token name
+     */
     name?: string | null;
+    /**
+     * token decimals
+     */
     decimals?: number;
     total_supply?: BigInteger;
+    /**
+     * amount of token traded all time across all pairs
+     */
     trade_volume?: string | null;
+    /**
+     * amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)
+     */
     trade_volume_usd?: string | null;
+    /**
+     * amount of token in USD traded all time across pairs (no minimum liquidity threshold)
+     */
     untracked_volume_usd?: string | null;
     tx_count?: BigInteger;
+    /**
+     * total amount of token provided as liquidity across all pairs
+     */
     total_liquidity?: string | null;
+    /**
+     * ETH per token
+     */
     derived_eth?: string | null;
     readonly token_symbol?: string | null;
 }

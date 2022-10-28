@@ -70,21 +70,27 @@ data class PoolV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "created_at_timestamp")
     val createdAtTimestamp: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "token_0")
     val token0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1")
     val token1: kotlin.String? = null,
 
@@ -103,9 +109,11 @@ data class PoolV3DTO (
     @Json(name = "fee_growth_global_1x128")
     val feeGrowthGlobal1x128: BigInteger? = null,
 
+    /*  */
     @Json(name = "token_0_price")
     val token0Price: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1_price")
     val token1Price: kotlin.String? = null,
 
@@ -115,48 +123,62 @@ data class PoolV3DTO (
     @Json(name = "observation_index")
     val observationIndex: BigInteger? = null,
 
+    /*  */
     @Json(name = "volume_token_0")
     val volumeToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_token_1")
     val volumeToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "volume_usd")
     val volumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "untracked_volume_usd")
     val untrackedVolumeUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fees_usd")
     val feesUsd: kotlin.String? = null,
 
     @Json(name = "tx_count")
     val txCount: BigInteger? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_0")
     val collectedFeesToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_1")
     val collectedFeesToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_usd")
     val collectedFeesUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_token_0")
     val totalValueLockedToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_token_1")
     val totalValueLockedToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_eth")
     val totalValueLockedEth: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_usd")
     val totalValueLockedUsd: kotlin.String? = null,
 
+    /*  */
     @Json(name = "total_value_locked_usd_untracked")
     val totalValueLockedUsdUntracked: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity_provider_count")
     val liquidityProviderCount: kotlin.String? = null,
 

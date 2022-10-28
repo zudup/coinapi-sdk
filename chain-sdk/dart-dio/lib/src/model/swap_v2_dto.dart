@@ -15,21 +15,21 @@ part 'swap_v2_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] 
-/// * [vid] 
-/// * [id] 
-/// * [transaction] 
-/// * [timestamp] 
-/// * [pair] 
-/// * [sender] 
-/// * [from] 
-/// * [amount0In] 
-/// * [amount1In] 
-/// * [amount0Out] 
-/// * [amount1Out] 
-/// * [to] 
+/// * [blockNumber] - 
+/// * [vid] - 
+/// * [id] - 
+/// * [transaction] - 
+/// * [timestamp] - 
+/// * [pair] - 
+/// * [sender] - 
+/// * [from] - 
+/// * [amount0In] - 
+/// * [amount1In] - 
+/// * [amount0Out] - 
+/// * [amount1Out] - 
+/// * [to] - 
 /// * [logIndex] 
-/// * [amountUsd] 
+/// * [amountUsd] - 
 /// * [evaluatedPrice] 
 /// * [evaluatedAmount] 
 /// * [evaluatedAggressor] 
@@ -43,48 +43,62 @@ abstract class SwapV2DTO implements Built<SwapV2DTO, SwapV2DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
+  /// 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
+  /// 
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
+  /// 
   @BuiltValueField(wireName: r'id')
   String? get id;
 
+  /// 
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
+  /// 
   @BuiltValueField(wireName: r'timestamp')
   DateTime? get timestamp;
 
+  /// 
   @BuiltValueField(wireName: r'pair')
   String? get pair;
 
+  /// 
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
+  /// 
   @BuiltValueField(wireName: r'from')
   String? get from;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0_in')
   String? get amount0In;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1_in')
   String? get amount1In;
 
+  /// 
   @BuiltValueField(wireName: r'amount_0_out')
   String? get amount0Out;
 
+  /// 
   @BuiltValueField(wireName: r'amount_1_out')
   String? get amount1Out;
 
+  /// 
   @BuiltValueField(wireName: r'to')
   String? get to;
 
   @BuiltValueField(wireName: r'log_index')
   BigInteger? get logIndex;
 
+  /// 
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 

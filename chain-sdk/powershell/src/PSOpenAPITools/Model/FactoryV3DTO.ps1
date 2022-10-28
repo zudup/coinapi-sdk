@@ -20,35 +20,35 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER PoolCount
-No description available.
+
 .PARAMETER TxCount
-No description available.
+
 .PARAMETER TotalVolumeUsd
-No description available.
+
 .PARAMETER TotalVolumeEth
-No description available.
+
 .PARAMETER TotalFeesUsd
-No description available.
+
 .PARAMETER TotalFeesEth
-No description available.
+
 .PARAMETER UntrackedVolumeUsd
-No description available.
+
 .PARAMETER TotalValueLockedUsd
-No description available.
+
 .PARAMETER TotalValueLockedEth
-No description available.
+
 .PARAMETER TotalValueLockedUsdUntracked
-No description available.
+
 .PARAMETER TotalValueLockedEthUntracked
-No description available.
+
 .PARAMETER Owner
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 FactoryV3DTO<PSCustomObject>

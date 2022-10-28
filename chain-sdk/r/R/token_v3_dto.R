@@ -62,24 +62,24 @@ TokenV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param symbol symbol
-    #' @param name name
-    #' @param decimals decimals
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param symbol 
+    #' @param name 
+    #' @param decimals 
     #' @param total_supply total_supply
-    #' @param volume volume
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param fees_usd fees_usd
+    #' @param volume 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
+    #' @param fees_usd 
     #' @param tx_count tx_count
     #' @param pool_count pool_count
-    #' @param total_value_locked total_value_locked
-    #' @param total_value_locked_usd total_value_locked_usd
-    #' @param total_value_locked_usd_untracked total_value_locked_usd_untracked
-    #' @param derived_eth derived_eth
-    #' @param whitelist_pools whitelist_pools
+    #' @param total_value_locked 
+    #' @param total_value_locked_usd 
+    #' @param total_value_locked_usd_untracked 
+    #' @param derived_eth 
+    #' @param whitelist_pools 
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export

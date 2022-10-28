@@ -15,15 +15,42 @@ import { BigInteger } from './bigInteger';
 export interface UniswapDayDataV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     vid?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     date?: number;
+    /**
+     * 
+     */
     volume_eth?: string | null;
+    /**
+     * 
+     */
     volume_usd?: string | null;
+    /**
+     * 
+     */
     volume_usd_untracked?: string | null;
+    /**
+     * 
+     */
     fees_usd?: string | null;
     tx_count?: BigInteger;
+    /**
+     * 
+     */
     tvl_usd?: string | null;
 }
 

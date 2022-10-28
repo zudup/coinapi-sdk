@@ -138,21 +138,25 @@ TickV3DTO.prototype['entry_time'] = undefined;
 TickV3DTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 TickV3DTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 TickV3DTO.prototype['vid'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 TickV3DTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} pool_address
  */
 TickV3DTO.prototype['pool_address'] = undefined;
@@ -163,6 +167,7 @@ TickV3DTO.prototype['pool_address'] = undefined;
 TickV3DTO.prototype['tick_idx'] = undefined;
 
 /**
+ * 
  * @member {String} pool
  */
 TickV3DTO.prototype['pool'] = undefined;
@@ -178,56 +183,67 @@ TickV3DTO.prototype['liquidity_gross'] = undefined;
 TickV3DTO.prototype['liquidity_net'] = undefined;
 
 /**
+ * 
  * @member {String} price_0
  */
 TickV3DTO.prototype['price_0'] = undefined;
 
 /**
+ * 
  * @member {String} price_1
  */
 TickV3DTO.prototype['price_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_0
  */
 TickV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} volume_token_1
  */
 TickV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} volume_usd
  */
 TickV3DTO.prototype['volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} untracked_volume_usd
  */
 TickV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
+ * 
  * @member {String} fees_usd
  */
 TickV3DTO.prototype['fees_usd'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_0
  */
 TickV3DTO.prototype['collected_fees_token_0'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_token_1
  */
 TickV3DTO.prototype['collected_fees_token_1'] = undefined;
 
 /**
+ * 
  * @member {String} collected_fees_usd
  */
 TickV3DTO.prototype['collected_fees_usd'] = undefined;
 
 /**
+ * 
  * @member {Date} created_at_timestamp
  */
 TickV3DTO.prototype['created_at_timestamp'] = undefined;

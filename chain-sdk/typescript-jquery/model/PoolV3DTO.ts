@@ -17,16 +17,34 @@ export interface PoolV3DTO {
 
     recv_time?: string;
 
+    /**
+     * 
+     */
     block_number?: number;
 
+    /**
+     * 
+     */
     vid?: number;
 
+    /**
+     * 
+     */
     id?: string;
 
+    /**
+     * 
+     */
     created_at_timestamp?: string;
 
+    /**
+     * 
+     */
     token_0?: string;
 
+    /**
+     * 
+     */
     token_1?: string;
 
     fee_tier?: models.BigInteger;
@@ -39,42 +57,90 @@ export interface PoolV3DTO {
 
     fee_growth_global_1x128?: models.BigInteger;
 
+    /**
+     * 
+     */
     token_0_price?: string;
 
+    /**
+     * 
+     */
     token_1_price?: string;
 
     tick?: models.BigInteger;
 
     observation_index?: models.BigInteger;
 
+    /**
+     * 
+     */
     volume_token_0?: string;
 
+    /**
+     * 
+     */
     volume_token_1?: string;
 
+    /**
+     * 
+     */
     volume_usd?: string;
 
+    /**
+     * 
+     */
     untracked_volume_usd?: string;
 
+    /**
+     * 
+     */
     fees_usd?: string;
 
     tx_count?: models.BigInteger;
 
+    /**
+     * 
+     */
     collected_fees_token_0?: string;
 
+    /**
+     * 
+     */
     collected_fees_token_1?: string;
 
+    /**
+     * 
+     */
     collected_fees_usd?: string;
 
+    /**
+     * 
+     */
     total_value_locked_token_0?: string;
 
+    /**
+     * 
+     */
     total_value_locked_token_1?: string;
 
+    /**
+     * 
+     */
     total_value_locked_eth?: string;
 
+    /**
+     * 
+     */
     total_value_locked_usd?: string;
 
+    /**
+     * 
+     */
     total_value_locked_usd_untracked?: string;
 
+    /**
+     * 
+     */
     liquidity_provider_count?: string;
 
     evaluated_ask?: number;

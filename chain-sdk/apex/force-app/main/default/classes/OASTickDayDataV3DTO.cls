@@ -27,85 +27,85 @@ public class OASTickDayDataV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get r_date
+     * 
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * Get pool
+     * 
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * Get tick
+     * 
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * Get liquidityGross
+     * 
      * @return liquidityGross
      */
     public String liquidityGross { get; set; }
 
     /**
-     * Get liquidityNet
+     * 
      * @return liquidityNet
      */
     public String liquidityNet { get; set; }
 
     /**
-     * Get volumeToken0
+     * 
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * Get volumeToken1
+     * 
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get feesUsd
+     * 
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * Get feeGrowthOutside0x128
+     * 
      * @return feeGrowthOutside0x128
      */
     public String feeGrowthOutside0x128 { get; set; }
 
     /**
-     * Get feeGrowthOutside1x128
+     * 
      * @return feeGrowthOutside1x128
      */
     public String feeGrowthOutside1x128 { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

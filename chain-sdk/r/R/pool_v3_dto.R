@@ -86,36 +86,36 @@ PoolV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number block_number
-    #' @param vid vid
-    #' @param id id
-    #' @param created_at_timestamp created_at_timestamp
-    #' @param token_0 token_0
-    #' @param token_1 token_1
+    #' @param block_number 
+    #' @param vid 
+    #' @param id 
+    #' @param created_at_timestamp 
+    #' @param token_0 
+    #' @param token_1 
     #' @param fee_tier fee_tier
     #' @param liquidity liquidity
     #' @param sqrt_price sqrt_price
     #' @param fee_growth_global_0x128 fee_growth_global_0x128
     #' @param fee_growth_global_1x128 fee_growth_global_1x128
-    #' @param token_0_price token_0_price
-    #' @param token_1_price token_1_price
+    #' @param token_0_price 
+    #' @param token_1_price 
     #' @param tick tick
     #' @param observation_index observation_index
-    #' @param volume_token_0 volume_token_0
-    #' @param volume_token_1 volume_token_1
-    #' @param volume_usd volume_usd
-    #' @param untracked_volume_usd untracked_volume_usd
-    #' @param fees_usd fees_usd
+    #' @param volume_token_0 
+    #' @param volume_token_1 
+    #' @param volume_usd 
+    #' @param untracked_volume_usd 
+    #' @param fees_usd 
     #' @param tx_count tx_count
-    #' @param collected_fees_token_0 collected_fees_token_0
-    #' @param collected_fees_token_1 collected_fees_token_1
-    #' @param collected_fees_usd collected_fees_usd
-    #' @param total_value_locked_token_0 total_value_locked_token_0
-    #' @param total_value_locked_token_1 total_value_locked_token_1
-    #' @param total_value_locked_eth total_value_locked_eth
-    #' @param total_value_locked_usd total_value_locked_usd
-    #' @param total_value_locked_usd_untracked total_value_locked_usd_untracked
-    #' @param liquidity_provider_count liquidity_provider_count
+    #' @param collected_fees_token_0 
+    #' @param collected_fees_token_1 
+    #' @param collected_fees_usd 
+    #' @param total_value_locked_token_0 
+    #' @param total_value_locked_token_1 
+    #' @param total_value_locked_eth 
+    #' @param total_value_locked_usd 
+    #' @param total_value_locked_usd_untracked 
+    #' @param liquidity_provider_count 
     #' @param evaluated_ask evaluated_ask
     #' @param ... Other optional arguments.
     #' @export

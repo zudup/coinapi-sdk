@@ -16,19 +16,61 @@ import { BigInteger } from './bigInteger';
 export interface SwapV3DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     vid?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     transaction?: string | null;
+    /**
+     * 
+     */
     timestamp?: string;
+    /**
+     * 
+     */
     pool?: string | null;
+    /**
+     * 
+     */
     token_0?: string | null;
+    /**
+     * 
+     */
     token_1?: string | null;
+    /**
+     * 
+     */
     sender?: string | null;
+    /**
+     * 
+     */
     recipient?: string | null;
+    /**
+     * 
+     */
     origin?: string | null;
+    /**
+     * 
+     */
     amount_0?: string | null;
+    /**
+     * 
+     */
     amount_1?: string | null;
+    /**
+     * 
+     */
     amount_usd?: string | null;
     sqrt_price_x96?: BigInteger;
     tick?: BigInteger;

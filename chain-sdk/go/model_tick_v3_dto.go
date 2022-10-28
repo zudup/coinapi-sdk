@@ -20,24 +20,40 @@ import (
 type TickV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	PoolAddress NullableString `json:"pool_address,omitempty"`
 	TickIdx *BigInteger `json:"tick_idx,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
 	LiquidityGross *BigInteger `json:"liquidity_gross,omitempty"`
 	LiquidityNet *BigInteger `json:"liquidity_net,omitempty"`
+	// 
 	Price0 NullableString `json:"price_0,omitempty"`
+	// 
 	Price1 NullableString `json:"price_1,omitempty"`
+	// 
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
+	// 
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
+	// 
 	CollectedFeesToken0 NullableString `json:"collected_fees_token_0,omitempty"`
+	// 
 	CollectedFeesToken1 NullableString `json:"collected_fees_token_1,omitempty"`
+	// 
 	CollectedFeesUsd NullableString `json:"collected_fees_usd,omitempty"`
+	// 
 	CreatedAtTimestamp *time.Time `json:"created_at_timestamp,omitempty"`
 	LiquidityProviderCount *BigInteger `json:"liquidity_provider_count,omitempty"`
 	FeeGrowthOutside0x128 *BigInteger `json:"fee_growth_outside_0x128,omitempty"`

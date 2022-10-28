@@ -129,71 +129,85 @@ SwapDTO.prototype['entry_time'] = undefined;
 SwapDTO.prototype['recv_time'] = undefined;
 
 /**
+ * 
  * @member {Number} block_number
  */
 SwapDTO.prototype['block_number'] = undefined;
 
 /**
+ * 
  * @member {String} id
  */
 SwapDTO.prototype['id'] = undefined;
 
 /**
+ * 
  * @member {String} transaction
  */
 SwapDTO.prototype['transaction'] = undefined;
 
 /**
+ * 
  * @member {String} timestamp
  */
 SwapDTO.prototype['timestamp'] = undefined;
 
 /**
+ * 
  * @member {String} pair
  */
 SwapDTO.prototype['pair'] = undefined;
 
 /**
+ * 
  * @member {String} sender
  */
 SwapDTO.prototype['sender'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0_in
  */
 SwapDTO.prototype['amount_0_in'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1_in
  */
 SwapDTO.prototype['amount_1_in'] = undefined;
 
 /**
+ * 
  * @member {String} amount_0_out
  */
 SwapDTO.prototype['amount_0_out'] = undefined;
 
 /**
+ * 
  * @member {String} amount_1_out
  */
 SwapDTO.prototype['amount_1_out'] = undefined;
 
 /**
+ * 
  * @member {String} to
  */
 SwapDTO.prototype['to'] = undefined;
 
 /**
+ * 
  * @member {String} log_index
  */
 SwapDTO.prototype['log_index'] = undefined;
 
 /**
+ * 
  * @member {String} amount_usd
  */
 SwapDTO.prototype['amount_usd'] = undefined;
 
 /**
+ * 
  * @member {Number} vid
  */
 SwapDTO.prototype['vid'] = undefined;

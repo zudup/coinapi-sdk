@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * PoolHourDataV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class PoolHourDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -203,7 +203,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -226,7 +226,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get periodStartUnix
+   * 
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
@@ -272,7 +272,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get pool
+   * 
    * @return pool
   **/
   @javax.annotation.Nullable
@@ -295,7 +295,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get liquidity
+   * 
    * @return liquidity
   **/
   @javax.annotation.Nullable
@@ -318,7 +318,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get sqrtPrice
+   * 
    * @return sqrtPrice
   **/
   @javax.annotation.Nullable
@@ -341,7 +341,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get token0Price
+   * 
    * @return token0Price
   **/
   @javax.annotation.Nullable
@@ -364,7 +364,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get token1Price
+   * 
    * @return token1Price
   **/
   @javax.annotation.Nullable
@@ -387,7 +387,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get tick
+   * 
    * @return tick
   **/
   @javax.annotation.Nullable
@@ -410,7 +410,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get feeGrowthGlobal0x128
+   * 
    * @return feeGrowthGlobal0x128
   **/
   @javax.annotation.Nullable
@@ -433,7 +433,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get feeGrowthGlobal1x128
+   * 
    * @return feeGrowthGlobal1x128
   **/
   @javax.annotation.Nullable
@@ -456,7 +456,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get tvlUsd
+   * 
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
@@ -479,7 +479,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get volumeToken0
+   * 
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
@@ -502,7 +502,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get volumeToken1
+   * 
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
@@ -525,7 +525,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get volumeUsd
+   * 
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
@@ -548,7 +548,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get feesUsd
+   * 
    * @return feesUsd
   **/
   @javax.annotation.Nullable
@@ -571,7 +571,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get txCount
+   * 
    * @return txCount
   **/
   @javax.annotation.Nullable
@@ -594,7 +594,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get open
+   * 
    * @return open
   **/
   @javax.annotation.Nullable
@@ -617,7 +617,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get high
+   * 
    * @return high
   **/
   @javax.annotation.Nullable
@@ -640,7 +640,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get low
+   * 
    * @return low
   **/
   @javax.annotation.Nullable
@@ -663,7 +663,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get close
+   * 
    * @return close
   **/
   @javax.annotation.Nullable
@@ -686,7 +686,7 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

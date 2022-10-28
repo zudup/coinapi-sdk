@@ -32,66 +32,79 @@ export interface SwapV2DTO {
      */
     recv_time?: string;
     /**
+     * 
      * @type {number}
      * @memberof SwapV2DTO
      */
     block_number?: number;
     /**
+     * 
      * @type {number}
      * @memberof SwapV2DTO
      */
     vid?: number;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     id?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     transaction?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     timestamp?: string;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     pair?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     sender?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     from?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_in?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_in?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_0_out?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
     amount_1_out?: string | null;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */
@@ -102,6 +115,7 @@ export interface SwapV2DTO {
      */
     log_index?: BigInteger;
     /**
+     * 
      * @type {string}
      * @memberof SwapV2DTO
      */

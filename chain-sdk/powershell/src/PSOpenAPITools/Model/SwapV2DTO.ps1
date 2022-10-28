@@ -20,35 +20,35 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER Transaction
-No description available.
+
 .PARAMETER Timestamp
-No description available.
+
 .PARAMETER Pair
-No description available.
+
 .PARAMETER VarSender
-No description available.
+
 .PARAMETER VarFrom
-No description available.
+
 .PARAMETER Amount0In
-No description available.
+
 .PARAMETER Amount1In
-No description available.
+
 .PARAMETER Amount0Out
-No description available.
+
 .PARAMETER Amount1Out
-No description available.
+
 .PARAMETER To
-No description available.
+
 .PARAMETER LogIndex
 No description available.
 .PARAMETER AmountUsd
-No description available.
+
 .PARAMETER EvaluatedPrice
 No description available.
 .PARAMETER EvaluatedAmount

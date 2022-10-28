@@ -15,25 +15,73 @@ import { RequestFile } from './models';
 export class PositionSnapshotV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
+    /**
+    * 
+    */
     'blockNumber'?: number;
+    /**
+    * 
+    */
     'id'?: string | null;
     /**
     * THIS IS SUPER OWNER
     */
     'owner'?: string;
+    /**
+    * 
+    */
     'pool'?: string | null;
+    /**
+    * 
+    */
     'position'?: string | null;
+    /**
+    * 
+    */
     'timestamp'?: string | null;
+    /**
+    * 
+    */
     'liquidity'?: string | null;
+    /**
+    * 
+    */
     'depositedToken0'?: string | null;
+    /**
+    * 
+    */
     'depositedToken1'?: string | null;
+    /**
+    * 
+    */
     'withdrawnToken0'?: string | null;
+    /**
+    * 
+    */
     'withdrawnToken1'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesToken0'?: string | null;
+    /**
+    * 
+    */
     'collectedFeesToken1'?: string | null;
+    /**
+    * 
+    */
     'transaction'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthInside0LastX128'?: string | null;
+    /**
+    * 
+    */
     'feeGrowthInside1LastX128'?: string | null;
+    /**
+    * 
+    */
     'vid'?: number;
 
     static discriminator: string | undefined = undefined;

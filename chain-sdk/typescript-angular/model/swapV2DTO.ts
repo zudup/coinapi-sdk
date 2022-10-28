@@ -16,20 +16,62 @@ import { BigInteger } from './bigInteger';
 export interface SwapV2DTO { 
     entry_time?: string;
     recv_time?: string;
+    /**
+     * 
+     */
     block_number?: number;
+    /**
+     * 
+     */
     vid?: number;
+    /**
+     * 
+     */
     id?: string | null;
+    /**
+     * 
+     */
     transaction?: string | null;
+    /**
+     * 
+     */
     timestamp?: string;
+    /**
+     * 
+     */
     pair?: string | null;
+    /**
+     * 
+     */
     sender?: string | null;
+    /**
+     * 
+     */
     from?: string | null;
+    /**
+     * 
+     */
     amount_0_in?: string | null;
+    /**
+     * 
+     */
     amount_1_in?: string | null;
+    /**
+     * 
+     */
     amount_0_out?: string | null;
+    /**
+     * 
+     */
     amount_1_out?: string | null;
+    /**
+     * 
+     */
     to?: string | null;
     log_index?: BigInteger;
+    /**
+     * 
+     */
     amount_usd?: string | null;
     readonly evaluated_price?: number;
     readonly evaluated_amount?: number;

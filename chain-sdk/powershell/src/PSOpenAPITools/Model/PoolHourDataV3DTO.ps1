@@ -20,49 +20,49 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-No description available.
+
 .PARAMETER Id
-No description available.
+
 .PARAMETER PeriodStartUnix
-No description available.
+
 .PARAMETER Pool
-No description available.
+
 .PARAMETER Liquidity
-No description available.
+
 .PARAMETER SqrtPrice
-No description available.
+
 .PARAMETER Token0Price
-No description available.
+
 .PARAMETER Token1Price
-No description available.
+
 .PARAMETER Tick
-No description available.
+
 .PARAMETER FeeGrowthGlobal0x128
-No description available.
+
 .PARAMETER FeeGrowthGlobal1x128
-No description available.
+
 .PARAMETER TvlUsd
-No description available.
+
 .PARAMETER VolumeToken0
-No description available.
+
 .PARAMETER VolumeToken1
-No description available.
+
 .PARAMETER VolumeUsd
-No description available.
+
 .PARAMETER FeesUsd
-No description available.
+
 .PARAMETER TxCount
-No description available.
+
 .PARAMETER Open
-No description available.
+
 .PARAMETER High
-No description available.
+
 .PARAMETER Low
-No description available.
+
 .PARAMETER Close
-No description available.
+
 .PARAMETER Vid
-No description available.
+
 .OUTPUTS
 
 PoolHourDataV3DTO<PSCustomObject>

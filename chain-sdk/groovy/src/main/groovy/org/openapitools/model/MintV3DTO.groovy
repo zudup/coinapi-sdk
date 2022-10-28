@@ -11,40 +11,40 @@ class MintV3DTO {
     Date entryTime
     
     Date recvTime
-    
+    /*  */
     Long blockNumber
-    
+    /*  */
     String id
-    
+    /*  */
     String transaction
-    
+    /*  */
     String timestamp
-    
+    /*  */
     String pool
-    
+    /*  */
     String token0
-    
+    /*  */
     String token1
-    
+    /*  */
     String owner
-    
+    /*  */
     String sender
-    
+    /*  */
     String origin
-    
+    /*  */
     String amount
-    
+    /*  */
     String amount0
-    
+    /*  */
     String amount1
-    
+    /*  */
     String amountUsd
-    
+    /*  */
     String tickLower
-    
+    /*  */
     String tickUpper
-    
+    /*  */
     String logIndex
-    
+    /*  */
     Long vid
 }

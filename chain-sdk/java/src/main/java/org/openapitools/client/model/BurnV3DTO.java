@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * BurnV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T11:33:40.784796Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T13:00:42.623293Z[Etc/UTC]")
 public class BurnV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -183,7 +183,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get blockNumber
+   * 
    * @return blockNumber
   **/
   @javax.annotation.Nullable
@@ -206,7 +206,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get id
+   * 
    * @return id
   **/
   @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get transaction
+   * 
    * @return transaction
   **/
   @javax.annotation.Nullable
@@ -252,7 +252,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get pool
+   * 
    * @return pool
   **/
   @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get token0
+   * 
    * @return token0
   **/
   @javax.annotation.Nullable
@@ -298,7 +298,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get token1
+   * 
    * @return token1
   **/
   @javax.annotation.Nullable
@@ -321,7 +321,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get timestamp
+   * 
    * @return timestamp
   **/
   @javax.annotation.Nullable
@@ -344,7 +344,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get owner
+   * 
    * @return owner
   **/
   @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get origin
+   * 
    * @return origin
   **/
   @javax.annotation.Nullable
@@ -390,7 +390,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get amount
+   * 
    * @return amount
   **/
   @javax.annotation.Nullable
@@ -413,7 +413,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get amount0
+   * 
    * @return amount0
   **/
   @javax.annotation.Nullable
@@ -436,7 +436,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get amount1
+   * 
    * @return amount1
   **/
   @javax.annotation.Nullable
@@ -459,7 +459,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get amountUsd
+   * 
    * @return amountUsd
   **/
   @javax.annotation.Nullable
@@ -482,7 +482,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get tickLower
+   * 
    * @return tickLower
   **/
   @javax.annotation.Nullable
@@ -505,7 +505,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get tickUpper
+   * 
    * @return tickUpper
   **/
   @javax.annotation.Nullable
@@ -528,7 +528,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get logIndex
+   * 
    * @return logIndex
   **/
   @javax.annotation.Nullable
@@ -551,7 +551,7 @@ public class BurnV3DTO {
   }
 
    /**
-   * Get vid
+   * 
    * @return vid
   **/
   @javax.annotation.Nullable

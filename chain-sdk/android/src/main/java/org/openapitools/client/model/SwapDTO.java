@@ -84,6 +84,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -94,6 +95,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -104,6 +106,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTransaction() {
@@ -114,6 +117,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
@@ -124,6 +128,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPair() {
@@ -134,6 +139,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getSender() {
@@ -144,6 +150,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount0In() {
@@ -154,6 +161,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount1In() {
@@ -164,6 +172,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount0Out() {
@@ -174,6 +183,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmount1Out() {
@@ -184,6 +194,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTo() {
@@ -194,6 +205,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLogIndex() {
@@ -204,6 +216,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getAmountUsd() {
@@ -214,6 +227,7 @@ public class SwapDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {

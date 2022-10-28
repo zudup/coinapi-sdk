@@ -17,20 +17,35 @@ import org.openapitools.client.core.ApiModel
 case class TokenDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   id: Option[String] = None,
+  /*  */
   factory: Option[String] = None,
+  /*  */
   symbol: Option[String] = None,
+  /*  */
   name: Option[String] = None,
+  /*  */
   decimals: Option[String] = None,
+  /*  */
   totalSupply: Option[String] = None,
+  /*  */
   volume: Option[String] = None,
+  /*  */
   volumeUsd: Option[String] = None,
+  /*  */
   untrackedVolumeUsd: Option[String] = None,
+  /*  */
   txCount: Option[String] = None,
+  /*  */
   liquidity: Option[String] = None,
+  /*  */
   derivedEth: Option[String] = None,
+  /*  */
   whitelistPairs: Option[Seq[String]] = None,
+  /*  */
   vid: Option[Long] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel

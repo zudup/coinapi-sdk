@@ -27,139 +27,139 @@ public class OASPairDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * Get blockNumber
+     * 
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * Get id
+     * 
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * Get factory
+     * 
      * @return factory
      */
     public String factory { get; set; }
 
     /**
-     * Get name
+     * 
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * Get token0
+     * 
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * Get token1
+     * 
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * Get reserve0
+     * 
      * @return reserve0
      */
     public String reserve0 { get; set; }
 
     /**
-     * Get reserve1
+     * 
      * @return reserve1
      */
     public String reserve1 { get; set; }
 
     /**
-     * Get totalSupply
+     * 
      * @return totalSupply
      */
     public String totalSupply { get; set; }
 
     /**
-     * Get reserveEth
+     * 
      * @return reserveEth
      */
     public String reserveEth { get; set; }
 
     /**
-     * Get reserveUsd
+     * 
      * @return reserveUsd
      */
     public String reserveUsd { get; set; }
 
     /**
-     * Get trackedReserveEth
+     * 
      * @return trackedReserveEth
      */
     public String trackedReserveEth { get; set; }
 
     /**
-     * Get token0Price
+     * 
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * Get token1Price
+     * 
      * @return token1Price
      */
     public String token1Price { get; set; }
 
     /**
-     * Get volumeToken0
+     * 
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * Get volumeToken1
+     * 
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * Get volumeUsd
+     * 
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * Get untrackedVolumeUsd
+     * 
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * Get txCount
+     * 
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * Get liquidityProviderCount
+     * 
      * @return liquidityProviderCount
      */
     public String liquidityProviderCount { get; set; }
 
     /**
-     * Get timestamp
+     * 
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * Get block
+     * 
      * @return block
      */
     public String block { get; set; }
 
     /**
-     * Get vid
+     * 
      * @return vid
      */
     public Long vid { get; set; }

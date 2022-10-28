@@ -17,18 +17,29 @@ import org.openapitools.client.core.ApiModel
 case class TokenV2DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
+  /*  */
   blockNumber: Option[Long] = None,
+  /*  */
   vid: Option[Long] = None,
+  /* token address */
   id: Option[String] = None,
+  /* token symbol */
   symbol: Option[String] = None,
+  /* token name */
   name: Option[String] = None,
+  /* token decimals */
   decimals: Option[Int] = None,
   totalSupply: Option[BigInteger] = None,
+  /* amount of token traded all time across all pairs */
   tradeVolume: Option[String] = None,
+  /* amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold) */
   tradeVolumeUsd: Option[String] = None,
+  /* amount of token in USD traded all time across pairs (no minimum liquidity threshold) */
   untrackedVolumeUsd: Option[String] = None,
   txCount: Option[BigInteger] = None,
+  /* total amount of token provided as liquidity across all pairs */
   totalLiquidity: Option[String] = None,
+  /* ETH per token */
   derivedEth: Option[String] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel

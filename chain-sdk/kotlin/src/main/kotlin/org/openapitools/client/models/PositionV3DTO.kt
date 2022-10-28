@@ -57,60 +57,79 @@ data class PositionV3DTO (
     @Json(name = "recv_time")
     val recvTime: java.time.OffsetDateTime? = null,
 
+    /*  */
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
+    /*  */
     @Json(name = "id")
     val id: kotlin.String? = null,
 
+    /*  */
     @Json(name = "owner")
     val owner: kotlin.String? = null,
 
+    /*  */
     @Json(name = "pool")
     val pool: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_0")
     val token0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "token_1")
     val token1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick_lower")
     val tickLower: kotlin.String? = null,
 
+    /*  */
     @Json(name = "tick_upper")
     val tickUpper: kotlin.String? = null,
 
+    /*  */
     @Json(name = "liquidity")
     val liquidity: kotlin.String? = null,
 
+    /*  */
     @Json(name = "deposited_token_0")
     val depositedToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "deposited_token_1")
     val depositedToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "withdrawn_token_0")
     val withdrawnToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "withdrawn_token_1")
     val withdrawnToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_0")
     val collectedFeesToken0: kotlin.String? = null,
 
+    /*  */
     @Json(name = "collected_fees_token_1")
     val collectedFeesToken1: kotlin.String? = null,
 
+    /*  */
     @Json(name = "transaction")
     val transaction: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_inside_0_last_x128")
     val feeGrowthInside0LastX128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "fee_growth_inside_1_last_x128")
     val feeGrowthInside1LastX128: kotlin.String? = null,
 
+    /*  */
     @Json(name = "vid")
     val vid: kotlin.Long? = null
 

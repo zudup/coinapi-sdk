@@ -20,19 +20,33 @@ import (
 type TickDayDataV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Date *int32 `json:"date,omitempty"`
+	// 
 	Pool NullableString `json:"pool,omitempty"`
+	// 
 	Tick NullableString `json:"tick,omitempty"`
+	// 
 	LiquidityGross NullableString `json:"liquidity_gross,omitempty"`
+	// 
 	LiquidityNet NullableString `json:"liquidity_net,omitempty"`
+	// 
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
+	// 
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
+	// 
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
+	// 
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
+	// 
 	FeeGrowthOutside0x128 NullableString `json:"fee_growth_outside_0x128,omitempty"`
+	// 
 	FeeGrowthOutside1x128 NullableString `json:"fee_growth_outside_1x128,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 }
 

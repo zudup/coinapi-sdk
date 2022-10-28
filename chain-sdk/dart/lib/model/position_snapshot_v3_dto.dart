@@ -50,6 +50,7 @@ class PositionSnapshotV3DTO {
   ///
   DateTime? recvTime;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -58,6 +59,7 @@ class PositionSnapshotV3DTO {
   ///
   int? blockNumber;
 
+  /// 
   String? id;
 
   /// THIS IS SUPER OWNER
@@ -69,32 +71,46 @@ class PositionSnapshotV3DTO {
   ///
   String? owner;
 
+  /// 
   String? pool;
 
+  /// 
   String? position;
 
+  /// 
   String? timestamp;
 
+  /// 
   String? liquidity;
 
+  /// 
   String? depositedToken0;
 
+  /// 
   String? depositedToken1;
 
+  /// 
   String? withdrawnToken0;
 
+  /// 
   String? withdrawnToken1;
 
+  /// 
   String? collectedFeesToken0;
 
+  /// 
   String? collectedFeesToken1;
 
+  /// 
   String? transaction;
 
+  /// 
   String? feeGrowthInside0LastX128;
 
+  /// 
   String? feeGrowthInside1LastX128;
 
+  /// 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

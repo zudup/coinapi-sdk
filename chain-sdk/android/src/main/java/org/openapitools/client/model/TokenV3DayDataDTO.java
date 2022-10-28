@@ -77,6 +77,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getBlockNumber() {
@@ -87,6 +88,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Long getVid() {
@@ -97,6 +99,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getId() {
@@ -107,6 +110,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public Integer getDate() {
@@ -117,6 +121,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getToken() {
@@ -127,6 +132,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolume() {
@@ -137,6 +143,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getVolumeUsd() {
@@ -147,6 +154,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getUntrackedVolumeUsd() {
@@ -157,6 +165,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLocked() {
@@ -167,6 +176,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getTotalValueLockedUsd() {
@@ -177,6 +187,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getPriceUsd() {
@@ -187,6 +198,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getFeesUsd() {
@@ -197,6 +209,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getOpen() {
@@ -207,6 +220,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getHigh() {
@@ -217,6 +231,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getLow() {
@@ -227,6 +242,7 @@ public class TokenV3DayDataDTO {
   }
 
   /**
+   * 
    **/
   @ApiModelProperty(value = "")
   public String getClose() {

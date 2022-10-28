@@ -20,19 +20,33 @@ import (
 type SwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
+	// 
 	BlockNumber *int64 `json:"block_number,omitempty"`
+	// 
 	Id NullableString `json:"id,omitempty"`
+	// 
 	Transaction NullableString `json:"transaction,omitempty"`
+	// 
 	Timestamp NullableString `json:"timestamp,omitempty"`
+	// 
 	Pair NullableString `json:"pair,omitempty"`
+	// 
 	Sender NullableString `json:"sender,omitempty"`
+	// 
 	Amount0In NullableString `json:"amount_0_in,omitempty"`
+	// 
 	Amount1In NullableString `json:"amount_1_in,omitempty"`
+	// 
 	Amount0Out NullableString `json:"amount_0_out,omitempty"`
+	// 
 	Amount1Out NullableString `json:"amount_1_out,omitempty"`
+	// 
 	To NullableString `json:"to,omitempty"`
+	// 
 	LogIndex NullableString `json:"log_index,omitempty"`
+	// 
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
+	// 
 	Vid *int64 `json:"vid,omitempty"`
 	PoolId NullableString `json:"pool_id,omitempty"`
 	TransactionId NullableString `json:"transaction_id,omitempty"`
