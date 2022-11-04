@@ -171,24 +171,24 @@ Method | HTTP request | Description
 *dappsSushiswapPoolDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolDayData/historical | .
 *dappsSushiswapPoolHourDataHistoricalGetSync* | *GET* /dapps/sushiswap/poolHourData/historical | .
 *dappsSushiswapPoolHourDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolHourData/historical | .
-*dappsSushiswapPoolsCurrentGetSync* | *GET* /dapps/sushiswap/pools/current | GetPools.
-*dappsSushiswapPoolsCurrentGetASync* | *GET* /dapps/sushiswap/pools/current | GetPools.
-*dappsSushiswapPoolsHistoricalGetSync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
-*dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
-*dappsSushiswapSwapsCurrentGetSync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
-*dappsSushiswapSwapsCurrentGetASync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
-*dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
-*dappsSushiswapSwapsHistoricalGetASync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
 *dappsSushiswapTokenDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
-*dappsSushiswapTokensCurrentGetSync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
-*dappsSushiswapTokensCurrentGetASync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
-*dappsSushiswapTokensHistoricalGetSync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
-*dappsSushiswapTokensHistoricalGetASync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
 *dappsSushiswapTransactionsHistoricalGetSync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapTransactionsHistoricalGetASync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapUsersHistoricalGetSync* | *GET* /dapps/sushiswap/users/historical | .
 *dappsSushiswapUsersHistoricalGetASync* | *GET* /dapps/sushiswap/users/historical | .
+*sushiswapGetPoolsCurrentSync* | *GET* /dapps/sushiswap/pools/current | .
+*sushiswapGetPoolsCurrentASync* | *GET* /dapps/sushiswap/pools/current | .
+*sushiswapGetPoolsHistoricalSync* | *GET* /dapps/sushiswap/pools/historical | .
+*sushiswapGetPoolsHistoricalASync* | *GET* /dapps/sushiswap/pools/historical | .
+*sushiswapGetSwapsCurrentSync* | *GET* /dapps/sushiswap/swaps/current | .
+*sushiswapGetSwapsCurrentASync* | *GET* /dapps/sushiswap/swaps/current | .
+*sushiswapGetSwapsHistoricalSync* | *GET* /dapps/sushiswap/swaps/historical | .
+*sushiswapGetSwapsHistoricalASync* | *GET* /dapps/sushiswap/swaps/historical | .
+*sushiswapGetTokensCurrentSync* | *GET* /dapps/sushiswap/tokens/current | .
+*sushiswapGetTokensCurrentASync* | *GET* /dapps/sushiswap/tokens/current | .
+*sushiswapGetTokensHistoricalSync* | *GET* /dapps/sushiswap/tokens/historical | .
+*sushiswapGetTokensHistoricalASync* | *GET* /dapps/sushiswap/tokens/historical | .
 
 
 ### UniswapV2Manager

@@ -1005,312 +1005,6 @@ sub dapps_sushiswap_pool_hour_data_historical_get {
 }
 
 #
-# dapps_sushiswap_pools_current_get
-#
-# GetPools
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_pools_current_get' } = {
-        summary => 'GetPools',
-        params => $params,
-        returns => 'ARRAY[SushiswapPairDTO]',
-        };
-}
-# @return ARRAY[SushiswapPairDTO]
-#
-sub dapps_sushiswap_pools_current_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pools/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dapps_sushiswap_pools_historical_get
-#
-# GetPools (historical)
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_pools_historical_get' } = {
-        summary => 'GetPools (historical)',
-        params => $params,
-        returns => 'ARRAY[SushiswapPairDTO]',
-        };
-}
-# @return ARRAY[SushiswapPairDTO]
-#
-sub dapps_sushiswap_pools_historical_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pools/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dapps_sushiswap_swaps_current_get
-#
-# GetSwaps
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_swaps_current_get' } = {
-        summary => 'GetSwaps',
-        params => $params,
-        returns => 'ARRAY[SushiswapSwapDTO]',
-        };
-}
-# @return ARRAY[SushiswapSwapDTO]
-#
-sub dapps_sushiswap_swaps_current_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/swaps/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dapps_sushiswap_swaps_historical_get
-#
-# GetSwaps (historical)
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_swaps_historical_get' } = {
-        summary => 'GetSwaps (historical)',
-        params => $params,
-        returns => 'ARRAY[SushiswapSwapDTO]',
-        };
-}
-# @return ARRAY[SushiswapSwapDTO]
-#
-sub dapps_sushiswap_swaps_historical_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/swaps/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
-    return $_response_object;
-}
-
-#
 # dapps_sushiswap_token_day_data_historical_get
 #
 # 
@@ -1408,159 +1102,6 @@ sub dapps_sushiswap_token_day_data_historical_get {
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
     return;
-}
-
-#
-# dapps_sushiswap_tokens_current_get
-#
-# GetTokens
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_tokens_current_get' } = {
-        summary => 'GetTokens',
-        params => $params,
-        returns => 'ARRAY[SushiswapTokenDTO]',
-        };
-}
-# @return ARRAY[SushiswapTokenDTO]
-#
-sub dapps_sushiswap_tokens_current_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokens/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dapps_sushiswap_tokens_historical_get
-#
-# GetTokens (historical)
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $token_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'token_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dapps_sushiswap_tokens_historical_get' } = {
-        summary => 'GetTokens (historical)',
-        params => $params,
-        returns => 'ARRAY[SushiswapTokenDTO]',
-        };
-}
-# @return ARRAY[SushiswapTokenDTO]
-#
-sub dapps_sushiswap_tokens_historical_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokens/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'token_id'}) {
-        $query_params->{'tokenId'} = $self->{api_client}->to_query_value($args{'token_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
-    return $_response_object;
 }
 
 #
@@ -1739,6 +1280,465 @@ sub dapps_sushiswap_users_historical_get {
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
     return;
+}
+
+#
+# sushiswap_get_pools_current
+#
+# 
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pools_current' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDTO]
+#
+sub sushiswap_get_pools_current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pools/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_pools_historical
+#
+# 
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $pool_id  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'pool_id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pools_historical' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDTO]
+#
+sub sushiswap_get_pools_historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pools/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'pool_id'}) {
+        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_swaps_current
+#
+# 
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps_current' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapSwapDTO]',
+        };
+}
+# @return ARRAY[SushiswapSwapDTO]
+#
+sub sushiswap_get_swaps_current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/swaps/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_swaps_historical
+#
+# 
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $pool_id  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'pool_id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps_historical' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapSwapDTO]',
+        };
+}
+# @return ARRAY[SushiswapSwapDTO]
+#
+sub sushiswap_get_swaps_historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/swaps/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'pool_id'}) {
+        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_tokens_current
+#
+# 
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens_current' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDTO]
+#
+sub sushiswap_get_tokens_current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_tokens_historical
+#
+# 
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $token_id  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'token_id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens_historical' } = {
+        summary => '',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDTO]
+#
+sub sushiswap_get_tokens_historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokens/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'token_id'}) {
+        $query_params->{'tokenId'} = $self->{api_client}->to_query_value($args{'token_id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
+    return $_response_object;
 }
 
 1;

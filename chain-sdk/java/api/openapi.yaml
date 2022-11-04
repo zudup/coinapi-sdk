@@ -37,9 +37,8 @@ tags:
 paths:
   /dapps/sushiswap/pools/current:
     get:
-      description: Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever since
-        the 1500s.
+      description: GetPools (current)
+      operationId: Sushiswap-GetPools-current
       responses:
         "200":
           content:
@@ -59,12 +58,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: GetPools
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/swaps/current:
     get:
+      description: GetSwaps (current)
+      operationId: Sushiswap-GetSwaps-current
       responses:
         "200":
           content:
@@ -84,12 +84,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: GetSwaps
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/tokens/current:
     get:
+      description: GetTokens (current)
+      operationId: Sushiswap-GetTokens-current
       responses:
         "200":
           content:
@@ -109,12 +110,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/pools/historical:
     get:
+      description: GetPools (historical)
+      operationId: Sushiswap-GetPools-historical
       parameters:
       - explode: true
         in: query
@@ -174,12 +176,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: GetPools (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/swaps/historical:
     get:
+      description: GetSwaps (historical)
+      operationId: Sushiswap-GetSwaps-historical
       parameters:
       - explode: true
         in: query
@@ -239,12 +242,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/tokens/historical:
     get:
+      description: GetTokens (historical)
+      operationId: Sushiswap-GetTokens-historical
       parameters:
       - explode: true
         in: query
@@ -304,7 +308,6 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical)
       tags:
       - Sushiswap
       x-accepts: application/json

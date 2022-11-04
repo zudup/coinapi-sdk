@@ -350,15 +350,15 @@ case $state in
             "dappsSushiswapMintsHistoricalGet[]" \
             "dappsSushiswapPoolDayDataHistoricalGet[]" \
             "dappsSushiswapPoolHourDataHistoricalGet[]" \
-            "dappsSushiswapPoolsCurrentGet[GetPools]" \
-            "dappsSushiswapPoolsHistoricalGet[GetPools (historical)]" \
-            "dappsSushiswapSwapsCurrentGet[GetSwaps]" \
-            "dappsSushiswapSwapsHistoricalGet[GetSwaps (historical)]" \
             "dappsSushiswapTokenDayDataHistoricalGet[]" \
-            "dappsSushiswapTokensCurrentGet[GetTokens]" \
-            "dappsSushiswapTokensHistoricalGet[GetTokens (historical)]" \
             "dappsSushiswapTransactionsHistoricalGet[]" \
-            "dappsSushiswapUsersHistoricalGet[]"             "dappsUniswapv2BundlesHistoricalGet[]" \
+            "dappsSushiswapUsersHistoricalGet[]" \
+            "sushiswapGetPoolsCurrent[]" \
+            "sushiswapGetPoolsHistorical[]" \
+            "sushiswapGetSwapsCurrent[]" \
+            "sushiswapGetSwapsHistorical[]" \
+            "sushiswapGetTokensCurrent[]" \
+            "sushiswapGetTokensHistorical[]"             "dappsUniswapv2BundlesHistoricalGet[]" \
             "dappsUniswapv2BurnsHistoricalGet[]" \
             "dappsUniswapv2DayDataHistoricalGet[]" \
             "dappsUniswapv2FactoryHistoricalGet[]" \
@@ -1017,58 +1017,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsSushiswapPoolsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapPoolsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapSwapsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapSwapsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       dappsSushiswapTokenDayDataHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"tokenId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapTokensCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapTokensHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1096,6 +1045,57 @@ case $state in
 "endBlock=:[QUERY] "
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetPoolsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetSwapsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetTokensCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      sushiswapGetTokensHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

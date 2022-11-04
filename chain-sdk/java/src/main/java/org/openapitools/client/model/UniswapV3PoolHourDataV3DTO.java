@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Hourly stats tracker for pool.
  */
 @ApiModel(description = "Hourly stats tracker for pool.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:55:38.286535Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T12:16:32.359035Z[Etc/UTC]")
 public class UniswapV3PoolHourDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

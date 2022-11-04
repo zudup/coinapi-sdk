@@ -14,15 +14,15 @@ Method | HTTP request | Description
 [**Invoke-DappsSushiswapMintsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
 [**Invoke-DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**Invoke-DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**Invoke-DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**Invoke-DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**Invoke-DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**Invoke-DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**Invoke-DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**Invoke-DappsSushiswapTokensCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**Invoke-DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**Invoke-DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**Invoke-DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | 
+[**Invoke-SushiswapGetPoolsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | 
+[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | 
+[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | 
+[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | 
+[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | 
 
 
 <a name="Invoke-DappsSushiswapBundlesHistoricalGet"></a>
@@ -533,186 +533,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsSushiswapPoolsCurrentGet"></a>
-# **Invoke-DappsSushiswapPoolsCurrentGet**
-> SushiswapPairDTO[] Invoke-DappsSushiswapPoolsCurrentGet<br>
-
-GetPools
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
-### Example
-```powershell
-
-# GetPools
-try {
-    $Result = Invoke-DappsSushiswapPoolsCurrentGet
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapPoolsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsSushiswapPoolsHistoricalGet"></a>
-# **Invoke-DappsSushiswapPoolsHistoricalGet**
-> SushiswapPairDTO[] Invoke-DappsSushiswapPoolsHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
-
-GetPools (historical)
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$PoolId = "MyPoolId" # String |  (optional)
-
-# GetPools (historical)
-try {
-    $Result = Invoke-DappsSushiswapPoolsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapPoolsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsSushiswapSwapsCurrentGet"></a>
-# **Invoke-DappsSushiswapSwapsCurrentGet**
-> SushiswapSwapDTO[] Invoke-DappsSushiswapSwapsCurrentGet<br>
-
-GetSwaps
-
-### Example
-```powershell
-
-# GetSwaps
-try {
-    $Result = Invoke-DappsSushiswapSwapsCurrentGet
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapSwapsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsSushiswapSwapsHistoricalGet"></a>
-# **Invoke-DappsSushiswapSwapsHistoricalGet**
-> SushiswapSwapDTO[] Invoke-DappsSushiswapSwapsHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
-
-GetSwaps (historical)
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$PoolId = "MyPoolId" # String |  (optional)
-
-# GetSwaps (historical)
-try {
-    $Result = Invoke-DappsSushiswapSwapsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapSwapsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="Invoke-DappsSushiswapTokenDayDataHistoricalGet"></a>
 # **Invoke-DappsSushiswapTokenDayDataHistoricalGet**
 > void Invoke-DappsSushiswapTokenDayDataHistoricalGet<br>
@@ -762,95 +582,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsSushiswapTokensCurrentGet"></a>
-# **Invoke-DappsSushiswapTokensCurrentGet**
-> SushiswapTokenDTO[] Invoke-DappsSushiswapTokensCurrentGet<br>
-
-GetTokens
-
-### Example
-```powershell
-
-# GetTokens
-try {
-    $Result = Invoke-DappsSushiswapTokensCurrentGet
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapTokensCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsSushiswapTokensHistoricalGet"></a>
-# **Invoke-DappsSushiswapTokensHistoricalGet**
-> SushiswapTokenDTO[] Invoke-DappsSushiswapTokensHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
-
-GetTokens (historical)
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$TokenId = "MyTokenId" # String |  (optional)
-
-# GetTokens (historical)
-try {
-    $Result = Invoke-DappsSushiswapTokensHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsSushiswapTokensHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **TokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -949,6 +680,279 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetPoolsCurrent"></a>
+# **Invoke-SushiswapGetPoolsCurrent**
+> SushiswapPairDTO[] Invoke-SushiswapGetPoolsCurrent<br>
+
+
+
+GetPools (current)
+
+### Example
+```powershell
+
+try {
+    $Result = Invoke-SushiswapGetPoolsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPoolsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetPoolsHistorical"></a>
+# **Invoke-SushiswapGetPoolsHistorical**
+> SushiswapPairDTO[] Invoke-SushiswapGetPoolsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+
+
+GetPools (historical)
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+try {
+    $Result = Invoke-SushiswapGetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPoolsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetSwapsCurrent"></a>
+# **Invoke-SushiswapGetSwapsCurrent**
+> SushiswapSwapDTO[] Invoke-SushiswapGetSwapsCurrent<br>
+
+
+
+GetSwaps (current)
+
+### Example
+```powershell
+
+try {
+    $Result = Invoke-SushiswapGetSwapsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetSwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetSwapsHistorical"></a>
+# **Invoke-SushiswapGetSwapsHistorical**
+> SushiswapSwapDTO[] Invoke-SushiswapGetSwapsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+
+
+GetSwaps (historical)
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+try {
+    $Result = Invoke-SushiswapGetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetSwapsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetTokensCurrent"></a>
+# **Invoke-SushiswapGetTokensCurrent**
+> SushiswapTokenDTO[] Invoke-SushiswapGetTokensCurrent<br>
+
+
+
+GetTokens (current)
+
+### Example
+```powershell
+
+try {
+    $Result = Invoke-SushiswapGetTokensCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapGetTokensHistorical"></a>
+# **Invoke-SushiswapGetTokensHistorical**
+> SushiswapTokenDTO[] Invoke-SushiswapGetTokensHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
+
+
+
+GetTokens (historical)
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$TokenId = "MyTokenId" # String |  (optional)
+
+try {
+    $Result = Invoke-SushiswapGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetTokensHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **TokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -25,15 +25,15 @@ module Api.Request.Sushiswap exposing
     , dappsSushiswapMintsHistoricalGet
     , dappsSushiswapPoolDayDataHistoricalGet
     , dappsSushiswapPoolHourDataHistoricalGet
-    , dappsSushiswapPoolsCurrentGet
-    , dappsSushiswapPoolsHistoricalGet
-    , dappsSushiswapSwapsCurrentGet
-    , dappsSushiswapSwapsHistoricalGet
     , dappsSushiswapTokenDayDataHistoricalGet
-    , dappsSushiswapTokensCurrentGet
-    , dappsSushiswapTokensHistoricalGet
     , dappsSushiswapTransactionsHistoricalGet
     , dappsSushiswapUsersHistoricalGet
+    , sushiswapGetPoolsCurrent
+    , sushiswapGetPoolsHistorical
+    , sushiswapGetSwapsCurrent
+    , sushiswapGetSwapsHistorical
+    , sushiswapGetTokensCurrent
+    , sushiswapGetTokensHistorical
     )
 
 import Api
@@ -176,60 +176,6 @@ dappsSushiswapPoolHourDataHistoricalGet startBlock_query endBlock_query startDat
 
 
 
-{-| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
--}
-dappsSushiswapPoolsCurrentGet : Api.Request (List Api.Data.SushiswapPairDTO)
-dappsSushiswapPoolsCurrentGet =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/pools/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
-
-
-dappsSushiswapPoolsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
-dappsSushiswapPoolsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/pools/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
-
-
-dappsSushiswapSwapsCurrentGet : Api.Request (List Api.Data.SushiswapSwapDTO)
-dappsSushiswapSwapsCurrentGet =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/swaps/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
-
-
-
-dappsSushiswapSwapsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapSwapDTO)
-dappsSushiswapSwapsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/swaps/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
-
-
-
 dappsSushiswapTokenDayDataHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
 dappsSushiswapTokenDayDataHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
@@ -240,32 +186,6 @@ dappsSushiswapTokenDayDataHistoricalGet startBlock_query endBlock_query startDat
         []
         Nothing
         (Json.Decode.succeed ())
-
-
-
-dappsSushiswapTokensCurrentGet : Api.Request (List Api.Data.SushiswapTokenDTO)
-dappsSushiswapTokensCurrentGet =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/tokens/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
-
-
-
-dappsSushiswapTokensHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDTO)
-dappsSushiswapTokensHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/tokens/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
 
 
 
@@ -292,3 +212,93 @@ dappsSushiswapUsersHistoricalGet startBlock_query endBlock_query startDate_query
         []
         Nothing
         (Json.Decode.succeed ())
+
+
+
+{-| GetPools (current)
+-}
+sushiswapGetPoolsCurrent : Api.Request (List Api.Data.SushiswapPairDTO)
+sushiswapGetPoolsCurrent =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/pools/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
+
+
+
+{-| GetPools (historical)
+-}
+sushiswapGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
+sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/pools/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
+
+
+
+{-| GetSwaps (current)
+-}
+sushiswapGetSwapsCurrent : Api.Request (List Api.Data.SushiswapSwapDTO)
+sushiswapGetSwapsCurrent =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/swaps/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
+
+
+
+{-| GetSwaps (historical)
+-}
+sushiswapGetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapSwapDTO)
+sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/swaps/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
+
+
+
+{-| GetTokens (current)
+-}
+sushiswapGetTokensCurrent : Api.Request (List Api.Data.SushiswapTokenDTO)
+sushiswapGetTokensCurrent =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/tokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
+
+
+
+{-| GetTokens (historical)
+-}
+sushiswapGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDTO)
+sushiswapGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/tokens/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)

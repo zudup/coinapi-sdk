@@ -5983,203 +5983,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.
-         * @summary GetPools
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolsCurrentGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pools/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary GetPools (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pools/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary GetSwaps
-         * @throws {RequiredError}
-         */
-        dappsSushiswapSwapsCurrentGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/swaps/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary GetSwaps (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/swaps/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * 
          * @throws {RequiredError}
          */
         dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/tokenDayData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (tokenId !== undefined) {
-                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary GetTokens
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokensCurrentGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokens/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary GetTokens (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokens/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -6289,6 +6097,192 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * GetPools (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * GetPools (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pools/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * GetSwaps (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetSwapsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * GetSwaps (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/swaps/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * GetTokens (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * GetTokens (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokens/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -6313,23 +6307,23 @@ export type SushiswapApiType = {
 
     dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsSushiswapPoolsCurrentGet(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
-
-    dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
-
-    dappsSushiswapSwapsCurrentGet(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
-
-    dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
-
     dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapTokensCurrentGet(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
-
-    dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
     dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
     dappsSushiswapUsersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+
+    sushiswapGetPoolsCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
+
+    sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
+
+    sushiswapGetSwapsCurrent(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
+
+    sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
+
+    sushiswapGetTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
+
+    sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 }
 
 /**
@@ -6480,66 +6474,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.
-         * @summary GetPools
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolsCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolsCurrentGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary GetPools (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary GetSwaps
-         * @throws {RequiredError}
-         */
-        dappsSushiswapSwapsCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapSwapsCurrentGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary GetSwaps (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * 
          * @throws {RequiredError}
          */
@@ -6548,36 +6482,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary GetTokens
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokensCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokensCurrentGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary GetTokens (historical)
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
                 } else {
                     throw response;
                 }
@@ -6606,6 +6510,90 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetPools (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetPools (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetSwaps (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetSwaps (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetTokens (current)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * GetTokens (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
                 } else {
                     throw response;
                 }

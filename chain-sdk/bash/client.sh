@@ -355,26 +355,11 @@ operation_parameters_minimum_occurrences["dappsSushiswapPoolHourDataHistoricalGe
 operation_parameters_minimum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoolsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoolsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoolsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoolsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoolsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapSwapsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapSwapsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapSwapsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapSwapsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapSwapsHistoricalGet:::poolId"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapTokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapTokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapTokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapTokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapTokensHistoricalGet:::tokenId"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTransactionsHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTransactionsHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapTransactionsHistoricalGet:::startDate"]=0
@@ -383,6 +368,21 @@ operation_parameters_minimum_occurrences["dappsSushiswapUsersHistoricalGet:::sta
 operation_parameters_minimum_occurrences["dappsSushiswapUsersHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapUsersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapUsersHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPoolsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPoolsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPoolsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPoolsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPoolsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::tokenId"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startDate"]=0
@@ -817,26 +817,11 @@ operation_parameters_maximum_occurrences["dappsSushiswapPoolHourDataHistoricalGe
 operation_parameters_maximum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapPoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoolsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoolsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoolsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoolsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoolsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapSwapsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapSwapsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapSwapsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapSwapsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapSwapsHistoricalGet:::poolId"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapTokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapTokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapTokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapTokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapTokensHistoricalGet:::tokenId"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTransactionsHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTransactionsHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapTransactionsHistoricalGet:::startDate"]=0
@@ -845,6 +830,21 @@ operation_parameters_maximum_occurrences["dappsSushiswapUsersHistoricalGet:::sta
 operation_parameters_maximum_occurrences["dappsSushiswapUsersHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapUsersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapUsersHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPoolsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPoolsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPoolsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPoolsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPoolsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::tokenId"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startDate"]=0
@@ -1276,26 +1276,11 @@ operation_parameters_collection_type["dappsSushiswapPoolHourDataHistoricalGet:::
 operation_parameters_collection_type["dappsSushiswapPoolHourDataHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsSushiswapPoolHourDataHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsSushiswapPoolHourDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsSushiswapPoolsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsSushiswapPoolsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsSushiswapPoolsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsSushiswapPoolsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsSushiswapPoolsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsSushiswapSwapsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsSushiswapSwapsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsSushiswapSwapsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsSushiswapSwapsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsSushiswapSwapsHistoricalGet:::poolId"]=""
 operation_parameters_collection_type["dappsSushiswapTokenDayDataHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsSushiswapTokenDayDataHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsSushiswapTokenDayDataHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsSushiswapTokenDayDataHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsSushiswapTokenDayDataHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsSushiswapTokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsSushiswapTokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsSushiswapTokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsSushiswapTokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsSushiswapTokensHistoricalGet:::tokenId"]=""
 operation_parameters_collection_type["dappsSushiswapTransactionsHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsSushiswapTransactionsHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsSushiswapTransactionsHistoricalGet:::startDate"]=""
@@ -1304,6 +1289,21 @@ operation_parameters_collection_type["dappsSushiswapUsersHistoricalGet:::startBl
 operation_parameters_collection_type["dappsSushiswapUsersHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsSushiswapUsersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsSushiswapUsersHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetPoolsHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetPoolsHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetPoolsHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetPoolsHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetPoolsHistorical:::poolId"]=""
+operation_parameters_collection_type["sushiswapGetSwapsHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetSwapsHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetSwapsHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetSwapsHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetSwapsHistorical:::poolId"]=""
+operation_parameters_collection_type["sushiswapGetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetTokensHistorical:::tokenId"]=""
 operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::startDate"]=""
@@ -1926,15 +1926,15 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapMintsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolHourDataHistoricalGet${OFF};
-  ${CYAN}dappsSushiswapPoolsCurrentGet${OFF};GetPools
-  ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};GetPools (historical)
-  ${CYAN}dappsSushiswapSwapsCurrentGet${OFF};GetSwaps
-  ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};GetSwaps (historical)
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
-  ${CYAN}dappsSushiswapTokensCurrentGet${OFF};GetTokens
-  ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};GetTokens (historical)
   ${CYAN}dappsSushiswapTransactionsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapUsersHistoricalGet${OFF};
+  ${CYAN}sushiswapGetPoolsCurrent${OFF};
+  ${CYAN}sushiswapGetPoolsHistorical${OFF};
+  ${CYAN}sushiswapGetSwapsCurrent${OFF};
+  ${CYAN}sushiswapGetSwapsHistorical${OFF};
+  ${CYAN}sushiswapGetTokensCurrent${OFF};
+  ${CYAN}sushiswapGetTokensHistorical${OFF};
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3428,86 +3428,6 @@ print_dappsSushiswapPoolHourDataHistoricalGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsSushiswapPoolsCurrentGet operation
-#
-##############################################################################
-print_dappsSushiswapPoolsCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsSushiswapPoolsHistoricalGet operation
-#
-##############################################################################
-print_dappsSushiswapPoolsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsHistoricalGet - GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsSushiswapSwapsCurrentGet operation
-#
-##############################################################################
-print_dappsSushiswapSwapsCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsSushiswapSwapsHistoricalGet operation
-#
-##############################################################################
-print_dappsSushiswapSwapsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsHistoricalGet - GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for dappsSushiswapTokenDayDataHistoricalGet operation
 #
 ##############################################################################
@@ -3530,45 +3450,6 @@ print_dappsSushiswapTokenDayDataHistoricalGet_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsSushiswapTokensCurrentGet operation
-#
-##############################################################################
-print_dappsSushiswapTokensCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapTokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsSushiswapTokensHistoricalGet operation
-#
-##############################################################################
-print_dappsSushiswapTokensHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapTokensHistoricalGet - GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3615,6 +3496,135 @@ print_dappsSushiswapUsersHistoricalGet_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetPoolsCurrent operation
+#
+##############################################################################
+print_sushiswapGetPoolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetPools (current)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetPoolsHistorical operation
+#
+##############################################################################
+print_sushiswapGetPoolsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetPools (historical)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetSwapsCurrent operation
+#
+##############################################################################
+print_sushiswapGetSwapsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetSwaps (current)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetSwapsHistorical operation
+#
+##############################################################################
+print_sushiswapGetSwapsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetSwaps (historical)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetTokensCurrent operation
+#
+##############################################################################
+print_sushiswapGetTokensCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetTokens (current)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for sushiswapGetTokensHistorical operation
+#
+##############################################################################
+print_sushiswapGetTokensHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "GetTokens (historical)" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -6764,150 +6774,6 @@ call_dappsSushiswapPoolHourDataHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsSushiswapPoolsCurrentGet operation
-#
-##############################################################################
-call_dappsSushiswapPoolsCurrentGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/pools/current" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapPoolsHistoricalGet operation
-#
-##############################################################################
-call_dappsSushiswapPoolsHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/pools/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapSwapsCurrentGet operation
-#
-##############################################################################
-call_dappsSushiswapSwapsCurrentGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/swaps/current" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapSwapsHistoricalGet operation
-#
-##############################################################################
-call_dappsSushiswapSwapsHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/swaps/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call dappsSushiswapTokenDayDataHistoricalGet operation
 #
 ##############################################################################
@@ -6921,78 +6787,6 @@ call_dappsSushiswapTokenDayDataHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/sushiswap/tokenDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapTokensCurrentGet operation
-#
-##############################################################################
-call_dappsSushiswapTokensCurrentGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/tokens/current" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapTokensHistoricalGet operation
-#
-##############################################################################
-call_dappsSushiswapTokensHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/tokens/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7065,6 +6859,222 @@ call_dappsSushiswapUsersHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/sushiswap/users/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetPoolsCurrent operation
+#
+##############################################################################
+call_sushiswapGetPoolsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/pools/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetPoolsHistorical operation
+#
+##############################################################################
+call_sushiswapGetPoolsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/pools/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetSwapsCurrent operation
+#
+##############################################################################
+call_sushiswapGetSwapsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/swaps/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetSwapsHistorical operation
+#
+##############################################################################
+call_sushiswapGetSwapsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/swaps/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetTokensCurrent operation
+#
+##############################################################################
+call_sushiswapGetTokensCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/tokens/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call sushiswapGetTokensHistorical operation
+#
+##############################################################################
+call_sushiswapGetTokensHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/tokens/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9190,32 +9200,32 @@ case $key in
     dappsSushiswapPoolHourDataHistoricalGet)
     operation="dappsSushiswapPoolHourDataHistoricalGet"
     ;;
-    dappsSushiswapPoolsCurrentGet)
-    operation="dappsSushiswapPoolsCurrentGet"
-    ;;
-    dappsSushiswapPoolsHistoricalGet)
-    operation="dappsSushiswapPoolsHistoricalGet"
-    ;;
-    dappsSushiswapSwapsCurrentGet)
-    operation="dappsSushiswapSwapsCurrentGet"
-    ;;
-    dappsSushiswapSwapsHistoricalGet)
-    operation="dappsSushiswapSwapsHistoricalGet"
-    ;;
     dappsSushiswapTokenDayDataHistoricalGet)
     operation="dappsSushiswapTokenDayDataHistoricalGet"
-    ;;
-    dappsSushiswapTokensCurrentGet)
-    operation="dappsSushiswapTokensCurrentGet"
-    ;;
-    dappsSushiswapTokensHistoricalGet)
-    operation="dappsSushiswapTokensHistoricalGet"
     ;;
     dappsSushiswapTransactionsHistoricalGet)
     operation="dappsSushiswapTransactionsHistoricalGet"
     ;;
     dappsSushiswapUsersHistoricalGet)
     operation="dappsSushiswapUsersHistoricalGet"
+    ;;
+    sushiswapGetPoolsCurrent)
+    operation="sushiswapGetPoolsCurrent"
+    ;;
+    sushiswapGetPoolsHistorical)
+    operation="sushiswapGetPoolsHistorical"
+    ;;
+    sushiswapGetSwapsCurrent)
+    operation="sushiswapGetSwapsCurrent"
+    ;;
+    sushiswapGetSwapsHistorical)
+    operation="sushiswapGetSwapsHistorical"
+    ;;
+    sushiswapGetTokensCurrent)
+    operation="sushiswapGetTokensCurrent"
+    ;;
+    sushiswapGetTokensHistorical)
+    operation="sushiswapGetTokensHistorical"
     ;;
     dappsUniswapv2BundlesHistoricalGet)
     operation="dappsUniswapv2BundlesHistoricalGet"
@@ -9618,32 +9628,32 @@ case $operation in
     dappsSushiswapPoolHourDataHistoricalGet)
     call_dappsSushiswapPoolHourDataHistoricalGet
     ;;
-    dappsSushiswapPoolsCurrentGet)
-    call_dappsSushiswapPoolsCurrentGet
-    ;;
-    dappsSushiswapPoolsHistoricalGet)
-    call_dappsSushiswapPoolsHistoricalGet
-    ;;
-    dappsSushiswapSwapsCurrentGet)
-    call_dappsSushiswapSwapsCurrentGet
-    ;;
-    dappsSushiswapSwapsHistoricalGet)
-    call_dappsSushiswapSwapsHistoricalGet
-    ;;
     dappsSushiswapTokenDayDataHistoricalGet)
     call_dappsSushiswapTokenDayDataHistoricalGet
-    ;;
-    dappsSushiswapTokensCurrentGet)
-    call_dappsSushiswapTokensCurrentGet
-    ;;
-    dappsSushiswapTokensHistoricalGet)
-    call_dappsSushiswapTokensHistoricalGet
     ;;
     dappsSushiswapTransactionsHistoricalGet)
     call_dappsSushiswapTransactionsHistoricalGet
     ;;
     dappsSushiswapUsersHistoricalGet)
     call_dappsSushiswapUsersHistoricalGet
+    ;;
+    sushiswapGetPoolsCurrent)
+    call_sushiswapGetPoolsCurrent
+    ;;
+    sushiswapGetPoolsHistorical)
+    call_sushiswapGetPoolsHistorical
+    ;;
+    sushiswapGetSwapsCurrent)
+    call_sushiswapGetSwapsCurrent
+    ;;
+    sushiswapGetSwapsHistorical)
+    call_sushiswapGetSwapsHistorical
+    ;;
+    sushiswapGetTokensCurrent)
+    call_sushiswapGetTokensCurrent
+    ;;
+    sushiswapGetTokensHistorical)
+    call_sushiswapGetTokensHistorical
     ;;
     dappsUniswapv2BundlesHistoricalGet)
     call_dappsUniswapv2BundlesHistoricalGet

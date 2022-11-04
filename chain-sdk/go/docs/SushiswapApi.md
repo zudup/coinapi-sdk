@@ -14,15 +14,15 @@ Method | HTTP request | Description
 [**DappsSushiswapMintsHistoricalGet**](SushiswapApi.md#DappsSushiswapMintsHistoricalGet) | **Get** /dapps/sushiswap/mints/historical | 
 [**DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolDayDataHistoricalGet) | **Get** /dapps/sushiswap/poolDayData/historical | 
 [**DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolHourDataHistoricalGet) | **Get** /dapps/sushiswap/poolHourData/historical | 
-[**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#DappsSushiswapPoolsCurrentGet) | **Get** /dapps/sushiswap/pools/current | GetPools
-[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#DappsSushiswapSwapsCurrentGet) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
-[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **Get** /dapps/sushiswap/tokenDayData/historical | 
-[**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#DappsSushiswapTokensCurrentGet) | **Get** /dapps/sushiswap/tokens/current | GetTokens
-[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **Get** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **Get** /dapps/sushiswap/users/historical | 
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | 
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | 
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | 
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | 
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | 
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | 
 
 
 
@@ -728,272 +728,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapPoolsCurrentGet
-
-> []SushiswapPairDTO DappsSushiswapPoolsCurrentGet(ctx).Execute()
-
-GetPools
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapPoolsCurrentGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoolsCurrentGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapPoolsCurrentGet`: []SushiswapPairDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapPoolsCurrentGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapPoolsCurrentGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapPoolsHistoricalGet
-
-> []SushiswapPairDTO DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
-
-GetPools (historical)
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    poolId := "poolId_example" // string |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapPoolsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoolsHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapPoolsHistoricalGet`: []SushiswapPairDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapPoolsHistoricalGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapPoolsHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **poolId** | **string** |  | 
-
-### Return type
-
-[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapSwapsCurrentGet
-
-> []SushiswapSwapDTO DappsSushiswapSwapsCurrentGet(ctx).Execute()
-
-GetSwaps
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapSwapsCurrentGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapSwapsCurrentGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapSwapsCurrentGet`: []SushiswapSwapDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapSwapsCurrentGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapSwapsCurrentGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapSwapsHistoricalGet
-
-> []SushiswapSwapDTO DappsSushiswapSwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
-
-GetSwaps (historical)
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    poolId := "poolId_example" // string |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapSwapsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapSwapsHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapSwapsHistoricalGet`: []SushiswapSwapDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapSwapsHistoricalGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapSwapsHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **poolId** | **string** |  | 
-
-### Return type
-
-[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## DappsSushiswapTokenDayDataHistoricalGet
 
 > DappsSushiswapTokenDayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
@@ -1059,138 +793,6 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapTokensCurrentGet
-
-> []SushiswapTokenDTO DappsSushiswapTokensCurrentGet(ctx).Execute()
-
-GetTokens
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapTokensCurrentGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapTokensCurrentGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapTokensCurrentGet`: []SushiswapTokenDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapTokensCurrentGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapTokensCurrentGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapTokensHistoricalGet
-
-> []SushiswapTokenDTO DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
-
-GetTokens (historical)
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    tokenId := "tokenId_example" // string |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapTokensHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapTokensHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DappsSushiswapTokensHistoricalGet`: []SushiswapTokenDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapTokensHistoricalGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapTokensHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **tokenId** | **string** |  | 
-
-### Return type
-
-[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1329,6 +931,414 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetPoolsCurrent
+
+> []SushiswapPairDTO SushiswapGetPoolsCurrent(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetPoolsCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPoolsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetPoolsCurrent`: []SushiswapPairDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPoolsCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetPoolsCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetPoolsHistorical
+
+> []SushiswapPairDTO SushiswapGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetPoolsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPoolsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetPoolsHistorical`: []SushiswapPairDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPoolsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetPoolsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetSwapsCurrent
+
+> []SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetSwapsCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetSwapsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetSwapsCurrent`: []SushiswapSwapDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetSwapsCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetSwapsCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetSwapsHistorical
+
+> []SushiswapSwapDTO SushiswapGetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetSwapsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetSwapsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetSwapsHistorical`: []SushiswapSwapDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetSwapsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetSwapsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetTokensCurrent
+
+> []SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetTokensCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetTokensCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetTokensCurrent`: []SushiswapTokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetTokensCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetTokensCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetTokensHistorical
+
+> []SushiswapTokenDTO SushiswapGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    tokenId := "tokenId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetTokensHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetTokensHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SushiswapGetTokensHistorical`: []SushiswapTokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetTokensHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSushiswapGetTokensHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **tokenId** | **string** |  | 
+
+### Return type
+
+[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

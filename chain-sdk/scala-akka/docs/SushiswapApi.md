@@ -24,24 +24,24 @@ Method | HTTP request | Description
 [**dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolsCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**dappsSushiswapPoolsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapSwapsCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
-[**dappsSushiswapSwapsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokensCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
-[**dappsSushiswapTokensHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokensHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapTransactionsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 [**dappsSushiswapUsersHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapUsersHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | 
+[**sushiswapGetPoolsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pools/current | 
+[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | 
+[**sushiswapGetPoolsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | 
+[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | 
+[**sushiswapGetSwapsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | 
+[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | 
+[**sushiswapGetSwapsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | 
+[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | 
+[**sushiswapGetTokensCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | 
+[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | 
+[**sushiswapGetTokensHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | 
 
 
 
@@ -923,336 +923,6 @@ No authorization required
 | **200** | Success |  -  |
 
 
-## dappsSushiswapPoolsCurrentGet
-
-> dappsSushiswapPoolsCurrentGet(): ApiRequest[Seq[PairDTO]]
-
-GetPools
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.dappsSushiswapPoolsCurrentGet()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsCurrentGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsCurrentGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## dappsSushiswapPoolsHistoricalGet
-
-> dappsSushiswapPoolsHistoricalGet(dappsSushiswapPoolsHistoricalGetRequest): ApiRequest[Seq[PairDTO]]
-
-GetPools (historical)
-
-### Example
-
-```scala
-// Import classes:
-import 
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val poolId: String = poolId_example // String | 
-    
-    val request = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **poolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## dappsSushiswapSwapsCurrentGet
-
-> dappsSushiswapSwapsCurrentGet(): ApiRequest[Seq[SwapDTO]]
-
-GetSwaps
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.dappsSushiswapSwapsCurrentGet()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsCurrentGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsCurrentGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## dappsSushiswapSwapsHistoricalGet
-
-> dappsSushiswapSwapsHistoricalGet(dappsSushiswapSwapsHistoricalGetRequest): ApiRequest[Seq[SwapDTO]]
-
-GetSwaps (historical)
-
-### Example
-
-```scala
-// Import classes:
-import 
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val poolId: String = poolId_example // String | 
-    
-    val request = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **poolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
 ## dappsSushiswapTokenDayDataHistoricalGet
 
 > dappsSushiswapTokenDayDataHistoricalGet(dappsSushiswapTokenDayDataHistoricalGetRequest): ApiRequest[Unit]
@@ -1340,170 +1010,6 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
-
-
-## dappsSushiswapTokensCurrentGet
-
-> dappsSushiswapTokensCurrentGet(): ApiRequest[Seq[TokenDTO]]
-
-GetTokens
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.dappsSushiswapTokensCurrentGet()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensCurrentGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensCurrentGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## dappsSushiswapTokensHistoricalGet
-
-> dappsSushiswapTokensHistoricalGet(dappsSushiswapTokensHistoricalGetRequest): ApiRequest[Seq[TokenDTO]]
-
-GetTokens (historical)
-
-### Example
-
-```scala
-// Import classes:
-import 
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val tokenId: String = tokenId_example // String | 
-    
-    val request = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **tokenId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
 
 
 ## dappsSushiswapTransactionsHistoricalGet
@@ -1676,4 +1182,508 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+
+
+## sushiswapGetPoolsCurrent
+
+> sushiswapGetPoolsCurrent(): ApiRequest[Seq[PairDTO]]
+
+
+
+GetPools (current)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
+    val request = apiInstance.sushiswapGetPoolsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## sushiswapGetPoolsHistorical
+
+> sushiswapGetPoolsHistorical(sushiswapGetPoolsHistoricalRequest): ApiRequest[Seq[PairDTO]]
+
+
+
+GetPools (historical)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val poolId: String = poolId_example // String | 
+    
+    val request = apiInstance.sushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+ **poolId** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## sushiswapGetSwapsCurrent
+
+> sushiswapGetSwapsCurrent(): ApiRequest[Seq[SwapDTO]]
+
+
+
+GetSwaps (current)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
+    val request = apiInstance.sushiswapGetSwapsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## sushiswapGetSwapsHistorical
+
+> sushiswapGetSwapsHistorical(sushiswapGetSwapsHistoricalRequest): ApiRequest[Seq[SwapDTO]]
+
+
+
+GetSwaps (historical)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val poolId: String = poolId_example // String | 
+    
+    val request = apiInstance.sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+ **poolId** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## sushiswapGetTokensCurrent
+
+> sushiswapGetTokensCurrent(): ApiRequest[Seq[TokenDTO]]
+
+
+
+GetTokens (current)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
+    val request = apiInstance.sushiswapGetTokensCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## sushiswapGetTokensHistorical
+
+> sushiswapGetTokensHistorical(sushiswapGetTokensHistoricalRequest): ApiRequest[Seq[TokenDTO]]
+
+
+
+GetTokens (historical)
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val tokenId: String = tokenId_example // String | 
+    
+    val request = apiInstance.sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+ **tokenId** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
 

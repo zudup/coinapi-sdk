@@ -14,15 +14,15 @@ Method | HTTP request | Description
 [**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
 [**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | 
+[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | 
+[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | 
+[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | 
+[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | 
+[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | 
 
 
 
@@ -392,142 +392,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsSushiswapPoolsCurrentGet
-
-GetPools
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
-### Example
-
-```bash
- dappsSushiswapPoolsCurrentGet
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsSushiswapPoolsHistoricalGet
-
-GetPools (historical)
-
-### Example
-
-```bash
- dappsSushiswapPoolsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsSushiswapSwapsCurrentGet
-
-GetSwaps
-
-### Example
-
-```bash
- dappsSushiswapSwapsCurrentGet
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsSushiswapSwapsHistoricalGet
-
-GetSwaps (historical)
-
-### Example
-
-```bash
- dappsSushiswapSwapsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## dappsSushiswapTokenDayDataHistoricalGet
 
 
@@ -561,73 +425,6 @@ No authorization required
 
 - **Content-Type**: Not Applicable
 - **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsSushiswapTokensCurrentGet
-
-GetTokens
-
-### Example
-
-```bash
- dappsSushiswapTokensCurrentGet
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsSushiswapTokensHistoricalGet
-
-GetTokens (historical)
-
-### Example
-
-```bash
- dappsSushiswapTokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **tokenId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -700,6 +497,219 @@ No authorization required
 
 - **Content-Type**: Not Applicable
 - **Accept**: Not Applicable
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetPoolsCurrent
+
+
+
+GetPools (current)
+
+### Example
+
+```bash
+ sushiswapGetPoolsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetPoolsHistorical
+
+
+
+GetPools (historical)
+
+### Example
+
+```bash
+ sushiswapGetPoolsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetSwapsCurrent
+
+
+
+GetSwaps (current)
+
+### Example
+
+```bash
+ sushiswapGetSwapsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetSwapsHistorical
+
+
+
+GetSwaps (historical)
+
+### Example
+
+```bash
+ sushiswapGetSwapsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetTokensCurrent
+
+
+
+GetTokens (current)
+
+### Example
+
+```bash
+ sushiswapGetTokensCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapGetTokensHistorical
+
+
+
+GetTokens (historical)
+
+### Example
+
+```bash
+ sushiswapGetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

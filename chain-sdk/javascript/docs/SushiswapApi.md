@@ -14,15 +14,15 @@ Method | HTTP request | Description
 [**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
 [**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-[**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | 
+[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | 
+[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | 
+[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | 
+[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | 
+[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | 
 
 
 
@@ -548,192 +548,6 @@ No authorization required
 - **Accept**: Not defined
 
 
-## dappsSushiswapPoolsCurrentGet
-
-> [SushiswapPairDTO] dappsSushiswapPoolsCurrentGet()
-
-GetPools
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.dappsSushiswapPoolsCurrentGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## dappsSushiswapPoolsHistoricalGet
-
-> [SushiswapPairDTO] dappsSushiswapPoolsHistoricalGet(opts)
-
-GetPools (historical)
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'poolId': "poolId_example" // String | 
-};
-apiInstance.dappsSushiswapPoolsHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## dappsSushiswapSwapsCurrentGet
-
-> [SushiswapSwapDTO] dappsSushiswapSwapsCurrentGet()
-
-GetSwaps
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.dappsSushiswapSwapsCurrentGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## dappsSushiswapSwapsHistoricalGet
-
-> [SushiswapSwapDTO] dappsSushiswapSwapsHistoricalGet(opts)
-
-GetSwaps (historical)
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'poolId': "poolId_example" // String | 
-};
-apiInstance.dappsSushiswapSwapsHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## dappsSushiswapTokenDayDataHistoricalGet
 
 > dappsSushiswapTokenDayDataHistoricalGet(opts)
@@ -785,98 +599,6 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
-
-
-## dappsSushiswapTokensCurrentGet
-
-> [SushiswapTokenDTO] dappsSushiswapTokensCurrentGet()
-
-GetTokens
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.dappsSushiswapTokensCurrentGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## dappsSushiswapTokensHistoricalGet
-
-> [SushiswapTokenDTO] dappsSushiswapTokensHistoricalGet(opts)
-
-GetTokens (historical)
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'tokenId': "tokenId_example" // String | 
-};
-apiInstance.dappsSushiswapTokensHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **tokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
 
 
 ## dappsSushiswapTransactionsHistoricalGet
@@ -979,4 +701,292 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+
+## sushiswapGetPoolsCurrent
+
+> [SushiswapPairDTO] sushiswapGetPoolsCurrent()
+
+
+
+GetPools (current)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapGetPoolsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetPoolsHistorical
+
+> [SushiswapPairDTO] sushiswapGetPoolsHistorical(opts)
+
+
+
+GetPools (historical)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.sushiswapGetPoolsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetSwapsCurrent
+
+> [SushiswapSwapDTO] sushiswapGetSwapsCurrent()
+
+
+
+GetSwaps (current)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapGetSwapsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetSwapsHistorical
+
+> [SushiswapSwapDTO] sushiswapGetSwapsHistorical(opts)
+
+
+
+GetSwaps (historical)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.sushiswapGetSwapsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTokensCurrent
+
+> [SushiswapTokenDTO] sushiswapGetTokensCurrent()
+
+
+
+GetTokens (current)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapGetTokensCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTokensHistorical
+
+> [SushiswapTokenDTO] sushiswapGetTokensHistorical(opts)
+
+
+
+GetTokens (historical)
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.sushiswapGetTokensHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

@@ -368,126 +368,6 @@ bool dappsSushiswapPoolHourDataHistoricalGetAsync(char * accessToken,
 	void(* handler)(Error, void* ) , void* userData);
 
 
-/*! \brief GetPools. *Synchronous*
- *
- * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoolsCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetPools. *Asynchronous*
- *
- * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief GetPools (historical). *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetPools (historical). *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoolsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief GetSwaps. *Synchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapSwapsCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetSwaps. *Asynchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief GetSwaps (historical). *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetSwaps (historical). *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapSwapsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief . *Synchronous*
  *
  * 
@@ -521,66 +401,6 @@ bool dappsSushiswapTokenDayDataHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	
 	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetTokens. *Synchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapTokensCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetTokens. *Asynchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapTokensCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief GetTokens (historical). *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param tokenId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapTokensHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetTokens (historical). *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param tokenId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapTokensHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData);
 
 
 /*! \brief . *Synchronous*
@@ -647,6 +467,186 @@ bool dappsSushiswapUsersHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	
 	void(* handler)(Error, void* ) , void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetPools (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetPoolsCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetPools (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetPoolsCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetPools (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetPoolsHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetPools (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetPoolsHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetSwaps (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetSwapsCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetSwaps (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetSwapsCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetSwaps (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetSwapsHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetSwaps (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetSwapsHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetTokens (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetTokensCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetTokens (current)
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetTokensCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief . *Synchronous*
+ *
+ * GetTokens (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetTokensHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief . *Asynchronous*
+ *
+ * GetTokens (historical)
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool sushiswapGetTokensHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData);
 
 
 

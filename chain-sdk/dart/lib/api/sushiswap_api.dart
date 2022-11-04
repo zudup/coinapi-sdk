@@ -698,278 +698,6 @@ class SushiswapApi {
     }
   }
 
-  /// GetPools
-  ///
-  /// Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  Future<Response> dappsSushiswapPoolsCurrentGetWithHttpInfo() async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pools/current';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetPools
-  ///
-  /// Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-  Future<List<SushiswapPairDTO>?> dappsSushiswapPoolsCurrentGet() async {
-    final response = await dappsSushiswapPoolsCurrentGetWithHttpInfo();
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
-        .cast<SushiswapPairDTO>()
-        .toList();
-
-    }
-    return null;
-  }
-
-  /// GetPools (historical)
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<Response> dappsSushiswapPoolsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pools/historical';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    if (startBlock != null) {
-      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
-    }
-    if (endBlock != null) {
-      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
-    }
-    if (startDate != null) {
-      queryParams.addAll(_queryParams('', 'startDate', startDate));
-    }
-    if (endDate != null) {
-      queryParams.addAll(_queryParams('', 'endDate', endDate));
-    }
-    if (poolId != null) {
-      queryParams.addAll(_queryParams('', 'poolId', poolId));
-    }
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetPools (historical)
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<List<SushiswapPairDTO>?> dappsSushiswapPoolsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsSushiswapPoolsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
-        .cast<SushiswapPairDTO>()
-        .toList();
-
-    }
-    return null;
-  }
-
-  /// GetSwaps
-  ///
-  /// Note: This method returns the HTTP [Response].
-  Future<Response> dappsSushiswapSwapsCurrentGetWithHttpInfo() async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/swaps/current';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetSwaps
-  Future<List<SushiswapSwapDTO>?> dappsSushiswapSwapsCurrentGet() async {
-    final response = await dappsSushiswapSwapsCurrentGetWithHttpInfo();
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
-        .cast<SushiswapSwapDTO>()
-        .toList();
-
-    }
-    return null;
-  }
-
-  /// GetSwaps (historical)
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<Response> dappsSushiswapSwapsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/swaps/historical';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    if (startBlock != null) {
-      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
-    }
-    if (endBlock != null) {
-      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
-    }
-    if (startDate != null) {
-      queryParams.addAll(_queryParams('', 'startDate', startDate));
-    }
-    if (endDate != null) {
-      queryParams.addAll(_queryParams('', 'endDate', endDate));
-    }
-    if (poolId != null) {
-      queryParams.addAll(_queryParams('', 'poolId', poolId));
-    }
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetSwaps (historical)
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<List<SushiswapSwapDTO>?> dappsSushiswapSwapsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsSushiswapSwapsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
-        .cast<SushiswapSwapDTO>()
-        .toList();
-
-    }
-    return null;
-  }
-
   /// Performs an HTTP 'GET /dapps/sushiswap/tokenDayData/historical' operation and returns the [Response].
   /// Parameters:
   ///
@@ -1039,140 +767,6 @@ class SushiswapApi {
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
-  }
-
-  /// GetTokens
-  ///
-  /// Note: This method returns the HTTP [Response].
-  Future<Response> dappsSushiswapTokensCurrentGetWithHttpInfo() async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/tokens/current';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetTokens
-  Future<List<SushiswapTokenDTO>?> dappsSushiswapTokensCurrentGet() async {
-    final response = await dappsSushiswapTokensCurrentGetWithHttpInfo();
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
-        .cast<SushiswapTokenDTO>()
-        .toList();
-
-    }
-    return null;
-  }
-
-  /// GetTokens (historical)
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] tokenId:
-  Future<Response> dappsSushiswapTokensHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/tokens/historical';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    if (startBlock != null) {
-      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
-    }
-    if (endBlock != null) {
-      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
-    }
-    if (startDate != null) {
-      queryParams.addAll(_queryParams('', 'startDate', startDate));
-    }
-    if (endDate != null) {
-      queryParams.addAll(_queryParams('', 'endDate', endDate));
-    }
-    if (tokenId != null) {
-      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
-    }
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetTokens (historical)
-  ///
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] tokenId:
-  Future<List<SushiswapTokenDTO>?> dappsSushiswapTokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsSushiswapTokensHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
-        .cast<SushiswapTokenDTO>()
-        .toList();
-
-    }
-    return null;
   }
 
   /// Performs an HTTP 'GET /dapps/sushiswap/transactions/historical' operation and returns the [Response].
@@ -1301,5 +895,407 @@ class SushiswapApi {
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+  }
+
+  /// GetPools (current)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> sushiswapGetPoolsCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/pools/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetPools (current)
+  Future<List<SushiswapPairDTO>?> sushiswapGetPoolsCurrent() async {
+    final response = await sushiswapGetPoolsCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
+        .cast<SushiswapPairDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetPools (historical)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> sushiswapGetPoolsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/pools/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetPools (historical)
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<List<SushiswapPairDTO>?> sushiswapGetPoolsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await sushiswapGetPoolsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
+        .cast<SushiswapPairDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetSwaps (current)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> sushiswapGetSwapsCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/swaps/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetSwaps (current)
+  Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsCurrent() async {
+    final response = await sushiswapGetSwapsCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
+        .cast<SushiswapSwapDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetSwaps (historical)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<Response> sushiswapGetSwapsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/swaps/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetSwaps (historical)
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] poolId:
+  Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await sushiswapGetSwapsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
+        .cast<SushiswapSwapDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetTokens (current)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> sushiswapGetTokensCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/tokens/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetTokens (current)
+  Future<List<SushiswapTokenDTO>?> sushiswapGetTokensCurrent() async {
+    final response = await sushiswapGetTokensCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
+        .cast<SushiswapTokenDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetTokens (historical)
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<Response> sushiswapGetTokensHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/tokens/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (tokenId != null) {
+      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetTokens (historical)
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] tokenId:
+  Future<List<SushiswapTokenDTO>?> sushiswapGetTokensHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await sushiswapGetTokensHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
+        .cast<SushiswapTokenDTO>()
+        .toList();
+
+    }
+    return null;
   }
 }

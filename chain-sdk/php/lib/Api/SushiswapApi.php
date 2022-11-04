@@ -102,31 +102,31 @@ class SushiswapApi
         'dappsSushiswapPoolHourDataHistoricalGet' => [
             'application/json',
         ],
-        'dappsSushiswapPoolsCurrentGet' => [
-            'application/json',
-        ],
-        'dappsSushiswapPoolsHistoricalGet' => [
-            'application/json',
-        ],
-        'dappsSushiswapSwapsCurrentGet' => [
-            'application/json',
-        ],
-        'dappsSushiswapSwapsHistoricalGet' => [
-            'application/json',
-        ],
         'dappsSushiswapTokenDayDataHistoricalGet' => [
-            'application/json',
-        ],
-        'dappsSushiswapTokensCurrentGet' => [
-            'application/json',
-        ],
-        'dappsSushiswapTokensHistoricalGet' => [
             'application/json',
         ],
         'dappsSushiswapTransactionsHistoricalGet' => [
             'application/json',
         ],
         'dappsSushiswapUsersHistoricalGet' => [
+            'application/json',
+        ],
+        'sushiswapGetPoolsCurrent' => [
+            'application/json',
+        ],
+        'sushiswapGetPoolsHistorical' => [
+            'application/json',
+        ],
+        'sushiswapGetSwapsCurrent' => [
+            'application/json',
+        ],
+        'sushiswapGetSwapsHistorical' => [
+            'application/json',
+        ],
+        'sushiswapGetTokensCurrent' => [
+            'application/json',
+        ],
+        'sushiswapGetTokensHistorical' => [
             'application/json',
         ],
     ];
@@ -2878,1208 +2878,6 @@ class SushiswapApi
     }
 
     /**
-     * Operation dappsSushiswapPoolsCurrentGet
-     *
-     * GetPools
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
-     */
-    public function dappsSushiswapPoolsCurrentGet(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
-    {
-        list($response) = $this->dappsSushiswapPoolsCurrentGetWithHttpInfo($contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsCurrentGetWithHttpInfo
-     *
-     * GetPools
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapPoolsCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
-    {
-        $request = $this->dappsSushiswapPoolsCurrentGetRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsCurrentGetAsync
-     *
-     * GetPools
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapPoolsCurrentGetAsync(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
-    {
-        return $this->dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo($contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo
-     *
-     * GetPools
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
-        $request = $this->dappsSushiswapPoolsCurrentGetRequest($contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapPoolsCurrentGet'
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapPoolsCurrentGetRequest(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
-    {
-
-
-        $resourcePath = '/dapps/sushiswap/pools/current';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsHistoricalGet
-     *
-     * GetPools (historical)
-     *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
-     */
-    public function dappsSushiswapPoolsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
-    {
-        list($response) = $this->dappsSushiswapPoolsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsHistoricalGetWithHttpInfo
-     *
-     * GetPools (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapPoolsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
-    {
-        $request = $this->dappsSushiswapPoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsHistoricalGetAsync
-     *
-     * GetPools (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapPoolsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
-    {
-        return $this->dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo
-     *
-     * GetPools (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
-        $request = $this->dappsSushiswapPoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapPoolsHistoricalGet'
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapPoolsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapPoolsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
-    {
-
-
-
-
-
-
-
-        $resourcePath = '/dapps/sushiswap/pools/historical';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_block,
-            'startBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_block,
-            'endBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
-            'startDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
-            'endDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool_id,
-            'poolId', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsCurrentGet
-     *
-     * GetSwaps
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
-     */
-    public function dappsSushiswapSwapsCurrentGet(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
-    {
-        list($response) = $this->dappsSushiswapSwapsCurrentGetWithHttpInfo($contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsCurrentGetWithHttpInfo
-     *
-     * GetSwaps
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapSwapsCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
-    {
-        $request = $this->dappsSushiswapSwapsCurrentGetRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsCurrentGetAsync
-     *
-     * GetSwaps
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapSwapsCurrentGetAsync(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
-    {
-        return $this->dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo($contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo
-     *
-     * GetSwaps
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
-        $request = $this->dappsSushiswapSwapsCurrentGetRequest($contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapSwapsCurrentGet'
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapSwapsCurrentGetRequest(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
-    {
-
-
-        $resourcePath = '/dapps/sushiswap/swaps/current';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsHistoricalGet
-     *
-     * GetSwaps (historical)
-     *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
-     */
-    public function dappsSushiswapSwapsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
-    {
-        list($response) = $this->dappsSushiswapSwapsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsHistoricalGetWithHttpInfo
-     *
-     * GetSwaps (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapSwapsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
-    {
-        $request = $this->dappsSushiswapSwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsHistoricalGetAsync
-     *
-     * GetSwaps (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapSwapsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
-    {
-        return $this->dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo
-     *
-     * GetSwaps (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
-        $request = $this->dappsSushiswapSwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapSwapsHistoricalGet'
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapSwapsHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapSwapsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
-    {
-
-
-
-
-
-
-
-        $resourcePath = '/dapps/sushiswap/swaps/historical';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_block,
-            'startBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_block,
-            'endBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
-            'startDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
-            'endDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $pool_id,
-            'poolId', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation dappsSushiswapTokenDayDataHistoricalGet
      *
      * @param  int $start_block start_block (optional)
@@ -4304,607 +3102,6 @@ class SushiswapApi
 
         $headers = $this->headerSelector->selectHeaders(
             [],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation dappsSushiswapTokensCurrentGet
-     *
-     * GetTokens
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
-     */
-    public function dappsSushiswapTokensCurrentGet(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
-    {
-        list($response) = $this->dappsSushiswapTokensCurrentGetWithHttpInfo($contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapTokensCurrentGetWithHttpInfo
-     *
-     * GetTokens
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapTokensCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
-    {
-        $request = $this->dappsSushiswapTokensCurrentGetRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapTokensCurrentGetAsync
-     *
-     * GetTokens
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapTokensCurrentGetAsync(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
-    {
-        return $this->dappsSushiswapTokensCurrentGetAsyncWithHttpInfo($contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapTokensCurrentGetAsyncWithHttpInfo
-     *
-     * GetTokens
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapTokensCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
-        $request = $this->dappsSushiswapTokensCurrentGetRequest($contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapTokensCurrentGet'
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensCurrentGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapTokensCurrentGetRequest(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
-    {
-
-
-        $resourcePath = '/dapps/sushiswap/tokens/current';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation dappsSushiswapTokensHistoricalGet
-     *
-     * GetTokens (historical)
-     *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
-     */
-    public function dappsSushiswapTokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
-    {
-        list($response) = $this->dappsSushiswapTokensHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation dappsSushiswapTokensHistoricalGetWithHttpInfo
-     *
-     * GetTokens (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function dappsSushiswapTokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
-    {
-        $request = $this->dappsSushiswapTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation dappsSushiswapTokensHistoricalGetAsync
-     *
-     * GetTokens (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapTokensHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
-    {
-        return $this->dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo
-     *
-     * GetTokens (historical)
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
-        $request = $this->dappsSushiswapTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'dappsSushiswapTokensHistoricalGet'
-     *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsSushiswapTokensHistoricalGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function dappsSushiswapTokensHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
-    {
-
-
-
-
-
-
-
-        $resourcePath = '/dapps/sushiswap/tokens/historical';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_block,
-            'startBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_block,
-            'endBlock', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
-            'startDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
-            'endDate', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $token_id,
-            'tokenId', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -5427,6 +3624,1761 @@ class SushiswapApi
 
         $headers = $this->headerSelector->selectHeaders(
             [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetPoolsCurrent
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
+     */
+    public function sushiswapGetPoolsCurrent(string $contentType = self::contentTypes['sushiswapGetPoolsCurrent'][0])
+    {
+        list($response) = $this->sushiswapGetPoolsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetPoolsCurrentWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetPoolsCurrentWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetPoolsCurrent'][0])
+    {
+        $request = $this->sushiswapGetPoolsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetPoolsCurrentAsync
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetPoolsCurrentAsync(string $contentType = self::contentTypes['sushiswapGetPoolsCurrent'][0])
+    {
+        return $this->sushiswapGetPoolsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetPoolsCurrentAsyncWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetPoolsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetPoolsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
+        $request = $this->sushiswapGetPoolsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetPoolsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetPoolsCurrentRequest(string $contentType = self::contentTypes['sushiswapGetPoolsCurrent'][0])
+    {
+
+
+        $resourcePath = '/dapps/sushiswap/pools/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetPoolsHistorical
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
+     */
+    public function sushiswapGetPoolsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetPoolsHistorical'][0])
+    {
+        list($response) = $this->sushiswapGetPoolsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetPoolsHistoricalWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetPoolsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetPoolsHistorical'][0])
+    {
+        $request = $this->sushiswapGetPoolsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetPoolsHistoricalAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetPoolsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetPoolsHistorical'][0])
+    {
+        return $this->sushiswapGetPoolsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetPoolsHistoricalAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetPoolsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetPoolsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
+        $request = $this->sushiswapGetPoolsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetPoolsHistorical'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetPoolsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetPoolsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/pools/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetSwapsCurrent
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
+     */
+    public function sushiswapGetSwapsCurrent(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
+    {
+        list($response) = $this->sushiswapGetSwapsCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetSwapsCurrentWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetSwapsCurrentWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
+    {
+        $request = $this->sushiswapGetSwapsCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetSwapsCurrentAsync
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetSwapsCurrentAsync(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
+    {
+        return $this->sushiswapGetSwapsCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetSwapsCurrentAsyncWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetSwapsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+        $request = $this->sushiswapGetSwapsCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetSwapsCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetSwapsCurrentRequest(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
+    {
+
+
+        $resourcePath = '/dapps/sushiswap/swaps/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetSwapsHistorical
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $pool_id pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
+     */
+    public function sushiswapGetSwapsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetSwapsHistorical'][0])
+    {
+        list($response) = $this->sushiswapGetSwapsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetSwapsHistoricalWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetSwapsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetSwapsHistorical'][0])
+    {
+        $request = $this->sushiswapGetSwapsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetSwapsHistoricalAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetSwapsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetSwapsHistorical'][0])
+    {
+        return $this->sushiswapGetSwapsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetSwapsHistoricalAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetSwapsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetSwapsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+        $request = $this->sushiswapGetSwapsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetSwapsHistorical'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $pool_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetSwapsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['sushiswapGetSwapsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/swaps/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetTokensCurrent
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
+     */
+    public function sushiswapGetTokensCurrent(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
+    {
+        list($response) = $this->sushiswapGetTokensCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetTokensCurrentWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
+    {
+        $request = $this->sushiswapGetTokensCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetTokensCurrentAsync
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetTokensCurrentAsync(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
+    {
+        return $this->sushiswapGetTokensCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetTokensCurrentAsyncWithHttpInfo
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+        $request = $this->sushiswapGetTokensCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetTokensCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetTokensCurrentRequest(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
+    {
+
+
+        $resourcePath = '/dapps/sushiswap/tokens/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation sushiswapGetTokensHistorical
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $token_id token_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
+     */
+    public function sushiswapGetTokensHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['sushiswapGetTokensHistorical'][0])
+    {
+        list($response) = $this->sushiswapGetTokensHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation sushiswapGetTokensHistoricalWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sushiswapGetTokensHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['sushiswapGetTokensHistorical'][0])
+    {
+        $request = $this->sushiswapGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sushiswapGetTokensHistoricalAsync
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetTokensHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['sushiswapGetTokensHistorical'][0])
+    {
+        return $this->sushiswapGetTokensHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sushiswapGetTokensHistoricalAsyncWithHttpInfo
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sushiswapGetTokensHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['sushiswapGetTokensHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+        $request = $this->sushiswapGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sushiswapGetTokensHistorical'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $token_id (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function sushiswapGetTokensHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['sushiswapGetTokensHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/sushiswap/tokens/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );

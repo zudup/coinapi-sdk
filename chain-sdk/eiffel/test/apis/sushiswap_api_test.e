@@ -179,68 +179,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dapps_sushiswap_pools_current_get
-            -- GetPools
-            --
-            -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-        local
-            l_response: LIST [SUSHISWAP_PAIR_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_pools_current_get
-            assert ("not_implemented", False)
-        end
-
-    test_dapps_sushiswap_pools_historical_get
-            -- GetPools (historical)
-            --
-            -- 
-        local
-            l_response: LIST [SUSHISWAP_PAIR_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_pools_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_dapps_sushiswap_swaps_current_get
-            -- GetSwaps
-            --
-            -- 
-        local
-            l_response: LIST [SUSHISWAP_SWAP_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_swaps_current_get
-            assert ("not_implemented", False)
-        end
-
-    test_dapps_sushiswap_swaps_historical_get
-            -- GetSwaps (historical)
-            --
-            -- 
-        local
-            l_response: LIST [SUSHISWAP_SWAP_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_swaps_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dapps_sushiswap_token_day_data_historical_get
             -- 
             --
@@ -255,37 +193,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- api.dapps_sushiswap_token_day_data_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
-            assert ("not_implemented", False)
-        end
-
-    test_dapps_sushiswap_tokens_current_get
-            -- GetTokens
-            --
-            -- 
-        local
-            l_response: LIST [SUSHISWAP_TOKEN_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_tokens_current_get
-            assert ("not_implemented", False)
-        end
-
-    test_dapps_sushiswap_tokens_historical_get
-            -- GetTokens (historical)
-            --
-            -- 
-        local
-            l_response: LIST [SUSHISWAP_TOKEN_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_token_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dapps_sushiswap_tokens_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
             assert ("not_implemented", False)
         end
 
@@ -318,6 +225,99 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- api.dapps_sushiswap_users_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_pools_current
+            -- 
+            --
+            -- GetPools (current)
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_pools_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_pools_historical
+            -- 
+            --
+            -- GetPools (historical)
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_pools_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_swaps_current
+            -- 
+            --
+            -- GetSwaps (current)
+        local
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_swaps_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_swaps_historical
+            -- 
+            --
+            -- GetSwaps (historical)
+        local
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_swaps_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_tokens_current
+            -- 
+            --
+            -- GetTokens (current)
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_tokens_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_tokens_historical
+            -- 
+            --
+            -- GetTokens (historical)
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_token_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_tokens_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
             assert ("not_implemented", False)
         end
 

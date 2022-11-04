@@ -1610,628 +1610,6 @@ bool SushiswapManager::dappsSushiswapPoolHourDataHistoricalGetSync(char * access
 	handler, userData, false);
 }
 
-static bool dappsSushiswapPoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.PairDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.PairDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.PairDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapPoolsCurrentGetHelper(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/pools/current");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapPoolsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapPoolsCurrentGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapPoolsCurrentGetHelper(accessToken,
-	
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapPoolsCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapPoolsCurrentGetHelper(accessToken,
-	
-	handler, userData, false);
-}
-
-static bool dappsSushiswapPoolsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.PairDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.PairDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.PairDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapPoolsHistoricalGetHelper(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-
-	itemAtq = stringify(&startBlock, "long long");
-	queryParams.insert(pair<string, string>("startBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startBlock");
-	}
-
-
-	itemAtq = stringify(&endBlock, "long long");
-	queryParams.insert(pair<string, string>("endBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endBlock");
-	}
-
-
-	itemAtq = stringify(&startDate, "std::string");
-	queryParams.insert(pair<string, string>("startDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startDate");
-	}
-
-
-	itemAtq = stringify(&endDate, "std::string");
-	queryParams.insert(pair<string, string>("endDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endDate");
-	}
-
-
-	itemAtq = stringify(&poolId, "std::string");
-	queryParams.insert(pair<string, string>("poolId", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("poolId");
-	}
-
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/pools/historical");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapPoolsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapPoolsHistoricalGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapPoolsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapPoolsHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, poolId, 
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapPoolsHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, poolId, 
-	handler, userData, false);
-}
-
-static bool dappsSushiswapSwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.SwapDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.SwapDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.SwapDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapSwapsCurrentGetHelper(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/swaps/current");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapSwapsCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapSwapsCurrentGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapSwapsCurrentGetHelper(accessToken,
-	
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapSwapsCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapSwapsCurrentGetHelper(accessToken,
-	
-	handler, userData, false);
-}
-
-static bool dappsSushiswapSwapsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.SwapDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.SwapDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.SwapDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapSwapsHistoricalGetHelper(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-
-	itemAtq = stringify(&startBlock, "long long");
-	queryParams.insert(pair<string, string>("startBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startBlock");
-	}
-
-
-	itemAtq = stringify(&endBlock, "long long");
-	queryParams.insert(pair<string, string>("endBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endBlock");
-	}
-
-
-	itemAtq = stringify(&startDate, "std::string");
-	queryParams.insert(pair<string, string>("startDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startDate");
-	}
-
-
-	itemAtq = stringify(&endDate, "std::string");
-	queryParams.insert(pair<string, string>("endDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endDate");
-	}
-
-
-	itemAtq = stringify(&poolId, "std::string");
-	queryParams.insert(pair<string, string>("poolId", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("poolId");
-	}
-
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/swaps/historical");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapSwapsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapSwapsHistoricalGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapSwapsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapSwapsHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, poolId, 
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapSwapsHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, poolId, 
-	handler, userData, false);
-}
-
 static bool dappsSushiswapTokenDayDataHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -2387,317 +1765,6 @@ bool SushiswapManager::dappsSushiswapTokenDayDataHistoricalGetSync(char * access
 	void(* handler)(Error, void* ) , void* userData)
 {
 	return dappsSushiswapTokenDayDataHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, tokenId, 
-	handler, userData, false);
-}
-
-static bool dappsSushiswapTokensCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.TokenDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.TokenDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.TokenDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapTokensCurrentGetHelper(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/tokens/current");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapTokensCurrentGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapTokensCurrentGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapTokensCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapTokensCurrentGetHelper(accessToken,
-	
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapTokensCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapTokensCurrentGetHelper(accessToken,
-	
-	handler, userData, false);
-}
-
-static bool dappsSushiswapTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
-	void(* voidHandler)())
-{
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.TokenDTO>, Error, void* )> (voidHandler);
-	
-	JsonNode* pJson;
-	char * data = p_chunk.memory;
-
-	std::list<Sushiswap.TokenDTO> out;
-	
-
-	if (code >= 200 && code < 300) {
-		Error error(code, string("No Error"));
-
-
-
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.TokenDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
-
-
-	} else {
-		Error error;
-		if (errormsg != NULL) {
-			error = Error(code, string(errormsg));
-		} else if (p_chunk.memory != NULL) {
-			error = Error(code, string(p_chunk.memory));
-		} else {
-			error = Error(code, string("Unknown Error"));
-		}
-		 handler(out, error, userData);
-		return false;
-			}
-}
-
-static bool dappsSushiswapTokensHistoricalGetHelper(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData, bool isAsync)
-{
-
-	//TODO: maybe delete headerList after its used to free up space?
-	struct curl_slist *headerList = NULL;
-
-	
-	string accessHeader = "Authorization: Bearer ";
-	accessHeader.append(accessToken);
-	headerList = curl_slist_append(headerList, accessHeader.c_str());
-	headerList = curl_slist_append(headerList, "Content-Type: application/json");
-
-	map <string, string> queryParams;
-	string itemAtq;
-	
-
-	itemAtq = stringify(&startBlock, "long long");
-	queryParams.insert(pair<string, string>("startBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startBlock");
-	}
-
-
-	itemAtq = stringify(&endBlock, "long long");
-	queryParams.insert(pair<string, string>("endBlock", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endBlock");
-	}
-
-
-	itemAtq = stringify(&startDate, "std::string");
-	queryParams.insert(pair<string, string>("startDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("startDate");
-	}
-
-
-	itemAtq = stringify(&endDate, "std::string");
-	queryParams.insert(pair<string, string>("endDate", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("endDate");
-	}
-
-
-	itemAtq = stringify(&tokenId, "std::string");
-	queryParams.insert(pair<string, string>("tokenId", itemAtq));
-	if( itemAtq.empty()==true){
-		queryParams.erase("tokenId");
-	}
-
-	string mBody = "";
-	JsonNode* node;
-	JsonArray* json_array;
-
-	string url("/dapps/sushiswap/tokens/historical");
-	int pos;
-
-
-	//TODO: free memory of errormsg, memorystruct
-	MemoryStruct_s* p_chunk = new MemoryStruct_s();
-	long code;
-	char* errormsg = NULL;
-	string myhttpmethod("GET");
-
-	if(strcmp("PUT", "GET") == 0){
-		if(strcmp("", mBody.c_str()) == 0){
-			mBody.append("{}");
-		}
-	}
-
-	if(!isAsync){
-		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsSushiswapTokensHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
-
-		curl_slist_free_all(headerList);
-		if (p_chunk) {
-			if(p_chunk->memory) {
-				free(p_chunk->memory);
-			}
-			delete (p_chunk);
-		}
-		if (errormsg) {
-			free(errormsg);
-		}
-		return retval;
-	} else{
-		GThread *thread = NULL;
-		RequestInfo *requestInfo = NULL;
-
-		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsSushiswapTokensHistoricalGetProcessor);;
-		if(requestInfo == NULL)
-			return false;
-
-		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
-		return true;
-	}
-}
-
-
-
-
-bool SushiswapManager::dappsSushiswapTokensHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapTokensHistoricalGetHelper(accessToken,
-	startBlock, endBlock, startDate, endDate, tokenId, 
-	handler, userData, true);
-}
-
-bool SushiswapManager::dappsSushiswapTokensHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	, void* userData)
-{
-	return dappsSushiswapTokensHistoricalGetHelper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
@@ -3003,6 +2070,939 @@ bool SushiswapManager::dappsSushiswapUsersHistoricalGetSync(char * accessToken,
 {
 	return dappsSushiswapUsersHistoricalGetHelper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool sushiswapGetPoolsCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.PairDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.PairDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.PairDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetPoolsCurrentHelper(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/pools/current");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetPoolsCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPoolsCurrentProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetPoolsCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetPoolsCurrentHelper(accessToken,
+	
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetPoolsCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetPoolsCurrentHelper(accessToken,
+	
+	handler, userData, false);
+}
+
+static bool sushiswapGetPoolsHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.PairDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.PairDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.PairDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetPoolsHistoricalHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/pools/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetPoolsHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPoolsHistoricalProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetPoolsHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetPoolsHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetPoolsHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetPoolsHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool sushiswapGetSwapsCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.SwapDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.SwapDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.SwapDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetSwapsCurrentHelper(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/swaps/current");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetSwapsCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwapsCurrentProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetSwapsCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetSwapsCurrentHelper(accessToken,
+	
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetSwapsCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetSwapsCurrentHelper(accessToken,
+	
+	handler, userData, false);
+}
+
+static bool sushiswapGetSwapsHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.SwapDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.SwapDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.SwapDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetSwapsHistoricalHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/swaps/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetSwapsHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwapsHistoricalProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetSwapsHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetSwapsHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetSwapsHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetSwapsHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool sushiswapGetTokensCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.TokenDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.TokenDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.TokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetTokensCurrentHelper(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/tokens/current");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetTokensCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokensCurrentProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetTokensCurrentAsync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetTokensCurrentHelper(accessToken,
+	
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetTokensCurrentSync(char * accessToken,
+	
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetTokensCurrentHelper(accessToken,
+	
+	handler, userData, false);
+}
+
+static bool sushiswapGetTokensHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Sushiswap.TokenDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Sushiswap.TokenDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Sushiswap.TokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool sushiswapGetTokensHistoricalHelper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&tokenId, "std::string");
+	queryParams.insert(pair<string, string>("tokenId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("tokenId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/sushiswap/tokens/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = sushiswapGetTokensHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokensHistoricalProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __SushiswapManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool SushiswapManager::sushiswapGetTokensHistoricalAsync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetTokensHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, true);
+}
+
+bool SushiswapManager::sushiswapGetTokensHistoricalSync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return sushiswapGetTokensHistoricalHelper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 

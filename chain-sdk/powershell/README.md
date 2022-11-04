@@ -113,15 +113,15 @@ Class | Method | HTTP request | Description
 *SushiswapApi* | [**Invoke-DappsSushiswapMintsHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
 *SushiswapApi* | [**Invoke-DappsSushiswapPoolDayDataHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 *SushiswapApi* | [**Invoke-DappsSushiswapPoolHourDataHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-*SushiswapApi* | [**Invoke-DappsSushiswapPoolsCurrentGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-*SushiswapApi* | [**Invoke-DappsSushiswapPoolsHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
-*SushiswapApi* | [**Invoke-DappsSushiswapSwapsCurrentGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-*SushiswapApi* | [**Invoke-DappsSushiswapSwapsHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 *SushiswapApi* | [**Invoke-DappsSushiswapTokenDayDataHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-*SushiswapApi* | [**Invoke-DappsSushiswapTokensCurrentGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-*SushiswapApi* | [**Invoke-DappsSushiswapTokensHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 *SushiswapApi* | [**Invoke-DappsSushiswapTransactionsHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 *SushiswapApi* | [**Invoke-DappsSushiswapUsersHistoricalGet**](docs/SushiswapApi.md#Invoke-DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+*SushiswapApi* | [**Invoke-SushiswapGetPoolsCurrent**](docs/SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | 
+*SushiswapApi* | [**Invoke-SushiswapGetPoolsHistorical**](docs/SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | 
+*SushiswapApi* | [**Invoke-SushiswapGetSwapsCurrent**](docs/SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | 
+*SushiswapApi* | [**Invoke-SushiswapGetSwapsHistorical**](docs/SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | 
+*SushiswapApi* | [**Invoke-SushiswapGetTokensCurrent**](docs/SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | 
+*SushiswapApi* | [**Invoke-SushiswapGetTokensHistorical**](docs/SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | 
 *UniswapV2Api* | [**Invoke-DappsUniswapv2BundlesHistoricalGet**](docs/UniswapV2Api.md#Invoke-DappsUniswapv2BundlesHistoricalGet) | **GET** /dapps/uniswapv2/bundles/historical | 
 *UniswapV2Api* | [**Invoke-DappsUniswapv2BurnsHistoricalGet**](docs/UniswapV2Api.md#Invoke-DappsUniswapv2BurnsHistoricalGet) | **GET** /dapps/uniswapv2/burns/historical | 
 *UniswapV2Api* | [**Invoke-DappsUniswapv2DayDataHistoricalGet**](docs/UniswapV2Api.md#Invoke-DappsUniswapv2DayDataHistoricalGet) | **GET** /dapps/uniswapv2/dayData/historical | 

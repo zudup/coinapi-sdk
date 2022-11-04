@@ -57,52 +57,8 @@ void main() {
       // TODO
     });
 
-    // GetPools
-    //
-    // Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    //
-    //Future<BuiltList<SushiswapPairDTO>> dappsSushiswapPoolsCurrentGet() async
-    test('test dappsSushiswapPoolsCurrentGet', () async {
-      // TODO
-    });
-
-    // GetPools (historical)
-    //
-    //Future<BuiltList<SushiswapPairDTO>> dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsSushiswapPoolsHistoricalGet', () async {
-      // TODO
-    });
-
-    // GetSwaps
-    //
-    //Future<BuiltList<SushiswapSwapDTO>> dappsSushiswapSwapsCurrentGet() async
-    test('test dappsSushiswapSwapsCurrentGet', () async {
-      // TODO
-    });
-
-    // GetSwaps (historical)
-    //
-    //Future<BuiltList<SushiswapSwapDTO>> dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsSushiswapSwapsHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsSushiswapTokenDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test dappsSushiswapTokenDayDataHistoricalGet', () async {
-      // TODO
-    });
-
-    // GetTokens
-    //
-    //Future<BuiltList<SushiswapTokenDTO>> dappsSushiswapTokensCurrentGet() async
-    test('test dappsSushiswapTokensCurrentGet', () async {
-      // TODO
-    });
-
-    // GetTokens (historical)
-    //
-    //Future<BuiltList<SushiswapTokenDTO>> dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsSushiswapTokensHistoricalGet', () async {
       // TODO
     });
 
@@ -113,6 +69,48 @@ void main() {
 
     //Future dappsSushiswapUsersHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test dappsSushiswapUsersHistoricalGet', () async {
+      // TODO
+    });
+
+    // GetPools (current)
+    //
+    //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPoolsCurrent() async
+    test('test sushiswapGetPoolsCurrent', () async {
+      // TODO
+    });
+
+    // GetPools (historical)
+    //
+    //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPoolsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetPoolsHistorical', () async {
+      // TODO
+    });
+
+    // GetSwaps (current)
+    //
+    //Future<BuiltList<SushiswapSwapDTO>> sushiswapGetSwapsCurrent() async
+    test('test sushiswapGetSwapsCurrent', () async {
+      // TODO
+    });
+
+    // GetSwaps (historical)
+    //
+    //Future<BuiltList<SushiswapSwapDTO>> sushiswapGetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetSwapsHistorical', () async {
+      // TODO
+    });
+
+    // GetTokens (current)
+    //
+    //Future<BuiltList<SushiswapTokenDTO>> sushiswapGetTokensCurrent() async
+    test('test sushiswapGetTokensCurrent', () async {
+      // TODO
+    });
+
+    // GetTokens (historical)
+    //
+    //Future<BuiltList<SushiswapTokenDTO>> sushiswapGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test sushiswapGetTokensHistorical', () async {
       // TODO
     });
 

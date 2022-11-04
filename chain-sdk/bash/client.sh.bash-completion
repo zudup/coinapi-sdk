@@ -125,15 +125,15 @@ _()
     operations["dappsSushiswapMintsHistoricalGet"]=1
     operations["dappsSushiswapPoolDayDataHistoricalGet"]=1
     operations["dappsSushiswapPoolHourDataHistoricalGet"]=1
-    operations["dappsSushiswapPoolsCurrentGet"]=1
-    operations["dappsSushiswapPoolsHistoricalGet"]=1
-    operations["dappsSushiswapSwapsCurrentGet"]=1
-    operations["dappsSushiswapSwapsHistoricalGet"]=1
     operations["dappsSushiswapTokenDayDataHistoricalGet"]=1
-    operations["dappsSushiswapTokensCurrentGet"]=1
-    operations["dappsSushiswapTokensHistoricalGet"]=1
     operations["dappsSushiswapTransactionsHistoricalGet"]=1
     operations["dappsSushiswapUsersHistoricalGet"]=1
+    operations["sushiswapGetPoolsCurrent"]=1
+    operations["sushiswapGetPoolsHistorical"]=1
+    operations["sushiswapGetSwapsCurrent"]=1
+    operations["sushiswapGetSwapsHistorical"]=1
+    operations["sushiswapGetTokensCurrent"]=1
+    operations["sushiswapGetTokensHistorical"]=1
     operations["dappsUniswapv2BundlesHistoricalGet"]=1
     operations["dappsUniswapv2BurnsHistoricalGet"]=1
     operations["dappsUniswapv2DayDataHistoricalGet"]=1
@@ -246,15 +246,15 @@ _()
     operation_parameters["dappsSushiswapMintsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["dappsSushiswapPoolDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["dappsSushiswapPoolHourDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsSushiswapPoolsCurrentGet"]=""
-    operation_parameters["dappsSushiswapPoolsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsSushiswapSwapsCurrentGet"]=""
-    operation_parameters["dappsSushiswapSwapsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["dappsSushiswapTokenDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsSushiswapTokensCurrentGet"]=""
-    operation_parameters["dappsSushiswapTokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["dappsSushiswapTransactionsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
     operation_parameters["dappsSushiswapUsersHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["sushiswapGetPoolsCurrent"]=""
+    operation_parameters["sushiswapGetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["sushiswapGetSwapsCurrent"]=""
+    operation_parameters["sushiswapGetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["sushiswapGetTokensCurrent"]=""
+    operation_parameters["sushiswapGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["dappsUniswapv2BundlesHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
     operation_parameters["dappsUniswapv2BurnsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["dappsUniswapv2DayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= "

@@ -503,37 +503,6 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Pool_Id : in Swagger.Nullable_UString);
 
-   --  GetPools
-   --  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-   procedure Dapps_Sushiswap_Pools_Current_Get
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
-
-   --  GetPools (historical)
-   procedure Dapps_Sushiswap_Pools_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
-
-   --  GetSwaps
-   procedure Dapps_Sushiswap_Swaps_Current_Get
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
-
-   --  GetSwaps (historical)
-   procedure Dapps_Sushiswap_Swaps_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
-
    --  
    procedure Dapps_Sushiswap_Token_Day_Data_Historical_Get
       (Client : in out Client_Type;
@@ -542,21 +511,6 @@ package .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Token_Id : in Swagger.Nullable_UString);
-
-   --  GetTokens
-   procedure Dapps_Sushiswap_Tokens_Current_Get
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
-
-   --  GetTokens (historical)
-   procedure Dapps_Sushiswap_Tokens_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
 
    --  
    procedure Dapps_Sushiswap_Transactions_Historical_Get
@@ -573,6 +527,57 @@ package .Clients is
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date);
+
+   --  
+   --  GetPools (current)
+   procedure Sushiswap_Get_Pools_Current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
+
+   --  
+   --  GetPools (historical)
+   procedure Sushiswap_Get_Pools_Historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
+
+   --  
+   --  GetSwaps (current)
+   procedure Sushiswap_Get_Swaps_Current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
+
+   --  
+   --  GetSwaps (historical)
+   procedure Sushiswap_Get_Swaps_Historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
+
+   --  
+   --  GetTokens (current)
+   procedure Sushiswap_Get_Tokens_Current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
+
+   --  
+   --  GetTokens (historical)
+   procedure Sushiswap_Get_Tokens_Historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Token_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
 
    --  
    procedure Dapps_Uniswapv_2Bundles_Historical_Get

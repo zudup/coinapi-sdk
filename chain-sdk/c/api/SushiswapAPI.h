@@ -50,46 +50,8 @@ void
 SushiswapAPI_dappsSushiswapPoolHourDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools
-//
-// Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-//
-list_t*
-SushiswapAPI_dappsSushiswapPoolsCurrentGet(apiClient_t *apiClient);
-
-
-// GetPools (historical)
-//
-list_t*
-SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
-
-
-// GetSwaps
-//
-list_t*
-SushiswapAPI_dappsSushiswapSwapsCurrentGet(apiClient_t *apiClient);
-
-
-// GetSwaps (historical)
-//
-list_t*
-SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
-
-
 void
 SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
-
-
-// GetTokens
-//
-list_t*
-SushiswapAPI_dappsSushiswapTokensCurrentGet(apiClient_t *apiClient);
-
-
-// GetTokens (historical)
-//
-list_t*
-SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
 void
@@ -98,5 +60,41 @@ SushiswapAPI_dappsSushiswapTransactionsHistoricalGet(apiClient_t *apiClient, lon
 
 void
 SushiswapAPI_dappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+// GetPools (current)
+//
+list_t*
+SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
+
+
+// GetPools (historical)
+//
+list_t*
+SushiswapAPI_sushiswapGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// GetSwaps (current)
+//
+list_t*
+SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient);
+
+
+// GetSwaps (historical)
+//
+list_t*
+SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// GetTokens (current)
+//
+list_t*
+SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient);
+
+
+// GetTokens (historical)
+//
+list_t*
+SushiswapAPI_sushiswapGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 

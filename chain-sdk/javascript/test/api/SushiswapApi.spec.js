@@ -148,70 +148,10 @@
         done();
       });
     });
-    describe('dappsSushiswapPoolsCurrentGet', function() {
-      it('should call dappsSushiswapPoolsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapPoolsCurrentGet
-        //instance.dappsSushiswapPoolsCurrentGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dappsSushiswapPoolsHistoricalGet', function() {
-      it('should call dappsSushiswapPoolsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapPoolsHistoricalGet
-        //instance.dappsSushiswapPoolsHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dappsSushiswapSwapsCurrentGet', function() {
-      it('should call dappsSushiswapSwapsCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapSwapsCurrentGet
-        //instance.dappsSushiswapSwapsCurrentGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dappsSushiswapSwapsHistoricalGet', function() {
-      it('should call dappsSushiswapSwapsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapSwapsHistoricalGet
-        //instance.dappsSushiswapSwapsHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsSushiswapTokenDayDataHistoricalGet', function() {
       it('should call dappsSushiswapTokenDayDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsSushiswapTokenDayDataHistoricalGet
         //instance.dappsSushiswapTokenDayDataHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dappsSushiswapTokensCurrentGet', function() {
-      it('should call dappsSushiswapTokensCurrentGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapTokensCurrentGet
-        //instance.dappsSushiswapTokensCurrentGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dappsSushiswapTokensHistoricalGet', function() {
-      it('should call dappsSushiswapTokensHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapTokensHistoricalGet
-        //instance.dappsSushiswapTokensHistoricalGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -232,6 +172,66 @@
       it('should call dappsSushiswapUsersHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsSushiswapUsersHistoricalGet
         //instance.dappsSushiswapUsersHistoricalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetPoolsCurrent', function() {
+      it('should call sushiswapGetPoolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetPoolsCurrent
+        //instance.sushiswapGetPoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetPoolsHistorical', function() {
+      it('should call sushiswapGetPoolsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetPoolsHistorical
+        //instance.sushiswapGetPoolsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetSwapsCurrent', function() {
+      it('should call sushiswapGetSwapsCurrent successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetSwapsCurrent
+        //instance.sushiswapGetSwapsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetSwapsHistorical', function() {
+      it('should call sushiswapGetSwapsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetSwapsHistorical
+        //instance.sushiswapGetSwapsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetTokensCurrent', function() {
+      it('should call sushiswapGetTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetTokensCurrent
+        //instance.sushiswapGetTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetTokensHistorical', function() {
+      it('should call sushiswapGetTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetTokensHistorical
+        //instance.sushiswapGetTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
