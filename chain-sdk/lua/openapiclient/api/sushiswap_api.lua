@@ -449,7 +449,7 @@ function sushiswap_api:dapps_sushiswap_users_historical_get(start_block, end_blo
 	end
 end
 
-function sushiswap_api:sushiswap_get_pools_current()
+function sushiswap_api:sushiswap_get_pools__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -498,7 +498,7 @@ function sushiswap_api:sushiswap_get_pools_current()
 	end
 end
 
-function sushiswap_api:sushiswap_get_pools_historical(start_block, end_block, start_date, end_date, pool_id)
+function sushiswap_api:sushiswap_get_pools__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -547,7 +547,7 @@ function sushiswap_api:sushiswap_get_pools_historical(start_block, end_block, st
 	end
 end
 
-function sushiswap_api:sushiswap_get_swaps_current()
+function sushiswap_api:sushiswap_get_swaps__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -581,10 +581,7 @@ function sushiswap_api:sushiswap_get_swaps_current()
 		if result == nil then
 			return nil, err3
 		end
-		for _, ob in ipairs(result) do
-			openapiclient_sushiswap_swap_dto.cast(ob)
-		end
-		return result, headers
+		return openapiclient_sushiswap_swap_dto.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -596,7 +593,7 @@ function sushiswap_api:sushiswap_get_swaps_current()
 	end
 end
 
-function sushiswap_api:sushiswap_get_swaps_historical(start_block, end_block, start_date, end_date, pool_id)
+function sushiswap_api:sushiswap_get_swaps__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -645,7 +642,7 @@ function sushiswap_api:sushiswap_get_swaps_historical(start_block, end_block, st
 	end
 end
 
-function sushiswap_api:sushiswap_get_tokens_current()
+function sushiswap_api:sushiswap_get_tokens__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -679,10 +676,7 @@ function sushiswap_api:sushiswap_get_tokens_current()
 		if result == nil then
 			return nil, err3
 		end
-		for _, ob in ipairs(result) do
-			openapiclient_sushiswap_token_dto.cast(ob)
-		end
-		return result, headers
+		return openapiclient_sushiswap_token_dto.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -694,7 +688,7 @@ function sushiswap_api:sushiswap_get_tokens_current()
 	end
 end
 
-function sushiswap_api:sushiswap_get_tokens_historical(start_block, end_block, start_date, end_date, token_id)
+function sushiswap_api:sushiswap_get_tokens__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;

@@ -372,9 +372,9 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      *
-     * GetPools (current)
+     * 
      */
     @isTest
     private static void sushiswapGetPoolsCurrentTest() {
@@ -414,9 +414,9 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      *
-     * GetPools (historical)
+     * 
      */
     @isTest
     private static void sushiswapGetPoolsHistoricalTest() {
@@ -464,9 +464,9 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      *
-     * GetSwaps (current)
+     * 
      */
     @isTest
     private static void sushiswapGetSwapsCurrentTest() {
@@ -477,38 +477,38 @@ private class OASSushiswapApiTest {
 
         OASClient client;
         OASSushiswapApi api;
-        List<OASSushiswapSwapDTO> response;
-        List<OASSushiswapSwapDTO> expectedResponse;
+        OASSushiswapSwapDTO response;
+        OASSushiswapSwapDTO expectedResponse;
         String js = '';
 
         api = new OASSushiswapApi(new OASClient());
 
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        js = JSON.serialize(OASSushiswapSwapDTO.getExample());
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsCurrent();
+        expectedResponse = OASSushiswapSwapDTO.getExample();
+        response = (OASSushiswapSwapDTO) api.sushiswapGetSwapsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        js = JSON.serialize(OASSushiswapSwapDTO.getExample());
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsCurrent();
+        expectedResponse = OASSushiswapSwapDTO.getExample();
+        response = (OASSushiswapSwapDTO) api.sushiswapGetSwapsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        js = JSON.serialize(OASSushiswapSwapDTO.getExample());
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsCurrent();
+        expectedResponse = OASSushiswapSwapDTO.getExample();
+        response = (OASSushiswapSwapDTO) api.sushiswapGetSwapsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      *
-     * GetSwaps (historical)
+     * 
      */
     @isTest
     private static void sushiswapGetSwapsHistoricalTest() {
@@ -556,9 +556,9 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      *
-     * GetTokens (current)
+     * 
      */
     @isTest
     private static void sushiswapGetTokensCurrentTest() {
@@ -569,38 +569,38 @@ private class OASSushiswapApiTest {
 
         OASClient client;
         OASSushiswapApi api;
-        List<OASSushiswapTokenDTO> response;
-        List<OASSushiswapTokenDTO> expectedResponse;
+        OASSushiswapTokenDTO response;
+        OASSushiswapTokenDTO expectedResponse;
         String js = '';
 
         api = new OASSushiswapApi(new OASClient());
 
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        js = JSON.serialize(OASSushiswapTokenDTO.getExample());
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensCurrent();
+        expectedResponse = OASSushiswapTokenDTO.getExample();
+        response = (OASSushiswapTokenDTO) api.sushiswapGetTokensCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        js = JSON.serialize(OASSushiswapTokenDTO.getExample());
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensCurrent();
+        expectedResponse = OASSushiswapTokenDTO.getExample();
+        response = (OASSushiswapTokenDTO) api.sushiswapGetTokensCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        js = JSON.serialize(OASSushiswapTokenDTO.getExample());
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensCurrent();
+        expectedResponse = OASSushiswapTokenDTO.getExample();
+        response = (OASSushiswapTokenDTO) api.sushiswapGetTokensCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      *
-     * GetTokens (historical)
+     * 
      */
     @isTest
     private static void sushiswapGetTokensHistoricalTest() {

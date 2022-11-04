@@ -1106,7 +1106,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPools (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1162,7 +1162,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPools (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1246,13 +1246,13 @@ export class SushiswapService {
     }
 
     /**
-     * GetSwaps (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public sushiswapGetSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapSwapDTO>>;
-    public sushiswapGetSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapSwapDTO>>>;
-    public sushiswapGetSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapSwapDTO>>>;
+    public sushiswapGetSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<SushiswapSwapDTO>;
+    public sushiswapGetSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<SushiswapSwapDTO>>;
+    public sushiswapGetSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<SushiswapSwapDTO>>;
     public sushiswapGetSwapsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -1289,7 +1289,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/swaps/current`;
-        return this.httpClient.request<Array<SushiswapSwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<SushiswapSwapDTO>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -1302,7 +1302,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetSwaps (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1386,13 +1386,13 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokens (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public sushiswapGetTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapTokenDTO>>;
-    public sushiswapGetTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapTokenDTO>>>;
-    public sushiswapGetTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapTokenDTO>>>;
+    public sushiswapGetTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<SushiswapTokenDTO>;
+    public sushiswapGetTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<SushiswapTokenDTO>>;
+    public sushiswapGetTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<SushiswapTokenDTO>>;
     public sushiswapGetTokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -1429,7 +1429,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/tokens/current`;
-        return this.httpClient.request<Array<SushiswapTokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<SushiswapTokenDTO>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -1442,7 +1442,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokens (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

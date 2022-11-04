@@ -269,25 +269,25 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
     /// </summary>
     /// <remarks>
-    /// GetPools (current)
+    /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswapGetPoolsCurrent(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
-    /// 
+    /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
     /// </summary>
     /// <remarks>
-    /// GetPools (historical)
+    /// 
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswapGetPoolsHistorical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -295,25 +295,25 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
     /// </summary>
     /// <remarks>
-    /// GetSwaps (current)
+    /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswapGetSwapsCurrent(
+    pplx::task<std::shared_ptr<Sushiswap_SwapDTO>> sushiswap_GetSwaps__current(
     ) const;
     /// <summary>
-    /// 
+    /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
     /// </summary>
     /// <remarks>
-    /// GetSwaps (historical)
+    /// 
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswapGetSwapsHistorical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_GetSwaps__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -321,25 +321,25 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
     /// </summary>
     /// <remarks>
-    /// GetTokens (current)
+    /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswapGetTokensCurrent(
+    pplx::task<std::shared_ptr<Sushiswap_TokenDTO>> sushiswap_GetTokens__current(
     ) const;
     /// <summary>
-    /// 
+    /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
     /// </summary>
     /// <remarks>
-    /// GetTokens (historical)
+    /// 
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswapGetTokensHistorical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_GetTokens__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

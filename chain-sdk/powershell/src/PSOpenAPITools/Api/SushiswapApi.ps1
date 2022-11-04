@@ -1379,7 +1379,7 @@ function Invoke-DappsSushiswapUsersHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 .DESCRIPTION
 
@@ -1454,7 +1454,7 @@ function Invoke-SushiswapGetPoolsCurrent {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 .DESCRIPTION
 
@@ -1579,7 +1579,7 @@ function Invoke-SushiswapGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 .DESCRIPTION
 
@@ -1595,7 +1595,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SushiswapSwapDTO[]
+SushiswapSwapDTO
 #>
 function Invoke-SushiswapGetSwapsCurrent {
     [CmdletBinding()]
@@ -1640,7 +1640,7 @@ function Invoke-SushiswapGetSwapsCurrent {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SushiswapSwapDTO[]" `
+                                -ReturnType "SushiswapSwapDTO" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1654,7 +1654,7 @@ function Invoke-SushiswapGetSwapsCurrent {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 .DESCRIPTION
 
@@ -1779,7 +1779,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 .DESCRIPTION
 
@@ -1795,7 +1795,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SushiswapTokenDTO[]
+SushiswapTokenDTO
 #>
 function Invoke-SushiswapGetTokensCurrent {
     [CmdletBinding()]
@@ -1840,7 +1840,7 @@ function Invoke-SushiswapGetTokensCurrent {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SushiswapTokenDTO[]" `
+                                -ReturnType "SushiswapTokenDTO" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1854,7 +1854,7 @@ function Invoke-SushiswapGetTokensCurrent {
 <#
 .SYNOPSIS
 
-No summary available.
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 .DESCRIPTION
 

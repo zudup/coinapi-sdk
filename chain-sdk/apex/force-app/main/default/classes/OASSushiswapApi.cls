@@ -443,8 +443,8 @@ public class OASSushiswapApi {
         );
     }
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * 
-     * GetPools (current)
      * @return List<OASSushiswapPairDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -464,8 +464,8 @@ public class OASSushiswapApi {
         );
     }
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * 
-     * GetPools (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -498,16 +498,16 @@ public class OASSushiswapApi {
         );
     }
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * 
-     * GetSwaps (current)
-     * @return List<OASSushiswapSwapDTO>
+     * @return OASSushiswapSwapDTO
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapSwapDTO> sushiswapGetSwapsCurrent() {
+    public OASSushiswapSwapDTO sushiswapGetSwapsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASSushiswapSwapDTO>) client.invoke(
+        return (OASSushiswapSwapDTO) client.invoke(
             'GET', '/dapps/sushiswap/swaps/current', '',
             query, form,
             new Map<String, Object>(),
@@ -515,12 +515,12 @@ public class OASSushiswapApi {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASSushiswapSwapDTO>.class
+            OASSushiswapSwapDTO.class
         );
     }
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * 
-     * GetSwaps (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -553,16 +553,16 @@ public class OASSushiswapApi {
         );
     }
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * 
-     * GetTokens (current)
-     * @return List<OASSushiswapTokenDTO>
+     * @return OASSushiswapTokenDTO
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapTokenDTO> sushiswapGetTokensCurrent() {
+    public OASSushiswapTokenDTO sushiswapGetTokensCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASSushiswapTokenDTO>) client.invoke(
+        return (OASSushiswapTokenDTO) client.invoke(
             'GET', '/dapps/sushiswap/tokens/current', '',
             query, form,
             new Map<String, Object>(),
@@ -570,12 +570,12 @@ public class OASSushiswapApi {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASSushiswapTokenDTO>.class
+            OASSushiswapTokenDTO.class
         );
     }
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * 
-     * GetTokens (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)

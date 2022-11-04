@@ -72,42 +72,42 @@ void main() {
       // TODO
     });
 
-    // GetPools (current)
+    // Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
     //
     //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPoolsCurrent() async
     test('test sushiswapGetPoolsCurrent', () async {
       // TODO
     });
 
-    // GetPools (historical)
+    // Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
     //
     //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPoolsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetPoolsHistorical', () async {
       // TODO
     });
 
-    // GetSwaps (current)
+    // Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
     //
-    //Future<BuiltList<SushiswapSwapDTO>> sushiswapGetSwapsCurrent() async
+    //Future<SushiswapSwapDTO> sushiswapGetSwapsCurrent() async
     test('test sushiswapGetSwapsCurrent', () async {
       // TODO
     });
 
-    // GetSwaps (historical)
+    // Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
     //
     //Future<BuiltList<SushiswapSwapDTO>> sushiswapGetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetSwapsHistorical', () async {
       // TODO
     });
 
-    // GetTokens (current)
+    // Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
     //
-    //Future<BuiltList<SushiswapTokenDTO>> sushiswapGetTokensCurrent() async
+    //Future<SushiswapTokenDTO> sushiswapGetTokensCurrent() async
     test('test sushiswapGetTokensCurrent', () async {
       // TODO
     });
 
-    // GetTokens (historical)
+    // Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
     //
     //Future<BuiltList<SushiswapTokenDTO>> sushiswapGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test sushiswapGetTokensHistorical', () async {

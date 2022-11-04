@@ -17,12 +17,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical |  |
-| [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current |  |
-| [**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical |  |
-| [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current |  |
-| [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical |  |
-| [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current |  |
-| [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical |  |
+| [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. |
+| [**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. |
+| [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. |
+| [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. |
+| [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. |
+| [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. |
 
 
 <a name="dappsSushiswapBundlesHistoricalGet"></a>
@@ -888,9 +888,7 @@ No authorization required
 # **sushiswapGetPoolsCurrent**
 > List&lt;SushiswapPairDTO&gt; sushiswapGetPoolsCurrent()
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Example
 ```java
@@ -946,9 +944,7 @@ No authorization required
 # **sushiswapGetPoolsHistorical**
 > List&lt;SushiswapPairDTO&gt; sushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Example
 ```java
@@ -1014,11 +1010,9 @@ No authorization required
 
 <a name="sushiswapGetSwapsCurrent"></a>
 # **sushiswapGetSwapsCurrent**
-> List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsCurrent()
+> SushiswapSwapDTO sushiswapGetSwapsCurrent()
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Example
 ```java
@@ -1036,7 +1030,7 @@ public class Example {
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
     try {
-      List<SushiswapSwapDTO> result = apiInstance.sushiswapGetSwapsCurrent();
+      SushiswapSwapDTO result = apiInstance.sushiswapGetSwapsCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsCurrent");
@@ -1054,7 +1048,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1074,9 +1068,7 @@ No authorization required
 # **sushiswapGetSwapsHistorical**
 > List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Example
 ```java
@@ -1142,11 +1134,9 @@ No authorization required
 
 <a name="sushiswapGetTokensCurrent"></a>
 # **sushiswapGetTokensCurrent**
-> List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensCurrent()
+> SushiswapTokenDTO sushiswapGetTokensCurrent()
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Example
 ```java
@@ -1164,7 +1154,7 @@ public class Example {
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
     try {
-      List<SushiswapTokenDTO> result = apiInstance.sushiswapGetTokensCurrent();
+      SushiswapTokenDTO result = apiInstance.sushiswapGetTokensCurrent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensCurrent");
@@ -1182,7 +1172,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1202,9 +1192,7 @@ No authorization required
 # **sushiswapGetTokensHistorical**
 > List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Example
 ```java

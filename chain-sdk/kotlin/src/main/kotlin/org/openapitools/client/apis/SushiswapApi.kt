@@ -1260,8 +1260,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * 
-     * GetPools (current)
      * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1290,8 +1290,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * 
-     * GetPools (current)
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1327,8 +1327,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * 
-     * GetPools (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1362,8 +1362,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * 
-     * GetPools (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1426,9 +1426,9 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * 
-     * GetSwaps (current)
-     * @return kotlin.collections.List<SushiswapSwapDTO>
+     * @return SushiswapSwapDTO
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1437,11 +1437,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetSwapsCurrent() : kotlin.collections.List<SushiswapSwapDTO> {
+    fun sushiswapGetSwapsCurrent() : SushiswapSwapDTO {
         val localVarResponse = sushiswapGetSwapsCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapSwapDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SushiswapSwapDTO
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1456,18 +1456,18 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * 
-     * GetSwaps (current)
-     * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
+     * @return ApiResponse<SushiswapSwapDTO?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetSwapsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?> {
+    fun sushiswapGetSwapsCurrentWithHttpInfo() : ApiResponse<SushiswapSwapDTO?> {
         val localVariableConfig = sushiswapGetSwapsCurrentRequestConfig()
 
-        return request<Unit, kotlin.collections.List<SushiswapSwapDTO>>(
+        return request<Unit, SushiswapSwapDTO>(
             localVariableConfig
         )
     }
@@ -1493,8 +1493,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * 
-     * GetSwaps (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1528,8 +1528,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * 
-     * GetSwaps (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1592,9 +1592,9 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * 
-     * GetTokens (current)
-     * @return kotlin.collections.List<SushiswapTokenDTO>
+     * @return SushiswapTokenDTO
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1603,11 +1603,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetTokensCurrent() : kotlin.collections.List<SushiswapTokenDTO> {
+    fun sushiswapGetTokensCurrent() : SushiswapTokenDTO {
         val localVarResponse = sushiswapGetTokensCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SushiswapTokenDTO
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1622,18 +1622,18 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * 
-     * GetTokens (current)
-     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
+     * @return ApiResponse<SushiswapTokenDTO?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?> {
+    fun sushiswapGetTokensCurrentWithHttpInfo() : ApiResponse<SushiswapTokenDTO?> {
         val localVariableConfig = sushiswapGetTokensCurrentRequestConfig()
 
-        return request<Unit, kotlin.collections.List<SushiswapTokenDTO>>(
+        return request<Unit, SushiswapTokenDTO>(
             localVariableConfig
         )
     }
@@ -1659,8 +1659,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * 
-     * GetTokens (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1694,8 +1694,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * 
-     * GetTokens (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)

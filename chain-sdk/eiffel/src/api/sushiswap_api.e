@@ -566,8 +566,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
+			-- Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 			-- 
-			-- GetPools (current)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DTO]
@@ -599,8 +599,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
+			-- Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 			-- 
-			-- GetPools (historical)
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -646,12 +646,12 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_swaps_current : detachable LIST [SUSHISWAP_SWAP_DTO]
+	sushiswap_get_swaps_current : detachable SUSHISWAP_SWAP_DTO
+			-- Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 			-- 
-			-- GetSwaps (current)
 			-- 
 			-- 
-			-- Result LIST [SUSHISWAP_SWAP_DTO]
+			-- Result SUSHISWAP_SWAP_DTO
 		require
 		local
   			l_path: STRING
@@ -672,7 +672,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_SWAP_DTO] } l_response.data ({ LIST [SUSHISWAP_SWAP_DTO] }) as l_data then
+			elseif attached { SUSHISWAP_SWAP_DTO } l_response.data ({ SUSHISWAP_SWAP_DTO }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -680,8 +680,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
+			-- Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 			-- 
-			-- GetSwaps (historical)
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -727,12 +727,12 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_tokens_current : detachable LIST [SUSHISWAP_TOKEN_DTO]
+	sushiswap_get_tokens_current : detachable SUSHISWAP_TOKEN_DTO
+			-- Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 			-- 
-			-- GetTokens (current)
 			-- 
 			-- 
-			-- Result LIST [SUSHISWAP_TOKEN_DTO]
+			-- Result SUSHISWAP_TOKEN_DTO
 		require
 		local
   			l_path: STRING
@@ -753,7 +753,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_TOKEN_DTO] } l_response.data ({ LIST [SUSHISWAP_TOKEN_DTO] }) as l_data then
+			elseif attached { SUSHISWAP_TOKEN_DTO } l_response.data ({ SUSHISWAP_TOKEN_DTO }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -761,8 +761,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
+			-- Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 			-- 
-			-- GetTokens (historical)
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 

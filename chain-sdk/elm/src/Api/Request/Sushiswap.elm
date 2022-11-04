@@ -215,8 +215,6 @@ dappsSushiswapUsersHistoricalGet startBlock_query endBlock_query startDate_query
 
 
 
-{-| GetPools (current)
--}
 sushiswapGetPoolsCurrent : Api.Request (List Api.Data.SushiswapPairDTO)
 sushiswapGetPoolsCurrent =
     Api.request
@@ -230,8 +228,6 @@ sushiswapGetPoolsCurrent =
 
 
 
-{-| GetPools (historical)
--}
 sushiswapGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
 sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
@@ -245,9 +241,7 @@ sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| GetSwaps (current)
--}
-sushiswapGetSwapsCurrent : Api.Request (List Api.Data.SushiswapSwapDTO)
+sushiswapGetSwapsCurrent : Api.Request Api.Data.SushiswapSwapDTO
 sushiswapGetSwapsCurrent =
     Api.request
         "GET"
@@ -256,12 +250,10 @@ sushiswapGetSwapsCurrent =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
+        Api.Data.sushiswapSwapDTODecoder
 
 
 
-{-| GetSwaps (historical)
--}
 sushiswapGetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapSwapDTO)
 sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
@@ -275,9 +267,7 @@ sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| GetTokens (current)
--}
-sushiswapGetTokensCurrent : Api.Request (List Api.Data.SushiswapTokenDTO)
+sushiswapGetTokensCurrent : Api.Request Api.Data.SushiswapTokenDTO
 sushiswapGetTokensCurrent =
     Api.request
         "GET"
@@ -286,12 +276,10 @@ sushiswapGetTokensCurrent =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
+        Api.Data.sushiswapTokenDTODecoder
 
 
 
-{-| GetTokens (historical)
--}
 sushiswapGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDTO)
 sushiswapGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request

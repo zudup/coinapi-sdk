@@ -3678,6 +3678,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrent
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3692,6 +3694,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetPoolsCurrentWithHttpInfo
+     *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3790,6 +3794,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsync
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3807,6 +3813,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetPoolsCurrentAsyncWithHttpInfo
+     *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3933,6 +3941,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistorical
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
      * @param  \DateTime $start_date start_date (optional)
@@ -3952,6 +3962,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetPoolsHistoricalWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4055,6 +4067,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsync
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
      * @param  \DateTime $start_date (optional)
@@ -4077,6 +4091,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetPoolsHistoricalAsyncWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4263,11 +4279,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrent
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapSwapDTO
      */
     public function sushiswapGetSwapsCurrent(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
     {
@@ -4278,11 +4296,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentWithHttpInfo
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function sushiswapGetSwapsCurrentWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
     {
@@ -4325,23 +4345,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4362,7 +4382,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapSwapDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4374,6 +4394,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetSwapsCurrentAsync
+     *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4393,6 +4415,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsyncWithHttpInfo
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4400,7 +4424,7 @@ class SushiswapApi
      */
     public function sushiswapGetSwapsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetSwapsCurrent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO';
         $request = $this->sushiswapGetSwapsCurrentRequest($contentType);
 
         return $this->client
@@ -4518,6 +4542,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistorical
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
      * @param  \DateTime $start_date start_date (optional)
@@ -4537,6 +4563,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetSwapsHistoricalWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4640,6 +4668,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsync
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
      * @param  \DateTime $start_date (optional)
@@ -4662,6 +4692,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetSwapsHistoricalAsyncWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4848,11 +4880,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrent
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapTokenDTO
      */
     public function sushiswapGetTokensCurrent(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
     {
@@ -4863,11 +4897,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentWithHttpInfo
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function sushiswapGetTokensCurrentWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
     {
@@ -4910,23 +4946,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4947,7 +4983,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapTokenDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4959,6 +4995,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetTokensCurrentAsync
+     *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4978,6 +5016,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsyncWithHttpInfo
      *
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4985,7 +5025,7 @@ class SushiswapApi
      */
     public function sushiswapGetTokensCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['sushiswapGetTokensCurrent'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO';
         $request = $this->sushiswapGetTokensCurrentRequest($contentType);
 
         return $this->client
@@ -5103,6 +5143,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistorical
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
      * @param  \DateTime $start_date start_date (optional)
@@ -5122,6 +5164,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetTokensHistoricalWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5225,6 +5269,8 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsync
      *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
      * @param  \DateTime $start_date (optional)
@@ -5247,6 +5293,8 @@ class SushiswapApi
 
     /**
      * Operation sushiswapGetTokensHistoricalAsyncWithHttpInfo
+     *
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)

@@ -18,12 +18,12 @@ Method | HTTP request | Description
 [**dapps_sushiswap_token_day_data_historical_get**](#dapps_sushiswap_token_day_data_historical_get) | **get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_transactions_historical_get**](#dapps_sushiswap_transactions_historical_get) | **get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](#dapps_sushiswap_users_historical_get) | **get** /dapps/sushiswap/users/historical | 
-[**sushiswap_get_pools_current**](#sushiswap_get_pools_current) | **get** /dapps/sushiswap/pools/current | 
-[**sushiswap_get_pools_historical**](#sushiswap_get_pools_historical) | **get** /dapps/sushiswap/pools/historical | 
-[**sushiswap_get_swaps_current**](#sushiswap_get_swaps_current) | **get** /dapps/sushiswap/swaps/current | 
-[**sushiswap_get_swaps_historical**](#sushiswap_get_swaps_historical) | **get** /dapps/sushiswap/swaps/historical | 
-[**sushiswap_get_tokens_current**](#sushiswap_get_tokens_current) | **get** /dapps/sushiswap/tokens/current | 
-[**sushiswap_get_tokens_historical**](#sushiswap_get_tokens_historical) | **get** /dapps/sushiswap/tokens/historical | 
+[**sushiswap_get_pools__current**](#sushiswap_get_pools__current) | **get** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+[**sushiswap_get_pools__historical**](#sushiswap_get_pools__historical) | **get** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+[**sushiswap_get_swaps__current**](#sushiswap_get_swaps__current) | **get** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+[**sushiswap_get_tokens__current**](#sushiswap_get_tokens__current) | **get** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 # **dapps_sushiswap_bundles_historical_get**
 <a name="dapps_sushiswap_bundles_historical_get"></a>
@@ -1453,13 +1453,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_pools_current**
-<a name="sushiswap_get_pools_current"></a>
-> [SushiswapPairDTO] sushiswap_get_pools_current()
+# **sushiswap_get_pools__current**
+<a name="sushiswap_get_pools__current"></a>
+> [SushiswapPairDTO] sushiswap_get_pools__current()
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Example
 
@@ -1481,10 +1479,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        api_response = api_instance.sushiswap_get_pools_current()
+        # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+        api_response = api_instance.sushiswap_get_pools__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_pools_current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_pools__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -1494,9 +1493,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_pools_current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_pools__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_pools_current.ApiResponseFor200
+#### sushiswap_get_pools__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1545,13 +1544,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_pools_historical**
-<a name="sushiswap_get_pools_historical"></a>
-> [SushiswapPairDTO] sushiswap_get_pools_historical()
+# **sushiswap_get_pools__historical**
+<a name="sushiswap_get_pools__historical"></a>
+> [SushiswapPairDTO] sushiswap_get_pools__historical()
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Example
 
@@ -1580,12 +1577,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        api_response = api_instance.sushiswap_get_pools_historical(
+        # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+        api_response = api_instance.sushiswap_get_pools__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_pools_historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_pools__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1649,9 +1647,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_pools_historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_pools__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_pools_historical.ApiResponseFor200
+#### sushiswap_get_pools__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1700,13 +1698,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_swaps_current**
-<a name="sushiswap_get_swaps_current"></a>
-> [SushiswapSwapDTO] sushiswap_get_swaps_current()
+# **sushiswap_get_swaps__current**
+<a name="sushiswap_get_swaps__current"></a>
+> SushiswapSwapDTO sushiswap_get_swaps__current()
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Example
 
@@ -1728,10 +1724,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        api_response = api_instance.sushiswap_get_swaps_current()
+        # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+        api_response = api_instance.sushiswap_get_swaps__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_swaps_current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_swaps__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -1741,9 +1738,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_swaps_current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_swaps__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_swaps_current.ApiResponseFor200
+#### sushiswap_get_swaps__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1751,40 +1748,22 @@ body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyA
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapSwapDTO**](../../models/SushiswapSwapDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapSwapDTO**](../../models/SushiswapSwapDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapSwapDTO**](../../models/SushiswapSwapDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 ### Authorization
 
@@ -1792,13 +1771,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_swaps_historical**
-<a name="sushiswap_get_swaps_historical"></a>
-> [SushiswapSwapDTO] sushiswap_get_swaps_historical()
+# **sushiswap_get_swaps__historical**
+<a name="sushiswap_get_swaps__historical"></a>
+> [SushiswapSwapDTO] sushiswap_get_swaps__historical()
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Example
 
@@ -1827,12 +1804,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        api_response = api_instance.sushiswap_get_swaps_historical(
+        # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+        api_response = api_instance.sushiswap_get_swaps__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_swaps_historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_swaps__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1896,9 +1874,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_swaps_historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_swaps__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_swaps_historical.ApiResponseFor200
+#### sushiswap_get_swaps__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1947,13 +1925,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_tokens_current**
-<a name="sushiswap_get_tokens_current"></a>
-> [SushiswapTokenDTO] sushiswap_get_tokens_current()
+# **sushiswap_get_tokens__current**
+<a name="sushiswap_get_tokens__current"></a>
+> SushiswapTokenDTO sushiswap_get_tokens__current()
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Example
 
@@ -1975,10 +1951,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        api_response = api_instance.sushiswap_get_tokens_current()
+        # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+        api_response = api_instance.sushiswap_get_tokens__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_tokens_current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_tokens__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -1988,9 +1965,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_tokens_current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_tokens__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_tokens_current.ApiResponseFor200
+#### sushiswap_get_tokens__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1998,40 +1975,22 @@ body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyA
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapTokenDTO**](../../models/SushiswapTokenDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapTokenDTO**](../../models/SushiswapTokenDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SushiswapTokenDTO**](../../models/SushiswapTokenDTO.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 ### Authorization
 
@@ -2039,13 +1998,11 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_tokens_historical**
-<a name="sushiswap_get_tokens_historical"></a>
-> [SushiswapTokenDTO] sushiswap_get_tokens_historical()
+# **sushiswap_get_tokens__historical**
+<a name="sushiswap_get_tokens__historical"></a>
+> [SushiswapTokenDTO] sushiswap_get_tokens__historical()
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Example
 
@@ -2074,12 +2031,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        api_response = api_instance.sushiswap_get_tokens_historical(
+        # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+        api_response = api_instance.sushiswap_get_tokens__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_tokens_historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_tokens__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2143,9 +2101,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_tokens_historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_tokens__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_tokens_historical.ApiResponseFor200
+#### sushiswap_get_tokens__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

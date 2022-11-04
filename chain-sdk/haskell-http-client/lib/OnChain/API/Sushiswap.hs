@@ -408,7 +408,7 @@ instance Produces DappsSushiswapUsersHistoricalGet MimeNoContent
 
 -- | @GET \/dapps\/sushiswap\/pools\/current@
 -- 
--- GetPools (current)
+-- Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 -- 
 sushiswapGetPoolsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
@@ -429,7 +429,7 @@ instance Produces SushiswapGetPoolsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/historical@
 -- 
--- GetPools (historical)
+-- Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 -- 
 sushiswapGetPoolsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
@@ -465,11 +465,11 @@ instance Produces SushiswapGetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/current@
 -- 
--- GetSwaps (current)
+-- Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 -- 
 sushiswapGetSwapsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest SushiswapGetSwapsCurrent MimeNoContent [SushiswapSwapDTO] accept
+  -> OnChainRequest SushiswapGetSwapsCurrent MimeNoContent SushiswapSwapDTO accept
 sushiswapGetSwapsCurrent  _ =
   _mkRequest "GET" ["/dapps/sushiswap/swaps/current"]
 
@@ -486,7 +486,7 @@ instance Produces SushiswapGetSwapsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
--- GetSwaps (historical)
+-- Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 -- 
 sushiswapGetSwapsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
@@ -522,11 +522,11 @@ instance Produces SushiswapGetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/current@
 -- 
--- GetTokens (current)
+-- Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 -- 
 sushiswapGetTokensCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest SushiswapGetTokensCurrent MimeNoContent [SushiswapTokenDTO] accept
+  -> OnChainRequest SushiswapGetTokensCurrent MimeNoContent SushiswapTokenDTO accept
 sushiswapGetTokensCurrent  _ =
   _mkRequest "GET" ["/dapps/sushiswap/tokens/current"]
 
@@ -543,7 +543,7 @@ instance Produces SushiswapGetTokensCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
--- GetTokens (historical)
+-- Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 -- 
 sushiswapGetTokensHistorical
   :: Accept accept -- ^ request accept ('MimeType')

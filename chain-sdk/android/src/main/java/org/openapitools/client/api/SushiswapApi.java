@@ -1692,8 +1692,8 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
   * 
-  * GetPools (current)
    * @return List<SushiswapPairDTO>
   */
   public List<SushiswapPairDTO> sushiswapGetPoolsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1748,8 +1748,8 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
    * 
-   * GetPools (current)
 
   */
   public void sushiswapGetPoolsCurrent (final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1808,8 +1808,8 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
   * 
-  * GetPools (historical)
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1874,8 +1874,8 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
    * 
-   * GetPools (historical)
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
   public void sushiswapGetPoolsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1939,11 +1939,11 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
   * 
-  * GetSwaps (current)
-   * @return List<SushiswapSwapDTO>
+   * @return SushiswapSwapDTO
   */
-  public List<SushiswapSwapDTO> sushiswapGetSwapsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public SushiswapSwapDTO sushiswapGetSwapsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1973,7 +1973,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapSwapDTO.class);
+         return (SushiswapSwapDTO) ApiInvoker.deserialize(localVarResponse, "", SushiswapSwapDTO.class);
       } else {
          return null;
       }
@@ -1995,11 +1995,11 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
    * 
-   * GetSwaps (current)
 
   */
-  public void sushiswapGetSwapsCurrent (final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetSwapsCurrent (final Response.Listener<SushiswapSwapDTO> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2039,7 +2039,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapSwapDTO.class));
+              responseListener.onResponse((SushiswapSwapDTO) ApiInvoker.deserialize(localVarResponse,  "", SushiswapSwapDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2055,8 +2055,8 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
   * 
-  * GetSwaps (historical)
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -2121,8 +2121,8 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
    * 
-   * GetSwaps (historical)
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
   public void sushiswapGetSwapsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2186,11 +2186,11 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
   * 
-  * GetTokens (current)
-   * @return List<SushiswapTokenDTO>
+   * @return SushiswapTokenDTO
   */
-  public List<SushiswapTokenDTO> sushiswapGetTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public SushiswapTokenDTO sushiswapGetTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2220,7 +2220,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDTO.class);
+         return (SushiswapTokenDTO) ApiInvoker.deserialize(localVarResponse, "", SushiswapTokenDTO.class);
       } else {
          return null;
       }
@@ -2242,11 +2242,11 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
    * 
-   * GetTokens (current)
 
   */
-  public void sushiswapGetTokensCurrent (final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetTokensCurrent (final Response.Listener<SushiswapTokenDTO> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2286,7 +2286,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDTO.class));
+              responseListener.onResponse((SushiswapTokenDTO) ApiInvoker.deserialize(localVarResponse,  "", SushiswapTokenDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2302,8 +2302,8 @@ public class SushiswapApi {
     }
   }
   /**
+  * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
   * 
-  * GetTokens (historical)
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -2368,8 +2368,8 @@ public class SushiswapApi {
   }
 
       /**
+   * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
    * 
-   * GetTokens (historical)
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
   public void sushiswapGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {

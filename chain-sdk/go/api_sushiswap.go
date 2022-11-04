@@ -1683,9 +1683,7 @@ func (r ApiSushiswapGetPoolsCurrentRequest) Execute() ([]SushiswapPairDTO, *http
 }
 
 /*
-SushiswapGetPoolsCurrent Method for SushiswapGetPoolsCurrent
-
-GetPools (current)
+SushiswapGetPoolsCurrent Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPoolsCurrentRequest
@@ -1812,9 +1810,7 @@ func (r ApiSushiswapGetPoolsHistoricalRequest) Execute() ([]SushiswapPairDTO, *h
 }
 
 /*
-SushiswapGetPoolsHistorical Method for SushiswapGetPoolsHistorical
-
-GetPools (historical)
+SushiswapGetPoolsHistorical Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPoolsHistoricalRequest
@@ -1921,14 +1917,12 @@ type ApiSushiswapGetSwapsCurrentRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapGetSwapsCurrentRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
+func (r ApiSushiswapGetSwapsCurrentRequest) Execute() (*SushiswapSwapDTO, *http.Response, error) {
 	return r.ApiService.SushiswapGetSwapsCurrentExecute(r)
 }
 
 /*
-SushiswapGetSwapsCurrent Method for SushiswapGetSwapsCurrent
-
-GetSwaps (current)
+SushiswapGetSwapsCurrent Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetSwapsCurrentRequest
@@ -1941,13 +1935,13 @@ func (a *SushiswapApiService) SushiswapGetSwapsCurrent(ctx context.Context) ApiS
 }
 
 // Execute executes the request
-//  @return []SushiswapSwapDTO
-func (a *SushiswapApiService) SushiswapGetSwapsCurrentExecute(r ApiSushiswapGetSwapsCurrentRequest) ([]SushiswapSwapDTO, *http.Response, error) {
+//  @return SushiswapSwapDTO
+func (a *SushiswapApiService) SushiswapGetSwapsCurrentExecute(r ApiSushiswapGetSwapsCurrentRequest) (*SushiswapSwapDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SushiswapSwapDTO
+		localVarReturnValue  *SushiswapSwapDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetSwapsCurrent")
@@ -2055,9 +2049,7 @@ func (r ApiSushiswapGetSwapsHistoricalRequest) Execute() ([]SushiswapSwapDTO, *h
 }
 
 /*
-SushiswapGetSwapsHistorical Method for SushiswapGetSwapsHistorical
-
-GetSwaps (historical)
+SushiswapGetSwapsHistorical Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetSwapsHistoricalRequest
@@ -2164,14 +2156,12 @@ type ApiSushiswapGetTokensCurrentRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapGetTokensCurrentRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
+func (r ApiSushiswapGetTokensCurrentRequest) Execute() (*SushiswapTokenDTO, *http.Response, error) {
 	return r.ApiService.SushiswapGetTokensCurrentExecute(r)
 }
 
 /*
-SushiswapGetTokensCurrent Method for SushiswapGetTokensCurrent
-
-GetTokens (current)
+SushiswapGetTokensCurrent Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetTokensCurrentRequest
@@ -2184,13 +2174,13 @@ func (a *SushiswapApiService) SushiswapGetTokensCurrent(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return []SushiswapTokenDTO
-func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGetTokensCurrentRequest) ([]SushiswapTokenDTO, *http.Response, error) {
+//  @return SushiswapTokenDTO
+func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGetTokensCurrentRequest) (*SushiswapTokenDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SushiswapTokenDTO
+		localVarReturnValue  *SushiswapTokenDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokensCurrent")
@@ -2298,9 +2288,7 @@ func (r ApiSushiswapGetTokensHistoricalRequest) Execute() ([]SushiswapTokenDTO, 
 }
 
 /*
-SushiswapGetTokensHistorical Method for SushiswapGetTokensHistorical
-
-GetTokens (historical)
+SushiswapGetTokensHistorical Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetTokensHistoricalRequest

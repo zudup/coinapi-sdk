@@ -279,7 +279,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetSwapsCurrent();
-            //Assert.IsType<List<SushiswapSwapDTO>>(response);
+            //Assert.IsType<SushiswapSwapDTO>(response);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetTokensCurrent();
-            //Assert.IsType<List<SushiswapTokenDTO>>(response);
+            //Assert.IsType<SushiswapTokenDTO>(response);
         }
 
         /// <summary>

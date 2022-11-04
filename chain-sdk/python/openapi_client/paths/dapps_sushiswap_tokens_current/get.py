@@ -29,84 +29,9 @@ from openapi_client.model.sushiswap_token_dto import SushiswapTokenDTO
 
 from . import path
 
-
-
-class SchemaFor200ResponseBodyTextPlain(
-    schemas.ListSchema
-):
-
-
-    class MetaOapg:
-        
-        @staticmethod
-        def items() -> typing.Type['SushiswapTokenDTO']:
-            return SushiswapTokenDTO
-
-    def __new__(
-        cls,
-        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
-        _configuration: typing.Optional[schemas.Configuration] = None,
-    ) -> 'SchemaFor200ResponseBodyTextPlain':
-        return super().__new__(
-            cls,
-            arg,
-            _configuration=_configuration,
-        )
-
-    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
-        return super().__getitem__(i)
-
-
-class SchemaFor200ResponseBodyApplicationJson(
-    schemas.ListSchema
-):
-
-
-    class MetaOapg:
-        
-        @staticmethod
-        def items() -> typing.Type['SushiswapTokenDTO']:
-            return SushiswapTokenDTO
-
-    def __new__(
-        cls,
-        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
-        _configuration: typing.Optional[schemas.Configuration] = None,
-    ) -> 'SchemaFor200ResponseBodyApplicationJson':
-        return super().__new__(
-            cls,
-            arg,
-            _configuration=_configuration,
-        )
-
-    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
-        return super().__getitem__(i)
-
-
-class SchemaFor200ResponseBodyTextJson(
-    schemas.ListSchema
-):
-
-
-    class MetaOapg:
-        
-        @staticmethod
-        def items() -> typing.Type['SushiswapTokenDTO']:
-            return SushiswapTokenDTO
-
-    def __new__(
-        cls,
-        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
-        _configuration: typing.Optional[schemas.Configuration] = None,
-    ) -> 'SchemaFor200ResponseBodyTextJson':
-        return super().__new__(
-            cls,
-            arg,
-            _configuration=_configuration,
-        )
-
-    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
-        return super().__getitem__(i)
+SchemaFor200ResponseBodyTextPlain = SushiswapTokenDTO
+SchemaFor200ResponseBodyApplicationJson = SushiswapTokenDTO
+SchemaFor200ResponseBodyTextJson = SushiswapTokenDTO
 
 
 @dataclass
@@ -143,7 +68,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _sushiswap_get_tokens_current_oapg(
+    def _sushiswap_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -154,7 +79,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _sushiswap_get_tokens_current_oapg(
+    def _sushiswap_get_tokens__current_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -163,7 +88,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _sushiswap_get_tokens_current_oapg(
+    def _sushiswap_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -174,7 +99,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _sushiswap_get_tokens_current_oapg(
+    def _sushiswap_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -182,6 +107,7 @@ class BaseApi(api_client.Api):
         skip_deserialization: bool = False,
     ):
         """
+        Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
         :param skip_deserialization: If true then api_response.response will be set but
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
@@ -221,7 +147,7 @@ class SushiswapGetTokensCurrent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def sushiswap_get_tokens_current(
+    def sushiswap_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -232,7 +158,7 @@ class SushiswapGetTokensCurrent(BaseApi):
     ]: ...
 
     @typing.overload
-    def sushiswap_get_tokens_current(
+    def sushiswap_get_tokens__current(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -241,7 +167,7 @@ class SushiswapGetTokensCurrent(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def sushiswap_get_tokens_current(
+    def sushiswap_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -252,14 +178,14 @@ class SushiswapGetTokensCurrent(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def sushiswap_get_tokens_current(
+    def sushiswap_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._sushiswap_get_tokens_current_oapg(
+        return self._sushiswap_get_tokens__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -309,7 +235,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._sushiswap_get_tokens_current_oapg(
+        return self._sushiswap_get_tokens__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

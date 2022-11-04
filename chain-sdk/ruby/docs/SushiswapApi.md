@@ -17,12 +17,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dapps_sushiswap_token_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dapps_sushiswap_transactions_historical_get**](SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dapps_sushiswap_users_historical_get**](SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical |  |
-| [**sushiswap_get_pools_current**](SushiswapApi.md#sushiswap_get_pools_current) | **GET** /dapps/sushiswap/pools/current |  |
-| [**sushiswap_get_pools_historical**](SushiswapApi.md#sushiswap_get_pools_historical) | **GET** /dapps/sushiswap/pools/historical |  |
-| [**sushiswap_get_swaps_current**](SushiswapApi.md#sushiswap_get_swaps_current) | **GET** /dapps/sushiswap/swaps/current |  |
-| [**sushiswap_get_swaps_historical**](SushiswapApi.md#sushiswap_get_swaps_historical) | **GET** /dapps/sushiswap/swaps/historical |  |
-| [**sushiswap_get_tokens_current**](SushiswapApi.md#sushiswap_get_tokens_current) | **GET** /dapps/sushiswap/tokens/current |  |
-| [**sushiswap_get_tokens_historical**](SushiswapApi.md#sushiswap_get_tokens_historical) | **GET** /dapps/sushiswap/tokens/historical |  |
+| [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. |
+| [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. |
+| [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. |
+| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. |
+| [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. |
+| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. |
 
 
 ## dapps_sushiswap_bundles_historical_get
@@ -936,13 +936,11 @@ No authorization required
 - **Accept**: Not defined
 
 
-## sushiswap_get_pools_current
+## sushiswap_get_pools__current
 
-> <Array<SushiswapPairDTO>> sushiswap_get_pools_current
+> <Array<SushiswapPairDTO>> sushiswap_get_pools__current
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Examples
 
@@ -953,29 +951,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  
-  result = api_instance.sushiswap_get_pools_current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+  result = api_instance.sushiswap_get_pools__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pools_current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pools__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_pools_current_with_http_info variant
+#### Using the sushiswap_get_pools__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> sushiswap_get_pools_current_with_http_info
+> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> sushiswap_get_pools__current_with_http_info
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_pools_current_with_http_info
+  # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+  data, status_code, headers = api_instance.sushiswap_get_pools__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pools_current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pools__current_with_http_info: #{e}"
 end
 ```
 
@@ -997,13 +995,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_pools_historical
+## sushiswap_get_pools__historical
 
-> <Array<SushiswapPairDTO>> sushiswap_get_pools_historical(opts)
+> <Array<SushiswapPairDTO>> sushiswap_get_pools__historical(opts)
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Examples
 
@@ -1021,29 +1017,29 @@ opts = {
 }
 
 begin
-  
-  result = api_instance.sushiswap_get_pools_historical(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+  result = api_instance.sushiswap_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pools_historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pools__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_pools_historical_with_http_info variant
+#### Using the sushiswap_get_pools__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> sushiswap_get_pools_historical_with_http_info(opts)
+> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> sushiswap_get_pools__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_pools_historical_with_http_info(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+  data, status_code, headers = api_instance.sushiswap_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pools_historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pools__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1071,13 +1067,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_swaps_current
+## sushiswap_get_swaps__current
 
-> <Array<SushiswapSwapDTO>> sushiswap_get_swaps_current
+> <SushiswapSwapDTO> sushiswap_get_swaps__current
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Examples
 
@@ -1088,29 +1082,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  
-  result = api_instance.sushiswap_get_swaps_current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+  result = api_instance.sushiswap_get_swaps__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_swaps_current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_swaps__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_swaps_current_with_http_info variant
+#### Using the sushiswap_get_swaps__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> sushiswap_get_swaps_current_with_http_info
+> <Array(<SushiswapSwapDTO>, Integer, Hash)> sushiswap_get_swaps__current_with_http_info
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_swaps_current_with_http_info
+  # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+  data, status_code, headers = api_instance.sushiswap_get_swaps__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SushiswapSwapDTO>>
+  p data # => <SushiswapSwapDTO>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_swaps_current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_swaps__current_with_http_info: #{e}"
 end
 ```
 
@@ -1120,7 +1114,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1132,13 +1126,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_swaps_historical
+## sushiswap_get_swaps__historical
 
-> <Array<SushiswapSwapDTO>> sushiswap_get_swaps_historical(opts)
+> <Array<SushiswapSwapDTO>> sushiswap_get_swaps__historical(opts)
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Examples
 
@@ -1156,29 +1148,29 @@ opts = {
 }
 
 begin
-  
-  result = api_instance.sushiswap_get_swaps_historical(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+  result = api_instance.sushiswap_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_swaps_historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_swaps__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_swaps_historical_with_http_info variant
+#### Using the sushiswap_get_swaps__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> sushiswap_get_swaps_historical_with_http_info(opts)
+> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> sushiswap_get_swaps__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_swaps_historical_with_http_info(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+  data, status_code, headers = api_instance.sushiswap_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapSwapDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_swaps_historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_swaps__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1206,13 +1198,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_tokens_current
+## sushiswap_get_tokens__current
 
-> <Array<SushiswapTokenDTO>> sushiswap_get_tokens_current
+> <SushiswapTokenDTO> sushiswap_get_tokens__current
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Examples
 
@@ -1223,29 +1213,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  
-  result = api_instance.sushiswap_get_tokens_current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+  result = api_instance.sushiswap_get_tokens__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_tokens_current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_tokens__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_tokens_current_with_http_info variant
+#### Using the sushiswap_get_tokens__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> sushiswap_get_tokens_current_with_http_info
+> <Array(<SushiswapTokenDTO>, Integer, Hash)> sushiswap_get_tokens__current_with_http_info
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_tokens_current_with_http_info
+  # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+  data, status_code, headers = api_instance.sushiswap_get_tokens__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SushiswapTokenDTO>>
+  p data # => <SushiswapTokenDTO>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_tokens_current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_tokens__current_with_http_info: #{e}"
 end
 ```
 
@@ -1255,7 +1245,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1267,13 +1257,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_tokens_historical
+## sushiswap_get_tokens__historical
 
-> <Array<SushiswapTokenDTO>> sushiswap_get_tokens_historical(opts)
+> <Array<SushiswapTokenDTO>> sushiswap_get_tokens__historical(opts)
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Examples
 
@@ -1291,29 +1279,29 @@ opts = {
 }
 
 begin
-  
-  result = api_instance.sushiswap_get_tokens_historical(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+  result = api_instance.sushiswap_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_tokens_historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_tokens__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_tokens_historical_with_http_info variant
+#### Using the sushiswap_get_tokens__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> sushiswap_get_tokens_historical_with_http_info(opts)
+> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> sushiswap_get_tokens__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.sushiswap_get_tokens_historical_with_http_info(opts)
+  # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+  data, status_code, headers = api_instance.sushiswap_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapTokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_tokens_historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_tokens__historical_with_http_info: #{e}"
 end
 ```
 

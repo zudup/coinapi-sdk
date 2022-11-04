@@ -2073,7 +2073,7 @@ bool SushiswapManager::dappsSushiswapUsersHistoricalGetSync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool sushiswapGetPoolsCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetPools (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
@@ -2120,7 +2120,7 @@ static bool sushiswapGetPoolsCurrentProcessor(MemoryStruct_s p_chunk, long code,
 			}
 }
 
-static bool sushiswapGetPoolsCurrentHelper(char * accessToken,
+static bool sushiswapGetPools (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2161,7 +2161,7 @@ static bool sushiswapGetPoolsCurrentHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetPoolsCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetPools (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2179,7 +2179,7 @@ static bool sushiswapGetPoolsCurrentHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPoolsCurrentProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPools (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2191,27 +2191,27 @@ static bool sushiswapGetPoolsCurrentHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetPoolsCurrentAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetPools (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetPoolsCurrentHelper(accessToken,
+	return sushiswapGetPools (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetPoolsCurrentSync(char * accessToken,
+bool SushiswapManager::sushiswapGetPools (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetPoolsCurrentHelper(accessToken,
+	return sushiswapGetPools (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
 
-static bool sushiswapGetPoolsHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetPools (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
@@ -2258,7 +2258,7 @@ static bool sushiswapGetPoolsHistoricalProcessor(MemoryStruct_s p_chunk, long co
 			}
 }
 
-static bool sushiswapGetPoolsHistoricalHelper(char * accessToken,
+static bool sushiswapGetPools (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2334,7 +2334,7 @@ static bool sushiswapGetPoolsHistoricalHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetPoolsHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetPools (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2352,7 +2352,7 @@ static bool sushiswapGetPoolsHistoricalHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPoolsHistoricalProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetPools (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2364,58 +2364,66 @@ static bool sushiswapGetPoolsHistoricalHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetPoolsHistoricalAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetPools (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetPoolsHistoricalHelper(accessToken,
+	return sushiswapGetPools (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetPoolsHistoricalSync(char * accessToken,
+bool SushiswapManager::sushiswapGetPools (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetPoolsHistoricalHelper(accessToken,
+	return sushiswapGetPools (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
 
-static bool sushiswapGetSwapsCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetSwaps (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.SwapDTO>, Error, void* )> (voidHandler);
+	void(* handler)(Sushiswap.SwapDTO, Error, void* )
+	= reinterpret_cast<void(*)(Sushiswap.SwapDTO, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<Sushiswap.SwapDTO> out;
 	
+	Sushiswap.SwapDTO out;
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
 
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.SwapDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
 
+		if (isprimitive("Sushiswap.SwapDTO")) {
+			pJson = json_from_string(data, NULL);
+			jsonToValue(&out, pJson, "Sushiswap.SwapDTO", "Sushiswap.SwapDTO");
+			json_node_free(pJson);
+
+			if ("Sushiswap.SwapDTO" == "std::string") {
+				string* val = (std::string*)(&out);
+				if (val->empty() && p_chunk.size>4) {
+					*val = string(p_chunk.memory, p_chunk.size);
+				}
+			}
+		} else {
+			
+			out.fromJson(data);
+			char *jsonStr =  out.toJson();
+			printf("\n%s\n", jsonStr);
+			g_free(static_cast<gpointer>(jsonStr));
+			
+		}
+		handler(out, error, userData);
+		return true;
+		//TODO: handle case where json parsing has an error
 
 	} else {
 		Error error;
@@ -2431,9 +2439,9 @@ static bool sushiswapGetSwapsCurrentProcessor(MemoryStruct_s p_chunk, long code,
 			}
 }
 
-static bool sushiswapGetSwapsCurrentHelper(char * accessToken,
+static bool sushiswapGetSwaps (current)Helper(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	void(* handler)(Sushiswap.SwapDTO, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2472,7 +2480,7 @@ static bool sushiswapGetSwapsCurrentHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetSwapsCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetSwaps (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2490,7 +2498,7 @@ static bool sushiswapGetSwapsCurrentHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwapsCurrentProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwaps (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2502,27 +2510,27 @@ static bool sushiswapGetSwapsCurrentHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetSwapsCurrentAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetSwaps (current)Async(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	void(* handler)(Sushiswap.SwapDTO, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetSwapsCurrentHelper(accessToken,
+	return sushiswapGetSwaps (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetSwapsCurrentSync(char * accessToken,
+bool SushiswapManager::sushiswapGetSwaps (current)Sync(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
+	void(* handler)(Sushiswap.SwapDTO, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetSwapsCurrentHelper(accessToken,
+	return sushiswapGetSwaps (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
 
-static bool sushiswapGetSwapsHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetSwaps (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
@@ -2569,7 +2577,7 @@ static bool sushiswapGetSwapsHistoricalProcessor(MemoryStruct_s p_chunk, long co
 			}
 }
 
-static bool sushiswapGetSwapsHistoricalHelper(char * accessToken,
+static bool sushiswapGetSwaps (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2645,7 +2653,7 @@ static bool sushiswapGetSwapsHistoricalHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetSwapsHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetSwaps (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2663,7 +2671,7 @@ static bool sushiswapGetSwapsHistoricalHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwapsHistoricalProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetSwaps (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2675,58 +2683,66 @@ static bool sushiswapGetSwapsHistoricalHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetSwapsHistoricalAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetSwaps (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetSwapsHistoricalHelper(accessToken,
+	return sushiswapGetSwaps (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetSwapsHistoricalSync(char * accessToken,
+bool SushiswapManager::sushiswapGetSwaps (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetSwapsHistoricalHelper(accessToken,
+	return sushiswapGetSwaps (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
 
-static bool sushiswapGetTokensCurrentProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetTokens (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<Sushiswap.TokenDTO>, Error, void* )> (voidHandler);
+	void(* handler)(Sushiswap.TokenDTO, Error, void* )
+	= reinterpret_cast<void(*)(Sushiswap.TokenDTO, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<Sushiswap.TokenDTO> out;
 	
+	Sushiswap.TokenDTO out;
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
 
-		pJson = json_from_string(data, NULL);
-		JsonArray * jsonarray = json_node_get_array (pJson);
-		guint length = json_array_get_length (jsonarray);
-		for(guint i = 0; i < length; i++){
-			JsonNode* myJson = json_array_get_element (jsonarray, i);
-			char * singlenodestr = json_to_string(myJson, false);
-			Sushiswap.TokenDTO singlemodel;
-			singlemodel.fromJson(singlenodestr);
-			out.push_front(singlemodel);
-			g_free(static_cast<gpointer>(singlenodestr));
-			json_node_free(myJson);
-		}
-		json_array_unref (jsonarray);
-		json_node_free(pJson);
 
+		if (isprimitive("Sushiswap.TokenDTO")) {
+			pJson = json_from_string(data, NULL);
+			jsonToValue(&out, pJson, "Sushiswap.TokenDTO", "Sushiswap.TokenDTO");
+			json_node_free(pJson);
+
+			if ("Sushiswap.TokenDTO" == "std::string") {
+				string* val = (std::string*)(&out);
+				if (val->empty() && p_chunk.size>4) {
+					*val = string(p_chunk.memory, p_chunk.size);
+				}
+			}
+		} else {
+			
+			out.fromJson(data);
+			char *jsonStr =  out.toJson();
+			printf("\n%s\n", jsonStr);
+			g_free(static_cast<gpointer>(jsonStr));
+			
+		}
+		handler(out, error, userData);
+		return true;
+		//TODO: handle case where json parsing has an error
 
 	} else {
 		Error error;
@@ -2742,9 +2758,9 @@ static bool sushiswapGetTokensCurrentProcessor(MemoryStruct_s p_chunk, long code
 			}
 }
 
-static bool sushiswapGetTokensCurrentHelper(char * accessToken,
+static bool sushiswapGetTokens (current)Helper(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	void(* handler)(Sushiswap.TokenDTO, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2783,7 +2799,7 @@ static bool sushiswapGetTokensCurrentHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetTokensCurrentProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetTokens (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2801,7 +2817,7 @@ static bool sushiswapGetTokensCurrentHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokensCurrentProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokens (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2813,27 +2829,27 @@ static bool sushiswapGetTokensCurrentHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetTokensCurrentAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetTokens (current)Async(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	void(* handler)(Sushiswap.TokenDTO, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetTokensCurrentHelper(accessToken,
+	return sushiswapGetTokens (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetTokensCurrentSync(char * accessToken,
+bool SushiswapManager::sushiswapGetTokens (current)Sync(char * accessToken,
 	
-	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
+	void(* handler)(Sushiswap.TokenDTO, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetTokensCurrentHelper(accessToken,
+	return sushiswapGetTokens (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
 
-static bool sushiswapGetTokensHistoricalProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool sushiswapGetTokens (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
@@ -2880,7 +2896,7 @@ static bool sushiswapGetTokensHistoricalProcessor(MemoryStruct_s p_chunk, long c
 			}
 }
 
-static bool sushiswapGetTokensHistoricalHelper(char * accessToken,
+static bool sushiswapGetTokens (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2956,7 +2972,7 @@ static bool sushiswapGetTokensHistoricalHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = sushiswapGetTokensHistoricalProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = sushiswapGetTokens (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2974,7 +2990,7 @@ static bool sushiswapGetTokensHistoricalHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (SushiswapManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokensHistoricalProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), sushiswapGetTokens (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2986,22 +3002,22 @@ static bool sushiswapGetTokensHistoricalHelper(char * accessToken,
 
 
 
-bool SushiswapManager::sushiswapGetTokensHistoricalAsync(char * accessToken,
+bool SushiswapManager::sushiswapGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetTokensHistoricalHelper(accessToken,
+	return sushiswapGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool SushiswapManager::sushiswapGetTokensHistoricalSync(char * accessToken,
+bool SushiswapManager::sushiswapGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData)
 {
-	return sushiswapGetTokensHistoricalHelper(accessToken,
+	return sushiswapGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }

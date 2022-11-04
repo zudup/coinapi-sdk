@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapTokensCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapTokensCurrent unit test stubs
+        Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

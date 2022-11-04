@@ -106,43 +106,43 @@ describe("sushiswap_api", function()
     end)
   end)
 
-  -- unit tests for sushiswap_get_pools_current
-  describe("sushiswap_get_pools_current test", function()
+  -- unit tests for sushiswap_get_pools__current
+  describe("sushiswap_get_pools__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for sushiswap_get_pools_historical
-  describe("sushiswap_get_pools_historical test", function()
+  -- unit tests for sushiswap_get_pools__historical
+  describe("sushiswap_get_pools__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for sushiswap_get_swaps_current
-  describe("sushiswap_get_swaps_current test", function()
+  -- unit tests for sushiswap_get_swaps__current
+  describe("sushiswap_get_swaps__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for sushiswap_get_swaps_historical
-  describe("sushiswap_get_swaps_historical test", function()
+  -- unit tests for sushiswap_get_swaps__historical
+  describe("sushiswap_get_swaps__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for sushiswap_get_tokens_current
-  describe("sushiswap_get_tokens_current test", function()
+  -- unit tests for sushiswap_get_tokens__current
+  describe("sushiswap_get_tokens__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for sushiswap_get_tokens_historical
-  describe("sushiswap_get_tokens_historical test", function()
+  -- unit tests for sushiswap_get_tokens__historical
+  describe("sushiswap_get_tokens__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

@@ -208,18 +208,18 @@ describe 'SushiswapApi' do
     end
   end
 
-  # unit tests for sushiswap_get_pools_current
-  # GetPools (current)
+  # unit tests for sushiswap_get_pools__current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapPairDTO>]
-  describe 'sushiswap_get_pools_current test' do
+  describe 'sushiswap_get_pools__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for sushiswap_get_pools_historical
-  # GetPools (historical)
+  # unit tests for sushiswap_get_pools__historical
+  # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -227,24 +227,24 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date 
   # @option opts [String] :pool_id 
   # @return [Array<SushiswapPairDTO>]
-  describe 'sushiswap_get_pools_historical test' do
+  describe 'sushiswap_get_pools__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for sushiswap_get_swaps_current
-  # GetSwaps (current)
+  # unit tests for sushiswap_get_swaps__current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
   # @param [Hash] opts the optional parameters
-  # @return [Array<SushiswapSwapDTO>]
-  describe 'sushiswap_get_swaps_current test' do
+  # @return [SushiswapSwapDTO]
+  describe 'sushiswap_get_swaps__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for sushiswap_get_swaps_historical
-  # GetSwaps (historical)
+  # unit tests for sushiswap_get_swaps__historical
+  # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -252,24 +252,24 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date 
   # @option opts [String] :pool_id 
   # @return [Array<SushiswapSwapDTO>]
-  describe 'sushiswap_get_swaps_historical test' do
+  describe 'sushiswap_get_swaps__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for sushiswap_get_tokens_current
-  # GetTokens (current)
+  # unit tests for sushiswap_get_tokens__current
+  # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
   # @param [Hash] opts the optional parameters
-  # @return [Array<SushiswapTokenDTO>]
-  describe 'sushiswap_get_tokens_current test' do
+  # @return [SushiswapTokenDTO]
+  describe 'sushiswap_get_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for sushiswap_get_tokens_historical
-  # GetTokens (historical)
+  # unit tests for sushiswap_get_tokens__historical
+  # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -277,7 +277,7 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
   # @return [Array<SushiswapTokenDTO>]
-  describe 'sushiswap_get_tokens_historical test' do
+  describe 'sushiswap_get_tokens__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

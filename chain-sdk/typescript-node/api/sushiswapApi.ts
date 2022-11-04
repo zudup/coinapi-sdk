@@ -1073,7 +1073,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetPools (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      */
     public async sushiswapGetPoolsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pools/current';
@@ -1134,7 +1135,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetPools (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1220,9 +1222,10 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetSwaps (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      */
-    public async sushiswapGetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }> {
+    public async sushiswapGetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SushiswapSwapDTO;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/swaps/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1264,13 +1267,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: SushiswapSwapDTO;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SushiswapSwapDTO>");
+                            body = ObjectSerializer.deserialize(body, "SushiswapSwapDTO");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1281,7 +1284,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetSwaps (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1367,9 +1371,10 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetTokens (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      */
-    public async sushiswapGetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }> {
+    public async sushiswapGetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SushiswapTokenDTO;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1411,13 +1416,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: SushiswapTokenDTO;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SushiswapTokenDTO>");
+                            body = ObjectSerializer.deserialize(body, "SushiswapTokenDTO");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1428,7 +1433,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * GetTokens (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

@@ -835,8 +835,8 @@ class SushiswapApi {
     return _response;
   }
 
-  /// sushiswapGetPoolsCurrent
-  /// GetPools (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -907,8 +907,8 @@ class SushiswapApi {
     );
   }
 
-  /// sushiswapGetPoolsHistorical
-  /// GetPools (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+  /// 
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -998,8 +998,8 @@ class SushiswapApi {
     );
   }
 
-  /// sushiswapGetSwapsCurrent
-  /// GetSwaps (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1009,9 +1009,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapSwapDTO>] as data
+  /// Returns a [Future] containing a [Response] with a [SushiswapSwapDTO] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapSwapDTO>>> sushiswapGetSwapsCurrent({ 
+  Future<Response<SushiswapSwapDTO>> sushiswapGetSwapsCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1040,14 +1040,14 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<SushiswapSwapDTO> _responseData;
+    SushiswapSwapDTO _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(SushiswapSwapDTO)]);
+      const _responseType = FullType(SushiswapSwapDTO);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<SushiswapSwapDTO>;
+      ) as SushiswapSwapDTO;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1058,7 +1058,7 @@ class SushiswapApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<SushiswapSwapDTO>>(
+    return Response<SushiswapSwapDTO>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1070,8 +1070,8 @@ class SushiswapApi {
     );
   }
 
-  /// sushiswapGetSwapsHistorical
-  /// GetSwaps (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+  /// 
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -1161,8 +1161,8 @@ class SushiswapApi {
     );
   }
 
-  /// sushiswapGetTokensCurrent
-  /// GetTokens (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+  /// 
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1172,9 +1172,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTokenDTO>] as data
+  /// Returns a [Future] containing a [Response] with a [SushiswapTokenDTO] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapTokenDTO>>> sushiswapGetTokensCurrent({ 
+  Future<Response<SushiswapTokenDTO>> sushiswapGetTokensCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1203,14 +1203,14 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<SushiswapTokenDTO> _responseData;
+    SushiswapTokenDTO _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(SushiswapTokenDTO)]);
+      const _responseType = FullType(SushiswapTokenDTO);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<SushiswapTokenDTO>;
+      ) as SushiswapTokenDTO;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1221,7 +1221,7 @@ class SushiswapApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<SushiswapTokenDTO>>(
+    return Response<SushiswapTokenDTO>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1233,8 +1233,8 @@ class SushiswapApi {
     );
   }
 
-  /// sushiswapGetTokensHistorical
-  /// GetTokens (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+  /// 
   ///
   /// Parameters:
   /// * [startBlock] 

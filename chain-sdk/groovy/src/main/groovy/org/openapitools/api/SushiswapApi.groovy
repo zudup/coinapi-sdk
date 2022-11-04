@@ -517,7 +517,7 @@ class SushiswapApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
+                    "GET", "",
                     SushiswapSwapDTO.class )
 
     }
@@ -572,7 +572,7 @@ class SushiswapApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
+                    "GET", "",
                     SushiswapTokenDTO.class )
 
     }

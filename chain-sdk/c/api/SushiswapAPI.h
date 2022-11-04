@@ -62,37 +62,37 @@ void
 SushiswapAPI_dappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetPools (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 //
 list_t*
 SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
 
 
-// GetPools (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetSwaps (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 //
-list_t*
+sushiswap_swap_dto_t*
 SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient);
 
 
-// GetSwaps (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetTokens (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 //
-list_t*
+sushiswap_token_dto_t*
 SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient);
 
 
-// GetTokens (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );

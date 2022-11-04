@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapPoolsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapPoolsHistorical unit test stubs
+        Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

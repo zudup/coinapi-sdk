@@ -300,7 +300,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetSwapsCurrent();
-            //Assert.IsInstanceOf(typeof(List<SushiswapSwapDTO>), response, "response is List<SushiswapSwapDTO>");
+            //Assert.IsInstanceOf(typeof(SushiswapSwapDTO), response, "response is SushiswapSwapDTO");
         }
         
         /// <summary>
@@ -327,7 +327,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetTokensCurrent();
-            //Assert.IsInstanceOf(typeof(List<SushiswapTokenDTO>), response, "response is List<SushiswapTokenDTO>");
+            //Assert.IsInstanceOf(typeof(SushiswapTokenDTO), response, "response is SushiswapTokenDTO");
         }
         
         /// <summary>

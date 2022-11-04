@@ -416,7 +416,7 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetPools (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      */
     sushiswapGetPoolsCurrent(): Observable<Array<SushiswapPairDTO>>
     sushiswapGetPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
@@ -428,7 +428,7 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetPools (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      */
     sushiswapGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPoolsHistoricalRequest): Observable<Array<SushiswapPairDTO>>
     sushiswapGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPoolsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
@@ -450,19 +450,19 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetSwaps (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      */
-    sushiswapGetSwapsCurrent(): Observable<Array<SushiswapSwapDTO>>
-    sushiswapGetSwapsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapSwapDTO>>>
-    sushiswapGetSwapsCurrent(opts?: OperationOpts): Observable<Array<SushiswapSwapDTO> | AjaxResponse<Array<SushiswapSwapDTO>>> {
-        return this.request<Array<SushiswapSwapDTO>>({
+    sushiswapGetSwapsCurrent(): Observable<SushiswapSwapDTO>
+    sushiswapGetSwapsCurrent(opts?: OperationOpts): Observable<AjaxResponse<SushiswapSwapDTO>>
+    sushiswapGetSwapsCurrent(opts?: OperationOpts): Observable<SushiswapSwapDTO | AjaxResponse<SushiswapSwapDTO>> {
+        return this.request<SushiswapSwapDTO>({
             url: '/dapps/sushiswap/swaps/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
 
     /**
-     * GetSwaps (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      */
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapsHistoricalRequest): Observable<Array<SushiswapSwapDTO>>
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapSwapDTO>>>
@@ -484,19 +484,19 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetTokens (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      */
-    sushiswapGetTokensCurrent(): Observable<Array<SushiswapTokenDTO>>
-    sushiswapGetTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDTO>>>
-    sushiswapGetTokensCurrent(opts?: OperationOpts): Observable<Array<SushiswapTokenDTO> | AjaxResponse<Array<SushiswapTokenDTO>>> {
-        return this.request<Array<SushiswapTokenDTO>>({
+    sushiswapGetTokensCurrent(): Observable<SushiswapTokenDTO>
+    sushiswapGetTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<SushiswapTokenDTO>>
+    sushiswapGetTokensCurrent(opts?: OperationOpts): Observable<SushiswapTokenDTO | AjaxResponse<SushiswapTokenDTO>> {
+        return this.request<SushiswapTokenDTO>({
             url: '/dapps/sushiswap/tokens/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
 
     /**
-     * GetTokens (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      */
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: SushiswapGetTokensHistoricalRequest): Observable<Array<SushiswapTokenDTO>>
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: SushiswapGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDTO>>>

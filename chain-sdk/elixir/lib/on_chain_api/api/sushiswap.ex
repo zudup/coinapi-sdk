@@ -531,7 +531,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (current)
+  Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
   ### Parameters
 
@@ -543,8 +543,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_pools_current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_pools_current(connection, _opts \\ []) do
+  @spec sushiswap_get_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_pools__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
@@ -559,7 +559,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (historical)
+  Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
   ### Parameters
 
@@ -576,8 +576,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_pools_historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_pools_historical(connection, opts \\ []) do
+  @spec sushiswap_get_pools__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_pools__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -601,7 +601,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps (current)
+  Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
   ### Parameters
 
@@ -610,11 +610,11 @@ defmodule OnChainAPI.Api.Sushiswap do
 
   ### Returns
 
-  - `{:ok, [%SushiswapSwapDto{}, ...]}` on success
+  - `{:ok, OnChainAPI.Model.SushiswapSwapDto.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_swaps_current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapSwapDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_swaps_current(connection, _opts \\ []) do
+  @spec sushiswap_get_swaps__current(Tesla.Env.client, keyword()) :: {:ok, OnChainAPI.Model.SushiswapSwapDto.t} | {:error, Tesla.Env.t}
+  def sushiswap_get_swaps__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
@@ -624,12 +624,12 @@ defmodule OnChainAPI.Api.Sushiswap do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.SushiswapSwapDto{}]}
+      {200, %OnChainAPI.Model.SushiswapSwapDto{}}
     ])
   end
 
   @doc """
-  GetSwaps (historical)
+  Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
   ### Parameters
 
@@ -646,8 +646,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapSwapDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_swaps_historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapSwapDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_swaps_historical(connection, opts \\ []) do
+  @spec sushiswap_get_swaps__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapSwapDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_swaps__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -671,7 +671,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens (current)
+  Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
   ### Parameters
 
@@ -680,11 +680,11 @@ defmodule OnChainAPI.Api.Sushiswap do
 
   ### Returns
 
-  - `{:ok, [%SushiswapTokenDto{}, ...]}` on success
+  - `{:ok, OnChainAPI.Model.SushiswapTokenDto.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_tokens_current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_tokens_current(connection, _opts \\ []) do
+  @spec sushiswap_get_tokens__current(Tesla.Env.client, keyword()) :: {:ok, OnChainAPI.Model.SushiswapTokenDto.t} | {:error, Tesla.Env.t}
+  def sushiswap_get_tokens__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
@@ -694,12 +694,12 @@ defmodule OnChainAPI.Api.Sushiswap do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.SushiswapTokenDto{}]}
+      {200, %OnChainAPI.Model.SushiswapTokenDto{}}
     ])
   end
 
   @doc """
-  GetTokens (historical)
+  Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
   ### Parameters
 
@@ -716,8 +716,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapTokenDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_tokens_historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_tokens_historical(connection, opts \\ []) do
+  @spec sushiswap_get_tokens__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_tokens__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,

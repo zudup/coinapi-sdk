@@ -22,12 +22,12 @@ Method | HTTP request | Description
 [**dapps_sushiswap_token_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_transactions_historical_get**](SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical | 
-[**sushiswap_get_pools_current**](SushiswapApi.md#sushiswap_get_pools_current) | **GET** /dapps/sushiswap/pools/current | 
-[**sushiswap_get_pools_historical**](SushiswapApi.md#sushiswap_get_pools_historical) | **GET** /dapps/sushiswap/pools/historical | 
-[**sushiswap_get_swaps_current**](SushiswapApi.md#sushiswap_get_swaps_current) | **GET** /dapps/sushiswap/swaps/current | 
-[**sushiswap_get_swaps_historical**](SushiswapApi.md#sushiswap_get_swaps_historical) | **GET** /dapps/sushiswap/swaps/historical | 
-[**sushiswap_get_tokens_current**](SushiswapApi.md#sushiswap_get_tokens_current) | **GET** /dapps/sushiswap/tokens/current | 
-[**sushiswap_get_tokens_historical**](SushiswapApi.md#sushiswap_get_tokens_historical) | **GET** /dapps/sushiswap/tokens/historical | 
+[**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+[**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+[**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+[**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+[**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+[**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 
 # **dapps_sushiswap_bundles_historical_get**
@@ -681,12 +681,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_pools_current**
-> ARRAY[SushiswapPairDTO] sushiswap_get_pools_current()
+# **sushiswap_get_pools__current**
+> ARRAY[SushiswapPairDTO] sushiswap_get_pools__current()
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Example
 ```perl
@@ -697,11 +695,11 @@ my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
 
 
 eval {
-    my $result = $api_instance->sushiswap_get_pools_current();
+    my $result = $api_instance->sushiswap_get_pools__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pools_current: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_pools__current: $@\n";
 }
 ```
 
@@ -723,12 +721,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_pools_historical**
-> ARRAY[SushiswapPairDTO] sushiswap_get_pools_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **sushiswap_get_pools__historical**
+> ARRAY[SushiswapPairDTO] sushiswap_get_pools__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Example
 ```perl
@@ -744,11 +740,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->sushiswap_get_pools_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->sushiswap_get_pools__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pools_historical: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_pools__historical: $@\n";
 }
 ```
 
@@ -777,12 +773,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_swaps_current**
-> ARRAY[SushiswapSwapDTO] sushiswap_get_swaps_current()
+# **sushiswap_get_swaps__current**
+> SushiswapSwapDTO sushiswap_get_swaps__current()
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Example
 ```perl
@@ -793,11 +787,11 @@ my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
 
 
 eval {
-    my $result = $api_instance->sushiswap_get_swaps_current();
+    my $result = $api_instance->sushiswap_get_swaps__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_swaps_current: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_swaps__current: $@\n";
 }
 ```
 
@@ -806,7 +800,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -819,12 +813,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_swaps_historical**
-> ARRAY[SushiswapSwapDTO] sushiswap_get_swaps_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **sushiswap_get_swaps__historical**
+> ARRAY[SushiswapSwapDTO] sushiswap_get_swaps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Example
 ```perl
@@ -840,11 +832,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->sushiswap_get_swaps_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->sushiswap_get_swaps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_swaps_historical: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_swaps__historical: $@\n";
 }
 ```
 
@@ -873,12 +865,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_tokens_current**
-> ARRAY[SushiswapTokenDTO] sushiswap_get_tokens_current()
+# **sushiswap_get_tokens__current**
+> SushiswapTokenDTO sushiswap_get_tokens__current()
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Example
 ```perl
@@ -889,11 +879,11 @@ my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
 
 
 eval {
-    my $result = $api_instance->sushiswap_get_tokens_current();
+    my $result = $api_instance->sushiswap_get_tokens__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_tokens_current: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_tokens__current: $@\n";
 }
 ```
 
@@ -902,7 +892,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -915,12 +905,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_tokens_historical**
-> ARRAY[SushiswapTokenDTO] sushiswap_get_tokens_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **sushiswap_get_tokens__historical**
+> ARRAY[SushiswapTokenDTO] sushiswap_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Example
 ```perl
@@ -936,11 +924,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    my $result = $api_instance->sushiswap_get_tokens_historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->sushiswap_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_tokens_historical: $@\n";
+    warn "Exception when calling SushiswapApi->sushiswap_get_tokens__historical: $@\n";
 }
 ```
 

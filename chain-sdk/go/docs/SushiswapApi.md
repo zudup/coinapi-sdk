@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **Get** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **Get** /dapps/sushiswap/users/historical | 
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | 
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | 
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | 
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | 
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | 
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | 
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 
 
@@ -941,9 +941,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsCurrent(ctx).Execute()
 
-
-
-
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Example
 
@@ -1002,9 +1000,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-
-
-
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Example
 
@@ -1075,11 +1071,9 @@ No authorization required
 
 ## SushiswapGetSwapsCurrent
 
-> []SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
+> SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
 
-
-
-
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Example
 
@@ -1102,7 +1096,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetSwapsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetSwapsCurrent`: []SushiswapSwapDTO
+    // response from `SushiswapGetSwapsCurrent`: SushiswapSwapDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetSwapsCurrent`: %v\n", resp)
 }
 ```
@@ -1118,7 +1112,7 @@ Other parameters are passed through a pointer to a apiSushiswapGetSwapsCurrentRe
 
 ### Return type
 
-[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
+[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1138,9 +1132,7 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-
-
-
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Example
 
@@ -1211,11 +1203,9 @@ No authorization required
 
 ## SushiswapGetTokensCurrent
 
-> []SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
+> SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
 
-
-
-
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Example
 
@@ -1238,7 +1228,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetTokensCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetTokensCurrent`: []SushiswapTokenDTO
+    // response from `SushiswapGetTokensCurrent`: SushiswapTokenDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetTokensCurrent`: %v\n", resp)
 }
 ```
@@ -1254,7 +1244,7 @@ Other parameters are passed through a pointer to a apiSushiswapGetTokensCurrentR
 
 ### Return type
 
-[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
+[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1274,9 +1264,7 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-
-
-
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Example
 

@@ -1471,7 +1471,7 @@ end:
 
 }
 
-// GetPools (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 //
 list_t*
 SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient)
@@ -1544,7 +1544,7 @@ end:
 
 }
 
-// GetPools (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
@@ -1721,9 +1721,9 @@ end:
 
 }
 
-// GetSwaps (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 //
-list_t*
+sushiswap_swap_dto_t*
 SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
@@ -1757,24 +1757,14 @@ SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient)
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","successful operation");
     //}
+    //nonprimitive not container
     cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
+    sushiswap_swap_dto_t *elementToReturn = sushiswap_swap_dto_parseFromJSON(SushiswapAPIlocalVarJSON);
+    cJSON_Delete(SushiswapAPIlocalVarJSON);
+    if(elementToReturn == NULL) {
+        // return 0;
     }
 
-    cJSON_Delete( SushiswapAPIlocalVarJSON);
-    cJSON_Delete( VarJSON);
     //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
@@ -1794,7 +1784,7 @@ end:
 
 }
 
-// GetSwaps (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
@@ -1971,9 +1961,9 @@ end:
 
 }
 
-// GetTokens (current)
+// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 //
-list_t*
+sushiswap_token_dto_t*
 SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
@@ -2007,24 +1997,14 @@ SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient)
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","successful operation");
     //}
+    //nonprimitive not container
     cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
+    sushiswap_token_dto_t *elementToReturn = sushiswap_token_dto_parseFromJSON(SushiswapAPIlocalVarJSON);
+    cJSON_Delete(SushiswapAPIlocalVarJSON);
+    if(elementToReturn == NULL) {
+        // return 0;
     }
 
-    cJSON_Delete( SushiswapAPIlocalVarJSON);
-    cJSON_Delete( VarJSON);
     //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
@@ -2044,7 +2024,7 @@ end:
 
 }
 
-// GetTokens (historical)
+// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 //
 list_t*
 SushiswapAPI_sushiswapGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId )

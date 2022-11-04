@@ -167,53 +167,53 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $dapps_sushiswap_users_historical_get_result = $api->dapps_sushiswap_users_historical_get(start_block => $dapps_sushiswap_users_historical_get_start_block, end_block => $dapps_sushiswap_users_historical_get_end_block, start_date => $dapps_sushiswap_users_historical_get_start_date, end_date => $dapps_sushiswap_users_historical_get_end_date);
 
 #
-# sushiswap_get_pools_current test
+# sushiswap_get_pools__current test
 #
 # uncomment below and update the test
-#my $sushiswap_get_pools_current_result = $api->sushiswap_get_pools_current();
+#my $sushiswap_get_pools__current_result = $api->sushiswap_get_pools__current();
 
 #
-# sushiswap_get_pools_historical test
+# sushiswap_get_pools__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_pools_historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pools_historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pools_historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pools_historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pools_historical_pool_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_pools_historical_result = $api->sushiswap_get_pools_historical(start_block => $sushiswap_get_pools_historical_start_block, end_block => $sushiswap_get_pools_historical_end_block, start_date => $sushiswap_get_pools_historical_start_date, end_date => $sushiswap_get_pools_historical_end_date, pool_id => $sushiswap_get_pools_historical_pool_id);
+#my $sushiswap_get_pools__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pools__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pools__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pools__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pools__historical_pool_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_pools__historical_result = $api->sushiswap_get_pools__historical(start_block => $sushiswap_get_pools__historical_start_block, end_block => $sushiswap_get_pools__historical_end_block, start_date => $sushiswap_get_pools__historical_start_date, end_date => $sushiswap_get_pools__historical_end_date, pool_id => $sushiswap_get_pools__historical_pool_id);
 
 #
-# sushiswap_get_swaps_current test
+# sushiswap_get_swaps__current test
 #
 # uncomment below and update the test
-#my $sushiswap_get_swaps_current_result = $api->sushiswap_get_swaps_current();
+#my $sushiswap_get_swaps__current_result = $api->sushiswap_get_swaps__current();
 
 #
-# sushiswap_get_swaps_historical test
+# sushiswap_get_swaps__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_swaps_historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_swaps_historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_swaps_historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_swaps_historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_swaps_historical_pool_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_swaps_historical_result = $api->sushiswap_get_swaps_historical(start_block => $sushiswap_get_swaps_historical_start_block, end_block => $sushiswap_get_swaps_historical_end_block, start_date => $sushiswap_get_swaps_historical_start_date, end_date => $sushiswap_get_swaps_historical_end_date, pool_id => $sushiswap_get_swaps_historical_pool_id);
+#my $sushiswap_get_swaps__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_swaps__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_swaps__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_swaps__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_swaps__historical_pool_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_swaps__historical_result = $api->sushiswap_get_swaps__historical(start_block => $sushiswap_get_swaps__historical_start_block, end_block => $sushiswap_get_swaps__historical_end_block, start_date => $sushiswap_get_swaps__historical_start_date, end_date => $sushiswap_get_swaps__historical_end_date, pool_id => $sushiswap_get_swaps__historical_pool_id);
 
 #
-# sushiswap_get_tokens_current test
+# sushiswap_get_tokens__current test
 #
 # uncomment below and update the test
-#my $sushiswap_get_tokens_current_result = $api->sushiswap_get_tokens_current();
+#my $sushiswap_get_tokens__current_result = $api->sushiswap_get_tokens__current();
 
 #
-# sushiswap_get_tokens_historical test
+# sushiswap_get_tokens__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_tokens_historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_tokens_historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_tokens_historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_tokens_historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_tokens_historical_token_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_tokens_historical_result = $api->sushiswap_get_tokens_historical(start_block => $sushiswap_get_tokens_historical_start_block, end_block => $sushiswap_get_tokens_historical_end_block, start_date => $sushiswap_get_tokens_historical_start_date, end_date => $sushiswap_get_tokens_historical_end_date, token_id => $sushiswap_get_tokens_historical_token_id);
+#my $sushiswap_get_tokens__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_tokens__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_tokens__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_tokens__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_tokens__historical_token_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_tokens__historical_result = $api->sushiswap_get_tokens__historical(start_block => $sushiswap_get_tokens__historical_start_block, end_block => $sushiswap_get_tokens__historical_end_block, start_date => $sushiswap_get_tokens__historical_start_date, end_date => $sushiswap_get_tokens__historical_end_date, token_id => $sushiswap_get_tokens__historical_token_id);
 

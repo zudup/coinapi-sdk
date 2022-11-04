@@ -229,9 +229,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_current
-            -- 
+            -- Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
             --
-            -- GetPools (current)
+            -- 
         local
             l_response: LIST [SUSHISWAP_PAIR_DTO]
         do
@@ -242,9 +242,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_historical
-            -- 
+            -- Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
             --
-            -- GetPools (historical)
+            -- 
         local
             l_response: LIST [SUSHISWAP_PAIR_DTO]
             l_start_block: INTEGER_64
@@ -260,11 +260,11 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_current
-            -- 
+            -- Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
             --
-            -- GetSwaps (current)
+            -- 
         local
-            l_response: LIST [SUSHISWAP_SWAP_DTO]
+            l_response: SUSHISWAP_SWAP_DTO
         do
             -- TODO: Initialize required params.
 
@@ -273,9 +273,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- 
+            -- Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
             --
-            -- GetSwaps (historical)
+            -- 
         local
             l_response: LIST [SUSHISWAP_SWAP_DTO]
             l_start_block: INTEGER_64
@@ -291,11 +291,11 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_current
-            -- 
+            -- Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
             --
-            -- GetTokens (current)
+            -- 
         local
-            l_response: LIST [SUSHISWAP_TOKEN_DTO]
+            l_response: SUSHISWAP_TOKEN_DTO
         do
             -- TODO: Initialize required params.
 
@@ -304,9 +304,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- 
+            -- Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
             --
-            -- GetTokens (historical)
+            -- 
         local
             l_response: LIST [SUSHISWAP_TOKEN_DTO]
             l_start_block: INTEGER_64

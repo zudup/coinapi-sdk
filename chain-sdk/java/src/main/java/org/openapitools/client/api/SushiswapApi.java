@@ -2016,8 +2016,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * 
-     * GetPools (current)
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2032,8 +2032,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * 
-     * GetPools (current)
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2049,8 +2049,8 @@ public class SushiswapApi {
     }
 
     /**
-     *  (asynchronously)
-     * GetPools (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. (asynchronously)
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2156,8 +2156,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * 
-     * GetPools (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2177,8 +2177,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * 
-     * GetPools (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2199,8 +2199,8 @@ public class SushiswapApi {
     }
 
     /**
-     *  (asynchronously)
-     * GetPools (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. (asynchronously)
+     * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2286,9 +2286,9 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * 
-     * GetSwaps (current)
-     * @return List&lt;SushiswapSwapDTO&gt;
+     * @return SushiswapSwapDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2296,15 +2296,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapSwapDTO> sushiswapGetSwapsCurrent() throws ApiException {
-        ApiResponse<List<SushiswapSwapDTO>> localVarResp = sushiswapGetSwapsCurrentWithHttpInfo();
+    public SushiswapSwapDTO sushiswapGetSwapsCurrent() throws ApiException {
+        ApiResponse<SushiswapSwapDTO> localVarResp = sushiswapGetSwapsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * 
-     * GetSwaps (current)
-     * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
+     * @return ApiResponse&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2312,15 +2312,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapSwapDTO>> sushiswapGetSwapsCurrentWithHttpInfo() throws ApiException {
+    public ApiResponse<SushiswapSwapDTO> sushiswapGetSwapsCurrentWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = sushiswapGetSwapsCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<SushiswapSwapDTO>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * GetSwaps (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. (asynchronously)
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2330,10 +2330,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetSwapsCurrentAsync(final ApiCallback<List<SushiswapSwapDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetSwapsCurrentAsync(final ApiCallback<SushiswapSwapDTO> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sushiswapGetSwapsCurrentValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<SushiswapSwapDTO>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2426,8 +2426,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * 
-     * GetSwaps (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2447,8 +2447,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * 
-     * GetSwaps (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2469,8 +2469,8 @@ public class SushiswapApi {
     }
 
     /**
-     *  (asynchronously)
-     * GetSwaps (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. (asynchronously)
+     * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2556,9 +2556,9 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * 
-     * GetTokens (current)
-     * @return List&lt;SushiswapTokenDTO&gt;
+     * @return SushiswapTokenDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2566,15 +2566,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapTokenDTO> sushiswapGetTokensCurrent() throws ApiException {
-        ApiResponse<List<SushiswapTokenDTO>> localVarResp = sushiswapGetTokensCurrentWithHttpInfo();
+    public SushiswapTokenDTO sushiswapGetTokensCurrent() throws ApiException {
+        ApiResponse<SushiswapTokenDTO> localVarResp = sushiswapGetTokensCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * 
-     * GetTokens (current)
-     * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
+     * @return ApiResponse&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2582,15 +2582,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapTokenDTO>> sushiswapGetTokensCurrentWithHttpInfo() throws ApiException {
+    public ApiResponse<SushiswapTokenDTO> sushiswapGetTokensCurrentWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = sushiswapGetTokensCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<SushiswapTokenDTO>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * GetTokens (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. (asynchronously)
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2600,10 +2600,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetTokensCurrentAsync(final ApiCallback<List<SushiswapTokenDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetTokensCurrentAsync(final ApiCallback<SushiswapTokenDTO> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sushiswapGetTokensCurrentValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<SushiswapTokenDTO>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2696,8 +2696,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * 
-     * GetTokens (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2717,8 +2717,8 @@ public class SushiswapApi {
     }
 
     /**
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * 
-     * GetTokens (historical)
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2739,8 +2739,8 @@ public class SushiswapApi {
     }
 
     /**
-     *  (asynchronously)
-     * GetTokens (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. (asynchronously)
+     * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)

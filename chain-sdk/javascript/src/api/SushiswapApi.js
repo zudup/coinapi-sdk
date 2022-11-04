@@ -631,7 +631,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
      */
@@ -667,7 +667,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -710,14 +710,14 @@ export default class SushiswapApi {
      * Callback function to receive the result of the sushiswapGetSwapsCurrent operation.
      * @callback module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SushiswapSwapDTO>} data The data returned by the service call.
+     * @param {module:model/SushiswapSwapDTO} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * GetSwaps (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SushiswapSwapDTO>}
+     * data is of type: {@link module:model/SushiswapSwapDTO}
      */
     sushiswapGetSwapsCurrent(callback) {
       let postBody = null;
@@ -734,7 +734,7 @@ export default class SushiswapApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [SushiswapSwapDTO];
+      let returnType = SushiswapSwapDTO;
       return this.apiClient.callApi(
         '/dapps/sushiswap/swaps/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -751,7 +751,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -794,14 +794,14 @@ export default class SushiswapApi {
      * Callback function to receive the result of the sushiswapGetTokensCurrent operation.
      * @callback module:api/SushiswapApi~sushiswapGetTokensCurrentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SushiswapTokenDTO>} data The data returned by the service call.
+     * @param {module:model/SushiswapTokenDTO} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * GetTokens (current)
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      * @param {module:api/SushiswapApi~sushiswapGetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SushiswapTokenDTO>}
+     * data is of type: {@link module:model/SushiswapTokenDTO}
      */
     sushiswapGetTokensCurrent(callback) {
       let postBody = null;
@@ -818,7 +818,7 @@ export default class SushiswapApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [SushiswapTokenDTO];
+      let returnType = SushiswapTokenDTO;
       return this.apiClient.callApi(
         '/dapps/sushiswap/tokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -835,7 +835,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens (historical)
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 

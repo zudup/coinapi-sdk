@@ -528,15 +528,13 @@ package .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date);
 
-   --  
-   --  GetPools (current)
-   procedure Sushiswap_Get_Pools_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+   procedure Sushiswap_Get_Pools__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
-   --  
-   --  GetPools (historical)
-   procedure Sushiswap_Get_Pools_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+   procedure Sushiswap_Get_Pools__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -545,15 +543,13 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
-   --  
-   --  GetSwaps (current)
-   procedure Sushiswap_Get_Swaps_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+   procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
+       Result : out .Models.SushiswapSwapDTO_Type);
 
-   --  
-   --  GetSwaps (historical)
-   procedure Sushiswap_Get_Swaps_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+   procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -562,15 +558,13 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
 
-   --  
-   --  GetTokens (current)
-   procedure Sushiswap_Get_Tokens_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+   procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
+       Result : out .Models.SushiswapTokenDTO_Type);
 
-   --  
-   --  GetTokens (historical)
-   procedure Sushiswap_Get_Tokens_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+   procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;

@@ -897,7 +897,7 @@ class SushiswapApi {
     }
   }
 
-  /// GetPools (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
   ///
   /// Note: This method returns the HTTP [Response].
   Future<Response> sushiswapGetPoolsCurrentWithHttpInfo() async {
@@ -925,7 +925,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
   Future<List<SushiswapPairDTO>?> sushiswapGetPoolsCurrent() async {
     final response = await sushiswapGetPoolsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -944,7 +944,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1000,7 +1000,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
   ///
   /// Parameters:
   ///
@@ -1031,7 +1031,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
   ///
   /// Note: This method returns the HTTP [Response].
   Future<Response> sushiswapGetSwapsCurrentWithHttpInfo() async {
@@ -1059,8 +1059,8 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (current)
-  Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsCurrent() async {
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+  Future<SushiswapSwapDTO?> sushiswapGetSwapsCurrent() async {
     final response = await sushiswapGetSwapsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1069,16 +1069,13 @@ class SushiswapApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
-        .cast<SushiswapSwapDTO>()
-        .toList();
-
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SushiswapSwapDTO',) as SushiswapSwapDTO;
+    
     }
     return null;
   }
 
-  /// GetSwaps (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1134,7 +1131,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
   ///
   /// Parameters:
   ///
@@ -1165,7 +1162,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens (current)
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
   ///
   /// Note: This method returns the HTTP [Response].
   Future<Response> sushiswapGetTokensCurrentWithHttpInfo() async {
@@ -1193,8 +1190,8 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (current)
-  Future<List<SushiswapTokenDTO>?> sushiswapGetTokensCurrent() async {
+  /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+  Future<SushiswapTokenDTO?> sushiswapGetTokensCurrent() async {
     final response = await sushiswapGetTokensCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1203,16 +1200,13 @@ class SushiswapApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
-        .cast<SushiswapTokenDTO>()
-        .toList();
-
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SushiswapTokenDTO',) as SushiswapTokenDTO;
+    
     }
     return null;
   }
 
-  /// GetTokens (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1268,7 +1262,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (historical)
+  /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
   ///
   /// Parameters:
   ///

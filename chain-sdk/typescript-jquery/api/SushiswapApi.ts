@@ -985,7 +985,8 @@ export class SushiswapApi {
     }
 
     /**
-     * GetPools (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
      */
     public sushiswapGetPoolsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
@@ -1042,7 +1043,8 @@ export class SushiswapApi {
     }
 
     /**
-     * GetPools (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1119,10 +1121,11 @@ export class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
      */
     public sushiswapGetSwapsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
+    { response: JQueryXHR; body: models.SushiswapSwapDTO;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/swaps/current';
@@ -1163,11 +1166,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
+            { response: JQueryXHR; body: models.SushiswapSwapDTO;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.SushiswapSwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: models.SushiswapSwapDTO, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1176,7 +1179,8 @@ export class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1253,10 +1257,11 @@ export class SushiswapApi {
     }
 
     /**
-     * GetTokens (current)
+     * 
+     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
      */
     public sushiswapGetTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
+    { response: JQueryXHR; body: models.SushiswapTokenDTO;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/tokens/current';
@@ -1297,11 +1302,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
+            { response: JQueryXHR; body: models.SushiswapTokenDTO;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.SushiswapTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: models.SushiswapTokenDTO, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1310,7 +1315,8 @@ export class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical)
+     * 
+     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

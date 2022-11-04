@@ -17,12 +17,12 @@ Feature | HTTP request | Description
 [**dapps_sushiswap_token_day_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_token_day_data_historical_get) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_transactions_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_transactions_historical_get) | **Get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_users_historical_get) | **Get** /dapps/sushiswap/users/historical | 
-[**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | 
-[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical | 
-[**sushiswap_get_swaps_current**](SUSHISWAP_API.md#sushiswap_get_swaps_current) | **Get** /dapps/sushiswap/swaps/current | 
-[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | 
-[**sushiswap_get_tokens_current**](SUSHISWAP_API.md#sushiswap_get_tokens_current) | **Get** /dapps/sushiswap/tokens/current | 
-[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | 
+[**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+[**sushiswap_get_swaps_current**](SUSHISWAP_API.md#sushiswap_get_swaps_current) | **Get** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+[**sushiswap_get_tokens_current**](SUSHISWAP_API.md#sushiswap_get_tokens_current) | **Get** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 
 # **dapps_sushiswap_bundles_historical_get**
@@ -439,9 +439,7 @@ No authorization required
 > sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 
 ### Parameters
@@ -466,9 +464,7 @@ No authorization required
 > sushiswap_get_pools_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 
 ### Parameters
@@ -497,12 +493,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswap_get_swaps_current**
-> sushiswap_get_swaps_current : detachable LIST [SUSHISWAP_SWAP_DTO]
+> sushiswap_get_swaps_current : detachable SUSHISWAP_SWAP_DTO
 
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 
 ### Parameters
@@ -510,7 +504,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SUSHISWAP_SWAP_DTO]**](Sushiswap.SwapDTO.md)
+[**SUSHISWAP_SWAP_DTO**](Sushiswap.SwapDTO.md)
 
 ### Authorization
 
@@ -527,9 +521,7 @@ No authorization required
 > sushiswap_get_swaps_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_SWAP_DTO]
 
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 
 ### Parameters
@@ -558,12 +550,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswap_get_tokens_current**
-> sushiswap_get_tokens_current : detachable LIST [SUSHISWAP_TOKEN_DTO]
+> sushiswap_get_tokens_current : detachable SUSHISWAP_TOKEN_DTO
 
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 
 ### Parameters
@@ -571,7 +561,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SUSHISWAP_TOKEN_DTO]**](Sushiswap.TokenDTO.md)
+[**SUSHISWAP_TOKEN_DTO**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 
@@ -588,9 +578,7 @@ No authorization required
 > sushiswap_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DTO]
 
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 
 ### Parameters

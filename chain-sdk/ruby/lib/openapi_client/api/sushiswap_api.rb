@@ -859,20 +859,20 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairDTO>]
-    def sushiswap_get_pools_current(opts = {})
-      data, _status_code, _headers = sushiswap_get_pools_current_with_http_info(opts)
+    def sushiswap_get_pools__current(opts = {})
+      data, _status_code, _headers = sushiswap_get_pools__current_with_http_info(opts)
       data
     end
 
-    # GetPools (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
-    def sushiswap_get_pools_current_with_http_info(opts = {})
+    def sushiswap_get_pools__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pools_current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pools__current ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/pools/current'
@@ -898,7 +898,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_pools_current",
+        :operation => :"SushiswapApi.sushiswap_get_pools__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -909,12 +909,12 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pools_current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetPools (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -922,12 +922,12 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
     # @return [Array<SushiswapPairDTO>]
-    def sushiswap_get_pools_historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_pools_historical_with_http_info(opts)
+    def sushiswap_get_pools__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_pools__historical_with_http_info(opts)
       data
     end
 
-    # GetPools (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -935,9 +935,9 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
-    def sushiswap_get_pools_historical_with_http_info(opts = {})
+    def sushiswap_get_pools__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pools_historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pools__historical ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/pools/historical'
@@ -968,7 +968,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_pools_historical",
+        :operation => :"SushiswapApi.sushiswap_get_pools__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -979,25 +979,25 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pools_historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pools__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetSwaps (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
     # @param [Hash] opts the optional parameters
-    # @return [Array<SushiswapSwapDTO>]
-    def sushiswap_get_swaps_current(opts = {})
-      data, _status_code, _headers = sushiswap_get_swaps_current_with_http_info(opts)
+    # @return [SushiswapSwapDTO]
+    def sushiswap_get_swaps__current(opts = {})
+      data, _status_code, _headers = sushiswap_get_swaps__current_with_http_info(opts)
       data
     end
 
-    # GetSwaps (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
-    def sushiswap_get_swaps_current_with_http_info(opts = {})
+    # @return [Array<(SushiswapSwapDTO, Integer, Hash)>] SushiswapSwapDTO data, response status code and response headers
+    def sushiswap_get_swaps__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_swaps_current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_swaps__current ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/swaps/current'
@@ -1017,13 +1017,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SushiswapSwapDTO>'
+      return_type = opts[:debug_return_type] || 'SushiswapSwapDTO'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_swaps_current",
+        :operation => :"SushiswapApi.sushiswap_get_swaps__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1034,12 +1034,12 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_swaps_current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_swaps__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetSwaps (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1047,12 +1047,12 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
     # @return [Array<SushiswapSwapDTO>]
-    def sushiswap_get_swaps_historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_swaps_historical_with_http_info(opts)
+    def sushiswap_get_swaps__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_swaps__historical_with_http_info(opts)
       data
     end
 
-    # GetSwaps (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1060,9 +1060,9 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
     # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
-    def sushiswap_get_swaps_historical_with_http_info(opts = {})
+    def sushiswap_get_swaps__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_swaps_historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_swaps__historical ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/swaps/historical'
@@ -1093,7 +1093,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_swaps_historical",
+        :operation => :"SushiswapApi.sushiswap_get_swaps__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1104,25 +1104,25 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_swaps_historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_swaps__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetTokens (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
     # @param [Hash] opts the optional parameters
-    # @return [Array<SushiswapTokenDTO>]
-    def sushiswap_get_tokens_current(opts = {})
-      data, _status_code, _headers = sushiswap_get_tokens_current_with_http_info(opts)
+    # @return [SushiswapTokenDTO]
+    def sushiswap_get_tokens__current(opts = {})
+      data, _status_code, _headers = sushiswap_get_tokens__current_with_http_info(opts)
       data
     end
 
-    # GetTokens (current)
+    # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
-    def sushiswap_get_tokens_current_with_http_info(opts = {})
+    # @return [Array<(SushiswapTokenDTO, Integer, Hash)>] SushiswapTokenDTO data, response status code and response headers
+    def sushiswap_get_tokens__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_tokens_current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_tokens__current ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/tokens/current'
@@ -1142,13 +1142,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SushiswapTokenDTO>'
+      return_type = opts[:debug_return_type] || 'SushiswapTokenDTO'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_tokens_current",
+        :operation => :"SushiswapApi.sushiswap_get_tokens__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1159,12 +1159,12 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_tokens_current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetTokens (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1172,12 +1172,12 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
     # @return [Array<SushiswapTokenDTO>]
-    def sushiswap_get_tokens_historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_tokens_historical_with_http_info(opts)
+    def sushiswap_get_tokens__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_tokens__historical_with_http_info(opts)
       data
     end
 
-    # GetTokens (historical)
+    # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1185,9 +1185,9 @@ module OpenapiClient
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
     # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
-    def sushiswap_get_tokens_historical_with_http_info(opts = {})
+    def sushiswap_get_tokens__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_tokens_historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_tokens__historical ...'
       end
       # resource path
       local_var_path = '/dapps/sushiswap/tokens/historical'
@@ -1218,7 +1218,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_tokens_historical",
+        :operation => :"SushiswapApi.sushiswap_get_tokens__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1229,7 +1229,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_tokens_historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_tokens__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

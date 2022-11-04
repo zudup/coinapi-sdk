@@ -1339,9 +1339,8 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Dapps_Sushiswap_Users_Historical_Get;
 
-   --  
-   --  GetPools (current)
-   procedure Sushiswap_Get_Pools_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+   procedure Sushiswap_Get_Pools__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -1354,11 +1353,10 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/pools/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Pools_Current;
+   end Sushiswap_Get_Pools__current;
 
-   --  
-   --  GetPools (historical)
-   procedure Sushiswap_Get_Pools_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+   procedure Sushiswap_Get_Pools__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1383,13 +1381,12 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/pools/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Pools_Historical;
+   end Sushiswap_Get_Pools__historical;
 
-   --  
-   --  GetSwaps (current)
-   procedure Sushiswap_Get_Swaps_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+   procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapSwapDTO_Type) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1400,11 +1397,10 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/swaps/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Swaps_Current;
+   end Sushiswap_Get_Swaps__current;
 
-   --  
-   --  GetSwaps (historical)
-   procedure Sushiswap_Get_Swaps_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+   procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1429,13 +1425,12 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/swaps/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Swaps_Historical;
+   end Sushiswap_Get_Swaps__historical;
 
-   --  
-   --  GetTokens (current)
-   procedure Sushiswap_Get_Tokens_Current
+   --  Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+   procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapTokenDTO_Type) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1446,11 +1441,10 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/tokens/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Tokens_Current;
+   end Sushiswap_Get_Tokens__current;
 
-   --  
-   --  GetTokens (historical)
-   procedure Sushiswap_Get_Tokens_Historical
+   --  Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+   procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1475,7 +1469,7 @@ package body .Clients is
       URI.Set_Path ("/dapps/sushiswap/tokens/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Tokens_Historical;
+   end Sushiswap_Get_Tokens__historical;
 
    --  
    procedure Dapps_Uniswapv_2Bundles_Historical_Get

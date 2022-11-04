@@ -353,12 +353,12 @@ case $state in
             "dappsSushiswapTokenDayDataHistoricalGet[]" \
             "dappsSushiswapTransactionsHistoricalGet[]" \
             "dappsSushiswapUsersHistoricalGet[]" \
-            "sushiswapGetPoolsCurrent[]" \
-            "sushiswapGetPoolsHistorical[]" \
-            "sushiswapGetSwapsCurrent[]" \
-            "sushiswapGetSwapsHistorical[]" \
-            "sushiswapGetTokensCurrent[]" \
-            "sushiswapGetTokensHistorical[]"             "dappsUniswapv2BundlesHistoricalGet[]" \
+            "sushiswapGetPoolsCurrent[Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.]" \
+            "sushiswapGetPoolsHistorical[Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.]" \
+            "sushiswapGetSwapsCurrent[Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.]" \
+            "sushiswapGetSwapsHistorical[Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.]" \
+            "sushiswapGetTokensCurrent[Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.]" \
+            "sushiswapGetTokensHistorical[Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.]"             "dappsUniswapv2BundlesHistoricalGet[]" \
             "dappsUniswapv2BurnsHistoricalGet[]" \
             "dappsUniswapv2DayDataHistoricalGet[]" \
             "dappsUniswapv2FactoryHistoricalGet[]" \

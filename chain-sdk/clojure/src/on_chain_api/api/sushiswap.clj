@@ -331,8 +331,7 @@
 
 
 (defn-spec sushiswap-get-pools-current-with-http-info any?
-  "
-  GetPools (current)"
+  "Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO."
   []
   (call-api "/dapps/sushiswap/pools/current" :get
             {:path-params   {}
@@ -344,8 +343,7 @@
              :auth-names    []}))
 
 (defn-spec sushiswap-get-pools-current (s/coll-of sushiswap/pair-dto-spec)
-  "
-  GetPools (current)"
+  "Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO."
   []
   (let [res (:data (sushiswap-get-pools-current-with-http-info))]
     (if (:decode-models *api-context*)
@@ -354,8 +352,7 @@
 
 
 (defn-spec sushiswap-get-pools-historical-with-http-info any?
-  "
-  GetPools (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters."
   ([] (sushiswap-get-pools-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/pools/historical" :get
@@ -368,8 +365,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-pools-historical (s/coll-of sushiswap/pair-dto-spec)
-  "
-  GetPools (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters."
   ([] (sushiswap-get-pools-historical nil))
   ([optional-params any?]
    (let [res (:data (sushiswap-get-pools-historical-with-http-info optional-params))]
@@ -379,8 +375,7 @@
 
 
 (defn-spec sushiswap-get-swaps-current-with-http-info any?
-  "
-  GetSwaps (current)"
+  "Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO."
   []
   (call-api "/dapps/sushiswap/swaps/current" :get
             {:path-params   {}
@@ -391,19 +386,17 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-get-swaps-current (s/coll-of sushiswap/swap-dto-spec)
-  "
-  GetSwaps (current)"
+(defn-spec sushiswap-get-swaps-current sushiswap/swap-dto-spec
+  "Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO."
   []
   (let [res (:data (sushiswap-get-swaps-current-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap/swap-dto-spec) res st/string-transformer)
+       (st/decode sushiswap/swap-dto-spec res st/string-transformer)
        res)))
 
 
 (defn-spec sushiswap-get-swaps-historical-with-http-info any?
-  "
-  GetSwaps (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters."
   ([] (sushiswap-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/swaps/historical" :get
@@ -416,8 +409,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-swaps-historical (s/coll-of sushiswap/swap-dto-spec)
-  "
-  GetSwaps (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters."
   ([] (sushiswap-get-swaps-historical nil))
   ([optional-params any?]
    (let [res (:data (sushiswap-get-swaps-historical-with-http-info optional-params))]
@@ -427,8 +419,7 @@
 
 
 (defn-spec sushiswap-get-tokens-current-with-http-info any?
-  "
-  GetTokens (current)"
+  "Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO."
   []
   (call-api "/dapps/sushiswap/tokens/current" :get
             {:path-params   {}
@@ -439,19 +430,17 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-get-tokens-current (s/coll-of sushiswap/token-dto-spec)
-  "
-  GetTokens (current)"
+(defn-spec sushiswap-get-tokens-current sushiswap/token-dto-spec
+  "Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO."
   []
   (let [res (:data (sushiswap-get-tokens-current-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap/token-dto-spec) res st/string-transformer)
+       (st/decode sushiswap/token-dto-spec res st/string-transformer)
        res)))
 
 
 (defn-spec sushiswap-get-tokens-historical-with-http-info any?
-  "
-  GetTokens (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters."
   ([] (sushiswap-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/tokens/historical" :get
@@ -464,8 +453,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-tokens-historical (s/coll-of sushiswap/token-dto-spec)
-  "
-  GetTokens (historical)"
+  "Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters."
   ([] (sushiswap-get-tokens-historical nil))
   ([optional-params any?]
    (let [res (:data (sushiswap-get-tokens-historical-with-http-info optional-params))]

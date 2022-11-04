@@ -17,12 +17,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappssushiswaptokendaydatahistoricalget) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappssushiswaptransactionshistoricalget) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappssushiswapusershistoricalget) | **GET** /dapps/sushiswap/users/historical |  |
-| [**SushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current |  |
-| [**SushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapgetpoolshistorical) | **GET** /dapps/sushiswap/pools/historical |  |
-| [**SushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current |  |
-| [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical |  |
-| [**SushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current |  |
-| [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical |  |
+| [**SushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. |
+| [**SushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapgetpoolshistorical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. |
+| [**SushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. |
+| [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. |
+| [**SushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. |
+| [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. |
 
 <a name="dappssushiswapbundleshistoricalget"></a>
 # **DappsSushiswapBundlesHistoricalGet**
@@ -1199,9 +1199,7 @@ No authorization required
 # **SushiswapGetPoolsCurrent**
 > List&lt;SushiswapPairDTO&gt; SushiswapGetPoolsCurrent ()
 
-
-
-GetPools (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
 
 ### Example
 ```csharp
@@ -1223,6 +1221,7 @@ namespace Example
 
             try
             {
+                // Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
                 List<SushiswapPairDTO> result = apiInstance.SushiswapGetPoolsCurrent();
                 Debug.WriteLine(result);
             }
@@ -1243,6 +1242,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
+    // Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
     ApiResponse<List<SushiswapPairDTO>> response = apiInstance.SushiswapGetPoolsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1283,9 +1283,7 @@ No authorization required
 # **SushiswapGetPoolsHistorical**
 > List&lt;SushiswapPairDTO&gt; SushiswapGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-
-
-GetPools (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
 
 ### Example
 ```csharp
@@ -1312,6 +1310,7 @@ namespace Example
 
             try
             {
+                // Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
                 List<SushiswapPairDTO> result = apiInstance.SushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1332,6 +1331,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
+    // Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
     ApiResponse<List<SushiswapPairDTO>> response = apiInstance.SushiswapGetPoolsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1378,11 +1378,9 @@ No authorization required
 
 <a name="sushiswapgetswapscurrent"></a>
 # **SushiswapGetSwapsCurrent**
-> List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsCurrent ()
+> SushiswapSwapDTO SushiswapGetSwapsCurrent ()
 
-
-
-GetSwaps (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
 
 ### Example
 ```csharp
@@ -1404,7 +1402,8 @@ namespace Example
 
             try
             {
-                List<SushiswapSwapDTO> result = apiInstance.SushiswapGetSwapsCurrent();
+                // Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+                SushiswapSwapDTO result = apiInstance.SushiswapGetSwapsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1424,7 +1423,8 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<SushiswapSwapDTO>> response = apiInstance.SushiswapGetSwapsCurrentWithHttpInfo();
+    // Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    ApiResponse<SushiswapSwapDTO> response = apiInstance.SushiswapGetSwapsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1441,7 +1441,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1464,9 +1464,7 @@ No authorization required
 # **SushiswapGetSwapsHistorical**
 > List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-
-
-GetSwaps (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
 
 ### Example
 ```csharp
@@ -1493,6 +1491,7 @@ namespace Example
 
             try
             {
+                // Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
                 List<SushiswapSwapDTO> result = apiInstance.SushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1513,6 +1512,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
+    // Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
     ApiResponse<List<SushiswapSwapDTO>> response = apiInstance.SushiswapGetSwapsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1559,11 +1559,9 @@ No authorization required
 
 <a name="sushiswapgettokenscurrent"></a>
 # **SushiswapGetTokensCurrent**
-> List&lt;SushiswapTokenDTO&gt; SushiswapGetTokensCurrent ()
+> SushiswapTokenDTO SushiswapGetTokensCurrent ()
 
-
-
-GetTokens (current)
+Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
 
 ### Example
 ```csharp
@@ -1585,7 +1583,8 @@ namespace Example
 
             try
             {
-                List<SushiswapTokenDTO> result = apiInstance.SushiswapGetTokensCurrent();
+                // Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+                SushiswapTokenDTO result = apiInstance.SushiswapGetTokensCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1605,7 +1604,8 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<SushiswapTokenDTO>> response = apiInstance.SushiswapGetTokensCurrentWithHttpInfo();
+    // Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    ApiResponse<SushiswapTokenDTO> response = apiInstance.SushiswapGetTokensCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1622,7 +1622,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1645,9 +1645,7 @@ No authorization required
 # **SushiswapGetTokensHistorical**
 > List&lt;SushiswapTokenDTO&gt; SushiswapGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-
-
-GetTokens (historical)
+Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
 
 ### Example
 ```csharp
@@ -1674,6 +1672,7 @@ namespace Example
 
             try
             {
+                // Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
                 List<SushiswapTokenDTO> result = apiInstance.SushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -1694,6 +1693,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
+    // Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
     ApiResponse<List<SushiswapTokenDTO>> response = apiInstance.SushiswapGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

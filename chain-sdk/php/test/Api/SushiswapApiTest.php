@@ -231,7 +231,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsCurrent
      *
-     * .
+     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO..
      *
      */
     public function testSushiswapGetPoolsCurrent()
@@ -243,7 +243,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsHistorical
      *
-     * .
+     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters..
      *
      */
     public function testSushiswapGetPoolsHistorical()
@@ -255,7 +255,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsCurrent
      *
-     * .
+     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO..
      *
      */
     public function testSushiswapGetSwapsCurrent()
@@ -267,7 +267,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsHistorical
      *
-     * .
+     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters..
      *
      */
     public function testSushiswapGetSwapsHistorical()
@@ -279,7 +279,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensCurrent
      *
-     * .
+     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO..
      *
      */
     public function testSushiswapGetTokensCurrent()
@@ -291,7 +291,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensHistorical
      *
-     * .
+     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters..
      *
      */
     public function testSushiswapGetTokensHistorical()

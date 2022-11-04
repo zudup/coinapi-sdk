@@ -275,8 +275,6 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * GetPools (current)
-   * 
    * Expected answers:
    *   code 200 : Seq[PairDTO] (successful operation)
    */
@@ -286,8 +284,6 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * GetPools (historical)
-   * 
    * Expected answers:
    *   code 200 : Seq[PairDTO] (successful operation)
    * 
@@ -308,19 +304,15 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * GetSwaps (current)
-   * 
    * Expected answers:
-   *   code 200 : Seq[SwapDTO] (successful operation)
+   *   code 200 : SwapDTO (successful operation)
    */
-  def sushiswapGetSwapsCurrent(): ApiRequest[Seq[SwapDTO]] =
-    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/swaps/current", "application/json")
-      .withSuccessResponse[Seq[SwapDTO]](200)
+  def sushiswapGetSwapsCurrent(): ApiRequest[SwapDTO] =
+    ApiRequest[SwapDTO](ApiMethods.GET, baseUrl, "/dapps/sushiswap/swaps/current", "application/json")
+      .withSuccessResponse[SwapDTO](200)
       
 
   /**
-   * GetSwaps (historical)
-   * 
    * Expected answers:
    *   code 200 : Seq[SwapDTO] (successful operation)
    * 
@@ -341,19 +333,15 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * GetTokens (current)
-   * 
    * Expected answers:
-   *   code 200 : Seq[TokenDTO] (successful operation)
+   *   code 200 : TokenDTO (successful operation)
    */
-  def sushiswapGetTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
-    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokens/current", "application/json")
-      .withSuccessResponse[Seq[TokenDTO]](200)
+  def sushiswapGetTokensCurrent(): ApiRequest[TokenDTO] =
+    ApiRequest[TokenDTO](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokens/current", "application/json")
+      .withSuccessResponse[TokenDTO](200)
       
 
   /**
-   * GetTokens (historical)
-   * 
    * Expected answers:
    *   code 200 : Seq[TokenDTO] (successful operation)
    * 
