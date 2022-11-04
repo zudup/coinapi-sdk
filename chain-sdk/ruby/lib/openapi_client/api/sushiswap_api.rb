@@ -670,7 +670,7 @@ module OpenapiClient
     # GetPools
     # Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     # @param [Hash] opts the optional parameters
-    # @return [Array<PairDTO>]
+    # @return [Array<SushiswapPairDTO>]
     def dapps_sushiswap_pools_current_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_pools_current_get_with_http_info(opts)
       data
@@ -679,7 +679,7 @@ module OpenapiClient
     # GetPools
     # Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<PairDTO>, Integer, Hash)>] Array<PairDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
     def dapps_sushiswap_pools_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_pools_current_get ...'
@@ -702,7 +702,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PairDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapPairDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -731,7 +731,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<PairDTO>]
+    # @return [Array<SushiswapPairDTO>]
     def dapps_sushiswap_pools_historical_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_pools_historical_get_with_http_info(opts)
       data
@@ -744,7 +744,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(Array<PairDTO>, Integer, Hash)>] Array<PairDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
     def dapps_sushiswap_pools_historical_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_pools_historical_get ...'
@@ -772,7 +772,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PairDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapPairDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -796,7 +796,7 @@ module OpenapiClient
 
     # GetSwaps
     # @param [Hash] opts the optional parameters
-    # @return [Array<SwapDTO>]
+    # @return [Array<SushiswapSwapDTO>]
     def dapps_sushiswap_swaps_current_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_swaps_current_get_with_http_info(opts)
       data
@@ -804,7 +804,7 @@ module OpenapiClient
 
     # GetSwaps
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<SwapDTO>, Integer, Hash)>] Array<SwapDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
     def dapps_sushiswap_swaps_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_swaps_current_get ...'
@@ -827,7 +827,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SwapDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapSwapDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -856,7 +856,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<SwapDTO>]
+    # @return [Array<SushiswapSwapDTO>]
     def dapps_sushiswap_swaps_historical_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_swaps_historical_get_with_http_info(opts)
       data
@@ -869,7 +869,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(Array<SwapDTO>, Integer, Hash)>] Array<SwapDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
     def dapps_sushiswap_swaps_historical_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_swaps_historical_get ...'
@@ -897,7 +897,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SwapDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapSwapDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -987,7 +987,7 @@ module OpenapiClient
 
     # GetTokens
     # @param [Hash] opts the optional parameters
-    # @return [Array<TokenDTO>]
+    # @return [Array<SushiswapTokenDTO>]
     def dapps_sushiswap_tokens_current_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_tokens_current_get_with_http_info(opts)
       data
@@ -995,7 +995,7 @@ module OpenapiClient
 
     # GetTokens
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<TokenDTO>, Integer, Hash)>] Array<TokenDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
     def dapps_sushiswap_tokens_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_tokens_current_get ...'
@@ -1018,7 +1018,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapTokenDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1047,7 +1047,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<TokenDTO>]
+    # @return [Array<SushiswapTokenDTO>]
     def dapps_sushiswap_tokens_historical_get(opts = {})
       data, _status_code, _headers = dapps_sushiswap_tokens_historical_get_with_http_info(opts)
       data
@@ -1060,7 +1060,7 @@ module OpenapiClient
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(Array<TokenDTO>, Integer, Hash)>] Array<TokenDTO> data, response status code and response headers
+    # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
     def dapps_sushiswap_tokens_historical_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SushiswapApi.dapps_sushiswap_tokens_historical_get ...'
@@ -1088,7 +1088,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenDTO>'
+      return_type = opts[:debug_return_type] || 'Array<SushiswapTokenDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

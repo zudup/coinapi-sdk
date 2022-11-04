@@ -234,11 +234,11 @@ dapps_sushiswap_pool_hour_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetPools
 %% Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
--spec dapps_sushiswap_pools_current_get(ctx:ctx()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_current_get(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_current_get(Ctx) ->
     dapps_sushiswap_pools_current_get(Ctx, #{}).
 
--spec dapps_sushiswap_pools_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -255,11 +255,11 @@ dapps_sushiswap_pools_current_get(Ctx, Optional) ->
 
 %% @doc GetPools (historical)
 %% 
--spec dapps_sushiswap_pools_historical_get(ctx:ctx()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_historical_get(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_historical_get(Ctx) ->
     dapps_sushiswap_pools_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_pools_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -276,11 +276,11 @@ dapps_sushiswap_pools_historical_get(Ctx, Optional) ->
 
 %% @doc GetSwaps
 %% 
--spec dapps_sushiswap_swaps_current_get(ctx:ctx()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_current_get(ctx:ctx()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_current_get(Ctx) ->
     dapps_sushiswap_swaps_current_get(Ctx, #{}).
 
--spec dapps_sushiswap_swaps_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -297,11 +297,11 @@ dapps_sushiswap_swaps_current_get(Ctx, Optional) ->
 
 %% @doc GetSwaps (historical)
 %% 
--spec dapps_sushiswap_swaps_historical_get(ctx:ctx()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_historical_get(ctx:ctx()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_historical_get(Ctx) ->
     dapps_sushiswap_swaps_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_swaps_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -339,11 +339,11 @@ dapps_sushiswap_token_day_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetTokens
 %% 
--spec dapps_sushiswap_tokens_current_get(ctx:ctx()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_current_get(ctx:ctx()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_current_get(Ctx) ->
     dapps_sushiswap_tokens_current_get(Ctx, #{}).
 
--spec dapps_sushiswap_tokens_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -360,11 +360,11 @@ dapps_sushiswap_tokens_current_get(Ctx, Optional) ->
 
 %% @doc GetTokens (historical)
 %% 
--spec dapps_sushiswap_tokens_historical_get(ctx:ctx()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_historical_get(ctx:ctx()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_historical_get(Ctx) ->
     dapps_sushiswap_tokens_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),

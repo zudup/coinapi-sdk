@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.PairV2DTO
-import org.openapitools.client.models.SwapV2DTO
-import org.openapitools.client.models.TokenV2DTO
+import org.openapitools.client.models.UniswapV2PairV2DTO
+import org.openapitools.client.models.UniswapV2SwapV2DTO
+import org.openapitools.client.models.UniswapV2TokenV2DTO
 
 import com.squareup.moshi.Json
 
@@ -897,7 +897,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return kotlin.collections.List<PairV2DTO>
+     * @return kotlin.collections.List<UniswapV2PairV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -906,11 +906,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsUniswapv2PoolsCurrentGet(filterPoolId: kotlin.String? = null) : kotlin.collections.List<PairV2DTO> {
+    fun dappsUniswapv2PoolsCurrentGet(filterPoolId: kotlin.String? = null) : kotlin.collections.List<UniswapV2PairV2DTO> {
         val localVarResponse = dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId = filterPoolId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PairV2DTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2PairV2DTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -928,16 +928,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse<kotlin.collections.List<PairV2DTO>?>
+     * @return ApiResponse<kotlin.collections.List<UniswapV2PairV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId: kotlin.String?) : ApiResponse<kotlin.collections.List<PairV2DTO>?> {
+    fun dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2PairV2DTO>?> {
         val localVariableConfig = dappsUniswapv2PoolsCurrentGetRequestConfig(filterPoolId = filterPoolId)
 
-        return request<Unit, kotlin.collections.List<PairV2DTO>>(
+        return request<Unit, kotlin.collections.List<UniswapV2PairV2DTO>>(
             localVariableConfig
         )
     }
@@ -1067,7 +1067,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @return kotlin.collections.List<SwapV2DTO>
+     * @return kotlin.collections.List<UniswapV2SwapV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1076,11 +1076,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsUniswapv2SwapsCurrentGet() : kotlin.collections.List<SwapV2DTO> {
+    fun dappsUniswapv2SwapsCurrentGet() : kotlin.collections.List<UniswapV2SwapV2DTO> {
         val localVarResponse = dappsUniswapv2SwapsCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SwapV2DTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2SwapV2DTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1097,16 +1097,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @return ApiResponse<kotlin.collections.List<SwapV2DTO>?>
+     * @return ApiResponse<kotlin.collections.List<UniswapV2SwapV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsUniswapv2SwapsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SwapV2DTO>?> {
+    fun dappsUniswapv2SwapsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2SwapV2DTO>?> {
         val localVariableConfig = dappsUniswapv2SwapsCurrentGetRequestConfig()
 
-        return request<Unit, kotlin.collections.List<SwapV2DTO>>(
+        return request<Unit, kotlin.collections.List<UniswapV2SwapV2DTO>>(
             localVariableConfig
         )
     }
@@ -1326,7 +1326,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @return kotlin.collections.List<TokenV2DTO>
+     * @return kotlin.collections.List<UniswapV2TokenV2DTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1335,11 +1335,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsUniswapv2TokensCurrentGet() : kotlin.collections.List<TokenV2DTO> {
+    fun dappsUniswapv2TokensCurrentGet() : kotlin.collections.List<UniswapV2TokenV2DTO> {
         val localVarResponse = dappsUniswapv2TokensCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<TokenV2DTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2TokenV2DTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1356,16 +1356,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @return ApiResponse<kotlin.collections.List<TokenV2DTO>?>
+     * @return ApiResponse<kotlin.collections.List<UniswapV2TokenV2DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsUniswapv2TokensCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<TokenV2DTO>?> {
+    fun dappsUniswapv2TokensCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2TokenV2DTO>?> {
         val localVariableConfig = dappsUniswapv2TokensCurrentGetRequestConfig()
 
-        return request<Unit, kotlin.collections.List<TokenV2DTO>>(
+        return request<Unit, kotlin.collections.List<UniswapV2TokenV2DTO>>(
             localVariableConfig
         )
     }

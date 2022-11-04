@@ -13,30 +13,30 @@
 
 
 import ApiClient from './ApiClient';
-import BigInteger from './model/BigInteger';
-import BundleV3DTO from './model/BundleV3DTO';
-import BurnV3DTO from './model/BurnV3DTO';
-import ETradeAggressiveSide from './model/ETradeAggressiveSide';
-import FactoryV3DTO from './model/FactoryV3DTO';
-import MintV3DTO from './model/MintV3DTO';
-import PairDTO from './model/PairDTO';
-import PairV2DTO from './model/PairV2DTO';
-import PoolDayDataV3DTO from './model/PoolDayDataV3DTO';
-import PoolHourDataV3DTO from './model/PoolHourDataV3DTO';
-import PoolV3DTO from './model/PoolV3DTO';
-import PositionSnapshotV3DTO from './model/PositionSnapshotV3DTO';
-import PositionV3DTO from './model/PositionV3DTO';
-import SwapDTO from './model/SwapDTO';
-import SwapV2DTO from './model/SwapV2DTO';
-import SwapV3DTO from './model/SwapV3DTO';
-import TickDayDataV3DTO from './model/TickDayDataV3DTO';
-import TickV3DTO from './model/TickV3DTO';
-import TokenDTO from './model/TokenDTO';
-import TokenHourDataV3DTO from './model/TokenHourDataV3DTO';
-import TokenV2DTO from './model/TokenV2DTO';
-import TokenV3DTO from './model/TokenV3DTO';
-import TokenV3DayDataDTO from './model/TokenV3DayDataDTO';
-import UniswapDayDataV3DTO from './model/UniswapDayDataV3DTO';
+import NumericsBigInteger from './model/NumericsBigInteger';
+import SushiswapPairDTO from './model/SushiswapPairDTO';
+import SushiswapSwapDTO from './model/SushiswapSwapDTO';
+import SushiswapTokenDTO from './model/SushiswapTokenDTO';
+import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
+import UniswapV2PairV2DTO from './model/UniswapV2PairV2DTO';
+import UniswapV2SwapV2DTO from './model/UniswapV2SwapV2DTO';
+import UniswapV2TokenV2DTO from './model/UniswapV2TokenV2DTO';
+import UniswapV3BundleV3DTO from './model/UniswapV3BundleV3DTO';
+import UniswapV3BurnV3DTO from './model/UniswapV3BurnV3DTO';
+import UniswapV3FactoryV3DTO from './model/UniswapV3FactoryV3DTO';
+import UniswapV3MintV3DTO from './model/UniswapV3MintV3DTO';
+import UniswapV3PoolDayDataV3DTO from './model/UniswapV3PoolDayDataV3DTO';
+import UniswapV3PoolHourDataV3DTO from './model/UniswapV3PoolHourDataV3DTO';
+import UniswapV3PoolV3DTO from './model/UniswapV3PoolV3DTO';
+import UniswapV3PositionSnapshotV3DTO from './model/UniswapV3PositionSnapshotV3DTO';
+import UniswapV3PositionV3DTO from './model/UniswapV3PositionV3DTO';
+import UniswapV3SwapV3DTO from './model/UniswapV3SwapV3DTO';
+import UniswapV3TickDayDataV3DTO from './model/UniswapV3TickDayDataV3DTO';
+import UniswapV3TickV3DTO from './model/UniswapV3TickV3DTO';
+import UniswapV3TokenHourDataV3DTO from './model/UniswapV3TokenHourDataV3DTO';
+import UniswapV3TokenV3DTO from './model/UniswapV3TokenV3DTO';
+import UniswapV3TokenV3DayDataDTO from './model/UniswapV3TokenV3DayDataDTO';
+import UniswapV3UniswapDayDataV3DTO from './model/UniswapV3UniswapDayDataV3DTO';
 import CowApi from './api/CowApi';
 import CurveApi from './api/CurveApi';
 import DexApi from './api/DexApi';
@@ -84,148 +84,148 @@ export {
     ApiClient,
 
     /**
-     * The BigInteger model constructor.
-     * @property {module:model/BigInteger}
+     * The NumericsBigInteger model constructor.
+     * @property {module:model/NumericsBigInteger}
      */
-    BigInteger,
+    NumericsBigInteger,
 
     /**
-     * The BundleV3DTO model constructor.
-     * @property {module:model/BundleV3DTO}
+     * The SushiswapPairDTO model constructor.
+     * @property {module:model/SushiswapPairDTO}
      */
-    BundleV3DTO,
+    SushiswapPairDTO,
 
     /**
-     * The BurnV3DTO model constructor.
-     * @property {module:model/BurnV3DTO}
+     * The SushiswapSwapDTO model constructor.
+     * @property {module:model/SushiswapSwapDTO}
      */
-    BurnV3DTO,
+    SushiswapSwapDTO,
 
     /**
-     * The ETradeAggressiveSide model constructor.
-     * @property {module:model/ETradeAggressiveSide}
+     * The SushiswapTokenDTO model constructor.
+     * @property {module:model/SushiswapTokenDTO}
      */
-    ETradeAggressiveSide,
+    SushiswapTokenDTO,
 
     /**
-     * The FactoryV3DTO model constructor.
-     * @property {module:model/FactoryV3DTO}
+     * The TransactionsETradeAggressiveSide model constructor.
+     * @property {module:model/TransactionsETradeAggressiveSide}
      */
-    FactoryV3DTO,
+    TransactionsETradeAggressiveSide,
 
     /**
-     * The MintV3DTO model constructor.
-     * @property {module:model/MintV3DTO}
+     * The UniswapV2PairV2DTO model constructor.
+     * @property {module:model/UniswapV2PairV2DTO}
      */
-    MintV3DTO,
+    UniswapV2PairV2DTO,
 
     /**
-     * The PairDTO model constructor.
-     * @property {module:model/PairDTO}
+     * The UniswapV2SwapV2DTO model constructor.
+     * @property {module:model/UniswapV2SwapV2DTO}
      */
-    PairDTO,
+    UniswapV2SwapV2DTO,
 
     /**
-     * The PairV2DTO model constructor.
-     * @property {module:model/PairV2DTO}
+     * The UniswapV2TokenV2DTO model constructor.
+     * @property {module:model/UniswapV2TokenV2DTO}
      */
-    PairV2DTO,
+    UniswapV2TokenV2DTO,
 
     /**
-     * The PoolDayDataV3DTO model constructor.
-     * @property {module:model/PoolDayDataV3DTO}
+     * The UniswapV3BundleV3DTO model constructor.
+     * @property {module:model/UniswapV3BundleV3DTO}
      */
-    PoolDayDataV3DTO,
+    UniswapV3BundleV3DTO,
 
     /**
-     * The PoolHourDataV3DTO model constructor.
-     * @property {module:model/PoolHourDataV3DTO}
+     * The UniswapV3BurnV3DTO model constructor.
+     * @property {module:model/UniswapV3BurnV3DTO}
      */
-    PoolHourDataV3DTO,
+    UniswapV3BurnV3DTO,
 
     /**
-     * The PoolV3DTO model constructor.
-     * @property {module:model/PoolV3DTO}
+     * The UniswapV3FactoryV3DTO model constructor.
+     * @property {module:model/UniswapV3FactoryV3DTO}
      */
-    PoolV3DTO,
+    UniswapV3FactoryV3DTO,
 
     /**
-     * The PositionSnapshotV3DTO model constructor.
-     * @property {module:model/PositionSnapshotV3DTO}
+     * The UniswapV3MintV3DTO model constructor.
+     * @property {module:model/UniswapV3MintV3DTO}
      */
-    PositionSnapshotV3DTO,
+    UniswapV3MintV3DTO,
 
     /**
-     * The PositionV3DTO model constructor.
-     * @property {module:model/PositionV3DTO}
+     * The UniswapV3PoolDayDataV3DTO model constructor.
+     * @property {module:model/UniswapV3PoolDayDataV3DTO}
      */
-    PositionV3DTO,
+    UniswapV3PoolDayDataV3DTO,
 
     /**
-     * The SwapDTO model constructor.
-     * @property {module:model/SwapDTO}
+     * The UniswapV3PoolHourDataV3DTO model constructor.
+     * @property {module:model/UniswapV3PoolHourDataV3DTO}
      */
-    SwapDTO,
+    UniswapV3PoolHourDataV3DTO,
 
     /**
-     * The SwapV2DTO model constructor.
-     * @property {module:model/SwapV2DTO}
+     * The UniswapV3PoolV3DTO model constructor.
+     * @property {module:model/UniswapV3PoolV3DTO}
      */
-    SwapV2DTO,
+    UniswapV3PoolV3DTO,
 
     /**
-     * The SwapV3DTO model constructor.
-     * @property {module:model/SwapV3DTO}
+     * The UniswapV3PositionSnapshotV3DTO model constructor.
+     * @property {module:model/UniswapV3PositionSnapshotV3DTO}
      */
-    SwapV3DTO,
+    UniswapV3PositionSnapshotV3DTO,
 
     /**
-     * The TickDayDataV3DTO model constructor.
-     * @property {module:model/TickDayDataV3DTO}
+     * The UniswapV3PositionV3DTO model constructor.
+     * @property {module:model/UniswapV3PositionV3DTO}
      */
-    TickDayDataV3DTO,
+    UniswapV3PositionV3DTO,
 
     /**
-     * The TickV3DTO model constructor.
-     * @property {module:model/TickV3DTO}
+     * The UniswapV3SwapV3DTO model constructor.
+     * @property {module:model/UniswapV3SwapV3DTO}
      */
-    TickV3DTO,
+    UniswapV3SwapV3DTO,
 
     /**
-     * The TokenDTO model constructor.
-     * @property {module:model/TokenDTO}
+     * The UniswapV3TickDayDataV3DTO model constructor.
+     * @property {module:model/UniswapV3TickDayDataV3DTO}
      */
-    TokenDTO,
+    UniswapV3TickDayDataV3DTO,
 
     /**
-     * The TokenHourDataV3DTO model constructor.
-     * @property {module:model/TokenHourDataV3DTO}
+     * The UniswapV3TickV3DTO model constructor.
+     * @property {module:model/UniswapV3TickV3DTO}
      */
-    TokenHourDataV3DTO,
+    UniswapV3TickV3DTO,
 
     /**
-     * The TokenV2DTO model constructor.
-     * @property {module:model/TokenV2DTO}
+     * The UniswapV3TokenHourDataV3DTO model constructor.
+     * @property {module:model/UniswapV3TokenHourDataV3DTO}
      */
-    TokenV2DTO,
+    UniswapV3TokenHourDataV3DTO,
 
     /**
-     * The TokenV3DTO model constructor.
-     * @property {module:model/TokenV3DTO}
+     * The UniswapV3TokenV3DTO model constructor.
+     * @property {module:model/UniswapV3TokenV3DTO}
      */
-    TokenV3DTO,
+    UniswapV3TokenV3DTO,
 
     /**
-     * The TokenV3DayDataDTO model constructor.
-     * @property {module:model/TokenV3DayDataDTO}
+     * The UniswapV3TokenV3DayDataDTO model constructor.
+     * @property {module:model/UniswapV3TokenV3DayDataDTO}
      */
-    TokenV3DayDataDTO,
+    UniswapV3TokenV3DayDataDTO,
 
     /**
-     * The UniswapDayDataV3DTO model constructor.
-     * @property {module:model/UniswapDayDataV3DTO}
+     * The UniswapV3UniswapDayDataV3DTO model constructor.
+     * @property {module:model/UniswapV3UniswapDayDataV3DTO}
      */
-    UniswapDayDataV3DTO,
+    UniswapV3UniswapDayDataV3DTO,
 
     /**
     * The CowApi service constructor.

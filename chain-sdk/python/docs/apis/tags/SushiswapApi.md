@@ -1131,7 +1131,7 @@ No authorization required
 
 # **dapps_sushiswap_pools_current_get**
 <a name="dapps_sushiswap_pools_current_get"></a>
-> [PairDTO] dapps_sushiswap_pools_current_get()
+> [SushiswapPairDTO] dapps_sushiswap_pools_current_get()
 
 GetPools
 
@@ -1142,7 +1142,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.pair_dto import PairDTO
+from openapi_client.model.sushiswap_pair_dto import SushiswapPairDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1190,7 +1190,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1202,7 +1202,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1214,7 +1214,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 ### Authorization
 
@@ -1224,7 +1224,7 @@ No authorization required
 
 # **dapps_sushiswap_pools_historical_get**
 <a name="dapps_sushiswap_pools_historical_get"></a>
-> [PairDTO] dapps_sushiswap_pools_historical_get()
+> [SushiswapPairDTO] dapps_sushiswap_pools_historical_get()
 
 GetPools (historical)
 
@@ -1233,7 +1233,7 @@ GetPools (historical)
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.pair_dto import PairDTO
+from openapi_client.model.sushiswap_pair_dto import SushiswapPairDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1344,7 +1344,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1356,7 +1356,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1368,7 +1368,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) | [**PairDTO**]({{complexTypePrefix}}PairDTO.md) |  | 
+[**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) | [**SushiswapPairDTO**]({{complexTypePrefix}}SushiswapPairDTO.md) |  | 
 
 ### Authorization
 
@@ -1378,7 +1378,7 @@ No authorization required
 
 # **dapps_sushiswap_swaps_current_get**
 <a name="dapps_sushiswap_swaps_current_get"></a>
-> [SwapDTO] dapps_sushiswap_swaps_current_get()
+> [SushiswapSwapDTO] dapps_sushiswap_swaps_current_get()
 
 GetSwaps
 
@@ -1387,7 +1387,7 @@ GetSwaps
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.swap_dto import SwapDTO
+from openapi_client.model.sushiswap_swap_dto import SushiswapSwapDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1435,7 +1435,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1447,7 +1447,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1459,7 +1459,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 ### Authorization
 
@@ -1469,7 +1469,7 @@ No authorization required
 
 # **dapps_sushiswap_swaps_historical_get**
 <a name="dapps_sushiswap_swaps_historical_get"></a>
-> [SwapDTO] dapps_sushiswap_swaps_historical_get()
+> [SushiswapSwapDTO] dapps_sushiswap_swaps_historical_get()
 
 GetSwaps (historical)
 
@@ -1478,7 +1478,7 @@ GetSwaps (historical)
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.swap_dto import SwapDTO
+from openapi_client.model.sushiswap_swap_dto import SushiswapSwapDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1589,7 +1589,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1601,7 +1601,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1613,7 +1613,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) | [**SwapDTO**]({{complexTypePrefix}}SwapDTO.md) |  | 
+[**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) | [**SushiswapSwapDTO**]({{complexTypePrefix}}SushiswapSwapDTO.md) |  | 
 
 ### Authorization
 
@@ -1737,7 +1737,7 @@ No authorization required
 
 # **dapps_sushiswap_tokens_current_get**
 <a name="dapps_sushiswap_tokens_current_get"></a>
-> [TokenDTO] dapps_sushiswap_tokens_current_get()
+> [SushiswapTokenDTO] dapps_sushiswap_tokens_current_get()
 
 GetTokens
 
@@ -1746,7 +1746,7 @@ GetTokens
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.token_dto import TokenDTO
+from openapi_client.model.sushiswap_token_dto import SushiswapTokenDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1794,7 +1794,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1806,7 +1806,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1818,7 +1818,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 ### Authorization
 
@@ -1828,7 +1828,7 @@ No authorization required
 
 # **dapps_sushiswap_tokens_historical_get**
 <a name="dapps_sushiswap_tokens_historical_get"></a>
-> [TokenDTO] dapps_sushiswap_tokens_historical_get()
+> [SushiswapTokenDTO] dapps_sushiswap_tokens_historical_get()
 
 GetTokens (historical)
 
@@ -1837,7 +1837,7 @@ GetTokens (historical)
 ```python
 import openapi_client
 from openapi_client.apis.tags import sushiswap_api
-from openapi_client.model.token_dto import TokenDTO
+from openapi_client.model.sushiswap_token_dto import SushiswapTokenDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1948,7 +1948,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1960,7 +1960,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1972,7 +1972,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) | [**TokenDTO**]({{complexTypePrefix}}TokenDTO.md) |  | 
+[**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) | [**SushiswapTokenDTO**]({{complexTypePrefix}}SushiswapTokenDTO.md) |  | 
 
 ### Authorization
 

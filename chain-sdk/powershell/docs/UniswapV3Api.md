@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 <a name="Invoke-DappsUniswapv3BundleCurrentGet"></a>
 # **Invoke-DappsUniswapv3BundleCurrentGet**
-> BundleV3DTO[] Invoke-DappsUniswapv3BundleCurrentGet<br>
+> UniswapV3BundleV3DTO[] Invoke-DappsUniswapv3BundleCurrentGet<br>
 
 GetBundles
 
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BundleV3DTO[]**](BundleV3DTO.md) (PSCustomObject)
+[**UniswapV3BundleV3DTO[]**](UniswapV3BundleV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3BurnsCurrentGet"></a>
 # **Invoke-DappsUniswapv3BurnsCurrentGet**
-> BurnV3DTO[] Invoke-DappsUniswapv3BurnsCurrentGet<br>
+> UniswapV3BurnV3DTO[] Invoke-DappsUniswapv3BurnsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetBurns
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BurnV3DTO[]**](BurnV3DTO.md) (PSCustomObject)
+[**UniswapV3BurnV3DTO[]**](UniswapV3BurnV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3FactoryCurrentGet"></a>
 # **Invoke-DappsUniswapv3FactoryCurrentGet**
-> FactoryV3DTO[] Invoke-DappsUniswapv3FactoryCurrentGet<br>
+> UniswapV3FactoryV3DTO[] Invoke-DappsUniswapv3FactoryCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChainId] <String><br>
 
 GetFactory
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FactoryV3DTO[]**](FactoryV3DTO.md) (PSCustomObject)
+[**UniswapV3FactoryV3DTO[]**](UniswapV3FactoryV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3MintsCurrentGet"></a>
 # **Invoke-DappsUniswapv3MintsCurrentGet**
-> MintV3DTO[] Invoke-DappsUniswapv3MintsCurrentGet<br>
+> UniswapV3MintV3DTO[] Invoke-DappsUniswapv3MintsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetMints
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MintV3DTO[]**](MintV3DTO.md) (PSCustomObject)
+[**UniswapV3MintV3DTO[]**](UniswapV3MintV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3PoolsCurrentGet"></a>
 # **Invoke-DappsUniswapv3PoolsCurrentGet**
-> PoolV3DTO[] Invoke-DappsUniswapv3PoolsCurrentGet<br>
+> UniswapV3PoolV3DTO[] Invoke-DappsUniswapv3PoolsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPools
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoolV3DTO[]**](PoolV3DTO.md) (PSCustomObject)
+[**UniswapV3PoolV3DTO[]**](UniswapV3PoolV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3PoolsDayDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3PoolsDayDataCurrentGet**
-> PoolDayDataV3DTO[] Invoke-DappsUniswapv3PoolsDayDataCurrentGet<br>
+> UniswapV3PoolDayDataV3DTO[] Invoke-DappsUniswapv3PoolsDayDataCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPoolsDayData
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoolDayDataV3DTO[]**](PoolDayDataV3DTO.md) (PSCustomObject)
+[**UniswapV3PoolDayDataV3DTO[]**](UniswapV3PoolDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -689,7 +689,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3PoolsHourDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3PoolsHourDataCurrentGet**
-> PoolHourDataV3DTO[] Invoke-DappsUniswapv3PoolsHourDataCurrentGet<br>
+> UniswapV3PoolHourDataV3DTO[] Invoke-DappsUniswapv3PoolsHourDataCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPoolsHourData
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoolHourDataV3DTO[]**](PoolHourDataV3DTO.md) (PSCustomObject)
+[**UniswapV3PoolHourDataV3DTO[]**](UniswapV3PoolHourDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -782,7 +782,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3PositionSnapshotsCurrentGet"></a>
 # **Invoke-DappsUniswapv3PositionSnapshotsCurrentGet**
-> PositionSnapshotV3DTO[] Invoke-DappsUniswapv3PositionSnapshotsCurrentGet<br>
+> UniswapV3PositionSnapshotV3DTO[] Invoke-DappsUniswapv3PositionSnapshotsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPositionSnapshot
@@ -808,7 +808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PositionSnapshotV3DTO[]**](PositionSnapshotV3DTO.md) (PSCustomObject)
+[**UniswapV3PositionSnapshotV3DTO[]**](UniswapV3PositionSnapshotV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -823,7 +823,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3PositionsCurrentGet"></a>
 # **Invoke-DappsUniswapv3PositionsCurrentGet**
-> PositionV3DTO[] Invoke-DappsUniswapv3PositionsCurrentGet<br>
+> UniswapV3PositionV3DTO[] Invoke-DappsUniswapv3PositionsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPositions
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PositionV3DTO[]**](PositionV3DTO.md) (PSCustomObject)
+[**UniswapV3PositionV3DTO[]**](UniswapV3PositionV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -916,7 +916,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3SwapsCurrentGet"></a>
 # **Invoke-DappsUniswapv3SwapsCurrentGet**
-> SwapV3DTO[] Invoke-DappsUniswapv3SwapsCurrentGet<br>
+> UniswapV3SwapV3DTO[] Invoke-DappsUniswapv3SwapsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetSwaps
@@ -942,7 +942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SwapV3DTO[]**](SwapV3DTO.md) (PSCustomObject)
+[**UniswapV3SwapV3DTO[]**](UniswapV3SwapV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1061,7 +1061,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3TicksCurrentGet"></a>
 # **Invoke-DappsUniswapv3TicksCurrentGet**
-> TickV3DTO[] Invoke-DappsUniswapv3TicksCurrentGet<br>
+> UniswapV3TickV3DTO[] Invoke-DappsUniswapv3TicksCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetTicks
@@ -1087,7 +1087,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TickV3DTO[]**](TickV3DTO.md) (PSCustomObject)
+[**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1102,7 +1102,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3TicksDayDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3TicksDayDataCurrentGet**
-> TickDayDataV3DTO[] Invoke-DappsUniswapv3TicksDayDataCurrentGet<br>
+> UniswapV3TickDayDataV3DTO[] Invoke-DappsUniswapv3TicksDayDataCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetTicksDayData
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TickDayDataV3DTO[]**](TickDayDataV3DTO.md) (PSCustomObject)
+[**UniswapV3TickDayDataV3DTO[]**](UniswapV3TickDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1299,7 +1299,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3TokensCurrentGet"></a>
 # **Invoke-DappsUniswapv3TokensCurrentGet**
-> TokenV3DTO[] Invoke-DappsUniswapv3TokensCurrentGet<br>
+> UniswapV3TokenV3DTO[] Invoke-DappsUniswapv3TokensCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
 GetTokens
@@ -1325,7 +1325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TokenV3DTO[]**](TokenV3DTO.md) (PSCustomObject)
+[**UniswapV3TokenV3DTO[]**](UniswapV3TokenV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1340,7 +1340,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3TokensDayDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3TokensDayDataCurrentGet**
-> TokenV3DayDataDTO[] Invoke-DappsUniswapv3TokensDayDataCurrentGet<br>
+> UniswapV3TokenV3DayDataDTO[] Invoke-DappsUniswapv3TokensDayDataCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
 GetTokensDayData
@@ -1366,7 +1366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TokenV3DayDataDTO[]**](TokenV3DayDataDTO.md) (PSCustomObject)
+[**UniswapV3TokenV3DayDataDTO[]**](UniswapV3TokenV3DayDataDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1433,7 +1433,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3TokensHourDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3TokensHourDataCurrentGet**
-> TokenHourDataV3DTO[] Invoke-DappsUniswapv3TokensHourDataCurrentGet<br>
+> UniswapV3TokenHourDataV3DTO[] Invoke-DappsUniswapv3TokensHourDataCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
 GetTokensHourData
@@ -1459,7 +1459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TokenHourDataV3DTO[]**](TokenHourDataV3DTO.md) (PSCustomObject)
+[**UniswapV3TokenHourDataV3DTO[]**](UniswapV3TokenHourDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1523,7 +1523,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv3UniswapDayDataCurrentGet"></a>
 # **Invoke-DappsUniswapv3UniswapDayDataCurrentGet**
-> UniswapDayDataV3DTO[] Invoke-DappsUniswapv3UniswapDayDataCurrentGet<br>
+> UniswapV3UniswapDayDataV3DTO[] Invoke-DappsUniswapv3UniswapDayDataCurrentGet<br>
 
 GetUniswapDayData
 
@@ -1544,7 +1544,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UniswapDayDataV3DTO[]**](UniswapDayDataV3DTO.md) (PSCustomObject)
+[**UniswapV3UniswapDayDataV3DTO[]**](UniswapV3UniswapDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 

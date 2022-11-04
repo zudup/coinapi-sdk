@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.factory_v3_dto import FactoryV3DTO
+from openapi_client.model.uniswap_v3_factory_v3_dto import UniswapV3FactoryV3DTO
 
 from . import path
 
@@ -65,12 +65,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['FactoryV3DTO']:
-            return FactoryV3DTO
+        def items() -> typing.Type['UniswapV3FactoryV3DTO']:
+            return UniswapV3FactoryV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['FactoryV3DTO'], typing.List['FactoryV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3FactoryV3DTO'], typing.List['UniswapV3FactoryV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -79,7 +79,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'FactoryV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3FactoryV3DTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +91,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['FactoryV3DTO']:
-            return FactoryV3DTO
+        def items() -> typing.Type['UniswapV3FactoryV3DTO']:
+            return UniswapV3FactoryV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['FactoryV3DTO'], typing.List['FactoryV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3FactoryV3DTO'], typing.List['UniswapV3FactoryV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -105,7 +105,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'FactoryV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3FactoryV3DTO':
         return super().__getitem__(i)
 
 
@@ -117,12 +117,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['FactoryV3DTO']:
-            return FactoryV3DTO
+        def items() -> typing.Type['UniswapV3FactoryV3DTO']:
+            return UniswapV3FactoryV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['FactoryV3DTO'], typing.List['FactoryV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3FactoryV3DTO'], typing.List['UniswapV3FactoryV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -131,7 +131,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'FactoryV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3FactoryV3DTO':
         return super().__getitem__(i)
 
 

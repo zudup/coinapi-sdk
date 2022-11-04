@@ -42,7 +42,7 @@ Method | HTTP request | Description
 
 ## dappsUniswapv3BundleCurrentGet
 
-> List&lt;BundleV3DTO&gt; dappsUniswapv3BundleCurrentGet()
+> List&lt;UniswapV3BundleV3DTO&gt; dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -54,7 +54,7 @@ GetBundles
 
 UniswapV3Api apiInstance = new UniswapV3Api();
 try {
-    List<BundleV3DTO> result = apiInstance.dappsUniswapv3BundleCurrentGet();
+    List<UniswapV3BundleV3DTO> result = apiInstance.dappsUniswapv3BundleCurrentGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3BundleCurrentGet");
@@ -68,7 +68,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;BundleV3DTO&gt;**](BundleV3DTO.md)
+[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 
 ## dappsUniswapv3BurnsCurrentGet
 
-> List&lt;BurnV3DTO&gt; dappsUniswapv3BurnsCurrentGet(filterPoolId)
+> List&lt;UniswapV3BurnV3DTO&gt; dappsUniswapv3BurnsCurrentGet(filterPoolId)
 
 GetBurns
 
@@ -144,7 +144,7 @@ GetBurns
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<BurnV3DTO> result = apiInstance.dappsUniswapv3BurnsCurrentGet(filterPoolId);
+    List<UniswapV3BurnV3DTO> result = apiInstance.dappsUniswapv3BurnsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3BurnsCurrentGet");
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;BurnV3DTO&gt;**](BurnV3DTO.md)
+[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ No authorization required
 
 ## dappsUniswapv3FactoryCurrentGet
 
-> List&lt;FactoryV3DTO&gt; dappsUniswapv3FactoryCurrentGet(chainId)
+> List&lt;UniswapV3FactoryV3DTO&gt; dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -288,7 +288,7 @@ GetFactory
 UniswapV3Api apiInstance = new UniswapV3Api();
 String chainId = null; // String | 
 try {
-    List<FactoryV3DTO> result = apiInstance.dappsUniswapv3FactoryCurrentGet(chainId);
+    List<UniswapV3FactoryV3DTO> result = apiInstance.dappsUniswapv3FactoryCurrentGet(chainId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3FactoryCurrentGet");
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;FactoryV3DTO&gt;**](FactoryV3DTO.md)
+[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -368,7 +368,7 @@ No authorization required
 
 ## dappsUniswapv3MintsCurrentGet
 
-> List&lt;MintV3DTO&gt; dappsUniswapv3MintsCurrentGet(filterPoolId)
+> List&lt;UniswapV3MintV3DTO&gt; dappsUniswapv3MintsCurrentGet(filterPoolId)
 
 GetMints
 
@@ -381,7 +381,7 @@ GetMints
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<MintV3DTO> result = apiInstance.dappsUniswapv3MintsCurrentGet(filterPoolId);
+    List<UniswapV3MintV3DTO> result = apiInstance.dappsUniswapv3MintsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3MintsCurrentGet");
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;MintV3DTO&gt;**](MintV3DTO.md)
+[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -565,7 +565,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsCurrentGet
 
-> List&lt;PoolV3DTO&gt; dappsUniswapv3PoolsCurrentGet(filterPoolId)
+> List&lt;UniswapV3PoolV3DTO&gt; dappsUniswapv3PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -578,7 +578,7 @@ GetPools
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<PoolV3DTO> result = apiInstance.dappsUniswapv3PoolsCurrentGet(filterPoolId);
+    List<UniswapV3PoolV3DTO> result = apiInstance.dappsUniswapv3PoolsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PoolsCurrentGet");
@@ -595,7 +595,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PoolV3DTO&gt;**](PoolV3DTO.md)
+[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -609,7 +609,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsDayDataCurrentGet
 
-> List&lt;PoolDayDataV3DTO&gt; dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
+> List&lt;UniswapV3PoolDayDataV3DTO&gt; dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
 
 GetPoolsDayData
 
@@ -622,7 +622,7 @@ GetPoolsDayData
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<PoolDayDataV3DTO> result = apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
+    List<UniswapV3PoolDayDataV3DTO> result = apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PoolsDayDataCurrentGet");
@@ -639,7 +639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PoolDayDataV3DTO&gt;**](PoolDayDataV3DTO.md)
+[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -704,7 +704,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsHourDataCurrentGet
 
-> List&lt;PoolHourDataV3DTO&gt; dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
+> List&lt;UniswapV3PoolHourDataV3DTO&gt; dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
 
 GetPoolsHourData
 
@@ -717,7 +717,7 @@ GetPoolsHourData
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<PoolHourDataV3DTO> result = apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
+    List<UniswapV3PoolHourDataV3DTO> result = apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PoolsHourDataCurrentGet");
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PoolHourDataV3DTO&gt;**](PoolHourDataV3DTO.md)
+[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -799,7 +799,7 @@ No authorization required
 
 ## dappsUniswapv3PositionSnapshotsCurrentGet
 
-> List&lt;PositionSnapshotV3DTO&gt; dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
+> List&lt;UniswapV3PositionSnapshotV3DTO&gt; dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
 
 GetPositionSnapshot
 
@@ -812,7 +812,7 @@ GetPositionSnapshot
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<PositionSnapshotV3DTO> result = apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
+    List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PositionSnapshotsCurrentGet");
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PositionSnapshotV3DTO&gt;**](PositionSnapshotV3DTO.md)
+[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -843,7 +843,7 @@ No authorization required
 
 ## dappsUniswapv3PositionsCurrentGet
 
-> List&lt;PositionV3DTO&gt; dappsUniswapv3PositionsCurrentGet(filterPoolId)
+> List&lt;UniswapV3PositionV3DTO&gt; dappsUniswapv3PositionsCurrentGet(filterPoolId)
 
 GetPositions
 
@@ -856,7 +856,7 @@ GetPositions
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<PositionV3DTO> result = apiInstance.dappsUniswapv3PositionsCurrentGet(filterPoolId);
+    List<UniswapV3PositionV3DTO> result = apiInstance.dappsUniswapv3PositionsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PositionsCurrentGet");
@@ -873,7 +873,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PositionV3DTO&gt;**](PositionV3DTO.md)
+[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -938,7 +938,7 @@ No authorization required
 
 ## dappsUniswapv3SwapsCurrentGet
 
-> List&lt;SwapV3DTO&gt; dappsUniswapv3SwapsCurrentGet(filterPoolId)
+> List&lt;UniswapV3SwapV3DTO&gt; dappsUniswapv3SwapsCurrentGet(filterPoolId)
 
 GetSwaps
 
@@ -951,7 +951,7 @@ GetSwaps
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<SwapV3DTO> result = apiInstance.dappsUniswapv3SwapsCurrentGet(filterPoolId);
+    List<UniswapV3SwapV3DTO> result = apiInstance.dappsUniswapv3SwapsCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3SwapsCurrentGet");
@@ -968,7 +968,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;SwapV3DTO&gt;**](SwapV3DTO.md)
+[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1084,7 +1084,7 @@ No authorization required
 
 ## dappsUniswapv3TicksCurrentGet
 
-> List&lt;TickV3DTO&gt; dappsUniswapv3TicksCurrentGet(filterPoolId)
+> List&lt;UniswapV3TickV3DTO&gt; dappsUniswapv3TicksCurrentGet(filterPoolId)
 
 GetTicks
 
@@ -1097,7 +1097,7 @@ GetTicks
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<TickV3DTO> result = apiInstance.dappsUniswapv3TicksCurrentGet(filterPoolId);
+    List<UniswapV3TickV3DTO> result = apiInstance.dappsUniswapv3TicksCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3TicksCurrentGet");
@@ -1114,7 +1114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TickV3DTO&gt;**](TickV3DTO.md)
+[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1128,7 +1128,7 @@ No authorization required
 
 ## dappsUniswapv3TicksDayDataCurrentGet
 
-> List&lt;TickDayDataV3DTO&gt; dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
+> List&lt;UniswapV3TickDayDataV3DTO&gt; dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
 
 GetTicksDayData
 
@@ -1141,7 +1141,7 @@ GetTicksDayData
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterPoolId = null; // String | Filter pool id
 try {
-    List<TickDayDataV3DTO> result = apiInstance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
+    List<UniswapV3TickDayDataV3DTO> result = apiInstance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3TicksDayDataCurrentGet");
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TickDayDataV3DTO&gt;**](TickDayDataV3DTO.md)
+[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1325,7 +1325,7 @@ No authorization required
 
 ## dappsUniswapv3TokensCurrentGet
 
-> List&lt;TokenV3DTO&gt; dappsUniswapv3TokensCurrentGet(filterTokenId)
+> List&lt;UniswapV3TokenV3DTO&gt; dappsUniswapv3TokensCurrentGet(filterTokenId)
 
 GetTokens
 
@@ -1338,7 +1338,7 @@ GetTokens
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterTokenId = null; // String | 
 try {
-    List<TokenV3DTO> result = apiInstance.dappsUniswapv3TokensCurrentGet(filterTokenId);
+    List<UniswapV3TokenV3DTO> result = apiInstance.dappsUniswapv3TokensCurrentGet(filterTokenId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3TokensCurrentGet");
@@ -1355,7 +1355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TokenV3DTO&gt;**](TokenV3DTO.md)
+[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1369,7 +1369,7 @@ No authorization required
 
 ## dappsUniswapv3TokensDayDataCurrentGet
 
-> List&lt;TokenV3DayDataDTO&gt; dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
 
 GetTokensDayData
 
@@ -1382,7 +1382,7 @@ GetTokensDayData
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterTokenId = null; // String | 
 try {
-    List<TokenV3DayDataDTO> result = apiInstance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
+    List<UniswapV3TokenV3DayDataDTO> result = apiInstance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3TokensDayDataCurrentGet");
@@ -1399,7 +1399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TokenV3DayDataDTO&gt;**](TokenV3DayDataDTO.md)
+[**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1464,7 +1464,7 @@ No authorization required
 
 ## dappsUniswapv3TokensHourDataCurrentGet
 
-> List&lt;TokenHourDataV3DTO&gt; dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
+> List&lt;UniswapV3TokenHourDataV3DTO&gt; dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
 
 GetTokensHourData
 
@@ -1477,7 +1477,7 @@ GetTokensHourData
 UniswapV3Api apiInstance = new UniswapV3Api();
 String filterTokenId = null; // String | 
 try {
-    List<TokenHourDataV3DTO> result = apiInstance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
+    List<UniswapV3TokenHourDataV3DTO> result = apiInstance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3TokensHourDataCurrentGet");
@@ -1494,7 +1494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TokenHourDataV3DTO&gt;**](TokenHourDataV3DTO.md)
+[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1557,7 +1557,7 @@ No authorization required
 
 ## dappsUniswapv3UniswapDayDataCurrentGet
 
-> List&lt;UniswapDayDataV3DTO&gt; dappsUniswapv3UniswapDayDataCurrentGet()
+> List&lt;UniswapV3UniswapDayDataV3DTO&gt; dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -1569,7 +1569,7 @@ GetUniswapDayData
 
 UniswapV3Api apiInstance = new UniswapV3Api();
 try {
-    List<UniswapDayDataV3DTO> result = apiInstance.dappsUniswapv3UniswapDayDataCurrentGet();
+    List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.dappsUniswapv3UniswapDayDataCurrentGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3UniswapDayDataCurrentGet");
@@ -1583,7 +1583,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;UniswapDayDataV3DTO&gt;**](UniswapDayDataV3DTO.md)
+[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

@@ -184,7 +184,7 @@ feature -- Test routines
             --
             -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
         local
-            l_response: LIST [PAIR_DTO]
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
         do
             -- TODO: Initialize required params.
 
@@ -197,7 +197,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [PAIR_DTO]
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -215,7 +215,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [SWAP_DTO]
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
         do
             -- TODO: Initialize required params.
 
@@ -228,7 +228,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [SWAP_DTO]
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -263,7 +263,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_DTO]
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
         do
             -- TODO: Initialize required params.
 
@@ -276,7 +276,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_DTO]
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME

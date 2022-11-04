@@ -30,7 +30,7 @@ type ApiDappsUniswapv3BundleCurrentGetRequest struct {
 	ApiService *UniswapV3ApiService
 }
 
-func (r ApiDappsUniswapv3BundleCurrentGetRequest) Execute() ([]BundleV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3BundleCurrentGetRequest) Execute() ([]UniswapV3BundleV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3BundleCurrentGetExecute(r)
 }
 
@@ -48,13 +48,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3BundleCurrentGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return []BundleV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3BundleCurrentGetExecute(r ApiDappsUniswapv3BundleCurrentGetRequest) ([]BundleV3DTO, *http.Response, error) {
+//  @return []UniswapV3BundleV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3BundleCurrentGetExecute(r ApiDappsUniswapv3BundleCurrentGetRequest) ([]UniswapV3BundleV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []BundleV3DTO
+		localVarReturnValue  []UniswapV3BundleV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3BundleCurrentGet")
@@ -256,7 +256,7 @@ func (r ApiDappsUniswapv3BurnsCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv3BurnsCurrentGetRequest) Execute() ([]BurnV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3BurnsCurrentGetRequest) Execute() ([]UniswapV3BurnV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3BurnsCurrentGetExecute(r)
 }
 
@@ -274,13 +274,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3BurnsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []BurnV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3BurnsCurrentGetExecute(r ApiDappsUniswapv3BurnsCurrentGetRequest) ([]BurnV3DTO, *http.Response, error) {
+//  @return []UniswapV3BurnV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3BurnsCurrentGetExecute(r ApiDappsUniswapv3BurnsCurrentGetRequest) ([]UniswapV3BurnV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []BurnV3DTO
+		localVarReturnValue  []UniswapV3BurnV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3BurnsCurrentGet")
@@ -610,7 +610,7 @@ type ApiDappsUniswapv3FactoryCurrentGetRequest struct {
 	chainId string
 }
 
-func (r ApiDappsUniswapv3FactoryCurrentGetRequest) Execute() ([]FactoryV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3FactoryCurrentGetRequest) Execute() ([]UniswapV3FactoryV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3FactoryCurrentGetExecute(r)
 }
 
@@ -630,13 +630,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3FactoryCurrentGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return []FactoryV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3FactoryCurrentGetExecute(r ApiDappsUniswapv3FactoryCurrentGetRequest) ([]FactoryV3DTO, *http.Response, error) {
+//  @return []UniswapV3FactoryV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3FactoryCurrentGetExecute(r ApiDappsUniswapv3FactoryCurrentGetRequest) ([]UniswapV3FactoryV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []FactoryV3DTO
+		localVarReturnValue  []UniswapV3FactoryV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3FactoryCurrentGet")
@@ -839,7 +839,7 @@ func (r ApiDappsUniswapv3MintsCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv3MintsCurrentGetRequest) Execute() ([]MintV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3MintsCurrentGetRequest) Execute() ([]UniswapV3MintV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3MintsCurrentGetExecute(r)
 }
 
@@ -857,13 +857,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3MintsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []MintV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3MintsCurrentGetExecute(r ApiDappsUniswapv3MintsCurrentGetRequest) ([]MintV3DTO, *http.Response, error) {
+//  @return []UniswapV3MintV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3MintsCurrentGetExecute(r ApiDappsUniswapv3MintsCurrentGetRequest) ([]UniswapV3MintV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []MintV3DTO
+		localVarReturnValue  []UniswapV3MintV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3MintsCurrentGet")
@@ -1339,7 +1339,7 @@ func (r ApiDappsUniswapv3PoolsCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv3PoolsCurrentGetRequest) Execute() ([]PoolV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3PoolsCurrentGetRequest) Execute() ([]UniswapV3PoolV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3PoolsCurrentGetExecute(r)
 }
 
@@ -1357,13 +1357,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3PoolsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []PoolV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3PoolsCurrentGetExecute(r ApiDappsUniswapv3PoolsCurrentGetRequest) ([]PoolV3DTO, *http.Response, error) {
+//  @return []UniswapV3PoolV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3PoolsCurrentGetExecute(r ApiDappsUniswapv3PoolsCurrentGetRequest) ([]UniswapV3PoolV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PoolV3DTO
+		localVarReturnValue  []UniswapV3PoolV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3PoolsCurrentGet")
@@ -1446,7 +1446,7 @@ func (r ApiDappsUniswapv3PoolsDayDataCurrentGetRequest) FilterPoolId(filterPoolI
 	return r
 }
 
-func (r ApiDappsUniswapv3PoolsDayDataCurrentGetRequest) Execute() ([]PoolDayDataV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3PoolsDayDataCurrentGetRequest) Execute() ([]UniswapV3PoolDayDataV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3PoolsDayDataCurrentGetExecute(r)
 }
 
@@ -1464,13 +1464,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3PoolsDayDataCurrentGet(ctx context.C
 }
 
 // Execute executes the request
-//  @return []PoolDayDataV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3PoolsDayDataCurrentGetExecute(r ApiDappsUniswapv3PoolsDayDataCurrentGetRequest) ([]PoolDayDataV3DTO, *http.Response, error) {
+//  @return []UniswapV3PoolDayDataV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3PoolsDayDataCurrentGetExecute(r ApiDappsUniswapv3PoolsDayDataCurrentGetRequest) ([]UniswapV3PoolDayDataV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PoolDayDataV3DTO
+		localVarReturnValue  []UniswapV3PoolDayDataV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3PoolsDayDataCurrentGet")
@@ -1684,7 +1684,7 @@ func (r ApiDappsUniswapv3PoolsHourDataCurrentGetRequest) FilterPoolId(filterPool
 	return r
 }
 
-func (r ApiDappsUniswapv3PoolsHourDataCurrentGetRequest) Execute() ([]PoolHourDataV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3PoolsHourDataCurrentGetRequest) Execute() ([]UniswapV3PoolHourDataV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3PoolsHourDataCurrentGetExecute(r)
 }
 
@@ -1702,13 +1702,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3PoolsHourDataCurrentGet(ctx context.
 }
 
 // Execute executes the request
-//  @return []PoolHourDataV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3PoolsHourDataCurrentGetExecute(r ApiDappsUniswapv3PoolsHourDataCurrentGetRequest) ([]PoolHourDataV3DTO, *http.Response, error) {
+//  @return []UniswapV3PoolHourDataV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3PoolsHourDataCurrentGetExecute(r ApiDappsUniswapv3PoolsHourDataCurrentGetRequest) ([]UniswapV3PoolHourDataV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PoolHourDataV3DTO
+		localVarReturnValue  []UniswapV3PoolHourDataV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3PoolsHourDataCurrentGet")
@@ -1922,7 +1922,7 @@ func (r ApiDappsUniswapv3PositionSnapshotsCurrentGetRequest) FilterPoolId(filter
 	return r
 }
 
-func (r ApiDappsUniswapv3PositionSnapshotsCurrentGetRequest) Execute() ([]PositionSnapshotV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3PositionSnapshotsCurrentGetRequest) Execute() ([]UniswapV3PositionSnapshotV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3PositionSnapshotsCurrentGetExecute(r)
 }
 
@@ -1940,13 +1940,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3PositionSnapshotsCurrentGet(ctx cont
 }
 
 // Execute executes the request
-//  @return []PositionSnapshotV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3PositionSnapshotsCurrentGetExecute(r ApiDappsUniswapv3PositionSnapshotsCurrentGetRequest) ([]PositionSnapshotV3DTO, *http.Response, error) {
+//  @return []UniswapV3PositionSnapshotV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3PositionSnapshotsCurrentGetExecute(r ApiDappsUniswapv3PositionSnapshotsCurrentGetRequest) ([]UniswapV3PositionSnapshotV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PositionSnapshotV3DTO
+		localVarReturnValue  []UniswapV3PositionSnapshotV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3PositionSnapshotsCurrentGet")
@@ -2029,7 +2029,7 @@ func (r ApiDappsUniswapv3PositionsCurrentGetRequest) FilterPoolId(filterPoolId s
 	return r
 }
 
-func (r ApiDappsUniswapv3PositionsCurrentGetRequest) Execute() ([]PositionV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3PositionsCurrentGetRequest) Execute() ([]UniswapV3PositionV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3PositionsCurrentGetExecute(r)
 }
 
@@ -2047,13 +2047,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3PositionsCurrentGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return []PositionV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3PositionsCurrentGetExecute(r ApiDappsUniswapv3PositionsCurrentGetRequest) ([]PositionV3DTO, *http.Response, error) {
+//  @return []UniswapV3PositionV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3PositionsCurrentGetExecute(r ApiDappsUniswapv3PositionsCurrentGetRequest) ([]UniswapV3PositionV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PositionV3DTO
+		localVarReturnValue  []UniswapV3PositionV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3PositionsCurrentGet")
@@ -2267,7 +2267,7 @@ func (r ApiDappsUniswapv3SwapsCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv3SwapsCurrentGetRequest) Execute() ([]SwapV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3SwapsCurrentGetRequest) Execute() ([]UniswapV3SwapV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3SwapsCurrentGetExecute(r)
 }
 
@@ -2285,13 +2285,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3SwapsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []SwapV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3SwapsCurrentGetExecute(r ApiDappsUniswapv3SwapsCurrentGetRequest) ([]SwapV3DTO, *http.Response, error) {
+//  @return []UniswapV3SwapV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3SwapsCurrentGetExecute(r ApiDappsUniswapv3SwapsCurrentGetRequest) ([]UniswapV3SwapV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SwapV3DTO
+		localVarReturnValue  []UniswapV3SwapV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3SwapsCurrentGet")
@@ -2636,7 +2636,7 @@ func (r ApiDappsUniswapv3TicksCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv3TicksCurrentGetRequest) Execute() ([]TickV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3TicksCurrentGetRequest) Execute() ([]UniswapV3TickV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3TicksCurrentGetExecute(r)
 }
 
@@ -2654,13 +2654,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3TicksCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []TickV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3TicksCurrentGetExecute(r ApiDappsUniswapv3TicksCurrentGetRequest) ([]TickV3DTO, *http.Response, error) {
+//  @return []UniswapV3TickV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3TicksCurrentGetExecute(r ApiDappsUniswapv3TicksCurrentGetRequest) ([]UniswapV3TickV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TickV3DTO
+		localVarReturnValue  []UniswapV3TickV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3TicksCurrentGet")
@@ -2743,7 +2743,7 @@ func (r ApiDappsUniswapv3TicksDayDataCurrentGetRequest) FilterPoolId(filterPoolI
 	return r
 }
 
-func (r ApiDappsUniswapv3TicksDayDataCurrentGetRequest) Execute() ([]TickDayDataV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3TicksDayDataCurrentGetRequest) Execute() ([]UniswapV3TickDayDataV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3TicksDayDataCurrentGetExecute(r)
 }
 
@@ -2761,13 +2761,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3TicksDayDataCurrentGet(ctx context.C
 }
 
 // Execute executes the request
-//  @return []TickDayDataV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3TicksDayDataCurrentGetExecute(r ApiDappsUniswapv3TicksDayDataCurrentGetRequest) ([]TickDayDataV3DTO, *http.Response, error) {
+//  @return []UniswapV3TickDayDataV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3TicksDayDataCurrentGetExecute(r ApiDappsUniswapv3TicksDayDataCurrentGetRequest) ([]UniswapV3TickDayDataV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TickDayDataV3DTO
+		localVarReturnValue  []UniswapV3TickDayDataV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3TicksDayDataCurrentGet")
@@ -3242,7 +3242,7 @@ func (r ApiDappsUniswapv3TokensCurrentGetRequest) FilterTokenId(filterTokenId st
 	return r
 }
 
-func (r ApiDappsUniswapv3TokensCurrentGetRequest) Execute() ([]TokenV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3TokensCurrentGetRequest) Execute() ([]UniswapV3TokenV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3TokensCurrentGetExecute(r)
 }
 
@@ -3260,13 +3260,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3TokensCurrentGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return []TokenV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3TokensCurrentGetExecute(r ApiDappsUniswapv3TokensCurrentGetRequest) ([]TokenV3DTO, *http.Response, error) {
+//  @return []UniswapV3TokenV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3TokensCurrentGetExecute(r ApiDappsUniswapv3TokensCurrentGetRequest) ([]UniswapV3TokenV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenV3DTO
+		localVarReturnValue  []UniswapV3TokenV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3TokensCurrentGet")
@@ -3348,7 +3348,7 @@ func (r ApiDappsUniswapv3TokensDayDataCurrentGetRequest) FilterTokenId(filterTok
 	return r
 }
 
-func (r ApiDappsUniswapv3TokensDayDataCurrentGetRequest) Execute() ([]TokenV3DayDataDTO, *http.Response, error) {
+func (r ApiDappsUniswapv3TokensDayDataCurrentGetRequest) Execute() ([]UniswapV3TokenV3DayDataDTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3TokensDayDataCurrentGetExecute(r)
 }
 
@@ -3366,13 +3366,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3TokensDayDataCurrentGet(ctx context.
 }
 
 // Execute executes the request
-//  @return []TokenV3DayDataDTO
-func (a *UniswapV3ApiService) DappsUniswapv3TokensDayDataCurrentGetExecute(r ApiDappsUniswapv3TokensDayDataCurrentGetRequest) ([]TokenV3DayDataDTO, *http.Response, error) {
+//  @return []UniswapV3TokenV3DayDataDTO
+func (a *UniswapV3ApiService) DappsUniswapv3TokensDayDataCurrentGetExecute(r ApiDappsUniswapv3TokensDayDataCurrentGetRequest) ([]UniswapV3TokenV3DayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenV3DayDataDTO
+		localVarReturnValue  []UniswapV3TokenV3DayDataDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3TokensDayDataCurrentGet")
@@ -3585,7 +3585,7 @@ func (r ApiDappsUniswapv3TokensHourDataCurrentGetRequest) FilterTokenId(filterTo
 	return r
 }
 
-func (r ApiDappsUniswapv3TokensHourDataCurrentGetRequest) Execute() ([]TokenHourDataV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3TokensHourDataCurrentGetRequest) Execute() ([]UniswapV3TokenHourDataV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3TokensHourDataCurrentGetExecute(r)
 }
 
@@ -3603,13 +3603,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3TokensHourDataCurrentGet(ctx context
 }
 
 // Execute executes the request
-//  @return []TokenHourDataV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3TokensHourDataCurrentGetExecute(r ApiDappsUniswapv3TokensHourDataCurrentGetRequest) ([]TokenHourDataV3DTO, *http.Response, error) {
+//  @return []UniswapV3TokenHourDataV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3TokensHourDataCurrentGetExecute(r ApiDappsUniswapv3TokensHourDataCurrentGetRequest) ([]UniswapV3TokenHourDataV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenHourDataV3DTO
+		localVarReturnValue  []UniswapV3TokenHourDataV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3TokensHourDataCurrentGet")
@@ -3807,7 +3807,7 @@ type ApiDappsUniswapv3UniswapDayDataCurrentGetRequest struct {
 	ApiService *UniswapV3ApiService
 }
 
-func (r ApiDappsUniswapv3UniswapDayDataCurrentGetRequest) Execute() ([]UniswapDayDataV3DTO, *http.Response, error) {
+func (r ApiDappsUniswapv3UniswapDayDataCurrentGetRequest) Execute() ([]UniswapV3UniswapDayDataV3DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv3UniswapDayDataCurrentGetExecute(r)
 }
 
@@ -3825,13 +3825,13 @@ func (a *UniswapV3ApiService) DappsUniswapv3UniswapDayDataCurrentGet(ctx context
 }
 
 // Execute executes the request
-//  @return []UniswapDayDataV3DTO
-func (a *UniswapV3ApiService) DappsUniswapv3UniswapDayDataCurrentGetExecute(r ApiDappsUniswapv3UniswapDayDataCurrentGetRequest) ([]UniswapDayDataV3DTO, *http.Response, error) {
+//  @return []UniswapV3UniswapDayDataV3DTO
+func (a *UniswapV3ApiService) DappsUniswapv3UniswapDayDataCurrentGetExecute(r ApiDappsUniswapv3UniswapDayDataCurrentGetRequest) ([]UniswapV3UniswapDayDataV3DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []UniswapDayDataV3DTO
+		localVarReturnValue  []UniswapV3UniswapDayDataV3DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV3ApiService.DappsUniswapv3UniswapDayDataCurrentGet")

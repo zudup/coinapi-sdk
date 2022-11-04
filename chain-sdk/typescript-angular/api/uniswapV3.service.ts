@@ -19,37 +19,37 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { BundleV3DTO } from '../model/bundleV3DTO';
+import { UniswapV3BundleV3DTO } from '../model/uniswapV3BundleV3DTO';
 // @ts-ignore
-import { BurnV3DTO } from '../model/burnV3DTO';
+import { UniswapV3BurnV3DTO } from '../model/uniswapV3BurnV3DTO';
 // @ts-ignore
-import { FactoryV3DTO } from '../model/factoryV3DTO';
+import { UniswapV3FactoryV3DTO } from '../model/uniswapV3FactoryV3DTO';
 // @ts-ignore
-import { MintV3DTO } from '../model/mintV3DTO';
+import { UniswapV3MintV3DTO } from '../model/uniswapV3MintV3DTO';
 // @ts-ignore
-import { PoolDayDataV3DTO } from '../model/poolDayDataV3DTO';
+import { UniswapV3PoolDayDataV3DTO } from '../model/uniswapV3PoolDayDataV3DTO';
 // @ts-ignore
-import { PoolHourDataV3DTO } from '../model/poolHourDataV3DTO';
+import { UniswapV3PoolHourDataV3DTO } from '../model/uniswapV3PoolHourDataV3DTO';
 // @ts-ignore
-import { PoolV3DTO } from '../model/poolV3DTO';
+import { UniswapV3PoolV3DTO } from '../model/uniswapV3PoolV3DTO';
 // @ts-ignore
-import { PositionSnapshotV3DTO } from '../model/positionSnapshotV3DTO';
+import { UniswapV3PositionSnapshotV3DTO } from '../model/uniswapV3PositionSnapshotV3DTO';
 // @ts-ignore
-import { PositionV3DTO } from '../model/positionV3DTO';
+import { UniswapV3PositionV3DTO } from '../model/uniswapV3PositionV3DTO';
 // @ts-ignore
-import { SwapV3DTO } from '../model/swapV3DTO';
+import { UniswapV3SwapV3DTO } from '../model/uniswapV3SwapV3DTO';
 // @ts-ignore
-import { TickDayDataV3DTO } from '../model/tickDayDataV3DTO';
+import { UniswapV3TickDayDataV3DTO } from '../model/uniswapV3TickDayDataV3DTO';
 // @ts-ignore
-import { TickV3DTO } from '../model/tickV3DTO';
+import { UniswapV3TickV3DTO } from '../model/uniswapV3TickV3DTO';
 // @ts-ignore
-import { TokenHourDataV3DTO } from '../model/tokenHourDataV3DTO';
+import { UniswapV3TokenHourDataV3DTO } from '../model/uniswapV3TokenHourDataV3DTO';
 // @ts-ignore
-import { TokenV3DTO } from '../model/tokenV3DTO';
+import { UniswapV3TokenV3DTO } from '../model/uniswapV3TokenV3DTO';
 // @ts-ignore
-import { TokenV3DayDataDTO } from '../model/tokenV3DayDataDTO';
+import { UniswapV3TokenV3DayDataDTO } from '../model/uniswapV3TokenV3DayDataDTO';
 // @ts-ignore
-import { UniswapDayDataV3DTO } from '../model/uniswapDayDataV3DTO';
+import { UniswapV3UniswapDayDataV3DTO } from '../model/uniswapV3UniswapDayDataV3DTO';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -126,9 +126,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3BundleCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<BundleV3DTO>>;
-    public dappsUniswapv3BundleCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<BundleV3DTO>>>;
-    public dappsUniswapv3BundleCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<BundleV3DTO>>>;
+    public dappsUniswapv3BundleCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BundleV3DTO>>;
+    public dappsUniswapv3BundleCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BundleV3DTO>>>;
+    public dappsUniswapv3BundleCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BundleV3DTO>>>;
     public dappsUniswapv3BundleCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -165,7 +165,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/bundle/current`;
-        return this.httpClient.request<Array<BundleV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3BundleV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -258,9 +258,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<BurnV3DTO>>;
-    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<BurnV3DTO>>>;
-    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<BurnV3DTO>>>;
+    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BurnV3DTO>>;
+    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BurnV3DTO>>>;
+    public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BurnV3DTO>>>;
     public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -303,7 +303,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/burns/current`;
-        return this.httpClient.request<Array<BurnV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3BurnV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -477,9 +477,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<FactoryV3DTO>>;
-    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<FactoryV3DTO>>>;
-    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<FactoryV3DTO>>>;
+    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3FactoryV3DTO>>;
+    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3FactoryV3DTO>>>;
+    public dappsUniswapv3FactoryCurrentGet(chainId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3FactoryV3DTO>>>;
     public dappsUniswapv3FactoryCurrentGet(chainId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
         if (chainId === null || chainId === undefined) {
             throw new Error('Required parameter chainId was null or undefined when calling dappsUniswapv3FactoryCurrentGet.');
@@ -519,7 +519,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/factory/current`;
-        return this.httpClient.request<Array<FactoryV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3FactoryV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -612,9 +612,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<MintV3DTO>>;
-    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<MintV3DTO>>>;
-    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<MintV3DTO>>>;
+    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3MintV3DTO>>;
+    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3MintV3DTO>>>;
+    public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3MintV3DTO>>>;
     public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -657,7 +657,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/mints/current`;
-        return this.httpClient.request<Array<MintV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3MintV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -916,9 +916,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PoolV3DTO>>;
-    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PoolV3DTO>>>;
-    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PoolV3DTO>>>;
+    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolV3DTO>>;
+    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolV3DTO>>>;
+    public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolV3DTO>>>;
     public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -961,7 +961,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/pools/current`;
-        return this.httpClient.request<Array<PoolV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3PoolV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -980,9 +980,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PoolDayDataV3DTO>>;
-    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PoolDayDataV3DTO>>>;
-    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PoolDayDataV3DTO>>>;
+    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDayDataV3DTO>>;
+    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDayDataV3DTO>>>;
+    public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDayDataV3DTO>>>;
     public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1025,7 +1025,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/poolsDayData/current`;
-        return this.httpClient.request<Array<PoolDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3PoolDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1124,9 +1124,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PoolHourDataV3DTO>>;
-    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PoolHourDataV3DTO>>>;
-    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PoolHourDataV3DTO>>>;
+    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolHourDataV3DTO>>;
+    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolHourDataV3DTO>>>;
+    public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolHourDataV3DTO>>>;
     public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1169,7 +1169,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/poolsHourData/current`;
-        return this.httpClient.request<Array<PoolHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3PoolHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1268,9 +1268,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PositionSnapshotV3DTO>>;
-    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PositionSnapshotV3DTO>>>;
-    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PositionSnapshotV3DTO>>>;
+    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionSnapshotV3DTO>>;
+    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionSnapshotV3DTO>>>;
+    public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionSnapshotV3DTO>>>;
     public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1313,7 +1313,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/positionSnapshots/current`;
-        return this.httpClient.request<Array<PositionSnapshotV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3PositionSnapshotV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1332,9 +1332,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PositionV3DTO>>;
-    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PositionV3DTO>>>;
-    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PositionV3DTO>>>;
+    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionV3DTO>>;
+    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionV3DTO>>>;
+    public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionV3DTO>>>;
     public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1377,7 +1377,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/positions/current`;
-        return this.httpClient.request<Array<PositionV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3PositionV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1476,9 +1476,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SwapV3DTO>>;
-    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SwapV3DTO>>>;
-    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SwapV3DTO>>>;
+    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3SwapV3DTO>>;
+    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3SwapV3DTO>>>;
+    public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3SwapV3DTO>>>;
     public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1521,7 +1521,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/swaps/current`;
-        return this.httpClient.request<Array<SwapV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3SwapV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1700,9 +1700,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TickV3DTO>>;
-    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TickV3DTO>>>;
-    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TickV3DTO>>>;
+    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickV3DTO>>;
+    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickV3DTO>>>;
+    public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickV3DTO>>>;
     public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1745,7 +1745,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/ticks/current`;
-        return this.httpClient.request<Array<TickV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TickV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1764,9 +1764,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TickDayDataV3DTO>>;
-    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TickDayDataV3DTO>>>;
-    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TickDayDataV3DTO>>>;
+    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDayDataV3DTO>>;
+    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDayDataV3DTO>>>;
+    public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDayDataV3DTO>>>;
     public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1809,7 +1809,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/ticksDayData/current`;
-        return this.httpClient.request<Array<TickDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TickDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2068,9 +2068,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenV3DTO>>;
-    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenV3DTO>>>;
-    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenV3DTO>>>;
+    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DTO>>;
+    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DTO>>>;
+    public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DTO>>>;
     public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -2113,7 +2113,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/tokens/current`;
-        return this.httpClient.request<Array<TokenV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TokenV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2132,9 +2132,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenV3DayDataDTO>>;
-    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenV3DayDataDTO>>>;
-    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenV3DayDataDTO>>>;
+    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DayDataDTO>>;
+    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DayDataDTO>>>;
+    public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DayDataDTO>>>;
     public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -2177,7 +2177,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/tokensDayData/current`;
-        return this.httpClient.request<Array<TokenV3DayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TokenV3DayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2276,9 +2276,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenHourDataV3DTO>>;
-    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenHourDataV3DTO>>>;
-    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenHourDataV3DTO>>>;
+    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenHourDataV3DTO>>;
+    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenHourDataV3DTO>>>;
+    public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenHourDataV3DTO>>>;
     public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -2321,7 +2321,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/tokensHourData/current`;
-        return this.httpClient.request<Array<TokenHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TokenHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2414,9 +2414,9 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapDayDataV3DTO>>;
-    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapDayDataV3DTO>>>;
-    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapDayDataV3DTO>>>;
+    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3UniswapDayDataV3DTO>>;
+    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3UniswapDayDataV3DTO>>>;
+    public dappsUniswapv3UniswapDayDataCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3UniswapDayDataV3DTO>>>;
     public dappsUniswapv3UniswapDayDataCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -2453,7 +2453,7 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/uniswapDayData/current`;
-        return this.httpClient.request<Array<UniswapDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3UniswapDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,

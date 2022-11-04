@@ -162,7 +162,7 @@ dappsUniswapv2PoolHourDataHistoricalGet startBlock_query endBlock_query startDat
 
 
 
-dappsUniswapv2PoolsCurrentGet : Maybe String -> Api.Request (List Api.Data.PairV2DTO)
+dappsUniswapv2PoolsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV2PairV2DTO)
 dappsUniswapv2PoolsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -171,7 +171,7 @@ dappsUniswapv2PoolsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.pairV2DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV2PairV2DTODecoder)
 
 
 
@@ -188,7 +188,7 @@ dappsUniswapv2PoolsHistoricalGet startBlock_query endBlock_query startDate_query
 
 
 
-dappsUniswapv2SwapsCurrentGet : Api.Request (List Api.Data.SwapV2DTO)
+dappsUniswapv2SwapsCurrentGet : Api.Request (List Api.Data.UniswapV2SwapV2DTO)
 dappsUniswapv2SwapsCurrentGet =
     Api.request
         "GET"
@@ -197,7 +197,7 @@ dappsUniswapv2SwapsCurrentGet =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.swapV2DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV2SwapV2DTODecoder)
 
 
 
@@ -227,7 +227,7 @@ dappsUniswapv2TokenDayDataHistoricalGet startBlock_query endBlock_query startDat
 
 
 
-dappsUniswapv2TokensCurrentGet : Api.Request (List Api.Data.TokenV2DTO)
+dappsUniswapv2TokensCurrentGet : Api.Request (List Api.Data.UniswapV2TokenV2DTO)
 dappsUniswapv2TokensCurrentGet =
     Api.request
         "GET"
@@ -236,7 +236,7 @@ dappsUniswapv2TokensCurrentGet =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.tokenV2DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV2TokenV2DTODecoder)
 
 
 

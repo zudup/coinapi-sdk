@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 
 # **dapps_uniswapv3_bundle_current_get**
-> ARRAY[BundleV3DTO] dapps_uniswapv3_bundle_current_get()
+> ARRAY[UniswapV3BundleV3DTO] dapps_uniswapv3_bundle_current_get()
 
 GetBundles
 
@@ -71,7 +71,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[BundleV3DTO]**](BundleV3DTO.md)
+[**ARRAY[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_burns_current_get**
-> ARRAY[BurnV3DTO] dapps_uniswapv3_burns_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3BurnV3DTO] dapps_uniswapv3_burns_current_get(filter_pool_id => $filter_pool_id)
 
 GetBurns
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[BurnV3DTO]**](BurnV3DTO.md)
+[**ARRAY[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_factory_current_get**
-> ARRAY[FactoryV3DTO] dapps_uniswapv3_factory_current_get(chain_id => $chain_id)
+> ARRAY[UniswapV3FactoryV3DTO] dapps_uniswapv3_factory_current_get(chain_id => $chain_id)
 
 GetFactory
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[FactoryV3DTO]**](FactoryV3DTO.md)
+[**ARRAY[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_mints_current_get**
-> ARRAY[MintV3DTO] dapps_uniswapv3_mints_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3MintV3DTO] dapps_uniswapv3_mints_current_get(filter_pool_id => $filter_pool_id)
 
 GetMints
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[MintV3DTO]**](MintV3DTO.md)
+[**ARRAY[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -568,7 +568,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_current_get**
-> ARRAY[PoolV3DTO] dapps_uniswapv3_pools_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3PoolV3DTO] dapps_uniswapv3_pools_current_get(filter_pool_id => $filter_pool_id)
 
 GetPools
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PoolV3DTO]**](PoolV3DTO.md)
+[**ARRAY[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -612,7 +612,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_day_data_current_get**
-> ARRAY[PoolDayDataV3DTO] dapps_uniswapv3_pools_day_data_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3PoolDayDataV3DTO] dapps_uniswapv3_pools_day_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetPoolsDayData
 
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)
+[**ARRAY[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -707,7 +707,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_hour_data_current_get**
-> ARRAY[PoolHourDataV3DTO] dapps_uniswapv3_pools_hour_data_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3PoolHourDataV3DTO] dapps_uniswapv3_pools_hour_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetPoolsHourData
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)
+[**ARRAY[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -802,7 +802,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_position_snapshots_current_get**
-> ARRAY[PositionSnapshotV3DTO] dapps_uniswapv3_position_snapshots_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3PositionSnapshotV3DTO] dapps_uniswapv3_position_snapshots_current_get(filter_pool_id => $filter_pool_id)
 
 GetPositionSnapshot
 
@@ -832,7 +832,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)
+[**ARRAY[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -846,7 +846,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_positions_current_get**
-> ARRAY[PositionV3DTO] dapps_uniswapv3_positions_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3PositionV3DTO] dapps_uniswapv3_positions_current_get(filter_pool_id => $filter_pool_id)
 
 GetPositions
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PositionV3DTO]**](PositionV3DTO.md)
+[**ARRAY[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -941,7 +941,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_swaps_current_get**
-> ARRAY[SwapV3DTO] dapps_uniswapv3_swaps_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3SwapV3DTO] dapps_uniswapv3_swaps_current_get(filter_pool_id => $filter_pool_id)
 
 GetSwaps
 
@@ -971,7 +971,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[SwapV3DTO]**](SwapV3DTO.md)
+[**ARRAY[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1087,7 +1087,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_ticks_current_get**
-> ARRAY[TickV3DTO] dapps_uniswapv3_ticks_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3TickV3DTO] dapps_uniswapv3_ticks_current_get(filter_pool_id => $filter_pool_id)
 
 GetTicks
 
@@ -1117,7 +1117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TickV3DTO]**](TickV3DTO.md)
+[**ARRAY[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1131,7 +1131,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_ticks_day_data_current_get**
-> ARRAY[TickDayDataV3DTO] dapps_uniswapv3_ticks_day_data_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV3TickDayDataV3DTO] dapps_uniswapv3_ticks_day_data_current_get(filter_pool_id => $filter_pool_id)
 
 GetTicksDayData
 
@@ -1161,7 +1161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TickDayDataV3DTO]**](TickDayDataV3DTO.md)
+[**ARRAY[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1328,7 +1328,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_current_get**
-> ARRAY[TokenV3DTO] dapps_uniswapv3_tokens_current_get(filter_token_id => $filter_token_id)
+> ARRAY[UniswapV3TokenV3DTO] dapps_uniswapv3_tokens_current_get(filter_token_id => $filter_token_id)
 
 GetTokens
 
@@ -1358,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TokenV3DTO]**](TokenV3DTO.md)
+[**ARRAY[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1372,7 +1372,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_day_data_current_get**
-> ARRAY[TokenV3DayDataDTO] dapps_uniswapv3_tokens_day_data_current_get(filter_token_id => $filter_token_id)
+> ARRAY[UniswapV3TokenV3DayDataDTO] dapps_uniswapv3_tokens_day_data_current_get(filter_token_id => $filter_token_id)
 
 GetTokensDayData
 
@@ -1402,7 +1402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)
+[**ARRAY[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1467,7 +1467,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_hour_data_current_get**
-> ARRAY[TokenHourDataV3DTO] dapps_uniswapv3_tokens_hour_data_current_get(filter_token_id => $filter_token_id)
+> ARRAY[UniswapV3TokenHourDataV3DTO] dapps_uniswapv3_tokens_hour_data_current_get(filter_token_id => $filter_token_id)
 
 GetTokensHourData
 
@@ -1497,7 +1497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)
+[**ARRAY[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1560,7 +1560,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_uniswap_day_data_current_get**
-> ARRAY[UniswapDayDataV3DTO] dapps_uniswapv3_uniswap_day_data_current_get()
+> ARRAY[UniswapV3UniswapDayDataV3DTO] dapps_uniswapv3_uniswap_day_data_current_get()
 
 GetUniswapDayData
 
@@ -1586,7 +1586,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)
+[**ARRAY[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

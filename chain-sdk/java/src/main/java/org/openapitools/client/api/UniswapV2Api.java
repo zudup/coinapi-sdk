@@ -28,9 +28,9 @@ import java.io.IOException;
 
 
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PairV2DTO;
-import org.openapitools.client.model.SwapV2DTO;
-import org.openapitools.client.model.TokenV2DTO;
+import org.openapitools.client.model.UniswapV2PairV2DTO;
+import org.openapitools.client.model.UniswapV2SwapV2DTO;
+import org.openapitools.client.model.UniswapV2TokenV2DTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -1456,7 +1456,7 @@ public class UniswapV2Api {
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PairV2DTO&gt;
+     * @return List&lt;UniswapV2PairV2DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1464,8 +1464,8 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PairV2DTO> dappsUniswapv2PoolsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PairV2DTO>> localVarResp = dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV2PairV2DTO> dappsUniswapv2PoolsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV2PairV2DTO>> localVarResp = dappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -1473,7 +1473,7 @@ public class UniswapV2Api {
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PairV2DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV2PairV2DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1481,9 +1481,9 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PairV2DTO>> dappsUniswapv2PoolsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV2PairV2DTO>> dappsUniswapv2PoolsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv2PoolsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PairV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2PairV2DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1500,10 +1500,10 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv2PoolsCurrentGetAsync(String filterPoolId, final ApiCallback<List<PairV2DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv2PoolsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV2PairV2DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv2PoolsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PairV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2PairV2DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1721,7 +1721,7 @@ public class UniswapV2Api {
     /**
      * GetSwaps
      * 
-     * @return List&lt;SwapV2DTO&gt;
+     * @return List&lt;UniswapV2SwapV2DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1729,15 +1729,15 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SwapV2DTO> dappsUniswapv2SwapsCurrentGet() throws ApiException {
-        ApiResponse<List<SwapV2DTO>> localVarResp = dappsUniswapv2SwapsCurrentGetWithHttpInfo();
+    public List<UniswapV2SwapV2DTO> dappsUniswapv2SwapsCurrentGet() throws ApiException {
+        ApiResponse<List<UniswapV2SwapV2DTO>> localVarResp = dappsUniswapv2SwapsCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetSwaps
      * 
-     * @return ApiResponse&lt;List&lt;SwapV2DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV2SwapV2DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1745,9 +1745,9 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SwapV2DTO>> dappsUniswapv2SwapsCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<UniswapV2SwapV2DTO>> dappsUniswapv2SwapsCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv2SwapsCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<SwapV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2SwapV2DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1763,10 +1763,10 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv2SwapsCurrentGetAsync(final ApiCallback<List<SwapV2DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv2SwapsCurrentGetAsync(final ApiCallback<List<UniswapV2SwapV2DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv2SwapsCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<SwapV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2SwapV2DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2132,7 +2132,7 @@ public class UniswapV2Api {
     /**
      * GetTokens
      * 
-     * @return List&lt;TokenV2DTO&gt;
+     * @return List&lt;UniswapV2TokenV2DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2140,15 +2140,15 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenV2DTO> dappsUniswapv2TokensCurrentGet() throws ApiException {
-        ApiResponse<List<TokenV2DTO>> localVarResp = dappsUniswapv2TokensCurrentGetWithHttpInfo();
+    public List<UniswapV2TokenV2DTO> dappsUniswapv2TokensCurrentGet() throws ApiException {
+        ApiResponse<List<UniswapV2TokenV2DTO>> localVarResp = dappsUniswapv2TokensCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetTokens
      * 
-     * @return ApiResponse&lt;List&lt;TokenV2DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV2TokenV2DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2156,9 +2156,9 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenV2DTO>> dappsUniswapv2TokensCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<UniswapV2TokenV2DTO>> dappsUniswapv2TokensCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv2TokensCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<TokenV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2TokenV2DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2174,10 +2174,10 @@ public class UniswapV2Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv2TokensCurrentGetAsync(final ApiCallback<List<TokenV2DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv2TokensCurrentGetAsync(final ApiCallback<List<UniswapV2TokenV2DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv2TokensCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<TokenV2DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV2TokenV2DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

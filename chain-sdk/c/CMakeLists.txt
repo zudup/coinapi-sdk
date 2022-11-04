@@ -54,30 +54,30 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/big_integer.c
-    model/bundle_v3_dto.c
-    model/burn_v3_dto.c
-    model/e_trade_aggressive_side.c
-    model/factory_v3_dto.c
-    model/mint_v3_dto.c
-    model/pair_dto.c
-    model/pair_v2_dto.c
-    model/pool_day_data_v3_dto.c
-    model/pool_hour_data_v3_dto.c
-    model/pool_v3_dto.c
-    model/position_snapshot_v3_dto.c
-    model/position_v3_dto.c
-    model/swap_dto.c
-    model/swap_v2_dto.c
-    model/swap_v3_dto.c
-    model/tick_day_data_v3_dto.c
-    model/tick_v3_dto.c
-    model/token_dto.c
-    model/token_hour_data_v3_dto.c
-    model/token_v2_dto.c
-    model/token_v3_day_data_dto.c
-    model/token_v3_dto.c
-    model/uniswap_day_data_v3_dto.c
+    model/numerics_big_integer.c
+    model/sushiswap_pair_dto.c
+    model/sushiswap_swap_dto.c
+    model/sushiswap_token_dto.c
+    model/transactions_e_trade_aggressive_side.c
+    model/uniswap_v2_pair_v2_dto.c
+    model/uniswap_v2_swap_v2_dto.c
+    model/uniswap_v2_token_v2_dto.c
+    model/uniswap_v3_bundle_v3_dto.c
+    model/uniswap_v3_burn_v3_dto.c
+    model/uniswap_v3_factory_v3_dto.c
+    model/uniswap_v3_mint_v3_dto.c
+    model/uniswap_v3_pool_day_data_v3_dto.c
+    model/uniswap_v3_pool_hour_data_v3_dto.c
+    model/uniswap_v3_pool_v3_dto.c
+    model/uniswap_v3_position_snapshot_v3_dto.c
+    model/uniswap_v3_position_v3_dto.c
+    model/uniswap_v3_swap_v3_dto.c
+    model/uniswap_v3_tick_day_data_v3_dto.c
+    model/uniswap_v3_tick_v3_dto.c
+    model/uniswap_v3_token_hour_data_v3_dto.c
+    model/uniswap_v3_token_v3_day_data_dto.c
+    model/uniswap_v3_token_v3_dto.c
+    model/uniswap_v3_uniswap_day_data_v3_dto.c
     api/CowAPI.c
     api/CurveAPI.c
     api/DexAPI.c
@@ -94,30 +94,30 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/big_integer.h
-    model/bundle_v3_dto.h
-    model/burn_v3_dto.h
-    model/e_trade_aggressive_side.h
-    model/factory_v3_dto.h
-    model/mint_v3_dto.h
-    model/pair_dto.h
-    model/pair_v2_dto.h
-    model/pool_day_data_v3_dto.h
-    model/pool_hour_data_v3_dto.h
-    model/pool_v3_dto.h
-    model/position_snapshot_v3_dto.h
-    model/position_v3_dto.h
-    model/swap_dto.h
-    model/swap_v2_dto.h
-    model/swap_v3_dto.h
-    model/tick_day_data_v3_dto.h
-    model/tick_v3_dto.h
-    model/token_dto.h
-    model/token_hour_data_v3_dto.h
-    model/token_v2_dto.h
-    model/token_v3_day_data_dto.h
-    model/token_v3_dto.h
-    model/uniswap_day_data_v3_dto.h
+    model/numerics_big_integer.h
+    model/sushiswap_pair_dto.h
+    model/sushiswap_swap_dto.h
+    model/sushiswap_token_dto.h
+    model/transactions_e_trade_aggressive_side.h
+    model/uniswap_v2_pair_v2_dto.h
+    model/uniswap_v2_swap_v2_dto.h
+    model/uniswap_v2_token_v2_dto.h
+    model/uniswap_v3_bundle_v3_dto.h
+    model/uniswap_v3_burn_v3_dto.h
+    model/uniswap_v3_factory_v3_dto.h
+    model/uniswap_v3_mint_v3_dto.h
+    model/uniswap_v3_pool_day_data_v3_dto.h
+    model/uniswap_v3_pool_hour_data_v3_dto.h
+    model/uniswap_v3_pool_v3_dto.h
+    model/uniswap_v3_position_snapshot_v3_dto.h
+    model/uniswap_v3_position_v3_dto.h
+    model/uniswap_v3_swap_v3_dto.h
+    model/uniswap_v3_tick_day_data_v3_dto.h
+    model/uniswap_v3_tick_v3_dto.h
+    model/uniswap_v3_token_hour_data_v3_dto.h
+    model/uniswap_v3_token_v3_day_data_dto.h
+    model/uniswap_v3_token_v3_dto.h
+    model/uniswap_v3_uniswap_day_data_v3_dto.h
     api/CowAPI.h
     api/CurveAPI.h
     api/DexAPI.h

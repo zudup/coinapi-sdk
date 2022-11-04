@@ -12,9 +12,9 @@
 package org.openapitools.client.api
 
 import java.time.OffsetDateTime
-import org.openapitools.client.model.PairV2DTO
-import org.openapitools.client.model.SwapV2DTO
-import org.openapitools.client.model.TokenV2DTO
+import org.openapitools.client.model.UniswapV2PairV2DTO
+import org.openapitools.client.model.UniswapV2SwapV2DTO
+import org.openapitools.client.model.UniswapV2TokenV2DTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -202,14 +202,14 @@ class UniswapV2Api(baseUrl: String) {
 
   /**
    * Expected answers:
-   *   code 200 : Seq[PairV2DTO] (successful operation)
+   *   code 200 : Seq[UniswapV2PairV2DTO] (successful operation)
    * 
    * @param filterPoolId Filter pool id
    */
-  def dappsUniswapv2PoolsCurrentGet(filterPoolId: Option[String] = None): ApiRequest[Seq[PairV2DTO]] =
-    ApiRequest[Seq[PairV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pools/current", "application/json")
+  def dappsUniswapv2PoolsCurrentGet(filterPoolId: Option[String] = None): ApiRequest[Seq[UniswapV2PairV2DTO]] =
+    ApiRequest[Seq[UniswapV2PairV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pools/current", "application/json")
       .withQueryParam("filter_pool_id", filterPoolId)
-      .withSuccessResponse[Seq[PairV2DTO]](200)
+      .withSuccessResponse[Seq[UniswapV2PairV2DTO]](200)
       
 
   /**
@@ -234,11 +234,11 @@ class UniswapV2Api(baseUrl: String) {
 
   /**
    * Expected answers:
-   *   code 200 : Seq[SwapV2DTO] (successful operation)
+   *   code 200 : Seq[UniswapV2SwapV2DTO] (successful operation)
    */
-  def dappsUniswapv2SwapsCurrentGet(): ApiRequest[Seq[SwapV2DTO]] =
-    ApiRequest[Seq[SwapV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/swaps/current", "application/json")
-      .withSuccessResponse[Seq[SwapV2DTO]](200)
+  def dappsUniswapv2SwapsCurrentGet(): ApiRequest[Seq[UniswapV2SwapV2DTO]] =
+    ApiRequest[Seq[UniswapV2SwapV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/swaps/current", "application/json")
+      .withSuccessResponse[Seq[UniswapV2SwapV2DTO]](200)
       
 
   /**
@@ -283,11 +283,11 @@ class UniswapV2Api(baseUrl: String) {
 
   /**
    * Expected answers:
-   *   code 200 : Seq[TokenV2DTO] (successful operation)
+   *   code 200 : Seq[UniswapV2TokenV2DTO] (successful operation)
    */
-  def dappsUniswapv2TokensCurrentGet(): ApiRequest[Seq[TokenV2DTO]] =
-    ApiRequest[Seq[TokenV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokens/current", "application/json")
-      .withSuccessResponse[Seq[TokenV2DTO]](200)
+  def dappsUniswapv2TokensCurrentGet(): ApiRequest[Seq[UniswapV2TokenV2DTO]] =
+    ApiRequest[Seq[UniswapV2TokenV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokens/current", "application/json")
+      .withSuccessResponse[Seq[UniswapV2TokenV2DTO]](200)
       
 
   /**

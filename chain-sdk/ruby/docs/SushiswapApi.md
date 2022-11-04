@@ -729,7 +729,7 @@ No authorization required
 
 ## dapps_sushiswap_pools_current_get
 
-> <Array<PairDTO>> dapps_sushiswap_pools_current_get
+> <Array<SushiswapPairDTO>> dapps_sushiswap_pools_current_get
 
 GetPools
 
@@ -756,7 +756,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PairDTO>>, Integer, Hash)> dapps_sushiswap_pools_current_get_with_http_info
+> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> dapps_sushiswap_pools_current_get_with_http_info
 
 ```ruby
 begin
@@ -764,7 +764,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_pools_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PairDTO>>
+  p data # => <Array<SushiswapPairDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_pools_current_get_with_http_info: #{e}"
 end
@@ -776,7 +776,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;PairDTO&gt;**](PairDTO.md)
+[**Array&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -790,7 +790,7 @@ No authorization required
 
 ## dapps_sushiswap_pools_historical_get
 
-> <Array<PairDTO>> dapps_sushiswap_pools_historical_get(opts)
+> <Array<SushiswapPairDTO>> dapps_sushiswap_pools_historical_get(opts)
 
 GetPools (historical)
 
@@ -822,7 +822,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PairDTO>>, Integer, Hash)> dapps_sushiswap_pools_historical_get_with_http_info(opts)
+> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> dapps_sushiswap_pools_historical_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -830,7 +830,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_pools_historical_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PairDTO>>
+  p data # => <Array<SushiswapPairDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_pools_historical_get_with_http_info: #{e}"
 end
@@ -848,7 +848,7 @@ end
 
 ### Return type
 
-[**Array&lt;PairDTO&gt;**](PairDTO.md)
+[**Array&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -862,7 +862,7 @@ No authorization required
 
 ## dapps_sushiswap_swaps_current_get
 
-> <Array<SwapDTO>> dapps_sushiswap_swaps_current_get
+> <Array<SushiswapSwapDTO>> dapps_sushiswap_swaps_current_get
 
 GetSwaps
 
@@ -887,7 +887,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SwapDTO>>, Integer, Hash)> dapps_sushiswap_swaps_current_get_with_http_info
+> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> dapps_sushiswap_swaps_current_get_with_http_info
 
 ```ruby
 begin
@@ -895,7 +895,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_swaps_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SwapDTO>>
+  p data # => <Array<SushiswapSwapDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_current_get_with_http_info: #{e}"
 end
@@ -907,7 +907,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;SwapDTO&gt;**](SwapDTO.md)
+[**Array&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -921,7 +921,7 @@ No authorization required
 
 ## dapps_sushiswap_swaps_historical_get
 
-> <Array<SwapDTO>> dapps_sushiswap_swaps_historical_get(opts)
+> <Array<SushiswapSwapDTO>> dapps_sushiswap_swaps_historical_get(opts)
 
 GetSwaps (historical)
 
@@ -953,7 +953,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SwapDTO>>, Integer, Hash)> dapps_sushiswap_swaps_historical_get_with_http_info(opts)
+> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> dapps_sushiswap_swaps_historical_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -961,7 +961,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_swaps_historical_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SwapDTO>>
+  p data # => <Array<SushiswapSwapDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_swaps_historical_get_with_http_info: #{e}"
 end
@@ -979,7 +979,7 @@ end
 
 ### Return type
 
-[**Array&lt;SwapDTO&gt;**](SwapDTO.md)
+[**Array&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1064,7 +1064,7 @@ No authorization required
 
 ## dapps_sushiswap_tokens_current_get
 
-> <Array<TokenDTO>> dapps_sushiswap_tokens_current_get
+> <Array<SushiswapTokenDTO>> dapps_sushiswap_tokens_current_get
 
 GetTokens
 
@@ -1089,7 +1089,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenDTO>>, Integer, Hash)> dapps_sushiswap_tokens_current_get_with_http_info
+> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> dapps_sushiswap_tokens_current_get_with_http_info
 
 ```ruby
 begin
@@ -1097,7 +1097,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_tokens_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenDTO>>
+  p data # => <Array<SushiswapTokenDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_current_get_with_http_info: #{e}"
 end
@@ -1109,7 +1109,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;TokenDTO&gt;**](TokenDTO.md)
+[**Array&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1123,7 +1123,7 @@ No authorization required
 
 ## dapps_sushiswap_tokens_historical_get
 
-> <Array<TokenDTO>> dapps_sushiswap_tokens_historical_get(opts)
+> <Array<SushiswapTokenDTO>> dapps_sushiswap_tokens_historical_get(opts)
 
 GetTokens (historical)
 
@@ -1155,7 +1155,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenDTO>>, Integer, Hash)> dapps_sushiswap_tokens_historical_get_with_http_info(opts)
+> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> dapps_sushiswap_tokens_historical_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1163,7 +1163,7 @@ begin
   data, status_code, headers = api_instance.dapps_sushiswap_tokens_historical_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenDTO>>
+  p data # => <Array<SushiswapTokenDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->dapps_sushiswap_tokens_historical_get_with_http_info: #{e}"
 end
@@ -1181,7 +1181,7 @@ end
 
 ### Return type
 
-[**Array&lt;TokenDTO&gt;**](TokenDTO.md)
+[**Array&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

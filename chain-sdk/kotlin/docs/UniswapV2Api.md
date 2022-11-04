@@ -488,7 +488,7 @@ No authorization required
 
 <a name="dappsUniswapv2PoolsCurrentGet"></a>
 # **dappsUniswapv2PoolsCurrentGet**
-> kotlin.collections.List&lt;PairV2DTO&gt; dappsUniswapv2PoolsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV2PairV2DTO&gt; dappsUniswapv2PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -501,7 +501,7 @@ GetPools
 val apiInstance = UniswapV2Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PairV2DTO> = apiInstance.dappsUniswapv2PoolsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV2PairV2DTO> = apiInstance.dappsUniswapv2PoolsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV2Api#dappsUniswapv2PoolsCurrentGet")
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PairV2DTO&gt;**](PairV2DTO.md)
+[**kotlin.collections.List&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -585,7 +585,7 @@ No authorization required
 
 <a name="dappsUniswapv2SwapsCurrentGet"></a>
 # **dappsUniswapv2SwapsCurrentGet**
-> kotlin.collections.List&lt;SwapV2DTO&gt; dappsUniswapv2SwapsCurrentGet()
+> kotlin.collections.List&lt;UniswapV2SwapV2DTO&gt; dappsUniswapv2SwapsCurrentGet()
 
 GetSwaps
 
@@ -597,7 +597,7 @@ GetSwaps
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<SwapV2DTO> = apiInstance.dappsUniswapv2SwapsCurrentGet()
+    val result : kotlin.collections.List<UniswapV2SwapV2DTO> = apiInstance.dappsUniswapv2SwapsCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV2Api#dappsUniswapv2SwapsCurrentGet")
@@ -613,7 +613,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;SwapV2DTO&gt;**](SwapV2DTO.md)
+[**kotlin.collections.List&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -730,7 +730,7 @@ No authorization required
 
 <a name="dappsUniswapv2TokensCurrentGet"></a>
 # **dappsUniswapv2TokensCurrentGet**
-> kotlin.collections.List&lt;TokenV2DTO&gt; dappsUniswapv2TokensCurrentGet()
+> kotlin.collections.List&lt;UniswapV2TokenV2DTO&gt; dappsUniswapv2TokensCurrentGet()
 
 GetTokens
 
@@ -742,7 +742,7 @@ GetTokens
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<TokenV2DTO> = apiInstance.dappsUniswapv2TokensCurrentGet()
+    val result : kotlin.collections.List<UniswapV2TokenV2DTO> = apiInstance.dappsUniswapv2TokensCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV2Api#dappsUniswapv2TokensCurrentGet")
@@ -758,7 +758,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenV2DTO&gt;**](TokenV2DTO.md)
+[**kotlin.collections.List&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

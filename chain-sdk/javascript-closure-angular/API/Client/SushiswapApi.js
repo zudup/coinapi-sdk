@@ -14,9 +14,9 @@
 
 goog.provide('API.Client.SushiswapApi');
 
-goog.require('API.Client.PairDTO');
-goog.require('API.Client.SwapDTO');
-goog.require('API.Client.TokenDTO');
+goog.require('API.Client.SushiswapPairDTO');
+goog.require('API.Client.SushiswapSwapDTO');
+goog.require('API.Client.SushiswapTokenDTO');
 
 /**
  * @constructor
@@ -589,7 +589,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolHourDataHistoricalGet = func
  * GetPools
  * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PairDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapPairDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapPoolsCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -625,7 +625,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolsCurrentGet = function(opt_e
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PairDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapPairDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapPoolsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -676,7 +676,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolsHistoricalGet = function(op
  * GetSwaps
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.SwapDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapSwapDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapSwapsCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -712,7 +712,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapSwapsCurrentGet = function(opt_e
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.SwapDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapSwapDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapSwapsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -819,7 +819,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapTokenDayDataHistoricalGet = func
  * GetTokens
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapTokenDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapTokensCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -855,7 +855,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapTokensCurrentGet = function(opt_
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SushiswapTokenDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapTokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */

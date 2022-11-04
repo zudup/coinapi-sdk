@@ -309,7 +309,7 @@ instance Produces DappsUniswapv2PoolHourDataHistoricalGet MimeNoContent
 -- 
 dappsUniswapv2PoolsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv2PoolsCurrentGet MimeNoContent [PairV2DTO] accept
+  -> OnChainRequest DappsUniswapv2PoolsCurrentGet MimeNoContent [UniswapV2PairV2DTO] accept
 dappsUniswapv2PoolsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv2/pools/current"]
 
@@ -363,7 +363,7 @@ instance Produces DappsUniswapv2PoolsHistoricalGet MimeNoContent
 -- 
 dappsUniswapv2SwapsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv2SwapsCurrentGet MimeNoContent [SwapV2DTO] accept
+  -> OnChainRequest DappsUniswapv2SwapsCurrentGet MimeNoContent [UniswapV2SwapV2DTO] accept
 dappsUniswapv2SwapsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv2/swaps/current"]
 
@@ -440,7 +440,7 @@ instance Produces DappsUniswapv2TokenDayDataHistoricalGet MimeNoContent
 -- 
 dappsUniswapv2TokensCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv2TokensCurrentGet MimeNoContent [TokenV2DTO] accept
+  -> OnChainRequest DappsUniswapv2TokensCurrentGet MimeNoContent [UniswapV2TokenV2DTO] accept
 dappsUniswapv2TokensCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv2/tokens/current"]
 

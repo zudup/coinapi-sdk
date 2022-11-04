@@ -42,7 +42,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 ## `dappsUniswapv3BundleCurrentGet()`
 
 ```php
-dappsUniswapv3BundleCurrentGet(): \OpenAPI\Client\Model\BundleV3DTO[]
+dappsUniswapv3BundleCurrentGet(): \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
 ```
 
 GetBundles
@@ -75,7 +75,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BundleV3DTO[]**](../Model/BundleV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]**](../Model/UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 ## `dappsUniswapv3BurnsCurrentGet()`
 
 ```php
-dappsUniswapv3BurnsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\BurnV3DTO[]
+dappsUniswapv3BurnsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
 ```
 
 GetBurns
@@ -188,7 +188,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BurnV3DTO[]**](../Model/BurnV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]**](../Model/UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ No authorization required
 ## `dappsUniswapv3FactoryCurrentGet()`
 
 ```php
-dappsUniswapv3FactoryCurrentGet($chain_id): \OpenAPI\Client\Model\FactoryV3DTO[]
+dappsUniswapv3FactoryCurrentGet($chain_id): \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
 ```
 
 GetFactory
@@ -362,7 +362,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FactoryV3DTO[]**](../Model/FactoryV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]**](../Model/UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -439,7 +439,7 @@ No authorization required
 ## `dappsUniswapv3MintsCurrentGet()`
 
 ```php
-dappsUniswapv3MintsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\MintV3DTO[]
+dappsUniswapv3MintsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
 ```
 
 GetMints
@@ -475,7 +475,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MintV3DTO[]**](../Model/MintV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3MintV3DTO[]**](../Model/UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ No authorization required
 ## `dappsUniswapv3PoolsCurrentGet()`
 
 ```php
-dappsUniswapv3PoolsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PoolV3DTO[]
+dappsUniswapv3PoolsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
 ```
 
 GetPools
@@ -712,7 +712,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PoolV3DTO[]**](../Model/PoolV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]**](../Model/UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -730,7 +730,7 @@ No authorization required
 ## `dappsUniswapv3PoolsDayDataCurrentGet()`
 
 ```php
-dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PoolDayDataV3DTO[]
+dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
 ```
 
 GetPoolsDayData
@@ -766,7 +766,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PoolDayDataV3DTO[]**](../Model/PoolDayDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]**](../Model/UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -845,7 +845,7 @@ No authorization required
 ## `dappsUniswapv3PoolsHourDataCurrentGet()`
 
 ```php
-dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PoolHourDataV3DTO[]
+dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
 ```
 
 GetPoolsHourData
@@ -881,7 +881,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PoolHourDataV3DTO[]**](../Model/PoolHourDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]**](../Model/UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -960,7 +960,7 @@ No authorization required
 ## `dappsUniswapv3PositionSnapshotsCurrentGet()`
 
 ```php
-dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PositionSnapshotV3DTO[]
+dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
 ```
 
 GetPositionSnapshot
@@ -996,7 +996,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PositionSnapshotV3DTO[]**](../Model/PositionSnapshotV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]**](../Model/UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -1014,7 +1014,7 @@ No authorization required
 ## `dappsUniswapv3PositionsCurrentGet()`
 
 ```php
-dappsUniswapv3PositionsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PositionV3DTO[]
+dappsUniswapv3PositionsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
 ```
 
 GetPositions
@@ -1050,7 +1050,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PositionV3DTO[]**](../Model/PositionV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]**](../Model/UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -1129,7 +1129,7 @@ No authorization required
 ## `dappsUniswapv3SwapsCurrentGet()`
 
 ```php
-dappsUniswapv3SwapsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\SwapV3DTO[]
+dappsUniswapv3SwapsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
 ```
 
 GetSwaps
@@ -1165,7 +1165,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SwapV3DTO[]**](../Model/SwapV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]**](../Model/UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1305,7 +1305,7 @@ No authorization required
 ## `dappsUniswapv3TicksCurrentGet()`
 
 ```php
-dappsUniswapv3TicksCurrentGet($filter_pool_id): \OpenAPI\Client\Model\TickV3DTO[]
+dappsUniswapv3TicksCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
 ```
 
 GetTicks
@@ -1341,7 +1341,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TickV3DTO[]**](../Model/TickV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TickV3DTO[]**](../Model/UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1359,7 +1359,7 @@ No authorization required
 ## `dappsUniswapv3TicksDayDataCurrentGet()`
 
 ```php
-dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\TickDayDataV3DTO[]
+dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
 ```
 
 GetTicksDayData
@@ -1395,7 +1395,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TickDayDataV3DTO[]**](../Model/TickDayDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]**](../Model/UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1596,7 +1596,7 @@ No authorization required
 ## `dappsUniswapv3TokensCurrentGet()`
 
 ```php
-dappsUniswapv3TokensCurrentGet($filter_token_id): \OpenAPI\Client\Model\TokenV3DTO[]
+dappsUniswapv3TokensCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
 ```
 
 GetTokens
@@ -1632,7 +1632,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenV3DTO[]**](../Model/TokenV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]**](../Model/UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1650,7 +1650,7 @@ No authorization required
 ## `dappsUniswapv3TokensDayDataCurrentGet()`
 
 ```php
-dappsUniswapv3TokensDayDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\TokenV3DayDataDTO[]
+dappsUniswapv3TokensDayDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
 ```
 
 GetTokensDayData
@@ -1686,7 +1686,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenV3DayDataDTO[]**](../Model/TokenV3DayDataDTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]**](../Model/UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1765,7 +1765,7 @@ No authorization required
 ## `dappsUniswapv3TokensHourDataCurrentGet()`
 
 ```php
-dappsUniswapv3TokensHourDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\TokenHourDataV3DTO[]
+dappsUniswapv3TokensHourDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
 ```
 
 GetTokensHourData
@@ -1801,7 +1801,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenHourDataV3DTO[]**](../Model/TokenHourDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]**](../Model/UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1878,7 +1878,7 @@ No authorization required
 ## `dappsUniswapv3UniswapDayDataCurrentGet()`
 
 ```php
-dappsUniswapv3UniswapDayDataCurrentGet(): \OpenAPI\Client\Model\UniswapDayDataV3DTO[]
+dappsUniswapv3UniswapDayDataCurrentGet(): \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
 ```
 
 GetUniswapDayData
@@ -1911,7 +1911,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapDayDataV3DTO[]**](../Model/UniswapDayDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]**](../Model/UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

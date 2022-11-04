@@ -607,7 +607,7 @@ module OpenapiClient
     # GetPools
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PairV2DTO>]
+    # @return [Array<UniswapV2PairV2DTO>]
     def dapps_uniswapv2_pools_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv2_pools_current_get_with_http_info(opts)
       data
@@ -616,7 +616,7 @@ module OpenapiClient
     # GetPools
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PairV2DTO>, Integer, Hash)>] Array<PairV2DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV2PairV2DTO>, Integer, Hash)>] Array<UniswapV2PairV2DTO> data, response status code and response headers
     def dapps_uniswapv2_pools_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_pools_current_get ...'
@@ -640,7 +640,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PairV2DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -730,7 +730,7 @@ module OpenapiClient
 
     # GetSwaps
     # @param [Hash] opts the optional parameters
-    # @return [Array<SwapV2DTO>]
+    # @return [Array<UniswapV2SwapV2DTO>]
     def dapps_uniswapv2_swaps_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv2_swaps_current_get_with_http_info(opts)
       data
@@ -738,7 +738,7 @@ module OpenapiClient
 
     # GetSwaps
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<SwapV2DTO>, Integer, Hash)>] Array<SwapV2DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV2SwapV2DTO>, Integer, Hash)>] Array<UniswapV2SwapV2DTO> data, response status code and response headers
     def dapps_uniswapv2_swaps_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_swaps_current_get ...'
@@ -761,7 +761,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SwapV2DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2SwapV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -917,7 +917,7 @@ module OpenapiClient
 
     # GetTokens
     # @param [Hash] opts the optional parameters
-    # @return [Array<TokenV2DTO>]
+    # @return [Array<UniswapV2TokenV2DTO>]
     def dapps_uniswapv2_tokens_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv2_tokens_current_get_with_http_info(opts)
       data
@@ -925,7 +925,7 @@ module OpenapiClient
 
     # GetTokens
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<TokenV2DTO>, Integer, Hash)>] Array<TokenV2DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV2TokenV2DTO>, Integer, Hash)>] Array<UniswapV2TokenV2DTO> data, response status code and response headers
     def dapps_uniswapv2_tokens_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_tokens_current_get ...'
@@ -948,7 +948,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenV2DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

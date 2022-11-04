@@ -1,9 +1,9 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.PairV2DTO
-import org.openapitools.model.SwapV2DTO
-import org.openapitools.model.TokenV2DTO
+import org.openapitools.model.UniswapV2PairV2DTO
+import org.openapitools.model.UniswapV2SwapV2DTO
+import org.openapitools.model.UniswapV2TokenV2DTO
 
 class UniswapV2Api {
     String basePath = "https://onchain.coinapi.io"
@@ -335,7 +335,7 @@ class UniswapV2Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PairV2DTO.class )
+                    UniswapV2PairV2DTO.class )
 
     }
 
@@ -390,7 +390,7 @@ class UniswapV2Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    SwapV2DTO.class )
+                    UniswapV2SwapV2DTO.class )
 
     }
 
@@ -480,7 +480,7 @@ class UniswapV2Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenV2DTO.class )
+                    UniswapV2TokenV2DTO.class )
 
     }
 

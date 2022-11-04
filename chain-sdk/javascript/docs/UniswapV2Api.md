@@ -498,7 +498,7 @@ No authorization required
 
 ## dappsUniswapv2PoolsCurrentGet
 
-> [PairV2DTO] dappsUniswapv2PoolsCurrentGet(opts)
+> [UniswapV2PairV2DTO] dappsUniswapv2PoolsCurrentGet(opts)
 
 GetPools
 
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PairV2DTO]**](PairV2DTO.md)
+[**[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ No authorization required
 
 ## dappsUniswapv2SwapsCurrentGet
 
-> [SwapV2DTO] dappsUniswapv2SwapsCurrentGet()
+> [UniswapV2SwapV2DTO] dappsUniswapv2SwapsCurrentGet()
 
 GetSwaps
 
@@ -621,7 +621,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[SwapV2DTO]**](SwapV2DTO.md)
+[**[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -741,7 +741,7 @@ No authorization required
 
 ## dappsUniswapv2TokensCurrentGet
 
-> [TokenV2DTO] dappsUniswapv2TokensCurrentGet()
+> [UniswapV2TokenV2DTO] dappsUniswapv2TokensCurrentGet()
 
 GetTokens
 
@@ -766,7 +766,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[TokenV2DTO]**](TokenV2DTO.md)
+[**[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pair_dto.md) *
+[list_t](sushiswap_pair_dto.md) *
 
 
 ### Authorization
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pair_dto.md) *
+[list_t](sushiswap_pair_dto.md) *
 
 
 ### Authorization
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](swap_dto.md) *
+[list_t](sushiswap_swap_dto.md) *
 
 
 ### Authorization
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](swap_dto.md) *
+[list_t](sushiswap_swap_dto.md) *
 
 
 ### Authorization
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_dto.md) *
+[list_t](sushiswap_token_dto.md) *
 
 
 ### Authorization
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_dto.md) *
+[list_t](sushiswap_token_dto.md) *
 
 
 ### Authorization

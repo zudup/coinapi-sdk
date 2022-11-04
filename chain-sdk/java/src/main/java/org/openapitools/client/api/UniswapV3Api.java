@@ -27,23 +27,23 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.BundleV3DTO;
-import org.openapitools.client.model.BurnV3DTO;
-import org.openapitools.client.model.FactoryV3DTO;
-import org.openapitools.client.model.MintV3DTO;
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PoolDayDataV3DTO;
-import org.openapitools.client.model.PoolHourDataV3DTO;
-import org.openapitools.client.model.PoolV3DTO;
-import org.openapitools.client.model.PositionSnapshotV3DTO;
-import org.openapitools.client.model.PositionV3DTO;
-import org.openapitools.client.model.SwapV3DTO;
-import org.openapitools.client.model.TickDayDataV3DTO;
-import org.openapitools.client.model.TickV3DTO;
-import org.openapitools.client.model.TokenHourDataV3DTO;
-import org.openapitools.client.model.TokenV3DTO;
-import org.openapitools.client.model.TokenV3DayDataDTO;
-import org.openapitools.client.model.UniswapDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3BundleV3DTO;
+import org.openapitools.client.model.UniswapV3BurnV3DTO;
+import org.openapitools.client.model.UniswapV3FactoryV3DTO;
+import org.openapitools.client.model.UniswapV3MintV3DTO;
+import org.openapitools.client.model.UniswapV3PoolDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolV3DTO;
+import org.openapitools.client.model.UniswapV3PositionSnapshotV3DTO;
+import org.openapitools.client.model.UniswapV3PositionV3DTO;
+import org.openapitools.client.model.UniswapV3SwapV3DTO;
+import org.openapitools.client.model.UniswapV3TickDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3TickV3DTO;
+import org.openapitools.client.model.UniswapV3TokenHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DayDataDTO;
+import org.openapitools.client.model.UniswapV3UniswapDayDataV3DTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -155,7 +155,7 @@ public class UniswapV3Api {
     /**
      * GetBundles
      * 
-     * @return List&lt;BundleV3DTO&gt;
+     * @return List&lt;UniswapV3BundleV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -163,15 +163,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<BundleV3DTO> dappsUniswapv3BundleCurrentGet() throws ApiException {
-        ApiResponse<List<BundleV3DTO>> localVarResp = dappsUniswapv3BundleCurrentGetWithHttpInfo();
+    public List<UniswapV3BundleV3DTO> dappsUniswapv3BundleCurrentGet() throws ApiException {
+        ApiResponse<List<UniswapV3BundleV3DTO>> localVarResp = dappsUniswapv3BundleCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetBundles
      * 
-     * @return ApiResponse&lt;List&lt;BundleV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3BundleV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -179,9 +179,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BundleV3DTO>> dappsUniswapv3BundleCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<UniswapV3BundleV3DTO>> dappsUniswapv3BundleCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3BundleCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<BundleV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3BundleV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -197,10 +197,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3BundleCurrentGetAsync(final ApiCallback<List<BundleV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3BundleCurrentGetAsync(final ApiCallback<List<UniswapV3BundleV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3BundleCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<BundleV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3BundleV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -416,7 +416,7 @@ public class UniswapV3Api {
      * GetBurns
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;BurnV3DTO&gt;
+     * @return List&lt;UniswapV3BurnV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -424,8 +424,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<BurnV3DTO> dappsUniswapv3BurnsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<BurnV3DTO>> localVarResp = dappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3BurnV3DTO> dappsUniswapv3BurnsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3BurnV3DTO>> localVarResp = dappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -433,7 +433,7 @@ public class UniswapV3Api {
      * GetBurns
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;BurnV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3BurnV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -441,9 +441,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BurnV3DTO>> dappsUniswapv3BurnsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3BurnV3DTO>> dappsUniswapv3BurnsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3BurnsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<BurnV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3BurnV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -460,10 +460,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3BurnsCurrentGetAsync(String filterPoolId, final ApiCallback<List<BurnV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3BurnsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3BurnV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3BurnsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<BurnV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3BurnV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -829,7 +829,7 @@ public class UniswapV3Api {
      * GetFactory
      * 
      * @param chainId  (required)
-     * @return List&lt;FactoryV3DTO&gt;
+     * @return List&lt;UniswapV3FactoryV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -837,8 +837,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(String chainId) throws ApiException {
-        ApiResponse<List<FactoryV3DTO>> localVarResp = dappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
+    public List<UniswapV3FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(String chainId) throws ApiException {
+        ApiResponse<List<UniswapV3FactoryV3DTO>> localVarResp = dappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
         return localVarResp.getData();
     }
 
@@ -846,7 +846,7 @@ public class UniswapV3Api {
      * GetFactory
      * 
      * @param chainId  (required)
-     * @return ApiResponse&lt;List&lt;FactoryV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3FactoryV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -854,9 +854,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<FactoryV3DTO>> dappsUniswapv3FactoryCurrentGetWithHttpInfo(String chainId) throws ApiException {
+    public ApiResponse<List<UniswapV3FactoryV3DTO>> dappsUniswapv3FactoryCurrentGetWithHttpInfo(String chainId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3FactoryCurrentGetValidateBeforeCall(chainId, null);
-        Type localVarReturnType = new TypeToken<List<FactoryV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3FactoryV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -873,10 +873,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3FactoryCurrentGetAsync(String chainId, final ApiCallback<List<FactoryV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3FactoryCurrentGetAsync(String chainId, final ApiCallback<List<UniswapV3FactoryV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3FactoryCurrentGetValidateBeforeCall(chainId, _callback);
-        Type localVarReturnType = new TypeToken<List<FactoryV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3FactoryV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1092,7 +1092,7 @@ public class UniswapV3Api {
      * GetMints
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;MintV3DTO&gt;
+     * @return List&lt;UniswapV3MintV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1100,8 +1100,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<MintV3DTO> dappsUniswapv3MintsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<MintV3DTO>> localVarResp = dappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3MintV3DTO> dappsUniswapv3MintsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3MintV3DTO>> localVarResp = dappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -1109,7 +1109,7 @@ public class UniswapV3Api {
      * GetMints
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;MintV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3MintV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1117,9 +1117,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<MintV3DTO>> dappsUniswapv3MintsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3MintV3DTO>> dappsUniswapv3MintsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3MintsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<MintV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3MintV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1136,10 +1136,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3MintsCurrentGetAsync(String filterPoolId, final ApiCallback<List<MintV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3MintsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3MintV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3MintsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<MintV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3MintV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1659,7 +1659,7 @@ public class UniswapV3Api {
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PoolV3DTO&gt;
+     * @return List&lt;UniswapV3PoolV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1667,8 +1667,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PoolV3DTO> dappsUniswapv3PoolsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PoolV3DTO>> localVarResp = dappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3PoolV3DTO> dappsUniswapv3PoolsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3PoolV3DTO>> localVarResp = dappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -1676,7 +1676,7 @@ public class UniswapV3Api {
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PoolV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3PoolV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1684,9 +1684,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PoolV3DTO>> dappsUniswapv3PoolsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3PoolV3DTO>> dappsUniswapv3PoolsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3PoolsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PoolV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1703,10 +1703,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3PoolsCurrentGetAsync(String filterPoolId, final ApiCallback<List<PoolV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3PoolsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3PoolV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3PoolsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PoolV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1782,7 +1782,7 @@ public class UniswapV3Api {
      * GetPoolsDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PoolDayDataV3DTO&gt;
+     * @return List&lt;UniswapV3PoolDayDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1790,8 +1790,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PoolDayDataV3DTO>> localVarResp = dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3PoolDayDataV3DTO>> localVarResp = dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -1799,7 +1799,7 @@ public class UniswapV3Api {
      * GetPoolsDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PoolDayDataV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3PoolDayDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1807,9 +1807,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PoolDayDataV3DTO>> dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3PoolDayDataV3DTO>> dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3PoolsDayDataCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PoolDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1826,10 +1826,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3PoolsDayDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<PoolDayDataV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3PoolsDayDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3PoolDayDataV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3PoolsDayDataCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PoolDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2053,7 +2053,7 @@ public class UniswapV3Api {
      * GetPoolsHourData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PoolHourDataV3DTO&gt;
+     * @return List&lt;UniswapV3PoolHourDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2061,8 +2061,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PoolHourDataV3DTO>> localVarResp = dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3PoolHourDataV3DTO>> localVarResp = dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -2070,7 +2070,7 @@ public class UniswapV3Api {
      * GetPoolsHourData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PoolHourDataV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3PoolHourDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2078,9 +2078,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PoolHourDataV3DTO>> dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3PoolHourDataV3DTO>> dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3PoolsHourDataCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PoolHourDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2097,10 +2097,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3PoolsHourDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<PoolHourDataV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3PoolsHourDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3PoolHourDataV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3PoolsHourDataCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PoolHourDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2324,7 +2324,7 @@ public class UniswapV3Api {
      * GetPositionSnapshot
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PositionSnapshotV3DTO&gt;
+     * @return List&lt;UniswapV3PositionSnapshotV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2332,8 +2332,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PositionSnapshotV3DTO>> localVarResp = dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> localVarResp = dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -2341,7 +2341,7 @@ public class UniswapV3Api {
      * GetPositionSnapshot
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PositionSnapshotV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3PositionSnapshotV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2349,9 +2349,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PositionSnapshotV3DTO>> dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3PositionSnapshotsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PositionSnapshotV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PositionSnapshotV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2368,10 +2368,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3PositionSnapshotsCurrentGetAsync(String filterPoolId, final ApiCallback<List<PositionSnapshotV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3PositionSnapshotsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3PositionSnapshotV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3PositionSnapshotsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PositionSnapshotV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PositionSnapshotV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2447,7 +2447,7 @@ public class UniswapV3Api {
      * GetPositions
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;PositionV3DTO&gt;
+     * @return List&lt;UniswapV3PositionV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2455,8 +2455,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PositionV3DTO> dappsUniswapv3PositionsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<PositionV3DTO>> localVarResp = dappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3PositionV3DTO> dappsUniswapv3PositionsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3PositionV3DTO>> localVarResp = dappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -2464,7 +2464,7 @@ public class UniswapV3Api {
      * GetPositions
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;PositionV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3PositionV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2472,9 +2472,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PositionV3DTO>> dappsUniswapv3PositionsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3PositionV3DTO>> dappsUniswapv3PositionsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3PositionsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<PositionV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PositionV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2491,10 +2491,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3PositionsCurrentGetAsync(String filterPoolId, final ApiCallback<List<PositionV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3PositionsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3PositionV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3PositionsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PositionV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3PositionV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2718,7 +2718,7 @@ public class UniswapV3Api {
      * GetSwaps
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;SwapV3DTO&gt;
+     * @return List&lt;UniswapV3SwapV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2726,8 +2726,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SwapV3DTO> dappsUniswapv3SwapsCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<SwapV3DTO>> localVarResp = dappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3SwapV3DTO> dappsUniswapv3SwapsCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3SwapV3DTO>> localVarResp = dappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -2735,7 +2735,7 @@ public class UniswapV3Api {
      * GetSwaps
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;SwapV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3SwapV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2743,9 +2743,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SwapV3DTO>> dappsUniswapv3SwapsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3SwapV3DTO>> dappsUniswapv3SwapsCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3SwapsCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<SwapV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3SwapV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2762,10 +2762,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3SwapsCurrentGetAsync(String filterPoolId, final ApiCallback<List<SwapV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3SwapsCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3SwapV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3SwapsCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<SwapV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3SwapV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3137,7 +3137,7 @@ public class UniswapV3Api {
      * GetTicks
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;TickV3DTO&gt;
+     * @return List&lt;UniswapV3TickV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3145,8 +3145,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TickV3DTO> dappsUniswapv3TicksCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<TickV3DTO>> localVarResp = dappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3TickV3DTO> dappsUniswapv3TicksCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3TickV3DTO>> localVarResp = dappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -3154,7 +3154,7 @@ public class UniswapV3Api {
      * GetTicks
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;TickV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3TickV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3162,9 +3162,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TickV3DTO>> dappsUniswapv3TicksCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3TickV3DTO>> dappsUniswapv3TicksCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3TicksCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<TickV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TickV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3181,10 +3181,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3TicksCurrentGetAsync(String filterPoolId, final ApiCallback<List<TickV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3TicksCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3TickV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3TicksCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<TickV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TickV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3260,7 +3260,7 @@ public class UniswapV3Api {
      * GetTicksDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List&lt;TickDayDataV3DTO&gt;
+     * @return List&lt;UniswapV3TickDayDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3268,8 +3268,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(String filterPoolId) throws ApiException {
-        ApiResponse<List<TickDayDataV3DTO>> localVarResp = dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
+    public List<UniswapV3TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(String filterPoolId) throws ApiException {
+        ApiResponse<List<UniswapV3TickDayDataV3DTO>> localVarResp = dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
         return localVarResp.getData();
     }
 
@@ -3277,7 +3277,7 @@ public class UniswapV3Api {
      * GetTicksDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return ApiResponse&lt;List&lt;TickDayDataV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3TickDayDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3285,9 +3285,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TickDayDataV3DTO>> dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
+    public ApiResponse<List<UniswapV3TickDayDataV3DTO>> dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(String filterPoolId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3TicksDayDataCurrentGetValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<TickDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3304,10 +3304,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3TicksDayDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<TickDayDataV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3TicksDayDataCurrentGetAsync(String filterPoolId, final ApiCallback<List<UniswapV3TickDayDataV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3TicksDayDataCurrentGetValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<TickDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3827,7 +3827,7 @@ public class UniswapV3Api {
      * GetTokens
      * 
      * @param filterTokenId  (optional)
-     * @return List&lt;TokenV3DTO&gt;
+     * @return List&lt;UniswapV3TokenV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3835,8 +3835,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenV3DTO> dappsUniswapv3TokensCurrentGet(String filterTokenId) throws ApiException {
-        ApiResponse<List<TokenV3DTO>> localVarResp = dappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
+    public List<UniswapV3TokenV3DTO> dappsUniswapv3TokensCurrentGet(String filterTokenId) throws ApiException {
+        ApiResponse<List<UniswapV3TokenV3DTO>> localVarResp = dappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
         return localVarResp.getData();
     }
 
@@ -3844,7 +3844,7 @@ public class UniswapV3Api {
      * GetTokens
      * 
      * @param filterTokenId  (optional)
-     * @return ApiResponse&lt;List&lt;TokenV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3TokenV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3852,9 +3852,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenV3DTO>> dappsUniswapv3TokensCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
+    public ApiResponse<List<UniswapV3TokenV3DTO>> dappsUniswapv3TokensCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3TokensCurrentGetValidateBeforeCall(filterTokenId, null);
-        Type localVarReturnType = new TypeToken<List<TokenV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3871,10 +3871,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3TokensCurrentGetAsync(String filterTokenId, final ApiCallback<List<TokenV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3TokensCurrentGetAsync(String filterTokenId, final ApiCallback<List<UniswapV3TokenV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3TokensCurrentGetValidateBeforeCall(filterTokenId, _callback);
-        Type localVarReturnType = new TypeToken<List<TokenV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3950,7 +3950,7 @@ public class UniswapV3Api {
      * GetTokensDayData
      * 
      * @param filterTokenId  (optional)
-     * @return List&lt;TokenV3DayDataDTO&gt;
+     * @return List&lt;UniswapV3TokenV3DayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3958,8 +3958,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(String filterTokenId) throws ApiException {
-        ApiResponse<List<TokenV3DayDataDTO>> localVarResp = dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
+    public List<UniswapV3TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(String filterTokenId) throws ApiException {
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResp = dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
         return localVarResp.getData();
     }
 
@@ -3967,7 +3967,7 @@ public class UniswapV3Api {
      * GetTokensDayData
      * 
      * @param filterTokenId  (optional)
-     * @return ApiResponse&lt;List&lt;TokenV3DayDataDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3TokenV3DayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3975,9 +3975,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenV3DayDataDTO>> dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
+    public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3TokensDayDataCurrentGetValidateBeforeCall(filterTokenId, null);
-        Type localVarReturnType = new TypeToken<List<TokenV3DayDataDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3994,10 +3994,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3TokensDayDataCurrentGetAsync(String filterTokenId, final ApiCallback<List<TokenV3DayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3TokensDayDataCurrentGetAsync(String filterTokenId, final ApiCallback<List<UniswapV3TokenV3DayDataDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3TokensDayDataCurrentGetValidateBeforeCall(filterTokenId, _callback);
-        Type localVarReturnType = new TypeToken<List<TokenV3DayDataDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4221,7 +4221,7 @@ public class UniswapV3Api {
      * GetTokensHourData
      * 
      * @param filterTokenId  (optional)
-     * @return List&lt;TokenHourDataV3DTO&gt;
+     * @return List&lt;UniswapV3TokenHourDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -4229,8 +4229,8 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(String filterTokenId) throws ApiException {
-        ApiResponse<List<TokenHourDataV3DTO>> localVarResp = dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
+    public List<UniswapV3TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(String filterTokenId) throws ApiException {
+        ApiResponse<List<UniswapV3TokenHourDataV3DTO>> localVarResp = dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
         return localVarResp.getData();
     }
 
@@ -4238,7 +4238,7 @@ public class UniswapV3Api {
      * GetTokensHourData
      * 
      * @param filterTokenId  (optional)
-     * @return ApiResponse&lt;List&lt;TokenHourDataV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3TokenHourDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -4246,9 +4246,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenHourDataV3DTO>> dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
+    public ApiResponse<List<UniswapV3TokenHourDataV3DTO>> dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(String filterTokenId) throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3TokensHourDataCurrentGetValidateBeforeCall(filterTokenId, null);
-        Type localVarReturnType = new TypeToken<List<TokenHourDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4265,10 +4265,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3TokensHourDataCurrentGetAsync(String filterTokenId, final ApiCallback<List<TokenHourDataV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3TokensHourDataCurrentGetAsync(String filterTokenId, final ApiCallback<List<UniswapV3TokenHourDataV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3TokensHourDataCurrentGetValidateBeforeCall(filterTokenId, _callback);
-        Type localVarReturnType = new TypeToken<List<TokenHourDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4478,7 +4478,7 @@ public class UniswapV3Api {
     /**
      * GetUniswapDayData
      * 
-     * @return List&lt;UniswapDayDataV3DTO&gt;
+     * @return List&lt;UniswapV3UniswapDayDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -4486,15 +4486,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet() throws ApiException {
-        ApiResponse<List<UniswapDayDataV3DTO>> localVarResp = dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
+    public List<UniswapV3UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet() throws ApiException {
+        ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> localVarResp = dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetUniswapDayData
      * 
-     * @return ApiResponse&lt;List&lt;UniswapDayDataV3DTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UniswapV3UniswapDayDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -4502,9 +4502,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapDayDataV3DTO>> dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsUniswapv3UniswapDayDataCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<UniswapDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataV3DTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4520,10 +4520,10 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsUniswapv3UniswapDayDataCurrentGetAsync(final ApiCallback<List<UniswapDayDataV3DTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsUniswapv3UniswapDayDataCurrentGetAsync(final ApiCallback<List<UniswapV3UniswapDayDataV3DTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsUniswapv3UniswapDayDataCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<UniswapDayDataV3DTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataV3DTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

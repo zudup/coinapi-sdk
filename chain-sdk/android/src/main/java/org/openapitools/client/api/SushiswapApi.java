@@ -24,9 +24,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import java.util.Date;
-import org.openapitools.client.model.PairDTO;
-import org.openapitools.client.model.SwapDTO;
-import org.openapitools.client.model.TokenDTO;
+import org.openapitools.client.model.SushiswapPairDTO;
+import org.openapitools.client.model.SushiswapSwapDTO;
+import org.openapitools.client.model.SushiswapTokenDTO;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -1319,9 +1319,9 @@ public class SushiswapApi {
   /**
   * GetPools
   * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-   * @return List<PairDTO>
+   * @return List<SushiswapPairDTO>
   */
-  public List<PairDTO> dappsSushiswapPoolsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairDTO> dappsSushiswapPoolsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1351,7 +1351,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PairDTO>) ApiInvoker.deserialize(localVarResponse, "array", PairDTO.class);
+         return (List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapPairDTO.class);
       } else {
          return null;
       }
@@ -1377,7 +1377,7 @@ public class SushiswapApi {
    * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
 
   */
-  public void dappsSushiswapPoolsCurrentGet (final Response.Listener<List<PairDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapPoolsCurrentGet (final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1417,7 +1417,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PairDTO>) ApiInvoker.deserialize(localVarResponse,  "array", PairDTO.class));
+              responseListener.onResponse((List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapPairDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1440,9 +1440,9 @@ public class SushiswapApi {
    * @param startDate 
    * @param endDate 
    * @param poolId 
-   * @return List<PairDTO>
+   * @return List<SushiswapPairDTO>
   */
-  public List<PairDTO> dappsSushiswapPoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairDTO> dappsSushiswapPoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1477,7 +1477,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PairDTO>) ApiInvoker.deserialize(localVarResponse, "array", PairDTO.class);
+         return (List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapPairDTO.class);
       } else {
          return null;
       }
@@ -1503,7 +1503,7 @@ public class SushiswapApi {
    * 
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
-  public void dappsSushiswapPoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<PairDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapPoolsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1548,7 +1548,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PairDTO>) ApiInvoker.deserialize(localVarResponse,  "array", PairDTO.class));
+              responseListener.onResponse((List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapPairDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1566,9 +1566,9 @@ public class SushiswapApi {
   /**
   * GetSwaps
   * 
-   * @return List<SwapDTO>
+   * @return List<SushiswapSwapDTO>
   */
-  public List<SwapDTO> dappsSushiswapSwapsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapSwapDTO> dappsSushiswapSwapsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1598,7 +1598,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SwapDTO.class);
+         return (List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapSwapDTO.class);
       } else {
          return null;
       }
@@ -1624,7 +1624,7 @@ public class SushiswapApi {
    * 
 
   */
-  public void dappsSushiswapSwapsCurrentGet (final Response.Listener<List<SwapDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapSwapsCurrentGet (final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1664,7 +1664,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SwapDTO.class));
+              responseListener.onResponse((List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapSwapDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1687,9 +1687,9 @@ public class SushiswapApi {
    * @param startDate 
    * @param endDate 
    * @param poolId 
-   * @return List<SwapDTO>
+   * @return List<SushiswapSwapDTO>
   */
-  public List<SwapDTO> dappsSushiswapSwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapSwapDTO> dappsSushiswapSwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1724,7 +1724,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SwapDTO.class);
+         return (List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapSwapDTO.class);
       } else {
          return null;
       }
@@ -1750,7 +1750,7 @@ public class SushiswapApi {
    * 
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
-  public void dappsSushiswapSwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SwapDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapSwapsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1795,7 +1795,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SwapDTO.class));
+              responseListener.onResponse((List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapSwapDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1940,9 +1940,9 @@ public class SushiswapApi {
   /**
   * GetTokens
   * 
-   * @return List<TokenDTO>
+   * @return List<SushiswapTokenDTO>
   */
-  public List<TokenDTO> dappsSushiswapTokensCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapTokenDTO> dappsSushiswapTokensCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1972,7 +1972,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenDTO.class);
+         return (List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDTO.class);
       } else {
          return null;
       }
@@ -1998,7 +1998,7 @@ public class SushiswapApi {
    * 
 
   */
-  public void dappsSushiswapTokensCurrentGet (final Response.Listener<List<TokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapTokensCurrentGet (final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2038,7 +2038,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenDTO.class));
+              responseListener.onResponse((List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2061,9 +2061,9 @@ public class SushiswapApi {
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return List<TokenDTO>
+   * @return List<SushiswapTokenDTO>
   */
-  public List<TokenDTO> dappsSushiswapTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapTokenDTO> dappsSushiswapTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2098,7 +2098,7 @@ public class SushiswapApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenDTO.class);
+         return (List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDTO.class);
       } else {
          return null;
       }
@@ -2124,7 +2124,7 @@ public class SushiswapApi {
    * 
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsSushiswapTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<TokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsSushiswapTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2169,7 +2169,7 @@ public class SushiswapApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenDTO.class));
+              responseListener.onResponse((List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

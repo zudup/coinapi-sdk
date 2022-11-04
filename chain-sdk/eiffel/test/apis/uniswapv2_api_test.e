@@ -168,7 +168,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [PAIR_V2_DTO]
+            l_response: LIST [UNISWAP_V2_PAIR_V2_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -199,7 +199,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [SWAP_V2_DTO]
+            l_response: LIST [UNISWAP_V2_SWAP_V2_DTO]
         do
             -- TODO: Initialize required params.
 
@@ -246,7 +246,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_V2_DTO]
+            l_response: LIST [UNISWAP_V2_TOKEN_V2_DTO]
         do
             -- TODO: Initialize required params.
 

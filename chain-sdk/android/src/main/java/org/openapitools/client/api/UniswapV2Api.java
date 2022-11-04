@@ -24,9 +24,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import java.util.Date;
-import org.openapitools.client.model.PairV2DTO;
-import org.openapitools.client.model.SwapV2DTO;
-import org.openapitools.client.model.TokenV2DTO;
+import org.openapitools.client.model.UniswapV2PairV2DTO;
+import org.openapitools.client.model.UniswapV2SwapV2DTO;
+import org.openapitools.client.model.UniswapV2TokenV2DTO;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -1196,9 +1196,9 @@ public class UniswapV2Api {
   * GetPools
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PairV2DTO>
+   * @return List<UniswapV2PairV2DTO>
   */
-  public List<PairV2DTO> dappsUniswapv2PoolsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2PairV2DTO> dappsUniswapv2PoolsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1229,7 +1229,7 @@ public class UniswapV2Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PairV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", PairV2DTO.class);
+         return (List<UniswapV2PairV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV2PairV2DTO.class);
       } else {
          return null;
       }
@@ -1255,7 +1255,7 @@ public class UniswapV2Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv2PoolsCurrentGet (String filterPoolId, final Response.Listener<List<PairV2DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv2PoolsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV2PairV2DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1296,7 +1296,7 @@ public class UniswapV2Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PairV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PairV2DTO.class));
+              responseListener.onResponse((List<UniswapV2PairV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV2PairV2DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1441,9 +1441,9 @@ public class UniswapV2Api {
   /**
   * GetSwaps
   * 
-   * @return List<SwapV2DTO>
+   * @return List<UniswapV2SwapV2DTO>
   */
-  public List<SwapV2DTO> dappsUniswapv2SwapsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2SwapV2DTO> dappsUniswapv2SwapsCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1473,7 +1473,7 @@ public class UniswapV2Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SwapV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", SwapV2DTO.class);
+         return (List<UniswapV2SwapV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV2SwapV2DTO.class);
       } else {
          return null;
       }
@@ -1499,7 +1499,7 @@ public class UniswapV2Api {
    * 
 
   */
-  public void dappsUniswapv2SwapsCurrentGet (final Response.Listener<List<SwapV2DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv2SwapsCurrentGet (final Response.Listener<List<UniswapV2SwapV2DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1539,7 +1539,7 @@ public class UniswapV2Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SwapV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", SwapV2DTO.class));
+              responseListener.onResponse((List<UniswapV2SwapV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV2SwapV2DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1811,9 +1811,9 @@ public class UniswapV2Api {
   /**
   * GetTokens
   * 
-   * @return List<TokenV2DTO>
+   * @return List<UniswapV2TokenV2DTO>
   */
-  public List<TokenV2DTO> dappsUniswapv2TokensCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2TokenV2DTO> dappsUniswapv2TokensCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1843,7 +1843,7 @@ public class UniswapV2Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenV2DTO.class);
+         return (List<UniswapV2TokenV2DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV2TokenV2DTO.class);
       } else {
          return null;
       }
@@ -1869,7 +1869,7 @@ public class UniswapV2Api {
    * 
 
   */
-  public void dappsUniswapv2TokensCurrentGet (final Response.Listener<List<TokenV2DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv2TokensCurrentGet (final Response.Listener<List<UniswapV2TokenV2DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1909,7 +1909,7 @@ public class UniswapV2Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenV2DTO.class));
+              responseListener.onResponse((List<UniswapV2TokenV2DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV2TokenV2DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -73,78 +73,883 @@ export class RequiredError extends Error {
  * 
  * @export
  */
-export type BigInteger = {
+export type NumericsBigInteger = {
     /**
      * 
      * @type {boolean}
-     * @memberof BigInteger
+     * @memberof NumericsBigInteger
      */
     is_power_of_two?: boolean;
     /**
      * 
      * @type {boolean}
-     * @memberof BigInteger
+     * @memberof NumericsBigInteger
      */
     is_zero?: boolean;
     /**
      * 
      * @type {boolean}
-     * @memberof BigInteger
+     * @memberof NumericsBigInteger
      */
     is_one?: boolean;
     /**
      * 
      * @type {boolean}
-     * @memberof BigInteger
+     * @memberof NumericsBigInteger
      */
     is_even?: boolean;
     /**
      * 
      * @type {number}
-     * @memberof BigInteger
+     * @memberof NumericsBigInteger
      */
     sign?: number;
+}
+
+/**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ * @export
+ */
+export type SushiswapPairDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapPairDTO
+     */
+    block_number?: number;
+    /**
+     * Pair contract address.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    id?: string;
+    /**
+     * Factory contract address.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    factory?: string;
+    /**
+     * Friendly name, format: <token0 name>-<token1 name>
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    name?: string;
+    /**
+     * Reference to token0 as stored in pair contract.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    token_0?: string;
+    /**
+     * Reference to token0 as stored in pair contract.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    token_1?: string;
+    /**
+     * Reserve of token0.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    reserve_0?: string;
+    /**
+     * Reserve of token1.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    reserve_1?: string;
+    /**
+     * Total supply of liquidity token distributed to LPs.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    total_supply?: string;
+    /**
+     * Total liquidity in pair stored as an amount of ETH.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    reserve_eth?: string;
+    /**
+     * Total liquidity amount in pair stored as an amount of USD.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    reserve_usd?: string;
+    /**
+     * Total liquidity with only tracked amount.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    tracked_reserve_eth?: string;
+    /**
+     * Token0 per token1.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    token_0_price?: string;
+    /**
+     * Token1 per token0.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    token_1_price?: string;
+    /**
+     * Amount of token0 swapped on this pair.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Amount of token1 swapped on this pair.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    volume_usd?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * All time amount of transactions on this pair.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    tx_count?: string;
+    /**
+     * Total number of LPs.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    liquidity_provider_count?: string;
+    /**
+     * Timestamp.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    timestamp?: string;
+    /**
+     * Block number in which pair information was created in.
+     * @type {string}
+     * @memberof SushiswapPairDTO
+     */
+    block?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapPairDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapPairDTO
+     */
+    evaluated_ask?: number;
+}
+
+/**
+ * Swap are created for each token swap within a pair.
+ * @export
+ */
+export type SushiswapSwapDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapSwapDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapSwapDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapSwapDTO
+     */
+    block_number?: number;
+    /**
+     * Transaction hash plus index in Transaction swap array.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    id?: string;
+    /**
+     * Reference to transaction swap was included in.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    transaction?: string;
+    /**
+     * Timestamp of swap, used for sorted lookups.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    timestamp?: string;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    pair?: string;
+    /**
+     * Address that initiated the swap.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    sender?: string;
+    /**
+     * Amount of token0 sold.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    amount_0_in?: string;
+    /**
+     * Amount of token1 sold.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    amount_1_in?: string;
+    /**
+     * Amount of token0 received.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    amount_0_out?: string;
+    /**
+     * Amount of token1 received.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    amount_1_out?: string;
+    /**
+     * Recipient of output tokens.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    to?: string;
+    /**
+     * Event index within transaction.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    log_index?: string;
+    /**
+     * Derived amount of tokens sold in USD.
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    amount_usd?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapSwapDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    pool_id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapSwapDTO
+     */
+    transaction_id?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapSwapDTO
+     */
+    evaluated_price?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapSwapDTO
+     */
+    evaluated_amount?: number;
+    /**
+     * 
+     * @type {TransactionsETradeAggressiveSide}
+     * @memberof SushiswapSwapDTO
+     */
+    evaluated_aggressor?: TransactionsETradeAggressiveSide;
+}
+
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ * @export
+ */
+export type SushiswapTokenDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTokenDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTokenDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapTokenDTO
+     */
+    block_number?: number;
+    /**
+     * Token address.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    id?: string;
+    /**
+     * Factory address.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    factory?: string;
+    /**
+     * Token symbol.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    symbol?: string;
+    /**
+     * Token name.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    name?: string;
+    /**
+     * Token decimals.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    decimals?: string;
+    /**
+     * Total supply of liquidity token.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    total_supply?: string;
+    /**
+     * Amount of token traded all time across all pairs.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    volume?: string;
+    /**
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    volume_usd?: string;
+    /**
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * Amount of transactions all time in pairs including token.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    tx_count?: string;
+    /**
+     * Total amount of token provided as liquidity across all pairs.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    liquidity?: string;
+    /**
+     * ETH per token.
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    derived_eth?: string;
+    /**
+     * Array of whitelisted pairs.
+     * @type {Array<string>}
+     * @memberof SushiswapTokenDTO
+     */
+    whitelist_pairs?: Array<string>;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapTokenDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapTokenDTO
+     */
+    token_symbol?: string;
+}
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export type TransactionsETradeAggressiveSide = 'Buy' | 'Sell' | 'EstimatedBuy' | 'EstimatedSell' | 'Unknown';
+
+/**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ * @export
+ */
+export type UniswapV2PairV2DTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2PairV2DTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2PairV2DTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2PairV2DTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2PairV2DTO
+     */
+    vid?: number;
+    /**
+     * Pair contract address.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    id?: string;
+    /**
+     * Reference to token0 as stored in pair contract.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    token_0?: string;
+    /**
+     * Reference to token1 as stored in pair contract.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    token_1?: string;
+    /**
+     * Reserve of token0.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    reserve_0?: string;
+    /**
+     * Reserve of token1.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    reserve_1?: string;
+    /**
+     * Total supply of liquidity token distributed to LPs.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    total_supply?: string;
+    /**
+     * Total liquidity in pair stored as an amount of ETH.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    reserve_eth?: string;
+    /**
+     * Total liquidity amount in pair stored as an amount of USD.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    reserve_usd?: string;
+    /**
+     * Total liquidity with only tracked amount.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    tracked_reserve_eth?: string;
+    /**
+     * Token0 per token1.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    token_0_price?: string;
+    /**
+     * Token1 per token0.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    token_1_price?: string;
+    /**
+     * Amount of token0 swapped on this pair.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    volume_token_0?: string;
+    /**
+     * Amount of token1 swapped on this pair.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    volume_token_1?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    volume_usd?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * 
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV2PairV2DTO
+     */
+    tx_count?: NumericsBigInteger;
+    /**
+     * Timestamp contract was created.
+     * @type {Date}
+     * @memberof UniswapV2PairV2DTO
+     */
+    created_at_timestamp?: Date;
+    /**
+     * Total number of LPs.
+     * @type {string}
+     * @memberof UniswapV2PairV2DTO
+     */
+    liquidity_provider_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2PairV2DTO
+     */
+    evaluated_ask?: number;
+}
+
+/**
+ * Swap are created for each token swap within a pair.
+ * @export
+ */
+export type UniswapV2SwapV2DTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    vid?: number;
+    /**
+     * Transaction hash plus index in Transaction swap array.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    id?: string;
+    /**
+     * Reference to transaction swap was included in.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    transaction?: string;
+    /**
+     * Timestamp of swap, used for sorted lookups.
+     * @type {Date}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    timestamp?: Date;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    pair?: string;
+    /**
+     * Address that initiated the swap.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    sender?: string;
+    /**
+     * The EOA (Externally Owned Account) that initiated the transaction.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    from?: string;
+    /**
+     * Amount of token0 sold.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    amount_0_in?: string;
+    /**
+     * Amount of token1 sold.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    amount_1_in?: string;
+    /**
+     * Amount of token0 received.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    amount_0_out?: string;
+    /**
+     * Amount of token1 received.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    amount_1_out?: string;
+    /**
+     * Recipient of output tokens.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    to?: string;
+    /**
+     * 
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    log_index?: NumericsBigInteger;
+    /**
+     * Derived amount of tokens sold in USD.
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    amount_usd?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    evaluated_price?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    evaluated_amount?: number;
+    /**
+     * 
+     * @type {TransactionsETradeAggressiveSide}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    evaluated_aggressor?: TransactionsETradeAggressiveSide;
+    /**
+     * 
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    pool_id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UniswapV2SwapV2DTO
+     */
+    transaction_id?: string;
+}
+
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ * @export
+ */
+export type UniswapV2TokenV2DTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    vid?: number;
+    /**
+     * Token address.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    id?: string;
+    /**
+     * Token symbol.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    symbol?: string;
+    /**
+     * Token name.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    name?: string;
+    /**
+     * Token decimals.
+     * @type {number}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    decimals?: number;
+    /**
+     * 
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    total_supply?: NumericsBigInteger;
+    /**
+     * Amount of token traded all time across all pairs.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    trade_volume?: string;
+    /**
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    trade_volume_usd?: string;
+    /**
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * 
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    tx_count?: NumericsBigInteger;
+    /**
+     * Total amount of token provided as liquidity across all pairs.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    total_liquidity?: string;
+    /**
+     * ETH per token.
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    derived_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UniswapV2TokenV2DTO
+     */
+    token_symbol?: string;
 }
 
 /**
  * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  * @export
  */
-export type BundleV3DTO = {
+export type UniswapV3BundleV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {string}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     id?: string;
     /**
      * Price of ETH in usd.
      * @type {string}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     eth_price_usd?: string;
     /**
      * 
      * @type {number}
-     * @memberof BundleV3DTO
+     * @memberof UniswapV3BundleV3DTO
      */
     vid?: number;
 }
@@ -153,235 +958,228 @@ export type BundleV3DTO = {
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  * @export
  */
-export type BurnV3DTO = {
+export type UniswapV3BurnV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     block_number?: number;
     /**
      * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     id?: string;
     /**
      * Transaction burn was included in.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     transaction?: string;
     /**
      * Pool position is within.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     token_1?: string;
     /**
      * Timestamp.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     timestamp?: string;
     /**
      * Owner of position where liquidity was burned.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     owner?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     origin?: string;
     /**
      * Amount of liquidity burned.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     amount?: string;
     /**
      * Amount of token 0 burned.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     amount_0?: string;
     /**
      * Amount of token 1 burned.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     amount_1?: string;
     /**
      * Derived amount based on available prices of tokens.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     amount_usd?: string;
     /**
      * Lower tick of position.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     tick_lower?: string;
     /**
      * Upper tick of position.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     tick_upper?: string;
     /**
      * Position within the transactions.
      * @type {string}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     log_index?: string;
     /**
      * 
      * @type {number}
-     * @memberof BurnV3DTO
+     * @memberof UniswapV3BurnV3DTO
      */
     vid?: number;
 }
 
 /**
- * 
- * @export
- * @enum {string}
- */
-export type ETradeAggressiveSide = 'Buy' | 'Sell' | 'EstimatedBuy' | 'EstimatedSell' | 'Unknown';
-
-/**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  * @export
  */
-export type FactoryV3DTO = {
+export type UniswapV3FactoryV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     block_number?: number;
     /**
      * Factory address.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     id?: string;
     /**
      * Amount of pools created.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     pool_count?: string;
     /**
      * Amount of transactions all time.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     tx_count?: string;
     /**
      * Total volume all time in derived USD.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_volume_usd?: string;
     /**
      * Total volume all time in derived ETH.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_volume_eth?: string;
     /**
      * Total swap fees all time in USD.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_fees_usd?: string;
     /**
      * All volume even through less reliable USD values.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_fees_eth?: string;
     /**
      * All volume even through less reliable USD values.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     untracked_volume_usd?: string;
     /**
      * Total value locked derived in USD.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_value_locked_usd?: string;
     /**
      * Total value locked derived in ETH.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_value_locked_eth?: string;
     /**
      * Total value locked derived in USD untracked.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Total value locked derived in ETH untracked.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     total_value_locked_eth_untracked?: string;
     /**
      * Current owner of the factory.
      * @type {string}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     owner?: string;
     /**
      * 
      * @type {number}
-     * @memberof FactoryV3DTO
+     * @memberof UniswapV3FactoryV3DTO
      */
     vid?: number;
 }
@@ -390,584 +1188,276 @@ export type FactoryV3DTO = {
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  * @export
  */
-export type MintV3DTO = {
+export type UniswapV3MintV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     block_number?: number;
     /**
      * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     id?: string;
     /**
      * Which txn the mint was included in.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     transaction?: string;
     /**
      * Time of transaction.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     timestamp?: string;
     /**
      * Pool address.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     token_1?: string;
     /**
      * Owner of position where liquidity minted to.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     owner?: string;
     /**
      * The address that minted the liquidity.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     sender?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     origin?: string;
     /**
      * Amount of liquidity minted.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     amount?: string;
     /**
      * Amount of token 0 minted.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     amount_0?: string;
     /**
      * Amount of token 1 minted.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     amount_1?: string;
     /**
      * Derived amount based on available prices of tokens.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     amount_usd?: string;
     /**
      * Lower tick of the position.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     tick_lower?: string;
     /**
      * Upper tick of the position.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     tick_upper?: string;
     /**
      * Order within the transaction.
      * @type {string}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     log_index?: string;
     /**
      * 
      * @type {number}
-     * @memberof MintV3DTO
+     * @memberof UniswapV3MintV3DTO
      */
     vid?: number;
-}
-
-/**
- * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- * @export
- */
-export type PairDTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof PairDTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof PairDTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof PairDTO
-     */
-    block_number?: number;
-    /**
-     * Pair contract address.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    id?: string;
-    /**
-     * Factory contract address.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    factory?: string;
-    /**
-     * Friendly name, format: <token0 name>-<token1 name>
-     * @type {string}
-     * @memberof PairDTO
-     */
-    name?: string;
-    /**
-     * Reference to token0 as stored in pair contract.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    token_0?: string;
-    /**
-     * Reference to token0 as stored in pair contract.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    token_1?: string;
-    /**
-     * Reserve of token0.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    reserve_0?: string;
-    /**
-     * Reserve of token1.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    reserve_1?: string;
-    /**
-     * Total supply of liquidity token distributed to LPs.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    total_supply?: string;
-    /**
-     * Total liquidity in pair stored as an amount of ETH.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    reserve_eth?: string;
-    /**
-     * Total liquidity amount in pair stored as an amount of USD.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    reserve_usd?: string;
-    /**
-     * Total liquidity with only tracked amount.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    tracked_reserve_eth?: string;
-    /**
-     * Token0 per token1.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    token_0_price?: string;
-    /**
-     * Token1 per token0.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    token_1_price?: string;
-    /**
-     * Amount of token0 swapped on this pair.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    volume_token_0?: string;
-    /**
-     * Amount of token1 swapped on this pair.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    volume_token_1?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
-     * @type {string}
-     * @memberof PairDTO
-     */
-    volume_usd?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * All time amount of transactions on this pair.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    tx_count?: string;
-    /**
-     * Total number of LPs.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    liquidity_provider_count?: string;
-    /**
-     * Timestamp.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    timestamp?: string;
-    /**
-     * Block number in which pair information was created in.
-     * @type {string}
-     * @memberof PairDTO
-     */
-    block?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PairDTO
-     */
-    vid?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PairDTO
-     */
-    evaluated_ask?: number;
-}
-
-/**
- * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- * @export
- */
-export type PairV2DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof PairV2DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof PairV2DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof PairV2DTO
-     */
-    block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PairV2DTO
-     */
-    vid?: number;
-    /**
-     * Pair contract address.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    id?: string;
-    /**
-     * Reference to token0 as stored in pair contract.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    token_0?: string;
-    /**
-     * Reference to token1 as stored in pair contract.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    token_1?: string;
-    /**
-     * Reserve of token0.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    reserve_0?: string;
-    /**
-     * Reserve of token1.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    reserve_1?: string;
-    /**
-     * Total supply of liquidity token distributed to LPs.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    total_supply?: string;
-    /**
-     * Total liquidity in pair stored as an amount of ETH.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    reserve_eth?: string;
-    /**
-     * Total liquidity amount in pair stored as an amount of USD.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    reserve_usd?: string;
-    /**
-     * Total liquidity with only tracked amount.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    tracked_reserve_eth?: string;
-    /**
-     * Token0 per token1.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    token_0_price?: string;
-    /**
-     * Token1 per token0.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    token_1_price?: string;
-    /**
-     * Amount of token0 swapped on this pair.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    volume_token_0?: string;
-    /**
-     * Amount of token1 swapped on this pair.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    volume_token_1?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    volume_usd?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * 
-     * @type {BigInteger}
-     * @memberof PairV2DTO
-     */
-    tx_count?: BigInteger;
-    /**
-     * Timestamp contract was created.
-     * @type {Date}
-     * @memberof PairV2DTO
-     */
-    created_at_timestamp?: Date;
-    /**
-     * Total number of LPs.
-     * @type {string}
-     * @memberof PairV2DTO
-     */
-    liquidity_provider_count?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PairV2DTO
-     */
-    evaluated_ask?: number;
 }
 
 /**
  * Data accumulated and condensed into day stats for each pool.
  * @export
  */
-export type PoolDayDataV3DTO = {
+export type UniswapV3PoolDayDataV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     block_number?: number;
     /**
      * Identifier, format: <pool address>-<day id>.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     id?: string;
     /**
      * Timestamp rounded to current day by dividing by 86400
      * @type {number}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     _date?: number;
     /**
      * Pointer to pool.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     pool?: string;
     /**
      * In range liquidity at end of period.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     liquidity?: string;
     /**
      * Current price tracker at end of period.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     sqrt_price?: string;
     /**
      * Price of token0 - derived from sqrtPrice.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     token_0_price?: string;
     /**
      * Price of token1 - derived from sqrtPrice.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     token_1_price?: string;
     /**
      * Current tick at end of period.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     tick?: string;
     /**
      * Tracker for global fee growth.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     fee_growth_global_0x128?: string;
     /**
      * Tracker for global fee growth.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     fee_growth_global_1x128?: string;
     /**
      * Total value locked derived in USD at end of period.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     tvl_usd?: string;
     /**
      * Volume in token0.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     volume_token_0?: string;
     /**
      * Volume in token1.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     volume_token_1?: string;
     /**
      * Volume in USD.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     fees_usd?: string;
     /**
      * Number of transactions during period.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     tx_count?: string;
     /**
      * Opening price of token0.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     open?: string;
     /**
      * High price of token0.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     high?: string;
     /**
      * Low price of token0.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     low?: string;
     /**
      * Close price of token0.
      * @type {string}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     close?: string;
     /**
      * 
      * @type {number}
-     * @memberof PoolDayDataV3DTO
+     * @memberof UniswapV3PoolDayDataV3DTO
      */
     vid?: number;
 }
@@ -976,149 +1466,149 @@ export type PoolDayDataV3DTO = {
  * Hourly stats tracker for pool.
  * @export
  */
-export type PoolHourDataV3DTO = {
+export type UniswapV3PoolHourDataV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     block_number?: number;
     /**
      * Identifier, format: <pool address>-<day id>
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     id?: string;
     /**
      * Unix timestamp for start of hour.
      * @type {number}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     period_start_unix?: number;
     /**
      * Pointer to pool.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     pool?: string;
     /**
      * In range liquidity at end of period.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     liquidity?: string;
     /**
      * Current price tracker at end of period.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     sqrt_price?: string;
     /**
      * Price of token0 - derived from sqrtPrice.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     token_0_price?: string;
     /**
      * Price of token1 - derived from sqrtPrice.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     token_1_price?: string;
     /**
      * Current tick at end of period.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     tick?: string;
     /**
      * Tracker for global fee growth.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     fee_growth_global_0x128?: string;
     /**
      * Tracker for global fee growth.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     fee_growth_global_1x128?: string;
     /**
      * Total value locked derived in USD at end of period.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     tvl_usd?: string;
     /**
      * Volume in token0.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     volume_token_0?: string;
     /**
      * Volume in token1.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     volume_token_1?: string;
     /**
      * Volume in USD.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     fees_usd?: string;
     /**
      * Number of transactions during period.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     tx_count?: string;
     /**
      * Opening price of token0.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     open?: string;
     /**
      * High price of token0.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     high?: string;
     /**
      * Low price of token0.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     low?: string;
     /**
      * Close price of token0.
      * @type {string}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     close?: string;
     /**
      * 
      * @type {number}
-     * @memberof PoolHourDataV3DTO
+     * @memberof UniswapV3PoolHourDataV3DTO
      */
     vid?: number;
 }
@@ -1127,203 +1617,203 @@ export type PoolHourDataV3DTO = {
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  * @export
  */
-export type PoolV3DTO = {
+export type UniswapV3PoolV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     vid?: number;
     /**
      * Pool address.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     id?: string;
     /**
      * Creation time.
      * @type {Date}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     created_at_timestamp?: Date;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     token_1?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    fee_tier?: BigInteger;
+    fee_tier?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    liquidity?: BigInteger;
+    liquidity?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    sqrt_price?: BigInteger;
+    sqrt_price?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    fee_growth_global_0x128?: BigInteger;
+    fee_growth_global_0x128?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    fee_growth_global_1x128?: BigInteger;
+    fee_growth_global_1x128?: NumericsBigInteger;
     /**
      * Token0 per token1.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     token_0_price?: string;
     /**
      * Token1 per token0.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     token_1_price?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    tick?: BigInteger;
+    tick?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    observation_index?: BigInteger;
+    observation_index?: NumericsBigInteger;
     /**
      * All time token0 swapped.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     volume_token_0?: string;
     /**
      * All time token1 swapped.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     volume_token_1?: string;
     /**
      * All time USD swapped.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     volume_usd?: string;
     /**
      * All time USD swapped, unfiltered for unreliable USD pools.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     fees_usd?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof PoolV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3PoolV3DTO
      */
-    tx_count?: BigInteger;
+    tx_count?: NumericsBigInteger;
     /**
      * All time fees collected token0.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     collected_fees_token_0?: string;
     /**
      * All time fees collected token1.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     collected_fees_token_1?: string;
     /**
      * All time fees collected derived USD.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     collected_fees_usd?: string;
     /**
      * Total token 0 across all ticks.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     total_value_locked_token_0?: string;
     /**
      * 
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     total_value_locked_token_1?: string;
     /**
      * Total token 1 across all ticks.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     total_value_locked_eth?: string;
     /**
      * Total value locked USD.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     total_value_locked_usd?: string;
     /**
      * Total value locked derived ETH.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Liquidity providers count, used to detect new exchanges.
      * @type {string}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     liquidity_provider_count?: string;
     /**
      * 
      * @type {number}
-     * @memberof PoolV3DTO
+     * @memberof UniswapV3PoolV3DTO
      */
     evaluated_ask?: number;
 }
@@ -1332,119 +1822,119 @@ export type PoolV3DTO = {
  * 
  * @export
  */
-export type PositionSnapshotV3DTO = {
+export type UniswapV3PositionSnapshotV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     block_number?: number;
     /**
      * NFT token identifier, format: <NFT token id>#<block number>
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     id?: string;
     /**
      * Owner of the NFT.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     owner?: string;
     /**
      * Pool the position is within.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     pool?: string;
     /**
      * Position of which the snap was taken of.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     position?: string;
     /**
      * Timestamp of block in which the snap was created.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     timestamp?: string;
     /**
      * Total position liquidity.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     liquidity?: string;
     /**
      * Amount of token 0 ever deposited to position.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     deposited_token_0?: string;
     /**
      * Amount of token 1 ever deposited to position.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     deposited_token_1?: string;
     /**
      * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     withdrawn_token_0?: string;
     /**
      * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     withdrawn_token_1?: string;
     /**
      * All time collected fees in token0.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     collected_fees_token_0?: string;
     /**
      * All time collected fees in token1.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     collected_fees_token_1?: string;
     /**
      * Transaction in which the snapshot was initialized.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     transaction?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     fee_growth_inside_0_last_x128?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     fee_growth_inside_1_last_x128?: string;
     /**
      * 
      * @type {number}
-     * @memberof PositionSnapshotV3DTO
+     * @memberof UniswapV3PositionSnapshotV3DTO
      */
     vid?: number;
 }
@@ -1453,131 +1943,131 @@ export type PositionSnapshotV3DTO = {
  * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  * @export
  */
-export type PositionV3DTO = {
+export type UniswapV3PositionV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     block_number?: number;
     /**
      * NFT token identifier.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     id?: string;
     /**
      * Owner of the NFT.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     owner?: string;
     /**
      * Pool position is within.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pair contract.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pair contract.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     token_1?: string;
     /**
      * Lower tick of the position.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     tick_lower?: string;
     /**
      * Upper tick of the position.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     tick_upper?: string;
     /**
      * Total position liquidity.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     liquidity?: string;
     /**
      * Amount of token 0 ever deposited to position.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     deposited_token_0?: string;
     /**
      * Amount of token 1 ever deposited to position.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     deposited_token_1?: string;
     /**
      * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     withdrawn_token_0?: string;
     /**
      * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     withdrawn_token_1?: string;
     /**
      * All time collected fees in token0.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     collected_fees_token_0?: string;
     /**
      * All time collected fees in token1.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     collected_fees_token_1?: string;
     /**
      * Transaction in which the position was initialized.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     transaction?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     fee_growth_inside_0_last_x128?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     fee_growth_inside_1_last_x128?: string;
     /**
      * 
      * @type {number}
-     * @memberof PositionV3DTO
+     * @memberof UniswapV3PositionV3DTO
      */
     vid?: number;
 }
@@ -1586,421 +2076,149 @@ export type PositionV3DTO = {
  * Swap are created for each token swap within a pair.
  * @export
  */
-export type SwapDTO = {
+export type UniswapV3SwapV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof SwapDTO
+     * @memberof UniswapV3SwapV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof SwapDTO
+     * @memberof UniswapV3SwapV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof SwapDTO
-     */
-    block_number?: number;
-    /**
-     * Transaction hash plus index in Transaction swap array.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    id?: string;
-    /**
-     * Reference to transaction swap was included in.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    transaction?: string;
-    /**
-     * Timestamp of swap, used for sorted lookups.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    timestamp?: string;
-    /**
-     * Reference to pair.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    pair?: string;
-    /**
-     * Address that initiated the swap.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    sender?: string;
-    /**
-     * Amount of token0 sold.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    amount_0_in?: string;
-    /**
-     * Amount of token1 sold.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    amount_1_in?: string;
-    /**
-     * Amount of token0 received.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    amount_0_out?: string;
-    /**
-     * Amount of token1 received.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    amount_1_out?: string;
-    /**
-     * Recipient of output tokens.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    to?: string;
-    /**
-     * Event index within transaction.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    log_index?: string;
-    /**
-     * Derived amount of tokens sold in USD.
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    amount_usd?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapDTO
-     */
-    vid?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    pool_id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SwapDTO
-     */
-    transaction_id?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapDTO
-     */
-    evaluated_price?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapDTO
-     */
-    evaluated_amount?: number;
-    /**
-     * 
-     * @type {ETradeAggressiveSide}
-     * @memberof SwapDTO
-     */
-    evaluated_aggressor?: ETradeAggressiveSide;
-}
-
-/**
- * Swap are created for each token swap within a pair.
- * @export
- */
-export type SwapV2DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof SwapV2DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof SwapV2DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof SwapV2DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof SwapV2DTO
-     */
-    vid?: number;
-    /**
-     * Transaction hash plus index in Transaction swap array.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    id?: string;
-    /**
-     * Reference to transaction swap was included in.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    transaction?: string;
-    /**
-     * Timestamp of swap, used for sorted lookups.
-     * @type {Date}
-     * @memberof SwapV2DTO
-     */
-    timestamp?: Date;
-    /**
-     * Reference to pair.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    pair?: string;
-    /**
-     * Address that initiated the swap.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    sender?: string;
-    /**
-     * The EOA (Externally Owned Account) that initiated the transaction.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    from?: string;
-    /**
-     * Amount of token0 sold.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    amount_0_in?: string;
-    /**
-     * Amount of token1 sold.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    amount_1_in?: string;
-    /**
-     * Amount of token0 received.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    amount_0_out?: string;
-    /**
-     * Amount of token1 received.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    amount_1_out?: string;
-    /**
-     * Recipient of output tokens.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    to?: string;
-    /**
-     * 
-     * @type {BigInteger}
-     * @memberof SwapV2DTO
-     */
-    log_index?: BigInteger;
-    /**
-     * Derived amount of tokens sold in USD.
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    amount_usd?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapV2DTO
-     */
-    evaluated_price?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapV2DTO
-     */
-    evaluated_amount?: number;
-    /**
-     * 
-     * @type {ETradeAggressiveSide}
-     * @memberof SwapV2DTO
-     */
-    evaluated_aggressor?: ETradeAggressiveSide;
-    /**
-     * 
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    pool_id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SwapV2DTO
-     */
-    transaction_id?: string;
-}
-
-/**
- * Swap are created for each token swap within a pair.
- * @export
- */
-export type SwapV3DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof SwapV3DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof SwapV3DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof SwapV3DTO
-     */
-    block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     vid?: number;
     /**
      * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     id?: string;
     /**
      * Pointer to transaction.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     transaction?: string;
     /**
      * Timestamp of transaction.
      * @type {Date}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     timestamp?: Date;
     /**
      * Pool swap occured within.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pair contract.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pair contract.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     token_1?: string;
     /**
      * Sender of the swap.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     sender?: string;
     /**
      * Recipient of the swap.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     recipient?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     origin?: string;
     /**
      * Delta of token0 swapped.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     amount_0?: string;
     /**
      * Delta of token1 swapped.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     amount_1?: string;
     /**
      * Derived amount of tokens sold in USD.
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     amount_usd?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof SwapV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3SwapV3DTO
      */
-    sqrt_price_x96?: BigInteger;
+    sqrt_price_x96?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof SwapV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3SwapV3DTO
      */
-    tick?: BigInteger;
+    tick?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof SwapV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3SwapV3DTO
      */
-    log_index?: BigInteger;
+    log_index?: NumericsBigInteger;
     /**
      * 
      * @type {number}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     evaluated_price?: number;
     /**
      * 
      * @type {number}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     evaluated_amount?: number;
     /**
      * 
-     * @type {ETradeAggressiveSide}
-     * @memberof SwapV3DTO
+     * @type {TransactionsETradeAggressiveSide}
+     * @memberof UniswapV3SwapV3DTO
      */
-    evaluated_aggressor?: ETradeAggressiveSide;
+    evaluated_aggressor?: TransactionsETradeAggressiveSide;
     /**
      * 
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     pool_id?: string;
     /**
      * 
      * @type {string}
-     * @memberof SwapV3DTO
+     * @memberof UniswapV3SwapV3DTO
      */
     transaction_id?: string;
 }
@@ -2009,101 +2227,101 @@ export type SwapV3DTO = {
  * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  * @export
  */
-export type TickDayDataV3DTO = {
+export type UniswapV3TickDayDataV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     block_number?: number;
     /**
      * Identifier, format: <pool address>-<tick index>-<timestamp>.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     id?: string;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     _date?: number;
     /**
      * Pointer to pool.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     pool?: string;
     /**
      * Pointer to tick.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     tick?: string;
     /**
      * Total liquidity pool has as tick lower or upper at end of period.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     liquidity_gross?: string;
     /**
      * How much liquidity changes when tick crossed at end of period.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     liquidity_net?: string;
     /**
      * Hourly volume of token0 with this tick in range.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     volume_token_0?: string;
     /**
      * Hourly volume of token1 with this tick in range.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     volume_token_1?: string;
     /**
      * Hourly volume in derived USD with this tick in range.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     fees_usd?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     fee_growth_outside_0x128?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     fee_growth_outside_1x128?: string;
     /**
      * 
      * @type {number}
-     * @memberof TickDayDataV3DTO
+     * @memberof UniswapV3TickDayDataV3DTO
      */
     vid?: number;
 }
@@ -2112,379 +2330,264 @@ export type TickDayDataV3DTO = {
  * Ticks are the boundaries between discrete areas in price space.
  * @export
  */
-export type TickV3DTO = {
+export type UniswapV3TickV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     vid?: number;
     /**
      * Identifier, format: <pool address>#<tick index>
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     id?: string;
     /**
      * Pool address.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     pool_address?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    tick_idx?: BigInteger;
+    tick_idx?: NumericsBigInteger;
     /**
      * Pool address.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     pool?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    liquidity_gross?: BigInteger;
+    liquidity_gross?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    liquidity_net?: BigInteger;
+    liquidity_net?: NumericsBigInteger;
     /**
      * Calculated price of token0 of tick within this pool - constant.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     price_0?: string;
     /**
      * Calculated price of token1 of tick within this pool - constant.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     price_1?: string;
     /**
      * Lifetime volume of token0 with this tick in range.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     volume_token_0?: string;
     /**
      * Lifetime volume of token1 with this tick in range.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     volume_token_1?: string;
     /**
      * Lifetime volume in derived USD with this tick in range.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     volume_usd?: string;
     /**
      * Lifetime volume in untracked USD with this tick in range.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     fees_usd?: string;
     /**
      * All time collected fees in token0.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     collected_fees_token_0?: string;
     /**
      * All time collected fees in token1.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     collected_fees_token_1?: string;
     /**
      * All time collected fees in USD.
      * @type {string}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     collected_fees_usd?: string;
     /**
      * Created time.
      * @type {Date}
-     * @memberof TickV3DTO
+     * @memberof UniswapV3TickV3DTO
      */
     created_at_timestamp?: Date;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    liquidity_provider_count?: BigInteger;
+    liquidity_provider_count?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    fee_growth_outside_0x128?: BigInteger;
+    fee_growth_outside_0x128?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TickV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TickV3DTO
      */
-    fee_growth_outside_1x128?: BigInteger;
-}
-
-/**
- * Stores aggregated information for a specific token across all pairs that token is included in.
- * @export
- */
-export type TokenDTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof TokenDTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof TokenDTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof TokenDTO
-     */
-    block_number?: number;
-    /**
-     * Token address.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    id?: string;
-    /**
-     * Factory address.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    factory?: string;
-    /**
-     * Token symbol.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    symbol?: string;
-    /**
-     * Token name.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    name?: string;
-    /**
-     * Token decimals.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    decimals?: string;
-    /**
-     * Total supply of liquidity token.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    total_supply?: string;
-    /**
-     * Amount of token traded all time across all pairs.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    volume?: string;
-    /**
-     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    volume_usd?: string;
-    /**
-     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * Amount of transactions all time in pairs including token.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    tx_count?: string;
-    /**
-     * Total amount of token provided as liquidity across all pairs.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    liquidity?: string;
-    /**
-     * ETH per token.
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    derived_eth?: string;
-    /**
-     * Array of whitelisted pairs.
-     * @type {Array<string>}
-     * @memberof TokenDTO
-     */
-    whitelist_pairs?: Array<string>;
-    /**
-     * 
-     * @type {number}
-     * @memberof TokenDTO
-     */
-    vid?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenDTO
-     */
-    token_symbol?: string;
+    fee_growth_outside_1x128?: NumericsBigInteger;
 }
 
 /**
  * Token data aggregated across all pairs that include token.
  * @export
  */
-export type TokenHourDataV3DTO = {
+export type UniswapV3TokenHourDataV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     block_number?: number;
     /**
      * Token address concatendated with date.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     id?: string;
     /**
      * Unix timestamp for start of hour.
      * @type {number}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     period_start_unix?: number;
     /**
      * Pointer to token.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     token?: string;
     /**
      * Volume in token units.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     volume?: string;
     /**
      * Volume in derived USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     volume_usd?: string;
     /**
      * Volume in USD even on pools with less reliable USD values.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     untracked_volume_usd?: string;
     /**
      * Liquidity across all pools in token units.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     total_value_locked?: string;
     /**
      * Liquidity across all pools in derived USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     total_value_locked_usd?: string;
     /**
      * Price at end of period in USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     price_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     fees_usd?: string;
     /**
      * Opening price USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     open?: string;
     /**
      * High price USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     high?: string;
     /**
      * Low price USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     low?: string;
     /**
      * Close price USD.
      * @type {string}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     close?: string;
     /**
      * 
      * @type {number}
-     * @memberof TokenHourDataV3DTO
+     * @memberof UniswapV3TokenHourDataV3DTO
      */
     vid?: number;
 }
@@ -2493,234 +2596,131 @@ export type TokenHourDataV3DTO = {
  * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
-export type TokenV2DTO = {
+export type UniswapV3TokenV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     vid?: number;
     /**
      * Token address.
      * @type {string}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     id?: string;
     /**
      * Token symbol.
      * @type {string}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     symbol?: string;
     /**
      * Token name.
      * @type {string}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     name?: string;
     /**
      * Token decimals.
      * @type {number}
-     * @memberof TokenV2DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     decimals?: number;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TokenV2DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TokenV3DTO
      */
-    total_supply?: BigInteger;
-    /**
-     * Amount of token traded all time across all pairs.
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    trade_volume?: string;
-    /**
-     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    trade_volume_usd?: string;
-    /**
-     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * 
-     * @type {BigInteger}
-     * @memberof TokenV2DTO
-     */
-    tx_count?: BigInteger;
-    /**
-     * Total amount of token provided as liquidity across all pairs.
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    total_liquidity?: string;
-    /**
-     * ETH per token.
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    derived_eth?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenV2DTO
-     */
-    token_symbol?: string;
-}
-
-/**
- * Stores aggregated information for a specific token across all pairs that token is included in.
- * @export
- */
-export type TokenV3DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof TokenV3DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof TokenV3DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof TokenV3DTO
-     */
-    block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TokenV3DTO
-     */
-    vid?: number;
-    /**
-     * Token address.
-     * @type {string}
-     * @memberof TokenV3DTO
-     */
-    id?: string;
-    /**
-     * Token symbol.
-     * @type {string}
-     * @memberof TokenV3DTO
-     */
-    symbol?: string;
-    /**
-     * Token name.
-     * @type {string}
-     * @memberof TokenV3DTO
-     */
-    name?: string;
-    /**
-     * Token decimals.
-     * @type {number}
-     * @memberof TokenV3DTO
-     */
-    decimals?: number;
-    /**
-     * 
-     * @type {BigInteger}
-     * @memberof TokenV3DTO
-     */
-    total_supply?: BigInteger;
+    total_supply?: NumericsBigInteger;
     /**
      * Volume in token units.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     volume?: string;
     /**
      * Volume in derived USD.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     volume_usd?: string;
     /**
      * Volume in USD even on pools with less reliable USD values.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     fees_usd?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TokenV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TokenV3DTO
      */
-    tx_count?: BigInteger;
+    tx_count?: NumericsBigInteger;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof TokenV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3TokenV3DTO
      */
-    pool_count?: BigInteger;
+    pool_count?: NumericsBigInteger;
     /**
      * Liquidity across all pools in token units.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     total_value_locked?: string;
     /**
      * Liquidity across all pools in derived USD.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     total_value_locked_usd?: string;
     /**
      * TVL derived in USD untracked.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Derived price in ETH.
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     derived_eth?: string;
     /**
      * Pools token is in that are white listed for USD pricing.
      * @type {Array<string>}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     whitelist_pools?: Array<string>;
     /**
      * 
      * @type {string}
-     * @memberof TokenV3DTO
+     * @memberof UniswapV3TokenV3DTO
      */
     token_symbol?: string;
 }
@@ -2729,113 +2729,113 @@ export type TokenV3DTO = {
  * Token data aggregated across all pairs that include token.
  * @export
  */
-export type TokenV3DayDataDTO = {
+export type UniswapV3TokenV3DayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     vid?: number;
     /**
      * Token address concatendated with date.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     id?: string;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     _date?: number;
     /**
      * Pointer to token.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     token?: string;
     /**
      * Volume in token units.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     volume?: string;
     /**
      * Volume in derived USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     volume_usd?: string;
     /**
      * Volume in USD even on pools with less reliable USD values.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     untracked_volume_usd?: string;
     /**
      * Liquidity across all pools in token units.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     total_value_locked?: string;
     /**
      * Liquidity across all pools in derived USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     total_value_locked_usd?: string;
     /**
      * Price at end of period in USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     price_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     fees_usd?: string;
     /**
      * Opening price USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     open?: string;
     /**
      * High price USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     high?: string;
     /**
      * Low price USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     low?: string;
     /**
      * Close price USD.
      * @type {string}
-     * @memberof TokenV3DayDataDTO
+     * @memberof UniswapV3TokenV3DayDataDTO
      */
     close?: string;
 }
@@ -2844,77 +2844,77 @@ export type TokenV3DayDataDTO = {
  * Data accumulated and condensed into day stats for all of Uniswap.
  * @export
  */
-export type UniswapDayDataV3DTO = {
+export type UniswapV3UniswapDayDataV3DTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     vid?: number;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     id?: string;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     _date?: number;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of ETH.
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     volume_eth?: string;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of USD.
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     volume_usd?: string;
     /**
      * Total daily volume in Uniswap derived in terms of USD untracked.
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     volume_usd_untracked?: string;
     /**
      * Fees in USD
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     fees_usd?: string;
     /**
      * 
-     * @type {BigInteger}
-     * @memberof UniswapDayDataV3DTO
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
-    tx_count?: BigInteger;
+    tx_count?: NumericsBigInteger;
     /**
      * Tvl in terms of USD.
      * @type {string}
-     * @memberof UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataV3DTO
      */
     tvl_usd?: string;
 }
@@ -6313,19 +6313,19 @@ export type SushiswapApiType = {
 
     dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsSushiswapPoolsCurrentGet(options?: RequestOptions): Promise<Array<PairDTO>>,
+    dappsSushiswapPoolsCurrentGet(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
-    dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<PairDTO>>,
+    dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
-    dappsSushiswapSwapsCurrentGet(options?: RequestOptions): Promise<Array<SwapDTO>>,
+    dappsSushiswapSwapsCurrentGet(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
-    dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SwapDTO>>,
+    dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
     dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsSushiswapTokensCurrentGet(options?: RequestOptions): Promise<Array<TokenDTO>>,
+    dappsSushiswapTokensCurrentGet(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
-    dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<TokenDTO>>,
+    dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
     dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
@@ -6484,7 +6484,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPools
          * @throws {RequiredError}
          */
-        dappsSushiswapPoolsCurrentGet(options?: RequestOptions = {}): Promise<Array<PairDTO>> {
+        dappsSushiswapPoolsCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolsCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6499,7 +6499,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPools (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<PairDTO>> {
+        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6514,7 +6514,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetSwaps
          * @throws {RequiredError}
          */
-        dappsSushiswapSwapsCurrentGet(options?: RequestOptions = {}): Promise<Array<SwapDTO>> {
+        dappsSushiswapSwapsCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapSwapsCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6529,7 +6529,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetSwaps (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SwapDTO>> {
+        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6558,7 +6558,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokens
          * @throws {RequiredError}
          */
-        dappsSushiswapTokensCurrentGet(options?: RequestOptions = {}): Promise<Array<TokenDTO>> {
+        dappsSushiswapTokensCurrentGet(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokensCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6573,7 +6573,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokens (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenDTO>> {
+        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -7308,17 +7308,17 @@ export type UniswapV2ApiType = {
 
     dappsUniswapv2PoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PairV2DTO>>,
+    dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairV2DTO>>,
 
     dappsUniswapv2PoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv2SwapsCurrentGet(options?: RequestOptions): Promise<Array<SwapV2DTO>>,
+    dappsUniswapv2SwapsCurrentGet(options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
 
     dappsUniswapv2SwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsUniswapv2TokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv2TokensCurrentGet(options?: RequestOptions): Promise<Array<TokenV2DTO>>,
+    dappsUniswapv2TokensCurrentGet(options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
 
     dappsUniswapv2TokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
@@ -7465,7 +7465,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPools
          * @throws {RequiredError}
          */
-        dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PairV2DTO>> {
+        dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).dappsUniswapv2PoolsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -7494,7 +7494,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetSwaps
          * @throws {RequiredError}
          */
-        dappsUniswapv2SwapsCurrentGet(options?: RequestOptions = {}): Promise<Array<SwapV2DTO>> {
+        dappsUniswapv2SwapsCurrentGet(options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).dappsUniswapv2SwapsCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -7537,7 +7537,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokens
          * @throws {RequiredError}
          */
-        dappsUniswapv2TokensCurrentGet(options?: RequestOptions = {}): Promise<Array<TokenV2DTO>> {
+        dappsUniswapv2TokensCurrentGet(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).dappsUniswapv2TokensCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8693,21 +8693,21 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type UniswapV3ApiType = { 
-    dappsUniswapv3BundleCurrentGet(options?: RequestOptions): Promise<Array<BundleV3DTO>>,
+    dappsUniswapv3BundleCurrentGet(options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
 
     dappsUniswapv3BundlesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<BurnV3DTO>>,
+    dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnV3DTO>>,
 
     dappsUniswapv3BurnsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsUniswapv3DayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3FactoryCurrentGet(chainId: string, options?: RequestOptions): Promise<Array<FactoryV3DTO>>,
+    dappsUniswapv3FactoryCurrentGet(chainId: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryV3DTO>>,
 
     dappsUniswapv3FactoryHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3MintsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<MintV3DTO>>,
+    dappsUniswapv3MintsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
 
     dappsUniswapv3MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
@@ -8715,31 +8715,31 @@ export type UniswapV3ApiType = {
 
     dappsUniswapv3PoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PoolV3DTO>>,
+    dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolV3DTO>>,
 
-    dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PoolDayDataV3DTO>>,
+    dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataV3DTO>>,
 
     dappsUniswapv3PoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PoolHourDataV3DTO>>,
+    dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataV3DTO>>,
 
     dappsUniswapv3PositionSnapshotHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PositionSnapshotV3DTO>>,
+    dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotV3DTO>>,
 
-    dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<PositionV3DTO>>,
+    dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
 
     dappsUniswapv3PositionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<SwapV3DTO>>,
+    dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
 
     dappsUniswapv3SwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsUniswapv3TickDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3TicksCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<TickV3DTO>>,
+    dappsUniswapv3TicksCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
 
-    dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<TickDayDataV3DTO>>,
+    dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataV3DTO>>,
 
     dappsUniswapv3TicksHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
@@ -8747,17 +8747,17 @@ export type UniswapV3ApiType = {
 
     dappsUniswapv3TokenHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3TokensCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<TokenV3DTO>>,
+    dappsUniswapv3TokensCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DTO>>,
 
-    dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<TokenV3DayDataDTO>>,
+    dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
 
     dappsUniswapv3TokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<TokenHourDataV3DTO>>,
+    dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataV3DTO>>,
 
     dappsUniswapv3TransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3UniswapDayDataCurrentGet(options?: RequestOptions): Promise<Array<UniswapDayDataV3DTO>>,
+    dappsUniswapv3UniswapDayDataCurrentGet(options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataV3DTO>>,
 }
 
 /**
@@ -8772,7 +8772,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetBundles
          * @throws {RequiredError}
          */
-        dappsUniswapv3BundleCurrentGet(options?: RequestOptions = {}): Promise<Array<BundleV3DTO>> {
+        dappsUniswapv3BundleCurrentGet(options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3BundleCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8801,7 +8801,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetBurns
          * @throws {RequiredError}
          */
-        dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<BurnV3DTO>> {
+        dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3BurnsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8844,7 +8844,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetFactory
          * @throws {RequiredError}
          */
-        dappsUniswapv3FactoryCurrentGet(chainId: string, options?: RequestOptions = {}): Promise<Array<FactoryV3DTO>> {
+        dappsUniswapv3FactoryCurrentGet(chainId: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3FactoryCurrentGet(chainId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8873,7 +8873,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetMints
          * @throws {RequiredError}
          */
-        dappsUniswapv3MintsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<MintV3DTO>> {
+        dappsUniswapv3MintsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3MintsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8930,7 +8930,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPools
          * @throws {RequiredError}
          */
-        dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PoolV3DTO>> {
+        dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PoolsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8945,7 +8945,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPoolsDayData
          * @throws {RequiredError}
          */
-        dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PoolDayDataV3DTO>> {
+        dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -8974,7 +8974,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPoolsHourData
          * @throws {RequiredError}
          */
-        dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PoolHourDataV3DTO>> {
+        dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9003,7 +9003,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPositionSnapshot
          * @throws {RequiredError}
          */
-        dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PositionSnapshotV3DTO>> {
+        dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9018,7 +9018,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetPositions
          * @throws {RequiredError}
          */
-        dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<PositionV3DTO>> {
+        dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PositionsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9047,7 +9047,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetSwaps
          * @throws {RequiredError}
          */
-        dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<SwapV3DTO>> {
+        dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3SwapsCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9090,7 +9090,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTicks
          * @throws {RequiredError}
          */
-        dappsUniswapv3TicksCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<TickV3DTO>> {
+        dappsUniswapv3TicksCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3TicksCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9105,7 +9105,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTicksDayData
          * @throws {RequiredError}
          */
-        dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<TickDayDataV3DTO>> {
+        dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3TicksDayDataCurrentGet(filterPoolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9162,7 +9162,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokens
          * @throws {RequiredError}
          */
-        dappsUniswapv3TokensCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenV3DTO>> {
+        dappsUniswapv3TokensCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3TokensCurrentGet(filterTokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9177,7 +9177,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokensDayData
          * @throws {RequiredError}
          */
-        dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenV3DayDataDTO>> {
+        dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3TokensDayDataCurrentGet(filterTokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9206,7 +9206,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokensHourData
          * @throws {RequiredError}
          */
-        dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenHourDataV3DTO>> {
+        dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3TokensHourDataCurrentGet(filterTokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -9235,7 +9235,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary GetUniswapDayData
          * @throws {RequiredError}
          */
-        dappsUniswapv3UniswapDayDataCurrentGet(options?: RequestOptions = {}): Promise<Array<UniswapDayDataV3DTO>> {
+        dappsUniswapv3UniswapDayDataCurrentGet(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3UniswapDayDataCurrentGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {

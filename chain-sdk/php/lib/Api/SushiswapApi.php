@@ -2886,7 +2886,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PairDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
      */
     public function dappsSushiswapPoolsCurrentGet(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
     {
@@ -2903,7 +2903,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PairDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapPoolsCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
     {
@@ -2946,23 +2946,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PairDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PairDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PairDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PairDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2983,7 +2983,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PairDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3025,7 +3025,7 @@ class SushiswapApi
      */
     public function dappsSushiswapPoolsCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapPoolsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PairDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
         $request = $this->dappsSushiswapPoolsCurrentGetRequest($contentType);
 
         return $this->client
@@ -3154,7 +3154,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PairDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapPairDTO[]
      */
     public function dappsSushiswapPoolsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
     {
@@ -3176,7 +3176,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PairDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapPairDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapPoolsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
     {
@@ -3219,23 +3219,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PairDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PairDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapPairDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PairDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapPairDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PairDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3256,7 +3256,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PairDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapPairDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3308,7 +3308,7 @@ class SushiswapApi
      */
     public function dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapPoolsHistoricalGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PairDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapPairDTO[]';
         $request = $this->dappsSushiswapPoolsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
 
         return $this->client
@@ -3487,7 +3487,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SwapDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
      */
     public function dappsSushiswapSwapsCurrentGet(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
     {
@@ -3504,7 +3504,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SwapDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapSwapsCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
     {
@@ -3547,23 +3547,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SwapDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SwapDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SwapDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SwapDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3584,7 +3584,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SwapDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3626,7 +3626,7 @@ class SushiswapApi
      */
     public function dappsSushiswapSwapsCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapSwapsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SwapDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
         $request = $this->dappsSushiswapSwapsCurrentGetRequest($contentType);
 
         return $this->client
@@ -3755,7 +3755,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SwapDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapSwapDTO[]
      */
     public function dappsSushiswapSwapsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
     {
@@ -3777,7 +3777,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SwapDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapSwapDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapSwapsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
     {
@@ -3820,23 +3820,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SwapDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SwapDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapSwapDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SwapDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapSwapDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SwapDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3857,7 +3857,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SwapDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapSwapDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3909,7 +3909,7 @@ class SushiswapApi
      */
     public function dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['dappsSushiswapSwapsHistoricalGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SwapDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapSwapDTO[]';
         $request = $this->dappsSushiswapSwapsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
 
         return $this->client
@@ -4364,7 +4364,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TokenDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
      */
     public function dappsSushiswapTokensCurrentGet(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
     {
@@ -4381,7 +4381,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapTokensCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
     {
@@ -4424,23 +4424,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TokenDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TokenDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TokenDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TokenDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4461,7 +4461,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TokenDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4503,7 +4503,7 @@ class SushiswapApi
      */
     public function dappsSushiswapTokensCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsSushiswapTokensCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TokenDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
         $request = $this->dappsSushiswapTokensCurrentGetRequest($contentType);
 
         return $this->client
@@ -4632,7 +4632,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TokenDTO[]
+     * @return \OpenAPI\Client\Model\SushiswapTokenDTO[]
      */
     public function dappsSushiswapTokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
     {
@@ -4654,7 +4654,7 @@ class SushiswapApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\SushiswapTokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsSushiswapTokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
     {
@@ -4697,23 +4697,23 @@ class SushiswapApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TokenDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TokenDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\SushiswapTokenDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TokenDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SushiswapTokenDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TokenDTO[]';
+            $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4734,7 +4734,7 @@ class SushiswapApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TokenDTO[]',
+                        '\OpenAPI\Client\Model\SushiswapTokenDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4786,7 +4786,7 @@ class SushiswapApi
      */
     public function dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsSushiswapTokensHistoricalGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TokenDTO[]';
+        $returnType = '\OpenAPI\Client\Model\SushiswapTokenDTO[]';
         $request = $this->dappsSushiswapTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client

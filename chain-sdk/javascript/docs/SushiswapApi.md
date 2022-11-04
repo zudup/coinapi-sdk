@@ -550,7 +550,7 @@ No authorization required
 
 ## dappsSushiswapPoolsCurrentGet
 
-> [PairDTO] dappsSushiswapPoolsCurrentGet()
+> [SushiswapPairDTO] dappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -577,7 +577,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[PairDTO]**](PairDTO.md)
+[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ No authorization required
 
 ## dappsSushiswapPoolsHistoricalGet
 
-> [PairDTO] dappsSushiswapPoolsHistoricalGet(opts)
+> [SushiswapPairDTO] dappsSushiswapPoolsHistoricalGet(opts)
 
 GetPools (historical)
 
@@ -630,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PairDTO]**](PairDTO.md)
+[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -644,7 +644,7 @@ No authorization required
 
 ## dappsSushiswapSwapsCurrentGet
 
-> [SwapDTO] dappsSushiswapSwapsCurrentGet()
+> [SushiswapSwapDTO] dappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -669,7 +669,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[SwapDTO]**](SwapDTO.md)
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ No authorization required
 
 ## dappsSushiswapSwapsHistoricalGet
 
-> [SwapDTO] dappsSushiswapSwapsHistoricalGet(opts)
+> [SushiswapSwapDTO] dappsSushiswapSwapsHistoricalGet(opts)
 
 GetSwaps (historical)
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[SwapDTO]**](SwapDTO.md)
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -789,7 +789,7 @@ No authorization required
 
 ## dappsSushiswapTokensCurrentGet
 
-> [TokenDTO] dappsSushiswapTokensCurrentGet()
+> [SushiswapTokenDTO] dappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -814,7 +814,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[TokenDTO]**](TokenDTO.md)
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -828,7 +828,7 @@ No authorization required
 
 ## dappsSushiswapTokensHistoricalGet
 
-> [TokenDTO] dappsSushiswapTokensHistoricalGet(opts)
+> [SushiswapTokenDTO] dappsSushiswapTokensHistoricalGet(opts)
 
 GetTokens (historical)
 
@@ -867,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TokenDTO]**](TokenDTO.md)
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 

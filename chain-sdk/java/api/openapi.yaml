@@ -46,17 +46,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -71,17 +71,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -96,17 +96,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -161,17 +161,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairDTO'
+                  $ref: '#/components/schemas/SushiswapPairDTO'
                 type: array
           description: successful operation
       summary: GetPools (historical)
@@ -226,17 +226,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapDTO'
+                  $ref: '#/components/schemas/SushiswapSwapDTO'
                 type: array
           description: successful operation
       summary: GetSwaps (historical)
@@ -291,17 +291,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenDTO'
+                  $ref: '#/components/schemas/SushiswapTokenDTO'
                 type: array
           description: successful operation
       summary: GetTokens (historical)
@@ -542,17 +542,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
                 type: array
           description: successful operation
       summary: GetBundles
@@ -843,17 +843,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
                 type: array
           description: successful operation
       summary: GetBurns
@@ -1280,17 +1280,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
                 type: array
           description: successful operation
       summary: GetFactory
@@ -2211,17 +2211,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
                 type: array
           description: successful operation
       summary: GetMints
@@ -2766,17 +2766,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -2800,17 +2800,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -2834,17 +2834,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetPoolsDayData
@@ -2868,17 +2868,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
                 type: array
           description: successful operation
       summary: GetPoolsHourData
@@ -2950,17 +2950,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
                 type: array
           description: successful operation
       summary: GetPositions
@@ -3032,17 +3032,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
                 type: array
           description: successful operation
       summary: GetPositionSnapshot
@@ -3566,17 +3566,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -3591,17 +3591,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -3762,17 +3762,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
                 type: array
           description: successful operation
       summary: GetTicks
@@ -3796,17 +3796,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetTicksDayData
@@ -4213,17 +4213,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -4238,17 +4238,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -4271,17 +4271,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
                 type: array
           description: successful operation
       summary: GetTokensDayData
@@ -4304,17 +4304,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
                 type: array
           description: successful operation
       summary: GetTokensHourData
@@ -4712,17 +4712,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetUniswapDayData
@@ -5080,7 +5080,7 @@ paths:
       x-accepts: application/json
 components:
   schemas:
-    BigInteger:
+    NumericsBigInteger:
       additionalProperties: false
       example:
         is_zero: true
@@ -5106,351 +5106,7 @@ components:
           readOnly: true
           type: integer
       type: object
-    BundleV3DTO:
-      additionalProperties: false
-      description: The Bundle is used as a global store of derived ETH price in USD.
-        This provides a strong estimate for the USD price of ETH.
-      example:
-        eth_price_usd: eth_price_usd
-        vid: 6
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        block_number: 0
-        id: id
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: ""
-          nullable: true
-          type: string
-        eth_price_usd:
-          description: Price of ETH in usd.
-          nullable: true
-          type: string
-        vid:
-          description: ""
-          format: int64
-          type: integer
-      type: object
-    BurnV3DTO:
-      additionalProperties: false
-      description: "Burn entities are created for every emitted Burn event on the\
-        \ Uniswap core contracts. The Burn entity stores key data about the event\
-        \ like token amounts, who burned, who received tokens, and more. This entity\
-        \ can be used to track liquidity removals on pairs."
-      example:
-        owner: owner
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        amount: amount
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        origin: origin
-        pool: pool
-        amount_usd: amount_usd
-        block_number: 0
-        tick_upper: tick_upper
-        amount_1: amount_1
-        log_index: log_index
-        amount_0: amount_0
-        vid: 6
-        tick_lower: tick_lower
-        token_0: token_0
-        id: id
-        token_1: token_1
-        transaction: transaction
-        timestamp: timestamp
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: Transaction hash + '#' + index in mints Transaction array.
-          nullable: true
-          type: string
-        transaction:
-          description: Transaction burn was included in.
-          nullable: true
-          type: string
-        pool:
-          description: Pool position is within.
-          nullable: true
-          type: string
-        token_0:
-          description: Reference to token0 as stored in pool contract.
-          nullable: true
-          type: string
-        token_1:
-          description: Reference to token1 as stored in pool contract.
-          nullable: true
-          type: string
-        timestamp:
-          description: Timestamp.
-          nullable: true
-          type: string
-        owner:
-          description: Owner of position where liquidity was burned.
-          nullable: true
-          type: string
-        origin:
-          description: "Transaction origin: the EOA (Externally Owned Account) that\
-            \ initiated the transaction."
-          nullable: true
-          type: string
-        amount:
-          description: Amount of liquidity burned.
-          nullable: true
-          type: string
-        amount_0:
-          description: Amount of token 0 burned.
-          nullable: true
-          type: string
-        amount_1:
-          description: Amount of token 1 burned.
-          nullable: true
-          type: string
-        amount_usd:
-          description: Derived amount based on available prices of tokens.
-          nullable: true
-          type: string
-        tick_lower:
-          description: Lower tick of position.
-          nullable: true
-          type: string
-        tick_upper:
-          description: Upper tick of position.
-          nullable: true
-          type: string
-        log_index:
-          description: Position within the transactions.
-          nullable: true
-          type: string
-        vid:
-          description: ""
-          format: int64
-          type: integer
-      type: object
-    ETradeAggressiveSide:
-      enum:
-      - Buy
-      - Sell
-      - EstimatedBuy
-      - EstimatedSell
-      - Unknown
-      type: string
-    FactoryV3DTO:
-      additionalProperties: false
-      description: "The Uniswap Factory entity is responsible for storing aggregate\
-        \ information across all Uniswap pairs. It can be used to view stats about\
-        \ total liquidity, volume, amount of pairs and more."
-      example:
-        owner: owner
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        untracked_volume_usd: untracked_volume_usd
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        tx_count: tx_count
-        total_volume_eth: total_volume_eth
-        total_value_locked_eth: total_value_locked_eth
-        block_number: 0
-        vid: 6
-        total_fees_usd: total_fees_usd
-        total_value_locked_usd: total_value_locked_usd
-        total_value_locked_eth_untracked: total_value_locked_eth_untracked
-        total_volume_usd: total_volume_usd
-        pool_count: pool_count
-        total_value_locked_usd_untracked: total_value_locked_usd_untracked
-        id: id
-        total_fees_eth: total_fees_eth
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: Factory address.
-          nullable: true
-          type: string
-        pool_count:
-          description: Amount of pools created.
-          nullable: true
-          type: string
-        tx_count:
-          description: Amount of transactions all time.
-          nullable: true
-          type: string
-        total_volume_usd:
-          description: Total volume all time in derived USD.
-          nullable: true
-          type: string
-        total_volume_eth:
-          description: Total volume all time in derived ETH.
-          nullable: true
-          type: string
-        total_fees_usd:
-          description: Total swap fees all time in USD.
-          nullable: true
-          type: string
-        total_fees_eth:
-          description: All volume even through less reliable USD values.
-          nullable: true
-          type: string
-        untracked_volume_usd:
-          description: All volume even through less reliable USD values.
-          nullable: true
-          type: string
-        total_value_locked_usd:
-          description: Total value locked derived in USD.
-          nullable: true
-          type: string
-        total_value_locked_eth:
-          description: Total value locked derived in ETH.
-          nullable: true
-          type: string
-        total_value_locked_usd_untracked:
-          description: Total value locked derived in USD untracked.
-          nullable: true
-          type: string
-        total_value_locked_eth_untracked:
-          description: Total value locked derived in ETH untracked.
-          nullable: true
-          type: string
-        owner:
-          description: Current owner of the factory.
-          nullable: true
-          type: string
-        vid:
-          description: ""
-          format: int64
-          type: integer
-      type: object
-    MintV3DTO:
-      additionalProperties: false
-      description: "Mint entities are created for every emitted Mint event on the\
-        \ Uniswap core contracts. The Mint entity stores key data about the event\
-        \ like token amounts, who sent the transaction, and more."
-      example:
-        owner: owner
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        amount: amount
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        origin: origin
-        pool: pool
-        amount_usd: amount_usd
-        block_number: 0
-        tick_upper: tick_upper
-        amount_1: amount_1
-        log_index: log_index
-        amount_0: amount_0
-        vid: 6
-        sender: sender
-        tick_lower: tick_lower
-        token_0: token_0
-        id: id
-        token_1: token_1
-        transaction: transaction
-        timestamp: timestamp
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: Transaction hash + '#' + index in mints Transaction array.
-          nullable: true
-          type: string
-        transaction:
-          description: Which txn the mint was included in.
-          nullable: true
-          type: string
-        timestamp:
-          description: Time of transaction.
-          nullable: true
-          type: string
-        pool:
-          description: Pool address.
-          nullable: true
-          type: string
-        token_0:
-          description: Reference to token0 as stored in pool contract.
-          nullable: true
-          type: string
-        token_1:
-          description: Reference to token1 as stored in pool contract.
-          nullable: true
-          type: string
-        owner:
-          description: Owner of position where liquidity minted to.
-          nullable: true
-          type: string
-        sender:
-          description: The address that minted the liquidity.
-          nullable: true
-          type: string
-        origin:
-          description: "Transaction origin: the EOA (Externally Owned Account) that\
-            \ initiated the transaction."
-          nullable: true
-          type: string
-        amount:
-          description: Amount of liquidity minted.
-          nullable: true
-          type: string
-        amount_0:
-          description: Amount of token 0 minted.
-          nullable: true
-          type: string
-        amount_1:
-          description: Amount of token 1 minted.
-          nullable: true
-          type: string
-        amount_usd:
-          description: Derived amount based on available prices of tokens.
-          nullable: true
-          type: string
-        tick_lower:
-          description: Lower tick of the position.
-          nullable: true
-          type: string
-        tick_upper:
-          description: Upper tick of the position.
-          nullable: true
-          type: string
-        log_index:
-          description: Order within the transaction.
-          nullable: true
-          type: string
-        vid:
-          description: ""
-          format: int64
-          type: integer
-      type: object
-    PairDTO:
+    SushiswapPairDTO:
       additionalProperties: false
       description: "Information about a pair. Includes references to each token within\
         \ the pair, volume information, liquidity information, and more. The pair\
@@ -5589,7 +5245,223 @@ components:
           readOnly: true
           type: number
       type: object
-    PairV2DTO:
+    SushiswapSwapDTO:
+      additionalProperties: false
+      description: Swap are created for each token swap within a pair.
+      example:
+        transaction_id: transaction_id
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        amount_1_out: amount_1_out
+        amount_0_out: amount_0_out
+        amount_usd: amount_usd
+        block_number: 0
+        pool_id: pool_id
+        log_index: log_index
+        pair: pair
+        amount_1_in: amount_1_in
+        amount_0_in: amount_0_in
+        vid: 6
+        evaluated_amount: 5.962133916683182
+        evaluated_aggressor: null
+        sender: sender
+        evaluated_price: 1.4658129805029452
+        id: id
+        to: to
+        transaction: transaction
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Transaction hash plus index in Transaction swap array.
+          nullable: true
+          type: string
+        transaction:
+          description: Reference to transaction swap was included in.
+          nullable: true
+          type: string
+        timestamp:
+          description: "Timestamp of swap, used for sorted lookups."
+          nullable: true
+          type: string
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        sender:
+          description: Address that initiated the swap.
+          nullable: true
+          type: string
+        amount_0_in:
+          description: Amount of token0 sold.
+          nullable: true
+          type: string
+        amount_1_in:
+          description: Amount of token1 sold.
+          nullable: true
+          type: string
+        amount_0_out:
+          description: Amount of token0 received.
+          nullable: true
+          type: string
+        amount_1_out:
+          description: Amount of token1 received.
+          nullable: true
+          type: string
+        to:
+          description: Recipient of output tokens.
+          nullable: true
+          type: string
+        log_index:
+          description: Event index within transaction.
+          nullable: true
+          type: string
+        amount_usd:
+          description: Derived amount of tokens sold in USD.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        pool_id:
+          nullable: true
+          readOnly: true
+          type: string
+        transaction_id:
+          nullable: true
+          readOnly: true
+          type: string
+        evaluated_price:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_amount:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_aggressor:
+          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
+      type: object
+    SushiswapTokenDTO:
+      additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        factory: factory
+        symbol: symbol
+        untracked_volume_usd: untracked_volume_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        total_supply: total_supply
+        block_number: 0
+        liquidity: liquidity
+        whitelist_pairs:
+        - whitelist_pairs
+        - whitelist_pairs
+        volume: volume
+        vid: 6
+        decimals: decimals
+        name: name
+        id: id
+        volume_usd: volume_usd
+        token_symbol: token_symbol
+        derived_eth: derived_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Token address.
+          nullable: true
+          type: string
+        factory:
+          description: Factory address.
+          nullable: true
+          type: string
+        symbol:
+          description: Token symbol.
+          nullable: true
+          type: string
+        name:
+          description: Token name.
+          nullable: true
+          type: string
+        decimals:
+          description: Token decimals.
+          nullable: true
+          type: string
+        total_supply:
+          description: Total supply of liquidity token.
+          nullable: true
+          type: string
+        volume:
+          description: Amount of token traded all time across all pairs.
+          nullable: true
+          type: string
+        volume_usd:
+          description: Amount of token in USD traded all time across pairs (only for
+            tokens with liquidity above minimum threshold).
+          nullable: true
+          type: string
+        untracked_volume_usd:
+          description: Amount of token in USD traded all time across pairs (no minimum
+            liquidity threshold).
+          nullable: true
+          type: string
+        tx_count:
+          description: Amount of transactions all time in pairs including token.
+          nullable: true
+          type: string
+        liquidity:
+          description: Total amount of token provided as liquidity across all pairs.
+          nullable: true
+          type: string
+        derived_eth:
+          description: ETH per token.
+          nullable: true
+          type: string
+        whitelist_pairs:
+          description: Array of whitelisted pairs.
+          items:
+            type: string
+          nullable: true
+          type: array
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        token_symbol:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    TransactionsETradeAggressiveSide:
+      enum:
+      - Buy
+      - Sell
+      - EstimatedBuy
+      - EstimatedSell
+      - Unknown
+      type: string
+    UniswapV2PairV2DTO:
       additionalProperties: false
       description: "Information about a pair. Includes references to each token within\
         \ the pair, volume information, liquidity information, and more. The pair\
@@ -5702,7 +5574,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         created_at_timestamp:
           description: Timestamp contract was created.
           format: date-time
@@ -5716,7 +5588,551 @@ components:
           readOnly: true
           type: number
       type: object
-    PoolDayDataV3DTO:
+    UniswapV2SwapV2DTO:
+      additionalProperties: false
+      description: Swap are created for each token swap within a pair.
+      example:
+        transaction_id: transaction_id
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        amount_1_out: amount_1_out
+        amount_0_out: amount_0_out
+        amount_usd: amount_usd
+        block_number: 0
+        pool_id: pool_id
+        log_index:
+          is_zero: true
+          sign: 1
+          is_even: true
+          is_power_of_two: true
+          is_one: true
+        pair: pair
+        amount_1_in: amount_1_in
+        amount_0_in: amount_0_in
+        vid: 6
+        evaluated_amount: 5.962133916683182
+        evaluated_aggressor: null
+        sender: sender
+        evaluated_price: 1.4658129805029452
+        from: from
+        id: id
+        to: to
+        transaction: transaction
+        timestamp: 2000-01-23T04:56:07.000+00:00
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        id:
+          description: Transaction hash plus index in Transaction swap array.
+          nullable: true
+          type: string
+        transaction:
+          description: Reference to transaction swap was included in.
+          nullable: true
+          type: string
+        timestamp:
+          description: "Timestamp of swap, used for sorted lookups."
+          format: date-time
+          type: string
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        sender:
+          description: Address that initiated the swap.
+          nullable: true
+          type: string
+        from:
+          description: The EOA (Externally Owned Account) that initiated the transaction.
+          nullable: true
+          type: string
+        amount_0_in:
+          description: Amount of token0 sold.
+          nullable: true
+          type: string
+        amount_1_in:
+          description: Amount of token1 sold.
+          nullable: true
+          type: string
+        amount_0_out:
+          description: Amount of token0 received.
+          nullable: true
+          type: string
+        amount_1_out:
+          description: Amount of token1 received.
+          nullable: true
+          type: string
+        to:
+          description: Recipient of output tokens.
+          nullable: true
+          type: string
+        log_index:
+          $ref: '#/components/schemas/NumericsBigInteger'
+        amount_usd:
+          description: Derived amount of tokens sold in USD.
+          nullable: true
+          type: string
+        evaluated_price:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_amount:
+          format: double
+          readOnly: true
+          type: number
+        evaluated_aggressor:
+          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
+        pool_id:
+          nullable: true
+          readOnly: true
+          type: string
+        transaction_id:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    UniswapV2TokenV2DTO:
+      additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        symbol: symbol
+        trade_volume: trade_volume
+        untracked_volume_usd: untracked_volume_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count:
+          is_zero: true
+          sign: 1
+          is_even: true
+          is_power_of_two: true
+          is_one: true
+        total_supply:
+          is_zero: true
+          sign: 1
+          is_even: true
+          is_power_of_two: true
+          is_one: true
+        block_number: 0
+        trade_volume_usd: trade_volume_usd
+        total_liquidity: total_liquidity
+        vid: 6
+        decimals: 1
+        name: name
+        id: id
+        token_symbol: token_symbol
+        derived_eth: derived_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        id:
+          description: Token address.
+          nullable: true
+          type: string
+        symbol:
+          description: Token symbol.
+          nullable: true
+          type: string
+        name:
+          description: Token name.
+          nullable: true
+          type: string
+        decimals:
+          description: Token decimals.
+          format: int32
+          type: integer
+        total_supply:
+          $ref: '#/components/schemas/NumericsBigInteger'
+        trade_volume:
+          description: Amount of token traded all time across all pairs.
+          nullable: true
+          type: string
+        trade_volume_usd:
+          description: Amount of token in USD traded all time across pairs (only for
+            tokens with liquidity above minimum threshold).
+          nullable: true
+          type: string
+        untracked_volume_usd:
+          description: Amount of token in USD traded all time across pairs (no minimum
+            liquidity threshold).
+          nullable: true
+          type: string
+        tx_count:
+          $ref: '#/components/schemas/NumericsBigInteger'
+        total_liquidity:
+          description: Total amount of token provided as liquidity across all pairs.
+          nullable: true
+          type: string
+        derived_eth:
+          description: ETH per token.
+          nullable: true
+          type: string
+        token_symbol:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    UniswapV3BundleV3DTO:
+      additionalProperties: false
+      description: The Bundle is used as a global store of derived ETH price in USD.
+        This provides a strong estimate for the USD price of ETH.
+      example:
+        eth_price_usd: eth_price_usd
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: ""
+          nullable: true
+          type: string
+        eth_price_usd:
+          description: Price of ETH in usd.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    UniswapV3BurnV3DTO:
+      additionalProperties: false
+      description: "Burn entities are created for every emitted Burn event on the\
+        \ Uniswap core contracts. The Burn entity stores key data about the event\
+        \ like token amounts, who burned, who received tokens, and more. This entity\
+        \ can be used to track liquidity removals on pairs."
+      example:
+        owner: owner
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        amount: amount
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        origin: origin
+        pool: pool
+        amount_usd: amount_usd
+        block_number: 0
+        tick_upper: tick_upper
+        amount_1: amount_1
+        log_index: log_index
+        amount_0: amount_0
+        vid: 6
+        tick_lower: tick_lower
+        token_0: token_0
+        id: id
+        token_1: token_1
+        transaction: transaction
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Transaction hash + '#' + index in mints Transaction array.
+          nullable: true
+          type: string
+        transaction:
+          description: Transaction burn was included in.
+          nullable: true
+          type: string
+        pool:
+          description: Pool position is within.
+          nullable: true
+          type: string
+        token_0:
+          description: Reference to token0 as stored in pool contract.
+          nullable: true
+          type: string
+        token_1:
+          description: Reference to token1 as stored in pool contract.
+          nullable: true
+          type: string
+        timestamp:
+          description: Timestamp.
+          nullable: true
+          type: string
+        owner:
+          description: Owner of position where liquidity was burned.
+          nullable: true
+          type: string
+        origin:
+          description: "Transaction origin: the EOA (Externally Owned Account) that\
+            \ initiated the transaction."
+          nullable: true
+          type: string
+        amount:
+          description: Amount of liquidity burned.
+          nullable: true
+          type: string
+        amount_0:
+          description: Amount of token 0 burned.
+          nullable: true
+          type: string
+        amount_1:
+          description: Amount of token 1 burned.
+          nullable: true
+          type: string
+        amount_usd:
+          description: Derived amount based on available prices of tokens.
+          nullable: true
+          type: string
+        tick_lower:
+          description: Lower tick of position.
+          nullable: true
+          type: string
+        tick_upper:
+          description: Upper tick of position.
+          nullable: true
+          type: string
+        log_index:
+          description: Position within the transactions.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    UniswapV3FactoryV3DTO:
+      additionalProperties: false
+      description: "The Uniswap Factory entity is responsible for storing aggregate\
+        \ information across all Uniswap pairs. It can be used to view stats about\
+        \ total liquidity, volume, amount of pairs and more."
+      example:
+        owner: owner
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        untracked_volume_usd: untracked_volume_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        total_volume_eth: total_volume_eth
+        total_value_locked_eth: total_value_locked_eth
+        block_number: 0
+        vid: 6
+        total_fees_usd: total_fees_usd
+        total_value_locked_usd: total_value_locked_usd
+        total_value_locked_eth_untracked: total_value_locked_eth_untracked
+        total_volume_usd: total_volume_usd
+        pool_count: pool_count
+        total_value_locked_usd_untracked: total_value_locked_usd_untracked
+        id: id
+        total_fees_eth: total_fees_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Factory address.
+          nullable: true
+          type: string
+        pool_count:
+          description: Amount of pools created.
+          nullable: true
+          type: string
+        tx_count:
+          description: Amount of transactions all time.
+          nullable: true
+          type: string
+        total_volume_usd:
+          description: Total volume all time in derived USD.
+          nullable: true
+          type: string
+        total_volume_eth:
+          description: Total volume all time in derived ETH.
+          nullable: true
+          type: string
+        total_fees_usd:
+          description: Total swap fees all time in USD.
+          nullable: true
+          type: string
+        total_fees_eth:
+          description: All volume even through less reliable USD values.
+          nullable: true
+          type: string
+        untracked_volume_usd:
+          description: All volume even through less reliable USD values.
+          nullable: true
+          type: string
+        total_value_locked_usd:
+          description: Total value locked derived in USD.
+          nullable: true
+          type: string
+        total_value_locked_eth:
+          description: Total value locked derived in ETH.
+          nullable: true
+          type: string
+        total_value_locked_usd_untracked:
+          description: Total value locked derived in USD untracked.
+          nullable: true
+          type: string
+        total_value_locked_eth_untracked:
+          description: Total value locked derived in ETH untracked.
+          nullable: true
+          type: string
+        owner:
+          description: Current owner of the factory.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    UniswapV3MintV3DTO:
+      additionalProperties: false
+      description: "Mint entities are created for every emitted Mint event on the\
+        \ Uniswap core contracts. The Mint entity stores key data about the event\
+        \ like token amounts, who sent the transaction, and more."
+      example:
+        owner: owner
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        amount: amount
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        origin: origin
+        pool: pool
+        amount_usd: amount_usd
+        block_number: 0
+        tick_upper: tick_upper
+        amount_1: amount_1
+        log_index: log_index
+        amount_0: amount_0
+        vid: 6
+        sender: sender
+        tick_lower: tick_lower
+        token_0: token_0
+        id: id
+        token_1: token_1
+        transaction: transaction
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Transaction hash + '#' + index in mints Transaction array.
+          nullable: true
+          type: string
+        transaction:
+          description: Which txn the mint was included in.
+          nullable: true
+          type: string
+        timestamp:
+          description: Time of transaction.
+          nullable: true
+          type: string
+        pool:
+          description: Pool address.
+          nullable: true
+          type: string
+        token_0:
+          description: Reference to token0 as stored in pool contract.
+          nullable: true
+          type: string
+        token_1:
+          description: Reference to token1 as stored in pool contract.
+          nullable: true
+          type: string
+        owner:
+          description: Owner of position where liquidity minted to.
+          nullable: true
+          type: string
+        sender:
+          description: The address that minted the liquidity.
+          nullable: true
+          type: string
+        origin:
+          description: "Transaction origin: the EOA (Externally Owned Account) that\
+            \ initiated the transaction."
+          nullable: true
+          type: string
+        amount:
+          description: Amount of liquidity minted.
+          nullable: true
+          type: string
+        amount_0:
+          description: Amount of token 0 minted.
+          nullable: true
+          type: string
+        amount_1:
+          description: Amount of token 1 minted.
+          nullable: true
+          type: string
+        amount_usd:
+          description: Derived amount based on available prices of tokens.
+          nullable: true
+          type: string
+        tick_lower:
+          description: Lower tick of the position.
+          nullable: true
+          type: string
+        tick_upper:
+          description: Upper tick of the position.
+          nullable: true
+          type: string
+        log_index:
+          description: Order within the transaction.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    UniswapV3PoolDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for each pool.
       example:
@@ -5840,7 +6256,7 @@ components:
           format: int64
           type: integer
       type: object
-    PoolHourDataV3DTO:
+    UniswapV3PoolHourDataV3DTO:
       additionalProperties: false
       description: Hourly stats tracker for pool.
       example:
@@ -5964,7 +6380,7 @@ components:
           format: int64
           type: integer
       type: object
-    PoolV3DTO:
+    UniswapV3PoolV3DTO:
       additionalProperties: false
       description: "Information about a pool. Includes references to each token within\
         \ the pool, volume information, liquidity information, and more. The pool\
@@ -6076,15 +6492,15 @@ components:
           nullable: true
           type: string
         fee_tier:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         liquidity:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         sqrt_price:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         fee_growth_global_0x128:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         fee_growth_global_1x128:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         token_0_price:
           description: Token0 per token1.
           nullable: true
@@ -6094,9 +6510,9 @@ components:
           nullable: true
           type: string
         tick:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         observation_index:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         volume_token_0:
           description: All time token0 swapped.
           nullable: true
@@ -6118,7 +6534,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         collected_fees_token_0:
           description: All time fees collected token0.
           nullable: true
@@ -6160,7 +6576,7 @@ components:
           readOnly: true
           type: number
       type: object
-    PositionSnapshotV3DTO:
+    UniswapV3PositionSnapshotV3DTO:
       additionalProperties: false
       example:
         owner: owner
@@ -6258,7 +6674,7 @@ components:
           format: int64
           type: integer
       type: object
-    PositionV3DTO:
+    UniswapV3PositionV3DTO:
       additionalProperties: false
       description: Positions created through NonfungiblePositionManager. Positions
         are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20
@@ -6369,229 +6785,7 @@ components:
           format: int64
           type: integer
       type: object
-    SwapDTO:
-      additionalProperties: false
-      description: Swap are created for each token swap within a pair.
-      example:
-        transaction_id: transaction_id
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        amount_1_out: amount_1_out
-        amount_0_out: amount_0_out
-        amount_usd: amount_usd
-        block_number: 0
-        pool_id: pool_id
-        log_index: log_index
-        pair: pair
-        amount_1_in: amount_1_in
-        amount_0_in: amount_0_in
-        vid: 6
-        evaluated_amount: 5.962133916683182
-        evaluated_aggressor: null
-        sender: sender
-        evaluated_price: 1.4658129805029452
-        id: id
-        to: to
-        transaction: transaction
-        timestamp: timestamp
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: Transaction hash plus index in Transaction swap array.
-          nullable: true
-          type: string
-        transaction:
-          description: Reference to transaction swap was included in.
-          nullable: true
-          type: string
-        timestamp:
-          description: "Timestamp of swap, used for sorted lookups."
-          nullable: true
-          type: string
-        pair:
-          description: Reference to pair.
-          nullable: true
-          type: string
-        sender:
-          description: Address that initiated the swap.
-          nullable: true
-          type: string
-        amount_0_in:
-          description: Amount of token0 sold.
-          nullable: true
-          type: string
-        amount_1_in:
-          description: Amount of token1 sold.
-          nullable: true
-          type: string
-        amount_0_out:
-          description: Amount of token0 received.
-          nullable: true
-          type: string
-        amount_1_out:
-          description: Amount of token1 received.
-          nullable: true
-          type: string
-        to:
-          description: Recipient of output tokens.
-          nullable: true
-          type: string
-        log_index:
-          description: Event index within transaction.
-          nullable: true
-          type: string
-        amount_usd:
-          description: Derived amount of tokens sold in USD.
-          nullable: true
-          type: string
-        vid:
-          description: ""
-          format: int64
-          type: integer
-        pool_id:
-          nullable: true
-          readOnly: true
-          type: string
-        transaction_id:
-          nullable: true
-          readOnly: true
-          type: string
-        evaluated_price:
-          format: double
-          readOnly: true
-          type: number
-        evaluated_amount:
-          format: double
-          readOnly: true
-          type: number
-        evaluated_aggressor:
-          $ref: '#/components/schemas/ETradeAggressiveSide'
-      type: object
-    SwapV2DTO:
-      additionalProperties: false
-      description: Swap are created for each token swap within a pair.
-      example:
-        transaction_id: transaction_id
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        amount_1_out: amount_1_out
-        amount_0_out: amount_0_out
-        amount_usd: amount_usd
-        block_number: 0
-        pool_id: pool_id
-        log_index:
-          is_zero: true
-          sign: 1
-          is_even: true
-          is_power_of_two: true
-          is_one: true
-        pair: pair
-        amount_1_in: amount_1_in
-        amount_0_in: amount_0_in
-        vid: 6
-        evaluated_amount: 5.962133916683182
-        evaluated_aggressor: null
-        sender: sender
-        evaluated_price: 1.4658129805029452
-        from: from
-        id: id
-        to: to
-        transaction: transaction
-        timestamp: 2000-01-23T04:56:07.000+00:00
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        vid:
-          description: ""
-          format: int64
-          type: integer
-        id:
-          description: Transaction hash plus index in Transaction swap array.
-          nullable: true
-          type: string
-        transaction:
-          description: Reference to transaction swap was included in.
-          nullable: true
-          type: string
-        timestamp:
-          description: "Timestamp of swap, used for sorted lookups."
-          format: date-time
-          type: string
-        pair:
-          description: Reference to pair.
-          nullable: true
-          type: string
-        sender:
-          description: Address that initiated the swap.
-          nullable: true
-          type: string
-        from:
-          description: The EOA (Externally Owned Account) that initiated the transaction.
-          nullable: true
-          type: string
-        amount_0_in:
-          description: Amount of token0 sold.
-          nullable: true
-          type: string
-        amount_1_in:
-          description: Amount of token1 sold.
-          nullable: true
-          type: string
-        amount_0_out:
-          description: Amount of token0 received.
-          nullable: true
-          type: string
-        amount_1_out:
-          description: Amount of token1 received.
-          nullable: true
-          type: string
-        to:
-          description: Recipient of output tokens.
-          nullable: true
-          type: string
-        log_index:
-          $ref: '#/components/schemas/BigInteger'
-        amount_usd:
-          description: Derived amount of tokens sold in USD.
-          nullable: true
-          type: string
-        evaluated_price:
-          format: double
-          readOnly: true
-          type: number
-        evaluated_amount:
-          format: double
-          readOnly: true
-          type: number
-        evaluated_aggressor:
-          $ref: '#/components/schemas/ETradeAggressiveSide'
-        pool_id:
-          nullable: true
-          readOnly: true
-          type: string
-        transaction_id:
-          nullable: true
-          readOnly: true
-          type: string
-      type: object
-    SwapV3DTO:
+    UniswapV3SwapV3DTO:
       additionalProperties: false
       description: Swap are created for each token swap within a pair.
       example:
@@ -6700,11 +6894,11 @@ components:
           nullable: true
           type: string
         sqrt_price_x96:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         tick:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         log_index:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         evaluated_price:
           format: double
           readOnly: true
@@ -6714,7 +6908,7 @@ components:
           readOnly: true
           type: number
         evaluated_aggressor:
-          $ref: '#/components/schemas/ETradeAggressiveSide'
+          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
         pool_id:
           nullable: true
           readOnly: true
@@ -6724,7 +6918,7 @@ components:
           readOnly: true
           type: string
       type: object
-    TickDayDataV3DTO:
+    UniswapV3TickDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for each exchange.
         Entity gets saved only if there is a change during the day
@@ -6809,7 +7003,7 @@ components:
           format: int64
           type: integer
       type: object
-    TickV3DTO:
+    UniswapV3TickV3DTO:
       additionalProperties: false
       description: Ticks are the boundaries between discrete areas in price space.
       example:
@@ -6891,15 +7085,15 @@ components:
           nullable: true
           type: string
         tick_idx:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         pool:
           description: Pool address.
           nullable: true
           type: string
         liquidity_gross:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         liquidity_net:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         price_0:
           description: Calculated price of token0 of tick within this pool - constant.
           nullable: true
@@ -6945,114 +7139,13 @@ components:
           format: date-time
           type: string
         liquidity_provider_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         fee_growth_outside_0x128:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         fee_growth_outside_1x128:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
       type: object
-    TokenDTO:
-      additionalProperties: false
-      description: Stores aggregated information for a specific token across all pairs
-        that token is included in.
-      example:
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        factory: factory
-        symbol: symbol
-        untracked_volume_usd: untracked_volume_usd
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        tx_count: tx_count
-        total_supply: total_supply
-        block_number: 0
-        liquidity: liquidity
-        whitelist_pairs:
-        - whitelist_pairs
-        - whitelist_pairs
-        volume: volume
-        vid: 6
-        decimals: decimals
-        name: name
-        id: id
-        volume_usd: volume_usd
-        token_symbol: token_symbol
-        derived_eth: derived_eth
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        id:
-          description: Token address.
-          nullable: true
-          type: string
-        factory:
-          description: Factory address.
-          nullable: true
-          type: string
-        symbol:
-          description: Token symbol.
-          nullable: true
-          type: string
-        name:
-          description: Token name.
-          nullable: true
-          type: string
-        decimals:
-          description: Token decimals.
-          nullable: true
-          type: string
-        total_supply:
-          description: Total supply of liquidity token.
-          nullable: true
-          type: string
-        volume:
-          description: Amount of token traded all time across all pairs.
-          nullable: true
-          type: string
-        volume_usd:
-          description: Amount of token in USD traded all time across pairs (only for
-            tokens with liquidity above minimum threshold).
-          nullable: true
-          type: string
-        untracked_volume_usd:
-          description: Amount of token in USD traded all time across pairs (no minimum
-            liquidity threshold).
-          nullable: true
-          type: string
-        tx_count:
-          description: Amount of transactions all time in pairs including token.
-          nullable: true
-          type: string
-        liquidity:
-          description: Total amount of token provided as liquidity across all pairs.
-          nullable: true
-          type: string
-        derived_eth:
-          description: ETH per token.
-          nullable: true
-          type: string
-        whitelist_pairs:
-          description: Array of whitelisted pairs.
-          items:
-            type: string
-          nullable: true
-          type: array
-        vid:
-          description: ""
-          format: int64
-          type: integer
-        token_symbol:
-          nullable: true
-          readOnly: true
-          type: string
-      type: object
-    TokenHourDataV3DTO:
+    UniswapV3TokenHourDataV3DTO:
       additionalProperties: false
       description: Token data aggregated across all pairs that include token.
       example:
@@ -7146,100 +7239,7 @@ components:
           format: int64
           type: integer
       type: object
-    TokenV2DTO:
-      additionalProperties: false
-      description: Stores aggregated information for a specific token across all pairs
-        that token is included in.
-      example:
-        entry_time: 2000-01-23T04:56:07.000+00:00
-        symbol: symbol
-        trade_volume: trade_volume
-        untracked_volume_usd: untracked_volume_usd
-        recv_time: 2000-01-23T04:56:07.000+00:00
-        tx_count:
-          is_zero: true
-          sign: 1
-          is_even: true
-          is_power_of_two: true
-          is_one: true
-        total_supply:
-          is_zero: true
-          sign: 1
-          is_even: true
-          is_power_of_two: true
-          is_one: true
-        block_number: 0
-        trade_volume_usd: trade_volume_usd
-        total_liquidity: total_liquidity
-        vid: 6
-        decimals: 1
-        name: name
-        id: id
-        token_symbol: token_symbol
-        derived_eth: derived_eth
-      properties:
-        entry_time:
-          format: date-time
-          type: string
-        recv_time:
-          format: date-time
-          type: string
-        block_number:
-          description: Number of block in which entity was recorded.
-          format: int64
-          type: integer
-        vid:
-          description: ""
-          format: int64
-          type: integer
-        id:
-          description: Token address.
-          nullable: true
-          type: string
-        symbol:
-          description: Token symbol.
-          nullable: true
-          type: string
-        name:
-          description: Token name.
-          nullable: true
-          type: string
-        decimals:
-          description: Token decimals.
-          format: int32
-          type: integer
-        total_supply:
-          $ref: '#/components/schemas/BigInteger'
-        trade_volume:
-          description: Amount of token traded all time across all pairs.
-          nullable: true
-          type: string
-        trade_volume_usd:
-          description: Amount of token in USD traded all time across pairs (only for
-            tokens with liquidity above minimum threshold).
-          nullable: true
-          type: string
-        untracked_volume_usd:
-          description: Amount of token in USD traded all time across pairs (no minimum
-            liquidity threshold).
-          nullable: true
-          type: string
-        tx_count:
-          $ref: '#/components/schemas/BigInteger'
-        total_liquidity:
-          description: Total amount of token provided as liquidity across all pairs.
-          nullable: true
-          type: string
-        derived_eth:
-          description: ETH per token.
-          nullable: true
-          type: string
-        token_symbol:
-          nullable: true
-          readOnly: true
-          type: string
-      type: object
-    TokenV3DTO:
+    UniswapV3TokenV3DTO:
       additionalProperties: false
       description: Stores aggregated information for a specific token across all pairs
         that token is included in.
@@ -7314,7 +7314,7 @@ components:
           format: int32
           type: integer
         total_supply:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         volume:
           description: Volume in token units.
           nullable: true
@@ -7332,9 +7332,9 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         pool_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         total_value_locked:
           description: Liquidity across all pools in token units.
           nullable: true
@@ -7362,7 +7362,7 @@ components:
           readOnly: true
           type: string
       type: object
-    TokenV3DayDataDTO:
+    UniswapV3TokenV3DayDataDTO:
       additionalProperties: false
       description: Token data aggregated across all pairs that include token.
       example:
@@ -7456,7 +7456,7 @@ components:
           nullable: true
           type: string
       type: object
-    UniswapDayDataV3DTO:
+    UniswapV3UniswapDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for all of Uniswap.
       example:
@@ -7519,7 +7519,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/BigInteger'
+          $ref: '#/components/schemas/NumericsBigInteger'
         tvl_usd:
           description: Tvl in terms of USD.
           nullable: true

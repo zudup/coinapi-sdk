@@ -54,7 +54,7 @@ void main() {
 
     // GetPools
     //
-    //Future<BuiltList<PairV2DTO>> dappsUniswapv2PoolsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV2PairV2DTO>> dappsUniswapv2PoolsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv2PoolsCurrentGet', () async {
       // TODO
     });
@@ -66,7 +66,7 @@ void main() {
 
     // GetSwaps
     //
-    //Future<BuiltList<SwapV2DTO>> dappsUniswapv2SwapsCurrentGet() async
+    //Future<BuiltList<UniswapV2SwapV2DTO>> dappsUniswapv2SwapsCurrentGet() async
     test('test dappsUniswapv2SwapsCurrentGet', () async {
       // TODO
     });
@@ -83,7 +83,7 @@ void main() {
 
     // GetTokens
     //
-    //Future<BuiltList<TokenV2DTO>> dappsUniswapv2TokensCurrentGet() async
+    //Future<BuiltList<UniswapV2TokenV2DTO>> dappsUniswapv2TokensCurrentGet() async
     test('test dappsUniswapv2TokensCurrentGet', () async {
       // TODO
     });

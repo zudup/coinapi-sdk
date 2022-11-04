@@ -14,22 +14,22 @@
 
 goog.provide('API.Client.UniswapV3Api');
 
-goog.require('API.Client.BundleV3DTO');
-goog.require('API.Client.BurnV3DTO');
-goog.require('API.Client.FactoryV3DTO');
-goog.require('API.Client.MintV3DTO');
-goog.require('API.Client.PoolDayDataV3DTO');
-goog.require('API.Client.PoolHourDataV3DTO');
-goog.require('API.Client.PoolV3DTO');
-goog.require('API.Client.PositionSnapshotV3DTO');
-goog.require('API.Client.PositionV3DTO');
-goog.require('API.Client.SwapV3DTO');
-goog.require('API.Client.TickDayDataV3DTO');
-goog.require('API.Client.TickV3DTO');
-goog.require('API.Client.TokenHourDataV3DTO');
-goog.require('API.Client.TokenV3DTO');
-goog.require('API.Client.TokenV3DayDataDTO');
-goog.require('API.Client.UniswapDayDataV3DTO');
+goog.require('API.Client.UniswapV3BundleV3DTO');
+goog.require('API.Client.UniswapV3BurnV3DTO');
+goog.require('API.Client.UniswapV3FactoryV3DTO');
+goog.require('API.Client.UniswapV3MintV3DTO');
+goog.require('API.Client.UniswapV3PoolDayDataV3DTO');
+goog.require('API.Client.UniswapV3PoolHourDataV3DTO');
+goog.require('API.Client.UniswapV3PoolV3DTO');
+goog.require('API.Client.UniswapV3PositionSnapshotV3DTO');
+goog.require('API.Client.UniswapV3PositionV3DTO');
+goog.require('API.Client.UniswapV3SwapV3DTO');
+goog.require('API.Client.UniswapV3TickDayDataV3DTO');
+goog.require('API.Client.UniswapV3TickV3DTO');
+goog.require('API.Client.UniswapV3TokenHourDataV3DTO');
+goog.require('API.Client.UniswapV3TokenV3DTO');
+goog.require('API.Client.UniswapV3TokenV3DayDataDTO');
+goog.require('API.Client.UniswapV3UniswapDayDataV3DTO');
 
 /**
  * @constructor
@@ -62,7 +62,7 @@ API.Client.UniswapV3Api.$inject = ['$http', '$httpParamSerializer', '$injector']
  * GetBundles
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.BundleV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3BundleV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3BundleCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -145,7 +145,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3BundlesHistoricalGet = function(
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.BurnV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3BurnV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3BurnsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -288,7 +288,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3DayDataHistoricalGet = function(
  * 
  * @param {!string} chainId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.FactoryV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3FactoryV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3FactoryCurrentGet = function(chainId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -376,7 +376,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3FactoryHistoricalGet = function(
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.MintV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3MintV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3MintsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -580,7 +580,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolHourDataHistoricalGet = func
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PoolV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3PoolV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -616,7 +616,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsCurrentGet = function(opt_f
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PoolDayDataV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3PoolDayDataV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsDayDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -708,7 +708,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsHistoricalGet = function(op
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PoolHourDataV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3PoolHourDataV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3PoolsHourDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -800,7 +800,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionSnapshotHistoricalGet = 
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PositionSnapshotV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3PositionSnapshotV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionSnapshotsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -836,7 +836,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionSnapshotsCurrentGet = fu
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PositionV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3PositionV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -928,7 +928,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3PositionsHistoricalGet = functio
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.SwapV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3SwapV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3SwapsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1076,7 +1076,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TickDayDataHistoricalGet = funct
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TickV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3TickV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1112,7 +1112,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksCurrentGet = function(opt_f
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TickDayDataV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3TickDayDataV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3TicksDayDataCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1316,7 +1316,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TokenHourDataHistoricalGet = fun
  * 
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3TokenV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1352,7 +1352,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensCurrentGet = function(opt_
  * 
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenV3DayDataDTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3TokenV3DayDataDTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensDayDataCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1444,7 +1444,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensHistoricalGet = function(o
  * 
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenHourDataV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3TokenHourDataV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3TokensHourDataCurrentGet = function(opt_filterTokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -1530,7 +1530,7 @@ API.Client.UniswapV3Api.prototype.dappsUniswapv3TransactionsHistoricalGet = func
  * GetUniswapDayData
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.UniswapDayDataV3DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3UniswapDayDataV3DTO>>}
  */
 API.Client.UniswapV3Api.prototype.dappsUniswapv3UniswapDayDataCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */

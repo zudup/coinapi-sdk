@@ -38,11 +38,11 @@
 
 %% @doc GetBundles
 %% 
--spec dapps_uniswapv3_bundle_current_get(ctx:ctx()) -> {ok, [openapi_bundle_v3_dto:openapi_bundle_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_bundle_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_bundle_v3_dto:openapi_uniswap_v3_bundle_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_bundle_current_get(Ctx) ->
     dapps_uniswapv3_bundle_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_bundle_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_bundle_v3_dto:openapi_bundle_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_bundle_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_bundle_v3_dto:openapi_uniswap_v3_bundle_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_bundle_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -80,11 +80,11 @@ dapps_uniswapv3_bundles_historical_get(Ctx, Optional) ->
 
 %% @doc GetBurns
 %% 
--spec dapps_uniswapv3_burns_current_get(ctx:ctx()) -> {ok, [openapi_burn_v3_dto:openapi_burn_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_burns_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_burn_v3_dto:openapi_uniswap_v3_burn_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_burns_current_get(Ctx) ->
     dapps_uniswapv3_burns_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_burns_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_burn_v3_dto:openapi_burn_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_burns_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_burn_v3_dto:openapi_uniswap_v3_burn_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_burns_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -143,11 +143,11 @@ dapps_uniswapv3_day_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetFactory
 %% 
--spec dapps_uniswapv3_factory_current_get(ctx:ctx(), binary()) -> {ok, [openapi_factory_v3_dto:openapi_factory_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_factory_current_get(ctx:ctx(), binary()) -> {ok, [openapi_uniswap_v3_factory_v3_dto:openapi_uniswap_v3_factory_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_factory_current_get(Ctx, ChainId) ->
     dapps_uniswapv3_factory_current_get(Ctx, ChainId, #{}).
 
--spec dapps_uniswapv3_factory_current_get(ctx:ctx(), binary(), maps:map()) -> {ok, [openapi_factory_v3_dto:openapi_factory_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_factory_current_get(ctx:ctx(), binary(), maps:map()) -> {ok, [openapi_uniswap_v3_factory_v3_dto:openapi_uniswap_v3_factory_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_factory_current_get(Ctx, ChainId, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -185,11 +185,11 @@ dapps_uniswapv3_factory_historical_get(Ctx, Optional) ->
 
 %% @doc GetMints
 %% 
--spec dapps_uniswapv3_mints_current_get(ctx:ctx()) -> {ok, [openapi_mint_v3_dto:openapi_mint_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_mints_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_mint_v3_dto:openapi_uniswap_v3_mint_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_mints_current_get(Ctx) ->
     dapps_uniswapv3_mints_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_mints_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_mint_v3_dto:openapi_mint_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_mints_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_mint_v3_dto:openapi_uniswap_v3_mint_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_mints_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -269,11 +269,11 @@ dapps_uniswapv3_pool_hour_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetPools
 %% 
--spec dapps_uniswapv3_pools_current_get(ctx:ctx()) -> {ok, [openapi_pool_v3_dto:openapi_pool_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_v3_dto:openapi_uniswap_v3_pool_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_current_get(Ctx) ->
     dapps_uniswapv3_pools_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_pools_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pool_v3_dto:openapi_pool_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_pool_v3_dto:openapi_uniswap_v3_pool_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -290,11 +290,11 @@ dapps_uniswapv3_pools_current_get(Ctx, Optional) ->
 
 %% @doc GetPoolsDayData
 %% 
--spec dapps_uniswapv3_pools_day_data_current_get(ctx:ctx()) -> {ok, [openapi_pool_day_data_v3_dto:openapi_pool_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_day_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_day_data_v3_dto:openapi_uniswap_v3_pool_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_day_data_current_get(Ctx) ->
     dapps_uniswapv3_pools_day_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_pools_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pool_day_data_v3_dto:openapi_pool_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_pool_day_data_v3_dto:openapi_uniswap_v3_pool_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_day_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -332,11 +332,11 @@ dapps_uniswapv3_pools_historical_get(Ctx, Optional) ->
 
 %% @doc GetPoolsHourData
 %% 
--spec dapps_uniswapv3_pools_hour_data_current_get(ctx:ctx()) -> {ok, [openapi_pool_hour_data_v3_dto:openapi_pool_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_hour_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_hour_data_v3_dto:openapi_uniswap_v3_pool_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_hour_data_current_get(Ctx) ->
     dapps_uniswapv3_pools_hour_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_pools_hour_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pool_hour_data_v3_dto:openapi_pool_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_pools_hour_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_pool_hour_data_v3_dto:openapi_uniswap_v3_pool_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_pools_hour_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -374,11 +374,11 @@ dapps_uniswapv3_position_snapshot_historical_get(Ctx, Optional) ->
 
 %% @doc GetPositionSnapshot
 %% 
--spec dapps_uniswapv3_position_snapshots_current_get(ctx:ctx()) -> {ok, [openapi_position_snapshot_v3_dto:openapi_position_snapshot_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_position_snapshots_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_position_snapshot_v3_dto:openapi_uniswap_v3_position_snapshot_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_position_snapshots_current_get(Ctx) ->
     dapps_uniswapv3_position_snapshots_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_position_snapshots_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_position_snapshot_v3_dto:openapi_position_snapshot_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_position_snapshots_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_position_snapshot_v3_dto:openapi_uniswap_v3_position_snapshot_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_position_snapshots_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -395,11 +395,11 @@ dapps_uniswapv3_position_snapshots_current_get(Ctx, Optional) ->
 
 %% @doc GetPositions
 %% 
--spec dapps_uniswapv3_positions_current_get(ctx:ctx()) -> {ok, [openapi_position_v3_dto:openapi_position_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_positions_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_position_v3_dto:openapi_uniswap_v3_position_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_positions_current_get(Ctx) ->
     dapps_uniswapv3_positions_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_positions_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_position_v3_dto:openapi_position_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_positions_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_position_v3_dto:openapi_uniswap_v3_position_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_positions_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -437,11 +437,11 @@ dapps_uniswapv3_positions_historical_get(Ctx, Optional) ->
 
 %% @doc GetSwaps
 %% 
--spec dapps_uniswapv3_swaps_current_get(ctx:ctx()) -> {ok, [openapi_swap_v3_dto:openapi_swap_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_swaps_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_swap_v3_dto:openapi_uniswap_v3_swap_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_swaps_current_get(Ctx) ->
     dapps_uniswapv3_swaps_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_swaps_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_swap_v3_dto:openapi_swap_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_swaps_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_swap_v3_dto:openapi_uniswap_v3_swap_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_swaps_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -500,11 +500,11 @@ dapps_uniswapv3_tick_day_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetTicks
 %% 
--spec dapps_uniswapv3_ticks_current_get(ctx:ctx()) -> {ok, [openapi_tick_v3_dto:openapi_tick_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_ticks_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_tick_v3_dto:openapi_uniswap_v3_tick_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_ticks_current_get(Ctx) ->
     dapps_uniswapv3_ticks_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_ticks_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_tick_v3_dto:openapi_tick_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_ticks_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_tick_v3_dto:openapi_uniswap_v3_tick_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_ticks_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -521,11 +521,11 @@ dapps_uniswapv3_ticks_current_get(Ctx, Optional) ->
 
 %% @doc GetTicksDayData
 %% 
--spec dapps_uniswapv3_ticks_day_data_current_get(ctx:ctx()) -> {ok, [openapi_tick_day_data_v3_dto:openapi_tick_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_ticks_day_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_tick_day_data_v3_dto:openapi_uniswap_v3_tick_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_ticks_day_data_current_get(Ctx) ->
     dapps_uniswapv3_ticks_day_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_ticks_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_tick_day_data_v3_dto:openapi_tick_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_ticks_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_tick_day_data_v3_dto:openapi_uniswap_v3_tick_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_ticks_day_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -605,11 +605,11 @@ dapps_uniswapv3_token_hour_data_historical_get(Ctx, Optional) ->
 
 %% @doc GetTokens
 %% 
--spec dapps_uniswapv3_tokens_current_get(ctx:ctx()) -> {ok, [openapi_token_v3_dto:openapi_token_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_v3_dto:openapi_uniswap_v3_token_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_current_get(Ctx) ->
     dapps_uniswapv3_tokens_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_tokens_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_v3_dto:openapi_token_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_token_v3_dto:openapi_uniswap_v3_token_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -626,11 +626,11 @@ dapps_uniswapv3_tokens_current_get(Ctx, Optional) ->
 
 %% @doc GetTokensDayData
 %% 
--spec dapps_uniswapv3_tokens_day_data_current_get(ctx:ctx()) -> {ok, [openapi_token_v3_day_data_dto:openapi_token_v3_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_day_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_v3_day_data_dto:openapi_uniswap_v3_token_v3_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_day_data_current_get(Ctx) ->
     dapps_uniswapv3_tokens_day_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_tokens_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_v3_day_data_dto:openapi_token_v3_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_token_v3_day_data_dto:openapi_uniswap_v3_token_v3_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_day_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -668,11 +668,11 @@ dapps_uniswapv3_tokens_historical_get(Ctx, Optional) ->
 
 %% @doc GetTokensHourData
 %% 
--spec dapps_uniswapv3_tokens_hour_data_current_get(ctx:ctx()) -> {ok, [openapi_token_hour_data_v3_dto:openapi_token_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_hour_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_hour_data_v3_dto:openapi_uniswap_v3_token_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_hour_data_current_get(Ctx) ->
     dapps_uniswapv3_tokens_hour_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_tokens_hour_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_hour_data_v3_dto:openapi_token_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_tokens_hour_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_token_hour_data_v3_dto:openapi_uniswap_v3_token_hour_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_tokens_hour_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -710,11 +710,11 @@ dapps_uniswapv3_transactions_historical_get(Ctx, Optional) ->
 
 %% @doc GetUniswapDayData
 %% 
--spec dapps_uniswapv3_uniswap_day_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_day_data_v3_dto:openapi_uniswap_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_uniswap_day_data_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v3_uniswap_day_data_v3_dto:openapi_uniswap_v3_uniswap_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_uniswap_day_data_current_get(Ctx) ->
     dapps_uniswapv3_uniswap_day_data_current_get(Ctx, #{}).
 
--spec dapps_uniswapv3_uniswap_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_day_data_v3_dto:openapi_uniswap_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_uniswapv3_uniswap_day_data_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v3_uniswap_day_data_v3_dto:openapi_uniswap_v3_uniswap_day_data_v3_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_uniswapv3_uniswap_day_data_current_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),

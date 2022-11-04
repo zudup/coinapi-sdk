@@ -15,9 +15,9 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PairDTO;
-import org.openapitools.client.model.SwapDTO;
-import org.openapitools.client.model.TokenDTO;
+import org.openapitools.client.model.SushiswapPairDTO;
+import org.openapitools.client.model.SushiswapSwapDTO;
+import org.openapitools.client.model.SushiswapTokenDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -179,7 +179,7 @@ public class SushiswapApiTest {
      */
     @Test
     public void dappsSushiswapPoolsCurrentGetTest() throws ApiException {
-        List<PairDTO> response = api.dappsSushiswapPoolsCurrentGet();
+        List<SushiswapPairDTO> response = api.dappsSushiswapPoolsCurrentGet();
         // TODO: test validations
     }
 
@@ -195,7 +195,7 @@ public class SushiswapApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String poolId = null;
-        List<PairDTO> response = api.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+        List<SushiswapPairDTO> response = api.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -206,7 +206,7 @@ public class SushiswapApiTest {
      */
     @Test
     public void dappsSushiswapSwapsCurrentGetTest() throws ApiException {
-        List<SwapDTO> response = api.dappsSushiswapSwapsCurrentGet();
+        List<SushiswapSwapDTO> response = api.dappsSushiswapSwapsCurrentGet();
         // TODO: test validations
     }
 
@@ -222,7 +222,7 @@ public class SushiswapApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String poolId = null;
-        List<SwapDTO> response = api.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+        List<SushiswapSwapDTO> response = api.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -247,7 +247,7 @@ public class SushiswapApiTest {
      */
     @Test
     public void dappsSushiswapTokensCurrentGetTest() throws ApiException {
-        List<TokenDTO> response = api.dappsSushiswapTokensCurrentGet();
+        List<SushiswapTokenDTO> response = api.dappsSushiswapTokensCurrentGet();
         // TODO: test validations
     }
 
@@ -263,7 +263,7 @@ public class SushiswapApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        List<TokenDTO> response = api.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<SushiswapTokenDTO> response = api.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 

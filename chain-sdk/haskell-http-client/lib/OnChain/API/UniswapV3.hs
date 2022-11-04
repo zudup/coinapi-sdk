@@ -66,7 +66,7 @@ import qualified Prelude as P
 -- 
 dappsUniswapv3BundleCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3BundleCurrentGet MimeNoContent [BundleV3DTO] accept
+  -> OnChainRequest DappsUniswapv3BundleCurrentGet MimeNoContent [UniswapV3BundleV3DTO] accept
 dappsUniswapv3BundleCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/bundle/current"]
 
@@ -112,7 +112,7 @@ instance Produces DappsUniswapv3BundlesHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3BurnsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3BurnsCurrentGet MimeNoContent [BurnV3DTO] accept
+  -> OnChainRequest DappsUniswapv3BurnsCurrentGet MimeNoContent [UniswapV3BurnV3DTO] accept
 dappsUniswapv3BurnsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/burns/current"]
 
@@ -192,7 +192,7 @@ instance Produces DappsUniswapv3DayDataHistoricalGet MimeNoContent
 dappsUniswapv3FactoryCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
   -> ChainId -- ^ "chainId"
-  -> OnChainRequest DappsUniswapv3FactoryCurrentGet MimeNoContent [FactoryV3DTO] accept
+  -> OnChainRequest DappsUniswapv3FactoryCurrentGet MimeNoContent [UniswapV3FactoryV3DTO] accept
 dappsUniswapv3FactoryCurrentGet  _ (ChainId chainId) =
   _mkRequest "GET" ["/dapps/uniswapv3/factory/current"]
 
@@ -238,7 +238,7 @@ instance Produces DappsUniswapv3FactoryHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3MintsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3MintsCurrentGet MimeNoContent [MintV3DTO] accept
+  -> OnChainRequest DappsUniswapv3MintsCurrentGet MimeNoContent [UniswapV3MintV3DTO] accept
 dappsUniswapv3MintsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/mints/current"]
 
@@ -348,7 +348,7 @@ instance Produces DappsUniswapv3PoolHourDataHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3PoolsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3PoolsCurrentGet MimeNoContent [PoolV3DTO] accept
+  -> OnChainRequest DappsUniswapv3PoolsCurrentGet MimeNoContent [UniswapV3PoolV3DTO] accept
 dappsUniswapv3PoolsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/pools/current"]
 
@@ -374,7 +374,7 @@ instance Produces DappsUniswapv3PoolsCurrentGet MimePlainText
 -- 
 dappsUniswapv3PoolsDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3PoolsDayDataCurrentGet MimeNoContent [PoolDayDataV3DTO] accept
+  -> OnChainRequest DappsUniswapv3PoolsDayDataCurrentGet MimeNoContent [UniswapV3PoolDayDataV3DTO] accept
 dappsUniswapv3PoolsDayDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/poolsDayData/current"]
 
@@ -428,7 +428,7 @@ instance Produces DappsUniswapv3PoolsHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3PoolsHourDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3PoolsHourDataCurrentGet MimeNoContent [PoolHourDataV3DTO] accept
+  -> OnChainRequest DappsUniswapv3PoolsHourDataCurrentGet MimeNoContent [UniswapV3PoolHourDataV3DTO] accept
 dappsUniswapv3PoolsHourDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/poolsHourData/current"]
 
@@ -482,7 +482,7 @@ instance Produces DappsUniswapv3PositionSnapshotHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3PositionSnapshotsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3PositionSnapshotsCurrentGet MimeNoContent [PositionSnapshotV3DTO] accept
+  -> OnChainRequest DappsUniswapv3PositionSnapshotsCurrentGet MimeNoContent [UniswapV3PositionSnapshotV3DTO] accept
 dappsUniswapv3PositionSnapshotsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/positionSnapshots/current"]
 
@@ -508,7 +508,7 @@ instance Produces DappsUniswapv3PositionSnapshotsCurrentGet MimePlainText
 -- 
 dappsUniswapv3PositionsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3PositionsCurrentGet MimeNoContent [PositionV3DTO] accept
+  -> OnChainRequest DappsUniswapv3PositionsCurrentGet MimeNoContent [UniswapV3PositionV3DTO] accept
 dappsUniswapv3PositionsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/positions/current"]
 
@@ -562,7 +562,7 @@ instance Produces DappsUniswapv3PositionsHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3SwapsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3SwapsCurrentGet MimeNoContent [SwapV3DTO] accept
+  -> OnChainRequest DappsUniswapv3SwapsCurrentGet MimeNoContent [UniswapV3SwapV3DTO] accept
 dappsUniswapv3SwapsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/swaps/current"]
 
@@ -644,7 +644,7 @@ instance Produces DappsUniswapv3TickDayDataHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3TicksCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3TicksCurrentGet MimeNoContent [TickV3DTO] accept
+  -> OnChainRequest DappsUniswapv3TicksCurrentGet MimeNoContent [UniswapV3TickV3DTO] accept
 dappsUniswapv3TicksCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/ticks/current"]
 
@@ -670,7 +670,7 @@ instance Produces DappsUniswapv3TicksCurrentGet MimePlainText
 -- 
 dappsUniswapv3TicksDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3TicksDayDataCurrentGet MimeNoContent [TickDayDataV3DTO] accept
+  -> OnChainRequest DappsUniswapv3TicksDayDataCurrentGet MimeNoContent [UniswapV3TickDayDataV3DTO] accept
 dappsUniswapv3TicksDayDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/ticksDayData/current"]
 
@@ -780,7 +780,7 @@ instance Produces DappsUniswapv3TokenHourDataHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3TokensCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3TokensCurrentGet MimeNoContent [TokenV3DTO] accept
+  -> OnChainRequest DappsUniswapv3TokensCurrentGet MimeNoContent [UniswapV3TokenV3DTO] accept
 dappsUniswapv3TokensCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/tokens/current"]
 
@@ -804,7 +804,7 @@ instance Produces DappsUniswapv3TokensCurrentGet MimePlainText
 -- 
 dappsUniswapv3TokensDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3TokensDayDataCurrentGet MimeNoContent [TokenV3DayDataDTO] accept
+  -> OnChainRequest DappsUniswapv3TokensDayDataCurrentGet MimeNoContent [UniswapV3TokenV3DayDataDTO] accept
 dappsUniswapv3TokensDayDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/tokensDayData/current"]
 
@@ -856,7 +856,7 @@ instance Produces DappsUniswapv3TokensHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3TokensHourDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3TokensHourDataCurrentGet MimeNoContent [TokenHourDataV3DTO] accept
+  -> OnChainRequest DappsUniswapv3TokensHourDataCurrentGet MimeNoContent [UniswapV3TokenHourDataV3DTO] accept
 dappsUniswapv3TokensHourDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/tokensHourData/current"]
 
@@ -905,7 +905,7 @@ instance Produces DappsUniswapv3TransactionsHistoricalGet MimeNoContent
 -- 
 dappsUniswapv3UniswapDayDataCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsUniswapv3UniswapDayDataCurrentGet MimeNoContent [UniswapDayDataV3DTO] accept
+  -> OnChainRequest DappsUniswapv3UniswapDayDataCurrentGet MimeNoContent [UniswapV3UniswapDayDataV3DTO] accept
 dappsUniswapv3UniswapDayDataCurrentGet  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayData/current"]
 

@@ -42,7 +42,7 @@ Method | HTTP request | Description
 
 ## dappsUniswapv3BundleCurrentGet
 
-> [BundleV3DTO] dappsUniswapv3BundleCurrentGet()
+> [UniswapV3BundleV3DTO] dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -67,7 +67,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[BundleV3DTO]**](BundleV3DTO.md)
+[**[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 
 ## dappsUniswapv3BurnsCurrentGet
 
-> [BurnV3DTO] dappsUniswapv3BurnsCurrentGet(opts)
+> [UniswapV3BurnV3DTO] dappsUniswapv3BurnsCurrentGet(opts)
 
 GetBurns
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[BurnV3DTO]**](BurnV3DTO.md)
+[**[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ No authorization required
 
 ## dappsUniswapv3FactoryCurrentGet
 
-> [FactoryV3DTO] dappsUniswapv3FactoryCurrentGet(chainId)
+> [UniswapV3FactoryV3DTO] dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[FactoryV3DTO]**](FactoryV3DTO.md)
+[**[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ No authorization required
 
 ## dappsUniswapv3MintsCurrentGet
 
-> [MintV3DTO] dappsUniswapv3MintsCurrentGet(opts)
+> [UniswapV3MintV3DTO] dappsUniswapv3MintsCurrentGet(opts)
 
 GetMints
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[MintV3DTO]**](MintV3DTO.md)
+[**[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -579,7 +579,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsCurrentGet
 
-> [PoolV3DTO] dappsUniswapv3PoolsCurrentGet(opts)
+> [UniswapV3PoolV3DTO] dappsUniswapv3PoolsCurrentGet(opts)
 
 GetPools
 
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PoolV3DTO]**](PoolV3DTO.md)
+[**[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -624,7 +624,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsDayDataCurrentGet
 
-> [PoolDayDataV3DTO] dappsUniswapv3PoolsDayDataCurrentGet(opts)
+> [UniswapV3PoolDayDataV3DTO] dappsUniswapv3PoolsDayDataCurrentGet(opts)
 
 GetPoolsDayData
 
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)
+[**[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -722,7 +722,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsHourDataCurrentGet
 
-> [PoolHourDataV3DTO] dappsUniswapv3PoolsHourDataCurrentGet(opts)
+> [UniswapV3PoolHourDataV3DTO] dappsUniswapv3PoolsHourDataCurrentGet(opts)
 
 GetPoolsHourData
 
@@ -753,7 +753,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)
+[**[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -820,7 +820,7 @@ No authorization required
 
 ## dappsUniswapv3PositionSnapshotsCurrentGet
 
-> [PositionSnapshotV3DTO] dappsUniswapv3PositionSnapshotsCurrentGet(opts)
+> [UniswapV3PositionSnapshotV3DTO] dappsUniswapv3PositionSnapshotsCurrentGet(opts)
 
 GetPositionSnapshot
 
@@ -851,7 +851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)
+[**[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -865,7 +865,7 @@ No authorization required
 
 ## dappsUniswapv3PositionsCurrentGet
 
-> [PositionV3DTO] dappsUniswapv3PositionsCurrentGet(opts)
+> [UniswapV3PositionV3DTO] dappsUniswapv3PositionsCurrentGet(opts)
 
 GetPositions
 
@@ -896,7 +896,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PositionV3DTO]**](PositionV3DTO.md)
+[**[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -963,7 +963,7 @@ No authorization required
 
 ## dappsUniswapv3SwapsCurrentGet
 
-> [SwapV3DTO] dappsUniswapv3SwapsCurrentGet(opts)
+> [UniswapV3SwapV3DTO] dappsUniswapv3SwapsCurrentGet(opts)
 
 GetSwaps
 
@@ -994,7 +994,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[SwapV3DTO]**](SwapV3DTO.md)
+[**[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1114,7 +1114,7 @@ No authorization required
 
 ## dappsUniswapv3TicksCurrentGet
 
-> [TickV3DTO] dappsUniswapv3TicksCurrentGet(opts)
+> [UniswapV3TickV3DTO] dappsUniswapv3TicksCurrentGet(opts)
 
 GetTicks
 
@@ -1145,7 +1145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TickV3DTO]**](TickV3DTO.md)
+[**[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1159,7 +1159,7 @@ No authorization required
 
 ## dappsUniswapv3TicksDayDataCurrentGet
 
-> [TickDayDataV3DTO] dappsUniswapv3TicksDayDataCurrentGet(opts)
+> [UniswapV3TickDayDataV3DTO] dappsUniswapv3TicksDayDataCurrentGet(opts)
 
 GetTicksDayData
 
@@ -1190,7 +1190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TickDayDataV3DTO]**](TickDayDataV3DTO.md)
+[**[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1363,7 +1363,7 @@ No authorization required
 
 ## dappsUniswapv3TokensCurrentGet
 
-> [TokenV3DTO] dappsUniswapv3TokensCurrentGet(opts)
+> [UniswapV3TokenV3DTO] dappsUniswapv3TokensCurrentGet(opts)
 
 GetTokens
 
@@ -1394,7 +1394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TokenV3DTO]**](TokenV3DTO.md)
+[**[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1408,7 +1408,7 @@ No authorization required
 
 ## dappsUniswapv3TokensDayDataCurrentGet
 
-> [TokenV3DayDataDTO] dappsUniswapv3TokensDayDataCurrentGet(opts)
+> [UniswapV3TokenV3DayDataDTO] dappsUniswapv3TokensDayDataCurrentGet(opts)
 
 GetTokensDayData
 
@@ -1439,7 +1439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)
+[**[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1506,7 +1506,7 @@ No authorization required
 
 ## dappsUniswapv3TokensHourDataCurrentGet
 
-> [TokenHourDataV3DTO] dappsUniswapv3TokensHourDataCurrentGet(opts)
+> [UniswapV3TokenHourDataV3DTO] dappsUniswapv3TokensHourDataCurrentGet(opts)
 
 GetTokensHourData
 
@@ -1537,7 +1537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)
+[**[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1602,7 +1602,7 @@ No authorization required
 
 ## dappsUniswapv3UniswapDayDataCurrentGet
 
-> [UniswapDayDataV3DTO] dappsUniswapv3UniswapDayDataCurrentGet()
+> [UniswapV3UniswapDayDataV3DTO] dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -1627,7 +1627,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)
+[**[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

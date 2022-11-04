@@ -146,7 +146,7 @@ test_that("DappsSushiswapPoolsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPools
   # Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-  # @return [array[PairDTO]]
+  # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -161,7 +161,7 @@ test_that("DappsSushiswapPoolsHistoricalGet", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
-  # @return [array[PairDTO]]
+  # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -171,7 +171,7 @@ test_that("DappsSushiswapSwapsCurrentGet", {
   # tests for DappsSushiswapSwapsCurrentGet
   # base path: https://onchain.coinapi.io
   # GetSwaps
-  # @return [array[SwapDTO]]
+  # @return [array[SushiswapSwapDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -186,7 +186,7 @@ test_that("DappsSushiswapSwapsHistoricalGet", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
-  # @return [array[SwapDTO]]
+  # @return [array[SushiswapSwapDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -210,7 +210,7 @@ test_that("DappsSushiswapTokensCurrentGet", {
   # tests for DappsSushiswapTokensCurrentGet
   # base path: https://onchain.coinapi.io
   # GetTokens
-  # @return [array[TokenDTO]]
+  # @return [array[SushiswapTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -225,7 +225,7 @@ test_that("DappsSushiswapTokensHistoricalGet", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [array[TokenDTO]]
+  # @return [array[SushiswapTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

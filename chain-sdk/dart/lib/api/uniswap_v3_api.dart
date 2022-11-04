@@ -45,7 +45,7 @@ class UniswapV3Api {
   }
 
   /// GetBundles
-  Future<List<BundleV3DTO>?> dappsUniswapv3BundleCurrentGet() async {
+  Future<List<UniswapV3BundleV3DTO>?> dappsUniswapv3BundleCurrentGet() async {
     final response = await dappsUniswapv3BundleCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -55,8 +55,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<BundleV3DTO>') as List)
-        .cast<BundleV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BundleV3DTO>') as List)
+        .cast<UniswapV3BundleV3DTO>()
         .toList();
 
     }
@@ -170,7 +170,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<BurnV3DTO>?> dappsUniswapv3BurnsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3BurnV3DTO>?> dappsUniswapv3BurnsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3BurnsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -180,8 +180,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<BurnV3DTO>') as List)
-        .cast<BurnV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BurnV3DTO>') as List)
+        .cast<UniswapV3BurnV3DTO>()
         .toList();
 
     }
@@ -361,7 +361,7 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] chainId (required):
-  Future<List<FactoryV3DTO>?> dappsUniswapv3FactoryCurrentGet(String chainId,) async {
+  Future<List<UniswapV3FactoryV3DTO>?> dappsUniswapv3FactoryCurrentGet(String chainId,) async {
     final response = await dappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -371,8 +371,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<FactoryV3DTO>') as List)
-        .cast<FactoryV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3FactoryV3DTO>') as List)
+        .cast<UniswapV3FactoryV3DTO>()
         .toList();
 
     }
@@ -486,7 +486,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<MintV3DTO>?> dappsUniswapv3MintsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3MintV3DTO>?> dappsUniswapv3MintsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3MintsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -496,8 +496,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<MintV3DTO>') as List)
-        .cast<MintV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3MintV3DTO>') as List)
+        .cast<UniswapV3MintV3DTO>()
         .toList();
 
     }
@@ -760,7 +760,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolV3DTO>?> dappsUniswapv3PoolsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3PoolV3DTO>?> dappsUniswapv3PoolsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3PoolsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -770,8 +770,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PoolV3DTO>') as List)
-        .cast<PoolV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolV3DTO>') as List)
+        .cast<UniswapV3PoolV3DTO>()
         .toList();
 
     }
@@ -821,7 +821,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolDayDataV3DTO>?> dappsUniswapv3PoolsDayDataCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3PoolDayDataV3DTO>?> dappsUniswapv3PoolsDayDataCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -831,8 +831,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PoolDayDataV3DTO>') as List)
-        .cast<PoolDayDataV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolDayDataV3DTO>') as List)
+        .cast<UniswapV3PoolDayDataV3DTO>()
         .toList();
 
     }
@@ -953,7 +953,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PoolHourDataV3DTO>?> dappsUniswapv3PoolsHourDataCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3PoolHourDataV3DTO>?> dappsUniswapv3PoolsHourDataCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -963,8 +963,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PoolHourDataV3DTO>') as List)
-        .cast<PoolHourDataV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolHourDataV3DTO>') as List)
+        .cast<UniswapV3PoolHourDataV3DTO>()
         .toList();
 
     }
@@ -1085,7 +1085,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PositionSnapshotV3DTO>?> dappsUniswapv3PositionSnapshotsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3PositionSnapshotV3DTO>?> dappsUniswapv3PositionSnapshotsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1095,8 +1095,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PositionSnapshotV3DTO>') as List)
-        .cast<PositionSnapshotV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionSnapshotV3DTO>') as List)
+        .cast<UniswapV3PositionSnapshotV3DTO>()
         .toList();
 
     }
@@ -1146,7 +1146,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PositionV3DTO>?> dappsUniswapv3PositionsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3PositionV3DTO>?> dappsUniswapv3PositionsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3PositionsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1156,8 +1156,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PositionV3DTO>') as List)
-        .cast<PositionV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionV3DTO>') as List)
+        .cast<UniswapV3PositionV3DTO>()
         .toList();
 
     }
@@ -1278,7 +1278,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<SwapV3DTO>?> dappsUniswapv3SwapsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3SwapV3DTO>?> dappsUniswapv3SwapsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3SwapsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1288,8 +1288,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SwapV3DTO>') as List)
-        .cast<SwapV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3SwapV3DTO>') as List)
+        .cast<UniswapV3SwapV3DTO>()
         .toList();
 
     }
@@ -1481,7 +1481,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<TickV3DTO>?> dappsUniswapv3TicksCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3TickV3DTO>?> dappsUniswapv3TicksCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3TicksCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1491,8 +1491,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TickV3DTO>') as List)
-        .cast<TickV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickV3DTO>') as List)
+        .cast<UniswapV3TickV3DTO>()
         .toList();
 
     }
@@ -1542,7 +1542,7 @@ class UniswapV3Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<TickDayDataV3DTO>?> dappsUniswapv3TicksDayDataCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV3TickDayDataV3DTO>?> dappsUniswapv3TicksDayDataCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1552,8 +1552,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TickDayDataV3DTO>') as List)
-        .cast<TickDayDataV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickDayDataV3DTO>') as List)
+        .cast<UniswapV3TickDayDataV3DTO>()
         .toList();
 
     }
@@ -1814,7 +1814,7 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] filterTokenId:
-  Future<List<TokenV3DTO>?> dappsUniswapv3TokensCurrentGet({ String? filterTokenId, }) async {
+  Future<List<UniswapV3TokenV3DTO>?> dappsUniswapv3TokensCurrentGet({ String? filterTokenId, }) async {
     final response = await dappsUniswapv3TokensCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1824,8 +1824,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenV3DTO>') as List)
-        .cast<TokenV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DTO>') as List)
+        .cast<UniswapV3TokenV3DTO>()
         .toList();
 
     }
@@ -1873,7 +1873,7 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] filterTokenId:
-  Future<List<TokenV3DayDataDTO>?> dappsUniswapv3TokensDayDataCurrentGet({ String? filterTokenId, }) async {
+  Future<List<UniswapV3TokenV3DayDataDTO>?> dappsUniswapv3TokensDayDataCurrentGet({ String? filterTokenId, }) async {
     final response = await dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1883,8 +1883,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenV3DayDataDTO>') as List)
-        .cast<TokenV3DayDataDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DayDataDTO>') as List)
+        .cast<UniswapV3TokenV3DayDataDTO>()
         .toList();
 
     }
@@ -2003,7 +2003,7 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [String] filterTokenId:
-  Future<List<TokenHourDataV3DTO>?> dappsUniswapv3TokensHourDataCurrentGet({ String? filterTokenId, }) async {
+  Future<List<UniswapV3TokenHourDataV3DTO>?> dappsUniswapv3TokensHourDataCurrentGet({ String? filterTokenId, }) async {
     final response = await dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo( filterTokenId: filterTokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -2013,8 +2013,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenHourDataV3DTO>') as List)
-        .cast<TokenHourDataV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenHourDataV3DTO>') as List)
+        .cast<UniswapV3TokenHourDataV3DTO>()
         .toList();
 
     }
@@ -2114,7 +2114,7 @@ class UniswapV3Api {
   }
 
   /// GetUniswapDayData
-  Future<List<UniswapDayDataV3DTO>?> dappsUniswapv3UniswapDayDataCurrentGet() async {
+  Future<List<UniswapV3UniswapDayDataV3DTO>?> dappsUniswapv3UniswapDayDataCurrentGet() async {
     final response = await dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -2124,8 +2124,8 @@ class UniswapV3Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapDayDataV3DTO>') as List)
-        .cast<UniswapDayDataV3DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3UniswapDayDataV3DTO>') as List)
+        .cast<UniswapV3UniswapDayDataV3DTO>()
         .toList();
 
     }

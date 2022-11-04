@@ -1188,7 +1188,7 @@ func (r ApiDappsUniswapv2PoolsCurrentGetRequest) FilterPoolId(filterPoolId strin
 	return r
 }
 
-func (r ApiDappsUniswapv2PoolsCurrentGetRequest) Execute() ([]PairV2DTO, *http.Response, error) {
+func (r ApiDappsUniswapv2PoolsCurrentGetRequest) Execute() ([]UniswapV2PairV2DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv2PoolsCurrentGetExecute(r)
 }
 
@@ -1206,13 +1206,13 @@ func (a *UniswapV2ApiService) DappsUniswapv2PoolsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []PairV2DTO
-func (a *UniswapV2ApiService) DappsUniswapv2PoolsCurrentGetExecute(r ApiDappsUniswapv2PoolsCurrentGetRequest) ([]PairV2DTO, *http.Response, error) {
+//  @return []UniswapV2PairV2DTO
+func (a *UniswapV2ApiService) DappsUniswapv2PoolsCurrentGetExecute(r ApiDappsUniswapv2PoolsCurrentGetRequest) ([]UniswapV2PairV2DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PairV2DTO
+		localVarReturnValue  []UniswapV2PairV2DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.DappsUniswapv2PoolsCurrentGet")
@@ -1419,7 +1419,7 @@ type ApiDappsUniswapv2SwapsCurrentGetRequest struct {
 	ApiService *UniswapV2ApiService
 }
 
-func (r ApiDappsUniswapv2SwapsCurrentGetRequest) Execute() ([]SwapV2DTO, *http.Response, error) {
+func (r ApiDappsUniswapv2SwapsCurrentGetRequest) Execute() ([]UniswapV2SwapV2DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv2SwapsCurrentGetExecute(r)
 }
 
@@ -1437,13 +1437,13 @@ func (a *UniswapV2ApiService) DappsUniswapv2SwapsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []SwapV2DTO
-func (a *UniswapV2ApiService) DappsUniswapv2SwapsCurrentGetExecute(r ApiDappsUniswapv2SwapsCurrentGetRequest) ([]SwapV2DTO, *http.Response, error) {
+//  @return []UniswapV2SwapV2DTO
+func (a *UniswapV2ApiService) DappsUniswapv2SwapsCurrentGetExecute(r ApiDappsUniswapv2SwapsCurrentGetRequest) ([]UniswapV2SwapV2DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SwapV2DTO
+		localVarReturnValue  []UniswapV2SwapV2DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.DappsUniswapv2SwapsCurrentGet")
@@ -1778,7 +1778,7 @@ type ApiDappsUniswapv2TokensCurrentGetRequest struct {
 	ApiService *UniswapV2ApiService
 }
 
-func (r ApiDappsUniswapv2TokensCurrentGetRequest) Execute() ([]TokenV2DTO, *http.Response, error) {
+func (r ApiDappsUniswapv2TokensCurrentGetRequest) Execute() ([]UniswapV2TokenV2DTO, *http.Response, error) {
 	return r.ApiService.DappsUniswapv2TokensCurrentGetExecute(r)
 }
 
@@ -1796,13 +1796,13 @@ func (a *UniswapV2ApiService) DappsUniswapv2TokensCurrentGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return []TokenV2DTO
-func (a *UniswapV2ApiService) DappsUniswapv2TokensCurrentGetExecute(r ApiDappsUniswapv2TokensCurrentGetRequest) ([]TokenV2DTO, *http.Response, error) {
+//  @return []UniswapV2TokenV2DTO
+func (a *UniswapV2ApiService) DappsUniswapv2TokensCurrentGetExecute(r ApiDappsUniswapv2TokensCurrentGetRequest) ([]UniswapV2TokenV2DTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenV2DTO
+		localVarReturnValue  []UniswapV2TokenV2DTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.DappsUniswapv2TokensCurrentGet")

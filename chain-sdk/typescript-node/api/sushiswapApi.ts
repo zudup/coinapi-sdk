@@ -15,9 +15,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { PairDTO } from '../model/pairDTO';
-import { SwapDTO } from '../model/swapDTO';
-import { TokenDTO } from '../model/tokenDTO';
+import { SushiswapPairDTO } from '../model/sushiswapPairDTO';
+import { SushiswapSwapDTO } from '../model/sushiswapSwapDTO';
+import { SushiswapTokenDTO } from '../model/sushiswapTokenDTO';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 
@@ -852,7 +852,7 @@ export class SushiswapApi {
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.
      * @summary GetPools
      */
-    public async dappsSushiswapPoolsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PairDTO>;  }> {
+    public async dappsSushiswapPoolsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pools/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -894,13 +894,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PairDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PairDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapPairDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -919,7 +919,7 @@ export class SushiswapApi {
      * @param endDate 
      * @param poolId 
      */
-    public async dappsSushiswapPoolsHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PairDTO>;  }> {
+    public async dappsSushiswapPoolsHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pools/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -981,13 +981,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PairDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PairDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapPairDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1001,7 +1001,7 @@ export class SushiswapApi {
      * 
      * @summary GetSwaps
      */
-    public async dappsSushiswapSwapsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SwapDTO>;  }> {
+    public async dappsSushiswapSwapsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/swaps/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1043,13 +1043,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SwapDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SwapDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapSwapDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1068,7 +1068,7 @@ export class SushiswapApi {
      * @param endDate 
      * @param poolId 
      */
-    public async dappsSushiswapSwapsHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SwapDTO>;  }> {
+    public async dappsSushiswapSwapsHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/swaps/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1130,13 +1130,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SwapDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapSwapDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SwapDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapSwapDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1228,7 +1228,7 @@ export class SushiswapApi {
      * 
      * @summary GetTokens
      */
-    public async dappsSushiswapTokensCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenDTO>;  }> {
+    public async dappsSushiswapTokensCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1270,13 +1270,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapTokenDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1295,7 +1295,7 @@ export class SushiswapApi {
      * @param endDate 
      * @param tokenId 
      */
-    public async dappsSushiswapTokensHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenDTO>;  }> {
+    public async dappsSushiswapTokensHistoricalGet (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/tokens/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1357,13 +1357,13 @@ export class SushiswapApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<SushiswapTokenDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

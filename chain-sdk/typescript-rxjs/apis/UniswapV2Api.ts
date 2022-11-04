@@ -16,9 +16,9 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
-    PairV2DTO,
-    SwapV2DTO,
-    TokenV2DTO,
+    UniswapV2PairV2DTO,
+    UniswapV2SwapV2DTO,
+    UniswapV2TokenV2DTO,
 } from '../models';
 
 export interface DappsUniswapv2BundlesHistoricalGetRequest {
@@ -334,15 +334,15 @@ export class UniswapV2Api extends BaseAPI {
     /**
      * GetPools
      */
-    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest): Observable<Array<PairV2DTO>>
-    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PairV2DTO>>>
-    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<PairV2DTO> | AjaxResponse<Array<PairV2DTO>>> {
+    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest): Observable<Array<UniswapV2PairV2DTO>>
+    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2PairV2DTO>>>
+    dappsUniswapv2PoolsCurrentGet({ filterPoolId }: DappsUniswapv2PoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV2PairV2DTO> | AjaxResponse<Array<UniswapV2PairV2DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PairV2DTO>>({
+        return this.request<Array<UniswapV2PairV2DTO>>({
             url: '/dapps/uniswapv2/pools/current',
             method: 'GET',
             query,
@@ -373,10 +373,10 @@ export class UniswapV2Api extends BaseAPI {
     /**
      * GetSwaps
      */
-    dappsUniswapv2SwapsCurrentGet(): Observable<Array<SwapV2DTO>>
-    dappsUniswapv2SwapsCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<SwapV2DTO>>>
-    dappsUniswapv2SwapsCurrentGet(opts?: OperationOpts): Observable<Array<SwapV2DTO> | AjaxResponse<Array<SwapV2DTO>>> {
-        return this.request<Array<SwapV2DTO>>({
+    dappsUniswapv2SwapsCurrentGet(): Observable<Array<UniswapV2SwapV2DTO>>
+    dappsUniswapv2SwapsCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2SwapV2DTO>>>
+    dappsUniswapv2SwapsCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV2SwapV2DTO> | AjaxResponse<Array<UniswapV2SwapV2DTO>>> {
+        return this.request<Array<UniswapV2SwapV2DTO>>({
             url: '/dapps/uniswapv2/swaps/current',
             method: 'GET',
         }, opts?.responseOpts);
@@ -427,10 +427,10 @@ export class UniswapV2Api extends BaseAPI {
     /**
      * GetTokens
      */
-    dappsUniswapv2TokensCurrentGet(): Observable<Array<TokenV2DTO>>
-    dappsUniswapv2TokensCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<TokenV2DTO>>>
-    dappsUniswapv2TokensCurrentGet(opts?: OperationOpts): Observable<Array<TokenV2DTO> | AjaxResponse<Array<TokenV2DTO>>> {
-        return this.request<Array<TokenV2DTO>>({
+    dappsUniswapv2TokensCurrentGet(): Observable<Array<UniswapV2TokenV2DTO>>
+    dappsUniswapv2TokensCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2TokenV2DTO>>>
+    dappsUniswapv2TokensCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV2TokenV2DTO> | AjaxResponse<Array<UniswapV2TokenV2DTO>>> {
+        return this.request<Array<UniswapV2TokenV2DTO>>({
             url: '/dapps/uniswapv2/tokens/current',
             method: 'GET',
         }, opts?.responseOpts);

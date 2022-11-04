@@ -838,7 +838,7 @@ No authorization required
 
 <a name="dappsuniswapv2poolscurrentget"></a>
 # **DappsUniswapv2PoolsCurrentGet**
-> List&lt;PairV2DTO&gt; DappsUniswapv2PoolsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV2PairV2DTO&gt; DappsUniswapv2PoolsCurrentGet (string filterPoolId = null)
 
 GetPools
 
@@ -864,7 +864,7 @@ namespace Example
             try
             {
                 // GetPools
-                List<PairV2DTO> result = apiInstance.DappsUniswapv2PoolsCurrentGet(filterPoolId);
+                List<UniswapV2PairV2DTO> result = apiInstance.DappsUniswapv2PoolsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -885,7 +885,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPools
-    ApiResponse<List<PairV2DTO>> response = apiInstance.DappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV2PairV2DTO>> response = apiInstance.DappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -906,7 +906,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PairV2DTO&gt;**](PairV2DTO.md)
+[**List&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -1018,7 +1018,7 @@ No authorization required
 
 <a name="dappsuniswapv2swapscurrentget"></a>
 # **DappsUniswapv2SwapsCurrentGet**
-> List&lt;SwapV2DTO&gt; DappsUniswapv2SwapsCurrentGet ()
+> List&lt;UniswapV2SwapV2DTO&gt; DappsUniswapv2SwapsCurrentGet ()
 
 GetSwaps
 
@@ -1043,7 +1043,7 @@ namespace Example
             try
             {
                 // GetSwaps
-                List<SwapV2DTO> result = apiInstance.DappsUniswapv2SwapsCurrentGet();
+                List<UniswapV2SwapV2DTO> result = apiInstance.DappsUniswapv2SwapsCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1064,7 +1064,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetSwaps
-    ApiResponse<List<SwapV2DTO>> response = apiInstance.DappsUniswapv2SwapsCurrentGetWithHttpInfo();
+    ApiResponse<List<UniswapV2SwapV2DTO>> response = apiInstance.DappsUniswapv2SwapsCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1081,7 +1081,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;SwapV2DTO&gt;**](SwapV2DTO.md)
+[**List&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -1284,7 +1284,7 @@ No authorization required
 
 <a name="dappsuniswapv2tokenscurrentget"></a>
 # **DappsUniswapv2TokensCurrentGet**
-> List&lt;TokenV2DTO&gt; DappsUniswapv2TokensCurrentGet ()
+> List&lt;UniswapV2TokenV2DTO&gt; DappsUniswapv2TokensCurrentGet ()
 
 GetTokens
 
@@ -1309,7 +1309,7 @@ namespace Example
             try
             {
                 // GetTokens
-                List<TokenV2DTO> result = apiInstance.DappsUniswapv2TokensCurrentGet();
+                List<UniswapV2TokenV2DTO> result = apiInstance.DappsUniswapv2TokensCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1330,7 +1330,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokens
-    ApiResponse<List<TokenV2DTO>> response = apiInstance.DappsUniswapv2TokensCurrentGetWithHttpInfo();
+    ApiResponse<List<UniswapV2TokenV2DTO>> response = apiInstance.DappsUniswapv2TokensCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1347,7 +1347,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;TokenV2DTO&gt;**](TokenV2DTO.md)
+[**List&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

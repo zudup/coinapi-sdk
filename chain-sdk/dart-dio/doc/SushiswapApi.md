@@ -503,7 +503,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapPoolsCurrentGet**
-> BuiltList<PairDTO> dappsSushiswapPoolsCurrentGet()
+> BuiltList<SushiswapPairDTO> dappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -528,7 +528,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;PairDTO&gt;**](PairDTO.md)
+[**BuiltList&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapPoolsHistoricalGet**
-> BuiltList<PairDTO> dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> BuiltList<SushiswapPairDTO> dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetPools (historical)
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PairDTO&gt;**](PairDTO.md)
+[**BuiltList&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapSwapsCurrentGet**
-> BuiltList<SwapDTO> dappsSushiswapSwapsCurrentGet()
+> BuiltList<SushiswapSwapDTO> dappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -614,7 +614,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;SwapDTO&gt;**](SwapDTO.md)
+[**BuiltList&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -628,7 +628,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapSwapsHistoricalGet**
-> BuiltList<SwapDTO> dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> BuiltList<SushiswapSwapDTO> dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetSwaps (historical)
 
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;SwapDTO&gt;**](SwapDTO.md)
+[**BuiltList&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -725,7 +725,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapTokensCurrentGet**
-> BuiltList<TokenDTO> dappsSushiswapTokensCurrentGet()
+> BuiltList<SushiswapTokenDTO> dappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -748,7 +748,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;TokenDTO&gt;**](TokenDTO.md)
+[**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -762,7 +762,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsSushiswapTokensHistoricalGet**
-> BuiltList<TokenDTO> dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> BuiltList<SushiswapTokenDTO> dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
 
 GetTokens (historical)
 
@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TokenDTO&gt;**](TokenDTO.md)
+[**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

@@ -23,23 +23,23 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.BundleV3DTO;
-import org.openapitools.client.model.BurnV3DTO;
 import java.util.Date;
-import org.openapitools.client.model.FactoryV3DTO;
-import org.openapitools.client.model.MintV3DTO;
-import org.openapitools.client.model.PoolDayDataV3DTO;
-import org.openapitools.client.model.PoolHourDataV3DTO;
-import org.openapitools.client.model.PoolV3DTO;
-import org.openapitools.client.model.PositionSnapshotV3DTO;
-import org.openapitools.client.model.PositionV3DTO;
-import org.openapitools.client.model.SwapV3DTO;
-import org.openapitools.client.model.TickDayDataV3DTO;
-import org.openapitools.client.model.TickV3DTO;
-import org.openapitools.client.model.TokenHourDataV3DTO;
-import org.openapitools.client.model.TokenV3DTO;
-import org.openapitools.client.model.TokenV3DayDataDTO;
-import org.openapitools.client.model.UniswapDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3BundleV3DTO;
+import org.openapitools.client.model.UniswapV3BurnV3DTO;
+import org.openapitools.client.model.UniswapV3FactoryV3DTO;
+import org.openapitools.client.model.UniswapV3MintV3DTO;
+import org.openapitools.client.model.UniswapV3PoolDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolV3DTO;
+import org.openapitools.client.model.UniswapV3PositionSnapshotV3DTO;
+import org.openapitools.client.model.UniswapV3PositionV3DTO;
+import org.openapitools.client.model.UniswapV3SwapV3DTO;
+import org.openapitools.client.model.UniswapV3TickDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3TickV3DTO;
+import org.openapitools.client.model.UniswapV3TokenHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DayDataDTO;
+import org.openapitools.client.model.UniswapV3UniswapDayDataV3DTO;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -74,9 +74,9 @@ public class UniswapV3Api {
   /**
   * GetBundles
   * 
-   * @return List<BundleV3DTO>
+   * @return List<UniswapV3BundleV3DTO>
   */
-  public List<BundleV3DTO> dappsUniswapv3BundleCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3BundleV3DTO> dappsUniswapv3BundleCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -106,7 +106,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<BundleV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", BundleV3DTO.class);
+         return (List<UniswapV3BundleV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3BundleV3DTO.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class UniswapV3Api {
    * 
 
   */
-  public void dappsUniswapv3BundleCurrentGet (final Response.Listener<List<BundleV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3BundleCurrentGet (final Response.Listener<List<UniswapV3BundleV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -172,7 +172,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<BundleV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", BundleV3DTO.class));
+              responseListener.onResponse((List<UniswapV3BundleV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3BundleV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -315,9 +315,9 @@ public class UniswapV3Api {
   * GetBurns
   * 
    * @param filterPoolId Filter pool id
-   * @return List<BurnV3DTO>
+   * @return List<UniswapV3BurnV3DTO>
   */
-  public List<BurnV3DTO> dappsUniswapv3BurnsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3BurnV3DTO> dappsUniswapv3BurnsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -348,7 +348,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<BurnV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", BurnV3DTO.class);
+         return (List<UniswapV3BurnV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3BurnV3DTO.class);
       } else {
          return null;
       }
@@ -374,7 +374,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3BurnsCurrentGet (String filterPoolId, final Response.Listener<List<BurnV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3BurnsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3BurnV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -415,7 +415,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<BurnV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", BurnV3DTO.class));
+              responseListener.onResponse((List<UniswapV3BurnV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3BurnV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -685,9 +685,9 @@ public class UniswapV3Api {
   * GetFactory
   * 
    * @param chainId 
-   * @return List<FactoryV3DTO>
+   * @return List<UniswapV3FactoryV3DTO>
   */
-  public List<FactoryV3DTO> dappsUniswapv3FactoryCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3FactoryV3DTO> dappsUniswapv3FactoryCurrentGet (String chainId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'chainId' is set
     if (chainId == null) {
@@ -722,7 +722,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<FactoryV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", FactoryV3DTO.class);
+         return (List<UniswapV3FactoryV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3FactoryV3DTO.class);
       } else {
          return null;
       }
@@ -748,7 +748,7 @@ public class UniswapV3Api {
    * 
    * @param chainId 
   */
-  public void dappsUniswapv3FactoryCurrentGet (String chainId, final Response.Listener<List<FactoryV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3FactoryCurrentGet (String chainId, final Response.Listener<List<UniswapV3FactoryV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'chainId' is set
@@ -793,7 +793,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<FactoryV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", FactoryV3DTO.class));
+              responseListener.onResponse((List<UniswapV3FactoryV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3FactoryV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -936,9 +936,9 @@ public class UniswapV3Api {
   * GetMints
   * 
    * @param filterPoolId Filter pool id
-   * @return List<MintV3DTO>
+   * @return List<UniswapV3MintV3DTO>
   */
-  public List<MintV3DTO> dappsUniswapv3MintsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3MintV3DTO> dappsUniswapv3MintsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -969,7 +969,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<MintV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", MintV3DTO.class);
+         return (List<UniswapV3MintV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3MintV3DTO.class);
       } else {
          return null;
       }
@@ -995,7 +995,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3MintsCurrentGet (String filterPoolId, final Response.Listener<List<MintV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3MintsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3MintV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1036,7 +1036,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<MintV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", MintV3DTO.class));
+              responseListener.onResponse((List<UniswapV3MintV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3MintV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1436,9 +1436,9 @@ public class UniswapV3Api {
   * GetPools
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PoolV3DTO>
+   * @return List<UniswapV3PoolV3DTO>
   */
-  public List<PoolV3DTO> dappsUniswapv3PoolsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolV3DTO> dappsUniswapv3PoolsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1469,7 +1469,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PoolV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", PoolV3DTO.class);
+         return (List<UniswapV3PoolV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3PoolV3DTO.class);
       } else {
          return null;
       }
@@ -1495,7 +1495,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3PoolsCurrentGet (String filterPoolId, final Response.Listener<List<PoolV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3PoolV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1536,7 +1536,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PoolV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PoolV3DTO.class));
+              responseListener.onResponse((List<UniswapV3PoolV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3PoolV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1555,9 +1555,9 @@ public class UniswapV3Api {
   * GetPoolsDayData
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PoolDayDataV3DTO>
+   * @return List<UniswapV3PoolDayDataV3DTO>
   */
-  public List<PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1588,7 +1588,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PoolDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", PoolDayDataV3DTO.class);
+         return (List<UniswapV3PoolDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3PoolDayDataV3DTO.class);
       } else {
          return null;
       }
@@ -1614,7 +1614,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId, final Response.Listener<List<PoolDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsDayDataCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3PoolDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1655,7 +1655,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PoolDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PoolDayDataV3DTO.class));
+              responseListener.onResponse((List<UniswapV3PoolDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3PoolDayDataV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1801,9 +1801,9 @@ public class UniswapV3Api {
   * GetPoolsHourData
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PoolHourDataV3DTO>
+   * @return List<UniswapV3PoolHourDataV3DTO>
   */
-  public List<PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -1834,7 +1834,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PoolHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", PoolHourDataV3DTO.class);
+         return (List<UniswapV3PoolHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3PoolHourDataV3DTO.class);
       } else {
          return null;
       }
@@ -1860,7 +1860,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId, final Response.Listener<List<PoolHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PoolsHourDataCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3PoolHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1901,7 +1901,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PoolHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PoolHourDataV3DTO.class));
+              responseListener.onResponse((List<UniswapV3PoolHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3PoolHourDataV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2047,9 +2047,9 @@ public class UniswapV3Api {
   * GetPositionSnapshot
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PositionSnapshotV3DTO>
+   * @return List<UniswapV3PositionSnapshotV3DTO>
   */
-  public List<PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2080,7 +2080,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PositionSnapshotV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", PositionSnapshotV3DTO.class);
+         return (List<UniswapV3PositionSnapshotV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3PositionSnapshotV3DTO.class);
       } else {
          return null;
       }
@@ -2106,7 +2106,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId, final Response.Listener<List<PositionSnapshotV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PositionSnapshotsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3PositionSnapshotV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2147,7 +2147,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PositionSnapshotV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PositionSnapshotV3DTO.class));
+              responseListener.onResponse((List<UniswapV3PositionSnapshotV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3PositionSnapshotV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2166,9 +2166,9 @@ public class UniswapV3Api {
   * GetPositions
   * 
    * @param filterPoolId Filter pool id
-   * @return List<PositionV3DTO>
+   * @return List<UniswapV3PositionV3DTO>
   */
-  public List<PositionV3DTO> dappsUniswapv3PositionsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PositionV3DTO> dappsUniswapv3PositionsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2199,7 +2199,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<PositionV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", PositionV3DTO.class);
+         return (List<UniswapV3PositionV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3PositionV3DTO.class);
       } else {
          return null;
       }
@@ -2225,7 +2225,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3PositionsCurrentGet (String filterPoolId, final Response.Listener<List<PositionV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3PositionsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3PositionV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2266,7 +2266,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<PositionV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", PositionV3DTO.class));
+              responseListener.onResponse((List<UniswapV3PositionV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3PositionV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2412,9 +2412,9 @@ public class UniswapV3Api {
   * GetSwaps
   * 
    * @param filterPoolId Filter pool id
-   * @return List<SwapV3DTO>
+   * @return List<UniswapV3SwapV3DTO>
   */
-  public List<SwapV3DTO> dappsUniswapv3SwapsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3SwapV3DTO> dappsUniswapv3SwapsCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2445,7 +2445,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<SwapV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", SwapV3DTO.class);
+         return (List<UniswapV3SwapV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3SwapV3DTO.class);
       } else {
          return null;
       }
@@ -2471,7 +2471,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3SwapsCurrentGet (String filterPoolId, final Response.Listener<List<SwapV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3SwapsCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3SwapV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2512,7 +2512,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<SwapV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", SwapV3DTO.class));
+              responseListener.onResponse((List<UniswapV3SwapV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3SwapV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2785,9 +2785,9 @@ public class UniswapV3Api {
   * GetTicks
   * 
    * @param filterPoolId Filter pool id
-   * @return List<TickV3DTO>
+   * @return List<UniswapV3TickV3DTO>
   */
-  public List<TickV3DTO> dappsUniswapv3TicksCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TickV3DTO> dappsUniswapv3TicksCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2818,7 +2818,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TickV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", TickV3DTO.class);
+         return (List<UniswapV3TickV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3TickV3DTO.class);
       } else {
          return null;
       }
@@ -2844,7 +2844,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3TicksCurrentGet (String filterPoolId, final Response.Listener<List<TickV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TicksCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3TickV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -2885,7 +2885,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TickV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", TickV3DTO.class));
+              responseListener.onResponse((List<UniswapV3TickV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3TickV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2904,9 +2904,9 @@ public class UniswapV3Api {
   * GetTicksDayData
   * 
    * @param filterPoolId Filter pool id
-   * @return List<TickDayDataV3DTO>
+   * @return List<UniswapV3TickDayDataV3DTO>
   */
-  public List<TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -2937,7 +2937,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TickDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", TickDayDataV3DTO.class);
+         return (List<UniswapV3TickDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3TickDayDataV3DTO.class);
       } else {
          return null;
       }
@@ -2963,7 +2963,7 @@ public class UniswapV3Api {
    * 
    * @param filterPoolId Filter pool id
   */
-  public void dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId, final Response.Listener<List<TickDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TicksDayDataCurrentGet (String filterPoolId, final Response.Listener<List<UniswapV3TickDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -3004,7 +3004,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TickDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", TickDayDataV3DTO.class));
+              responseListener.onResponse((List<UniswapV3TickDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3TickDayDataV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3404,9 +3404,9 @@ public class UniswapV3Api {
   * GetTokens
   * 
    * @param filterTokenId 
-   * @return List<TokenV3DTO>
+   * @return List<UniswapV3TokenV3DTO>
   */
-  public List<TokenV3DTO> dappsUniswapv3TokensCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenV3DTO> dappsUniswapv3TokensCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -3437,7 +3437,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenV3DTO.class);
+         return (List<UniswapV3TokenV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3TokenV3DTO.class);
       } else {
          return null;
       }
@@ -3463,7 +3463,7 @@ public class UniswapV3Api {
    * 
    * @param filterTokenId 
   */
-  public void dappsUniswapv3TokensCurrentGet (String filterTokenId, final Response.Listener<List<TokenV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensCurrentGet (String filterTokenId, final Response.Listener<List<UniswapV3TokenV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -3504,7 +3504,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenV3DTO.class));
+              responseListener.onResponse((List<UniswapV3TokenV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3TokenV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3523,9 +3523,9 @@ public class UniswapV3Api {
   * GetTokensDayData
   * 
    * @param filterTokenId 
-   * @return List<TokenV3DayDataDTO>
+   * @return List<UniswapV3TokenV3DayDataDTO>
   */
-  public List<TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -3556,7 +3556,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenV3DayDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenV3DayDataDTO.class);
+         return (List<UniswapV3TokenV3DayDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3TokenV3DayDataDTO.class);
       } else {
          return null;
       }
@@ -3582,7 +3582,7 @@ public class UniswapV3Api {
    * 
    * @param filterTokenId 
   */
-  public void dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId, final Response.Listener<List<TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensDayDataCurrentGet (String filterTokenId, final Response.Listener<List<UniswapV3TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -3623,7 +3623,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenV3DayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenV3DayDataDTO.class));
+              responseListener.onResponse((List<UniswapV3TokenV3DayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3TokenV3DayDataDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -3769,9 +3769,9 @@ public class UniswapV3Api {
   * GetTokensHourData
   * 
    * @param filterTokenId 
-   * @return List<TokenHourDataV3DTO>
+   * @return List<UniswapV3TokenHourDataV3DTO>
   */
-  public List<TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -3802,7 +3802,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<TokenHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", TokenHourDataV3DTO.class);
+         return (List<UniswapV3TokenHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3TokenHourDataV3DTO.class);
       } else {
          return null;
       }
@@ -3828,7 +3828,7 @@ public class UniswapV3Api {
    * 
    * @param filterTokenId 
   */
-  public void dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId, final Response.Listener<List<TokenHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3TokensHourDataCurrentGet (String filterTokenId, final Response.Listener<List<UniswapV3TokenHourDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -3869,7 +3869,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<TokenHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", TokenHourDataV3DTO.class));
+              responseListener.onResponse((List<UniswapV3TokenHourDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3TokenHourDataV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -4011,9 +4011,9 @@ public class UniswapV3Api {
   /**
   * GetUniswapDayData
   * 
-   * @return List<UniswapDayDataV3DTO>
+   * @return List<UniswapV3UniswapDayDataV3DTO>
   */
-  public List<UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -4043,7 +4043,7 @@ public class UniswapV3Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<UniswapDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapDayDataV3DTO.class);
+         return (List<UniswapV3UniswapDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse, "array", UniswapV3UniswapDayDataV3DTO.class);
       } else {
          return null;
       }
@@ -4069,7 +4069,7 @@ public class UniswapV3Api {
    * 
 
   */
-  public void dappsUniswapv3UniswapDayDataCurrentGet (final Response.Listener<List<UniswapDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dappsUniswapv3UniswapDayDataCurrentGet (final Response.Listener<List<UniswapV3UniswapDayDataV3DTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -4109,7 +4109,7 @@ public class UniswapV3Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<UniswapDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapDayDataV3DTO.class));
+              responseListener.onResponse((List<UniswapV3UniswapDayDataV3DTO>) ApiInvoker.deserialize(localVarResponse,  "array", UniswapV3UniswapDayDataV3DTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

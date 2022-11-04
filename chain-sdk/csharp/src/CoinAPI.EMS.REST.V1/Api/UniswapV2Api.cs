@@ -288,8 +288,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
-        /// <returns>List<PairV2DTO></returns>
-        List<PairV2DTO> DappsUniswapv2PoolsCurrentGet (string filterPoolId = default(string));
+        /// <returns>List<UniswapV2PairV2DTO></returns>
+        List<UniswapV2PairV2DTO> DappsUniswapv2PoolsCurrentGet (string filterPoolId = default(string));
 
         /// <summary>
         /// GetPools
@@ -299,8 +299,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
-        /// <returns>ApiResponse of List<PairV2DTO></returns>
-        ApiResponse<List<PairV2DTO>> DappsUniswapv2PoolsCurrentGetWithHttpInfo (string filterPoolId = default(string));
+        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
+        ApiResponse<List<UniswapV2PairV2DTO>> DappsUniswapv2PoolsCurrentGetWithHttpInfo (string filterPoolId = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -337,8 +337,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// 
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SwapV2DTO></returns>
-        List<SwapV2DTO> DappsUniswapv2SwapsCurrentGet ();
+        /// <returns>List<UniswapV2SwapV2DTO></returns>
+        List<UniswapV2SwapV2DTO> DappsUniswapv2SwapsCurrentGet ();
 
         /// <summary>
         /// GetSwaps
@@ -347,8 +347,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// 
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SwapV2DTO></returns>
-        ApiResponse<List<SwapV2DTO>> DappsUniswapv2SwapsCurrentGetWithHttpInfo ();
+        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
+        ApiResponse<List<UniswapV2SwapV2DTO>> DappsUniswapv2SwapsCurrentGetWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -414,8 +414,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// 
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<TokenV2DTO></returns>
-        List<TokenV2DTO> DappsUniswapv2TokensCurrentGet ();
+        /// <returns>List<UniswapV2TokenV2DTO></returns>
+        List<UniswapV2TokenV2DTO> DappsUniswapv2TokensCurrentGet ();
 
         /// <summary>
         /// GetTokens
@@ -424,8 +424,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// 
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<TokenV2DTO></returns>
-        ApiResponse<List<TokenV2DTO>> DappsUniswapv2TokensCurrentGetWithHttpInfo ();
+        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
+        ApiResponse<List<UniswapV2TokenV2DTO>> DappsUniswapv2TokensCurrentGetWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -793,8 +793,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<PairV2DTO></returns>
-        System.Threading.Tasks.Task<List<PairV2DTO>> DappsUniswapv2PoolsCurrentGetAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> DappsUniswapv2PoolsCurrentGetAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// GetPools
@@ -805,8 +805,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;PairV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PairV2DTO>>> DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -846,8 +846,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SwapV2DTO></returns>
-        System.Threading.Tasks.Task<List<SwapV2DTO>> DappsUniswapv2SwapsCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> DappsUniswapv2SwapsCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// GetSwaps
@@ -857,8 +857,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SwapV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SwapV2DTO>>> DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -929,8 +929,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<TokenV2DTO></returns>
-        System.Threading.Tasks.Task<List<TokenV2DTO>> DappsUniswapv2TokensCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> DappsUniswapv2TokensCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// GetTokens
@@ -940,8 +940,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenV2DTO>>> DappsUniswapv2TokensCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> DappsUniswapv2TokensCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2470,10 +2470,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
-        /// <returns>List<PairV2DTO></returns>
-        public List<PairV2DTO> DappsUniswapv2PoolsCurrentGet (string filterPoolId = default(string))
+        /// <returns>List<UniswapV2PairV2DTO></returns>
+        public List<UniswapV2PairV2DTO> DappsUniswapv2PoolsCurrentGet (string filterPoolId = default(string))
         {
-             ApiResponse<List<PairV2DTO>> localVarResponse = DappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
+             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = DappsUniswapv2PoolsCurrentGetWithHttpInfo(filterPoolId);
              return localVarResponse.Data;
         }
 
@@ -2482,8 +2482,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
-        /// <returns>ApiResponse of List<PairV2DTO></returns>
-        public ApiResponse<List<PairV2DTO>> DappsUniswapv2PoolsCurrentGetWithHttpInfo (string filterPoolId = default(string))
+        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
+        public ApiResponse<List<UniswapV2PairV2DTO>> DappsUniswapv2PoolsCurrentGetWithHttpInfo (string filterPoolId = default(string))
         {
 
             var localVarPath = "/dapps/uniswapv2/pools/current";
@@ -2525,9 +2525,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PairV2DTO>)));
+                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
         }
 
         /// <summary>
@@ -2536,10 +2536,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<PairV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<PairV2DTO>> DappsUniswapv2PoolsCurrentGetAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> DappsUniswapv2PoolsCurrentGetAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<PairV2DTO>> localVarResponse = await DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync(filterPoolId, cancellationToken);
+             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = await DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync(filterPoolId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2550,8 +2550,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;PairV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<PairV2DTO>>> DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> DappsUniswapv2PoolsCurrentGetWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/pools/current";
@@ -2593,9 +2593,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PairV2DTO>)));
+                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
         }
 
         /// <summary>
@@ -2751,10 +2751,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GetSwaps 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SwapV2DTO></returns>
-        public List<SwapV2DTO> DappsUniswapv2SwapsCurrentGet ()
+        /// <returns>List<UniswapV2SwapV2DTO></returns>
+        public List<UniswapV2SwapV2DTO> DappsUniswapv2SwapsCurrentGet ()
         {
-             ApiResponse<List<SwapV2DTO>> localVarResponse = DappsUniswapv2SwapsCurrentGetWithHttpInfo();
+             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = DappsUniswapv2SwapsCurrentGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -2762,8 +2762,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GetSwaps 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SwapV2DTO></returns>
-        public ApiResponse<List<SwapV2DTO>> DappsUniswapv2SwapsCurrentGetWithHttpInfo ()
+        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
+        public ApiResponse<List<UniswapV2SwapV2DTO>> DappsUniswapv2SwapsCurrentGetWithHttpInfo ()
         {
 
             var localVarPath = "/dapps/uniswapv2/swaps/current";
@@ -2804,9 +2804,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<SwapV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SwapV2DTO>)));
+                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
         }
 
         /// <summary>
@@ -2814,10 +2814,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SwapV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<SwapV2DTO>> DappsUniswapv2SwapsCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> DappsUniswapv2SwapsCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<SwapV2DTO>> localVarResponse = await DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = await DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2827,8 +2827,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SwapV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<SwapV2DTO>>> DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> DappsUniswapv2SwapsCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/swaps/current";
@@ -2869,9 +2869,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<SwapV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SwapV2DTO>)));
+                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
         }
 
         /// <summary>
@@ -3176,10 +3176,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GetTokens 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<TokenV2DTO></returns>
-        public List<TokenV2DTO> DappsUniswapv2TokensCurrentGet ()
+        /// <returns>List<UniswapV2TokenV2DTO></returns>
+        public List<UniswapV2TokenV2DTO> DappsUniswapv2TokensCurrentGet ()
         {
-             ApiResponse<List<TokenV2DTO>> localVarResponse = DappsUniswapv2TokensCurrentGetWithHttpInfo();
+             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = DappsUniswapv2TokensCurrentGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -3187,8 +3187,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GetTokens 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<TokenV2DTO></returns>
-        public ApiResponse<List<TokenV2DTO>> DappsUniswapv2TokensCurrentGetWithHttpInfo ()
+        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
+        public ApiResponse<List<UniswapV2TokenV2DTO>> DappsUniswapv2TokensCurrentGetWithHttpInfo ()
         {
 
             var localVarPath = "/dapps/uniswapv2/tokens/current";
@@ -3229,9 +3229,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TokenV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TokenV2DTO>)));
+                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
         }
 
         /// <summary>
@@ -3239,10 +3239,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<TokenV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<TokenV2DTO>> DappsUniswapv2TokensCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> DappsUniswapv2TokensCurrentGetAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<TokenV2DTO>> localVarResponse = await DappsUniswapv2TokensCurrentGetWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = await DappsUniswapv2TokensCurrentGetWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3252,8 +3252,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TokenV2DTO>>> DappsUniswapv2TokensCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> DappsUniswapv2TokensCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/tokens/current";
@@ -3294,9 +3294,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TokenV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TokenV2DTO>)));
+                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
         }
 
         /// <summary>

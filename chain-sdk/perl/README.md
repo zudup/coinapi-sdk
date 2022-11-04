@@ -246,30 +246,30 @@ use WWW::OpenAPIClient::UniswapV3Api;
 
 To load the models:
 ```perl
-use WWW::OpenAPIClient::Object::BigInteger;
-use WWW::OpenAPIClient::Object::BundleV3DTO;
-use WWW::OpenAPIClient::Object::BurnV3DTO;
-use WWW::OpenAPIClient::Object::ETradeAggressiveSide;
-use WWW::OpenAPIClient::Object::FactoryV3DTO;
-use WWW::OpenAPIClient::Object::MintV3DTO;
-use WWW::OpenAPIClient::Object::PairDTO;
-use WWW::OpenAPIClient::Object::PairV2DTO;
-use WWW::OpenAPIClient::Object::PoolDayDataV3DTO;
-use WWW::OpenAPIClient::Object::PoolHourDataV3DTO;
-use WWW::OpenAPIClient::Object::PoolV3DTO;
-use WWW::OpenAPIClient::Object::PositionSnapshotV3DTO;
-use WWW::OpenAPIClient::Object::PositionV3DTO;
-use WWW::OpenAPIClient::Object::SwapDTO;
-use WWW::OpenAPIClient::Object::SwapV2DTO;
-use WWW::OpenAPIClient::Object::SwapV3DTO;
-use WWW::OpenAPIClient::Object::TickDayDataV3DTO;
-use WWW::OpenAPIClient::Object::TickV3DTO;
-use WWW::OpenAPIClient::Object::TokenDTO;
-use WWW::OpenAPIClient::Object::TokenHourDataV3DTO;
-use WWW::OpenAPIClient::Object::TokenV2DTO;
-use WWW::OpenAPIClient::Object::TokenV3DTO;
-use WWW::OpenAPIClient::Object::TokenV3DayDataDTO;
-use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
+use WWW::OpenAPIClient::Object::NumericsBigInteger;
+use WWW::OpenAPIClient::Object::SushiswapPairDTO;
+use WWW::OpenAPIClient::Object::SushiswapSwapDTO;
+use WWW::OpenAPIClient::Object::SushiswapTokenDTO;
+use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UniswapV2PairV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV2SwapV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV2TokenV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV3BundleV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3BurnV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3FactoryV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3MintV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolDayDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolHourDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PositionSnapshotV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PositionV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3SwapV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TickDayDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TickV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenHourDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenV3DayDataDTO;
+use WWW::OpenAPIClient::Object::UniswapV3UniswapDayDataV3DTO;
 
 ````
 
@@ -289,30 +289,30 @@ use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 
 # load the models
-use WWW::OpenAPIClient::Object::BigInteger;
-use WWW::OpenAPIClient::Object::BundleV3DTO;
-use WWW::OpenAPIClient::Object::BurnV3DTO;
-use WWW::OpenAPIClient::Object::ETradeAggressiveSide;
-use WWW::OpenAPIClient::Object::FactoryV3DTO;
-use WWW::OpenAPIClient::Object::MintV3DTO;
-use WWW::OpenAPIClient::Object::PairDTO;
-use WWW::OpenAPIClient::Object::PairV2DTO;
-use WWW::OpenAPIClient::Object::PoolDayDataV3DTO;
-use WWW::OpenAPIClient::Object::PoolHourDataV3DTO;
-use WWW::OpenAPIClient::Object::PoolV3DTO;
-use WWW::OpenAPIClient::Object::PositionSnapshotV3DTO;
-use WWW::OpenAPIClient::Object::PositionV3DTO;
-use WWW::OpenAPIClient::Object::SwapDTO;
-use WWW::OpenAPIClient::Object::SwapV2DTO;
-use WWW::OpenAPIClient::Object::SwapV3DTO;
-use WWW::OpenAPIClient::Object::TickDayDataV3DTO;
-use WWW::OpenAPIClient::Object::TickV3DTO;
-use WWW::OpenAPIClient::Object::TokenDTO;
-use WWW::OpenAPIClient::Object::TokenHourDataV3DTO;
-use WWW::OpenAPIClient::Object::TokenV2DTO;
-use WWW::OpenAPIClient::Object::TokenV3DTO;
-use WWW::OpenAPIClient::Object::TokenV3DayDataDTO;
-use WWW::OpenAPIClient::Object::UniswapDayDataV3DTO;
+use WWW::OpenAPIClient::Object::NumericsBigInteger;
+use WWW::OpenAPIClient::Object::SushiswapPairDTO;
+use WWW::OpenAPIClient::Object::SushiswapSwapDTO;
+use WWW::OpenAPIClient::Object::SushiswapTokenDTO;
+use WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide;
+use WWW::OpenAPIClient::Object::UniswapV2PairV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV2SwapV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV2TokenV2DTO;
+use WWW::OpenAPIClient::Object::UniswapV3BundleV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3BurnV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3FactoryV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3MintV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolDayDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolHourDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PoolV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PositionSnapshotV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3PositionV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3SwapV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TickDayDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TickV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenHourDataV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenV3DTO;
+use WWW::OpenAPIClient::Object::UniswapV3TokenV3DayDataDTO;
+use WWW::OpenAPIClient::Object::UniswapV3UniswapDayDataV3DTO;
 
 # for displaying the API response data
 use Data::Dumper;
@@ -461,30 +461,30 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
- - [WWW::OpenAPIClient::Object::BigInteger](docs/BigInteger.md)
- - [WWW::OpenAPIClient::Object::BundleV3DTO](docs/BundleV3DTO.md)
- - [WWW::OpenAPIClient::Object::BurnV3DTO](docs/BurnV3DTO.md)
- - [WWW::OpenAPIClient::Object::ETradeAggressiveSide](docs/ETradeAggressiveSide.md)
- - [WWW::OpenAPIClient::Object::FactoryV3DTO](docs/FactoryV3DTO.md)
- - [WWW::OpenAPIClient::Object::MintV3DTO](docs/MintV3DTO.md)
- - [WWW::OpenAPIClient::Object::PairDTO](docs/PairDTO.md)
- - [WWW::OpenAPIClient::Object::PairV2DTO](docs/PairV2DTO.md)
- - [WWW::OpenAPIClient::Object::PoolDayDataV3DTO](docs/PoolDayDataV3DTO.md)
- - [WWW::OpenAPIClient::Object::PoolHourDataV3DTO](docs/PoolHourDataV3DTO.md)
- - [WWW::OpenAPIClient::Object::PoolV3DTO](docs/PoolV3DTO.md)
- - [WWW::OpenAPIClient::Object::PositionSnapshotV3DTO](docs/PositionSnapshotV3DTO.md)
- - [WWW::OpenAPIClient::Object::PositionV3DTO](docs/PositionV3DTO.md)
- - [WWW::OpenAPIClient::Object::SwapDTO](docs/SwapDTO.md)
- - [WWW::OpenAPIClient::Object::SwapV2DTO](docs/SwapV2DTO.md)
- - [WWW::OpenAPIClient::Object::SwapV3DTO](docs/SwapV3DTO.md)
- - [WWW::OpenAPIClient::Object::TickDayDataV3DTO](docs/TickDayDataV3DTO.md)
- - [WWW::OpenAPIClient::Object::TickV3DTO](docs/TickV3DTO.md)
- - [WWW::OpenAPIClient::Object::TokenDTO](docs/TokenDTO.md)
- - [WWW::OpenAPIClient::Object::TokenHourDataV3DTO](docs/TokenHourDataV3DTO.md)
- - [WWW::OpenAPIClient::Object::TokenV2DTO](docs/TokenV2DTO.md)
- - [WWW::OpenAPIClient::Object::TokenV3DTO](docs/TokenV3DTO.md)
- - [WWW::OpenAPIClient::Object::TokenV3DayDataDTO](docs/TokenV3DayDataDTO.md)
- - [WWW::OpenAPIClient::Object::UniswapDayDataV3DTO](docs/UniswapDayDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::NumericsBigInteger](docs/NumericsBigInteger.md)
+ - [WWW::OpenAPIClient::Object::SushiswapPairDTO](docs/SushiswapPairDTO.md)
+ - [WWW::OpenAPIClient::Object::SushiswapSwapDTO](docs/SushiswapSwapDTO.md)
+ - [WWW::OpenAPIClient::Object::SushiswapTokenDTO](docs/SushiswapTokenDTO.md)
+ - [WWW::OpenAPIClient::Object::TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
+ - [WWW::OpenAPIClient::Object::UniswapV2PairV2DTO](docs/UniswapV2PairV2DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV2SwapV2DTO](docs/UniswapV2SwapV2DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV2TokenV2DTO](docs/UniswapV2TokenV2DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3BundleV3DTO](docs/UniswapV3BundleV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3BurnV3DTO](docs/UniswapV3BurnV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3FactoryV3DTO](docs/UniswapV3FactoryV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3MintV3DTO](docs/UniswapV3MintV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3PoolDayDataV3DTO](docs/UniswapV3PoolDayDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3PoolHourDataV3DTO](docs/UniswapV3PoolHourDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3PoolV3DTO](docs/UniswapV3PoolV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3PositionSnapshotV3DTO](docs/UniswapV3PositionSnapshotV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3PositionV3DTO](docs/UniswapV3PositionV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3SwapV3DTO](docs/UniswapV3SwapV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3TickDayDataV3DTO](docs/UniswapV3TickDayDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3TickV3DTO](docs/UniswapV3TickV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3TokenHourDataV3DTO](docs/UniswapV3TokenHourDataV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3TokenV3DTO](docs/UniswapV3TokenV3DTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3TokenV3DayDataDTO](docs/UniswapV3TokenV3DayDataDTO.md)
+ - [WWW::OpenAPIClient::Object::UniswapV3UniswapDayDataV3DTO](docs/UniswapV3UniswapDayDataV3DTO.md)
 
 
 # DOCUMENTATION FOR AUTHORIZATION

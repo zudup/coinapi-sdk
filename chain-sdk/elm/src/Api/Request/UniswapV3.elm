@@ -60,7 +60,7 @@ import Json.Encode
 
 
 
-dappsUniswapv3BundleCurrentGet : Api.Request (List Api.Data.BundleV3DTO)
+dappsUniswapv3BundleCurrentGet : Api.Request (List Api.Data.UniswapV3BundleV3DTO)
 dappsUniswapv3BundleCurrentGet =
     Api.request
         "GET"
@@ -69,7 +69,7 @@ dappsUniswapv3BundleCurrentGet =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.bundleV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BundleV3DTODecoder)
 
 
 
@@ -86,7 +86,7 @@ dappsUniswapv3BundlesHistoricalGet startBlock_query endBlock_query startDate_que
 
 
 
-dappsUniswapv3BurnsCurrentGet : Maybe String -> Api.Request (List Api.Data.BurnV3DTO)
+dappsUniswapv3BurnsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3BurnV3DTO)
 dappsUniswapv3BurnsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -95,7 +95,7 @@ dappsUniswapv3BurnsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.burnV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BurnV3DTODecoder)
 
 
 
@@ -125,7 +125,7 @@ dappsUniswapv3DayDataHistoricalGet startBlock_query endBlock_query startDate_que
 
 
 
-dappsUniswapv3FactoryCurrentGet : String -> Api.Request (List Api.Data.FactoryV3DTO)
+dappsUniswapv3FactoryCurrentGet : String -> Api.Request (List Api.Data.UniswapV3FactoryV3DTO)
 dappsUniswapv3FactoryCurrentGet chainId_path =
     Api.request
         "GET"
@@ -134,7 +134,7 @@ dappsUniswapv3FactoryCurrentGet chainId_path =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.factoryV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3FactoryV3DTODecoder)
 
 
 
@@ -151,7 +151,7 @@ dappsUniswapv3FactoryHistoricalGet startBlock_query endBlock_query startDate_que
 
 
 
-dappsUniswapv3MintsCurrentGet : Maybe String -> Api.Request (List Api.Data.MintV3DTO)
+dappsUniswapv3MintsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3MintV3DTO)
 dappsUniswapv3MintsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -160,7 +160,7 @@ dappsUniswapv3MintsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.mintV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3MintV3DTODecoder)
 
 
 
@@ -203,7 +203,7 @@ dappsUniswapv3PoolHourDataHistoricalGet startBlock_query endBlock_query startDat
 
 
 
-dappsUniswapv3PoolsCurrentGet : Maybe String -> Api.Request (List Api.Data.PoolV3DTO)
+dappsUniswapv3PoolsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolV3DTO)
 dappsUniswapv3PoolsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -212,11 +212,11 @@ dappsUniswapv3PoolsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.poolV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolV3DTODecoder)
 
 
 
-dappsUniswapv3PoolsDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.PoolDayDataV3DTO)
+dappsUniswapv3PoolsDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataV3DTO)
 dappsUniswapv3PoolsDayDataCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -225,7 +225,7 @@ dappsUniswapv3PoolsDayDataCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.poolDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolDayDataV3DTODecoder)
 
 
 
@@ -242,7 +242,7 @@ dappsUniswapv3PoolsHistoricalGet startBlock_query endBlock_query startDate_query
 
 
 
-dappsUniswapv3PoolsHourDataCurrentGet : Maybe String -> Api.Request (List Api.Data.PoolHourDataV3DTO)
+dappsUniswapv3PoolsHourDataCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataV3DTO)
 dappsUniswapv3PoolsHourDataCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -251,7 +251,7 @@ dappsUniswapv3PoolsHourDataCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.poolHourDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolHourDataV3DTODecoder)
 
 
 
@@ -268,7 +268,7 @@ dappsUniswapv3PositionSnapshotHistoricalGet startBlock_query endBlock_query star
 
 
 
-dappsUniswapv3PositionSnapshotsCurrentGet : Maybe String -> Api.Request (List Api.Data.PositionSnapshotV3DTO)
+dappsUniswapv3PositionSnapshotsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3PositionSnapshotV3DTO)
 dappsUniswapv3PositionSnapshotsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -277,11 +277,11 @@ dappsUniswapv3PositionSnapshotsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.positionSnapshotV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PositionSnapshotV3DTODecoder)
 
 
 
-dappsUniswapv3PositionsCurrentGet : Maybe String -> Api.Request (List Api.Data.PositionV3DTO)
+dappsUniswapv3PositionsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3PositionV3DTO)
 dappsUniswapv3PositionsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -290,7 +290,7 @@ dappsUniswapv3PositionsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.positionV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PositionV3DTODecoder)
 
 
 
@@ -307,7 +307,7 @@ dappsUniswapv3PositionsHistoricalGet startBlock_query endBlock_query startDate_q
 
 
 
-dappsUniswapv3SwapsCurrentGet : Maybe String -> Api.Request (List Api.Data.SwapV3DTO)
+dappsUniswapv3SwapsCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3SwapV3DTO)
 dappsUniswapv3SwapsCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -316,7 +316,7 @@ dappsUniswapv3SwapsCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.swapV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3SwapV3DTODecoder)
 
 
 
@@ -346,7 +346,7 @@ dappsUniswapv3TickDayDataHistoricalGet startBlock_query endBlock_query startDate
 
 
 
-dappsUniswapv3TicksCurrentGet : Maybe String -> Api.Request (List Api.Data.TickV3DTO)
+dappsUniswapv3TicksCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3TickV3DTO)
 dappsUniswapv3TicksCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -355,11 +355,11 @@ dappsUniswapv3TicksCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.tickV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TickV3DTODecoder)
 
 
 
-dappsUniswapv3TicksDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.TickDayDataV3DTO)
+dappsUniswapv3TicksDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataV3DTO)
 dappsUniswapv3TicksDayDataCurrentGet filterPoolId_query =
     Api.request
         "GET"
@@ -368,7 +368,7 @@ dappsUniswapv3TicksDayDataCurrentGet filterPoolId_query =
         [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.tickDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TickDayDataV3DTODecoder)
 
 
 
@@ -411,7 +411,7 @@ dappsUniswapv3TokenHourDataHistoricalGet startBlock_query endBlock_query startDa
 
 
 
-dappsUniswapv3TokensCurrentGet : Maybe String -> Api.Request (List Api.Data.TokenV3DTO)
+dappsUniswapv3TokensCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DTO)
 dappsUniswapv3TokensCurrentGet filterTokenId_query =
     Api.request
         "GET"
@@ -420,11 +420,11 @@ dappsUniswapv3TokensCurrentGet filterTokenId_query =
         [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.tokenV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenV3DTODecoder)
 
 
 
-dappsUniswapv3TokensDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.TokenV3DayDataDTO)
+dappsUniswapv3TokensDayDataCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
 dappsUniswapv3TokensDayDataCurrentGet filterTokenId_query =
     Api.request
         "GET"
@@ -433,7 +433,7 @@ dappsUniswapv3TokensDayDataCurrentGet filterTokenId_query =
         [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.tokenV3DayDataDTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenV3DayDataDTODecoder)
 
 
 
@@ -450,7 +450,7 @@ dappsUniswapv3TokensHistoricalGet startBlock_query endBlock_query startDate_quer
 
 
 
-dappsUniswapv3TokensHourDataCurrentGet : Maybe String -> Api.Request (List Api.Data.TokenHourDataV3DTO)
+dappsUniswapv3TokensHourDataCurrentGet : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataV3DTO)
 dappsUniswapv3TokensHourDataCurrentGet filterTokenId_query =
     Api.request
         "GET"
@@ -459,7 +459,7 @@ dappsUniswapv3TokensHourDataCurrentGet filterTokenId_query =
         [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.tokenHourDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenHourDataV3DTODecoder)
 
 
 
@@ -476,7 +476,7 @@ dappsUniswapv3TransactionsHistoricalGet startBlock_query endBlock_query startDat
 
 
 
-dappsUniswapv3UniswapDayDataCurrentGet : Api.Request (List Api.Data.UniswapDayDataV3DTO)
+dappsUniswapv3UniswapDayDataCurrentGet : Api.Request (List Api.Data.UniswapV3UniswapDayDataV3DTO)
 dappsUniswapv3UniswapDayDataCurrentGet =
     Api.request
         "GET"
@@ -485,4 +485,4 @@ dappsUniswapv3UniswapDayDataCurrentGet =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3UniswapDayDataV3DTODecoder)

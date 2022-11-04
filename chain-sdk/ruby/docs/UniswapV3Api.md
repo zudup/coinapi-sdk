@@ -41,7 +41,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 ## dapps_uniswapv3_bundle_current_get
 
-> <Array<BundleV3DTO>> dapps_uniswapv3_bundle_current_get
+> <Array<UniswapV3BundleV3DTO>> dapps_uniswapv3_bundle_current_get
 
 GetBundles
 
@@ -66,7 +66,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<BundleV3DTO>>, Integer, Hash)> dapps_uniswapv3_bundle_current_get_with_http_info
+> <Array(<Array<UniswapV3BundleV3DTO>>, Integer, Hash)> dapps_uniswapv3_bundle_current_get_with_http_info
 
 ```ruby
 begin
@@ -74,7 +74,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_bundle_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<BundleV3DTO>>
+  p data # => <Array<UniswapV3BundleV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_bundle_current_get_with_http_info: #{e}"
 end
@@ -86,7 +86,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;BundleV3DTO&gt;**](BundleV3DTO.md)
+[**Array&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ No authorization required
 
 ## dapps_uniswapv3_burns_current_get
 
-> <Array<BurnV3DTO>> dapps_uniswapv3_burns_current_get(opts)
+> <Array<UniswapV3BurnV3DTO>> dapps_uniswapv3_burns_current_get(opts)
 
 GetBurns
 
@@ -197,7 +197,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<BurnV3DTO>>, Integer, Hash)> dapps_uniswapv3_burns_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3BurnV3DTO>>, Integer, Hash)> dapps_uniswapv3_burns_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -205,7 +205,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_burns_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<BurnV3DTO>>
+  p data # => <Array<UniswapV3BurnV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_burns_current_get_with_http_info: #{e}"
 end
@@ -219,7 +219,7 @@ end
 
 ### Return type
 
-[**Array&lt;BurnV3DTO&gt;**](BurnV3DTO.md)
+[**Array&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ No authorization required
 
 ## dapps_uniswapv3_factory_current_get
 
-> <Array<FactoryV3DTO>> dapps_uniswapv3_factory_current_get(chain_id)
+> <Array<UniswapV3FactoryV3DTO>> dapps_uniswapv3_factory_current_get(chain_id)
 
 GetFactory
 
@@ -399,7 +399,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<FactoryV3DTO>>, Integer, Hash)> dapps_uniswapv3_factory_current_get_with_http_info(chain_id)
+> <Array(<Array<UniswapV3FactoryV3DTO>>, Integer, Hash)> dapps_uniswapv3_factory_current_get_with_http_info(chain_id)
 
 ```ruby
 begin
@@ -407,7 +407,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_factory_current_get_with_http_info(chain_id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<FactoryV3DTO>>
+  p data # => <Array<UniswapV3FactoryV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_factory_current_get_with_http_info: #{e}"
 end
@@ -421,7 +421,7 @@ end
 
 ### Return type
 
-[**Array&lt;FactoryV3DTO&gt;**](FactoryV3DTO.md)
+[**Array&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -504,7 +504,7 @@ No authorization required
 
 ## dapps_uniswapv3_mints_current_get
 
-> <Array<MintV3DTO>> dapps_uniswapv3_mints_current_get(opts)
+> <Array<UniswapV3MintV3DTO>> dapps_uniswapv3_mints_current_get(opts)
 
 GetMints
 
@@ -532,7 +532,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<MintV3DTO>>, Integer, Hash)> dapps_uniswapv3_mints_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3MintV3DTO>>, Integer, Hash)> dapps_uniswapv3_mints_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -540,7 +540,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_mints_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<MintV3DTO>>
+  p data # => <Array<UniswapV3MintV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_mints_current_get_with_http_info: #{e}"
 end
@@ -554,7 +554,7 @@ end
 
 ### Return type
 
-[**Array&lt;MintV3DTO&gt;**](MintV3DTO.md)
+[**Array&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -781,7 +781,7 @@ No authorization required
 
 ## dapps_uniswapv3_pools_current_get
 
-> <Array<PoolV3DTO>> dapps_uniswapv3_pools_current_get(opts)
+> <Array<UniswapV3PoolV3DTO>> dapps_uniswapv3_pools_current_get(opts)
 
 GetPools
 
@@ -809,7 +809,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PoolV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3PoolV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -817,7 +817,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_pools_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PoolV3DTO>>
+  p data # => <Array<UniswapV3PoolV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_pools_current_get_with_http_info: #{e}"
 end
@@ -831,7 +831,7 @@ end
 
 ### Return type
 
-[**Array&lt;PoolV3DTO&gt;**](PoolV3DTO.md)
+[**Array&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -845,7 +845,7 @@ No authorization required
 
 ## dapps_uniswapv3_pools_day_data_current_get
 
-> <Array<PoolDayDataV3DTO>> dapps_uniswapv3_pools_day_data_current_get(opts)
+> <Array<UniswapV3PoolDayDataV3DTO>> dapps_uniswapv3_pools_day_data_current_get(opts)
 
 GetPoolsDayData
 
@@ -873,7 +873,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PoolDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_day_data_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3PoolDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_day_data_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -881,7 +881,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_pools_day_data_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PoolDayDataV3DTO>>
+  p data # => <Array<UniswapV3PoolDayDataV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_pools_day_data_current_get_with_http_info: #{e}"
 end
@@ -895,7 +895,7 @@ end
 
 ### Return type
 
-[**Array&lt;PoolDayDataV3DTO&gt;**](PoolDayDataV3DTO.md)
+[**Array&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -980,7 +980,7 @@ No authorization required
 
 ## dapps_uniswapv3_pools_hour_data_current_get
 
-> <Array<PoolHourDataV3DTO>> dapps_uniswapv3_pools_hour_data_current_get(opts)
+> <Array<UniswapV3PoolHourDataV3DTO>> dapps_uniswapv3_pools_hour_data_current_get(opts)
 
 GetPoolsHourData
 
@@ -1008,7 +1008,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PoolHourDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_hour_data_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3PoolHourDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_pools_hour_data_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1016,7 +1016,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_pools_hour_data_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PoolHourDataV3DTO>>
+  p data # => <Array<UniswapV3PoolHourDataV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_pools_hour_data_current_get_with_http_info: #{e}"
 end
@@ -1030,7 +1030,7 @@ end
 
 ### Return type
 
-[**Array&lt;PoolHourDataV3DTO&gt;**](PoolHourDataV3DTO.md)
+[**Array&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1115,7 +1115,7 @@ No authorization required
 
 ## dapps_uniswapv3_position_snapshots_current_get
 
-> <Array<PositionSnapshotV3DTO>> dapps_uniswapv3_position_snapshots_current_get(opts)
+> <Array<UniswapV3PositionSnapshotV3DTO>> dapps_uniswapv3_position_snapshots_current_get(opts)
 
 GetPositionSnapshot
 
@@ -1143,7 +1143,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PositionSnapshotV3DTO>>, Integer, Hash)> dapps_uniswapv3_position_snapshots_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3PositionSnapshotV3DTO>>, Integer, Hash)> dapps_uniswapv3_position_snapshots_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1151,7 +1151,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_position_snapshots_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PositionSnapshotV3DTO>>
+  p data # => <Array<UniswapV3PositionSnapshotV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_position_snapshots_current_get_with_http_info: #{e}"
 end
@@ -1165,7 +1165,7 @@ end
 
 ### Return type
 
-[**Array&lt;PositionSnapshotV3DTO&gt;**](PositionSnapshotV3DTO.md)
+[**Array&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -1179,7 +1179,7 @@ No authorization required
 
 ## dapps_uniswapv3_positions_current_get
 
-> <Array<PositionV3DTO>> dapps_uniswapv3_positions_current_get(opts)
+> <Array<UniswapV3PositionV3DTO>> dapps_uniswapv3_positions_current_get(opts)
 
 GetPositions
 
@@ -1207,7 +1207,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PositionV3DTO>>, Integer, Hash)> dapps_uniswapv3_positions_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3PositionV3DTO>>, Integer, Hash)> dapps_uniswapv3_positions_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1215,7 +1215,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_positions_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PositionV3DTO>>
+  p data # => <Array<UniswapV3PositionV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_positions_current_get_with_http_info: #{e}"
 end
@@ -1229,7 +1229,7 @@ end
 
 ### Return type
 
-[**Array&lt;PositionV3DTO&gt;**](PositionV3DTO.md)
+[**Array&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -1314,7 +1314,7 @@ No authorization required
 
 ## dapps_uniswapv3_swaps_current_get
 
-> <Array<SwapV3DTO>> dapps_uniswapv3_swaps_current_get(opts)
+> <Array<UniswapV3SwapV3DTO>> dapps_uniswapv3_swaps_current_get(opts)
 
 GetSwaps
 
@@ -1342,7 +1342,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SwapV3DTO>>, Integer, Hash)> dapps_uniswapv3_swaps_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3SwapV3DTO>>, Integer, Hash)> dapps_uniswapv3_swaps_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1350,7 +1350,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_swaps_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SwapV3DTO>>
+  p data # => <Array<UniswapV3SwapV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_swaps_current_get_with_http_info: #{e}"
 end
@@ -1364,7 +1364,7 @@ end
 
 ### Return type
 
-[**Array&lt;SwapV3DTO&gt;**](SwapV3DTO.md)
+[**Array&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1520,7 +1520,7 @@ No authorization required
 
 ## dapps_uniswapv3_ticks_current_get
 
-> <Array<TickV3DTO>> dapps_uniswapv3_ticks_current_get(opts)
+> <Array<UniswapV3TickV3DTO>> dapps_uniswapv3_ticks_current_get(opts)
 
 GetTicks
 
@@ -1548,7 +1548,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TickV3DTO>>, Integer, Hash)> dapps_uniswapv3_ticks_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3TickV3DTO>>, Integer, Hash)> dapps_uniswapv3_ticks_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1556,7 +1556,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_ticks_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TickV3DTO>>
+  p data # => <Array<UniswapV3TickV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_ticks_current_get_with_http_info: #{e}"
 end
@@ -1570,7 +1570,7 @@ end
 
 ### Return type
 
-[**Array&lt;TickV3DTO&gt;**](TickV3DTO.md)
+[**Array&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1584,7 +1584,7 @@ No authorization required
 
 ## dapps_uniswapv3_ticks_day_data_current_get
 
-> <Array<TickDayDataV3DTO>> dapps_uniswapv3_ticks_day_data_current_get(opts)
+> <Array<UniswapV3TickDayDataV3DTO>> dapps_uniswapv3_ticks_day_data_current_get(opts)
 
 GetTicksDayData
 
@@ -1612,7 +1612,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TickDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_ticks_day_data_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3TickDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_ticks_day_data_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1620,7 +1620,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_ticks_day_data_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TickDayDataV3DTO>>
+  p data # => <Array<UniswapV3TickDayDataV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_ticks_day_data_current_get_with_http_info: #{e}"
 end
@@ -1634,7 +1634,7 @@ end
 
 ### Return type
 
-[**Array&lt;TickDayDataV3DTO&gt;**](TickDayDataV3DTO.md)
+[**Array&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1861,7 +1861,7 @@ No authorization required
 
 ## dapps_uniswapv3_tokens_current_get
 
-> <Array<TokenV3DTO>> dapps_uniswapv3_tokens_current_get(opts)
+> <Array<UniswapV3TokenV3DTO>> dapps_uniswapv3_tokens_current_get(opts)
 
 GetTokens
 
@@ -1889,7 +1889,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenV3DTO>>, Integer, Hash)> dapps_uniswapv3_tokens_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3TokenV3DTO>>, Integer, Hash)> dapps_uniswapv3_tokens_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1897,7 +1897,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_tokens_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenV3DTO>>
+  p data # => <Array<UniswapV3TokenV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_tokens_current_get_with_http_info: #{e}"
 end
@@ -1911,7 +1911,7 @@ end
 
 ### Return type
 
-[**Array&lt;TokenV3DTO&gt;**](TokenV3DTO.md)
+[**Array&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1925,7 +1925,7 @@ No authorization required
 
 ## dapps_uniswapv3_tokens_day_data_current_get
 
-> <Array<TokenV3DayDataDTO>> dapps_uniswapv3_tokens_day_data_current_get(opts)
+> <Array<UniswapV3TokenV3DayDataDTO>> dapps_uniswapv3_tokens_day_data_current_get(opts)
 
 GetTokensDayData
 
@@ -1953,7 +1953,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenV3DayDataDTO>>, Integer, Hash)> dapps_uniswapv3_tokens_day_data_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3TokenV3DayDataDTO>>, Integer, Hash)> dapps_uniswapv3_tokens_day_data_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -1961,7 +1961,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_tokens_day_data_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenV3DayDataDTO>>
+  p data # => <Array<UniswapV3TokenV3DayDataDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_tokens_day_data_current_get_with_http_info: #{e}"
 end
@@ -1975,7 +1975,7 @@ end
 
 ### Return type
 
-[**Array&lt;TokenV3DayDataDTO&gt;**](TokenV3DayDataDTO.md)
+[**Array&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -2060,7 +2060,7 @@ No authorization required
 
 ## dapps_uniswapv3_tokens_hour_data_current_get
 
-> <Array<TokenHourDataV3DTO>> dapps_uniswapv3_tokens_hour_data_current_get(opts)
+> <Array<UniswapV3TokenHourDataV3DTO>> dapps_uniswapv3_tokens_hour_data_current_get(opts)
 
 GetTokensHourData
 
@@ -2088,7 +2088,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenHourDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_tokens_hour_data_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV3TokenHourDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_tokens_hour_data_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -2096,7 +2096,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_tokens_hour_data_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenHourDataV3DTO>>
+  p data # => <Array<UniswapV3TokenHourDataV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_tokens_hour_data_current_get_with_http_info: #{e}"
 end
@@ -2110,7 +2110,7 @@ end
 
 ### Return type
 
-[**Array&lt;TokenHourDataV3DTO&gt;**](TokenHourDataV3DTO.md)
+[**Array&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -2193,7 +2193,7 @@ No authorization required
 
 ## dapps_uniswapv3_uniswap_day_data_current_get
 
-> <Array<UniswapDayDataV3DTO>> dapps_uniswapv3_uniswap_day_data_current_get
+> <Array<UniswapV3UniswapDayDataV3DTO>> dapps_uniswapv3_uniswap_day_data_current_get
 
 GetUniswapDayData
 
@@ -2218,7 +2218,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_uniswap_day_data_current_get_with_http_info
+> <Array(<Array<UniswapV3UniswapDayDataV3DTO>>, Integer, Hash)> dapps_uniswapv3_uniswap_day_data_current_get_with_http_info
 
 ```ruby
 begin
@@ -2226,7 +2226,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv3_uniswap_day_data_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<UniswapDayDataV3DTO>>
+  p data # => <Array<UniswapV3UniswapDayDataV3DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV3Api->dapps_uniswapv3_uniswap_day_data_current_get_with_http_info: #{e}"
 end
@@ -2238,7 +2238,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;UniswapDayDataV3DTO&gt;**](UniswapDayDataV3DTO.md)
+[**Array&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

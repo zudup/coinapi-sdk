@@ -15,9 +15,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { PairV2DTO } from '../model/pairV2DTO';
-import { SwapV2DTO } from '../model/swapV2DTO';
-import { TokenV2DTO } from '../model/tokenV2DTO';
+import { UniswapV2PairV2DTO } from '../model/uniswapV2PairV2DTO';
+import { UniswapV2SwapV2DTO } from '../model/uniswapV2SwapV2DTO';
+import { UniswapV2TokenV2DTO } from '../model/uniswapV2TokenV2DTO';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 
@@ -780,7 +780,7 @@ export class UniswapV2Api {
      * @summary GetPools
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv2PoolsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PairV2DTO>;  }> {
+    public async dappsUniswapv2PoolsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/pools/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -826,13 +826,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PairV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PairV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairV2DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -924,7 +924,7 @@ export class UniswapV2Api {
      * 
      * @summary GetSwaps
      */
-    public async dappsUniswapv2SwapsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SwapV2DTO>;  }> {
+    public async dappsUniswapv2SwapsCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/swaps/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -966,13 +966,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SwapV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SwapV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2SwapV2DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1142,7 +1142,7 @@ export class UniswapV2Api {
      * 
      * @summary GetTokens
      */
-    public async dappsUniswapv2TokensCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenV2DTO>;  }> {
+    public async dappsUniswapv2TokensCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1184,13 +1184,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenV2DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

@@ -16,22 +16,22 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
-    BundleV3DTO,
-    BurnV3DTO,
-    FactoryV3DTO,
-    MintV3DTO,
-    PoolDayDataV3DTO,
-    PoolHourDataV3DTO,
-    PoolV3DTO,
-    PositionSnapshotV3DTO,
-    PositionV3DTO,
-    SwapV3DTO,
-    TickDayDataV3DTO,
-    TickV3DTO,
-    TokenHourDataV3DTO,
-    TokenV3DTO,
-    TokenV3DayDataDTO,
-    UniswapDayDataV3DTO,
+    UniswapV3BundleV3DTO,
+    UniswapV3BurnV3DTO,
+    UniswapV3FactoryV3DTO,
+    UniswapV3MintV3DTO,
+    UniswapV3PoolDayDataV3DTO,
+    UniswapV3PoolHourDataV3DTO,
+    UniswapV3PoolV3DTO,
+    UniswapV3PositionSnapshotV3DTO,
+    UniswapV3PositionV3DTO,
+    UniswapV3SwapV3DTO,
+    UniswapV3TickDayDataV3DTO,
+    UniswapV3TickV3DTO,
+    UniswapV3TokenHourDataV3DTO,
+    UniswapV3TokenV3DTO,
+    UniswapV3TokenV3DayDataDTO,
+    UniswapV3UniswapDayDataV3DTO,
 } from '../models';
 
 export interface DappsUniswapv3BundlesHistoricalGetRequest {
@@ -230,10 +230,10 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetBundles
      */
-    dappsUniswapv3BundleCurrentGet(): Observable<Array<BundleV3DTO>>
-    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<BundleV3DTO>>>
-    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<Array<BundleV3DTO> | AjaxResponse<Array<BundleV3DTO>>> {
-        return this.request<Array<BundleV3DTO>>({
+    dappsUniswapv3BundleCurrentGet(): Observable<Array<UniswapV3BundleV3DTO>>
+    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
+    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV3BundleV3DTO> | AjaxResponse<Array<UniswapV3BundleV3DTO>>> {
+        return this.request<Array<UniswapV3BundleV3DTO>>({
             url: '/dapps/uniswapv3/bundle/current',
             method: 'GET',
         }, opts?.responseOpts);
@@ -262,15 +262,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetBurns
      */
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest): Observable<Array<BurnV3DTO>>
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<BurnV3DTO>>>
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<Array<BurnV3DTO> | AjaxResponse<Array<BurnV3DTO>>> {
+    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest): Observable<Array<UniswapV3BurnV3DTO>>
+    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
+    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3BurnV3DTO> | AjaxResponse<Array<UniswapV3BurnV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<BurnV3DTO>>({
+        return this.request<Array<UniswapV3BurnV3DTO>>({
             url: '/dapps/uniswapv3/burns/current',
             method: 'GET',
             query,
@@ -321,12 +321,12 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetFactory
      */
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest): Observable<Array<FactoryV3DTO>>
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<FactoryV3DTO>>>
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<Array<FactoryV3DTO> | AjaxResponse<Array<FactoryV3DTO>>> {
+    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest): Observable<Array<UniswapV3FactoryV3DTO>>
+    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
+    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3FactoryV3DTO> | AjaxResponse<Array<UniswapV3FactoryV3DTO>>> {
         throwIfNullOrUndefined(chainId, 'chainId', 'dappsUniswapv3FactoryCurrentGet');
 
-        return this.request<Array<FactoryV3DTO>>({
+        return this.request<Array<UniswapV3FactoryV3DTO>>({
             url: '/dapps/uniswapv3/factory/current'.replace('{chain_id}', encodeURI(chainId)),
             method: 'GET',
         }, opts?.responseOpts);
@@ -355,15 +355,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetMints
      */
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest): Observable<Array<MintV3DTO>>
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<MintV3DTO>>>
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<Array<MintV3DTO> | AjaxResponse<Array<MintV3DTO>>> {
+    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest): Observable<Array<UniswapV3MintV3DTO>>
+    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
+    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3MintV3DTO> | AjaxResponse<Array<UniswapV3MintV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<MintV3DTO>>({
+        return this.request<Array<UniswapV3MintV3DTO>>({
             url: '/dapps/uniswapv3/mints/current',
             method: 'GET',
             query,
@@ -436,15 +436,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetPools
      */
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest): Observable<Array<PoolV3DTO>>
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PoolV3DTO>>>
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<PoolV3DTO> | AjaxResponse<Array<PoolV3DTO>>> {
+    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest): Observable<Array<UniswapV3PoolV3DTO>>
+    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
+    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolV3DTO> | AjaxResponse<Array<UniswapV3PoolV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PoolV3DTO>>({
+        return this.request<Array<UniswapV3PoolV3DTO>>({
             url: '/dapps/uniswapv3/pools/current',
             method: 'GET',
             query,
@@ -454,15 +454,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetPoolsDayData
      */
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest): Observable<Array<PoolDayDataV3DTO>>
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PoolDayDataV3DTO>>>
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<PoolDayDataV3DTO> | AjaxResponse<Array<PoolDayDataV3DTO>>> {
+    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
+    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
+    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolDayDataV3DTO> | AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PoolDayDataV3DTO>>({
+        return this.request<Array<UniswapV3PoolDayDataV3DTO>>({
             url: '/dapps/uniswapv3/poolsDayData/current',
             method: 'GET',
             query,
@@ -493,15 +493,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetPoolsHourData
      */
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest): Observable<Array<PoolHourDataV3DTO>>
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PoolHourDataV3DTO>>>
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<PoolHourDataV3DTO> | AjaxResponse<Array<PoolHourDataV3DTO>>> {
+    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
+    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
+    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolHourDataV3DTO> | AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PoolHourDataV3DTO>>({
+        return this.request<Array<UniswapV3PoolHourDataV3DTO>>({
             url: '/dapps/uniswapv3/poolsHourData/current',
             method: 'GET',
             query,
@@ -532,15 +532,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetPositionSnapshot
      */
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest): Observable<Array<PositionSnapshotV3DTO>>
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PositionSnapshotV3DTO>>>
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<Array<PositionSnapshotV3DTO> | AjaxResponse<Array<PositionSnapshotV3DTO>>> {
+    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
+    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
+    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionSnapshotV3DTO> | AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PositionSnapshotV3DTO>>({
+        return this.request<Array<UniswapV3PositionSnapshotV3DTO>>({
             url: '/dapps/uniswapv3/positionSnapshots/current',
             method: 'GET',
             query,
@@ -550,15 +550,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetPositions
      */
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest): Observable<Array<PositionV3DTO>>
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PositionV3DTO>>>
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<Array<PositionV3DTO> | AjaxResponse<Array<PositionV3DTO>>> {
+    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest): Observable<Array<UniswapV3PositionV3DTO>>
+    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
+    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionV3DTO> | AjaxResponse<Array<UniswapV3PositionV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<PositionV3DTO>>({
+        return this.request<Array<UniswapV3PositionV3DTO>>({
             url: '/dapps/uniswapv3/positions/current',
             method: 'GET',
             query,
@@ -589,15 +589,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetSwaps
      */
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest): Observable<Array<SwapV3DTO>>
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SwapV3DTO>>>
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<Array<SwapV3DTO> | AjaxResponse<Array<SwapV3DTO>>> {
+    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest): Observable<Array<UniswapV3SwapV3DTO>>
+    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
+    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3SwapV3DTO> | AjaxResponse<Array<UniswapV3SwapV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<SwapV3DTO>>({
+        return this.request<Array<UniswapV3SwapV3DTO>>({
             url: '/dapps/uniswapv3/swaps/current',
             method: 'GET',
             query,
@@ -649,15 +649,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetTicks
      */
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest): Observable<Array<TickV3DTO>>
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TickV3DTO>>>
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<Array<TickV3DTO> | AjaxResponse<Array<TickV3DTO>>> {
+    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest): Observable<Array<UniswapV3TickV3DTO>>
+    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
+    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickV3DTO> | AjaxResponse<Array<UniswapV3TickV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<TickV3DTO>>({
+        return this.request<Array<UniswapV3TickV3DTO>>({
             url: '/dapps/uniswapv3/ticks/current',
             method: 'GET',
             query,
@@ -667,15 +667,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetTicksDayData
      */
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest): Observable<Array<TickDayDataV3DTO>>
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TickDayDataV3DTO>>>
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<TickDayDataV3DTO> | AjaxResponse<Array<TickDayDataV3DTO>>> {
+    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
+    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
+    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickDayDataV3DTO> | AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
 
-        return this.request<Array<TickDayDataV3DTO>>({
+        return this.request<Array<UniswapV3TickDayDataV3DTO>>({
             url: '/dapps/uniswapv3/ticksDayData/current',
             method: 'GET',
             query,
@@ -748,15 +748,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetTokens
      */
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest): Observable<Array<TokenV3DTO>>
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenV3DTO>>>
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<Array<TokenV3DTO> | AjaxResponse<Array<TokenV3DTO>>> {
+    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest): Observable<Array<UniswapV3TokenV3DTO>>
+    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
+    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DTO> | AjaxResponse<Array<UniswapV3TokenV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterTokenId != null) { query['filter_token_id'] = filterTokenId; }
 
-        return this.request<Array<TokenV3DTO>>({
+        return this.request<Array<UniswapV3TokenV3DTO>>({
             url: '/dapps/uniswapv3/tokens/current',
             method: 'GET',
             query,
@@ -766,15 +766,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetTokensDayData
      */
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest): Observable<Array<TokenV3DayDataDTO>>
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenV3DayDataDTO>>>
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<TokenV3DayDataDTO> | AjaxResponse<Array<TokenV3DayDataDTO>>> {
+    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
+    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
+    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DayDataDTO> | AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterTokenId != null) { query['filter_token_id'] = filterTokenId; }
 
-        return this.request<Array<TokenV3DayDataDTO>>({
+        return this.request<Array<UniswapV3TokenV3DayDataDTO>>({
             url: '/dapps/uniswapv3/tokensDayData/current',
             method: 'GET',
             query,
@@ -805,15 +805,15 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetTokensHourData
      */
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest): Observable<Array<TokenHourDataV3DTO>>
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenHourDataV3DTO>>>
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<TokenHourDataV3DTO> | AjaxResponse<Array<TokenHourDataV3DTO>>> {
+    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
+    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
+    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenHourDataV3DTO> | AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
         if (filterTokenId != null) { query['filter_token_id'] = filterTokenId; }
 
-        return this.request<Array<TokenHourDataV3DTO>>({
+        return this.request<Array<UniswapV3TokenHourDataV3DTO>>({
             url: '/dapps/uniswapv3/tokensHourData/current',
             method: 'GET',
             query,
@@ -843,10 +843,10 @@ export class UniswapV3Api extends BaseAPI {
     /**
      * GetUniswapDayData
      */
-    dappsUniswapv3UniswapDayDataCurrentGet(): Observable<Array<UniswapDayDataV3DTO>>
-    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapDayDataV3DTO>>>
-    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<Array<UniswapDayDataV3DTO> | AjaxResponse<Array<UniswapDayDataV3DTO>>> {
-        return this.request<Array<UniswapDayDataV3DTO>>({
+    dappsUniswapv3UniswapDayDataCurrentGet(): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
+    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
+    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV3UniswapDayDataV3DTO> | AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>> {
+        return this.request<Array<UniswapV3UniswapDayDataV3DTO>>({
             url: '/dapps/uniswapv3/uniswapDayData/current',
             method: 'GET',
         }, opts?.responseOpts);

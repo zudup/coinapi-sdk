@@ -59,10 +59,10 @@ sub new {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_bundle_current_get' } = {
         summary => 'GetBundles',
         params => $params,
-        returns => 'ARRAY[BundleV3DTO]',
+        returns => 'ARRAY[UniswapV3BundleV3DTO]',
         };
 }
-# @return ARRAY[BundleV3DTO]
+# @return ARRAY[UniswapV3BundleV3DTO]
 #
 sub dapps_uniswapv3_bundle_current_get {
     my ($self, %args) = @_;
@@ -93,7 +93,7 @@ sub dapps_uniswapv3_bundle_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[BundleV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3BundleV3DTO]', $response);
     return $_response_object;
 }
 
@@ -203,10 +203,10 @@ sub dapps_uniswapv3_bundles_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_burns_current_get' } = {
         summary => 'GetBurns',
         params => $params,
-        returns => 'ARRAY[BurnV3DTO]',
+        returns => 'ARRAY[UniswapV3BurnV3DTO]',
         };
 }
-# @return ARRAY[BurnV3DTO]
+# @return ARRAY[UniswapV3BurnV3DTO]
 #
 sub dapps_uniswapv3_burns_current_get {
     my ($self, %args) = @_;
@@ -242,7 +242,7 @@ sub dapps_uniswapv3_burns_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[BurnV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3BurnV3DTO]', $response);
     return $_response_object;
 }
 
@@ -452,10 +452,10 @@ sub dapps_uniswapv3_day_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_factory_current_get' } = {
         summary => 'GetFactory',
         params => $params,
-        returns => 'ARRAY[FactoryV3DTO]',
+        returns => 'ARRAY[UniswapV3FactoryV3DTO]',
         };
 }
-# @return ARRAY[FactoryV3DTO]
+# @return ARRAY[UniswapV3FactoryV3DTO]
 #
 sub dapps_uniswapv3_factory_current_get {
     my ($self, %args) = @_;
@@ -498,7 +498,7 @@ sub dapps_uniswapv3_factory_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[FactoryV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3FactoryV3DTO]', $response);
     return $_response_object;
 }
 
@@ -608,10 +608,10 @@ sub dapps_uniswapv3_factory_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_mints_current_get' } = {
         summary => 'GetMints',
         params => $params,
-        returns => 'ARRAY[MintV3DTO]',
+        returns => 'ARRAY[UniswapV3MintV3DTO]',
         };
 }
-# @return ARRAY[MintV3DTO]
+# @return ARRAY[UniswapV3MintV3DTO]
 #
 sub dapps_uniswapv3_mints_current_get {
     my ($self, %args) = @_;
@@ -647,7 +647,7 @@ sub dapps_uniswapv3_mints_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[MintV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3MintV3DTO]', $response);
     return $_response_object;
 }
 
@@ -968,10 +968,10 @@ sub dapps_uniswapv3_pool_hour_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_pools_current_get' } = {
         summary => 'GetPools',
         params => $params,
-        returns => 'ARRAY[PoolV3DTO]',
+        returns => 'ARRAY[UniswapV3PoolV3DTO]',
         };
 }
-# @return ARRAY[PoolV3DTO]
+# @return ARRAY[UniswapV3PoolV3DTO]
 #
 sub dapps_uniswapv3_pools_current_get {
     my ($self, %args) = @_;
@@ -1007,7 +1007,7 @@ sub dapps_uniswapv3_pools_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PoolV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1028,10 +1028,10 @@ sub dapps_uniswapv3_pools_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_pools_day_data_current_get' } = {
         summary => 'GetPoolsDayData',
         params => $params,
-        returns => 'ARRAY[PoolDayDataV3DTO]',
+        returns => 'ARRAY[UniswapV3PoolDayDataV3DTO]',
         };
 }
-# @return ARRAY[PoolDayDataV3DTO]
+# @return ARRAY[UniswapV3PoolDayDataV3DTO]
 #
 sub dapps_uniswapv3_pools_day_data_current_get {
     my ($self, %args) = @_;
@@ -1067,7 +1067,7 @@ sub dapps_uniswapv3_pools_day_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PoolDayDataV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolDayDataV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1188,10 +1188,10 @@ sub dapps_uniswapv3_pools_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_pools_hour_data_current_get' } = {
         summary => 'GetPoolsHourData',
         params => $params,
-        returns => 'ARRAY[PoolHourDataV3DTO]',
+        returns => 'ARRAY[UniswapV3PoolHourDataV3DTO]',
         };
 }
-# @return ARRAY[PoolHourDataV3DTO]
+# @return ARRAY[UniswapV3PoolHourDataV3DTO]
 #
 sub dapps_uniswapv3_pools_hour_data_current_get {
     my ($self, %args) = @_;
@@ -1227,7 +1227,7 @@ sub dapps_uniswapv3_pools_hour_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PoolHourDataV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolHourDataV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1348,10 +1348,10 @@ sub dapps_uniswapv3_position_snapshot_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_position_snapshots_current_get' } = {
         summary => 'GetPositionSnapshot',
         params => $params,
-        returns => 'ARRAY[PositionSnapshotV3DTO]',
+        returns => 'ARRAY[UniswapV3PositionSnapshotV3DTO]',
         };
 }
-# @return ARRAY[PositionSnapshotV3DTO]
+# @return ARRAY[UniswapV3PositionSnapshotV3DTO]
 #
 sub dapps_uniswapv3_position_snapshots_current_get {
     my ($self, %args) = @_;
@@ -1387,7 +1387,7 @@ sub dapps_uniswapv3_position_snapshots_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PositionSnapshotV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PositionSnapshotV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1408,10 +1408,10 @@ sub dapps_uniswapv3_position_snapshots_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_positions_current_get' } = {
         summary => 'GetPositions',
         params => $params,
-        returns => 'ARRAY[PositionV3DTO]',
+        returns => 'ARRAY[UniswapV3PositionV3DTO]',
         };
 }
-# @return ARRAY[PositionV3DTO]
+# @return ARRAY[UniswapV3PositionV3DTO]
 #
 sub dapps_uniswapv3_positions_current_get {
     my ($self, %args) = @_;
@@ -1447,7 +1447,7 @@ sub dapps_uniswapv3_positions_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PositionV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PositionV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1568,10 +1568,10 @@ sub dapps_uniswapv3_positions_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_swaps_current_get' } = {
         summary => 'GetSwaps',
         params => $params,
-        returns => 'ARRAY[SwapV3DTO]',
+        returns => 'ARRAY[UniswapV3SwapV3DTO]',
         };
 }
-# @return ARRAY[SwapV3DTO]
+# @return ARRAY[UniswapV3SwapV3DTO]
 #
 sub dapps_uniswapv3_swaps_current_get {
     my ($self, %args) = @_;
@@ -1607,7 +1607,7 @@ sub dapps_uniswapv3_swaps_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SwapV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3SwapV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1828,10 +1828,10 @@ sub dapps_uniswapv3_tick_day_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_ticks_current_get' } = {
         summary => 'GetTicks',
         params => $params,
-        returns => 'ARRAY[TickV3DTO]',
+        returns => 'ARRAY[UniswapV3TickV3DTO]',
         };
 }
-# @return ARRAY[TickV3DTO]
+# @return ARRAY[UniswapV3TickV3DTO]
 #
 sub dapps_uniswapv3_ticks_current_get {
     my ($self, %args) = @_;
@@ -1867,7 +1867,7 @@ sub dapps_uniswapv3_ticks_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TickV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TickV3DTO]', $response);
     return $_response_object;
 }
 
@@ -1888,10 +1888,10 @@ sub dapps_uniswapv3_ticks_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_ticks_day_data_current_get' } = {
         summary => 'GetTicksDayData',
         params => $params,
-        returns => 'ARRAY[TickDayDataV3DTO]',
+        returns => 'ARRAY[UniswapV3TickDayDataV3DTO]',
         };
 }
-# @return ARRAY[TickDayDataV3DTO]
+# @return ARRAY[UniswapV3TickDayDataV3DTO]
 #
 sub dapps_uniswapv3_ticks_day_data_current_get {
     my ($self, %args) = @_;
@@ -1927,7 +1927,7 @@ sub dapps_uniswapv3_ticks_day_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TickDayDataV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TickDayDataV3DTO]', $response);
     return $_response_object;
 }
 
@@ -2248,10 +2248,10 @@ sub dapps_uniswapv3_token_hour_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_tokens_current_get' } = {
         summary => 'GetTokens',
         params => $params,
-        returns => 'ARRAY[TokenV3DTO]',
+        returns => 'ARRAY[UniswapV3TokenV3DTO]',
         };
 }
-# @return ARRAY[TokenV3DTO]
+# @return ARRAY[UniswapV3TokenV3DTO]
 #
 sub dapps_uniswapv3_tokens_current_get {
     my ($self, %args) = @_;
@@ -2287,7 +2287,7 @@ sub dapps_uniswapv3_tokens_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenV3DTO]', $response);
     return $_response_object;
 }
 
@@ -2308,10 +2308,10 @@ sub dapps_uniswapv3_tokens_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_tokens_day_data_current_get' } = {
         summary => 'GetTokensDayData',
         params => $params,
-        returns => 'ARRAY[TokenV3DayDataDTO]',
+        returns => 'ARRAY[UniswapV3TokenV3DayDataDTO]',
         };
 }
-# @return ARRAY[TokenV3DayDataDTO]
+# @return ARRAY[UniswapV3TokenV3DayDataDTO]
 #
 sub dapps_uniswapv3_tokens_day_data_current_get {
     my ($self, %args) = @_;
@@ -2347,7 +2347,7 @@ sub dapps_uniswapv3_tokens_day_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenV3DayDataDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenV3DayDataDTO]', $response);
     return $_response_object;
 }
 
@@ -2468,10 +2468,10 @@ sub dapps_uniswapv3_tokens_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_tokens_hour_data_current_get' } = {
         summary => 'GetTokensHourData',
         params => $params,
-        returns => 'ARRAY[TokenHourDataV3DTO]',
+        returns => 'ARRAY[UniswapV3TokenHourDataV3DTO]',
         };
 }
-# @return ARRAY[TokenHourDataV3DTO]
+# @return ARRAY[UniswapV3TokenHourDataV3DTO]
 #
 sub dapps_uniswapv3_tokens_hour_data_current_get {
     my ($self, %args) = @_;
@@ -2507,7 +2507,7 @@ sub dapps_uniswapv3_tokens_hour_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenHourDataV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenHourDataV3DTO]', $response);
     return $_response_object;
 }
 
@@ -2611,10 +2611,10 @@ sub dapps_uniswapv3_transactions_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv3_uniswap_day_data_current_get' } = {
         summary => 'GetUniswapDayData',
         params => $params,
-        returns => 'ARRAY[UniswapDayDataV3DTO]',
+        returns => 'ARRAY[UniswapV3UniswapDayDataV3DTO]',
         };
 }
-# @return ARRAY[UniswapDayDataV3DTO]
+# @return ARRAY[UniswapV3UniswapDayDataV3DTO]
 #
 sub dapps_uniswapv3_uniswap_day_data_current_get {
     my ($self, %args) = @_;
@@ -2645,7 +2645,7 @@ sub dapps_uniswapv3_uniswap_day_data_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapDayDataV3DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3UniswapDayDataV3DTO]', $response);
     return $_response_object;
 }
 

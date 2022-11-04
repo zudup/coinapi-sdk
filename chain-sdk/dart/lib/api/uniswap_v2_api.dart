@@ -677,7 +677,7 @@ class UniswapV2Api {
   ///
   /// * [String] filterPoolId:
   ///   Filter pool id
-  Future<List<PairV2DTO>?> dappsUniswapv2PoolsCurrentGet({ String? filterPoolId, }) async {
+  Future<List<UniswapV2PairV2DTO>?> dappsUniswapv2PoolsCurrentGet({ String? filterPoolId, }) async {
     final response = await dappsUniswapv2PoolsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -687,8 +687,8 @@ class UniswapV2Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PairV2DTO>') as List)
-        .cast<PairV2DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2PairV2DTO>') as List)
+        .cast<UniswapV2PairV2DTO>()
         .toList();
 
     }
@@ -795,7 +795,7 @@ class UniswapV2Api {
   }
 
   /// GetSwaps
-  Future<List<SwapV2DTO>?> dappsUniswapv2SwapsCurrentGet() async {
+  Future<List<UniswapV2SwapV2DTO>?> dappsUniswapv2SwapsCurrentGet() async {
     final response = await dappsUniswapv2SwapsCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -805,8 +805,8 @@ class UniswapV2Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SwapV2DTO>') as List)
-        .cast<SwapV2DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2SwapV2DTO>') as List)
+        .cast<UniswapV2SwapV2DTO>()
         .toList();
 
     }
@@ -984,7 +984,7 @@ class UniswapV2Api {
   }
 
   /// GetTokens
-  Future<List<TokenV2DTO>?> dappsUniswapv2TokensCurrentGet() async {
+  Future<List<UniswapV2TokenV2DTO>?> dappsUniswapv2TokensCurrentGet() async {
     final response = await dappsUniswapv2TokensCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -994,8 +994,8 @@ class UniswapV2Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenV2DTO>') as List)
-        .cast<TokenV2DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TokenV2DTO>') as List)
+        .cast<UniswapV2TokenV2DTO>()
         .toList();
 
     }

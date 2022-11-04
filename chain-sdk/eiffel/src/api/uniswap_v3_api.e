@@ -24,12 +24,12 @@ inherit
 feature -- API Access
 
 
-	dapps_uniswapv3_bundle_current_get : detachable LIST [BUNDLE_V3_DTO]
+	dapps_uniswapv3_bundle_current_get : detachable LIST [UNISWAP_V3_BUNDLE_V3_DTO]
 			-- GetBundles
 			-- 
 			-- 
 			-- 
-			-- Result LIST [BUNDLE_V3_DTO]
+			-- Result LIST [UNISWAP_V3_BUNDLE_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -50,7 +50,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [BUNDLE_V3_DTO] } l_response.data ({ LIST [BUNDLE_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_BUNDLE_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_BUNDLE_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -97,14 +97,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_burns_current_get (filter_pool_id: STRING_32): detachable LIST [BURN_V3_DTO]
+	dapps_uniswapv3_burns_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_BURN_V3_DTO]
 			-- GetBurns
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [BURN_V3_DTO]
+			-- Result LIST [UNISWAP_V3_BURN_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -126,7 +126,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [BURN_V3_DTO] } l_response.data ({ LIST [BURN_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_BURN_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_BURN_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -216,14 +216,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_factory_current_get (chain_id: STRING_32): detachable LIST [FACTORY_V3_DTO]
+	dapps_uniswapv3_factory_current_get (chain_id: STRING_32): detachable LIST [UNISWAP_V3_FACTORY_V3_DTO]
 			-- GetFactory
 			-- 
 			-- 
 			-- argument: chain_id  (required)
 			-- 
 			-- 
-			-- Result LIST [FACTORY_V3_DTO]
+			-- Result LIST [UNISWAP_V3_FACTORY_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -245,7 +245,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [FACTORY_V3_DTO] } l_response.data ({ LIST [FACTORY_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_FACTORY_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_FACTORY_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -292,14 +292,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_mints_current_get (filter_pool_id: STRING_32): detachable LIST [MINT_V3_DTO]
+	dapps_uniswapv3_mints_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_MINT_V3_DTO]
 			-- GetMints
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [MINT_V3_DTO]
+			-- Result LIST [UNISWAP_V3_MINT_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -321,7 +321,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [MINT_V3_DTO] } l_response.data ({ LIST [MINT_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_MINT_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_MINT_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -457,14 +457,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_pools_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_V3_DTO]
+	dapps_uniswapv3_pools_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_V3_DTO]
 			-- GetPools
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [POOL_V3_DTO]
+			-- Result LIST [UNISWAP_V3_POOL_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -486,21 +486,21 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [POOL_V3_DTO] } l_response.data ({ LIST [POOL_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_POOL_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_POOL_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_uniswapv3_pools_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_pools_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
 			-- GetPoolsDayData
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [POOL_DAY_DATA_V3_DTO]
+			-- Result LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -522,7 +522,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [POOL_DAY_DATA_V3_DTO] } l_response.data ({ LIST [POOL_DAY_DATA_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -572,14 +572,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id: STRING_32): detachable LIST [POOL_HOUR_DATA_V3_DTO]
+	dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
 			-- GetPoolsHourData
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [POOL_HOUR_DATA_V3_DTO]
+			-- Result LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -601,7 +601,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [POOL_HOUR_DATA_V3_DTO] } l_response.data ({ LIST [POOL_HOUR_DATA_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -651,14 +651,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_position_snapshots_current_get (filter_pool_id: STRING_32): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
+	dapps_uniswapv3_position_snapshots_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
 			-- GetPositionSnapshot
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [POSITION_SNAPSHOT_V3_DTO]
+			-- Result LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -680,21 +680,21 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [POSITION_SNAPSHOT_V3_DTO] } l_response.data ({ LIST [POSITION_SNAPSHOT_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_uniswapv3_positions_current_get (filter_pool_id: STRING_32): detachable LIST [POSITION_V3_DTO]
+	dapps_uniswapv3_positions_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_V3_DTO]
 			-- GetPositions
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [POSITION_V3_DTO]
+			-- Result LIST [UNISWAP_V3_POSITION_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -716,7 +716,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [POSITION_V3_DTO] } l_response.data ({ LIST [POSITION_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_POSITION_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_POSITION_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -766,14 +766,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_swaps_current_get (filter_pool_id: STRING_32): detachable LIST [SWAP_V3_DTO]
+	dapps_uniswapv3_swaps_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_SWAP_V3_DTO]
 			-- GetSwaps
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [SWAP_V3_DTO]
+			-- Result LIST [UNISWAP_V3_SWAP_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -795,7 +795,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [SWAP_V3_DTO] } l_response.data ({ LIST [SWAP_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_SWAP_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_SWAP_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -888,14 +888,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_ticks_current_get (filter_pool_id: STRING_32): detachable LIST [TICK_V3_DTO]
+	dapps_uniswapv3_ticks_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_V3_DTO]
 			-- GetTicks
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [TICK_V3_DTO]
+			-- Result LIST [UNISWAP_V3_TICK_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -917,21 +917,21 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TICK_V3_DTO] } l_response.data ({ LIST [TICK_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_TICK_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_TICK_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [TICK_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
 			-- GetTicksDayData
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [TICK_DAY_DATA_V3_DTO]
+			-- Result LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -953,7 +953,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TICK_DAY_DATA_V3_DTO] } l_response.data ({ LIST [TICK_DAY_DATA_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1089,14 +1089,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_tokens_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DTO]
+	dapps_uniswapv3_tokens_current_get (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DTO]
 			-- GetTokens
 			-- 
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [TOKEN_V3_DTO]
+			-- Result LIST [UNISWAP_V3_TOKEN_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -1118,21 +1118,21 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TOKEN_V3_DTO] } l_response.data ({ LIST [TOKEN_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_TOKEN_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_TOKEN_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_uniswapv3_tokens_day_data_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
+	dapps_uniswapv3_tokens_day_data_current_get (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
 			-- GetTokensDayData
 			-- 
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [TOKEN_V3_DAY_DATA_DTO]
+			-- Result LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
 		require
 		local
   			l_path: STRING
@@ -1154,7 +1154,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TOKEN_V3_DAY_DATA_DTO] } l_response.data ({ LIST [TOKEN_V3_DAY_DATA_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO] } l_response.data ({ LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1204,14 +1204,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id: STRING_32): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
+	dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
 			-- GetTokensHourData
 			-- 
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [TOKEN_HOUR_DATA_V3_DTO]
+			-- Result LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -1233,7 +1233,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TOKEN_HOUR_DATA_V3_DTO] } l_response.data ({ LIST [TOKEN_HOUR_DATA_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1280,12 +1280,12 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
+	dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
 			-- GetUniswapDayData
 			-- 
 			-- 
 			-- 
-			-- Result LIST [UNISWAP_DAY_DATA_V3_DTO]
+			-- Result LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
 		require
 		local
   			l_path: STRING
@@ -1306,7 +1306,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [UNISWAP_DAY_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_DAY_DATA_V3_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO] } l_response.data ({ LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")

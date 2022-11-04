@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.PairDTO
-import org.openapitools.client.models.SwapDTO
-import org.openapitools.client.models.TokenDTO
+import org.openapitools.client.models.SushiswapPairDTO
+import org.openapitools.client.models.SushiswapSwapDTO
+import org.openapitools.client.models.SushiswapTokenDTO
 
 import com.squareup.moshi.Json
 
@@ -986,7 +986,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetPools
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-     * @return kotlin.collections.List<PairDTO>
+     * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -995,11 +995,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapPoolsCurrentGet() : kotlin.collections.List<PairDTO> {
+    fun dappsSushiswapPoolsCurrentGet() : kotlin.collections.List<SushiswapPairDTO> {
         val localVarResponse = dappsSushiswapPoolsCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PairDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1016,16 +1016,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetPools
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-     * @return ApiResponse<kotlin.collections.List<PairDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapPoolsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<PairDTO>?> {
+    fun dappsSushiswapPoolsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairDTO>?> {
         val localVariableConfig = dappsSushiswapPoolsCurrentGetRequestConfig()
 
-        return request<Unit, kotlin.collections.List<PairDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapPairDTO>>(
             localVariableConfig
         )
     }
@@ -1058,7 +1058,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return kotlin.collections.List<PairDTO>
+     * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1067,11 +1067,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapPoolsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : kotlin.collections.List<PairDTO> {
+    fun dappsSushiswapPoolsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : kotlin.collections.List<SushiswapPairDTO> {
         val localVarResponse = dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<PairDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1093,16 +1093,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse<kotlin.collections.List<PairDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<kotlin.collections.List<PairDTO>?> {
+    fun dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairDTO>?> {
         val localVariableConfig = dappsSushiswapPoolsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
 
-        return request<Unit, kotlin.collections.List<PairDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapPairDTO>>(
             localVariableConfig
         )
     }
@@ -1152,7 +1152,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @return kotlin.collections.List<SwapDTO>
+     * @return kotlin.collections.List<SushiswapSwapDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1161,11 +1161,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapSwapsCurrentGet() : kotlin.collections.List<SwapDTO> {
+    fun dappsSushiswapSwapsCurrentGet() : kotlin.collections.List<SushiswapSwapDTO> {
         val localVarResponse = dappsSushiswapSwapsCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SwapDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapSwapDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1182,16 +1182,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetSwaps
      * 
-     * @return ApiResponse<kotlin.collections.List<SwapDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapSwapsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SwapDTO>?> {
+    fun dappsSushiswapSwapsCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?> {
         val localVariableConfig = dappsSushiswapSwapsCurrentGetRequestConfig()
 
-        return request<Unit, kotlin.collections.List<SwapDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapSwapDTO>>(
             localVariableConfig
         )
     }
@@ -1224,7 +1224,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return kotlin.collections.List<SwapDTO>
+     * @return kotlin.collections.List<SushiswapSwapDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1233,11 +1233,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapSwapsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : kotlin.collections.List<SwapDTO> {
+    fun dappsSushiswapSwapsHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, poolId: kotlin.String? = null) : kotlin.collections.List<SushiswapSwapDTO> {
         val localVarResponse = dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SwapDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapSwapDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1259,16 +1259,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse<kotlin.collections.List<SwapDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<kotlin.collections.List<SwapDTO>?> {
+    fun dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, poolId: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?> {
         val localVariableConfig = dappsSushiswapSwapsHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, poolId = poolId)
 
-        return request<Unit, kotlin.collections.List<SwapDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapSwapDTO>>(
             localVariableConfig
         )
     }
@@ -1414,7 +1414,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @return kotlin.collections.List<TokenDTO>
+     * @return kotlin.collections.List<SushiswapTokenDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1423,11 +1423,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapTokensCurrentGet() : kotlin.collections.List<TokenDTO> {
+    fun dappsSushiswapTokensCurrentGet() : kotlin.collections.List<SushiswapTokenDTO> {
         val localVarResponse = dappsSushiswapTokensCurrentGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<TokenDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1444,16 +1444,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * GetTokens
      * 
-     * @return ApiResponse<kotlin.collections.List<TokenDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapTokensCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<TokenDTO>?> {
+    fun dappsSushiswapTokensCurrentGetWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?> {
         val localVariableConfig = dappsSushiswapTokensCurrentGetRequestConfig()
 
-        return request<Unit, kotlin.collections.List<TokenDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapTokenDTO>>(
             localVariableConfig
         )
     }
@@ -1486,7 +1486,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
-     * @return kotlin.collections.List<TokenDTO>
+     * @return kotlin.collections.List<SushiswapTokenDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1495,11 +1495,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dappsSushiswapTokensHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, tokenId: kotlin.String? = null) : kotlin.collections.List<TokenDTO> {
+    fun dappsSushiswapTokensHistoricalGet(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, tokenId: kotlin.String? = null) : kotlin.collections.List<SushiswapTokenDTO> {
         val localVarResponse = dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<TokenDTO>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDTO>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1521,16 +1521,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
-     * @return ApiResponse<kotlin.collections.List<TokenDTO>?>
+     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : ApiResponse<kotlin.collections.List<TokenDTO>?> {
+    fun dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, tokenId: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?> {
         val localVariableConfig = dappsSushiswapTokensHistoricalGetRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, tokenId = tokenId)
 
-        return request<Unit, kotlin.collections.List<TokenDTO>>(
+        return request<Unit, kotlin.collections.List<SushiswapTokenDTO>>(
             localVariableConfig
         )
     }

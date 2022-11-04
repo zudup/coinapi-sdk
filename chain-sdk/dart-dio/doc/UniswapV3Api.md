@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 
 # **dappsUniswapv3BundleCurrentGet**
-> BuiltList<BundleV3DTO> dappsUniswapv3BundleCurrentGet()
+> BuiltList<UniswapV3BundleV3DTO> dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -68,7 +68,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;BundleV3DTO&gt;**](BundleV3DTO.md)
+[**BuiltList&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3BurnsCurrentGet**
-> BuiltList<BurnV3DTO> dappsUniswapv3BurnsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3BurnV3DTO> dappsUniswapv3BurnsCurrentGet(filterPoolId)
 
 GetBurns
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;BurnV3DTO&gt;**](BurnV3DTO.md)
+[**BuiltList&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3FactoryCurrentGet**
-> BuiltList<FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(chainId)
+> BuiltList<UniswapV3FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;FactoryV3DTO&gt;**](FactoryV3DTO.md)
+[**BuiltList&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -350,7 +350,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3MintsCurrentGet**
-> BuiltList<MintV3DTO> dappsUniswapv3MintsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3MintV3DTO> dappsUniswapv3MintsCurrentGet(filterPoolId)
 
 GetMints
 
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;MintV3DTO&gt;**](MintV3DTO.md)
+[**BuiltList&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -535,7 +535,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3PoolsCurrentGet**
-> BuiltList<PoolV3DTO> dappsUniswapv3PoolsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3PoolV3DTO> dappsUniswapv3PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PoolV3DTO&gt;**](PoolV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3PoolsDayDataCurrentGet**
-> BuiltList<PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
+> BuiltList<UniswapV3PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
 
 GetPoolsDayData
 
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PoolDayDataV3DTO&gt;**](PoolDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -665,7 +665,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3PoolsHourDataCurrentGet**
-> BuiltList<PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
+> BuiltList<UniswapV3PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
 
 GetPoolsHourData
 
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PoolHourDataV3DTO&gt;**](PoolHourDataV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -754,7 +754,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3PositionSnapshotsCurrentGet**
-> BuiltList<PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
 
 GetPositionSnapshot
 
@@ -781,7 +781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PositionSnapshotV3DTO&gt;**](PositionSnapshotV3DTO.md)
+[**BuiltList&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -795,7 +795,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3PositionsCurrentGet**
-> BuiltList<PositionV3DTO> dappsUniswapv3PositionsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3PositionV3DTO> dappsUniswapv3PositionsCurrentGet(filterPoolId)
 
 GetPositions
 
@@ -822,7 +822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PositionV3DTO&gt;**](PositionV3DTO.md)
+[**BuiltList&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -884,7 +884,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3SwapsCurrentGet**
-> BuiltList<SwapV3DTO> dappsUniswapv3SwapsCurrentGet(filterPoolId)
+> BuiltList<UniswapV3SwapV3DTO> dappsUniswapv3SwapsCurrentGet(filterPoolId)
 
 GetSwaps
 
@@ -911,7 +911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;SwapV3DTO&gt;**](SwapV3DTO.md)
+[**BuiltList&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1021,7 +1021,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3TicksCurrentGet**
-> BuiltList<TickV3DTO> dappsUniswapv3TicksCurrentGet(filterPoolId)
+> BuiltList<UniswapV3TickV3DTO> dappsUniswapv3TicksCurrentGet(filterPoolId)
 
 GetTicks
 
@@ -1048,7 +1048,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TickV3DTO&gt;**](TickV3DTO.md)
+[**BuiltList&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1062,7 +1062,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3TicksDayDataCurrentGet**
-> BuiltList<TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
+> BuiltList<UniswapV3TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
 
 GetTicksDayData
 
@@ -1089,7 +1089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TickDayDataV3DTO&gt;**](TickDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1247,7 +1247,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3TokensCurrentGet**
-> BuiltList<TokenV3DTO> dappsUniswapv3TokensCurrentGet(filterTokenId)
+> BuiltList<UniswapV3TokenV3DTO> dappsUniswapv3TokensCurrentGet(filterTokenId)
 
 GetTokens
 
@@ -1274,7 +1274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TokenV3DTO&gt;**](TokenV3DTO.md)
+[**BuiltList&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1288,7 +1288,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3TokensDayDataCurrentGet**
-> BuiltList<TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
+> BuiltList<UniswapV3TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
 
 GetTokensDayData
 
@@ -1315,7 +1315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TokenV3DayDataDTO&gt;**](TokenV3DayDataDTO.md)
+[**BuiltList&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1377,7 +1377,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3TokensHourDataCurrentGet**
-> BuiltList<TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
+> BuiltList<UniswapV3TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
 
 GetTokensHourData
 
@@ -1404,7 +1404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TokenHourDataV3DTO&gt;**](TokenHourDataV3DTO.md)
+[**BuiltList&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1464,7 +1464,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv3UniswapDayDataCurrentGet**
-> BuiltList<UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet()
+> BuiltList<UniswapV3UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -1487,7 +1487,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;UniswapDayDataV3DTO&gt;**](UniswapDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

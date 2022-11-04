@@ -16,9 +16,9 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_pair_dto = require "openapiclient.model.pair_dto"
-local openapiclient_swap_dto = require "openapiclient.model.swap_dto"
-local openapiclient_token_dto = require "openapiclient.model.token_dto"
+local openapiclient_sushiswap_pair_dto = require "openapiclient.model.sushiswap_pair_dto"
+local openapiclient_sushiswap_swap_dto = require "openapiclient.model.sushiswap_swap_dto"
+local openapiclient_sushiswap_token_dto = require "openapiclient.model.sushiswap_token_dto"
 
 local sushiswap_api = {}
 local sushiswap_api_mt = {
@@ -391,7 +391,7 @@ function sushiswap_api:dapps_sushiswap_pools_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pair_dto.cast(ob)
+			openapiclient_sushiswap_pair_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -440,7 +440,7 @@ function sushiswap_api:dapps_sushiswap_pools_historical_get(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pair_dto.cast(ob)
+			openapiclient_sushiswap_pair_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -489,7 +489,7 @@ function sushiswap_api:dapps_sushiswap_swaps_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_swap_dto.cast(ob)
+			openapiclient_sushiswap_swap_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -538,7 +538,7 @@ function sushiswap_api:dapps_sushiswap_swaps_historical_get(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_swap_dto.cast(ob)
+			openapiclient_sushiswap_swap_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -618,7 +618,7 @@ function sushiswap_api:dapps_sushiswap_tokens_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_dto.cast(ob)
+			openapiclient_sushiswap_token_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -667,7 +667,7 @@ function sushiswap_api:dapps_sushiswap_tokens_historical_get(start_block, end_bl
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_dto.cast(ob)
+			openapiclient_sushiswap_token_dto.cast(ob)
 		end
 		return result, headers
 	else

@@ -730,7 +730,7 @@ No authorization required
 
 ## DappsSushiswapPoolsCurrentGet
 
-> []PairDTO DappsSushiswapPoolsCurrentGet(ctx).Execute()
+> []SushiswapPairDTO DappsSushiswapPoolsCurrentGet(ctx).Execute()
 
 GetPools
 
@@ -757,7 +757,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoolsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapPoolsCurrentGet`: []PairDTO
+    // response from `DappsSushiswapPoolsCurrentGet`: []SushiswapPairDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapPoolsCurrentGet`: %v\n", resp)
 }
 ```
@@ -773,7 +773,7 @@ Other parameters are passed through a pointer to a apiDappsSushiswapPoolsCurrent
 
 ### Return type
 
-[**[]PairDTO**](PairDTO.md)
+[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -791,7 +791,7 @@ No authorization required
 
 ## DappsSushiswapPoolsHistoricalGet
 
-> []PairDTO DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+> []SushiswapPairDTO DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
 GetPools (historical)
 
@@ -822,7 +822,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoolsHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapPoolsHistoricalGet`: []PairDTO
+    // response from `DappsSushiswapPoolsHistoricalGet`: []SushiswapPairDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapPoolsHistoricalGet`: %v\n", resp)
 }
 ```
@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PairDTO**](PairDTO.md)
+[**[]SushiswapPairDTO**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -864,7 +864,7 @@ No authorization required
 
 ## DappsSushiswapSwapsCurrentGet
 
-> []SwapDTO DappsSushiswapSwapsCurrentGet(ctx).Execute()
+> []SushiswapSwapDTO DappsSushiswapSwapsCurrentGet(ctx).Execute()
 
 GetSwaps
 
@@ -889,7 +889,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapSwapsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapSwapsCurrentGet`: []SwapDTO
+    // response from `DappsSushiswapSwapsCurrentGet`: []SushiswapSwapDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapSwapsCurrentGet`: %v\n", resp)
 }
 ```
@@ -905,7 +905,7 @@ Other parameters are passed through a pointer to a apiDappsSushiswapSwapsCurrent
 
 ### Return type
 
-[**[]SwapDTO**](SwapDTO.md)
+[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -923,7 +923,7 @@ No authorization required
 
 ## DappsSushiswapSwapsHistoricalGet
 
-> []SwapDTO DappsSushiswapSwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+> []SushiswapSwapDTO DappsSushiswapSwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
 GetSwaps (historical)
 
@@ -954,7 +954,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapSwapsHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapSwapsHistoricalGet`: []SwapDTO
+    // response from `DappsSushiswapSwapsHistoricalGet`: []SushiswapSwapDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapSwapsHistoricalGet`: %v\n", resp)
 }
 ```
@@ -978,7 +978,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]SwapDTO**](SwapDTO.md)
+[**[]SushiswapSwapDTO**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1067,7 +1067,7 @@ No authorization required
 
 ## DappsSushiswapTokensCurrentGet
 
-> []TokenDTO DappsSushiswapTokensCurrentGet(ctx).Execute()
+> []SushiswapTokenDTO DappsSushiswapTokensCurrentGet(ctx).Execute()
 
 GetTokens
 
@@ -1092,7 +1092,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapTokensCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapTokensCurrentGet`: []TokenDTO
+    // response from `DappsSushiswapTokensCurrentGet`: []SushiswapTokenDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapTokensCurrentGet`: %v\n", resp)
 }
 ```
@@ -1108,7 +1108,7 @@ Other parameters are passed through a pointer to a apiDappsSushiswapTokensCurren
 
 ### Return type
 
-[**[]TokenDTO**](TokenDTO.md)
+[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1126,7 +1126,7 @@ No authorization required
 
 ## DappsSushiswapTokensHistoricalGet
 
-> []TokenDTO DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []SushiswapTokenDTO DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
 GetTokens (historical)
 
@@ -1157,7 +1157,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapTokensHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsSushiswapTokensHistoricalGet`: []TokenDTO
+    // response from `DappsSushiswapTokensHistoricalGet`: []SushiswapTokenDTO
     fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapTokensHistoricalGet`: %v\n", resp)
 }
 ```
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TokenDTO**](TokenDTO.md)
+[**[]SushiswapTokenDTO**](SushiswapTokenDTO.md)
 
 ### Authorization
 

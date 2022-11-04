@@ -14,23 +14,23 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.BundleV3DTO;
-import org.openapitools.client.model.BurnV3DTO;
-import org.openapitools.client.model.FactoryV3DTO;
-import org.openapitools.client.model.MintV3DTO;
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PoolDayDataV3DTO;
-import org.openapitools.client.model.PoolHourDataV3DTO;
-import org.openapitools.client.model.PoolV3DTO;
-import org.openapitools.client.model.PositionSnapshotV3DTO;
-import org.openapitools.client.model.PositionV3DTO;
-import org.openapitools.client.model.SwapV3DTO;
-import org.openapitools.client.model.TickDayDataV3DTO;
-import org.openapitools.client.model.TickV3DTO;
-import org.openapitools.client.model.TokenHourDataV3DTO;
-import org.openapitools.client.model.TokenV3DTO;
-import org.openapitools.client.model.TokenV3DayDataDTO;
-import org.openapitools.client.model.UniswapDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3BundleV3DTO;
+import org.openapitools.client.model.UniswapV3BurnV3DTO;
+import org.openapitools.client.model.UniswapV3FactoryV3DTO;
+import org.openapitools.client.model.UniswapV3MintV3DTO;
+import org.openapitools.client.model.UniswapV3PoolDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3PoolV3DTO;
+import org.openapitools.client.model.UniswapV3PositionSnapshotV3DTO;
+import org.openapitools.client.model.UniswapV3PositionV3DTO;
+import org.openapitools.client.model.UniswapV3SwapV3DTO;
+import org.openapitools.client.model.UniswapV3TickDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3TickV3DTO;
+import org.openapitools.client.model.UniswapV3TokenHourDataV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DTO;
+import org.openapitools.client.model.UniswapV3TokenV3DayDataDTO;
+import org.openapitools.client.model.UniswapV3UniswapDayDataV3DTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -54,7 +54,7 @@ public class UniswapV3ApiTest {
      */
     @Test
     public void dappsUniswapv3BundleCurrentGetTest() throws ApiException {
-        List<BundleV3DTO> response = api.dappsUniswapv3BundleCurrentGet();
+        List<UniswapV3BundleV3DTO> response = api.dappsUniswapv3BundleCurrentGet();
         // TODO: test validations
     }
 
@@ -79,7 +79,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3BurnsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<BurnV3DTO> response = api.dappsUniswapv3BurnsCurrentGet(filterPoolId);
+        List<UniswapV3BurnV3DTO> response = api.dappsUniswapv3BurnsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -118,7 +118,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3FactoryCurrentGetTest() throws ApiException {
         String chainId = null;
-        List<FactoryV3DTO> response = api.dappsUniswapv3FactoryCurrentGet(chainId);
+        List<UniswapV3FactoryV3DTO> response = api.dappsUniswapv3FactoryCurrentGet(chainId);
         // TODO: test validations
     }
 
@@ -143,7 +143,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3MintsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<MintV3DTO> response = api.dappsUniswapv3MintsCurrentGet(filterPoolId);
+        List<UniswapV3MintV3DTO> response = api.dappsUniswapv3MintsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -197,7 +197,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3PoolsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PoolV3DTO> response = api.dappsUniswapv3PoolsCurrentGet(filterPoolId);
+        List<UniswapV3PoolV3DTO> response = api.dappsUniswapv3PoolsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -209,7 +209,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3PoolsDayDataCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PoolDayDataV3DTO> response = api.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
+        List<UniswapV3PoolDayDataV3DTO> response = api.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -235,7 +235,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3PoolsHourDataCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PoolHourDataV3DTO> response = api.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
+        List<UniswapV3PoolHourDataV3DTO> response = api.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -261,7 +261,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3PositionSnapshotsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PositionSnapshotV3DTO> response = api.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
+        List<UniswapV3PositionSnapshotV3DTO> response = api.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -273,7 +273,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3PositionsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PositionV3DTO> response = api.dappsUniswapv3PositionsCurrentGet(filterPoolId);
+        List<UniswapV3PositionV3DTO> response = api.dappsUniswapv3PositionsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -299,7 +299,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3SwapsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<SwapV3DTO> response = api.dappsUniswapv3SwapsCurrentGet(filterPoolId);
+        List<UniswapV3SwapV3DTO> response = api.dappsUniswapv3SwapsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -339,7 +339,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3TicksCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<TickV3DTO> response = api.dappsUniswapv3TicksCurrentGet(filterPoolId);
+        List<UniswapV3TickV3DTO> response = api.dappsUniswapv3TicksCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -351,7 +351,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3TicksDayDataCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<TickDayDataV3DTO> response = api.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
+        List<UniswapV3TickDayDataV3DTO> response = api.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -405,7 +405,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3TokensCurrentGetTest() throws ApiException {
         String filterTokenId = null;
-        List<TokenV3DTO> response = api.dappsUniswapv3TokensCurrentGet(filterTokenId);
+        List<UniswapV3TokenV3DTO> response = api.dappsUniswapv3TokensCurrentGet(filterTokenId);
         // TODO: test validations
     }
 
@@ -417,7 +417,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3TokensDayDataCurrentGetTest() throws ApiException {
         String filterTokenId = null;
-        List<TokenV3DayDataDTO> response = api.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
+        List<UniswapV3TokenV3DayDataDTO> response = api.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
         // TODO: test validations
     }
 
@@ -443,7 +443,7 @@ public class UniswapV3ApiTest {
     @Test
     public void dappsUniswapv3TokensHourDataCurrentGetTest() throws ApiException {
         String filterTokenId = null;
-        List<TokenHourDataV3DTO> response = api.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
+        List<UniswapV3TokenHourDataV3DTO> response = api.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
         // TODO: test validations
     }
 
@@ -467,7 +467,7 @@ public class UniswapV3ApiTest {
      */
     @Test
     public void dappsUniswapv3UniswapDayDataCurrentGetTest() throws ApiException {
-        List<UniswapDayDataV3DTO> response = api.dappsUniswapv3UniswapDayDataCurrentGet();
+        List<UniswapV3UniswapDayDataV3DTO> response = api.dappsUniswapv3UniswapDayDataCurrentGet();
         // TODO: test validations
     }
 

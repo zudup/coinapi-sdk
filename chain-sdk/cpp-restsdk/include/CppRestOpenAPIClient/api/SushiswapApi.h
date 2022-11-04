@@ -23,9 +23,9 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
-#include "CppRestOpenAPIClient/model/PairDTO.h"
-#include "CppRestOpenAPIClient/model/SwapDTO.h"
-#include "CppRestOpenAPIClient/model/TokenDTO.h"
+#include "CppRestOpenAPIClient/model/SushiswapPairDTO.h"
+#include "CppRestOpenAPIClient/model/SushiswapSwapDTO.h"
+#include "CppRestOpenAPIClient/model/SushiswapTokenDTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -224,7 +224,7 @@ public:
     /// <remarks>
     /// Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<PairDTO>>> dappsSushiswapPoolsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> dappsSushiswapPoolsCurrentGet(
     ) const;
     /// <summary>
     /// GetPools (historical)
@@ -237,7 +237,7 @@ public:
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<PairDTO>>> dappsSushiswapPoolsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> dappsSushiswapPoolsHistoricalGet(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -250,7 +250,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<SwapDTO>>> dappsSushiswapSwapsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> dappsSushiswapSwapsCurrentGet(
     ) const;
     /// <summary>
     /// GetSwaps (historical)
@@ -263,7 +263,7 @@ public:
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<SwapDTO>>> dappsSushiswapSwapsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> dappsSushiswapSwapsHistoricalGet(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -294,7 +294,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<TokenDTO>>> dappsSushiswapTokensCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> dappsSushiswapTokensCurrentGet(
     ) const;
     /// <summary>
     /// GetTokens (historical)
@@ -307,7 +307,7 @@ public:
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<TokenDTO>>> dappsSushiswapTokensHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> dappsSushiswapTokensHistoricalGet(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

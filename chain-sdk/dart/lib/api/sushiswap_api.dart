@@ -731,7 +731,7 @@ class SushiswapApi {
   /// GetPools
   ///
   /// Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-  Future<List<PairDTO>?> dappsSushiswapPoolsCurrentGet() async {
+  Future<List<SushiswapPairDTO>?> dappsSushiswapPoolsCurrentGet() async {
     final response = await dappsSushiswapPoolsCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -741,8 +741,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PairDTO>') as List)
-        .cast<PairDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
+        .cast<SushiswapPairDTO>()
         .toList();
 
     }
@@ -818,7 +818,7 @@ class SushiswapApi {
   /// * [DateTime] endDate:
   ///
   /// * [String] poolId:
-  Future<List<PairDTO>?> dappsSushiswapPoolsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  Future<List<SushiswapPairDTO>?> dappsSushiswapPoolsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await dappsSushiswapPoolsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -828,8 +828,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<PairDTO>') as List)
-        .cast<PairDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapPairDTO>') as List)
+        .cast<SushiswapPairDTO>()
         .toList();
 
     }
@@ -865,7 +865,7 @@ class SushiswapApi {
   }
 
   /// GetSwaps
-  Future<List<SwapDTO>?> dappsSushiswapSwapsCurrentGet() async {
+  Future<List<SushiswapSwapDTO>?> dappsSushiswapSwapsCurrentGet() async {
     final response = await dappsSushiswapSwapsCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -875,8 +875,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SwapDTO>') as List)
-        .cast<SwapDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
+        .cast<SushiswapSwapDTO>()
         .toList();
 
     }
@@ -952,7 +952,7 @@ class SushiswapApi {
   /// * [DateTime] endDate:
   ///
   /// * [String] poolId:
-  Future<List<SwapDTO>?> dappsSushiswapSwapsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  Future<List<SushiswapSwapDTO>?> dappsSushiswapSwapsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await dappsSushiswapSwapsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -962,8 +962,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<SwapDTO>') as List)
-        .cast<SwapDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapSwapDTO>') as List)
+        .cast<SushiswapSwapDTO>()
         .toList();
 
     }
@@ -1070,7 +1070,7 @@ class SushiswapApi {
   }
 
   /// GetTokens
-  Future<List<TokenDTO>?> dappsSushiswapTokensCurrentGet() async {
+  Future<List<SushiswapTokenDTO>?> dappsSushiswapTokensCurrentGet() async {
     final response = await dappsSushiswapTokensCurrentGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1080,8 +1080,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenDTO>') as List)
-        .cast<TokenDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
+        .cast<SushiswapTokenDTO>()
         .toList();
 
     }
@@ -1157,7 +1157,7 @@ class SushiswapApi {
   /// * [DateTime] endDate:
   ///
   /// * [String] tokenId:
-  Future<List<TokenDTO>?> dappsSushiswapTokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  Future<List<SushiswapTokenDTO>?> dappsSushiswapTokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     final response = await dappsSushiswapTokensHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1167,8 +1167,8 @@ class SushiswapApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<TokenDTO>') as List)
-        .cast<TokenDTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<SushiswapTokenDTO>') as List)
+        .cast<SushiswapTokenDTO>()
         .toList();
 
     }

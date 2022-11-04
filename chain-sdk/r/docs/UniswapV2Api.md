@@ -451,7 +451,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv2PoolsCurrentGet**
-> array[PairV2DTO] DappsUniswapv2PoolsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV2PairV2DTO] DappsUniswapv2PoolsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPools
 
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PairV2DTO]**](PairV2DTO.md)
+[**array[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -544,7 +544,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv2SwapsCurrentGet**
-> array[SwapV2DTO] DappsUniswapv2SwapsCurrentGet()
+> array[UniswapV2SwapV2DTO] DappsUniswapv2SwapsCurrentGet()
 
 GetSwaps
 
@@ -567,7 +567,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[SwapV2DTO]**](SwapV2DTO.md)
+[**array[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -680,7 +680,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv2TokensCurrentGet**
-> array[TokenV2DTO] DappsUniswapv2TokensCurrentGet()
+> array[UniswapV2TokenV2DTO] DappsUniswapv2TokensCurrentGet()
 
 GetTokens
 
@@ -703,7 +703,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[TokenV2DTO]**](TokenV2DTO.md)
+[**array[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

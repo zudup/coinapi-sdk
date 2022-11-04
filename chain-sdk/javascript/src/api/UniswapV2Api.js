@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import PairV2DTO from '../model/PairV2DTO';
-import SwapV2DTO from '../model/SwapV2DTO';
-import TokenV2DTO from '../model/TokenV2DTO';
+import UniswapV2PairV2DTO from '../model/UniswapV2PairV2DTO';
+import UniswapV2SwapV2DTO from '../model/UniswapV2SwapV2DTO';
+import UniswapV2TokenV2DTO from '../model/UniswapV2TokenV2DTO';
 
 /**
 * UniswapV2 service.
@@ -448,7 +448,7 @@ export default class UniswapV2Api {
      * Callback function to receive the result of the dappsUniswapv2PoolsCurrentGet operation.
      * @callback module:api/UniswapV2Api~dappsUniswapv2PoolsCurrentGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/PairV2DTO>} data The data returned by the service call.
+     * @param {Array.<module:model/UniswapV2PairV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -457,7 +457,7 @@ export default class UniswapV2Api {
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId Filter pool id
      * @param {module:api/UniswapV2Api~dappsUniswapv2PoolsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/PairV2DTO>}
+     * data is of type: {@link Array.<module:model/UniswapV2PairV2DTO>}
      */
     dappsUniswapv2PoolsCurrentGet(opts, callback) {
       opts = opts || {};
@@ -476,7 +476,7 @@ export default class UniswapV2Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [PairV2DTO];
+      let returnType = [UniswapV2PairV2DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv2/pools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -534,14 +534,14 @@ export default class UniswapV2Api {
      * Callback function to receive the result of the dappsUniswapv2SwapsCurrentGet operation.
      * @callback module:api/UniswapV2Api~dappsUniswapv2SwapsCurrentGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SwapV2DTO>} data The data returned by the service call.
+     * @param {Array.<module:model/UniswapV2SwapV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * GetSwaps
      * @param {module:api/UniswapV2Api~dappsUniswapv2SwapsCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SwapV2DTO>}
+     * data is of type: {@link Array.<module:model/UniswapV2SwapV2DTO>}
      */
     dappsUniswapv2SwapsCurrentGet(callback) {
       let postBody = null;
@@ -558,7 +558,7 @@ export default class UniswapV2Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [SwapV2DTO];
+      let returnType = [UniswapV2SwapV2DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv2/swaps/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -662,14 +662,14 @@ export default class UniswapV2Api {
      * Callback function to receive the result of the dappsUniswapv2TokensCurrentGet operation.
      * @callback module:api/UniswapV2Api~dappsUniswapv2TokensCurrentGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TokenV2DTO>} data The data returned by the service call.
+     * @param {Array.<module:model/UniswapV2TokenV2DTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * GetTokens
      * @param {module:api/UniswapV2Api~dappsUniswapv2TokensCurrentGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TokenV2DTO>}
+     * data is of type: {@link Array.<module:model/UniswapV2TokenV2DTO>}
      */
     dappsUniswapv2TokensCurrentGet(callback) {
       let postBody = null;
@@ -686,7 +686,7 @@ export default class UniswapV2Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [TokenV2DTO];
+      let returnType = [UniswapV2TokenV2DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv2/tokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -71,7 +71,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsUniswapv3BundleCurrentGet();
-            //Assert.IsInstanceOf(typeof(List<BundleV3DTO>), response, "response is List<BundleV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3BundleV3DTO>), response, "response is List<UniswapV3BundleV3DTO>");
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3BurnsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<BurnV3DTO>), response, "response is List<BurnV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3BurnV3DTO>), response, "response is List<UniswapV3BurnV3DTO>");
         }
         
         /// <summary>
@@ -141,7 +141,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string chainId = null;
             //var response = instance.DappsUniswapv3FactoryCurrentGet(chainId);
-            //Assert.IsInstanceOf(typeof(List<FactoryV3DTO>), response, "response is List<FactoryV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3FactoryV3DTO>), response, "response is List<UniswapV3FactoryV3DTO>");
         }
         
         /// <summary>
@@ -168,7 +168,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3MintsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<MintV3DTO>), response, "response is List<MintV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3MintV3DTO>), response, "response is List<UniswapV3MintV3DTO>");
         }
         
         /// <summary>
@@ -228,7 +228,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<PoolV3DTO>), response, "response is List<PoolV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolV3DTO>), response, "response is List<UniswapV3PoolV3DTO>");
         }
         
         /// <summary>
@@ -240,7 +240,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<PoolDayDataV3DTO>), response, "response is List<PoolDayDataV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolDayDataV3DTO>), response, "response is List<UniswapV3PoolDayDataV3DTO>");
         }
         
         /// <summary>
@@ -268,7 +268,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<PoolHourDataV3DTO>), response, "response is List<PoolHourDataV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolHourDataV3DTO>), response, "response is List<UniswapV3PoolHourDataV3DTO>");
         }
         
         /// <summary>
@@ -296,7 +296,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<PositionSnapshotV3DTO>), response, "response is List<PositionSnapshotV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3PositionSnapshotV3DTO>), response, "response is List<UniswapV3PositionSnapshotV3DTO>");
         }
         
         /// <summary>
@@ -308,7 +308,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PositionsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<PositionV3DTO>), response, "response is List<PositionV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3PositionV3DTO>), response, "response is List<UniswapV3PositionV3DTO>");
         }
         
         /// <summary>
@@ -336,7 +336,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3SwapsCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<SwapV3DTO>), response, "response is List<SwapV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3SwapV3DTO>), response, "response is List<UniswapV3SwapV3DTO>");
         }
         
         /// <summary>
@@ -380,7 +380,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3TicksCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<TickV3DTO>), response, "response is List<TickV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3TickV3DTO>), response, "response is List<UniswapV3TickV3DTO>");
         }
         
         /// <summary>
@@ -392,7 +392,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<TickDayDataV3DTO>), response, "response is List<TickDayDataV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3TickDayDataV3DTO>), response, "response is List<UniswapV3TickDayDataV3DTO>");
         }
         
         /// <summary>
@@ -452,7 +452,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensCurrentGet(filterTokenId);
-            //Assert.IsInstanceOf(typeof(List<TokenV3DTO>), response, "response is List<TokenV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenV3DTO>), response, "response is List<UniswapV3TokenV3DTO>");
         }
         
         /// <summary>
@@ -464,7 +464,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
-            //Assert.IsInstanceOf(typeof(List<TokenV3DayDataDTO>), response, "response is List<TokenV3DayDataDTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenV3DayDataDTO>), response, "response is List<UniswapV3TokenV3DayDataDTO>");
         }
         
         /// <summary>
@@ -492,7 +492,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
-            //Assert.IsInstanceOf(typeof(List<TokenHourDataV3DTO>), response, "response is List<TokenHourDataV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenHourDataV3DTO>), response, "response is List<UniswapV3TokenHourDataV3DTO>");
         }
         
         /// <summary>
@@ -518,7 +518,7 @@ namespace CoinAPI.EMS.REST.V1.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsUniswapv3UniswapDayDataCurrentGet();
-            //Assert.IsInstanceOf(typeof(List<UniswapDayDataV3DTO>), response, "response is List<UniswapDayDataV3DTO>");
+            //Assert.IsInstanceOf(typeof(List<UniswapV3UniswapDayDataV3DTO>), response, "response is List<UniswapV3UniswapDayDataV3DTO>");
         }
         
     }

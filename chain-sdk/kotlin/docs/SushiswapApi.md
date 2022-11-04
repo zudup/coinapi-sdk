@@ -539,7 +539,7 @@ No authorization required
 
 <a name="dappsSushiswapPoolsCurrentGet"></a>
 # **dappsSushiswapPoolsCurrentGet**
-> kotlin.collections.List&lt;PairDTO&gt; dappsSushiswapPoolsCurrentGet()
+> kotlin.collections.List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -553,7 +553,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<PairDTO> = apiInstance.dappsSushiswapPoolsCurrentGet()
+    val result : kotlin.collections.List<SushiswapPairDTO> = apiInstance.dappsSushiswapPoolsCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapPoolsCurrentGet")
@@ -569,7 +569,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;PairDTO&gt;**](PairDTO.md)
+[**kotlin.collections.List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ No authorization required
 
 <a name="dappsSushiswapPoolsHistoricalGet"></a>
 # **dappsSushiswapPoolsHistoricalGet**
-> kotlin.collections.List&lt;PairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> kotlin.collections.List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetPools (historical)
 
@@ -599,7 +599,7 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<PairDTO> = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<SushiswapPairDTO> = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapPoolsHistoricalGet")
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PairDTO&gt;**](PairDTO.md)
+[**kotlin.collections.List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -635,7 +635,7 @@ No authorization required
 
 <a name="dappsSushiswapSwapsCurrentGet"></a>
 # **dappsSushiswapSwapsCurrentGet**
-> kotlin.collections.List&lt;SwapDTO&gt; dappsSushiswapSwapsCurrentGet()
+> kotlin.collections.List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -647,7 +647,7 @@ GetSwaps
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SwapDTO> = apiInstance.dappsSushiswapSwapsCurrentGet()
+    val result : kotlin.collections.List<SushiswapSwapDTO> = apiInstance.dappsSushiswapSwapsCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapSwapsCurrentGet")
@@ -663,7 +663,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**kotlin.collections.List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ No authorization required
 
 <a name="dappsSushiswapSwapsHistoricalGet"></a>
 # **dappsSushiswapSwapsHistoricalGet**
-> kotlin.collections.List&lt;SwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> kotlin.collections.List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetSwaps (historical)
 
@@ -693,7 +693,7 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<SwapDTO> = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<SushiswapSwapDTO> = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapSwapsHistoricalGet")
@@ -716,7 +716,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**kotlin.collections.List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -781,7 +781,7 @@ No authorization required
 
 <a name="dappsSushiswapTokensCurrentGet"></a>
 # **dappsSushiswapTokensCurrentGet**
-> kotlin.collections.List&lt;TokenDTO&gt; dappsSushiswapTokensCurrentGet()
+> kotlin.collections.List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -793,7 +793,7 @@ GetTokens
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<TokenDTO> = apiInstance.dappsSushiswapTokensCurrentGet()
+    val result : kotlin.collections.List<SushiswapTokenDTO> = apiInstance.dappsSushiswapTokensCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapTokensCurrentGet")
@@ -809,7 +809,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**kotlin.collections.List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -822,7 +822,7 @@ No authorization required
 
 <a name="dappsSushiswapTokensHistoricalGet"></a>
 # **dappsSushiswapTokensHistoricalGet**
-> kotlin.collections.List&lt;TokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> kotlin.collections.List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
 
 GetTokens (historical)
 
@@ -839,7 +839,7 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenDTO> = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<SushiswapTokenDTO> = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling SushiswapApi#dappsSushiswapTokensHistoricalGet")
@@ -862,7 +862,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**kotlin.collections.List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

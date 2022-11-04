@@ -1,29 +1,29 @@
 import localVarRequest from 'request';
 
-export * from './bigInteger';
-export * from './bundleV3DTO';
-export * from './burnV3DTO';
-export * from './eTradeAggressiveSide';
-export * from './factoryV3DTO';
-export * from './mintV3DTO';
-export * from './pairDTO';
-export * from './pairV2DTO';
-export * from './poolDayDataV3DTO';
-export * from './poolHourDataV3DTO';
-export * from './poolV3DTO';
-export * from './positionSnapshotV3DTO';
-export * from './positionV3DTO';
-export * from './swapDTO';
-export * from './swapV2DTO';
-export * from './swapV3DTO';
-export * from './tickDayDataV3DTO';
-export * from './tickV3DTO';
-export * from './tokenDTO';
-export * from './tokenHourDataV3DTO';
-export * from './tokenV2DTO';
-export * from './tokenV3DTO';
-export * from './tokenV3DayDataDTO';
-export * from './uniswapDayDataV3DTO';
+export * from './numericsBigInteger';
+export * from './sushiswapPairDTO';
+export * from './sushiswapSwapDTO';
+export * from './sushiswapTokenDTO';
+export * from './transactionsETradeAggressiveSide';
+export * from './uniswapV2PairV2DTO';
+export * from './uniswapV2SwapV2DTO';
+export * from './uniswapV2TokenV2DTO';
+export * from './uniswapV3BundleV3DTO';
+export * from './uniswapV3BurnV3DTO';
+export * from './uniswapV3FactoryV3DTO';
+export * from './uniswapV3MintV3DTO';
+export * from './uniswapV3PoolDayDataV3DTO';
+export * from './uniswapV3PoolHourDataV3DTO';
+export * from './uniswapV3PoolV3DTO';
+export * from './uniswapV3PositionSnapshotV3DTO';
+export * from './uniswapV3PositionV3DTO';
+export * from './uniswapV3SwapV3DTO';
+export * from './uniswapV3TickDayDataV3DTO';
+export * from './uniswapV3TickV3DTO';
+export * from './uniswapV3TokenHourDataV3DTO';
+export * from './uniswapV3TokenV3DTO';
+export * from './uniswapV3TokenV3DayDataDTO';
+export * from './uniswapV3UniswapDayDataV3DTO';
 
 import * as fs from 'fs';
 
@@ -38,30 +38,30 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { BigInteger } from './bigInteger';
-import { BundleV3DTO } from './bundleV3DTO';
-import { BurnV3DTO } from './burnV3DTO';
-import { ETradeAggressiveSide } from './eTradeAggressiveSide';
-import { FactoryV3DTO } from './factoryV3DTO';
-import { MintV3DTO } from './mintV3DTO';
-import { PairDTO } from './pairDTO';
-import { PairV2DTO } from './pairV2DTO';
-import { PoolDayDataV3DTO } from './poolDayDataV3DTO';
-import { PoolHourDataV3DTO } from './poolHourDataV3DTO';
-import { PoolV3DTO } from './poolV3DTO';
-import { PositionSnapshotV3DTO } from './positionSnapshotV3DTO';
-import { PositionV3DTO } from './positionV3DTO';
-import { SwapDTO } from './swapDTO';
-import { SwapV2DTO } from './swapV2DTO';
-import { SwapV3DTO } from './swapV3DTO';
-import { TickDayDataV3DTO } from './tickDayDataV3DTO';
-import { TickV3DTO } from './tickV3DTO';
-import { TokenDTO } from './tokenDTO';
-import { TokenHourDataV3DTO } from './tokenHourDataV3DTO';
-import { TokenV2DTO } from './tokenV2DTO';
-import { TokenV3DTO } from './tokenV3DTO';
-import { TokenV3DayDataDTO } from './tokenV3DayDataDTO';
-import { UniswapDayDataV3DTO } from './uniswapDayDataV3DTO';
+import { NumericsBigInteger } from './numericsBigInteger';
+import { SushiswapPairDTO } from './sushiswapPairDTO';
+import { SushiswapSwapDTO } from './sushiswapSwapDTO';
+import { SushiswapTokenDTO } from './sushiswapTokenDTO';
+import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
+import { UniswapV2PairV2DTO } from './uniswapV2PairV2DTO';
+import { UniswapV2SwapV2DTO } from './uniswapV2SwapV2DTO';
+import { UniswapV2TokenV2DTO } from './uniswapV2TokenV2DTO';
+import { UniswapV3BundleV3DTO } from './uniswapV3BundleV3DTO';
+import { UniswapV3BurnV3DTO } from './uniswapV3BurnV3DTO';
+import { UniswapV3FactoryV3DTO } from './uniswapV3FactoryV3DTO';
+import { UniswapV3MintV3DTO } from './uniswapV3MintV3DTO';
+import { UniswapV3PoolDayDataV3DTO } from './uniswapV3PoolDayDataV3DTO';
+import { UniswapV3PoolHourDataV3DTO } from './uniswapV3PoolHourDataV3DTO';
+import { UniswapV3PoolV3DTO } from './uniswapV3PoolV3DTO';
+import { UniswapV3PositionSnapshotV3DTO } from './uniswapV3PositionSnapshotV3DTO';
+import { UniswapV3PositionV3DTO } from './uniswapV3PositionV3DTO';
+import { UniswapV3SwapV3DTO } from './uniswapV3SwapV3DTO';
+import { UniswapV3TickDayDataV3DTO } from './uniswapV3TickDayDataV3DTO';
+import { UniswapV3TickV3DTO } from './uniswapV3TickV3DTO';
+import { UniswapV3TokenHourDataV3DTO } from './uniswapV3TokenHourDataV3DTO';
+import { UniswapV3TokenV3DTO } from './uniswapV3TokenV3DTO';
+import { UniswapV3TokenV3DayDataDTO } from './uniswapV3TokenV3DayDataDTO';
+import { UniswapV3UniswapDayDataV3DTO } from './uniswapV3UniswapDayDataV3DTO';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -76,33 +76,33 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "ETradeAggressiveSide": ETradeAggressiveSide,
+        "TransactionsETradeAggressiveSide": TransactionsETradeAggressiveSide,
 }
 
 let typeMap: {[index: string]: any} = {
-    "BigInteger": BigInteger,
-    "BundleV3DTO": BundleV3DTO,
-    "BurnV3DTO": BurnV3DTO,
-    "FactoryV3DTO": FactoryV3DTO,
-    "MintV3DTO": MintV3DTO,
-    "PairDTO": PairDTO,
-    "PairV2DTO": PairV2DTO,
-    "PoolDayDataV3DTO": PoolDayDataV3DTO,
-    "PoolHourDataV3DTO": PoolHourDataV3DTO,
-    "PoolV3DTO": PoolV3DTO,
-    "PositionSnapshotV3DTO": PositionSnapshotV3DTO,
-    "PositionV3DTO": PositionV3DTO,
-    "SwapDTO": SwapDTO,
-    "SwapV2DTO": SwapV2DTO,
-    "SwapV3DTO": SwapV3DTO,
-    "TickDayDataV3DTO": TickDayDataV3DTO,
-    "TickV3DTO": TickV3DTO,
-    "TokenDTO": TokenDTO,
-    "TokenHourDataV3DTO": TokenHourDataV3DTO,
-    "TokenV2DTO": TokenV2DTO,
-    "TokenV3DTO": TokenV3DTO,
-    "TokenV3DayDataDTO": TokenV3DayDataDTO,
-    "UniswapDayDataV3DTO": UniswapDayDataV3DTO,
+    "NumericsBigInteger": NumericsBigInteger,
+    "SushiswapPairDTO": SushiswapPairDTO,
+    "SushiswapSwapDTO": SushiswapSwapDTO,
+    "SushiswapTokenDTO": SushiswapTokenDTO,
+    "UniswapV2PairV2DTO": UniswapV2PairV2DTO,
+    "UniswapV2SwapV2DTO": UniswapV2SwapV2DTO,
+    "UniswapV2TokenV2DTO": UniswapV2TokenV2DTO,
+    "UniswapV3BundleV3DTO": UniswapV3BundleV3DTO,
+    "UniswapV3BurnV3DTO": UniswapV3BurnV3DTO,
+    "UniswapV3FactoryV3DTO": UniswapV3FactoryV3DTO,
+    "UniswapV3MintV3DTO": UniswapV3MintV3DTO,
+    "UniswapV3PoolDayDataV3DTO": UniswapV3PoolDayDataV3DTO,
+    "UniswapV3PoolHourDataV3DTO": UniswapV3PoolHourDataV3DTO,
+    "UniswapV3PoolV3DTO": UniswapV3PoolV3DTO,
+    "UniswapV3PositionSnapshotV3DTO": UniswapV3PositionSnapshotV3DTO,
+    "UniswapV3PositionV3DTO": UniswapV3PositionV3DTO,
+    "UniswapV3SwapV3DTO": UniswapV3SwapV3DTO,
+    "UniswapV3TickDayDataV3DTO": UniswapV3TickDayDataV3DTO,
+    "UniswapV3TickV3DTO": UniswapV3TickV3DTO,
+    "UniswapV3TokenHourDataV3DTO": UniswapV3TokenHourDataV3DTO,
+    "UniswapV3TokenV3DTO": UniswapV3TokenV3DTO,
+    "UniswapV3TokenV3DayDataDTO": UniswapV3TokenV3DayDataDTO,
+    "UniswapV3UniswapDayDataV3DTO": UniswapV3UniswapDayDataV3DTO,
 }
 
 export class ObjectSerializer {

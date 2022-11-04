@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.swap_dto import SwapDTO
+from openapi_client.model.sushiswap_swap_dto import SushiswapSwapDTO
 
 from . import path
 
@@ -39,12 +39,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['SwapDTO']:
-            return SwapDTO
+        def items() -> typing.Type['SushiswapSwapDTO']:
+            return SushiswapSwapDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['SwapDTO'], typing.List['SwapDTO']],
+        arg: typing.Union[typing.Tuple['SushiswapSwapDTO'], typing.List['SushiswapSwapDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -53,7 +53,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'SwapDTO':
+    def __getitem__(self, i: int) -> 'SushiswapSwapDTO':
         return super().__getitem__(i)
 
 
@@ -65,12 +65,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['SwapDTO']:
-            return SwapDTO
+        def items() -> typing.Type['SushiswapSwapDTO']:
+            return SushiswapSwapDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['SwapDTO'], typing.List['SwapDTO']],
+        arg: typing.Union[typing.Tuple['SushiswapSwapDTO'], typing.List['SushiswapSwapDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -79,7 +79,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'SwapDTO':
+    def __getitem__(self, i: int) -> 'SushiswapSwapDTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +91,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['SwapDTO']:
-            return SwapDTO
+        def items() -> typing.Type['SushiswapSwapDTO']:
+            return SushiswapSwapDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['SwapDTO'], typing.List['SwapDTO']],
+        arg: typing.Union[typing.Tuple['SushiswapSwapDTO'], typing.List['SushiswapSwapDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -105,7 +105,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'SwapDTO':
+    def __getitem__(self, i: int) -> 'SushiswapSwapDTO':
         return super().__getitem__(i)
 
 

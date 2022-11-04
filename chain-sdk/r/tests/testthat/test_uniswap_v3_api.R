@@ -9,7 +9,7 @@ test_that("DappsUniswapv3BundleCurrentGet", {
   # tests for DappsUniswapv3BundleCurrentGet
   # base path: https://onchain.coinapi.io
   # GetBundles
-  # @return [array[BundleV3DTO]]
+  # @return [array[UniswapV3BundleV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -33,7 +33,7 @@ test_that("DappsUniswapv3BurnsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetBurns
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[BurnV3DTO]]
+  # @return [array[UniswapV3BurnV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -71,7 +71,7 @@ test_that("DappsUniswapv3FactoryCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetFactory
   # @param chain_id character 
-  # @return [array[FactoryV3DTO]]
+  # @return [array[UniswapV3FactoryV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -95,7 +95,7 @@ test_that("DappsUniswapv3MintsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetMints
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[MintV3DTO]]
+  # @return [array[UniswapV3MintV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -148,7 +148,7 @@ test_that("DappsUniswapv3PoolsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPools
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PoolV3DTO]]
+  # @return [array[UniswapV3PoolV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -159,7 +159,7 @@ test_that("DappsUniswapv3PoolsDayDataCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPoolsDayData
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PoolDayDataV3DTO]]
+  # @return [array[UniswapV3PoolDayDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -184,7 +184,7 @@ test_that("DappsUniswapv3PoolsHourDataCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPoolsHourData
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PoolHourDataV3DTO]]
+  # @return [array[UniswapV3PoolHourDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -209,7 +209,7 @@ test_that("DappsUniswapv3PositionSnapshotsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPositionSnapshot
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PositionSnapshotV3DTO]]
+  # @return [array[UniswapV3PositionSnapshotV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -220,7 +220,7 @@ test_that("DappsUniswapv3PositionsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPositions
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PositionV3DTO]]
+  # @return [array[UniswapV3PositionV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -245,7 +245,7 @@ test_that("DappsUniswapv3SwapsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetSwaps
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[SwapV3DTO]]
+  # @return [array[UniswapV3SwapV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -284,7 +284,7 @@ test_that("DappsUniswapv3TicksCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetTicks
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[TickV3DTO]]
+  # @return [array[UniswapV3TickV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -295,7 +295,7 @@ test_that("DappsUniswapv3TicksDayDataCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetTicksDayData
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[TickDayDataV3DTO]]
+  # @return [array[UniswapV3TickDayDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -348,7 +348,7 @@ test_that("DappsUniswapv3TokensCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetTokens
   # @param filter_token_id character  (optional)
-  # @return [array[TokenV3DTO]]
+  # @return [array[UniswapV3TokenV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -359,7 +359,7 @@ test_that("DappsUniswapv3TokensDayDataCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetTokensDayData
   # @param filter_token_id character  (optional)
-  # @return [array[TokenV3DayDataDTO]]
+  # @return [array[UniswapV3TokenV3DayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -384,7 +384,7 @@ test_that("DappsUniswapv3TokensHourDataCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetTokensHourData
   # @param filter_token_id character  (optional)
-  # @return [array[TokenHourDataV3DTO]]
+  # @return [array[UniswapV3TokenHourDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -407,7 +407,7 @@ test_that("DappsUniswapv3UniswapDayDataCurrentGet", {
   # tests for DappsUniswapv3UniswapDayDataCurrentGet
   # base path: https://onchain.coinapi.io
   # GetUniswapDayData
-  # @return [array[UniswapDayDataV3DTO]]
+  # @return [array[UniswapV3UniswapDayDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

@@ -456,7 +456,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv2PoolsCurrentGet**
-> BuiltList<PairV2DTO> dappsUniswapv2PoolsCurrentGet(filterPoolId)
+> BuiltList<UniswapV2PairV2DTO> dappsUniswapv2PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;PairV2DTO&gt;**](PairV2DTO.md)
+[**BuiltList&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv2SwapsCurrentGet**
-> BuiltList<SwapV2DTO> dappsUniswapv2SwapsCurrentGet()
+> BuiltList<UniswapV2SwapV2DTO> dappsUniswapv2SwapsCurrentGet()
 
 GetSwaps
 
@@ -568,7 +568,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;SwapV2DTO&gt;**](SwapV2DTO.md)
+[**BuiltList&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dappsUniswapv2TokensCurrentGet**
-> BuiltList<TokenV2DTO> dappsUniswapv2TokensCurrentGet()
+> BuiltList<UniswapV2TokenV2DTO> dappsUniswapv2TokensCurrentGet()
 
 GetTokens
 
@@ -701,7 +701,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;TokenV2DTO&gt;**](TokenV2DTO.md)
+[**BuiltList&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

@@ -342,7 +342,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_pools_current_get**
-> dapps_sushiswap_pools_current_get : detachable LIST [PAIR_DTO]
+> dapps_sushiswap_pools_current_get : detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
 GetPools
@@ -355,7 +355,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [PAIR_DTO]**](PairDTO.md)
+[**LIST [SUSHISWAP_PAIR_DTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_pools_historical_get**
-> dapps_sushiswap_pools_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [PAIR_DTO]
+> dapps_sushiswap_pools_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
 GetPools (historical)
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [PAIR_DTO]**](PairDTO.md)
+[**LIST [SUSHISWAP_PAIR_DTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_swaps_current_get**
-> dapps_sushiswap_swaps_current_get : detachable LIST [SWAP_DTO]
+> dapps_sushiswap_swaps_current_get : detachable LIST [SUSHISWAP_SWAP_DTO]
 
 
 GetSwaps
@@ -412,7 +412,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SWAP_DTO]**](SwapDTO.md)
+[**LIST [SUSHISWAP_SWAP_DTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -426,7 +426,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_swaps_historical_get**
-> dapps_sushiswap_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SWAP_DTO]
+> dapps_sushiswap_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_SWAP_DTO]
 
 
 GetSwaps (historical)
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [SWAP_DTO]**](SwapDTO.md)
+[**LIST [SUSHISWAP_SWAP_DTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_tokens_current_get**
-> dapps_sushiswap_tokens_current_get : detachable LIST [TOKEN_DTO]
+> dapps_sushiswap_tokens_current_get : detachable LIST [SUSHISWAP_TOKEN_DTO]
 
 
 GetTokens
@@ -501,7 +501,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [TOKEN_DTO]**](TokenDTO.md)
+[**LIST [SUSHISWAP_TOKEN_DTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -515,7 +515,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_tokens_historical_get**
-> dapps_sushiswap_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [TOKEN_DTO]
+> dapps_sushiswap_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DTO]
 
 
 GetTokens (historical)
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TOKEN_DTO]**](TokenDTO.md)
+[**LIST [SUSHISWAP_TOKEN_DTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 

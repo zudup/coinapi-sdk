@@ -928,7 +928,7 @@ No authorization required
 
 <a name="dappssushiswappoolscurrentget"></a>
 # **DappsSushiswapPoolsCurrentGet**
-> List&lt;PairDTO&gt; DappsSushiswapPoolsCurrentGet ()
+> List&lt;SushiswapPairDTO&gt; DappsSushiswapPoolsCurrentGet ()
 
 GetPools
 
@@ -955,7 +955,7 @@ namespace Example
             try
             {
                 // GetPools
-                List<PairDTO> result = apiInstance.DappsSushiswapPoolsCurrentGet();
+                List<SushiswapPairDTO> result = apiInstance.DappsSushiswapPoolsCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -976,7 +976,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPools
-    ApiResponse<List<PairDTO>> response = apiInstance.DappsSushiswapPoolsCurrentGetWithHttpInfo();
+    ApiResponse<List<SushiswapPairDTO>> response = apiInstance.DappsSushiswapPoolsCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -993,7 +993,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -1014,7 +1014,7 @@ No authorization required
 
 <a name="dappssushiswappoolshistoricalget"></a>
 # **DappsSushiswapPoolsHistoricalGet**
-> List&lt;PairDTO&gt; DappsSushiswapPoolsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapPairDTO&gt; DappsSushiswapPoolsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
 GetPools (historical)
 
@@ -1044,7 +1044,7 @@ namespace Example
             try
             {
                 // GetPools (historical)
-                List<PairDTO> result = apiInstance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                List<SushiswapPairDTO> result = apiInstance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1065,7 +1065,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPools (historical)
-    ApiResponse<List<PairDTO>> response = apiInstance.DappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    ApiResponse<List<SushiswapPairDTO>> response = apiInstance.DappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1090,7 +1090,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -1111,7 +1111,7 @@ No authorization required
 
 <a name="dappssushiswapswapscurrentget"></a>
 # **DappsSushiswapSwapsCurrentGet**
-> List&lt;SwapDTO&gt; DappsSushiswapSwapsCurrentGet ()
+> List&lt;SushiswapSwapDTO&gt; DappsSushiswapSwapsCurrentGet ()
 
 GetSwaps
 
@@ -1136,7 +1136,7 @@ namespace Example
             try
             {
                 // GetSwaps
-                List<SwapDTO> result = apiInstance.DappsSushiswapSwapsCurrentGet();
+                List<SushiswapSwapDTO> result = apiInstance.DappsSushiswapSwapsCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1157,7 +1157,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetSwaps
-    ApiResponse<List<SwapDTO>> response = apiInstance.DappsSushiswapSwapsCurrentGetWithHttpInfo();
+    ApiResponse<List<SushiswapSwapDTO>> response = apiInstance.DappsSushiswapSwapsCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1174,7 +1174,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1195,7 +1195,7 @@ No authorization required
 
 <a name="dappssushiswapswapshistoricalget"></a>
 # **DappsSushiswapSwapsHistoricalGet**
-> List&lt;SwapDTO&gt; DappsSushiswapSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapSwapDTO&gt; DappsSushiswapSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
 GetSwaps (historical)
 
@@ -1225,7 +1225,7 @@ namespace Example
             try
             {
                 // GetSwaps (historical)
-                List<SwapDTO> result = apiInstance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                List<SushiswapSwapDTO> result = apiInstance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1246,7 +1246,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetSwaps (historical)
-    ApiResponse<List<SwapDTO>> response = apiInstance.DappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    ApiResponse<List<SushiswapSwapDTO>> response = apiInstance.DappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1271,7 +1271,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1383,7 +1383,7 @@ No authorization required
 
 <a name="dappssushiswaptokenscurrentget"></a>
 # **DappsSushiswapTokensCurrentGet**
-> List&lt;TokenDTO&gt; DappsSushiswapTokensCurrentGet ()
+> List&lt;SushiswapTokenDTO&gt; DappsSushiswapTokensCurrentGet ()
 
 GetTokens
 
@@ -1408,7 +1408,7 @@ namespace Example
             try
             {
                 // GetTokens
-                List<TokenDTO> result = apiInstance.DappsSushiswapTokensCurrentGet();
+                List<SushiswapTokenDTO> result = apiInstance.DappsSushiswapTokensCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1429,7 +1429,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokens
-    ApiResponse<List<TokenDTO>> response = apiInstance.DappsSushiswapTokensCurrentGetWithHttpInfo();
+    ApiResponse<List<SushiswapTokenDTO>> response = apiInstance.DappsSushiswapTokensCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1446,7 +1446,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1467,7 +1467,7 @@ No authorization required
 
 <a name="dappssushiswaptokenshistoricalget"></a>
 # **DappsSushiswapTokensHistoricalGet**
-> List&lt;TokenDTO&gt; DappsSushiswapTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+> List&lt;SushiswapTokenDTO&gt; DappsSushiswapTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
 GetTokens (historical)
 
@@ -1497,7 +1497,7 @@ namespace Example
             try
             {
                 // GetTokens (historical)
-                List<TokenDTO> result = apiInstance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                List<SushiswapTokenDTO> result = apiInstance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1518,7 +1518,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokens (historical)
-    ApiResponse<List<TokenDTO>> response = apiInstance.DappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    ApiResponse<List<SushiswapTokenDTO>> response = apiInstance.DappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1543,7 +1543,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

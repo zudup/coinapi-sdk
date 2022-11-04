@@ -133,7 +133,7 @@ test_that("DappsUniswapv2PoolsCurrentGet", {
   # base path: https://onchain.coinapi.io
   # GetPools
   # @param filter_pool_id character Filter pool id (optional)
-  # @return [array[PairV2DTO]]
+  # @return [array[UniswapV2PairV2DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -157,7 +157,7 @@ test_that("DappsUniswapv2SwapsCurrentGet", {
   # tests for DappsUniswapv2SwapsCurrentGet
   # base path: https://onchain.coinapi.io
   # GetSwaps
-  # @return [array[SwapV2DTO]]
+  # @return [array[UniswapV2SwapV2DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -195,7 +195,7 @@ test_that("DappsUniswapv2TokensCurrentGet", {
   # tests for DappsUniswapv2TokensCurrentGet
   # base path: https://onchain.coinapi.io
   # GetTokens
-  # @return [array[TokenV2DTO]]
+  # @return [array[UniswapV2TokenV2DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

@@ -19,11 +19,11 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { PairDTO } from '../model/pairDTO';
+import { SushiswapPairDTO } from '../model/sushiswapPairDTO';
 // @ts-ignore
-import { SwapDTO } from '../model/swapDTO';
+import { SushiswapSwapDTO } from '../model/sushiswapSwapDTO';
 // @ts-ignore
-import { TokenDTO } from '../model/tokenDTO';
+import { SushiswapTokenDTO } from '../model/sushiswapTokenDTO';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -881,9 +881,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapPoolsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PairDTO>>;
-    public dappsSushiswapPoolsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PairDTO>>>;
-    public dappsSushiswapPoolsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PairDTO>>>;
+    public dappsSushiswapPoolsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapPairDTO>>;
+    public dappsSushiswapPoolsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapPairDTO>>>;
+    public dappsSushiswapPoolsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapPairDTO>>>;
     public dappsSushiswapPoolsCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -920,7 +920,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/pools/current`;
-        return this.httpClient.request<Array<PairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapPairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -942,9 +942,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PairDTO>>;
-    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PairDTO>>>;
-    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PairDTO>>>;
+    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapPairDTO>>;
+    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapPairDTO>>>;
+    public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapPairDTO>>>;
     public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1003,7 +1003,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/pools/historical`;
-        return this.httpClient.request<Array<PairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapPairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1021,9 +1021,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapSwapsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SwapDTO>>;
-    public dappsSushiswapSwapsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SwapDTO>>>;
-    public dappsSushiswapSwapsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SwapDTO>>>;
+    public dappsSushiswapSwapsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapSwapDTO>>;
+    public dappsSushiswapSwapsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapSwapDTO>>>;
+    public dappsSushiswapSwapsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapSwapDTO>>>;
     public dappsSushiswapSwapsCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -1060,7 +1060,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/swaps/current`;
-        return this.httpClient.request<Array<SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapSwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -1082,9 +1082,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SwapDTO>>;
-    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SwapDTO>>>;
-    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SwapDTO>>>;
+    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapSwapDTO>>;
+    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapSwapDTO>>>;
+    public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapSwapDTO>>>;
     public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1143,7 +1143,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/swaps/historical`;
-        return this.httpClient.request<Array<SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapSwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1241,9 +1241,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapTokensCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenDTO>>;
-    public dappsSushiswapTokensCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenDTO>>>;
-    public dappsSushiswapTokensCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenDTO>>>;
+    public dappsSushiswapTokensCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapTokenDTO>>;
+    public dappsSushiswapTokensCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapTokenDTO>>>;
+    public dappsSushiswapTokensCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapTokenDTO>>>;
     public dappsSushiswapTokensCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -1280,7 +1280,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/tokens/current`;
-        return this.httpClient.request<Array<TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapTokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -1302,9 +1302,9 @@ export class SushiswapService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenDTO>>;
-    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenDTO>>>;
-    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenDTO>>>;
+    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SushiswapTokenDTO>>;
+    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SushiswapTokenDTO>>>;
+    public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SushiswapTokenDTO>>>;
     public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -1363,7 +1363,7 @@ export class SushiswapService {
         }
 
         let localVarPath = `/dapps/sushiswap/tokens/historical`;
-        return this.httpClient.request<Array<TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<SushiswapTokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,

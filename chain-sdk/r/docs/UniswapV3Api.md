@@ -40,7 +40,7 @@ Method | HTTP request | Description
 
 
 # **DappsUniswapv3BundleCurrentGet**
-> array[BundleV3DTO] DappsUniswapv3BundleCurrentGet()
+> array[UniswapV3BundleV3DTO] DappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[BundleV3DTO]**](BundleV3DTO.md)
+[**array[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3BurnsCurrentGet**
-> array[BurnV3DTO] DappsUniswapv3BurnsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3BurnV3DTO] DappsUniswapv3BurnsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetBurns
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[BurnV3DTO]**](BurnV3DTO.md)
+[**array[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3FactoryCurrentGet**
-> array[FactoryV3DTO] DappsUniswapv3FactoryCurrentGet(chain_id)
+> array[UniswapV3FactoryV3DTO] DappsUniswapv3FactoryCurrentGet(chain_id)
 
 GetFactory
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[FactoryV3DTO]**](FactoryV3DTO.md)
+[**array[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3MintsCurrentGet**
-> array[MintV3DTO] DappsUniswapv3MintsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3MintV3DTO] DappsUniswapv3MintsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetMints
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[MintV3DTO]**](MintV3DTO.md)
+[**array[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3PoolsCurrentGet**
-> array[PoolV3DTO] DappsUniswapv3PoolsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3PoolV3DTO] DappsUniswapv3PoolsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPools
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PoolV3DTO]**](PoolV3DTO.md)
+[**array[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsUniswapv3PoolsDayDataCurrentGet**
-> array[PoolDayDataV3DTO] DappsUniswapv3PoolsDayDataCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3PoolDayDataV3DTO] DappsUniswapv3PoolsDayDataCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPoolsDayData
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)
+[**array[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3PoolsHourDataCurrentGet**
-> array[PoolHourDataV3DTO] DappsUniswapv3PoolsHourDataCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3PoolHourDataV3DTO] DappsUniswapv3PoolsHourDataCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPoolsHourData
 
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)
+[**array[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -776,7 +776,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3PositionSnapshotsCurrentGet**
-> array[PositionSnapshotV3DTO] DappsUniswapv3PositionSnapshotsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3PositionSnapshotV3DTO] DappsUniswapv3PositionSnapshotsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPositionSnapshot
 
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)
+[**array[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -821,7 +821,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsUniswapv3PositionsCurrentGet**
-> array[PositionV3DTO] DappsUniswapv3PositionsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3PositionV3DTO] DappsUniswapv3PositionsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetPositions
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PositionV3DTO]**](PositionV3DTO.md)
+[**array[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -914,7 +914,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3SwapsCurrentGet**
-> array[SwapV3DTO] DappsUniswapv3SwapsCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3SwapV3DTO] DappsUniswapv3SwapsCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetSwaps
 
@@ -942,7 +942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[SwapV3DTO]**](SwapV3DTO.md)
+[**array[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1055,7 +1055,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3TicksCurrentGet**
-> array[TickV3DTO] DappsUniswapv3TicksCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3TickV3DTO] DappsUniswapv3TicksCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetTicks
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TickV3DTO]**](TickV3DTO.md)
+[**array[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1100,7 +1100,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsUniswapv3TicksDayDataCurrentGet**
-> array[TickDayDataV3DTO] DappsUniswapv3TicksDayDataCurrentGet(filter_pool_id = var.filter_pool_id)
+> array[UniswapV3TickDayDataV3DTO] DappsUniswapv3TicksDayDataCurrentGet(filter_pool_id = var.filter_pool_id)
 
 GetTicksDayData
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TickDayDataV3DTO]**](TickDayDataV3DTO.md)
+[**array[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1289,7 +1289,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3TokensCurrentGet**
-> array[TokenV3DTO] DappsUniswapv3TokensCurrentGet(filter_token_id = var.filter_token_id)
+> array[UniswapV3TokenV3DTO] DappsUniswapv3TokensCurrentGet(filter_token_id = var.filter_token_id)
 
 GetTokens
 
@@ -1317,7 +1317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TokenV3DTO]**](TokenV3DTO.md)
+[**array[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1334,7 +1334,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsUniswapv3TokensDayDataCurrentGet**
-> array[TokenV3DayDataDTO] DappsUniswapv3TokensDayDataCurrentGet(filter_token_id = var.filter_token_id)
+> array[UniswapV3TokenV3DayDataDTO] DappsUniswapv3TokensDayDataCurrentGet(filter_token_id = var.filter_token_id)
 
 GetTokensDayData
 
@@ -1362,7 +1362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)
+[**array[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1427,7 +1427,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3TokensHourDataCurrentGet**
-> array[TokenHourDataV3DTO] DappsUniswapv3TokensHourDataCurrentGet(filter_token_id = var.filter_token_id)
+> array[UniswapV3TokenHourDataV3DTO] DappsUniswapv3TokensHourDataCurrentGet(filter_token_id = var.filter_token_id)
 
 GetTokensHourData
 
@@ -1455,7 +1455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)
+[**array[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1518,7 +1518,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsUniswapv3UniswapDayDataCurrentGet**
-> array[UniswapDayDataV3DTO] DappsUniswapv3UniswapDayDataCurrentGet()
+> array[UniswapV3UniswapDayDataV3DTO] DappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -1541,7 +1541,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)
+[**array[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

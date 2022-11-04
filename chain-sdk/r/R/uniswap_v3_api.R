@@ -17,12 +17,12 @@
 #' \strong{ DappsUniswapv3BundleCurrentGet } \emph{ GetBundles }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{BundleV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3BundleV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[BundleV3DTO]
+#' \item return type : array[UniswapV3BundleV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -51,12 +51,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{BurnV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3BurnV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[BurnV3DTO]
+#' \item return type : array[UniswapV3BurnV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -104,12 +104,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } chain_id character
-#' \item \emph{ @returnType } list( \link{FactoryV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3FactoryV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[FactoryV3DTO]
+#' \item return type : array[UniswapV3FactoryV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -138,12 +138,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{MintV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3MintV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[MintV3DTO]
+#' \item return type : array[UniswapV3MintV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -211,12 +211,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PoolV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3PoolV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PoolV3DTO]
+#' \item return type : array[UniswapV3PoolV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -227,12 +227,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PoolDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3PoolDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PoolDayDataV3DTO]
+#' \item return type : array[UniswapV3PoolDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -262,12 +262,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PoolHourDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3PoolHourDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PoolHourDataV3DTO]
+#' \item return type : array[UniswapV3PoolHourDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -297,12 +297,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PositionSnapshotV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3PositionSnapshotV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PositionSnapshotV3DTO]
+#' \item return type : array[UniswapV3PositionSnapshotV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -313,12 +313,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PositionV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3PositionV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PositionV3DTO]
+#' \item return type : array[UniswapV3PositionV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -348,12 +348,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{SwapV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3SwapV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[SwapV3DTO]
+#' \item return type : array[UniswapV3SwapV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -402,12 +402,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{TickV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3TickV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TickV3DTO]
+#' \item return type : array[UniswapV3TickV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -418,12 +418,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{TickDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3TickDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TickDayDataV3DTO]
+#' \item return type : array[UniswapV3TickDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -491,12 +491,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{TokenV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3TokenV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenV3DTO]
+#' \item return type : array[UniswapV3TokenV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -507,12 +507,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{TokenV3DayDataDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3TokenV3DayDataDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenV3DayDataDTO]
+#' \item return type : array[UniswapV3TokenV3DayDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -542,12 +542,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{TokenHourDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3TokenHourDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenHourDataV3DTO]
+#' \item return type : array[UniswapV3TokenHourDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -575,12 +575,12 @@
 #' \strong{ DappsUniswapv3UniswapDayDataCurrentGet } \emph{ GetUniswapDayData }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3UniswapDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[UniswapDayDataV3DTO]
+#' \item return type : array[UniswapV3UniswapDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1077,7 +1077,7 @@ UniswapV3Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[BundleV3DTO]
+    #' @return array[UniswapV3BundleV3DTO]
     #' @export
     DappsUniswapv3BundleCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3BundleCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -1098,7 +1098,7 @@ UniswapV3Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[BundleV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3BundleV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3BundleCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -1138,7 +1138,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[BundleV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3BundleV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1257,7 +1257,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[BurnV3DTO]
+    #' @return array[UniswapV3BurnV3DTO]
     #' @export
     DappsUniswapv3BurnsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3BurnsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -1279,7 +1279,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[BurnV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3BurnV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3BurnsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -1322,7 +1322,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[BurnV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3BurnV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1539,7 +1539,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param chain_id 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[FactoryV3DTO]
+    #' @return array[UniswapV3FactoryV3DTO]
     #' @export
     DappsUniswapv3FactoryCurrentGet = function(chain_id, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3FactoryCurrentGetWithHttpInfo(chain_id, data_file = data_file, ...)
@@ -1561,7 +1561,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param chain_id 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[FactoryV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3FactoryV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3FactoryCurrentGetWithHttpInfo = function(chain_id, data_file = NULL, ...) {
       args <- list(...)
@@ -1610,7 +1610,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[FactoryV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3FactoryV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1729,7 +1729,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[MintV3DTO]
+    #' @return array[UniswapV3MintV3DTO]
     #' @export
     DappsUniswapv3MintsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3MintsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -1751,7 +1751,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[MintV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3MintV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3MintsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -1794,7 +1794,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[MintV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3MintV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2114,7 +2114,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PoolV3DTO]
+    #' @return array[UniswapV3PoolV3DTO]
     #' @export
     DappsUniswapv3PoolsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3PoolsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2136,7 +2136,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PoolV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PoolV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3PoolsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2179,7 +2179,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PoolV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2205,7 +2205,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PoolDayDataV3DTO]
+    #' @return array[UniswapV3PoolDayDataV3DTO]
     #' @export
     DappsUniswapv3PoolsDayDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2227,7 +2227,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PoolDayDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PoolDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2270,7 +2270,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PoolDayDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2394,7 +2394,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PoolHourDataV3DTO]
+    #' @return array[UniswapV3PoolHourDataV3DTO]
     #' @export
     DappsUniswapv3PoolsHourDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2416,7 +2416,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PoolHourDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PoolHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2459,7 +2459,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PoolHourDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolHourDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2583,7 +2583,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PositionSnapshotV3DTO]
+    #' @return array[UniswapV3PositionSnapshotV3DTO]
     #' @export
     DappsUniswapv3PositionSnapshotsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2605,7 +2605,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PositionSnapshotV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PositionSnapshotV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2648,7 +2648,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PositionSnapshotV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionSnapshotV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2674,7 +2674,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PositionV3DTO]
+    #' @return array[UniswapV3PositionV3DTO]
     #' @export
     DappsUniswapv3PositionsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3PositionsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2696,7 +2696,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PositionV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PositionV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3PositionsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2739,7 +2739,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PositionV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2863,7 +2863,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[SwapV3DTO]
+    #' @return array[UniswapV3SwapV3DTO]
     #' @export
     DappsUniswapv3SwapsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3SwapsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -2885,7 +2885,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[SwapV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3SwapV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3SwapsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2928,7 +2928,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[SwapV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3SwapV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -3150,7 +3150,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TickV3DTO]
+    #' @return array[UniswapV3TickV3DTO]
     #' @export
     DappsUniswapv3TicksCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3TicksCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -3172,7 +3172,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TickV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TickV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3TicksCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -3215,7 +3215,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TickV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TickV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -3241,7 +3241,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TickDayDataV3DTO]
+    #' @return array[UniswapV3TickDayDataV3DTO]
     #' @export
     DappsUniswapv3TicksDayDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -3263,7 +3263,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TickDayDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TickDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -3306,7 +3306,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TickDayDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TickDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -3626,7 +3626,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenV3DTO]
+    #' @return array[UniswapV3TokenV3DTO]
     #' @export
     DappsUniswapv3TokensCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3TokensCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
@@ -3648,7 +3648,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TokenV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3TokensCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -3691,7 +3691,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -3717,7 +3717,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenV3DayDataDTO]
+    #' @return array[UniswapV3TokenV3DayDataDTO]
     #' @export
     DappsUniswapv3TokensDayDataCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
@@ -3739,7 +3739,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenV3DayDataDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TokenV3DayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -3782,7 +3782,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenV3DayDataDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenV3DayDataDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -3906,7 +3906,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenHourDataV3DTO]
+    #' @return array[UniswapV3TokenHourDataV3DTO]
     #' @export
     DappsUniswapv3TokensHourDataCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
@@ -3928,7 +3928,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenHourDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TokenHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -3971,7 +3971,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenHourDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenHourDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -4089,7 +4089,7 @@ UniswapV3Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[UniswapDayDataV3DTO]
+    #' @return array[UniswapV3UniswapDayDataV3DTO]
     #' @export
     DappsUniswapv3UniswapDayDataCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -4110,7 +4110,7 @@ UniswapV3Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[UniswapDayDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3UniswapDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -4150,7 +4150,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[UniswapDayDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3UniswapDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

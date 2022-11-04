@@ -15,22 +15,22 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { BundleV3DTO } from '../model/bundleV3DTO';
-import { BurnV3DTO } from '../model/burnV3DTO';
-import { FactoryV3DTO } from '../model/factoryV3DTO';
-import { MintV3DTO } from '../model/mintV3DTO';
-import { PoolDayDataV3DTO } from '../model/poolDayDataV3DTO';
-import { PoolHourDataV3DTO } from '../model/poolHourDataV3DTO';
-import { PoolV3DTO } from '../model/poolV3DTO';
-import { PositionSnapshotV3DTO } from '../model/positionSnapshotV3DTO';
-import { PositionV3DTO } from '../model/positionV3DTO';
-import { SwapV3DTO } from '../model/swapV3DTO';
-import { TickDayDataV3DTO } from '../model/tickDayDataV3DTO';
-import { TickV3DTO } from '../model/tickV3DTO';
-import { TokenHourDataV3DTO } from '../model/tokenHourDataV3DTO';
-import { TokenV3DTO } from '../model/tokenV3DTO';
-import { TokenV3DayDataDTO } from '../model/tokenV3DayDataDTO';
-import { UniswapDayDataV3DTO } from '../model/uniswapDayDataV3DTO';
+import { UniswapV3BundleV3DTO } from '../model/uniswapV3BundleV3DTO';
+import { UniswapV3BurnV3DTO } from '../model/uniswapV3BurnV3DTO';
+import { UniswapV3FactoryV3DTO } from '../model/uniswapV3FactoryV3DTO';
+import { UniswapV3MintV3DTO } from '../model/uniswapV3MintV3DTO';
+import { UniswapV3PoolDayDataV3DTO } from '../model/uniswapV3PoolDayDataV3DTO';
+import { UniswapV3PoolHourDataV3DTO } from '../model/uniswapV3PoolHourDataV3DTO';
+import { UniswapV3PoolV3DTO } from '../model/uniswapV3PoolV3DTO';
+import { UniswapV3PositionSnapshotV3DTO } from '../model/uniswapV3PositionSnapshotV3DTO';
+import { UniswapV3PositionV3DTO } from '../model/uniswapV3PositionV3DTO';
+import { UniswapV3SwapV3DTO } from '../model/uniswapV3SwapV3DTO';
+import { UniswapV3TickDayDataV3DTO } from '../model/uniswapV3TickDayDataV3DTO';
+import { UniswapV3TickV3DTO } from '../model/uniswapV3TickV3DTO';
+import { UniswapV3TokenHourDataV3DTO } from '../model/uniswapV3TokenHourDataV3DTO';
+import { UniswapV3TokenV3DTO } from '../model/uniswapV3TokenV3DTO';
+import { UniswapV3TokenV3DayDataDTO } from '../model/uniswapV3TokenV3DayDataDTO';
+import { UniswapV3UniswapDayDataV3DTO } from '../model/uniswapV3UniswapDayDataV3DTO';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 
@@ -105,7 +105,7 @@ export class UniswapV3Api {
      * 
      * @summary GetBundles
      */
-    public async dappsUniswapv3BundleCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BundleV3DTO>;  }> {
+    public async dappsUniswapv3BundleCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BundleV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/bundle/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -147,13 +147,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<BundleV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BundleV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<BundleV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3BundleV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -241,7 +241,7 @@ export class UniswapV3Api {
      * @summary GetBurns
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3BurnsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BurnV3DTO>;  }> {
+    public async dappsUniswapv3BurnsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BurnV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/burns/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -287,13 +287,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<BurnV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BurnV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<BurnV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3BurnV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -459,7 +459,7 @@ export class UniswapV3Api {
      * @summary GetFactory
      * @param chainId 
      */
-    public async dappsUniswapv3FactoryCurrentGet (chainId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<FactoryV3DTO>;  }> {
+    public async dappsUniswapv3FactoryCurrentGet (chainId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/factory/current'
             .replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
         let localVarQueryParameters: any = {};
@@ -507,13 +507,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<FactoryV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<FactoryV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3FactoryV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -601,7 +601,7 @@ export class UniswapV3Api {
      * @summary GetMints
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3MintsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<MintV3DTO>;  }> {
+    public async dappsUniswapv3MintsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3MintV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/mints/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -647,13 +647,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<MintV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3MintV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<MintV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3MintV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -902,7 +902,7 @@ export class UniswapV3Api {
      * @summary GetPools
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3PoolsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PoolV3DTO>;  }> {
+    public async dappsUniswapv3PoolsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/pools/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -948,13 +948,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PoolV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PoolV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3PoolV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -969,7 +969,7 @@ export class UniswapV3Api {
      * @summary GetPoolsDayData
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3PoolsDayDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PoolDayDataV3DTO>;  }> {
+    public async dappsUniswapv3PoolsDayDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/poolsDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1015,13 +1015,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PoolDayDataV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PoolDayDataV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3PoolDayDataV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1114,7 +1114,7 @@ export class UniswapV3Api {
      * @summary GetPoolsHourData
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3PoolsHourDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PoolHourDataV3DTO>;  }> {
+    public async dappsUniswapv3PoolsHourDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/poolsHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1160,13 +1160,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PoolHourDataV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PoolHourDataV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3PoolHourDataV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1259,7 +1259,7 @@ export class UniswapV3Api {
      * @summary GetPositionSnapshot
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3PositionSnapshotsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PositionSnapshotV3DTO>;  }> {
+    public async dappsUniswapv3PositionSnapshotsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionSnapshotV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/positionSnapshots/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1305,13 +1305,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PositionSnapshotV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionSnapshotV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PositionSnapshotV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3PositionSnapshotV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1326,7 +1326,7 @@ export class UniswapV3Api {
      * @summary GetPositions
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3PositionsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PositionV3DTO>;  }> {
+    public async dappsUniswapv3PositionsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/positions/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1372,13 +1372,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PositionV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PositionV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3PositionV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1471,7 +1471,7 @@ export class UniswapV3Api {
      * @summary GetSwaps
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3SwapsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SwapV3DTO>;  }> {
+    public async dappsUniswapv3SwapsCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3SwapV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/swaps/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1517,13 +1517,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<SwapV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3SwapV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<SwapV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3SwapV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1694,7 +1694,7 @@ export class UniswapV3Api {
      * @summary GetTicks
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3TicksCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TickV3DTO>;  }> {
+    public async dappsUniswapv3TicksCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/ticks/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1740,13 +1740,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TickV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TickV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3TickV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1761,7 +1761,7 @@ export class UniswapV3Api {
      * @summary GetTicksDayData
      * @param filterPoolId Filter pool id
      */
-    public async dappsUniswapv3TicksDayDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TickDayDataV3DTO>;  }> {
+    public async dappsUniswapv3TicksDayDataCurrentGet (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/ticksDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1807,13 +1807,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TickDayDataV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TickDayDataV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3TickDayDataV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -2062,7 +2062,7 @@ export class UniswapV3Api {
      * @summary GetTokens
      * @param filterTokenId 
      */
-    public async dappsUniswapv3TokensCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenV3DTO>;  }> {
+    public async dappsUniswapv3TokensCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/tokens/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2108,13 +2108,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3TokenV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -2129,7 +2129,7 @@ export class UniswapV3Api {
      * @summary GetTokensDayData
      * @param filterTokenId 
      */
-    public async dappsUniswapv3TokensDayDataCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenV3DayDataDTO>;  }> {
+    public async dappsUniswapv3TokensDayDataCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/tokensDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2175,13 +2175,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenV3DayDataDTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenV3DayDataDTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3TokenV3DayDataDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -2274,7 +2274,7 @@ export class UniswapV3Api {
      * @summary GetTokensHourData
      * @param filterTokenId 
      */
-    public async dappsUniswapv3TokensHourDataCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TokenHourDataV3DTO>;  }> {
+    public async dappsUniswapv3TokensHourDataCurrentGet (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/tokensHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2320,13 +2320,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TokenHourDataV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TokenHourDataV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3TokenHourDataV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -2413,7 +2413,7 @@ export class UniswapV3Api {
      * 
      * @summary GetUniswapDayData
      */
-    public async dappsUniswapv3UniswapDayDataCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapDayDataV3DTO>;  }> {
+    public async dappsUniswapv3UniswapDayDataCurrentGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2455,13 +2455,13 @@ export class UniswapV3Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapDayDataV3DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataV3DTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapDayDataV3DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV3UniswapDayDataV3DTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

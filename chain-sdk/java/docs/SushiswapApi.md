@@ -689,7 +689,7 @@ No authorization required
 
 <a name="dappsSushiswapPoolsCurrentGet"></a>
 # **dappsSushiswapPoolsCurrentGet**
-> List&lt;PairDTO&gt; dappsSushiswapPoolsCurrentGet()
+> List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -711,7 +711,7 @@ public class Example {
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
     try {
-      List<PairDTO> result = apiInstance.dappsSushiswapPoolsCurrentGet();
+      List<SushiswapPairDTO> result = apiInstance.dappsSushiswapPoolsCurrentGet();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsCurrentGet");
@@ -729,7 +729,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -747,7 +747,7 @@ No authorization required
 
 <a name="dappsSushiswapPoolsHistoricalGet"></a>
 # **dappsSushiswapPoolsHistoricalGet**
-> List&lt;PairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetPools (historical)
 
@@ -772,7 +772,7 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
     String poolId = "poolId_example"; // String | 
     try {
-      List<PairDTO> result = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+      List<SushiswapPairDTO> result = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsHistoricalGet");
@@ -797,7 +797,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -815,7 +815,7 @@ No authorization required
 
 <a name="dappsSushiswapSwapsCurrentGet"></a>
 # **dappsSushiswapSwapsCurrentGet**
-> List&lt;SwapDTO&gt; dappsSushiswapSwapsCurrentGet()
+> List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -835,7 +835,7 @@ public class Example {
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
     try {
-      List<SwapDTO> result = apiInstance.dappsSushiswapSwapsCurrentGet();
+      List<SushiswapSwapDTO> result = apiInstance.dappsSushiswapSwapsCurrentGet();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsCurrentGet");
@@ -853,7 +853,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -871,7 +871,7 @@ No authorization required
 
 <a name="dappsSushiswapSwapsHistoricalGet"></a>
 # **dappsSushiswapSwapsHistoricalGet**
-> List&lt;SwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetSwaps (historical)
 
@@ -896,7 +896,7 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
     String poolId = "poolId_example"; // String | 
     try {
-      List<SwapDTO> result = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+      List<SushiswapSwapDTO> result = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsHistoricalGet");
@@ -921,7 +921,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1006,7 +1006,7 @@ No authorization required
 
 <a name="dappsSushiswapTokensCurrentGet"></a>
 # **dappsSushiswapTokensCurrentGet**
-> List&lt;TokenDTO&gt; dappsSushiswapTokensCurrentGet()
+> List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -1026,7 +1026,7 @@ public class Example {
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
     try {
-      List<TokenDTO> result = apiInstance.dappsSushiswapTokensCurrentGet();
+      List<SushiswapTokenDTO> result = apiInstance.dappsSushiswapTokensCurrentGet();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensCurrentGet");
@@ -1044,7 +1044,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1062,7 +1062,7 @@ No authorization required
 
 <a name="dappsSushiswapTokensHistoricalGet"></a>
 # **dappsSushiswapTokensHistoricalGet**
-> List&lt;TokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
 
 GetTokens (historical)
 
@@ -1087,7 +1087,7 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
     String tokenId = "tokenId_example"; // String | 
     try {
-      List<TokenDTO> result = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+      List<SushiswapTokenDTO> result = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensHistoricalGet");
@@ -1112,7 +1112,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

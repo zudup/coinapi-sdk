@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pair_v2_dto.md) *
+[list_t](uniswap_v2_pair_v2_dto.md) *
 
 
 ### Authorization
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](swap_v2_dto.md) *
+[list_t](uniswap_v2_swap_v2_dto.md) *
 
 
 ### Authorization
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_v2_dto.md) *
+[list_t](uniswap_v2_token_v2_dto.md) *
 
 
 ### Authorization

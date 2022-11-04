@@ -32,8 +32,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;BundleV3DTO&gt;</returns>
-        List<BundleV3DTO> DappsUniswapv3BundleCurrentGet(int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        List<UniswapV3BundleV3DTO> DappsUniswapv3BundleCurrentGet(int operationIndex = 0);
 
         /// <summary>
         /// GetBundles
@@ -43,8 +43,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;BundleV3DTO&gt;</returns>
-        ApiResponse<List<BundleV3DTO>> DappsUniswapv3BundleCurrentGetWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3BundleV3DTO>> DappsUniswapv3BundleCurrentGetWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;BurnV3DTO&gt;</returns>
-        List<BurnV3DTO> DappsUniswapv3BurnsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        List<UniswapV3BurnV3DTO> DappsUniswapv3BurnsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetBurns
@@ -89,8 +89,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;BurnV3DTO&gt;</returns>
-        ApiResponse<List<BurnV3DTO>> DappsUniswapv3BurnsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3BurnV3DTO>> DappsUniswapv3BurnsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -151,8 +151,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;FactoryV3DTO&gt;</returns>
-        List<FactoryV3DTO> DappsUniswapv3FactoryCurrentGet(string chainId, int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        List<UniswapV3FactoryV3DTO> DappsUniswapv3FactoryCurrentGet(string chainId, int operationIndex = 0);
 
         /// <summary>
         /// GetFactory
@@ -163,8 +163,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;FactoryV3DTO&gt;</returns>
-        ApiResponse<List<FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetWithHttpInfo(string chainId, int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetWithHttpInfo(string chainId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -197,8 +197,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;MintV3DTO&gt;</returns>
-        List<MintV3DTO> DappsUniswapv3MintsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3MintV3DTO&gt;</returns>
+        List<UniswapV3MintV3DTO> DappsUniswapv3MintsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetMints
@@ -209,8 +209,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;MintV3DTO&gt;</returns>
-        ApiResponse<List<MintV3DTO>> DappsUniswapv3MintsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3MintV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3MintV3DTO>> DappsUniswapv3MintsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -301,8 +301,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolV3DTO&gt;</returns>
-        List<PoolV3DTO> DappsUniswapv3PoolsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        List<UniswapV3PoolV3DTO> DappsUniswapv3PoolsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPools
@@ -313,16 +313,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolV3DTO&gt;</returns>
-        ApiResponse<List<PoolV3DTO>> DappsUniswapv3PoolsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3PoolV3DTO>> DappsUniswapv3PoolsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// GetPoolsDayData
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolDayDataV3DTO&gt;</returns>
-        List<PoolDayDataV3DTO> DappsUniswapv3PoolsDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        List<UniswapV3PoolDayDataV3DTO> DappsUniswapv3PoolsDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPoolsDayData
@@ -333,8 +333,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolDayDataV3DTO&gt;</returns>
-        ApiResponse<List<PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -369,8 +369,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolHourDataV3DTO&gt;</returns>
-        List<PoolHourDataV3DTO> DappsUniswapv3PoolsHourDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        List<UniswapV3PoolHourDataV3DTO> DappsUniswapv3PoolsHourDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPoolsHourData
@@ -381,8 +381,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolHourDataV3DTO&gt;</returns>
-        ApiResponse<List<PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -417,8 +417,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PositionSnapshotV3DTO&gt;</returns>
-        List<PositionSnapshotV3DTO> DappsUniswapv3PositionSnapshotsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        List<UniswapV3PositionSnapshotV3DTO> DappsUniswapv3PositionSnapshotsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPositionSnapshot
@@ -429,16 +429,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PositionSnapshotV3DTO&gt;</returns>
-        ApiResponse<List<PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// GetPositions
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PositionV3DTO&gt;</returns>
-        List<PositionV3DTO> DappsUniswapv3PositionsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        List<UniswapV3PositionV3DTO> DappsUniswapv3PositionsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPositions
@@ -449,8 +449,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PositionV3DTO&gt;</returns>
-        ApiResponse<List<PositionV3DTO>> DappsUniswapv3PositionsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3PositionV3DTO>> DappsUniswapv3PositionsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -485,8 +485,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapV3DTO&gt;</returns>
-        List<SwapV3DTO> DappsUniswapv3SwapsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        List<UniswapV3SwapV3DTO> DappsUniswapv3SwapsCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetSwaps
@@ -497,8 +497,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapV3DTO&gt;</returns>
-        ApiResponse<List<SwapV3DTO>> DappsUniswapv3SwapsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3SwapV3DTO>> DappsUniswapv3SwapsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -561,8 +561,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TickV3DTO&gt;</returns>
-        List<TickV3DTO> DappsUniswapv3TicksCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3TickV3DTO&gt;</returns>
+        List<UniswapV3TickV3DTO> DappsUniswapv3TicksCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTicks
@@ -573,16 +573,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TickV3DTO&gt;</returns>
-        ApiResponse<List<TickV3DTO>> DappsUniswapv3TicksCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3TickV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3TickV3DTO>> DappsUniswapv3TicksCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// GetTicksDayData
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TickDayDataV3DTO&gt;</returns>
-        List<TickDayDataV3DTO> DappsUniswapv3TicksDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        List<UniswapV3TickDayDataV3DTO> DappsUniswapv3TicksDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTicksDayData
@@ -593,8 +593,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TickDayDataV3DTO&gt;</returns>
-        ApiResponse<List<TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -685,8 +685,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenV3DTO&gt;</returns>
-        List<TokenV3DTO> DappsUniswapv3TokensCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        List<UniswapV3TokenV3DTO> DappsUniswapv3TokensCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTokens
@@ -697,16 +697,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenV3DTO&gt;</returns>
-        ApiResponse<List<TokenV3DTO>> DappsUniswapv3TokensCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3TokenV3DTO>> DappsUniswapv3TokensCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
         /// <summary>
         /// GetTokensDayData
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenV3DayDataDTO&gt;</returns>
-        List<TokenV3DayDataDTO> DappsUniswapv3TokensDayDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        List<UniswapV3TokenV3DayDataDTO> DappsUniswapv3TokensDayDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTokensDayData
@@ -717,8 +717,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenV3DayDataDTO&gt;</returns>
-        ApiResponse<List<TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -753,8 +753,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenHourDataV3DTO&gt;</returns>
-        List<TokenHourDataV3DTO> DappsUniswapv3TokensHourDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        List<UniswapV3TokenHourDataV3DTO> DappsUniswapv3TokensHourDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTokensHourData
@@ -765,8 +765,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenHourDataV3DTO&gt;</returns>
-        ApiResponse<List<TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -798,8 +798,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;UniswapDayDataV3DTO&gt;</returns>
-        List<UniswapDayDataV3DTO> DappsUniswapv3UniswapDayDataCurrentGet(int operationIndex = 0);
+        /// <returns>List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        List<UniswapV3UniswapDayDataV3DTO> DappsUniswapv3UniswapDayDataCurrentGet(int operationIndex = 0);
 
         /// <summary>
         /// GetUniswapDayData
@@ -809,8 +809,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;UniswapDayDataV3DTO&gt;</returns>
-        ApiResponse<List<UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -829,8 +829,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;BundleV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<BundleV3DTO>> DappsUniswapv3BundleCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3BundleV3DTO>> DappsUniswapv3BundleCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetBundles
@@ -841,8 +841,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;BundleV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BundleV3DTO>>> DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3BundleV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3BundleV3DTO>>> DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -884,8 +884,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;BurnV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<BurnV3DTO>> DappsUniswapv3BurnsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3BurnV3DTO>> DappsUniswapv3BurnsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetBurns
@@ -897,8 +897,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;BurnV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BurnV3DTO>>> DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3BurnV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3BurnV3DTO>>> DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -973,8 +973,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;FactoryV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetFactory
@@ -986,8 +986,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;FactoryV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<FactoryV3DTO>>> DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryV3DTO>>> DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1029,8 +1029,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;MintV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<MintV3DTO>> DappsUniswapv3MintsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3MintV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3MintV3DTO>> DappsUniswapv3MintsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetMints
@@ -1042,8 +1042,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;MintV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<MintV3DTO>>> DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3MintV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3MintV3DTO>>> DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1153,8 +1153,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PoolV3DTO>> DappsUniswapv3PoolsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3PoolV3DTO>> DappsUniswapv3PoolsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPools
@@ -1166,8 +1166,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PoolV3DTO>>> DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolV3DTO>>> DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetPoolsDayData
         /// </summary>
@@ -1178,8 +1178,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolDayDataV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPoolsDayData
@@ -1191,8 +1191,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolDayDataV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PoolDayDataV3DTO>>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataV3DTO>>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1236,8 +1236,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolHourDataV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPoolsHourData
@@ -1249,8 +1249,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolHourDataV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PoolHourDataV3DTO>>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataV3DTO>>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1294,8 +1294,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PositionSnapshotV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPositionSnapshot
@@ -1307,8 +1307,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PositionSnapshotV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PositionSnapshotV3DTO>>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionSnapshotV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PositionSnapshotV3DTO>>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetPositions
         /// </summary>
@@ -1319,8 +1319,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PositionV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PositionV3DTO>> DappsUniswapv3PositionsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3PositionV3DTO>> DappsUniswapv3PositionsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPositions
@@ -1332,8 +1332,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PositionV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PositionV3DTO>>> DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PositionV3DTO>>> DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1377,8 +1377,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<SwapV3DTO>> DappsUniswapv3SwapsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3SwapV3DTO>> DappsUniswapv3SwapsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetSwaps
@@ -1390,8 +1390,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SwapV3DTO>>> DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3SwapV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3SwapV3DTO>>> DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1468,8 +1468,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TickV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TickV3DTO>> DappsUniswapv3TicksCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3TickV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3TickV3DTO>> DappsUniswapv3TicksCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTicks
@@ -1481,8 +1481,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TickV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TickV3DTO>>> DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TickV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickV3DTO>>> DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetTicksDayData
         /// </summary>
@@ -1493,8 +1493,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TickDayDataV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTicksDayData
@@ -1506,8 +1506,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TickDayDataV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TickDayDataV3DTO>>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataV3DTO>>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1617,8 +1617,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TokenV3DTO>> DappsUniswapv3TokensCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3TokenV3DTO>> DappsUniswapv3TokensCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTokens
@@ -1630,8 +1630,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenV3DTO>>> DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DTO>>> DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetTokensDayData
         /// </summary>
@@ -1642,8 +1642,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenV3DayDataDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTokensDayData
@@ -1655,8 +1655,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV3DayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenV3DayDataDTO>>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1700,8 +1700,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenHourDataV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTokensHourData
@@ -1713,8 +1713,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenHourDataV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenHourDataV3DTO>>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataV3DTO>>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1755,8 +1755,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;UniswapDayDataV3DTO&gt;</returns>
-        System.Threading.Tasks.Task<List<UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetUniswapDayData
@@ -1767,8 +1767,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapDayDataV3DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapDayDataV3DTO>>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataV3DTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataV3DTO>>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1894,10 +1894,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;BundleV3DTO&gt;</returns>
-        public List<BundleV3DTO> DappsUniswapv3BundleCurrentGet(int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        public List<UniswapV3BundleV3DTO> DappsUniswapv3BundleCurrentGet(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BundleV3DTO>> localVarResponse = DappsUniswapv3BundleCurrentGetWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BundleV3DTO>> localVarResponse = DappsUniswapv3BundleCurrentGetWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1906,8 +1906,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;BundleV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BundleV3DTO>> DappsUniswapv3BundleCurrentGetWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BundleV3DTO>> DappsUniswapv3BundleCurrentGetWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -1939,7 +1939,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<BundleV3DTO>>("/dapps/uniswapv3/bundle/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3BundleV3DTO>>("/dapps/uniswapv3/bundle/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3BundleCurrentGet", localVarResponse);
@@ -1958,10 +1958,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;BundleV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BundleV3DTO>> DappsUniswapv3BundleCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3BundleV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3BundleV3DTO>> DappsUniswapv3BundleCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BundleV3DTO>> localVarResponse = await DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BundleV3DTO>> localVarResponse = await DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1971,8 +1971,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;BundleV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BundleV3DTO>>> DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3BundleV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BundleV3DTO>>> DappsUniswapv3BundleCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -2005,7 +2005,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<BundleV3DTO>>("/dapps/uniswapv3/bundle/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3BundleV3DTO>>("/dapps/uniswapv3/bundle/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2195,10 +2195,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;BurnV3DTO&gt;</returns>
-        public List<BurnV3DTO> DappsUniswapv3BurnsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        public List<UniswapV3BurnV3DTO> DappsUniswapv3BurnsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BurnV3DTO>> localVarResponse = DappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BurnV3DTO>> localVarResponse = DappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -2208,8 +2208,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;BurnV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BurnV3DTO>> DappsUniswapv3BurnsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BurnV3DTO>> DappsUniswapv3BurnsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -2245,7 +2245,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<BurnV3DTO>>("/dapps/uniswapv3/burns/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3BurnV3DTO>>("/dapps/uniswapv3/burns/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3BurnsCurrentGet", localVarResponse);
@@ -2265,10 +2265,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;BurnV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BurnV3DTO>> DappsUniswapv3BurnsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3BurnV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3BurnV3DTO>> DappsUniswapv3BurnsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BurnV3DTO>> localVarResponse = await DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BurnV3DTO>> localVarResponse = await DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2279,8 +2279,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;BurnV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<BurnV3DTO>>> DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3BurnV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3BurnV3DTO>>> DappsUniswapv3BurnsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -2317,7 +2317,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<BurnV3DTO>>("/dapps/uniswapv3/burns/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3BurnV3DTO>>("/dapps/uniswapv3/burns/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2689,10 +2689,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;FactoryV3DTO&gt;</returns>
-        public List<FactoryV3DTO> DappsUniswapv3FactoryCurrentGet(string chainId, int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        public List<UniswapV3FactoryV3DTO> DappsUniswapv3FactoryCurrentGet(string chainId, int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<FactoryV3DTO>> localVarResponse = DappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3FactoryV3DTO>> localVarResponse = DappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
             return localVarResponse.Data;
         }
 
@@ -2702,8 +2702,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;FactoryV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetWithHttpInfo(string chainId, int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetWithHttpInfo(string chainId, int operationIndex = 0)
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
@@ -2742,7 +2742,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<FactoryV3DTO>>("/dapps/uniswapv3/factory/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3FactoryV3DTO>>("/dapps/uniswapv3/factory/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3FactoryCurrentGet", localVarResponse);
@@ -2762,10 +2762,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;FactoryV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3FactoryV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3FactoryV3DTO>> DappsUniswapv3FactoryCurrentGetAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<FactoryV3DTO>> localVarResponse = await DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(chainId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3FactoryV3DTO>> localVarResponse = await DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(chainId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2776,8 +2776,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="chainId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;FactoryV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<FactoryV3DTO>>> DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3FactoryV3DTO>>> DappsUniswapv3FactoryCurrentGetWithHttpInfoAsync(string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'chainId' is set
             if (chainId == null)
@@ -2817,7 +2817,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<FactoryV3DTO>>("/dapps/uniswapv3/factory/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3FactoryV3DTO>>("/dapps/uniswapv3/factory/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3007,10 +3007,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;MintV3DTO&gt;</returns>
-        public List<MintV3DTO> DappsUniswapv3MintsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3MintV3DTO&gt;</returns>
+        public List<UniswapV3MintV3DTO> DappsUniswapv3MintsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<MintV3DTO>> localVarResponse = DappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3MintV3DTO>> localVarResponse = DappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -3020,8 +3020,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;MintV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<MintV3DTO>> DappsUniswapv3MintsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3MintV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3MintV3DTO>> DappsUniswapv3MintsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3057,7 +3057,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<MintV3DTO>>("/dapps/uniswapv3/mints/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3MintV3DTO>>("/dapps/uniswapv3/mints/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3MintsCurrentGet", localVarResponse);
@@ -3077,10 +3077,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;MintV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<MintV3DTO>> DappsUniswapv3MintsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3MintV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3MintV3DTO>> DappsUniswapv3MintsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<MintV3DTO>> localVarResponse = await DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3MintV3DTO>> localVarResponse = await DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3091,8 +3091,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;MintV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<MintV3DTO>>> DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3MintV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3MintV3DTO>>> DappsUniswapv3MintsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3129,7 +3129,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<MintV3DTO>>("/dapps/uniswapv3/mints/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3MintV3DTO>>("/dapps/uniswapv3/mints/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3695,10 +3695,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolV3DTO&gt;</returns>
-        public List<PoolV3DTO> DappsUniswapv3PoolsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        public List<UniswapV3PoolV3DTO> DappsUniswapv3PoolsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolV3DTO>> localVarResponse = DappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolV3DTO>> localVarResponse = DappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -3708,8 +3708,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolV3DTO>> DappsUniswapv3PoolsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolV3DTO>> DappsUniswapv3PoolsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3745,7 +3745,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PoolV3DTO>>("/dapps/uniswapv3/pools/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3PoolV3DTO>>("/dapps/uniswapv3/pools/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3PoolsCurrentGet", localVarResponse);
@@ -3765,10 +3765,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PoolV3DTO>> DappsUniswapv3PoolsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3PoolV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolV3DTO>> DappsUniswapv3PoolsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolV3DTO>> localVarResponse = await DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolV3DTO>> localVarResponse = await DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3779,8 +3779,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolV3DTO>>> DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolV3DTO>>> DappsUniswapv3PoolsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3817,7 +3817,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PoolV3DTO>>("/dapps/uniswapv3/pools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3PoolV3DTO>>("/dapps/uniswapv3/pools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3837,10 +3837,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolDayDataV3DTO&gt;</returns>
-        public List<PoolDayDataV3DTO> DappsUniswapv3PoolsDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        public List<UniswapV3PoolDayDataV3DTO> DappsUniswapv3PoolsDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolDayDataV3DTO>> localVarResponse = DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolDayDataV3DTO>> localVarResponse = DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -3850,8 +3850,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolDayDataV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3887,7 +3887,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PoolDayDataV3DTO>>("/dapps/uniswapv3/poolsDayData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3PoolDayDataV3DTO>>("/dapps/uniswapv3/poolsDayData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3PoolsDayDataCurrentGet", localVarResponse);
@@ -3907,10 +3907,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolDayDataV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3PoolDayDataV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataV3DTO>> DappsUniswapv3PoolsDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolDayDataV3DTO>> localVarResponse = await DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolDayDataV3DTO>> localVarResponse = await DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3921,8 +3921,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolDayDataV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolDayDataV3DTO>>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolDayDataV3DTO>>> DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3959,7 +3959,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PoolDayDataV3DTO>>("/dapps/uniswapv3/poolsDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3PoolDayDataV3DTO>>("/dapps/uniswapv3/poolsDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4161,10 +4161,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PoolHourDataV3DTO&gt;</returns>
-        public List<PoolHourDataV3DTO> DappsUniswapv3PoolsHourDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        public List<UniswapV3PoolHourDataV3DTO> DappsUniswapv3PoolsHourDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolHourDataV3DTO>> localVarResponse = DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolHourDataV3DTO>> localVarResponse = DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -4174,8 +4174,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PoolHourDataV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -4211,7 +4211,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PoolHourDataV3DTO>>("/dapps/uniswapv3/poolsHourData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3PoolHourDataV3DTO>>("/dapps/uniswapv3/poolsHourData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3PoolsHourDataCurrentGet", localVarResponse);
@@ -4231,10 +4231,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PoolHourDataV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3PoolHourDataV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataV3DTO>> DappsUniswapv3PoolsHourDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolHourDataV3DTO>> localVarResponse = await DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolHourDataV3DTO>> localVarResponse = await DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4245,8 +4245,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PoolHourDataV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PoolHourDataV3DTO>>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PoolHourDataV3DTO>>> DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -4283,7 +4283,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PoolHourDataV3DTO>>("/dapps/uniswapv3/poolsHourData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3PoolHourDataV3DTO>>("/dapps/uniswapv3/poolsHourData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4485,10 +4485,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PositionSnapshotV3DTO&gt;</returns>
-        public List<PositionSnapshotV3DTO> DappsUniswapv3PositionSnapshotsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        public List<UniswapV3PositionSnapshotV3DTO> DappsUniswapv3PositionSnapshotsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionSnapshotV3DTO>> localVarResponse = DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> localVarResponse = DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -4498,8 +4498,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PositionSnapshotV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -4535,7 +4535,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PositionSnapshotV3DTO>>("/dapps/uniswapv3/positionSnapshots/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3PositionSnapshotV3DTO>>("/dapps/uniswapv3/positionSnapshots/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3PositionSnapshotsCurrentGet", localVarResponse);
@@ -4555,10 +4555,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PositionSnapshotV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3PositionSnapshotV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3PositionSnapshotV3DTO>> DappsUniswapv3PositionSnapshotsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionSnapshotV3DTO>> localVarResponse = await DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> localVarResponse = await DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4569,8 +4569,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PositionSnapshotV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionSnapshotV3DTO>>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionSnapshotV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionSnapshotV3DTO>>> DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -4607,7 +4607,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PositionSnapshotV3DTO>>("/dapps/uniswapv3/positionSnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3PositionSnapshotV3DTO>>("/dapps/uniswapv3/positionSnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4627,10 +4627,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PositionV3DTO&gt;</returns>
-        public List<PositionV3DTO> DappsUniswapv3PositionsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        public List<UniswapV3PositionV3DTO> DappsUniswapv3PositionsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionV3DTO>> localVarResponse = DappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionV3DTO>> localVarResponse = DappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -4640,8 +4640,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PositionV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionV3DTO>> DappsUniswapv3PositionsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionV3DTO>> DappsUniswapv3PositionsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -4677,7 +4677,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PositionV3DTO>>("/dapps/uniswapv3/positions/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3PositionV3DTO>>("/dapps/uniswapv3/positions/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3PositionsCurrentGet", localVarResponse);
@@ -4697,10 +4697,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PositionV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PositionV3DTO>> DappsUniswapv3PositionsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3PositionV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3PositionV3DTO>> DappsUniswapv3PositionsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionV3DTO>> localVarResponse = await DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionV3DTO>> localVarResponse = await DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4711,8 +4711,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PositionV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PositionV3DTO>>> DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3PositionV3DTO>>> DappsUniswapv3PositionsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -4749,7 +4749,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PositionV3DTO>>("/dapps/uniswapv3/positions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3PositionV3DTO>>("/dapps/uniswapv3/positions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4951,10 +4951,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapV3DTO&gt;</returns>
-        public List<SwapV3DTO> DappsUniswapv3SwapsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        public List<UniswapV3SwapV3DTO> DappsUniswapv3SwapsCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapV3DTO>> localVarResponse = DappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3SwapV3DTO>> localVarResponse = DappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -4964,8 +4964,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapV3DTO>> DappsUniswapv3SwapsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3SwapV3DTO>> DappsUniswapv3SwapsCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -5001,7 +5001,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SwapV3DTO>>("/dapps/uniswapv3/swaps/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3SwapV3DTO>>("/dapps/uniswapv3/swaps/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3SwapsCurrentGet", localVarResponse);
@@ -5021,10 +5021,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SwapV3DTO>> DappsUniswapv3SwapsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3SwapV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3SwapV3DTO>> DappsUniswapv3SwapsCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapV3DTO>> localVarResponse = await DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3SwapV3DTO>> localVarResponse = await DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5035,8 +5035,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapV3DTO>>> DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3SwapV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3SwapV3DTO>>> DappsUniswapv3SwapsCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -5073,7 +5073,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SwapV3DTO>>("/dapps/uniswapv3/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3SwapV3DTO>>("/dapps/uniswapv3/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5457,10 +5457,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TickV3DTO&gt;</returns>
-        public List<TickV3DTO> DappsUniswapv3TicksCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3TickV3DTO&gt;</returns>
+        public List<UniswapV3TickV3DTO> DappsUniswapv3TicksCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickV3DTO>> localVarResponse = DappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickV3DTO>> localVarResponse = DappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -5470,8 +5470,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TickV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickV3DTO>> DappsUniswapv3TicksCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3TickV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickV3DTO>> DappsUniswapv3TicksCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -5507,7 +5507,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TickV3DTO>>("/dapps/uniswapv3/ticks/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3TickV3DTO>>("/dapps/uniswapv3/ticks/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3TicksCurrentGet", localVarResponse);
@@ -5527,10 +5527,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TickV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TickV3DTO>> DappsUniswapv3TicksCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3TickV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3TickV3DTO>> DappsUniswapv3TicksCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickV3DTO>> localVarResponse = await DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickV3DTO>> localVarResponse = await DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5541,8 +5541,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TickV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickV3DTO>>> DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TickV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickV3DTO>>> DappsUniswapv3TicksCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -5579,7 +5579,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TickV3DTO>>("/dapps/uniswapv3/ticks/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3TickV3DTO>>("/dapps/uniswapv3/ticks/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5599,10 +5599,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TickDayDataV3DTO&gt;</returns>
-        public List<TickDayDataV3DTO> DappsUniswapv3TicksDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        public List<UniswapV3TickDayDataV3DTO> DappsUniswapv3TicksDayDataCurrentGet(string filterPoolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickDayDataV3DTO>> localVarResponse = DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickDayDataV3DTO>> localVarResponse = DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
             return localVarResponse.Data;
         }
 
@@ -5612,8 +5612,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TickDayDataV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(string filterPoolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -5649,7 +5649,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TickDayDataV3DTO>>("/dapps/uniswapv3/ticksDayData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3TickDayDataV3DTO>>("/dapps/uniswapv3/ticksDayData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3TicksDayDataCurrentGet", localVarResponse);
@@ -5669,10 +5669,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TickDayDataV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3TickDayDataV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataV3DTO>> DappsUniswapv3TicksDayDataCurrentGetAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickDayDataV3DTO>> localVarResponse = await DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickDayDataV3DTO>> localVarResponse = await DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(filterPoolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5683,8 +5683,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterPoolId">Filter pool id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TickDayDataV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TickDayDataV3DTO>>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TickDayDataV3DTO>>> DappsUniswapv3TicksDayDataCurrentGetWithHttpInfoAsync(string filterPoolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -5721,7 +5721,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TickDayDataV3DTO>>("/dapps/uniswapv3/ticksDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3TickDayDataV3DTO>>("/dapps/uniswapv3/ticksDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6287,10 +6287,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenV3DTO&gt;</returns>
-        public List<TokenV3DTO> DappsUniswapv3TokensCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        public List<UniswapV3TokenV3DTO> DappsUniswapv3TokensCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DTO>> localVarResponse = DappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DTO>> localVarResponse = DappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
             return localVarResponse.Data;
         }
 
@@ -6300,8 +6300,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DTO>> DappsUniswapv3TokensCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DTO>> DappsUniswapv3TokensCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -6337,7 +6337,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TokenV3DTO>>("/dapps/uniswapv3/tokens/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3TokenV3DTO>>("/dapps/uniswapv3/tokens/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3TokensCurrentGet", localVarResponse);
@@ -6357,10 +6357,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TokenV3DTO>> DappsUniswapv3TokensCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3TokenV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DTO>> DappsUniswapv3TokensCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DTO>> localVarResponse = await DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DTO>> localVarResponse = await DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6371,8 +6371,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DTO>>> DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DTO>>> DappsUniswapv3TokensCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -6409,7 +6409,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TokenV3DTO>>("/dapps/uniswapv3/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3TokenV3DTO>>("/dapps/uniswapv3/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6429,10 +6429,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenV3DayDataDTO&gt;</returns>
-        public List<TokenV3DayDataDTO> DappsUniswapv3TokensDayDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        public List<UniswapV3TokenV3DayDataDTO> DappsUniswapv3TokensDayDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DayDataDTO>> localVarResponse = DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
             return localVarResponse.Data;
         }
 
@@ -6442,8 +6442,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenV3DayDataDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -6479,7 +6479,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TokenV3DayDataDTO>>("/dapps/uniswapv3/tokensDayData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3TokenV3DayDataDTO>>("/dapps/uniswapv3/tokensDayData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3TokensDayDataCurrentGet", localVarResponse);
@@ -6499,10 +6499,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenV3DayDataDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3TokenV3DayDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> DappsUniswapv3TokensDayDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DayDataDTO>> localVarResponse = await DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = await DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6513,8 +6513,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenV3DayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenV3DayDataDTO>>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> DappsUniswapv3TokensDayDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -6551,7 +6551,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TokenV3DayDataDTO>>("/dapps/uniswapv3/tokensDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3TokenV3DayDataDTO>>("/dapps/uniswapv3/tokensDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6753,10 +6753,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenHourDataV3DTO&gt;</returns>
-        public List<TokenHourDataV3DTO> DappsUniswapv3TokensHourDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        public List<UniswapV3TokenHourDataV3DTO> DappsUniswapv3TokensHourDataCurrentGet(string filterTokenId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenHourDataV3DTO>> localVarResponse = DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenHourDataV3DTO>> localVarResponse = DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
             return localVarResponse.Data;
         }
 
@@ -6766,8 +6766,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenHourDataV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(string filterTokenId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -6803,7 +6803,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TokenHourDataV3DTO>>("/dapps/uniswapv3/tokensHourData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3TokenHourDataV3DTO>>("/dapps/uniswapv3/tokensHourData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3TokensHourDataCurrentGet", localVarResponse);
@@ -6823,10 +6823,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenHourDataV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3TokenHourDataV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenHourDataV3DTO>> DappsUniswapv3TokensHourDataCurrentGetAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenHourDataV3DTO>> localVarResponse = await DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenHourDataV3DTO>> localVarResponse = await DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(filterTokenId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6837,8 +6837,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="filterTokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenHourDataV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenHourDataV3DTO>>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3TokenHourDataV3DTO>>> DappsUniswapv3TokensHourDataCurrentGetWithHttpInfoAsync(string filterTokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -6875,7 +6875,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TokenHourDataV3DTO>>("/dapps/uniswapv3/tokensHourData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3TokenHourDataV3DTO>>("/dapps/uniswapv3/tokensHourData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7064,10 +7064,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;UniswapDayDataV3DTO&gt;</returns>
-        public List<UniswapDayDataV3DTO> DappsUniswapv3UniswapDayDataCurrentGet(int operationIndex = 0)
+        /// <returns>List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        public List<UniswapV3UniswapDayDataV3DTO> DappsUniswapv3UniswapDayDataCurrentGet(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapDayDataV3DTO>> localVarResponse = DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> localVarResponse = DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -7076,8 +7076,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;UniswapDayDataV3DTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -7109,7 +7109,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<UniswapDayDataV3DTO>>("/dapps/uniswapv3/uniswapDayData/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<UniswapV3UniswapDayDataV3DTO>>("/dapps/uniswapv3/uniswapDayData/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsUniswapv3UniswapDayDataCurrentGet", localVarResponse);
@@ -7128,10 +7128,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;UniswapDayDataV3DTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;UniswapV3UniswapDayDataV3DTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataV3DTO>> DappsUniswapv3UniswapDayDataCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapDayDataV3DTO>> localVarResponse = await DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> localVarResponse = await DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7141,8 +7141,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapDayDataV3DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapDayDataV3DTO>>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataV3DTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<UniswapV3UniswapDayDataV3DTO>>> DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -7175,7 +7175,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapDayDataV3DTO>>("/dapps/uniswapv3/uniswapDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<UniswapV3UniswapDayDataV3DTO>>("/dapps/uniswapv3/uniswapDayData/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

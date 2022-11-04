@@ -1278,7 +1278,7 @@ package body .Clients is
    --  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
    procedure Dapps_Sushiswap_Pools_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.PairDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1299,7 +1299,7 @@ package body .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PairDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1322,7 +1322,7 @@ package body .Clients is
    --  GetSwaps
    procedure Dapps_Sushiswap_Swaps_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.SwapDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1343,7 +1343,7 @@ package body .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.SwapDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1389,7 +1389,7 @@ package body .Clients is
    --  GetTokens
    procedure Dapps_Sushiswap_Tokens_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.TokenDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1410,7 +1410,7 @@ package body .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TokenDTO_Type_Vectors.Vector) is
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1677,7 +1677,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_2Pools_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PairV2DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV2PairV2DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1717,7 +1717,7 @@ package body .Clients is
    --  GetSwaps
    procedure Dapps_Uniswapv_2Swaps_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.SwapV2DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV2SwapV2DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1779,7 +1779,7 @@ package body .Clients is
    --  GetTokens
    procedure Dapps_Uniswapv_2Tokens_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.TokenV2DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV2TokenV2DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1860,7 +1860,7 @@ package body .Clients is
    --  GetBundles
    procedure Dapps_Uniswapv_3Bundle_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.BundleV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3BundleV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1898,7 +1898,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Burns_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.BurnV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3BurnV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1960,7 +1960,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Factory_Current_Get
       (Client : in out Client_Type;
        Chain_Id : in Swagger.UString;
-       Result : out .Models.FactoryV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3FactoryV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1999,7 +1999,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Mints_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.MintV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3MintV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2086,7 +2086,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Pools_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PoolV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3PoolV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2104,7 +2104,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Pools_Day_Data_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PoolDayDataV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3PoolDayDataV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2145,7 +2145,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Pools_Hour_Data_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PoolHourDataV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3PoolHourDataV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2186,7 +2186,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Position_Snapshots_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PositionSnapshotV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3PositionSnapshotV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2204,7 +2204,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Positions_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.PositionV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3PositionV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2245,7 +2245,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Swaps_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.SwapV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3SwapV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2309,7 +2309,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Ticks_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TickV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3TickV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2327,7 +2327,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Ticks_Day_Data_Current_Get
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TickDayDataV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3TickDayDataV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2414,7 +2414,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Tokens_Current_Get
       (Client : in out Client_Type;
        Filter_Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TokenV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3TokenV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2432,7 +2432,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Tokens_Day_Data_Current_Get
       (Client : in out Client_Type;
        Filter_Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TokenV3DayDataDTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3TokenV3DayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2473,7 +2473,7 @@ package body .Clients is
    procedure Dapps_Uniswapv_3Tokens_Hour_Data_Current_Get
       (Client : in out Client_Type;
        Filter_Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.TokenHourDataV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3TokenHourDataV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -2511,7 +2511,7 @@ package body .Clients is
    --  GetUniswapDayData
    procedure Dapps_Uniswapv_3Uniswap_Day_Data_Current_Get
       (Client : in out Client_Type;
-       Result : out .Models.UniswapDayDataV3DTO_Type_Vectors.Vector) is
+       Result : out .Models.UniswapV3UniswapDayDataV3DTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin

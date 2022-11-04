@@ -18,7 +18,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [BUNDLE_V3_DTO]
+            l_response: LIST [UNISWAP_V3_BUNDLE_V3_DTO]
         do
             -- TODO: Initialize required params.
 
@@ -47,7 +47,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [BURN_V3_DTO]
+            l_response: LIST [UNISWAP_V3_BURN_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -94,7 +94,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [FACTORY_V3_DTO]
+            l_response: LIST [UNISWAP_V3_FACTORY_V3_DTO]
             l_chain_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -125,7 +125,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [MINT_V3_DTO]
+            l_response: LIST [UNISWAP_V3_MINT_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -190,7 +190,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [POOL_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POOL_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -204,7 +204,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [POOL_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -235,7 +235,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [POOL_HOUR_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -266,7 +266,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [POSITION_SNAPSHOT_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -280,7 +280,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [POSITION_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POSITION_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -311,7 +311,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [SWAP_V3_DTO]
+            l_response: LIST [UNISWAP_V3_SWAP_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -359,7 +359,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TICK_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TICK_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -373,7 +373,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TICK_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -438,7 +438,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TOKEN_V3_DTO]
             l_filter_token_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -452,7 +452,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_V3_DAY_DATA_DTO]
+            l_response: LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
             l_filter_token_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -483,7 +483,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [TOKEN_HOUR_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
             l_filter_token_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -513,7 +513,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: LIST [UNISWAP_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
         do
             -- TODO: Initialize required params.
 

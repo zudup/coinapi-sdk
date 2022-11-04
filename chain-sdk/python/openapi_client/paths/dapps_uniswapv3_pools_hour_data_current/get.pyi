@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.pool_hour_data_v3_dto import PoolHourDataV3DTO
+from openapi_client.model.uniswap_v3_pool_hour_data_v3_dto import UniswapV3PoolHourDataV3DTO
 
 # Query params
 FilterPoolIdSchema = schemas.StrSchema
@@ -63,12 +63,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['PoolHourDataV3DTO']:
-            return PoolHourDataV3DTO
+        def items() -> typing.Type['UniswapV3PoolHourDataV3DTO']:
+            return UniswapV3PoolHourDataV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['PoolHourDataV3DTO'], typing.List['PoolHourDataV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PoolHourDataV3DTO'], typing.List['UniswapV3PoolHourDataV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -77,7 +77,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'PoolHourDataV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PoolHourDataV3DTO':
         return super().__getitem__(i)
 
 
@@ -89,12 +89,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['PoolHourDataV3DTO']:
-            return PoolHourDataV3DTO
+        def items() -> typing.Type['UniswapV3PoolHourDataV3DTO']:
+            return UniswapV3PoolHourDataV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['PoolHourDataV3DTO'], typing.List['PoolHourDataV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PoolHourDataV3DTO'], typing.List['UniswapV3PoolHourDataV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -103,7 +103,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'PoolHourDataV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PoolHourDataV3DTO':
         return super().__getitem__(i)
 
 
@@ -115,12 +115,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['PoolHourDataV3DTO']:
-            return PoolHourDataV3DTO
+        def items() -> typing.Type['UniswapV3PoolHourDataV3DTO']:
+            return UniswapV3PoolHourDataV3DTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['PoolHourDataV3DTO'], typing.List['PoolHourDataV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PoolHourDataV3DTO'], typing.List['UniswapV3PoolHourDataV3DTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -129,7 +129,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'PoolHourDataV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PoolHourDataV3DTO':
         return super().__getitem__(i)
 
 

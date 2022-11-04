@@ -659,7 +659,7 @@ No authorization required
 
 ## dapps_uniswapv2_pools_current_get
 
-> <Array<PairV2DTO>> dapps_uniswapv2_pools_current_get(opts)
+> <Array<UniswapV2PairV2DTO>> dapps_uniswapv2_pools_current_get(opts)
 
 GetPools
 
@@ -687,7 +687,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PairV2DTO>>, Integer, Hash)> dapps_uniswapv2_pools_current_get_with_http_info(opts)
+> <Array(<Array<UniswapV2PairV2DTO>>, Integer, Hash)> dapps_uniswapv2_pools_current_get_with_http_info(opts)
 
 ```ruby
 begin
@@ -695,7 +695,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv2_pools_current_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<PairV2DTO>>
+  p data # => <Array<UniswapV2PairV2DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV2Api->dapps_uniswapv2_pools_current_get_with_http_info: #{e}"
 end
@@ -709,7 +709,7 @@ end
 
 ### Return type
 
-[**Array&lt;PairV2DTO&gt;**](PairV2DTO.md)
+[**Array&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -794,7 +794,7 @@ No authorization required
 
 ## dapps_uniswapv2_swaps_current_get
 
-> <Array<SwapV2DTO>> dapps_uniswapv2_swaps_current_get
+> <Array<UniswapV2SwapV2DTO>> dapps_uniswapv2_swaps_current_get
 
 GetSwaps
 
@@ -819,7 +819,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SwapV2DTO>>, Integer, Hash)> dapps_uniswapv2_swaps_current_get_with_http_info
+> <Array(<Array<UniswapV2SwapV2DTO>>, Integer, Hash)> dapps_uniswapv2_swaps_current_get_with_http_info
 
 ```ruby
 begin
@@ -827,7 +827,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv2_swaps_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SwapV2DTO>>
+  p data # => <Array<UniswapV2SwapV2DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV2Api->dapps_uniswapv2_swaps_current_get_with_http_info: #{e}"
 end
@@ -839,7 +839,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;SwapV2DTO&gt;**](SwapV2DTO.md)
+[**Array&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -995,7 +995,7 @@ No authorization required
 
 ## dapps_uniswapv2_tokens_current_get
 
-> <Array<TokenV2DTO>> dapps_uniswapv2_tokens_current_get
+> <Array<UniswapV2TokenV2DTO>> dapps_uniswapv2_tokens_current_get
 
 GetTokens
 
@@ -1020,7 +1020,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TokenV2DTO>>, Integer, Hash)> dapps_uniswapv2_tokens_current_get_with_http_info
+> <Array(<Array<UniswapV2TokenV2DTO>>, Integer, Hash)> dapps_uniswapv2_tokens_current_get_with_http_info
 
 ```ruby
 begin
@@ -1028,7 +1028,7 @@ begin
   data, status_code, headers = api_instance.dapps_uniswapv2_tokens_current_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<TokenV2DTO>>
+  p data # => <Array<UniswapV2TokenV2DTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling UniswapV2Api->dapps_uniswapv2_tokens_current_get_with_http_info: #{e}"
 end
@@ -1040,7 +1040,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;TokenV2DTO&gt;**](TokenV2DTO.md)
+[**Array&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

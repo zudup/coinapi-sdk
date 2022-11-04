@@ -310,7 +310,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_pools_current_get**
-> dapps_uniswapv2_pools_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [PAIR_V2_DTO]
+> dapps_uniswapv2_pools_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
 
 
 GetPools
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [PAIR_V2_DTO]**](PairV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_V2_DTO]**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_swaps_current_get**
-> dapps_uniswapv2_swaps_current_get : detachable LIST [SWAP_V2_DTO]
+> dapps_uniswapv2_swaps_current_get : detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
 
 
 GetSwaps
@@ -381,7 +381,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SWAP_V2_DTO]**](SwapV2DTO.md)
+[**LIST [UNISWAP_V2_SWAP_V2_DTO]**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_tokens_current_get**
-> dapps_uniswapv2_tokens_current_get : detachable LIST [TOKEN_V2_DTO]
+> dapps_uniswapv2_tokens_current_get : detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
 
 
 GetTokens
@@ -470,7 +470,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [TOKEN_V2_DTO]**](TokenV2DTO.md)
+[**LIST [UNISWAP_V2_TOKEN_V2_DTO]**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

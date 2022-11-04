@@ -498,7 +498,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsSushiswapPoolsCurrentGet**
-> array[PairDTO] DappsSushiswapPoolsCurrentGet()
+> array[SushiswapPairDTO] DappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -523,7 +523,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[PairDTO]**](PairDTO.md)
+[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -540,7 +540,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapPoolsHistoricalGet**
-> array[PairDTO] DappsSushiswapPoolsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+> array[SushiswapPairDTO] DappsSushiswapPoolsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
 GetPools (historical)
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[PairDTO]**](PairDTO.md)
+[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -593,7 +593,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapSwapsCurrentGet**
-> array[SwapDTO] DappsSushiswapSwapsCurrentGet()
+> array[SushiswapSwapDTO] DappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -616,7 +616,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[SwapDTO]**](SwapDTO.md)
+[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -633,7 +633,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapSwapsHistoricalGet**
-> array[SwapDTO] DappsSushiswapSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+> array[SushiswapSwapDTO] DappsSushiswapSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
 GetSwaps (historical)
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[SwapDTO]**](SwapDTO.md)
+[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ No authorization required
 | **200** | Success |  -  |
 
 # **DappsSushiswapTokensCurrentGet**
-> array[TokenDTO] DappsSushiswapTokensCurrentGet()
+> array[SushiswapTokenDTO] DappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -757,7 +757,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[TokenDTO]**](TokenDTO.md)
+[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -774,7 +774,7 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapTokensHistoricalGet**
-> array[TokenDTO] DappsSushiswapTokensHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
+> array[SushiswapTokenDTO] DappsSushiswapTokensHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
 GetTokens (historical)
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[TokenDTO]**](TokenDTO.md)
+[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 

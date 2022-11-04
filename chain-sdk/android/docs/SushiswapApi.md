@@ -530,7 +530,7 @@ No authorization required
 
 ## dappsSushiswapPoolsCurrentGet
 
-> List&lt;PairDTO&gt; dappsSushiswapPoolsCurrentGet()
+> List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsCurrentGet()
 
 GetPools
 
@@ -544,7 +544,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<PairDTO> result = apiInstance.dappsSushiswapPoolsCurrentGet();
+    List<SushiswapPairDTO> result = apiInstance.dappsSushiswapPoolsCurrentGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsCurrentGet");
@@ -558,7 +558,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -572,7 +572,7 @@ No authorization required
 
 ## dappsSushiswapPoolsHistoricalGet
 
-> List&lt;PairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapPairDTO&gt; dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetPools (historical)
 
@@ -589,7 +589,7 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    List<PairDTO> result = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapPairDTO> result = apiInstance.dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsHistoricalGet");
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -624,7 +624,7 @@ No authorization required
 
 ## dappsSushiswapSwapsCurrentGet
 
-> List&lt;SwapDTO&gt; dappsSushiswapSwapsCurrentGet()
+> List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsCurrentGet()
 
 GetSwaps
 
@@ -636,7 +636,7 @@ GetSwaps
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SwapDTO> result = apiInstance.dappsSushiswapSwapsCurrentGet();
+    List<SushiswapSwapDTO> result = apiInstance.dappsSushiswapSwapsCurrentGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsCurrentGet");
@@ -650,7 +650,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -664,7 +664,7 @@ No authorization required
 
 ## dappsSushiswapSwapsHistoricalGet
 
-> List&lt;SwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapSwapDTO&gt; dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
 
 GetSwaps (historical)
 
@@ -681,7 +681,7 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    List<SwapDTO> result = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapSwapDTO> result = apiInstance.dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsHistoricalGet");
@@ -702,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ No authorization required
 
 ## dappsSushiswapTokensCurrentGet
 
-> List&lt;TokenDTO&gt; dappsSushiswapTokensCurrentGet()
+> List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensCurrentGet()
 
 GetTokens
 
@@ -779,7 +779,7 @@ GetTokens
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<TokenDTO> result = apiInstance.dappsSushiswapTokensCurrentGet();
+    List<SushiswapTokenDTO> result = apiInstance.dappsSushiswapTokensCurrentGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensCurrentGet");
@@ -793,7 +793,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -807,7 +807,7 @@ No authorization required
 
 ## dappsSushiswapTokensHistoricalGet
 
-> List&lt;TokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> List&lt;SushiswapTokenDTO&gt; dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
 
 GetTokens (historical)
 
@@ -824,7 +824,7 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String tokenId = null; // String | 
 try {
-    List<TokenDTO> result = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    List<SushiswapTokenDTO> result = apiInstance.dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensHistoricalGet");
@@ -845,7 +845,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

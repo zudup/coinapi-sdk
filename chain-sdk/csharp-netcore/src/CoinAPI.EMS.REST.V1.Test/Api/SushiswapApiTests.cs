@@ -209,7 +209,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsSushiswapPoolsCurrentGet();
-            //Assert.IsType<List<PairDTO>>(response);
+            //Assert.IsType<List<SushiswapPairDTO>>(response);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string poolId = null;
             //var response = instance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<PairDTO>>(response);
+            //Assert.IsType<List<SushiswapPairDTO>>(response);
         }
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsSushiswapSwapsCurrentGet();
-            //Assert.IsType<List<SwapDTO>>(response);
+            //Assert.IsType<List<SushiswapSwapDTO>>(response);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string poolId = null;
             //var response = instance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SwapDTO>>(response);
+            //Assert.IsType<List<SushiswapSwapDTO>>(response);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsSushiswapTokensCurrentGet();
-            //Assert.IsType<List<TokenDTO>>(response);
+            //Assert.IsType<List<SushiswapTokenDTO>>(response);
         }
 
         /// <summary>
@@ -294,7 +294,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string tokenId = null;
             //var response = instance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-            //Assert.IsType<List<TokenDTO>>(response);
+            //Assert.IsType<List<SushiswapTokenDTO>>(response);
         }
 
         /// <summary>

@@ -63,7 +63,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsUniswapv3BundleCurrentGet();
-            //Assert.IsType<List<BundleV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3BundleV3DTO>>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3BurnsCurrentGet(filterPoolId);
-            //Assert.IsType<List<BurnV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3BurnV3DTO>>(response);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string chainId = null;
             //var response = instance.DappsUniswapv3FactoryCurrentGet(chainId);
-            //Assert.IsType<List<FactoryV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3FactoryV3DTO>>(response);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3MintsCurrentGet(filterPoolId);
-            //Assert.IsType<List<MintV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3MintV3DTO>>(response);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsCurrentGet(filterPoolId);
-            //Assert.IsType<List<PoolV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3PoolV3DTO>>(response);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
-            //Assert.IsType<List<PoolDayDataV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3PoolDayDataV3DTO>>(response);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
-            //Assert.IsType<List<PoolHourDataV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3PoolHourDataV3DTO>>(response);
         }
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
-            //Assert.IsType<List<PositionSnapshotV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3PositionSnapshotV3DTO>>(response);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3PositionsCurrentGet(filterPoolId);
-            //Assert.IsType<List<PositionV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3PositionV3DTO>>(response);
         }
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3SwapsCurrentGet(filterPoolId);
-            //Assert.IsType<List<SwapV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3SwapV3DTO>>(response);
         }
 
         /// <summary>
@@ -360,7 +360,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3TicksCurrentGet(filterPoolId);
-            //Assert.IsType<List<TickV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3TickV3DTO>>(response);
         }
 
         /// <summary>
@@ -372,7 +372,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.DappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
-            //Assert.IsType<List<TickDayDataV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3TickDayDataV3DTO>>(response);
         }
 
         /// <summary>
@@ -429,7 +429,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensCurrentGet(filterTokenId);
-            //Assert.IsType<List<TokenV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3TokenV3DTO>>(response);
         }
 
         /// <summary>
@@ -441,7 +441,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
-            //Assert.IsType<List<TokenV3DayDataDTO>>(response);
+            //Assert.IsType<List<UniswapV3TokenV3DayDataDTO>>(response);
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterTokenId = null;
             //var response = instance.DappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
-            //Assert.IsType<List<TokenHourDataV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3TokenHourDataV3DTO>>(response);
         }
 
         /// <summary>
@@ -493,7 +493,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.DappsUniswapv3UniswapDayDataCurrentGet();
-            //Assert.IsType<List<UniswapDayDataV3DTO>>(response);
+            //Assert.IsType<List<UniswapV3UniswapDayDataV3DTO>>(response);
         }
     }
 }

@@ -19,10 +19,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%BundleV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3BundleV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_bundle_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.BundleV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_bundle_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BundleV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_bundle_current_get(connection, _opts \\ []) do
     request =
       %{}
@@ -33,7 +33,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.BundleV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3BundleV3Dto{}]}
     ])
   end
 
@@ -87,10 +87,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%BurnV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3BurnV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_burns_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.BurnV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_burns_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BurnV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_burns_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -106,7 +106,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.BurnV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3BurnV3Dto{}]}
     ])
   end
 
@@ -201,10 +201,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%FactoryV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3FactoryV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_factory_current_get(Tesla.Env.client, String.t, keyword()) :: {:ok, list(OnChainAPI.Model.FactoryV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_factory_current_get(Tesla.Env.client, String.t, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3FactoryV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_factory_current_get(connection, chain_id, _opts \\ []) do
     request =
       %{}
@@ -215,7 +215,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.FactoryV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3FactoryV3Dto{}]}
     ])
   end
 
@@ -269,10 +269,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%MintV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3MintV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_mints_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.MintV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_mints_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3MintV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_mints_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -288,7 +288,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.MintV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3MintV3Dto{}]}
     ])
   end
 
@@ -426,10 +426,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%PoolV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3PoolV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.PoolV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_pools_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_pools_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -445,7 +445,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.PoolV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3PoolV3Dto{}]}
     ])
   end
 
@@ -460,10 +460,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%PoolDayDataV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3PoolDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.PoolDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_pools_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolDayDataV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_pools_day_data_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -479,7 +479,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.PoolDayDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3PoolDayDataV3Dto{}]}
     ])
   end
 
@@ -535,10 +535,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%PoolHourDataV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3PoolHourDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.PoolHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_pools_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolHourDataV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_pools_hour_data_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -554,7 +554,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.PoolHourDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3PoolHourDataV3Dto{}]}
     ])
   end
 
@@ -610,10 +610,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%PositionSnapshotV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3PositionSnapshotV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_position_snapshots_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.PositionSnapshotV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_position_snapshots_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_position_snapshots_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -629,7 +629,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.PositionSnapshotV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto{}]}
     ])
   end
 
@@ -644,10 +644,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%PositionV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3PositionV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_positions_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.PositionV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_positions_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_positions_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -663,7 +663,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.PositionV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3PositionV3Dto{}]}
     ])
   end
 
@@ -719,10 +719,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%SwapV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3SwapV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_swaps_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SwapV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_swaps_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3SwapV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_swaps_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -738,7 +738,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.SwapV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3SwapV3Dto{}]}
     ])
   end
 
@@ -835,10 +835,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%TickV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3TickV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_ticks_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.TickV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_ticks_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_ticks_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -854,7 +854,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.TickV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TickV3Dto{}]}
     ])
   end
 
@@ -869,10 +869,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%TickDayDataV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3TickDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_ticks_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.TickDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_ticks_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickDayDataV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_ticks_day_data_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
@@ -888,7 +888,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.TickDayDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TickDayDataV3Dto{}]}
     ])
   end
 
@@ -1026,10 +1026,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%TokenV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3TokenV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.TokenV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_tokens_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_tokens_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
@@ -1045,7 +1045,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.TokenV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TokenV3Dto{}]}
     ])
   end
 
@@ -1060,10 +1060,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%TokenV3DayDataDto{}, ...]}` on success
+  - `{:ok, [%UniswapV3TokenV3DayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.TokenV3DayDataDto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_tokens_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3DayDataDto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_tokens_day_data_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
@@ -1079,7 +1079,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.TokenV3DayDataDto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TokenV3DayDataDto{}]}
     ])
   end
 
@@ -1135,10 +1135,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%TokenHourDataV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3TokenHourDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.TokenHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_tokens_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenHourDataV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_tokens_hour_data_current_get(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
@@ -1154,7 +1154,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.TokenHourDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TokenHourDataV3Dto{}]}
     ])
   end
 
@@ -1207,10 +1207,10 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, [%UniswapDayDataV3Dto{}, ...]}` on success
+  - `{:ok, [%UniswapV3UniswapDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_uniswap_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  @spec dapps_uniswapv3_uniswap_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto.t)} | {:error, Tesla.Env.t}
   def dapps_uniswapv3_uniswap_day_data_current_get(connection, _opts \\ []) do
     request =
       %{}
@@ -1221,7 +1221,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapDayDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto{}]}
     ])
   end
 end

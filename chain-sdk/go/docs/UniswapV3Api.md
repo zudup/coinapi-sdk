@@ -42,7 +42,7 @@ Method | HTTP request | Description
 
 ## DappsUniswapv3BundleCurrentGet
 
-> []BundleV3DTO DappsUniswapv3BundleCurrentGet(ctx).Execute()
+> []UniswapV3BundleV3DTO DappsUniswapv3BundleCurrentGet(ctx).Execute()
 
 GetBundles
 
@@ -67,7 +67,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BundleCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3BundleCurrentGet`: []BundleV3DTO
+    // response from `DappsUniswapv3BundleCurrentGet`: []UniswapV3BundleV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3BundleCurrentGet`: %v\n", resp)
 }
 ```
@@ -83,7 +83,7 @@ Other parameters are passed through a pointer to a apiDappsUniswapv3BundleCurren
 
 ### Return type
 
-[**[]BundleV3DTO**](BundleV3DTO.md)
+[**[]UniswapV3BundleV3DTO**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ No authorization required
 
 ## DappsUniswapv3BurnsCurrentGet
 
-> []BurnV3DTO DappsUniswapv3BurnsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3BurnV3DTO DappsUniswapv3BurnsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetBurns
 
@@ -196,7 +196,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3BurnsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3BurnsCurrentGet`: []BurnV3DTO
+    // response from `DappsUniswapv3BurnsCurrentGet`: []UniswapV3BurnV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3BurnsCurrentGet`: %v\n", resp)
 }
 ```
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]BurnV3DTO**](BurnV3DTO.md)
+[**[]UniswapV3BurnV3DTO**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ No authorization required
 
 ## DappsUniswapv3FactoryCurrentGet
 
-> []FactoryV3DTO DappsUniswapv3FactoryCurrentGet(ctx, chainId).Execute()
+> []UniswapV3FactoryV3DTO DappsUniswapv3FactoryCurrentGet(ctx, chainId).Execute()
 
 GetFactory
 
@@ -400,7 +400,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3FactoryCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3FactoryCurrentGet`: []FactoryV3DTO
+    // response from `DappsUniswapv3FactoryCurrentGet`: []UniswapV3FactoryV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3FactoryCurrentGet`: %v\n", resp)
 }
 ```
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]FactoryV3DTO**](FactoryV3DTO.md)
+[**[]UniswapV3FactoryV3DTO**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -511,7 +511,7 @@ No authorization required
 
 ## DappsUniswapv3MintsCurrentGet
 
-> []MintV3DTO DappsUniswapv3MintsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3MintV3DTO DappsUniswapv3MintsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetMints
 
@@ -537,7 +537,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3MintsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3MintsCurrentGet`: []MintV3DTO
+    // response from `DappsUniswapv3MintsCurrentGet`: []UniswapV3MintV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3MintsCurrentGet`: %v\n", resp)
 }
 ```
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]MintV3DTO**](MintV3DTO.md)
+[**[]UniswapV3MintV3DTO**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -788,7 +788,7 @@ No authorization required
 
 ## DappsUniswapv3PoolsCurrentGet
 
-> []PoolV3DTO DappsUniswapv3PoolsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3PoolV3DTO DappsUniswapv3PoolsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPools
 
@@ -814,7 +814,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3PoolsCurrentGet`: []PoolV3DTO
+    // response from `DappsUniswapv3PoolsCurrentGet`: []UniswapV3PoolV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsCurrentGet`: %v\n", resp)
 }
 ```
@@ -834,7 +834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PoolV3DTO**](PoolV3DTO.md)
+[**[]UniswapV3PoolV3DTO**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ No authorization required
 
 ## DappsUniswapv3PoolsDayDataCurrentGet
 
-> []PoolDayDataV3DTO DappsUniswapv3PoolsDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3PoolDayDataV3DTO DappsUniswapv3PoolsDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPoolsDayData
 
@@ -878,7 +878,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3PoolsDayDataCurrentGet`: []PoolDayDataV3DTO
+    // response from `DappsUniswapv3PoolsDayDataCurrentGet`: []UniswapV3PoolDayDataV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsDayDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -898,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PoolDayDataV3DTO**](PoolDayDataV3DTO.md)
+[**[]UniswapV3PoolDayDataV3DTO**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -987,7 +987,7 @@ No authorization required
 
 ## DappsUniswapv3PoolsHourDataCurrentGet
 
-> []PoolHourDataV3DTO DappsUniswapv3PoolsHourDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3PoolHourDataV3DTO DappsUniswapv3PoolsHourDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPoolsHourData
 
@@ -1013,7 +1013,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoolsHourDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3PoolsHourDataCurrentGet`: []PoolHourDataV3DTO
+    // response from `DappsUniswapv3PoolsHourDataCurrentGet`: []UniswapV3PoolHourDataV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PoolsHourDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PoolHourDataV3DTO**](PoolHourDataV3DTO.md)
+[**[]UniswapV3PoolHourDataV3DTO**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1122,7 +1122,7 @@ No authorization required
 
 ## DappsUniswapv3PositionSnapshotsCurrentGet
 
-> []PositionSnapshotV3DTO DappsUniswapv3PositionSnapshotsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3PositionSnapshotV3DTO DappsUniswapv3PositionSnapshotsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPositionSnapshot
 
@@ -1148,7 +1148,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionSnapshotsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3PositionSnapshotsCurrentGet`: []PositionSnapshotV3DTO
+    // response from `DappsUniswapv3PositionSnapshotsCurrentGet`: []UniswapV3PositionSnapshotV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PositionSnapshotsCurrentGet`: %v\n", resp)
 }
 ```
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PositionSnapshotV3DTO**](PositionSnapshotV3DTO.md)
+[**[]UniswapV3PositionSnapshotV3DTO**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -1186,7 +1186,7 @@ No authorization required
 
 ## DappsUniswapv3PositionsCurrentGet
 
-> []PositionV3DTO DappsUniswapv3PositionsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3PositionV3DTO DappsUniswapv3PositionsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPositions
 
@@ -1212,7 +1212,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PositionsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3PositionsCurrentGet`: []PositionV3DTO
+    // response from `DappsUniswapv3PositionsCurrentGet`: []UniswapV3PositionV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3PositionsCurrentGet`: %v\n", resp)
 }
 ```
@@ -1232,7 +1232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PositionV3DTO**](PositionV3DTO.md)
+[**[]UniswapV3PositionV3DTO**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -1321,7 +1321,7 @@ No authorization required
 
 ## DappsUniswapv3SwapsCurrentGet
 
-> []SwapV3DTO DappsUniswapv3SwapsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3SwapV3DTO DappsUniswapv3SwapsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetSwaps
 
@@ -1347,7 +1347,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3SwapsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3SwapsCurrentGet`: []SwapV3DTO
+    // response from `DappsUniswapv3SwapsCurrentGet`: []UniswapV3SwapV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3SwapsCurrentGet`: %v\n", resp)
 }
 ```
@@ -1367,7 +1367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]SwapV3DTO**](SwapV3DTO.md)
+[**[]UniswapV3SwapV3DTO**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ No authorization required
 
 ## DappsUniswapv3TicksCurrentGet
 
-> []TickV3DTO DappsUniswapv3TicksCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3TickV3DTO DappsUniswapv3TicksCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetTicks
 
@@ -1553,7 +1553,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TicksCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3TicksCurrentGet`: []TickV3DTO
+    // response from `DappsUniswapv3TicksCurrentGet`: []UniswapV3TickV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TicksCurrentGet`: %v\n", resp)
 }
 ```
@@ -1573,7 +1573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TickV3DTO**](TickV3DTO.md)
+[**[]UniswapV3TickV3DTO**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1591,7 +1591,7 @@ No authorization required
 
 ## DappsUniswapv3TicksDayDataCurrentGet
 
-> []TickDayDataV3DTO DappsUniswapv3TicksDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV3TickDayDataV3DTO DappsUniswapv3TicksDayDataCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetTicksDayData
 
@@ -1617,7 +1617,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TicksDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3TicksDayDataCurrentGet`: []TickDayDataV3DTO
+    // response from `DappsUniswapv3TicksDayDataCurrentGet`: []UniswapV3TickDayDataV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TicksDayDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -1637,7 +1637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TickDayDataV3DTO**](TickDayDataV3DTO.md)
+[**[]UniswapV3TickDayDataV3DTO**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1868,7 +1868,7 @@ No authorization required
 
 ## DappsUniswapv3TokensCurrentGet
 
-> []TokenV3DTO DappsUniswapv3TokensCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
+> []UniswapV3TokenV3DTO DappsUniswapv3TokensCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokens
 
@@ -1894,7 +1894,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3TokensCurrentGet`: []TokenV3DTO
+    // response from `DappsUniswapv3TokensCurrentGet`: []UniswapV3TokenV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensCurrentGet`: %v\n", resp)
 }
 ```
@@ -1914,7 +1914,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TokenV3DTO**](TokenV3DTO.md)
+[**[]UniswapV3TokenV3DTO**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1932,7 +1932,7 @@ No authorization required
 
 ## DappsUniswapv3TokensDayDataCurrentGet
 
-> []TokenV3DayDataDTO DappsUniswapv3TokensDayDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
+> []UniswapV3TokenV3DayDataDTO DappsUniswapv3TokensDayDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokensDayData
 
@@ -1958,7 +1958,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3TokensDayDataCurrentGet`: []TokenV3DayDataDTO
+    // response from `DappsUniswapv3TokensDayDataCurrentGet`: []UniswapV3TokenV3DayDataDTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensDayDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -1978,7 +1978,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TokenV3DayDataDTO**](TokenV3DayDataDTO.md)
+[**[]UniswapV3TokenV3DayDataDTO**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -2067,7 +2067,7 @@ No authorization required
 
 ## DappsUniswapv3TokensHourDataCurrentGet
 
-> []TokenHourDataV3DTO DappsUniswapv3TokensHourDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
+> []UniswapV3TokenHourDataV3DTO DappsUniswapv3TokensHourDataCurrentGet(ctx).FilterTokenId(filterTokenId).Execute()
 
 GetTokensHourData
 
@@ -2093,7 +2093,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3TokensHourDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3TokensHourDataCurrentGet`: []TokenHourDataV3DTO
+    // response from `DappsUniswapv3TokensHourDataCurrentGet`: []UniswapV3TokenHourDataV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3TokensHourDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -2113,7 +2113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]TokenHourDataV3DTO**](TokenHourDataV3DTO.md)
+[**[]UniswapV3TokenHourDataV3DTO**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -2200,7 +2200,7 @@ No authorization required
 
 ## DappsUniswapv3UniswapDayDataCurrentGet
 
-> []UniswapDayDataV3DTO DappsUniswapv3UniswapDayDataCurrentGet(ctx).Execute()
+> []UniswapV3UniswapDayDataV3DTO DappsUniswapv3UniswapDayDataCurrentGet(ctx).Execute()
 
 GetUniswapDayData
 
@@ -2225,7 +2225,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3UniswapDayDataCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv3UniswapDayDataCurrentGet`: []UniswapDayDataV3DTO
+    // response from `DappsUniswapv3UniswapDayDataCurrentGet`: []UniswapV3UniswapDayDataV3DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV3Api.DappsUniswapv3UniswapDayDataCurrentGet`: %v\n", resp)
 }
 ```
@@ -2241,7 +2241,7 @@ Other parameters are passed through a pointer to a apiDappsUniswapv3UniswapDayDa
 
 ### Return type
 
-[**[]UniswapDayDataV3DTO**](UniswapDayDataV3DTO.md)
+[**[]UniswapV3UniswapDayDataV3DTO**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

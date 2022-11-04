@@ -40,7 +40,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 <a name="dappsuniswapv3bundlecurrentget"></a>
 # **DappsUniswapv3BundleCurrentGet**
-> List&lt;BundleV3DTO&gt; DappsUniswapv3BundleCurrentGet ()
+> List&lt;UniswapV3BundleV3DTO&gt; DappsUniswapv3BundleCurrentGet ()
 
 GetBundles
 
@@ -65,7 +65,7 @@ namespace Example
             try
             {
                 // GetBundles
-                List<BundleV3DTO> result = apiInstance.DappsUniswapv3BundleCurrentGet();
+                List<UniswapV3BundleV3DTO> result = apiInstance.DappsUniswapv3BundleCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -86,7 +86,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetBundles
-    ApiResponse<List<BundleV3DTO>> response = apiInstance.DappsUniswapv3BundleCurrentGetWithHttpInfo();
+    ApiResponse<List<UniswapV3BundleV3DTO>> response = apiInstance.DappsUniswapv3BundleCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -103,7 +103,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;BundleV3DTO&gt;**](BundleV3DTO.md)
+[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ No authorization required
 
 <a name="dappsuniswapv3burnscurrentget"></a>
 # **DappsUniswapv3BurnsCurrentGet**
-> List&lt;BurnV3DTO&gt; DappsUniswapv3BurnsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3BurnV3DTO&gt; DappsUniswapv3BurnsCurrentGet (string filterPoolId = null)
 
 GetBurns
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // GetBurns
-                List<BurnV3DTO> result = apiInstance.DappsUniswapv3BurnsCurrentGet(filterPoolId);
+                List<UniswapV3BurnV3DTO> result = apiInstance.DappsUniswapv3BurnsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -260,7 +260,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetBurns
-    ApiResponse<List<BurnV3DTO>> response = apiInstance.DappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3BurnV3DTO>> response = apiInstance.DappsUniswapv3BurnsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -281,7 +281,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;BurnV3DTO&gt;**](BurnV3DTO.md)
+[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -482,7 +482,7 @@ No authorization required
 
 <a name="dappsuniswapv3factorycurrentget"></a>
 # **DappsUniswapv3FactoryCurrentGet**
-> List&lt;FactoryV3DTO&gt; DappsUniswapv3FactoryCurrentGet (string chainId)
+> List&lt;UniswapV3FactoryV3DTO&gt; DappsUniswapv3FactoryCurrentGet (string chainId)
 
 GetFactory
 
@@ -508,7 +508,7 @@ namespace Example
             try
             {
                 // GetFactory
-                List<FactoryV3DTO> result = apiInstance.DappsUniswapv3FactoryCurrentGet(chainId);
+                List<UniswapV3FactoryV3DTO> result = apiInstance.DappsUniswapv3FactoryCurrentGet(chainId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -529,7 +529,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetFactory
-    ApiResponse<List<FactoryV3DTO>> response = apiInstance.DappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
+    ApiResponse<List<UniswapV3FactoryV3DTO>> response = apiInstance.DappsUniswapv3FactoryCurrentGetWithHttpInfo(chainId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -550,7 +550,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;FactoryV3DTO&gt;**](FactoryV3DTO.md)
+[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -660,7 +660,7 @@ No authorization required
 
 <a name="dappsuniswapv3mintscurrentget"></a>
 # **DappsUniswapv3MintsCurrentGet**
-> List&lt;MintV3DTO&gt; DappsUniswapv3MintsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3MintV3DTO&gt; DappsUniswapv3MintsCurrentGet (string filterPoolId = null)
 
 GetMints
 
@@ -686,7 +686,7 @@ namespace Example
             try
             {
                 // GetMints
-                List<MintV3DTO> result = apiInstance.DappsUniswapv3MintsCurrentGet(filterPoolId);
+                List<UniswapV3MintV3DTO> result = apiInstance.DappsUniswapv3MintsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -707,7 +707,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetMints
-    ApiResponse<List<MintV3DTO>> response = apiInstance.DappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3MintV3DTO>> response = apiInstance.DappsUniswapv3MintsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -728,7 +728,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;MintV3DTO&gt;**](MintV3DTO.md)
+[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -1022,7 +1022,7 @@ No authorization required
 
 <a name="dappsuniswapv3poolscurrentget"></a>
 # **DappsUniswapv3PoolsCurrentGet**
-> List&lt;PoolV3DTO&gt; DappsUniswapv3PoolsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3PoolV3DTO&gt; DappsUniswapv3PoolsCurrentGet (string filterPoolId = null)
 
 GetPools
 
@@ -1048,7 +1048,7 @@ namespace Example
             try
             {
                 // GetPools
-                List<PoolV3DTO> result = apiInstance.DappsUniswapv3PoolsCurrentGet(filterPoolId);
+                List<UniswapV3PoolV3DTO> result = apiInstance.DappsUniswapv3PoolsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1069,7 +1069,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPools
-    ApiResponse<List<PoolV3DTO>> response = apiInstance.DappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3PoolV3DTO>> response = apiInstance.DappsUniswapv3PoolsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1090,7 +1090,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PoolV3DTO&gt;**](PoolV3DTO.md)
+[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -1111,7 +1111,7 @@ No authorization required
 
 <a name="dappsuniswapv3poolsdaydatacurrentget"></a>
 # **DappsUniswapv3PoolsDayDataCurrentGet**
-> List&lt;PoolDayDataV3DTO&gt; DappsUniswapv3PoolsDayDataCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3PoolDayDataV3DTO&gt; DappsUniswapv3PoolsDayDataCurrentGet (string filterPoolId = null)
 
 GetPoolsDayData
 
@@ -1137,7 +1137,7 @@ namespace Example
             try
             {
                 // GetPoolsDayData
-                List<PoolDayDataV3DTO> result = apiInstance.DappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
+                List<UniswapV3PoolDayDataV3DTO> result = apiInstance.DappsUniswapv3PoolsDayDataCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1158,7 +1158,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPoolsDayData
-    ApiResponse<List<PoolDayDataV3DTO>> response = apiInstance.DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3PoolDayDataV3DTO>> response = apiInstance.DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1179,7 +1179,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PoolDayDataV3DTO&gt;**](PoolDayDataV3DTO.md)
+[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1291,7 +1291,7 @@ No authorization required
 
 <a name="dappsuniswapv3poolshourdatacurrentget"></a>
 # **DappsUniswapv3PoolsHourDataCurrentGet**
-> List&lt;PoolHourDataV3DTO&gt; DappsUniswapv3PoolsHourDataCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3PoolHourDataV3DTO&gt; DappsUniswapv3PoolsHourDataCurrentGet (string filterPoolId = null)
 
 GetPoolsHourData
 
@@ -1317,7 +1317,7 @@ namespace Example
             try
             {
                 // GetPoolsHourData
-                List<PoolHourDataV3DTO> result = apiInstance.DappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
+                List<UniswapV3PoolHourDataV3DTO> result = apiInstance.DappsUniswapv3PoolsHourDataCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1338,7 +1338,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPoolsHourData
-    ApiResponse<List<PoolHourDataV3DTO>> response = apiInstance.DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3PoolHourDataV3DTO>> response = apiInstance.DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1359,7 +1359,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PoolHourDataV3DTO&gt;**](PoolHourDataV3DTO.md)
+[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1471,7 +1471,7 @@ No authorization required
 
 <a name="dappsuniswapv3positionsnapshotscurrentget"></a>
 # **DappsUniswapv3PositionSnapshotsCurrentGet**
-> List&lt;PositionSnapshotV3DTO&gt; DappsUniswapv3PositionSnapshotsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3PositionSnapshotV3DTO&gt; DappsUniswapv3PositionSnapshotsCurrentGet (string filterPoolId = null)
 
 GetPositionSnapshot
 
@@ -1497,7 +1497,7 @@ namespace Example
             try
             {
                 // GetPositionSnapshot
-                List<PositionSnapshotV3DTO> result = apiInstance.DappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
+                List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.DappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1518,7 +1518,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPositionSnapshot
-    ApiResponse<List<PositionSnapshotV3DTO>> response = apiInstance.DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> response = apiInstance.DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1539,7 +1539,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PositionSnapshotV3DTO&gt;**](PositionSnapshotV3DTO.md)
+[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -1560,7 +1560,7 @@ No authorization required
 
 <a name="dappsuniswapv3positionscurrentget"></a>
 # **DappsUniswapv3PositionsCurrentGet**
-> List&lt;PositionV3DTO&gt; DappsUniswapv3PositionsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3PositionV3DTO&gt; DappsUniswapv3PositionsCurrentGet (string filterPoolId = null)
 
 GetPositions
 
@@ -1586,7 +1586,7 @@ namespace Example
             try
             {
                 // GetPositions
-                List<PositionV3DTO> result = apiInstance.DappsUniswapv3PositionsCurrentGet(filterPoolId);
+                List<UniswapV3PositionV3DTO> result = apiInstance.DappsUniswapv3PositionsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1607,7 +1607,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPositions
-    ApiResponse<List<PositionV3DTO>> response = apiInstance.DappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3PositionV3DTO>> response = apiInstance.DappsUniswapv3PositionsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1628,7 +1628,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;PositionV3DTO&gt;**](PositionV3DTO.md)
+[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -1740,7 +1740,7 @@ No authorization required
 
 <a name="dappsuniswapv3swapscurrentget"></a>
 # **DappsUniswapv3SwapsCurrentGet**
-> List&lt;SwapV3DTO&gt; DappsUniswapv3SwapsCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3SwapV3DTO&gt; DappsUniswapv3SwapsCurrentGet (string filterPoolId = null)
 
 GetSwaps
 
@@ -1766,7 +1766,7 @@ namespace Example
             try
             {
                 // GetSwaps
-                List<SwapV3DTO> result = apiInstance.DappsUniswapv3SwapsCurrentGet(filterPoolId);
+                List<UniswapV3SwapV3DTO> result = apiInstance.DappsUniswapv3SwapsCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1787,7 +1787,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetSwaps
-    ApiResponse<List<SwapV3DTO>> response = apiInstance.DappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3SwapV3DTO>> response = apiInstance.DappsUniswapv3SwapsCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1808,7 +1808,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;SwapV3DTO&gt;**](SwapV3DTO.md)
+[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -2011,7 +2011,7 @@ No authorization required
 
 <a name="dappsuniswapv3tickscurrentget"></a>
 # **DappsUniswapv3TicksCurrentGet**
-> List&lt;TickV3DTO&gt; DappsUniswapv3TicksCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3TickV3DTO&gt; DappsUniswapv3TicksCurrentGet (string filterPoolId = null)
 
 GetTicks
 
@@ -2037,7 +2037,7 @@ namespace Example
             try
             {
                 // GetTicks
-                List<TickV3DTO> result = apiInstance.DappsUniswapv3TicksCurrentGet(filterPoolId);
+                List<UniswapV3TickV3DTO> result = apiInstance.DappsUniswapv3TicksCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2058,7 +2058,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTicks
-    ApiResponse<List<TickV3DTO>> response = apiInstance.DappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3TickV3DTO>> response = apiInstance.DappsUniswapv3TicksCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2079,7 +2079,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TickV3DTO&gt;**](TickV3DTO.md)
+[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -2100,7 +2100,7 @@ No authorization required
 
 <a name="dappsuniswapv3ticksdaydatacurrentget"></a>
 # **DappsUniswapv3TicksDayDataCurrentGet**
-> List&lt;TickDayDataV3DTO&gt; DappsUniswapv3TicksDayDataCurrentGet (string filterPoolId = null)
+> List&lt;UniswapV3TickDayDataV3DTO&gt; DappsUniswapv3TicksDayDataCurrentGet (string filterPoolId = null)
 
 GetTicksDayData
 
@@ -2126,7 +2126,7 @@ namespace Example
             try
             {
                 // GetTicksDayData
-                List<TickDayDataV3DTO> result = apiInstance.DappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
+                List<UniswapV3TickDayDataV3DTO> result = apiInstance.DappsUniswapv3TicksDayDataCurrentGet(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2147,7 +2147,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTicksDayData
-    ApiResponse<List<TickDayDataV3DTO>> response = apiInstance.DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
+    ApiResponse<List<UniswapV3TickDayDataV3DTO>> response = apiInstance.DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2168,7 +2168,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TickDayDataV3DTO&gt;**](TickDayDataV3DTO.md)
+[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -2462,7 +2462,7 @@ No authorization required
 
 <a name="dappsuniswapv3tokenscurrentget"></a>
 # **DappsUniswapv3TokensCurrentGet**
-> List&lt;TokenV3DTO&gt; DappsUniswapv3TokensCurrentGet (string filterTokenId = null)
+> List&lt;UniswapV3TokenV3DTO&gt; DappsUniswapv3TokensCurrentGet (string filterTokenId = null)
 
 GetTokens
 
@@ -2488,7 +2488,7 @@ namespace Example
             try
             {
                 // GetTokens
-                List<TokenV3DTO> result = apiInstance.DappsUniswapv3TokensCurrentGet(filterTokenId);
+                List<UniswapV3TokenV3DTO> result = apiInstance.DappsUniswapv3TokensCurrentGet(filterTokenId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2509,7 +2509,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokens
-    ApiResponse<List<TokenV3DTO>> response = apiInstance.DappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
+    ApiResponse<List<UniswapV3TokenV3DTO>> response = apiInstance.DappsUniswapv3TokensCurrentGetWithHttpInfo(filterTokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2530,7 +2530,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TokenV3DTO&gt;**](TokenV3DTO.md)
+[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -2551,7 +2551,7 @@ No authorization required
 
 <a name="dappsuniswapv3tokensdaydatacurrentget"></a>
 # **DappsUniswapv3TokensDayDataCurrentGet**
-> List&lt;TokenV3DayDataDTO&gt; DappsUniswapv3TokensDayDataCurrentGet (string filterTokenId = null)
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; DappsUniswapv3TokensDayDataCurrentGet (string filterTokenId = null)
 
 GetTokensDayData
 
@@ -2577,7 +2577,7 @@ namespace Example
             try
             {
                 // GetTokensDayData
-                List<TokenV3DayDataDTO> result = apiInstance.DappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
+                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.DappsUniswapv3TokensDayDataCurrentGet(filterTokenId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2598,7 +2598,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokensDayData
-    ApiResponse<List<TokenV3DayDataDTO>> response = apiInstance.DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
+    ApiResponse<List<UniswapV3TokenV3DayDataDTO>> response = apiInstance.DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filterTokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2619,7 +2619,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TokenV3DayDataDTO&gt;**](TokenV3DayDataDTO.md)
+[**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -2731,7 +2731,7 @@ No authorization required
 
 <a name="dappsuniswapv3tokenshourdatacurrentget"></a>
 # **DappsUniswapv3TokensHourDataCurrentGet**
-> List&lt;TokenHourDataV3DTO&gt; DappsUniswapv3TokensHourDataCurrentGet (string filterTokenId = null)
+> List&lt;UniswapV3TokenHourDataV3DTO&gt; DappsUniswapv3TokensHourDataCurrentGet (string filterTokenId = null)
 
 GetTokensHourData
 
@@ -2757,7 +2757,7 @@ namespace Example
             try
             {
                 // GetTokensHourData
-                List<TokenHourDataV3DTO> result = apiInstance.DappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
+                List<UniswapV3TokenHourDataV3DTO> result = apiInstance.DappsUniswapv3TokensHourDataCurrentGet(filterTokenId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2778,7 +2778,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetTokensHourData
-    ApiResponse<List<TokenHourDataV3DTO>> response = apiInstance.DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
+    ApiResponse<List<UniswapV3TokenHourDataV3DTO>> response = apiInstance.DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filterTokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2799,7 +2799,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;TokenHourDataV3DTO&gt;**](TokenHourDataV3DTO.md)
+[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -2909,7 +2909,7 @@ No authorization required
 
 <a name="dappsuniswapv3uniswapdaydatacurrentget"></a>
 # **DappsUniswapv3UniswapDayDataCurrentGet**
-> List&lt;UniswapDayDataV3DTO&gt; DappsUniswapv3UniswapDayDataCurrentGet ()
+> List&lt;UniswapV3UniswapDayDataV3DTO&gt; DappsUniswapv3UniswapDayDataCurrentGet ()
 
 GetUniswapDayData
 
@@ -2934,7 +2934,7 @@ namespace Example
             try
             {
                 // GetUniswapDayData
-                List<UniswapDayDataV3DTO> result = apiInstance.DappsUniswapv3UniswapDayDataCurrentGet();
+                List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.DappsUniswapv3UniswapDayDataCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2955,7 +2955,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetUniswapDayData
-    ApiResponse<List<UniswapDayDataV3DTO>> response = apiInstance.DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
+    ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> response = apiInstance.DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2972,7 +2972,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;UniswapDayDataV3DTO&gt;**](UniswapDayDataV3DTO.md)
+[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

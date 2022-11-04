@@ -1085,7 +1085,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PairDTO[]
+SushiswapPairDTO[]
 #>
 function Invoke-DappsSushiswapPoolsCurrentGet {
     [CmdletBinding()]
@@ -1130,7 +1130,7 @@ function Invoke-DappsSushiswapPoolsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PairDTO[]" `
+                                -ReturnType "SushiswapPairDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1175,7 +1175,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PairDTO[]
+SushiswapPairDTO[]
 #>
 function Invoke-DappsSushiswapPoolsHistoricalGet {
     [CmdletBinding()]
@@ -1255,7 +1255,7 @@ function Invoke-DappsSushiswapPoolsHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PairDTO[]" `
+                                -ReturnType "SushiswapPairDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1285,7 +1285,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SwapDTO[]
+SushiswapSwapDTO[]
 #>
 function Invoke-DappsSushiswapSwapsCurrentGet {
     [CmdletBinding()]
@@ -1330,7 +1330,7 @@ function Invoke-DappsSushiswapSwapsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SwapDTO[]" `
+                                -ReturnType "SushiswapSwapDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1375,7 +1375,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SwapDTO[]
+SushiswapSwapDTO[]
 #>
 function Invoke-DappsSushiswapSwapsHistoricalGet {
     [CmdletBinding()]
@@ -1455,7 +1455,7 @@ function Invoke-DappsSushiswapSwapsHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SwapDTO[]" `
+                                -ReturnType "SushiswapSwapDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1595,7 +1595,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenDTO[]
+SushiswapTokenDTO[]
 #>
 function Invoke-DappsSushiswapTokensCurrentGet {
     [CmdletBinding()]
@@ -1640,7 +1640,7 @@ function Invoke-DappsSushiswapTokensCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenDTO[]" `
+                                -ReturnType "SushiswapTokenDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1685,7 +1685,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenDTO[]
+SushiswapTokenDTO[]
 #>
 function Invoke-DappsSushiswapTokensHistoricalGet {
     [CmdletBinding()]
@@ -1765,7 +1765,7 @@ function Invoke-DappsSushiswapTokensHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenDTO[]" `
+                                -ReturnType "SushiswapTokenDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

@@ -28,14 +28,14 @@ public class OASUniswapV3Api {
     /**
      * GetBundles
      * 
-     * @return List<OASBundleV3DTO>
+     * @return List<OASUniswapV3BundleV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASBundleV3DTO> dappsUniswapv3BundleCurrentGet() {
+    public List<OASUniswapV3BundleV3DTO> dappsUniswapv3BundleCurrentGet() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASBundleV3DTO>) client.invoke(
+        return (List<OASUniswapV3BundleV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/bundle/current', '',
             query, form,
             new Map<String, Object>(),
@@ -43,7 +43,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASBundleV3DTO>.class
+            List<OASUniswapV3BundleV3DTO>.class
         );
     }
     /**
@@ -81,10 +81,10 @@ public class OASUniswapV3Api {
      * GetBurns
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASBurnV3DTO>
+     * @return List<OASUniswapV3BurnV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASBurnV3DTO> dappsUniswapv3BurnsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3BurnV3DTO> dappsUniswapv3BurnsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -92,7 +92,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASBurnV3DTO>) client.invoke(
+        return (List<OASUniswapV3BurnV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/burns/current', '',
             query, form,
             new Map<String, Object>(),
@@ -100,7 +100,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASBurnV3DTO>.class
+            List<OASUniswapV3BurnV3DTO>.class
         );
     }
     /**
@@ -171,15 +171,15 @@ public class OASUniswapV3Api {
      * GetFactory
      * 
      * @param chainId  (required)
-     * @return List<OASFactoryV3DTO>
+     * @return List<OASUniswapV3FactoryV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASFactoryV3DTO> dappsUniswapv3FactoryCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3FactoryV3DTO> dappsUniswapv3FactoryCurrentGet(Map<String, Object> params) {
         client.assertNotNull(params.get('chainId'), 'chainId');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASFactoryV3DTO>) client.invoke(
+        return (List<OASUniswapV3FactoryV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/factory/current', '',
             query, form,
             new Map<String, Object>{
@@ -189,7 +189,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASFactoryV3DTO>.class
+            List<OASUniswapV3FactoryV3DTO>.class
         );
     }
     /**
@@ -227,10 +227,10 @@ public class OASUniswapV3Api {
      * GetMints
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASMintV3DTO>
+     * @return List<OASUniswapV3MintV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASMintV3DTO> dappsUniswapv3MintsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3MintV3DTO> dappsUniswapv3MintsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -238,7 +238,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASMintV3DTO>) client.invoke(
+        return (List<OASUniswapV3MintV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/mints/current', '',
             query, form,
             new Map<String, Object>(),
@@ -246,7 +246,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASMintV3DTO>.class
+            List<OASUniswapV3MintV3DTO>.class
         );
     }
     /**
@@ -352,10 +352,10 @@ public class OASUniswapV3Api {
      * GetPools
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASPoolV3DTO>
+     * @return List<OASUniswapV3PoolV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPoolV3DTO> dappsUniswapv3PoolsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3PoolV3DTO> dappsUniswapv3PoolsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -363,7 +363,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASPoolV3DTO>) client.invoke(
+        return (List<OASUniswapV3PoolV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/pools/current', '',
             query, form,
             new Map<String, Object>(),
@@ -371,17 +371,17 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASPoolV3DTO>.class
+            List<OASUniswapV3PoolV3DTO>.class
         );
     }
     /**
      * GetPoolsDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASPoolDayDataV3DTO>
+     * @return List<OASUniswapV3PoolDayDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3PoolDayDataV3DTO> dappsUniswapv3PoolsDayDataCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -389,7 +389,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASPoolDayDataV3DTO>) client.invoke(
+        return (List<OASUniswapV3PoolDayDataV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/poolsDayData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -397,7 +397,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASPoolDayDataV3DTO>.class
+            List<OASUniswapV3PoolDayDataV3DTO>.class
         );
     }
     /**
@@ -437,10 +437,10 @@ public class OASUniswapV3Api {
      * GetPoolsHourData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASPoolHourDataV3DTO>
+     * @return List<OASUniswapV3PoolHourDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3PoolHourDataV3DTO> dappsUniswapv3PoolsHourDataCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -448,7 +448,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASPoolHourDataV3DTO>) client.invoke(
+        return (List<OASUniswapV3PoolHourDataV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/poolsHourData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -456,7 +456,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASPoolHourDataV3DTO>.class
+            List<OASUniswapV3PoolHourDataV3DTO>.class
         );
     }
     /**
@@ -496,10 +496,10 @@ public class OASUniswapV3Api {
      * GetPositionSnapshot
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASPositionSnapshotV3DTO>
+     * @return List<OASUniswapV3PositionSnapshotV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3PositionSnapshotV3DTO> dappsUniswapv3PositionSnapshotsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -507,7 +507,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASPositionSnapshotV3DTO>) client.invoke(
+        return (List<OASUniswapV3PositionSnapshotV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/positionSnapshots/current', '',
             query, form,
             new Map<String, Object>(),
@@ -515,17 +515,17 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASPositionSnapshotV3DTO>.class
+            List<OASUniswapV3PositionSnapshotV3DTO>.class
         );
     }
     /**
      * GetPositions
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASPositionV3DTO>
+     * @return List<OASUniswapV3PositionV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASPositionV3DTO> dappsUniswapv3PositionsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3PositionV3DTO> dappsUniswapv3PositionsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -533,7 +533,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASPositionV3DTO>) client.invoke(
+        return (List<OASUniswapV3PositionV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/positions/current', '',
             query, form,
             new Map<String, Object>(),
@@ -541,7 +541,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASPositionV3DTO>.class
+            List<OASUniswapV3PositionV3DTO>.class
         );
     }
     /**
@@ -581,10 +581,10 @@ public class OASUniswapV3Api {
      * GetSwaps
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASSwapV3DTO>
+     * @return List<OASUniswapV3SwapV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSwapV3DTO> dappsUniswapv3SwapsCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3SwapV3DTO> dappsUniswapv3SwapsCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -592,7 +592,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASSwapV3DTO>) client.invoke(
+        return (List<OASUniswapV3SwapV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/swaps/current', '',
             query, form,
             new Map<String, Object>(),
@@ -600,7 +600,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASSwapV3DTO>.class
+            List<OASUniswapV3SwapV3DTO>.class
         );
     }
     /**
@@ -673,10 +673,10 @@ public class OASUniswapV3Api {
      * GetTicks
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASTickV3DTO>
+     * @return List<OASUniswapV3TickV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASTickV3DTO> dappsUniswapv3TicksCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3TickV3DTO> dappsUniswapv3TicksCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -684,7 +684,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASTickV3DTO>) client.invoke(
+        return (List<OASUniswapV3TickV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/ticks/current', '',
             query, form,
             new Map<String, Object>(),
@@ -692,17 +692,17 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASTickV3DTO>.class
+            List<OASUniswapV3TickV3DTO>.class
         );
     }
     /**
      * GetTicksDayData
      * 
      * @param filterPoolId Filter pool id (optional)
-     * @return List<OASTickDayDataV3DTO>
+     * @return List<OASUniswapV3TickDayDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASTickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3TickDayDataV3DTO> dappsUniswapv3TicksDayDataCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -710,7 +710,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASTickDayDataV3DTO>) client.invoke(
+        return (List<OASUniswapV3TickDayDataV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/ticksDayData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -718,7 +718,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASTickDayDataV3DTO>.class
+            List<OASUniswapV3TickDayDataV3DTO>.class
         );
     }
     /**
@@ -824,10 +824,10 @@ public class OASUniswapV3Api {
      * GetTokens
      * 
      * @param filterTokenId  (optional)
-     * @return List<OASTokenV3DTO>
+     * @return List<OASUniswapV3TokenV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASTokenV3DTO> dappsUniswapv3TokensCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3TokenV3DTO> dappsUniswapv3TokensCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -835,7 +835,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASTokenV3DTO>) client.invoke(
+        return (List<OASUniswapV3TokenV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/tokens/current', '',
             query, form,
             new Map<String, Object>(),
@@ -843,17 +843,17 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASTokenV3DTO>.class
+            List<OASUniswapV3TokenV3DTO>.class
         );
     }
     /**
      * GetTokensDayData
      * 
      * @param filterTokenId  (optional)
-     * @return List<OASTokenV3DayDataDTO>
+     * @return List<OASUniswapV3TokenV3DayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASTokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3TokenV3DayDataDTO> dappsUniswapv3TokensDayDataCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -861,7 +861,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASTokenV3DayDataDTO>) client.invoke(
+        return (List<OASUniswapV3TokenV3DayDataDTO>) client.invoke(
             'GET', '/dapps/uniswapv3/tokensDayData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -869,7 +869,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASTokenV3DayDataDTO>.class
+            List<OASUniswapV3TokenV3DayDataDTO>.class
         );
     }
     /**
@@ -909,10 +909,10 @@ public class OASUniswapV3Api {
      * GetTokensHourData
      * 
      * @param filterTokenId  (optional)
-     * @return List<OASTokenHourDataV3DTO>
+     * @return List<OASUniswapV3TokenHourDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASTokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(Map<String, Object> params) {
+    public List<OASUniswapV3TokenHourDataV3DTO> dappsUniswapv3TokensHourDataCurrentGet(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -920,7 +920,7 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASTokenHourDataV3DTO>) client.invoke(
+        return (List<OASUniswapV3TokenHourDataV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/tokensHourData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -928,7 +928,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASTokenHourDataV3DTO>.class
+            List<OASUniswapV3TokenHourDataV3DTO>.class
         );
     }
     /**
@@ -965,14 +965,14 @@ public class OASUniswapV3Api {
     /**
      * GetUniswapDayData
      * 
-     * @return List<OASUniswapDayDataV3DTO>
+     * @return List<OASUniswapV3UniswapDayDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet() {
+    public List<OASUniswapV3UniswapDayDataV3DTO> dappsUniswapv3UniswapDayDataCurrentGet() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapDayDataV3DTO>) client.invoke(
+        return (List<OASUniswapV3UniswapDayDataV3DTO>) client.invoke(
             'GET', '/dapps/uniswapv3/uniswapDayData/current', '',
             query, form,
             new Map<String, Object>(),
@@ -980,7 +980,7 @@ public class OASUniswapV3Api {
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapDayDataV3DTO>.class
+            List<OASUniswapV3UniswapDayDataV3DTO>.class
         );
     }
 }

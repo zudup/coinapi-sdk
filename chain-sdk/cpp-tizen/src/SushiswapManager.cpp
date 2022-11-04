@@ -1613,13 +1613,13 @@ bool SushiswapManager::dappsSushiswapPoolHourDataHistoricalGetSync(char * access
 static bool dappsSushiswapPoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<PairDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<PairDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapPairDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<PairDTO> out;
+	std::list<SushiswapPairDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -1633,7 +1633,7 @@ static bool dappsSushiswapPoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			PairDTO singlemodel;
+			SushiswapPairDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -1659,7 +1659,7 @@ static bool dappsSushiswapPoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 
 static bool dappsSushiswapPoolsCurrentGetHelper(char * accessToken,
 	
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -1730,7 +1730,7 @@ static bool dappsSushiswapPoolsCurrentGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapPoolsCurrentGetHelper(accessToken,
@@ -1740,7 +1740,7 @@ bool SushiswapManager::dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapPoolsCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapPoolsCurrentGetHelper(accessToken,
@@ -1751,13 +1751,13 @@ bool SushiswapManager::dappsSushiswapPoolsCurrentGetSync(char * accessToken,
 static bool dappsSushiswapPoolsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<PairDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<PairDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapPairDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<PairDTO> out;
+	std::list<SushiswapPairDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -1771,7 +1771,7 @@ static bool dappsSushiswapPoolsHistoricalGetProcessor(MemoryStruct_s p_chunk, lo
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			PairDTO singlemodel;
+			SushiswapPairDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -1797,7 +1797,7 @@ static bool dappsSushiswapPoolsHistoricalGetProcessor(MemoryStruct_s p_chunk, lo
 
 static bool dappsSushiswapPoolsHistoricalGetHelper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -1903,7 +1903,7 @@ static bool dappsSushiswapPoolsHistoricalGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapPoolsHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapPoolsHistoricalGetHelper(accessToken,
@@ -1913,7 +1913,7 @@ bool SushiswapManager::dappsSushiswapPoolsHistoricalGetAsync(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<PairDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapPairDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapPoolsHistoricalGetHelper(accessToken,
@@ -1924,13 +1924,13 @@ bool SushiswapManager::dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
 static bool dappsSushiswapSwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<SwapDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<SwapDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapSwapDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<SwapDTO> out;
+	std::list<SushiswapSwapDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -1944,7 +1944,7 @@ static bool dappsSushiswapSwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			SwapDTO singlemodel;
+			SushiswapSwapDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -1970,7 +1970,7 @@ static bool dappsSushiswapSwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 
 static bool dappsSushiswapSwapsCurrentGetHelper(char * accessToken,
 	
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2041,7 +2041,7 @@ static bool dappsSushiswapSwapsCurrentGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapSwapsCurrentGetHelper(accessToken,
@@ -2051,7 +2051,7 @@ bool SushiswapManager::dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapSwapsCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapSwapsCurrentGetHelper(accessToken,
@@ -2062,13 +2062,13 @@ bool SushiswapManager::dappsSushiswapSwapsCurrentGetSync(char * accessToken,
 static bool dappsSushiswapSwapsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<SwapDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<SwapDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapSwapDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<SwapDTO> out;
+	std::list<SushiswapSwapDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -2082,7 +2082,7 @@ static bool dappsSushiswapSwapsHistoricalGetProcessor(MemoryStruct_s p_chunk, lo
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			SwapDTO singlemodel;
+			SushiswapSwapDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -2108,7 +2108,7 @@ static bool dappsSushiswapSwapsHistoricalGetProcessor(MemoryStruct_s p_chunk, lo
 
 static bool dappsSushiswapSwapsHistoricalGetHelper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2214,7 +2214,7 @@ static bool dappsSushiswapSwapsHistoricalGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapSwapsHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapSwapsHistoricalGetHelper(accessToken,
@@ -2224,7 +2224,7 @@ bool SushiswapManager::dappsSushiswapSwapsHistoricalGetAsync(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<SwapDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapSwapDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapSwapsHistoricalGetHelper(accessToken,
@@ -2394,13 +2394,13 @@ bool SushiswapManager::dappsSushiswapTokenDayDataHistoricalGetSync(char * access
 static bool dappsSushiswapTokensCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<TokenDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<TokenDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapTokenDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<TokenDTO> out;
+	std::list<SushiswapTokenDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -2414,7 +2414,7 @@ static bool dappsSushiswapTokensCurrentGetProcessor(MemoryStruct_s p_chunk, long
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			TokenDTO singlemodel;
+			SushiswapTokenDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -2440,7 +2440,7 @@ static bool dappsSushiswapTokensCurrentGetProcessor(MemoryStruct_s p_chunk, long
 
 static bool dappsSushiswapTokensCurrentGetHelper(char * accessToken,
 	
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2511,7 +2511,7 @@ static bool dappsSushiswapTokensCurrentGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapTokensCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapTokensCurrentGetHelper(accessToken,
@@ -2521,7 +2521,7 @@ bool SushiswapManager::dappsSushiswapTokensCurrentGetAsync(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapTokensCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapTokensCurrentGetHelper(accessToken,
@@ -2532,13 +2532,13 @@ bool SushiswapManager::dappsSushiswapTokensCurrentGetSync(char * accessToken,
 static bool dappsSushiswapTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<TokenDTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<TokenDTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<SushiswapTokenDTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<TokenDTO> out;
+	std::list<SushiswapTokenDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -2552,7 +2552,7 @@ static bool dappsSushiswapTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, l
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			TokenDTO singlemodel;
+			SushiswapTokenDTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -2578,7 +2578,7 @@ static bool dappsSushiswapTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, l
 
 static bool dappsSushiswapTokensHistoricalGetHelper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2684,7 +2684,7 @@ static bool dappsSushiswapTokensHistoricalGetHelper(char * accessToken,
 
 bool SushiswapManager::dappsSushiswapTokensHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapTokensHistoricalGetHelper(accessToken,
@@ -2694,7 +2694,7 @@ bool SushiswapManager::dappsSushiswapTokensHistoricalGetAsync(char * accessToken
 
 bool SushiswapManager::dappsSushiswapTokensHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	void(* handler)(std::list<TokenDTO>, Error, void* )
+	void(* handler)(std::list<SushiswapTokenDTO>, Error, void* )
 	, void* userData)
 {
 	return dappsSushiswapTokensHistoricalGetHelper(accessToken,

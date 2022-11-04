@@ -71,28 +71,28 @@ void main() {
     //
     // Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     //
-    //Future<List<PairDTO>> dappsSushiswapPoolsCurrentGet() async
+    //Future<List<SushiswapPairDTO>> dappsSushiswapPoolsCurrentGet() async
     test('test dappsSushiswapPoolsCurrentGet', () async {
       // TODO
     });
 
     // GetPools (historical)
     //
-    //Future<List<PairDTO>> dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    //Future<List<SushiswapPairDTO>> dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapPoolsHistoricalGet', () async {
       // TODO
     });
 
     // GetSwaps
     //
-    //Future<List<SwapDTO>> dappsSushiswapSwapsCurrentGet() async
+    //Future<List<SushiswapSwapDTO>> dappsSushiswapSwapsCurrentGet() async
     test('test dappsSushiswapSwapsCurrentGet', () async {
       // TODO
     });
 
     // GetSwaps (historical)
     //
-    //Future<List<SwapDTO>> dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    //Future<List<SushiswapSwapDTO>> dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapSwapsHistoricalGet', () async {
       // TODO
     });
@@ -104,14 +104,14 @@ void main() {
 
     // GetTokens
     //
-    //Future<List<TokenDTO>> dappsSushiswapTokensCurrentGet() async
+    //Future<List<SushiswapTokenDTO>> dappsSushiswapTokensCurrentGet() async
     test('test dappsSushiswapTokensCurrentGet', () async {
       // TODO
     });
 
     // GetTokens (historical)
     //
-    //Future<List<TokenDTO>> dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    //Future<List<SushiswapTokenDTO>> dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test dappsSushiswapTokensHistoricalGet', () async {
       // TODO
     });

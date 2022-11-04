@@ -775,7 +775,7 @@ export class SushiswapApi {
      * @summary GetPools
      */
     public dappsSushiswapPoolsCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PairDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/pools/current';
@@ -816,11 +816,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PairDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PairDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapPairDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -838,7 +838,7 @@ export class SushiswapApi {
      * @param poolId 
      */
     public dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PairDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/pools/historical';
@@ -894,11 +894,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PairDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PairDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapPairDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -911,7 +911,7 @@ export class SushiswapApi {
      * @summary GetSwaps
      */
     public dappsSushiswapSwapsCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SwapDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/swaps/current';
@@ -952,11 +952,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.SwapDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.SwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapSwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -974,7 +974,7 @@ export class SushiswapApi {
      * @param poolId 
      */
     public dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SwapDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/swaps/historical';
@@ -1030,11 +1030,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.SwapDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.SwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapSwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1121,7 +1121,7 @@ export class SushiswapApi {
      * @summary GetTokens
      */
     public dappsSushiswapTokensCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/tokens/current';
@@ -1162,11 +1162,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TokenDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1184,7 +1184,7 @@ export class SushiswapApi {
      * @param tokenId 
      */
     public dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, tokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenDTO>;  },
+    { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/sushiswap/tokens/historical';
@@ -1240,11 +1240,11 @@ export class SushiswapApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TokenDTO>;  },
+            { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.SushiswapTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

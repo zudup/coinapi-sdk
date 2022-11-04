@@ -820,7 +820,7 @@ No authorization required
 
 ## DappsSushiswapPoolsCurrentGet
 
-> List&lt;PairDTO&gt; DappsSushiswapPoolsCurrentGet ()
+> List&lt;SushiswapPairDTO&gt; DappsSushiswapPoolsCurrentGet ()
 
 GetPools
 
@@ -847,7 +847,7 @@ namespace Example
             try
             {
                 // GetPools
-                List<PairDTO> result = apiInstance.DappsSushiswapPoolsCurrentGet();
+                List<SushiswapPairDTO> result = apiInstance.DappsSushiswapPoolsCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -867,7 +867,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -892,7 +892,7 @@ No authorization required
 
 ## DappsSushiswapPoolsHistoricalGet
 
-> List&lt;PairDTO&gt; DappsSushiswapPoolsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapPairDTO&gt; DappsSushiswapPoolsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
 GetPools (historical)
 
@@ -922,7 +922,7 @@ namespace Example
             try
             {
                 // GetPools (historical)
-                List<PairDTO> result = apiInstance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                List<SushiswapPairDTO> result = apiInstance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -949,7 +949,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;PairDTO&gt;**](PairDTO.md)
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -974,7 +974,7 @@ No authorization required
 
 ## DappsSushiswapSwapsCurrentGet
 
-> List&lt;SwapDTO&gt; DappsSushiswapSwapsCurrentGet ()
+> List&lt;SushiswapSwapDTO&gt; DappsSushiswapSwapsCurrentGet ()
 
 GetSwaps
 
@@ -999,7 +999,7 @@ namespace Example
             try
             {
                 // GetSwaps
-                List<SwapDTO> result = apiInstance.DappsSushiswapSwapsCurrentGet();
+                List<SushiswapSwapDTO> result = apiInstance.DappsSushiswapSwapsCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1019,7 +1019,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1044,7 +1044,7 @@ No authorization required
 
 ## DappsSushiswapSwapsHistoricalGet
 
-> List&lt;SwapDTO&gt; DappsSushiswapSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapSwapDTO&gt; DappsSushiswapSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
 GetSwaps (historical)
 
@@ -1074,7 +1074,7 @@ namespace Example
             try
             {
                 // GetSwaps (historical)
-                List<SwapDTO> result = apiInstance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                List<SushiswapSwapDTO> result = apiInstance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1101,7 +1101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;SwapDTO&gt;**](SwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1206,7 +1206,7 @@ No authorization required
 
 ## DappsSushiswapTokensCurrentGet
 
-> List&lt;TokenDTO&gt; DappsSushiswapTokensCurrentGet ()
+> List&lt;SushiswapTokenDTO&gt; DappsSushiswapTokensCurrentGet ()
 
 GetTokens
 
@@ -1231,7 +1231,7 @@ namespace Example
             try
             {
                 // GetTokens
-                List<TokenDTO> result = apiInstance.DappsSushiswapTokensCurrentGet();
+                List<SushiswapTokenDTO> result = apiInstance.DappsSushiswapTokensCurrentGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1251,7 +1251,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1276,7 +1276,7 @@ No authorization required
 
 ## DappsSushiswapTokensHistoricalGet
 
-> List&lt;TokenDTO&gt; DappsSushiswapTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+> List&lt;SushiswapTokenDTO&gt; DappsSushiswapTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
 GetTokens (historical)
 
@@ -1306,7 +1306,7 @@ namespace Example
             try
             {
                 // GetTokens (historical)
-                List<TokenDTO> result = apiInstance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                List<SushiswapTokenDTO> result = apiInstance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;TokenDTO&gt;**](TokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 

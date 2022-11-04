@@ -533,7 +533,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_pools_current_get**
-> ARRAY[PairDTO] dapps_sushiswap_pools_current_get()
+> ARRAY[SushiswapPairDTO] dapps_sushiswap_pools_current_get()
 
 GetPools
 
@@ -561,7 +561,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[PairDTO]**](PairDTO.md)
+[**ARRAY[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -575,7 +575,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_pools_historical_get**
-> ARRAY[PairDTO] dapps_sushiswap_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+> ARRAY[SushiswapPairDTO] dapps_sushiswap_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
 GetPools (historical)
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PairDTO]**](PairDTO.md)
+[**ARRAY[SushiswapPairDTO]**](SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -627,7 +627,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_swaps_current_get**
-> ARRAY[SwapDTO] dapps_sushiswap_swaps_current_get()
+> ARRAY[SushiswapSwapDTO] dapps_sushiswap_swaps_current_get()
 
 GetSwaps
 
@@ -653,7 +653,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[SwapDTO]**](SwapDTO.md)
+[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_swaps_historical_get**
-> ARRAY[SwapDTO] dapps_sushiswap_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+> ARRAY[SushiswapSwapDTO] dapps_sushiswap_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
 GetSwaps (historical)
 
@@ -705,7 +705,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[SwapDTO]**](SwapDTO.md)
+[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -770,7 +770,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_tokens_current_get**
-> ARRAY[TokenDTO] dapps_sushiswap_tokens_current_get()
+> ARRAY[SushiswapTokenDTO] dapps_sushiswap_tokens_current_get()
 
 GetTokens
 
@@ -796,7 +796,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[TokenDTO]**](TokenDTO.md)
+[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_tokens_historical_get**
-> ARRAY[TokenDTO] dapps_sushiswap_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+> ARRAY[SushiswapTokenDTO] dapps_sushiswap_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
 GetTokens (historical)
 
@@ -848,7 +848,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[TokenDTO]**](TokenDTO.md)
+[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 

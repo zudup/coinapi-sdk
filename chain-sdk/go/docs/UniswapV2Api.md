@@ -660,7 +660,7 @@ No authorization required
 
 ## DappsUniswapv2PoolsCurrentGet
 
-> []PairV2DTO DappsUniswapv2PoolsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
+> []UniswapV2PairV2DTO DappsUniswapv2PoolsCurrentGet(ctx).FilterPoolId(filterPoolId).Execute()
 
 GetPools
 
@@ -686,7 +686,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.DappsUniswapv2PoolsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv2PoolsCurrentGet`: []PairV2DTO
+    // response from `DappsUniswapv2PoolsCurrentGet`: []UniswapV2PairV2DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.DappsUniswapv2PoolsCurrentGet`: %v\n", resp)
 }
 ```
@@ -706,7 +706,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]PairV2DTO**](PairV2DTO.md)
+[**[]UniswapV2PairV2DTO**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -795,7 +795,7 @@ No authorization required
 
 ## DappsUniswapv2SwapsCurrentGet
 
-> []SwapV2DTO DappsUniswapv2SwapsCurrentGet(ctx).Execute()
+> []UniswapV2SwapV2DTO DappsUniswapv2SwapsCurrentGet(ctx).Execute()
 
 GetSwaps
 
@@ -820,7 +820,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.DappsUniswapv2SwapsCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv2SwapsCurrentGet`: []SwapV2DTO
+    // response from `DappsUniswapv2SwapsCurrentGet`: []UniswapV2SwapV2DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.DappsUniswapv2SwapsCurrentGet`: %v\n", resp)
 }
 ```
@@ -836,7 +836,7 @@ Other parameters are passed through a pointer to a apiDappsUniswapv2SwapsCurrent
 
 ### Return type
 
-[**[]SwapV2DTO**](SwapV2DTO.md)
+[**[]UniswapV2SwapV2DTO**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -996,7 +996,7 @@ No authorization required
 
 ## DappsUniswapv2TokensCurrentGet
 
-> []TokenV2DTO DappsUniswapv2TokensCurrentGet(ctx).Execute()
+> []UniswapV2TokenV2DTO DappsUniswapv2TokensCurrentGet(ctx).Execute()
 
 GetTokens
 
@@ -1021,7 +1021,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.DappsUniswapv2TokensCurrentGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DappsUniswapv2TokensCurrentGet`: []TokenV2DTO
+    // response from `DappsUniswapv2TokensCurrentGet`: []UniswapV2TokenV2DTO
     fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.DappsUniswapv2TokensCurrentGet`: %v\n", resp)
 }
 ```
@@ -1037,7 +1037,7 @@ Other parameters are passed through a pointer to a apiDappsUniswapv2TokensCurren
 
 ### Return type
 
-[**[]TokenV2DTO**](TokenV2DTO.md)
+[**[]UniswapV2TokenV2DTO**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

@@ -25,7 +25,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-BundleV3DTO[]
+UniswapV3BundleV3DTO[]
 #>
 function Invoke-DappsUniswapv3BundleCurrentGet {
     [CmdletBinding()]
@@ -70,7 +70,7 @@ function Invoke-DappsUniswapv3BundleCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "BundleV3DTO[]" `
+                                -ReturnType "UniswapV3BundleV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -203,7 +203,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-BurnV3DTO[]
+UniswapV3BurnV3DTO[]
 #>
 function Invoke-DappsUniswapv3BurnsCurrentGet {
     [CmdletBinding()]
@@ -255,7 +255,7 @@ function Invoke-DappsUniswapv3BurnsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "BurnV3DTO[]" `
+                                -ReturnType "UniswapV3BurnV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -498,7 +498,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-FactoryV3DTO[]
+UniswapV3FactoryV3DTO[]
 #>
 function Invoke-DappsUniswapv3FactoryCurrentGet {
     [CmdletBinding()]
@@ -550,7 +550,7 @@ function Invoke-DappsUniswapv3FactoryCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "FactoryV3DTO[]" `
+                                -ReturnType "UniswapV3FactoryV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -683,7 +683,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-MintV3DTO[]
+UniswapV3MintV3DTO[]
 #>
 function Invoke-DappsUniswapv3MintsCurrentGet {
     [CmdletBinding()]
@@ -735,7 +735,7 @@ function Invoke-DappsUniswapv3MintsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "MintV3DTO[]" `
+                                -ReturnType "UniswapV3MintV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1098,7 +1098,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PoolV3DTO[]
+UniswapV3PoolV3DTO[]
 #>
 function Invoke-DappsUniswapv3PoolsCurrentGet {
     [CmdletBinding()]
@@ -1150,7 +1150,7 @@ function Invoke-DappsUniswapv3PoolsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PoolV3DTO[]" `
+                                -ReturnType "UniswapV3PoolV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1183,7 +1183,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PoolDayDataV3DTO[]
+UniswapV3PoolDayDataV3DTO[]
 #>
 function Invoke-DappsUniswapv3PoolsDayDataCurrentGet {
     [CmdletBinding()]
@@ -1235,7 +1235,7 @@ function Invoke-DappsUniswapv3PoolsDayDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PoolDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3PoolDayDataV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1378,7 +1378,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PoolHourDataV3DTO[]
+UniswapV3PoolHourDataV3DTO[]
 #>
 function Invoke-DappsUniswapv3PoolsHourDataCurrentGet {
     [CmdletBinding()]
@@ -1430,7 +1430,7 @@ function Invoke-DappsUniswapv3PoolsHourDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PoolHourDataV3DTO[]" `
+                                -ReturnType "UniswapV3PoolHourDataV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1573,7 +1573,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PositionSnapshotV3DTO[]
+UniswapV3PositionSnapshotV3DTO[]
 #>
 function Invoke-DappsUniswapv3PositionSnapshotsCurrentGet {
     [CmdletBinding()]
@@ -1625,7 +1625,7 @@ function Invoke-DappsUniswapv3PositionSnapshotsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PositionSnapshotV3DTO[]" `
+                                -ReturnType "UniswapV3PositionSnapshotV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1658,7 +1658,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PositionV3DTO[]
+UniswapV3PositionV3DTO[]
 #>
 function Invoke-DappsUniswapv3PositionsCurrentGet {
     [CmdletBinding()]
@@ -1710,7 +1710,7 @@ function Invoke-DappsUniswapv3PositionsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PositionV3DTO[]" `
+                                -ReturnType "UniswapV3PositionV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1853,7 +1853,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SwapV3DTO[]
+UniswapV3SwapV3DTO[]
 #>
 function Invoke-DappsUniswapv3SwapsCurrentGet {
     [CmdletBinding()]
@@ -1905,7 +1905,7 @@ function Invoke-DappsUniswapv3SwapsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SwapV3DTO[]" `
+                                -ReturnType "UniswapV3SwapV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2158,7 +2158,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TickV3DTO[]
+UniswapV3TickV3DTO[]
 #>
 function Invoke-DappsUniswapv3TicksCurrentGet {
     [CmdletBinding()]
@@ -2210,7 +2210,7 @@ function Invoke-DappsUniswapv3TicksCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TickV3DTO[]" `
+                                -ReturnType "UniswapV3TickV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2243,7 +2243,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TickDayDataV3DTO[]
+UniswapV3TickDayDataV3DTO[]
 #>
 function Invoke-DappsUniswapv3TicksDayDataCurrentGet {
     [CmdletBinding()]
@@ -2295,7 +2295,7 @@ function Invoke-DappsUniswapv3TicksDayDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TickDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3TickDayDataV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2658,7 +2658,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenV3DTO[]
+UniswapV3TokenV3DTO[]
 #>
 function Invoke-DappsUniswapv3TokensCurrentGet {
     [CmdletBinding()]
@@ -2710,7 +2710,7 @@ function Invoke-DappsUniswapv3TokensCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenV3DTO[]" `
+                                -ReturnType "UniswapV3TokenV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2743,7 +2743,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenV3DayDataDTO[]
+UniswapV3TokenV3DayDataDTO[]
 #>
 function Invoke-DappsUniswapv3TokensDayDataCurrentGet {
     [CmdletBinding()]
@@ -2795,7 +2795,7 @@ function Invoke-DappsUniswapv3TokensDayDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenV3DayDataDTO[]" `
+                                -ReturnType "UniswapV3TokenV3DayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2938,7 +2938,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenHourDataV3DTO[]
+UniswapV3TokenHourDataV3DTO[]
 #>
 function Invoke-DappsUniswapv3TokensHourDataCurrentGet {
     [CmdletBinding()]
@@ -2990,7 +2990,7 @@ function Invoke-DappsUniswapv3TokensHourDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenHourDataV3DTO[]" `
+                                -ReturnType "UniswapV3TokenHourDataV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -3120,7 +3120,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapDayDataV3DTO[]
+UniswapV3UniswapDayDataV3DTO[]
 #>
 function Invoke-DappsUniswapv3UniswapDayDataCurrentGet {
     [CmdletBinding()]
@@ -3165,7 +3165,7 @@ function Invoke-DappsUniswapv3UniswapDayDataCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3UniswapDayDataV3DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

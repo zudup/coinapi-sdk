@@ -1025,7 +1025,7 @@ No authorization required
 
 # **dapps_uniswapv2_pools_current_get**
 <a name="dapps_uniswapv2_pools_current_get"></a>
-> [PairV2DTO] dapps_uniswapv2_pools_current_get()
+> [UniswapV2PairV2DTO] dapps_uniswapv2_pools_current_get()
 
 GetPools
 
@@ -1034,7 +1034,7 @@ GetPools
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.pair_v2_dto import PairV2DTO
+from openapi_client.model.uniswap_v2_pair_v2_dto import UniswapV2PairV2DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1109,7 +1109,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) |  | 
+[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1121,7 +1121,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) |  | 
+[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1133,7 +1133,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) | [**PairV2DTO**]({{complexTypePrefix}}PairV2DTO.md) |  | 
+[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
 
 ### Authorization
 
@@ -1257,7 +1257,7 @@ No authorization required
 
 # **dapps_uniswapv2_swaps_current_get**
 <a name="dapps_uniswapv2_swaps_current_get"></a>
-> [SwapV2DTO] dapps_uniswapv2_swaps_current_get()
+> [UniswapV2SwapV2DTO] dapps_uniswapv2_swaps_current_get()
 
 GetSwaps
 
@@ -1266,7 +1266,7 @@ GetSwaps
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.swap_v2_dto import SwapV2DTO
+from openapi_client.model.uniswap_v2_swap_v2_dto import UniswapV2SwapV2DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1314,7 +1314,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) |  | 
+[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1326,7 +1326,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) |  | 
+[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1338,7 +1338,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) | [**SwapV2DTO**]({{complexTypePrefix}}SwapV2DTO.md) |  | 
+[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
 
 ### Authorization
 
@@ -1576,7 +1576,7 @@ No authorization required
 
 # **dapps_uniswapv2_tokens_current_get**
 <a name="dapps_uniswapv2_tokens_current_get"></a>
-> [TokenV2DTO] dapps_uniswapv2_tokens_current_get()
+> [UniswapV2TokenV2DTO] dapps_uniswapv2_tokens_current_get()
 
 GetTokens
 
@@ -1585,7 +1585,7 @@ GetTokens
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.token_v2_dto import TokenV2DTO
+from openapi_client.model.uniswap_v2_token_v2_dto import UniswapV2TokenV2DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1633,7 +1633,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) |  | 
+[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1645,7 +1645,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) |  | 
+[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1657,7 +1657,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) | [**TokenV2DTO**]({{complexTypePrefix}}TokenV2DTO.md) |  | 
+[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
 
 ### Authorization
 

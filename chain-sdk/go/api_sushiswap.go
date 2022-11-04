@@ -1303,7 +1303,7 @@ type ApiDappsSushiswapPoolsCurrentGetRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiDappsSushiswapPoolsCurrentGetRequest) Execute() ([]PairDTO, *http.Response, error) {
+func (r ApiDappsSushiswapPoolsCurrentGetRequest) Execute() ([]SushiswapPairDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapPoolsCurrentGetExecute(r)
 }
 
@@ -1323,13 +1323,13 @@ func (a *SushiswapApiService) DappsSushiswapPoolsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []PairDTO
-func (a *SushiswapApiService) DappsSushiswapPoolsCurrentGetExecute(r ApiDappsSushiswapPoolsCurrentGetRequest) ([]PairDTO, *http.Response, error) {
+//  @return []SushiswapPairDTO
+func (a *SushiswapApiService) DappsSushiswapPoolsCurrentGetExecute(r ApiDappsSushiswapPoolsCurrentGetRequest) ([]SushiswapPairDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PairDTO
+		localVarReturnValue  []SushiswapPairDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapPoolsCurrentGet")
@@ -1432,7 +1432,7 @@ func (r ApiDappsSushiswapPoolsHistoricalGetRequest) PoolId(poolId string) ApiDap
 	return r
 }
 
-func (r ApiDappsSushiswapPoolsHistoricalGetRequest) Execute() ([]PairDTO, *http.Response, error) {
+func (r ApiDappsSushiswapPoolsHistoricalGetRequest) Execute() ([]SushiswapPairDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapPoolsHistoricalGetExecute(r)
 }
 
@@ -1450,13 +1450,13 @@ func (a *SushiswapApiService) DappsSushiswapPoolsHistoricalGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return []PairDTO
-func (a *SushiswapApiService) DappsSushiswapPoolsHistoricalGetExecute(r ApiDappsSushiswapPoolsHistoricalGetRequest) ([]PairDTO, *http.Response, error) {
+//  @return []SushiswapPairDTO
+func (a *SushiswapApiService) DappsSushiswapPoolsHistoricalGetExecute(r ApiDappsSushiswapPoolsHistoricalGetRequest) ([]SushiswapPairDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []PairDTO
+		localVarReturnValue  []SushiswapPairDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapPoolsHistoricalGet")
@@ -1544,7 +1544,7 @@ type ApiDappsSushiswapSwapsCurrentGetRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiDappsSushiswapSwapsCurrentGetRequest) Execute() ([]SwapDTO, *http.Response, error) {
+func (r ApiDappsSushiswapSwapsCurrentGetRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapSwapsCurrentGetExecute(r)
 }
 
@@ -1562,13 +1562,13 @@ func (a *SushiswapApiService) DappsSushiswapSwapsCurrentGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return []SwapDTO
-func (a *SushiswapApiService) DappsSushiswapSwapsCurrentGetExecute(r ApiDappsSushiswapSwapsCurrentGetRequest) ([]SwapDTO, *http.Response, error) {
+//  @return []SushiswapSwapDTO
+func (a *SushiswapApiService) DappsSushiswapSwapsCurrentGetExecute(r ApiDappsSushiswapSwapsCurrentGetRequest) ([]SushiswapSwapDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SwapDTO
+		localVarReturnValue  []SushiswapSwapDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapSwapsCurrentGet")
@@ -1671,7 +1671,7 @@ func (r ApiDappsSushiswapSwapsHistoricalGetRequest) PoolId(poolId string) ApiDap
 	return r
 }
 
-func (r ApiDappsSushiswapSwapsHistoricalGetRequest) Execute() ([]SwapDTO, *http.Response, error) {
+func (r ApiDappsSushiswapSwapsHistoricalGetRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapSwapsHistoricalGetExecute(r)
 }
 
@@ -1689,13 +1689,13 @@ func (a *SushiswapApiService) DappsSushiswapSwapsHistoricalGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return []SwapDTO
-func (a *SushiswapApiService) DappsSushiswapSwapsHistoricalGetExecute(r ApiDappsSushiswapSwapsHistoricalGetRequest) ([]SwapDTO, *http.Response, error) {
+//  @return []SushiswapSwapDTO
+func (a *SushiswapApiService) DappsSushiswapSwapsHistoricalGetExecute(r ApiDappsSushiswapSwapsHistoricalGetRequest) ([]SushiswapSwapDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SwapDTO
+		localVarReturnValue  []SushiswapSwapDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapSwapsHistoricalGet")
@@ -1914,7 +1914,7 @@ type ApiDappsSushiswapTokensCurrentGetRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiDappsSushiswapTokensCurrentGetRequest) Execute() ([]TokenDTO, *http.Response, error) {
+func (r ApiDappsSushiswapTokensCurrentGetRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapTokensCurrentGetExecute(r)
 }
 
@@ -1932,13 +1932,13 @@ func (a *SushiswapApiService) DappsSushiswapTokensCurrentGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return []TokenDTO
-func (a *SushiswapApiService) DappsSushiswapTokensCurrentGetExecute(r ApiDappsSushiswapTokensCurrentGetRequest) ([]TokenDTO, *http.Response, error) {
+//  @return []SushiswapTokenDTO
+func (a *SushiswapApiService) DappsSushiswapTokensCurrentGetExecute(r ApiDappsSushiswapTokensCurrentGetRequest) ([]SushiswapTokenDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenDTO
+		localVarReturnValue  []SushiswapTokenDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapTokensCurrentGet")
@@ -2041,7 +2041,7 @@ func (r ApiDappsSushiswapTokensHistoricalGetRequest) TokenId(tokenId string) Api
 	return r
 }
 
-func (r ApiDappsSushiswapTokensHistoricalGetRequest) Execute() ([]TokenDTO, *http.Response, error) {
+func (r ApiDappsSushiswapTokensHistoricalGetRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
 	return r.ApiService.DappsSushiswapTokensHistoricalGetExecute(r)
 }
 
@@ -2059,13 +2059,13 @@ func (a *SushiswapApiService) DappsSushiswapTokensHistoricalGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return []TokenDTO
-func (a *SushiswapApiService) DappsSushiswapTokensHistoricalGetExecute(r ApiDappsSushiswapTokensHistoricalGetRequest) ([]TokenDTO, *http.Response, error) {
+//  @return []SushiswapTokenDTO
+func (a *SushiswapApiService) DappsSushiswapTokensHistoricalGetExecute(r ApiDappsSushiswapTokensHistoricalGetRequest) ([]SushiswapTokenDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []TokenDTO
+		localVarReturnValue  []SushiswapTokenDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapTokensHistoricalGet")

@@ -336,7 +336,7 @@ instance Produces DappsSushiswapPoolHourDataHistoricalGet MimeNoContent
 -- 
 dappsSushiswapPoolsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapPoolsCurrentGet MimeNoContent [PairDTO] accept
+  -> OnChainRequest DappsSushiswapPoolsCurrentGet MimeNoContent [SushiswapPairDTO] accept
 dappsSushiswapPoolsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pools/current"]
 
@@ -357,7 +357,7 @@ instance Produces DappsSushiswapPoolsCurrentGet MimePlainText
 -- 
 dappsSushiswapPoolsHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapPoolsHistoricalGet MimeNoContent [PairDTO] accept
+  -> OnChainRequest DappsSushiswapPoolsHistoricalGet MimeNoContent [SushiswapPairDTO] accept
 dappsSushiswapPoolsHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pools/historical"]
 
@@ -393,7 +393,7 @@ instance Produces DappsSushiswapPoolsHistoricalGet MimePlainText
 -- 
 dappsSushiswapSwapsCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapSwapsCurrentGet MimeNoContent [SwapDTO] accept
+  -> OnChainRequest DappsSushiswapSwapsCurrentGet MimeNoContent [SushiswapSwapDTO] accept
 dappsSushiswapSwapsCurrentGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/swaps/current"]
 
@@ -414,7 +414,7 @@ instance Produces DappsSushiswapSwapsCurrentGet MimePlainText
 -- 
 dappsSushiswapSwapsHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapSwapsHistoricalGet MimeNoContent [SwapDTO] accept
+  -> OnChainRequest DappsSushiswapSwapsHistoricalGet MimeNoContent [SushiswapSwapDTO] accept
 dappsSushiswapSwapsHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/swaps/historical"]
 
@@ -478,7 +478,7 @@ instance Produces DappsSushiswapTokenDayDataHistoricalGet MimeNoContent
 -- 
 dappsSushiswapTokensCurrentGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapTokensCurrentGet MimeNoContent [TokenDTO] accept
+  -> OnChainRequest DappsSushiswapTokensCurrentGet MimeNoContent [SushiswapTokenDTO] accept
 dappsSushiswapTokensCurrentGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/tokens/current"]
 
@@ -499,7 +499,7 @@ instance Produces DappsSushiswapTokensCurrentGet MimePlainText
 -- 
 dappsSushiswapTokensHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DappsSushiswapTokensHistoricalGet MimeNoContent [TokenDTO] accept
+  -> OnChainRequest DappsSushiswapTokensHistoricalGet MimeNoContent [SushiswapTokenDTO] accept
 dappsSushiswapTokensHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/tokens/historical"]
 

@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 # **dapps_uniswapv3_bundle_current_get**
 <a name="dapps_uniswapv3_bundle_current_get"></a>
-> [BundleV3DTO] dapps_uniswapv3_bundle_current_get()
+> [UniswapV3BundleV3DTO] dapps_uniswapv3_bundle_current_get()
 
 GetBundles
 
@@ -50,7 +50,7 @@ GetBundles
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.bundle_v3_dto import BundleV3DTO
+from openapi_client.model.uniswap_v3_bundle_v3_dto import UniswapV3BundleV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -98,7 +98,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) |  | 
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -110,7 +110,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) |  | 
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -122,7 +122,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) | [**BundleV3DTO**]({{complexTypePrefix}}BundleV3DTO.md) |  | 
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
 
 ### Authorization
 
@@ -237,7 +237,7 @@ No authorization required
 
 # **dapps_uniswapv3_burns_current_get**
 <a name="dapps_uniswapv3_burns_current_get"></a>
-> [BurnV3DTO] dapps_uniswapv3_burns_current_get()
+> [UniswapV3BurnV3DTO] dapps_uniswapv3_burns_current_get()
 
 GetBurns
 
@@ -246,7 +246,7 @@ GetBurns
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.burn_v3_dto import BurnV3DTO
+from openapi_client.model.uniswap_v3_burn_v3_dto import UniswapV3BurnV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -321,7 +321,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) |  | 
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -333,7 +333,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) |  | 
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -345,7 +345,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) | [**BurnV3DTO**]({{complexTypePrefix}}BurnV3DTO.md) |  | 
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
 
 ### Authorization
 
@@ -574,7 +574,7 @@ No authorization required
 
 # **dapps_uniswapv3_factory_current_get**
 <a name="dapps_uniswapv3_factory_current_get"></a>
-> [FactoryV3DTO] dapps_uniswapv3_factory_current_get(chain_id)
+> [UniswapV3FactoryV3DTO] dapps_uniswapv3_factory_current_get(chain_id)
 
 GetFactory
 
@@ -583,7 +583,7 @@ GetFactory
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.factory_v3_dto import FactoryV3DTO
+from openapi_client.model.uniswap_v3_factory_v3_dto import UniswapV3FactoryV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -657,7 +657,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) |  | 
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -669,7 +669,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) |  | 
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -681,7 +681,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) | [**FactoryV3DTO**]({{complexTypePrefix}}FactoryV3DTO.md) |  | 
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
 
 ### Authorization
 
@@ -796,7 +796,7 @@ No authorization required
 
 # **dapps_uniswapv3_mints_current_get**
 <a name="dapps_uniswapv3_mints_current_get"></a>
-> [MintV3DTO] dapps_uniswapv3_mints_current_get()
+> [UniswapV3MintV3DTO] dapps_uniswapv3_mints_current_get()
 
 GetMints
 
@@ -805,7 +805,7 @@ GetMints
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.mint_v3_dto import MintV3DTO
+from openapi_client.model.uniswap_v3_mint_v3_dto import UniswapV3MintV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -880,7 +880,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) |  | 
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -892,7 +892,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) |  | 
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -904,7 +904,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) | [**MintV3DTO**]({{complexTypePrefix}}MintV3DTO.md) |  | 
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1256,7 +1256,7 @@ No authorization required
 
 # **dapps_uniswapv3_pools_current_get**
 <a name="dapps_uniswapv3_pools_current_get"></a>
-> [PoolV3DTO] dapps_uniswapv3_pools_current_get()
+> [UniswapV3PoolV3DTO] dapps_uniswapv3_pools_current_get()
 
 GetPools
 
@@ -1265,7 +1265,7 @@ GetPools
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.pool_v3_dto import PoolV3DTO
+from openapi_client.model.uniswap_v3_pool_v3_dto import UniswapV3PoolV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1340,7 +1340,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) |  | 
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1352,7 +1352,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) |  | 
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1364,7 +1364,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) | [**PoolV3DTO**]({{complexTypePrefix}}PoolV3DTO.md) |  | 
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1374,7 +1374,7 @@ No authorization required
 
 # **dapps_uniswapv3_pools_day_data_current_get**
 <a name="dapps_uniswapv3_pools_day_data_current_get"></a>
-> [PoolDayDataV3DTO] dapps_uniswapv3_pools_day_data_current_get()
+> [UniswapV3PoolDayDataV3DTO] dapps_uniswapv3_pools_day_data_current_get()
 
 GetPoolsDayData
 
@@ -1383,7 +1383,7 @@ GetPoolsDayData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.pool_day_data_v3_dto import PoolDayDataV3DTO
+from openapi_client.model.uniswap_v3_pool_day_data_v3_dto import UniswapV3PoolDayDataV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1458,7 +1458,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) |  | 
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1470,7 +1470,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) |  | 
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1482,7 +1482,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) | [**PoolDayDataV3DTO**]({{complexTypePrefix}}PoolDayDataV3DTO.md) |  | 
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1606,7 +1606,7 @@ No authorization required
 
 # **dapps_uniswapv3_pools_hour_data_current_get**
 <a name="dapps_uniswapv3_pools_hour_data_current_get"></a>
-> [PoolHourDataV3DTO] dapps_uniswapv3_pools_hour_data_current_get()
+> [UniswapV3PoolHourDataV3DTO] dapps_uniswapv3_pools_hour_data_current_get()
 
 GetPoolsHourData
 
@@ -1615,7 +1615,7 @@ GetPoolsHourData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.pool_hour_data_v3_dto import PoolHourDataV3DTO
+from openapi_client.model.uniswap_v3_pool_hour_data_v3_dto import UniswapV3PoolHourDataV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1690,7 +1690,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) |  | 
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1702,7 +1702,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) |  | 
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1714,7 +1714,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) | [**PoolHourDataV3DTO**]({{complexTypePrefix}}PoolHourDataV3DTO.md) |  | 
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1838,7 +1838,7 @@ No authorization required
 
 # **dapps_uniswapv3_position_snapshots_current_get**
 <a name="dapps_uniswapv3_position_snapshots_current_get"></a>
-> [PositionSnapshotV3DTO] dapps_uniswapv3_position_snapshots_current_get()
+> [UniswapV3PositionSnapshotV3DTO] dapps_uniswapv3_position_snapshots_current_get()
 
 GetPositionSnapshot
 
@@ -1847,7 +1847,7 @@ GetPositionSnapshot
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.position_snapshot_v3_dto import PositionSnapshotV3DTO
+from openapi_client.model.uniswap_v3_position_snapshot_v3_dto import UniswapV3PositionSnapshotV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1922,7 +1922,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) |  | 
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1934,7 +1934,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) |  | 
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1946,7 +1946,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) | [**PositionSnapshotV3DTO**]({{complexTypePrefix}}PositionSnapshotV3DTO.md) |  | 
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1956,7 +1956,7 @@ No authorization required
 
 # **dapps_uniswapv3_positions_current_get**
 <a name="dapps_uniswapv3_positions_current_get"></a>
-> [PositionV3DTO] dapps_uniswapv3_positions_current_get()
+> [UniswapV3PositionV3DTO] dapps_uniswapv3_positions_current_get()
 
 GetPositions
 
@@ -1965,7 +1965,7 @@ GetPositions
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.position_v3_dto import PositionV3DTO
+from openapi_client.model.uniswap_v3_position_v3_dto import UniswapV3PositionV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2040,7 +2040,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) |  | 
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2052,7 +2052,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) |  | 
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2064,7 +2064,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) | [**PositionV3DTO**]({{complexTypePrefix}}PositionV3DTO.md) |  | 
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
 
 ### Authorization
 
@@ -2188,7 +2188,7 @@ No authorization required
 
 # **dapps_uniswapv3_swaps_current_get**
 <a name="dapps_uniswapv3_swaps_current_get"></a>
-> [SwapV3DTO] dapps_uniswapv3_swaps_current_get()
+> [UniswapV3SwapV3DTO] dapps_uniswapv3_swaps_current_get()
 
 GetSwaps
 
@@ -2197,7 +2197,7 @@ GetSwaps
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.swap_v3_dto import SwapV3DTO
+from openapi_client.model.uniswap_v3_swap_v3_dto import UniswapV3SwapV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2272,7 +2272,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) |  | 
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2284,7 +2284,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) |  | 
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2296,7 +2296,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) | [**SwapV3DTO**]({{complexTypePrefix}}SwapV3DTO.md) |  | 
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
 
 ### Authorization
 
@@ -2534,7 +2534,7 @@ No authorization required
 
 # **dapps_uniswapv3_ticks_current_get**
 <a name="dapps_uniswapv3_ticks_current_get"></a>
-> [TickV3DTO] dapps_uniswapv3_ticks_current_get()
+> [UniswapV3TickV3DTO] dapps_uniswapv3_ticks_current_get()
 
 GetTicks
 
@@ -2543,7 +2543,7 @@ GetTicks
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.tick_v3_dto import TickV3DTO
+from openapi_client.model.uniswap_v3_tick_v3_dto import UniswapV3TickV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2618,7 +2618,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) |  | 
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2630,7 +2630,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) |  | 
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2642,7 +2642,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) | [**TickV3DTO**]({{complexTypePrefix}}TickV3DTO.md) |  | 
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
 
 ### Authorization
 
@@ -2652,7 +2652,7 @@ No authorization required
 
 # **dapps_uniswapv3_ticks_day_data_current_get**
 <a name="dapps_uniswapv3_ticks_day_data_current_get"></a>
-> [TickDayDataV3DTO] dapps_uniswapv3_ticks_day_data_current_get()
+> [UniswapV3TickDayDataV3DTO] dapps_uniswapv3_ticks_day_data_current_get()
 
 GetTicksDayData
 
@@ -2661,7 +2661,7 @@ GetTicksDayData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.tick_day_data_v3_dto import TickDayDataV3DTO
+from openapi_client.model.uniswap_v3_tick_day_data_v3_dto import UniswapV3TickDayDataV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2736,7 +2736,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) |  | 
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2748,7 +2748,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) |  | 
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2760,7 +2760,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) | [**TickDayDataV3DTO**]({{complexTypePrefix}}TickDayDataV3DTO.md) |  | 
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
 
 ### Authorization
 
@@ -3112,7 +3112,7 @@ No authorization required
 
 # **dapps_uniswapv3_tokens_current_get**
 <a name="dapps_uniswapv3_tokens_current_get"></a>
-> [TokenV3DTO] dapps_uniswapv3_tokens_current_get()
+> [UniswapV3TokenV3DTO] dapps_uniswapv3_tokens_current_get()
 
 GetTokens
 
@@ -3121,7 +3121,7 @@ GetTokens
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.token_v3_dto import TokenV3DTO
+from openapi_client.model.uniswap_v3_token_v3_dto import UniswapV3TokenV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -3196,7 +3196,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) |  | 
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -3208,7 +3208,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) |  | 
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -3220,7 +3220,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) | [**TokenV3DTO**]({{complexTypePrefix}}TokenV3DTO.md) |  | 
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
 
 ### Authorization
 
@@ -3230,7 +3230,7 @@ No authorization required
 
 # **dapps_uniswapv3_tokens_day_data_current_get**
 <a name="dapps_uniswapv3_tokens_day_data_current_get"></a>
-> [TokenV3DayDataDTO] dapps_uniswapv3_tokens_day_data_current_get()
+> [UniswapV3TokenV3DayDataDTO] dapps_uniswapv3_tokens_day_data_current_get()
 
 GetTokensDayData
 
@@ -3239,7 +3239,7 @@ GetTokensDayData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.token_v3_day_data_dto import TokenV3DayDataDTO
+from openapi_client.model.uniswap_v3_token_v3_day_data_dto import UniswapV3TokenV3DayDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -3314,7 +3314,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) |  | 
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -3326,7 +3326,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) |  | 
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -3338,7 +3338,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) | [**TokenV3DayDataDTO**]({{complexTypePrefix}}TokenV3DayDataDTO.md) |  | 
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
 
 ### Authorization
 
@@ -3462,7 +3462,7 @@ No authorization required
 
 # **dapps_uniswapv3_tokens_hour_data_current_get**
 <a name="dapps_uniswapv3_tokens_hour_data_current_get"></a>
-> [TokenHourDataV3DTO] dapps_uniswapv3_tokens_hour_data_current_get()
+> [UniswapV3TokenHourDataV3DTO] dapps_uniswapv3_tokens_hour_data_current_get()
 
 GetTokensHourData
 
@@ -3471,7 +3471,7 @@ GetTokensHourData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.token_hour_data_v3_dto import TokenHourDataV3DTO
+from openapi_client.model.uniswap_v3_token_hour_data_v3_dto import UniswapV3TokenHourDataV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -3546,7 +3546,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) |  | 
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -3558,7 +3558,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) |  | 
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -3570,7 +3570,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) | [**TokenHourDataV3DTO**]({{complexTypePrefix}}TokenHourDataV3DTO.md) |  | 
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
 
 ### Authorization
 
@@ -3685,7 +3685,7 @@ No authorization required
 
 # **dapps_uniswapv3_uniswap_day_data_current_get**
 <a name="dapps_uniswapv3_uniswap_day_data_current_get"></a>
-> [UniswapDayDataV3DTO] dapps_uniswapv3_uniswap_day_data_current_get()
+> [UniswapV3UniswapDayDataV3DTO] dapps_uniswapv3_uniswap_day_data_current_get()
 
 GetUniswapDayData
 
@@ -3694,7 +3694,7 @@ GetUniswapDayData
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v3_api
-from openapi_client.model.uniswap_day_data_v3_dto import UniswapDayDataV3DTO
+from openapi_client.model.uniswap_v3_uniswap_day_data_v3_dto import UniswapV3UniswapDayDataV3DTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -3742,7 +3742,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) |  | 
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -3754,7 +3754,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) |  | 
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -3766,7 +3766,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) | [**UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapDayDataV3DTO.md) |  | 
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
 
 ### Authorization
 

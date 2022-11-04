@@ -159,7 +159,7 @@ describe 'UniswapV2Api' do
   # GetPools
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PairV2DTO>]
+  # @return [Array<UniswapV2PairV2DTO>]
   describe 'dapps_uniswapv2_pools_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -183,7 +183,7 @@ describe 'UniswapV2Api' do
   # unit tests for dapps_uniswapv2_swaps_current_get
   # GetSwaps
   # @param [Hash] opts the optional parameters
-  # @return [Array<SwapV2DTO>]
+  # @return [Array<UniswapV2SwapV2DTO>]
   describe 'dapps_uniswapv2_swaps_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -221,7 +221,7 @@ describe 'UniswapV2Api' do
   # unit tests for dapps_uniswapv2_tokens_current_get
   # GetTokens
   # @param [Hash] opts the optional parameters
-  # @return [Array<TokenV2DTO>]
+  # @return [Array<UniswapV2TokenV2DTO>]
   describe 'dapps_uniswapv2_tokens_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

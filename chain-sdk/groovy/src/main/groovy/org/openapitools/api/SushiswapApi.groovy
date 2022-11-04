@@ -1,9 +1,9 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.PairDTO
-import org.openapitools.model.SwapDTO
-import org.openapitools.model.TokenDTO
+import org.openapitools.model.SushiswapPairDTO
+import org.openapitools.model.SushiswapSwapDTO
+import org.openapitools.model.SushiswapTokenDTO
 
 class SushiswapApi {
     String basePath = "https://onchain.coinapi.io"
@@ -364,7 +364,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PairDTO.class )
+                    SushiswapPairDTO.class )
 
     }
 
@@ -399,7 +399,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PairDTO.class )
+                    SushiswapPairDTO.class )
 
     }
 
@@ -419,7 +419,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    SwapDTO.class )
+                    SushiswapSwapDTO.class )
 
     }
 
@@ -454,7 +454,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    SwapDTO.class )
+                    SushiswapSwapDTO.class )
 
     }
 
@@ -509,7 +509,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenDTO.class )
+                    SushiswapTokenDTO.class )
 
     }
 
@@ -544,7 +544,7 @@ class SushiswapApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenDTO.class )
+                    SushiswapTokenDTO.class )
 
     }
 

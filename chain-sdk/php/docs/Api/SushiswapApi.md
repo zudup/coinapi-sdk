@@ -630,7 +630,7 @@ No authorization required
 ## `dappsSushiswapPoolsCurrentGet()`
 
 ```php
-dappsSushiswapPoolsCurrentGet(): \OpenAPI\Client\Model\PairDTO[]
+dappsSushiswapPoolsCurrentGet(): \OpenAPI\Client\Model\SushiswapPairDTO[]
 ```
 
 GetPools
@@ -665,7 +665,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PairDTO[]**](../Model/PairDTO.md)
+[**\OpenAPI\Client\Model\SushiswapPairDTO[]**](../Model/SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ No authorization required
 ## `dappsSushiswapPoolsHistoricalGet()`
 
 ```php
-dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\PairDTO[]
+dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapPairDTO[]
 ```
 
 GetPools (historical)
@@ -727,7 +727,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PairDTO[]**](../Model/PairDTO.md)
+[**\OpenAPI\Client\Model\SushiswapPairDTO[]**](../Model/SushiswapPairDTO.md)
 
 ### Authorization
 
@@ -745,7 +745,7 @@ No authorization required
 ## `dappsSushiswapSwapsCurrentGet()`
 
 ```php
-dappsSushiswapSwapsCurrentGet(): \OpenAPI\Client\Model\SwapDTO[]
+dappsSushiswapSwapsCurrentGet(): \OpenAPI\Client\Model\SushiswapSwapDTO[]
 ```
 
 GetSwaps
@@ -778,7 +778,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SwapDTO[]**](../Model/SwapDTO.md)
+[**\OpenAPI\Client\Model\SushiswapSwapDTO[]**](../Model/SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -796,7 +796,7 @@ No authorization required
 ## `dappsSushiswapSwapsHistoricalGet()`
 
 ```php
-dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SwapDTO[]
+dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapSwapDTO[]
 ```
 
 GetSwaps (historical)
@@ -840,7 +840,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SwapDTO[]**](../Model/SwapDTO.md)
+[**\OpenAPI\Client\Model\SushiswapSwapDTO[]**](../Model/SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -919,7 +919,7 @@ No authorization required
 ## `dappsSushiswapTokensCurrentGet()`
 
 ```php
-dappsSushiswapTokensCurrentGet(): \OpenAPI\Client\Model\TokenDTO[]
+dappsSushiswapTokensCurrentGet(): \OpenAPI\Client\Model\SushiswapTokenDTO[]
 ```
 
 GetTokens
@@ -952,7 +952,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenDTO[]**](../Model/TokenDTO.md)
+[**\OpenAPI\Client\Model\SushiswapTokenDTO[]**](../Model/SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -970,7 +970,7 @@ No authorization required
 ## `dappsSushiswapTokensHistoricalGet()`
 
 ```php
-dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\TokenDTO[]
+dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\SushiswapTokenDTO[]
 ```
 
 GetTokens (historical)
@@ -1014,7 +1014,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenDTO[]**](../Model/TokenDTO.md)
+[**\OpenAPI\Client\Model\SushiswapTokenDTO[]**](../Model/SushiswapTokenDTO.md)
 
 ### Authorization
 

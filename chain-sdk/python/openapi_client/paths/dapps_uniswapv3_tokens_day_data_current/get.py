@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.token_v3_day_data_dto import TokenV3DayDataDTO
+from openapi_client.model.uniswap_v3_token_v3_day_data_dto import UniswapV3TokenV3DayDataDTO
 
 from . import path
 
@@ -65,12 +65,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['TokenV3DayDataDTO']:
-            return TokenV3DayDataDTO
+        def items() -> typing.Type['UniswapV3TokenV3DayDataDTO']:
+            return UniswapV3TokenV3DayDataDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['TokenV3DayDataDTO'], typing.List['TokenV3DayDataDTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3TokenV3DayDataDTO'], typing.List['UniswapV3TokenV3DayDataDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -79,7 +79,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'TokenV3DayDataDTO':
+    def __getitem__(self, i: int) -> 'UniswapV3TokenV3DayDataDTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +91,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['TokenV3DayDataDTO']:
-            return TokenV3DayDataDTO
+        def items() -> typing.Type['UniswapV3TokenV3DayDataDTO']:
+            return UniswapV3TokenV3DayDataDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['TokenV3DayDataDTO'], typing.List['TokenV3DayDataDTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3TokenV3DayDataDTO'], typing.List['UniswapV3TokenV3DayDataDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -105,7 +105,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'TokenV3DayDataDTO':
+    def __getitem__(self, i: int) -> 'UniswapV3TokenV3DayDataDTO':
         return super().__getitem__(i)
 
 
@@ -117,12 +117,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['TokenV3DayDataDTO']:
-            return TokenV3DayDataDTO
+        def items() -> typing.Type['UniswapV3TokenV3DayDataDTO']:
+            return UniswapV3TokenV3DayDataDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['TokenV3DayDataDTO'], typing.List['TokenV3DayDataDTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3TokenV3DayDataDTO'], typing.List['UniswapV3TokenV3DayDataDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -131,7 +131,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'TokenV3DayDataDTO':
+    def __getitem__(self, i: int) -> 'UniswapV3TokenV3DayDataDTO':
         return super().__getitem__(i)
 
 

@@ -204,12 +204,12 @@
 #' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{PairDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapPairDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PairDTO]
+#' \item return type : array[SushiswapPairDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -224,12 +224,12 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
-#' \item \emph{ @returnType } list( \link{PairDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapPairDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PairDTO]
+#' \item return type : array[SushiswapPairDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -239,12 +239,12 @@
 #' \strong{ DappsSushiswapSwapsCurrentGet } \emph{ GetSwaps }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{SwapDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapSwapDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[SwapDTO]
+#' \item return type : array[SushiswapSwapDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -259,12 +259,12 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
-#' \item \emph{ @returnType } list( \link{SwapDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapSwapDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[SwapDTO]
+#' \item return type : array[SushiswapSwapDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -293,12 +293,12 @@
 #' \strong{ DappsSushiswapTokensCurrentGet } \emph{ GetTokens }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{TokenDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapTokenDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenDTO]
+#' \item return type : array[SushiswapTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -313,12 +313,12 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
-#' \item \emph{ @returnType } list( \link{TokenDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{SushiswapTokenDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenDTO]
+#' \item return type : array[SushiswapTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1624,7 +1624,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PairDTO]
+    #' @return array[SushiswapPairDTO]
     #' @export
     DappsSushiswapPoolsCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapPoolsCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -1645,7 +1645,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PairDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapPairDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapPoolsCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -1685,7 +1685,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PairDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1715,7 +1715,7 @@ SushiswapApi <- R6::R6Class(
     #' @param pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PairDTO]
+    #' @return array[SushiswapPairDTO]
     #' @export
     DappsSushiswapPoolsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapPoolsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
@@ -1741,7 +1741,7 @@ SushiswapApi <- R6::R6Class(
     #' @param pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PairDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapPairDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapPoolsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -1796,7 +1796,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PairDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1821,7 +1821,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[SwapDTO]
+    #' @return array[SushiswapSwapDTO]
     #' @export
     DappsSushiswapSwapsCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapSwapsCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -1842,7 +1842,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[SwapDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapSwapDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapSwapsCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -1882,7 +1882,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[SwapDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapSwapDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1912,7 +1912,7 @@ SushiswapApi <- R6::R6Class(
     #' @param pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[SwapDTO]
+    #' @return array[SushiswapSwapDTO]
     #' @export
     DappsSushiswapSwapsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapSwapsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
@@ -1938,7 +1938,7 @@ SushiswapApi <- R6::R6Class(
     #' @param pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[SwapDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapSwapDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapSwapsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -1993,7 +1993,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[SwapDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapSwapDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2116,7 +2116,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenDTO]
+    #' @return array[SushiswapTokenDTO]
     #' @export
     DappsSushiswapTokensCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapTokensCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -2137,7 +2137,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapTokensCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -2177,7 +2177,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapTokenDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2207,7 +2207,7 @@ SushiswapApi <- R6::R6Class(
     #' @param token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenDTO]
+    #' @return array[SushiswapTokenDTO]
     #' @export
     DappsSushiswapTokensHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsSushiswapTokensHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
@@ -2233,7 +2233,7 @@ SushiswapApi <- R6::R6Class(
     #' @param token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenDTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsSushiswapTokensHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -2288,7 +2288,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenDTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapTokenDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

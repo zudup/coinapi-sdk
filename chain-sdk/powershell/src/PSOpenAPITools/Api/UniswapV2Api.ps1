@@ -988,7 +988,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-PairV2DTO[]
+UniswapV2PairV2DTO[]
 #>
 function Invoke-DappsUniswapv2PoolsCurrentGet {
     [CmdletBinding()]
@@ -1040,7 +1040,7 @@ function Invoke-DappsUniswapv2PoolsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "PairV2DTO[]" `
+                                -ReturnType "UniswapV2PairV2DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1180,7 +1180,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SwapV2DTO[]
+UniswapV2SwapV2DTO[]
 #>
 function Invoke-DappsUniswapv2SwapsCurrentGet {
     [CmdletBinding()]
@@ -1225,7 +1225,7 @@ function Invoke-DappsUniswapv2SwapsCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SwapV2DTO[]" `
+                                -ReturnType "UniswapV2SwapV2DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1475,7 +1475,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-TokenV2DTO[]
+UniswapV2TokenV2DTO[]
 #>
 function Invoke-DappsUniswapv2TokensCurrentGet {
     [CmdletBinding()]
@@ -1520,7 +1520,7 @@ function Invoke-DappsUniswapv2TokensCurrentGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "TokenV2DTO[]" `
+                                -ReturnType "UniswapV2TokenV2DTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

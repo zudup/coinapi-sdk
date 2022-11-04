@@ -9,7 +9,7 @@ void main() {
   group(UniswapV3Api, () {
     // GetBundles
     //
-    //Future<BuiltList<BundleV3DTO>> dappsUniswapv3BundleCurrentGet() async
+    //Future<BuiltList<UniswapV3BundleV3DTO>> dappsUniswapv3BundleCurrentGet() async
     test('test dappsUniswapv3BundleCurrentGet', () async {
       // TODO
     });
@@ -21,7 +21,7 @@ void main() {
 
     // GetBurns
     //
-    //Future<BuiltList<BurnV3DTO>> dappsUniswapv3BurnsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3BurnV3DTO>> dappsUniswapv3BurnsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3BurnsCurrentGet', () async {
       // TODO
     });
@@ -38,7 +38,7 @@ void main() {
 
     // GetFactory
     //
-    //Future<BuiltList<FactoryV3DTO>> dappsUniswapv3FactoryCurrentGet(String chainId) async
+    //Future<BuiltList<UniswapV3FactoryV3DTO>> dappsUniswapv3FactoryCurrentGet(String chainId) async
     test('test dappsUniswapv3FactoryCurrentGet', () async {
       // TODO
     });
@@ -50,7 +50,7 @@ void main() {
 
     // GetMints
     //
-    //Future<BuiltList<MintV3DTO>> dappsUniswapv3MintsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3MintV3DTO>> dappsUniswapv3MintsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3MintsCurrentGet', () async {
       // TODO
     });
@@ -72,14 +72,14 @@ void main() {
 
     // GetPools
     //
-    //Future<BuiltList<PoolV3DTO>> dappsUniswapv3PoolsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3PoolV3DTO>> dappsUniswapv3PoolsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3PoolsCurrentGet', () async {
       // TODO
     });
 
     // GetPoolsDayData
     //
-    //Future<BuiltList<PoolDayDataV3DTO>> dappsUniswapv3PoolsDayDataCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3PoolDayDataV3DTO>> dappsUniswapv3PoolsDayDataCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3PoolsDayDataCurrentGet', () async {
       // TODO
     });
@@ -91,7 +91,7 @@ void main() {
 
     // GetPoolsHourData
     //
-    //Future<BuiltList<PoolHourDataV3DTO>> dappsUniswapv3PoolsHourDataCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3PoolHourDataV3DTO>> dappsUniswapv3PoolsHourDataCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3PoolsHourDataCurrentGet', () async {
       // TODO
     });
@@ -103,14 +103,14 @@ void main() {
 
     // GetPositionSnapshot
     //
-    //Future<BuiltList<PositionSnapshotV3DTO>> dappsUniswapv3PositionSnapshotsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3PositionSnapshotV3DTO>> dappsUniswapv3PositionSnapshotsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3PositionSnapshotsCurrentGet', () async {
       // TODO
     });
 
     // GetPositions
     //
-    //Future<BuiltList<PositionV3DTO>> dappsUniswapv3PositionsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3PositionV3DTO>> dappsUniswapv3PositionsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3PositionsCurrentGet', () async {
       // TODO
     });
@@ -122,7 +122,7 @@ void main() {
 
     // GetSwaps
     //
-    //Future<BuiltList<SwapV3DTO>> dappsUniswapv3SwapsCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3SwapV3DTO>> dappsUniswapv3SwapsCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3SwapsCurrentGet', () async {
       // TODO
     });
@@ -139,14 +139,14 @@ void main() {
 
     // GetTicks
     //
-    //Future<BuiltList<TickV3DTO>> dappsUniswapv3TicksCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3TickV3DTO>> dappsUniswapv3TicksCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3TicksCurrentGet', () async {
       // TODO
     });
 
     // GetTicksDayData
     //
-    //Future<BuiltList<TickDayDataV3DTO>> dappsUniswapv3TicksDayDataCurrentGet({ String filterPoolId }) async
+    //Future<BuiltList<UniswapV3TickDayDataV3DTO>> dappsUniswapv3TicksDayDataCurrentGet({ String filterPoolId }) async
     test('test dappsUniswapv3TicksDayDataCurrentGet', () async {
       // TODO
     });
@@ -168,14 +168,14 @@ void main() {
 
     // GetTokens
     //
-    //Future<BuiltList<TokenV3DTO>> dappsUniswapv3TokensCurrentGet({ String filterTokenId }) async
+    //Future<BuiltList<UniswapV3TokenV3DTO>> dappsUniswapv3TokensCurrentGet({ String filterTokenId }) async
     test('test dappsUniswapv3TokensCurrentGet', () async {
       // TODO
     });
 
     // GetTokensDayData
     //
-    //Future<BuiltList<TokenV3DayDataDTO>> dappsUniswapv3TokensDayDataCurrentGet({ String filterTokenId }) async
+    //Future<BuiltList<UniswapV3TokenV3DayDataDTO>> dappsUniswapv3TokensDayDataCurrentGet({ String filterTokenId }) async
     test('test dappsUniswapv3TokensDayDataCurrentGet', () async {
       // TODO
     });
@@ -187,7 +187,7 @@ void main() {
 
     // GetTokensHourData
     //
-    //Future<BuiltList<TokenHourDataV3DTO>> dappsUniswapv3TokensHourDataCurrentGet({ String filterTokenId }) async
+    //Future<BuiltList<UniswapV3TokenHourDataV3DTO>> dappsUniswapv3TokensHourDataCurrentGet({ String filterTokenId }) async
     test('test dappsUniswapv3TokensHourDataCurrentGet', () async {
       // TODO
     });
@@ -199,7 +199,7 @@ void main() {
 
     // GetUniswapDayData
     //
-    //Future<BuiltList<UniswapDayDataV3DTO>> dappsUniswapv3UniswapDayDataCurrentGet() async
+    //Future<BuiltList<UniswapV3UniswapDayDataV3DTO>> dappsUniswapv3UniswapDayDataCurrentGet() async
     test('test dappsUniswapv3UniswapDayDataCurrentGet', () async {
       // TODO
     });

@@ -570,7 +570,7 @@ No authorization required
 ## `dappsUniswapv2PoolsCurrentGet()`
 
 ```php
-dappsUniswapv2PoolsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\PairV2DTO[]
+dappsUniswapv2PoolsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
 ```
 
 GetPools
@@ -606,7 +606,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PairV2DTO[]**](../Model/PairV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2PairV2DTO[]**](../Model/UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -685,7 +685,7 @@ No authorization required
 ## `dappsUniswapv2SwapsCurrentGet()`
 
 ```php
-dappsUniswapv2SwapsCurrentGet(): \OpenAPI\Client\Model\SwapV2DTO[]
+dappsUniswapv2SwapsCurrentGet(): \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
 ```
 
 GetSwaps
@@ -718,7 +718,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SwapV2DTO[]**](../Model/SwapV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]**](../Model/UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -858,7 +858,7 @@ No authorization required
 ## `dappsUniswapv2TokensCurrentGet()`
 
 ```php
-dappsUniswapv2TokensCurrentGet(): \OpenAPI\Client\Model\TokenV2DTO[]
+dappsUniswapv2TokensCurrentGet(): \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
 ```
 
 GetTokens
@@ -891,7 +891,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TokenV2DTO[]**](../Model/TokenV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]**](../Model/UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

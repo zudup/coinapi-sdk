@@ -228,7 +228,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BundleV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
      */
     public function dappsUniswapv3BundleCurrentGet(string $contentType = self::contentTypes['dappsUniswapv3BundleCurrentGet'][0])
     {
@@ -245,7 +245,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BundleV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3BundleV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3BundleCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsUniswapv3BundleCurrentGet'][0])
     {
@@ -288,23 +288,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BundleV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BundleV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BundleV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BundleV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -325,7 +325,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BundleV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -367,7 +367,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3BundleCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsUniswapv3BundleCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BundleV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]';
         $request = $this->dappsUniswapv3BundleCurrentGetRequest($contentType);
 
         return $this->client
@@ -753,7 +753,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BurnV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
      */
     public function dappsUniswapv3BurnsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3BurnsCurrentGet'][0])
     {
@@ -771,7 +771,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BurnV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3BurnV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3BurnsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3BurnsCurrentGet'][0])
     {
@@ -814,23 +814,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BurnV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BurnV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BurnV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BurnV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -851,7 +851,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BurnV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -895,7 +895,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3BurnsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3BurnsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BurnV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]';
         $request = $this->dappsUniswapv3BurnsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -1568,7 +1568,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FactoryV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
      */
     public function dappsUniswapv3FactoryCurrentGet($chain_id, string $contentType = self::contentTypes['dappsUniswapv3FactoryCurrentGet'][0])
     {
@@ -1586,7 +1586,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FactoryV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3FactoryCurrentGetWithHttpInfo($chain_id, string $contentType = self::contentTypes['dappsUniswapv3FactoryCurrentGet'][0])
     {
@@ -1629,23 +1629,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FactoryV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FactoryV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FactoryV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FactoryV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1666,7 +1666,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FactoryV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1710,7 +1710,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3FactoryCurrentGetAsyncWithHttpInfo($chain_id, string $contentType = self::contentTypes['dappsUniswapv3FactoryCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FactoryV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]';
         $request = $this->dappsUniswapv3FactoryCurrentGetRequest($chain_id, $contentType);
 
         return $this->client
@@ -2112,7 +2112,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MintV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
      */
     public function dappsUniswapv3MintsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3MintsCurrentGet'][0])
     {
@@ -2130,7 +2130,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MintV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3MintV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3MintsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3MintsCurrentGet'][0])
     {
@@ -2173,23 +2173,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MintV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3MintV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MintV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3MintV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MintV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MintV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2210,7 +2210,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MintV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2254,7 +2254,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3MintsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3MintsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MintV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]';
         $request = $this->dappsUniswapv3MintsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -3218,7 +3218,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PoolV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
      */
     public function dappsUniswapv3PoolsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsCurrentGet'][0])
     {
@@ -3236,7 +3236,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PoolV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3PoolsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsCurrentGet'][0])
     {
@@ -3279,23 +3279,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PoolV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PoolV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PoolV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PoolV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3316,7 +3316,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PoolV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3360,7 +3360,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3PoolsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PoolV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]';
         $request = $this->dappsUniswapv3PoolsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -3496,7 +3496,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PoolDayDataV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
      */
     public function dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsDayDataCurrentGet'][0])
     {
@@ -3514,7 +3514,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PoolDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsDayDataCurrentGet'][0])
     {
@@ -3557,23 +3557,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PoolDayDataV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PoolDayDataV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PoolDayDataV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PoolDayDataV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3594,7 +3594,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PoolDayDataV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3638,7 +3638,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3PoolsDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsDayDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PoolDayDataV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]';
         $request = $this->dappsUniswapv3PoolsDayDataCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -4050,7 +4050,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PoolHourDataV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
      */
     public function dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsHourDataCurrentGet'][0])
     {
@@ -4068,7 +4068,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PoolHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsHourDataCurrentGet'][0])
     {
@@ -4111,23 +4111,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PoolHourDataV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PoolHourDataV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PoolHourDataV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PoolHourDataV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4148,7 +4148,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PoolHourDataV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4192,7 +4192,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3PoolsHourDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PoolsHourDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PoolHourDataV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]';
         $request = $this->dappsUniswapv3PoolsHourDataCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -4604,7 +4604,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PositionSnapshotV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
      */
     public function dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionSnapshotsCurrentGet'][0])
     {
@@ -4622,7 +4622,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PositionSnapshotV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionSnapshotsCurrentGet'][0])
     {
@@ -4665,23 +4665,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PositionSnapshotV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PositionSnapshotV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PositionSnapshotV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PositionSnapshotV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4702,7 +4702,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PositionSnapshotV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4746,7 +4746,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3PositionSnapshotsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionSnapshotsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PositionSnapshotV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]';
         $request = $this->dappsUniswapv3PositionSnapshotsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -4882,7 +4882,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PositionV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
      */
     public function dappsUniswapv3PositionsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionsCurrentGet'][0])
     {
@@ -4900,7 +4900,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PositionV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3PositionV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3PositionsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionsCurrentGet'][0])
     {
@@ -4943,23 +4943,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PositionV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PositionV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PositionV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PositionV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4980,7 +4980,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PositionV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5024,7 +5024,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3PositionsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3PositionsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PositionV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]';
         $request = $this->dappsUniswapv3PositionsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -5436,7 +5436,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SwapV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
      */
     public function dappsUniswapv3SwapsCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3SwapsCurrentGet'][0])
     {
@@ -5454,7 +5454,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SwapV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3SwapV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3SwapsCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3SwapsCurrentGet'][0])
     {
@@ -5497,23 +5497,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SwapV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SwapV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SwapV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SwapV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5534,7 +5534,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SwapV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5578,7 +5578,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3SwapsCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3SwapsCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SwapV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]';
         $request = $this->dappsUniswapv3SwapsCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -6266,7 +6266,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TickV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
      */
     public function dappsUniswapv3TicksCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksCurrentGet'][0])
     {
@@ -6284,7 +6284,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TickV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3TickV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3TicksCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksCurrentGet'][0])
     {
@@ -6327,23 +6327,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TickV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3TickV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TickV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3TickV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TickV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TickV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6364,7 +6364,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TickV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6408,7 +6408,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3TicksCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TickV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]';
         $request = $this->dappsUniswapv3TicksCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -6544,7 +6544,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TickDayDataV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
      */
     public function dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksDayDataCurrentGet'][0])
     {
@@ -6562,7 +6562,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TickDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3TicksDayDataCurrentGetWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksDayDataCurrentGet'][0])
     {
@@ -6605,23 +6605,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TickDayDataV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TickDayDataV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TickDayDataV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TickDayDataV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6642,7 +6642,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TickDayDataV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6686,7 +6686,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3TicksDayDataCurrentGetAsyncWithHttpInfo($filter_pool_id = null, string $contentType = self::contentTypes['dappsUniswapv3TicksDayDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TickDayDataV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]';
         $request = $this->dappsUniswapv3TicksDayDataCurrentGetRequest($filter_pool_id, $contentType);
 
         return $this->client
@@ -7650,7 +7650,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TokenV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
      */
     public function dappsUniswapv3TokensCurrentGet($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensCurrentGet'][0])
     {
@@ -7668,7 +7668,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TokenV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3TokensCurrentGetWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensCurrentGet'][0])
     {
@@ -7711,23 +7711,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TokenV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TokenV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TokenV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TokenV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7748,7 +7748,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TokenV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7792,7 +7792,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3TokensCurrentGetAsyncWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TokenV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]';
         $request = $this->dappsUniswapv3TokensCurrentGetRequest($filter_token_id, $contentType);
 
         return $this->client
@@ -7928,7 +7928,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TokenV3DayDataDTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
      */
     public function dappsUniswapv3TokensDayDataCurrentGet($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensDayDataCurrentGet'][0])
     {
@@ -7946,7 +7946,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3TokensDayDataCurrentGetWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensDayDataCurrentGet'][0])
     {
@@ -7989,23 +7989,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TokenV3DayDataDTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TokenV3DayDataDTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TokenV3DayDataDTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TokenV3DayDataDTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8026,7 +8026,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TokenV3DayDataDTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8070,7 +8070,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3TokensDayDataCurrentGetAsyncWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensDayDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TokenV3DayDataDTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
         $request = $this->dappsUniswapv3TokensDayDataCurrentGetRequest($filter_token_id, $contentType);
 
         return $this->client
@@ -8482,7 +8482,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TokenHourDataV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
      */
     public function dappsUniswapv3TokensHourDataCurrentGet($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensHourDataCurrentGet'][0])
     {
@@ -8500,7 +8500,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TokenHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3TokensHourDataCurrentGetWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensHourDataCurrentGet'][0])
     {
@@ -8543,23 +8543,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TokenHourDataV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TokenHourDataV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TokenHourDataV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TokenHourDataV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8580,7 +8580,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TokenHourDataV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8624,7 +8624,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3TokensHourDataCurrentGetAsyncWithHttpInfo($filter_token_id = null, string $contentType = self::contentTypes['dappsUniswapv3TokensHourDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TokenHourDataV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]';
         $request = $this->dappsUniswapv3TokensHourDataCurrentGetRequest($filter_token_id, $contentType);
 
         return $this->client
@@ -9020,7 +9020,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UniswapDayDataV3DTO[]
+     * @return \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
      */
     public function dappsUniswapv3UniswapDayDataCurrentGet(string $contentType = self::contentTypes['dappsUniswapv3UniswapDayDataCurrentGet'][0])
     {
@@ -9037,7 +9037,7 @@ class UniswapV3Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UniswapDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function dappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(string $contentType = self::contentTypes['dappsUniswapv3UniswapDayDataCurrentGet'][0])
     {
@@ -9080,23 +9080,23 @@ class UniswapV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UniswapDayDataV3DTO[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UniswapDayDataV3DTO[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapDayDataV3DTO[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UniswapDayDataV3DTO[]';
+            $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9117,7 +9117,7 @@ class UniswapV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UniswapDayDataV3DTO[]',
+                        '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9159,7 +9159,7 @@ class UniswapV3Api
      */
     public function dappsUniswapv3UniswapDayDataCurrentGetAsyncWithHttpInfo(string $contentType = self::contentTypes['dappsUniswapv3UniswapDayDataCurrentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UniswapDayDataV3DTO[]';
+        $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]';
         $request = $this->dappsUniswapv3UniswapDayDataCurrentGetRequest($contentType);
 
         return $this->client

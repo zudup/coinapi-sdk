@@ -5,9 +5,9 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
-#include "../model/pair_dto.h"
-#include "../model/swap_dto.h"
-#include "../model/token_dto.h"
+#include "../model/sushiswap_pair_dto.h"
+#include "../model/sushiswap_swap_dto.h"
+#include "../model/sushiswap_token_dto.h"
 
 
 void

@@ -113,617 +113,617 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
-instance Arbitrary BigInteger where
-  arbitrary = sized genBigInteger
+instance Arbitrary NumericsBigInteger where
+  arbitrary = sized genNumericsBigInteger
 
-genBigInteger :: Int -> Gen BigInteger
-genBigInteger n =
-  BigInteger
-    <$> arbitraryReducedMaybe n -- bigIntegerIsPowerOfTwo :: Maybe Bool
-    <*> arbitraryReducedMaybe n -- bigIntegerIsZero :: Maybe Bool
-    <*> arbitraryReducedMaybe n -- bigIntegerIsOne :: Maybe Bool
-    <*> arbitraryReducedMaybe n -- bigIntegerIsEven :: Maybe Bool
-    <*> arbitraryReducedMaybe n -- bigIntegerSign :: Maybe Int
+genNumericsBigInteger :: Int -> Gen NumericsBigInteger
+genNumericsBigInteger n =
+  NumericsBigInteger
+    <$> arbitraryReducedMaybe n -- numericsBigIntegerIsPowerOfTwo :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- numericsBigIntegerIsZero :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- numericsBigIntegerIsOne :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- numericsBigIntegerIsEven :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- numericsBigIntegerSign :: Maybe Int
   
-instance Arbitrary BundleV3DTO where
-  arbitrary = sized genBundleV3DTO
+instance Arbitrary SushiswapPairDTO where
+  arbitrary = sized genSushiswapPairDTO
 
-genBundleV3DTO :: Int -> Gen BundleV3DTO
-genBundleV3DTO n =
-  BundleV3DTO
-    <$> arbitraryReducedMaybe n -- bundleV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- bundleV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- bundleV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- bundleV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- bundleV3DTOEthPriceUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- bundleV3DTOVid :: Maybe Integer
+genSushiswapPairDTO :: Int -> Gen SushiswapPairDTO
+genSushiswapPairDTO n =
+  SushiswapPairDTO
+    <$> arbitraryReducedMaybe n -- sushiswapPairDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOFactory :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOReserve0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOReserve1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOReserveEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOReserveUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOTrackedReserveEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOToken0Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOToken1Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOLiquidityProviderCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOBlock :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapPairDTOEvaluatedAsk :: Maybe Double
   
-instance Arbitrary BurnV3DTO where
-  arbitrary = sized genBurnV3DTO
+instance Arbitrary SushiswapSwapDTO where
+  arbitrary = sized genSushiswapSwapDTO
 
-genBurnV3DTO :: Int -> Gen BurnV3DTO
-genBurnV3DTO n =
-  BurnV3DTO
-    <$> arbitraryReducedMaybe n -- burnV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- burnV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- burnV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- burnV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOTimestamp :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOOwner :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOOrigin :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOAmount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOAmount0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOAmount1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOAmountUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOTickLower :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOTickUpper :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOLogIndex :: Maybe Text
-    <*> arbitraryReducedMaybe n -- burnV3DTOVid :: Maybe Integer
+genSushiswapSwapDTO :: Int -> Gen SushiswapSwapDTO
+genSushiswapSwapDTO n =
+  SushiswapSwapDTO
+    <$> arbitraryReducedMaybe n -- sushiswapSwapDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOAmount0In :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOAmount1In :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOAmount0Out :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOAmount1Out :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOLogIndex :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOTransactionId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- sushiswapSwapDTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
   
-instance Arbitrary FactoryV3DTO where
-  arbitrary = sized genFactoryV3DTO
+instance Arbitrary SushiswapTokenDTO where
+  arbitrary = sized genSushiswapTokenDTO
 
-genFactoryV3DTO :: Int -> Gen FactoryV3DTO
-genFactoryV3DTO n =
-  FactoryV3DTO
-    <$> arbitraryReducedMaybe n -- factoryV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- factoryV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- factoryV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- factoryV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOPoolCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTxCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalVolumeEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalFeesEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalValueLockedUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalValueLockedEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalValueLockedUsdUntracked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOTotalValueLockedEthUntracked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOOwner :: Maybe Text
-    <*> arbitraryReducedMaybe n -- factoryV3DTOVid :: Maybe Integer
+genSushiswapTokenDTO :: Int -> Gen SushiswapTokenDTO
+genSushiswapTokenDTO n =
+  SushiswapTokenDTO
+    <$> arbitraryReducedMaybe n -- sushiswapTokenDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOFactory :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTODecimals :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTODerivedEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOWhitelistPairs :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDTOTokenSymbol :: Maybe Text
   
-instance Arbitrary MintV3DTO where
-  arbitrary = sized genMintV3DTO
+instance Arbitrary UniswapV2PairV2DTO where
+  arbitrary = sized genUniswapV2PairV2DTO
 
-genMintV3DTO :: Int -> Gen MintV3DTO
-genMintV3DTO n =
-  MintV3DTO
-    <$> arbitraryReducedMaybe n -- mintV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- mintV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- mintV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- mintV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOTimestamp :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOOwner :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOSender :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOOrigin :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOAmount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOAmount0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOAmount1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOAmountUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOTickLower :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOTickUpper :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOLogIndex :: Maybe Text
-    <*> arbitraryReducedMaybe n -- mintV3DTOVid :: Maybe Integer
+genUniswapV2PairV2DTO :: Int -> Gen UniswapV2PairV2DTO
+genUniswapV2PairV2DTO n =
+  UniswapV2PairV2DTO
+    <$> arbitraryReducedMaybe n -- uniswapV2PairV2DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOReserve0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOReserve1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOReserveEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOReserveUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOTrackedReserveEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOToken0Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOToken1Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOTxCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOCreatedAtTimestamp :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOLiquidityProviderCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2PairV2DTOEvaluatedAsk :: Maybe Double
   
-instance Arbitrary PairDTO where
-  arbitrary = sized genPairDTO
+instance Arbitrary UniswapV2SwapV2DTO where
+  arbitrary = sized genUniswapV2SwapV2DTO
 
-genPairDTO :: Int -> Gen PairDTO
-genPairDTO n =
-  PairDTO
-    <$> arbitraryReducedMaybe n -- pairDTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- pairDTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- pairDTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- pairDTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOFactory :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOName :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOReserve0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOReserve1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOTotalSupply :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOReserveEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOReserveUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOTrackedReserveEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOToken0Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOToken1Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOTxCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOLiquidityProviderCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOTimestamp :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOBlock :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairDTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- pairDTOEvaluatedAsk :: Maybe Double
+genUniswapV2SwapV2DTO :: Int -> Gen UniswapV2SwapV2DTO
+genUniswapV2SwapV2DTO n =
+  UniswapV2SwapV2DTO
+    <$> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOTimestamp :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOFrom :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOAmount0In :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOAmount1In :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOAmount0Out :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOAmount1Out :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOLogIndex :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2SwapV2DTOTransactionId :: Maybe Text
   
-instance Arbitrary PairV2DTO where
-  arbitrary = sized genPairV2DTO
+instance Arbitrary UniswapV2TokenV2DTO where
+  arbitrary = sized genUniswapV2TokenV2DTO
 
-genPairV2DTO :: Int -> Gen PairV2DTO
-genPairV2DTO n =
-  PairV2DTO
-    <$> arbitraryReducedMaybe n -- pairV2DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- pairV2DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- pairV2DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- pairV2DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- pairV2DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOReserve0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOReserve1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOTotalSupply :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOReserveEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOReserveUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOTrackedReserveEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOToken0Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOToken1Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOTxCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- pairV2DTOCreatedAtTimestamp :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- pairV2DTOLiquidityProviderCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- pairV2DTOEvaluatedAsk :: Maybe Double
+genUniswapV2TokenV2DTO :: Int -> Gen UniswapV2TokenV2DTO
+genUniswapV2TokenV2DTO n =
+  UniswapV2TokenV2DTO
+    <$> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTODecimals :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTotalSupply :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTradeVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTradeVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTxCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTotalLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTODerivedEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV2TokenV2DTOTokenSymbol :: Maybe Text
   
-instance Arbitrary PoolDayDataV3DTO where
-  arbitrary = sized genPoolDayDataV3DTO
+instance Arbitrary UniswapV3BundleV3DTO where
+  arbitrary = sized genUniswapV3BundleV3DTO
 
-genPoolDayDataV3DTO :: Int -> Gen PoolDayDataV3DTO
-genPoolDayDataV3DTO n =
-  PoolDayDataV3DTO
-    <$> arbitraryReducedMaybe n -- poolDayDataV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTODate :: Maybe Int
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOSqrtPrice :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOToken0Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOToken1Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOTick :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOFeeGrowthGlobal0x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOFeeGrowthGlobal1x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOTvlUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOTxCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOOpen :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOHigh :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOLow :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOClose :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolDayDataV3DTOVid :: Maybe Integer
+genUniswapV3BundleV3DTO :: Int -> Gen UniswapV3BundleV3DTO
+genUniswapV3BundleV3DTO n =
+  UniswapV3BundleV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3BundleV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3BundleV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3BundleV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3BundleV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BundleV3DTOEthPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BundleV3DTOVid :: Maybe Integer
   
-instance Arbitrary PoolHourDataV3DTO where
-  arbitrary = sized genPoolHourDataV3DTO
+instance Arbitrary UniswapV3BurnV3DTO where
+  arbitrary = sized genUniswapV3BurnV3DTO
 
-genPoolHourDataV3DTO :: Int -> Gen PoolHourDataV3DTO
-genPoolHourDataV3DTO n =
-  PoolHourDataV3DTO
-    <$> arbitraryReducedMaybe n -- poolHourDataV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOPeriodStartUnix :: Maybe Int
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOSqrtPrice :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOToken0Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOToken1Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOTick :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOFeeGrowthGlobal0x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOFeeGrowthGlobal1x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOTvlUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOTxCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOOpen :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOHigh :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOLow :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOClose :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolHourDataV3DTOVid :: Maybe Integer
+genUniswapV3BurnV3DTO :: Int -> Gen UniswapV3BurnV3DTO
+genUniswapV3BurnV3DTO n =
+  UniswapV3BurnV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOOwner :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOOrigin :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOAmount0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOAmount1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOTickLower :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOTickUpper :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOLogIndex :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3BurnV3DTOVid :: Maybe Integer
   
-instance Arbitrary PoolV3DTO where
-  arbitrary = sized genPoolV3DTO
+instance Arbitrary UniswapV3FactoryV3DTO where
+  arbitrary = sized genUniswapV3FactoryV3DTO
 
-genPoolV3DTO :: Int -> Gen PoolV3DTO
-genPoolV3DTO n =
-  PoolV3DTO
-    <$> arbitraryReducedMaybe n -- poolV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- poolV3DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- poolV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOCreatedAtTimestamp :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- poolV3DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOFeeTier :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOLiquidity :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOSqrtPrice :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOFeeGrowthGlobal0x128 :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOFeeGrowthGlobal1x128 :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOToken0Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOToken1Price :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTick :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOObservationIndex :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTxCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- poolV3DTOCollectedFeesToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOCollectedFeesToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOCollectedFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTotalValueLockedToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTotalValueLockedToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTotalValueLockedEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTotalValueLockedUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOTotalValueLockedUsdUntracked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOLiquidityProviderCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- poolV3DTOEvaluatedAsk :: Maybe Double
+genUniswapV3FactoryV3DTO :: Int -> Gen UniswapV3FactoryV3DTO
+genUniswapV3FactoryV3DTO n =
+  UniswapV3FactoryV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOPoolCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalFeesEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalValueLockedEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalValueLockedUsdUntracked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOTotalValueLockedEthUntracked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOOwner :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3FactoryV3DTOVid :: Maybe Integer
   
-instance Arbitrary PositionSnapshotV3DTO where
-  arbitrary = sized genPositionSnapshotV3DTO
+instance Arbitrary UniswapV3MintV3DTO where
+  arbitrary = sized genUniswapV3MintV3DTO
 
-genPositionSnapshotV3DTO :: Int -> Gen PositionSnapshotV3DTO
-genPositionSnapshotV3DTO n =
-  PositionSnapshotV3DTO
-    <$> arbitraryReducedMaybe n -- positionSnapshotV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOOwner :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOPosition :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOTimestamp :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTODepositedToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTODepositedToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOWithdrawnToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOWithdrawnToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOCollectedFeesToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOCollectedFeesToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOFeeGrowthInside0LastX128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOFeeGrowthInside1LastX128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionSnapshotV3DTOVid :: Maybe Integer
+genUniswapV3MintV3DTO :: Int -> Gen UniswapV3MintV3DTO
+genUniswapV3MintV3DTO n =
+  UniswapV3MintV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3MintV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOOwner :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOOrigin :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOAmount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOAmount0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOAmount1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOTickLower :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOTickUpper :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOLogIndex :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3MintV3DTOVid :: Maybe Integer
   
-instance Arbitrary PositionV3DTO where
-  arbitrary = sized genPositionV3DTO
+instance Arbitrary UniswapV3PoolDayDataV3DTO where
+  arbitrary = sized genUniswapV3PoolDayDataV3DTO
 
-genPositionV3DTO :: Int -> Gen PositionV3DTO
-genPositionV3DTO n =
-  PositionV3DTO
-    <$> arbitraryReducedMaybe n -- positionV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- positionV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- positionV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- positionV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOOwner :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOTickLower :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOTickUpper :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTODepositedToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTODepositedToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOWithdrawnToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOWithdrawnToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOCollectedFeesToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOCollectedFeesToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOFeeGrowthInside0LastX128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOFeeGrowthInside1LastX128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- positionV3DTOVid :: Maybe Integer
+genUniswapV3PoolDayDataV3DTO :: Int -> Gen UniswapV3PoolDayDataV3DTO
+genUniswapV3PoolDayDataV3DTO n =
+  UniswapV3PoolDayDataV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOSqrtPrice :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOToken0Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOToken1Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOFeeGrowthGlobal0x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOFeeGrowthGlobal1x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOTvlUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOOpen :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOHigh :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOLow :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOClose :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolDayDataV3DTOVid :: Maybe Integer
   
-instance Arbitrary SwapDTO where
-  arbitrary = sized genSwapDTO
+instance Arbitrary UniswapV3PoolHourDataV3DTO where
+  arbitrary = sized genUniswapV3PoolHourDataV3DTO
 
-genSwapDTO :: Int -> Gen SwapDTO
-genSwapDTO n =
-  SwapDTO
-    <$> arbitraryReducedMaybe n -- swapDTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapDTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapDTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapDTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOTimestamp :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOPair :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOSender :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOAmount0In :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOAmount1In :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOAmount0Out :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOAmount1Out :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOTo :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOLogIndex :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOAmountUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapDTOPoolId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOTransactionId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapDTOEvaluatedPrice :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapDTOEvaluatedAmount :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapDTOEvaluatedAggressor :: Maybe ETradeAggressiveSide
+genUniswapV3PoolHourDataV3DTO :: Int -> Gen UniswapV3PoolHourDataV3DTO
+genUniswapV3PoolHourDataV3DTO n =
+  UniswapV3PoolHourDataV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOPeriodStartUnix :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOSqrtPrice :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOToken0Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOToken1Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOFeeGrowthGlobal0x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOFeeGrowthGlobal1x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOTvlUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOOpen :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOHigh :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOLow :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOClose :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolHourDataV3DTOVid :: Maybe Integer
   
-instance Arbitrary SwapV2DTO where
-  arbitrary = sized genSwapV2DTO
+instance Arbitrary UniswapV3PoolV3DTO where
+  arbitrary = sized genUniswapV3PoolV3DTO
 
-genSwapV2DTO :: Int -> Gen SwapV2DTO
-genSwapV2DTO n =
-  SwapV2DTO
-    <$> arbitraryReducedMaybe n -- swapV2DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV2DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV2DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapV2DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapV2DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOTimestamp :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV2DTOPair :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOSender :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOFrom :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOAmount0In :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOAmount1In :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOAmount0Out :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOAmount1Out :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOTo :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOLogIndex :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- swapV2DTOAmountUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOEvaluatedPrice :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapV2DTOEvaluatedAmount :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapV2DTOEvaluatedAggressor :: Maybe ETradeAggressiveSide
-    <*> arbitraryReducedMaybe n -- swapV2DTOPoolId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV2DTOTransactionId :: Maybe Text
+genUniswapV3PoolV3DTO :: Int -> Gen UniswapV3PoolV3DTO
+genUniswapV3PoolV3DTO n =
+  UniswapV3PoolV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOCreatedAtTimestamp :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOFeeTier :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOLiquidity :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOSqrtPrice :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOFeeGrowthGlobal0x128 :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOFeeGrowthGlobal1x128 :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOToken0Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOToken1Price :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTick :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOObservationIndex :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTxCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOCollectedFeesToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOCollectedFeesToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOCollectedFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTotalValueLockedToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTotalValueLockedToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTotalValueLockedEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOTotalValueLockedUsdUntracked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOLiquidityProviderCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PoolV3DTOEvaluatedAsk :: Maybe Double
   
-instance Arbitrary SwapV3DTO where
-  arbitrary = sized genSwapV3DTO
+instance Arbitrary UniswapV3PositionSnapshotV3DTO where
+  arbitrary = sized genUniswapV3PositionSnapshotV3DTO
 
-genSwapV3DTO :: Int -> Gen SwapV3DTO
-genSwapV3DTO n =
-  SwapV3DTO
-    <$> arbitraryReducedMaybe n -- swapV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapV3DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- swapV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOTransaction :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOTimestamp :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- swapV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOSender :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTORecipient :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOOrigin :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOAmount0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOAmount1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOAmountUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOSqrtPriceX96 :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- swapV3DTOTick :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- swapV3DTOLogIndex :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- swapV3DTOEvaluatedPrice :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapV3DTOEvaluatedAmount :: Maybe Double
-    <*> arbitraryReducedMaybe n -- swapV3DTOEvaluatedAggressor :: Maybe ETradeAggressiveSide
-    <*> arbitraryReducedMaybe n -- swapV3DTOPoolId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- swapV3DTOTransactionId :: Maybe Text
+genUniswapV3PositionSnapshotV3DTO :: Int -> Gen UniswapV3PositionSnapshotV3DTO
+genUniswapV3PositionSnapshotV3DTO n =
+  UniswapV3PositionSnapshotV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOOwner :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOPosition :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTODepositedToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTODepositedToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOWithdrawnToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOWithdrawnToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOCollectedFeesToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOCollectedFeesToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOFeeGrowthInside0LastX128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOFeeGrowthInside1LastX128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionSnapshotV3DTOVid :: Maybe Integer
   
-instance Arbitrary TickDayDataV3DTO where
-  arbitrary = sized genTickDayDataV3DTO
+instance Arbitrary UniswapV3PositionV3DTO where
+  arbitrary = sized genUniswapV3PositionV3DTO
 
-genTickDayDataV3DTO :: Int -> Gen TickDayDataV3DTO
-genTickDayDataV3DTO n =
-  TickDayDataV3DTO
-    <$> arbitraryReducedMaybe n -- tickDayDataV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTODate :: Maybe Int
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOTick :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOLiquidityGross :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOLiquidityNet :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOFeeGrowthOutside0x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOFeeGrowthOutside1x128 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickDayDataV3DTOVid :: Maybe Integer
+genUniswapV3PositionV3DTO :: Int -> Gen UniswapV3PositionV3DTO
+genUniswapV3PositionV3DTO n =
+  UniswapV3PositionV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOOwner :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOTickLower :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOTickUpper :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTODepositedToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTODepositedToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOWithdrawnToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOWithdrawnToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOCollectedFeesToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOCollectedFeesToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOFeeGrowthInside0LastX128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOFeeGrowthInside1LastX128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3PositionV3DTOVid :: Maybe Integer
   
-instance Arbitrary TickV3DTO where
-  arbitrary = sized genTickV3DTO
+instance Arbitrary UniswapV3SwapV3DTO where
+  arbitrary = sized genUniswapV3SwapV3DTO
 
-genTickV3DTO :: Int -> Gen TickV3DTO
-genTickV3DTO n =
-  TickV3DTO
-    <$> arbitraryReducedMaybe n -- tickV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tickV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tickV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tickV3DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tickV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOPoolAddress :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOTickIdx :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tickV3DTOPool :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOLiquidityGross :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tickV3DTOLiquidityNet :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tickV3DTOPrice0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOPrice1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOVolumeToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOVolumeToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOCollectedFeesToken0 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOCollectedFeesToken1 :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOCollectedFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tickV3DTOCreatedAtTimestamp :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tickV3DTOLiquidityProviderCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tickV3DTOFeeGrowthOutside0x128 :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tickV3DTOFeeGrowthOutside1x128 :: Maybe BigInteger
+genUniswapV3SwapV3DTO :: Int -> Gen UniswapV3SwapV3DTO
+genUniswapV3SwapV3DTO n =
+  UniswapV3SwapV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOTimestamp :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTORecipient :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOOrigin :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOAmount0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOAmount1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOSqrtPriceX96 :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOTick :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOLogIndex :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOEvaluatedPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOEvaluatedAmount :: Maybe Double
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOEvaluatedAggressor :: Maybe TransactionsETradeAggressiveSide
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOPoolId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3SwapV3DTOTransactionId :: Maybe Text
   
-instance Arbitrary TokenDTO where
-  arbitrary = sized genTokenDTO
+instance Arbitrary UniswapV3TickDayDataV3DTO where
+  arbitrary = sized genUniswapV3TickDayDataV3DTO
 
-genTokenDTO :: Int -> Gen TokenDTO
-genTokenDTO n =
-  TokenDTO
-    <$> arbitraryReducedMaybe n -- tokenDTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenDTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenDTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenDTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOFactory :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOSymbol :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOName :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTODecimals :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOTotalSupply :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOVolume :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOTxCount :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTODerivedEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenDTOWhitelistPairs :: Maybe [Text]
-    <*> arbitraryReducedMaybe n -- tokenDTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenDTOTokenSymbol :: Maybe Text
+genUniswapV3TickDayDataV3DTO :: Int -> Gen UniswapV3TickDayDataV3DTO
+genUniswapV3TickDayDataV3DTO n =
+  UniswapV3TickDayDataV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOTick :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOLiquidityGross :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOLiquidityNet :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOFeeGrowthOutside0x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOFeeGrowthOutside1x128 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickDayDataV3DTOVid :: Maybe Integer
   
-instance Arbitrary TokenHourDataV3DTO where
-  arbitrary = sized genTokenHourDataV3DTO
+instance Arbitrary UniswapV3TickV3DTO where
+  arbitrary = sized genUniswapV3TickV3DTO
 
-genTokenHourDataV3DTO :: Int -> Gen TokenHourDataV3DTO
-genTokenHourDataV3DTO n =
-  TokenHourDataV3DTO
-    <$> arbitraryReducedMaybe n -- tokenHourDataV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOPeriodStartUnix :: Maybe Int
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOToken :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOVolume :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOTotalValueLocked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOTotalValueLockedUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOPriceUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOOpen :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOHigh :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOLow :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOClose :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenHourDataV3DTOVid :: Maybe Integer
+genUniswapV3TickV3DTO :: Int -> Gen UniswapV3TickV3DTO
+genUniswapV3TickV3DTO n =
+  UniswapV3TickV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3TickV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOPoolAddress :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOTickIdx :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOPool :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOLiquidityGross :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOLiquidityNet :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOPrice0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOPrice1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOCollectedFeesToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOCollectedFeesToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOCollectedFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOCreatedAtTimestamp :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOLiquidityProviderCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOFeeGrowthOutside0x128 :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TickV3DTOFeeGrowthOutside1x128 :: Maybe NumericsBigInteger
   
-instance Arbitrary TokenV2DTO where
-  arbitrary = sized genTokenV2DTO
+instance Arbitrary UniswapV3TokenHourDataV3DTO where
+  arbitrary = sized genUniswapV3TokenHourDataV3DTO
 
-genTokenV2DTO :: Int -> Gen TokenV2DTO
-genTokenV2DTO n =
-  TokenV2DTO
-    <$> arbitraryReducedMaybe n -- tokenV2DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV2DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV2DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV2DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV2DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOSymbol :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOName :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTODecimals :: Maybe Int
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTotalSupply :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTradeVolume :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTradeVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTxCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTotalLiquidity :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTODerivedEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV2DTOTokenSymbol :: Maybe Text
+genUniswapV3TokenHourDataV3DTO :: Int -> Gen UniswapV3TokenHourDataV3DTO
+genUniswapV3TokenHourDataV3DTO n =
+  UniswapV3TokenHourDataV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOPeriodStartUnix :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOTotalValueLocked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOOpen :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOHigh :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOLow :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOClose :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenHourDataV3DTOVid :: Maybe Integer
   
-instance Arbitrary TokenV3DTO where
-  arbitrary = sized genTokenV3DTO
+instance Arbitrary UniswapV3TokenV3DTO where
+  arbitrary = sized genUniswapV3TokenV3DTO
 
-genTokenV3DTO :: Int -> Gen TokenV3DTO
-genTokenV3DTO n =
-  TokenV3DTO
-    <$> arbitraryReducedMaybe n -- tokenV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV3DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOSymbol :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOName :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTODecimals :: Maybe Int
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTotalSupply :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tokenV3DTOVolume :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTxCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tokenV3DTOPoolCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTotalValueLocked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTotalValueLockedUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTotalValueLockedUsdUntracked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTODerivedEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DTOWhitelistPools :: Maybe [Text]
-    <*> arbitraryReducedMaybe n -- tokenV3DTOTokenSymbol :: Maybe Text
+genUniswapV3TokenV3DTO :: Int -> Gen UniswapV3TokenV3DTO
+genUniswapV3TokenV3DTO n =
+  UniswapV3TokenV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOSymbol :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOName :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTODecimals :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTotalSupply :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTxCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOPoolCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTotalValueLocked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTotalValueLockedUsdUntracked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTODerivedEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOWhitelistPools :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DTOTokenSymbol :: Maybe Text
   
-instance Arbitrary TokenV3DayDataDTO where
-  arbitrary = sized genTokenV3DayDataDTO
+instance Arbitrary UniswapV3TokenV3DayDataDTO where
+  arbitrary = sized genUniswapV3TokenV3DayDataDTO
 
-genTokenV3DayDataDTO :: Int -> Gen TokenV3DayDataDTO
-genTokenV3DayDataDTO n =
-  TokenV3DayDataDTO
-    <$> arbitraryReducedMaybe n -- tokenV3DayDataDTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTODate :: Maybe Int
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOToken :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOVolume :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOUntrackedVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOTotalValueLocked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOTotalValueLockedUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOPriceUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOOpen :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOHigh :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOLow :: Maybe Text
-    <*> arbitraryReducedMaybe n -- tokenV3DayDataDTOClose :: Maybe Text
+genUniswapV3TokenV3DayDataDTO :: Int -> Gen UniswapV3TokenV3DayDataDTO
+genUniswapV3TokenV3DayDataDTO n =
+  UniswapV3TokenV3DayDataDTO
+    <$> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOTotalValueLocked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOTotalValueLockedUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOOpen :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOHigh :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOLow :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3TokenV3DayDataDTOClose :: Maybe Text
   
-instance Arbitrary UniswapDayDataV3DTO where
-  arbitrary = sized genUniswapDayDataV3DTO
+instance Arbitrary UniswapV3UniswapDayDataV3DTO where
+  arbitrary = sized genUniswapV3UniswapDayDataV3DTO
 
-genUniswapDayDataV3DTO :: Int -> Gen UniswapDayDataV3DTO
-genUniswapDayDataV3DTO n =
-  UniswapDayDataV3DTO
-    <$> arbitraryReducedMaybe n -- uniswapDayDataV3DTOEntryTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTORecvTime :: Maybe DateTime
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOBlockNumber :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOVid :: Maybe Integer
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTODate :: Maybe Int
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOVolumeEth :: Maybe Text
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOVolumeUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOVolumeUsdUntracked :: Maybe Text
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOFeesUsd :: Maybe Text
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOTxCount :: Maybe BigInteger
-    <*> arbitraryReducedMaybe n -- uniswapDayDataV3DTOTvlUsd :: Maybe Text
+genUniswapV3UniswapDayDataV3DTO :: Int -> Gen UniswapV3UniswapDayDataV3DTO
+genUniswapV3UniswapDayDataV3DTO n =
+  UniswapV3UniswapDayDataV3DTO
+    <$> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOVid :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOVolumeUsdUntracked :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOFeesUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOTxCount :: Maybe NumericsBigInteger
+    <*> arbitraryReducedMaybe n -- uniswapV3UniswapDayDataV3DTOTvlUsd :: Maybe Text
   
 
 
 
-instance Arbitrary ETradeAggressiveSide where
+instance Arbitrary TransactionsETradeAggressiveSide where
   arbitrary = arbitraryBoundedEnum
 

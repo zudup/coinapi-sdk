@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](bundle_v3_dto.md) *
+[list_t](uniswap_v3_bundle_v3_dto.md) *
 
 
 ### Authorization
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](burn_v3_dto.md) *
+[list_t](uniswap_v3_burn_v3_dto.md) *
 
 
 ### Authorization
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](factory_v3_dto.md) *
+[list_t](uniswap_v3_factory_v3_dto.md) *
 
 
 ### Authorization
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](mint_v3_dto.md) *
+[list_t](uniswap_v3_mint_v3_dto.md) *
 
 
 ### Authorization
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pool_v3_dto.md) *
+[list_t](uniswap_v3_pool_v3_dto.md) *
 
 
 ### Authorization
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pool_day_data_v3_dto.md) *
+[list_t](uniswap_v3_pool_day_data_v3_dto.md) *
 
 
 ### Authorization
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](pool_hour_data_v3_dto.md) *
+[list_t](uniswap_v3_pool_hour_data_v3_dto.md) *
 
 
 ### Authorization
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](position_snapshot_v3_dto.md) *
+[list_t](uniswap_v3_position_snapshot_v3_dto.md) *
 
 
 ### Authorization
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](position_v3_dto.md) *
+[list_t](uniswap_v3_position_v3_dto.md) *
 
 
 ### Authorization
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](swap_v3_dto.md) *
+[list_t](uniswap_v3_swap_v3_dto.md) *
 
 
 ### Authorization
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](tick_v3_dto.md) *
+[list_t](uniswap_v3_tick_v3_dto.md) *
 
 
 ### Authorization
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](tick_day_data_v3_dto.md) *
+[list_t](uniswap_v3_tick_day_data_v3_dto.md) *
 
 
 ### Authorization
@@ -848,7 +848,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_v3_dto.md) *
+[list_t](uniswap_v3_token_v3_dto.md) *
 
 
 ### Authorization
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_v3_day_data_dto.md) *
+[list_t](uniswap_v3_token_v3_day_data_dto.md) *
 
 
 ### Authorization
@@ -936,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](token_hour_data_v3_dto.md) *
+[list_t](uniswap_v3_token_hour_data_v3_dto.md) *
 
 
 ### Authorization
@@ -993,7 +993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[list_t](uniswap_day_data_v3_dto.md) *
+[list_t](uniswap_v3_uniswap_day_data_v3_dto.md) *
 
 
 ### Authorization

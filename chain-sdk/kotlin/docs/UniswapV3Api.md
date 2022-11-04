@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 <a name="dappsUniswapv3BundleCurrentGet"></a>
 # **dappsUniswapv3BundleCurrentGet**
-> kotlin.collections.List&lt;BundleV3DTO&gt; dappsUniswapv3BundleCurrentGet()
+> kotlin.collections.List&lt;UniswapV3BundleV3DTO&gt; dappsUniswapv3BundleCurrentGet()
 
 GetBundles
 
@@ -53,7 +53,7 @@ GetBundles
 
 val apiInstance = UniswapV3Api()
 try {
-    val result : kotlin.collections.List<BundleV3DTO> = apiInstance.dappsUniswapv3BundleCurrentGet()
+    val result : kotlin.collections.List<UniswapV3BundleV3DTO> = apiInstance.dappsUniswapv3BundleCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3BundleCurrentGet")
@@ -69,7 +69,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;BundleV3DTO&gt;**](BundleV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 
 <a name="dappsUniswapv3BurnsCurrentGet"></a>
 # **dappsUniswapv3BurnsCurrentGet**
-> kotlin.collections.List&lt;BurnV3DTO&gt; dappsUniswapv3BurnsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3BurnV3DTO&gt; dappsUniswapv3BurnsCurrentGet(filterPoolId)
 
 GetBurns
 
@@ -145,7 +145,7 @@ GetBurns
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<BurnV3DTO> = apiInstance.dappsUniswapv3BurnsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3BurnV3DTO> = apiInstance.dappsUniswapv3BurnsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3BurnsCurrentGet")
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;BurnV3DTO&gt;**](BurnV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 <a name="dappsUniswapv3FactoryCurrentGet"></a>
 # **dappsUniswapv3FactoryCurrentGet**
-> kotlin.collections.List&lt;FactoryV3DTO&gt; dappsUniswapv3FactoryCurrentGet(chainId)
+> kotlin.collections.List&lt;UniswapV3FactoryV3DTO&gt; dappsUniswapv3FactoryCurrentGet(chainId)
 
 GetFactory
 
@@ -292,7 +292,7 @@ GetFactory
 val apiInstance = UniswapV3Api()
 val chainId : kotlin.String = chainId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<FactoryV3DTO> = apiInstance.dappsUniswapv3FactoryCurrentGet(chainId)
+    val result : kotlin.collections.List<UniswapV3FactoryV3DTO> = apiInstance.dappsUniswapv3FactoryCurrentGet(chainId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3FactoryCurrentGet")
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;FactoryV3DTO&gt;**](FactoryV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ No authorization required
 
 <a name="dappsUniswapv3MintsCurrentGet"></a>
 # **dappsUniswapv3MintsCurrentGet**
-> kotlin.collections.List&lt;MintV3DTO&gt; dappsUniswapv3MintsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3MintV3DTO&gt; dappsUniswapv3MintsCurrentGet(filterPoolId)
 
 GetMints
 
@@ -387,7 +387,7 @@ GetMints
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<MintV3DTO> = apiInstance.dappsUniswapv3MintsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3MintV3DTO> = apiInstance.dappsUniswapv3MintsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3MintsCurrentGet")
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;MintV3DTO&gt;**](MintV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -575,7 +575,7 @@ No authorization required
 
 <a name="dappsUniswapv3PoolsCurrentGet"></a>
 # **dappsUniswapv3PoolsCurrentGet**
-> kotlin.collections.List&lt;PoolV3DTO&gt; dappsUniswapv3PoolsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3PoolV3DTO&gt; dappsUniswapv3PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -588,7 +588,7 @@ GetPools
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolV3DTO> = apiInstance.dappsUniswapv3PoolsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3PoolV3DTO> = apiInstance.dappsUniswapv3PoolsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsCurrentGet")
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PoolV3DTO&gt;**](PoolV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -620,7 +620,7 @@ No authorization required
 
 <a name="dappsUniswapv3PoolsDayDataCurrentGet"></a>
 # **dappsUniswapv3PoolsDayDataCurrentGet**
-> kotlin.collections.List&lt;PoolDayDataV3DTO&gt; dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3PoolDayDataV3DTO&gt; dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
 
 GetPoolsDayData
 
@@ -633,7 +633,7 @@ GetPoolsDayData
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolDayDataV3DTO> = apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3PoolDayDataV3DTO> = apiInstance.dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsDayDataCurrentGet")
@@ -652,7 +652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PoolDayDataV3DTO&gt;**](PoolDayDataV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -717,7 +717,7 @@ No authorization required
 
 <a name="dappsUniswapv3PoolsHourDataCurrentGet"></a>
 # **dappsUniswapv3PoolsHourDataCurrentGet**
-> kotlin.collections.List&lt;PoolHourDataV3DTO&gt; dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3PoolHourDataV3DTO&gt; dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
 
 GetPoolsHourData
 
@@ -730,7 +730,7 @@ GetPoolsHourData
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PoolHourDataV3DTO> = apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3PoolHourDataV3DTO> = apiInstance.dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3PoolsHourDataCurrentGet")
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PoolHourDataV3DTO&gt;**](PoolHourDataV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ No authorization required
 
 <a name="dappsUniswapv3PositionSnapshotsCurrentGet"></a>
 # **dappsUniswapv3PositionSnapshotsCurrentGet**
-> kotlin.collections.List&lt;PositionSnapshotV3DTO&gt; dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3PositionSnapshotV3DTO&gt; dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
 
 GetPositionSnapshot
 
@@ -827,7 +827,7 @@ GetPositionSnapshot
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PositionSnapshotV3DTO> = apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3PositionSnapshotV3DTO> = apiInstance.dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3PositionSnapshotsCurrentGet")
@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PositionSnapshotV3DTO&gt;**](PositionSnapshotV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -859,7 +859,7 @@ No authorization required
 
 <a name="dappsUniswapv3PositionsCurrentGet"></a>
 # **dappsUniswapv3PositionsCurrentGet**
-> kotlin.collections.List&lt;PositionV3DTO&gt; dappsUniswapv3PositionsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3PositionV3DTO&gt; dappsUniswapv3PositionsCurrentGet(filterPoolId)
 
 GetPositions
 
@@ -872,7 +872,7 @@ GetPositions
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<PositionV3DTO> = apiInstance.dappsUniswapv3PositionsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3PositionV3DTO> = apiInstance.dappsUniswapv3PositionsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3PositionsCurrentGet")
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;PositionV3DTO&gt;**](PositionV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -956,7 +956,7 @@ No authorization required
 
 <a name="dappsUniswapv3SwapsCurrentGet"></a>
 # **dappsUniswapv3SwapsCurrentGet**
-> kotlin.collections.List&lt;SwapV3DTO&gt; dappsUniswapv3SwapsCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3SwapV3DTO&gt; dappsUniswapv3SwapsCurrentGet(filterPoolId)
 
 GetSwaps
 
@@ -969,7 +969,7 @@ GetSwaps
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<SwapV3DTO> = apiInstance.dappsUniswapv3SwapsCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3SwapV3DTO> = apiInstance.dappsUniswapv3SwapsCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3SwapsCurrentGet")
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;SwapV3DTO&gt;**](SwapV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -1105,7 +1105,7 @@ No authorization required
 
 <a name="dappsUniswapv3TicksCurrentGet"></a>
 # **dappsUniswapv3TicksCurrentGet**
-> kotlin.collections.List&lt;TickV3DTO&gt; dappsUniswapv3TicksCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3TickV3DTO&gt; dappsUniswapv3TicksCurrentGet(filterPoolId)
 
 GetTicks
 
@@ -1118,7 +1118,7 @@ GetTicks
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<TickV3DTO> = apiInstance.dappsUniswapv3TicksCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3TickV3DTO> = apiInstance.dappsUniswapv3TicksCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3TicksCurrentGet")
@@ -1137,7 +1137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TickV3DTO&gt;**](TickV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1150,7 +1150,7 @@ No authorization required
 
 <a name="dappsUniswapv3TicksDayDataCurrentGet"></a>
 # **dappsUniswapv3TicksDayDataCurrentGet**
-> kotlin.collections.List&lt;TickDayDataV3DTO&gt; dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
+> kotlin.collections.List&lt;UniswapV3TickDayDataV3DTO&gt; dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
 
 GetTicksDayData
 
@@ -1163,7 +1163,7 @@ GetTicksDayData
 val apiInstance = UniswapV3Api()
 val filterPoolId : kotlin.String = filterPoolId_example // kotlin.String | Filter pool id
 try {
-    val result : kotlin.collections.List<TickDayDataV3DTO> = apiInstance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
+    val result : kotlin.collections.List<UniswapV3TickDayDataV3DTO> = apiInstance.dappsUniswapv3TicksDayDataCurrentGet(filterPoolId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3TicksDayDataCurrentGet")
@@ -1182,7 +1182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TickDayDataV3DTO&gt;**](TickDayDataV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1351,7 +1351,7 @@ No authorization required
 
 <a name="dappsUniswapv3TokensCurrentGet"></a>
 # **dappsUniswapv3TokensCurrentGet**
-> kotlin.collections.List&lt;TokenV3DTO&gt; dappsUniswapv3TokensCurrentGet(filterTokenId)
+> kotlin.collections.List&lt;UniswapV3TokenV3DTO&gt; dappsUniswapv3TokensCurrentGet(filterTokenId)
 
 GetTokens
 
@@ -1364,7 +1364,7 @@ GetTokens
 val apiInstance = UniswapV3Api()
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenV3DTO> = apiInstance.dappsUniswapv3TokensCurrentGet(filterTokenId)
+    val result : kotlin.collections.List<UniswapV3TokenV3DTO> = apiInstance.dappsUniswapv3TokensCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3TokensCurrentGet")
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenV3DTO&gt;**](TokenV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -1396,7 +1396,7 @@ No authorization required
 
 <a name="dappsUniswapv3TokensDayDataCurrentGet"></a>
 # **dappsUniswapv3TokensDayDataCurrentGet**
-> kotlin.collections.List&lt;TokenV3DayDataDTO&gt; dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
+> kotlin.collections.List&lt;UniswapV3TokenV3DayDataDTO&gt; dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
 
 GetTokensDayData
 
@@ -1409,7 +1409,7 @@ GetTokensDayData
 val apiInstance = UniswapV3Api()
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenV3DayDataDTO> = apiInstance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
+    val result : kotlin.collections.List<UniswapV3TokenV3DayDataDTO> = apiInstance.dappsUniswapv3TokensDayDataCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3TokensDayDataCurrentGet")
@@ -1428,7 +1428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenV3DayDataDTO&gt;**](TokenV3DayDataDTO.md)
+[**kotlin.collections.List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1493,7 +1493,7 @@ No authorization required
 
 <a name="dappsUniswapv3TokensHourDataCurrentGet"></a>
 # **dappsUniswapv3TokensHourDataCurrentGet**
-> kotlin.collections.List&lt;TokenHourDataV3DTO&gt; dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
+> kotlin.collections.List&lt;UniswapV3TokenHourDataV3DTO&gt; dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
 
 GetTokensHourData
 
@@ -1506,7 +1506,7 @@ GetTokensHourData
 val apiInstance = UniswapV3Api()
 val filterTokenId : kotlin.String = filterTokenId_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<TokenHourDataV3DTO> = apiInstance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
+    val result : kotlin.collections.List<UniswapV3TokenHourDataV3DTO> = apiInstance.dappsUniswapv3TokensHourDataCurrentGet(filterTokenId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3TokensHourDataCurrentGet")
@@ -1525,7 +1525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.collections.List&lt;TokenHourDataV3DTO&gt;**](TokenHourDataV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1588,7 +1588,7 @@ No authorization required
 
 <a name="dappsUniswapv3UniswapDayDataCurrentGet"></a>
 # **dappsUniswapv3UniswapDayDataCurrentGet**
-> kotlin.collections.List&lt;UniswapDayDataV3DTO&gt; dappsUniswapv3UniswapDayDataCurrentGet()
+> kotlin.collections.List&lt;UniswapV3UniswapDayDataV3DTO&gt; dappsUniswapv3UniswapDayDataCurrentGet()
 
 GetUniswapDayData
 
@@ -1600,7 +1600,7 @@ GetUniswapDayData
 
 val apiInstance = UniswapV3Api()
 try {
-    val result : kotlin.collections.List<UniswapDayDataV3DTO> = apiInstance.dappsUniswapv3UniswapDayDataCurrentGet()
+    val result : kotlin.collections.List<UniswapV3UniswapDayDataV3DTO> = apiInstance.dappsUniswapv3UniswapDayDataCurrentGet()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UniswapV3Api#dappsUniswapv3UniswapDayDataCurrentGet")
@@ -1616,7 +1616,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**kotlin.collections.List&lt;UniswapDayDataV3DTO&gt;**](UniswapDayDataV3DTO.md)
+[**kotlin.collections.List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

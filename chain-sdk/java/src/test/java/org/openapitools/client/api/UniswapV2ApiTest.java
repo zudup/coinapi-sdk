@@ -15,9 +15,9 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PairV2DTO;
-import org.openapitools.client.model.SwapV2DTO;
-import org.openapitools.client.model.TokenV2DTO;
+import org.openapitools.client.model.UniswapV2PairV2DTO;
+import org.openapitools.client.model.UniswapV2SwapV2DTO;
+import org.openapitools.client.model.UniswapV2TokenV2DTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -165,7 +165,7 @@ public class UniswapV2ApiTest {
     @Test
     public void dappsUniswapv2PoolsCurrentGetTest() throws ApiException {
         String filterPoolId = null;
-        List<PairV2DTO> response = api.dappsUniswapv2PoolsCurrentGet(filterPoolId);
+        List<UniswapV2PairV2DTO> response = api.dappsUniswapv2PoolsCurrentGet(filterPoolId);
         // TODO: test validations
     }
 
@@ -190,7 +190,7 @@ public class UniswapV2ApiTest {
      */
     @Test
     public void dappsUniswapv2SwapsCurrentGetTest() throws ApiException {
-        List<SwapV2DTO> response = api.dappsUniswapv2SwapsCurrentGet();
+        List<UniswapV2SwapV2DTO> response = api.dappsUniswapv2SwapsCurrentGet();
         // TODO: test validations
     }
 
@@ -229,7 +229,7 @@ public class UniswapV2ApiTest {
      */
     @Test
     public void dappsUniswapv2TokensCurrentGetTest() throws ApiException {
-        List<TokenV2DTO> response = api.dappsUniswapv2TokensCurrentGet();
+        List<UniswapV2TokenV2DTO> response = api.dappsUniswapv2TokensCurrentGet();
         // TODO: test validations
     }
 

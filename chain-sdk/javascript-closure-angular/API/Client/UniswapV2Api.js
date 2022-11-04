@@ -14,9 +14,9 @@
 
 goog.provide('API.Client.UniswapV2Api');
 
-goog.require('API.Client.PairV2DTO');
-goog.require('API.Client.SwapV2DTO');
-goog.require('API.Client.TokenV2DTO');
+goog.require('API.Client.UniswapV2PairV2DTO');
+goog.require('API.Client.UniswapV2SwapV2DTO');
+goog.require('API.Client.UniswapV2TokenV2DTO');
 
 /**
  * @constructor
@@ -539,7 +539,7 @@ API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolHourDataHistoricalGet = func
  * 
  * @param {!string=} opt_filterPoolId Filter pool id
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.PairV2DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2PairV2DTO>>}
  */
 API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolsCurrentGet = function(opt_filterPoolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -630,7 +630,7 @@ API.Client.UniswapV2Api.prototype.dappsUniswapv2PoolsHistoricalGet = function(op
  * GetSwaps
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.SwapV2DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2SwapV2DTO>>}
  */
 API.Client.UniswapV2Api.prototype.dappsUniswapv2SwapsCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -773,7 +773,7 @@ API.Client.UniswapV2Api.prototype.dappsUniswapv2TokenDayDataHistoricalGet = func
  * GetTokens
  * 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.TokenV2DTO>>}
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2TokenV2DTO>>}
  */
 API.Client.UniswapV2Api.prototype.dappsUniswapv2TokensCurrentGet = function(opt_extraHttpRequestParams) {
   /** @const {string} */

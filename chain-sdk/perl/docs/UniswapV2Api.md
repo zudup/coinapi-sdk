@@ -483,7 +483,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_pools_current_get**
-> ARRAY[PairV2DTO] dapps_uniswapv2_pools_current_get(filter_pool_id => $filter_pool_id)
+> ARRAY[UniswapV2PairV2DTO] dapps_uniswapv2_pools_current_get(filter_pool_id => $filter_pool_id)
 
 GetPools
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ARRAY[PairV2DTO]**](PairV2DTO.md)
+[**ARRAY[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -578,7 +578,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_swaps_current_get**
-> ARRAY[SwapV2DTO] dapps_uniswapv2_swaps_current_get()
+> ARRAY[UniswapV2SwapV2DTO] dapps_uniswapv2_swaps_current_get()
 
 GetSwaps
 
@@ -604,7 +604,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[SwapV2DTO]**](SwapV2DTO.md)
+[**ARRAY[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -720,7 +720,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv2_tokens_current_get**
-> ARRAY[TokenV2DTO] dapps_uniswapv2_tokens_current_get()
+> ARRAY[UniswapV2TokenV2DTO] dapps_uniswapv2_tokens_current_get()
 
 GetTokens
 
@@ -746,7 +746,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ARRAY[TokenV2DTO]**](TokenV2DTO.md)
+[**ARRAY[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

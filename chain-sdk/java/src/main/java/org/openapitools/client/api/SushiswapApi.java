@@ -28,9 +28,9 @@ import java.io.IOException;
 
 
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.PairDTO;
-import org.openapitools.client.model.SwapDTO;
-import org.openapitools.client.model.TokenDTO;
+import org.openapitools.client.model.SushiswapPairDTO;
+import org.openapitools.client.model.SushiswapSwapDTO;
+import org.openapitools.client.model.SushiswapTokenDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -1590,7 +1590,7 @@ public class SushiswapApi {
     /**
      * GetPools
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-     * @return List&lt;PairDTO&gt;
+     * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1598,15 +1598,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PairDTO> dappsSushiswapPoolsCurrentGet() throws ApiException {
-        ApiResponse<List<PairDTO>> localVarResp = dappsSushiswapPoolsCurrentGetWithHttpInfo();
+    public List<SushiswapPairDTO> dappsSushiswapPoolsCurrentGet() throws ApiException {
+        ApiResponse<List<SushiswapPairDTO>> localVarResp = dappsSushiswapPoolsCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetPools
      * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s.
-     * @return ApiResponse&lt;List&lt;PairDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1614,9 +1614,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PairDTO>> dappsSushiswapPoolsCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<SushiswapPairDTO>> dappsSushiswapPoolsCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapPoolsCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapPairDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1632,10 +1632,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapPoolsCurrentGetAsync(final ApiCallback<List<PairDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapPoolsCurrentGetAsync(final ApiCallback<List<SushiswapPairDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapPoolsCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapPairDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1735,7 +1735,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return List&lt;PairDTO&gt;
+     * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1743,8 +1743,8 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<PairDTO> dappsSushiswapPoolsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
-        ApiResponse<List<PairDTO>> localVarResp = dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    public List<SushiswapPairDTO> dappsSushiswapPoolsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+        ApiResponse<List<SushiswapPairDTO>> localVarResp = dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
         return localVarResp.getData();
     }
 
@@ -1756,7 +1756,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse&lt;List&lt;PairDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1764,9 +1764,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PairDTO>> dappsSushiswapPoolsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+    public ApiResponse<List<SushiswapPairDTO>> dappsSushiswapPoolsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapPoolsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, null);
-        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapPairDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1787,10 +1787,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapPoolsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<PairDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapPoolsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<SushiswapPairDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapPoolsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapPairDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1860,7 +1860,7 @@ public class SushiswapApi {
     /**
      * GetSwaps
      * 
-     * @return List&lt;SwapDTO&gt;
+     * @return List&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1868,15 +1868,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SwapDTO> dappsSushiswapSwapsCurrentGet() throws ApiException {
-        ApiResponse<List<SwapDTO>> localVarResp = dappsSushiswapSwapsCurrentGetWithHttpInfo();
+    public List<SushiswapSwapDTO> dappsSushiswapSwapsCurrentGet() throws ApiException {
+        ApiResponse<List<SushiswapSwapDTO>> localVarResp = dappsSushiswapSwapsCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetSwaps
      * 
-     * @return ApiResponse&lt;List&lt;SwapDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1884,9 +1884,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SwapDTO>> dappsSushiswapSwapsCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<SushiswapSwapDTO>> dappsSushiswapSwapsCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapSwapsCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1902,10 +1902,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapSwapsCurrentGetAsync(final ApiCallback<List<SwapDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapSwapsCurrentGetAsync(final ApiCallback<List<SushiswapSwapDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapSwapsCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2005,7 +2005,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return List&lt;SwapDTO&gt;
+     * @return List&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2013,8 +2013,8 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SwapDTO> dappsSushiswapSwapsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
-        ApiResponse<List<SwapDTO>> localVarResp = dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    public List<SushiswapSwapDTO> dappsSushiswapSwapsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+        ApiResponse<List<SushiswapSwapDTO>> localVarResp = dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
         return localVarResp.getData();
     }
 
@@ -2026,7 +2026,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse&lt;List&lt;SwapDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2034,9 +2034,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SwapDTO>> dappsSushiswapSwapsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+    public ApiResponse<List<SushiswapSwapDTO>> dappsSushiswapSwapsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapSwapsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, null);
-        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2057,10 +2057,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapSwapsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<SwapDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapSwapsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<SushiswapSwapDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapSwapsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapSwapDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2278,7 +2278,7 @@ public class SushiswapApi {
     /**
      * GetTokens
      * 
-     * @return List&lt;TokenDTO&gt;
+     * @return List&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2286,15 +2286,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenDTO> dappsSushiswapTokensCurrentGet() throws ApiException {
-        ApiResponse<List<TokenDTO>> localVarResp = dappsSushiswapTokensCurrentGetWithHttpInfo();
+    public List<SushiswapTokenDTO> dappsSushiswapTokensCurrentGet() throws ApiException {
+        ApiResponse<List<SushiswapTokenDTO>> localVarResp = dappsSushiswapTokensCurrentGetWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * GetTokens
      * 
-     * @return ApiResponse&lt;List&lt;TokenDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2302,9 +2302,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenDTO>> dappsSushiswapTokensCurrentGetWithHttpInfo() throws ApiException {
+    public ApiResponse<List<SushiswapTokenDTO>> dappsSushiswapTokensCurrentGetWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapTokensCurrentGetValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2320,10 +2320,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapTokensCurrentGetAsync(final ApiCallback<List<TokenDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapTokensCurrentGetAsync(final ApiCallback<List<SushiswapTokenDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapTokensCurrentGetValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2423,7 +2423,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
-     * @return List&lt;TokenDTO&gt;
+     * @return List&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2431,8 +2431,8 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<TokenDTO> dappsSushiswapTokensHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
-        ApiResponse<List<TokenDTO>> localVarResp = dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    public List<SushiswapTokenDTO> dappsSushiswapTokensHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
+        ApiResponse<List<SushiswapTokenDTO>> localVarResp = dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
         return localVarResp.getData();
     }
 
@@ -2444,7 +2444,7 @@ public class SushiswapApi {
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
-     * @return ApiResponse&lt;List&lt;TokenDTO&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2452,9 +2452,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<TokenDTO>> dappsSushiswapTokensHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
+    public ApiResponse<List<SushiswapTokenDTO>> dappsSushiswapTokensHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapTokensHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, tokenId, null);
-        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2475,10 +2475,10 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapTokensHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback<List<TokenDTO>> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapTokensHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback<List<SushiswapTokenDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapTokensHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

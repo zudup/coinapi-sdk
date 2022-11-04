@@ -51,7 +51,7 @@ export class UniswapV3Api {
      * @summary GetBundles
      */
     public dappsUniswapv3BundleCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.BundleV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/bundle/current';
@@ -92,11 +92,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.BundleV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.BundleV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BundleV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -180,7 +180,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3BurnsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.BurnV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/burns/current';
@@ -224,11 +224,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.BurnV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.BurnV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BurnV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -386,7 +386,7 @@ export class UniswapV3Api {
      * @param chainId 
      */
     public dappsUniswapv3FactoryCurrentGet(chainId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.FactoryV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/factory/current'.replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
@@ -432,11 +432,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.FactoryV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.FactoryV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3FactoryV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -520,7 +520,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3MintsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.MintV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/mints/current';
@@ -564,11 +564,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.MintV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.MintV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3MintV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -804,7 +804,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3PoolsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PoolV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/pools/current';
@@ -848,11 +848,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PoolV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PoolV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PoolV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -866,7 +866,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3PoolsDayDataCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PoolDayDataV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/poolsDayData/current';
@@ -910,11 +910,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PoolDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PoolDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PoolDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1002,7 +1002,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3PoolsHourDataCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PoolHourDataV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/poolsHourData/current';
@@ -1046,11 +1046,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PoolHourDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PoolHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PoolHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1138,7 +1138,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3PositionSnapshotsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PositionSnapshotV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/positionSnapshots/current';
@@ -1182,11 +1182,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PositionSnapshotV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PositionSnapshotV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PositionSnapshotV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1200,7 +1200,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3PositionsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.PositionV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/positions/current';
@@ -1244,11 +1244,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.PositionV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.PositionV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PositionV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1336,7 +1336,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3SwapsCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.SwapV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/swaps/current';
@@ -1380,11 +1380,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.SwapV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.SwapV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3SwapV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1546,7 +1546,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3TicksCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TickV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/ticks/current';
@@ -1590,11 +1590,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TickV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TickV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TickV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1608,7 +1608,7 @@ export class UniswapV3Api {
      * @param filterPoolId Filter pool id
      */
     public dappsUniswapv3TicksDayDataCurrentGet(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TickDayDataV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/ticksDayData/current';
@@ -1652,11 +1652,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TickDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TickDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TickDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1892,7 +1892,7 @@ export class UniswapV3Api {
      * @param filterTokenId 
      */
     public dappsUniswapv3TokensCurrentGet(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/tokens/current';
@@ -1936,11 +1936,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TokenV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TokenV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1954,7 +1954,7 @@ export class UniswapV3Api {
      * @param filterTokenId 
      */
     public dappsUniswapv3TokensDayDataCurrentGet(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenV3DayDataDTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/tokensDayData/current';
@@ -1998,11 +1998,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TokenV3DayDataDTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TokenV3DayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenV3DayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2090,7 +2090,7 @@ export class UniswapV3Api {
      * @param filterTokenId 
      */
     public dappsUniswapv3TokensHourDataCurrentGet(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.TokenHourDataV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/tokensHourData/current';
@@ -2134,11 +2134,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.TokenHourDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.TokenHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2221,7 +2221,7 @@ export class UniswapV3Api {
      * @summary GetUniswapDayData
      */
     public dappsUniswapv3UniswapDayDataCurrentGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapDayDataV3DTO>;  },
+    { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/current';
@@ -2262,11 +2262,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3UniswapDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

@@ -307,8 +307,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PairDTO&gt;</returns>
-        List<PairDTO> DappsSushiswapPoolsCurrentGet(int operationIndex = 0);
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        List<SushiswapPairDTO> DappsSushiswapPoolsCurrentGet(int operationIndex = 0);
 
         /// <summary>
         /// GetPools
@@ -318,8 +318,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PairDTO&gt;</returns>
-        ApiResponse<List<PairDTO>> DappsSushiswapPoolsCurrentGetWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        ApiResponse<List<SushiswapPairDTO>> DappsSushiswapPoolsCurrentGetWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// GetPools (historical)
         /// </summary>
@@ -330,8 +330,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PairDTO&gt;</returns>
-        List<PairDTO> DappsSushiswapPoolsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        List<SushiswapPairDTO> DappsSushiswapPoolsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetPools (historical)
@@ -346,15 +346,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PairDTO&gt;</returns>
-        ApiResponse<List<PairDTO>> DappsSushiswapPoolsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        ApiResponse<List<SushiswapPairDTO>> DappsSushiswapPoolsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
         /// GetSwaps
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapDTO&gt;</returns>
-        List<SwapDTO> DappsSushiswapSwapsCurrentGet(int operationIndex = 0);
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        List<SushiswapSwapDTO> DappsSushiswapSwapsCurrentGet(int operationIndex = 0);
 
         /// <summary>
         /// GetSwaps
@@ -364,8 +364,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapDTO&gt;</returns>
-        ApiResponse<List<SwapDTO>> DappsSushiswapSwapsCurrentGetWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        ApiResponse<List<SushiswapSwapDTO>> DappsSushiswapSwapsCurrentGetWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// GetSwaps (historical)
         /// </summary>
@@ -376,8 +376,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapDTO&gt;</returns>
-        List<SwapDTO> DappsSushiswapSwapsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        List<SushiswapSwapDTO> DappsSushiswapSwapsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetSwaps (historical)
@@ -392,8 +392,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapDTO&gt;</returns>
-        ApiResponse<List<SwapDTO>> DappsSushiswapSwapsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        ApiResponse<List<SushiswapSwapDTO>> DappsSushiswapSwapsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -427,8 +427,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenDTO&gt;</returns>
-        List<TokenDTO> DappsSushiswapTokensCurrentGet(int operationIndex = 0);
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        List<SushiswapTokenDTO> DappsSushiswapTokensCurrentGet(int operationIndex = 0);
 
         /// <summary>
         /// GetTokens
@@ -438,8 +438,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenDTO&gt;</returns>
-        ApiResponse<List<TokenDTO>> DappsSushiswapTokensCurrentGetWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        ApiResponse<List<SushiswapTokenDTO>> DappsSushiswapTokensCurrentGetWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// GetTokens (historical)
         /// </summary>
@@ -450,8 +450,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenDTO&gt;</returns>
-        List<TokenDTO> DappsSushiswapTokensHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        List<SushiswapTokenDTO> DappsSushiswapTokensHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// GetTokens (historical)
@@ -466,8 +466,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenDTO&gt;</returns>
-        ApiResponse<List<TokenDTO>> DappsSushiswapTokensHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        ApiResponse<List<SushiswapTokenDTO>> DappsSushiswapTokensHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -860,8 +860,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PairDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PairDTO>> DappsSushiswapPoolsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDTO>> DappsSushiswapPoolsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPools
@@ -872,8 +872,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PairDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PairDTO>>> DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetPools (historical)
         /// </summary>
@@ -888,8 +888,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PairDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<PairDTO>> DappsSushiswapPoolsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDTO>> DappsSushiswapPoolsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetPools (historical)
@@ -905,8 +905,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PairDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PairDTO>>> DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetSwaps
         /// </summary>
@@ -916,8 +916,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<SwapDTO>> DappsSushiswapSwapsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> DappsSushiswapSwapsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetSwaps
@@ -928,8 +928,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SwapDTO>>> DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetSwaps (historical)
         /// </summary>
@@ -944,8 +944,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<SwapDTO>> DappsSushiswapSwapsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> DappsSushiswapSwapsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetSwaps (historical)
@@ -961,8 +961,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SwapDTO>>> DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1005,8 +1005,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TokenDTO>> DappsSushiswapTokensCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> DappsSushiswapTokensCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTokens
@@ -1017,8 +1017,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenDTO>>> DappsSushiswapTokensCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> DappsSushiswapTokensCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GetTokens (historical)
         /// </summary>
@@ -1033,8 +1033,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<TokenDTO>> DappsSushiswapTokensHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> DappsSushiswapTokensHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// GetTokens (historical)
@@ -1050,8 +1050,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TokenDTO>>> DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -3011,10 +3011,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PairDTO&gt;</returns>
-        public List<PairDTO> DappsSushiswapPoolsCurrentGet(int operationIndex = 0)
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        public List<SushiswapPairDTO> DappsSushiswapPoolsCurrentGet(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> localVarResponse = DappsSushiswapPoolsCurrentGetWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = DappsSushiswapPoolsCurrentGetWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -3023,8 +3023,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PairDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> DappsSushiswapPoolsCurrentGetWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> DappsSushiswapPoolsCurrentGetWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3056,7 +3056,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PairDTO>>("/dapps/sushiswap/pools/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapPairDTO>>("/dapps/sushiswap/pools/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapPoolsCurrentGet", localVarResponse);
@@ -3075,10 +3075,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PairDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PairDTO>> DappsSushiswapPoolsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDTO>> DappsSushiswapPoolsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> localVarResponse = await DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = await DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3088,8 +3088,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PairDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>>> DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>>> DappsSushiswapPoolsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3122,7 +3122,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PairDTO>>("/dapps/sushiswap/pools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDTO>>("/dapps/sushiswap/pools/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3146,10 +3146,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;PairDTO&gt;</returns>
-        public List<PairDTO> DappsSushiswapPoolsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        public List<SushiswapPairDTO> DappsSushiswapPoolsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> localVarResponse = DappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = DappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
             return localVarResponse.Data;
         }
 
@@ -3163,8 +3163,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;PairDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> DappsSushiswapPoolsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> DappsSushiswapPoolsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3216,7 +3216,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<PairDTO>>("/dapps/sushiswap/pools/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapPairDTO>>("/dapps/sushiswap/pools/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapPoolsHistoricalGet", localVarResponse);
@@ -3240,10 +3240,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;PairDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PairDTO>> DappsSushiswapPoolsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDTO>> DappsSushiswapPoolsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>> localVarResponse = await DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, poolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = await DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, poolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3258,8 +3258,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;PairDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<PairDTO>>> DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>>> DappsSushiswapPoolsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3312,7 +3312,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PairDTO>>("/dapps/sushiswap/pools/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDTO>>("/dapps/sushiswap/pools/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3331,10 +3331,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapDTO&gt;</returns>
-        public List<SwapDTO> DappsSushiswapSwapsCurrentGet(int operationIndex = 0)
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        public List<SushiswapSwapDTO> DappsSushiswapSwapsCurrentGet(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> localVarResponse = DappsSushiswapSwapsCurrentGetWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = DappsSushiswapSwapsCurrentGetWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -3343,8 +3343,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> DappsSushiswapSwapsCurrentGetWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> DappsSushiswapSwapsCurrentGetWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3376,7 +3376,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapSwapsCurrentGet", localVarResponse);
@@ -3395,10 +3395,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SwapDTO>> DappsSushiswapSwapsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> DappsSushiswapSwapsCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> localVarResponse = await DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3408,8 +3408,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>>> DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>>> DappsSushiswapSwapsCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3442,7 +3442,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3466,10 +3466,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SwapDTO&gt;</returns>
-        public List<SwapDTO> DappsSushiswapSwapsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        public List<SushiswapSwapDTO> DappsSushiswapSwapsHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> localVarResponse = DappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = DappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
             return localVarResponse.Data;
         }
 
@@ -3483,8 +3483,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SwapDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> DappsSushiswapSwapsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> DappsSushiswapSwapsHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3536,7 +3536,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SwapDTO>>("/dapps/sushiswap/swaps/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapSwapsHistoricalGet", localVarResponse);
@@ -3560,10 +3560,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SwapDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SwapDTO>> DappsSushiswapSwapsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> DappsSushiswapSwapsHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>> localVarResponse = await DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, poolId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, poolId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3578,8 +3578,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="poolId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SwapDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SwapDTO>>> DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>>> DappsSushiswapSwapsHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3632,7 +3632,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SwapDTO>>("/dapps/sushiswap/swaps/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3833,10 +3833,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenDTO&gt;</returns>
-        public List<TokenDTO> DappsSushiswapTokensCurrentGet(int operationIndex = 0)
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        public List<SushiswapTokenDTO> DappsSushiswapTokensCurrentGet(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> localVarResponse = DappsSushiswapTokensCurrentGetWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = DappsSushiswapTokensCurrentGetWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -3845,8 +3845,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> DappsSushiswapTokensCurrentGetWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> DappsSushiswapTokensCurrentGetWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -3878,7 +3878,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapTokensCurrentGet", localVarResponse);
@@ -3897,10 +3897,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TokenDTO>> DappsSushiswapTokensCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> DappsSushiswapTokensCurrentGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> localVarResponse = await DappsSushiswapTokensCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await DappsSushiswapTokensCurrentGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3910,8 +3910,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>>> DappsSushiswapTokensCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>>> DappsSushiswapTokensCurrentGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -3944,7 +3944,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3968,10 +3968,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;TokenDTO&gt;</returns>
-        public List<TokenDTO> DappsSushiswapTokensHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0)
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        public List<SushiswapTokenDTO> DappsSushiswapTokensHistoricalGet(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> localVarResponse = DappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = DappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
             return localVarResponse.Data;
         }
 
@@ -3985,8 +3985,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;TokenDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> DappsSushiswapTokensHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> DappsSushiswapTokensHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -4038,7 +4038,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TokenDTO>>("/dapps/sushiswap/tokens/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DappsSushiswapTokensHistoricalGet", localVarResponse);
@@ -4062,10 +4062,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;TokenDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TokenDTO>> DappsSushiswapTokensHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> DappsSushiswapTokensHistoricalGetAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>> localVarResponse = await DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, tokenId, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, tokenId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4080,8 +4080,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="tokenId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;TokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<TokenDTO>>> DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>>> DappsSushiswapTokensHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -4134,7 +4134,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TokenDTO>>("/dapps/sushiswap/tokens/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

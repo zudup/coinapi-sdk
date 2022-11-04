@@ -402,14 +402,14 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv2_pools_current_get (filter_pool_id: STRING_32): detachable LIST [PAIR_V2_DTO]
+	dapps_uniswapv2_pools_current_get (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
 			-- GetPools
 			-- 
 			-- 
 			-- argument: filter_pool_id Filter pool id (optional, default to null)
 			-- 
 			-- 
-			-- Result LIST [PAIR_V2_DTO]
+			-- Result LIST [UNISWAP_V2_PAIR_V2_DTO]
 		require
 		local
   			l_path: STRING
@@ -431,7 +431,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [PAIR_V2_DTO] } l_response.data ({ LIST [PAIR_V2_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V2_PAIR_V2_DTO] } l_response.data ({ LIST [UNISWAP_V2_PAIR_V2_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -481,12 +481,12 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv2_swaps_current_get : detachable LIST [SWAP_V2_DTO]
+	dapps_uniswapv2_swaps_current_get : detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
 			-- GetSwaps
 			-- 
 			-- 
 			-- 
-			-- Result LIST [SWAP_V2_DTO]
+			-- Result LIST [UNISWAP_V2_SWAP_V2_DTO]
 		require
 		local
   			l_path: STRING
@@ -507,7 +507,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [SWAP_V2_DTO] } l_response.data ({ LIST [SWAP_V2_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V2_SWAP_V2_DTO] } l_response.data ({ LIST [UNISWAP_V2_SWAP_V2_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -600,12 +600,12 @@ feature -- API Access
 			end
 		end
 
-	dapps_uniswapv2_tokens_current_get : detachable LIST [TOKEN_V2_DTO]
+	dapps_uniswapv2_tokens_current_get : detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
 			-- GetTokens
 			-- 
 			-- 
 			-- 
-			-- Result LIST [TOKEN_V2_DTO]
+			-- Result LIST [UNISWAP_V2_TOKEN_V2_DTO]
 		require
 		local
   			l_path: STRING
@@ -626,7 +626,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { LIST [TOKEN_V2_DTO] } l_response.data ({ LIST [TOKEN_V2_DTO] }) as l_data then
+			elseif attached { LIST [UNISWAP_V2_TOKEN_V2_DTO] } l_response.data ({ LIST [UNISWAP_V2_TOKEN_V2_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")

@@ -16,22 +16,22 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_bundle_v3_dto = require "openapiclient.model.bundle_v3_dto"
-local openapiclient_burn_v3_dto = require "openapiclient.model.burn_v3_dto"
-local openapiclient_factory_v3_dto = require "openapiclient.model.factory_v3_dto"
-local openapiclient_mint_v3_dto = require "openapiclient.model.mint_v3_dto"
-local openapiclient_pool_day_data_v3_dto = require "openapiclient.model.pool_day_data_v3_dto"
-local openapiclient_pool_hour_data_v3_dto = require "openapiclient.model.pool_hour_data_v3_dto"
-local openapiclient_pool_v3_dto = require "openapiclient.model.pool_v3_dto"
-local openapiclient_position_snapshot_v3_dto = require "openapiclient.model.position_snapshot_v3_dto"
-local openapiclient_position_v3_dto = require "openapiclient.model.position_v3_dto"
-local openapiclient_swap_v3_dto = require "openapiclient.model.swap_v3_dto"
-local openapiclient_tick_day_data_v3_dto = require "openapiclient.model.tick_day_data_v3_dto"
-local openapiclient_tick_v3_dto = require "openapiclient.model.tick_v3_dto"
-local openapiclient_token_hour_data_v3_dto = require "openapiclient.model.token_hour_data_v3_dto"
-local openapiclient_token_v3_dto = require "openapiclient.model.token_v3_dto"
-local openapiclient_token_v3_day_data_dto = require "openapiclient.model.token_v3_day_data_dto"
-local openapiclient_uniswap_day_data_v3_dto = require "openapiclient.model.uniswap_day_data_v3_dto"
+local openapiclient_uniswap_v3_bundle_v3_dto = require "openapiclient.model.uniswap_v3_bundle_v3_dto"
+local openapiclient_uniswap_v3_burn_v3_dto = require "openapiclient.model.uniswap_v3_burn_v3_dto"
+local openapiclient_uniswap_v3_factory_v3_dto = require "openapiclient.model.uniswap_v3_factory_v3_dto"
+local openapiclient_uniswap_v3_mint_v3_dto = require "openapiclient.model.uniswap_v3_mint_v3_dto"
+local openapiclient_uniswap_v3_pool_day_data_v3_dto = require "openapiclient.model.uniswap_v3_pool_day_data_v3_dto"
+local openapiclient_uniswap_v3_pool_hour_data_v3_dto = require "openapiclient.model.uniswap_v3_pool_hour_data_v3_dto"
+local openapiclient_uniswap_v3_pool_v3_dto = require "openapiclient.model.uniswap_v3_pool_v3_dto"
+local openapiclient_uniswap_v3_position_snapshot_v3_dto = require "openapiclient.model.uniswap_v3_position_snapshot_v3_dto"
+local openapiclient_uniswap_v3_position_v3_dto = require "openapiclient.model.uniswap_v3_position_v3_dto"
+local openapiclient_uniswap_v3_swap_v3_dto = require "openapiclient.model.uniswap_v3_swap_v3_dto"
+local openapiclient_uniswap_v3_tick_day_data_v3_dto = require "openapiclient.model.uniswap_v3_tick_day_data_v3_dto"
+local openapiclient_uniswap_v3_tick_v3_dto = require "openapiclient.model.uniswap_v3_tick_v3_dto"
+local openapiclient_uniswap_v3_token_hour_data_v3_dto = require "openapiclient.model.uniswap_v3_token_hour_data_v3_dto"
+local openapiclient_uniswap_v3_token_v3_dto = require "openapiclient.model.uniswap_v3_token_v3_dto"
+local openapiclient_uniswap_v3_token_v3_day_data_dto = require "openapiclient.model.uniswap_v3_token_v3_day_data_dto"
+local openapiclient_uniswap_v3_uniswap_day_data_v3_dto = require "openapiclient.model.uniswap_v3_uniswap_day_data_v3_dto"
 
 local uniswap_v3_api = {}
 local uniswap_v3_api_mt = {
@@ -94,7 +94,7 @@ function uniswap_v3_api:dapps_uniswapv3_bundle_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_bundle_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_bundle_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -174,7 +174,7 @@ function uniswap_v3_api:dapps_uniswapv3_burns_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_burn_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_burn_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -285,7 +285,7 @@ function uniswap_v3_api:dapps_uniswapv3_factory_current_get(chain_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_factory_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_factory_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -365,7 +365,7 @@ function uniswap_v3_api:dapps_uniswapv3_mints_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_mint_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_mint_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -507,7 +507,7 @@ function uniswap_v3_api:dapps_uniswapv3_pools_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pool_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_pool_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -556,7 +556,7 @@ function uniswap_v3_api:dapps_uniswapv3_pools_day_data_current_get(filter_pool_i
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pool_day_data_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_pool_day_data_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -636,7 +636,7 @@ function uniswap_v3_api:dapps_uniswapv3_pools_hour_data_current_get(filter_pool_
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pool_hour_data_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_pool_hour_data_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -716,7 +716,7 @@ function uniswap_v3_api:dapps_uniswapv3_position_snapshots_current_get(filter_po
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_position_snapshot_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_position_snapshot_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -765,7 +765,7 @@ function uniswap_v3_api:dapps_uniswapv3_positions_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_position_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_position_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -845,7 +845,7 @@ function uniswap_v3_api:dapps_uniswapv3_swaps_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_swap_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_swap_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -956,7 +956,7 @@ function uniswap_v3_api:dapps_uniswapv3_ticks_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_tick_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_tick_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1005,7 +1005,7 @@ function uniswap_v3_api:dapps_uniswapv3_ticks_day_data_current_get(filter_pool_i
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_tick_day_data_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_tick_day_data_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1147,7 +1147,7 @@ function uniswap_v3_api:dapps_uniswapv3_tokens_current_get(filter_token_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_token_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1196,7 +1196,7 @@ function uniswap_v3_api:dapps_uniswapv3_tokens_day_data_current_get(filter_token
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_v3_day_data_dto.cast(ob)
+			openapiclient_uniswap_v3_token_v3_day_data_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1276,7 +1276,7 @@ function uniswap_v3_api:dapps_uniswapv3_tokens_hour_data_current_get(filter_toke
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_hour_data_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_token_hour_data_v3_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1356,7 +1356,7 @@ function uniswap_v3_api:dapps_uniswapv3_uniswap_day_data_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_day_data_v3_dto.cast(ob)
+			openapiclient_uniswap_v3_uniswap_day_data_v3_dto.cast(ob)
 		end
 		return result, headers
 	else

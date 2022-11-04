@@ -16,9 +16,9 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_pair_v2_dto = require "openapiclient.model.pair_v2_dto"
-local openapiclient_swap_v2_dto = require "openapiclient.model.swap_v2_dto"
-local openapiclient_token_v2_dto = require "openapiclient.model.token_v2_dto"
+local openapiclient_uniswap_v2_pair_v2_dto = require "openapiclient.model.uniswap_v2_pair_v2_dto"
+local openapiclient_uniswap_v2_swap_v2_dto = require "openapiclient.model.uniswap_v2_swap_v2_dto"
+local openapiclient_uniswap_v2_token_v2_dto = require "openapiclient.model.uniswap_v2_token_v2_dto"
 
 local uniswap_v2_api = {}
 local uniswap_v2_api_mt = {
@@ -360,7 +360,7 @@ function uniswap_v2_api:dapps_uniswapv2_pools_current_get(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_pair_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_pair_v2_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -440,7 +440,7 @@ function uniswap_v2_api:dapps_uniswapv2_swaps_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_swap_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_swap_v2_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -551,7 +551,7 @@ function uniswap_v2_api:dapps_uniswapv2_tokens_current_get()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_token_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_token_v2_dto.cast(ob)
 		end
 		return result, headers
 	else

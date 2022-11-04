@@ -485,7 +485,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv2PoolsCurrentGet"></a>
 # **Invoke-DappsUniswapv2PoolsCurrentGet**
-> PairV2DTO[] Invoke-DappsUniswapv2PoolsCurrentGet<br>
+> UniswapV2PairV2DTO[] Invoke-DappsUniswapv2PoolsCurrentGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
 GetPools
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PairV2DTO[]**](PairV2DTO.md) (PSCustomObject)
+[**UniswapV2PairV2DTO[]**](UniswapV2PairV2DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -578,7 +578,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv2SwapsCurrentGet"></a>
 # **Invoke-DappsUniswapv2SwapsCurrentGet**
-> SwapV2DTO[] Invoke-DappsUniswapv2SwapsCurrentGet<br>
+> UniswapV2SwapV2DTO[] Invoke-DappsUniswapv2SwapsCurrentGet<br>
 
 GetSwaps
 
@@ -599,7 +599,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SwapV2DTO[]**](SwapV2DTO.md) (PSCustomObject)
+[**UniswapV2SwapV2DTO[]**](UniswapV2SwapV2DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -718,7 +718,7 @@ No authorization required
 
 <a name="Invoke-DappsUniswapv2TokensCurrentGet"></a>
 # **Invoke-DappsUniswapv2TokensCurrentGet**
-> TokenV2DTO[] Invoke-DappsUniswapv2TokensCurrentGet<br>
+> UniswapV2TokenV2DTO[] Invoke-DappsUniswapv2TokensCurrentGet<br>
 
 GetTokens
 
@@ -739,7 +739,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TokenV2DTO[]**](TokenV2DTO.md) (PSCustomObject)
+[**UniswapV2TokenV2DTO[]**](UniswapV2TokenV2DTO.md) (PSCustomObject)
 
 ### Authorization
 

@@ -1015,10 +1015,10 @@ sub dapps_sushiswap_pool_hour_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_pools_current_get' } = {
         summary => 'GetPools',
         params => $params,
-        returns => 'ARRAY[PairDTO]',
+        returns => 'ARRAY[SushiswapPairDTO]',
         };
 }
-# @return ARRAY[PairDTO]
+# @return ARRAY[SushiswapPairDTO]
 #
 sub dapps_sushiswap_pools_current_get {
     my ($self, %args) = @_;
@@ -1049,7 +1049,7 @@ sub dapps_sushiswap_pools_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PairDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
     return $_response_object;
 }
 
@@ -1094,10 +1094,10 @@ sub dapps_sushiswap_pools_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_pools_historical_get' } = {
         summary => 'GetPools (historical)',
         params => $params,
-        returns => 'ARRAY[PairDTO]',
+        returns => 'ARRAY[SushiswapPairDTO]',
         };
 }
-# @return ARRAY[PairDTO]
+# @return ARRAY[SushiswapPairDTO]
 #
 sub dapps_sushiswap_pools_historical_get {
     my ($self, %args) = @_;
@@ -1153,7 +1153,7 @@ sub dapps_sushiswap_pools_historical_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PairDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
     return $_response_object;
 }
 
@@ -1168,10 +1168,10 @@ sub dapps_sushiswap_pools_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_swaps_current_get' } = {
         summary => 'GetSwaps',
         params => $params,
-        returns => 'ARRAY[SwapDTO]',
+        returns => 'ARRAY[SushiswapSwapDTO]',
         };
 }
-# @return ARRAY[SwapDTO]
+# @return ARRAY[SushiswapSwapDTO]
 #
 sub dapps_sushiswap_swaps_current_get {
     my ($self, %args) = @_;
@@ -1202,7 +1202,7 @@ sub dapps_sushiswap_swaps_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SwapDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
     return $_response_object;
 }
 
@@ -1247,10 +1247,10 @@ sub dapps_sushiswap_swaps_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_swaps_historical_get' } = {
         summary => 'GetSwaps (historical)',
         params => $params,
-        returns => 'ARRAY[SwapDTO]',
+        returns => 'ARRAY[SushiswapSwapDTO]',
         };
 }
-# @return ARRAY[SwapDTO]
+# @return ARRAY[SushiswapSwapDTO]
 #
 sub dapps_sushiswap_swaps_historical_get {
     my ($self, %args) = @_;
@@ -1306,7 +1306,7 @@ sub dapps_sushiswap_swaps_historical_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SwapDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
     return $_response_object;
 }
 
@@ -1421,10 +1421,10 @@ sub dapps_sushiswap_token_day_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_tokens_current_get' } = {
         summary => 'GetTokens',
         params => $params,
-        returns => 'ARRAY[TokenDTO]',
+        returns => 'ARRAY[SushiswapTokenDTO]',
         };
 }
-# @return ARRAY[TokenDTO]
+# @return ARRAY[SushiswapTokenDTO]
 #
 sub dapps_sushiswap_tokens_current_get {
     my ($self, %args) = @_;
@@ -1455,7 +1455,7 @@ sub dapps_sushiswap_tokens_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
     return $_response_object;
 }
 
@@ -1500,10 +1500,10 @@ sub dapps_sushiswap_tokens_current_get {
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_tokens_historical_get' } = {
         summary => 'GetTokens (historical)',
         params => $params,
-        returns => 'ARRAY[TokenDTO]',
+        returns => 'ARRAY[SushiswapTokenDTO]',
         };
 }
-# @return ARRAY[TokenDTO]
+# @return ARRAY[SushiswapTokenDTO]
 #
 sub dapps_sushiswap_tokens_historical_get {
     my ($self, %args) = @_;
@@ -1559,7 +1559,7 @@ sub dapps_sushiswap_tokens_historical_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenDTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
     return $_response_object;
 }
 

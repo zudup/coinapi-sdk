@@ -535,7 +535,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapPoolsCurrentGet"></a>
 # **Invoke-DappsSushiswapPoolsCurrentGet**
-> PairDTO[] Invoke-DappsSushiswapPoolsCurrentGet<br>
+> SushiswapPairDTO[] Invoke-DappsSushiswapPoolsCurrentGet<br>
 
 GetPools
 
@@ -558,7 +558,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PairDTO[]**](PairDTO.md) (PSCustomObject)
+[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -573,7 +573,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapPoolsHistoricalGet"></a>
 # **Invoke-DappsSushiswapPoolsHistoricalGet**
-> PairDTO[] Invoke-DappsSushiswapPoolsHistoricalGet<br>
+> SushiswapPairDTO[] Invoke-DappsSushiswapPoolsHistoricalGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PairDTO[]**](PairDTO.md) (PSCustomObject)
+[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -626,7 +626,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapSwapsCurrentGet"></a>
 # **Invoke-DappsSushiswapSwapsCurrentGet**
-> SwapDTO[] Invoke-DappsSushiswapSwapsCurrentGet<br>
+> SushiswapSwapDTO[] Invoke-DappsSushiswapSwapsCurrentGet<br>
 
 GetSwaps
 
@@ -647,7 +647,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SwapDTO[]**](SwapDTO.md) (PSCustomObject)
+[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -662,7 +662,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapSwapsHistoricalGet"></a>
 # **Invoke-DappsSushiswapSwapsHistoricalGet**
-> SwapDTO[] Invoke-DappsSushiswapSwapsHistoricalGet<br>
+> SushiswapSwapDTO[] Invoke-DappsSushiswapSwapsHistoricalGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SwapDTO[]**](SwapDTO.md) (PSCustomObject)
+[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapTokensCurrentGet"></a>
 # **Invoke-DappsSushiswapTokensCurrentGet**
-> TokenDTO[] Invoke-DappsSushiswapTokensCurrentGet<br>
+> SushiswapTokenDTO[] Invoke-DappsSushiswapTokensCurrentGet<br>
 
 GetTokens
 
@@ -788,7 +788,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TokenDTO[]**](TokenDTO.md) (PSCustomObject)
+[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -803,7 +803,7 @@ No authorization required
 
 <a name="Invoke-DappsSushiswapTokensHistoricalGet"></a>
 # **Invoke-DappsSushiswapTokensHistoricalGet**
-> TokenDTO[] Invoke-DappsSushiswapTokensHistoricalGet<br>
+> SushiswapTokenDTO[] Invoke-DappsSushiswapTokensHistoricalGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -841,7 +841,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TokenDTO[]**](TokenDTO.md) (PSCustomObject)
+[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 

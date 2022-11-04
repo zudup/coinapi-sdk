@@ -35,7 +35,7 @@ describe 'UniswapV3Api' do
   # unit tests for dapps_uniswapv3_bundle_current_get
   # GetBundles
   # @param [Hash] opts the optional parameters
-  # @return [Array<BundleV3DTO>]
+  # @return [Array<UniswapV3BundleV3DTO>]
   describe 'dapps_uniswapv3_bundle_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -59,7 +59,7 @@ describe 'UniswapV3Api' do
   # GetBurns
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<BurnV3DTO>]
+  # @return [Array<UniswapV3BurnV3DTO>]
   describe 'dapps_uniswapv3_burns_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -97,7 +97,7 @@ describe 'UniswapV3Api' do
   # GetFactory
   # @param chain_id 
   # @param [Hash] opts the optional parameters
-  # @return [Array<FactoryV3DTO>]
+  # @return [Array<UniswapV3FactoryV3DTO>]
   describe 'dapps_uniswapv3_factory_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -121,7 +121,7 @@ describe 'UniswapV3Api' do
   # GetMints
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<MintV3DTO>]
+  # @return [Array<UniswapV3MintV3DTO>]
   describe 'dapps_uniswapv3_mints_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -174,7 +174,7 @@ describe 'UniswapV3Api' do
   # GetPools
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PoolV3DTO>]
+  # @return [Array<UniswapV3PoolV3DTO>]
   describe 'dapps_uniswapv3_pools_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -185,7 +185,7 @@ describe 'UniswapV3Api' do
   # GetPoolsDayData
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PoolDayDataV3DTO>]
+  # @return [Array<UniswapV3PoolDayDataV3DTO>]
   describe 'dapps_uniswapv3_pools_day_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -210,7 +210,7 @@ describe 'UniswapV3Api' do
   # GetPoolsHourData
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PoolHourDataV3DTO>]
+  # @return [Array<UniswapV3PoolHourDataV3DTO>]
   describe 'dapps_uniswapv3_pools_hour_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -235,7 +235,7 @@ describe 'UniswapV3Api' do
   # GetPositionSnapshot
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PositionSnapshotV3DTO>]
+  # @return [Array<UniswapV3PositionSnapshotV3DTO>]
   describe 'dapps_uniswapv3_position_snapshots_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -246,7 +246,7 @@ describe 'UniswapV3Api' do
   # GetPositions
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<PositionV3DTO>]
+  # @return [Array<UniswapV3PositionV3DTO>]
   describe 'dapps_uniswapv3_positions_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -271,7 +271,7 @@ describe 'UniswapV3Api' do
   # GetSwaps
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<SwapV3DTO>]
+  # @return [Array<UniswapV3SwapV3DTO>]
   describe 'dapps_uniswapv3_swaps_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -310,7 +310,7 @@ describe 'UniswapV3Api' do
   # GetTicks
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<TickV3DTO>]
+  # @return [Array<UniswapV3TickV3DTO>]
   describe 'dapps_uniswapv3_ticks_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -321,7 +321,7 @@ describe 'UniswapV3Api' do
   # GetTicksDayData
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id Filter pool id
-  # @return [Array<TickDayDataV3DTO>]
+  # @return [Array<UniswapV3TickDayDataV3DTO>]
   describe 'dapps_uniswapv3_ticks_day_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -374,7 +374,7 @@ describe 'UniswapV3Api' do
   # GetTokens
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
-  # @return [Array<TokenV3DTO>]
+  # @return [Array<UniswapV3TokenV3DTO>]
   describe 'dapps_uniswapv3_tokens_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -385,7 +385,7 @@ describe 'UniswapV3Api' do
   # GetTokensDayData
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
-  # @return [Array<TokenV3DayDataDTO>]
+  # @return [Array<UniswapV3TokenV3DayDataDTO>]
   describe 'dapps_uniswapv3_tokens_day_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -410,7 +410,7 @@ describe 'UniswapV3Api' do
   # GetTokensHourData
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
-  # @return [Array<TokenHourDataV3DTO>]
+  # @return [Array<UniswapV3TokenHourDataV3DTO>]
   describe 'dapps_uniswapv3_tokens_hour_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -433,7 +433,7 @@ describe 'UniswapV3Api' do
   # unit tests for dapps_uniswapv3_uniswap_day_data_current_get
   # GetUniswapDayData
   # @param [Hash] opts the optional parameters
-  # @return [Array<UniswapDayDataV3DTO>]
+  # @return [Array<UniswapV3UniswapDayDataV3DTO>]
   describe 'dapps_uniswapv3_uniswap_day_data_current_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

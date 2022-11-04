@@ -75,7 +75,7 @@ Method | HTTP request | Description
 
 ## dappsUniswapv3BundleCurrentGet
 
-> dappsUniswapv3BundleCurrentGet(): ApiRequest[Seq[BundleV3DTO]]
+> dappsUniswapv3BundleCurrentGet(): ApiRequest[Seq[UniswapV3BundleV3DTO]]
 
 GetBundles
 
@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[BundleV3DTO]**](BundleV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)]
 
 
 ### Authorization
@@ -234,7 +234,7 @@ No authorization required
 
 ## dappsUniswapv3BurnsCurrentGet
 
-> dappsUniswapv3BurnsCurrentGet(dappsUniswapv3BurnsCurrentGetRequest): ApiRequest[Seq[BurnV3DTO]]
+> dappsUniswapv3BurnsCurrentGet(dappsUniswapv3BurnsCurrentGetRequest): ApiRequest[Seq[UniswapV3BurnV3DTO]]
 
 GetBurns
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[BurnV3DTO]**](BurnV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)]
 
 
 ### Authorization
@@ -487,7 +487,7 @@ No authorization required
 
 ## dappsUniswapv3FactoryCurrentGet
 
-> dappsUniswapv3FactoryCurrentGet(dappsUniswapv3FactoryCurrentGetRequest): ApiRequest[Seq[FactoryV3DTO]]
+> dappsUniswapv3FactoryCurrentGet(dappsUniswapv3FactoryCurrentGetRequest): ApiRequest[Seq[UniswapV3FactoryV3DTO]]
 
 GetFactory
 
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[FactoryV3DTO]**](FactoryV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)]
 
 
 ### Authorization
@@ -651,7 +651,7 @@ No authorization required
 
 ## dappsUniswapv3MintsCurrentGet
 
-> dappsUniswapv3MintsCurrentGet(dappsUniswapv3MintsCurrentGetRequest): ApiRequest[Seq[MintV3DTO]]
+> dappsUniswapv3MintsCurrentGet(dappsUniswapv3MintsCurrentGetRequest): ApiRequest[Seq[UniswapV3MintV3DTO]]
 
 GetMints
 
@@ -709,7 +709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[MintV3DTO]**](MintV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)]
 
 
 ### Authorization
@@ -996,7 +996,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsCurrentGet
 
-> dappsUniswapv3PoolsCurrentGet(dappsUniswapv3PoolsCurrentGetRequest): ApiRequest[Seq[PoolV3DTO]]
+> dappsUniswapv3PoolsCurrentGet(dappsUniswapv3PoolsCurrentGetRequest): ApiRequest[Seq[UniswapV3PoolV3DTO]]
 
 GetPools
 
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolV3DTO]**](PoolV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)]
 
 
 ### Authorization
@@ -1074,7 +1074,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsDayDataCurrentGet
 
-> dappsUniswapv3PoolsDayDataCurrentGet(dappsUniswapv3PoolsDayDataCurrentGetRequest): ApiRequest[Seq[PoolDayDataV3DTO]]
+> dappsUniswapv3PoolsDayDataCurrentGet(dappsUniswapv3PoolsDayDataCurrentGetRequest): ApiRequest[Seq[UniswapV3PoolDayDataV3DTO]]
 
 GetPoolsDayData
 
@@ -1132,7 +1132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)]
 
 
 ### Authorization
@@ -1241,7 +1241,7 @@ No authorization required
 
 ## dappsUniswapv3PoolsHourDataCurrentGet
 
-> dappsUniswapv3PoolsHourDataCurrentGet(dappsUniswapv3PoolsHourDataCurrentGetRequest): ApiRequest[Seq[PoolHourDataV3DTO]]
+> dappsUniswapv3PoolsHourDataCurrentGet(dappsUniswapv3PoolsHourDataCurrentGetRequest): ApiRequest[Seq[UniswapV3PoolHourDataV3DTO]]
 
 GetPoolsHourData
 
@@ -1299,7 +1299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)]
 
 
 ### Authorization
@@ -1408,7 +1408,7 @@ No authorization required
 
 ## dappsUniswapv3PositionSnapshotsCurrentGet
 
-> dappsUniswapv3PositionSnapshotsCurrentGet(dappsUniswapv3PositionSnapshotsCurrentGetRequest): ApiRequest[Seq[PositionSnapshotV3DTO]]
+> dappsUniswapv3PositionSnapshotsCurrentGet(dappsUniswapv3PositionSnapshotsCurrentGetRequest): ApiRequest[Seq[UniswapV3PositionSnapshotV3DTO]]
 
 GetPositionSnapshot
 
@@ -1466,7 +1466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)]
 
 
 ### Authorization
@@ -1486,7 +1486,7 @@ No authorization required
 
 ## dappsUniswapv3PositionsCurrentGet
 
-> dappsUniswapv3PositionsCurrentGet(dappsUniswapv3PositionsCurrentGetRequest): ApiRequest[Seq[PositionV3DTO]]
+> dappsUniswapv3PositionsCurrentGet(dappsUniswapv3PositionsCurrentGetRequest): ApiRequest[Seq[UniswapV3PositionV3DTO]]
 
 GetPositions
 
@@ -1544,7 +1544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PositionV3DTO]**](PositionV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)]
 
 
 ### Authorization
@@ -1653,7 +1653,7 @@ No authorization required
 
 ## dappsUniswapv3SwapsCurrentGet
 
-> dappsUniswapv3SwapsCurrentGet(dappsUniswapv3SwapsCurrentGetRequest): ApiRequest[Seq[SwapV3DTO]]
+> dappsUniswapv3SwapsCurrentGet(dappsUniswapv3SwapsCurrentGetRequest): ApiRequest[Seq[UniswapV3SwapV3DTO]]
 
 GetSwaps
 
@@ -1711,7 +1711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[SwapV3DTO]**](SwapV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)]
 
 
 ### Authorization
@@ -1909,7 +1909,7 @@ No authorization required
 
 ## dappsUniswapv3TicksCurrentGet
 
-> dappsUniswapv3TicksCurrentGet(dappsUniswapv3TicksCurrentGetRequest): ApiRequest[Seq[TickV3DTO]]
+> dappsUniswapv3TicksCurrentGet(dappsUniswapv3TicksCurrentGetRequest): ApiRequest[Seq[UniswapV3TickV3DTO]]
 
 GetTicks
 
@@ -1967,7 +1967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TickV3DTO]**](TickV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)]
 
 
 ### Authorization
@@ -1987,7 +1987,7 @@ No authorization required
 
 ## dappsUniswapv3TicksDayDataCurrentGet
 
-> dappsUniswapv3TicksDayDataCurrentGet(dappsUniswapv3TicksDayDataCurrentGetRequest): ApiRequest[Seq[TickDayDataV3DTO]]
+> dappsUniswapv3TicksDayDataCurrentGet(dappsUniswapv3TicksDayDataCurrentGetRequest): ApiRequest[Seq[UniswapV3TickDayDataV3DTO]]
 
 GetTicksDayData
 
@@ -2045,7 +2045,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TickDayDataV3DTO]**](TickDayDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)]
 
 
 ### Authorization
@@ -2332,7 +2332,7 @@ No authorization required
 
 ## dappsUniswapv3TokensCurrentGet
 
-> dappsUniswapv3TokensCurrentGet(dappsUniswapv3TokensCurrentGetRequest): ApiRequest[Seq[TokenV3DTO]]
+> dappsUniswapv3TokensCurrentGet(dappsUniswapv3TokensCurrentGetRequest): ApiRequest[Seq[UniswapV3TokenV3DTO]]
 
 GetTokens
 
@@ -2390,7 +2390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TokenV3DTO]**](TokenV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)]
 
 
 ### Authorization
@@ -2410,7 +2410,7 @@ No authorization required
 
 ## dappsUniswapv3TokensDayDataCurrentGet
 
-> dappsUniswapv3TokensDayDataCurrentGet(dappsUniswapv3TokensDayDataCurrentGetRequest): ApiRequest[Seq[TokenV3DayDataDTO]]
+> dappsUniswapv3TokensDayDataCurrentGet(dappsUniswapv3TokensDayDataCurrentGetRequest): ApiRequest[Seq[UniswapV3TokenV3DayDataDTO]]
 
 GetTokensDayData
 
@@ -2468,7 +2468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)]
+ApiRequest[[**Seq[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)]
 
 
 ### Authorization
@@ -2577,7 +2577,7 @@ No authorization required
 
 ## dappsUniswapv3TokensHourDataCurrentGet
 
-> dappsUniswapv3TokensHourDataCurrentGet(dappsUniswapv3TokensHourDataCurrentGetRequest): ApiRequest[Seq[TokenHourDataV3DTO]]
+> dappsUniswapv3TokensHourDataCurrentGet(dappsUniswapv3TokensHourDataCurrentGetRequest): ApiRequest[Seq[UniswapV3TokenHourDataV3DTO]]
 
 GetTokensHourData
 
@@ -2635,7 +2635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)]
 
 
 ### Authorization
@@ -2741,7 +2741,7 @@ No authorization required
 
 ## dappsUniswapv3UniswapDayDataCurrentGet
 
-> dappsUniswapv3UniswapDayDataCurrentGet(): ApiRequest[Seq[UniswapDayDataV3DTO]]
+> dappsUniswapv3UniswapDayDataCurrentGet(): ApiRequest[Seq[UniswapV3UniswapDayDataV3DTO]]
 
 GetUniswapDayData
 
@@ -2794,7 +2794,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)]
 
 
 ### Authorization

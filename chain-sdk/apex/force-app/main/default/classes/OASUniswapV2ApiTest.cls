@@ -276,31 +276,31 @@ private class OASUniswapV2ApiTest {
 
         OASClient client;
         OASUniswapV2Api api;
-        List<OASPairV2DTO> response;
-        List<OASPairV2DTO> expectedResponse;
+        List<OASUniswapV2PairV2DTO> response;
+        List<OASUniswapV2PairV2DTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV2Api(new OASClient());
 
-        js = JSON.serialize(new List<OASPairV2DTO>{OASPairV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASPairV2DTO>{OASPairV2DTO.getExample()};
-        response = (List<OASPairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
+        expectedResponse = new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()};
+        response = (List<OASUniswapV2PairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASPairV2DTO>{OASPairV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASPairV2DTO>{OASPairV2DTO.getExample()};
-        response = (List<OASPairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
+        expectedResponse = new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()};
+        response = (List<OASUniswapV2PairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASPairV2DTO>{OASPairV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASPairV2DTO>{OASPairV2DTO.getExample()};
-        response = (List<OASPairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
+        expectedResponse = new List<OASUniswapV2PairV2DTO>{OASUniswapV2PairV2DTO.getExample()};
+        response = (List<OASUniswapV2PairV2DTO>) api.dappsUniswapv2PoolsCurrentGet(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -347,31 +347,31 @@ private class OASUniswapV2ApiTest {
 
         OASClient client;
         OASUniswapV2Api api;
-        List<OASSwapV2DTO> response;
-        List<OASSwapV2DTO> expectedResponse;
+        List<OASUniswapV2SwapV2DTO> response;
+        List<OASUniswapV2SwapV2DTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV2Api(new OASClient());
 
-        js = JSON.serialize(new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()};
-        response = (List<OASSwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
+        expectedResponse = new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()};
+        response = (List<OASUniswapV2SwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()};
-        response = (List<OASSwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
+        expectedResponse = new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()};
+        response = (List<OASUniswapV2SwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASSwapV2DTO>{OASSwapV2DTO.getExample()};
-        response = (List<OASSwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
+        expectedResponse = new List<OASUniswapV2SwapV2DTO>{OASUniswapV2SwapV2DTO.getExample()};
+        response = (List<OASUniswapV2SwapV2DTO>) api.dappsUniswapv2SwapsCurrentGet();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -447,31 +447,31 @@ private class OASUniswapV2ApiTest {
 
         OASClient client;
         OASUniswapV2Api api;
-        List<OASTokenV2DTO> response;
-        List<OASTokenV2DTO> expectedResponse;
+        List<OASUniswapV2TokenV2DTO> response;
+        List<OASUniswapV2TokenV2DTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV2Api(new OASClient());
 
-        js = JSON.serialize(new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()};
-        response = (List<OASTokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
+        expectedResponse = new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()};
+        response = (List<OASUniswapV2TokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()};
-        response = (List<OASTokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
+        expectedResponse = new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()};
+        response = (List<OASUniswapV2TokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASTokenV2DTO>{OASTokenV2DTO.getExample()};
-        response = (List<OASTokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
+        expectedResponse = new List<OASUniswapV2TokenV2DTO>{OASUniswapV2TokenV2DTO.getExample()};
+        response = (List<OASUniswapV2TokenV2DTO>) api.dappsUniswapv2TokensCurrentGet();
         System.assertEquals(expectedResponse, response);
     }
 

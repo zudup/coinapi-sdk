@@ -1,22 +1,22 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.BundleV3DTO
-import org.openapitools.model.BurnV3DTO
-import org.openapitools.model.FactoryV3DTO
-import org.openapitools.model.MintV3DTO
-import org.openapitools.model.PoolDayDataV3DTO
-import org.openapitools.model.PoolHourDataV3DTO
-import org.openapitools.model.PoolV3DTO
-import org.openapitools.model.PositionSnapshotV3DTO
-import org.openapitools.model.PositionV3DTO
-import org.openapitools.model.SwapV3DTO
-import org.openapitools.model.TickDayDataV3DTO
-import org.openapitools.model.TickV3DTO
-import org.openapitools.model.TokenHourDataV3DTO
-import org.openapitools.model.TokenV3DTO
-import org.openapitools.model.TokenV3DayDataDTO
-import org.openapitools.model.UniswapDayDataV3DTO
+import org.openapitools.model.UniswapV3BundleV3DTO
+import org.openapitools.model.UniswapV3BurnV3DTO
+import org.openapitools.model.UniswapV3FactoryV3DTO
+import org.openapitools.model.UniswapV3MintV3DTO
+import org.openapitools.model.UniswapV3PoolDayDataV3DTO
+import org.openapitools.model.UniswapV3PoolHourDataV3DTO
+import org.openapitools.model.UniswapV3PoolV3DTO
+import org.openapitools.model.UniswapV3PositionSnapshotV3DTO
+import org.openapitools.model.UniswapV3PositionV3DTO
+import org.openapitools.model.UniswapV3SwapV3DTO
+import org.openapitools.model.UniswapV3TickDayDataV3DTO
+import org.openapitools.model.UniswapV3TickV3DTO
+import org.openapitools.model.UniswapV3TokenHourDataV3DTO
+import org.openapitools.model.UniswapV3TokenV3DTO
+import org.openapitools.model.UniswapV3TokenV3DayDataDTO
+import org.openapitools.model.UniswapV3UniswapDayDataV3DTO
 
 class UniswapV3Api {
     String basePath = "https://onchain.coinapi.io"
@@ -39,7 +39,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    BundleV3DTO.class )
+                    UniswapV3BundleV3DTO.class )
 
     }
 
@@ -94,7 +94,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    BurnV3DTO.class )
+                    UniswapV3BurnV3DTO.class )
 
     }
 
@@ -185,7 +185,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    FactoryV3DTO.class )
+                    UniswapV3FactoryV3DTO.class )
 
     }
 
@@ -240,7 +240,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    MintV3DTO.class )
+                    UniswapV3MintV3DTO.class )
 
     }
 
@@ -368,7 +368,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PoolV3DTO.class )
+                    UniswapV3PoolV3DTO.class )
 
     }
 
@@ -391,7 +391,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PoolDayDataV3DTO.class )
+                    UniswapV3PoolDayDataV3DTO.class )
 
     }
 
@@ -449,7 +449,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PoolHourDataV3DTO.class )
+                    UniswapV3PoolHourDataV3DTO.class )
 
     }
 
@@ -507,7 +507,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PositionSnapshotV3DTO.class )
+                    UniswapV3PositionSnapshotV3DTO.class )
 
     }
 
@@ -530,7 +530,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    PositionV3DTO.class )
+                    UniswapV3PositionV3DTO.class )
 
     }
 
@@ -588,7 +588,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    SwapV3DTO.class )
+                    UniswapV3SwapV3DTO.class )
 
     }
 
@@ -681,7 +681,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TickV3DTO.class )
+                    UniswapV3TickV3DTO.class )
 
     }
 
@@ -704,7 +704,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TickDayDataV3DTO.class )
+                    UniswapV3TickDayDataV3DTO.class )
 
     }
 
@@ -832,7 +832,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenV3DTO.class )
+                    UniswapV3TokenV3DTO.class )
 
     }
 
@@ -855,7 +855,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenV3DayDataDTO.class )
+                    UniswapV3TokenV3DayDataDTO.class )
 
     }
 
@@ -913,7 +913,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    TokenHourDataV3DTO.class )
+                    UniswapV3TokenHourDataV3DTO.class )
 
     }
 
@@ -965,7 +965,7 @@ class UniswapV3Api {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
-                    UniswapDayDataV3DTO.class )
+                    UniswapV3UniswapDayDataV3DTO.class )
 
     }
 

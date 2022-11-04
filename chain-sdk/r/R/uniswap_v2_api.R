@@ -186,12 +186,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{PairV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2PairV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[PairV2DTO]
+#' \item return type : array[UniswapV2PairV2DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -220,12 +220,12 @@
 #' \strong{ DappsUniswapv2SwapsCurrentGet } \emph{ GetSwaps }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{SwapV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2SwapV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[SwapV2DTO]
+#' \item return type : array[UniswapV2SwapV2DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -273,12 +273,12 @@
 #' \strong{ DappsUniswapv2TokensCurrentGet } \emph{ GetTokens }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{TokenV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2TokenV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[TokenV2DTO]
+#' \item return type : array[UniswapV2TokenV2DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1487,7 +1487,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[PairV2DTO]
+    #' @return array[UniswapV2PairV2DTO]
     #' @export
     DappsUniswapv2PoolsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv2PoolsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
@@ -1509,7 +1509,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param filter_pool_id (optional) Filter pool id
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[PairV2DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV2PairV2DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv2PoolsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -1552,7 +1552,7 @@ UniswapV2Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PairV2DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV2PairV2DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1675,7 +1675,7 @@ UniswapV2Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[SwapV2DTO]
+    #' @return array[UniswapV2SwapV2DTO]
     #' @export
     DappsUniswapv2SwapsCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv2SwapsCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -1696,7 +1696,7 @@ UniswapV2Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[SwapV2DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV2SwapV2DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv2SwapsCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -1736,7 +1736,7 @@ UniswapV2Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[SwapV2DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV2SwapV2DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1957,7 +1957,7 @@ UniswapV2Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[TokenV2DTO]
+    #' @return array[UniswapV2TokenV2DTO]
     #' @export
     DappsUniswapv2TokensCurrentGet = function(data_file = NULL, ...) {
       local_var_response <- self$DappsUniswapv2TokensCurrentGetWithHttpInfo(data_file = data_file, ...)
@@ -1978,7 +1978,7 @@ UniswapV2Api <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (array[TokenV2DTO]) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV2TokenV2DTO]) with additional information such as HTTP status code, headers
     #' @export
     DappsUniswapv2TokensCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -2018,7 +2018,7 @@ UniswapV2Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[TokenV2DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV2TokenV2DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

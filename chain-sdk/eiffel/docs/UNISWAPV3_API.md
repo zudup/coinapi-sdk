@@ -40,7 +40,7 @@ Feature | HTTP request | Description
 
 
 # **dapps_uniswapv3_bundle_current_get**
-> dapps_uniswapv3_bundle_current_get : detachable LIST [BUNDLE_V3_DTO]
+> dapps_uniswapv3_bundle_current_get : detachable LIST [UNISWAP_V3_BUNDLE_V3_DTO]
 
 
 GetBundles
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [BUNDLE_V3_DTO]**](BundleV3DTO.md)
+[**LIST [UNISWAP_V3_BUNDLE_V3_DTO]**](UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_burns_current_get**
-> dapps_uniswapv3_burns_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [BURN_V3_DTO]
+> dapps_uniswapv3_burns_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_BURN_V3_DTO]
 
 
 GetBurns
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [BURN_V3_DTO]**](BurnV3DTO.md)
+[**LIST [UNISWAP_V3_BURN_V3_DTO]**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_factory_current_get**
-> dapps_uniswapv3_factory_current_get (chain_id: STRING_32 ): detachable LIST [FACTORY_V3_DTO]
+> dapps_uniswapv3_factory_current_get (chain_id: STRING_32 ): detachable LIST [UNISWAP_V3_FACTORY_V3_DTO]
 
 
 GetFactory
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [FACTORY_V3_DTO]**](FactoryV3DTO.md)
+[**LIST [UNISWAP_V3_FACTORY_V3_DTO]**](UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_mints_current_get**
-> dapps_uniswapv3_mints_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [MINT_V3_DTO]
+> dapps_uniswapv3_mints_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_MINT_V3_DTO]
 
 
 GetMints
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [MINT_V3_DTO]**](MintV3DTO.md)
+[**LIST [UNISWAP_V3_MINT_V3_DTO]**](UniswapV3MintV3DTO.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_current_get**
-> dapps_uniswapv3_pools_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_V3_DTO]
+> dapps_uniswapv3_pools_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_V3_DTO]
 
 
 GetPools
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [POOL_V3_DTO]**](PoolV3DTO.md)
+[**LIST [UNISWAP_V3_POOL_V3_DTO]**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -398,7 +398,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_day_data_current_get**
-> dapps_uniswapv3_pools_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_DAY_DATA_V3_DTO]
+> dapps_uniswapv3_pools_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
 
 
 GetPoolsDayData
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [POOL_DAY_DATA_V3_DTO]**](PoolDayDataV3DTO.md)
+[**LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]**](UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_pools_hour_data_current_get**
-> dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POOL_HOUR_DATA_V3_DTO]
+> dapps_uniswapv3_pools_hour_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
 
 
 GetPoolsHourData
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [POOL_HOUR_DATA_V3_DTO]**](PoolHourDataV3DTO.md)
+[**LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]**](UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -518,7 +518,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_position_snapshots_current_get**
-> dapps_uniswapv3_position_snapshots_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_SNAPSHOT_V3_DTO]
+> dapps_uniswapv3_position_snapshots_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
 
 
 GetPositionSnapshot
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [POSITION_SNAPSHOT_V3_DTO]**](PositionSnapshotV3DTO.md)
+[**LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]**](UniswapV3PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_positions_current_get**
-> dapps_uniswapv3_positions_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [POSITION_V3_DTO]
+> dapps_uniswapv3_positions_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POSITION_V3_DTO]
 
 
 GetPositions
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [POSITION_V3_DTO]**](PositionV3DTO.md)
+[**LIST [UNISWAP_V3_POSITION_V3_DTO]**](UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -606,7 +606,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_swaps_current_get**
-> dapps_uniswapv3_swaps_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [SWAP_V3_DTO]
+> dapps_uniswapv3_swaps_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_SWAP_V3_DTO]
 
 
 GetSwaps
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [SWAP_V3_DTO]**](SwapV3DTO.md)
+[**LIST [UNISWAP_V3_SWAP_V3_DTO]**](UniswapV3SwapV3DTO.md)
 
 ### Authorization
 
@@ -698,7 +698,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_ticks_current_get**
-> dapps_uniswapv3_ticks_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_V3_DTO]
+> dapps_uniswapv3_ticks_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TICK_V3_DTO]
 
 
 GetTicks
@@ -712,7 +712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TICK_V3_DTO]**](TickV3DTO.md)
+[**LIST [UNISWAP_V3_TICK_V3_DTO]**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -726,7 +726,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_ticks_day_data_current_get**
-> dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [TICK_DAY_DATA_V3_DTO]
+> dapps_uniswapv3_ticks_day_data_current_get (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
 
 
 GetTicksDayData
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TICK_DAY_DATA_V3_DTO]**](TickDayDataV3DTO.md)
+[**LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]**](UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -850,7 +850,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_current_get**
-> dapps_uniswapv3_tokens_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DTO]
+> dapps_uniswapv3_tokens_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_V3_DTO]
 
 
 GetTokens
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TOKEN_V3_DTO]**](TokenV3DTO.md)
+[**LIST [UNISWAP_V3_TOKEN_V3_DTO]**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -878,7 +878,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_day_data_current_get**
-> dapps_uniswapv3_tokens_day_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_V3_DAY_DATA_DTO]
+> dapps_uniswapv3_tokens_day_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
 
 
 GetTokensDayData
@@ -892,7 +892,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TOKEN_V3_DAY_DATA_DTO]**](TokenV3DayDataDTO.md)
+[**LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]**](UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -938,7 +938,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_tokens_hour_data_current_get**
-> dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [TOKEN_HOUR_DATA_V3_DTO]
+> dapps_uniswapv3_tokens_hour_data_current_get (filter_token_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
 
 
 GetTokensHourData
@@ -952,7 +952,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [TOKEN_HOUR_DATA_V3_DTO]**](TokenHourDataV3DTO.md)
+[**LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]**](UniswapV3TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -997,7 +997,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_uniswapv3_uniswap_day_data_current_get**
-> dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_DAY_DATA_V3_DTO]
+> dapps_uniswapv3_uniswap_day_data_current_get : detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
 
 
 GetUniswapDayData
@@ -1008,7 +1008,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [UNISWAP_DAY_DATA_V3_DTO]**](UniswapDayDataV3DTO.md)
+[**LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

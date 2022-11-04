@@ -932,10 +932,10 @@ sub dapps_uniswapv2_pool_hour_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv2_pools_current_get' } = {
         summary => 'GetPools',
         params => $params,
-        returns => 'ARRAY[PairV2DTO]',
+        returns => 'ARRAY[UniswapV2PairV2DTO]',
         };
 }
-# @return ARRAY[PairV2DTO]
+# @return ARRAY[UniswapV2PairV2DTO]
 #
 sub dapps_uniswapv2_pools_current_get {
     my ($self, %args) = @_;
@@ -971,7 +971,7 @@ sub dapps_uniswapv2_pools_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[PairV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairV2DTO]', $response);
     return $_response_object;
 }
 
@@ -1086,10 +1086,10 @@ sub dapps_uniswapv2_pools_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv2_swaps_current_get' } = {
         summary => 'GetSwaps',
         params => $params,
-        returns => 'ARRAY[SwapV2DTO]',
+        returns => 'ARRAY[UniswapV2SwapV2DTO]',
         };
 }
-# @return ARRAY[SwapV2DTO]
+# @return ARRAY[UniswapV2SwapV2DTO]
 #
 sub dapps_uniswapv2_swaps_current_get {
     my ($self, %args) = @_;
@@ -1120,7 +1120,7 @@ sub dapps_uniswapv2_swaps_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SwapV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapV2DTO]', $response);
     return $_response_object;
 }
 
@@ -1335,10 +1335,10 @@ sub dapps_uniswapv2_token_day_data_historical_get {
     __PACKAGE__->method_documentation->{ 'dapps_uniswapv2_tokens_current_get' } = {
         summary => 'GetTokens',
         params => $params,
-        returns => 'ARRAY[TokenV2DTO]',
+        returns => 'ARRAY[UniswapV2TokenV2DTO]',
         };
 }
-# @return ARRAY[TokenV2DTO]
+# @return ARRAY[UniswapV2TokenV2DTO]
 #
 sub dapps_uniswapv2_tokens_current_get {
     my ($self, %args) = @_;
@@ -1369,7 +1369,7 @@ sub dapps_uniswapv2_tokens_current_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[TokenV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenV2DTO]', $response);
     return $_response_object;
 }
 

@@ -3,30 +3,30 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
-            [on-chain-api.specs.factory-v3-dto :refer :all]
-            [on-chain-api.specs.token-hour-data-v3-dto :refer :all]
-            [on-chain-api.specs.swap-v3-dto :refer :all]
-            [on-chain-api.specs.token-v2-dto :refer :all]
-            [on-chain-api.specs.pair-dto :refer :all]
-            [on-chain-api.specs.pair-v2-dto :refer :all]
-            [on-chain-api.specs.bundle-v3-dto :refer :all]
-            [on-chain-api.specs.position-snapshot-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.pool-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.pool-v3-dto :refer :all]
-            [on-chain-api.specs.big-integer :refer :all]
-            [on-chain-api.specs.pool-hour-data-v3-dto :refer :all]
-            [on-chain-api.specs.tick-v3-dto :refer :all]
-            [on-chain-api.specs.mint-v3-dto :refer :all]
-            [on-chain-api.specs.tick-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.swap-v2-dto :refer :all]
-            [on-chain-api.specs.swap-dto :refer :all]
-            [on-chain-api.specs.token-dto :refer :all]
-            [on-chain-api.specs.token-v3-dto :refer :all]
-            [on-chain-api.specs.e-trade-aggressive-side :refer :all]
-            [on-chain-api.specs.position-v3-dto :refer :all]
-            [on-chain-api.specs.burn-v3-dto :refer :all]
-            [on-chain-api.specs.token-v3-day-data-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-tick-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.sushiswap-pair-dto :refer :all]
+            [on-chain-api.specs.transactions-e-trade-aggressive-side :refer :all]
+            [on-chain-api.specs.uniswap-v3-token-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2-token-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-position-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-token-v3-day-data-dto :refer :all]
+            [on-chain-api.specs.sushiswap-swap-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-bundle-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-swap-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-token-hour-data-v3-dto :refer :all]
+            [on-chain-api.specs.sushiswap-token-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-uniswap-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-burn-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-pool-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-tick-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-pool-hour-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-position-snapshot-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-pool-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2-pair-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2-swap-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3-factory-v3-dto :refer :all]
+            [on-chain-api.specs.numerics-big-integer :refer :all]
+            [on-chain-api.specs.uniswap-v3-mint-v3-dto :refer :all]
             )
   (:import (java.io File)))
 
@@ -251,13 +251,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv2-pools-current-get (s/coll-of pair-v2-dto-spec)
+(defn-spec dapps-uniswapv2-pools-current-get (s/coll-of uniswap-v2-pair-v2-dto-spec)
   "GetPools"
   ([] (dapps-uniswapv2-pools-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv2-pools-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of pair-v2-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v2-pair-v2-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -296,12 +296,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-uniswapv2-swaps-current-get (s/coll-of swap-v2-dto-spec)
+(defn-spec dapps-uniswapv2-swaps-current-get (s/coll-of uniswap-v2-swap-v2-dto-spec)
   "GetSwaps"
   []
   (let [res (:data (dapps-uniswapv2-swaps-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of swap-v2-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of uniswap-v2-swap-v2-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -363,12 +363,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-uniswapv2-tokens-current-get (s/coll-of token-v2-dto-spec)
+(defn-spec dapps-uniswapv2-tokens-current-get (s/coll-of uniswap-v2-token-v2-dto-spec)
   "GetTokens"
   []
   (let [res (:data (dapps-uniswapv2-tokens-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of token-v2-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of uniswap-v2-token-v2-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -453,12 +453,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-uniswapv3-bundle-current-get (s/coll-of bundle-v3-dto-spec)
+(defn-spec dapps-uniswapv3-bundle-current-get (s/coll-of uniswap-v3-bundle-v3-dto-spec)
   "GetBundles"
   []
   (let [res (:data (dapps-uniswapv3-bundle-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of bundle-v3-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of uniswap-v3-bundle-v3-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -498,13 +498,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-burns-current-get (s/coll-of burn-v3-dto-spec)
+(defn-spec dapps-uniswapv3-burns-current-get (s/coll-of uniswap-v3-burn-v3-dto-spec)
   "GetBurns"
   ([] (dapps-uniswapv3-burns-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-burns-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of burn-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-burn-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -567,12 +567,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-uniswapv3-factory-current-get (s/coll-of factory-v3-dto-spec)
+(defn-spec dapps-uniswapv3-factory-current-get (s/coll-of uniswap-v3-factory-v3-dto-spec)
   "GetFactory"
   [chain_id string?]
   (let [res (:data (dapps-uniswapv3-factory-current-get-with-http-info chain_id))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of factory-v3-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of uniswap-v3-factory-v3-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -612,13 +612,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-mints-current-get (s/coll-of mint-v3-dto-spec)
+(defn-spec dapps-uniswapv3-mints-current-get (s/coll-of uniswap-v3-mint-v3-dto-spec)
   "GetMints"
   ([] (dapps-uniswapv3-mints-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-mints-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of mint-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-mint-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -704,13 +704,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-pools-current-get (s/coll-of pool-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-current-get (s/coll-of uniswap-v3-pool-v3-dto-spec)
   "GetPools"
   ([] (dapps-uniswapv3-pools-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-pools-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of pool-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-pool-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -727,13 +727,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-pools-day-data-current-get (s/coll-of pool-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-day-data-current-get (s/coll-of uniswap-v3-pool-day-data-v3-dto-spec)
   "GetPoolsDayData"
   ([] (dapps-uniswapv3-pools-day-data-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-pools-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of pool-day-data-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-pool-day-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -773,13 +773,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-pools-hour-data-current-get (s/coll-of pool-hour-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-pools-hour-data-current-get (s/coll-of uniswap-v3-pool-hour-data-v3-dto-spec)
   "GetPoolsHourData"
   ([] (dapps-uniswapv3-pools-hour-data-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-pools-hour-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of pool-hour-data-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-pool-hour-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -819,13 +819,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-position-snapshots-current-get (s/coll-of position-snapshot-v3-dto-spec)
+(defn-spec dapps-uniswapv3-position-snapshots-current-get (s/coll-of uniswap-v3-position-snapshot-v3-dto-spec)
   "GetPositionSnapshot"
   ([] (dapps-uniswapv3-position-snapshots-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-position-snapshots-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of position-snapshot-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-position-snapshot-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -842,13 +842,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-positions-current-get (s/coll-of position-v3-dto-spec)
+(defn-spec dapps-uniswapv3-positions-current-get (s/coll-of uniswap-v3-position-v3-dto-spec)
   "GetPositions"
   ([] (dapps-uniswapv3-positions-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-positions-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of position-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-position-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -888,13 +888,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-swaps-current-get (s/coll-of swap-v3-dto-spec)
+(defn-spec dapps-uniswapv3-swaps-current-get (s/coll-of uniswap-v3-swap-v3-dto-spec)
   "GetSwaps"
   ([] (dapps-uniswapv3-swaps-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-swaps-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of swap-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-swap-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -957,13 +957,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-ticks-current-get (s/coll-of tick-v3-dto-spec)
+(defn-spec dapps-uniswapv3-ticks-current-get (s/coll-of uniswap-v3-tick-v3-dto-spec)
   "GetTicks"
   ([] (dapps-uniswapv3-ticks-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-ticks-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of tick-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-tick-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -980,13 +980,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-ticks-day-data-current-get (s/coll-of tick-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-ticks-day-data-current-get (s/coll-of uniswap-v3-tick-day-data-v3-dto-spec)
   "GetTicksDayData"
   ([] (dapps-uniswapv3-ticks-day-data-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-ticks-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of tick-day-data-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-tick-day-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1072,13 +1072,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-tokens-current-get (s/coll-of token-v3-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-current-get (s/coll-of uniswap-v3-token-v3-dto-spec)
   "GetTokens"
   ([] (dapps-uniswapv3-tokens-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-tokens-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of token-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-token-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1095,13 +1095,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-tokens-day-data-current-get (s/coll-of token-v3-day-data-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-day-data-current-get (s/coll-of uniswap-v3-token-v3-day-data-dto-spec)
   "GetTokensDayData"
   ([] (dapps-uniswapv3-tokens-day-data-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-tokens-day-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of token-v3-day-data-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-token-v3-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1141,13 +1141,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-uniswapv3-tokens-hour-data-current-get (s/coll-of token-hour-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-tokens-hour-data-current-get (s/coll-of uniswap-v3-token-hour-data-v3-dto-spec)
   "GetTokensHourData"
   ([] (dapps-uniswapv3-tokens-hour-data-current-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-tokens-hour-data-current-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of token-hour-data-v3-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of uniswap-v3-token-hour-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1186,12 +1186,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-uniswapv3-uniswap-day-data-current-get (s/coll-of uniswap-day-data-v3-dto-spec)
+(defn-spec dapps-uniswapv3-uniswap-day-data-current-get (s/coll-of uniswap-v3-uniswap-day-data-v3-dto-spec)
   "GetUniswapDayData"
   []
   (let [res (:data (dapps-uniswapv3-uniswap-day-data-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-day-data-v3-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of uniswap-v3-uniswap-day-data-v3-dto-spec) res st/string-transformer)
        res)))
 
 

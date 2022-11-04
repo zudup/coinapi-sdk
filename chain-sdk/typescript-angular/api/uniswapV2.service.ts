@@ -19,11 +19,11 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { PairV2DTO } from '../model/pairV2DTO';
+import { UniswapV2PairV2DTO } from '../model/uniswapV2PairV2DTO';
 // @ts-ignore
-import { SwapV2DTO } from '../model/swapV2DTO';
+import { UniswapV2SwapV2DTO } from '../model/uniswapV2SwapV2DTO';
 // @ts-ignore
-import { TokenV2DTO } from '../model/tokenV2DTO';
+import { UniswapV2TokenV2DTO } from '../model/uniswapV2TokenV2DTO';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -806,9 +806,9 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<PairV2DTO>>;
-    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<PairV2DTO>>>;
-    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<PairV2DTO>>>;
+    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairV2DTO>>;
+    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairV2DTO>>>;
+    public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairV2DTO>>>;
     public dappsUniswapv2PoolsCurrentGet(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -851,7 +851,7 @@ export class UniswapV2Service {
         }
 
         let localVarPath = `/dapps/uniswapv2/pools/current`;
-        return this.httpClient.request<Array<PairV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV2PairV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -949,9 +949,9 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv2SwapsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<SwapV2DTO>>;
-    public dappsUniswapv2SwapsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<SwapV2DTO>>>;
-    public dappsUniswapv2SwapsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<SwapV2DTO>>>;
+    public dappsUniswapv2SwapsCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2SwapV2DTO>>;
+    public dappsUniswapv2SwapsCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2SwapV2DTO>>>;
+    public dappsUniswapv2SwapsCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2SwapV2DTO>>>;
     public dappsUniswapv2SwapsCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -988,7 +988,7 @@ export class UniswapV2Service {
         }
 
         let localVarPath = `/dapps/uniswapv2/swaps/current`;
-        return this.httpClient.request<Array<SwapV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV2SwapV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -1165,9 +1165,9 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public dappsUniswapv2TokensCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<TokenV2DTO>>;
-    public dappsUniswapv2TokensCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<TokenV2DTO>>>;
-    public dappsUniswapv2TokensCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<TokenV2DTO>>>;
+    public dappsUniswapv2TokensCurrentGet(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenV2DTO>>;
+    public dappsUniswapv2TokensCurrentGet(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenV2DTO>>>;
+    public dappsUniswapv2TokensCurrentGet(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenV2DTO>>>;
     public dappsUniswapv2TokensCurrentGet(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -1204,7 +1204,7 @@ export class UniswapV2Service {
         }
 
         let localVarPath = `/dapps/uniswapv2/tokens/current`;
-        return this.httpClient.request<Array<TokenV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV2TokenV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,

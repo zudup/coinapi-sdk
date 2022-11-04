@@ -623,7 +623,7 @@ No authorization required
 
 <a name="dappsUniswapv2PoolsCurrentGet"></a>
 # **dappsUniswapv2PoolsCurrentGet**
-> List&lt;PairV2DTO&gt; dappsUniswapv2PoolsCurrentGet(filterPoolId)
+> List&lt;UniswapV2PairV2DTO&gt; dappsUniswapv2PoolsCurrentGet(filterPoolId)
 
 GetPools
 
@@ -644,7 +644,7 @@ public class Example {
     UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
     String filterPoolId = "filterPoolId_example"; // String | Filter pool id
     try {
-      List<PairV2DTO> result = apiInstance.dappsUniswapv2PoolsCurrentGet(filterPoolId);
+      List<UniswapV2PairV2DTO> result = apiInstance.dappsUniswapv2PoolsCurrentGet(filterPoolId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2PoolsCurrentGet");
@@ -665,7 +665,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;PairV2DTO&gt;**](PairV2DTO.md)
+[**List&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
 
 ### Authorization
 
@@ -750,7 +750,7 @@ No authorization required
 
 <a name="dappsUniswapv2SwapsCurrentGet"></a>
 # **dappsUniswapv2SwapsCurrentGet**
-> List&lt;SwapV2DTO&gt; dappsUniswapv2SwapsCurrentGet()
+> List&lt;UniswapV2SwapV2DTO&gt; dappsUniswapv2SwapsCurrentGet()
 
 GetSwaps
 
@@ -770,7 +770,7 @@ public class Example {
 
     UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
     try {
-      List<SwapV2DTO> result = apiInstance.dappsUniswapv2SwapsCurrentGet();
+      List<UniswapV2SwapV2DTO> result = apiInstance.dappsUniswapv2SwapsCurrentGet();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2SwapsCurrentGet");
@@ -788,7 +788,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;SwapV2DTO&gt;**](SwapV2DTO.md)
+[**List&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -940,7 +940,7 @@ No authorization required
 
 <a name="dappsUniswapv2TokensCurrentGet"></a>
 # **dappsUniswapv2TokensCurrentGet**
-> List&lt;TokenV2DTO&gt; dappsUniswapv2TokensCurrentGet()
+> List&lt;UniswapV2TokenV2DTO&gt; dappsUniswapv2TokensCurrentGet()
 
 GetTokens
 
@@ -960,7 +960,7 @@ public class Example {
 
     UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
     try {
-      List<TokenV2DTO> result = apiInstance.dappsUniswapv2TokensCurrentGet();
+      List<UniswapV2TokenV2DTO> result = apiInstance.dappsUniswapv2TokensCurrentGet();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2TokensCurrentGet");
@@ -978,7 +978,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;TokenV2DTO&gt;**](TokenV2DTO.md)
+[**List&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
 
 ### Authorization
 

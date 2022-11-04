@@ -21,7 +21,7 @@ module OpenapiClient
     end
     # GetBundles
     # @param [Hash] opts the optional parameters
-    # @return [Array<BundleV3DTO>]
+    # @return [Array<UniswapV3BundleV3DTO>]
     def dapps_uniswapv3_bundle_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_bundle_current_get_with_http_info(opts)
       data
@@ -29,7 +29,7 @@ module OpenapiClient
 
     # GetBundles
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<BundleV3DTO>, Integer, Hash)>] Array<BundleV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3BundleV3DTO>, Integer, Hash)>] Array<UniswapV3BundleV3DTO> data, response status code and response headers
     def dapps_uniswapv3_bundle_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_bundle_current_get ...'
@@ -52,7 +52,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<BundleV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3BundleV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -140,7 +140,7 @@ module OpenapiClient
     # GetBurns
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<BurnV3DTO>]
+    # @return [Array<UniswapV3BurnV3DTO>]
     def dapps_uniswapv3_burns_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_burns_current_get_with_http_info(opts)
       data
@@ -149,7 +149,7 @@ module OpenapiClient
     # GetBurns
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<BurnV3DTO>, Integer, Hash)>] Array<BurnV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3BurnV3DTO>, Integer, Hash)>] Array<UniswapV3BurnV3DTO> data, response status code and response headers
     def dapps_uniswapv3_burns_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_burns_current_get ...'
@@ -173,7 +173,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<BurnV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3BurnV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -327,7 +327,7 @@ module OpenapiClient
     # GetFactory
     # @param chain_id [String] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<FactoryV3DTO>]
+    # @return [Array<UniswapV3FactoryV3DTO>]
     def dapps_uniswapv3_factory_current_get(chain_id, opts = {})
       data, _status_code, _headers = dapps_uniswapv3_factory_current_get_with_http_info(chain_id, opts)
       data
@@ -336,7 +336,7 @@ module OpenapiClient
     # GetFactory
     # @param chain_id [String] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<FactoryV3DTO>, Integer, Hash)>] Array<FactoryV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3FactoryV3DTO>, Integer, Hash)>] Array<UniswapV3FactoryV3DTO> data, response status code and response headers
     def dapps_uniswapv3_factory_current_get_with_http_info(chain_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_factory_current_get ...'
@@ -363,7 +363,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<FactoryV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3FactoryV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -451,7 +451,7 @@ module OpenapiClient
     # GetMints
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<MintV3DTO>]
+    # @return [Array<UniswapV3MintV3DTO>]
     def dapps_uniswapv3_mints_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_mints_current_get_with_http_info(opts)
       data
@@ -460,7 +460,7 @@ module OpenapiClient
     # GetMints
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<MintV3DTO>, Integer, Hash)>] Array<MintV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3MintV3DTO>, Integer, Hash)>] Array<UniswapV3MintV3DTO> data, response status code and response headers
     def dapps_uniswapv3_mints_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_mints_current_get ...'
@@ -484,7 +484,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<MintV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3MintV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -707,7 +707,7 @@ module OpenapiClient
     # GetPools
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PoolV3DTO>]
+    # @return [Array<UniswapV3PoolV3DTO>]
     def dapps_uniswapv3_pools_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_pools_current_get_with_http_info(opts)
       data
@@ -716,7 +716,7 @@ module OpenapiClient
     # GetPools
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PoolV3DTO>, Integer, Hash)>] Array<PoolV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3PoolV3DTO>, Integer, Hash)>] Array<UniswapV3PoolV3DTO> data, response status code and response headers
     def dapps_uniswapv3_pools_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_pools_current_get ...'
@@ -740,7 +740,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PoolV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3PoolV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -765,7 +765,7 @@ module OpenapiClient
     # GetPoolsDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PoolDayDataV3DTO>]
+    # @return [Array<UniswapV3PoolDayDataV3DTO>]
     def dapps_uniswapv3_pools_day_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_pools_day_data_current_get_with_http_info(opts)
       data
@@ -774,7 +774,7 @@ module OpenapiClient
     # GetPoolsDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PoolDayDataV3DTO>, Integer, Hash)>] Array<PoolDayDataV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3PoolDayDataV3DTO>, Integer, Hash)>] Array<UniswapV3PoolDayDataV3DTO> data, response status code and response headers
     def dapps_uniswapv3_pools_day_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_pools_day_data_current_get ...'
@@ -798,7 +798,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PoolDayDataV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3PoolDayDataV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -889,7 +889,7 @@ module OpenapiClient
     # GetPoolsHourData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PoolHourDataV3DTO>]
+    # @return [Array<UniswapV3PoolHourDataV3DTO>]
     def dapps_uniswapv3_pools_hour_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_pools_hour_data_current_get_with_http_info(opts)
       data
@@ -898,7 +898,7 @@ module OpenapiClient
     # GetPoolsHourData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PoolHourDataV3DTO>, Integer, Hash)>] Array<PoolHourDataV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3PoolHourDataV3DTO>, Integer, Hash)>] Array<UniswapV3PoolHourDataV3DTO> data, response status code and response headers
     def dapps_uniswapv3_pools_hour_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_pools_hour_data_current_get ...'
@@ -922,7 +922,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PoolHourDataV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3PoolHourDataV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1013,7 +1013,7 @@ module OpenapiClient
     # GetPositionSnapshot
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PositionSnapshotV3DTO>]
+    # @return [Array<UniswapV3PositionSnapshotV3DTO>]
     def dapps_uniswapv3_position_snapshots_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_position_snapshots_current_get_with_http_info(opts)
       data
@@ -1022,7 +1022,7 @@ module OpenapiClient
     # GetPositionSnapshot
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PositionSnapshotV3DTO>, Integer, Hash)>] Array<PositionSnapshotV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3PositionSnapshotV3DTO>, Integer, Hash)>] Array<UniswapV3PositionSnapshotV3DTO> data, response status code and response headers
     def dapps_uniswapv3_position_snapshots_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_position_snapshots_current_get ...'
@@ -1046,7 +1046,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PositionSnapshotV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3PositionSnapshotV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1071,7 +1071,7 @@ module OpenapiClient
     # GetPositions
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<PositionV3DTO>]
+    # @return [Array<UniswapV3PositionV3DTO>]
     def dapps_uniswapv3_positions_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_positions_current_get_with_http_info(opts)
       data
@@ -1080,7 +1080,7 @@ module OpenapiClient
     # GetPositions
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<PositionV3DTO>, Integer, Hash)>] Array<PositionV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3PositionV3DTO>, Integer, Hash)>] Array<UniswapV3PositionV3DTO> data, response status code and response headers
     def dapps_uniswapv3_positions_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_positions_current_get ...'
@@ -1104,7 +1104,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<PositionV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3PositionV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1195,7 +1195,7 @@ module OpenapiClient
     # GetSwaps
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<SwapV3DTO>]
+    # @return [Array<UniswapV3SwapV3DTO>]
     def dapps_uniswapv3_swaps_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_swaps_current_get_with_http_info(opts)
       data
@@ -1204,7 +1204,7 @@ module OpenapiClient
     # GetSwaps
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<SwapV3DTO>, Integer, Hash)>] Array<SwapV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3SwapV3DTO>, Integer, Hash)>] Array<UniswapV3SwapV3DTO> data, response status code and response headers
     def dapps_uniswapv3_swaps_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_swaps_current_get ...'
@@ -1228,7 +1228,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SwapV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3SwapV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1385,7 +1385,7 @@ module OpenapiClient
     # GetTicks
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<TickV3DTO>]
+    # @return [Array<UniswapV3TickV3DTO>]
     def dapps_uniswapv3_ticks_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_ticks_current_get_with_http_info(opts)
       data
@@ -1394,7 +1394,7 @@ module OpenapiClient
     # GetTicks
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<TickV3DTO>, Integer, Hash)>] Array<TickV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3TickV3DTO>, Integer, Hash)>] Array<UniswapV3TickV3DTO> data, response status code and response headers
     def dapps_uniswapv3_ticks_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_ticks_current_get ...'
@@ -1418,7 +1418,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TickV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3TickV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1443,7 +1443,7 @@ module OpenapiClient
     # GetTicksDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<TickDayDataV3DTO>]
+    # @return [Array<UniswapV3TickDayDataV3DTO>]
     def dapps_uniswapv3_ticks_day_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_ticks_day_data_current_get_with_http_info(opts)
       data
@@ -1452,7 +1452,7 @@ module OpenapiClient
     # GetTicksDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id Filter pool id
-    # @return [Array<(Array<TickDayDataV3DTO>, Integer, Hash)>] Array<TickDayDataV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3TickDayDataV3DTO>, Integer, Hash)>] Array<UniswapV3TickDayDataV3DTO> data, response status code and response headers
     def dapps_uniswapv3_ticks_day_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_ticks_day_data_current_get ...'
@@ -1476,7 +1476,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TickDayDataV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3TickDayDataV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1699,7 +1699,7 @@ module OpenapiClient
     # GetTokens
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<TokenV3DTO>]
+    # @return [Array<UniswapV3TokenV3DTO>]
     def dapps_uniswapv3_tokens_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_tokens_current_get_with_http_info(opts)
       data
@@ -1708,7 +1708,7 @@ module OpenapiClient
     # GetTokens
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<(Array<TokenV3DTO>, Integer, Hash)>] Array<TokenV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3TokenV3DTO>, Integer, Hash)>] Array<UniswapV3TokenV3DTO> data, response status code and response headers
     def dapps_uniswapv3_tokens_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_tokens_current_get ...'
@@ -1732,7 +1732,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3TokenV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1757,7 +1757,7 @@ module OpenapiClient
     # GetTokensDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<TokenV3DayDataDTO>]
+    # @return [Array<UniswapV3TokenV3DayDataDTO>]
     def dapps_uniswapv3_tokens_day_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_tokens_day_data_current_get_with_http_info(opts)
       data
@@ -1766,7 +1766,7 @@ module OpenapiClient
     # GetTokensDayData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<(Array<TokenV3DayDataDTO>, Integer, Hash)>] Array<TokenV3DayDataDTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3TokenV3DayDataDTO>, Integer, Hash)>] Array<UniswapV3TokenV3DayDataDTO> data, response status code and response headers
     def dapps_uniswapv3_tokens_day_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_tokens_day_data_current_get ...'
@@ -1790,7 +1790,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenV3DayDataDTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3TokenV3DayDataDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -1881,7 +1881,7 @@ module OpenapiClient
     # GetTokensHourData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<TokenHourDataV3DTO>]
+    # @return [Array<UniswapV3TokenHourDataV3DTO>]
     def dapps_uniswapv3_tokens_hour_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_tokens_hour_data_current_get_with_http_info(opts)
       data
@@ -1890,7 +1890,7 @@ module OpenapiClient
     # GetTokensHourData
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
-    # @return [Array<(Array<TokenHourDataV3DTO>, Integer, Hash)>] Array<TokenHourDataV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3TokenHourDataV3DTO>, Integer, Hash)>] Array<UniswapV3TokenHourDataV3DTO> data, response status code and response headers
     def dapps_uniswapv3_tokens_hour_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_tokens_hour_data_current_get ...'
@@ -1914,7 +1914,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<TokenHourDataV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3TokenHourDataV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -2001,7 +2001,7 @@ module OpenapiClient
 
     # GetUniswapDayData
     # @param [Hash] opts the optional parameters
-    # @return [Array<UniswapDayDataV3DTO>]
+    # @return [Array<UniswapV3UniswapDayDataV3DTO>]
     def dapps_uniswapv3_uniswap_day_data_current_get(opts = {})
       data, _status_code, _headers = dapps_uniswapv3_uniswap_day_data_current_get_with_http_info(opts)
       data
@@ -2009,7 +2009,7 @@ module OpenapiClient
 
     # GetUniswapDayData
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<UniswapDayDataV3DTO>, Integer, Hash)>] Array<UniswapDayDataV3DTO> data, response status code and response headers
+    # @return [Array<(Array<UniswapV3UniswapDayDataV3DTO>, Integer, Hash)>] Array<UniswapV3UniswapDayDataV3DTO> data, response status code and response headers
     def dapps_uniswapv3_uniswap_day_data_current_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniswapV3Api.dapps_uniswapv3_uniswap_day_data_current_get ...'
@@ -2032,7 +2032,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<UniswapDayDataV3DTO>'
+      return_type = opts[:debug_return_type] || 'Array<UniswapV3UniswapDayDataV3DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
