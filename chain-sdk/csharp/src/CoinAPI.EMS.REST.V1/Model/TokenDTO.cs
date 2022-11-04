@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TokenDTO
+    /// Stores aggregated information for a specific token across all pairs that token is included in.
     /// </summary>
     [DataContract]
     public partial class TokenDTO :  IEquatable<TokenDTO>, IValidatableObject
@@ -35,20 +35,20 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="factory">factory.</param>
-        /// <param name="symbol">symbol.</param>
-        /// <param name="name">name.</param>
-        /// <param name="decimals">decimals.</param>
-        /// <param name="totalSupply">totalSupply.</param>
-        /// <param name="volume">volume.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
-        /// <param name="txCount">txCount.</param>
-        /// <param name="liquidity">liquidity.</param>
-        /// <param name="derivedEth">derivedEth.</param>
-        /// <param name="whitelistPairs">whitelistPairs.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">Token address..</param>
+        /// <param name="factory">Factory address..</param>
+        /// <param name="symbol">Token symbol..</param>
+        /// <param name="name">Token name..</param>
+        /// <param name="decimals">Token decimals..</param>
+        /// <param name="totalSupply">Total supply of liquidity token..</param>
+        /// <param name="volume">Amount of token traded all time across all pairs..</param>
+        /// <param name="volumeUsd">Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)..</param>
+        /// <param name="untrackedVolumeUsd">Amount of token in USD traded all time across pairs (no minimum liquidity threshold)..</param>
+        /// <param name="txCount">Amount of transactions all time in pairs including token..</param>
+        /// <param name="liquidity">Total amount of token provided as liquidity across all pairs..</param>
+        /// <param name="derivedEth">ETH per token..</param>
+        /// <param name="whitelistPairs">Array of whitelisted pairs..</param>
         /// <param name="vid">vid.</param>
         public TokenDTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string factory = default(string), string symbol = default(string), string name = default(string), string decimals = default(string), string totalSupply = default(string), string volume = default(string), string volumeUsd = default(string), string untrackedVolumeUsd = default(string), string txCount = default(string), string liquidity = default(string), string derivedEth = default(string), List<string> whitelistPairs = default(List<string>), long vid = default(long))
         {
@@ -97,86 +97,100 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Token address.
         /// </summary>
+        /// <value>Token address.</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Factory
+        /// Factory address.
         /// </summary>
+        /// <value>Factory address.</value>
         [DataMember(Name="factory", EmitDefaultValue=true)]
         public string Factory { get; set; }
 
         /// <summary>
-        /// Gets or Sets Symbol
+        /// Token symbol.
         /// </summary>
+        /// <value>Token symbol.</value>
         [DataMember(Name="symbol", EmitDefaultValue=true)]
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Token name.
         /// </summary>
+        /// <value>Token name.</value>
         [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Decimals
+        /// Token decimals.
         /// </summary>
+        /// <value>Token decimals.</value>
         [DataMember(Name="decimals", EmitDefaultValue=true)]
         public string Decimals { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalSupply
+        /// Total supply of liquidity token.
         /// </summary>
+        /// <value>Total supply of liquidity token.</value>
         [DataMember(Name="total_supply", EmitDefaultValue=true)]
         public string TotalSupply { get; set; }
 
         /// <summary>
-        /// Gets or Sets Volume
+        /// Amount of token traded all time across all pairs.
         /// </summary>
+        /// <value>Amount of token traded all time across all pairs.</value>
         [DataMember(Name="volume", EmitDefaultValue=true)]
         public string Volume { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
         /// </summary>
+        /// <value>Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).</value>
         [DataMember(Name="volume_usd", EmitDefaultValue=true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
         /// </summary>
+        /// <value>Amount of token in USD traded all time across pairs (no minimum liquidity threshold).</value>
         [DataMember(Name="untracked_volume_usd", EmitDefaultValue=true)]
         public string UntrackedVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TxCount
+        /// Amount of transactions all time in pairs including token.
         /// </summary>
+        /// <value>Amount of transactions all time in pairs including token.</value>
         [DataMember(Name="tx_count", EmitDefaultValue=true)]
         public string TxCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Liquidity
+        /// Total amount of token provided as liquidity across all pairs.
         /// </summary>
+        /// <value>Total amount of token provided as liquidity across all pairs.</value>
         [DataMember(Name="liquidity", EmitDefaultValue=true)]
         public string Liquidity { get; set; }
 
         /// <summary>
-        /// Gets or Sets DerivedEth
+        /// ETH per token.
         /// </summary>
+        /// <value>ETH per token.</value>
         [DataMember(Name="derived_eth", EmitDefaultValue=true)]
         public string DerivedEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets WhitelistPairs
+        /// Array of whitelisted pairs.
         /// </summary>
+        /// <value>Array of whitelisted pairs.</value>
         [DataMember(Name="whitelist_pairs", EmitDefaultValue=true)]
         public List<string> WhitelistPairs { get; set; }
 

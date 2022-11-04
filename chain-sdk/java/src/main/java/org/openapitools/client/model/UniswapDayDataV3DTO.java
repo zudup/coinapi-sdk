@@ -41,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -51,7 +52,7 @@ import org.openapitools.client.JSON;
  * Data accumulated and condensed into day stats for all of Uniswap.
  */
 @ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class UniswapDayDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -157,11 +158,11 @@ public class UniswapDayDataV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -483,9 +484,7 @@ public class UniswapDayDataV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (UniswapDayDataV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!UniswapDayDataV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UniswapDayDataV3DTO is not found in the empty JSON string", UniswapDayDataV3DTO.openapiRequiredFields.toString()));
         }
       }

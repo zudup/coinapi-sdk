@@ -69,4 +69,10 @@ model_token_v3_day_data_dto.go
 model_token_v3_dto.go
 model_uniswap_day_data_v3_dto.go
 response.go
+test/api_cow_test.go
+test/api_curve_test.go
+test/api_dex_test.go
+test/api_sushiswap_test.go
+test/api_uniswap_v2_test.go
+test/api_uniswap_v3_test.go
 utils.go

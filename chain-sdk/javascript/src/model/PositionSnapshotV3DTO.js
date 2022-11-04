@@ -108,8 +108,80 @@ class PositionSnapshotV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>PositionSnapshotV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PositionSnapshotV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['owner'] && !(typeof data['owner'] === 'string' || data['owner'] instanceof String)) {
+            throw new Error("Expected the field `owner` to be a primitive type in the JSON string but got " + data['owner']);
+        }
+        // ensure the json data is a string
+        if (data['pool'] && !(typeof data['pool'] === 'string' || data['pool'] instanceof String)) {
+            throw new Error("Expected the field `pool` to be a primitive type in the JSON string but got " + data['pool']);
+        }
+        // ensure the json data is a string
+        if (data['position'] && !(typeof data['position'] === 'string' || data['position'] instanceof String)) {
+            throw new Error("Expected the field `position` to be a primitive type in the JSON string but got " + data['position']);
+        }
+        // ensure the json data is a string
+        if (data['timestamp'] && !(typeof data['timestamp'] === 'string' || data['timestamp'] instanceof String)) {
+            throw new Error("Expected the field `timestamp` to be a primitive type in the JSON string but got " + data['timestamp']);
+        }
+        // ensure the json data is a string
+        if (data['liquidity'] && !(typeof data['liquidity'] === 'string' || data['liquidity'] instanceof String)) {
+            throw new Error("Expected the field `liquidity` to be a primitive type in the JSON string but got " + data['liquidity']);
+        }
+        // ensure the json data is a string
+        if (data['deposited_token_0'] && !(typeof data['deposited_token_0'] === 'string' || data['deposited_token_0'] instanceof String)) {
+            throw new Error("Expected the field `deposited_token_0` to be a primitive type in the JSON string but got " + data['deposited_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['deposited_token_1'] && !(typeof data['deposited_token_1'] === 'string' || data['deposited_token_1'] instanceof String)) {
+            throw new Error("Expected the field `deposited_token_1` to be a primitive type in the JSON string but got " + data['deposited_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['withdrawn_token_0'] && !(typeof data['withdrawn_token_0'] === 'string' || data['withdrawn_token_0'] instanceof String)) {
+            throw new Error("Expected the field `withdrawn_token_0` to be a primitive type in the JSON string but got " + data['withdrawn_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['withdrawn_token_1'] && !(typeof data['withdrawn_token_1'] === 'string' || data['withdrawn_token_1'] instanceof String)) {
+            throw new Error("Expected the field `withdrawn_token_1` to be a primitive type in the JSON string but got " + data['withdrawn_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['collected_fees_token_0'] && !(typeof data['collected_fees_token_0'] === 'string' || data['collected_fees_token_0'] instanceof String)) {
+            throw new Error("Expected the field `collected_fees_token_0` to be a primitive type in the JSON string but got " + data['collected_fees_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['collected_fees_token_1'] && !(typeof data['collected_fees_token_1'] === 'string' || data['collected_fees_token_1'] instanceof String)) {
+            throw new Error("Expected the field `collected_fees_token_1` to be a primitive type in the JSON string but got " + data['collected_fees_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['transaction'] && !(typeof data['transaction'] === 'string' || data['transaction'] instanceof String)) {
+            throw new Error("Expected the field `transaction` to be a primitive type in the JSON string but got " + data['transaction']);
+        }
+        // ensure the json data is a string
+        if (data['fee_growth_inside_0_last_x128'] && !(typeof data['fee_growth_inside_0_last_x128'] === 'string' || data['fee_growth_inside_0_last_x128'] instanceof String)) {
+            throw new Error("Expected the field `fee_growth_inside_0_last_x128` to be a primitive type in the JSON string but got " + data['fee_growth_inside_0_last_x128']);
+        }
+        // ensure the json data is a string
+        if (data['fee_growth_inside_1_last_x128'] && !(typeof data['fee_growth_inside_1_last_x128'] === 'string' || data['fee_growth_inside_1_last_x128'] instanceof String)) {
+            throw new Error("Expected the field `fee_growth_inside_1_last_x128` to be a primitive type in the JSON string but got " + data['fee_growth_inside_1_last_x128']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -122,97 +194,97 @@ PositionSnapshotV3DTO.prototype['entry_time'] = undefined;
 PositionSnapshotV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 PositionSnapshotV3DTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * NFT token identifier, format: <NFT token id>#<block number>
  * @member {String} id
  */
 PositionSnapshotV3DTO.prototype['id'] = undefined;
 
 /**
- * THIS IS SUPER OWNER
+ * Owner of the NFT.
  * @member {String} owner
  */
 PositionSnapshotV3DTO.prototype['owner'] = undefined;
 
 /**
- * 
+ * Pool the position is within.
  * @member {String} pool
  */
 PositionSnapshotV3DTO.prototype['pool'] = undefined;
 
 /**
- * 
+ * Position of which the snap was taken of.
  * @member {String} position
  */
 PositionSnapshotV3DTO.prototype['position'] = undefined;
 
 /**
- * 
+ * Timestamp of block in which the snap was created.
  * @member {String} timestamp
  */
 PositionSnapshotV3DTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Total position liquidity.
  * @member {String} liquidity
  */
 PositionSnapshotV3DTO.prototype['liquidity'] = undefined;
 
 /**
- * 
+ * Amount of token 0 ever deposited to position.
  * @member {String} deposited_token_0
  */
 PositionSnapshotV3DTO.prototype['deposited_token_0'] = undefined;
 
 /**
- * 
+ * Amount of token 1 ever deposited to position.
  * @member {String} deposited_token_1
  */
 PositionSnapshotV3DTO.prototype['deposited_token_1'] = undefined;
 
 /**
- * 
+ * Amount of token 0 ever withdrawn from position (without fees).
  * @member {String} withdrawn_token_0
  */
 PositionSnapshotV3DTO.prototype['withdrawn_token_0'] = undefined;
 
 /**
- * 
+ * Amount of token 1 ever withdrawn from position (without fees).
  * @member {String} withdrawn_token_1
  */
 PositionSnapshotV3DTO.prototype['withdrawn_token_1'] = undefined;
 
 /**
- * 
+ * All time collected fees in token0.
  * @member {String} collected_fees_token_0
  */
 PositionSnapshotV3DTO.prototype['collected_fees_token_0'] = undefined;
 
 /**
- * 
+ * All time collected fees in token1.
  * @member {String} collected_fees_token_1
  */
 PositionSnapshotV3DTO.prototype['collected_fees_token_1'] = undefined;
 
 /**
- * 
+ * Transaction in which the snapshot was initialized.
  * @member {String} transaction
  */
 PositionSnapshotV3DTO.prototype['transaction'] = undefined;
 
 /**
- * 
+ * Variable needed for fee computation.
  * @member {String} fee_growth_inside_0_last_x128
  */
 PositionSnapshotV3DTO.prototype['fee_growth_inside_0_last_x128'] = undefined;
 
 /**
- * 
+ * Variable needed for fee computation.
  * @member {String} fee_growth_inside_1_last_x128
  */
 PositionSnapshotV3DTO.prototype['fee_growth_inside_1_last_x128'] = undefined;

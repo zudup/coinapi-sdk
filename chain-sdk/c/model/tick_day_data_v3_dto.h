@@ -1,7 +1,7 @@
 /*
  * tick_day_data_v3_dto.h
  *
- * 
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
 
 #ifndef _tick_day_data_v3_dto_H_

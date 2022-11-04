@@ -12,10 +12,6 @@ CowAPI_dappsCowOrdersHistoricalGet(apiClient_t *apiClient, long startBlock , lon
 
 
 void
-CowAPI_dappsCowPoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
-
-
-void
 CowAPI_dappsCowSettlementHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 

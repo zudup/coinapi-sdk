@@ -50,24 +50,6 @@ class CowApi(baseUrl: String) {
    * @param startDate 
    * @param endDate 
    */
-  def dappsCowPoiHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/poi/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
-      
-
-  /**
-   * Expected answers:
-   *   code 200 :  (Success)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   */
   def dappsCowSettlementHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/settlement/historical", "application/json")
       .withQueryParam("startBlock", startBlock)

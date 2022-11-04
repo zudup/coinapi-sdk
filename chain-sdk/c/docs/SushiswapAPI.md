@@ -12,16 +12,15 @@ Method | HTTP request | Description
 [**SushiswapAPI_dappsSushiswapLiquidityPositionHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
 [**SushiswapAPI_dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**SushiswapAPI_dappsSushiswapMintsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-[**SushiswapAPI_dappsSushiswapPoiHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical | 
 [**SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**SushiswapAPI_dappsSushiswapPoolHourDataHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**SushiswapAPI_dappsSushiswapPoolsCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**SushiswapAPI_dappsSushiswapPoolsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | 
+[**SushiswapAPI_dappsSushiswapPoolsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**SushiswapAPI_dappsSushiswapSwapsCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**SushiswapAPI_dappsSushiswapSwapsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | 
+[**SushiswapAPI_dappsSushiswapSwapsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
 [**SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**SushiswapAPI_dappsSushiswapTokensCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**SushiswapAPI_dappsSushiswapTokensHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | 
+[**SushiswapAPI_dappsSushiswapTokensHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
 [**SushiswapAPI_dappsSushiswapTransactionsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**SushiswapAPI_dappsSushiswapUsersHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 
@@ -262,35 +261,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **SushiswapAPI_dappsSushiswapPoiHistoricalGet**
-```c
-void SushiswapAPI_dappsSushiswapPoiHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-
-### Return type
-
-void
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet**
 ```c
 void SushiswapAPI_dappsSushiswapPoolDayDataHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
@@ -383,7 +353,9 @@ No authorization required
 
 # **SushiswapAPI_dappsSushiswapPoolsHistoricalGet**
 ```c
-void SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
+// GetPools
+//
+list_t* SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
 ```
 
 ### Parameters
@@ -398,7 +370,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](pair_dto.md) *
+
 
 ### Authorization
 
@@ -407,7 +380,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -441,7 +414,9 @@ No authorization required
 
 # **SushiswapAPI_dappsSushiswapSwapsHistoricalGet**
 ```c
-void SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
+// GetSwaps
+//
+list_t* SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
 ```
 
 ### Parameters
@@ -456,7 +431,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](swap_dto.md) *
+
 
 ### Authorization
 
@@ -465,7 +441,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -529,7 +505,9 @@ No authorization required
 
 # **SushiswapAPI_dappsSushiswapTokensHistoricalGet**
 ```c
-void SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * tokenId);
+// GetTokens
+//
+list_t* SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * tokenId);
 ```
 
 ### Parameters
@@ -544,7 +522,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](token_dto.md) *
+
 
 ### Authorization
 
@@ -553,7 +532,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

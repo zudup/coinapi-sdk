@@ -31,6 +31,8 @@ class TickV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Ticks are the boundaries between discrete areas in price space.
     """
 
 

@@ -1,7 +1,7 @@
 /*
  * PairDTO.h
  *
- * 
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 
 #ifndef _PairDTO_H_
@@ -20,7 +20,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  *
  *  \ingroup Models
  *
@@ -59,158 +59,158 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get Pair contract address.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Pair contract address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Factory contract address.
 	 */
 	std::string getFactory();
 
-	/*! \brief Set 
+	/*! \brief Set Factory contract address.
 	 */
 	void setFactory(std::string  factory);
-	/*! \brief Get 
+	/*! \brief Get Friendly name, format: <token0 name>-<token1 name>
 	 */
 	std::string getName();
 
-	/*! \brief Set 
+	/*! \brief Set Friendly name, format: <token0 name>-<token1 name>
 	 */
 	void setName(std::string  name);
-	/*! \brief Get 
+	/*! \brief Get Reference to token0 as stored in pair contract.
 	 */
 	std::string getToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token0 as stored in pair contract.
 	 */
 	void setToken0(std::string  token_0);
-	/*! \brief Get 
+	/*! \brief Get Reference to token0 as stored in pair contract.
 	 */
 	std::string getToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token0 as stored in pair contract.
 	 */
 	void setToken1(std::string  token_1);
-	/*! \brief Get 
+	/*! \brief Get Reserve of token0.
 	 */
 	std::string getReserve0();
 
-	/*! \brief Set 
+	/*! \brief Set Reserve of token0.
 	 */
 	void setReserve0(std::string  reserve_0);
-	/*! \brief Get 
+	/*! \brief Get Reserve of token1.
 	 */
 	std::string getReserve1();
 
-	/*! \brief Set 
+	/*! \brief Set Reserve of token1.
 	 */
 	void setReserve1(std::string  reserve_1);
-	/*! \brief Get 
+	/*! \brief Get Total supply of liquidity token distributed to LPs.
 	 */
 	std::string getTotalSupply();
 
-	/*! \brief Set 
+	/*! \brief Set Total supply of liquidity token distributed to LPs.
 	 */
 	void setTotalSupply(std::string  total_supply);
-	/*! \brief Get 
+	/*! \brief Get Total liquidity in pair stored as an amount of ETH.
 	 */
 	std::string getReserveEth();
 
-	/*! \brief Set 
+	/*! \brief Set Total liquidity in pair stored as an amount of ETH.
 	 */
 	void setReserveEth(std::string  reserve_eth);
-	/*! \brief Get 
+	/*! \brief Get Total liquidity amount in pair stored as an amount of USD.
 	 */
 	std::string getReserveUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total liquidity amount in pair stored as an amount of USD.
 	 */
 	void setReserveUsd(std::string  reserve_usd);
-	/*! \brief Get 
+	/*! \brief Get Total liquidity with only tracked amount.
 	 */
 	std::string getTrackedReserveEth();
 
-	/*! \brief Set 
+	/*! \brief Set Total liquidity with only tracked amount.
 	 */
 	void setTrackedReserveEth(std::string  tracked_reserve_eth);
-	/*! \brief Get 
+	/*! \brief Get Token0 per token1.
 	 */
 	std::string getToken0Price();
 
-	/*! \brief Set 
+	/*! \brief Set Token0 per token1.
 	 */
 	void setToken0Price(std::string  token_0_price);
-	/*! \brief Get 
+	/*! \brief Get Token1 per token0.
 	 */
 	std::string getToken1Price();
 
-	/*! \brief Set 
+	/*! \brief Set Token1 per token0.
 	 */
 	void setToken1Price(std::string  token_1_price);
-	/*! \brief Get 
+	/*! \brief Get Amount of token0 swapped on this pair.
 	 */
 	std::string getVolumeToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token0 swapped on this pair.
 	 */
 	void setVolumeToken0(std::string  volume_token_0);
-	/*! \brief Get 
+	/*! \brief Get Amount of token1 swapped on this pair.
 	 */
 	std::string getVolumeToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token1 swapped on this pair.
 	 */
 	void setVolumeToken1(std::string  volume_token_1);
-	/*! \brief Get 
+	/*! \brief Get Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get All time amount of transactions on this pair.
 	 */
 	std::string getTxCount();
 
-	/*! \brief Set 
+	/*! \brief Set All time amount of transactions on this pair.
 	 */
 	void setTxCount(std::string  tx_count);
-	/*! \brief Get 
+	/*! \brief Get Total number of LPs.
 	 */
 	std::string getLiquidityProviderCount();
 
-	/*! \brief Set 
+	/*! \brief Set Total number of LPs.
 	 */
 	void setLiquidityProviderCount(std::string  liquidity_provider_count);
-	/*! \brief Get 
+	/*! \brief Get Timestamp.
 	 */
 	std::string getTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp.
 	 */
 	void setTimestamp(std::string  timestamp);
-	/*! \brief Get 
+	/*! \brief Get Block number in which pair information was created in.
 	 */
 	std::string getBlock();
 
-	/*! \brief Set 
+	/*! \brief Set Block number in which pair information was created in.
 	 */
 	void setBlock(std::string  block);
 	/*! \brief Get 

@@ -1,7 +1,7 @@
 #' Create a new BurnV3DTO
 #'
 #' @description
-#' BurnV3DTO Class
+#' Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
 #'
 #' @docType class
 #' @title BurnV3DTO
@@ -9,22 +9,22 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
-#' @field id  character [optional]
-#' @field transaction  character [optional]
-#' @field pool  character [optional]
-#' @field token_0  character [optional]
-#' @field token_1  character [optional]
-#' @field timestamp  character [optional]
-#' @field owner  character [optional]
-#' @field origin  character [optional]
-#' @field amount  character [optional]
-#' @field amount_0  character [optional]
-#' @field amount_1  character [optional]
-#' @field amount_usd  character [optional]
-#' @field tick_lower  character [optional]
-#' @field tick_upper  character [optional]
-#' @field log_index  character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
+#' @field id Transaction hash + '#' + index in mints Transaction array. character [optional]
+#' @field transaction Transaction burn was included in. character [optional]
+#' @field pool Pool position is within. character [optional]
+#' @field token_0 Reference to token0 as stored in pool contract. character [optional]
+#' @field token_1 Reference to token1 as stored in pool contract. character [optional]
+#' @field timestamp Timestamp. character [optional]
+#' @field owner Owner of position where liquidity was burned. character [optional]
+#' @field origin Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. character [optional]
+#' @field amount Amount of liquidity burned. character [optional]
+#' @field amount_0 Amount of token 0 burned. character [optional]
+#' @field amount_1 Amount of token 1 burned. character [optional]
+#' @field amount_usd Derived amount based on available prices of tokens. character [optional]
+#' @field tick_lower Lower tick of position. character [optional]
+#' @field tick_upper Upper tick of position. character [optional]
+#' @field log_index Position within the transactions. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -58,102 +58,138 @@ BurnV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
-    #' @param id 
-    #' @param transaction 
-    #' @param pool 
-    #' @param token_0 
-    #' @param token_1 
-    #' @param timestamp 
-    #' @param owner 
-    #' @param origin 
-    #' @param amount 
-    #' @param amount_0 
-    #' @param amount_1 
-    #' @param amount_usd 
-    #' @param tick_lower 
-    #' @param tick_upper 
-    #' @param log_index 
+    #' @param block_number Number of block in which entity was recorded.
+    #' @param id Transaction hash + '#' + index in mints Transaction array.
+    #' @param transaction Transaction burn was included in.
+    #' @param pool Pool position is within.
+    #' @param token_0 Reference to token0 as stored in pool contract.
+    #' @param token_1 Reference to token1 as stored in pool contract.
+    #' @param timestamp Timestamp.
+    #' @param owner Owner of position where liquidity was burned.
+    #' @param origin Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+    #' @param amount Amount of liquidity burned.
+    #' @param amount_0 Amount of token 0 burned.
+    #' @param amount_1 Amount of token 1 burned.
+    #' @param amount_usd Derived amount based on available prices of tokens.
+    #' @param tick_lower Lower tick of position.
+    #' @param tick_upper Upper tick of position.
+    #' @param log_index Position within the transactions.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `transaction` = NULL, `pool` = NULL, `token_0` = NULL, `token_1` = NULL, `timestamp` = NULL, `owner` = NULL, `origin` = NULL, `amount` = NULL, `amount_0` = NULL, `amount_1` = NULL, `amount_usd` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `log_index` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `transaction` = NULL, `pool` = NULL, `token_0` = NULL, `token_1` = NULL, `timestamp` = NULL, `owner` = NULL, `origin` = NULL, `amount` = NULL, `amount_0` = NULL, `amount_1` = NULL, `amount_usd` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `log_index` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`transaction`)) {
-        stopifnot(is.character(`transaction`), length(`transaction`) == 1)
+        if (!(is.character(`transaction`) && length(`transaction`) == 1)) {
+          stop(paste("Error! Invalid data for `transaction`. Must be a string:", `transaction`))
+        }
         self$`transaction` <- `transaction`
       }
       if (!is.null(`pool`)) {
-        stopifnot(is.character(`pool`), length(`pool`) == 1)
+        if (!(is.character(`pool`) && length(`pool`) == 1)) {
+          stop(paste("Error! Invalid data for `pool`. Must be a string:", `pool`))
+        }
         self$`pool` <- `pool`
       }
       if (!is.null(`token_0`)) {
-        stopifnot(is.character(`token_0`), length(`token_0`) == 1)
+        if (!(is.character(`token_0`) && length(`token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0`. Must be a string:", `token_0`))
+        }
         self$`token_0` <- `token_0`
       }
       if (!is.null(`token_1`)) {
-        stopifnot(is.character(`token_1`), length(`token_1`) == 1)
+        if (!(is.character(`token_1`) && length(`token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1`. Must be a string:", `token_1`))
+        }
         self$`token_1` <- `token_1`
       }
       if (!is.null(`timestamp`)) {
-        stopifnot(is.character(`timestamp`), length(`timestamp`) == 1)
+        if (!(is.character(`timestamp`) && length(`timestamp`) == 1)) {
+          stop(paste("Error! Invalid data for `timestamp`. Must be a string:", `timestamp`))
+        }
         self$`timestamp` <- `timestamp`
       }
       if (!is.null(`owner`)) {
-        stopifnot(is.character(`owner`), length(`owner`) == 1)
+        if (!(is.character(`owner`) && length(`owner`) == 1)) {
+          stop(paste("Error! Invalid data for `owner`. Must be a string:", `owner`))
+        }
         self$`owner` <- `owner`
       }
       if (!is.null(`origin`)) {
-        stopifnot(is.character(`origin`), length(`origin`) == 1)
+        if (!(is.character(`origin`) && length(`origin`) == 1)) {
+          stop(paste("Error! Invalid data for `origin`. Must be a string:", `origin`))
+        }
         self$`origin` <- `origin`
       }
       if (!is.null(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        if (!(is.character(`amount`) && length(`amount`) == 1)) {
+          stop(paste("Error! Invalid data for `amount`. Must be a string:", `amount`))
+        }
         self$`amount` <- `amount`
       }
       if (!is.null(`amount_0`)) {
-        stopifnot(is.character(`amount_0`), length(`amount_0`) == 1)
+        if (!(is.character(`amount_0`) && length(`amount_0`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_0`. Must be a string:", `amount_0`))
+        }
         self$`amount_0` <- `amount_0`
       }
       if (!is.null(`amount_1`)) {
-        stopifnot(is.character(`amount_1`), length(`amount_1`) == 1)
+        if (!(is.character(`amount_1`) && length(`amount_1`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_1`. Must be a string:", `amount_1`))
+        }
         self$`amount_1` <- `amount_1`
       }
       if (!is.null(`amount_usd`)) {
-        stopifnot(is.character(`amount_usd`), length(`amount_usd`) == 1)
+        if (!(is.character(`amount_usd`) && length(`amount_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_usd`. Must be a string:", `amount_usd`))
+        }
         self$`amount_usd` <- `amount_usd`
       }
       if (!is.null(`tick_lower`)) {
-        stopifnot(is.character(`tick_lower`), length(`tick_lower`) == 1)
+        if (!(is.character(`tick_lower`) && length(`tick_lower`) == 1)) {
+          stop(paste("Error! Invalid data for `tick_lower`. Must be a string:", `tick_lower`))
+        }
         self$`tick_lower` <- `tick_lower`
       }
       if (!is.null(`tick_upper`)) {
-        stopifnot(is.character(`tick_upper`), length(`tick_upper`) == 1)
+        if (!(is.character(`tick_upper`) && length(`tick_upper`) == 1)) {
+          stop(paste("Error! Invalid data for `tick_upper`. Must be a string:", `tick_upper`))
+        }
         self$`tick_upper` <- `tick_upper`
       }
       if (!is.null(`log_index`)) {
-        stopifnot(is.character(`log_index`), length(`log_index`) == 1)
+        if (!(is.character(`log_index`) && length(`log_index`) == 1)) {
+          stop(paste("Error! Invalid data for `log_index`. Must be a string:", `log_index`))
+        }
         self$`log_index` <- `log_index`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -559,18 +595,19 @@ BurnV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#BurnV3DTO$unlock()
+# BurnV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#BurnV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# BurnV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#BurnV3DTO$lock()
+# BurnV3DTO$lock()
 

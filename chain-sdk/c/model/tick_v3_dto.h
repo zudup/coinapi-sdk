@@ -1,7 +1,7 @@
 /*
  * tick_v3_dto.h
  *
- * 
+ * Ticks are the boundaries between discrete areas in price space.
  */
 
 #ifndef _tick_v3_dto_H_

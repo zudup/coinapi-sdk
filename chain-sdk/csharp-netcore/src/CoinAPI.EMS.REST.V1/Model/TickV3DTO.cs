@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TickV3DTO
+    /// Ticks are the boundaries between discrete areas in price space.
     /// </summary>
     [DataContract(Name = "TickV3DTO")]
     public partial class TickV3DTO : IEquatable<TickV3DTO>, IValidatableObject
@@ -37,25 +37,25 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">id.</param>
-        /// <param name="poolAddress">poolAddress.</param>
+        /// <param name="id">Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;.</param>
+        /// <param name="poolAddress">Pool address..</param>
         /// <param name="tickIdx">tickIdx.</param>
-        /// <param name="pool">pool.</param>
+        /// <param name="pool">Pool address..</param>
         /// <param name="liquidityGross">liquidityGross.</param>
         /// <param name="liquidityNet">liquidityNet.</param>
-        /// <param name="price0">price0.</param>
-        /// <param name="price1">price1.</param>
-        /// <param name="volumeToken0">volumeToken0.</param>
-        /// <param name="volumeToken1">volumeToken1.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
-        /// <param name="feesUsd">feesUsd.</param>
-        /// <param name="collectedFeesToken0">collectedFeesToken0.</param>
-        /// <param name="collectedFeesToken1">collectedFeesToken1.</param>
-        /// <param name="collectedFeesUsd">collectedFeesUsd.</param>
-        /// <param name="createdAtTimestamp">createdAtTimestamp.</param>
+        /// <param name="price0">Calculated price of token0 of tick within this pool - constant..</param>
+        /// <param name="price1">Calculated price of token1 of tick within this pool - constant..</param>
+        /// <param name="volumeToken0">Lifetime volume of token0 with this tick in range..</param>
+        /// <param name="volumeToken1">Lifetime volume of token1 with this tick in range..</param>
+        /// <param name="volumeUsd">Lifetime volume in derived USD with this tick in range..</param>
+        /// <param name="untrackedVolumeUsd">Lifetime volume in untracked USD with this tick in range..</param>
+        /// <param name="feesUsd">Fees in USD..</param>
+        /// <param name="collectedFeesToken0">All time collected fees in token0..</param>
+        /// <param name="collectedFeesToken1">All time collected fees in token1..</param>
+        /// <param name="collectedFeesUsd">All time collected fees in USD..</param>
+        /// <param name="createdAtTimestamp">Created time..</param>
         /// <param name="liquidityProviderCount">liquidityProviderCount.</param>
         /// <param name="feeGrowthOutside0x128">feeGrowthOutside0x128.</param>
         /// <param name="feeGrowthOutside1x128">feeGrowthOutside1x128.</param>
@@ -100,8 +100,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
 
@@ -112,14 +113,16 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
         /// </summary>
+        /// <value>Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets PoolAddress
+        /// Pool address.
         /// </summary>
+        /// <value>Pool address.</value>
         [DataMember(Name = "pool_address", EmitDefaultValue = true)]
         public string PoolAddress { get; set; }
 
@@ -130,8 +133,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger TickIdx { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pool address.
         /// </summary>
+        /// <value>Pool address.</value>
         [DataMember(Name = "pool", EmitDefaultValue = true)]
         public string Pool { get; set; }
 
@@ -148,68 +152,79 @@ namespace CoinAPI.EMS.REST.V1.Model
         public BigInteger LiquidityNet { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price0
+        /// Calculated price of token0 of tick within this pool - constant.
         /// </summary>
+        /// <value>Calculated price of token0 of tick within this pool - constant.</value>
         [DataMember(Name = "price_0", EmitDefaultValue = true)]
         public string Price0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price1
+        /// Calculated price of token1 of tick within this pool - constant.
         /// </summary>
+        /// <value>Calculated price of token1 of tick within this pool - constant.</value>
         [DataMember(Name = "price_1", EmitDefaultValue = true)]
         public string Price1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken0
+        /// Lifetime volume of token0 with this tick in range.
         /// </summary>
+        /// <value>Lifetime volume of token0 with this tick in range.</value>
         [DataMember(Name = "volume_token_0", EmitDefaultValue = true)]
         public string VolumeToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken1
+        /// Lifetime volume of token1 with this tick in range.
         /// </summary>
+        /// <value>Lifetime volume of token1 with this tick in range.</value>
         [DataMember(Name = "volume_token_1", EmitDefaultValue = true)]
         public string VolumeToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// Lifetime volume in derived USD with this tick in range.
         /// </summary>
+        /// <value>Lifetime volume in derived USD with this tick in range.</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// Lifetime volume in untracked USD with this tick in range.
         /// </summary>
+        /// <value>Lifetime volume in untracked USD with this tick in range.</value>
         [DataMember(Name = "untracked_volume_usd", EmitDefaultValue = true)]
         public string UntrackedVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// Fees in USD.
         /// </summary>
+        /// <value>Fees in USD.</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectedFeesToken0
+        /// All time collected fees in token0.
         /// </summary>
+        /// <value>All time collected fees in token0.</value>
         [DataMember(Name = "collected_fees_token_0", EmitDefaultValue = true)]
         public string CollectedFeesToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectedFeesToken1
+        /// All time collected fees in token1.
         /// </summary>
+        /// <value>All time collected fees in token1.</value>
         [DataMember(Name = "collected_fees_token_1", EmitDefaultValue = true)]
         public string CollectedFeesToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectedFeesUsd
+        /// All time collected fees in USD.
         /// </summary>
+        /// <value>All time collected fees in USD.</value>
         [DataMember(Name = "collected_fees_usd", EmitDefaultValue = true)]
         public string CollectedFeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAtTimestamp
+        /// Created time.
         /// </summary>
+        /// <value>Created time.</value>
         [DataMember(Name = "created_at_timestamp", EmitDefaultValue = false)]
         public DateTime CreatedAtTimestamp { get; set; }
 

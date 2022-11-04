@@ -106,8 +106,72 @@ class TokenHourDataV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TokenHourDataV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TokenHourDataV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
+        }
+        // ensure the json data is a string
+        if (data['volume'] && !(typeof data['volume'] === 'string' || data['volume'] instanceof String)) {
+            throw new Error("Expected the field `volume` to be a primitive type in the JSON string but got " + data['volume']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked'] && !(typeof data['total_value_locked'] === 'string' || data['total_value_locked'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked` to be a primitive type in the JSON string but got " + data['total_value_locked']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_usd'] && !(typeof data['total_value_locked_usd'] === 'string' || data['total_value_locked_usd'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_usd` to be a primitive type in the JSON string but got " + data['total_value_locked_usd']);
+        }
+        // ensure the json data is a string
+        if (data['price_usd'] && !(typeof data['price_usd'] === 'string' || data['price_usd'] instanceof String)) {
+            throw new Error("Expected the field `price_usd` to be a primitive type in the JSON string but got " + data['price_usd']);
+        }
+        // ensure the json data is a string
+        if (data['fees_usd'] && !(typeof data['fees_usd'] === 'string' || data['fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `fees_usd` to be a primitive type in the JSON string but got " + data['fees_usd']);
+        }
+        // ensure the json data is a string
+        if (data['open'] && !(typeof data['open'] === 'string' || data['open'] instanceof String)) {
+            throw new Error("Expected the field `open` to be a primitive type in the JSON string but got " + data['open']);
+        }
+        // ensure the json data is a string
+        if (data['high'] && !(typeof data['high'] === 'string' || data['high'] instanceof String)) {
+            throw new Error("Expected the field `high` to be a primitive type in the JSON string but got " + data['high']);
+        }
+        // ensure the json data is a string
+        if (data['low'] && !(typeof data['low'] === 'string' || data['low'] instanceof String)) {
+            throw new Error("Expected the field `low` to be a primitive type in the JSON string but got " + data['low']);
+        }
+        // ensure the json data is a string
+        if (data['close'] && !(typeof data['close'] === 'string' || data['close'] instanceof String)) {
+            throw new Error("Expected the field `close` to be a primitive type in the JSON string but got " + data['close']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -120,7 +184,7 @@ TokenHourDataV3DTO.prototype['entry_time'] = undefined;
 TokenHourDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TokenHourDataV3DTO.prototype['block_number'] = undefined;

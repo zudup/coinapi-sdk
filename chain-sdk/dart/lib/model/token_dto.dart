@@ -49,7 +49,7 @@ class TokenDTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -58,43 +58,43 @@ class TokenDTO {
   ///
   int? blockNumber;
 
-  /// 
+  /// Token address.
   String? id;
 
-  /// 
+  /// Factory address.
   String? factory_;
 
-  /// 
+  /// Token symbol.
   String? symbol;
 
-  /// 
+  /// Token name.
   String? name;
 
-  /// 
+  /// Token decimals.
   String? decimals;
 
-  /// 
+  /// Total supply of liquidity token.
   String? totalSupply;
 
-  /// 
+  /// Amount of token traded all time across all pairs.
   String? volume;
 
-  /// 
+  /// Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
   String? volumeUsd;
 
-  /// 
+  /// Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
   String? untrackedVolumeUsd;
 
-  /// 
+  /// Amount of transactions all time in pairs including token.
   String? txCount;
 
-  /// 
+  /// Total amount of token provided as liquidity across all pairs.
   String? liquidity;
 
-  /// 
+  /// ETH per token.
   String? derivedEth;
 
-  /// 
+  /// Array of whitelisted pairs.
   List<String>? whitelistPairs;
 
   /// 

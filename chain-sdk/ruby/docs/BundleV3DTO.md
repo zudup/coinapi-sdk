@@ -6,9 +6,9 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **id** | **String** |  | [optional] |
-| **eth_price_usd** | **String** |  | [optional] |
+| **eth_price_usd** | **String** | Price of ETH in usd. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 
 ## Example

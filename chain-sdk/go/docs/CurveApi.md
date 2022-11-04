@@ -24,7 +24,6 @@ Method | HTTP request | Description
 [**DappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#DappsCurveGaugeWithdrawHistoricalGet) | **Get** /dapps/curve/gaugeWithdraw/historical | 
 [**DappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#DappsCurveHourlyVolumeHistoricalGet) | **Get** /dapps/curve/hourlyVolume/historical | 
 [**DappsCurveLpTokenHistoricalGet**](CurveApi.md#DappsCurveLpTokenHistoricalGet) | **Get** /dapps/curve/lpToken/historical | 
-[**DappsCurvePoiHistoricalGet**](CurveApi.md#DappsCurvePoiHistoricalGet) | **Get** /dapps/curve/poi/historical | 
 [**DappsCurvePoolsHistoricalGet**](CurveApi.md#DappsCurvePoolsHistoricalGet) | **Get** /dapps/curve/pools/historical | 
 [**DappsCurveProposalsHistoricalGet**](CurveApi.md#DappsCurveProposalsHistoricalGet) | **Get** /dapps/curve/proposals/historical | 
 [**DappsCurveProposalsVoteHistoricalGet**](CurveApi.md#DappsCurveProposalsVoteHistoricalGet) | **Get** /dapps/curve/proposalsVote/historical | 
@@ -1423,75 +1422,6 @@ Name | Type | Description  | Notes
  **startDate** | **time.Time** |  | 
  **endDate** | **time.Time** |  | 
  **poolId** | **string** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsCurvePoiHistoricalGet
-
-> DappsCurvePoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.CurveApi.DappsCurvePoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.DappsCurvePoiHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsCurvePoiHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
 
 ### Return type
 

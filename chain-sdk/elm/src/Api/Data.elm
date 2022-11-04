@@ -108,6 +108,8 @@ type alias BigInteger =
     }
 
 
+{-| The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+-}
 type alias BundleV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -118,6 +120,8 @@ type alias BundleV3DTO =
     }
 
 
+{-| Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+-}
 type alias BurnV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -159,6 +163,8 @@ eTradeAggressiveSideVariants =
     ]
 
 
+{-| The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+-}
 type alias FactoryV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -180,6 +186,8 @@ type alias FactoryV3DTO =
     }
 
 
+{-| Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
+-}
 type alias MintV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -204,6 +212,8 @@ type alias MintV3DTO =
     }
 
 
+{-| Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+-}
 type alias PairDTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -263,6 +273,8 @@ type alias PairV2DTO =
     }
 
 
+{-| Data accumulated and condensed into day stats for each pool.
+-}
 type alias PoolDayDataV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -291,6 +303,8 @@ type alias PoolDayDataV3DTO =
     }
 
 
+{-| Hourly stats tracker for pool.
+-}
 type alias PoolHourDataV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -319,6 +333,8 @@ type alias PoolHourDataV3DTO =
     }
 
 
+{-| Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
+-}
 type alias PoolV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -379,6 +395,8 @@ type alias PositionSnapshotV3DTO =
     }
 
 
+{-| Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+-}
 type alias PositionV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -404,6 +422,8 @@ type alias PositionV3DTO =
     }
 
 
+{-| Swap are created for each token swap within a pair.
+-}
 type alias SwapDTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -457,6 +477,8 @@ type alias SwapV2DTO =
     }
 
 
+{-| Swap are created for each token swap within a pair.
+-}
 type alias SwapV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -485,6 +507,8 @@ type alias SwapV3DTO =
     }
 
 
+{-| Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+-}
 type alias TickDayDataV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -505,6 +529,8 @@ type alias TickDayDataV3DTO =
     }
 
 
+{-| Ticks are the boundaries between discrete areas in price space.
+-}
 type alias TickV3DTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -533,6 +559,8 @@ type alias TickV3DTO =
     }
 
 
+{-| Stores aggregated information for a specific token across all pairs that token is included in.
+-}
 type alias TokenDTO =
     { entryTime : Maybe Posix
     , recvTime : Maybe Posix
@@ -1102,7 +1130,7 @@ encodePositionSnapshotV3DTOPairs model =
             , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
             , maybeEncode "block_number" Json.Encode.int model.blockNumber
             , maybeEncodeNullable "id" Json.Encode.string model.id
-            , maybeEncode "owner" Json.Encode.string model.owner
+            , maybeEncodeNullable "owner" Json.Encode.string model.owner
             , maybeEncodeNullable "pool" Json.Encode.string model.pool
             , maybeEncodeNullable "position" Json.Encode.string model.position
             , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
@@ -1864,7 +1892,7 @@ positionSnapshotV3DTODecoder =
         |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
         |> maybeDecode "block_number" Json.Decode.int Nothing
         |> maybeDecodeNullable "id" Json.Decode.string Nothing
-        |> maybeDecode "owner" Json.Decode.string Nothing
+        |> maybeDecodeNullable "owner" Json.Decode.string Nothing
         |> maybeDecodeNullable "pool" Json.Decode.string Nothing
         |> maybeDecodeNullable "position" Json.Decode.string Nothing
         |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing

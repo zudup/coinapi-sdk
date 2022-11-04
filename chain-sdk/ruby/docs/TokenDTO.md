@@ -6,20 +6,20 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **factory** | **String** |  | [optional] |
-| **symbol** | **String** |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **decimals** | **String** |  | [optional] |
-| **total_supply** | **String** |  | [optional] |
-| **volume** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **untracked_volume_usd** | **String** |  | [optional] |
-| **tx_count** | **String** |  | [optional] |
-| **liquidity** | **String** |  | [optional] |
-| **derived_eth** | **String** |  | [optional] |
-| **whitelist_pairs** | **Array&lt;String&gt;** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | Token address. | [optional] |
+| **factory** | **String** | Factory address. | [optional] |
+| **symbol** | **String** | Token symbol. | [optional] |
+| **name** | **String** | Token name. | [optional] |
+| **decimals** | **String** | Token decimals. | [optional] |
+| **total_supply** | **String** | Total supply of liquidity token. | [optional] |
+| **volume** | **String** | Amount of token traded all time across all pairs. | [optional] |
+| **volume_usd** | **String** | Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). | [optional] |
+| **untracked_volume_usd** | **String** | Amount of token in USD traded all time across pairs (no minimum liquidity threshold). | [optional] |
+| **tx_count** | **String** | Amount of transactions all time in pairs including token. | [optional] |
+| **liquidity** | **String** | Total amount of token provided as liquidity across all pairs. | [optional] |
+| **derived_eth** | **String** | ETH per token. | [optional] |
+| **whitelist_pairs** | **Array&lt;String&gt;** | Array of whitelisted pairs. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **token_symbol** | **String** |  | [optional][readonly] |
 

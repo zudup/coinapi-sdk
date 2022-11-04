@@ -39,10 +39,6 @@ UniswapV2API_dappsUniswapv2MintsHistoricalGet(apiClient_t *apiClient, long start
 
 
 void
-UniswapV2API_dappsUniswapv2PoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
-
-
-void
 UniswapV2API_dappsUniswapv2PoolDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

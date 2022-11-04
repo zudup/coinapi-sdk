@@ -71,13 +71,6 @@ describe("sushiswap_api", function()
     end)
   end)
 
-  -- unit tests for dapps_sushiswap_poi_historical_get
-  describe("dapps_sushiswap_poi_historical_get test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dapps_sushiswap_pool_day_data_historical_get
   describe("dapps_sushiswap_pool_day_data_historical_get test", function()
     it("should work", function()

@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class FactoryV3DTO {
     /**
      * Constructs a new <code>FactoryV3DTO</code>.
+     * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
      * @alias module:model/FactoryV3DTO
      */
     constructor() { 
@@ -102,8 +103,72 @@ class FactoryV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>FactoryV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FactoryV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['pool_count'] && !(typeof data['pool_count'] === 'string' || data['pool_count'] instanceof String)) {
+            throw new Error("Expected the field `pool_count` to be a primitive type in the JSON string but got " + data['pool_count']);
+        }
+        // ensure the json data is a string
+        if (data['tx_count'] && !(typeof data['tx_count'] === 'string' || data['tx_count'] instanceof String)) {
+            throw new Error("Expected the field `tx_count` to be a primitive type in the JSON string but got " + data['tx_count']);
+        }
+        // ensure the json data is a string
+        if (data['total_volume_usd'] && !(typeof data['total_volume_usd'] === 'string' || data['total_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `total_volume_usd` to be a primitive type in the JSON string but got " + data['total_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_volume_eth'] && !(typeof data['total_volume_eth'] === 'string' || data['total_volume_eth'] instanceof String)) {
+            throw new Error("Expected the field `total_volume_eth` to be a primitive type in the JSON string but got " + data['total_volume_eth']);
+        }
+        // ensure the json data is a string
+        if (data['total_fees_usd'] && !(typeof data['total_fees_usd'] === 'string' || data['total_fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `total_fees_usd` to be a primitive type in the JSON string but got " + data['total_fees_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_fees_eth'] && !(typeof data['total_fees_eth'] === 'string' || data['total_fees_eth'] instanceof String)) {
+            throw new Error("Expected the field `total_fees_eth` to be a primitive type in the JSON string but got " + data['total_fees_eth']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_usd'] && !(typeof data['total_value_locked_usd'] === 'string' || data['total_value_locked_usd'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_usd` to be a primitive type in the JSON string but got " + data['total_value_locked_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_eth'] && !(typeof data['total_value_locked_eth'] === 'string' || data['total_value_locked_eth'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_eth` to be a primitive type in the JSON string but got " + data['total_value_locked_eth']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_usd_untracked'] && !(typeof data['total_value_locked_usd_untracked'] === 'string' || data['total_value_locked_usd_untracked'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_usd_untracked` to be a primitive type in the JSON string but got " + data['total_value_locked_usd_untracked']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_eth_untracked'] && !(typeof data['total_value_locked_eth_untracked'] === 'string' || data['total_value_locked_eth_untracked'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_eth_untracked` to be a primitive type in the JSON string but got " + data['total_value_locked_eth_untracked']);
+        }
+        // ensure the json data is a string
+        if (data['owner'] && !(typeof data['owner'] === 'string' || data['owner'] instanceof String)) {
+            throw new Error("Expected the field `owner` to be a primitive type in the JSON string but got " + data['owner']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -116,85 +181,85 @@ FactoryV3DTO.prototype['entry_time'] = undefined;
 FactoryV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 FactoryV3DTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * Factory address.
  * @member {String} id
  */
 FactoryV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Amount of pools created.
  * @member {String} pool_count
  */
 FactoryV3DTO.prototype['pool_count'] = undefined;
 
 /**
- * 
+ * Amount of transactions all time.
  * @member {String} tx_count
  */
 FactoryV3DTO.prototype['tx_count'] = undefined;
 
 /**
- * 
+ * Total volume all time in derived USD.
  * @member {String} total_volume_usd
  */
 FactoryV3DTO.prototype['total_volume_usd'] = undefined;
 
 /**
- * 
+ * Total volume all time in derived ETH.
  * @member {String} total_volume_eth
  */
 FactoryV3DTO.prototype['total_volume_eth'] = undefined;
 
 /**
- * 
+ * Total swap fees all time in USD.
  * @member {String} total_fees_usd
  */
 FactoryV3DTO.prototype['total_fees_usd'] = undefined;
 
 /**
- * 
+ * All volume even through less reliable USD values.
  * @member {String} total_fees_eth
  */
 FactoryV3DTO.prototype['total_fees_eth'] = undefined;
 
 /**
- * 
+ * All volume even through less reliable USD values.
  * @member {String} untracked_volume_usd
  */
 FactoryV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * Total value locked derived in USD.
  * @member {String} total_value_locked_usd
  */
 FactoryV3DTO.prototype['total_value_locked_usd'] = undefined;
 
 /**
- * 
+ * Total value locked derived in ETH.
  * @member {String} total_value_locked_eth
  */
 FactoryV3DTO.prototype['total_value_locked_eth'] = undefined;
 
 /**
- * 
+ * Total value locked derived in USD untracked.
  * @member {String} total_value_locked_usd_untracked
  */
 FactoryV3DTO.prototype['total_value_locked_usd_untracked'] = undefined;
 
 /**
- * 
+ * Total value locked derived in ETH untracked.
  * @member {String} total_value_locked_eth_untracked
  */
 FactoryV3DTO.prototype['total_value_locked_eth_untracked'] = undefined;
 
 /**
- * 
+ * Current owner of the factory.
  * @member {String} owner
  */
 FactoryV3DTO.prototype['owner'] = undefined;

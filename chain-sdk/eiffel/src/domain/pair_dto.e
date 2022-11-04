@@ -24,49 +24,49 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Pair contract address.
     factory: detachable STRING_32
-      -- 
+      -- Factory contract address.
     name: detachable STRING_32
-      -- 
+      -- Friendly name, format: <token0 name>-<token1 name>
     token_0: detachable STRING_32
-      -- 
+      -- Reference to token0 as stored in pair contract.
     token_1: detachable STRING_32
-      -- 
+      -- Reference to token0 as stored in pair contract.
     reserve_0: detachable STRING_32
-      -- 
+      -- Reserve of token0.
     reserve_1: detachable STRING_32
-      -- 
+      -- Reserve of token1.
     total_supply: detachable STRING_32
-      -- 
+      -- Total supply of liquidity token distributed to LPs.
     reserve_eth: detachable STRING_32
-      -- 
+      -- Total liquidity in pair stored as an amount of ETH.
     reserve_usd: detachable STRING_32
-      -- 
+      -- Total liquidity amount in pair stored as an amount of USD.
     tracked_reserve_eth: detachable STRING_32
-      -- 
+      -- Total liquidity with only tracked amount.
     token_0_price: detachable STRING_32
-      -- 
+      -- Token0 per token1.
     token_1_price: detachable STRING_32
-      -- 
+      -- Token1 per token0.
     volume_token_0: detachable STRING_32
-      -- 
+      -- Amount of token0 swapped on this pair.
     volume_token_1: detachable STRING_32
-      -- 
+      -- Amount of token1 swapped on this pair.
     volume_usd: detachable STRING_32
-      -- 
+      -- Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     tx_count: detachable STRING_32
-      -- 
+      -- All time amount of transactions on this pair.
     liquidity_provider_count: detachable STRING_32
-      -- 
+      -- Total number of LPs.
     timestamp: detachable STRING_32
-      -- 
+      -- Timestamp.
     block: detachable STRING_32
-      -- 
+      -- Block number in which pair information was created in.
  	vid: INTEGER_64
     	 -- 
  	evaluated_ask: REAL_64

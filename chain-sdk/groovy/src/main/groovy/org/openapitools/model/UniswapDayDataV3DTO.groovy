@@ -12,7 +12,7 @@ class UniswapDayDataV3DTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
     Long vid

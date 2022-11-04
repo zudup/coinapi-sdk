@@ -12,59 +12,62 @@
 
 import { RequestFile } from './models';
 
+/**
+* Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+*/
 export class TickDayDataV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
-    * 
+    * Identifier, format: <pool address>-<tick index>-<timestamp>.
     */
     'id'?: string | null;
     /**
-    * 
+    * Timestamp rounded to current day by dividing by 86400.
     */
     'date'?: number;
     /**
-    * 
+    * Pointer to pool.
     */
     'pool'?: string | null;
     /**
-    * 
+    * Pointer to tick.
     */
     'tick'?: string | null;
     /**
-    * 
+    * Total liquidity pool has as tick lower or upper at end of period.
     */
     'liquidityGross'?: string | null;
     /**
-    * 
+    * How much liquidity changes when tick crossed at end of period.
     */
     'liquidityNet'?: string | null;
     /**
-    * 
+    * Hourly volume of token0 with this tick in range.
     */
     'volumeToken0'?: string | null;
     /**
-    * 
+    * Hourly volume of token1 with this tick in range.
     */
     'volumeToken1'?: string | null;
     /**
-    * 
+    * Hourly volume in derived USD with this tick in range.
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * Fees in USD.
     */
     'feesUsd'?: string | null;
     /**
-    * 
+    * Variable needed for fee computation.
     */
     'feeGrowthOutside0x128'?: string | null;
     /**
-    * 
+    * Variable needed for fee computation.
     */
     'feeGrowthOutside1x128'?: string | null;
     /**

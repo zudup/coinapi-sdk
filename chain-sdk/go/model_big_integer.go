@@ -43,7 +43,7 @@ func NewBigIntegerWithDefaults() *BigInteger {
 
 // GetIsPowerOfTwo returns the IsPowerOfTwo field value if set, zero value otherwise.
 func (o *BigInteger) GetIsPowerOfTwo() bool {
-	if o == nil || o.IsPowerOfTwo == nil {
+	if o == nil || isNil(o.IsPowerOfTwo) {
 		var ret bool
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *BigInteger) GetIsPowerOfTwo() bool {
 // GetIsPowerOfTwoOk returns a tuple with the IsPowerOfTwo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BigInteger) GetIsPowerOfTwoOk() (*bool, bool) {
-	if o == nil || o.IsPowerOfTwo == nil {
-		return nil, false
+	if o == nil || isNil(o.IsPowerOfTwo) {
+    return nil, false
 	}
 	return o.IsPowerOfTwo, true
 }
 
 // HasIsPowerOfTwo returns a boolean if a field has been set.
 func (o *BigInteger) HasIsPowerOfTwo() bool {
-	if o != nil && o.IsPowerOfTwo != nil {
+	if o != nil && !isNil(o.IsPowerOfTwo) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *BigInteger) SetIsPowerOfTwo(v bool) {
 
 // GetIsZero returns the IsZero field value if set, zero value otherwise.
 func (o *BigInteger) GetIsZero() bool {
-	if o == nil || o.IsZero == nil {
+	if o == nil || isNil(o.IsZero) {
 		var ret bool
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *BigInteger) GetIsZero() bool {
 // GetIsZeroOk returns a tuple with the IsZero field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BigInteger) GetIsZeroOk() (*bool, bool) {
-	if o == nil || o.IsZero == nil {
-		return nil, false
+	if o == nil || isNil(o.IsZero) {
+    return nil, false
 	}
 	return o.IsZero, true
 }
 
 // HasIsZero returns a boolean if a field has been set.
 func (o *BigInteger) HasIsZero() bool {
-	if o != nil && o.IsZero != nil {
+	if o != nil && !isNil(o.IsZero) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *BigInteger) SetIsZero(v bool) {
 
 // GetIsOne returns the IsOne field value if set, zero value otherwise.
 func (o *BigInteger) GetIsOne() bool {
-	if o == nil || o.IsOne == nil {
+	if o == nil || isNil(o.IsOne) {
 		var ret bool
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *BigInteger) GetIsOne() bool {
 // GetIsOneOk returns a tuple with the IsOne field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BigInteger) GetIsOneOk() (*bool, bool) {
-	if o == nil || o.IsOne == nil {
-		return nil, false
+	if o == nil || isNil(o.IsOne) {
+    return nil, false
 	}
 	return o.IsOne, true
 }
 
 // HasIsOne returns a boolean if a field has been set.
 func (o *BigInteger) HasIsOne() bool {
-	if o != nil && o.IsOne != nil {
+	if o != nil && !isNil(o.IsOne) {
 		return true
 	}
 
@@ -139,7 +139,7 @@ func (o *BigInteger) SetIsOne(v bool) {
 
 // GetIsEven returns the IsEven field value if set, zero value otherwise.
 func (o *BigInteger) GetIsEven() bool {
-	if o == nil || o.IsEven == nil {
+	if o == nil || isNil(o.IsEven) {
 		var ret bool
 		return ret
 	}
@@ -149,15 +149,15 @@ func (o *BigInteger) GetIsEven() bool {
 // GetIsEvenOk returns a tuple with the IsEven field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BigInteger) GetIsEvenOk() (*bool, bool) {
-	if o == nil || o.IsEven == nil {
-		return nil, false
+	if o == nil || isNil(o.IsEven) {
+    return nil, false
 	}
 	return o.IsEven, true
 }
 
 // HasIsEven returns a boolean if a field has been set.
 func (o *BigInteger) HasIsEven() bool {
-	if o != nil && o.IsEven != nil {
+	if o != nil && !isNil(o.IsEven) {
 		return true
 	}
 
@@ -171,7 +171,7 @@ func (o *BigInteger) SetIsEven(v bool) {
 
 // GetSign returns the Sign field value if set, zero value otherwise.
 func (o *BigInteger) GetSign() int32 {
-	if o == nil || o.Sign == nil {
+	if o == nil || isNil(o.Sign) {
 		var ret int32
 		return ret
 	}
@@ -181,15 +181,15 @@ func (o *BigInteger) GetSign() int32 {
 // GetSignOk returns a tuple with the Sign field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BigInteger) GetSignOk() (*int32, bool) {
-	if o == nil || o.Sign == nil {
-		return nil, false
+	if o == nil || isNil(o.Sign) {
+    return nil, false
 	}
 	return o.Sign, true
 }
 
 // HasSign returns a boolean if a field has been set.
 func (o *BigInteger) HasSign() bool {
-	if o != nil && o.Sign != nil {
+	if o != nil && !isNil(o.Sign) {
 		return true
 	}
 
@@ -203,19 +203,19 @@ func (o *BigInteger) SetSign(v int32) {
 
 func (o BigInteger) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IsPowerOfTwo != nil {
+	if !isNil(o.IsPowerOfTwo) {
 		toSerialize["is_power_of_two"] = o.IsPowerOfTwo
 	}
-	if o.IsZero != nil {
+	if !isNil(o.IsZero) {
 		toSerialize["is_zero"] = o.IsZero
 	}
-	if o.IsOne != nil {
+	if !isNil(o.IsOne) {
 		toSerialize["is_one"] = o.IsOne
 	}
-	if o.IsEven != nil {
+	if !isNil(o.IsEven) {
 		toSerialize["is_even"] = o.IsEven
 	}
-	if o.Sign != nil {
+	if !isNil(o.Sign) {
 		toSerialize["sign"] = o.Sign
 	}
 	return json.Marshal(toSerialize)

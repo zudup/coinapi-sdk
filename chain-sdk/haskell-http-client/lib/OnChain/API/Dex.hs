@@ -111,31 +111,6 @@ instance HasOptionalParam DappsDexOrdersHistoricalGet TokenId where
 instance Produces DappsDexOrdersHistoricalGet MimeNoContent
 
 
--- *** dappsDexPoiHistoricalGet
-
--- | @GET \/dapps\/dex\/poi\/historical@
--- 
-dappsDexPoiHistoricalGet
-  :: OnChainRequest DappsDexPoiHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsDexPoiHistoricalGet =
-  _mkRequest "GET" ["/dapps/dex/poi/historical"]
-
-data DappsDexPoiHistoricalGet  
-instance HasOptionalParam DappsDexPoiHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsDexPoiHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsDexPoiHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsDexPoiHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsDexPoiHistoricalGet MimeNoContent
-
-
 -- *** dappsDexPricesHistoricalGet
 
 -- | @GET \/dapps\/dex\/prices\/historical@

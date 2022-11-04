@@ -17,7 +17,10 @@ import org.openapitools.client.model.BigInteger;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Ticks are the boundaries between discrete areas in price space.
+ **/
+@ApiModel(description = "Ticks are the boundaries between discrete areas in price space.")
 public class TickV3DTO {
   
   @SerializedName("entry_time")
@@ -90,9 +93,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -112,9 +115,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Identifier, format: <pool address>#<tick index>
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>#<tick index>")
   public String getId() {
     return id;
   }
@@ -123,9 +126,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Pool address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
   public String getPoolAddress() {
     return poolAddress;
   }
@@ -144,9 +147,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Pool address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
   public String getPool() {
     return pool;
   }
@@ -175,9 +178,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Calculated price of token0 of tick within this pool - constant.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Calculated price of token0 of tick within this pool - constant.")
   public String getPrice0() {
     return price0;
   }
@@ -186,9 +189,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Calculated price of token1 of tick within this pool - constant.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Calculated price of token1 of tick within this pool - constant.")
   public String getPrice1() {
     return price1;
   }
@@ -197,9 +200,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Lifetime volume of token0 with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume of token0 with this tick in range.")
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -208,9 +211,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Lifetime volume of token1 with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume of token1 with this tick in range.")
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -219,9 +222,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Lifetime volume in derived USD with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume in derived USD with this tick in range.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -230,9 +233,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Lifetime volume in untracked USD with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume in untracked USD with this tick in range.")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -241,9 +244,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -252,9 +255,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token0.")
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -263,9 +266,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token1.")
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -274,9 +277,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in USD.")
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
   }
@@ -285,9 +288,9 @@ public class TickV3DTO {
   }
 
   /**
-   * 
+   * Created time.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Created time.")
   public Date getCreatedAtTimestamp() {
     return createdAtTimestamp;
   }

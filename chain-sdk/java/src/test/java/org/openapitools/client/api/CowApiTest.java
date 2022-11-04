@@ -48,19 +48,6 @@ public class CowApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowPoiHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsCowPoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void dappsCowSettlementHistoricalGetTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
-**block_number** | **INTEGER_64** |  | [optional] [default to null]
+**block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **vid** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Token address. | [optional] [default to null]
 **symbol** | [**STRING_32**](STRING_32.md) | Token symbol. | [optional] [default to null]

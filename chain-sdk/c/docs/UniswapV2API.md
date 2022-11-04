@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**UniswapV2API_dappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
 [**UniswapV2API_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**UniswapV2API_dappsUniswapv2MintsHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
-[**UniswapV2API_dappsUniswapv2PoiHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical | 
 [**UniswapV2API_dappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**UniswapV2API_dappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
 [**UniswapV2API_dappsUniswapv2PoolsCurrentGet**](UniswapV2API.md#UniswapV2API_dappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools
@@ -216,35 +215,6 @@ Name | Type | Description  | Notes
 **startDate** | **char** |  | [optional] 
 **endDate** | **char** |  | [optional] 
 **poolId** | **char \*** |  | [optional] 
-
-### Return type
-
-void
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UniswapV2API_dappsUniswapv2PoiHistoricalGet**
-```c
-void UniswapV2API_dappsUniswapv2PoiHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
 
 ### Return type
 

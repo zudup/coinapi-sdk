@@ -8,27 +8,27 @@ import 'package:built_value/serializer.dart';
 
 part 'burn_v3_dto.g.dart';
 
-/// BurnV3DTO
+/// Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [transaction] - 
-/// * [pool] - 
-/// * [token0] - 
-/// * [token1] - 
-/// * [timestamp] - 
-/// * [owner] - 
-/// * [origin] - 
-/// * [amount] - 
-/// * [amount0] - 
-/// * [amount1] - 
-/// * [amountUsd] - 
-/// * [tickLower] - 
-/// * [tickUpper] - 
-/// * [logIndex] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Transaction hash + '#' + index in mints Transaction array.
+/// * [transaction] - Transaction burn was included in.
+/// * [pool] - Pool position is within.
+/// * [token0] - Reference to token0 as stored in pool contract.
+/// * [token1] - Reference to token1 as stored in pool contract.
+/// * [timestamp] - Timestamp.
+/// * [owner] - Owner of position where liquidity was burned.
+/// * [origin] - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+/// * [amount] - Amount of liquidity burned.
+/// * [amount0] - Amount of token 0 burned.
+/// * [amount1] - Amount of token 1 burned.
+/// * [amountUsd] - Derived amount based on available prices of tokens.
+/// * [tickLower] - Lower tick of position.
+/// * [tickUpper] - Upper tick of position.
+/// * [logIndex] - Position within the transactions.
 /// * [vid] - 
 @BuiltValue()
 abstract class BurnV3DTO implements Built<BurnV3DTO, BurnV3DTOBuilder> {
@@ -38,67 +38,67 @@ abstract class BurnV3DTO implements Built<BurnV3DTO, BurnV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Transaction hash + '#' + index in mints Transaction array.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Transaction burn was included in.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Pool position is within.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Reference to token0 as stored in pool contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token1 as stored in pool contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
-  /// 
+  /// Timestamp.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Owner of position where liquidity was burned.
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
-  /// 
+  /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
   @BuiltValueField(wireName: r'origin')
   String? get origin;
 
-  /// 
+  /// Amount of liquidity burned.
   @BuiltValueField(wireName: r'amount')
   String? get amount;
 
-  /// 
+  /// Amount of token 0 burned.
   @BuiltValueField(wireName: r'amount_0')
   String? get amount0;
 
-  /// 
+  /// Amount of token 1 burned.
   @BuiltValueField(wireName: r'amount_1')
   String? get amount1;
 
-  /// 
+  /// Derived amount based on available prices of tokens.
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 
-  /// 
+  /// Lower tick of position.
   @BuiltValueField(wireName: r'tick_lower')
   String? get tickLower;
 
-  /// 
+  /// Upper tick of position.
   @BuiltValueField(wireName: r'tick_upper')
   String? get tickUpper;
 
-  /// 
+  /// Position within the transactions.
   @BuiltValueField(wireName: r'log_index')
   String? get logIndex;
 

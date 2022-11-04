@@ -18,7 +18,6 @@ Method | HTTP request | Description
 [**dapps_uniswapv3_factory_historical_get**](UniswapV3Api.md#dapps_uniswapv3_factory_historical_get) | **GET** /dapps/uniswapv3/factory/historical | 
 [**dapps_uniswapv3_mints_current_get**](UniswapV3Api.md#dapps_uniswapv3_mints_current_get) | **GET** /dapps/uniswapv3/mints/current | GetMints
 [**dapps_uniswapv3_mints_historical_get**](UniswapV3Api.md#dapps_uniswapv3_mints_historical_get) | **GET** /dapps/uniswapv3/mints/historical | 
-[**dapps_uniswapv3_poi_historical_get**](UniswapV3Api.md#dapps_uniswapv3_poi_historical_get) | **GET** /dapps/uniswapv3/poi/historical | 
 [**dapps_uniswapv3_pool_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_day_data_historical_get) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 [**dapps_uniswapv3_pool_hour_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_hour_data_historical_get) | **GET** /dapps/uniswapv3/poolHourData/historical | 
 [**dapps_uniswapv3_pools_current_get**](UniswapV3Api.md#dapps_uniswapv3_pools_current_get) | **GET** /dapps/uniswapv3/pools/current | GetPools
@@ -450,55 +449,6 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**|  | [optional] 
  **end_date** | **DATE_TIME**|  | [optional] 
  **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_uniswapv3_poi_historical_get**
-> dapps_uniswapv3_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::UniswapV3Api;
-my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_uniswapv3_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling UniswapV3Api->dapps_uniswapv3_poi_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
 
 ### Return type
 

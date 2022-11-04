@@ -2022,246 +2022,6 @@ paths:
           description: Success
       tags:
       - Cow
-  /dapps/uniswapv3/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - UniswapV3
-  /dapps/uniswapv2/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - UniswapV2
-  /dapps/sushiswap/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Sushiswap
-  /dapps/dex/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Dex
-  /dapps/curve/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Curve
-  /dapps/cow/poi/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Cow
   /dapps/uniswapv3/poolDayData/historical:
     get:
       parameters:
@@ -2682,7 +2442,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+          description: successful operation
+      summary: GetPools
       tags:
       - Sushiswap
   /dapps/curve/pools/historical:
@@ -3537,7 +3314,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+          description: successful operation
+      summary: GetSwaps
       tags:
       - Sushiswap
   /dapps/curve/swaps/historical:
@@ -4170,7 +3964,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+          description: successful operation
+      summary: GetTokens
       tags:
       - Sushiswap
   /dapps/curve/tokens/historical:
@@ -5180,6 +4991,8 @@ components:
       type: object
     BundleV3DTO:
       additionalProperties: false
+      description: The Bundle is used as a global store of derived ETH price in USD.
+        This provides a strong estimate for the USD price of ETH.
       example:
         eth_price_usd: eth_price_usd
         vid: 6
@@ -5195,7 +5008,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
@@ -5203,7 +5016,7 @@ components:
           nullable: true
           type: string
         eth_price_usd:
-          description: ""
+          description: Price of ETH in usd.
           nullable: true
           type: string
         vid:
@@ -5213,6 +5026,10 @@ components:
       type: object
     BurnV3DTO:
       additionalProperties: false
+      description: "Burn entities are created for every emitted Burn event on the\
+        \ Uniswap core contracts. The Burn entity stores key data about the event\
+        \ like token amounts, who burned, who received tokens, and more. This entity\
+        \ can be used to track liquidity removals on pairs."
       example:
         owner: owner
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -5241,67 +5058,68 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Transaction hash + '#' + index in mints Transaction array.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Transaction burn was included in.
           nullable: true
           type: string
         pool:
-          description: ""
+          description: Pool position is within.
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pool contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pool contract.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: Timestamp.
           nullable: true
           type: string
         owner:
-          description: ""
+          description: Owner of position where liquidity was burned.
           nullable: true
           type: string
         origin:
-          description: ""
+          description: "Transaction origin: the EOA (Externally Owned Account) that\
+            \ initiated the transaction."
           nullable: true
           type: string
         amount:
-          description: ""
+          description: Amount of liquidity burned.
           nullable: true
           type: string
         amount_0:
-          description: ""
+          description: Amount of token 0 burned.
           nullable: true
           type: string
         amount_1:
-          description: ""
+          description: Amount of token 1 burned.
           nullable: true
           type: string
         amount_usd:
-          description: ""
+          description: Derived amount based on available prices of tokens.
           nullable: true
           type: string
         tick_lower:
-          description: ""
+          description: Lower tick of position.
           nullable: true
           type: string
         tick_upper:
-          description: ""
+          description: Upper tick of position.
           nullable: true
           type: string
         log_index:
-          description: ""
+          description: Position within the transactions.
           nullable: true
           type: string
         vid:
@@ -5319,6 +5137,9 @@ components:
       type: string
     FactoryV3DTO:
       additionalProperties: false
+      description: "The Uniswap Factory entity is responsible for storing aggregate\
+        \ information across all Uniswap pairs. It can be used to view stats about\
+        \ total liquidity, volume, amount of pairs and more."
       example:
         owner: owner
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -5345,59 +5166,59 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Factory address.
           nullable: true
           type: string
         pool_count:
-          description: ""
+          description: Amount of pools created.
           nullable: true
           type: string
         tx_count:
-          description: ""
+          description: Amount of transactions all time.
           nullable: true
           type: string
         total_volume_usd:
-          description: ""
+          description: Total volume all time in derived USD.
           nullable: true
           type: string
         total_volume_eth:
-          description: ""
+          description: Total volume all time in derived ETH.
           nullable: true
           type: string
         total_fees_usd:
-          description: ""
+          description: Total swap fees all time in USD.
           nullable: true
           type: string
         total_fees_eth:
-          description: ""
+          description: All volume even through less reliable USD values.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: All volume even through less reliable USD values.
           nullable: true
           type: string
         total_value_locked_usd:
-          description: ""
+          description: Total value locked derived in USD.
           nullable: true
           type: string
         total_value_locked_eth:
-          description: ""
+          description: Total value locked derived in ETH.
           nullable: true
           type: string
         total_value_locked_usd_untracked:
-          description: ""
+          description: Total value locked derived in USD untracked.
           nullable: true
           type: string
         total_value_locked_eth_untracked:
-          description: ""
+          description: Total value locked derived in ETH untracked.
           nullable: true
           type: string
         owner:
-          description: ""
+          description: Current owner of the factory.
           nullable: true
           type: string
         vid:
@@ -5407,6 +5228,9 @@ components:
       type: object
     MintV3DTO:
       additionalProperties: false
+      description: "Mint entities are created for every emitted Mint event on the\
+        \ Uniswap core contracts. The Mint entity stores key data about the event\
+        \ like token amounts, who sent the transaction, and more."
       example:
         owner: owner
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -5436,71 +5260,72 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Transaction hash + '#' + index in mints Transaction array.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Which txn the mint was included in.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: Time of transaction.
           nullable: true
           type: string
         pool:
-          description: ""
+          description: Pool address.
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pool contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pool contract.
           nullable: true
           type: string
         owner:
-          description: ""
+          description: Owner of position where liquidity minted to.
           nullable: true
           type: string
         sender:
-          description: ""
+          description: The address that minted the liquidity.
           nullable: true
           type: string
         origin:
-          description: ""
+          description: "Transaction origin: the EOA (Externally Owned Account) that\
+            \ initiated the transaction."
           nullable: true
           type: string
         amount:
-          description: ""
+          description: Amount of liquidity minted.
           nullable: true
           type: string
         amount_0:
-          description: ""
+          description: Amount of token 0 minted.
           nullable: true
           type: string
         amount_1:
-          description: ""
+          description: Amount of token 1 minted.
           nullable: true
           type: string
         amount_usd:
-          description: ""
+          description: Derived amount based on available prices of tokens.
           nullable: true
           type: string
         tick_lower:
-          description: ""
+          description: Lower tick of the position.
           nullable: true
           type: string
         tick_upper:
-          description: ""
+          description: Upper tick of the position.
           nullable: true
           type: string
         log_index:
-          description: ""
+          description: Order within the transaction.
           nullable: true
           type: string
         vid:
@@ -5510,6 +5335,10 @@ components:
       type: object
     PairDTO:
       additionalProperties: false
+      description: "Information about a pair. Includes references to each token within\
+        \ the pair, volume information, liquidity information, and more. The pair\
+        \ entity mirrors the pair smart contract, and also contains aggregated information\
+        \ about use."
       example:
         untracked_volume_usd: untracked_volume_usd
         tracked_reserve_eth: tracked_reserve_eth
@@ -5545,91 +5374,93 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Pair contract address.
           nullable: true
           type: string
         factory:
-          description: ""
+          description: Factory contract address.
           nullable: true
           type: string
         name:
-          description: ""
+          description: "Friendly name, format: <token0 name>-<token1 name>"
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pair contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token0 as stored in pair contract.
           nullable: true
           type: string
         reserve_0:
-          description: ""
+          description: Reserve of token0.
           nullable: true
           type: string
         reserve_1:
-          description: ""
+          description: Reserve of token1.
           nullable: true
           type: string
         total_supply:
-          description: ""
+          description: Total supply of liquidity token distributed to LPs.
           nullable: true
           type: string
         reserve_eth:
-          description: ""
+          description: Total liquidity in pair stored as an amount of ETH.
           nullable: true
           type: string
         reserve_usd:
-          description: ""
+          description: Total liquidity amount in pair stored as an amount of USD.
           nullable: true
           type: string
         tracked_reserve_eth:
-          description: ""
+          description: Total liquidity with only tracked amount.
           nullable: true
           type: string
         token_0_price:
-          description: ""
+          description: Token0 per token1.
           nullable: true
           type: string
         token_1_price:
-          description: ""
+          description: Token1 per token0.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Amount of token0 swapped on this pair.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Amount of token1 swapped on this pair.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Total amount swapped all time in this pair stored in USD (only
+            tracked if USD liquidity is above minimum threshold).
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: "Total amount swapped all time in this pair stored in USD,\
+            \ no minimum liquidity threshold."
           nullable: true
           type: string
         tx_count:
-          description: ""
+          description: All time amount of transactions on this pair.
           nullable: true
           type: string
         liquidity_provider_count:
-          description: ""
+          description: Total number of LPs.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: Timestamp.
           nullable: true
           type: string
         block:
-          description: ""
+          description: Block number in which pair information was created in.
           nullable: true
           type: string
         vid:
@@ -5684,7 +5515,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -5724,7 +5555,7 @@ components:
           nullable: true
           type: string
         tracked_reserve_eth:
-          description: Total liquidity with only tracked amount (see tracked amounts).
+          description: Total liquidity with only tracked amount.
           nullable: true
           type: string
         token_0_price:
@@ -5760,7 +5591,7 @@ components:
           format: date-time
           type: string
         liquidity_provider_count:
-          description: ""
+          description: Total number of LPs.
           nullable: true
           type: string
         evaluated_ask:
@@ -5770,6 +5601,7 @@ components:
       type: object
     PoolDayDataV3DTO:
       additionalProperties: false
+      description: Data accumulated and condensed into day stats for each pool.
       example:
         date: 6
         token_0_price: token_0_price
@@ -5803,87 +5635,87 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: "Identifier, format: <pool address>-<day id>."
           nullable: true
           type: string
         date:
-          description: ""
+          description: Timestamp rounded to current day by dividing by 86400
           format: int32
           type: integer
         pool:
-          description: ""
+          description: Pointer to pool.
           nullable: true
           type: string
         liquidity:
-          description: ""
+          description: In range liquidity at end of period.
           nullable: true
           type: string
         sqrt_price:
-          description: ""
+          description: Current price tracker at end of period.
           nullable: true
           type: string
         token_0_price:
-          description: ""
+          description: Price of token0 - derived from sqrtPrice.
           nullable: true
           type: string
         token_1_price:
-          description: ""
+          description: Price of token1 - derived from sqrtPrice.
           nullable: true
           type: string
         tick:
-          description: ""
+          description: Current tick at end of period.
           nullable: true
           type: string
         fee_growth_global_0x128:
-          description: ""
+          description: Tracker for global fee growth.
           nullable: true
           type: string
         fee_growth_global_1x128:
-          description: ""
+          description: Tracker for global fee growth.
           nullable: true
           type: string
         tvl_usd:
-          description: ""
+          description: Total value locked derived in USD at end of period.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Volume in token0.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Volume in token1.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Volume in USD.
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: Fees in USD.
           nullable: true
           type: string
         tx_count:
-          description: ""
+          description: Number of transactions during period.
           nullable: true
           type: string
         open:
-          description: ""
+          description: Opening price of token0.
           nullable: true
           type: string
         high:
-          description: ""
+          description: High price of token0.
           nullable: true
           type: string
         low:
-          description: ""
+          description: Low price of token0.
           nullable: true
           type: string
         close:
-          description: ""
+          description: Close price of token0.
           nullable: true
           type: string
         vid:
@@ -5893,6 +5725,7 @@ components:
       type: object
     PoolHourDataV3DTO:
       additionalProperties: false
+      description: Hourly stats tracker for pool.
       example:
         token_0_price: token_0_price
         volume_token_1: volume_token_1
@@ -5926,87 +5759,87 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: "Identifier, format: <pool address>-<day id>"
           nullable: true
           type: string
         period_start_unix:
-          description: ""
+          description: Unix timestamp for start of hour.
           format: int32
           type: integer
         pool:
-          description: ""
+          description: Pointer to pool.
           nullable: true
           type: string
         liquidity:
-          description: ""
+          description: In range liquidity at end of period.
           nullable: true
           type: string
         sqrt_price:
-          description: ""
+          description: Current price tracker at end of period.
           nullable: true
           type: string
         token_0_price:
-          description: ""
+          description: Price of token0 - derived from sqrtPrice.
           nullable: true
           type: string
         token_1_price:
-          description: ""
+          description: Price of token1 - derived from sqrtPrice.
           nullable: true
           type: string
         tick:
-          description: ""
+          description: Current tick at end of period.
           nullable: true
           type: string
         fee_growth_global_0x128:
-          description: ""
+          description: Tracker for global fee growth.
           nullable: true
           type: string
         fee_growth_global_1x128:
-          description: ""
+          description: Tracker for global fee growth.
           nullable: true
           type: string
         tvl_usd:
-          description: ""
+          description: Total value locked derived in USD at end of period.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Volume in token0.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Volume in token1.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Volume in USD.
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: Fees in USD.
           nullable: true
           type: string
         tx_count:
-          description: ""
+          description: Number of transactions during period.
           nullable: true
           type: string
         open:
-          description: ""
+          description: Opening price of token0.
           nullable: true
           type: string
         high:
-          description: ""
+          description: High price of token0.
           nullable: true
           type: string
         low:
-          description: ""
+          description: Low price of token0.
           nullable: true
           type: string
         close:
-          description: ""
+          description: Close price of token0.
           nullable: true
           type: string
         vid:
@@ -6016,6 +5849,10 @@ components:
       type: object
     PoolV3DTO:
       additionalProperties: false
+      description: "Information about a pool. Includes references to each token within\
+        \ the pool, volume information, liquidity information, and more. The pool\
+        \ entity mirrors the pool smart contract, and also contains aggregated information\
+        \ about use."
       example:
         untracked_volume_usd: untracked_volume_usd
         created_at_timestamp: 2000-01-23T04:56:07.000+00:00
@@ -6098,7 +5935,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -6106,19 +5943,19 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: Pool address.
           nullable: true
           type: string
         created_at_timestamp:
-          description: ""
+          description: Creation time.
           format: date-time
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pool contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pool contract.
           nullable: true
           type: string
         fee_tier:
@@ -6132,11 +5969,11 @@ components:
         fee_growth_global_1x128:
           $ref: '#/components/schemas/BigInteger'
         token_0_price:
-          description: ""
+          description: Token0 per token1.
           nullable: true
           type: string
         token_1_price:
-          description: ""
+          description: Token1 per token0.
           nullable: true
           type: string
         tick:
@@ -6144,41 +5981,41 @@ components:
         observation_index:
           $ref: '#/components/schemas/BigInteger'
         volume_token_0:
-          description: ""
+          description: All time token0 swapped.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: All time token1 swapped.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: All time USD swapped.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: "All time USD swapped, unfiltered for unreliable USD pools."
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: Fees in USD.
           nullable: true
           type: string
         tx_count:
           $ref: '#/components/schemas/BigInteger'
         collected_fees_token_0:
-          description: ""
+          description: All time fees collected token0.
           nullable: true
           type: string
         collected_fees_token_1:
-          description: ""
+          description: All time fees collected token1.
           nullable: true
           type: string
         collected_fees_usd:
-          description: ""
+          description: All time fees collected derived USD.
           nullable: true
           type: string
         total_value_locked_token_0:
-          description: ""
+          description: Total token 0 across all ticks.
           nullable: true
           type: string
         total_value_locked_token_1:
@@ -6186,19 +6023,19 @@ components:
           nullable: true
           type: string
         total_value_locked_eth:
-          description: ""
+          description: Total token 1 across all ticks.
           nullable: true
           type: string
         total_value_locked_usd:
-          description: ""
+          description: Total value locked USD.
           nullable: true
           type: string
         total_value_locked_usd_untracked:
-          description: ""
+          description: Total value locked derived ETH.
           nullable: true
           type: string
         liquidity_provider_count:
-          description: ""
+          description: "Liquidity providers count, used to detect new exchanges."
           nullable: true
           type: string
         evaluated_ask:
@@ -6236,68 +6073,67 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: "NFT token identifier, format: <NFT token id>#<block number>"
           nullable: true
           type: string
         owner:
-          description: THIS IS SUPER OWNER
-          format: FORMATTTTTTTTTTT
-          title: OWNERINHO
+          description: Owner of the NFT.
+          nullable: true
           type: string
         pool:
-          description: ""
+          description: Pool the position is within.
           nullable: true
           type: string
         position:
-          description: ""
+          description: Position of which the snap was taken of.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: Timestamp of block in which the snap was created.
           nullable: true
           type: string
         liquidity:
-          description: ""
+          description: Total position liquidity.
           nullable: true
           type: string
         deposited_token_0:
-          description: ""
+          description: Amount of token 0 ever deposited to position.
           nullable: true
           type: string
         deposited_token_1:
-          description: ""
+          description: Amount of token 1 ever deposited to position.
           nullable: true
           type: string
         withdrawn_token_0:
-          description: ""
+          description: Amount of token 0 ever withdrawn from position (without fees).
           nullable: true
           type: string
         withdrawn_token_1:
-          description: ""
+          description: Amount of token 1 ever withdrawn from position (without fees).
           nullable: true
           type: string
         collected_fees_token_0:
-          description: ""
+          description: All time collected fees in token0.
           nullable: true
           type: string
         collected_fees_token_1:
-          description: ""
+          description: All time collected fees in token1.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Transaction in which the snapshot was initialized.
           nullable: true
           type: string
         fee_growth_inside_0_last_x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         fee_growth_inside_1_last_x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         vid:
@@ -6307,6 +6143,9 @@ components:
       type: object
     PositionV3DTO:
       additionalProperties: false
+      description: Positions created through NonfungiblePositionManager. Positions
+        are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20
+        tokens on Uniswap V1 and V2.
       example:
         owner: owner
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -6337,75 +6176,75 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: NFT token identifier.
           nullable: true
           type: string
         owner:
-          description: ""
+          description: Owner of the NFT.
           nullable: true
           type: string
         pool:
-          description: ""
+          description: Pool position is within.
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pair contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pair contract.
           nullable: true
           type: string
         tick_lower:
-          description: ""
+          description: Lower tick of the position.
           nullable: true
           type: string
         tick_upper:
-          description: ""
+          description: Upper tick of the position.
           nullable: true
           type: string
         liquidity:
-          description: ""
+          description: Total position liquidity.
           nullable: true
           type: string
         deposited_token_0:
-          description: ""
+          description: Amount of token 0 ever deposited to position.
           nullable: true
           type: string
         deposited_token_1:
-          description: ""
+          description: Amount of token 1 ever deposited to position.
           nullable: true
           type: string
         withdrawn_token_0:
-          description: ""
+          description: Amount of token 0 ever withdrawn from position (without fees).
           nullable: true
           type: string
         withdrawn_token_1:
-          description: ""
+          description: Amount of token 1 ever withdrawn from position (without fees).
           nullable: true
           type: string
         collected_fees_token_0:
-          description: ""
+          description: All time collected fees in token0.
           nullable: true
           type: string
         collected_fees_token_1:
-          description: ""
+          description: All time collected fees in token1.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Transaction in which the position was initialized.
           nullable: true
           type: string
         fee_growth_inside_0_last_x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         fee_growth_inside_1_last_x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         vid:
@@ -6415,6 +6254,7 @@ components:
       type: object
     SwapDTO:
       additionalProperties: false
+      description: Swap are created for each token swap within a pair.
       example:
         transaction_id: transaction_id
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -6445,55 +6285,55 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Transaction hash plus index in Transaction swap array.
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Reference to transaction swap was included in.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: "Timestamp of swap, used for sorted lookups."
           nullable: true
           type: string
         pair:
-          description: ""
+          description: Reference to pair.
           nullable: true
           type: string
         sender:
-          description: ""
+          description: Address that initiated the swap.
           nullable: true
           type: string
         amount_0_in:
-          description: ""
+          description: Amount of token0 sold.
           nullable: true
           type: string
         amount_1_in:
-          description: ""
+          description: Amount of token1 sold.
           nullable: true
           type: string
         amount_0_out:
-          description: ""
+          description: Amount of token0 received.
           nullable: true
           type: string
         amount_1_out:
-          description: ""
+          description: Amount of token1 received.
           nullable: true
           type: string
         to:
-          description: ""
+          description: Recipient of output tokens.
           nullable: true
           type: string
         log_index:
-          description: ""
+          description: Event index within transaction.
           nullable: true
           type: string
         amount_usd:
-          description: ""
+          description: Derived amount of tokens sold in USD.
           nullable: true
           type: string
         vid:
@@ -6558,7 +6398,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -6636,6 +6476,7 @@ components:
       type: object
     SwapV3DTO:
       additionalProperties: false
+      description: Swap are created for each token swap within a pair.
       example:
         transaction_id: transaction_id
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -6684,7 +6525,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -6692,51 +6533,53 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: "Identifier, format: transaction hash + \"#\" + index in swaps\
+            \ Transaction array."
           nullable: true
           type: string
         transaction:
-          description: ""
+          description: Pointer to transaction.
           nullable: true
           type: string
         timestamp:
-          description: ""
+          description: Timestamp of transaction.
           format: date-time
           type: string
         pool:
-          description: ""
+          description: Pool swap occured within.
           nullable: true
           type: string
         token_0:
-          description: ""
+          description: Reference to token0 as stored in pair contract.
           nullable: true
           type: string
         token_1:
-          description: ""
+          description: Reference to token1 as stored in pair contract.
           nullable: true
           type: string
         sender:
-          description: ""
+          description: Sender of the swap.
           nullable: true
           type: string
         recipient:
-          description: ""
+          description: Recipient of the swap.
           nullable: true
           type: string
         origin:
-          description: ""
+          description: "Transaction origin: the EOA (Externally Owned Account) that\
+            \ initiated the transaction"
           nullable: true
           type: string
         amount_0:
-          description: ""
+          description: Delta of token0 swapped.
           nullable: true
           type: string
         amount_1:
-          description: ""
+          description: Delta of token1 swapped.
           nullable: true
           type: string
         amount_usd:
-          description: ""
+          description: Derived amount of tokens sold in USD.
           nullable: true
           type: string
         sqrt_price_x96:
@@ -6766,6 +6609,8 @@ components:
       type: object
     TickDayDataV3DTO:
       additionalProperties: false
+      description: Data accumulated and condensed into day stats for each exchange.
+        Entity gets saved only if there is a change during the day
       example:
         date: 6
         volume_token_1: volume_token_1
@@ -6791,55 +6636,55 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: "Identifier, format: <pool address>-<tick index>-<timestamp>."
           nullable: true
           type: string
         date:
-          description: ""
+          description: Timestamp rounded to current day by dividing by 86400.
           format: int32
           type: integer
         pool:
-          description: ""
+          description: Pointer to pool.
           nullable: true
           type: string
         tick:
-          description: ""
+          description: Pointer to tick.
           nullable: true
           type: string
         liquidity_gross:
-          description: ""
+          description: Total liquidity pool has as tick lower or upper at end of period.
           nullable: true
           type: string
         liquidity_net:
-          description: ""
+          description: How much liquidity changes when tick crossed at end of period.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Hourly volume of token0 with this tick in range.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Hourly volume of token1 with this tick in range.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Hourly volume in derived USD with this tick in range.
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: Fees in USD.
           nullable: true
           type: string
         fee_growth_outside_0x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         fee_growth_outside_1x128:
-          description: ""
+          description: Variable needed for fee computation.
           nullable: true
           type: string
         vid:
@@ -6849,6 +6694,7 @@ components:
       type: object
     TickV3DTO:
       additionalProperties: false
+      description: Ticks are the boundaries between discrete areas in price space.
       example:
         volume_token_1: volume_token_1
         entry_time: 2000-01-23T04:56:07.000+00:00
@@ -6912,7 +6758,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -6920,17 +6766,17 @@ components:
           format: int64
           type: integer
         id:
-          description: ""
+          description: "Identifier, format: <pool address>#<tick index>"
           nullable: true
           type: string
         pool_address:
-          description: ""
+          description: Pool address.
           nullable: true
           type: string
         tick_idx:
           $ref: '#/components/schemas/BigInteger'
         pool:
-          description: ""
+          description: Pool address.
           nullable: true
           type: string
         liquidity_gross:
@@ -6938,47 +6784,47 @@ components:
         liquidity_net:
           $ref: '#/components/schemas/BigInteger'
         price_0:
-          description: ""
+          description: Calculated price of token0 of tick within this pool - constant.
           nullable: true
           type: string
         price_1:
-          description: ""
+          description: Calculated price of token1 of tick within this pool - constant.
           nullable: true
           type: string
         volume_token_0:
-          description: ""
+          description: Lifetime volume of token0 with this tick in range.
           nullable: true
           type: string
         volume_token_1:
-          description: ""
+          description: Lifetime volume of token1 with this tick in range.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Lifetime volume in derived USD with this tick in range.
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: Lifetime volume in untracked USD with this tick in range.
           nullable: true
           type: string
         fees_usd:
-          description: ""
+          description: Fees in USD.
           nullable: true
           type: string
         collected_fees_token_0:
-          description: ""
+          description: All time collected fees in token0.
           nullable: true
           type: string
         collected_fees_token_1:
-          description: ""
+          description: All time collected fees in token1.
           nullable: true
           type: string
         collected_fees_usd:
-          description: ""
+          description: All time collected fees in USD.
           nullable: true
           type: string
         created_at_timestamp:
-          description: ""
+          description: Created time.
           format: date-time
           type: string
         liquidity_provider_count:
@@ -6990,6 +6836,8 @@ components:
       type: object
     TokenDTO:
       additionalProperties: false
+      description: Stores aggregated information for a specific token across all pairs
+        that token is included in.
       example:
         entry_time: 2000-01-23T04:56:07.000+00:00
         factory: factory
@@ -7019,59 +6867,61 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
-          description: ""
+          description: Token address.
           nullable: true
           type: string
         factory:
-          description: ""
+          description: Factory address.
           nullable: true
           type: string
         symbol:
-          description: ""
+          description: Token symbol.
           nullable: true
           type: string
         name:
-          description: ""
+          description: Token name.
           nullable: true
           type: string
         decimals:
-          description: ""
+          description: Token decimals.
           nullable: true
           type: string
         total_supply:
-          description: ""
+          description: Total supply of liquidity token.
           nullable: true
           type: string
         volume:
-          description: ""
+          description: Amount of token traded all time across all pairs.
           nullable: true
           type: string
         volume_usd:
-          description: ""
+          description: Amount of token in USD traded all time across pairs (only for
+            tokens with liquidity above minimum threshold).
           nullable: true
           type: string
         untracked_volume_usd:
-          description: ""
+          description: Amount of token in USD traded all time across pairs (no minimum
+            liquidity threshold).
           nullable: true
           type: string
         tx_count:
-          description: ""
+          description: Amount of transactions all time in pairs including token.
           nullable: true
           type: string
         liquidity:
-          description: ""
+          description: Total amount of token provided as liquidity across all pairs.
           nullable: true
           type: string
         derived_eth:
-          description: ""
+          description: ETH per token.
           nullable: true
           type: string
         whitelist_pairs:
-          description: ""
+          description: Array of whitelisted pairs.
           items:
             type: string
           nullable: true
@@ -7115,7 +6965,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         id:
@@ -7218,7 +7068,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -7323,7 +7173,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -7425,7 +7275,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:
@@ -7518,7 +7368,7 @@ components:
           format: date-time
           type: string
         block_number:
-          description: ""
+          description: Number of block in which entity was recorded.
           format: int64
           type: integer
         vid:

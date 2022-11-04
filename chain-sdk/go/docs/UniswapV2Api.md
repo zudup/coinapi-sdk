@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**DappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2Api.md#DappsUniswapv2LiquidityPositionHistoricalGet) | **Get** /dapps/uniswapv2/liquidityPosition/historical | 
 [**DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2Api.md#DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**DappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#DappsUniswapv2MintsHistoricalGet) | **Get** /dapps/uniswapv2/mints/historical | 
-[**DappsUniswapv2PoiHistoricalGet**](UniswapV2Api.md#DappsUniswapv2PoiHistoricalGet) | **Get** /dapps/uniswapv2/poi/historical | 
 [**DappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#DappsUniswapv2PoolDayDataHistoricalGet) | **Get** /dapps/uniswapv2/poolDayData/historical | 
 [**DappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#DappsUniswapv2PoolHourDataHistoricalGet) | **Get** /dapps/uniswapv2/poolHourData/historical | 
 [**DappsUniswapv2PoolsCurrentGet**](UniswapV2Api.md#DappsUniswapv2PoolsCurrentGet) | **Get** /dapps/uniswapv2/pools/current | GetPools
@@ -498,75 +497,6 @@ Name | Type | Description  | Notes
  **startDate** | **time.Time** |  | 
  **endDate** | **time.Time** |  | 
  **poolId** | **string** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsUniswapv2PoiHistoricalGet
-
-> DappsUniswapv2PoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV2Api.DappsUniswapv2PoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.DappsUniswapv2PoiHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsUniswapv2PoiHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
 
 ### Return type
 

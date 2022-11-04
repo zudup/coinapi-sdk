@@ -20,7 +20,7 @@ export class TokenV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**

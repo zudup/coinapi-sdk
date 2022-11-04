@@ -12,6 +12,7 @@
  */
 
 /**
+ * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  * @export
  * @interface PositionV3DTO
  */
@@ -27,109 +28,109 @@ export interface PositionV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PositionV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * NFT token identifier.
      * @type {string}
      * @memberof PositionV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Owner of the NFT.
      * @type {string}
      * @memberof PositionV3DTO
      */
     owner?: string | null;
     /**
-     * 
+     * Pool position is within.
      * @type {string}
      * @memberof PositionV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_1?: string | null;
     /**
-     * 
+     * Lower tick of the position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_lower?: string | null;
     /**
-     * 
+     * Upper tick of the position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_upper?: string | null;
     /**
-     * 
+     * Total position liquidity.
      * @type {string}
      * @memberof PositionV3DTO
      */
     liquidity?: string | null;
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_1?: string | null;
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_1?: string | null;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * Transaction in which the position was initialized.
      * @type {string}
      * @memberof PositionV3DTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionV3DTO
      */
     fee_growth_inside_0_last_x128?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionV3DTO
      */

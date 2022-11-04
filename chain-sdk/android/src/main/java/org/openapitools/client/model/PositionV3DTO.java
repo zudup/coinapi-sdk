@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+ **/
+@ApiModel(description = "Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.")
 public class PositionV3DTO {
   
   @SerializedName("entry_time")
@@ -83,9 +86,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -94,9 +97,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * NFT token identifier.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "NFT token identifier.")
   public String getId() {
     return id;
   }
@@ -105,9 +108,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Owner of the NFT.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Owner of the NFT.")
   public String getOwner() {
     return owner;
   }
@@ -116,9 +119,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Pool position is within.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool position is within.")
   public String getPool() {
     return pool;
   }
@@ -127,9 +130,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Reference to token0 as stored in pair contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pair contract.")
   public String getToken0() {
     return token0;
   }
@@ -138,9 +141,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Reference to token1 as stored in pair contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pair contract.")
   public String getToken1() {
     return token1;
   }
@@ -149,9 +152,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Lower tick of the position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lower tick of the position.")
   public String getTickLower() {
     return tickLower;
   }
@@ -160,9 +163,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Upper tick of the position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Upper tick of the position.")
   public String getTickUpper() {
     return tickUpper;
   }
@@ -171,9 +174,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Total position liquidity.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total position liquidity.")
   public String getLiquidity() {
     return liquidity;
   }
@@ -182,9 +185,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 ever deposited to position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 ever deposited to position.")
   public String getDepositedToken0() {
     return depositedToken0;
   }
@@ -193,9 +196,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 ever deposited to position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 ever deposited to position.")
   public String getDepositedToken1() {
     return depositedToken1;
   }
@@ -204,9 +207,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 ever withdrawn from position (without fees).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 ever withdrawn from position (without fees).")
   public String getWithdrawnToken0() {
     return withdrawnToken0;
   }
@@ -215,9 +218,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 ever withdrawn from position (without fees).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 ever withdrawn from position (without fees).")
   public String getWithdrawnToken1() {
     return withdrawnToken1;
   }
@@ -226,9 +229,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token0.")
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -237,9 +240,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token1.")
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -248,9 +251,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Transaction in which the position was initialized.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction in which the position was initialized.")
   public String getTransaction() {
     return transaction;
   }
@@ -259,9 +262,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthInside0LastX128() {
     return feeGrowthInside0LastX128;
   }
@@ -270,9 +273,9 @@ public class PositionV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthInside1LastX128() {
     return feeGrowthInside1LastX128;
   }

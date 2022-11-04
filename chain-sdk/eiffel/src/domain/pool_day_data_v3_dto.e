@@ -24,47 +24,47 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Identifier, format: <pool address>-<day id>.
  	date: INTEGER_32
-    	 -- 
+    	 -- Timestamp rounded to current day by dividing by 86400
     pool: detachable STRING_32
-      -- 
+      -- Pointer to pool.
     liquidity: detachable STRING_32
-      -- 
+      -- In range liquidity at end of period.
     sqrt_price: detachable STRING_32
-      -- 
+      -- Current price tracker at end of period.
     token_0_price: detachable STRING_32
-      -- 
+      -- Price of token0 - derived from sqrtPrice.
     token_1_price: detachable STRING_32
-      -- 
+      -- Price of token1 - derived from sqrtPrice.
     tick: detachable STRING_32
-      -- 
+      -- Current tick at end of period.
     fee_growth_global_0x128: detachable STRING_32
-      -- 
+      -- Tracker for global fee growth.
     fee_growth_global_1x128: detachable STRING_32
-      -- 
+      -- Tracker for global fee growth.
     tvl_usd: detachable STRING_32
-      -- 
+      -- Total value locked derived in USD at end of period.
     volume_token_0: detachable STRING_32
-      -- 
+      -- Volume in token0.
     volume_token_1: detachable STRING_32
-      -- 
+      -- Volume in token1.
     volume_usd: detachable STRING_32
-      -- 
+      -- Volume in USD.
     fees_usd: detachable STRING_32
-      -- 
+      -- Fees in USD.
     tx_count: detachable STRING_32
-      -- 
+      -- Number of transactions during period.
     open: detachable STRING_32
-      -- 
+      -- Opening price of token0.
     high: detachable STRING_32
-      -- 
+      -- High price of token0.
     low: detachable STRING_32
-      -- 
+      -- Low price of token0.
     close: detachable STRING_32
-      -- 
+      -- Close price of token0.
  	vid: INTEGER_64
     	 -- 
 

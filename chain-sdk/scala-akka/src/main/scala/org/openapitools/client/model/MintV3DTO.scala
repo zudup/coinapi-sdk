@@ -17,39 +17,39 @@ import org.openapitools.client.core.ApiModel
 case class MintV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Transaction hash + '#' + index in mints Transaction array. */
   id: Option[String] = None,
-  /*  */
+  /* Which txn the mint was included in. */
   transaction: Option[String] = None,
-  /*  */
+  /* Time of transaction. */
   timestamp: Option[String] = None,
-  /*  */
+  /* Pool address. */
   pool: Option[String] = None,
-  /*  */
+  /* Reference to token0 as stored in pool contract. */
   token0: Option[String] = None,
-  /*  */
+  /* Reference to token1 as stored in pool contract. */
   token1: Option[String] = None,
-  /*  */
+  /* Owner of position where liquidity minted to. */
   owner: Option[String] = None,
-  /*  */
+  /* The address that minted the liquidity. */
   sender: Option[String] = None,
-  /*  */
+  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. */
   origin: Option[String] = None,
-  /*  */
+  /* Amount of liquidity minted. */
   amount: Option[String] = None,
-  /*  */
+  /* Amount of token 0 minted. */
   amount0: Option[String] = None,
-  /*  */
+  /* Amount of token 1 minted. */
   amount1: Option[String] = None,
-  /*  */
+  /* Derived amount based on available prices of tokens. */
   amountUsd: Option[String] = None,
-  /*  */
+  /* Lower tick of the position. */
   tickLower: Option[String] = None,
-  /*  */
+  /* Upper tick of the position. */
   tickUpper: Option[String] = None,
-  /*  */
+  /* Order within the transaction. */
   logIndex: Option[String] = None,
   /*  */
   vid: Option[Long] = None

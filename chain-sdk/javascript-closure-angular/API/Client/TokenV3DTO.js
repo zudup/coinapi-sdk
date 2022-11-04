@@ -19,7 +19,7 @@ API.Client.TokenV3DTO.prototype.entryTime;
 API.Client.TokenV3DTO.prototype.recvTime;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */

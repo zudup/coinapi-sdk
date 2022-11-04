@@ -13,44 +13,44 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Transaction hash + '#' + index in mints Transaction array.
 .PARAMETER Transaction
-
+Transaction burn was included in.
 .PARAMETER Pool
-
+Pool position is within.
 .PARAMETER Token0
-
+Reference to token0 as stored in pool contract.
 .PARAMETER Token1
-
+Reference to token1 as stored in pool contract.
 .PARAMETER Timestamp
-
+Timestamp.
 .PARAMETER Owner
-
+Owner of position where liquidity was burned.
 .PARAMETER Origin
-
+Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 .PARAMETER Amount
-
+Amount of liquidity burned.
 .PARAMETER Amount0
-
+Amount of token 0 burned.
 .PARAMETER Amount1
-
+Amount of token 1 burned.
 .PARAMETER AmountUsd
-
+Derived amount based on available prices of tokens.
 .PARAMETER TickLower
-
+Lower tick of position.
 .PARAMETER TickUpper
-
+Upper tick of position.
 .PARAMETER LogIndex
-
+Position within the transactions.
 .PARAMETER Vid
 
 .OUTPUTS

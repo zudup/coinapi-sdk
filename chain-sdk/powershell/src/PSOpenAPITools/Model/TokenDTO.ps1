@@ -13,40 +13,40 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Stores aggregated information for a specific token across all pairs that token is included in.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Token address.
 .PARAMETER Factory
-
+Factory address.
 .PARAMETER Symbol
-
+Token symbol.
 .PARAMETER Name
-
+Token name.
 .PARAMETER Decimals
-
+Token decimals.
 .PARAMETER TotalSupply
-
+Total supply of liquidity token.
 .PARAMETER Volume
-
+Amount of token traded all time across all pairs.
 .PARAMETER VolumeUsd
-
+Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 .PARAMETER UntrackedVolumeUsd
-
+Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 .PARAMETER TxCount
-
+Amount of transactions all time in pairs including token.
 .PARAMETER Liquidity
-
+Total amount of token provided as liquidity across all pairs.
 .PARAMETER DerivedEth
-
+ETH per token.
 .PARAMETER WhitelistPairs
-
+Array of whitelisted pairs.
 .PARAMETER Vid
 
 .PARAMETER TokenSymbol

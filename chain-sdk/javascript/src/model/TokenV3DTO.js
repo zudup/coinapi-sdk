@@ -116,8 +116,84 @@ class TokenV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TokenV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TokenV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['symbol'] && !(typeof data['symbol'] === 'string' || data['symbol'] instanceof String)) {
+            throw new Error("Expected the field `symbol` to be a primitive type in the JSON string but got " + data['symbol']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // validate the optional field `total_supply`
+        if (data['total_supply']) { // data not null
+          BigInteger.validateJSON(data['total_supply']);
+        }
+        // ensure the json data is a string
+        if (data['volume'] && !(typeof data['volume'] === 'string' || data['volume'] instanceof String)) {
+            throw new Error("Expected the field `volume` to be a primitive type in the JSON string but got " + data['volume']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['fees_usd'] && !(typeof data['fees_usd'] === 'string' || data['fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `fees_usd` to be a primitive type in the JSON string but got " + data['fees_usd']);
+        }
+        // validate the optional field `tx_count`
+        if (data['tx_count']) { // data not null
+          BigInteger.validateJSON(data['tx_count']);
+        }
+        // validate the optional field `pool_count`
+        if (data['pool_count']) { // data not null
+          BigInteger.validateJSON(data['pool_count']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked'] && !(typeof data['total_value_locked'] === 'string' || data['total_value_locked'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked` to be a primitive type in the JSON string but got " + data['total_value_locked']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_usd'] && !(typeof data['total_value_locked_usd'] === 'string' || data['total_value_locked_usd'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_usd` to be a primitive type in the JSON string but got " + data['total_value_locked_usd']);
+        }
+        // ensure the json data is a string
+        if (data['total_value_locked_usd_untracked'] && !(typeof data['total_value_locked_usd_untracked'] === 'string' || data['total_value_locked_usd_untracked'] instanceof String)) {
+            throw new Error("Expected the field `total_value_locked_usd_untracked` to be a primitive type in the JSON string but got " + data['total_value_locked_usd_untracked']);
+        }
+        // ensure the json data is a string
+        if (data['derived_eth'] && !(typeof data['derived_eth'] === 'string' || data['derived_eth'] instanceof String)) {
+            throw new Error("Expected the field `derived_eth` to be a primitive type in the JSON string but got " + data['derived_eth']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['whitelist_pools'])) {
+            throw new Error("Expected the field `whitelist_pools` to be an array in the JSON data but got " + data['whitelist_pools']);
+        }
+        // ensure the json data is a string
+        if (data['token_symbol'] && !(typeof data['token_symbol'] === 'string' || data['token_symbol'] instanceof String)) {
+            throw new Error("Expected the field `token_symbol` to be a primitive type in the JSON string but got " + data['token_symbol']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -130,7 +206,7 @@ TokenV3DTO.prototype['entry_time'] = undefined;
 TokenV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TokenV3DTO.prototype['block_number'] = undefined;

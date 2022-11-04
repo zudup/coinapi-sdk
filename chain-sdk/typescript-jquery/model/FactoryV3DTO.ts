@@ -12,78 +12,81 @@
 
 import * as models from './models';
 
+/**
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ */
 export interface FactoryV3DTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
     /**
-     * 
+     * Factory address.
      */
     id?: string;
 
     /**
-     * 
+     * Amount of pools created.
      */
     pool_count?: string;
 
     /**
-     * 
+     * Amount of transactions all time.
      */
     tx_count?: string;
 
     /**
-     * 
+     * Total volume all time in derived USD.
      */
     total_volume_usd?: string;
 
     /**
-     * 
+     * Total volume all time in derived ETH.
      */
     total_volume_eth?: string;
 
     /**
-     * 
+     * Total swap fees all time in USD.
      */
     total_fees_usd?: string;
 
     /**
-     * 
+     * All volume even through less reliable USD values.
      */
     total_fees_eth?: string;
 
     /**
-     * 
+     * All volume even through less reliable USD values.
      */
     untracked_volume_usd?: string;
 
     /**
-     * 
+     * Total value locked derived in USD.
      */
     total_value_locked_usd?: string;
 
     /**
-     * 
+     * Total value locked derived in ETH.
      */
     total_value_locked_eth?: string;
 
     /**
-     * 
+     * Total value locked derived in USD untracked.
      */
     total_value_locked_usd_untracked?: string;
 
     /**
-     * 
+     * Total value locked derived in ETH untracked.
      */
     total_value_locked_eth_untracked?: string;
 
     /**
-     * 
+     * Current owner of the factory.
      */
     owner?: string;
 

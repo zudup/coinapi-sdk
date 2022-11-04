@@ -89,8 +89,48 @@ class UniswapDayDataV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>UniswapDayDataV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UniswapDayDataV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['volume_eth'] && !(typeof data['volume_eth'] === 'string' || data['volume_eth'] instanceof String)) {
+            throw new Error("Expected the field `volume_eth` to be a primitive type in the JSON string but got " + data['volume_eth']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd_untracked'] && !(typeof data['volume_usd_untracked'] === 'string' || data['volume_usd_untracked'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd_untracked` to be a primitive type in the JSON string but got " + data['volume_usd_untracked']);
+        }
+        // ensure the json data is a string
+        if (data['fees_usd'] && !(typeof data['fees_usd'] === 'string' || data['fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `fees_usd` to be a primitive type in the JSON string but got " + data['fees_usd']);
+        }
+        // validate the optional field `tx_count`
+        if (data['tx_count']) { // data not null
+          BigInteger.validateJSON(data['tx_count']);
+        }
+        // ensure the json data is a string
+        if (data['tvl_usd'] && !(typeof data['tvl_usd'] === 'string' || data['tvl_usd'] instanceof String)) {
+            throw new Error("Expected the field `tvl_usd` to be a primitive type in the JSON string but got " + data['tvl_usd']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -103,7 +143,7 @@ UniswapDayDataV3DTO.prototype['entry_time'] = undefined;
 UniswapDayDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 UniswapDayDataV3DTO.prototype['block_number'] = undefined;

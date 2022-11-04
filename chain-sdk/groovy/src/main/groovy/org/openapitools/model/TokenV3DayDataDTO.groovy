@@ -11,7 +11,7 @@ class TokenV3DayDataDTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
     Long vid

@@ -5,7 +5,6 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowPoiHistoricalGet**](CowApi.md#dappsCowPoiHistoricalGet) | **GET** /dapps/cow/poi/historical | 
 [**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
 [**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
 [**dappsCowTradesHistoricalGet**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
@@ -21,42 +20,6 @@ Method | HTTP request | Description
 
 ```bash
  dappsCowOrdersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCowPoiHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCowPoiHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters

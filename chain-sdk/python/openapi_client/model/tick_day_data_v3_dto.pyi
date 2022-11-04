@@ -31,6 +31,8 @@ class TickDayDataV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
     """
 
 

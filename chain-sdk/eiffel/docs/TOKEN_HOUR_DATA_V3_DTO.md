@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
-**block_number** | **INTEGER_64** |  | [optional] [default to null]
+**block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Token address concatendated with date. | [optional] [default to null]
 **period_start_unix** | **INTEGER_32** | Unix timestamp for start of hour. | [optional] [default to null]
 **token** | [**STRING_32**](STRING_32.md) | Pointer to token. | [optional] [default to null]

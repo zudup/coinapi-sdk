@@ -24,11 +24,11 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
       -- 
     eth_price_usd: detachable STRING_32
-      -- 
+      -- Price of ETH in usd.
  	vid: INTEGER_64
     	 -- 
 

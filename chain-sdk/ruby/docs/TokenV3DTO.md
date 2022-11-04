@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **id** | **String** | Token address. | [optional] |
 | **symbol** | **String** | Token symbol. | [optional] |

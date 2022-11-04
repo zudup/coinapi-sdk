@@ -241,16 +241,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $dapps_curve_lp_token_historical_get_result = $api->dapps_curve_lp_token_historical_get(start_block => $dapps_curve_lp_token_historical_get_start_block, end_block => $dapps_curve_lp_token_historical_get_end_block, start_date => $dapps_curve_lp_token_historical_get_start_date, end_date => $dapps_curve_lp_token_historical_get_end_date, pool_id => $dapps_curve_lp_token_historical_get_pool_id);
 
 #
-# dapps_curve_poi_historical_get test
-#
-# uncomment below and update the test
-#my $dapps_curve_poi_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_poi_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_poi_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_poi_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_poi_historical_get_result = $api->dapps_curve_poi_historical_get(start_block => $dapps_curve_poi_historical_get_start_block, end_block => $dapps_curve_poi_historical_get_end_block, start_date => $dapps_curve_poi_historical_get_start_date, end_date => $dapps_curve_poi_historical_get_end_date);
-
-#
 # dapps_curve_pools_historical_get test
 #
 # uncomment below and update the test

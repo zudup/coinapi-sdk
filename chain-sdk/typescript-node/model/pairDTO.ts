@@ -12,95 +12,98 @@
 
 import { RequestFile } from './models';
 
+/**
+* Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+*/
 export class PairDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
-    * 
+    * Pair contract address.
     */
     'id'?: string | null;
     /**
-    * 
+    * Factory contract address.
     */
     'factory'?: string | null;
     /**
-    * 
+    * Friendly name, format: <token0 name>-<token1 name>
     */
     'name'?: string | null;
     /**
-    * 
+    * Reference to token0 as stored in pair contract.
     */
     'token0'?: string | null;
     /**
-    * 
+    * Reference to token0 as stored in pair contract.
     */
     'token1'?: string | null;
     /**
-    * 
+    * Reserve of token0.
     */
     'reserve0'?: string | null;
     /**
-    * 
+    * Reserve of token1.
     */
     'reserve1'?: string | null;
     /**
-    * 
+    * Total supply of liquidity token distributed to LPs.
     */
     'totalSupply'?: string | null;
     /**
-    * 
+    * Total liquidity in pair stored as an amount of ETH.
     */
     'reserveEth'?: string | null;
     /**
-    * 
+    * Total liquidity amount in pair stored as an amount of USD.
     */
     'reserveUsd'?: string | null;
     /**
-    * 
+    * Total liquidity with only tracked amount.
     */
     'trackedReserveEth'?: string | null;
     /**
-    * 
+    * Token0 per token1.
     */
     'token0Price'?: string | null;
     /**
-    * 
+    * Token1 per token0.
     */
     'token1Price'?: string | null;
     /**
-    * 
+    * Amount of token0 swapped on this pair.
     */
     'volumeToken0'?: string | null;
     /**
-    * 
+    * Amount of token1 swapped on this pair.
     */
     'volumeToken1'?: string | null;
     /**
-    * 
+    * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * 
+    * All time amount of transactions on this pair.
     */
     'txCount'?: string | null;
     /**
-    * 
+    * Total number of LPs.
     */
     'liquidityProviderCount'?: string | null;
     /**
-    * 
+    * Timestamp.
     */
     'timestamp'?: string | null;
     /**
-    * 
+    * Block number in which pair information was created in.
     */
     'block'?: string | null;
     /**

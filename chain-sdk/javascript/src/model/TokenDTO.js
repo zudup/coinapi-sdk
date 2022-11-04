@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class TokenDTO {
     /**
      * Constructs a new <code>TokenDTO</code>.
+     * Stores aggregated information for a specific token across all pairs that token is included in.
      * @alias module:model/TokenDTO
      */
     constructor() { 
@@ -105,8 +106,76 @@ class TokenDTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TokenDTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TokenDTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['factory'] && !(typeof data['factory'] === 'string' || data['factory'] instanceof String)) {
+            throw new Error("Expected the field `factory` to be a primitive type in the JSON string but got " + data['factory']);
+        }
+        // ensure the json data is a string
+        if (data['symbol'] && !(typeof data['symbol'] === 'string' || data['symbol'] instanceof String)) {
+            throw new Error("Expected the field `symbol` to be a primitive type in the JSON string but got " + data['symbol']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['decimals'] && !(typeof data['decimals'] === 'string' || data['decimals'] instanceof String)) {
+            throw new Error("Expected the field `decimals` to be a primitive type in the JSON string but got " + data['decimals']);
+        }
+        // ensure the json data is a string
+        if (data['total_supply'] && !(typeof data['total_supply'] === 'string' || data['total_supply'] instanceof String)) {
+            throw new Error("Expected the field `total_supply` to be a primitive type in the JSON string but got " + data['total_supply']);
+        }
+        // ensure the json data is a string
+        if (data['volume'] && !(typeof data['volume'] === 'string' || data['volume'] instanceof String)) {
+            throw new Error("Expected the field `volume` to be a primitive type in the JSON string but got " + data['volume']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['tx_count'] && !(typeof data['tx_count'] === 'string' || data['tx_count'] instanceof String)) {
+            throw new Error("Expected the field `tx_count` to be a primitive type in the JSON string but got " + data['tx_count']);
+        }
+        // ensure the json data is a string
+        if (data['liquidity'] && !(typeof data['liquidity'] === 'string' || data['liquidity'] instanceof String)) {
+            throw new Error("Expected the field `liquidity` to be a primitive type in the JSON string but got " + data['liquidity']);
+        }
+        // ensure the json data is a string
+        if (data['derived_eth'] && !(typeof data['derived_eth'] === 'string' || data['derived_eth'] instanceof String)) {
+            throw new Error("Expected the field `derived_eth` to be a primitive type in the JSON string but got " + data['derived_eth']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['whitelist_pairs'])) {
+            throw new Error("Expected the field `whitelist_pairs` to be an array in the JSON data but got " + data['whitelist_pairs']);
+        }
+        // ensure the json data is a string
+        if (data['token_symbol'] && !(typeof data['token_symbol'] === 'string' || data['token_symbol'] instanceof String)) {
+            throw new Error("Expected the field `token_symbol` to be a primitive type in the JSON string but got " + data['token_symbol']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -119,85 +188,85 @@ TokenDTO.prototype['entry_time'] = undefined;
 TokenDTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TokenDTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * Token address.
  * @member {String} id
  */
 TokenDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Factory address.
  * @member {String} factory
  */
 TokenDTO.prototype['factory'] = undefined;
 
 /**
- * 
+ * Token symbol.
  * @member {String} symbol
  */
 TokenDTO.prototype['symbol'] = undefined;
 
 /**
- * 
+ * Token name.
  * @member {String} name
  */
 TokenDTO.prototype['name'] = undefined;
 
 /**
- * 
+ * Token decimals.
  * @member {String} decimals
  */
 TokenDTO.prototype['decimals'] = undefined;
 
 /**
- * 
+ * Total supply of liquidity token.
  * @member {String} total_supply
  */
 TokenDTO.prototype['total_supply'] = undefined;
 
 /**
- * 
+ * Amount of token traded all time across all pairs.
  * @member {String} volume
  */
 TokenDTO.prototype['volume'] = undefined;
 
 /**
- * 
+ * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
  * @member {String} volume_usd
  */
 TokenDTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
  * @member {String} untracked_volume_usd
  */
 TokenDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * Amount of transactions all time in pairs including token.
  * @member {String} tx_count
  */
 TokenDTO.prototype['tx_count'] = undefined;
 
 /**
- * 
+ * Total amount of token provided as liquidity across all pairs.
  * @member {String} liquidity
  */
 TokenDTO.prototype['liquidity'] = undefined;
 
 /**
- * 
+ * ETH per token.
  * @member {String} derived_eth
  */
 TokenDTO.prototype['derived_eth'] = undefined;
 
 /**
- * 
+ * Array of whitelisted pairs.
  * @member {Array.<String>} whitelist_pairs
  */
 TokenDTO.prototype['whitelist_pairs'] = undefined;

@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**UniswapV3API_dappsUniswapv3FactoryHistoricalGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
 [**UniswapV3API_dappsUniswapv3MintsCurrentGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
 [**UniswapV3API_dappsUniswapv3MintsHistoricalGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
-[**UniswapV3API_dappsUniswapv3PoiHistoricalGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
 [**UniswapV3API_dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 [**UniswapV3API_dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
 [**UniswapV3API_dappsUniswapv3PoolsCurrentGet**](UniswapV3API.md#UniswapV3API_dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
@@ -286,35 +285,6 @@ Name | Type | Description  | Notes
 **startDate** | **char** |  | [optional] 
 **endDate** | **char** |  | [optional] 
 **poolId** | **char \*** |  | [optional] 
-
-### Return type
-
-void
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UniswapV3API_dappsUniswapv3PoiHistoricalGet**
-```c
-void UniswapV3API_dappsUniswapv3PoiHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
 
 ### Return type
 

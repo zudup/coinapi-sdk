@@ -16,6 +16,7 @@ import type {
 } from './';
 
 /**
+ * Ticks are the boundaries between discrete areas in price space.
  * @export
  * @interface TickV3DTO
  */
@@ -31,7 +32,7 @@ export interface TickV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TickV3DTO
      */
@@ -43,13 +44,13 @@ export interface TickV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: <pool address>#<tick index>
      * @type {string}
      * @memberof TickV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -60,7 +61,7 @@ export interface TickV3DTO {
      */
     tick_idx?: BigInteger;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -76,67 +77,67 @@ export interface TickV3DTO {
      */
     liquidity_net?: BigInteger;
     /**
-     * 
+     * Calculated price of token0 of tick within this pool - constant.
      * @type {string}
      * @memberof TickV3DTO
      */
     price_0?: string | null;
     /**
-     * 
+     * Calculated price of token1 of tick within this pool - constant.
      * @type {string}
      * @memberof TickV3DTO
      */
     price_1?: string | null;
     /**
-     * 
+     * Lifetime volume of token0 with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Lifetime volume of token1 with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Lifetime volume in derived USD with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Lifetime volume in untracked USD with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof TickV3DTO
      */
     fees_usd?: string | null;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * All time collected fees in USD.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_usd?: string | null;
     /**
-     * 
+     * Created time.
      * @type {string}
      * @memberof TickV3DTO
      */

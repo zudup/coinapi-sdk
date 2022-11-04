@@ -1,7 +1,7 @@
 /*
  * pool_hour_data_v3_dto.h
  *
- * 
+ * Hourly stats tracker for pool.
  */
 
 #ifndef _pool_hour_data_v3_dto_H_

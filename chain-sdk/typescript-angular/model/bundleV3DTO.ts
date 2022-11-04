@@ -11,11 +11,14 @@
  */
 
 
+/**
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+ */
 export interface BundleV3DTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
@@ -23,7 +26,7 @@ export interface BundleV3DTO {
      */
     id?: string | null;
     /**
-     * 
+     * Price of ETH in usd.
      */
     eth_price_usd?: string | null;
     /**

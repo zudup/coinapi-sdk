@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Number of block in which entity was recorded.
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
@@ -38,25 +38,25 @@ void main() {
       // TODO
     });
 
-    // 
+    // Pool address.
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
-    // 
+    // Creation time.
     // DateTime createdAtTimestamp
     test('to test the property `createdAtTimestamp`', () async {
       // TODO
     });
 
-    // 
+    // Reference to token0 as stored in pool contract.
     // String token0
     test('to test the property `token0`', () async {
       // TODO
     });
 
-    // 
+    // Reference to token1 as stored in pool contract.
     // String token1
     test('to test the property `token1`', () async {
       // TODO
@@ -87,13 +87,13 @@ void main() {
       // TODO
     });
 
-    // 
+    // Token0 per token1.
     // String token0Price
     test('to test the property `token0Price`', () async {
       // TODO
     });
 
-    // 
+    // Token1 per token0.
     // String token1Price
     test('to test the property `token1Price`', () async {
       // TODO
@@ -109,31 +109,31 @@ void main() {
       // TODO
     });
 
-    // 
+    // All time token0 swapped.
     // String volumeToken0
     test('to test the property `volumeToken0`', () async {
       // TODO
     });
 
-    // 
+    // All time token1 swapped.
     // String volumeToken1
     test('to test the property `volumeToken1`', () async {
       // TODO
     });
 
-    // 
+    // All time USD swapped.
     // String volumeUsd
     test('to test the property `volumeUsd`', () async {
       // TODO
     });
 
-    // 
+    // All time USD swapped, unfiltered for unreliable USD pools.
     // String untrackedVolumeUsd
     test('to test the property `untrackedVolumeUsd`', () async {
       // TODO
     });
 
-    // 
+    // Fees in USD.
     // String feesUsd
     test('to test the property `feesUsd`', () async {
       // TODO
@@ -144,25 +144,25 @@ void main() {
       // TODO
     });
 
-    // 
+    // All time fees collected token0.
     // String collectedFeesToken0
     test('to test the property `collectedFeesToken0`', () async {
       // TODO
     });
 
-    // 
+    // All time fees collected token1.
     // String collectedFeesToken1
     test('to test the property `collectedFeesToken1`', () async {
       // TODO
     });
 
-    // 
+    // All time fees collected derived USD.
     // String collectedFeesUsd
     test('to test the property `collectedFeesUsd`', () async {
       // TODO
     });
 
-    // 
+    // Total token 0 across all ticks.
     // String totalValueLockedToken0
     test('to test the property `totalValueLockedToken0`', () async {
       // TODO
@@ -174,25 +174,25 @@ void main() {
       // TODO
     });
 
-    // 
+    // Total token 1 across all ticks.
     // String totalValueLockedEth
     test('to test the property `totalValueLockedEth`', () async {
       // TODO
     });
 
-    // 
+    // Total value locked USD.
     // String totalValueLockedUsd
     test('to test the property `totalValueLockedUsd`', () async {
       // TODO
     });
 
-    // 
+    // Total value locked derived ETH.
     // String totalValueLockedUsdUntracked
     test('to test the property `totalValueLockedUsdUntracked`', () async {
       // TODO
     });
 
-    // 
+    // Liquidity providers count, used to detect new exchanges.
     // String liquidityProviderCount
     test('to test the property `liquidityProviderCount`', () async {
       // TODO

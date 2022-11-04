@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**dappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
 [**dappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
 [**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
-[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
 [**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 [**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
 [**dappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
@@ -456,56 +455,6 @@ Name | Type | Description  | Notes
  **startDate** | **java.time.OffsetDateTime**|  | [optional]
  **endDate** | **java.time.OffsetDateTime**|  | [optional]
  **poolId** | **kotlin.String**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsUniswapv3PoiHistoricalGet"></a>
-# **dappsUniswapv3PoiHistoricalGet**
-> dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
 
 ### Return type
 

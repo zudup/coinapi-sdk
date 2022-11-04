@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Number of block in which entity was recorded.
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
@@ -86,7 +86,7 @@ void main() {
       // TODO
     });
 
-    // Total liquidity with only tracked amount (see tracked amounts).
+    // Total liquidity with only tracked amount.
     // String trackedReserveEth
     test('to test the property `trackedReserveEth`', () async {
       // TODO
@@ -139,7 +139,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Total number of LPs.
     // String liquidityProviderCount
     test('to test the property `liquidityProviderCount`', () async {
       // TODO

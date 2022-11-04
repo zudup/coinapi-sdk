@@ -23,14 +23,6 @@ Describe -tag 'PSOpenAPITools' -name 'DexApi' {
         }
     }
 
-    Context 'Invoke-DappsDexPoiHistoricalGet' {
-        It 'Test Invoke-DappsDexPoiHistoricalGet' {
-            #$TestResult = Invoke-DappsDexPoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-DappsDexPricesHistoricalGet' {
         It 'Test Invoke-DappsDexPricesHistoricalGet' {
             #$TestResult = Invoke-DappsDexPricesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"

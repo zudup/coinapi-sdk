@@ -24,7 +24,6 @@ Method | HTTP request | Description
 [**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
 [**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
 [**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoiHistoricalGet**](CurveApi.md#dappsCurvePoiHistoricalGet) | **GET** /dapps/curve/poi/historical | 
 [**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
 [**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
 [**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
@@ -754,42 +753,6 @@ Name | Type | Description  | Notes
  **startDate** | **string** |  | [optional] [default to null]
  **endDate** | **string** |  | [optional] [default to null]
  **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurvePoiHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurvePoiHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
 
 ### Return type
 

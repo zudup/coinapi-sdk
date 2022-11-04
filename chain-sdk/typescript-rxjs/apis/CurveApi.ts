@@ -167,13 +167,6 @@ export interface DappsCurveLpTokenHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsCurvePoiHistoricalGetRequest {
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-}
-
 export interface DappsCurvePoolsHistoricalGetRequest {
     startBlock?: number;
     endBlock?: number;
@@ -677,26 +670,6 @@ export class CurveApi extends BaseAPI {
 
         return this.request<void>({
             url: '/dapps/curve/lpToken/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsCurvePoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCurvePoiHistoricalGetRequest): Observable<void>
-    dappsCurvePoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCurvePoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCurvePoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCurvePoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-
-        return this.request<void>({
-            url: '/dapps/curve/poi/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

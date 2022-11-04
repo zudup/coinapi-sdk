@@ -1,7 +1,7 @@
 /*
  * TokenDTO.h
  *
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
 #ifndef _TokenDTO_H_
@@ -21,7 +21,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Stores aggregated information for a specific token across all pairs that token is included in.
  *
  *  \ingroup Models
  *
@@ -60,102 +60,102 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get Token address.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Token address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Factory address.
 	 */
 	std::string getFactory();
 
-	/*! \brief Set 
+	/*! \brief Set Factory address.
 	 */
 	void setFactory(std::string  factory);
-	/*! \brief Get 
+	/*! \brief Get Token symbol.
 	 */
 	std::string getSymbol();
 
-	/*! \brief Set 
+	/*! \brief Set Token symbol.
 	 */
 	void setSymbol(std::string  symbol);
-	/*! \brief Get 
+	/*! \brief Get Token name.
 	 */
 	std::string getName();
 
-	/*! \brief Set 
+	/*! \brief Set Token name.
 	 */
 	void setName(std::string  name);
-	/*! \brief Get 
+	/*! \brief Get Token decimals.
 	 */
 	std::string getDecimals();
 
-	/*! \brief Set 
+	/*! \brief Set Token decimals.
 	 */
 	void setDecimals(std::string  decimals);
-	/*! \brief Get 
+	/*! \brief Get Total supply of liquidity token.
 	 */
 	std::string getTotalSupply();
 
-	/*! \brief Set 
+	/*! \brief Set Total supply of liquidity token.
 	 */
 	void setTotalSupply(std::string  total_supply);
-	/*! \brief Get 
+	/*! \brief Get Amount of token traded all time across all pairs.
 	 */
 	std::string getVolume();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token traded all time across all pairs.
 	 */
 	void setVolume(std::string  volume);
-	/*! \brief Get 
+	/*! \brief Get Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Amount of transactions all time in pairs including token.
 	 */
 	std::string getTxCount();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of transactions all time in pairs including token.
 	 */
 	void setTxCount(std::string  tx_count);
-	/*! \brief Get 
+	/*! \brief Get Total amount of token provided as liquidity across all pairs.
 	 */
 	std::string getLiquidity();
 
-	/*! \brief Set 
+	/*! \brief Set Total amount of token provided as liquidity across all pairs.
 	 */
 	void setLiquidity(std::string  liquidity);
-	/*! \brief Get 
+	/*! \brief Get ETH per token.
 	 */
 	std::string getDerivedEth();
 
-	/*! \brief Set 
+	/*! \brief Set ETH per token.
 	 */
 	void setDerivedEth(std::string  derived_eth);
-	/*! \brief Get 
+	/*! \brief Get Array of whitelisted pairs.
 	 */
 	std::list<std::string> getWhitelistPairs();
 
-	/*! \brief Set 
+	/*! \brief Set Array of whitelisted pairs.
 	 */
 	void setWhitelistPairs(std::list <std::string> whitelist_pairs);
 	/*! \brief Get 

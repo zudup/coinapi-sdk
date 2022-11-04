@@ -27,7 +27,7 @@ public class OASTokenV3DayDataDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }

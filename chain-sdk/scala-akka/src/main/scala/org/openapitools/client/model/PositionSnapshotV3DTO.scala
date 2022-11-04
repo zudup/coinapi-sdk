@@ -17,37 +17,37 @@ import org.openapitools.client.core.ApiModel
 case class PositionSnapshotV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* NFT token identifier, format: <NFT token id>#<block number> */
   id: Option[String] = None,
-  /* THIS IS SUPER OWNER */
+  /* Owner of the NFT. */
   owner: Option[String] = None,
-  /*  */
+  /* Pool the position is within. */
   pool: Option[String] = None,
-  /*  */
+  /* Position of which the snap was taken of. */
   position: Option[String] = None,
-  /*  */
+  /* Timestamp of block in which the snap was created. */
   timestamp: Option[String] = None,
-  /*  */
+  /* Total position liquidity. */
   liquidity: Option[String] = None,
-  /*  */
+  /* Amount of token 0 ever deposited to position. */
   depositedToken0: Option[String] = None,
-  /*  */
+  /* Amount of token 1 ever deposited to position. */
   depositedToken1: Option[String] = None,
-  /*  */
+  /* Amount of token 0 ever withdrawn from position (without fees). */
   withdrawnToken0: Option[String] = None,
-  /*  */
+  /* Amount of token 1 ever withdrawn from position (without fees). */
   withdrawnToken1: Option[String] = None,
-  /*  */
+  /* All time collected fees in token0. */
   collectedFeesToken0: Option[String] = None,
-  /*  */
+  /* All time collected fees in token1. */
   collectedFeesToken1: Option[String] = None,
-  /*  */
+  /* Transaction in which the snapshot was initialized. */
   transaction: Option[String] = None,
-  /*  */
+  /* Variable needed for fee computation. */
   feeGrowthInside0LastX128: Option[String] = None,
-  /*  */
+  /* Variable needed for fee computation. */
   feeGrowthInside1LastX128: Option[String] = None,
   /*  */
   vid: Option[Long] = None

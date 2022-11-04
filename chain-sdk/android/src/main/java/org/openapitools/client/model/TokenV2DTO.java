@@ -77,9 +77,9 @@ public class TokenV2DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }

@@ -70,11 +70,6 @@ void main() {
       // TODO
     });
 
-    //Future dappsUniswapv3PoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsUniswapv3PoiHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsUniswapv3PoolDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsUniswapv3PoolDayDataHistoricalGet', () async {
       // TODO

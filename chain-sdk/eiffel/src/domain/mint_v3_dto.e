@@ -24,39 +24,39 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Transaction hash + '#' + index in mints Transaction array.
     transaction: detachable STRING_32
-      -- 
+      -- Which txn the mint was included in.
     timestamp: detachable STRING_32
-      -- 
+      -- Time of transaction.
     pool: detachable STRING_32
-      -- 
+      -- Pool address.
     token_0: detachable STRING_32
-      -- 
+      -- Reference to token0 as stored in pool contract.
     token_1: detachable STRING_32
-      -- 
+      -- Reference to token1 as stored in pool contract.
     owner: detachable STRING_32
-      -- 
+      -- Owner of position where liquidity minted to.
     sender: detachable STRING_32
-      -- 
+      -- The address that minted the liquidity.
     origin: detachable STRING_32
-      -- 
+      -- Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
     amount: detachable STRING_32
-      -- 
+      -- Amount of liquidity minted.
     amount_0: detachable STRING_32
-      -- 
+      -- Amount of token 0 minted.
     amount_1: detachable STRING_32
-      -- 
+      -- Amount of token 1 minted.
     amount_usd: detachable STRING_32
-      -- 
+      -- Derived amount based on available prices of tokens.
     tick_lower: detachable STRING_32
-      -- 
+      -- Lower tick of the position.
     tick_upper: detachable STRING_32
-      -- 
+      -- Upper tick of the position.
     log_index: detachable STRING_32
-      -- 
+      -- Order within the transaction.
  	vid: INTEGER_64
     	 -- 
 

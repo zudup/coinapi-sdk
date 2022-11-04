@@ -66,7 +66,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASCowApi* | [**dappsCowOrdersHistoricalGet**](OASCowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-*OASCowApi* | [**dappsCowPoiHistoricalGet**](OASCowApi.md#dappsCowPoiHistoricalGet) | **GET** /dapps/cow/poi/historical | 
 *OASCowApi* | [**dappsCowSettlementHistoricalGet**](OASCowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
 *OASCowApi* | [**dappsCowTokensHistoricalGet**](OASCowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
 *OASCowApi* | [**dappsCowTradesHistoricalGet**](OASCowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
@@ -91,7 +90,6 @@ Class | Method | HTTP request | Description
 *OASCurveApi* | [**dappsCurveGaugeWithdrawHistoricalGet**](OASCurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
 *OASCurveApi* | [**dappsCurveHourlyVolumeHistoricalGet**](OASCurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
 *OASCurveApi* | [**dappsCurveLpTokenHistoricalGet**](OASCurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-*OASCurveApi* | [**dappsCurvePoiHistoricalGet**](OASCurveApi.md#dappsCurvePoiHistoricalGet) | **GET** /dapps/curve/poi/historical | 
 *OASCurveApi* | [**dappsCurvePoolsHistoricalGet**](OASCurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
 *OASCurveApi* | [**dappsCurveProposalsHistoricalGet**](OASCurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
 *OASCurveApi* | [**dappsCurveProposalsVoteHistoricalGet**](OASCurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
@@ -106,7 +104,6 @@ Class | Method | HTTP request | Description
 *OASCurveApi* | [**dappsCurveWeeklyVolumeHistoricalGet**](OASCurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
 *OASDexApi* | [**dappsDexBatchHistoricalGet**](OASDexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical | 
 *OASDexApi* | [**dappsDexOrdersHistoricalGet**](OASDexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
-*OASDexApi* | [**dappsDexPoiHistoricalGet**](OASDexApi.md#dappsDexPoiHistoricalGet) | **GET** /dapps/dex/poi/historical | 
 *OASDexApi* | [**dappsDexPricesHistoricalGet**](OASDexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
 *OASDexApi* | [**dappsDexSolutionHistoricalGet**](OASDexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
 *OASDexApi* | [**dappsDexStatsHistoricalGet**](OASDexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical | 
@@ -123,16 +120,15 @@ Class | Method | HTTP request | Description
 *OASSushiswapApi* | [**dappsSushiswapLiquidityPositionHistoricalGet**](OASSushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
 *OASSushiswapApi* | [**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 *OASSushiswapApi* | [**dappsSushiswapMintsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-*OASSushiswapApi* | [**dappsSushiswapPoiHistoricalGet**](OASSushiswapApi.md#dappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical | 
 *OASSushiswapApi* | [**dappsSushiswapPoolDayDataHistoricalGet**](OASSushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 *OASSushiswapApi* | [**dappsSushiswapPoolHourDataHistoricalGet**](OASSushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 *OASSushiswapApi* | [**dappsSushiswapPoolsCurrentGet**](OASSushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-*OASSushiswapApi* | [**dappsSushiswapPoolsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | 
+*OASSushiswapApi* | [**dappsSushiswapPoolsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 *OASSushiswapApi* | [**dappsSushiswapSwapsCurrentGet**](OASSushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-*OASSushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | 
+*OASSushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
 *OASSushiswapApi* | [**dappsSushiswapTokenDayDataHistoricalGet**](OASSushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 *OASSushiswapApi* | [**dappsSushiswapTokensCurrentGet**](OASSushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-*OASSushiswapApi* | [**dappsSushiswapTokensHistoricalGet**](OASSushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | 
+*OASSushiswapApi* | [**dappsSushiswapTokensHistoricalGet**](OASSushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
 *OASSushiswapApi* | [**dappsSushiswapTransactionsHistoricalGet**](OASSushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 *OASSushiswapApi* | [**dappsSushiswapUsersHistoricalGet**](OASSushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2BundlesHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2BundlesHistoricalGet) | **GET** /dapps/uniswapv2/bundles/historical | 
@@ -142,7 +138,6 @@ Class | Method | HTTP request | Description
 *OASUniswapV2Api* | [**dappsUniswapv2LiquidityPositionHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2MintsHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
-*OASUniswapV2Api* | [**dappsUniswapv2PoiHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2PoolDayDataHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2PoolHourDataHistoricalGet**](OASUniswapV2Api.md#dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
 *OASUniswapV2Api* | [**dappsUniswapv2PoolsCurrentGet**](OASUniswapV2Api.md#dappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools
@@ -163,7 +158,6 @@ Class | Method | HTTP request | Description
 *OASUniswapV3Api* | [**dappsUniswapv3FactoryHistoricalGet**](OASUniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
 *OASUniswapV3Api* | [**dappsUniswapv3MintsCurrentGet**](OASUniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
 *OASUniswapV3Api* | [**dappsUniswapv3MintsHistoricalGet**](OASUniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
-*OASUniswapV3Api* | [**dappsUniswapv3PoiHistoricalGet**](OASUniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
 *OASUniswapV3Api* | [**dappsUniswapv3PoolDayDataHistoricalGet**](OASUniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 *OASUniswapV3Api* | [**dappsUniswapv3PoolHourDataHistoricalGet**](OASUniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
 *OASUniswapV3Api* | [**dappsUniswapv3PoolsCurrentGet**](OASUniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools

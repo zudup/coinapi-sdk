@@ -1,7 +1,7 @@
 #' Create a new PoolV3DTO
 #'
 #' @description
-#' PoolV3DTO Class
+#' Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 #'
 #' @docType class
 #' @title PoolV3DTO
@@ -9,36 +9,36 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
-#' @field id  character [optional]
-#' @field created_at_timestamp  character [optional]
-#' @field token_0  character [optional]
-#' @field token_1  character [optional]
+#' @field id Pool address. character [optional]
+#' @field created_at_timestamp Creation time. character [optional]
+#' @field token_0 Reference to token0 as stored in pool contract. character [optional]
+#' @field token_1 Reference to token1 as stored in pool contract. character [optional]
 #' @field fee_tier  \link{BigInteger} [optional]
 #' @field liquidity  \link{BigInteger} [optional]
 #' @field sqrt_price  \link{BigInteger} [optional]
 #' @field fee_growth_global_0x128  \link{BigInteger} [optional]
 #' @field fee_growth_global_1x128  \link{BigInteger} [optional]
-#' @field token_0_price  character [optional]
-#' @field token_1_price  character [optional]
+#' @field token_0_price Token0 per token1. character [optional]
+#' @field token_1_price Token1 per token0. character [optional]
 #' @field tick  \link{BigInteger} [optional]
 #' @field observation_index  \link{BigInteger} [optional]
-#' @field volume_token_0  character [optional]
-#' @field volume_token_1  character [optional]
-#' @field volume_usd  character [optional]
-#' @field untracked_volume_usd  character [optional]
-#' @field fees_usd  character [optional]
+#' @field volume_token_0 All time token0 swapped. character [optional]
+#' @field volume_token_1 All time token1 swapped. character [optional]
+#' @field volume_usd All time USD swapped. character [optional]
+#' @field untracked_volume_usd All time USD swapped, unfiltered for unreliable USD pools. character [optional]
+#' @field fees_usd Fees in USD. character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
-#' @field collected_fees_token_0  character [optional]
-#' @field collected_fees_token_1  character [optional]
-#' @field collected_fees_usd  character [optional]
-#' @field total_value_locked_token_0  character [optional]
+#' @field collected_fees_token_0 All time fees collected token0. character [optional]
+#' @field collected_fees_token_1 All time fees collected token1. character [optional]
+#' @field collected_fees_usd All time fees collected derived USD. character [optional]
+#' @field total_value_locked_token_0 Total token 0 across all ticks. character [optional]
 #' @field total_value_locked_token_1  character [optional]
-#' @field total_value_locked_eth  character [optional]
-#' @field total_value_locked_usd  character [optional]
-#' @field total_value_locked_usd_untracked  character [optional]
-#' @field liquidity_provider_count  character [optional]
+#' @field total_value_locked_eth Total token 1 across all ticks. character [optional]
+#' @field total_value_locked_usd Total value locked USD. character [optional]
+#' @field total_value_locked_usd_untracked Total value locked derived ETH. character [optional]
+#' @field liquidity_provider_count Liquidity providers count, used to detect new exchanges. character [optional]
 #' @field evaluated_ask  numeric [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -86,72 +86,86 @@ PoolV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
-    #' @param id 
-    #' @param created_at_timestamp 
-    #' @param token_0 
-    #' @param token_1 
+    #' @param id Pool address.
+    #' @param created_at_timestamp Creation time.
+    #' @param token_0 Reference to token0 as stored in pool contract.
+    #' @param token_1 Reference to token1 as stored in pool contract.
     #' @param fee_tier fee_tier
     #' @param liquidity liquidity
     #' @param sqrt_price sqrt_price
     #' @param fee_growth_global_0x128 fee_growth_global_0x128
     #' @param fee_growth_global_1x128 fee_growth_global_1x128
-    #' @param token_0_price 
-    #' @param token_1_price 
+    #' @param token_0_price Token0 per token1.
+    #' @param token_1_price Token1 per token0.
     #' @param tick tick
     #' @param observation_index observation_index
-    #' @param volume_token_0 
-    #' @param volume_token_1 
-    #' @param volume_usd 
-    #' @param untracked_volume_usd 
-    #' @param fees_usd 
+    #' @param volume_token_0 All time token0 swapped.
+    #' @param volume_token_1 All time token1 swapped.
+    #' @param volume_usd All time USD swapped.
+    #' @param untracked_volume_usd All time USD swapped, unfiltered for unreliable USD pools.
+    #' @param fees_usd Fees in USD.
     #' @param tx_count tx_count
-    #' @param collected_fees_token_0 
-    #' @param collected_fees_token_1 
-    #' @param collected_fees_usd 
-    #' @param total_value_locked_token_0 
+    #' @param collected_fees_token_0 All time fees collected token0.
+    #' @param collected_fees_token_1 All time fees collected token1.
+    #' @param collected_fees_usd All time fees collected derived USD.
+    #' @param total_value_locked_token_0 Total token 0 across all ticks.
     #' @param total_value_locked_token_1 
-    #' @param total_value_locked_eth 
-    #' @param total_value_locked_usd 
-    #' @param total_value_locked_usd_untracked 
-    #' @param liquidity_provider_count 
+    #' @param total_value_locked_eth Total token 1 across all ticks.
+    #' @param total_value_locked_usd Total value locked USD.
+    #' @param total_value_locked_usd_untracked Total value locked derived ETH.
+    #' @param liquidity_provider_count Liquidity providers count, used to detect new exchanges.
     #' @param evaluated_ask evaluated_ask
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `created_at_timestamp` = NULL, `token_0` = NULL, `token_1` = NULL, `fee_tier` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `observation_index` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `collected_fees_token_0` = NULL, `collected_fees_token_1` = NULL, `collected_fees_usd` = NULL, `total_value_locked_token_0` = NULL, `total_value_locked_token_1` = NULL, `total_value_locked_eth` = NULL, `total_value_locked_usd` = NULL, `total_value_locked_usd_untracked` = NULL, `liquidity_provider_count` = NULL, `evaluated_ask` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `created_at_timestamp` = NULL, `token_0` = NULL, `token_1` = NULL, `fee_tier` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `observation_index` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `collected_fees_token_0` = NULL, `collected_fees_token_1` = NULL, `collected_fees_usd` = NULL, `total_value_locked_token_0` = NULL, `total_value_locked_token_1` = NULL, `total_value_locked_eth` = NULL, `total_value_locked_usd` = NULL, `total_value_locked_usd_untracked` = NULL, `liquidity_provider_count` = NULL, `evaluated_ask` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`created_at_timestamp`)) {
-        stopifnot(is.character(`created_at_timestamp`), length(`created_at_timestamp`) == 1)
+        if (!is.character(`created_at_timestamp`)) {
+          stop(paste("Error! Invalid data for `created_at_timestamp`. Must be a string:", `created_at_timestamp`))
+        }
         self$`created_at_timestamp` <- `created_at_timestamp`
       }
       if (!is.null(`token_0`)) {
-        stopifnot(is.character(`token_0`), length(`token_0`) == 1)
+        if (!(is.character(`token_0`) && length(`token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0`. Must be a string:", `token_0`))
+        }
         self$`token_0` <- `token_0`
       }
       if (!is.null(`token_1`)) {
-        stopifnot(is.character(`token_1`), length(`token_1`) == 1)
+        if (!(is.character(`token_1`) && length(`token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1`. Must be a string:", `token_1`))
+        }
         self$`token_1` <- `token_1`
       }
       if (!is.null(`fee_tier`)) {
@@ -175,11 +189,15 @@ PoolV3DTO <- R6::R6Class(
         self$`fee_growth_global_1x128` <- `fee_growth_global_1x128`
       }
       if (!is.null(`token_0_price`)) {
-        stopifnot(is.character(`token_0_price`), length(`token_0_price`) == 1)
+        if (!(is.character(`token_0_price`) && length(`token_0_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0_price`. Must be a string:", `token_0_price`))
+        }
         self$`token_0_price` <- `token_0_price`
       }
       if (!is.null(`token_1_price`)) {
-        stopifnot(is.character(`token_1_price`), length(`token_1_price`) == 1)
+        if (!(is.character(`token_1_price`) && length(`token_1_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1_price`. Must be a string:", `token_1_price`))
+        }
         self$`token_1_price` <- `token_1_price`
       }
       if (!is.null(`tick`)) {
@@ -191,23 +209,33 @@ PoolV3DTO <- R6::R6Class(
         self$`observation_index` <- `observation_index`
       }
       if (!is.null(`volume_token_0`)) {
-        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        if (!(is.character(`volume_token_0`) && length(`volume_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_0`. Must be a string:", `volume_token_0`))
+        }
         self$`volume_token_0` <- `volume_token_0`
       }
       if (!is.null(`volume_token_1`)) {
-        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        if (!(is.character(`volume_token_1`) && length(`volume_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_1`. Must be a string:", `volume_token_1`))
+        }
         self$`volume_token_1` <- `volume_token_1`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`untracked_volume_usd`)) {
-        stopifnot(is.character(`untracked_volume_usd`), length(`untracked_volume_usd`) == 1)
+        if (!(is.character(`untracked_volume_usd`) && length(`untracked_volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `untracked_volume_usd`. Must be a string:", `untracked_volume_usd`))
+        }
         self$`untracked_volume_usd` <- `untracked_volume_usd`
       }
       if (!is.null(`fees_usd`)) {
-        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        if (!(is.character(`fees_usd`) && length(`fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `fees_usd`. Must be a string:", `fees_usd`))
+        }
         self$`fees_usd` <- `fees_usd`
       }
       if (!is.null(`tx_count`)) {
@@ -215,43 +243,63 @@ PoolV3DTO <- R6::R6Class(
         self$`tx_count` <- `tx_count`
       }
       if (!is.null(`collected_fees_token_0`)) {
-        stopifnot(is.character(`collected_fees_token_0`), length(`collected_fees_token_0`) == 1)
+        if (!(is.character(`collected_fees_token_0`) && length(`collected_fees_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `collected_fees_token_0`. Must be a string:", `collected_fees_token_0`))
+        }
         self$`collected_fees_token_0` <- `collected_fees_token_0`
       }
       if (!is.null(`collected_fees_token_1`)) {
-        stopifnot(is.character(`collected_fees_token_1`), length(`collected_fees_token_1`) == 1)
+        if (!(is.character(`collected_fees_token_1`) && length(`collected_fees_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `collected_fees_token_1`. Must be a string:", `collected_fees_token_1`))
+        }
         self$`collected_fees_token_1` <- `collected_fees_token_1`
       }
       if (!is.null(`collected_fees_usd`)) {
-        stopifnot(is.character(`collected_fees_usd`), length(`collected_fees_usd`) == 1)
+        if (!(is.character(`collected_fees_usd`) && length(`collected_fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `collected_fees_usd`. Must be a string:", `collected_fees_usd`))
+        }
         self$`collected_fees_usd` <- `collected_fees_usd`
       }
       if (!is.null(`total_value_locked_token_0`)) {
-        stopifnot(is.character(`total_value_locked_token_0`), length(`total_value_locked_token_0`) == 1)
+        if (!(is.character(`total_value_locked_token_0`) && length(`total_value_locked_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_token_0`. Must be a string:", `total_value_locked_token_0`))
+        }
         self$`total_value_locked_token_0` <- `total_value_locked_token_0`
       }
       if (!is.null(`total_value_locked_token_1`)) {
-        stopifnot(is.character(`total_value_locked_token_1`), length(`total_value_locked_token_1`) == 1)
+        if (!(is.character(`total_value_locked_token_1`) && length(`total_value_locked_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_token_1`. Must be a string:", `total_value_locked_token_1`))
+        }
         self$`total_value_locked_token_1` <- `total_value_locked_token_1`
       }
       if (!is.null(`total_value_locked_eth`)) {
-        stopifnot(is.character(`total_value_locked_eth`), length(`total_value_locked_eth`) == 1)
+        if (!(is.character(`total_value_locked_eth`) && length(`total_value_locked_eth`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_eth`. Must be a string:", `total_value_locked_eth`))
+        }
         self$`total_value_locked_eth` <- `total_value_locked_eth`
       }
       if (!is.null(`total_value_locked_usd`)) {
-        stopifnot(is.character(`total_value_locked_usd`), length(`total_value_locked_usd`) == 1)
+        if (!(is.character(`total_value_locked_usd`) && length(`total_value_locked_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_usd`. Must be a string:", `total_value_locked_usd`))
+        }
         self$`total_value_locked_usd` <- `total_value_locked_usd`
       }
       if (!is.null(`total_value_locked_usd_untracked`)) {
-        stopifnot(is.character(`total_value_locked_usd_untracked`), length(`total_value_locked_usd_untracked`) == 1)
+        if (!(is.character(`total_value_locked_usd_untracked`) && length(`total_value_locked_usd_untracked`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_usd_untracked`. Must be a string:", `total_value_locked_usd_untracked`))
+        }
         self$`total_value_locked_usd_untracked` <- `total_value_locked_usd_untracked`
       }
       if (!is.null(`liquidity_provider_count`)) {
-        stopifnot(is.character(`liquidity_provider_count`), length(`liquidity_provider_count`) == 1)
+        if (!(is.character(`liquidity_provider_count`) && length(`liquidity_provider_count`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity_provider_count`. Must be a string:", `liquidity_provider_count`))
+        }
         self$`liquidity_provider_count` <- `liquidity_provider_count`
       }
       if (!is.null(`evaluated_ask`)) {
-        stopifnot(is.numeric(`evaluated_ask`), length(`evaluated_ask`) == 1)
+        if (!(is.numeric(`evaluated_ask`) && length(`evaluated_ask`) == 1)) {
+          stop(paste("Error! Invalid data for `evaluated_ask`. Must be a number:", `evaluated_ask`))
+        }
         self$`evaluated_ask` <- `evaluated_ask`
       }
     },
@@ -897,18 +945,19 @@ PoolV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#PoolV3DTO$unlock()
+# PoolV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#PoolV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# PoolV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#PoolV3DTO$lock()
+# PoolV3DTO$lock()
 

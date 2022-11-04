@@ -188,21 +188,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test DappsUniswapv3PoiHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsUniswapv3PoiHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
         /// Test DappsUniswapv3PoolDayDataHistoricalGet
         /// </summary>
         [Test]

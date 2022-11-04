@@ -11,7 +11,7 @@ class TokenHourDataV3DTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /* Token address concatendated with date. */
     String id

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **Int64** |  | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | **String** | Token address concatendated with date. | [optional] 
 **PeriodStartUnix** | **Int32** | Unix timestamp for start of hour. | [optional] 
 **Token** | **String** | Pointer to token. | [optional] 

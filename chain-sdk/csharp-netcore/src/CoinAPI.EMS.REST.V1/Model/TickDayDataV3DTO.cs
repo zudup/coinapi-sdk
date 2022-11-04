@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// TickDayDataV3DTO
+    /// Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
     /// </summary>
     [DataContract(Name = "TickDayDataV3DTO")]
     public partial class TickDayDataV3DTO : IEquatable<TickDayDataV3DTO>, IValidatableObject
@@ -37,19 +37,19 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="date">date.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="tick">tick.</param>
-        /// <param name="liquidityGross">liquidityGross.</param>
-        /// <param name="liquidityNet">liquidityNet.</param>
-        /// <param name="volumeToken0">volumeToken0.</param>
-        /// <param name="volumeToken1">volumeToken1.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="feesUsd">feesUsd.</param>
-        /// <param name="feeGrowthOutside0x128">feeGrowthOutside0x128.</param>
-        /// <param name="feeGrowthOutside1x128">feeGrowthOutside1x128.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;..</param>
+        /// <param name="date">Timestamp rounded to current day by dividing by 86400..</param>
+        /// <param name="pool">Pointer to pool..</param>
+        /// <param name="tick">Pointer to tick..</param>
+        /// <param name="liquidityGross">Total liquidity pool has as tick lower or upper at end of period..</param>
+        /// <param name="liquidityNet">How much liquidity changes when tick crossed at end of period..</param>
+        /// <param name="volumeToken0">Hourly volume of token0 with this tick in range..</param>
+        /// <param name="volumeToken1">Hourly volume of token1 with this tick in range..</param>
+        /// <param name="volumeUsd">Hourly volume in derived USD with this tick in range..</param>
+        /// <param name="feesUsd">Fees in USD..</param>
+        /// <param name="feeGrowthOutside0x128">Variable needed for fee computation..</param>
+        /// <param name="feeGrowthOutside1x128">Variable needed for fee computation..</param>
         /// <param name="vid">vid.</param>
         public TickDayDataV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), int date = default(int), string pool = default(string), string tick = default(string), string liquidityGross = default(string), string liquidityNet = default(string), string volumeToken0 = default(string), string volumeToken1 = default(string), string volumeUsd = default(string), string feesUsd = default(string), string feeGrowthOutside0x128 = default(string), string feeGrowthOutside1x128 = default(string), long vid = default(long))
         {
@@ -84,80 +84,93 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
         /// </summary>
+        /// <value>Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// Timestamp rounded to current day by dividing by 86400.
         /// </summary>
+        /// <value>Timestamp rounded to current day by dividing by 86400.</value>
         [DataMember(Name = "date", EmitDefaultValue = false)]
         public int Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pointer to pool.
         /// </summary>
+        /// <value>Pointer to pool.</value>
         [DataMember(Name = "pool", EmitDefaultValue = true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tick
+        /// Pointer to tick.
         /// </summary>
+        /// <value>Pointer to tick.</value>
         [DataMember(Name = "tick", EmitDefaultValue = true)]
         public string Tick { get; set; }
 
         /// <summary>
-        /// Gets or Sets LiquidityGross
+        /// Total liquidity pool has as tick lower or upper at end of period.
         /// </summary>
+        /// <value>Total liquidity pool has as tick lower or upper at end of period.</value>
         [DataMember(Name = "liquidity_gross", EmitDefaultValue = true)]
         public string LiquidityGross { get; set; }
 
         /// <summary>
-        /// Gets or Sets LiquidityNet
+        /// How much liquidity changes when tick crossed at end of period.
         /// </summary>
+        /// <value>How much liquidity changes when tick crossed at end of period.</value>
         [DataMember(Name = "liquidity_net", EmitDefaultValue = true)]
         public string LiquidityNet { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken0
+        /// Hourly volume of token0 with this tick in range.
         /// </summary>
+        /// <value>Hourly volume of token0 with this tick in range.</value>
         [DataMember(Name = "volume_token_0", EmitDefaultValue = true)]
         public string VolumeToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken1
+        /// Hourly volume of token1 with this tick in range.
         /// </summary>
+        /// <value>Hourly volume of token1 with this tick in range.</value>
         [DataMember(Name = "volume_token_1", EmitDefaultValue = true)]
         public string VolumeToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// Hourly volume in derived USD with this tick in range.
         /// </summary>
+        /// <value>Hourly volume in derived USD with this tick in range.</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// Fees in USD.
         /// </summary>
+        /// <value>Fees in USD.</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthOutside0x128
+        /// Variable needed for fee computation.
         /// </summary>
+        /// <value>Variable needed for fee computation.</value>
         [DataMember(Name = "fee_growth_outside_0x128", EmitDefaultValue = true)]
         public string FeeGrowthOutside0x128 { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthOutside1x128
+        /// Variable needed for fee computation.
         /// </summary>
+        /// <value>Variable needed for fee computation.</value>
         [DataMember(Name = "fee_growth_outside_1x128", EmitDefaultValue = true)]
         public string FeeGrowthOutside1x128 { get; set; }
 

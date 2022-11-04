@@ -10,7 +10,7 @@ Swap are created for each token swap within a pair.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Long** |  |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**vid** | **Long** |  |  [optional] |
 |**id** | **String** | Transaction hash plus index in Transaction swap array. |  [optional] |
 |**transaction** | **String** | Reference to transaction swap was included in. |  [optional] |

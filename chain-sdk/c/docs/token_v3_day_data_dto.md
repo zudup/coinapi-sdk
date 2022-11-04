@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
-**block_number** | **long** |  | [optional] 
+**block_number** | **long** | Number of block in which entity was recorded. | [optional] 
 **vid** | **long** |  | [optional] 
 **id** | **char \*** | Token address concatendated with date. | [optional] 
 **date** | **int** | Timestamp rounded to current day by dividing by 86400. | [optional] 

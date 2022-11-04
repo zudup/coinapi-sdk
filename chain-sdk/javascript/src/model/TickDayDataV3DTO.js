@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class TickDayDataV3DTO {
     /**
      * Constructs a new <code>TickDayDataV3DTO</code>.
+     * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
      * @alias module:model/TickDayDataV3DTO
      */
     constructor() { 
@@ -99,8 +100,64 @@ class TickDayDataV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TickDayDataV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TickDayDataV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['pool'] && !(typeof data['pool'] === 'string' || data['pool'] instanceof String)) {
+            throw new Error("Expected the field `pool` to be a primitive type in the JSON string but got " + data['pool']);
+        }
+        // ensure the json data is a string
+        if (data['tick'] && !(typeof data['tick'] === 'string' || data['tick'] instanceof String)) {
+            throw new Error("Expected the field `tick` to be a primitive type in the JSON string but got " + data['tick']);
+        }
+        // ensure the json data is a string
+        if (data['liquidity_gross'] && !(typeof data['liquidity_gross'] === 'string' || data['liquidity_gross'] instanceof String)) {
+            throw new Error("Expected the field `liquidity_gross` to be a primitive type in the JSON string but got " + data['liquidity_gross']);
+        }
+        // ensure the json data is a string
+        if (data['liquidity_net'] && !(typeof data['liquidity_net'] === 'string' || data['liquidity_net'] instanceof String)) {
+            throw new Error("Expected the field `liquidity_net` to be a primitive type in the JSON string but got " + data['liquidity_net']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_0'] && !(typeof data['volume_token_0'] === 'string' || data['volume_token_0'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_0` to be a primitive type in the JSON string but got " + data['volume_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_1'] && !(typeof data['volume_token_1'] === 'string' || data['volume_token_1'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_1` to be a primitive type in the JSON string but got " + data['volume_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['fees_usd'] && !(typeof data['fees_usd'] === 'string' || data['fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `fees_usd` to be a primitive type in the JSON string but got " + data['fees_usd']);
+        }
+        // ensure the json data is a string
+        if (data['fee_growth_outside_0x128'] && !(typeof data['fee_growth_outside_0x128'] === 'string' || data['fee_growth_outside_0x128'] instanceof String)) {
+            throw new Error("Expected the field `fee_growth_outside_0x128` to be a primitive type in the JSON string but got " + data['fee_growth_outside_0x128']);
+        }
+        // ensure the json data is a string
+        if (data['fee_growth_outside_1x128'] && !(typeof data['fee_growth_outside_1x128'] === 'string' || data['fee_growth_outside_1x128'] instanceof String)) {
+            throw new Error("Expected the field `fee_growth_outside_1x128` to be a primitive type in the JSON string but got " + data['fee_growth_outside_1x128']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -113,79 +170,79 @@ TickDayDataV3DTO.prototype['entry_time'] = undefined;
 TickDayDataV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TickDayDataV3DTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * Identifier, format: <pool address>-<tick index>-<timestamp>.
  * @member {String} id
  */
 TickDayDataV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Timestamp rounded to current day by dividing by 86400.
  * @member {Number} date
  */
 TickDayDataV3DTO.prototype['date'] = undefined;
 
 /**
- * 
+ * Pointer to pool.
  * @member {String} pool
  */
 TickDayDataV3DTO.prototype['pool'] = undefined;
 
 /**
- * 
+ * Pointer to tick.
  * @member {String} tick
  */
 TickDayDataV3DTO.prototype['tick'] = undefined;
 
 /**
- * 
+ * Total liquidity pool has as tick lower or upper at end of period.
  * @member {String} liquidity_gross
  */
 TickDayDataV3DTO.prototype['liquidity_gross'] = undefined;
 
 /**
- * 
+ * How much liquidity changes when tick crossed at end of period.
  * @member {String} liquidity_net
  */
 TickDayDataV3DTO.prototype['liquidity_net'] = undefined;
 
 /**
- * 
+ * Hourly volume of token0 with this tick in range.
  * @member {String} volume_token_0
  */
 TickDayDataV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
- * 
+ * Hourly volume of token1 with this tick in range.
  * @member {String} volume_token_1
  */
 TickDayDataV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
- * 
+ * Hourly volume in derived USD with this tick in range.
  * @member {String} volume_usd
  */
 TickDayDataV3DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * Fees in USD.
  * @member {String} fees_usd
  */
 TickDayDataV3DTO.prototype['fees_usd'] = undefined;
 
 /**
- * 
+ * Variable needed for fee computation.
  * @member {String} fee_growth_outside_0x128
  */
 TickDayDataV3DTO.prototype['fee_growth_outside_0x128'] = undefined;
 
 /**
- * 
+ * Variable needed for fee computation.
  * @member {String} fee_growth_outside_1x128
  */
 TickDayDataV3DTO.prototype['fee_growth_outside_1x128'] = undefined;

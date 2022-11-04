@@ -1,7 +1,7 @@
 /*
  * SwapV3DTO.h
  *
- * 
+ * Swap are created for each token swap within a pair.
  */
 
 #ifndef _SwapV3DTO_H_
@@ -22,7 +22,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Swap are created for each token swap within a pair.
  *
  *  \ingroup Models
  *
@@ -61,11 +61,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
@@ -75,88 +75,88 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Pointer to transaction.
 	 */
 	std::string getTransaction();
 
-	/*! \brief Set 
+	/*! \brief Set Pointer to transaction.
 	 */
 	void setTransaction(std::string  transaction);
-	/*! \brief Get 
+	/*! \brief Get Timestamp of transaction.
 	 */
 	std::string getTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp of transaction.
 	 */
 	void setTimestamp(std::string  timestamp);
-	/*! \brief Get 
+	/*! \brief Get Pool swap occured within.
 	 */
 	std::string getPool();
 
-	/*! \brief Set 
+	/*! \brief Set Pool swap occured within.
 	 */
 	void setPool(std::string  pool);
-	/*! \brief Get 
+	/*! \brief Get Reference to token0 as stored in pair contract.
 	 */
 	std::string getToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token0 as stored in pair contract.
 	 */
 	void setToken0(std::string  token_0);
-	/*! \brief Get 
+	/*! \brief Get Reference to token1 as stored in pair contract.
 	 */
 	std::string getToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token1 as stored in pair contract.
 	 */
 	void setToken1(std::string  token_1);
-	/*! \brief Get 
+	/*! \brief Get Sender of the swap.
 	 */
 	std::string getSender();
 
-	/*! \brief Set 
+	/*! \brief Set Sender of the swap.
 	 */
 	void setSender(std::string  sender);
-	/*! \brief Get 
+	/*! \brief Get Recipient of the swap.
 	 */
 	std::string getRecipient();
 
-	/*! \brief Set 
+	/*! \brief Set Recipient of the swap.
 	 */
 	void setRecipient(std::string  recipient);
-	/*! \brief Get 
+	/*! \brief Get Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
 	 */
 	std::string getOrigin();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
 	 */
 	void setOrigin(std::string  origin);
-	/*! \brief Get 
+	/*! \brief Get Delta of token0 swapped.
 	 */
 	std::string getAmount0();
 
-	/*! \brief Set 
+	/*! \brief Set Delta of token0 swapped.
 	 */
 	void setAmount0(std::string  amount_0);
-	/*! \brief Get 
+	/*! \brief Get Delta of token1 swapped.
 	 */
 	std::string getAmount1();
 
-	/*! \brief Set 
+	/*! \brief Set Delta of token1 swapped.
 	 */
 	void setAmount1(std::string  amount_1);
-	/*! \brief Get 
+	/*! \brief Get Derived amount of tokens sold in USD.
 	 */
 	std::string getAmountUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Derived amount of tokens sold in USD.
 	 */
 	void setAmountUsd(std::string  amount_usd);
 	/*! \brief Get 

@@ -6,19 +6,19 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **date** | **Integer** |  | [optional] |
-| **pool** | **String** |  | [optional] |
-| **tick** | **String** |  | [optional] |
-| **liquidity_gross** | **String** |  | [optional] |
-| **liquidity_net** | **String** |  | [optional] |
-| **volume_token_0** | **String** |  | [optional] |
-| **volume_token_1** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **fees_usd** | **String** |  | [optional] |
-| **fee_growth_outside_0x128** | **String** |  | [optional] |
-| **fee_growth_outside_1x128** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;. | [optional] |
+| **date** | **Integer** | Timestamp rounded to current day by dividing by 86400. | [optional] |
+| **pool** | **String** | Pointer to pool. | [optional] |
+| **tick** | **String** | Pointer to tick. | [optional] |
+| **liquidity_gross** | **String** | Total liquidity pool has as tick lower or upper at end of period. | [optional] |
+| **liquidity_net** | **String** | How much liquidity changes when tick crossed at end of period. | [optional] |
+| **volume_token_0** | **String** | Hourly volume of token0 with this tick in range. | [optional] |
+| **volume_token_1** | **String** | Hourly volume of token1 with this tick in range. | [optional] |
+| **volume_usd** | **String** | Hourly volume in derived USD with this tick in range. | [optional] |
+| **fees_usd** | **String** | Fees in USD. | [optional] |
+| **fee_growth_outside_0x128** | **String** | Variable needed for fee computation. | [optional] |
+| **fee_growth_outside_1x128** | **String** | Variable needed for fee computation. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 
 ## Example

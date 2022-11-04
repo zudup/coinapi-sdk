@@ -237,7 +237,7 @@ __PACKAGE__->method_documentation({
     'block_number' => {
         datatype => 'int',
         base_name => 'block_number',
-        description => '',
+        description => 'Number of block in which entity was recorded.',
         format => '',
         read_only => '',
             },

@@ -40,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * BurnV3DTO
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class BurnV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -183,11 +185,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -206,11 +208,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Transaction hash + &#39;#&#39; + index in mints Transaction array.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash + '#' + index in mints Transaction array.")
 
   public String getId() {
     return id;
@@ -229,11 +231,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Transaction burn was included in.
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction burn was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -252,11 +254,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Pool position is within.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool position is within.")
 
   public String getPool() {
     return pool;
@@ -275,11 +277,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Reference to token0 as stored in pool contract.
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
 
   public String getToken0() {
     return token0;
@@ -298,11 +300,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Reference to token1 as stored in pool contract.
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
 
   public String getToken1() {
     return token1;
@@ -321,11 +323,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Timestamp.
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp.")
 
   public String getTimestamp() {
     return timestamp;
@@ -344,11 +346,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Owner of position where liquidity was burned.
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Owner of position where liquidity was burned.")
 
   public String getOwner() {
     return owner;
@@ -367,11 +369,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
    * @return origin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.")
 
   public String getOrigin() {
     return origin;
@@ -390,11 +392,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Amount of liquidity burned.
    * @return amount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of liquidity burned.")
 
   public String getAmount() {
     return amount;
@@ -413,11 +415,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Amount of token 0 burned.
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 burned.")
 
   public String getAmount0() {
     return amount0;
@@ -436,11 +438,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Amount of token 1 burned.
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 burned.")
 
   public String getAmount1() {
     return amount1;
@@ -459,11 +461,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Derived amount based on available prices of tokens.
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -482,11 +484,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Lower tick of position.
    * @return tickLower
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lower tick of position.")
 
   public String getTickLower() {
     return tickLower;
@@ -505,11 +507,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Upper tick of position.
    * @return tickUpper
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Upper tick of position.")
 
   public String getTickUpper() {
     return tickUpper;
@@ -528,11 +530,11 @@ public class BurnV3DTO {
   }
 
    /**
-   * 
+   * Position within the transactions.
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Position within the transactions.")
 
   public String getLogIndex() {
     return logIndex;
@@ -691,9 +693,7 @@ public class BurnV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (BurnV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!BurnV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in BurnV3DTO is not found in the empty JSON string", BurnV3DTO.openapiRequiredFields.toString()));
         }
       }

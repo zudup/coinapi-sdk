@@ -305,39 +305,6 @@ bool dappsSushiswapMintsHistoricalGetAsync(char * accessToken,
  * \param endBlock 
  * \param startDate 
  * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoiHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsSushiswapPoiHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
  * \param poolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
@@ -426,7 +393,7 @@ bool dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPools. *Synchronous*
  *
  * 
  * \param startBlock 
@@ -440,10 +407,10 @@ bool dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
  */
 bool dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<PairDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPools. *Asynchronous*
  *
  * 
  * \param startBlock 
@@ -457,8 +424,8 @@ bool dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
  */
 bool dappsSushiswapPoolsHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<PairDTO>, Error, void* )
+	, void* userData);
 
 
 /*! \brief GetSwaps. *Synchronous*
@@ -486,7 +453,7 @@ bool dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetSwaps. *Synchronous*
  *
  * 
  * \param startBlock 
@@ -500,10 +467,10 @@ bool dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
  */
 bool dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<SwapDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetSwaps. *Asynchronous*
  *
  * 
  * \param startBlock 
@@ -517,8 +484,8 @@ bool dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
  */
 bool dappsSushiswapSwapsHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<SwapDTO>, Error, void* )
+	, void* userData);
 
 
 /*! \brief . *Synchronous*
@@ -581,7 +548,7 @@ bool dappsSushiswapTokensCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTokens. *Synchronous*
  *
  * 
  * \param startBlock 
@@ -595,10 +562,10 @@ bool dappsSushiswapTokensCurrentGetAsync(char * accessToken,
  */
 bool dappsSushiswapTokensHistoricalGetSync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<TokenDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTokens. *Asynchronous*
  *
  * 
  * \param startBlock 
@@ -612,8 +579,8 @@ bool dappsSushiswapTokensHistoricalGetSync(char * accessToken,
  */
 bool dappsSushiswapTokensHistoricalGetAsync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<TokenDTO>, Error, void* )
+	, void* userData);
 
 
 /*! \brief . *Synchronous*

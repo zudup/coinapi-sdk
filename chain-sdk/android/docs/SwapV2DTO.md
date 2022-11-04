@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
-**blockNumber** | **Long** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **Long** |  |  [optional]
 **id** | **String** | Transaction hash plus index in Transaction swap array. |  [optional]
 **transaction** | **String** | Reference to transaction swap was included in. |  [optional]

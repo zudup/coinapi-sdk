@@ -12,6 +12,7 @@
  */
 
 /**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  * @interface TokenDTO
  */
@@ -27,85 +28,85 @@ export interface TokenDTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenDTO
      */
     block_number?: number;
     /**
-     * 
+     * Token address.
      * @type {string}
      * @memberof TokenDTO
      */
     id?: string | null;
     /**
-     * 
+     * Factory address.
      * @type {string}
      * @memberof TokenDTO
      */
     factory?: string | null;
     /**
-     * 
+     * Token symbol.
      * @type {string}
      * @memberof TokenDTO
      */
     symbol?: string | null;
     /**
-     * 
+     * Token name.
      * @type {string}
      * @memberof TokenDTO
      */
     name?: string | null;
     /**
-     * 
+     * Token decimals.
      * @type {string}
      * @memberof TokenDTO
      */
     decimals?: string | null;
     /**
-     * 
+     * Total supply of liquidity token.
      * @type {string}
      * @memberof TokenDTO
      */
     total_supply?: string | null;
     /**
-     * 
+     * Amount of token traded all time across all pairs.
      * @type {string}
      * @memberof TokenDTO
      */
     volume?: string | null;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @type {string}
      * @memberof TokenDTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @type {string}
      * @memberof TokenDTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Amount of transactions all time in pairs including token.
      * @type {string}
      * @memberof TokenDTO
      */
     tx_count?: string | null;
     /**
-     * 
+     * Total amount of token provided as liquidity across all pairs.
      * @type {string}
      * @memberof TokenDTO
      */
     liquidity?: string | null;
     /**
-     * 
+     * ETH per token.
      * @type {string}
      * @memberof TokenDTO
      */
     derived_eth?: string | null;
     /**
-     * 
+     * Array of whitelisted pairs.
      * @type {Array<string>}
      * @memberof TokenDTO
      */

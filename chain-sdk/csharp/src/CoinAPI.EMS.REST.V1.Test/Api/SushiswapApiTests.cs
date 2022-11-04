@@ -188,21 +188,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test DappsSushiswapPoiHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsSushiswapPoiHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsSushiswapPoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
         /// Test DappsSushiswapPoolDayDataHistoricalGet
         /// </summary>
         [Test]
@@ -257,8 +242,8 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.DappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<PairDTO>), response, "response is List<PairDTO>");
         }
         
         /// <summary>
@@ -284,8 +269,8 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<SwapDTO>), response, "response is List<SwapDTO>");
         }
         
         /// <summary>
@@ -327,8 +312,8 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string tokenId = null;
-            //instance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-            
+            //var response = instance.DappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            //Assert.IsInstanceOf(typeof(List<TokenDTO>), response, "response is List<TokenDTO>");
         }
         
         /// <summary>

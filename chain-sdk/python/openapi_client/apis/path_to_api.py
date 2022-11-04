@@ -48,12 +48,6 @@ from openapi_client.apis.paths.dapps_sushiswap_mints_historical import DappsSush
 from openapi_client.apis.paths.dapps_uniswapv3_mints_current import DappsUniswapv3MintsCurrent
 from openapi_client.apis.paths.dapps_dex_orders_historical import DappsDexOrdersHistorical
 from openapi_client.apis.paths.dapps_cow_orders_historical import DappsCowOrdersHistorical
-from openapi_client.apis.paths.dapps_uniswapv3_poi_historical import DappsUniswapv3PoiHistorical
-from openapi_client.apis.paths.dapps_uniswapv2_poi_historical import DappsUniswapv2PoiHistorical
-from openapi_client.apis.paths.dapps_sushiswap_poi_historical import DappsSushiswapPoiHistorical
-from openapi_client.apis.paths.dapps_dex_poi_historical import DappsDexPoiHistorical
-from openapi_client.apis.paths.dapps_curve_poi_historical import DappsCurvePoiHistorical
-from openapi_client.apis.paths.dapps_cow_poi_historical import DappsCowPoiHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_pool_day_data_historical import DappsUniswapv3PoolDayDataHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_pool_day_data_historical import DappsUniswapv2PoolDayDataHistorical
 from openapi_client.apis.paths.dapps_sushiswap_pool_day_data_historical import DappsSushiswapPoolDayDataHistorical
@@ -175,12 +169,6 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_UNISWAPV3_MINTS_CURRENT: DappsUniswapv3MintsCurrent,
         PathValues.DAPPS_DEX_ORDERS_HISTORICAL: DappsDexOrdersHistorical,
         PathValues.DAPPS_COW_ORDERS_HISTORICAL: DappsCowOrdersHistorical,
-        PathValues.DAPPS_UNISWAPV3_POI_HISTORICAL: DappsUniswapv3PoiHistorical,
-        PathValues.DAPPS_UNISWAPV2_POI_HISTORICAL: DappsUniswapv2PoiHistorical,
-        PathValues.DAPPS_SUSHISWAP_POI_HISTORICAL: DappsSushiswapPoiHistorical,
-        PathValues.DAPPS_DEX_POI_HISTORICAL: DappsDexPoiHistorical,
-        PathValues.DAPPS_CURVE_POI_HISTORICAL: DappsCurvePoiHistorical,
-        PathValues.DAPPS_COW_POI_HISTORICAL: DappsCowPoiHistorical,
         PathValues.DAPPS_UNISWAPV3_POOL_DAY_DATA_HISTORICAL: DappsUniswapv3PoolDayDataHistorical,
         PathValues.DAPPS_UNISWAPV2_POOL_DAY_DATA_HISTORICAL: DappsUniswapv2PoolDayDataHistorical,
         PathValues.DAPPS_SUSHISWAP_POOL_DAY_DATA_HISTORICAL: DappsSushiswapPoolDayDataHistorical,
@@ -303,12 +291,6 @@ path_to_api = PathToApi(
         PathValues.DAPPS_UNISWAPV3_MINTS_CURRENT: DappsUniswapv3MintsCurrent,
         PathValues.DAPPS_DEX_ORDERS_HISTORICAL: DappsDexOrdersHistorical,
         PathValues.DAPPS_COW_ORDERS_HISTORICAL: DappsCowOrdersHistorical,
-        PathValues.DAPPS_UNISWAPV3_POI_HISTORICAL: DappsUniswapv3PoiHistorical,
-        PathValues.DAPPS_UNISWAPV2_POI_HISTORICAL: DappsUniswapv2PoiHistorical,
-        PathValues.DAPPS_SUSHISWAP_POI_HISTORICAL: DappsSushiswapPoiHistorical,
-        PathValues.DAPPS_DEX_POI_HISTORICAL: DappsDexPoiHistorical,
-        PathValues.DAPPS_CURVE_POI_HISTORICAL: DappsCurvePoiHistorical,
-        PathValues.DAPPS_COW_POI_HISTORICAL: DappsCowPoiHistorical,
         PathValues.DAPPS_UNISWAPV3_POOL_DAY_DATA_HISTORICAL: DappsUniswapv3PoolDayDataHistorical,
         PathValues.DAPPS_UNISWAPV2_POOL_DAY_DATA_HISTORICAL: DappsUniswapv2PoolDayDataHistorical,
         PathValues.DAPPS_SUSHISWAP_POOL_DAY_DATA_HISTORICAL: DappsSushiswapPoolDayDataHistorical,

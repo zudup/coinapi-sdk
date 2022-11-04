@@ -8,29 +8,29 @@ import 'package:built_value/serializer.dart';
 
 part 'position_v3_dto.g.dart';
 
-/// PositionV3DTO
+/// Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [owner] - 
-/// * [pool] - 
-/// * [token0] - 
-/// * [token1] - 
-/// * [tickLower] - 
-/// * [tickUpper] - 
-/// * [liquidity] - 
-/// * [depositedToken0] - 
-/// * [depositedToken1] - 
-/// * [withdrawnToken0] - 
-/// * [withdrawnToken1] - 
-/// * [collectedFeesToken0] - 
-/// * [collectedFeesToken1] - 
-/// * [transaction] - 
-/// * [feeGrowthInside0LastX128] - 
-/// * [feeGrowthInside1LastX128] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - NFT token identifier.
+/// * [owner] - Owner of the NFT.
+/// * [pool] - Pool position is within.
+/// * [token0] - Reference to token0 as stored in pair contract.
+/// * [token1] - Reference to token1 as stored in pair contract.
+/// * [tickLower] - Lower tick of the position.
+/// * [tickUpper] - Upper tick of the position.
+/// * [liquidity] - Total position liquidity.
+/// * [depositedToken0] - Amount of token 0 ever deposited to position.
+/// * [depositedToken1] - Amount of token 1 ever deposited to position.
+/// * [withdrawnToken0] - Amount of token 0 ever withdrawn from position (without fees).
+/// * [withdrawnToken1] - Amount of token 1 ever withdrawn from position (without fees).
+/// * [collectedFeesToken0] - All time collected fees in token0.
+/// * [collectedFeesToken1] - All time collected fees in token1.
+/// * [transaction] - Transaction in which the position was initialized.
+/// * [feeGrowthInside0LastX128] - Variable needed for fee computation.
+/// * [feeGrowthInside1LastX128] - Variable needed for fee computation.
 /// * [vid] - 
 @BuiltValue()
 abstract class PositionV3DTO implements Built<PositionV3DTO, PositionV3DTOBuilder> {
@@ -40,75 +40,75 @@ abstract class PositionV3DTO implements Built<PositionV3DTO, PositionV3DTOBuilde
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// NFT token identifier.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Owner of the NFT.
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
-  /// 
+  /// Pool position is within.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Reference to token0 as stored in pair contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token1 as stored in pair contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
-  /// 
+  /// Lower tick of the position.
   @BuiltValueField(wireName: r'tick_lower')
   String? get tickLower;
 
-  /// 
+  /// Upper tick of the position.
   @BuiltValueField(wireName: r'tick_upper')
   String? get tickUpper;
 
-  /// 
+  /// Total position liquidity.
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
-  /// 
+  /// Amount of token 0 ever deposited to position.
   @BuiltValueField(wireName: r'deposited_token_0')
   String? get depositedToken0;
 
-  /// 
+  /// Amount of token 1 ever deposited to position.
   @BuiltValueField(wireName: r'deposited_token_1')
   String? get depositedToken1;
 
-  /// 
+  /// Amount of token 0 ever withdrawn from position (without fees).
   @BuiltValueField(wireName: r'withdrawn_token_0')
   String? get withdrawnToken0;
 
-  /// 
+  /// Amount of token 1 ever withdrawn from position (without fees).
   @BuiltValueField(wireName: r'withdrawn_token_1')
   String? get withdrawnToken1;
 
-  /// 
+  /// All time collected fees in token0.
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
-  /// 
+  /// All time collected fees in token1.
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
-  /// 
+  /// Transaction in which the position was initialized.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_inside_0_last_x128')
   String? get feeGrowthInside0LastX128;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_inside_1_last_x128')
   String? get feeGrowthInside1LastX128;
 

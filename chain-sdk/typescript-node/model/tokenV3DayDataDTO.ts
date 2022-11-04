@@ -19,7 +19,7 @@ export class TokenV3DayDataDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**

@@ -306,19 +306,6 @@ public class CurveApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCurvePoiHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsCurvePoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void dappsCurvePoolsHistoricalGetTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;

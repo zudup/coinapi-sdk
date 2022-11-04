@@ -27,97 +27,97 @@ export interface PositionSnapshotV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PositionSnapshotV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * NFT token identifier, format: <NFT token id>#<block number>
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     id?: string | null;
     /**
-     * THIS IS SUPER OWNER
+     * Owner of the NFT.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
-    owner?: string;
+    owner?: string | null;
     /**
-     * 
+     * Pool the position is within.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * Position of which the snap was taken of.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     position?: string | null;
     /**
-     * 
+     * Timestamp of block in which the snap was created.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     timestamp?: string | null;
     /**
-     * 
+     * Total position liquidity.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     liquidity?: string | null;
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_1?: string | null;
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_1?: string | null;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * Transaction in which the snapshot was initialized.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     fee_growth_inside_0_last_x128?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */

@@ -61,11 +61,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 

@@ -12,78 +12,81 @@
 
 import * as models from './models';
 
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ */
 export interface TokenDTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
     /**
-     * 
+     * Token address.
      */
     id?: string;
 
     /**
-     * 
+     * Factory address.
      */
     factory?: string;
 
     /**
-     * 
+     * Token symbol.
      */
     symbol?: string;
 
     /**
-     * 
+     * Token name.
      */
     name?: string;
 
     /**
-     * 
+     * Token decimals.
      */
     decimals?: string;
 
     /**
-     * 
+     * Total supply of liquidity token.
      */
     total_supply?: string;
 
     /**
-     * 
+     * Amount of token traded all time across all pairs.
      */
     volume?: string;
 
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      */
     volume_usd?: string;
 
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      */
     untracked_volume_usd?: string;
 
     /**
-     * 
+     * Amount of transactions all time in pairs including token.
      */
     tx_count?: string;
 
     /**
-     * 
+     * Total amount of token provided as liquidity across all pairs.
      */
     liquidity?: string;
 
     /**
-     * 
+     * ETH per token.
      */
     derived_eth?: string;
 
     /**
-     * 
+     * Array of whitelisted pairs.
      */
     whitelist_pairs?: Array<string>;
 

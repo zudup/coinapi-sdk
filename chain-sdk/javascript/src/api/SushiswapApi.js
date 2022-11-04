@@ -397,50 +397,6 @@ export default class SushiswapApi {
     }
 
     /**
-     * Callback function to receive the result of the dappsSushiswapPoiHistoricalGet operation.
-     * @callback module:api/SushiswapApi~dappsSushiswapPoiHistoricalGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {module:api/SushiswapApi~dappsSushiswapPoiHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    dappsSushiswapPoiHistoricalGet(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/dapps/sushiswap/poi/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the dappsSushiswapPoolDayDataHistoricalGet operation.
      * @callback module:api/SushiswapApi~dappsSushiswapPoolDayDataHistoricalGetCallback
      * @param {String} error Error message, if any.
@@ -573,11 +529,12 @@ export default class SushiswapApi {
      * Callback function to receive the result of the dappsSushiswapPoolsHistoricalGet operation.
      * @callback module:api/SushiswapApi~dappsSushiswapPoolsHistoricalGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/PairDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
+     * GetPools
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -585,6 +542,7 @@ export default class SushiswapApi {
      * @param {Date} opts.endDate 
      * @param {String} opts.poolId 
      * @param {module:api/SushiswapApi~dappsSushiswapPoolsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PairDTO>}
      */
     dappsSushiswapPoolsHistoricalGet(opts, callback) {
       opts = opts || {};
@@ -606,8 +564,8 @@ export default class SushiswapApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [PairDTO];
       return this.apiClient.callApi(
         '/dapps/sushiswap/pools/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -655,11 +613,12 @@ export default class SushiswapApi {
      * Callback function to receive the result of the dappsSushiswapSwapsHistoricalGet operation.
      * @callback module:api/SushiswapApi~dappsSushiswapSwapsHistoricalGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/SwapDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
+     * GetSwaps
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -667,6 +626,7 @@ export default class SushiswapApi {
      * @param {Date} opts.endDate 
      * @param {String} opts.poolId 
      * @param {module:api/SushiswapApi~dappsSushiswapSwapsHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SwapDTO>}
      */
     dappsSushiswapSwapsHistoricalGet(opts, callback) {
       opts = opts || {};
@@ -688,8 +648,8 @@ export default class SushiswapApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SwapDTO];
       return this.apiClient.callApi(
         '/dapps/sushiswap/swaps/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -783,11 +743,12 @@ export default class SushiswapApi {
      * Callback function to receive the result of the dappsSushiswapTokensHistoricalGet operation.
      * @callback module:api/SushiswapApi~dappsSushiswapTokensHistoricalGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/TokenDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
+     * GetTokens
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -795,6 +756,7 @@ export default class SushiswapApi {
      * @param {Date} opts.endDate 
      * @param {String} opts.tokenId 
      * @param {module:api/SushiswapApi~dappsSushiswapTokensHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/TokenDTO>}
      */
     dappsSushiswapTokensHistoricalGet(opts, callback) {
       opts = opts || {};
@@ -816,8 +778,8 @@ export default class SushiswapApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [TokenDTO];
       return this.apiClient.callApi(
         '/dapps/sushiswap/tokens/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

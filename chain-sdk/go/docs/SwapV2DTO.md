@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **int64** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **NullableString** | Transaction hash plus index in Transaction swap array. | [optional] 
 **Transaction** | Pointer to **NullableString** | Reference to transaction swap was included in. | [optional] 

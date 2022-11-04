@@ -105,37 +105,6 @@ function dex_api:dapps_dex_orders_historical_get(start_block, end_block, start_d
 	end
 end
 
-function dex_api:dapps_dex_poi_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/dex/poi/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
 function dex_api:dapps_dex_prices_historical_get(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;

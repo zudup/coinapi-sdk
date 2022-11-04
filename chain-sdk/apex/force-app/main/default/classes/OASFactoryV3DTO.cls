@@ -11,7 +11,7 @@
  */
 
 /**
- * OASFactoryV3DTO
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
 public class OASFactoryV3DTO implements OAS.MappedProperties {
     /**
@@ -27,85 +27,85 @@ public class OASFactoryV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Factory address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Amount of pools created.
      * @return poolCount
      */
     public String poolCount { get; set; }
 
     /**
-     * 
+     * Amount of transactions all time.
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * 
+     * Total volume all time in derived USD.
      * @return totalVolumeUsd
      */
     public String totalVolumeUsd { get; set; }
 
     /**
-     * 
+     * Total volume all time in derived ETH.
      * @return totalVolumeEth
      */
     public String totalVolumeEth { get; set; }
 
     /**
-     * 
+     * Total swap fees all time in USD.
      * @return totalFeesUsd
      */
     public String totalFeesUsd { get; set; }
 
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @return totalFeesEth
      */
     public String totalFeesEth { get; set; }
 
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * Total value locked derived in USD.
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * 
+     * Total value locked derived in ETH.
      * @return totalValueLockedEth
      */
     public String totalValueLockedEth { get; set; }
 
     /**
-     * 
+     * Total value locked derived in USD untracked.
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * 
+     * Total value locked derived in ETH untracked.
      * @return totalValueLockedEthUntracked
      */
     public String totalValueLockedEthUntracked { get; set; }
 
     /**
-     * 
+     * Current owner of the factory.
      * @return owner
      */
     public String owner { get; set; }

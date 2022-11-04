@@ -83,31 +83,6 @@ instance HasOptionalParam DappsCowOrdersHistoricalGet EndDate where
 instance Produces DappsCowOrdersHistoricalGet MimeNoContent
 
 
--- *** dappsCowPoiHistoricalGet
-
--- | @GET \/dapps\/cow\/poi\/historical@
--- 
-dappsCowPoiHistoricalGet
-  :: OnChainRequest DappsCowPoiHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowPoiHistoricalGet =
-  _mkRequest "GET" ["/dapps/cow/poi/historical"]
-
-data DappsCowPoiHistoricalGet  
-instance HasOptionalParam DappsCowPoiHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowPoiHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowPoiHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowPoiHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCowPoiHistoricalGet MimeNoContent
-
-
 -- *** dappsCowSettlementHistoricalGet
 
 -- | @GET \/dapps\/cow\/settlement\/historical@

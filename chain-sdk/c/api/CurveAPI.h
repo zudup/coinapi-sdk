@@ -88,10 +88,6 @@ CurveAPI_dappsCurveLpTokenHistoricalGet(apiClient_t *apiClient, long startBlock 
 
 
 void
-CurveAPI_dappsCurvePoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
-
-
-void
 CurveAPI_dappsCurvePoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

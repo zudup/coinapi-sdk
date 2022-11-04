@@ -1,7 +1,7 @@
 #' Create a new PositionV3DTO
 #'
 #' @description
-#' PositionV3DTO Class
+#' Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
 #'
 #' @docType class
 #' @title PositionV3DTO
@@ -9,24 +9,24 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
-#' @field id  character [optional]
-#' @field owner  character [optional]
-#' @field pool  character [optional]
-#' @field token_0  character [optional]
-#' @field token_1  character [optional]
-#' @field tick_lower  character [optional]
-#' @field tick_upper  character [optional]
-#' @field liquidity  character [optional]
-#' @field deposited_token_0  character [optional]
-#' @field deposited_token_1  character [optional]
-#' @field withdrawn_token_0  character [optional]
-#' @field withdrawn_token_1  character [optional]
-#' @field collected_fees_token_0  character [optional]
-#' @field collected_fees_token_1  character [optional]
-#' @field transaction  character [optional]
-#' @field fee_growth_inside_0_last_x128  character [optional]
-#' @field fee_growth_inside_1_last_x128  character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
+#' @field id NFT token identifier. character [optional]
+#' @field owner Owner of the NFT. character [optional]
+#' @field pool Pool position is within. character [optional]
+#' @field token_0 Reference to token0 as stored in pair contract. character [optional]
+#' @field token_1 Reference to token1 as stored in pair contract. character [optional]
+#' @field tick_lower Lower tick of the position. character [optional]
+#' @field tick_upper Upper tick of the position. character [optional]
+#' @field liquidity Total position liquidity. character [optional]
+#' @field deposited_token_0 Amount of token 0 ever deposited to position. character [optional]
+#' @field deposited_token_1 Amount of token 1 ever deposited to position. character [optional]
+#' @field withdrawn_token_0 Amount of token 0 ever withdrawn from position (without fees). character [optional]
+#' @field withdrawn_token_1 Amount of token 1 ever withdrawn from position (without fees). character [optional]
+#' @field collected_fees_token_0 All time collected fees in token0. character [optional]
+#' @field collected_fees_token_1 All time collected fees in token1. character [optional]
+#' @field transaction Transaction in which the position was initialized. character [optional]
+#' @field fee_growth_inside_0_last_x128 Variable needed for fee computation. character [optional]
+#' @field fee_growth_inside_1_last_x128 Variable needed for fee computation. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -62,112 +62,152 @@ PositionV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
-    #' @param id 
-    #' @param owner 
-    #' @param pool 
-    #' @param token_0 
-    #' @param token_1 
-    #' @param tick_lower 
-    #' @param tick_upper 
-    #' @param liquidity 
-    #' @param deposited_token_0 
-    #' @param deposited_token_1 
-    #' @param withdrawn_token_0 
-    #' @param withdrawn_token_1 
-    #' @param collected_fees_token_0 
-    #' @param collected_fees_token_1 
-    #' @param transaction 
-    #' @param fee_growth_inside_0_last_x128 
-    #' @param fee_growth_inside_1_last_x128 
+    #' @param block_number Number of block in which entity was recorded.
+    #' @param id NFT token identifier.
+    #' @param owner Owner of the NFT.
+    #' @param pool Pool position is within.
+    #' @param token_0 Reference to token0 as stored in pair contract.
+    #' @param token_1 Reference to token1 as stored in pair contract.
+    #' @param tick_lower Lower tick of the position.
+    #' @param tick_upper Upper tick of the position.
+    #' @param liquidity Total position liquidity.
+    #' @param deposited_token_0 Amount of token 0 ever deposited to position.
+    #' @param deposited_token_1 Amount of token 1 ever deposited to position.
+    #' @param withdrawn_token_0 Amount of token 0 ever withdrawn from position (without fees).
+    #' @param withdrawn_token_1 Amount of token 1 ever withdrawn from position (without fees).
+    #' @param collected_fees_token_0 All time collected fees in token0.
+    #' @param collected_fees_token_1 All time collected fees in token1.
+    #' @param transaction Transaction in which the position was initialized.
+    #' @param fee_growth_inside_0_last_x128 Variable needed for fee computation.
+    #' @param fee_growth_inside_1_last_x128 Variable needed for fee computation.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `owner` = NULL, `pool` = NULL, `token_0` = NULL, `token_1` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `liquidity` = NULL, `deposited_token_0` = NULL, `deposited_token_1` = NULL, `withdrawn_token_0` = NULL, `withdrawn_token_1` = NULL, `collected_fees_token_0` = NULL, `collected_fees_token_1` = NULL, `transaction` = NULL, `fee_growth_inside_0_last_x128` = NULL, `fee_growth_inside_1_last_x128` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `owner` = NULL, `pool` = NULL, `token_0` = NULL, `token_1` = NULL, `tick_lower` = NULL, `tick_upper` = NULL, `liquidity` = NULL, `deposited_token_0` = NULL, `deposited_token_1` = NULL, `withdrawn_token_0` = NULL, `withdrawn_token_1` = NULL, `collected_fees_token_0` = NULL, `collected_fees_token_1` = NULL, `transaction` = NULL, `fee_growth_inside_0_last_x128` = NULL, `fee_growth_inside_1_last_x128` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`owner`)) {
-        stopifnot(is.character(`owner`), length(`owner`) == 1)
+        if (!(is.character(`owner`) && length(`owner`) == 1)) {
+          stop(paste("Error! Invalid data for `owner`. Must be a string:", `owner`))
+        }
         self$`owner` <- `owner`
       }
       if (!is.null(`pool`)) {
-        stopifnot(is.character(`pool`), length(`pool`) == 1)
+        if (!(is.character(`pool`) && length(`pool`) == 1)) {
+          stop(paste("Error! Invalid data for `pool`. Must be a string:", `pool`))
+        }
         self$`pool` <- `pool`
       }
       if (!is.null(`token_0`)) {
-        stopifnot(is.character(`token_0`), length(`token_0`) == 1)
+        if (!(is.character(`token_0`) && length(`token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0`. Must be a string:", `token_0`))
+        }
         self$`token_0` <- `token_0`
       }
       if (!is.null(`token_1`)) {
-        stopifnot(is.character(`token_1`), length(`token_1`) == 1)
+        if (!(is.character(`token_1`) && length(`token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1`. Must be a string:", `token_1`))
+        }
         self$`token_1` <- `token_1`
       }
       if (!is.null(`tick_lower`)) {
-        stopifnot(is.character(`tick_lower`), length(`tick_lower`) == 1)
+        if (!(is.character(`tick_lower`) && length(`tick_lower`) == 1)) {
+          stop(paste("Error! Invalid data for `tick_lower`. Must be a string:", `tick_lower`))
+        }
         self$`tick_lower` <- `tick_lower`
       }
       if (!is.null(`tick_upper`)) {
-        stopifnot(is.character(`tick_upper`), length(`tick_upper`) == 1)
+        if (!(is.character(`tick_upper`) && length(`tick_upper`) == 1)) {
+          stop(paste("Error! Invalid data for `tick_upper`. Must be a string:", `tick_upper`))
+        }
         self$`tick_upper` <- `tick_upper`
       }
       if (!is.null(`liquidity`)) {
-        stopifnot(is.character(`liquidity`), length(`liquidity`) == 1)
+        if (!(is.character(`liquidity`) && length(`liquidity`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity`. Must be a string:", `liquidity`))
+        }
         self$`liquidity` <- `liquidity`
       }
       if (!is.null(`deposited_token_0`)) {
-        stopifnot(is.character(`deposited_token_0`), length(`deposited_token_0`) == 1)
+        if (!(is.character(`deposited_token_0`) && length(`deposited_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `deposited_token_0`. Must be a string:", `deposited_token_0`))
+        }
         self$`deposited_token_0` <- `deposited_token_0`
       }
       if (!is.null(`deposited_token_1`)) {
-        stopifnot(is.character(`deposited_token_1`), length(`deposited_token_1`) == 1)
+        if (!(is.character(`deposited_token_1`) && length(`deposited_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `deposited_token_1`. Must be a string:", `deposited_token_1`))
+        }
         self$`deposited_token_1` <- `deposited_token_1`
       }
       if (!is.null(`withdrawn_token_0`)) {
-        stopifnot(is.character(`withdrawn_token_0`), length(`withdrawn_token_0`) == 1)
+        if (!(is.character(`withdrawn_token_0`) && length(`withdrawn_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `withdrawn_token_0`. Must be a string:", `withdrawn_token_0`))
+        }
         self$`withdrawn_token_0` <- `withdrawn_token_0`
       }
       if (!is.null(`withdrawn_token_1`)) {
-        stopifnot(is.character(`withdrawn_token_1`), length(`withdrawn_token_1`) == 1)
+        if (!(is.character(`withdrawn_token_1`) && length(`withdrawn_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `withdrawn_token_1`. Must be a string:", `withdrawn_token_1`))
+        }
         self$`withdrawn_token_1` <- `withdrawn_token_1`
       }
       if (!is.null(`collected_fees_token_0`)) {
-        stopifnot(is.character(`collected_fees_token_0`), length(`collected_fees_token_0`) == 1)
+        if (!(is.character(`collected_fees_token_0`) && length(`collected_fees_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `collected_fees_token_0`. Must be a string:", `collected_fees_token_0`))
+        }
         self$`collected_fees_token_0` <- `collected_fees_token_0`
       }
       if (!is.null(`collected_fees_token_1`)) {
-        stopifnot(is.character(`collected_fees_token_1`), length(`collected_fees_token_1`) == 1)
+        if (!(is.character(`collected_fees_token_1`) && length(`collected_fees_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `collected_fees_token_1`. Must be a string:", `collected_fees_token_1`))
+        }
         self$`collected_fees_token_1` <- `collected_fees_token_1`
       }
       if (!is.null(`transaction`)) {
-        stopifnot(is.character(`transaction`), length(`transaction`) == 1)
+        if (!(is.character(`transaction`) && length(`transaction`) == 1)) {
+          stop(paste("Error! Invalid data for `transaction`. Must be a string:", `transaction`))
+        }
         self$`transaction` <- `transaction`
       }
       if (!is.null(`fee_growth_inside_0_last_x128`)) {
-        stopifnot(is.character(`fee_growth_inside_0_last_x128`), length(`fee_growth_inside_0_last_x128`) == 1)
+        if (!(is.character(`fee_growth_inside_0_last_x128`) && length(`fee_growth_inside_0_last_x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_inside_0_last_x128`. Must be a string:", `fee_growth_inside_0_last_x128`))
+        }
         self$`fee_growth_inside_0_last_x128` <- `fee_growth_inside_0_last_x128`
       }
       if (!is.null(`fee_growth_inside_1_last_x128`)) {
-        stopifnot(is.character(`fee_growth_inside_1_last_x128`), length(`fee_growth_inside_1_last_x128`) == 1)
+        if (!(is.character(`fee_growth_inside_1_last_x128`) && length(`fee_growth_inside_1_last_x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_inside_1_last_x128`. Must be a string:", `fee_growth_inside_1_last_x128`))
+        }
         self$`fee_growth_inside_1_last_x128` <- `fee_growth_inside_1_last_x128`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -605,18 +645,19 @@ PositionV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#PositionV3DTO$unlock()
+# PositionV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#PositionV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# PositionV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#PositionV3DTO$lock()
+# PositionV3DTO$lock()
 

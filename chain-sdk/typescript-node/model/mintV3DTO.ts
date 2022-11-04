@@ -12,75 +12,78 @@
 
 import { RequestFile } from './models';
 
+/**
+* Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
+*/
 export class MintV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
-    * 
+    * Transaction hash + \'#\' + index in mints Transaction array.
     */
     'id'?: string | null;
     /**
-    * 
+    * Which txn the mint was included in.
     */
     'transaction'?: string | null;
     /**
-    * 
+    * Time of transaction.
     */
     'timestamp'?: string | null;
     /**
-    * 
+    * Pool address.
     */
     'pool'?: string | null;
     /**
-    * 
+    * Reference to token0 as stored in pool contract.
     */
     'token0'?: string | null;
     /**
-    * 
+    * Reference to token1 as stored in pool contract.
     */
     'token1'?: string | null;
     /**
-    * 
+    * Owner of position where liquidity minted to.
     */
     'owner'?: string | null;
     /**
-    * 
+    * The address that minted the liquidity.
     */
     'sender'?: string | null;
     /**
-    * 
+    * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
     */
     'origin'?: string | null;
     /**
-    * 
+    * Amount of liquidity minted.
     */
     'amount'?: string | null;
     /**
-    * 
+    * Amount of token 0 minted.
     */
     'amount0'?: string | null;
     /**
-    * 
+    * Amount of token 1 minted.
     */
     'amount1'?: string | null;
     /**
-    * 
+    * Derived amount based on available prices of tokens.
     */
     'amountUsd'?: string | null;
     /**
-    * 
+    * Lower tick of the position.
     */
     'tickLower'?: string | null;
     /**
-    * 
+    * Upper tick of the position.
     */
     'tickUpper'?: string | null;
     /**
-    * 
+    * Order within the transaction.
     */
     'logIndex'?: string | null;
     /**

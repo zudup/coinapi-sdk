@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**blockNumber** | **kotlin.Long** |  |  [optional]
+**blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **kotlin.Long** |  |  [optional]
 **id** | **kotlin.String** | Timestamp rounded to current day by dividing by 86400. |  [optional]
 **date** | **kotlin.Int** | Timestamp rounded to current day by dividing by 86400. |  [optional]

@@ -16,7 +16,6 @@
 
 module Api.Request.Cow exposing
     ( dappsCowOrdersHistoricalGet
-    , dappsCowPoiHistoricalGet
     , dappsCowSettlementHistoricalGet
     , dappsCowTokensHistoricalGet
     , dappsCowTradesHistoricalGet
@@ -38,19 +37,6 @@ dappsCowOrdersHistoricalGet startBlock_query endBlock_query startDate_query endD
     Api.request
         "GET"
         "/dapps/cow/orders/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCowPoiHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCowPoiHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/cow/poi/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []

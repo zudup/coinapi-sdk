@@ -17,7 +17,7 @@ import org.openapitools.client.core.ApiModel
 case class SwapV2DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
-**BlockNumber** | **long** |  | [optional] 
+**BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **long** |  | [optional] 
 **Id** | **string** | Transaction hash plus index in Transaction swap array. | [optional] 
 **Transaction** | **string** | Reference to transaction swap was included in. | [optional] 

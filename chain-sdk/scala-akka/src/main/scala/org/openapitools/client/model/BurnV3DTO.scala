@@ -17,37 +17,37 @@ import org.openapitools.client.core.ApiModel
 case class BurnV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Transaction hash + '#' + index in mints Transaction array. */
   id: Option[String] = None,
-  /*  */
+  /* Transaction burn was included in. */
   transaction: Option[String] = None,
-  /*  */
+  /* Pool position is within. */
   pool: Option[String] = None,
-  /*  */
+  /* Reference to token0 as stored in pool contract. */
   token0: Option[String] = None,
-  /*  */
+  /* Reference to token1 as stored in pool contract. */
   token1: Option[String] = None,
-  /*  */
+  /* Timestamp. */
   timestamp: Option[String] = None,
-  /*  */
+  /* Owner of position where liquidity was burned. */
   owner: Option[String] = None,
-  /*  */
+  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. */
   origin: Option[String] = None,
-  /*  */
+  /* Amount of liquidity burned. */
   amount: Option[String] = None,
-  /*  */
+  /* Amount of token 0 burned. */
   amount0: Option[String] = None,
-  /*  */
+  /* Amount of token 1 burned. */
   amount1: Option[String] = None,
-  /*  */
+  /* Derived amount based on available prices of tokens. */
   amountUsd: Option[String] = None,
-  /*  */
+  /* Lower tick of position. */
   tickLower: Option[String] = None,
-  /*  */
+  /* Upper tick of position. */
   tickUpper: Option[String] = None,
-  /*  */
+  /* Position within the transactions. */
   logIndex: Option[String] = None,
   /*  */
   vid: Option[Long] = None

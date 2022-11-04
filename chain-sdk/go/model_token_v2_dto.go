@@ -20,7 +20,7 @@ import (
 type TokenV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -66,7 +66,7 @@ func NewTokenV2DTOWithDefaults() *TokenV2DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -76,15 +76,15 @@ func (o *TokenV2DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -98,7 +98,7 @@ func (o *TokenV2DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -108,15 +108,15 @@ func (o *TokenV2DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -130,7 +130,7 @@ func (o *TokenV2DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -140,15 +140,15 @@ func (o *TokenV2DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -162,7 +162,7 @@ func (o *TokenV2DTO) SetBlockNumber(v int64) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -172,15 +172,15 @@ func (o *TokenV2DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -194,7 +194,7 @@ func (o *TokenV2DTO) SetVid(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -206,7 +206,7 @@ func (o *TokenV2DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -236,7 +236,7 @@ func (o *TokenV2DTO) UnsetId() {
 
 // GetSymbol returns the Symbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetSymbol() string {
-	if o == nil || o.Symbol.Get() == nil {
+	if o == nil || isNil(o.Symbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -248,7 +248,7 @@ func (o *TokenV2DTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -278,7 +278,7 @@ func (o *TokenV2DTO) UnsetSymbol() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetName() string {
-	if o == nil || o.Name.Get() == nil {
+	if o == nil || isNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -290,7 +290,7 @@ func (o *TokenV2DTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetNameOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -320,7 +320,7 @@ func (o *TokenV2DTO) UnsetName() {
 
 // GetDecimals returns the Decimals field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetDecimals() int32 {
-	if o == nil || o.Decimals == nil {
+	if o == nil || isNil(o.Decimals) {
 		var ret int32
 		return ret
 	}
@@ -330,15 +330,15 @@ func (o *TokenV2DTO) GetDecimals() int32 {
 // GetDecimalsOk returns a tuple with the Decimals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetDecimalsOk() (*int32, bool) {
-	if o == nil || o.Decimals == nil {
-		return nil, false
+	if o == nil || isNil(o.Decimals) {
+    return nil, false
 	}
 	return o.Decimals, true
 }
 
 // HasDecimals returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasDecimals() bool {
-	if o != nil && o.Decimals != nil {
+	if o != nil && !isNil(o.Decimals) {
 		return true
 	}
 
@@ -352,7 +352,7 @@ func (o *TokenV2DTO) SetDecimals(v int32) {
 
 // GetTotalSupply returns the TotalSupply field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetTotalSupply() BigInteger {
-	if o == nil || o.TotalSupply == nil {
+	if o == nil || isNil(o.TotalSupply) {
 		var ret BigInteger
 		return ret
 	}
@@ -362,15 +362,15 @@ func (o *TokenV2DTO) GetTotalSupply() BigInteger {
 // GetTotalSupplyOk returns a tuple with the TotalSupply field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetTotalSupplyOk() (*BigInteger, bool) {
-	if o == nil || o.TotalSupply == nil {
-		return nil, false
+	if o == nil || isNil(o.TotalSupply) {
+    return nil, false
 	}
 	return o.TotalSupply, true
 }
 
 // HasTotalSupply returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasTotalSupply() bool {
-	if o != nil && o.TotalSupply != nil {
+	if o != nil && !isNil(o.TotalSupply) {
 		return true
 	}
 
@@ -384,7 +384,7 @@ func (o *TokenV2DTO) SetTotalSupply(v BigInteger) {
 
 // GetTradeVolume returns the TradeVolume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetTradeVolume() string {
-	if o == nil || o.TradeVolume.Get() == nil {
+	if o == nil || isNil(o.TradeVolume.Get()) {
 		var ret string
 		return ret
 	}
@@ -396,7 +396,7 @@ func (o *TokenV2DTO) GetTradeVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetTradeVolumeOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TradeVolume.Get(), o.TradeVolume.IsSet()
 }
@@ -426,7 +426,7 @@ func (o *TokenV2DTO) UnsetTradeVolume() {
 
 // GetTradeVolumeUsd returns the TradeVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetTradeVolumeUsd() string {
-	if o == nil || o.TradeVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.TradeVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -438,7 +438,7 @@ func (o *TokenV2DTO) GetTradeVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetTradeVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TradeVolumeUsd.Get(), o.TradeVolumeUsd.IsSet()
 }
@@ -468,7 +468,7 @@ func (o *TokenV2DTO) UnsetTradeVolumeUsd() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetUntrackedVolumeUsd() string {
-	if o == nil || o.UntrackedVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -480,7 +480,7 @@ func (o *TokenV2DTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -510,7 +510,7 @@ func (o *TokenV2DTO) UnsetUntrackedVolumeUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise.
 func (o *TokenV2DTO) GetTxCount() BigInteger {
-	if o == nil || o.TxCount == nil {
+	if o == nil || isNil(o.TxCount) {
 		var ret BigInteger
 		return ret
 	}
@@ -520,15 +520,15 @@ func (o *TokenV2DTO) GetTxCount() BigInteger {
 // GetTxCountOk returns a tuple with the TxCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TokenV2DTO) GetTxCountOk() (*BigInteger, bool) {
-	if o == nil || o.TxCount == nil {
-		return nil, false
+	if o == nil || isNil(o.TxCount) {
+    return nil, false
 	}
 	return o.TxCount, true
 }
 
 // HasTxCount returns a boolean if a field has been set.
 func (o *TokenV2DTO) HasTxCount() bool {
-	if o != nil && o.TxCount != nil {
+	if o != nil && !isNil(o.TxCount) {
 		return true
 	}
 
@@ -542,7 +542,7 @@ func (o *TokenV2DTO) SetTxCount(v BigInteger) {
 
 // GetTotalLiquidity returns the TotalLiquidity field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetTotalLiquidity() string {
-	if o == nil || o.TotalLiquidity.Get() == nil {
+	if o == nil || isNil(o.TotalLiquidity.Get()) {
 		var ret string
 		return ret
 	}
@@ -554,7 +554,7 @@ func (o *TokenV2DTO) GetTotalLiquidity() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetTotalLiquidityOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalLiquidity.Get(), o.TotalLiquidity.IsSet()
 }
@@ -584,7 +584,7 @@ func (o *TokenV2DTO) UnsetTotalLiquidity() {
 
 // GetDerivedEth returns the DerivedEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetDerivedEth() string {
-	if o == nil || o.DerivedEth.Get() == nil {
+	if o == nil || isNil(o.DerivedEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -596,7 +596,7 @@ func (o *TokenV2DTO) GetDerivedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetDerivedEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.DerivedEth.Get(), o.DerivedEth.IsSet()
 }
@@ -626,7 +626,7 @@ func (o *TokenV2DTO) UnsetDerivedEth() {
 
 // GetTokenSymbol returns the TokenSymbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TokenV2DTO) GetTokenSymbol() string {
-	if o == nil || o.TokenSymbol.Get() == nil {
+	if o == nil || isNil(o.TokenSymbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -638,7 +638,7 @@ func (o *TokenV2DTO) GetTokenSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TokenV2DTO) GetTokenSymbolOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TokenSymbol.Get(), o.TokenSymbol.IsSet()
 }
@@ -668,16 +668,16 @@ func (o *TokenV2DTO) UnsetTokenSymbol() {
 
 func (o TokenV2DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
@@ -689,10 +689,10 @@ func (o TokenV2DTO) MarshalJSON() ([]byte, error) {
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
 	}
-	if o.Decimals != nil {
+	if !isNil(o.Decimals) {
 		toSerialize["decimals"] = o.Decimals
 	}
-	if o.TotalSupply != nil {
+	if !isNil(o.TotalSupply) {
 		toSerialize["total_supply"] = o.TotalSupply
 	}
 	if o.TradeVolume.IsSet() {
@@ -704,7 +704,7 @@ func (o TokenV2DTO) MarshalJSON() ([]byte, error) {
 	if o.UntrackedVolumeUsd.IsSet() {
 		toSerialize["untracked_volume_usd"] = o.UntrackedVolumeUsd.Get()
 	}
-	if o.TxCount != nil {
+	if !isNil(o.TxCount) {
 		toSerialize["tx_count"] = o.TxCount
 	}
 	if o.TotalLiquidity.IsSet() {

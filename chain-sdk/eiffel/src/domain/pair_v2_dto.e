@@ -24,7 +24,7 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
@@ -44,7 +44,7 @@ feature --Access
     reserve_usd: detachable STRING_32
       -- Total liquidity amount in pair stored as an amount of USD.
     tracked_reserve_eth: detachable STRING_32
-      -- Total liquidity with only tracked amount (see tracked amounts).
+      -- Total liquidity with only tracked amount.
     token_0_price: detachable STRING_32
       -- Token0 per token1.
     token_1_price: detachable STRING_32
@@ -62,7 +62,7 @@ feature --Access
     created_at_timestamp: detachable DATE_TIME
       -- Timestamp contract was created.
     liquidity_provider_count: detachable STRING_32
-      -- 
+      -- Total number of LPs.
  	evaluated_ask: REAL_64
     	 
 

@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Pool address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("id", {
 
 test_that("created_at_timestamp", {
   # tests for the property `created_at_timestamp` (character)
-  # 
+  # Creation time.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`created_at_timestamp`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("created_at_timestamp", {
 
 test_that("token_0", {
   # tests for the property `token_0` (character)
-  # 
+  # Reference to token0 as stored in pool contract.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("token_0", {
 
 test_that("token_1", {
   # tests for the property `token_1` (character)
-  # 
+  # Reference to token1 as stored in pool contract.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1`, "EXPECTED_RESULT")
@@ -104,7 +104,7 @@ test_that("fee_growth_global_1x128", {
 
 test_that("token_0_price", {
   # tests for the property `token_0_price` (character)
-  # 
+  # Token0 per token1.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0_price`, "EXPECTED_RESULT")
@@ -112,7 +112,7 @@ test_that("token_0_price", {
 
 test_that("token_1_price", {
   # tests for the property `token_1_price` (character)
-  # 
+  # Token1 per token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1_price`, "EXPECTED_RESULT")
@@ -134,7 +134,7 @@ test_that("observation_index", {
 
 test_that("volume_token_0", {
   # tests for the property `volume_token_0` (character)
-  # 
+  # All time token0 swapped.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_0`, "EXPECTED_RESULT")
@@ -142,7 +142,7 @@ test_that("volume_token_0", {
 
 test_that("volume_token_1", {
   # tests for the property `volume_token_1` (character)
-  # 
+  # All time token1 swapped.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_1`, "EXPECTED_RESULT")
@@ -150,7 +150,7 @@ test_that("volume_token_1", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # 
+  # All time USD swapped.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -158,7 +158,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
-  # 
+  # All time USD swapped, unfiltered for unreliable USD pools.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -166,7 +166,7 @@ test_that("untracked_volume_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # 
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -181,7 +181,7 @@ test_that("tx_count", {
 
 test_that("collected_fees_token_0", {
   # tests for the property `collected_fees_token_0` (character)
-  # 
+  # All time fees collected token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_0`, "EXPECTED_RESULT")
@@ -189,7 +189,7 @@ test_that("collected_fees_token_0", {
 
 test_that("collected_fees_token_1", {
   # tests for the property `collected_fees_token_1` (character)
-  # 
+  # All time fees collected token1.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_1`, "EXPECTED_RESULT")
@@ -197,7 +197,7 @@ test_that("collected_fees_token_1", {
 
 test_that("collected_fees_usd", {
   # tests for the property `collected_fees_usd` (character)
-  # 
+  # All time fees collected derived USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_usd`, "EXPECTED_RESULT")
@@ -205,7 +205,7 @@ test_that("collected_fees_usd", {
 
 test_that("total_value_locked_token_0", {
   # tests for the property `total_value_locked_token_0` (character)
-  # 
+  # Total token 0 across all ticks.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_token_0`, "EXPECTED_RESULT")
@@ -221,7 +221,7 @@ test_that("total_value_locked_token_1", {
 
 test_that("total_value_locked_eth", {
   # tests for the property `total_value_locked_eth` (character)
-  # 
+  # Total token 1 across all ticks.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_eth`, "EXPECTED_RESULT")
@@ -229,7 +229,7 @@ test_that("total_value_locked_eth", {
 
 test_that("total_value_locked_usd", {
   # tests for the property `total_value_locked_usd` (character)
-  # 
+  # Total value locked USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd`, "EXPECTED_RESULT")
@@ -237,7 +237,7 @@ test_that("total_value_locked_usd", {
 
 test_that("total_value_locked_usd_untracked", {
   # tests for the property `total_value_locked_usd_untracked` (character)
-  # 
+  # Total value locked derived ETH.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_value_locked_usd_untracked`, "EXPECTED_RESULT")
@@ -245,7 +245,7 @@ test_that("total_value_locked_usd_untracked", {
 
 test_that("liquidity_provider_count", {
   # tests for the property `liquidity_provider_count` (character)
-  # 
+  # Liquidity providers count, used to detect new exchanges.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity_provider_count`, "EXPECTED_RESULT")

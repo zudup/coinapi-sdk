@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
+ **/
+@ApiModel(description = "Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.")
 public class MintV3DTO {
   
   @SerializedName("entry_time")
@@ -81,9 +84,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -92,9 +95,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Transaction hash + '#' + index in mints Transaction array.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash + '#' + index in mints Transaction array.")
   public String getId() {
     return id;
   }
@@ -103,9 +106,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Which txn the mint was included in.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Which txn the mint was included in.")
   public String getTransaction() {
     return transaction;
   }
@@ -114,9 +117,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Time of transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Time of transaction.")
   public String getTimestamp() {
     return timestamp;
   }
@@ -125,9 +128,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Pool address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
   public String getPool() {
     return pool;
   }
@@ -136,9 +139,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Reference to token0 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
   public String getToken0() {
     return token0;
   }
@@ -147,9 +150,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Reference to token1 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
   public String getToken1() {
     return token1;
   }
@@ -158,9 +161,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Owner of position where liquidity minted to.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Owner of position where liquidity minted to.")
   public String getOwner() {
     return owner;
   }
@@ -169,9 +172,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * The address that minted the liquidity.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address that minted the liquidity.")
   public String getSender() {
     return sender;
   }
@@ -180,9 +183,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.")
   public String getOrigin() {
     return origin;
   }
@@ -191,9 +194,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Amount of liquidity minted.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of liquidity minted.")
   public String getAmount() {
     return amount;
   }
@@ -202,9 +205,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 minted.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 minted.")
   public String getAmount0() {
     return amount0;
   }
@@ -213,9 +216,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 minted.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 minted.")
   public String getAmount1() {
     return amount1;
   }
@@ -224,9 +227,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Derived amount based on available prices of tokens.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -235,9 +238,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Lower tick of the position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lower tick of the position.")
   public String getTickLower() {
     return tickLower;
   }
@@ -246,9 +249,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Upper tick of the position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Upper tick of the position.")
   public String getTickUpper() {
     return tickUpper;
   }
@@ -257,9 +260,9 @@ public class MintV3DTO {
   }
 
   /**
-   * 
+   * Order within the transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Order within the transaction.")
   public String getLogIndex() {
     return logIndex;
   }

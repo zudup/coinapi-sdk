@@ -13,38 +13,38 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Identifier, format: <pool address>-<tick index>-<timestamp>.
 .PARAMETER Date
-
+Timestamp rounded to current day by dividing by 86400.
 .PARAMETER Pool
-
+Pointer to pool.
 .PARAMETER Tick
-
+Pointer to tick.
 .PARAMETER LiquidityGross
-
+Total liquidity pool has as tick lower or upper at end of period.
 .PARAMETER LiquidityNet
-
+How much liquidity changes when tick crossed at end of period.
 .PARAMETER VolumeToken0
-
+Hourly volume of token0 with this tick in range.
 .PARAMETER VolumeToken1
-
+Hourly volume of token1 with this tick in range.
 .PARAMETER VolumeUsd
-
+Hourly volume in derived USD with this tick in range.
 .PARAMETER FeesUsd
-
+Fees in USD.
 .PARAMETER FeeGrowthOutside0x128
-
+Variable needed for fee computation.
 .PARAMETER FeeGrowthOutside1x128
-
+Variable needed for fee computation.
 .PARAMETER Vid
 
 .OUTPUTS

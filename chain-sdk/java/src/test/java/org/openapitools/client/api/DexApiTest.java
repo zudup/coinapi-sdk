@@ -62,19 +62,6 @@ public class DexApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexPoiHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void dappsDexPricesHistoricalGetTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;

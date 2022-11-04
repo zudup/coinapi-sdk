@@ -6,36 +6,36 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **created_at_timestamp** | **Time** |  | [optional] |
-| **token_0** | **String** |  | [optional] |
-| **token_1** | **String** |  | [optional] |
+| **id** | **String** | Pool address. | [optional] |
+| **created_at_timestamp** | **Time** | Creation time. | [optional] |
+| **token_0** | **String** | Reference to token0 as stored in pool contract. | [optional] |
+| **token_1** | **String** | Reference to token1 as stored in pool contract. | [optional] |
 | **fee_tier** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **liquidity** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **sqrt_price** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **fee_growth_global_0x128** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **fee_growth_global_1x128** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **token_0_price** | **String** |  | [optional] |
-| **token_1_price** | **String** |  | [optional] |
+| **token_0_price** | **String** | Token0 per token1. | [optional] |
+| **token_1_price** | **String** | Token1 per token0. | [optional] |
 | **tick** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **observation_index** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **volume_token_0** | **String** |  | [optional] |
-| **volume_token_1** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **untracked_volume_usd** | **String** |  | [optional] |
-| **fees_usd** | **String** |  | [optional] |
+| **volume_token_0** | **String** | All time token0 swapped. | [optional] |
+| **volume_token_1** | **String** | All time token1 swapped. | [optional] |
+| **volume_usd** | **String** | All time USD swapped. | [optional] |
+| **untracked_volume_usd** | **String** | All time USD swapped, unfiltered for unreliable USD pools. | [optional] |
+| **fees_usd** | **String** | Fees in USD. | [optional] |
 | **tx_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **collected_fees_token_0** | **String** |  | [optional] |
-| **collected_fees_token_1** | **String** |  | [optional] |
-| **collected_fees_usd** | **String** |  | [optional] |
-| **total_value_locked_token_0** | **String** |  | [optional] |
+| **collected_fees_token_0** | **String** | All time fees collected token0. | [optional] |
+| **collected_fees_token_1** | **String** | All time fees collected token1. | [optional] |
+| **collected_fees_usd** | **String** | All time fees collected derived USD. | [optional] |
+| **total_value_locked_token_0** | **String** | Total token 0 across all ticks. | [optional] |
 | **total_value_locked_token_1** | **String** |  | [optional] |
-| **total_value_locked_eth** | **String** |  | [optional] |
-| **total_value_locked_usd** | **String** |  | [optional] |
-| **total_value_locked_usd_untracked** | **String** |  | [optional] |
-| **liquidity_provider_count** | **String** |  | [optional] |
+| **total_value_locked_eth** | **String** | Total token 1 across all ticks. | [optional] |
+| **total_value_locked_usd** | **String** | Total value locked USD. | [optional] |
+| **total_value_locked_usd_untracked** | **String** | Total value locked derived ETH. | [optional] |
+| **liquidity_provider_count** | **String** | Liquidity providers count, used to detect new exchanges. | [optional] |
 | **evaluated_ask** | **Float** |  | [optional][readonly] |
 
 ## Example

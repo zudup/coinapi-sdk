@@ -20,37 +20,37 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+NFT token identifier, format: <NFT token id>#<block number>
 .PARAMETER Owner
-THIS IS SUPER OWNER
+Owner of the NFT.
 .PARAMETER Pool
-
+Pool the position is within.
 .PARAMETER Position
-
+Position of which the snap was taken of.
 .PARAMETER Timestamp
-
+Timestamp of block in which the snap was created.
 .PARAMETER Liquidity
-
+Total position liquidity.
 .PARAMETER DepositedToken0
-
+Amount of token 0 ever deposited to position.
 .PARAMETER DepositedToken1
-
+Amount of token 1 ever deposited to position.
 .PARAMETER WithdrawnToken0
-
+Amount of token 0 ever withdrawn from position (without fees).
 .PARAMETER WithdrawnToken1
-
+Amount of token 1 ever withdrawn from position (without fees).
 .PARAMETER CollectedFeesToken0
-
+All time collected fees in token0.
 .PARAMETER CollectedFeesToken1
-
+All time collected fees in token1.
 .PARAMETER Transaction
-
+Transaction in which the snapshot was initialized.
 .PARAMETER FeeGrowthInside0LastX128
-
+Variable needed for fee computation.
 .PARAMETER FeeGrowthInside1LastX128
-
+Variable needed for fee computation.
 .PARAMETER Vid
 
 .OUTPUTS

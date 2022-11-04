@@ -11,7 +11,6 @@
 """
 
 from openapi_client.paths.dapps_cow_orders_historical.get import DappsCowOrdersHistoricalGet
-from openapi_client.paths.dapps_cow_poi_historical.get import DappsCowPoiHistoricalGet
 from openapi_client.paths.dapps_cow_settlement_historical.get import DappsCowSettlementHistoricalGet
 from openapi_client.paths.dapps_cow_tokens_historical.get import DappsCowTokensHistoricalGet
 from openapi_client.paths.dapps_cow_trades_historical.get import DappsCowTradesHistoricalGet
@@ -20,7 +19,6 @@ from openapi_client.paths.dapps_cow_users_historical.get import DappsCowUsersHis
 
 class CowApi(
     DappsCowOrdersHistoricalGet,
-    DappsCowPoiHistoricalGet,
     DappsCowSettlementHistoricalGet,
     DappsCowTokensHistoricalGet,
     DappsCowTradesHistoricalGet,

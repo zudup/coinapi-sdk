@@ -192,29 +192,6 @@
         res))))
 
 
-(defn-spec dapps-uniswapv2-poi-historical-get-with-http-info any?
-  ""
-  ([] (dapps-uniswapv2-poi-historical-get-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/poi/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       []
-              :auth-names    []})))
-
-(defn-spec dapps-uniswapv2-poi-historical-get any?
-  ""
-  ([] (dapps-uniswapv2-poi-historical-get nil))
-  ([optional-params any?]
-   (let [res (:data (dapps-uniswapv2-poi-historical-get-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
-        res))))
-
-
 (defn-spec dapps-uniswapv2-pool-day-data-historical-get-with-http-info any?
   ""
   ([] (dapps-uniswapv2-pool-day-data-historical-get-with-http-info nil))
@@ -663,29 +640,6 @@
   ([] (dapps-uniswapv3-mints-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-uniswapv3-mints-historical-get-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
-        res))))
-
-
-(defn-spec dapps-uniswapv3-poi-historical-get-with-http-info any?
-  ""
-  ([] (dapps-uniswapv3-poi-historical-get-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/poi/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       []
-              :auth-names    []})))
-
-(defn-spec dapps-uniswapv3-poi-historical-get any?
-  ""
-  ([] (dapps-uniswapv3-poi-historical-get nil))
-  ([optional-params any?]
-   (let [res (:data (dapps-uniswapv3-poi-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode any? res st/string-transformer)
         res))))

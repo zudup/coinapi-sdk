@@ -40,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * MintV3DTO
+ * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class MintV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -187,11 +189,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -210,11 +212,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Transaction hash + &#39;#&#39; + index in mints Transaction array.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash + '#' + index in mints Transaction array.")
 
   public String getId() {
     return id;
@@ -233,11 +235,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Which txn the mint was included in.
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Which txn the mint was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -256,11 +258,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Time of transaction.
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Time of transaction.")
 
   public String getTimestamp() {
     return timestamp;
@@ -279,11 +281,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Pool address.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
 
   public String getPool() {
     return pool;
@@ -302,11 +304,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Reference to token0 as stored in pool contract.
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
 
   public String getToken0() {
     return token0;
@@ -325,11 +327,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Reference to token1 as stored in pool contract.
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
 
   public String getToken1() {
     return token1;
@@ -348,11 +350,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Owner of position where liquidity minted to.
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Owner of position where liquidity minted to.")
 
   public String getOwner() {
     return owner;
@@ -371,11 +373,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * The address that minted the liquidity.
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address that minted the liquidity.")
 
   public String getSender() {
     return sender;
@@ -394,11 +396,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
    * @return origin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.")
 
   public String getOrigin() {
     return origin;
@@ -417,11 +419,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Amount of liquidity minted.
    * @return amount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of liquidity minted.")
 
   public String getAmount() {
     return amount;
@@ -440,11 +442,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Amount of token 0 minted.
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 minted.")
 
   public String getAmount0() {
     return amount0;
@@ -463,11 +465,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Amount of token 1 minted.
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 minted.")
 
   public String getAmount1() {
     return amount1;
@@ -486,11 +488,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Derived amount based on available prices of tokens.
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -509,11 +511,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Lower tick of the position.
    * @return tickLower
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lower tick of the position.")
 
   public String getTickLower() {
     return tickLower;
@@ -532,11 +534,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Upper tick of the position.
    * @return tickUpper
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Upper tick of the position.")
 
   public String getTickUpper() {
     return tickUpper;
@@ -555,11 +557,11 @@ public class MintV3DTO {
   }
 
    /**
-   * 
+   * Order within the transaction.
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Order within the transaction.")
 
   public String getLogIndex() {
     return logIndex;
@@ -721,9 +723,7 @@ public class MintV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (MintV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!MintV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in MintV3DTO is not found in the empty JSON string", MintV3DTO.openapiRequiredFields.toString()));
         }
       }

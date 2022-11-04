@@ -8,33 +8,33 @@ import 'package:built_value/serializer.dart';
 
 part 'pair_dto.g.dart';
 
-/// PairDTO
+/// Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [factory_] - 
-/// * [name] - 
-/// * [token0] - 
-/// * [token1] - 
-/// * [reserve0] - 
-/// * [reserve1] - 
-/// * [totalSupply] - 
-/// * [reserveEth] - 
-/// * [reserveUsd] - 
-/// * [trackedReserveEth] - 
-/// * [token0Price] - 
-/// * [token1Price] - 
-/// * [volumeToken0] - 
-/// * [volumeToken1] - 
-/// * [volumeUsd] - 
-/// * [untrackedVolumeUsd] - 
-/// * [txCount] - 
-/// * [liquidityProviderCount] - 
-/// * [timestamp] - 
-/// * [block] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Pair contract address.
+/// * [factory_] - Factory contract address.
+/// * [name] - Friendly name, format: <token0 name>-<token1 name>
+/// * [token0] - Reference to token0 as stored in pair contract.
+/// * [token1] - Reference to token0 as stored in pair contract.
+/// * [reserve0] - Reserve of token0.
+/// * [reserve1] - Reserve of token1.
+/// * [totalSupply] - Total supply of liquidity token distributed to LPs.
+/// * [reserveEth] - Total liquidity in pair stored as an amount of ETH.
+/// * [reserveUsd] - Total liquidity amount in pair stored as an amount of USD.
+/// * [trackedReserveEth] - Total liquidity with only tracked amount.
+/// * [token0Price] - Token0 per token1.
+/// * [token1Price] - Token1 per token0.
+/// * [volumeToken0] - Amount of token0 swapped on this pair.
+/// * [volumeToken1] - Amount of token1 swapped on this pair.
+/// * [volumeUsd] - Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+/// * [untrackedVolumeUsd] - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+/// * [txCount] - All time amount of transactions on this pair.
+/// * [liquidityProviderCount] - Total number of LPs.
+/// * [timestamp] - Timestamp.
+/// * [block] - Block number in which pair information was created in.
 /// * [vid] - 
 /// * [evaluatedAsk] 
 @BuiltValue()
@@ -45,91 +45,91 @@ abstract class PairDTO implements Built<PairDTO, PairDTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Pair contract address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Factory contract address.
   @BuiltValueField(wireName: r'factory')
   String? get factory_;
 
-  /// 
+  /// Friendly name, format: <token0 name>-<token1 name>
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// 
+  /// Reference to token0 as stored in pair contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token0 as stored in pair contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
-  /// 
+  /// Reserve of token0.
   @BuiltValueField(wireName: r'reserve_0')
   String? get reserve0;
 
-  /// 
+  /// Reserve of token1.
   @BuiltValueField(wireName: r'reserve_1')
   String? get reserve1;
 
-  /// 
+  /// Total supply of liquidity token distributed to LPs.
   @BuiltValueField(wireName: r'total_supply')
   String? get totalSupply;
 
-  /// 
+  /// Total liquidity in pair stored as an amount of ETH.
   @BuiltValueField(wireName: r'reserve_eth')
   String? get reserveEth;
 
-  /// 
+  /// Total liquidity amount in pair stored as an amount of USD.
   @BuiltValueField(wireName: r'reserve_usd')
   String? get reserveUsd;
 
-  /// 
+  /// Total liquidity with only tracked amount.
   @BuiltValueField(wireName: r'tracked_reserve_eth')
   String? get trackedReserveEth;
 
-  /// 
+  /// Token0 per token1.
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
-  /// 
+  /// Token1 per token0.
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
-  /// 
+  /// Amount of token0 swapped on this pair.
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
-  /// 
+  /// Amount of token1 swapped on this pair.
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
-  /// 
+  /// Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// All time amount of transactions on this pair.
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
-  /// 
+  /// Total number of LPs.
   @BuiltValueField(wireName: r'liquidity_provider_count')
   String? get liquidityProviderCount;
 
-  /// 
+  /// Timestamp.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Block number in which pair information was created in.
   @BuiltValueField(wireName: r'block')
   String? get block;
 

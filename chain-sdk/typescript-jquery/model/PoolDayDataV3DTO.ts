@@ -12,113 +12,116 @@
 
 import * as models from './models';
 
+/**
+ * Data accumulated and condensed into day stats for each pool.
+ */
 export interface PoolDayDataV3DTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
     /**
-     * 
+     * Identifier, format: <pool address>-<day id>.
      */
     id?: string;
 
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400
      */
     date?: number;
 
     /**
-     * 
+     * Pointer to pool.
      */
     pool?: string;
 
     /**
-     * 
+     * In range liquidity at end of period.
      */
     liquidity?: string;
 
     /**
-     * 
+     * Current price tracker at end of period.
      */
     sqrt_price?: string;
 
     /**
-     * 
+     * Price of token0 - derived from sqrtPrice.
      */
     token_0_price?: string;
 
     /**
-     * 
+     * Price of token1 - derived from sqrtPrice.
      */
     token_1_price?: string;
 
     /**
-     * 
+     * Current tick at end of period.
      */
     tick?: string;
 
     /**
-     * 
+     * Tracker for global fee growth.
      */
     fee_growth_global_0x128?: string;
 
     /**
-     * 
+     * Tracker for global fee growth.
      */
     fee_growth_global_1x128?: string;
 
     /**
-     * 
+     * Total value locked derived in USD at end of period.
      */
     tvl_usd?: string;
 
     /**
-     * 
+     * Volume in token0.
      */
     volume_token_0?: string;
 
     /**
-     * 
+     * Volume in token1.
      */
     volume_token_1?: string;
 
     /**
-     * 
+     * Volume in USD.
      */
     volume_usd?: string;
 
     /**
-     * 
+     * Fees in USD.
      */
     fees_usd?: string;
 
     /**
-     * 
+     * Number of transactions during period.
      */
     tx_count?: string;
 
     /**
-     * 
+     * Opening price of token0.
      */
     open?: string;
 
     /**
-     * 
+     * High price of token0.
      */
     high?: string;
 
     /**
-     * 
+     * Low price of token0.
      */
     low?: string;
 
     /**
-     * 
+     * Close price of token0.
      */
     close?: string;
 

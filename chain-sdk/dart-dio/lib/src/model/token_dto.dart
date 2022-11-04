@@ -9,25 +9,25 @@ import 'package:built_value/serializer.dart';
 
 part 'token_dto.g.dart';
 
-/// TokenDTO
+/// Stores aggregated information for a specific token across all pairs that token is included in.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [factory_] - 
-/// * [symbol] - 
-/// * [name] - 
-/// * [decimals] - 
-/// * [totalSupply] - 
-/// * [volume] - 
-/// * [volumeUsd] - 
-/// * [untrackedVolumeUsd] - 
-/// * [txCount] - 
-/// * [liquidity] - 
-/// * [derivedEth] - 
-/// * [whitelistPairs] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Token address.
+/// * [factory_] - Factory address.
+/// * [symbol] - Token symbol.
+/// * [name] - Token name.
+/// * [decimals] - Token decimals.
+/// * [totalSupply] - Total supply of liquidity token.
+/// * [volume] - Amount of token traded all time across all pairs.
+/// * [volumeUsd] - Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+/// * [untrackedVolumeUsd] - Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
+/// * [txCount] - Amount of transactions all time in pairs including token.
+/// * [liquidity] - Total amount of token provided as liquidity across all pairs.
+/// * [derivedEth] - ETH per token.
+/// * [whitelistPairs] - Array of whitelisted pairs.
 /// * [vid] - 
 /// * [tokenSymbol] 
 @BuiltValue()
@@ -38,59 +38,59 @@ abstract class TokenDTO implements Built<TokenDTO, TokenDTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Token address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Factory address.
   @BuiltValueField(wireName: r'factory')
   String? get factory_;
 
-  /// 
+  /// Token symbol.
   @BuiltValueField(wireName: r'symbol')
   String? get symbol;
 
-  /// 
+  /// Token name.
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// 
+  /// Token decimals.
   @BuiltValueField(wireName: r'decimals')
   String? get decimals;
 
-  /// 
+  /// Total supply of liquidity token.
   @BuiltValueField(wireName: r'total_supply')
   String? get totalSupply;
 
-  /// 
+  /// Amount of token traded all time across all pairs.
   @BuiltValueField(wireName: r'volume')
   String? get volume;
 
-  /// 
+  /// Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// Amount of transactions all time in pairs including token.
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
-  /// 
+  /// Total amount of token provided as liquidity across all pairs.
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
-  /// 
+  /// ETH per token.
   @BuiltValueField(wireName: r'derived_eth')
   String? get derivedEth;
 
-  /// 
+  /// Array of whitelisted pairs.
   @BuiltValueField(wireName: r'whitelist_pairs')
   BuiltList<String>? get whitelistPairs;
 

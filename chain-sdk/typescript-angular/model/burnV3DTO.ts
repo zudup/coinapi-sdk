@@ -11,71 +11,74 @@
  */
 
 
+/**
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ */
 export interface BurnV3DTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      */
     id?: string | null;
     /**
-     * 
+     * Transaction burn was included in.
      */
     transaction?: string | null;
     /**
-     * 
+     * Pool position is within.
      */
     pool?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      */
     token_1?: string | null;
     /**
-     * 
+     * Timestamp.
      */
     timestamp?: string | null;
     /**
-     * 
+     * Owner of position where liquidity was burned.
      */
     owner?: string | null;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      */
     origin?: string | null;
     /**
-     * 
+     * Amount of liquidity burned.
      */
     amount?: string | null;
     /**
-     * 
+     * Amount of token 0 burned.
      */
     amount_0?: string | null;
     /**
-     * 
+     * Amount of token 1 burned.
      */
     amount_1?: string | null;
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      */
     amount_usd?: string | null;
     /**
-     * 
+     * Lower tick of position.
      */
     tick_lower?: string | null;
     /**
-     * 
+     * Upper tick of position.
      */
     tick_upper?: string | null;
     /**
-     * 
+     * Position within the transactions.
      */
     log_index?: string | null;
     /**

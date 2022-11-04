@@ -41,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,9 +49,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * PoolV3DTO
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class PoolV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -248,11 +250,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -294,11 +296,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Pool address.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
 
   public String getId() {
     return id;
@@ -317,11 +319,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Creation time.
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Creation time.")
 
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;
@@ -340,11 +342,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Reference to token0 as stored in pool contract.
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
 
   public String getToken0() {
     return token0;
@@ -363,11 +365,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Reference to token1 as stored in pool contract.
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
 
   public String getToken1() {
     return token1;
@@ -501,11 +503,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Token0 per token1.
    * @return token0Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token0 per token1.")
 
   public String getToken0Price() {
     return token0Price;
@@ -524,11 +526,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Token1 per token0.
    * @return token1Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token1 per token0.")
 
   public String getToken1Price() {
     return token1Price;
@@ -593,11 +595,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time token0 swapped.
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time token0 swapped.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -616,11 +618,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time token1 swapped.
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time token1 swapped.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -639,11 +641,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time USD swapped.
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time USD swapped.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -662,11 +664,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time USD swapped, unfiltered for unreliable USD pools.
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time USD swapped, unfiltered for unreliable USD pools.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -685,11 +687,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Fees in USD.
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -731,11 +733,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time fees collected token0.
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected token0.")
 
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
@@ -754,11 +756,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time fees collected token1.
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected token1.")
 
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
@@ -777,11 +779,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * All time fees collected derived USD.
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected derived USD.")
 
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
@@ -800,11 +802,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Total token 0 across all ticks.
    * @return totalValueLockedToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total token 0 across all ticks.")
 
   public String getTotalValueLockedToken0() {
     return totalValueLockedToken0;
@@ -846,11 +848,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Total token 1 across all ticks.
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total token 1 across all ticks.")
 
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
@@ -869,11 +871,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Total value locked USD.
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -892,11 +894,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived ETH.
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived ETH.")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -915,11 +917,11 @@ public class PoolV3DTO {
   }
 
    /**
-   * 
+   * Liquidity providers count, used to detect new exchanges.
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Liquidity providers count, used to detect new exchanges.")
 
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
@@ -1111,9 +1113,7 @@ public class PoolV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PoolV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!PoolV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PoolV3DTO is not found in the empty JSON string", PoolV3DTO.openapiRequiredFields.toString()));
         }
       }

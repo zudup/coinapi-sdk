@@ -9,7 +9,6 @@
         , dapps_uniswapv3_factory_historical_get/0
         , dapps_uniswapv3_mints_current_get/0
         , dapps_uniswapv3_mints_historical_get/0
-        , dapps_uniswapv3_poi_historical_get/0
         , dapps_uniswapv3_pool_day_data_historical_get/0
         , dapps_uniswapv3_pool_hour_data_historical_get/0
         , dapps_uniswapv3_pools_current_get/0
@@ -141,18 +140,6 @@ dapps_uniswapv3_mints_historical_get() ->
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
   Path        = ["/dapps/uniswapv3/mints/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"poolId=">>, PoolId, <<"&">>],
-
-  openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
-
-%% @doc 
-%% 
--spec dapps_uniswapv3_poi_historical_get() ->
-  openapi_utils:response().
-dapps_uniswapv3_poi_historical_get() ->
-  Method      = get,
-  Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/poi/historical"],
-  QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 

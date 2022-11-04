@@ -16,10 +16,6 @@ DexAPI_dappsDexOrdersHistoricalGet(apiClient_t *apiClient, long startBlock , lon
 
 
 void
-DexAPI_dappsDexPoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
-
-
-void
 DexAPI_dappsDexPricesHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 

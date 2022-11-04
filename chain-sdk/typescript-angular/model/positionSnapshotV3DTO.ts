@@ -15,67 +15,67 @@ export interface PositionSnapshotV3DTO {
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
-     * 
+     * NFT token identifier, format: <NFT token id>#<block number>
      */
     id?: string | null;
     /**
-     * THIS IS SUPER OWNER
+     * Owner of the NFT.
      */
-    owner?: string;
+    owner?: string | null;
     /**
-     * 
+     * Pool the position is within.
      */
     pool?: string | null;
     /**
-     * 
+     * Position of which the snap was taken of.
      */
     position?: string | null;
     /**
-     * 
+     * Timestamp of block in which the snap was created.
      */
     timestamp?: string | null;
     /**
-     * 
+     * Total position liquidity.
      */
     liquidity?: string | null;
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      */
     deposited_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      */
     deposited_token_1?: string | null;
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      */
     withdrawn_token_0?: string | null;
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      */
     withdrawn_token_1?: string | null;
     /**
-     * 
+     * All time collected fees in token0.
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time collected fees in token1.
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * Transaction in which the snapshot was initialized.
      */
     transaction?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      */
     fee_growth_inside_0_last_x128?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      */
     fee_growth_inside_1_last_x128?: string | null;
     /**

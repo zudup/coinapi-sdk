@@ -24,17 +24,17 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- 
+      -- Pool address.
     created_at_timestamp: detachable DATE_TIME
-      -- 
+      -- Creation time.
     token_0: detachable STRING_32
-      -- 
+      -- Reference to token0 as stored in pool contract.
     token_1: detachable STRING_32
-      -- 
+      -- Reference to token1 as stored in pool contract.
     fee_tier: detachable BIG_INTEGER
       
     liquidity: detachable BIG_INTEGER
@@ -46,43 +46,43 @@ feature --Access
     fee_growth_global_1x128: detachable BIG_INTEGER
       
     token_0_price: detachable STRING_32
-      -- 
+      -- Token0 per token1.
     token_1_price: detachable STRING_32
-      -- 
+      -- Token1 per token0.
     tick: detachable BIG_INTEGER
       
     observation_index: detachable BIG_INTEGER
       
     volume_token_0: detachable STRING_32
-      -- 
+      -- All time token0 swapped.
     volume_token_1: detachable STRING_32
-      -- 
+      -- All time token1 swapped.
     volume_usd: detachable STRING_32
-      -- 
+      -- All time USD swapped.
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- All time USD swapped, unfiltered for unreliable USD pools.
     fees_usd: detachable STRING_32
-      -- 
+      -- Fees in USD.
     tx_count: detachable BIG_INTEGER
       
     collected_fees_token_0: detachable STRING_32
-      -- 
+      -- All time fees collected token0.
     collected_fees_token_1: detachable STRING_32
-      -- 
+      -- All time fees collected token1.
     collected_fees_usd: detachable STRING_32
-      -- 
+      -- All time fees collected derived USD.
     total_value_locked_token_0: detachable STRING_32
-      -- 
+      -- Total token 0 across all ticks.
     total_value_locked_token_1: detachable STRING_32
       -- 
     total_value_locked_eth: detachable STRING_32
-      -- 
+      -- Total token 1 across all ticks.
     total_value_locked_usd: detachable STRING_32
-      -- 
+      -- Total value locked USD.
     total_value_locked_usd_untracked: detachable STRING_32
-      -- 
+      -- Total value locked derived ETH.
     liquidity_provider_count: detachable STRING_32
-      -- 
+      -- Liquidity providers count, used to detect new exchanges.
  	evaluated_ask: REAL_64
     	 
 

@@ -6,8 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
 [**dappsCowOrdersHistoricalGetWithHttpInfo**](CowApi.md#dappsCowOrdersHistoricalGetWithHttpInfo) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowPoiHistoricalGet**](CowApi.md#dappsCowPoiHistoricalGet) | **GET** /dapps/cow/poi/historical | 
-[**dappsCowPoiHistoricalGetWithHttpInfo**](CowApi.md#dappsCowPoiHistoricalGetWithHttpInfo) | **GET** /dapps/cow/poi/historical | 
 [**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
 [**dappsCowSettlementHistoricalGetWithHttpInfo**](CowApi.md#dappsCowSettlementHistoricalGetWithHttpInfo) | **GET** /dapps/cow/settlement/historical | 
 [**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
@@ -70,92 +68,6 @@ object Example extends App {
 
         case Failure(exception) => 
             System.err.println("Exception when calling CowApi#dappsCowOrdersHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCowPoiHistoricalGet
-
-> dappsCowPoiHistoricalGet(dappsCowPoiHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CowApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCowPoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CowApi#dappsCowPoiHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CowApi#dappsCowPoiHistoricalGet")
             exception.printStackTrace();
     }
 }

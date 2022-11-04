@@ -10,25 +10,25 @@ import 'package:built_value/serializer.dart';
 
 part 'swap_v3_dto.g.dart';
 
-/// SwapV3DTO
+/// Swap are created for each token swap within a pair.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
-/// * [id] - 
-/// * [transaction] - 
-/// * [timestamp] - 
-/// * [pool] - 
-/// * [token0] - 
-/// * [token1] - 
-/// * [sender] - 
-/// * [recipient] - 
-/// * [origin] - 
-/// * [amount0] - 
-/// * [amount1] - 
-/// * [amountUsd] - 
+/// * [id] - Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+/// * [transaction] - Pointer to transaction.
+/// * [timestamp] - Timestamp of transaction.
+/// * [pool] - Pool swap occured within.
+/// * [token0] - Reference to token0 as stored in pair contract.
+/// * [token1] - Reference to token1 as stored in pair contract.
+/// * [sender] - Sender of the swap.
+/// * [recipient] - Recipient of the swap.
+/// * [origin] - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
+/// * [amount0] - Delta of token0 swapped.
+/// * [amount1] - Delta of token1 swapped.
+/// * [amountUsd] - Derived amount of tokens sold in USD.
 /// * [sqrtPriceX96] 
 /// * [tick] 
 /// * [logIndex] 
@@ -45,7 +45,7 @@ abstract class SwapV3DTO implements Built<SwapV3DTO, SwapV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
@@ -53,51 +53,51 @@ abstract class SwapV3DTO implements Built<SwapV3DTO, SwapV3DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// 
+  /// Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Pointer to transaction.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Timestamp of transaction.
   @BuiltValueField(wireName: r'timestamp')
   DateTime? get timestamp;
 
-  /// 
+  /// Pool swap occured within.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Reference to token0 as stored in pair contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token1 as stored in pair contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
-  /// 
+  /// Sender of the swap.
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
-  /// 
+  /// Recipient of the swap.
   @BuiltValueField(wireName: r'recipient')
   String? get recipient;
 
-  /// 
+  /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
   @BuiltValueField(wireName: r'origin')
   String? get origin;
 
-  /// 
+  /// Delta of token0 swapped.
   @BuiltValueField(wireName: r'amount_0')
   String? get amount0;
 
-  /// 
+  /// Delta of token1 swapped.
   @BuiltValueField(wireName: r'amount_1')
   String? get amount1;
 
-  /// 
+  /// Derived amount of tokens sold in USD.
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 

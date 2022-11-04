@@ -113,19 +113,6 @@ test_that("DappsSushiswapMintsHistoricalGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsSushiswapPoiHistoricalGet", {
-  # tests for DappsSushiswapPoiHistoricalGet
-  # base path: https://onchain.coinapi.io
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @return [Void]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("DappsSushiswapPoolDayDataHistoricalGet", {
   # tests for DappsSushiswapPoolDayDataHistoricalGet
   # base path: https://onchain.coinapi.io
@@ -168,12 +155,13 @@ test_that("DappsSushiswapPoolsCurrentGet", {
 test_that("DappsSushiswapPoolsHistoricalGet", {
   # tests for DappsSushiswapPoolsHistoricalGet
   # base path: https://onchain.coinapi.io
+  # GetPools
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
-  # @return [Void]
+  # @return [array[PairDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -192,12 +180,13 @@ test_that("DappsSushiswapSwapsCurrentGet", {
 test_that("DappsSushiswapSwapsHistoricalGet", {
   # tests for DappsSushiswapSwapsHistoricalGet
   # base path: https://onchain.coinapi.io
+  # GetSwaps
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
-  # @return [Void]
+  # @return [array[SwapDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -230,12 +219,13 @@ test_that("DappsSushiswapTokensCurrentGet", {
 test_that("DappsSushiswapTokensHistoricalGet", {
   # tests for DappsSushiswapTokensHistoricalGet
   # base path: https://onchain.coinapi.io
+  # GetTokens
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[TokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

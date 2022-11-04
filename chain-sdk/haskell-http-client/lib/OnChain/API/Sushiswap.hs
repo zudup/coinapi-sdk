@@ -270,31 +270,6 @@ instance HasOptionalParam DappsSushiswapMintsHistoricalGet PoolId where
 instance Produces DappsSushiswapMintsHistoricalGet MimeNoContent
 
 
--- *** dappsSushiswapPoiHistoricalGet
-
--- | @GET \/dapps\/sushiswap\/poi\/historical@
--- 
-dappsSushiswapPoiHistoricalGet
-  :: OnChainRequest DappsSushiswapPoiHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsSushiswapPoiHistoricalGet =
-  _mkRequest "GET" ["/dapps/sushiswap/poi/historical"]
-
-data DappsSushiswapPoiHistoricalGet  
-instance HasOptionalParam DappsSushiswapPoiHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsSushiswapPoiHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsSushiswapPoiHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsSushiswapPoiHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsSushiswapPoiHistoricalGet MimeNoContent
-
-
 -- *** dappsSushiswapPoolDayDataHistoricalGet
 
 -- | @GET \/dapps\/sushiswap\/poolDayData\/historical@
@@ -378,9 +353,12 @@ instance Produces DappsSushiswapPoolsCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/historical@
 -- 
+-- GetPools
+-- 
 dappsSushiswapPoolsHistoricalGet
-  :: OnChainRequest DappsSushiswapPoolsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsSushiswapPoolsHistoricalGet =
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DappsSushiswapPoolsHistoricalGet MimeNoContent [PairDTO] accept
+dappsSushiswapPoolsHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pools/historical"]
 
 data DappsSushiswapPoolsHistoricalGet  
@@ -399,7 +377,12 @@ instance HasOptionalParam DappsSushiswapPoolsHistoricalGet EndDate where
 instance HasOptionalParam DappsSushiswapPoolsHistoricalGet PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsSushiswapPoolsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces DappsSushiswapPoolsHistoricalGet MimeJSON
+-- | @text/json@
+instance Produces DappsSushiswapPoolsHistoricalGet MimeTextJson
+-- | @text/plain@
+instance Produces DappsSushiswapPoolsHistoricalGet MimePlainText
 
 
 -- *** dappsSushiswapSwapsCurrentGet
@@ -427,9 +410,12 @@ instance Produces DappsSushiswapSwapsCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
+-- GetSwaps
+-- 
 dappsSushiswapSwapsHistoricalGet
-  :: OnChainRequest DappsSushiswapSwapsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsSushiswapSwapsHistoricalGet =
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DappsSushiswapSwapsHistoricalGet MimeNoContent [SwapDTO] accept
+dappsSushiswapSwapsHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/swaps/historical"]
 
 data DappsSushiswapSwapsHistoricalGet  
@@ -448,7 +434,12 @@ instance HasOptionalParam DappsSushiswapSwapsHistoricalGet EndDate where
 instance HasOptionalParam DappsSushiswapSwapsHistoricalGet PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsSushiswapSwapsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces DappsSushiswapSwapsHistoricalGet MimeJSON
+-- | @text/json@
+instance Produces DappsSushiswapSwapsHistoricalGet MimeTextJson
+-- | @text/plain@
+instance Produces DappsSushiswapSwapsHistoricalGet MimePlainText
 
 
 -- *** dappsSushiswapTokenDayDataHistoricalGet
@@ -504,9 +495,12 @@ instance Produces DappsSushiswapTokensCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
+-- GetTokens
+-- 
 dappsSushiswapTokensHistoricalGet
-  :: OnChainRequest DappsSushiswapTokensHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsSushiswapTokensHistoricalGet =
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DappsSushiswapTokensHistoricalGet MimeNoContent [TokenDTO] accept
+dappsSushiswapTokensHistoricalGet  _ =
   _mkRequest "GET" ["/dapps/sushiswap/tokens/historical"]
 
 data DappsSushiswapTokensHistoricalGet  
@@ -525,7 +519,12 @@ instance HasOptionalParam DappsSushiswapTokensHistoricalGet EndDate where
 instance HasOptionalParam DappsSushiswapTokensHistoricalGet TokenId where
   applyOptionalParam req (TokenId xs) =
     req `addQuery` toQuery ("tokenId", Just xs)
-instance Produces DappsSushiswapTokensHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces DappsSushiswapTokensHistoricalGet MimeJSON
+-- | @text/json@
+instance Produces DappsSushiswapTokensHistoricalGet MimeTextJson
+-- | @text/plain@
+instance Produces DappsSushiswapTokensHistoricalGet MimePlainText
 
 
 -- *** dappsSushiswapTransactionsHistoricalGet

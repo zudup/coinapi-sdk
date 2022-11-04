@@ -12,11 +12,14 @@
 import { BigInteger } from './bigInteger';
 
 
+/**
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
+ */
 export interface PoolV3DTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
@@ -24,19 +27,19 @@ export interface PoolV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * Pool address.
      */
     id?: string | null;
     /**
-     * 
+     * Creation time.
      */
     created_at_timestamp?: string;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      */
     token_1?: string | null;
     fee_tier?: BigInteger;
@@ -45,50 +48,50 @@ export interface PoolV3DTO {
     fee_growth_global_0x128?: BigInteger;
     fee_growth_global_1x128?: BigInteger;
     /**
-     * 
+     * Token0 per token1.
      */
     token_0_price?: string | null;
     /**
-     * 
+     * Token1 per token0.
      */
     token_1_price?: string | null;
     tick?: BigInteger;
     observation_index?: BigInteger;
     /**
-     * 
+     * All time token0 swapped.
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * All time token1 swapped.
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * All time USD swapped.
      */
     volume_usd?: string | null;
     /**
-     * 
+     * All time USD swapped, unfiltered for unreliable USD pools.
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Fees in USD.
      */
     fees_usd?: string | null;
     tx_count?: BigInteger;
     /**
-     * 
+     * All time fees collected token0.
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time fees collected token1.
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * All time fees collected derived USD.
      */
     collected_fees_usd?: string | null;
     /**
-     * 
+     * Total token 0 across all ticks.
      */
     total_value_locked_token_0?: string | null;
     /**
@@ -96,19 +99,19 @@ export interface PoolV3DTO {
      */
     total_value_locked_token_1?: string | null;
     /**
-     * 
+     * Total token 1 across all ticks.
      */
     total_value_locked_eth?: string | null;
     /**
-     * 
+     * Total value locked USD.
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * Total value locked derived ETH.
      */
     total_value_locked_usd_untracked?: string | null;
     /**
-     * 
+     * Liquidity providers count, used to detect new exchanges.
      */
     liquidity_provider_count?: string | null;
     readonly evaluated_ask?: number;

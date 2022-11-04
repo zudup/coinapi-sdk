@@ -57,11 +57,6 @@ void main() {
       // TODO
     });
 
-    //Future dappsSushiswapPoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsSushiswapPoiHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsSushiswapPoolDayDataHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapPoolDayDataHistoricalGet', () async {
       // TODO
@@ -81,7 +76,9 @@ void main() {
       // TODO
     });
 
-    //Future dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    // GetPools
+    //
+    //Future<List<PairDTO>> dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapPoolsHistoricalGet', () async {
       // TODO
     });
@@ -93,7 +90,9 @@ void main() {
       // TODO
     });
 
-    //Future dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    // GetSwaps
+    //
+    //Future<List<SwapDTO>> dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapSwapsHistoricalGet', () async {
       // TODO
     });
@@ -110,7 +109,9 @@ void main() {
       // TODO
     });
 
-    //Future dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    // GetTokens
+    //
+    //Future<List<TokenDTO>> dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test dappsSushiswapTokensHistoricalGet', () async {
       // TODO
     });

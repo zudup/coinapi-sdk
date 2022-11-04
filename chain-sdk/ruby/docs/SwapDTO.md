@@ -6,19 +6,19 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **transaction** | **String** |  | [optional] |
-| **timestamp** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
-| **sender** | **String** |  | [optional] |
-| **amount_0_in** | **String** |  | [optional] |
-| **amount_1_in** | **String** |  | [optional] |
-| **amount_0_out** | **String** |  | [optional] |
-| **amount_1_out** | **String** |  | [optional] |
-| **to** | **String** |  | [optional] |
-| **log_index** | **String** |  | [optional] |
-| **amount_usd** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | Transaction hash plus index in Transaction swap array. | [optional] |
+| **transaction** | **String** | Reference to transaction swap was included in. | [optional] |
+| **timestamp** | **String** | Timestamp of swap, used for sorted lookups. | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
+| **sender** | **String** | Address that initiated the swap. | [optional] |
+| **amount_0_in** | **String** | Amount of token0 sold. | [optional] |
+| **amount_1_in** | **String** | Amount of token1 sold. | [optional] |
+| **amount_0_out** | **String** | Amount of token0 received. | [optional] |
+| **amount_1_out** | **String** | Amount of token1 received. | [optional] |
+| **to** | **String** | Recipient of output tokens. | [optional] |
+| **log_index** | **String** | Event index within transaction. | [optional] |
+| **amount_usd** | **String** | Derived amount of tokens sold in USD. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **pool_id** | **String** |  | [optional][readonly] |
 | **transaction_id** | **String** |  | [optional][readonly] |

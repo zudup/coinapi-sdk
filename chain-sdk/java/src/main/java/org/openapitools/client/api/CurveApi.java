@@ -130,7 +130,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -138,7 +137,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -151,10 +149,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveAccountsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveAccountsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveAccountsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -280,7 +275,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -288,7 +282,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -301,10 +294,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveAddLiquidityEventHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveAddLiquidityEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveAddLiquidityEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -433,7 +423,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -441,7 +430,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -454,10 +442,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveAdminFeeChangeLogHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveAdminFeeChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveAdminFeeChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -586,7 +571,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -594,7 +578,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -607,10 +590,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveAmplificationCoeffChangeLogHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveAmplificationCoeffChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveAmplificationCoeffChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -739,7 +719,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -747,7 +726,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -760,10 +738,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveCoinsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveCoinsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveCoinsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -892,7 +867,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -900,7 +874,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -913,10 +886,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveContractsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveContractsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveContractsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1045,7 +1015,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1053,7 +1022,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1066,10 +1034,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveContractsVersionHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveContractsVersionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveContractsVersionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1198,7 +1163,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1206,7 +1170,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1219,10 +1182,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveDailyVolumeHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveDailyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveDailyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1351,7 +1311,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1359,7 +1318,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1372,10 +1330,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveFeeChangeLogHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveFeeChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveFeeChangeLogHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1499,7 +1454,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1507,7 +1461,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1520,10 +1473,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeDepositHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeDepositHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeDepositHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -1649,7 +1599,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1657,7 +1606,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1670,10 +1618,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveGaugeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1797,7 +1742,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1805,7 +1749,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1818,10 +1761,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeLiquidityHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeLiquidityHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeLiquidityHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -1942,7 +1882,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1950,7 +1889,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1963,10 +1901,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeTotalWeightHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeTotalWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeTotalWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2087,7 +2022,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2095,7 +2029,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2108,10 +2041,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeTypeHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeTypeHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeTypeHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2232,7 +2162,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2240,7 +2169,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2253,10 +2181,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeTypeWeightHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeTypeWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeTypeWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2377,7 +2302,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2385,7 +2309,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2398,10 +2321,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeWeightHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeWeightHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2522,7 +2442,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2530,7 +2449,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2543,10 +2461,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeWeightVoteHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeWeightVoteHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeWeightVoteHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2667,7 +2582,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2675,7 +2589,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2688,10 +2601,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveGaugeWithdrawHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveGaugeWithdrawHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveGaugeWithdrawHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2817,7 +2727,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2825,7 +2734,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2838,10 +2746,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveHourlyVolumeHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveHourlyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveHourlyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -2970,7 +2875,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2978,7 +2882,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2991,10 +2894,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveLpTokenHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveLpTokenHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveLpTokenHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -3062,151 +2962,6 @@ public class CurveApi {
         return localVarCall;
     }
     /**
-     * Build call for dappsCurvePoiHistoricalGet
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsCurvePoiHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/curve/poi/historical";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (startBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startBlock", startBlock));
-        }
-
-        if (endBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endBlock", endBlock));
-        }
-
-        if (startDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startDate", startDate));
-        }
-
-        if (endDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endDate", endDate));
-        }
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call dappsCurvePoiHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurvePoiHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public void dappsCurvePoiHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        dappsCurvePoiHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Void> dappsCurvePoiHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        okhttp3.Call localVarCall = dappsCurvePoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, null);
-        return localVarApiClient.execute(localVarCall);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsCurvePoiHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = dappsCurvePoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for dappsCurvePoolsHistoricalGet
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3268,7 +3023,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3276,7 +3030,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3289,10 +3042,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurvePoolsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurvePoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurvePoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -3416,7 +3166,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3424,7 +3173,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3437,10 +3185,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveProposalsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveProposalsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveProposalsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -3561,7 +3306,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3569,7 +3313,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3582,10 +3325,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveProposalsVoteHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveProposalsVoteHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveProposalsVoteHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -3711,7 +3451,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3719,7 +3458,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3732,10 +3470,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveRemoveLiquidityEventHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveRemoveLiquidityEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveRemoveLiquidityEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -3864,7 +3599,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3872,7 +3606,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3885,10 +3618,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveRemoveLiquidityOneEventHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveRemoveLiquidityOneEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveRemoveLiquidityOneEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -4017,7 +3747,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4025,7 +3754,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4038,10 +3766,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveSwapsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveSwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveSwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -4165,7 +3890,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4173,7 +3897,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4186,10 +3909,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveSystemStateHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveSystemStateHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveSystemStateHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -4315,7 +4035,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4323,7 +4042,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4336,10 +4054,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveTokensHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveTokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        return localVarCall;
+        return dappsCurveTokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
 
     }
 
@@ -4468,7 +4183,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4476,7 +4190,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4489,10 +4202,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveTransferOwnershipEventHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveTransferOwnershipEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveTransferOwnershipEventHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -4621,7 +4331,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4629,7 +4338,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4642,10 +4350,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveUnderlyingCoinHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveUnderlyingCoinHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveUnderlyingCoinHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -4769,7 +4474,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4777,7 +4481,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4790,10 +4493,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveVotingAppHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveVotingAppHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsCurveVotingAppHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -4919,7 +4619,6 @@ public class CurveApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4927,7 +4626,6 @@ public class CurveApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4940,10 +4638,7 @@ public class CurveApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsCurveWeeklyVolumeHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsCurveWeeklyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsCurveWeeklyVolumeHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 

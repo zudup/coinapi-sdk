@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **id** | **String** | Pair contract address. | [optional] |
 | **token_0** | **String** | Reference to token0 as stored in pair contract. | [optional] |
@@ -16,7 +16,7 @@
 | **total_supply** | **String** | Total supply of liquidity token distributed to LPs. | [optional] |
 | **reserve_eth** | **String** | Total liquidity in pair stored as an amount of ETH. | [optional] |
 | **reserve_usd** | **String** | Total liquidity amount in pair stored as an amount of USD. | [optional] |
-| **tracked_reserve_eth** | **String** | Total liquidity with only tracked amount (see tracked amounts). | [optional] |
+| **tracked_reserve_eth** | **String** | Total liquidity with only tracked amount. | [optional] |
 | **token_0_price** | **String** | Token0 per token1. | [optional] |
 | **token_1_price** | **String** | Token1 per token0. | [optional] |
 | **volume_token_0** | **String** | Amount of token0 swapped on this pair. | [optional] |
@@ -25,7 +25,7 @@
 | **untracked_volume_usd** | **String** | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. | [optional] |
 | **tx_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **created_at_timestamp** | **Time** | Timestamp contract was created. | [optional] |
-| **liquidity_provider_count** | **String** |  | [optional] |
+| **liquidity_provider_count** | **String** | Total number of LPs. | [optional] |
 | **evaluated_ask** | **Float** |  | [optional][readonly] |
 
 ## Example

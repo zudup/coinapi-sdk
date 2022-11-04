@@ -20,7 +20,7 @@ No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
@@ -40,7 +40,7 @@ Total liquidity in pair stored as an amount of ETH.
 .PARAMETER ReserveUsd
 Total liquidity amount in pair stored as an amount of USD.
 .PARAMETER TrackedReserveEth
-Total liquidity with only tracked amount (see tracked amounts).
+Total liquidity with only tracked amount.
 .PARAMETER Token0Price
 Token0 per token1.
 .PARAMETER Token1Price
@@ -58,7 +58,7 @@ No description available.
 .PARAMETER CreatedAtTimestamp
 Timestamp contract was created.
 .PARAMETER LiquidityProviderCount
-
+Total number of LPs.
 .PARAMETER EvaluatedAsk
 No description available.
 .OUTPUTS

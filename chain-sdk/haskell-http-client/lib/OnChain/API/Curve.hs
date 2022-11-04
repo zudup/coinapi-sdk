@@ -591,31 +591,6 @@ instance HasOptionalParam DappsCurveLpTokenHistoricalGet PoolId where
 instance Produces DappsCurveLpTokenHistoricalGet MimeNoContent
 
 
--- *** dappsCurvePoiHistoricalGet
-
--- | @GET \/dapps\/curve\/poi\/historical@
--- 
-dappsCurvePoiHistoricalGet
-  :: OnChainRequest DappsCurvePoiHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurvePoiHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/poi/historical"]
-
-data DappsCurvePoiHistoricalGet  
-instance HasOptionalParam DappsCurvePoiHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurvePoiHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurvePoiHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurvePoiHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurvePoiHistoricalGet MimeNoContent
-
-
 -- *** dappsCurvePoolsHistoricalGet
 
 -- | @GET \/dapps\/curve\/pools\/historical@

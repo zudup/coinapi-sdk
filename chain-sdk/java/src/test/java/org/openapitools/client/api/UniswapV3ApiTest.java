@@ -165,19 +165,6 @@ public class UniswapV3ApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsUniswapv3PoiHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void dappsUniswapv3PoolDayDataHistoricalGetTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;

@@ -12,7 +12,7 @@ Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**block_number** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
+**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | Pair contract address. | [optional] 
 **token_0** | None, str,  | NoneClass, str,  | Reference to token0 as stored in pair contract. | [optional] 
@@ -22,7 +22,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **total_supply** | None, str,  | NoneClass, str,  | Total supply of liquidity token distributed to LPs. | [optional] 
 **reserve_eth** | None, str,  | NoneClass, str,  | Total liquidity in pair stored as an amount of ETH. | [optional] 
 **reserve_usd** | None, str,  | NoneClass, str,  | Total liquidity amount in pair stored as an amount of USD. | [optional] 
-**tracked_reserve_eth** | None, str,  | NoneClass, str,  | Total liquidity with only tracked amount (see tracked amounts). | [optional] 
+**tracked_reserve_eth** | None, str,  | NoneClass, str,  | Total liquidity with only tracked amount. | [optional] 
 **token_0_price** | None, str,  | NoneClass, str,  | Token0 per token1. | [optional] 
 **token_1_price** | None, str,  | NoneClass, str,  | Token1 per token0. | [optional] 
 **volume_token_0** | None, str,  | NoneClass, str,  | Amount of token0 swapped on this pair. | [optional] 
@@ -31,7 +31,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **untracked_volume_usd** | None, str,  | NoneClass, str,  | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. | [optional] 
 **tx_count** | [**BigInteger**](BigInteger.md) | [**BigInteger**](BigInteger.md) |  | [optional] 
 **created_at_timestamp** | str, datetime,  | str,  | Timestamp contract was created. | [optional] value must conform to RFC-3339 date-time
-**liquidity_provider_count** | None, str,  | NoneClass, str,  |  | [optional] 
+**liquidity_provider_count** | None, str,  | NoneClass, str,  | Total number of LPs. | [optional] 
 **evaluated_ask** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

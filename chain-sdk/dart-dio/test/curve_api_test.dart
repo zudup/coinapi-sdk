@@ -107,11 +107,6 @@ void main() {
       // TODO
     });
 
-    //Future dappsCurvePoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurvePoiHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsCurvePoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsCurvePoolsHistoricalGet', () async {
       // TODO

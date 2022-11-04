@@ -6,27 +6,27 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **period_start_unix** | **Integer** |  | [optional] |
-| **pool** | **String** |  | [optional] |
-| **liquidity** | **String** |  | [optional] |
-| **sqrt_price** | **String** |  | [optional] |
-| **token_0_price** | **String** |  | [optional] |
-| **token_1_price** | **String** |  | [optional] |
-| **tick** | **String** |  | [optional] |
-| **fee_growth_global_0x128** | **String** |  | [optional] |
-| **fee_growth_global_1x128** | **String** |  | [optional] |
-| **tvl_usd** | **String** |  | [optional] |
-| **volume_token_0** | **String** |  | [optional] |
-| **volume_token_1** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **fees_usd** | **String** |  | [optional] |
-| **tx_count** | **String** |  | [optional] |
-| **open** | **String** |  | [optional] |
-| **high** | **String** |  | [optional] |
-| **low** | **String** |  | [optional] |
-| **close** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;day id&gt; | [optional] |
+| **period_start_unix** | **Integer** | Unix timestamp for start of hour. | [optional] |
+| **pool** | **String** | Pointer to pool. | [optional] |
+| **liquidity** | **String** | In range liquidity at end of period. | [optional] |
+| **sqrt_price** | **String** | Current price tracker at end of period. | [optional] |
+| **token_0_price** | **String** | Price of token0 - derived from sqrtPrice. | [optional] |
+| **token_1_price** | **String** | Price of token1 - derived from sqrtPrice. | [optional] |
+| **tick** | **String** | Current tick at end of period. | [optional] |
+| **fee_growth_global_0x128** | **String** | Tracker for global fee growth. | [optional] |
+| **fee_growth_global_1x128** | **String** | Tracker for global fee growth. | [optional] |
+| **tvl_usd** | **String** | Total value locked derived in USD at end of period. | [optional] |
+| **volume_token_0** | **String** | Volume in token0. | [optional] |
+| **volume_token_1** | **String** | Volume in token1. | [optional] |
+| **volume_usd** | **String** | Volume in USD. | [optional] |
+| **fees_usd** | **String** | Fees in USD. | [optional] |
+| **tx_count** | **String** | Number of transactions during period. | [optional] |
+| **open** | **String** | Opening price of token0. | [optional] |
+| **high** | **String** | High price of token0. | [optional] |
+| **low** | **String** | Low price of token0. | [optional] |
+| **close** | **String** | Close price of token0. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 
 ## Example

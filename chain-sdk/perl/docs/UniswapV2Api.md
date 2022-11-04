@@ -16,7 +16,6 @@ Method | HTTP request | Description
 [**dapps_uniswapv2_liquidity_position_historical_get**](UniswapV2Api.md#dapps_uniswapv2_liquidity_position_historical_get) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
 [**dapps_uniswapv2_liquidity_position_snapshots_historical_get**](UniswapV2Api.md#dapps_uniswapv2_liquidity_position_snapshots_historical_get) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**dapps_uniswapv2_mints_historical_get**](UniswapV2Api.md#dapps_uniswapv2_mints_historical_get) | **GET** /dapps/uniswapv2/mints/historical | 
-[**dapps_uniswapv2_poi_historical_get**](UniswapV2Api.md#dapps_uniswapv2_poi_historical_get) | **GET** /dapps/uniswapv2/poi/historical | 
 [**dapps_uniswapv2_pool_day_data_historical_get**](UniswapV2Api.md#dapps_uniswapv2_pool_day_data_historical_get) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**dapps_uniswapv2_pool_hour_data_historical_get**](UniswapV2Api.md#dapps_uniswapv2_pool_hour_data_historical_get) | **GET** /dapps/uniswapv2/poolHourData/historical | 
 [**dapps_uniswapv2_pools_current_get**](UniswapV2Api.md#dapps_uniswapv2_pools_current_get) | **GET** /dapps/uniswapv2/pools/current | GetPools
@@ -365,55 +364,6 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**|  | [optional] 
  **end_date** | **DATE_TIME**|  | [optional] 
  **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_uniswapv2_poi_historical_get**
-> dapps_uniswapv2_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::UniswapV2Api;
-my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_uniswapv2_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling UniswapV2Api->dapps_uniswapv2_poi_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
 
 ### Return type
 

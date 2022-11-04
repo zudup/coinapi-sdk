@@ -55,7 +55,7 @@ class TickV3DTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -73,10 +73,10 @@ class TickV3DTO {
   ///
   int? vid;
 
-  /// 
+  /// Identifier, format: <pool address>#<tick index>
   String? id;
 
-  /// 
+  /// Pool address.
   String? poolAddress;
 
   ///
@@ -87,7 +87,7 @@ class TickV3DTO {
   ///
   BigInteger? tickIdx;
 
-  /// 
+  /// Pool address.
   String? pool;
 
   ///
@@ -106,37 +106,37 @@ class TickV3DTO {
   ///
   BigInteger? liquidityNet;
 
-  /// 
+  /// Calculated price of token0 of tick within this pool - constant.
   String? price0;
 
-  /// 
+  /// Calculated price of token1 of tick within this pool - constant.
   String? price1;
 
-  /// 
+  /// Lifetime volume of token0 with this tick in range.
   String? volumeToken0;
 
-  /// 
+  /// Lifetime volume of token1 with this tick in range.
   String? volumeToken1;
 
-  /// 
+  /// Lifetime volume in derived USD with this tick in range.
   String? volumeUsd;
 
-  /// 
+  /// Lifetime volume in untracked USD with this tick in range.
   String? untrackedVolumeUsd;
 
-  /// 
+  /// Fees in USD.
   String? feesUsd;
 
-  /// 
+  /// All time collected fees in token0.
   String? collectedFeesToken0;
 
-  /// 
+  /// All time collected fees in token1.
   String? collectedFeesToken1;
 
-  /// 
+  /// All time collected fees in USD.
   String? collectedFeesUsd;
 
-  /// 
+  /// Created time.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

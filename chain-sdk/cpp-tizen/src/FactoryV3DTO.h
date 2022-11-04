@@ -1,7 +1,7 @@
 /*
  * FactoryV3DTO.h
  *
- * 
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
 
 #ifndef _FactoryV3DTO_H_
@@ -20,7 +20,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  *
  *  \ingroup Models
  *
@@ -59,102 +59,102 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get Factory address.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Factory address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Amount of pools created.
 	 */
 	std::string getPoolCount();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of pools created.
 	 */
 	void setPoolCount(std::string  pool_count);
-	/*! \brief Get 
+	/*! \brief Get Amount of transactions all time.
 	 */
 	std::string getTxCount();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of transactions all time.
 	 */
 	void setTxCount(std::string  tx_count);
-	/*! \brief Get 
+	/*! \brief Get Total volume all time in derived USD.
 	 */
 	std::string getTotalVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total volume all time in derived USD.
 	 */
 	void setTotalVolumeUsd(std::string  total_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Total volume all time in derived ETH.
 	 */
 	std::string getTotalVolumeEth();
 
-	/*! \brief Set 
+	/*! \brief Set Total volume all time in derived ETH.
 	 */
 	void setTotalVolumeEth(std::string  total_volume_eth);
-	/*! \brief Get 
+	/*! \brief Get Total swap fees all time in USD.
 	 */
 	std::string getTotalFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total swap fees all time in USD.
 	 */
 	void setTotalFeesUsd(std::string  total_fees_usd);
-	/*! \brief Get 
+	/*! \brief Get All volume even through less reliable USD values.
 	 */
 	std::string getTotalFeesEth();
 
-	/*! \brief Set 
+	/*! \brief Set All volume even through less reliable USD values.
 	 */
 	void setTotalFeesEth(std::string  total_fees_eth);
-	/*! \brief Get 
+	/*! \brief Get All volume even through less reliable USD values.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set All volume even through less reliable USD values.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived in USD.
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived in USD.
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived in ETH.
 	 */
 	std::string getTotalValueLockedEth();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived in ETH.
 	 */
 	void setTotalValueLockedEth(std::string  total_value_locked_eth);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived in USD untracked.
 	 */
 	std::string getTotalValueLockedUsdUntracked();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived in USD untracked.
 	 */
 	void setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived in ETH untracked.
 	 */
 	std::string getTotalValueLockedEthUntracked();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived in ETH untracked.
 	 */
 	void setTotalValueLockedEthUntracked(std::string  total_value_locked_eth_untracked);
-	/*! \brief Get 
+	/*! \brief Get Current owner of the factory.
 	 */
 	std::string getOwner();
 
-	/*! \brief Set 
+	/*! \brief Set Current owner of the factory.
 	 */
 	void setOwner(std::string  owner);
 	/*! \brief Get 

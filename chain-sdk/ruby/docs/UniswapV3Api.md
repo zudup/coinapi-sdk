@@ -13,7 +13,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dapps_uniswapv3_factory_historical_get**](UniswapV3Api.md#dapps_uniswapv3_factory_historical_get) | **GET** /dapps/uniswapv3/factory/historical |  |
 | [**dapps_uniswapv3_mints_current_get**](UniswapV3Api.md#dapps_uniswapv3_mints_current_get) | **GET** /dapps/uniswapv3/mints/current | GetMints |
 | [**dapps_uniswapv3_mints_historical_get**](UniswapV3Api.md#dapps_uniswapv3_mints_historical_get) | **GET** /dapps/uniswapv3/mints/historical |  |
-| [**dapps_uniswapv3_poi_historical_get**](UniswapV3Api.md#dapps_uniswapv3_poi_historical_get) | **GET** /dapps/uniswapv3/poi/historical |  |
 | [**dapps_uniswapv3_pool_day_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_day_data_historical_get) | **GET** /dapps/uniswapv3/poolDayData/historical |  |
 | [**dapps_uniswapv3_pool_hour_data_historical_get**](UniswapV3Api.md#dapps_uniswapv3_pool_hour_data_historical_get) | **GET** /dapps/uniswapv3/poolHourData/historical |  |
 | [**dapps_uniswapv3_pools_current_get**](UniswapV3Api.md#dapps_uniswapv3_pools_current_get) | **GET** /dapps/uniswapv3/pools/current | GetPools |
@@ -623,75 +622,6 @@ end
 | **start_date** | **Time** |  | [optional] |
 | **end_date** | **Time** |  | [optional] |
 | **pool_id** | **String** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_uniswapv3_poi_historical_get
-
-> dapps_uniswapv3_poi_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::UniswapV3Api.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_uniswapv3_poi_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->dapps_uniswapv3_poi_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_uniswapv3_poi_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_uniswapv3_poi_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_uniswapv3_poi_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->dapps_uniswapv3_poi_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
 
 ### Return type
 

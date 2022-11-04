@@ -6,20 +6,20 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **transaction** | **String** |  | [optional] |
-| **timestamp** | **Time** |  | [optional] |
-| **pool** | **String** |  | [optional] |
-| **token_0** | **String** |  | [optional] |
-| **token_1** | **String** |  | [optional] |
-| **sender** | **String** |  | [optional] |
-| **recipient** | **String** |  | [optional] |
-| **origin** | **String** |  | [optional] |
-| **amount_0** | **String** |  | [optional] |
-| **amount_1** | **String** |  | [optional] |
-| **amount_usd** | **String** |  | [optional] |
+| **id** | **String** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] |
+| **transaction** | **String** | Pointer to transaction. | [optional] |
+| **timestamp** | **Time** | Timestamp of transaction. | [optional] |
+| **pool** | **String** | Pool swap occured within. | [optional] |
+| **token_0** | **String** | Reference to token0 as stored in pair contract. | [optional] |
+| **token_1** | **String** | Reference to token1 as stored in pair contract. | [optional] |
+| **sender** | **String** | Sender of the swap. | [optional] |
+| **recipient** | **String** | Recipient of the swap. | [optional] |
+| **origin** | **String** | Transaction origin: the EOA (Externally Owned Account) that initiated the transaction | [optional] |
+| **amount_0** | **String** | Delta of token0 swapped. | [optional] |
+| **amount_1** | **String** | Delta of token1 swapped. | [optional] |
+| **amount_usd** | **String** | Derived amount of tokens sold in USD. | [optional] |
 | **sqrt_price_x96** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **tick** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **log_index** | [**BigInteger**](BigInteger.md) |  | [optional] |

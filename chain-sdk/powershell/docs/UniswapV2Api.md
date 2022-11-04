@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**Invoke-DappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
 [**Invoke-DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**Invoke-DappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
-[**Invoke-DappsUniswapv2PoiHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical | 
 [**Invoke-DappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**Invoke-DappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#Invoke-DappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
 [**Invoke-DappsUniswapv2PoolsCurrentGet**](UniswapV2Api.md#Invoke-DappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools
@@ -364,55 +363,6 @@ Name | Type | Description  | Notes
  **StartDate** | **System.DateTime**|  | [optional] 
  **EndDate** | **System.DateTime**|  | [optional] 
  **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv2PoiHistoricalGet"></a>
-# **Invoke-DappsUniswapv2PoiHistoricalGet**
-> void Invoke-DappsUniswapv2PoiHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv2PoiHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv2PoiHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
 
 ### Return type
 

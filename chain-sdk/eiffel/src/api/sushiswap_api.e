@@ -356,46 +356,6 @@ feature -- API Access
 			end
 		end
 
-	dapps_sushiswap_poi_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- 
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/poi/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
-			if l_response.has_error then
-				last_error := l_response.error
-			end
-		end
-
 	dapps_sushiswap_pool_day_data_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
 			-- 
 			-- 
@@ -515,8 +475,8 @@ feature -- API Access
 			end
 		end
 
-	dapps_sushiswap_pools_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
-			-- 
+	dapps_sushiswap_pools_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [PAIR_DTO]
+			-- GetPools
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -530,6 +490,7 @@ feature -- API Access
 			-- argument: pool_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [PAIR_DTO]
 		require
 		local
   			l_path: STRING
@@ -547,14 +508,18 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [PAIR_DTO] } l_response.data ({ LIST [PAIR_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
@@ -591,8 +556,8 @@ feature -- API Access
 			end
 		end
 
-	dapps_sushiswap_swaps_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32)
-			-- 
+	dapps_sushiswap_swaps_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SWAP_DTO]
+			-- GetSwaps
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -606,6 +571,7 @@ feature -- API Access
 			-- argument: pool_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [SWAP_DTO]
 		require
 		local
   			l_path: STRING
@@ -623,14 +589,18 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [SWAP_DTO] } l_response.data ({ LIST [SWAP_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
@@ -710,8 +680,8 @@ feature -- API Access
 			end
 		end
 
-	dapps_sushiswap_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
+	dapps_sushiswap_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [TOKEN_DTO]
+			-- GetTokens
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -725,6 +695,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [TOKEN_DTO]
 		require
 		local
   			l_path: STRING
@@ -742,14 +713,18 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [TOKEN_DTO] } l_response.data ({ LIST [TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 

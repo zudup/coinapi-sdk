@@ -52,7 +52,7 @@ class SwapDTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -61,40 +61,40 @@ class SwapDTO {
   ///
   int? blockNumber;
 
-  /// 
+  /// Transaction hash plus index in Transaction swap array.
   String? id;
 
-  /// 
+  /// Reference to transaction swap was included in.
   String? transaction;
 
-  /// 
+  /// Timestamp of swap, used for sorted lookups.
   String? timestamp;
 
-  /// 
+  /// Reference to pair.
   String? pair;
 
-  /// 
+  /// Address that initiated the swap.
   String? sender;
 
-  /// 
+  /// Amount of token0 sold.
   String? amount0In;
 
-  /// 
+  /// Amount of token1 sold.
   String? amount1In;
 
-  /// 
+  /// Amount of token0 received.
   String? amount0Out;
 
-  /// 
+  /// Amount of token1 received.
   String? amount1Out;
 
-  /// 
+  /// Recipient of output tokens.
   String? to;
 
-  /// 
+  /// Event index within transaction.
   String? logIndex;
 
-  /// 
+  /// Derived amount of tokens sold in USD.
   String? amountUsd;
 
   /// 

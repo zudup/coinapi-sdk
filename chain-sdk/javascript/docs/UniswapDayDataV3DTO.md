@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
-**blockNumber** | **Number** |  | [optional] 
+**blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
 **vid** | **Number** |  | [optional] 
 **id** | **String** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **date** | **Number** | Timestamp rounded to current day by dividing by 86400. | [optional] 

@@ -24,7 +24,6 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**dappsCurveGaugeWithdrawHistoricalGet()**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical |  |
 | [**dappsCurveHourlyVolumeHistoricalGet()**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical |  |
 | [**dappsCurveLpTokenHistoricalGet()**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical |  |
-| [**dappsCurvePoiHistoricalGet()**](CurveApi.md#dappsCurvePoiHistoricalGet) | **GET** /dapps/curve/poi/historical |  |
 | [**dappsCurvePoolsHistoricalGet()**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical |  |
 | [**dappsCurveProposalsHistoricalGet()**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical |  |
 | [**dappsCurveProposalsVoteHistoricalGet()**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical |  |
@@ -1223,65 +1222,6 @@ try {
 | **start_date** | **\DateTime**|  | [optional] |
 | **end_date** | **\DateTime**|  | [optional] |
 | **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurvePoiHistoricalGet()`
-
-```php
-dappsCurvePoiHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurvePoiHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurvePoiHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
 
 ### Return type
 

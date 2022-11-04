@@ -17,33 +17,33 @@ import org.openapitools.client.core.ApiModel
 case class FactoryV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Factory address. */
   id: Option[String] = None,
-  /*  */
+  /* Amount of pools created. */
   poolCount: Option[String] = None,
-  /*  */
+  /* Amount of transactions all time. */
   txCount: Option[String] = None,
-  /*  */
+  /* Total volume all time in derived USD. */
   totalVolumeUsd: Option[String] = None,
-  /*  */
+  /* Total volume all time in derived ETH. */
   totalVolumeEth: Option[String] = None,
-  /*  */
+  /* Total swap fees all time in USD. */
   totalFeesUsd: Option[String] = None,
-  /*  */
+  /* All volume even through less reliable USD values. */
   totalFeesEth: Option[String] = None,
-  /*  */
+  /* All volume even through less reliable USD values. */
   untrackedVolumeUsd: Option[String] = None,
-  /*  */
+  /* Total value locked derived in USD. */
   totalValueLockedUsd: Option[String] = None,
-  /*  */
+  /* Total value locked derived in ETH. */
   totalValueLockedEth: Option[String] = None,
-  /*  */
+  /* Total value locked derived in USD untracked. */
   totalValueLockedUsdUntracked: Option[String] = None,
-  /*  */
+  /* Total value locked derived in ETH untracked. */
   totalValueLockedEthUntracked: Option[String] = None,
-  /*  */
+  /* Current owner of the factory. */
   owner: Option[String] = None,
   /*  */
   vid: Option[Long] = None

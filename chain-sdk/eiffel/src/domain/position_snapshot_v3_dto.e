@@ -24,37 +24,37 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- NFT token identifier, format: <NFT token id>#<block number>
     owner: detachable STRING_32
-      -- THIS IS SUPER OWNER
+      -- Owner of the NFT.
     pool: detachable STRING_32
-      -- 
+      -- Pool the position is within.
     position: detachable STRING_32
-      -- 
+      -- Position of which the snap was taken of.
     timestamp: detachable STRING_32
-      -- 
+      -- Timestamp of block in which the snap was created.
     liquidity: detachable STRING_32
-      -- 
+      -- Total position liquidity.
     deposited_token_0: detachable STRING_32
-      -- 
+      -- Amount of token 0 ever deposited to position.
     deposited_token_1: detachable STRING_32
-      -- 
+      -- Amount of token 1 ever deposited to position.
     withdrawn_token_0: detachable STRING_32
-      -- 
+      -- Amount of token 0 ever withdrawn from position (without fees).
     withdrawn_token_1: detachable STRING_32
-      -- 
+      -- Amount of token 1 ever withdrawn from position (without fees).
     collected_fees_token_0: detachable STRING_32
-      -- 
+      -- All time collected fees in token0.
     collected_fees_token_1: detachable STRING_32
-      -- 
+      -- All time collected fees in token1.
     transaction: detachable STRING_32
-      -- 
+      -- Transaction in which the snapshot was initialized.
     fee_growth_inside_0_last_x128: detachable STRING_32
-      -- 
+      -- Variable needed for fee computation.
     fee_growth_inside_1_last_x128: detachable STRING_32
-      -- 
+      -- Variable needed for fee computation.
  	vid: INTEGER_64
     	 -- 
 

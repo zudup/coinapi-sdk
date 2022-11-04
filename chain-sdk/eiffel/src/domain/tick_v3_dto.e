@@ -24,43 +24,43 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- 
+      -- Identifier, format: <pool address>#<tick index>
     pool_address: detachable STRING_32
-      -- 
+      -- Pool address.
     tick_idx: detachable BIG_INTEGER
       
     pool: detachable STRING_32
-      -- 
+      -- Pool address.
     liquidity_gross: detachable BIG_INTEGER
       
     liquidity_net: detachable BIG_INTEGER
       
     price_0: detachable STRING_32
-      -- 
+      -- Calculated price of token0 of tick within this pool - constant.
     price_1: detachable STRING_32
-      -- 
+      -- Calculated price of token1 of tick within this pool - constant.
     volume_token_0: detachable STRING_32
-      -- 
+      -- Lifetime volume of token0 with this tick in range.
     volume_token_1: detachable STRING_32
-      -- 
+      -- Lifetime volume of token1 with this tick in range.
     volume_usd: detachable STRING_32
-      -- 
+      -- Lifetime volume in derived USD with this tick in range.
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- Lifetime volume in untracked USD with this tick in range.
     fees_usd: detachable STRING_32
-      -- 
+      -- Fees in USD.
     collected_fees_token_0: detachable STRING_32
-      -- 
+      -- All time collected fees in token0.
     collected_fees_token_1: detachable STRING_32
-      -- 
+      -- All time collected fees in token1.
     collected_fees_usd: detachable STRING_32
-      -- 
+      -- All time collected fees in USD.
     created_at_timestamp: detachable DATE_TIME
-      -- 
+      -- Created time.
     liquidity_provider_count: detachable BIG_INTEGER
       
     fee_growth_outside_0x128: detachable BIG_INTEGER

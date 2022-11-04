@@ -17,31 +17,31 @@ import org.openapitools.client.core.ApiModel
 case class TickDayDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Identifier, format: <pool address>-<tick index>-<timestamp>. */
   id: Option[String] = None,
-  /*  */
+  /* Timestamp rounded to current day by dividing by 86400. */
   date: Option[Int] = None,
-  /*  */
+  /* Pointer to pool. */
   pool: Option[String] = None,
-  /*  */
+  /* Pointer to tick. */
   tick: Option[String] = None,
-  /*  */
+  /* Total liquidity pool has as tick lower or upper at end of period. */
   liquidityGross: Option[String] = None,
-  /*  */
+  /* How much liquidity changes when tick crossed at end of period. */
   liquidityNet: Option[String] = None,
-  /*  */
+  /* Hourly volume of token0 with this tick in range. */
   volumeToken0: Option[String] = None,
-  /*  */
+  /* Hourly volume of token1 with this tick in range. */
   volumeToken1: Option[String] = None,
-  /*  */
+  /* Hourly volume in derived USD with this tick in range. */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Fees in USD. */
   feesUsd: Option[String] = None,
-  /*  */
+  /* Variable needed for fee computation. */
   feeGrowthOutside0x128: Option[String] = None,
-  /*  */
+  /* Variable needed for fee computation. */
   feeGrowthOutside1x128: Option[String] = None,
   /*  */
   vid: Option[Long] = None

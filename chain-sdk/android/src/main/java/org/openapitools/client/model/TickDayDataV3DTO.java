@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+ **/
+@ApiModel(description = "Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day")
 public class TickDayDataV3DTO {
   
   @SerializedName("entry_time")
@@ -73,9 +76,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -84,9 +87,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Identifier, format: <pool address>-<tick index>-<timestamp>.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>-<tick index>-<timestamp>.")
   public String getId() {
     return id;
   }
@@ -95,9 +98,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Timestamp rounded to current day by dividing by 86400.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
   public Integer getDate() {
     return date;
   }
@@ -106,9 +109,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Pointer to pool.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to pool.")
   public String getPool() {
     return pool;
   }
@@ -117,9 +120,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Pointer to tick.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to tick.")
   public String getTick() {
     return tick;
   }
@@ -128,9 +131,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Total liquidity pool has as tick lower or upper at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total liquidity pool has as tick lower or upper at end of period.")
   public String getLiquidityGross() {
     return liquidityGross;
   }
@@ -139,9 +142,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * How much liquidity changes when tick crossed at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "How much liquidity changes when tick crossed at end of period.")
   public String getLiquidityNet() {
     return liquidityNet;
   }
@@ -150,9 +153,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Hourly volume of token0 with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume of token0 with this tick in range.")
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -161,9 +164,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Hourly volume of token1 with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume of token1 with this tick in range.")
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -172,9 +175,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Hourly volume in derived USD with this tick in range.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume in derived USD with this tick in range.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -183,9 +186,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -194,9 +197,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthOutside0x128() {
     return feeGrowthOutside0x128;
   }
@@ -205,9 +208,9 @@ public class TickDayDataV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthOutside1x128() {
     return feeGrowthOutside1x128;
   }

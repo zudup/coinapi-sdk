@@ -6,7 +6,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 |------------- | ------------- | -------------|
 | [**dappsDexBatchHistoricalGet**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical |  |
 | [**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical |  |
-| [**dappsDexPoiHistoricalGet**](DexApi.md#dappsDexPoiHistoricalGet) | **GET** /dapps/dex/poi/historical |  |
 | [**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical |  |
 | [**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical |  |
 | [**dappsDexStatsHistoricalGet**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical |  |
@@ -130,71 +129,6 @@ public class Example {
 | **startDate** | **OffsetDateTime**|  | [optional] |
 | **endDate** | **OffsetDateTime**|  | [optional] |
 | **tokenId** | **String**|  | [optional] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-<a name="dappsDexPoiHistoricalGet"></a>
-# **dappsDexPoiHistoricalGet**
-> dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DexApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    DexApi apiInstance = new DexApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    try {
-      apiInstance.dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DexApi#dappsDexPoiHistoricalGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 

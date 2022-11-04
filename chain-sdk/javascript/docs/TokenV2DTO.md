@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
-**blockNumber** | **Number** |  | [optional] 
+**blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
 **vid** | **Number** |  | [optional] 
 **id** | **String** | Token address. | [optional] 
 **symbol** | **String** | Token symbol. | [optional] 

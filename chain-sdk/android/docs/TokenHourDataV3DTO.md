@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
-**blockNumber** | **Long** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **String** | Token address concatendated with date. |  [optional]
 **periodStartUnix** | **Integer** | Unix timestamp for start of hour. |  [optional]
 **token** | **String** | Pointer to token. |  [optional]

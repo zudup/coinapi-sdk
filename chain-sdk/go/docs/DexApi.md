@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DappsDexBatchHistoricalGet**](DexApi.md#DappsDexBatchHistoricalGet) | **Get** /dapps/dex/batch/historical | 
 [**DappsDexOrdersHistoricalGet**](DexApi.md#DappsDexOrdersHistoricalGet) | **Get** /dapps/dex/orders/historical | 
-[**DappsDexPoiHistoricalGet**](DexApi.md#DappsDexPoiHistoricalGet) | **Get** /dapps/dex/poi/historical | 
 [**DappsDexPricesHistoricalGet**](DexApi.md#DappsDexPricesHistoricalGet) | **Get** /dapps/dex/prices/historical | 
 [**DappsDexSolutionHistoricalGet**](DexApi.md#DappsDexSolutionHistoricalGet) | **Get** /dapps/dex/solution/historical | 
 [**DappsDexStatsHistoricalGet**](DexApi.md#DappsDexStatsHistoricalGet) | **Get** /dapps/dex/stats/historical | 
@@ -139,75 +138,6 @@ Name | Type | Description  | Notes
  **startDate** | **time.Time** |  | 
  **endDate** | **time.Time** |  | 
  **tokenId** | **string** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsDexPoiHistoricalGet
-
-> DappsDexPoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexPoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexPoiHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsDexPoiHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
 
 ### Return type
 

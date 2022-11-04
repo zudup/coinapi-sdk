@@ -22,8 +22,6 @@ Method | HTTP request | Description
 [**dappsUniswapv3MintsCurrentGetWithHttpInfo**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGetWithHttpInfo) | **GET** /dapps/uniswapv3/mints/current | GetMints
 [**dappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
 [**dappsUniswapv3MintsHistoricalGetWithHttpInfo**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv3/mints/historical | 
-[**dappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGet) | **GET** /dapps/uniswapv3/poi/historical | 
-[**dappsUniswapv3PoiHistoricalGetWithHttpInfo**](UniswapV3Api.md#dappsUniswapv3PoiHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv3/poi/historical | 
 [**dappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 [**dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayData/historical | 
 [**dappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
@@ -797,92 +795,6 @@ Name | Type | Description  | Notes
  **startDate** | **OffsetDateTime**|  | [optional]
  **endDate** | **OffsetDateTime**|  | [optional]
  **poolId** | **String**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsUniswapv3PoiHistoricalGet
-
-> dappsUniswapv3PoiHistoricalGet(dappsUniswapv3PoiHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#dappsUniswapv3PoiHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
 
 ### Return type
 

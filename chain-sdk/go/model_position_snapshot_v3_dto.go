@@ -20,37 +20,37 @@ import (
 type PositionSnapshotV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// NFT token identifier, format: <NFT token id>#<block number>
 	Id NullableString `json:"id,omitempty"`
-	// THIS IS SUPER OWNER
-	Owner *string `json:"owner,omitempty"`
-	// 
+	// Owner of the NFT.
+	Owner NullableString `json:"owner,omitempty"`
+	// Pool the position is within.
 	Pool NullableString `json:"pool,omitempty"`
-	// 
+	// Position of which the snap was taken of.
 	Position NullableString `json:"position,omitempty"`
-	// 
+	// Timestamp of block in which the snap was created.
 	Timestamp NullableString `json:"timestamp,omitempty"`
-	// 
+	// Total position liquidity.
 	Liquidity NullableString `json:"liquidity,omitempty"`
-	// 
+	// Amount of token 0 ever deposited to position.
 	DepositedToken0 NullableString `json:"deposited_token_0,omitempty"`
-	// 
+	// Amount of token 1 ever deposited to position.
 	DepositedToken1 NullableString `json:"deposited_token_1,omitempty"`
-	// 
+	// Amount of token 0 ever withdrawn from position (without fees).
 	WithdrawnToken0 NullableString `json:"withdrawn_token_0,omitempty"`
-	// 
+	// Amount of token 1 ever withdrawn from position (without fees).
 	WithdrawnToken1 NullableString `json:"withdrawn_token_1,omitempty"`
-	// 
+	// All time collected fees in token0.
 	CollectedFeesToken0 NullableString `json:"collected_fees_token_0,omitempty"`
-	// 
+	// All time collected fees in token1.
 	CollectedFeesToken1 NullableString `json:"collected_fees_token_1,omitempty"`
-	// 
+	// Transaction in which the snapshot was initialized.
 	Transaction NullableString `json:"transaction,omitempty"`
-	// 
+	// Variable needed for fee computation.
 	FeeGrowthInside0LastX128 NullableString `json:"fee_growth_inside_0_last_x128,omitempty"`
-	// 
+	// Variable needed for fee computation.
 	FeeGrowthInside1LastX128 NullableString `json:"fee_growth_inside_1_last_x128,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -75,7 +75,7 @@ func NewPositionSnapshotV3DTOWithDefaults() *PositionSnapshotV3DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *PositionSnapshotV3DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *PositionSnapshotV3DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionSnapshotV3DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *PositionSnapshotV3DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *PositionSnapshotV3DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *PositionSnapshotV3DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionSnapshotV3DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -139,7 +139,7 @@ func (o *PositionSnapshotV3DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *PositionSnapshotV3DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -149,15 +149,15 @@ func (o *PositionSnapshotV3DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionSnapshotV3DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -171,7 +171,7 @@ func (o *PositionSnapshotV3DTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -183,7 +183,7 @@ func (o *PositionSnapshotV3DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -211,41 +211,51 @@ func (o *PositionSnapshotV3DTO) UnsetId() {
 	o.Id.Unset()
 }
 
-// GetOwner returns the Owner field value if set, zero value otherwise.
+// GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetOwner() string {
-	if o == nil || o.Owner == nil {
+	if o == nil || isNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
-	return *o.Owner
+	return *o.Owner.Get()
 }
 
 // GetOwnerOk returns a tuple with the Owner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetOwnerOk() (*string, bool) {
-	if o == nil || o.Owner == nil {
-		return nil, false
+	if o == nil {
+    return nil, false
 	}
-	return o.Owner, true
+	return o.Owner.Get(), o.Owner.IsSet()
 }
 
 // HasOwner returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasOwner() bool {
-	if o != nil && o.Owner != nil {
+	if o != nil && o.Owner.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetOwner gets a reference to the given string and assigns it to the Owner field.
+// SetOwner gets a reference to the given NullableString and assigns it to the Owner field.
 func (o *PositionSnapshotV3DTO) SetOwner(v string) {
-	o.Owner = &v
+	o.Owner.Set(&v)
+}
+// SetOwnerNil sets the value for Owner to be an explicit nil
+func (o *PositionSnapshotV3DTO) SetOwnerNil() {
+	o.Owner.Set(nil)
+}
+
+// UnsetOwner ensures that no value is present for Owner, not even an explicit nil
+func (o *PositionSnapshotV3DTO) UnsetOwner() {
+	o.Owner.Unset()
 }
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetPool() string {
-	if o == nil || o.Pool.Get() == nil {
+	if o == nil || isNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -257,7 +267,7 @@ func (o *PositionSnapshotV3DTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -287,7 +297,7 @@ func (o *PositionSnapshotV3DTO) UnsetPool() {
 
 // GetPosition returns the Position field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetPosition() string {
-	if o == nil || o.Position.Get() == nil {
+	if o == nil || isNil(o.Position.Get()) {
 		var ret string
 		return ret
 	}
@@ -299,7 +309,7 @@ func (o *PositionSnapshotV3DTO) GetPosition() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetPositionOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Position.Get(), o.Position.IsSet()
 }
@@ -329,7 +339,7 @@ func (o *PositionSnapshotV3DTO) UnsetPosition() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetTimestamp() string {
-	if o == nil || o.Timestamp.Get() == nil {
+	if o == nil || isNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -341,7 +351,7 @@ func (o *PositionSnapshotV3DTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -371,7 +381,7 @@ func (o *PositionSnapshotV3DTO) UnsetTimestamp() {
 
 // GetLiquidity returns the Liquidity field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetLiquidity() string {
-	if o == nil || o.Liquidity.Get() == nil {
+	if o == nil || isNil(o.Liquidity.Get()) {
 		var ret string
 		return ret
 	}
@@ -383,7 +393,7 @@ func (o *PositionSnapshotV3DTO) GetLiquidity() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetLiquidityOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Liquidity.Get(), o.Liquidity.IsSet()
 }
@@ -413,7 +423,7 @@ func (o *PositionSnapshotV3DTO) UnsetLiquidity() {
 
 // GetDepositedToken0 returns the DepositedToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetDepositedToken0() string {
-	if o == nil || o.DepositedToken0.Get() == nil {
+	if o == nil || isNil(o.DepositedToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -425,7 +435,7 @@ func (o *PositionSnapshotV3DTO) GetDepositedToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetDepositedToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.DepositedToken0.Get(), o.DepositedToken0.IsSet()
 }
@@ -455,7 +465,7 @@ func (o *PositionSnapshotV3DTO) UnsetDepositedToken0() {
 
 // GetDepositedToken1 returns the DepositedToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetDepositedToken1() string {
-	if o == nil || o.DepositedToken1.Get() == nil {
+	if o == nil || isNil(o.DepositedToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -467,7 +477,7 @@ func (o *PositionSnapshotV3DTO) GetDepositedToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetDepositedToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.DepositedToken1.Get(), o.DepositedToken1.IsSet()
 }
@@ -497,7 +507,7 @@ func (o *PositionSnapshotV3DTO) UnsetDepositedToken1() {
 
 // GetWithdrawnToken0 returns the WithdrawnToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetWithdrawnToken0() string {
-	if o == nil || o.WithdrawnToken0.Get() == nil {
+	if o == nil || isNil(o.WithdrawnToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -509,7 +519,7 @@ func (o *PositionSnapshotV3DTO) GetWithdrawnToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetWithdrawnToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.WithdrawnToken0.Get(), o.WithdrawnToken0.IsSet()
 }
@@ -539,7 +549,7 @@ func (o *PositionSnapshotV3DTO) UnsetWithdrawnToken0() {
 
 // GetWithdrawnToken1 returns the WithdrawnToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetWithdrawnToken1() string {
-	if o == nil || o.WithdrawnToken1.Get() == nil {
+	if o == nil || isNil(o.WithdrawnToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -551,7 +561,7 @@ func (o *PositionSnapshotV3DTO) GetWithdrawnToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetWithdrawnToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.WithdrawnToken1.Get(), o.WithdrawnToken1.IsSet()
 }
@@ -581,7 +591,7 @@ func (o *PositionSnapshotV3DTO) UnsetWithdrawnToken1() {
 
 // GetCollectedFeesToken0 returns the CollectedFeesToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetCollectedFeesToken0() string {
-	if o == nil || o.CollectedFeesToken0.Get() == nil {
+	if o == nil || isNil(o.CollectedFeesToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -593,7 +603,7 @@ func (o *PositionSnapshotV3DTO) GetCollectedFeesToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetCollectedFeesToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.CollectedFeesToken0.Get(), o.CollectedFeesToken0.IsSet()
 }
@@ -623,7 +633,7 @@ func (o *PositionSnapshotV3DTO) UnsetCollectedFeesToken0() {
 
 // GetCollectedFeesToken1 returns the CollectedFeesToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetCollectedFeesToken1() string {
-	if o == nil || o.CollectedFeesToken1.Get() == nil {
+	if o == nil || isNil(o.CollectedFeesToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -635,7 +645,7 @@ func (o *PositionSnapshotV3DTO) GetCollectedFeesToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetCollectedFeesToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.CollectedFeesToken1.Get(), o.CollectedFeesToken1.IsSet()
 }
@@ -665,7 +675,7 @@ func (o *PositionSnapshotV3DTO) UnsetCollectedFeesToken1() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetTransaction() string {
-	if o == nil || o.Transaction.Get() == nil {
+	if o == nil || isNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -677,7 +687,7 @@ func (o *PositionSnapshotV3DTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -707,7 +717,7 @@ func (o *PositionSnapshotV3DTO) UnsetTransaction() {
 
 // GetFeeGrowthInside0LastX128 returns the FeeGrowthInside0LastX128 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetFeeGrowthInside0LastX128() string {
-	if o == nil || o.FeeGrowthInside0LastX128.Get() == nil {
+	if o == nil || isNil(o.FeeGrowthInside0LastX128.Get()) {
 		var ret string
 		return ret
 	}
@@ -719,7 +729,7 @@ func (o *PositionSnapshotV3DTO) GetFeeGrowthInside0LastX128() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetFeeGrowthInside0LastX128Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.FeeGrowthInside0LastX128.Get(), o.FeeGrowthInside0LastX128.IsSet()
 }
@@ -749,7 +759,7 @@ func (o *PositionSnapshotV3DTO) UnsetFeeGrowthInside0LastX128() {
 
 // GetFeeGrowthInside1LastX128 returns the FeeGrowthInside1LastX128 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PositionSnapshotV3DTO) GetFeeGrowthInside1LastX128() string {
-	if o == nil || o.FeeGrowthInside1LastX128.Get() == nil {
+	if o == nil || isNil(o.FeeGrowthInside1LastX128.Get()) {
 		var ret string
 		return ret
 	}
@@ -761,7 +771,7 @@ func (o *PositionSnapshotV3DTO) GetFeeGrowthInside1LastX128() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PositionSnapshotV3DTO) GetFeeGrowthInside1LastX128Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.FeeGrowthInside1LastX128.Get(), o.FeeGrowthInside1LastX128.IsSet()
 }
@@ -791,7 +801,7 @@ func (o *PositionSnapshotV3DTO) UnsetFeeGrowthInside1LastX128() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *PositionSnapshotV3DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -801,15 +811,15 @@ func (o *PositionSnapshotV3DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PositionSnapshotV3DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *PositionSnapshotV3DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -823,20 +833,20 @@ func (o *PositionSnapshotV3DTO) SetVid(v int64) {
 
 func (o PositionSnapshotV3DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()
 	}
-	if o.Owner != nil {
-		toSerialize["owner"] = o.Owner
+	if o.Owner.IsSet() {
+		toSerialize["owner"] = o.Owner.Get()
 	}
 	if o.Pool.IsSet() {
 		toSerialize["pool"] = o.Pool.Get()
@@ -877,7 +887,7 @@ func (o PositionSnapshotV3DTO) MarshalJSON() ([]byte, error) {
 	if o.FeeGrowthInside1LastX128.IsSet() {
 		toSerialize["fee_growth_inside_1_last_x128"] = o.FeeGrowthInside1LastX128.Get()
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return json.Marshal(toSerialize)

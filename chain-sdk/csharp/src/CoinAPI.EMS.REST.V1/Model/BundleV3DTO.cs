@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// BundleV3DTO
+    /// The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
     /// </summary>
     [DataContract]
     public partial class BundleV3DTO :  IEquatable<BundleV3DTO>, IValidatableObject
@@ -35,9 +35,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="id">id.</param>
-        /// <param name="ethPriceUsd">ethPriceUsd.</param>
+        /// <param name="ethPriceUsd">Price of ETH in usd..</param>
         /// <param name="vid">vid.</param>
         public BundleV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string ethPriceUsd = default(string), long vid = default(long))
         {
@@ -64,8 +64,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
@@ -76,8 +77,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets EthPriceUsd
+        /// Price of ETH in usd.
         /// </summary>
+        /// <value>Price of ETH in usd.</value>
         [DataMember(Name="eth_price_usd", EmitDefaultValue=true)]
         public string EthPriceUsd { get; set; }
 

@@ -20,26 +20,24 @@ Method | HTTP request | Description
 [**dappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
 [**dappsSushiswapMintsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapMintsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/mints/historical | 
-[**dappsSushiswapPoiHistoricalGet**](SushiswapApi.md#dappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical | 
-[**dappsSushiswapPoiHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoiHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/poi/historical | 
 [**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 [**dappsSushiswapPoolsCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolsCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | 
-[**dappsSushiswapPoolsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | 
+[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
+[**dappsSushiswapPoolsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
 [**dappsSushiswapSwapsCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapSwapsCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | 
-[**dappsSushiswapSwapsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | 
+[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+[**dappsSushiswapSwapsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 [**dappsSushiswapTokensCurrentGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokensCurrentGetWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | 
-[**dappsSushiswapTokensHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokensHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | 
+[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
+[**dappsSushiswapTokensHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTokensHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapTransactionsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
@@ -747,92 +745,6 @@ No authorization required
 | **200** | Success |  -  |
 
 
-## dappsSushiswapPoiHistoricalGet
-
-> dappsSushiswapPoiHistoricalGet(dappsSushiswapPoiHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsSushiswapPoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoiHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoiHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
 ## dappsSushiswapPoolDayDataHistoricalGet
 
 > dappsSushiswapPoolDayDataHistoricalGet(dappsSushiswapPoolDayDataHistoricalGetRequest): ApiRequest[Unit]
@@ -1088,14 +1000,15 @@ No authorization required
 
 ## dappsSushiswapPoolsHistoricalGet
 
-> dappsSushiswapPoolsHistoricalGet(dappsSushiswapPoolsHistoricalGetRequest): ApiRequest[Unit]
+> dappsSushiswapPoolsHistoricalGet(dappsSushiswapPoolsHistoricalGetRequest): ApiRequest[Seq[PairDTO]]
 
-
+GetPools
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1129,6 +1042,7 @@ object Example extends App {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
             System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolsHistoricalGet")
@@ -1157,8 +1071,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1167,12 +1081,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
 ## dappsSushiswapSwapsCurrentGet
@@ -1250,14 +1164,15 @@ No authorization required
 
 ## dappsSushiswapSwapsHistoricalGet
 
-> dappsSushiswapSwapsHistoricalGet(dappsSushiswapSwapsHistoricalGetRequest): ApiRequest[Unit]
+> dappsSushiswapSwapsHistoricalGet(dappsSushiswapSwapsHistoricalGetRequest): ApiRequest[Seq[SwapDTO]]
 
-
+GetSwaps
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1291,6 +1206,7 @@ object Example extends App {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
             System.err.println("Exception when calling SushiswapApi#dappsSushiswapSwapsHistoricalGet")
@@ -1319,8 +1235,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1329,12 +1245,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
 ## dappsSushiswapTokenDayDataHistoricalGet
@@ -1501,14 +1417,15 @@ No authorization required
 
 ## dappsSushiswapTokensHistoricalGet
 
-> dappsSushiswapTokensHistoricalGet(dappsSushiswapTokensHistoricalGetRequest): ApiRequest[Unit]
+> dappsSushiswapTokensHistoricalGet(dappsSushiswapTokensHistoricalGetRequest): ApiRequest[Seq[TokenDTO]]
 
-
+GetTokens
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1542,6 +1459,7 @@ object Example extends App {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
             System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokensHistoricalGet")
@@ -1570,8 +1488,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1580,12 +1498,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
 ## dappsSushiswapTransactionsHistoricalGet

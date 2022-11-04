@@ -17,33 +17,33 @@ import org.openapitools.client.core.ApiModel
 case class TokenDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Token address. */
   id: Option[String] = None,
-  /*  */
+  /* Factory address. */
   factory: Option[String] = None,
-  /*  */
+  /* Token symbol. */
   symbol: Option[String] = None,
-  /*  */
+  /* Token name. */
   name: Option[String] = None,
-  /*  */
+  /* Token decimals. */
   decimals: Option[String] = None,
-  /*  */
+  /* Total supply of liquidity token. */
   totalSupply: Option[String] = None,
-  /*  */
+  /* Amount of token traded all time across all pairs. */
   volume: Option[String] = None,
-  /*  */
+  /* Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Amount of token in USD traded all time across pairs (no minimum liquidity threshold). */
   untrackedVolumeUsd: Option[String] = None,
-  /*  */
+  /* Amount of transactions all time in pairs including token. */
   txCount: Option[String] = None,
-  /*  */
+  /* Total amount of token provided as liquidity across all pairs. */
   liquidity: Option[String] = None,
-  /*  */
+  /* ETH per token. */
   derivedEth: Option[String] = None,
-  /*  */
+  /* Array of whitelisted pairs. */
   whitelistPairs: Option[Seq[String]] = None,
   /*  */
   vid: Option[Long] = None,

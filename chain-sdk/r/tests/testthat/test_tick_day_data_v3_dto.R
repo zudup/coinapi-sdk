@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("id", {
 
 test_that("date", {
   # tests for the property `date` (integer)
-  # 
+  # Timestamp rounded to current day by dividing by 86400.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`date`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("date", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
-  # 
+  # Pointer to pool.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("pool", {
 
 test_that("tick", {
   # tests for the property `tick` (character)
-  # 
+  # Pointer to tick.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tick`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("tick", {
 
 test_that("liquidity_gross", {
   # tests for the property `liquidity_gross` (character)
-  # 
+  # Total liquidity pool has as tick lower or upper at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity_gross`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("liquidity_gross", {
 
 test_that("liquidity_net", {
   # tests for the property `liquidity_net` (character)
-  # 
+  # How much liquidity changes when tick crossed at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity_net`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("liquidity_net", {
 
 test_that("volume_token_0", {
   # tests for the property `volume_token_0` (character)
-  # 
+  # Hourly volume of token0 with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_0`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("volume_token_0", {
 
 test_that("volume_token_1", {
   # tests for the property `volume_token_1` (character)
-  # 
+  # Hourly volume of token1 with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_1`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("volume_token_1", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # 
+  # Hourly volume in derived USD with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("volume_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # 
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("fees_usd", {
 
 test_that("fee_growth_outside_0x128", {
   # tests for the property `fee_growth_outside_0x128` (character)
-  # 
+  # Variable needed for fee computation.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_outside_0x128`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("fee_growth_outside_0x128", {
 
 test_that("fee_growth_outside_1x128", {
   # tests for the property `fee_growth_outside_1x128` (character)
-  # 
+  # Variable needed for fee computation.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_outside_1x128`, "EXPECTED_RESULT")

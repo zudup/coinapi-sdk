@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Data accumulated and condensed into day stats for each pool.
+ **/
+@ApiModel(description = "Data accumulated and condensed into day stats for each pool.")
 public class PoolDayDataV3DTO {
   
   @SerializedName("entry_time")
@@ -89,9 +92,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -100,9 +103,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Identifier, format: <pool address>-<day id>.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>-<day id>.")
   public String getId() {
     return id;
   }
@@ -111,9 +114,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Timestamp rounded to current day by dividing by 86400
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400")
   public Integer getDate() {
     return date;
   }
@@ -122,9 +125,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Pointer to pool.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to pool.")
   public String getPool() {
     return pool;
   }
@@ -133,9 +136,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * In range liquidity at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "In range liquidity at end of period.")
   public String getLiquidity() {
     return liquidity;
   }
@@ -144,9 +147,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Current price tracker at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current price tracker at end of period.")
   public String getSqrtPrice() {
     return sqrtPrice;
   }
@@ -155,9 +158,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Price of token0 - derived from sqrtPrice.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Price of token0 - derived from sqrtPrice.")
   public String getToken0Price() {
     return token0Price;
   }
@@ -166,9 +169,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Price of token1 - derived from sqrtPrice.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Price of token1 - derived from sqrtPrice.")
   public String getToken1Price() {
     return token1Price;
   }
@@ -177,9 +180,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Current tick at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current tick at end of period.")
   public String getTick() {
     return tick;
   }
@@ -188,9 +191,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Tracker for global fee growth.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Tracker for global fee growth.")
   public String getFeeGrowthGlobal0x128() {
     return feeGrowthGlobal0x128;
   }
@@ -199,9 +202,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Tracker for global fee growth.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Tracker for global fee growth.")
   public String getFeeGrowthGlobal1x128() {
     return feeGrowthGlobal1x128;
   }
@@ -210,9 +213,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived in USD at end of period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD at end of period.")
   public String getTvlUsd() {
     return tvlUsd;
   }
@@ -221,9 +224,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Volume in token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in token0.")
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -232,9 +235,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Volume in token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in token1.")
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -243,9 +246,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Volume in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in USD.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -254,9 +257,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -265,9 +268,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Number of transactions during period.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of transactions during period.")
   public String getTxCount() {
     return txCount;
   }
@@ -276,9 +279,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Opening price of token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Opening price of token0.")
   public String getOpen() {
     return open;
   }
@@ -287,9 +290,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * High price of token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "High price of token0.")
   public String getHigh() {
     return high;
   }
@@ -298,9 +301,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Low price of token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Low price of token0.")
   public String getLow() {
     return low;
   }
@@ -309,9 +312,9 @@ public class PoolDayDataV3DTO {
   }
 
   /**
-   * 
+   * Close price of token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Close price of token0.")
   public String getClose() {
     return close;
   }

@@ -12,59 +12,62 @@
 import { ETradeAggressiveSide } from './eTradeAggressiveSide';
 
 
+/**
+ * Swap are created for each token swap within a pair.
+ */
 export interface SwapDTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      */
     id?: string | null;
     /**
-     * 
+     * Reference to transaction swap was included in.
      */
     transaction?: string | null;
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      */
     timestamp?: string | null;
     /**
-     * 
+     * Reference to pair.
      */
     pair?: string | null;
     /**
-     * 
+     * Address that initiated the swap.
      */
     sender?: string | null;
     /**
-     * 
+     * Amount of token0 sold.
      */
     amount_0_in?: string | null;
     /**
-     * 
+     * Amount of token1 sold.
      */
     amount_1_in?: string | null;
     /**
-     * 
+     * Amount of token0 received.
      */
     amount_0_out?: string | null;
     /**
-     * 
+     * Amount of token1 received.
      */
     amount_1_out?: string | null;
     /**
-     * 
+     * Recipient of output tokens.
      */
     to?: string | null;
     /**
-     * 
+     * Event index within transaction.
      */
     log_index?: string | null;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      */
     amount_usd?: string | null;
     /**

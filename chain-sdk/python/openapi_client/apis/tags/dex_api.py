@@ -12,7 +12,6 @@
 
 from openapi_client.paths.dapps_dex_batch_historical.get import DappsDexBatchHistoricalGet
 from openapi_client.paths.dapps_dex_orders_historical.get import DappsDexOrdersHistoricalGet
-from openapi_client.paths.dapps_dex_poi_historical.get import DappsDexPoiHistoricalGet
 from openapi_client.paths.dapps_dex_prices_historical.get import DappsDexPricesHistoricalGet
 from openapi_client.paths.dapps_dex_solution_historical.get import DappsDexSolutionHistoricalGet
 from openapi_client.paths.dapps_dex_stats_historical.get import DappsDexStatsHistoricalGet
@@ -26,7 +25,6 @@ from openapi_client.paths.dapps_dex_withdraw_request_historical.get import Dapps
 class DexApi(
     DappsDexBatchHistoricalGet,
     DappsDexOrdersHistoricalGet,
-    DappsDexPoiHistoricalGet,
     DappsDexPricesHistoricalGet,
     DappsDexSolutionHistoricalGet,
     DappsDexStatsHistoricalGet,

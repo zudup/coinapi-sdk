@@ -11,7 +11,7 @@
  */
 
 /**
- * OASMintV3DTO
+ * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  */
 public class OASMintV3DTO implements OAS.MappedProperties {
     /**
@@ -27,103 +27,103 @@ public class OASMintV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Which txn the mint was included in.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Time of transaction.
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * 
+     * Pool address.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * 
+     * Owner of position where liquidity minted to.
      * @return owner
      */
     public String owner { get; set; }
 
     /**
-     * 
+     * The address that minted the liquidity.
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @return origin
      */
     public String origin { get; set; }
 
     /**
-     * 
+     * Amount of liquidity minted.
      * @return amount
      */
     public String amount { get; set; }
 
     /**
-     * 
+     * Amount of token 0 minted.
      * @return amount0
      */
     public String amount0 { get; set; }
 
     /**
-     * 
+     * Amount of token 1 minted.
      * @return amount1
      */
     public String amount1 { get; set; }
 
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      * @return amountUsd
      */
     public String amountUsd { get; set; }
 
     /**
-     * 
+     * Lower tick of the position.
      * @return tickLower
      */
     public String tickLower { get; set; }
 
     /**
-     * 
+     * Upper tick of the position.
      * @return tickUpper
      */
     public String tickUpper { get; set; }
 
     /**
-     * 
+     * Order within the transaction.
      * @return logIndex
      */
     public String logIndex { get; set; }

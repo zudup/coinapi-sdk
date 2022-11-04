@@ -79,9 +79,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -90,9 +90,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * NFT token identifier, format: <NFT token id>#<block number>
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "NFT token identifier, format: <NFT token id>#<block number>")
   public String getId() {
     return id;
   }
@@ -101,9 +101,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * THIS IS SUPER OWNER
+   * Owner of the NFT.
    **/
-  @ApiModelProperty(value = "THIS IS SUPER OWNER")
+  @ApiModelProperty(value = "Owner of the NFT.")
   public String getOwner() {
     return owner;
   }
@@ -112,9 +112,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Pool the position is within.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool the position is within.")
   public String getPool() {
     return pool;
   }
@@ -123,9 +123,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Position of which the snap was taken of.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Position of which the snap was taken of.")
   public String getPosition() {
     return position;
   }
@@ -134,9 +134,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Timestamp of block in which the snap was created.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp of block in which the snap was created.")
   public String getTimestamp() {
     return timestamp;
   }
@@ -145,9 +145,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Total position liquidity.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total position liquidity.")
   public String getLiquidity() {
     return liquidity;
   }
@@ -156,9 +156,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 ever deposited to position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 ever deposited to position.")
   public String getDepositedToken0() {
     return depositedToken0;
   }
@@ -167,9 +167,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 ever deposited to position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 ever deposited to position.")
   public String getDepositedToken1() {
     return depositedToken1;
   }
@@ -178,9 +178,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 ever withdrawn from position (without fees).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 ever withdrawn from position (without fees).")
   public String getWithdrawnToken0() {
     return withdrawnToken0;
   }
@@ -189,9 +189,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 ever withdrawn from position (without fees).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 ever withdrawn from position (without fees).")
   public String getWithdrawnToken1() {
     return withdrawnToken1;
   }
@@ -200,9 +200,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token0.")
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -211,9 +211,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * All time collected fees in token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token1.")
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -222,9 +222,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Transaction in which the snapshot was initialized.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction in which the snapshot was initialized.")
   public String getTransaction() {
     return transaction;
   }
@@ -233,9 +233,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthInside0LastX128() {
     return feeGrowthInside0LastX128;
   }
@@ -244,9 +244,9 @@ public class PositionSnapshotV3DTO {
   }
 
   /**
-   * 
+   * Variable needed for fee computation.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
   public String getFeeGrowthInside1LastX128() {
     return feeGrowthInside1LastX128;
   }

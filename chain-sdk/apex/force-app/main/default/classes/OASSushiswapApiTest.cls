@@ -234,34 +234,6 @@ private class OASSushiswapApiTest {
      * 
      */
     @isTest
-    private static void dappsSushiswapPoiHistoricalGetTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3)
-        };
-
-        OASClient client;
-        OASSushiswapApi api;
-        String js = '';
-
-        api = new OASSushiswapApi(new OASClient());
-
-        api.dappsSushiswapPoiHistoricalGet(params);
-    }
-
-    /**
-     * 
-     *
-     * 
-     */
-    @isTest
     private static void dappsSushiswapPoolDayDataHistoricalGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
@@ -357,7 +329,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * GetPools
      *
      * 
      */
@@ -378,11 +350,32 @@ private class OASSushiswapApiTest {
 
         OASClient client;
         OASSushiswapApi api;
+        List<OASPairDTO> response;
+        List<OASPairDTO> expectedResponse;
         String js = '';
 
         api = new OASSushiswapApi(new OASClient());
 
-        api.dappsSushiswapPoolsHistoricalGet(params);
+        js = JSON.serialize(new List<OASPairDTO>{OASPairDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASPairDTO>{OASPairDTO.getExample()};
+        response = (List<OASPairDTO>) api.dappsSushiswapPoolsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASPairDTO>{OASPairDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASPairDTO>{OASPairDTO.getExample()};
+        response = (List<OASPairDTO>) api.dappsSushiswapPoolsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASPairDTO>{OASPairDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASPairDTO>{OASPairDTO.getExample()};
+        response = (List<OASPairDTO>) api.dappsSushiswapPoolsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -428,7 +421,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * GetSwaps
      *
      * 
      */
@@ -449,11 +442,32 @@ private class OASSushiswapApiTest {
 
         OASClient client;
         OASSushiswapApi api;
+        List<OASSwapDTO> response;
+        List<OASSwapDTO> expectedResponse;
         String js = '';
 
         api = new OASSushiswapApi(new OASClient());
 
-        api.dappsSushiswapSwapsHistoricalGet(params);
+        js = JSON.serialize(new List<OASSwapDTO>{OASSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSwapDTO>{OASSwapDTO.getExample()};
+        response = (List<OASSwapDTO>) api.dappsSushiswapSwapsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSwapDTO>{OASSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSwapDTO>{OASSwapDTO.getExample()};
+        response = (List<OASSwapDTO>) api.dappsSushiswapSwapsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSwapDTO>{OASSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSwapDTO>{OASSwapDTO.getExample()};
+        response = (List<OASSwapDTO>) api.dappsSushiswapSwapsHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -528,7 +542,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * 
+     * GetTokens
      *
      * 
      */
@@ -549,11 +563,32 @@ private class OASSushiswapApiTest {
 
         OASClient client;
         OASSushiswapApi api;
+        List<OASTokenDTO> response;
+        List<OASTokenDTO> expectedResponse;
         String js = '';
 
         api = new OASSushiswapApi(new OASClient());
 
-        api.dappsSushiswapTokensHistoricalGet(params);
+        js = JSON.serialize(new List<OASTokenDTO>{OASTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASTokenDTO>{OASTokenDTO.getExample()};
+        response = (List<OASTokenDTO>) api.dappsSushiswapTokensHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASTokenDTO>{OASTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASTokenDTO>{OASTokenDTO.getExample()};
+        response = (List<OASTokenDTO>) api.dappsSushiswapTokensHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASTokenDTO>{OASTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASTokenDTO>{OASTokenDTO.getExample()};
+        response = (List<OASTokenDTO>) api.dappsSushiswapTokensHistoricalGet(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

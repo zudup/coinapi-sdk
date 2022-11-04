@@ -6,22 +6,22 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **int64** |  | [optional] 
-**Id** | Pointer to **NullableString** |  | [optional] 
-**Owner** | Pointer to **string** | THIS IS SUPER OWNER | [optional] 
-**Pool** | Pointer to **NullableString** |  | [optional] 
-**Position** | Pointer to **NullableString** |  | [optional] 
-**Timestamp** | Pointer to **NullableString** |  | [optional] 
-**Liquidity** | Pointer to **NullableString** |  | [optional] 
-**DepositedToken0** | Pointer to **NullableString** |  | [optional] 
-**DepositedToken1** | Pointer to **NullableString** |  | [optional] 
-**WithdrawnToken0** | Pointer to **NullableString** |  | [optional] 
-**WithdrawnToken1** | Pointer to **NullableString** |  | [optional] 
-**CollectedFeesToken0** | Pointer to **NullableString** |  | [optional] 
-**CollectedFeesToken1** | Pointer to **NullableString** |  | [optional] 
-**Transaction** | Pointer to **NullableString** |  | [optional] 
-**FeeGrowthInside0LastX128** | Pointer to **NullableString** |  | [optional] 
-**FeeGrowthInside1LastX128** | Pointer to **NullableString** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
+**Id** | Pointer to **NullableString** | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] 
+**Owner** | Pointer to **NullableString** | Owner of the NFT. | [optional] 
+**Pool** | Pointer to **NullableString** | Pool the position is within. | [optional] 
+**Position** | Pointer to **NullableString** | Position of which the snap was taken of. | [optional] 
+**Timestamp** | Pointer to **NullableString** | Timestamp of block in which the snap was created. | [optional] 
+**Liquidity** | Pointer to **NullableString** | Total position liquidity. | [optional] 
+**DepositedToken0** | Pointer to **NullableString** | Amount of token 0 ever deposited to position. | [optional] 
+**DepositedToken1** | Pointer to **NullableString** | Amount of token 1 ever deposited to position. | [optional] 
+**WithdrawnToken0** | Pointer to **NullableString** | Amount of token 0 ever withdrawn from position (without fees). | [optional] 
+**WithdrawnToken1** | Pointer to **NullableString** | Amount of token 1 ever withdrawn from position (without fees). | [optional] 
+**CollectedFeesToken0** | Pointer to **NullableString** | All time collected fees in token0. | [optional] 
+**CollectedFeesToken1** | Pointer to **NullableString** | All time collected fees in token1. | [optional] 
+**Transaction** | Pointer to **NullableString** | Transaction in which the snapshot was initialized. | [optional] 
+**FeeGrowthInside0LastX128** | Pointer to **NullableString** | Variable needed for fee computation. | [optional] 
+**FeeGrowthInside1LastX128** | Pointer to **NullableString** | Variable needed for fee computation. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -178,6 +178,16 @@ SetOwner sets Owner field to given value.
 
 HasOwner returns a boolean if a field has been set.
 
+### SetOwnerNil
+
+`func (o *PositionSnapshotV3DTO) SetOwnerNil(b bool)`
+
+ SetOwnerNil sets the value for Owner to be an explicit nil
+
+### UnsetOwner
+`func (o *PositionSnapshotV3DTO) UnsetOwner()`
+
+UnsetOwner ensures that no value is present for Owner, not even an explicit nil
 ### GetPool
 
 `func (o *PositionSnapshotV3DTO) GetPool() string`

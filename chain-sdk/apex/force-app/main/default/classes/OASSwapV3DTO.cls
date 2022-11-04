@@ -11,7 +11,7 @@
  */
 
 /**
- * OASSwapV3DTO
+ * Swap are created for each token swap within a pair.
  */
 public class OASSwapV3DTO implements OAS.MappedProperties {
     /**
@@ -27,7 +27,7 @@ public class OASSwapV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
@@ -39,73 +39,73 @@ public class OASSwapV3DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * 
+     * Identifier, format: transaction hash + "#" + index in swaps Transaction array.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Pointer to transaction.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Timestamp of transaction.
      * @return timestamp
      */
     public Datetime timestamp { get; set; }
 
     /**
-     * 
+     * Pool swap occured within.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * 
+     * Sender of the swap.
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * 
+     * Recipient of the swap.
      * @return recipient
      */
     public String recipient { get; set; }
 
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      * @return origin
      */
     public String origin { get; set; }
 
     /**
-     * 
+     * Delta of token0 swapped.
      * @return amount0
      */
     public String amount0 { get; set; }
 
     /**
-     * 
+     * Delta of token1 swapped.
      * @return amount1
      */
     public String amount1 { get; set; }
 
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @return amountUsd
      */
     public String amountUsd { get; set; }

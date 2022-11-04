@@ -11,7 +11,7 @@
  */
 
 /**
- * OASPoolDayDataV3DTO
+ * Data accumulated and condensed into day stats for each pool.
  */
 public class OASPoolDayDataV3DTO implements OAS.MappedProperties {
     /**
@@ -27,127 +27,127 @@ public class OASPoolDayDataV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Identifier, format: <pool address>-<day id>.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * 
+     * Pointer to pool.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * In range liquidity at end of period.
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * 
+     * Current price tracker at end of period.
      * @return sqrtPrice
      */
     public String sqrtPrice { get; set; }
 
     /**
-     * 
+     * Price of token0 - derived from sqrtPrice.
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * 
+     * Price of token1 - derived from sqrtPrice.
      * @return token1Price
      */
     public String token1Price { get; set; }
 
     /**
-     * 
+     * Current tick at end of period.
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * 
+     * Tracker for global fee growth.
      * @return feeGrowthGlobal0x128
      */
     public String feeGrowthGlobal0x128 { get; set; }
 
     /**
-     * 
+     * Tracker for global fee growth.
      * @return feeGrowthGlobal1x128
      */
     public String feeGrowthGlobal1x128 { get; set; }
 
     /**
-     * 
+     * Total value locked derived in USD at end of period.
      * @return tvlUsd
      */
     public String tvlUsd { get; set; }
 
     /**
-     * 
+     * Volume in token0.
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * 
+     * Volume in token1.
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * 
+     * Volume in USD.
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * Fees in USD.
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * 
+     * Number of transactions during period.
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * 
+     * Opening price of token0.
      * @return open
      */
     public String open { get; set; }
 
     /**
-     * 
+     * High price of token0.
      * @return high
      */
     public String high { get; set; }
 
     /**
-     * 
+     * Low price of token0.
      * @return low
      */
     public String low { get; set; }
 
     /**
-     * 
+     * Close price of token0.
      * @return close
      */
     public String close { get; set; }

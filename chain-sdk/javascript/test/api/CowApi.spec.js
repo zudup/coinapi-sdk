@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('dappsCowPoiHistoricalGet', function() {
-      it('should call dappsCowPoiHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowPoiHistoricalGet
-        //instance.dappsCowPoiHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsCowSettlementHistoricalGet', function() {
       it('should call dappsCowSettlementHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsCowSettlementHistoricalGet

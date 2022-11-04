@@ -27,7 +27,7 @@ public class OASPairV2DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
@@ -87,7 +87,7 @@ public class OASPairV2DTO implements OAS.MappedProperties {
     public String reserveUsd { get; set; }
 
     /**
-     * Total liquidity with only tracked amount (see tracked amounts).
+     * Total liquidity with only tracked amount.
      * @return trackedReserveEth
      */
     public String trackedReserveEth { get; set; }
@@ -141,7 +141,7 @@ public class OASPairV2DTO implements OAS.MappedProperties {
     public Datetime createdAtTimestamp { get; set; }
 
     /**
-     * 
+     * Total number of LPs.
      * @return liquidityProviderCount
      */
     public String liquidityProviderCount { get; set; }

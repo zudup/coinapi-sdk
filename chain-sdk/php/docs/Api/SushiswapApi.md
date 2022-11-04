@@ -12,16 +12,15 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**dappsSushiswapLiquidityPositionHistoricalGet()**](SushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical |  |
 | [**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet()**](SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical |  |
 | [**dappsSushiswapMintsHistoricalGet()**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical |  |
-| [**dappsSushiswapPoiHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical |  |
 | [**dappsSushiswapPoolDayDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical |  |
 | [**dappsSushiswapPoolHourDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical |  |
 | [**dappsSushiswapPoolsCurrentGet()**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools |
-| [**dappsSushiswapPoolsHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical |  |
+| [**dappsSushiswapPoolsHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools |
 | [**dappsSushiswapSwapsCurrentGet()**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
-| [**dappsSushiswapSwapsHistoricalGet()**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical |  |
+| [**dappsSushiswapSwapsHistoricalGet()**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps |
 | [**dappsSushiswapTokenDayDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dappsSushiswapTokensCurrentGet()**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
-| [**dappsSushiswapTokensHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical |  |
+| [**dappsSushiswapTokensHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens |
 | [**dappsSushiswapTransactionsHistoricalGet()**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dappsSushiswapUsersHistoricalGet()**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical |  |
 
@@ -506,65 +505,6 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsSushiswapPoiHistoricalGet()`
-
-```php
-dappsSushiswapPoiHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsSushiswapPoiHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling SushiswapApi->dappsSushiswapPoiHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `dappsSushiswapPoolDayDataHistoricalGet()`
 
 ```php
@@ -743,10 +683,10 @@ No authorization required
 ## `dappsSushiswapPoolsHistoricalGet()`
 
 ```php
-dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\PairDTO[]
 ```
 
-
+GetPools
 
 ### Example
 
@@ -768,7 +708,8 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 $pool_id = 'pool_id_example'; // string
 
 try {
-    $apiInstance->dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SushiswapApi->dappsSushiswapPoolsHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -786,7 +727,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\PairDTO[]**](../Model/PairDTO.md)
 
 ### Authorization
 
@@ -795,7 +736,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -855,10 +796,10 @@ No authorization required
 ## `dappsSushiswapSwapsHistoricalGet()`
 
 ```php
-dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SwapDTO[]
 ```
 
-
+GetSwaps
 
 ### Example
 
@@ -880,7 +821,8 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 $pool_id = 'pool_id_example'; // string
 
 try {
-    $apiInstance->dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SushiswapApi->dappsSushiswapSwapsHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -898,7 +840,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\SwapDTO[]**](../Model/SwapDTO.md)
 
 ### Authorization
 
@@ -907,7 +849,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -1028,10 +970,10 @@ No authorization required
 ## `dappsSushiswapTokensHistoricalGet()`
 
 ```php
-dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\TokenDTO[]
 ```
 
-
+GetTokens
 
 ### Example
 
@@ -1053,7 +995,8 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 $token_id = 'token_id_example'; // string
 
 try {
-    $apiInstance->dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SushiswapApi->dappsSushiswapTokensHistoricalGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -1071,7 +1014,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\TokenDTO[]**](../Model/TokenDTO.md)
 
 ### Authorization
 
@@ -1080,7 +1023,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

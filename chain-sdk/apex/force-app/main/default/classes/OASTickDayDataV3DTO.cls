@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTickDayDataV3DTO
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
 public class OASTickDayDataV3DTO implements OAS.MappedProperties {
     /**
@@ -27,79 +27,79 @@ public class OASTickDayDataV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Identifier, format: <pool address>-<tick index>-<timestamp>.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400.
      * @return r_date
      */
     public Integer r_date { get; set; }
 
     /**
-     * 
+     * Pointer to pool.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Pointer to tick.
      * @return tick
      */
     public String tick { get; set; }
 
     /**
-     * 
+     * Total liquidity pool has as tick lower or upper at end of period.
      * @return liquidityGross
      */
     public String liquidityGross { get; set; }
 
     /**
-     * 
+     * How much liquidity changes when tick crossed at end of period.
      * @return liquidityNet
      */
     public String liquidityNet { get; set; }
 
     /**
-     * 
+     * Hourly volume of token0 with this tick in range.
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * 
+     * Hourly volume of token1 with this tick in range.
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * 
+     * Hourly volume in derived USD with this tick in range.
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * Fees in USD.
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * 
+     * Variable needed for fee computation.
      * @return feeGrowthOutside0x128
      */
     public String feeGrowthOutside0x128 { get; set; }
 
     /**
-     * 
+     * Variable needed for fee computation.
      * @return feeGrowthOutside1x128
      */
     public String feeGrowthOutside1x128 { get; set; }

@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// PositionV3DTO
+    /// Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
     /// </summary>
     [DataContract]
     public partial class PositionV3DTO :  IEquatable<PositionV3DTO>, IValidatableObject
@@ -35,24 +35,24 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="owner">owner.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="token0">token0.</param>
-        /// <param name="token1">token1.</param>
-        /// <param name="tickLower">tickLower.</param>
-        /// <param name="tickUpper">tickUpper.</param>
-        /// <param name="liquidity">liquidity.</param>
-        /// <param name="depositedToken0">depositedToken0.</param>
-        /// <param name="depositedToken1">depositedToken1.</param>
-        /// <param name="withdrawnToken0">withdrawnToken0.</param>
-        /// <param name="withdrawnToken1">withdrawnToken1.</param>
-        /// <param name="collectedFeesToken0">collectedFeesToken0.</param>
-        /// <param name="collectedFeesToken1">collectedFeesToken1.</param>
-        /// <param name="transaction">transaction.</param>
-        /// <param name="feeGrowthInside0LastX128">feeGrowthInside0LastX128.</param>
-        /// <param name="feeGrowthInside1LastX128">feeGrowthInside1LastX128.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">NFT token identifier..</param>
+        /// <param name="owner">Owner of the NFT..</param>
+        /// <param name="pool">Pool position is within..</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract..</param>
+        /// <param name="token1">Reference to token1 as stored in pair contract..</param>
+        /// <param name="tickLower">Lower tick of the position..</param>
+        /// <param name="tickUpper">Upper tick of the position..</param>
+        /// <param name="liquidity">Total position liquidity..</param>
+        /// <param name="depositedToken0">Amount of token 0 ever deposited to position..</param>
+        /// <param name="depositedToken1">Amount of token 1 ever deposited to position..</param>
+        /// <param name="withdrawnToken0">Amount of token 0 ever withdrawn from position (without fees)..</param>
+        /// <param name="withdrawnToken1">Amount of token 1 ever withdrawn from position (without fees)..</param>
+        /// <param name="collectedFeesToken0">All time collected fees in token0..</param>
+        /// <param name="collectedFeesToken1">All time collected fees in token1..</param>
+        /// <param name="transaction">Transaction in which the position was initialized..</param>
+        /// <param name="feeGrowthInside0LastX128">Variable needed for fee computation..</param>
+        /// <param name="feeGrowthInside1LastX128">Variable needed for fee computation..</param>
         /// <param name="vid">vid.</param>
         public PositionV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string owner = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string), string tickLower = default(string), string tickUpper = default(string), string liquidity = default(string), string depositedToken0 = default(string), string depositedToken1 = default(string), string withdrawnToken0 = default(string), string withdrawnToken1 = default(string), string collectedFeesToken0 = default(string), string collectedFeesToken1 = default(string), string transaction = default(string), string feeGrowthInside0LastX128 = default(string), string feeGrowthInside1LastX128 = default(string), long vid = default(long))
         {
@@ -109,110 +109,128 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// NFT token identifier.
         /// </summary>
+        /// <value>NFT token identifier.</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// Owner of the NFT.
         /// </summary>
+        /// <value>Owner of the NFT.</value>
         [DataMember(Name="owner", EmitDefaultValue=true)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pool position is within.
         /// </summary>
+        /// <value>Pool position is within.</value>
         [DataMember(Name="pool", EmitDefaultValue=true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token0
+        /// Reference to token0 as stored in pair contract.
         /// </summary>
+        /// <value>Reference to token0 as stored in pair contract.</value>
         [DataMember(Name="token_0", EmitDefaultValue=true)]
         public string Token0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token1
+        /// Reference to token1 as stored in pair contract.
         /// </summary>
+        /// <value>Reference to token1 as stored in pair contract.</value>
         [DataMember(Name="token_1", EmitDefaultValue=true)]
         public string Token1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets TickLower
+        /// Lower tick of the position.
         /// </summary>
+        /// <value>Lower tick of the position.</value>
         [DataMember(Name="tick_lower", EmitDefaultValue=true)]
         public string TickLower { get; set; }
 
         /// <summary>
-        /// Gets or Sets TickUpper
+        /// Upper tick of the position.
         /// </summary>
+        /// <value>Upper tick of the position.</value>
         [DataMember(Name="tick_upper", EmitDefaultValue=true)]
         public string TickUpper { get; set; }
 
         /// <summary>
-        /// Gets or Sets Liquidity
+        /// Total position liquidity.
         /// </summary>
+        /// <value>Total position liquidity.</value>
         [DataMember(Name="liquidity", EmitDefaultValue=true)]
         public string Liquidity { get; set; }
 
         /// <summary>
-        /// Gets or Sets DepositedToken0
+        /// Amount of token 0 ever deposited to position.
         /// </summary>
+        /// <value>Amount of token 0 ever deposited to position.</value>
         [DataMember(Name="deposited_token_0", EmitDefaultValue=true)]
         public string DepositedToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets DepositedToken1
+        /// Amount of token 1 ever deposited to position.
         /// </summary>
+        /// <value>Amount of token 1 ever deposited to position.</value>
         [DataMember(Name="deposited_token_1", EmitDefaultValue=true)]
         public string DepositedToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets WithdrawnToken0
+        /// Amount of token 0 ever withdrawn from position (without fees).
         /// </summary>
+        /// <value>Amount of token 0 ever withdrawn from position (without fees).</value>
         [DataMember(Name="withdrawn_token_0", EmitDefaultValue=true)]
         public string WithdrawnToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets WithdrawnToken1
+        /// Amount of token 1 ever withdrawn from position (without fees).
         /// </summary>
+        /// <value>Amount of token 1 ever withdrawn from position (without fees).</value>
         [DataMember(Name="withdrawn_token_1", EmitDefaultValue=true)]
         public string WithdrawnToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectedFeesToken0
+        /// All time collected fees in token0.
         /// </summary>
+        /// <value>All time collected fees in token0.</value>
         [DataMember(Name="collected_fees_token_0", EmitDefaultValue=true)]
         public string CollectedFeesToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectedFeesToken1
+        /// All time collected fees in token1.
         /// </summary>
+        /// <value>All time collected fees in token1.</value>
         [DataMember(Name="collected_fees_token_1", EmitDefaultValue=true)]
         public string CollectedFeesToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Transaction
+        /// Transaction in which the position was initialized.
         /// </summary>
+        /// <value>Transaction in which the position was initialized.</value>
         [DataMember(Name="transaction", EmitDefaultValue=true)]
         public string Transaction { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthInside0LastX128
+        /// Variable needed for fee computation.
         /// </summary>
+        /// <value>Variable needed for fee computation.</value>
         [DataMember(Name="fee_growth_inside_0_last_x128", EmitDefaultValue=true)]
         public string FeeGrowthInside0LastX128 { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthInside1LastX128
+        /// Variable needed for fee computation.
         /// </summary>
+        /// <value>Variable needed for fee computation.</value>
         [DataMember(Name="fee_growth_inside_1_last_x128", EmitDefaultValue=true)]
         public string FeeGrowthInside1LastX128 { get; set; }
 

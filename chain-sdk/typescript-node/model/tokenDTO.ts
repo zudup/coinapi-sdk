@@ -12,63 +12,66 @@
 
 import { RequestFile } from './models';
 
+/**
+* Stores aggregated information for a specific token across all pairs that token is included in.
+*/
 export class TokenDTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
-    * 
+    * Token address.
     */
     'id'?: string | null;
     /**
-    * 
+    * Factory address.
     */
     'factory'?: string | null;
     /**
-    * 
+    * Token symbol.
     */
     'symbol'?: string | null;
     /**
-    * 
+    * Token name.
     */
     'name'?: string | null;
     /**
-    * 
+    * Token decimals.
     */
     'decimals'?: string | null;
     /**
-    * 
+    * Total supply of liquidity token.
     */
     'totalSupply'?: string | null;
     /**
-    * 
+    * Amount of token traded all time across all pairs.
     */
     'volume'?: string | null;
     /**
-    * 
+    * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * 
+    * Amount of transactions all time in pairs including token.
     */
     'txCount'?: string | null;
     /**
-    * 
+    * Total amount of token provided as liquidity across all pairs.
     */
     'liquidity'?: string | null;
     /**
-    * 
+    * ETH per token.
     */
     'derivedEth'?: string | null;
     /**
-    * 
+    * Array of whitelisted pairs.
     */
     'whitelistPairs'?: Array<string> | null;
     /**

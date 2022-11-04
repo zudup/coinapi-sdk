@@ -12,11 +12,14 @@
 import { BigInteger } from './bigInteger';
 
 
+/**
+ * Ticks are the boundaries between discrete areas in price space.
+ */
 export interface TickV3DTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
@@ -24,62 +27,62 @@ export interface TickV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: <pool address>#<tick index>
      */
     id?: string | null;
     /**
-     * 
+     * Pool address.
      */
     pool_address?: string | null;
     tick_idx?: BigInteger;
     /**
-     * 
+     * Pool address.
      */
     pool?: string | null;
     liquidity_gross?: BigInteger;
     liquidity_net?: BigInteger;
     /**
-     * 
+     * Calculated price of token0 of tick within this pool - constant.
      */
     price_0?: string | null;
     /**
-     * 
+     * Calculated price of token1 of tick within this pool - constant.
      */
     price_1?: string | null;
     /**
-     * 
+     * Lifetime volume of token0 with this tick in range.
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Lifetime volume of token1 with this tick in range.
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Lifetime volume in derived USD with this tick in range.
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Lifetime volume in untracked USD with this tick in range.
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Fees in USD.
      */
     fees_usd?: string | null;
     /**
-     * 
+     * All time collected fees in token0.
      */
     collected_fees_token_0?: string | null;
     /**
-     * 
+     * All time collected fees in token1.
      */
     collected_fees_token_1?: string | null;
     /**
-     * 
+     * All time collected fees in USD.
      */
     collected_fees_usd?: string | null;
     /**
-     * 
+     * Created time.
      */
     created_at_timestamp?: string;
     liquidity_provider_count?: BigInteger;

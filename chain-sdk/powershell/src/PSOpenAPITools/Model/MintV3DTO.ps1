@@ -13,46 +13,46 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Transaction hash + '#' + index in mints Transaction array.
 .PARAMETER Transaction
-
+Which txn the mint was included in.
 .PARAMETER Timestamp
-
+Time of transaction.
 .PARAMETER Pool
-
+Pool address.
 .PARAMETER Token0
-
+Reference to token0 as stored in pool contract.
 .PARAMETER Token1
-
+Reference to token1 as stored in pool contract.
 .PARAMETER Owner
-
+Owner of position where liquidity minted to.
 .PARAMETER VarSender
-
+The address that minted the liquidity.
 .PARAMETER Origin
-
+Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 .PARAMETER Amount
-
+Amount of liquidity minted.
 .PARAMETER Amount0
-
+Amount of token 0 minted.
 .PARAMETER Amount1
-
+Amount of token 1 minted.
 .PARAMETER AmountUsd
-
+Derived amount based on available prices of tokens.
 .PARAMETER TickLower
-
+Lower tick of the position.
 .PARAMETER TickUpper
-
+Upper tick of the position.
 .PARAMETER LogIndex
-
+Order within the transaction.
 .PARAMETER Vid
 
 .OUTPUTS

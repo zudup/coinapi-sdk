@@ -20,7 +20,7 @@ import (
 type SwapV2DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -75,7 +75,7 @@ func NewSwapV2DTOWithDefaults() *SwapV2DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *SwapV2DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *SwapV2DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *SwapV2DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -139,7 +139,7 @@ func (o *SwapV2DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -149,15 +149,15 @@ func (o *SwapV2DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -171,7 +171,7 @@ func (o *SwapV2DTO) SetBlockNumber(v int64) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -181,15 +181,15 @@ func (o *SwapV2DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -203,7 +203,7 @@ func (o *SwapV2DTO) SetVid(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -215,7 +215,7 @@ func (o *SwapV2DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -245,7 +245,7 @@ func (o *SwapV2DTO) UnsetId() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetTransaction() string {
-	if o == nil || o.Transaction.Get() == nil {
+	if o == nil || isNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -257,7 +257,7 @@ func (o *SwapV2DTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -287,7 +287,7 @@ func (o *SwapV2DTO) UnsetTransaction() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetTimestamp() time.Time {
-	if o == nil || o.Timestamp == nil {
+	if o == nil || isNil(o.Timestamp) {
 		var ret time.Time
 		return ret
 	}
@@ -297,15 +297,15 @@ func (o *SwapV2DTO) GetTimestamp() time.Time {
 // GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetTimestampOk() (*time.Time, bool) {
-	if o == nil || o.Timestamp == nil {
-		return nil, false
+	if o == nil || isNil(o.Timestamp) {
+    return nil, false
 	}
 	return o.Timestamp, true
 }
 
 // HasTimestamp returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasTimestamp() bool {
-	if o != nil && o.Timestamp != nil {
+	if o != nil && !isNil(o.Timestamp) {
 		return true
 	}
 
@@ -319,7 +319,7 @@ func (o *SwapV2DTO) SetTimestamp(v time.Time) {
 
 // GetPair returns the Pair field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetPair() string {
-	if o == nil || o.Pair.Get() == nil {
+	if o == nil || isNil(o.Pair.Get()) {
 		var ret string
 		return ret
 	}
@@ -331,7 +331,7 @@ func (o *SwapV2DTO) GetPair() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetPairOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Pair.Get(), o.Pair.IsSet()
 }
@@ -361,7 +361,7 @@ func (o *SwapV2DTO) UnsetPair() {
 
 // GetSender returns the Sender field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetSender() string {
-	if o == nil || o.Sender.Get() == nil {
+	if o == nil || isNil(o.Sender.Get()) {
 		var ret string
 		return ret
 	}
@@ -373,7 +373,7 @@ func (o *SwapV2DTO) GetSender() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetSenderOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Sender.Get(), o.Sender.IsSet()
 }
@@ -403,7 +403,7 @@ func (o *SwapV2DTO) UnsetSender() {
 
 // GetFrom returns the From field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetFrom() string {
-	if o == nil || o.From.Get() == nil {
+	if o == nil || isNil(o.From.Get()) {
 		var ret string
 		return ret
 	}
@@ -415,7 +415,7 @@ func (o *SwapV2DTO) GetFrom() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetFromOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.From.Get(), o.From.IsSet()
 }
@@ -445,7 +445,7 @@ func (o *SwapV2DTO) UnsetFrom() {
 
 // GetAmount0In returns the Amount0In field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetAmount0In() string {
-	if o == nil || o.Amount0In.Get() == nil {
+	if o == nil || isNil(o.Amount0In.Get()) {
 		var ret string
 		return ret
 	}
@@ -457,7 +457,7 @@ func (o *SwapV2DTO) GetAmount0In() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetAmount0InOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount0In.Get(), o.Amount0In.IsSet()
 }
@@ -487,7 +487,7 @@ func (o *SwapV2DTO) UnsetAmount0In() {
 
 // GetAmount1In returns the Amount1In field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetAmount1In() string {
-	if o == nil || o.Amount1In.Get() == nil {
+	if o == nil || isNil(o.Amount1In.Get()) {
 		var ret string
 		return ret
 	}
@@ -499,7 +499,7 @@ func (o *SwapV2DTO) GetAmount1In() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetAmount1InOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount1In.Get(), o.Amount1In.IsSet()
 }
@@ -529,7 +529,7 @@ func (o *SwapV2DTO) UnsetAmount1In() {
 
 // GetAmount0Out returns the Amount0Out field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetAmount0Out() string {
-	if o == nil || o.Amount0Out.Get() == nil {
+	if o == nil || isNil(o.Amount0Out.Get()) {
 		var ret string
 		return ret
 	}
@@ -541,7 +541,7 @@ func (o *SwapV2DTO) GetAmount0Out() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetAmount0OutOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount0Out.Get(), o.Amount0Out.IsSet()
 }
@@ -571,7 +571,7 @@ func (o *SwapV2DTO) UnsetAmount0Out() {
 
 // GetAmount1Out returns the Amount1Out field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetAmount1Out() string {
-	if o == nil || o.Amount1Out.Get() == nil {
+	if o == nil || isNil(o.Amount1Out.Get()) {
 		var ret string
 		return ret
 	}
@@ -583,7 +583,7 @@ func (o *SwapV2DTO) GetAmount1Out() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetAmount1OutOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount1Out.Get(), o.Amount1Out.IsSet()
 }
@@ -613,7 +613,7 @@ func (o *SwapV2DTO) UnsetAmount1Out() {
 
 // GetTo returns the To field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetTo() string {
-	if o == nil || o.To.Get() == nil {
+	if o == nil || isNil(o.To.Get()) {
 		var ret string
 		return ret
 	}
@@ -625,7 +625,7 @@ func (o *SwapV2DTO) GetTo() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetToOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.To.Get(), o.To.IsSet()
 }
@@ -655,7 +655,7 @@ func (o *SwapV2DTO) UnsetTo() {
 
 // GetLogIndex returns the LogIndex field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetLogIndex() BigInteger {
-	if o == nil || o.LogIndex == nil {
+	if o == nil || isNil(o.LogIndex) {
 		var ret BigInteger
 		return ret
 	}
@@ -665,15 +665,15 @@ func (o *SwapV2DTO) GetLogIndex() BigInteger {
 // GetLogIndexOk returns a tuple with the LogIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetLogIndexOk() (*BigInteger, bool) {
-	if o == nil || o.LogIndex == nil {
-		return nil, false
+	if o == nil || isNil(o.LogIndex) {
+    return nil, false
 	}
 	return o.LogIndex, true
 }
 
 // HasLogIndex returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasLogIndex() bool {
-	if o != nil && o.LogIndex != nil {
+	if o != nil && !isNil(o.LogIndex) {
 		return true
 	}
 
@@ -687,7 +687,7 @@ func (o *SwapV2DTO) SetLogIndex(v BigInteger) {
 
 // GetAmountUsd returns the AmountUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetAmountUsd() string {
-	if o == nil || o.AmountUsd.Get() == nil {
+	if o == nil || isNil(o.AmountUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -699,7 +699,7 @@ func (o *SwapV2DTO) GetAmountUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetAmountUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.AmountUsd.Get(), o.AmountUsd.IsSet()
 }
@@ -729,7 +729,7 @@ func (o *SwapV2DTO) UnsetAmountUsd() {
 
 // GetEvaluatedPrice returns the EvaluatedPrice field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetEvaluatedPrice() float64 {
-	if o == nil || o.EvaluatedPrice == nil {
+	if o == nil || isNil(o.EvaluatedPrice) {
 		var ret float64
 		return ret
 	}
@@ -739,15 +739,15 @@ func (o *SwapV2DTO) GetEvaluatedPrice() float64 {
 // GetEvaluatedPriceOk returns a tuple with the EvaluatedPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetEvaluatedPriceOk() (*float64, bool) {
-	if o == nil || o.EvaluatedPrice == nil {
-		return nil, false
+	if o == nil || isNil(o.EvaluatedPrice) {
+    return nil, false
 	}
 	return o.EvaluatedPrice, true
 }
 
 // HasEvaluatedPrice returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasEvaluatedPrice() bool {
-	if o != nil && o.EvaluatedPrice != nil {
+	if o != nil && !isNil(o.EvaluatedPrice) {
 		return true
 	}
 
@@ -761,7 +761,7 @@ func (o *SwapV2DTO) SetEvaluatedPrice(v float64) {
 
 // GetEvaluatedAmount returns the EvaluatedAmount field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetEvaluatedAmount() float64 {
-	if o == nil || o.EvaluatedAmount == nil {
+	if o == nil || isNil(o.EvaluatedAmount) {
 		var ret float64
 		return ret
 	}
@@ -771,15 +771,15 @@ func (o *SwapV2DTO) GetEvaluatedAmount() float64 {
 // GetEvaluatedAmountOk returns a tuple with the EvaluatedAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetEvaluatedAmountOk() (*float64, bool) {
-	if o == nil || o.EvaluatedAmount == nil {
-		return nil, false
+	if o == nil || isNil(o.EvaluatedAmount) {
+    return nil, false
 	}
 	return o.EvaluatedAmount, true
 }
 
 // HasEvaluatedAmount returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasEvaluatedAmount() bool {
-	if o != nil && o.EvaluatedAmount != nil {
+	if o != nil && !isNil(o.EvaluatedAmount) {
 		return true
 	}
 
@@ -793,7 +793,7 @@ func (o *SwapV2DTO) SetEvaluatedAmount(v float64) {
 
 // GetEvaluatedAggressor returns the EvaluatedAggressor field value if set, zero value otherwise.
 func (o *SwapV2DTO) GetEvaluatedAggressor() ETradeAggressiveSide {
-	if o == nil || o.EvaluatedAggressor == nil {
+	if o == nil || isNil(o.EvaluatedAggressor) {
 		var ret ETradeAggressiveSide
 		return ret
 	}
@@ -803,15 +803,15 @@ func (o *SwapV2DTO) GetEvaluatedAggressor() ETradeAggressiveSide {
 // GetEvaluatedAggressorOk returns a tuple with the EvaluatedAggressor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SwapV2DTO) GetEvaluatedAggressorOk() (*ETradeAggressiveSide, bool) {
-	if o == nil || o.EvaluatedAggressor == nil {
-		return nil, false
+	if o == nil || isNil(o.EvaluatedAggressor) {
+    return nil, false
 	}
 	return o.EvaluatedAggressor, true
 }
 
 // HasEvaluatedAggressor returns a boolean if a field has been set.
 func (o *SwapV2DTO) HasEvaluatedAggressor() bool {
-	if o != nil && o.EvaluatedAggressor != nil {
+	if o != nil && !isNil(o.EvaluatedAggressor) {
 		return true
 	}
 
@@ -825,7 +825,7 @@ func (o *SwapV2DTO) SetEvaluatedAggressor(v ETradeAggressiveSide) {
 
 // GetPoolId returns the PoolId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetPoolId() string {
-	if o == nil || o.PoolId.Get() == nil {
+	if o == nil || isNil(o.PoolId.Get()) {
 		var ret string
 		return ret
 	}
@@ -837,7 +837,7 @@ func (o *SwapV2DTO) GetPoolId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetPoolIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.PoolId.Get(), o.PoolId.IsSet()
 }
@@ -867,7 +867,7 @@ func (o *SwapV2DTO) UnsetPoolId() {
 
 // GetTransactionId returns the TransactionId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SwapV2DTO) GetTransactionId() string {
-	if o == nil || o.TransactionId.Get() == nil {
+	if o == nil || isNil(o.TransactionId.Get()) {
 		var ret string
 		return ret
 	}
@@ -879,7 +879,7 @@ func (o *SwapV2DTO) GetTransactionId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SwapV2DTO) GetTransactionIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TransactionId.Get(), o.TransactionId.IsSet()
 }
@@ -909,16 +909,16 @@ func (o *SwapV2DTO) UnsetTransactionId() {
 
 func (o SwapV2DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
@@ -927,7 +927,7 @@ func (o SwapV2DTO) MarshalJSON() ([]byte, error) {
 	if o.Transaction.IsSet() {
 		toSerialize["transaction"] = o.Transaction.Get()
 	}
-	if o.Timestamp != nil {
+	if !isNil(o.Timestamp) {
 		toSerialize["timestamp"] = o.Timestamp
 	}
 	if o.Pair.IsSet() {
@@ -954,19 +954,19 @@ func (o SwapV2DTO) MarshalJSON() ([]byte, error) {
 	if o.To.IsSet() {
 		toSerialize["to"] = o.To.Get()
 	}
-	if o.LogIndex != nil {
+	if !isNil(o.LogIndex) {
 		toSerialize["log_index"] = o.LogIndex
 	}
 	if o.AmountUsd.IsSet() {
 		toSerialize["amount_usd"] = o.AmountUsd.Get()
 	}
-	if o.EvaluatedPrice != nil {
+	if !isNil(o.EvaluatedPrice) {
 		toSerialize["evaluated_price"] = o.EvaluatedPrice
 	}
-	if o.EvaluatedAmount != nil {
+	if !isNil(o.EvaluatedAmount) {
 		toSerialize["evaluated_amount"] = o.EvaluatedAmount
 	}
-	if o.EvaluatedAggressor != nil {
+	if !isNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
 	if o.PoolId.IsSet() {

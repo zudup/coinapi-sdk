@@ -42,6 +42,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -49,9 +50,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TokenDTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -189,11 +191,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -212,11 +214,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Token address.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token address.")
 
   public String getId() {
     return id;
@@ -235,11 +237,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Factory address.
    * @return factory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Factory address.")
 
   public String getFactory() {
     return factory;
@@ -258,11 +260,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Token symbol.
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token symbol.")
 
   public String getSymbol() {
     return symbol;
@@ -281,11 +283,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Token name.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token name.")
 
   public String getName() {
     return name;
@@ -304,11 +306,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Token decimals.
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token decimals.")
 
   public String getDecimals() {
     return decimals;
@@ -327,11 +329,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Total supply of liquidity token.
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total supply of liquidity token.")
 
   public String getTotalSupply() {
     return totalSupply;
@@ -350,11 +352,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Amount of token traded all time across all pairs.
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
 
   public String getVolume() {
     return volume;
@@ -373,11 +375,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -396,11 +398,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -419,11 +421,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Amount of transactions all time in pairs including token.
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of transactions all time in pairs including token.")
 
   public String getTxCount() {
     return txCount;
@@ -442,11 +444,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Total amount of token provided as liquidity across all pairs.
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
 
   public String getLiquidity() {
     return liquidity;
@@ -465,11 +467,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * ETH per token.
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ETH per token.")
 
   public String getDerivedEth() {
     return derivedEth;
@@ -496,11 +498,11 @@ public class TokenDTO {
   }
 
    /**
-   * 
+   * Array of whitelisted pairs.
    * @return whitelistPairs
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Array of whitelisted pairs.")
 
   public List<String> getWhitelistPairs() {
     return whitelistPairs;
@@ -670,9 +672,7 @@ public class TokenDTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (TokenDTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!TokenDTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in TokenDTO is not found in the empty JSON string", TokenDTO.openapiRequiredFields.toString()));
         }
       }
@@ -720,8 +720,8 @@ public class TokenDTO {
       if ((jsonObj.get("derived_eth") != null && !jsonObj.get("derived_eth").isJsonNull()) && !jsonObj.get("derived_eth").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `derived_eth` to be a primitive type in the JSON string but got `%s`", jsonObj.get("derived_eth").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("whitelist_pairs") != null && !jsonObj.get("whitelist_pairs").isJsonNull()) && !jsonObj.get("whitelist_pairs").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("whitelist_pairs") != null && !jsonObj.get("whitelist_pairs").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `whitelist_pairs` to be an array in the JSON string but got `%s`", jsonObj.get("whitelist_pairs").toString()));
       }
       if ((jsonObj.get("token_symbol") != null && !jsonObj.get("token_symbol").isJsonNull()) && !jsonObj.get("token_symbol").isJsonPrimitive()) {

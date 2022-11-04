@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
-**block_number** | **int** |  | [optional] 
+**block_number** | **int** | Number of block in which entity was recorded. | [optional] 
 **vid** | **int** |  | [optional] 
 **id** | **string** | Token address. | [optional] 
 **symbol** | **string** | Token symbol. | [optional] 

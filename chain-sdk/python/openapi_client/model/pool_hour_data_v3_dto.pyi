@@ -31,6 +31,8 @@ class PoolHourDataV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Hourly stats tracker for pool.
     """
 
 

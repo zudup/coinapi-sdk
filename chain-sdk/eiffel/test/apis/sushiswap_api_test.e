@@ -145,22 +145,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dapps_sushiswap_poi_historical_get
-            -- 
-            --
-            -- 
-        local
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-        do
-            -- TODO: Initialize required params.
-
-            -- api.dapps_sushiswap_poi_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
-            assert ("not_implemented", False)
-        end
-
     test_dapps_sushiswap_pool_day_data_historical_get
             -- 
             --
@@ -209,10 +193,11 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_pools_historical_get
-            -- 
+            -- GetPools
             --
             -- 
         local
+            l_response: LIST [PAIR_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -221,7 +206,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_sushiswap_pools_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            -- l_response := api.dapps_sushiswap_pools_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -239,10 +224,11 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_swaps_historical_get
-            -- 
+            -- GetSwaps
             --
             -- 
         local
+            l_response: LIST [SWAP_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -251,7 +237,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_sushiswap_swaps_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            -- l_response := api.dapps_sushiswap_swaps_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -286,10 +272,11 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_tokens_historical_get
-            -- 
+            -- GetTokens
             --
             -- 
         local
+            l_response: LIST [TOKEN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -298,7 +285,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_sushiswap_tokens_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
+            -- l_response := api.dapps_sushiswap_tokens_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
             assert ("not_implemented", False)
         end
 

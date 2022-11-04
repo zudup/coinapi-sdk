@@ -55,7 +55,7 @@ class PoolDayDataV3DTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -64,10 +64,10 @@ class PoolDayDataV3DTO {
   ///
   int? blockNumber;
 
-  /// 
+  /// Identifier, format: <pool address>-<day id>.
   String? id;
 
-  /// 
+  /// Timestamp rounded to current day by dividing by 86400
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -76,58 +76,58 @@ class PoolDayDataV3DTO {
   ///
   int? date;
 
-  /// 
+  /// Pointer to pool.
   String? pool;
 
-  /// 
+  /// In range liquidity at end of period.
   String? liquidity;
 
-  /// 
+  /// Current price tracker at end of period.
   String? sqrtPrice;
 
-  /// 
+  /// Price of token0 - derived from sqrtPrice.
   String? token0Price;
 
-  /// 
+  /// Price of token1 - derived from sqrtPrice.
   String? token1Price;
 
-  /// 
+  /// Current tick at end of period.
   String? tick;
 
-  /// 
+  /// Tracker for global fee growth.
   String? feeGrowthGlobal0x128;
 
-  /// 
+  /// Tracker for global fee growth.
   String? feeGrowthGlobal1x128;
 
-  /// 
+  /// Total value locked derived in USD at end of period.
   String? tvlUsd;
 
-  /// 
+  /// Volume in token0.
   String? volumeToken0;
 
-  /// 
+  /// Volume in token1.
   String? volumeToken1;
 
-  /// 
+  /// Volume in USD.
   String? volumeUsd;
 
-  /// 
+  /// Fees in USD.
   String? feesUsd;
 
-  /// 
+  /// Number of transactions during period.
   String? txCount;
 
-  /// 
+  /// Opening price of token0.
   String? open;
 
-  /// 
+  /// High price of token0.
   String? high;
 
-  /// 
+  /// Low price of token0.
   String? low;
 
-  /// 
+  /// Close price of token0.
   String? close;
 
   /// 

@@ -1,7 +1,7 @@
 #' Create a new BundleV3DTO
 #'
 #' @description
-#' BundleV3DTO Class
+#' The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
 #'
 #' @docType class
 #' @title BundleV3DTO
@@ -9,9 +9,9 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field id  character [optional]
-#' @field eth_price_usd  character [optional]
+#' @field eth_price_usd Price of ETH in usd. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -32,37 +32,47 @@ BundleV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param id 
-    #' @param eth_price_usd 
+    #' @param eth_price_usd Price of ETH in usd.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `eth_price_usd` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `eth_price_usd` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`eth_price_usd`)) {
-        stopifnot(is.character(`eth_price_usd`), length(`eth_price_usd`) == 1)
+        if (!(is.character(`eth_price_usd`) && length(`eth_price_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `eth_price_usd`. Must be a string:", `eth_price_usd`))
+        }
         self$`eth_price_usd` <- `eth_price_usd`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -260,18 +270,19 @@ BundleV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#BundleV3DTO$unlock()
+# BundleV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#BundleV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# BundleV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#BundleV3DTO$lock()
+# BundleV3DTO$lock()
 

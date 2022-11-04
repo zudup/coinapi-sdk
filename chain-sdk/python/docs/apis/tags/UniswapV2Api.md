@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**dapps_uniswapv2_liquidity_position_historical_get**](#dapps_uniswapv2_liquidity_position_historical_get) | **get** /dapps/uniswapv2/liquidityPosition/historical | 
 [**dapps_uniswapv2_liquidity_position_snapshots_historical_get**](#dapps_uniswapv2_liquidity_position_snapshots_historical_get) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**dapps_uniswapv2_mints_historical_get**](#dapps_uniswapv2_mints_historical_get) | **get** /dapps/uniswapv2/mints/historical | 
-[**dapps_uniswapv2_poi_historical_get**](#dapps_uniswapv2_poi_historical_get) | **get** /dapps/uniswapv2/poi/historical | 
 [**dapps_uniswapv2_pool_day_data_historical_get**](#dapps_uniswapv2_pool_day_data_historical_get) | **get** /dapps/uniswapv2/poolDayData/historical | 
 [**dapps_uniswapv2_pool_hour_data_historical_get**](#dapps_uniswapv2_pool_hour_data_historical_get) | **get** /dapps/uniswapv2/poolHourData/historical | 
 [**dapps_uniswapv2_pools_current_get**](#dapps_uniswapv2_pools_current_get) | **get** /dapps/uniswapv2/pools/current | GetPools
@@ -784,111 +783,6 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 200 | [ApiResponseFor200](#dapps_uniswapv2_mints_historical_get.ApiResponseFor200) | Success
 
 #### dapps_uniswapv2_mints_historical_get.ApiResponseFor200
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
-headers | Unset | headers were not defined |
-
-### Authorization
-
-No authorization required
-
-[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
-
-# **dapps_uniswapv2_poi_historical_get**
-<a name="dapps_uniswapv2_poi_historical_get"></a>
-> dapps_uniswapv2_poi_historical_get()
-
-
-
-### Example
-
-```python
-import openapi_client
-from openapi_client.apis.tags import uniswap_v2_api
-from pprint import pprint
-# Defining the host is optional and defaults to https://onchain.coinapi.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "https://onchain.coinapi.io"
-)
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
-
-    # example passing only optional values
-    query_params = {
-        'startBlock': 1,
-        'endBlock': 1,
-        'startDate': "1970-01-01T00:00:00.00Z",
-        'endDate': "1970-01-01T00:00:00.00Z",
-    }
-    try:
-        api_response = api_instance.dapps_uniswapv2_poi_historical_get(
-            query_params=query_params,
-        )
-    except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->dapps_uniswapv2_poi_historical_get: %s\n" % e)
-```
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-startBlock | StartBlockSchema | | optional
-endBlock | EndBlockSchema | | optional
-startDate | StartDateSchema | | optional
-endDate | EndDateSchema | | optional
-
-
-# StartBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# EndBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# StartDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# EndDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-### Return Types, Responses
-
-Code | Class | Description
-------------- | ------------- | -------------
-n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_uniswapv2_poi_historical_get.ApiResponseFor200) | Success
-
-#### dapps_uniswapv2_poi_historical_get.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

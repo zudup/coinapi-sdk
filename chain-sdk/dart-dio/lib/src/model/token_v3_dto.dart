@@ -15,7 +15,7 @@ part 'token_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [id] - Token address.
 /// * [symbol] - Token symbol.
@@ -42,7 +42,7 @@ abstract class TokenV3DTO implements Built<TokenV3DTO, TokenV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

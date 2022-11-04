@@ -63,14 +63,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV2Api' {
         }
     }
 
-    Context 'Invoke-DappsUniswapv2PoiHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv2PoiHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv2PoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-DappsUniswapv2PoolDayDataHistoricalGet' {
         It 'Test Invoke-DappsUniswapv2PoolDayDataHistoricalGet' {
             #$TestResult = Invoke-DappsUniswapv2PoolDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

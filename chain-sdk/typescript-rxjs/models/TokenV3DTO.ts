@@ -32,7 +32,7 @@ export interface TokenV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenV3DTO
      */

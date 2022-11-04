@@ -54,29 +54,6 @@
         res))))
 
 
-(defn-spec dapps-cow-poi-historical-get-with-http-info any?
-  ""
-  ([] (dapps-cow-poi-historical-get-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/cow/poi/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       []
-              :auth-names    []})))
-
-(defn-spec dapps-cow-poi-historical-get any?
-  ""
-  ([] (dapps-cow-poi-historical-get nil))
-  ([optional-params any?]
-   (let [res (:data (dapps-cow-poi-historical-get-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
-        res))))
-
-
 (defn-spec dapps-cow-settlement-historical-get-with-http-info any?
   ""
   ([] (dapps-cow-settlement-historical-get-with-http-info nil))

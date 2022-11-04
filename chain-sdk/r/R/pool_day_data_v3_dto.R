@@ -1,7 +1,7 @@
 #' Create a new PoolDayDataV3DTO
 #'
 #' @description
-#' PoolDayDataV3DTO Class
+#' Data accumulated and condensed into day stats for each pool.
 #'
 #' @docType class
 #' @title PoolDayDataV3DTO
@@ -9,27 +9,27 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
-#' @field id  character [optional]
-#' @field date  integer [optional]
-#' @field pool  character [optional]
-#' @field liquidity  character [optional]
-#' @field sqrt_price  character [optional]
-#' @field token_0_price  character [optional]
-#' @field token_1_price  character [optional]
-#' @field tick  character [optional]
-#' @field fee_growth_global_0x128  character [optional]
-#' @field fee_growth_global_1x128  character [optional]
-#' @field tvl_usd  character [optional]
-#' @field volume_token_0  character [optional]
-#' @field volume_token_1  character [optional]
-#' @field volume_usd  character [optional]
-#' @field fees_usd  character [optional]
-#' @field tx_count  character [optional]
-#' @field open  character [optional]
-#' @field high  character [optional]
-#' @field low  character [optional]
-#' @field close  character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
+#' @field id Identifier, format: <pool address>-<day id>. character [optional]
+#' @field date Timestamp rounded to current day by dividing by 86400 integer [optional]
+#' @field pool Pointer to pool. character [optional]
+#' @field liquidity In range liquidity at end of period. character [optional]
+#' @field sqrt_price Current price tracker at end of period. character [optional]
+#' @field token_0_price Price of token0 - derived from sqrtPrice. character [optional]
+#' @field token_1_price Price of token1 - derived from sqrtPrice. character [optional]
+#' @field tick Current tick at end of period. character [optional]
+#' @field fee_growth_global_0x128 Tracker for global fee growth. character [optional]
+#' @field fee_growth_global_1x128 Tracker for global fee growth. character [optional]
+#' @field tvl_usd Total value locked derived in USD at end of period. character [optional]
+#' @field volume_token_0 Volume in token0. character [optional]
+#' @field volume_token_1 Volume in token1. character [optional]
+#' @field volume_usd Volume in USD. character [optional]
+#' @field fees_usd Fees in USD. character [optional]
+#' @field tx_count Number of transactions during period. character [optional]
+#' @field open Opening price of token0. character [optional]
+#' @field high High price of token0. character [optional]
+#' @field low Low price of token0. character [optional]
+#' @field close Close price of token0. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -68,127 +68,173 @@ PoolDayDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
-    #' @param id 
-    #' @param date 
-    #' @param pool 
-    #' @param liquidity 
-    #' @param sqrt_price 
-    #' @param token_0_price 
-    #' @param token_1_price 
-    #' @param tick 
-    #' @param fee_growth_global_0x128 
-    #' @param fee_growth_global_1x128 
-    #' @param tvl_usd 
-    #' @param volume_token_0 
-    #' @param volume_token_1 
-    #' @param volume_usd 
-    #' @param fees_usd 
-    #' @param tx_count 
-    #' @param open 
-    #' @param high 
-    #' @param low 
-    #' @param close 
+    #' @param block_number Number of block in which entity was recorded.
+    #' @param id Identifier, format: <pool address>-<day id>.
+    #' @param date Timestamp rounded to current day by dividing by 86400
+    #' @param pool Pointer to pool.
+    #' @param liquidity In range liquidity at end of period.
+    #' @param sqrt_price Current price tracker at end of period.
+    #' @param token_0_price Price of token0 - derived from sqrtPrice.
+    #' @param token_1_price Price of token1 - derived from sqrtPrice.
+    #' @param tick Current tick at end of period.
+    #' @param fee_growth_global_0x128 Tracker for global fee growth.
+    #' @param fee_growth_global_1x128 Tracker for global fee growth.
+    #' @param tvl_usd Total value locked derived in USD at end of period.
+    #' @param volume_token_0 Volume in token0.
+    #' @param volume_token_1 Volume in token1.
+    #' @param volume_usd Volume in USD.
+    #' @param fees_usd Fees in USD.
+    #' @param tx_count Number of transactions during period.
+    #' @param open Opening price of token0.
+    #' @param high High price of token0.
+    #' @param low Low price of token0.
+    #' @param close Close price of token0.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `date` = NULL, `pool` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `tvl_usd` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `open` = NULL, `high` = NULL, `low` = NULL, `close` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `date` = NULL, `pool` = NULL, `liquidity` = NULL, `sqrt_price` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `tick` = NULL, `fee_growth_global_0x128` = NULL, `fee_growth_global_1x128` = NULL, `tvl_usd` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `open` = NULL, `high` = NULL, `low` = NULL, `close` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`date`)) {
-        stopifnot(is.numeric(`date`), length(`date`) == 1)
+        if (!(is.numeric(`date`) && length(`date`) == 1)) {
+          stop(paste("Error! Invalid data for `date`. Must be an integer:", `date`))
+        }
         self$`date` <- `date`
       }
       if (!is.null(`pool`)) {
-        stopifnot(is.character(`pool`), length(`pool`) == 1)
+        if (!(is.character(`pool`) && length(`pool`) == 1)) {
+          stop(paste("Error! Invalid data for `pool`. Must be a string:", `pool`))
+        }
         self$`pool` <- `pool`
       }
       if (!is.null(`liquidity`)) {
-        stopifnot(is.character(`liquidity`), length(`liquidity`) == 1)
+        if (!(is.character(`liquidity`) && length(`liquidity`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity`. Must be a string:", `liquidity`))
+        }
         self$`liquidity` <- `liquidity`
       }
       if (!is.null(`sqrt_price`)) {
-        stopifnot(is.character(`sqrt_price`), length(`sqrt_price`) == 1)
+        if (!(is.character(`sqrt_price`) && length(`sqrt_price`) == 1)) {
+          stop(paste("Error! Invalid data for `sqrt_price`. Must be a string:", `sqrt_price`))
+        }
         self$`sqrt_price` <- `sqrt_price`
       }
       if (!is.null(`token_0_price`)) {
-        stopifnot(is.character(`token_0_price`), length(`token_0_price`) == 1)
+        if (!(is.character(`token_0_price`) && length(`token_0_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0_price`. Must be a string:", `token_0_price`))
+        }
         self$`token_0_price` <- `token_0_price`
       }
       if (!is.null(`token_1_price`)) {
-        stopifnot(is.character(`token_1_price`), length(`token_1_price`) == 1)
+        if (!(is.character(`token_1_price`) && length(`token_1_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1_price`. Must be a string:", `token_1_price`))
+        }
         self$`token_1_price` <- `token_1_price`
       }
       if (!is.null(`tick`)) {
-        stopifnot(is.character(`tick`), length(`tick`) == 1)
+        if (!(is.character(`tick`) && length(`tick`) == 1)) {
+          stop(paste("Error! Invalid data for `tick`. Must be a string:", `tick`))
+        }
         self$`tick` <- `tick`
       }
       if (!is.null(`fee_growth_global_0x128`)) {
-        stopifnot(is.character(`fee_growth_global_0x128`), length(`fee_growth_global_0x128`) == 1)
+        if (!(is.character(`fee_growth_global_0x128`) && length(`fee_growth_global_0x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_global_0x128`. Must be a string:", `fee_growth_global_0x128`))
+        }
         self$`fee_growth_global_0x128` <- `fee_growth_global_0x128`
       }
       if (!is.null(`fee_growth_global_1x128`)) {
-        stopifnot(is.character(`fee_growth_global_1x128`), length(`fee_growth_global_1x128`) == 1)
+        if (!(is.character(`fee_growth_global_1x128`) && length(`fee_growth_global_1x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_global_1x128`. Must be a string:", `fee_growth_global_1x128`))
+        }
         self$`fee_growth_global_1x128` <- `fee_growth_global_1x128`
       }
       if (!is.null(`tvl_usd`)) {
-        stopifnot(is.character(`tvl_usd`), length(`tvl_usd`) == 1)
+        if (!(is.character(`tvl_usd`) && length(`tvl_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `tvl_usd`. Must be a string:", `tvl_usd`))
+        }
         self$`tvl_usd` <- `tvl_usd`
       }
       if (!is.null(`volume_token_0`)) {
-        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        if (!(is.character(`volume_token_0`) && length(`volume_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_0`. Must be a string:", `volume_token_0`))
+        }
         self$`volume_token_0` <- `volume_token_0`
       }
       if (!is.null(`volume_token_1`)) {
-        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        if (!(is.character(`volume_token_1`) && length(`volume_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_1`. Must be a string:", `volume_token_1`))
+        }
         self$`volume_token_1` <- `volume_token_1`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`fees_usd`)) {
-        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        if (!(is.character(`fees_usd`) && length(`fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `fees_usd`. Must be a string:", `fees_usd`))
+        }
         self$`fees_usd` <- `fees_usd`
       }
       if (!is.null(`tx_count`)) {
-        stopifnot(is.character(`tx_count`), length(`tx_count`) == 1)
+        if (!(is.character(`tx_count`) && length(`tx_count`) == 1)) {
+          stop(paste("Error! Invalid data for `tx_count`. Must be a string:", `tx_count`))
+        }
         self$`tx_count` <- `tx_count`
       }
       if (!is.null(`open`)) {
-        stopifnot(is.character(`open`), length(`open`) == 1)
+        if (!(is.character(`open`) && length(`open`) == 1)) {
+          stop(paste("Error! Invalid data for `open`. Must be a string:", `open`))
+        }
         self$`open` <- `open`
       }
       if (!is.null(`high`)) {
-        stopifnot(is.character(`high`), length(`high`) == 1)
+        if (!(is.character(`high`) && length(`high`) == 1)) {
+          stop(paste("Error! Invalid data for `high`. Must be a string:", `high`))
+        }
         self$`high` <- `high`
       }
       if (!is.null(`low`)) {
-        stopifnot(is.character(`low`), length(`low`) == 1)
+        if (!(is.character(`low`) && length(`low`) == 1)) {
+          stop(paste("Error! Invalid data for `low`. Must be a string:", `low`))
+        }
         self$`low` <- `low`
       }
       if (!is.null(`close`)) {
-        stopifnot(is.character(`close`), length(`close`) == 1)
+        if (!(is.character(`close`) && length(`close`) == 1)) {
+          stop(paste("Error! Invalid data for `close`. Must be a string:", `close`))
+        }
         self$`close` <- `close`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -674,18 +720,19 @@ PoolDayDataV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#PoolDayDataV3DTO$unlock()
+# PoolDayDataV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#PoolDayDataV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# PoolDayDataV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#PoolDayDataV3DTO$lock()
+# PoolDayDataV3DTO$lock()
 

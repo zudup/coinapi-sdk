@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
 #' @field id Timestamp rounded to current day by dividing by 86400. character [optional]
 #' @field date Timestamp rounded to current day by dividing by 86400. integer [optional]
@@ -44,7 +44,7 @@ UniswapDayDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
     #' @param id Timestamp rounded to current day by dividing by 86400.
     #' @param date Timestamp rounded to current day by dividing by 86400.
@@ -56,47 +56,65 @@ UniswapDayDataV3DTO <- R6::R6Class(
     #' @param tvl_usd Tvl in terms of USD.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `date` = NULL, `volume_eth` = NULL, `volume_usd` = NULL, `volume_usd_untracked` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `tvl_usd` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `date` = NULL, `volume_eth` = NULL, `volume_usd` = NULL, `volume_usd_untracked` = NULL, `fees_usd` = NULL, `tx_count` = NULL, `tvl_usd` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`date`)) {
-        stopifnot(is.numeric(`date`), length(`date`) == 1)
+        if (!(is.numeric(`date`) && length(`date`) == 1)) {
+          stop(paste("Error! Invalid data for `date`. Must be an integer:", `date`))
+        }
         self$`date` <- `date`
       }
       if (!is.null(`volume_eth`)) {
-        stopifnot(is.character(`volume_eth`), length(`volume_eth`) == 1)
+        if (!(is.character(`volume_eth`) && length(`volume_eth`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_eth`. Must be a string:", `volume_eth`))
+        }
         self$`volume_eth` <- `volume_eth`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`volume_usd_untracked`)) {
-        stopifnot(is.character(`volume_usd_untracked`), length(`volume_usd_untracked`) == 1)
+        if (!(is.character(`volume_usd_untracked`) && length(`volume_usd_untracked`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd_untracked`. Must be a string:", `volume_usd_untracked`))
+        }
         self$`volume_usd_untracked` <- `volume_usd_untracked`
       }
       if (!is.null(`fees_usd`)) {
-        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        if (!(is.character(`fees_usd`) && length(`fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `fees_usd`. Must be a string:", `fees_usd`))
+        }
         self$`fees_usd` <- `fees_usd`
       }
       if (!is.null(`tx_count`)) {
@@ -104,7 +122,9 @@ UniswapDayDataV3DTO <- R6::R6Class(
         self$`tx_count` <- `tx_count`
       }
       if (!is.null(`tvl_usd`)) {
-        stopifnot(is.character(`tvl_usd`), length(`tvl_usd`) == 1)
+        if (!(is.character(`tvl_usd`) && length(`tvl_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `tvl_usd`. Must be a string:", `tvl_usd`))
+        }
         self$`tvl_usd` <- `tvl_usd`
       }
     },
@@ -400,18 +420,19 @@ UniswapDayDataV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#UniswapDayDataV3DTO$unlock()
+# UniswapDayDataV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#UniswapDayDataV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# UniswapDayDataV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#UniswapDayDataV3DTO$lock()
+# UniswapDayDataV3DTO$lock()
 

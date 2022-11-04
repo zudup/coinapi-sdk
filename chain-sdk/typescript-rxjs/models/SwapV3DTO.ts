@@ -17,6 +17,7 @@ import type {
 } from './';
 
 /**
+ * Swap are created for each token swap within a pair.
  * @export
  * @interface SwapV3DTO
  */
@@ -32,7 +33,7 @@ export interface SwapV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof SwapV3DTO
      */
@@ -44,73 +45,73 @@ export interface SwapV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      * @type {string}
      * @memberof SwapV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Pointer to transaction.
      * @type {string}
      * @memberof SwapV3DTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Timestamp of transaction.
      * @type {string}
      * @memberof SwapV3DTO
      */
     timestamp?: string;
     /**
-     * 
+     * Pool swap occured within.
      * @type {string}
      * @memberof SwapV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_1?: string | null;
     /**
-     * 
+     * Sender of the swap.
      * @type {string}
      * @memberof SwapV3DTO
      */
     sender?: string | null;
     /**
-     * 
+     * Recipient of the swap.
      * @type {string}
      * @memberof SwapV3DTO
      */
     recipient?: string | null;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      * @type {string}
      * @memberof SwapV3DTO
      */
     origin?: string | null;
     /**
-     * 
+     * Delta of token0 swapped.
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_0?: string | null;
     /**
-     * 
+     * Delta of token1 swapped.
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_1?: string | null;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapV3DTO
      */

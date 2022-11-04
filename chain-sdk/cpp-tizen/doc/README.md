@@ -44,8 +44,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *dappsCowOrdersHistoricalGetSync* | *GET* /dapps/cow/orders/historical | .
 *dappsCowOrdersHistoricalGetASync* | *GET* /dapps/cow/orders/historical | .
-*dappsCowPoiHistoricalGetSync* | *GET* /dapps/cow/poi/historical | .
-*dappsCowPoiHistoricalGetASync* | *GET* /dapps/cow/poi/historical | .
 *dappsCowSettlementHistoricalGetSync* | *GET* /dapps/cow/settlement/historical | .
 *dappsCowSettlementHistoricalGetASync* | *GET* /dapps/cow/settlement/historical | .
 *dappsCowTokensHistoricalGetSync* | *GET* /dapps/cow/tokens/historical | .
@@ -99,8 +97,6 @@ Method | HTTP request | Description
 *dappsCurveHourlyVolumeHistoricalGetASync* | *GET* /dapps/curve/hourlyVolume/historical | .
 *dappsCurveLpTokenHistoricalGetSync* | *GET* /dapps/curve/lpToken/historical | .
 *dappsCurveLpTokenHistoricalGetASync* | *GET* /dapps/curve/lpToken/historical | .
-*dappsCurvePoiHistoricalGetSync* | *GET* /dapps/curve/poi/historical | .
-*dappsCurvePoiHistoricalGetASync* | *GET* /dapps/curve/poi/historical | .
 *dappsCurvePoolsHistoricalGetSync* | *GET* /dapps/curve/pools/historical | .
 *dappsCurvePoolsHistoricalGetASync* | *GET* /dapps/curve/pools/historical | .
 *dappsCurveProposalsHistoricalGetSync* | *GET* /dapps/curve/proposals/historical | .
@@ -134,8 +130,6 @@ Method | HTTP request | Description
 *dappsDexBatchHistoricalGetASync* | *GET* /dapps/dex/batch/historical | .
 *dappsDexOrdersHistoricalGetSync* | *GET* /dapps/dex/orders/historical | .
 *dappsDexOrdersHistoricalGetASync* | *GET* /dapps/dex/orders/historical | .
-*dappsDexPoiHistoricalGetSync* | *GET* /dapps/dex/poi/historical | .
-*dappsDexPoiHistoricalGetASync* | *GET* /dapps/dex/poi/historical | .
 *dappsDexPricesHistoricalGetSync* | *GET* /dapps/dex/prices/historical | .
 *dappsDexPricesHistoricalGetASync* | *GET* /dapps/dex/prices/historical | .
 *dappsDexSolutionHistoricalGetSync* | *GET* /dapps/dex/solution/historical | .
@@ -173,26 +167,24 @@ Method | HTTP request | Description
 *dappsSushiswapLiquidityPositionSnapshotsHistoricalGetASync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | .
 *dappsSushiswapMintsHistoricalGetSync* | *GET* /dapps/sushiswap/mints/historical | .
 *dappsSushiswapMintsHistoricalGetASync* | *GET* /dapps/sushiswap/mints/historical | .
-*dappsSushiswapPoiHistoricalGetSync* | *GET* /dapps/sushiswap/poi/historical | .
-*dappsSushiswapPoiHistoricalGetASync* | *GET* /dapps/sushiswap/poi/historical | .
 *dappsSushiswapPoolDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/poolDayData/historical | .
 *dappsSushiswapPoolDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolDayData/historical | .
 *dappsSushiswapPoolHourDataHistoricalGetSync* | *GET* /dapps/sushiswap/poolHourData/historical | .
 *dappsSushiswapPoolHourDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolHourData/historical | .
 *dappsSushiswapPoolsCurrentGetSync* | *GET* /dapps/sushiswap/pools/current | GetPools.
 *dappsSushiswapPoolsCurrentGetASync* | *GET* /dapps/sushiswap/pools/current | GetPools.
-*dappsSushiswapPoolsHistoricalGetSync* | *GET* /dapps/sushiswap/pools/historical | .
-*dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | .
+*dappsSushiswapPoolsHistoricalGetSync* | *GET* /dapps/sushiswap/pools/historical | GetPools.
+*dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | GetPools.
 *dappsSushiswapSwapsCurrentGetSync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
 *dappsSushiswapSwapsCurrentGetASync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
-*dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | .
-*dappsSushiswapSwapsHistoricalGetASync* | *GET* /dapps/sushiswap/swaps/historical | .
+*dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps.
+*dappsSushiswapSwapsHistoricalGetASync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps.
 *dappsSushiswapTokenDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokensCurrentGetSync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
 *dappsSushiswapTokensCurrentGetASync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
-*dappsSushiswapTokensHistoricalGetSync* | *GET* /dapps/sushiswap/tokens/historical | .
-*dappsSushiswapTokensHistoricalGetASync* | *GET* /dapps/sushiswap/tokens/historical | .
+*dappsSushiswapTokensHistoricalGetSync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens.
+*dappsSushiswapTokensHistoricalGetASync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens.
 *dappsSushiswapTransactionsHistoricalGetSync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapTransactionsHistoricalGetASync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapUsersHistoricalGetSync* | *GET* /dapps/sushiswap/users/historical | .
@@ -216,8 +208,6 @@ Method | HTTP request | Description
 *dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetASync* | *GET* /dapps/uniswapv2/liquidityPositionSnapshots/historical | .
 *dappsUniswapv2MintsHistoricalGetSync* | *GET* /dapps/uniswapv2/mints/historical | .
 *dappsUniswapv2MintsHistoricalGetASync* | *GET* /dapps/uniswapv2/mints/historical | .
-*dappsUniswapv2PoiHistoricalGetSync* | *GET* /dapps/uniswapv2/poi/historical | .
-*dappsUniswapv2PoiHistoricalGetASync* | *GET* /dapps/uniswapv2/poi/historical | .
 *dappsUniswapv2PoolDayDataHistoricalGetSync* | *GET* /dapps/uniswapv2/poolDayData/historical | .
 *dappsUniswapv2PoolDayDataHistoricalGetASync* | *GET* /dapps/uniswapv2/poolDayData/historical | .
 *dappsUniswapv2PoolHourDataHistoricalGetSync* | *GET* /dapps/uniswapv2/poolHourData/historical | .
@@ -263,8 +253,6 @@ Method | HTTP request | Description
 *dappsUniswapv3MintsCurrentGetASync* | *GET* /dapps/uniswapv3/mints/current | GetMints.
 *dappsUniswapv3MintsHistoricalGetSync* | *GET* /dapps/uniswapv3/mints/historical | .
 *dappsUniswapv3MintsHistoricalGetASync* | *GET* /dapps/uniswapv3/mints/historical | .
-*dappsUniswapv3PoiHistoricalGetSync* | *GET* /dapps/uniswapv3/poi/historical | .
-*dappsUniswapv3PoiHistoricalGetASync* | *GET* /dapps/uniswapv3/poi/historical | .
 *dappsUniswapv3PoolDayDataHistoricalGetSync* | *GET* /dapps/uniswapv3/poolDayData/historical | .
 *dappsUniswapv3PoolDayDataHistoricalGetASync* | *GET* /dapps/uniswapv3/poolDayData/historical | .
 *dappsUniswapv3PoolHourDataHistoricalGetSync* | *GET* /dapps/uniswapv3/poolHourData/historical | .
@@ -319,24 +307,24 @@ Method | HTTP request | Description
 Class | Description
 ------------- | -------------
  *BigInteger* | 
- *BundleV3DTO* | 
- *BurnV3DTO* | 
+ *BundleV3DTO* | The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+ *BurnV3DTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  *ETradeAggressiveSide* | 
- *FactoryV3DTO* | 
- *MintV3DTO* | 
- *PairDTO* | 
+ *FactoryV3DTO* | The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ *MintV3DTO* | Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
+ *PairDTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  *PairV2DTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- *PoolDayDataV3DTO* | 
- *PoolHourDataV3DTO* | 
- *PoolV3DTO* | 
+ *PoolDayDataV3DTO* | Data accumulated and condensed into day stats for each pool.
+ *PoolHourDataV3DTO* | Hourly stats tracker for pool.
+ *PoolV3DTO* | Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  *PositionSnapshotV3DTO* | 
- *PositionV3DTO* | 
- *SwapDTO* | 
+ *PositionV3DTO* | Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+ *SwapDTO* | Swap are created for each token swap within a pair.
  *SwapV2DTO* | Swap are created for each token swap within a pair.
- *SwapV3DTO* | 
- *TickDayDataV3DTO* | 
- *TickV3DTO* | 
- *TokenDTO* | 
+ *SwapV3DTO* | Swap are created for each token swap within a pair.
+ *TickDayDataV3DTO* | Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+ *TickV3DTO* | Ticks are the boundaries between discrete areas in price space.
+ *TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *TokenHourDataV3DTO* | Token data aggregated across all pairs that include token.
  *TokenV2DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
  *TokenV3DTO* | Stores aggregated information for a specific token across all pairs that token is included in.

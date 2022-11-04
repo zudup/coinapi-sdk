@@ -12,6 +12,7 @@
  */
 
 /**
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  * @export
  * @interface BurnV3DTO
  */
@@ -27,97 +28,97 @@ export interface BurnV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof BurnV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
      * @memberof BurnV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Transaction burn was included in.
      * @type {string}
      * @memberof BurnV3DTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Pool position is within.
      * @type {string}
      * @memberof BurnV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @type {string}
      * @memberof BurnV3DTO
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @type {string}
      * @memberof BurnV3DTO
      */
     token_1?: string | null;
     /**
-     * 
+     * Timestamp.
      * @type {string}
      * @memberof BurnV3DTO
      */
     timestamp?: string | null;
     /**
-     * 
+     * Owner of position where liquidity was burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     owner?: string | null;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
      * @memberof BurnV3DTO
      */
     origin?: string | null;
     /**
-     * 
+     * Amount of liquidity burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount?: string | null;
     /**
-     * 
+     * Amount of token 0 burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_0?: string | null;
     /**
-     * 
+     * Amount of token 1 burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_1?: string | null;
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_usd?: string | null;
     /**
-     * 
+     * Lower tick of position.
      * @type {string}
      * @memberof BurnV3DTO
      */
     tick_lower?: string | null;
     /**
-     * 
+     * Upper tick of position.
      * @type {string}
      * @memberof BurnV3DTO
      */
     tick_upper?: string | null;
     /**
-     * 
+     * Position within the transactions.
      * @type {string}
      * @memberof BurnV3DTO
      */

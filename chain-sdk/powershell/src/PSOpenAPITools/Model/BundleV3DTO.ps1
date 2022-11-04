@@ -13,18 +13,18 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
 
 .PARAMETER EthPriceUsd
-
+Price of ETH in usd.
 .PARAMETER Vid
 
 .OUTPUTS

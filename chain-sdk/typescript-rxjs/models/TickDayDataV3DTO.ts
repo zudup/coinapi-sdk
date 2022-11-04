@@ -12,6 +12,7 @@
  */
 
 /**
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  * @export
  * @interface TickDayDataV3DTO
  */
@@ -27,79 +28,79 @@ export interface TickDayDataV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TickDayDataV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Identifier, format: <pool address>-<tick index>-<timestamp>.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
      * @memberof TickDayDataV3DTO
      */
     date?: number;
     /**
-     * 
+     * Pointer to pool.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * Pointer to tick.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     tick?: string | null;
     /**
-     * 
+     * Total liquidity pool has as tick lower or upper at end of period.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     liquidity_gross?: string | null;
     /**
-     * 
+     * How much liquidity changes when tick crossed at end of period.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     liquidity_net?: string | null;
     /**
-     * 
+     * Hourly volume of token0 with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Hourly volume of token1 with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Hourly volume in derived USD with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     fees_usd?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     fee_growth_outside_0x128?: string | null;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */

@@ -81,13 +81,6 @@ export interface DappsSushiswapMintsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsSushiswapPoiHistoricalGetRequest {
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-}
-
 export interface DappsSushiswapPoolDayDataHistoricalGetRequest {
     startBlock?: number;
     endBlock?: number;
@@ -321,26 +314,6 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      */
-    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest): Observable<void>
-    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsSushiswapPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsSushiswapPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-
-        return this.request<void>({
-            url: '/dapps/sushiswap/poi/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
     dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest): Observable<void>
     dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
     dappsSushiswapPoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
@@ -395,10 +368,11 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * GetPools
      */
-    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest): Observable<void>
-    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest): Observable<Array<PairDTO>>
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PairDTO>>>
+    dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<Array<PairDTO> | AjaxResponse<Array<PairDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -408,7 +382,7 @@ export class SushiswapApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<PairDTO>>({
             url: '/dapps/sushiswap/pools/historical',
             method: 'GET',
             query,
@@ -428,10 +402,11 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * GetSwaps
      */
-    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest): Observable<void>
-    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest): Observable<Array<SwapDTO>>
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SwapDTO>>>
+    dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<Array<SwapDTO> | AjaxResponse<Array<SwapDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -441,7 +416,7 @@ export class SushiswapApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<SwapDTO>>({
             url: '/dapps/sushiswap/swaps/historical',
             method: 'GET',
             query,
@@ -482,10 +457,11 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * GetTokens
      */
-    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest): Observable<void>
-    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest): Observable<Array<TokenDTO>>
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenDTO>>>
+    dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<Array<TokenDTO> | AjaxResponse<Array<TokenDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -495,7 +471,7 @@ export class SushiswapApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (tokenId != null) { query['tokenId'] = tokenId; }
 
-        return this.request<void>({
+        return this.request<Array<TokenDTO>>({
             url: '/dapps/sushiswap/tokens/historical',
             method: 'GET',
             query,

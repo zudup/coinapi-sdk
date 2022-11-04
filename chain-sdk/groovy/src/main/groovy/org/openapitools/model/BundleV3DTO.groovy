@@ -11,11 +11,11 @@ class BundleV3DTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
     String id
-    /*  */
+    /* Price of ETH in usd. */
     String ethPriceUsd
     /*  */
     Long vid

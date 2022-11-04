@@ -138,16 +138,6 @@
         done();
       });
     });
-    describe('dappsUniswapv3PoiHistoricalGet', function() {
-      it('should call dappsUniswapv3PoiHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsUniswapv3PoiHistoricalGet
-        //instance.dappsUniswapv3PoiHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsUniswapv3PoolDayDataHistoricalGet', function() {
       it('should call dappsUniswapv3PoolDayDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsUniswapv3PoolDayDataHistoricalGet

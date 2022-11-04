@@ -13,56 +13,56 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Pair contract address.
 .PARAMETER Factory
-
+Factory contract address.
 .PARAMETER Name
-
+Friendly name, format: <token0 name>-<token1 name>
 .PARAMETER Token0
-
+Reference to token0 as stored in pair contract.
 .PARAMETER Token1
-
+Reference to token0 as stored in pair contract.
 .PARAMETER Reserve0
-
+Reserve of token0.
 .PARAMETER Reserve1
-
+Reserve of token1.
 .PARAMETER TotalSupply
-
+Total supply of liquidity token distributed to LPs.
 .PARAMETER ReserveEth
-
+Total liquidity in pair stored as an amount of ETH.
 .PARAMETER ReserveUsd
-
+Total liquidity amount in pair stored as an amount of USD.
 .PARAMETER TrackedReserveEth
-
+Total liquidity with only tracked amount.
 .PARAMETER Token0Price
-
+Token0 per token1.
 .PARAMETER Token1Price
-
+Token1 per token0.
 .PARAMETER VolumeToken0
-
+Amount of token0 swapped on this pair.
 .PARAMETER VolumeToken1
-
+Amount of token1 swapped on this pair.
 .PARAMETER VolumeUsd
-
+Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
 .PARAMETER UntrackedVolumeUsd
-
+Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 .PARAMETER TxCount
-
+All time amount of transactions on this pair.
 .PARAMETER LiquidityProviderCount
-
+Total number of LPs.
 .PARAMETER Timestamp
-
+Timestamp.
 .PARAMETER Block
-
+Block number in which pair information was created in.
 .PARAMETER Vid
 
 .PARAMETER EvaluatedAsk

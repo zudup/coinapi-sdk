@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **Int64** |  | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **Int64** |  | [optional] 
 **Id** | **String** | Token address. | [optional] 
 **Symbol** | **String** | Token symbol. | [optional] 

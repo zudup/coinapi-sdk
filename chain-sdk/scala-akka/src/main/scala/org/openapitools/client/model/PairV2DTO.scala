@@ -17,7 +17,7 @@ import org.openapitools.client.core.ApiModel
 case class PairV2DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
@@ -37,7 +37,7 @@ case class PairV2DTO (
   reserveEth: Option[String] = None,
   /* Total liquidity amount in pair stored as an amount of USD. */
   reserveUsd: Option[String] = None,
-  /* Total liquidity with only tracked amount (see tracked amounts). */
+  /* Total liquidity with only tracked amount. */
   trackedReserveEth: Option[String] = None,
   /* Token0 per token1. */
   token0Price: Option[String] = None,
@@ -54,7 +54,7 @@ case class PairV2DTO (
   txCount: Option[BigInteger] = None,
   /* Timestamp contract was created. */
   createdAtTimestamp: Option[OffsetDateTime] = None,
-  /*  */
+  /* Total number of LPs. */
   liquidityProviderCount: Option[String] = None,
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel

@@ -13,11 +13,14 @@ import { ETradeAggressiveSide } from './eTradeAggressiveSide';
 import { BigInteger } from './bigInteger';
 
 
+/**
+ * Swap are created for each token swap within a pair.
+ */
 export interface SwapV3DTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
@@ -25,51 +28,51 @@ export interface SwapV3DTO {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      */
     id?: string | null;
     /**
-     * 
+     * Pointer to transaction.
      */
     transaction?: string | null;
     /**
-     * 
+     * Timestamp of transaction.
      */
     timestamp?: string;
     /**
-     * 
+     * Pool swap occured within.
      */
     pool?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      */
     token_1?: string | null;
     /**
-     * 
+     * Sender of the swap.
      */
     sender?: string | null;
     /**
-     * 
+     * Recipient of the swap.
      */
     recipient?: string | null;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      */
     origin?: string | null;
     /**
-     * 
+     * Delta of token0 swapped.
      */
     amount_0?: string | null;
     /**
-     * 
+     * Delta of token1 swapped.
      */
     amount_1?: string | null;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      */
     amount_usd?: string | null;
     sqrt_price_x96?: BigInteger;

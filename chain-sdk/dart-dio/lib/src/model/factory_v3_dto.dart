@@ -8,25 +8,25 @@ import 'package:built_value/serializer.dart';
 
 part 'factory_v3_dto.g.dart';
 
-/// FactoryV3DTO
+/// The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [poolCount] - 
-/// * [txCount] - 
-/// * [totalVolumeUsd] - 
-/// * [totalVolumeEth] - 
-/// * [totalFeesUsd] - 
-/// * [totalFeesEth] - 
-/// * [untrackedVolumeUsd] - 
-/// * [totalValueLockedUsd] - 
-/// * [totalValueLockedEth] - 
-/// * [totalValueLockedUsdUntracked] - 
-/// * [totalValueLockedEthUntracked] - 
-/// * [owner] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Factory address.
+/// * [poolCount] - Amount of pools created.
+/// * [txCount] - Amount of transactions all time.
+/// * [totalVolumeUsd] - Total volume all time in derived USD.
+/// * [totalVolumeEth] - Total volume all time in derived ETH.
+/// * [totalFeesUsd] - Total swap fees all time in USD.
+/// * [totalFeesEth] - All volume even through less reliable USD values.
+/// * [untrackedVolumeUsd] - All volume even through less reliable USD values.
+/// * [totalValueLockedUsd] - Total value locked derived in USD.
+/// * [totalValueLockedEth] - Total value locked derived in ETH.
+/// * [totalValueLockedUsdUntracked] - Total value locked derived in USD untracked.
+/// * [totalValueLockedEthUntracked] - Total value locked derived in ETH untracked.
+/// * [owner] - Current owner of the factory.
 /// * [vid] - 
 @BuiltValue()
 abstract class FactoryV3DTO implements Built<FactoryV3DTO, FactoryV3DTOBuilder> {
@@ -36,59 +36,59 @@ abstract class FactoryV3DTO implements Built<FactoryV3DTO, FactoryV3DTOBuilder> 
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Factory address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Amount of pools created.
   @BuiltValueField(wireName: r'pool_count')
   String? get poolCount;
 
-  /// 
+  /// Amount of transactions all time.
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
-  /// 
+  /// Total volume all time in derived USD.
   @BuiltValueField(wireName: r'total_volume_usd')
   String? get totalVolumeUsd;
 
-  /// 
+  /// Total volume all time in derived ETH.
   @BuiltValueField(wireName: r'total_volume_eth')
   String? get totalVolumeEth;
 
-  /// 
+  /// Total swap fees all time in USD.
   @BuiltValueField(wireName: r'total_fees_usd')
   String? get totalFeesUsd;
 
-  /// 
+  /// All volume even through less reliable USD values.
   @BuiltValueField(wireName: r'total_fees_eth')
   String? get totalFeesEth;
 
-  /// 
+  /// All volume even through less reliable USD values.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// Total value locked derived in USD.
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// 
+  /// Total value locked derived in ETH.
   @BuiltValueField(wireName: r'total_value_locked_eth')
   String? get totalValueLockedEth;
 
-  /// 
+  /// Total value locked derived in USD untracked.
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
-  /// 
+  /// Total value locked derived in ETH untracked.
   @BuiltValueField(wireName: r'total_value_locked_eth_untracked')
   String? get totalValueLockedEthUntracked;
 
-  /// 
+  /// Current owner of the factory.
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 

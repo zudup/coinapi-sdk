@@ -24,31 +24,31 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Transaction hash plus index in Transaction swap array.
     transaction: detachable STRING_32
-      -- 
+      -- Reference to transaction swap was included in.
     timestamp: detachable STRING_32
-      -- 
+      -- Timestamp of swap, used for sorted lookups.
     pair: detachable STRING_32
-      -- 
+      -- Reference to pair.
     sender: detachable STRING_32
-      -- 
+      -- Address that initiated the swap.
     amount_0_in: detachable STRING_32
-      -- 
+      -- Amount of token0 sold.
     amount_1_in: detachable STRING_32
-      -- 
+      -- Amount of token1 sold.
     amount_0_out: detachable STRING_32
-      -- 
+      -- Amount of token0 received.
     amount_1_out: detachable STRING_32
-      -- 
+      -- Amount of token1 received.
     to: detachable STRING_32
-      -- 
+      -- Recipient of output tokens.
     log_index: detachable STRING_32
-      -- 
+      -- Event index within transaction.
     amount_usd: detachable STRING_32
-      -- 
+      -- Derived amount of tokens sold in USD.
  	vid: INTEGER_64
     	 -- 
     pool_id: detachable STRING_32

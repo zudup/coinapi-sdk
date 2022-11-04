@@ -13,40 +13,40 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Swap are created for each token swap within a pair.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+Identifier, format: transaction hash + ""#"" + index in swaps Transaction array.
 .PARAMETER Transaction
-
+Pointer to transaction.
 .PARAMETER Timestamp
-
+Timestamp of transaction.
 .PARAMETER Pool
-
+Pool swap occured within.
 .PARAMETER Token0
-
+Reference to token0 as stored in pair contract.
 .PARAMETER Token1
-
+Reference to token1 as stored in pair contract.
 .PARAMETER VarSender
-
+Sender of the swap.
 .PARAMETER Recipient
-
+Recipient of the swap.
 .PARAMETER Origin
-
+Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
 .PARAMETER Amount0
-
+Delta of token0 swapped.
 .PARAMETER Amount1
-
+Delta of token1 swapped.
 .PARAMETER AmountUsd
-
+Derived amount of tokens sold in USD.
 .PARAMETER SqrtPriceX96
 No description available.
 .PARAMETER Tick

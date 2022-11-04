@@ -167,14 +167,6 @@ Describe -tag 'PSOpenAPITools' -name 'CurveApi' {
         }
     }
 
-    Context 'Invoke-DappsCurvePoiHistoricalGet' {
-        It 'Test Invoke-DappsCurvePoiHistoricalGet' {
-            #$TestResult = Invoke-DappsCurvePoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-DappsCurvePoolsHistoricalGet' {
         It 'Test Invoke-DappsCurvePoolsHistoricalGet' {
             #$TestResult = Invoke-DappsCurvePoolsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

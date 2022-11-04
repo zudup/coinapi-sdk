@@ -47,7 +47,7 @@ class TickDayDataV3DTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -56,10 +56,10 @@ class TickDayDataV3DTO {
   ///
   int? blockNumber;
 
-  /// 
+  /// Identifier, format: <pool address>-<tick index>-<timestamp>.
   String? id;
 
-  /// 
+  /// Timestamp rounded to current day by dividing by 86400.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -68,34 +68,34 @@ class TickDayDataV3DTO {
   ///
   int? date;
 
-  /// 
+  /// Pointer to pool.
   String? pool;
 
-  /// 
+  /// Pointer to tick.
   String? tick;
 
-  /// 
+  /// Total liquidity pool has as tick lower or upper at end of period.
   String? liquidityGross;
 
-  /// 
+  /// How much liquidity changes when tick crossed at end of period.
   String? liquidityNet;
 
-  /// 
+  /// Hourly volume of token0 with this tick in range.
   String? volumeToken0;
 
-  /// 
+  /// Hourly volume of token1 with this tick in range.
   String? volumeToken1;
 
-  /// 
+  /// Hourly volume in derived USD with this tick in range.
   String? volumeUsd;
 
-  /// 
+  /// Fees in USD.
   String? feesUsd;
 
-  /// 
+  /// Variable needed for fee computation.
   String? feeGrowthOutside0x128;
 
-  /// 
+  /// Variable needed for fee computation.
   String? feeGrowthOutside1x128;
 
   /// 

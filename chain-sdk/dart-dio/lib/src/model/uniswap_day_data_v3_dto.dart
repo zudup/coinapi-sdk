@@ -14,7 +14,7 @@ part 'uniswap_day_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [id] - Timestamp rounded to current day by dividing by 86400.
 /// * [date] - Timestamp rounded to current day by dividing by 86400.
@@ -32,7 +32,7 @@ abstract class UniswapDayDataV3DTO implements Built<UniswapDayDataV3DTO, Uniswap
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

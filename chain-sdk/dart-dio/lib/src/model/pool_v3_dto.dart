@@ -9,41 +9,41 @@ import 'package:built_value/serializer.dart';
 
 part 'pool_v3_dto.g.dart';
 
-/// PoolV3DTO
+/// Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
-/// * [id] - 
-/// * [createdAtTimestamp] - 
-/// * [token0] - 
-/// * [token1] - 
+/// * [id] - Pool address.
+/// * [createdAtTimestamp] - Creation time.
+/// * [token0] - Reference to token0 as stored in pool contract.
+/// * [token1] - Reference to token1 as stored in pool contract.
 /// * [feeTier] 
 /// * [liquidity] 
 /// * [sqrtPrice] 
 /// * [feeGrowthGlobal0x128] 
 /// * [feeGrowthGlobal1x128] 
-/// * [token0Price] - 
-/// * [token1Price] - 
+/// * [token0Price] - Token0 per token1.
+/// * [token1Price] - Token1 per token0.
 /// * [tick] 
 /// * [observationIndex] 
-/// * [volumeToken0] - 
-/// * [volumeToken1] - 
-/// * [volumeUsd] - 
-/// * [untrackedVolumeUsd] - 
-/// * [feesUsd] - 
+/// * [volumeToken0] - All time token0 swapped.
+/// * [volumeToken1] - All time token1 swapped.
+/// * [volumeUsd] - All time USD swapped.
+/// * [untrackedVolumeUsd] - All time USD swapped, unfiltered for unreliable USD pools.
+/// * [feesUsd] - Fees in USD.
 /// * [txCount] 
-/// * [collectedFeesToken0] - 
-/// * [collectedFeesToken1] - 
-/// * [collectedFeesUsd] - 
-/// * [totalValueLockedToken0] - 
+/// * [collectedFeesToken0] - All time fees collected token0.
+/// * [collectedFeesToken1] - All time fees collected token1.
+/// * [collectedFeesUsd] - All time fees collected derived USD.
+/// * [totalValueLockedToken0] - Total token 0 across all ticks.
 /// * [totalValueLockedToken1] - 
-/// * [totalValueLockedEth] - 
-/// * [totalValueLockedUsd] - 
-/// * [totalValueLockedUsdUntracked] - 
-/// * [liquidityProviderCount] - 
+/// * [totalValueLockedEth] - Total token 1 across all ticks.
+/// * [totalValueLockedUsd] - Total value locked USD.
+/// * [totalValueLockedUsdUntracked] - Total value locked derived ETH.
+/// * [liquidityProviderCount] - Liquidity providers count, used to detect new exchanges.
 /// * [evaluatedAsk] 
 @BuiltValue()
 abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
@@ -53,7 +53,7 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
@@ -61,19 +61,19 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// 
+  /// Pool address.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Creation time.
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 
-  /// 
+  /// Reference to token0 as stored in pool contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token1 as stored in pool contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
@@ -92,11 +92,11 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'fee_growth_global_1x128')
   BigInteger? get feeGrowthGlobal1x128;
 
-  /// 
+  /// Token0 per token1.
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
-  /// 
+  /// Token1 per token0.
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
@@ -106,42 +106,42 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'observation_index')
   BigInteger? get observationIndex;
 
-  /// 
+  /// All time token0 swapped.
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
-  /// 
+  /// All time token1 swapped.
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
-  /// 
+  /// All time USD swapped.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// All time USD swapped, unfiltered for unreliable USD pools.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
   @BuiltValueField(wireName: r'tx_count')
   BigInteger? get txCount;
 
-  /// 
+  /// All time fees collected token0.
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
-  /// 
+  /// All time fees collected token1.
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
-  /// 
+  /// All time fees collected derived USD.
   @BuiltValueField(wireName: r'collected_fees_usd')
   String? get collectedFeesUsd;
 
-  /// 
+  /// Total token 0 across all ticks.
   @BuiltValueField(wireName: r'total_value_locked_token_0')
   String? get totalValueLockedToken0;
 
@@ -149,19 +149,19 @@ abstract class PoolV3DTO implements Built<PoolV3DTO, PoolV3DTOBuilder> {
   @BuiltValueField(wireName: r'total_value_locked_token_1')
   String? get totalValueLockedToken1;
 
-  /// 
+  /// Total token 1 across all ticks.
   @BuiltValueField(wireName: r'total_value_locked_eth')
   String? get totalValueLockedEth;
 
-  /// 
+  /// Total value locked USD.
   @BuiltValueField(wireName: r'total_value_locked_usd')
   String? get totalValueLockedUsd;
 
-  /// 
+  /// Total value locked derived ETH.
   @BuiltValueField(wireName: r'total_value_locked_usd_untracked')
   String? get totalValueLockedUsdUntracked;
 
-  /// 
+  /// Liquidity providers count, used to detect new exchanges.
   @BuiltValueField(wireName: r'liquidity_provider_count')
   String? get liquidityProviderCount;
 

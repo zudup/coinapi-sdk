@@ -23,13 +23,6 @@ export interface DappsCowOrdersHistoricalGetRequest {
     endDate?: string;
 }
 
-export interface DappsCowPoiHistoricalGetRequest {
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-}
-
 export interface DappsCowSettlementHistoricalGetRequest {
     startBlock?: number;
     endBlock?: number;
@@ -79,26 +72,6 @@ export class CowApi extends BaseAPI {
 
         return this.request<void>({
             url: '/dapps/cow/orders/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsCowPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowPoiHistoricalGetRequest): Observable<void>
-    dappsCowPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-
-        return this.request<void>({
-            url: '/dapps/cow/poi/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

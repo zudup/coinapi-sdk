@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("reserve_usd", {
 
 test_that("tracked_reserve_eth", {
   # tests for the property `tracked_reserve_eth` (character)
-  # Total liquidity with only tracked amount (see tracked amounts).
+  # Total liquidity with only tracked amount.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tracked_reserve_eth`, "EXPECTED_RESULT")
@@ -172,7 +172,7 @@ test_that("created_at_timestamp", {
 
 test_that("liquidity_provider_count", {
   # tests for the property `liquidity_provider_count` (character)
-  # 
+  # Total number of LPs.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity_provider_count`, "EXPECTED_RESULT")

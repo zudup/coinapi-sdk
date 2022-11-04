@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **int64** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | Pointer to **NullableString** | Token address concatendated with date. | [optional] 
 **PeriodStartUnix** | Pointer to **int32** | Unix timestamp for start of hour. | [optional] 
 **Token** | Pointer to **NullableString** | Pointer to token. | [optional] 

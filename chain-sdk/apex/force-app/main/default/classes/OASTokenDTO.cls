@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTokenDTO
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 public class OASTokenDTO implements OAS.MappedProperties {
     /**
@@ -27,85 +27,85 @@ public class OASTokenDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Token address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Factory address.
      * @return factory
      */
     public String factory { get; set; }
 
     /**
-     * 
+     * Token symbol.
      * @return symbol
      */
     public String symbol { get; set; }
 
     /**
-     * 
+     * Token name.
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * 
+     * Token decimals.
      * @return decimals
      */
     public String decimals { get; set; }
 
     /**
-     * 
+     * Total supply of liquidity token.
      * @return totalSupply
      */
     public String totalSupply { get; set; }
 
     /**
-     * 
+     * Amount of token traded all time across all pairs.
      * @return volume
      */
     public String volume { get; set; }
 
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * Amount of transactions all time in pairs including token.
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * 
+     * Total amount of token provided as liquidity across all pairs.
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * 
+     * ETH per token.
      * @return derivedEth
      */
     public String derivedEth { get; set; }
 
     /**
-     * 
+     * Array of whitelisted pairs.
      * @return whitelistPairs
      */
     public List<String> whitelistPairs { get; set; }

@@ -12,7 +12,7 @@ class PairV2DTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
     Long vid
@@ -32,7 +32,7 @@ class PairV2DTO {
     String reserveEth
     /* Total liquidity amount in pair stored as an amount of USD. */
     String reserveUsd
-    /* Total liquidity with only tracked amount (see tracked amounts). */
+    /* Total liquidity with only tracked amount. */
     String trackedReserveEth
     /* Token0 per token1. */
     String token0Price
@@ -50,7 +50,7 @@ class PairV2DTO {
     BigInteger txCount
     /* Timestamp contract was created. */
     Date createdAtTimestamp
-    /*  */
+    /* Total number of LPs. */
     String liquidityProviderCount
     
     Double evaluatedAsk

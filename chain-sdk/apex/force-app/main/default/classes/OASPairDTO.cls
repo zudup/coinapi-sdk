@@ -11,7 +11,7 @@
  */
 
 /**
- * OASPairDTO
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 public class OASPairDTO implements OAS.MappedProperties {
     /**
@@ -27,133 +27,133 @@ public class OASPairDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Pair contract address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Factory contract address.
      * @return factory
      */
     public String factory { get; set; }
 
     /**
-     * 
+     * Friendly name, format: <token0 name>-<token1 name>
      * @return name
      */
     public String name { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * 
+     * Reserve of token0.
      * @return reserve0
      */
     public String reserve0 { get; set; }
 
     /**
-     * 
+     * Reserve of token1.
      * @return reserve1
      */
     public String reserve1 { get; set; }
 
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      * @return totalSupply
      */
     public String totalSupply { get; set; }
 
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      * @return reserveEth
      */
     public String reserveEth { get; set; }
 
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      * @return reserveUsd
      */
     public String reserveUsd { get; set; }
 
     /**
-     * 
+     * Total liquidity with only tracked amount.
      * @return trackedReserveEth
      */
     public String trackedReserveEth { get; set; }
 
     /**
-     * 
+     * Token0 per token1.
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * 
+     * Token1 per token0.
      * @return token1Price
      */
     public String token1Price { get; set; }
 
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * All time amount of transactions on this pair.
      * @return txCount
      */
     public String txCount { get; set; }
 
     /**
-     * 
+     * Total number of LPs.
      * @return liquidityProviderCount
      */
     public String liquidityProviderCount { get; set; }
 
     /**
-     * 
+     * Timestamp.
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * 
+     * Block number in which pair information was created in.
      * @return block
      */
     public String block { get; set; }

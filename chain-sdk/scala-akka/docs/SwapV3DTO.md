@@ -2,6 +2,7 @@
 
 # SwapV3DTO
 
+Swap are created for each token swap within a pair.
 
 ## Properties
 
@@ -9,20 +10,20 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
-**blockNumber** | **Long** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **Long** |  |  [optional]
-**id** | **String** |  |  [optional]
-**transaction** | **String** |  |  [optional]
-**timestamp** | **OffsetDateTime** |  |  [optional]
-**pool** | **String** |  |  [optional]
-**token0** | **String** |  |  [optional]
-**token1** | **String** |  |  [optional]
-**sender** | **String** |  |  [optional]
-**recipient** | **String** |  |  [optional]
-**origin** | **String** |  |  [optional]
-**amount0** | **String** |  |  [optional]
-**amount1** | **String** |  |  [optional]
-**amountUsd** | **String** |  |  [optional]
+**id** | **String** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. |  [optional]
+**transaction** | **String** | Pointer to transaction. |  [optional]
+**timestamp** | **OffsetDateTime** | Timestamp of transaction. |  [optional]
+**pool** | **String** | Pool swap occured within. |  [optional]
+**token0** | **String** | Reference to token0 as stored in pair contract. |  [optional]
+**token1** | **String** | Reference to token1 as stored in pair contract. |  [optional]
+**sender** | **String** | Sender of the swap. |  [optional]
+**recipient** | **String** | Recipient of the swap. |  [optional]
+**origin** | **String** | Transaction origin: the EOA (Externally Owned Account) that initiated the transaction |  [optional]
+**amount0** | **String** | Delta of token0 swapped. |  [optional]
+**amount1** | **String** | Delta of token1 swapped. |  [optional]
+**amountUsd** | **String** | Derived amount of tokens sold in USD. |  [optional]
 **sqrtPriceX96** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **tick** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **logIndex** | [**BigInteger**](BigInteger.md) |  |  [optional]

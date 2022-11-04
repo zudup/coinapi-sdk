@@ -1,7 +1,7 @@
 #' Create a new TickDayDataV3DTO
 #'
 #' @description
-#' TickDayDataV3DTO Class
+#' Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 #'
 #' @docType class
 #' @title TickDayDataV3DTO
@@ -9,19 +9,19 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
-#' @field id  character [optional]
-#' @field date  integer [optional]
-#' @field pool  character [optional]
-#' @field tick  character [optional]
-#' @field liquidity_gross  character [optional]
-#' @field liquidity_net  character [optional]
-#' @field volume_token_0  character [optional]
-#' @field volume_token_1  character [optional]
-#' @field volume_usd  character [optional]
-#' @field fees_usd  character [optional]
-#' @field fee_growth_outside_0x128  character [optional]
-#' @field fee_growth_outside_1x128  character [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
+#' @field id Identifier, format: <pool address>-<tick index>-<timestamp>. character [optional]
+#' @field date Timestamp rounded to current day by dividing by 86400. integer [optional]
+#' @field pool Pointer to pool. character [optional]
+#' @field tick Pointer to tick. character [optional]
+#' @field liquidity_gross Total liquidity pool has as tick lower or upper at end of period. character [optional]
+#' @field liquidity_net How much liquidity changes when tick crossed at end of period. character [optional]
+#' @field volume_token_0 Hourly volume of token0 with this tick in range. character [optional]
+#' @field volume_token_1 Hourly volume of token1 with this tick in range. character [optional]
+#' @field volume_usd Hourly volume in derived USD with this tick in range. character [optional]
+#' @field fees_usd Fees in USD. character [optional]
+#' @field fee_growth_outside_0x128 Variable needed for fee computation. character [optional]
+#' @field fee_growth_outside_1x128 Variable needed for fee computation. character [optional]
 #' @field vid  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -52,87 +52,117 @@ TickDayDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
-    #' @param id 
-    #' @param date 
-    #' @param pool 
-    #' @param tick 
-    #' @param liquidity_gross 
-    #' @param liquidity_net 
-    #' @param volume_token_0 
-    #' @param volume_token_1 
-    #' @param volume_usd 
-    #' @param fees_usd 
-    #' @param fee_growth_outside_0x128 
-    #' @param fee_growth_outside_1x128 
+    #' @param block_number Number of block in which entity was recorded.
+    #' @param id Identifier, format: <pool address>-<tick index>-<timestamp>.
+    #' @param date Timestamp rounded to current day by dividing by 86400.
+    #' @param pool Pointer to pool.
+    #' @param tick Pointer to tick.
+    #' @param liquidity_gross Total liquidity pool has as tick lower or upper at end of period.
+    #' @param liquidity_net How much liquidity changes when tick crossed at end of period.
+    #' @param volume_token_0 Hourly volume of token0 with this tick in range.
+    #' @param volume_token_1 Hourly volume of token1 with this tick in range.
+    #' @param volume_usd Hourly volume in derived USD with this tick in range.
+    #' @param fees_usd Fees in USD.
+    #' @param fee_growth_outside_0x128 Variable needed for fee computation.
+    #' @param fee_growth_outside_1x128 Variable needed for fee computation.
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `date` = NULL, `pool` = NULL, `tick` = NULL, `liquidity_gross` = NULL, `liquidity_net` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `fees_usd` = NULL, `fee_growth_outside_0x128` = NULL, `fee_growth_outside_1x128` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `date` = NULL, `pool` = NULL, `tick` = NULL, `liquidity_gross` = NULL, `liquidity_net` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `fees_usd` = NULL, `fee_growth_outside_0x128` = NULL, `fee_growth_outside_1x128` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`date`)) {
-        stopifnot(is.numeric(`date`), length(`date`) == 1)
+        if (!(is.numeric(`date`) && length(`date`) == 1)) {
+          stop(paste("Error! Invalid data for `date`. Must be an integer:", `date`))
+        }
         self$`date` <- `date`
       }
       if (!is.null(`pool`)) {
-        stopifnot(is.character(`pool`), length(`pool`) == 1)
+        if (!(is.character(`pool`) && length(`pool`) == 1)) {
+          stop(paste("Error! Invalid data for `pool`. Must be a string:", `pool`))
+        }
         self$`pool` <- `pool`
       }
       if (!is.null(`tick`)) {
-        stopifnot(is.character(`tick`), length(`tick`) == 1)
+        if (!(is.character(`tick`) && length(`tick`) == 1)) {
+          stop(paste("Error! Invalid data for `tick`. Must be a string:", `tick`))
+        }
         self$`tick` <- `tick`
       }
       if (!is.null(`liquidity_gross`)) {
-        stopifnot(is.character(`liquidity_gross`), length(`liquidity_gross`) == 1)
+        if (!(is.character(`liquidity_gross`) && length(`liquidity_gross`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity_gross`. Must be a string:", `liquidity_gross`))
+        }
         self$`liquidity_gross` <- `liquidity_gross`
       }
       if (!is.null(`liquidity_net`)) {
-        stopifnot(is.character(`liquidity_net`), length(`liquidity_net`) == 1)
+        if (!(is.character(`liquidity_net`) && length(`liquidity_net`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity_net`. Must be a string:", `liquidity_net`))
+        }
         self$`liquidity_net` <- `liquidity_net`
       }
       if (!is.null(`volume_token_0`)) {
-        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        if (!(is.character(`volume_token_0`) && length(`volume_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_0`. Must be a string:", `volume_token_0`))
+        }
         self$`volume_token_0` <- `volume_token_0`
       }
       if (!is.null(`volume_token_1`)) {
-        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        if (!(is.character(`volume_token_1`) && length(`volume_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_1`. Must be a string:", `volume_token_1`))
+        }
         self$`volume_token_1` <- `volume_token_1`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`fees_usd`)) {
-        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        if (!(is.character(`fees_usd`) && length(`fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `fees_usd`. Must be a string:", `fees_usd`))
+        }
         self$`fees_usd` <- `fees_usd`
       }
       if (!is.null(`fee_growth_outside_0x128`)) {
-        stopifnot(is.character(`fee_growth_outside_0x128`), length(`fee_growth_outside_0x128`) == 1)
+        if (!(is.character(`fee_growth_outside_0x128`) && length(`fee_growth_outside_0x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_outside_0x128`. Must be a string:", `fee_growth_outside_0x128`))
+        }
         self$`fee_growth_outside_0x128` <- `fee_growth_outside_0x128`
       }
       if (!is.null(`fee_growth_outside_1x128`)) {
-        stopifnot(is.character(`fee_growth_outside_1x128`), length(`fee_growth_outside_1x128`) == 1)
+        if (!(is.character(`fee_growth_outside_1x128`) && length(`fee_growth_outside_1x128`) == 1)) {
+          stop(paste("Error! Invalid data for `fee_growth_outside_1x128`. Must be a string:", `fee_growth_outside_1x128`))
+        }
         self$`fee_growth_outside_1x128` <- `fee_growth_outside_1x128`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -490,18 +520,19 @@ TickDayDataV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#TickDayDataV3DTO$unlock()
+# TickDayDataV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#TickDayDataV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# TickDayDataV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#TickDayDataV3DTO$lock()
+# TickDayDataV3DTO$lock()
 

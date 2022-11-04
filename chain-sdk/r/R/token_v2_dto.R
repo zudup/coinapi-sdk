@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
 #' @field id Token address. character [optional]
 #' @field symbol Token symbol. character [optional]
@@ -52,7 +52,7 @@ TokenV2DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
     #' @param id Token address.
     #' @param symbol Token symbol.
@@ -68,39 +68,53 @@ TokenV2DTO <- R6::R6Class(
     #' @param token_symbol token_symbol
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `symbol` = NULL, `name` = NULL, `decimals` = NULL, `total_supply` = NULL, `trade_volume` = NULL, `trade_volume_usd` = NULL, `untracked_volume_usd` = NULL, `tx_count` = NULL, `total_liquidity` = NULL, `derived_eth` = NULL, `token_symbol` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `symbol` = NULL, `name` = NULL, `decimals` = NULL, `total_supply` = NULL, `trade_volume` = NULL, `trade_volume_usd` = NULL, `untracked_volume_usd` = NULL, `tx_count` = NULL, `total_liquidity` = NULL, `derived_eth` = NULL, `token_symbol` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`symbol`)) {
-        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
+        if (!(is.character(`symbol`) && length(`symbol`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol`. Must be a string:", `symbol`))
+        }
         self$`symbol` <- `symbol`
       }
       if (!is.null(`name`)) {
-        stopifnot(is.character(`name`), length(`name`) == 1)
+        if (!(is.character(`name`) && length(`name`) == 1)) {
+          stop(paste("Error! Invalid data for `name`. Must be a string:", `name`))
+        }
         self$`name` <- `name`
       }
       if (!is.null(`decimals`)) {
-        stopifnot(is.numeric(`decimals`), length(`decimals`) == 1)
+        if (!(is.numeric(`decimals`) && length(`decimals`) == 1)) {
+          stop(paste("Error! Invalid data for `decimals`. Must be an integer:", `decimals`))
+        }
         self$`decimals` <- `decimals`
       }
       if (!is.null(`total_supply`)) {
@@ -108,15 +122,21 @@ TokenV2DTO <- R6::R6Class(
         self$`total_supply` <- `total_supply`
       }
       if (!is.null(`trade_volume`)) {
-        stopifnot(is.character(`trade_volume`), length(`trade_volume`) == 1)
+        if (!(is.character(`trade_volume`) && length(`trade_volume`) == 1)) {
+          stop(paste("Error! Invalid data for `trade_volume`. Must be a string:", `trade_volume`))
+        }
         self$`trade_volume` <- `trade_volume`
       }
       if (!is.null(`trade_volume_usd`)) {
-        stopifnot(is.character(`trade_volume_usd`), length(`trade_volume_usd`) == 1)
+        if (!(is.character(`trade_volume_usd`) && length(`trade_volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `trade_volume_usd`. Must be a string:", `trade_volume_usd`))
+        }
         self$`trade_volume_usd` <- `trade_volume_usd`
       }
       if (!is.null(`untracked_volume_usd`)) {
-        stopifnot(is.character(`untracked_volume_usd`), length(`untracked_volume_usd`) == 1)
+        if (!(is.character(`untracked_volume_usd`) && length(`untracked_volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `untracked_volume_usd`. Must be a string:", `untracked_volume_usd`))
+        }
         self$`untracked_volume_usd` <- `untracked_volume_usd`
       }
       if (!is.null(`tx_count`)) {
@@ -124,15 +144,21 @@ TokenV2DTO <- R6::R6Class(
         self$`tx_count` <- `tx_count`
       }
       if (!is.null(`total_liquidity`)) {
-        stopifnot(is.character(`total_liquidity`), length(`total_liquidity`) == 1)
+        if (!(is.character(`total_liquidity`) && length(`total_liquidity`) == 1)) {
+          stop(paste("Error! Invalid data for `total_liquidity`. Must be a string:", `total_liquidity`))
+        }
         self$`total_liquidity` <- `total_liquidity`
       }
       if (!is.null(`derived_eth`)) {
-        stopifnot(is.character(`derived_eth`), length(`derived_eth`) == 1)
+        if (!(is.character(`derived_eth`) && length(`derived_eth`) == 1)) {
+          stop(paste("Error! Invalid data for `derived_eth`. Must be a string:", `derived_eth`))
+        }
         self$`derived_eth` <- `derived_eth`
       }
       if (!is.null(`token_symbol`)) {
-        stopifnot(is.character(`token_symbol`), length(`token_symbol`) == 1)
+        if (!(is.character(`token_symbol`) && length(`token_symbol`) == 1)) {
+          stop(paste("Error! Invalid data for `token_symbol`. Must be a string:", `token_symbol`))
+        }
         self$`token_symbol` <- `token_symbol`
       }
     },
@@ -494,18 +520,19 @@ TokenV2DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#TokenV2DTO$unlock()
+# TokenV2DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#TokenV2DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# TokenV2DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#TokenV2DTO$lock()
+# TokenV2DTO$lock()
 

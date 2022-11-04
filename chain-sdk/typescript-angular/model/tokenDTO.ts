@@ -11,63 +11,66 @@
  */
 
 
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ */
 export interface TokenDTO { 
     entry_time?: string;
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
     /**
-     * 
+     * Token address.
      */
     id?: string | null;
     /**
-     * 
+     * Factory address.
      */
     factory?: string | null;
     /**
-     * 
+     * Token symbol.
      */
     symbol?: string | null;
     /**
-     * 
+     * Token name.
      */
     name?: string | null;
     /**
-     * 
+     * Token decimals.
      */
     decimals?: string | null;
     /**
-     * 
+     * Total supply of liquidity token.
      */
     total_supply?: string | null;
     /**
-     * 
+     * Amount of token traded all time across all pairs.
      */
     volume?: string | null;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Amount of transactions all time in pairs including token.
      */
     tx_count?: string | null;
     /**
-     * 
+     * Total amount of token provided as liquidity across all pairs.
      */
     liquidity?: string | null;
     /**
-     * 
+     * ETH per token.
      */
     derived_eth?: string | null;
     /**
-     * 
+     * Array of whitelisted pairs.
      */
     whitelist_pairs?: Array<string> | null;
     /**

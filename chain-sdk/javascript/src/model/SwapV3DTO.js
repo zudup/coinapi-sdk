@@ -23,6 +23,7 @@ import ETradeAggressiveSide from './ETradeAggressiveSide';
 class SwapV3DTO {
     /**
      * Constructs a new <code>SwapV3DTO</code>.
+     * Swap are created for each token swap within a pair.
      * @alias module:model/SwapV3DTO
      */
     constructor() { 
@@ -125,8 +126,84 @@ class SwapV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>SwapV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SwapV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['transaction'] && !(typeof data['transaction'] === 'string' || data['transaction'] instanceof String)) {
+            throw new Error("Expected the field `transaction` to be a primitive type in the JSON string but got " + data['transaction']);
+        }
+        // ensure the json data is a string
+        if (data['pool'] && !(typeof data['pool'] === 'string' || data['pool'] instanceof String)) {
+            throw new Error("Expected the field `pool` to be a primitive type in the JSON string but got " + data['pool']);
+        }
+        // ensure the json data is a string
+        if (data['token_0'] && !(typeof data['token_0'] === 'string' || data['token_0'] instanceof String)) {
+            throw new Error("Expected the field `token_0` to be a primitive type in the JSON string but got " + data['token_0']);
+        }
+        // ensure the json data is a string
+        if (data['token_1'] && !(typeof data['token_1'] === 'string' || data['token_1'] instanceof String)) {
+            throw new Error("Expected the field `token_1` to be a primitive type in the JSON string but got " + data['token_1']);
+        }
+        // ensure the json data is a string
+        if (data['sender'] && !(typeof data['sender'] === 'string' || data['sender'] instanceof String)) {
+            throw new Error("Expected the field `sender` to be a primitive type in the JSON string but got " + data['sender']);
+        }
+        // ensure the json data is a string
+        if (data['recipient'] && !(typeof data['recipient'] === 'string' || data['recipient'] instanceof String)) {
+            throw new Error("Expected the field `recipient` to be a primitive type in the JSON string but got " + data['recipient']);
+        }
+        // ensure the json data is a string
+        if (data['origin'] && !(typeof data['origin'] === 'string' || data['origin'] instanceof String)) {
+            throw new Error("Expected the field `origin` to be a primitive type in the JSON string but got " + data['origin']);
+        }
+        // ensure the json data is a string
+        if (data['amount_0'] && !(typeof data['amount_0'] === 'string' || data['amount_0'] instanceof String)) {
+            throw new Error("Expected the field `amount_0` to be a primitive type in the JSON string but got " + data['amount_0']);
+        }
+        // ensure the json data is a string
+        if (data['amount_1'] && !(typeof data['amount_1'] === 'string' || data['amount_1'] instanceof String)) {
+            throw new Error("Expected the field `amount_1` to be a primitive type in the JSON string but got " + data['amount_1']);
+        }
+        // ensure the json data is a string
+        if (data['amount_usd'] && !(typeof data['amount_usd'] === 'string' || data['amount_usd'] instanceof String)) {
+            throw new Error("Expected the field `amount_usd` to be a primitive type in the JSON string but got " + data['amount_usd']);
+        }
+        // validate the optional field `sqrt_price_x96`
+        if (data['sqrt_price_x96']) { // data not null
+          BigInteger.validateJSON(data['sqrt_price_x96']);
+        }
+        // validate the optional field `tick`
+        if (data['tick']) { // data not null
+          BigInteger.validateJSON(data['tick']);
+        }
+        // validate the optional field `log_index`
+        if (data['log_index']) { // data not null
+          BigInteger.validateJSON(data['log_index']);
+        }
+        // ensure the json data is a string
+        if (data['pool_id'] && !(typeof data['pool_id'] === 'string' || data['pool_id'] instanceof String)) {
+            throw new Error("Expected the field `pool_id` to be a primitive type in the JSON string but got " + data['pool_id']);
+        }
+        // ensure the json data is a string
+        if (data['transaction_id'] && !(typeof data['transaction_id'] === 'string' || data['transaction_id'] instanceof String)) {
+            throw new Error("Expected the field `transaction_id` to be a primitive type in the JSON string but got " + data['transaction_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -139,7 +216,7 @@ SwapV3DTO.prototype['entry_time'] = undefined;
 SwapV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 SwapV3DTO.prototype['block_number'] = undefined;
@@ -151,73 +228,73 @@ SwapV3DTO.prototype['block_number'] = undefined;
 SwapV3DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
  * @member {String} id
  */
 SwapV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Pointer to transaction.
  * @member {String} transaction
  */
 SwapV3DTO.prototype['transaction'] = undefined;
 
 /**
- * 
+ * Timestamp of transaction.
  * @member {Date} timestamp
  */
 SwapV3DTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Pool swap occured within.
  * @member {String} pool
  */
 SwapV3DTO.prototype['pool'] = undefined;
 
 /**
- * 
+ * Reference to token0 as stored in pair contract.
  * @member {String} token_0
  */
 SwapV3DTO.prototype['token_0'] = undefined;
 
 /**
- * 
+ * Reference to token1 as stored in pair contract.
  * @member {String} token_1
  */
 SwapV3DTO.prototype['token_1'] = undefined;
 
 /**
- * 
+ * Sender of the swap.
  * @member {String} sender
  */
 SwapV3DTO.prototype['sender'] = undefined;
 
 /**
- * 
+ * Recipient of the swap.
  * @member {String} recipient
  */
 SwapV3DTO.prototype['recipient'] = undefined;
 
 /**
- * 
+ * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
  * @member {String} origin
  */
 SwapV3DTO.prototype['origin'] = undefined;
 
 /**
- * 
+ * Delta of token0 swapped.
  * @member {String} amount_0
  */
 SwapV3DTO.prototype['amount_0'] = undefined;
 
 /**
- * 
+ * Delta of token1 swapped.
  * @member {String} amount_1
  */
 SwapV3DTO.prototype['amount_1'] = undefined;
 
 /**
- * 
+ * Derived amount of tokens sold in USD.
  * @member {String} amount_usd
  */
 SwapV3DTO.prototype['amount_usd'] = undefined;

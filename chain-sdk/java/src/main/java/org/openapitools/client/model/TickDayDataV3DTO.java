@@ -40,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TickDayDataV3DTO
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class TickDayDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -171,11 +173,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -194,11 +196,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>-<tick index>-<timestamp>.")
 
   public String getId() {
     return id;
@@ -217,11 +219,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Timestamp rounded to current day by dividing by 86400.
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public Integer getDate() {
     return date;
@@ -240,11 +242,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Pointer to pool.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to pool.")
 
   public String getPool() {
     return pool;
@@ -263,11 +265,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Pointer to tick.
    * @return tick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to tick.")
 
   public String getTick() {
     return tick;
@@ -286,11 +288,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Total liquidity pool has as tick lower or upper at end of period.
    * @return liquidityGross
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total liquidity pool has as tick lower or upper at end of period.")
 
   public String getLiquidityGross() {
     return liquidityGross;
@@ -309,11 +311,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * How much liquidity changes when tick crossed at end of period.
    * @return liquidityNet
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "How much liquidity changes when tick crossed at end of period.")
 
   public String getLiquidityNet() {
     return liquidityNet;
@@ -332,11 +334,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Hourly volume of token0 with this tick in range.
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume of token0 with this tick in range.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -355,11 +357,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Hourly volume of token1 with this tick in range.
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume of token1 with this tick in range.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -378,11 +380,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Hourly volume in derived USD with this tick in range.
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Hourly volume in derived USD with this tick in range.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -401,11 +403,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Fees in USD.
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -424,11 +426,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Variable needed for fee computation.
    * @return feeGrowthOutside0x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthOutside0x128() {
     return feeGrowthOutside0x128;
@@ -447,11 +449,11 @@ public class TickDayDataV3DTO {
   }
 
    /**
-   * 
+   * Variable needed for fee computation.
    * @return feeGrowthOutside1x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthOutside1x128() {
     return feeGrowthOutside1x128;
@@ -601,9 +603,7 @@ public class TickDayDataV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (TickDayDataV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!TickDayDataV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in TickDayDataV3DTO is not found in the empty JSON string", TickDayDataV3DTO.openapiRequiredFields.toString()));
         }
       }

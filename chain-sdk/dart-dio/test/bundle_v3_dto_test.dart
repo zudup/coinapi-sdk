@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Number of block in which entity was recorded.
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
@@ -29,7 +29,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Price of ETH in usd.
     // String ethPriceUsd
     test('to test the property `ethPriceUsd`', () async {
       // TODO

@@ -54,7 +54,7 @@ class PairV2DTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -96,7 +96,7 @@ class PairV2DTO {
   /// Total liquidity amount in pair stored as an amount of USD.
   String? reserveUsd;
 
-  /// Total liquidity with only tracked amount (see tracked amounts).
+  /// Total liquidity with only tracked amount.
   String? trackedReserveEth;
 
   /// Token0 per token1.
@@ -134,7 +134,7 @@ class PairV2DTO {
   ///
   DateTime? createdAtTimestamp;
 
-  /// 
+  /// Total number of LPs.
   String? liquidityProviderCount;
 
   ///

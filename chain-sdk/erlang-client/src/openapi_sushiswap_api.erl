@@ -8,7 +8,6 @@
          dapps_sushiswap_liquidity_position_historical_get/1, dapps_sushiswap_liquidity_position_historical_get/2,
          dapps_sushiswap_liquidity_position_snapshots_historical_get/1, dapps_sushiswap_liquidity_position_snapshots_historical_get/2,
          dapps_sushiswap_mints_historical_get/1, dapps_sushiswap_mints_historical_get/2,
-         dapps_sushiswap_poi_historical_get/1, dapps_sushiswap_poi_historical_get/2,
          dapps_sushiswap_pool_day_data_historical_get/1, dapps_sushiswap_pool_day_data_historical_get/2,
          dapps_sushiswap_pool_hour_data_historical_get/1, dapps_sushiswap_pool_hour_data_historical_get/2,
          dapps_sushiswap_pools_current_get/1, dapps_sushiswap_pools_current_get/2,
@@ -193,27 +192,6 @@ dapps_sushiswap_mints_historical_get(Ctx, Optional) ->
 
 %% @doc 
 %% 
--spec dapps_sushiswap_poi_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_sushiswap_poi_historical_get(Ctx) ->
-    dapps_sushiswap_poi_historical_get(Ctx, #{}).
-
--spec dapps_sushiswap_poi_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_sushiswap_poi_historical_get(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/sushiswap/poi/historical">>],
-    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc 
-%% 
 -spec dapps_sushiswap_pool_day_data_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pool_day_data_historical_get(Ctx) ->
     dapps_sushiswap_pool_day_data_historical_get(Ctx, #{}).
@@ -275,13 +253,13 @@ dapps_sushiswap_pools_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
+%% @doc GetPools
 %% 
--spec dapps_sushiswap_pools_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_historical_get(ctx:ctx()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_historical_get(Ctx) ->
     dapps_sushiswap_pools_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_pools_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_pools_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -317,13 +295,13 @@ dapps_sushiswap_swaps_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
+%% @doc GetSwaps
 %% 
--spec dapps_sushiswap_swaps_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_historical_get(ctx:ctx()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_historical_get(Ctx) ->
     dapps_sushiswap_swaps_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_swaps_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_swaps_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
@@ -380,13 +358,13 @@ dapps_sushiswap_tokens_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
+%% @doc GetTokens
 %% 
--spec dapps_sushiswap_tokens_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_historical_get(ctx:ctx()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_historical_get(Ctx) ->
     dapps_sushiswap_tokens_historical_get(Ctx, #{}).
 
--spec dapps_sushiswap_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec dapps_sushiswap_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_historical_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),

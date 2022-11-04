@@ -107,7 +107,7 @@ export type BigInteger = {
 }
 
 /**
- * 
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  * @export
  */
 export type BundleV3DTO = {
@@ -124,7 +124,7 @@ export type BundleV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof BundleV3DTO
      */
@@ -136,7 +136,7 @@ export type BundleV3DTO = {
      */
     id?: string;
     /**
-     * 
+     * Price of ETH in usd.
      * @type {string}
      * @memberof BundleV3DTO
      */
@@ -150,7 +150,7 @@ export type BundleV3DTO = {
 }
 
 /**
- * 
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  * @export
  */
 export type BurnV3DTO = {
@@ -167,97 +167,97 @@ export type BurnV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof BurnV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
      * @memberof BurnV3DTO
      */
     id?: string;
     /**
-     * 
+     * Transaction burn was included in.
      * @type {string}
      * @memberof BurnV3DTO
      */
     transaction?: string;
     /**
-     * 
+     * Pool position is within.
      * @type {string}
      * @memberof BurnV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @type {string}
      * @memberof BurnV3DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @type {string}
      * @memberof BurnV3DTO
      */
     token_1?: string;
     /**
-     * 
+     * Timestamp.
      * @type {string}
      * @memberof BurnV3DTO
      */
     timestamp?: string;
     /**
-     * 
+     * Owner of position where liquidity was burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     owner?: string;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
      * @memberof BurnV3DTO
      */
     origin?: string;
     /**
-     * 
+     * Amount of liquidity burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount?: string;
     /**
-     * 
+     * Amount of token 0 burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_0?: string;
     /**
-     * 
+     * Amount of token 1 burned.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_1?: string;
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      * @type {string}
      * @memberof BurnV3DTO
      */
     amount_usd?: string;
     /**
-     * 
+     * Lower tick of position.
      * @type {string}
      * @memberof BurnV3DTO
      */
     tick_lower?: string;
     /**
-     * 
+     * Upper tick of position.
      * @type {string}
      * @memberof BurnV3DTO
      */
     tick_upper?: string;
     /**
-     * 
+     * Position within the transactions.
      * @type {string}
      * @memberof BurnV3DTO
      */
@@ -278,7 +278,7 @@ export type BurnV3DTO = {
 export type ETradeAggressiveSide = 'Buy' | 'Sell' | 'EstimatedBuy' | 'EstimatedSell' | 'Unknown';
 
 /**
- * 
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  * @export
  */
 export type FactoryV3DTO = {
@@ -295,85 +295,85 @@ export type FactoryV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof FactoryV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Factory address.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     id?: string;
     /**
-     * 
+     * Amount of pools created.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     pool_count?: string;
     /**
-     * 
+     * Amount of transactions all time.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     tx_count?: string;
     /**
-     * 
+     * Total volume all time in derived USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_usd?: string;
     /**
-     * 
+     * Total volume all time in derived ETH.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_eth?: string;
     /**
-     * 
+     * Total swap fees all time in USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_usd?: string;
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_eth?: string;
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * Total value locked derived in USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * 
+     * Total value locked derived in ETH.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth?: string;
     /**
-     * 
+     * Total value locked derived in USD untracked.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
-     * 
+     * Total value locked derived in ETH untracked.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth_untracked?: string;
     /**
-     * 
+     * Current owner of the factory.
      * @type {string}
      * @memberof FactoryV3DTO
      */
@@ -387,7 +387,7 @@ export type FactoryV3DTO = {
 }
 
 /**
- * 
+ * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  * @export
  */
 export type MintV3DTO = {
@@ -404,103 +404,103 @@ export type MintV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof MintV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
      * @memberof MintV3DTO
      */
     id?: string;
     /**
-     * 
+     * Which txn the mint was included in.
      * @type {string}
      * @memberof MintV3DTO
      */
     transaction?: string;
     /**
-     * 
+     * Time of transaction.
      * @type {string}
      * @memberof MintV3DTO
      */
     timestamp?: string;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof MintV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @type {string}
      * @memberof MintV3DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @type {string}
      * @memberof MintV3DTO
      */
     token_1?: string;
     /**
-     * 
+     * Owner of position where liquidity minted to.
      * @type {string}
      * @memberof MintV3DTO
      */
     owner?: string;
     /**
-     * 
+     * The address that minted the liquidity.
      * @type {string}
      * @memberof MintV3DTO
      */
     sender?: string;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
      * @memberof MintV3DTO
      */
     origin?: string;
     /**
-     * 
+     * Amount of liquidity minted.
      * @type {string}
      * @memberof MintV3DTO
      */
     amount?: string;
     /**
-     * 
+     * Amount of token 0 minted.
      * @type {string}
      * @memberof MintV3DTO
      */
     amount_0?: string;
     /**
-     * 
+     * Amount of token 1 minted.
      * @type {string}
      * @memberof MintV3DTO
      */
     amount_1?: string;
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      * @type {string}
      * @memberof MintV3DTO
      */
     amount_usd?: string;
     /**
-     * 
+     * Lower tick of the position.
      * @type {string}
      * @memberof MintV3DTO
      */
     tick_lower?: string;
     /**
-     * 
+     * Upper tick of the position.
      * @type {string}
      * @memberof MintV3DTO
      */
     tick_upper?: string;
     /**
-     * 
+     * Order within the transaction.
      * @type {string}
      * @memberof MintV3DTO
      */
@@ -514,7 +514,7 @@ export type MintV3DTO = {
 }
 
 /**
- * 
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @export
  */
 export type PairDTO = {
@@ -531,133 +531,133 @@ export type PairDTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PairDTO
      */
     block_number?: number;
     /**
-     * 
+     * Pair contract address.
      * @type {string}
      * @memberof PairDTO
      */
     id?: string;
     /**
-     * 
+     * Factory contract address.
      * @type {string}
      * @memberof PairDTO
      */
     factory?: string;
     /**
-     * 
+     * Friendly name, format: <token0 name>-<token1 name>
      * @type {string}
      * @memberof PairDTO
      */
     name?: string;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairDTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairDTO
      */
     token_1?: string;
     /**
-     * 
+     * Reserve of token0.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_0?: string;
     /**
-     * 
+     * Reserve of token1.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_1?: string;
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      * @type {string}
      * @memberof PairDTO
      */
     total_supply?: string;
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_eth?: string;
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_usd?: string;
     /**
-     * 
+     * Total liquidity with only tracked amount.
      * @type {string}
      * @memberof PairDTO
      */
     tracked_reserve_eth?: string;
     /**
-     * 
+     * Token0 per token1.
      * @type {string}
      * @memberof PairDTO
      */
     token_0_price?: string;
     /**
-     * 
+     * Token1 per token0.
      * @type {string}
      * @memberof PairDTO
      */
     token_1_price?: string;
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      * @type {string}
      * @memberof PairDTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      * @type {string}
      * @memberof PairDTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * All time amount of transactions on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     tx_count?: string;
     /**
-     * 
+     * Total number of LPs.
      * @type {string}
      * @memberof PairDTO
      */
     liquidity_provider_count?: string;
     /**
-     * 
+     * Timestamp.
      * @type {string}
      * @memberof PairDTO
      */
     timestamp?: string;
     /**
-     * 
+     * Block number in which pair information was created in.
      * @type {string}
      * @memberof PairDTO
      */
@@ -694,7 +694,7 @@ export type PairV2DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PairV2DTO
      */
@@ -754,7 +754,7 @@ export type PairV2DTO = {
      */
     reserve_usd?: string;
     /**
-     * Total liquidity with only tracked amount (see tracked amounts).
+     * Total liquidity with only tracked amount.
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -808,7 +808,7 @@ export type PairV2DTO = {
      */
     created_at_timestamp?: Date;
     /**
-     * 
+     * Total number of LPs.
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -822,7 +822,7 @@ export type PairV2DTO = {
 }
 
 /**
- * 
+ * Data accumulated and condensed into day stats for each pool.
  * @export
  */
 export type PoolDayDataV3DTO = {
@@ -839,127 +839,127 @@ export type PoolDayDataV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PoolDayDataV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Identifier, format: <pool address>-<day id>.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     id?: string;
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400
      * @type {number}
      * @memberof PoolDayDataV3DTO
      */
     _date?: number;
     /**
-     * 
+     * Pointer to pool.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     pool?: string;
     /**
-     * 
+     * In range liquidity at end of period.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     liquidity?: string;
     /**
-     * 
+     * Current price tracker at end of period.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     sqrt_price?: string;
     /**
-     * 
+     * Price of token0 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     token_0_price?: string;
     /**
-     * 
+     * Price of token1 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     token_1_price?: string;
     /**
-     * 
+     * Current tick at end of period.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tick?: string;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fee_growth_global_0x128?: string;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fee_growth_global_1x128?: string;
     /**
-     * 
+     * Total value locked derived in USD at end of period.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tvl_usd?: string;
     /**
-     * 
+     * Volume in token0.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Volume in token1.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Volume in USD.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     fees_usd?: string;
     /**
-     * 
+     * Number of transactions during period.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     tx_count?: string;
     /**
-     * 
+     * Opening price of token0.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     open?: string;
     /**
-     * 
+     * High price of token0.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     high?: string;
     /**
-     * 
+     * Low price of token0.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
     low?: string;
     /**
-     * 
+     * Close price of token0.
      * @type {string}
      * @memberof PoolDayDataV3DTO
      */
@@ -973,7 +973,7 @@ export type PoolDayDataV3DTO = {
 }
 
 /**
- * 
+ * Hourly stats tracker for pool.
  * @export
  */
 export type PoolHourDataV3DTO = {
@@ -990,127 +990,127 @@ export type PoolHourDataV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Identifier, format: <pool address>-<day id>
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     id?: string;
     /**
-     * 
+     * Unix timestamp for start of hour.
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     period_start_unix?: number;
     /**
-     * 
+     * Pointer to pool.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     pool?: string;
     /**
-     * 
+     * In range liquidity at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     liquidity?: string;
     /**
-     * 
+     * Current price tracker at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     sqrt_price?: string;
     /**
-     * 
+     * Price of token0 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_0_price?: string;
     /**
-     * 
+     * Price of token1 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_1_price?: string;
     /**
-     * 
+     * Current tick at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tick?: string;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_0x128?: string;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_1x128?: string;
     /**
-     * 
+     * Total value locked derived in USD at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tvl_usd?: string;
     /**
-     * 
+     * Volume in token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Volume in token1.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Volume in USD.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fees_usd?: string;
     /**
-     * 
+     * Number of transactions during period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tx_count?: string;
     /**
-     * 
+     * Opening price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     open?: string;
     /**
-     * 
+     * High price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     high?: string;
     /**
-     * 
+     * Low price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     low?: string;
     /**
-     * 
+     * Close price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
@@ -1124,7 +1124,7 @@ export type PoolHourDataV3DTO = {
 }
 
 /**
- * 
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  * @export
  */
 export type PoolV3DTO = {
@@ -1141,7 +1141,7 @@ export type PoolV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PoolV3DTO
      */
@@ -1153,25 +1153,25 @@ export type PoolV3DTO = {
      */
     vid?: number;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof PoolV3DTO
      */
     id?: string;
     /**
-     * 
+     * Creation time.
      * @type {Date}
      * @memberof PoolV3DTO
      */
     created_at_timestamp?: Date;
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @type {string}
      * @memberof PoolV3DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -1207,13 +1207,13 @@ export type PoolV3DTO = {
      */
     fee_growth_global_1x128?: BigInteger;
     /**
-     * 
+     * Token0 per token1.
      * @type {string}
      * @memberof PoolV3DTO
      */
     token_0_price?: string;
     /**
-     * 
+     * Token1 per token0.
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -1231,31 +1231,31 @@ export type PoolV3DTO = {
      */
     observation_index?: BigInteger;
     /**
-     * 
+     * All time token0 swapped.
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * All time token1 swapped.
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * All time USD swapped.
      * @type {string}
      * @memberof PoolV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * All time USD swapped, unfiltered for unreliable USD pools.
      * @type {string}
      * @memberof PoolV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -1267,25 +1267,25 @@ export type PoolV3DTO = {
      */
     tx_count?: BigInteger;
     /**
-     * 
+     * All time fees collected token0.
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_token_0?: string;
     /**
-     * 
+     * All time fees collected token1.
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_token_1?: string;
     /**
-     * 
+     * All time fees collected derived USD.
      * @type {string}
      * @memberof PoolV3DTO
      */
     collected_fees_usd?: string;
     /**
-     * 
+     * Total token 0 across all ticks.
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -1297,25 +1297,25 @@ export type PoolV3DTO = {
      */
     total_value_locked_token_1?: string;
     /**
-     * 
+     * Total token 1 across all ticks.
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_eth?: string;
     /**
-     * 
+     * Total value locked USD.
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_usd?: string;
     /**
-     * 
+     * Total value locked derived ETH.
      * @type {string}
      * @memberof PoolV3DTO
      */
     total_value_locked_usd_untracked?: string;
     /**
-     * 
+     * Liquidity providers count, used to detect new exchanges.
      * @type {string}
      * @memberof PoolV3DTO
      */
@@ -1346,97 +1346,97 @@ export type PositionSnapshotV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PositionSnapshotV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * NFT token identifier, format: <NFT token id>#<block number>
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     id?: string;
     /**
-     * THIS IS SUPER OWNER
+     * Owner of the NFT.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     owner?: string;
     /**
-     * 
+     * Pool the position is within.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Position of which the snap was taken of.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     position?: string;
     /**
-     * 
+     * Timestamp of block in which the snap was created.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     timestamp?: string;
     /**
-     * 
+     * Total position liquidity.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     liquidity?: string;
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_0?: string;
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     deposited_token_1?: string;
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_0?: string;
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     withdrawn_token_1?: string;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_0?: string;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     collected_fees_token_1?: string;
     /**
-     * 
+     * Transaction in which the snapshot was initialized.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     transaction?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
     fee_growth_inside_0_last_x128?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionSnapshotV3DTO
      */
@@ -1450,7 +1450,7 @@ export type PositionSnapshotV3DTO = {
 }
 
 /**
- * 
+ * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  * @export
  */
 export type PositionV3DTO = {
@@ -1467,109 +1467,109 @@ export type PositionV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PositionV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * NFT token identifier.
      * @type {string}
      * @memberof PositionV3DTO
      */
     id?: string;
     /**
-     * 
+     * Owner of the NFT.
      * @type {string}
      * @memberof PositionV3DTO
      */
     owner?: string;
     /**
-     * 
+     * Pool position is within.
      * @type {string}
      * @memberof PositionV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof PositionV3DTO
      */
     token_1?: string;
     /**
-     * 
+     * Lower tick of the position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_lower?: string;
     /**
-     * 
+     * Upper tick of the position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     tick_upper?: string;
     /**
-     * 
+     * Total position liquidity.
      * @type {string}
      * @memberof PositionV3DTO
      */
     liquidity?: string;
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_0?: string;
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      * @type {string}
      * @memberof PositionV3DTO
      */
     deposited_token_1?: string;
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_0?: string;
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
      * @memberof PositionV3DTO
      */
     withdrawn_token_1?: string;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_0?: string;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof PositionV3DTO
      */
     collected_fees_token_1?: string;
     /**
-     * 
+     * Transaction in which the position was initialized.
      * @type {string}
      * @memberof PositionV3DTO
      */
     transaction?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionV3DTO
      */
     fee_growth_inside_0_last_x128?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof PositionV3DTO
      */
@@ -1583,7 +1583,7 @@ export type PositionV3DTO = {
 }
 
 /**
- * 
+ * Swap are created for each token swap within a pair.
  * @export
  */
 export type SwapDTO = {
@@ -1600,79 +1600,79 @@ export type SwapDTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof SwapDTO
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @type {string}
      * @memberof SwapDTO
      */
     id?: string;
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @type {string}
      * @memberof SwapDTO
      */
     transaction?: string;
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @type {string}
      * @memberof SwapDTO
      */
     timestamp?: string;
     /**
-     * 
+     * Reference to pair.
      * @type {string}
      * @memberof SwapDTO
      */
     pair?: string;
     /**
-     * 
+     * Address that initiated the swap.
      * @type {string}
      * @memberof SwapDTO
      */
     sender?: string;
     /**
-     * 
+     * Amount of token0 sold.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_in?: string;
     /**
-     * 
+     * Amount of token1 sold.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_in?: string;
     /**
-     * 
+     * Amount of token0 received.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_out?: string;
     /**
-     * 
+     * Amount of token1 received.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_out?: string;
     /**
-     * 
+     * Recipient of output tokens.
      * @type {string}
      * @memberof SwapDTO
      */
     to?: string;
     /**
-     * 
+     * Event index within transaction.
      * @type {string}
      * @memberof SwapDTO
      */
     log_index?: string;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapDTO
      */
@@ -1733,7 +1733,7 @@ export type SwapV2DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof SwapV2DTO
      */
@@ -1855,7 +1855,7 @@ export type SwapV2DTO = {
 }
 
 /**
- * 
+ * Swap are created for each token swap within a pair.
  * @export
  */
 export type SwapV3DTO = {
@@ -1872,7 +1872,7 @@ export type SwapV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof SwapV3DTO
      */
@@ -1884,73 +1884,73 @@ export type SwapV3DTO = {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      * @type {string}
      * @memberof SwapV3DTO
      */
     id?: string;
     /**
-     * 
+     * Pointer to transaction.
      * @type {string}
      * @memberof SwapV3DTO
      */
     transaction?: string;
     /**
-     * 
+     * Timestamp of transaction.
      * @type {Date}
      * @memberof SwapV3DTO
      */
     timestamp?: Date;
     /**
-     * 
+     * Pool swap occured within.
      * @type {string}
      * @memberof SwapV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_0?: string;
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @type {string}
      * @memberof SwapV3DTO
      */
     token_1?: string;
     /**
-     * 
+     * Sender of the swap.
      * @type {string}
      * @memberof SwapV3DTO
      */
     sender?: string;
     /**
-     * 
+     * Recipient of the swap.
      * @type {string}
      * @memberof SwapV3DTO
      */
     recipient?: string;
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      * @type {string}
      * @memberof SwapV3DTO
      */
     origin?: string;
     /**
-     * 
+     * Delta of token0 swapped.
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_0?: string;
     /**
-     * 
+     * Delta of token1 swapped.
      * @type {string}
      * @memberof SwapV3DTO
      */
     amount_1?: string;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapV3DTO
      */
@@ -2006,7 +2006,7 @@ export type SwapV3DTO = {
 }
 
 /**
- * 
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  * @export
  */
 export type TickDayDataV3DTO = {
@@ -2023,79 +2023,79 @@ export type TickDayDataV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TickDayDataV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Identifier, format: <pool address>-<tick index>-<timestamp>.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     id?: string;
     /**
-     * 
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
      * @memberof TickDayDataV3DTO
      */
     _date?: number;
     /**
-     * 
+     * Pointer to pool.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     pool?: string;
     /**
-     * 
+     * Pointer to tick.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     tick?: string;
     /**
-     * 
+     * Total liquidity pool has as tick lower or upper at end of period.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     liquidity_gross?: string;
     /**
-     * 
+     * How much liquidity changes when tick crossed at end of period.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     liquidity_net?: string;
     /**
-     * 
+     * Hourly volume of token0 with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Hourly volume of token1 with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Hourly volume in derived USD with this tick in range.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     fees_usd?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
     fee_growth_outside_0x128?: string;
     /**
-     * 
+     * Variable needed for fee computation.
      * @type {string}
      * @memberof TickDayDataV3DTO
      */
@@ -2109,7 +2109,7 @@ export type TickDayDataV3DTO = {
 }
 
 /**
- * 
+ * Ticks are the boundaries between discrete areas in price space.
  * @export
  */
 export type TickV3DTO = {
@@ -2126,7 +2126,7 @@ export type TickV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TickV3DTO
      */
@@ -2138,13 +2138,13 @@ export type TickV3DTO = {
      */
     vid?: number;
     /**
-     * 
+     * Identifier, format: <pool address>#<tick index>
      * @type {string}
      * @memberof TickV3DTO
      */
     id?: string;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -2156,7 +2156,7 @@ export type TickV3DTO = {
      */
     tick_idx?: BigInteger;
     /**
-     * 
+     * Pool address.
      * @type {string}
      * @memberof TickV3DTO
      */
@@ -2174,67 +2174,67 @@ export type TickV3DTO = {
      */
     liquidity_net?: BigInteger;
     /**
-     * 
+     * Calculated price of token0 of tick within this pool - constant.
      * @type {string}
      * @memberof TickV3DTO
      */
     price_0?: string;
     /**
-     * 
+     * Calculated price of token1 of tick within this pool - constant.
      * @type {string}
      * @memberof TickV3DTO
      */
     price_1?: string;
     /**
-     * 
+     * Lifetime volume of token0 with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_0?: string;
     /**
-     * 
+     * Lifetime volume of token1 with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_token_1?: string;
     /**
-     * 
+     * Lifetime volume in derived USD with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Lifetime volume in untracked USD with this tick in range.
      * @type {string}
      * @memberof TickV3DTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof TickV3DTO
      */
     fees_usd?: string;
     /**
-     * 
+     * All time collected fees in token0.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_0?: string;
     /**
-     * 
+     * All time collected fees in token1.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_token_1?: string;
     /**
-     * 
+     * All time collected fees in USD.
      * @type {string}
      * @memberof TickV3DTO
      */
     collected_fees_usd?: string;
     /**
-     * 
+     * Created time.
      * @type {Date}
      * @memberof TickV3DTO
      */
@@ -2260,7 +2260,7 @@ export type TickV3DTO = {
 }
 
 /**
- * 
+ * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
 export type TokenDTO = {
@@ -2277,85 +2277,85 @@ export type TokenDTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenDTO
      */
     block_number?: number;
     /**
-     * 
+     * Token address.
      * @type {string}
      * @memberof TokenDTO
      */
     id?: string;
     /**
-     * 
+     * Factory address.
      * @type {string}
      * @memberof TokenDTO
      */
     factory?: string;
     /**
-     * 
+     * Token symbol.
      * @type {string}
      * @memberof TokenDTO
      */
     symbol?: string;
     /**
-     * 
+     * Token name.
      * @type {string}
      * @memberof TokenDTO
      */
     name?: string;
     /**
-     * 
+     * Token decimals.
      * @type {string}
      * @memberof TokenDTO
      */
     decimals?: string;
     /**
-     * 
+     * Total supply of liquidity token.
      * @type {string}
      * @memberof TokenDTO
      */
     total_supply?: string;
     /**
-     * 
+     * Amount of token traded all time across all pairs.
      * @type {string}
      * @memberof TokenDTO
      */
     volume?: string;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @type {string}
      * @memberof TokenDTO
      */
     volume_usd?: string;
     /**
-     * 
+     * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @type {string}
      * @memberof TokenDTO
      */
     untracked_volume_usd?: string;
     /**
-     * 
+     * Amount of transactions all time in pairs including token.
      * @type {string}
      * @memberof TokenDTO
      */
     tx_count?: string;
     /**
-     * 
+     * Total amount of token provided as liquidity across all pairs.
      * @type {string}
      * @memberof TokenDTO
      */
     liquidity?: string;
     /**
-     * 
+     * ETH per token.
      * @type {string}
      * @memberof TokenDTO
      */
     derived_eth?: string;
     /**
-     * 
+     * Array of whitelisted pairs.
      * @type {Array<string>}
      * @memberof TokenDTO
      */
@@ -2392,7 +2392,7 @@ export type TokenHourDataV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenHourDataV3DTO
      */
@@ -2507,7 +2507,7 @@ export type TokenV2DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenV2DTO
      */
@@ -2610,7 +2610,7 @@ export type TokenV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenV3DTO
      */
@@ -2743,7 +2743,7 @@ export type TokenV3DayDataDTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
@@ -2858,7 +2858,7 @@ export type UniswapDayDataV3DTO = {
      */
     recv_time?: Date;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof UniswapDayDataV3DTO
      */
@@ -2933,43 +2933,6 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
          */
         dappsCowOrdersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/cow/orders/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsCowPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/poi/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -3159,8 +3122,6 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
 export type CowApiType = { 
     dappsCowOrdersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
-    dappsCowPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsCowSettlementHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
     dappsCowTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
@@ -3183,20 +3144,6 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
          */
         dappsCowOrdersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = CowApiFetchParamCreator(configuration).dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsCowPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).dappsCowPoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -4059,43 +4006,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * 
          * @throws {RequiredError}
          */
-        dappsCurvePoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/poi/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
         dappsCurvePoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/curve/pools/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -4612,8 +4522,6 @@ export type CurveApiType = {
 
     dappsCurveLpTokenHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsCurvePoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsCurvePoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsCurveProposalsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
@@ -4930,20 +4838,6 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
          * 
          * @throws {RequiredError}
          */
-        dappsCurvePoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).dappsCurvePoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
         dappsCurvePoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -5184,43 +5078,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (tokenId !== undefined) {
                 localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsDexPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/poi/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -5557,8 +5414,6 @@ export type DexApiType = {
 
     dappsDexOrdersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsDexPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsDexPricesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsDexSolutionHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
@@ -5603,20 +5458,6 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
          */
         dappsDexOrdersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsDexPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -6063,43 +5904,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * 
          * @throws {RequiredError}
          */
-        dappsSushiswapPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/poi/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
         dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/poolDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -6202,6 +6006,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
+         * @summary GetPools
          * @throws {RequiredError}
          */
         dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6265,6 +6070,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
+         * @summary GetSwaps
          * @throws {RequiredError}
          */
         dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6369,6 +6175,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
+         * @summary GetTokens
          * @throws {RequiredError}
          */
         dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -6502,25 +6309,23 @@ export type SushiswapApiType = {
 
     dappsSushiswapMintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsSushiswapPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsSushiswapPoolsCurrentGet(options?: RequestOptions): Promise<Array<PairDTO>>,
 
-    dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+    dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<PairDTO>>,
 
     dappsSushiswapSwapsCurrentGet(options?: RequestOptions): Promise<Array<SwapDTO>>,
 
-    dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+    dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SwapDTO>>,
 
     dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsSushiswapTokensCurrentGet(options?: RequestOptions): Promise<Array<TokenDTO>>,
 
-    dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
+    dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<TokenDTO>>,
 
     dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
 
@@ -6650,20 +6455,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * 
          * @throws {RequiredError}
          */
-        dappsSushiswapPoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
         dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -6705,13 +6496,14 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
+         * @summary GetPools
          * @throws {RequiredError}
          */
-        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
+        dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<PairDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
@@ -6734,13 +6526,14 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
+         * @summary GetSwaps
          * @throws {RequiredError}
          */
-        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
+        dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SwapDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
@@ -6777,13 +6570,14 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
+         * @summary GetTokens
          * @throws {RequiredError}
          */
-        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Response> {
+        dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
@@ -7090,43 +6884,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 
             if (poolId !== undefined) {
                 localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsUniswapv2PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/poi/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -7547,8 +7304,6 @@ export type UniswapV2ApiType = {
 
     dappsUniswapv2MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv2PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsUniswapv2PoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsUniswapv2PoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
@@ -7669,20 +7424,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          */
         dappsUniswapv2MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).dappsUniswapv2MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsUniswapv2PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).dappsUniswapv2PoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;
@@ -8140,43 +7881,6 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 
             if (poolId !== undefined) {
                 localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsUniswapv3PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poi/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -9007,8 +8711,6 @@ export type UniswapV3ApiType = {
 
     dappsUniswapv3MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
-    dappsUniswapv3PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
     dappsUniswapv3PoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
 
     dappsUniswapv3PoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
@@ -9187,20 +8889,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          */
         dappsUniswapv3MintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsUniswapv3PoiHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).dappsUniswapv3PoiHistoricalGet(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;

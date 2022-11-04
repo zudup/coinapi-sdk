@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**dappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
 [**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**dappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
-[**dappsUniswapv2PoiHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical | 
 [**dappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**dappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
 [**dappsUniswapv2PoolsCurrentGet**](UniswapV2Api.md#dappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools
@@ -362,55 +361,6 @@ Name | Type | Description  | Notes
  **startDate** | **Date**|  | [optional] [default to null]
  **endDate** | **Date**|  | [optional] [default to null]
  **poolId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsUniswapv2PoiHistoricalGet
-
-> dappsUniswapv2PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.UniswapV2Api;
-
-UniswapV2Api apiInstance = new UniswapV2Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsUniswapv2PoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2PoiHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
 
 ### Return type
 

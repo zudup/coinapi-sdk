@@ -19,7 +19,7 @@ API.Client.SwapV2DTO.prototype.entryTime;
 API.Client.SwapV2DTO.prototype.recvTime;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */

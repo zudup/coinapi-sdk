@@ -1,7 +1,7 @@
 /*
  * swap_v3_dto.h
  *
- * 
+ * Swap are created for each token swap within a pair.
  */
 
 #ifndef _swap_v3_dto_H_

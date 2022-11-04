@@ -345,20 +345,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DappsCurvePoiHistoricalGet
-        /// </summary>
-        [Fact]
-        public void DappsCurvePoiHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurvePoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-        }
-
-        /// <summary>
         /// Test DappsCurvePoolsHistoricalGet
         /// </summary>
         [Fact]

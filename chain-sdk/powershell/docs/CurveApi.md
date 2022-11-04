@@ -24,7 +24,6 @@ Method | HTTP request | Description
 [**Invoke-DappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
 [**Invoke-DappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#Invoke-DappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
 [**Invoke-DappsCurveLpTokenHistoricalGet**](CurveApi.md#Invoke-DappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**Invoke-DappsCurvePoiHistoricalGet**](CurveApi.md#Invoke-DappsCurvePoiHistoricalGet) | **GET** /dapps/curve/poi/historical | 
 [**Invoke-DappsCurvePoolsHistoricalGet**](CurveApi.md#Invoke-DappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
 [**Invoke-DappsCurveProposalsHistoricalGet**](CurveApi.md#Invoke-DappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
 [**Invoke-DappsCurveProposalsVoteHistoricalGet**](CurveApi.md#Invoke-DappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
@@ -1036,55 +1035,6 @@ Name | Type | Description  | Notes
  **StartDate** | **System.DateTime**|  | [optional] 
  **EndDate** | **System.DateTime**|  | [optional] 
  **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsCurvePoiHistoricalGet"></a>
-# **Invoke-DappsCurvePoiHistoricalGet**
-> void Invoke-DappsCurvePoiHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-
-try {
-    $Result = Invoke-DappsCurvePoiHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurvePoiHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
 
 ### Return type
 

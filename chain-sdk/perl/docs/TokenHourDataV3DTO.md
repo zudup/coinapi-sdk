@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
-**block_number** | **int** |  | [optional] 
+**block_number** | **int** | Number of block in which entity was recorded. | [optional] 
 **id** | **string** | Token address concatendated with date. | [optional] 
 **period_start_unix** | **int** | Unix timestamp for start of hour. | [optional] 
 **token** | **string** | Pointer to token. | [optional] 

@@ -17,11 +17,11 @@ import org.openapitools.client.core.ApiModel
 case class BundleV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /*  */
   id: Option[String] = None,
-  /*  */
+  /* Price of ETH in usd. */
   ethPriceUsd: Option[String] = None,
   /*  */
   vid: Option[Long] = None

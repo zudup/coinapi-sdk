@@ -24,33 +24,33 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Factory address.
     pool_count: detachable STRING_32
-      -- 
+      -- Amount of pools created.
     tx_count: detachable STRING_32
-      -- 
+      -- Amount of transactions all time.
     total_volume_usd: detachable STRING_32
-      -- 
+      -- Total volume all time in derived USD.
     total_volume_eth: detachable STRING_32
-      -- 
+      -- Total volume all time in derived ETH.
     total_fees_usd: detachable STRING_32
-      -- 
+      -- Total swap fees all time in USD.
     total_fees_eth: detachable STRING_32
-      -- 
+      -- All volume even through less reliable USD values.
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- All volume even through less reliable USD values.
     total_value_locked_usd: detachable STRING_32
-      -- 
+      -- Total value locked derived in USD.
     total_value_locked_eth: detachable STRING_32
-      -- 
+      -- Total value locked derived in ETH.
     total_value_locked_usd_untracked: detachable STRING_32
-      -- 
+      -- Total value locked derived in USD untracked.
     total_value_locked_eth_untracked: detachable STRING_32
-      -- 
+      -- Total value locked derived in ETH untracked.
     owner: detachable STRING_32
-      -- 
+      -- Current owner of the factory.
  	vid: INTEGER_64
     	 -- 
 

@@ -24,7 +24,7 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32

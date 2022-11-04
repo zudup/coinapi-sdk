@@ -13,7 +13,7 @@ part 'token_hour_data_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [id] - Token address concatendated with date.
 /// * [periodStartUnix] - Unix timestamp for start of hour.
 /// * [token] - Pointer to token.
@@ -37,7 +37,7 @@ abstract class TokenHourDataV3DTO implements Built<TokenHourDataV3DTO, TokenHour
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

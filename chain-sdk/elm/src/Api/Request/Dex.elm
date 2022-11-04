@@ -17,7 +17,6 @@
 module Api.Request.Dex exposing
     ( dappsDexBatchHistoricalGet
     , dappsDexOrdersHistoricalGet
-    , dappsDexPoiHistoricalGet
     , dappsDexPricesHistoricalGet
     , dappsDexSolutionHistoricalGet
     , dappsDexStatsHistoricalGet
@@ -58,19 +57,6 @@ dappsDexOrdersHistoricalGet startBlock_query endBlock_query startDate_query endD
         "/dapps/dex/orders/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsDexPoiHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsDexPoiHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/dex/poi/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.succeed ())

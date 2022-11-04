@@ -297,7 +297,6 @@ case $state in
     # Operations
     _values "Operations" \
             "dappsCowOrdersHistoricalGet[]" \
-            "dappsCowPoiHistoricalGet[]" \
             "dappsCowSettlementHistoricalGet[]" \
             "dappsCowTokensHistoricalGet[]" \
             "dappsCowTradesHistoricalGet[]" \
@@ -321,7 +320,6 @@ case $state in
             "dappsCurveGaugeWithdrawHistoricalGet[]" \
             "dappsCurveHourlyVolumeHistoricalGet[]" \
             "dappsCurveLpTokenHistoricalGet[]" \
-            "dappsCurvePoiHistoricalGet[]" \
             "dappsCurvePoolsHistoricalGet[]" \
             "dappsCurveProposalsHistoricalGet[]" \
             "dappsCurveProposalsVoteHistoricalGet[]" \
@@ -335,7 +333,6 @@ case $state in
             "dappsCurveVotingAppHistoricalGet[]" \
             "dappsCurveWeeklyVolumeHistoricalGet[]"             "dappsDexBatchHistoricalGet[]" \
             "dappsDexOrdersHistoricalGet[]" \
-            "dappsDexPoiHistoricalGet[]" \
             "dappsDexPricesHistoricalGet[]" \
             "dappsDexSolutionHistoricalGet[]" \
             "dappsDexStatsHistoricalGet[]" \
@@ -351,16 +348,15 @@ case $state in
             "dappsSushiswapLiquidityPositionHistoricalGet[]" \
             "dappsSushiswapLiquidityPositionSnapshotsHistoricalGet[]" \
             "dappsSushiswapMintsHistoricalGet[]" \
-            "dappsSushiswapPoiHistoricalGet[]" \
             "dappsSushiswapPoolDayDataHistoricalGet[]" \
             "dappsSushiswapPoolHourDataHistoricalGet[]" \
             "dappsSushiswapPoolsCurrentGet[GetPools]" \
-            "dappsSushiswapPoolsHistoricalGet[]" \
+            "dappsSushiswapPoolsHistoricalGet[GetPools]" \
             "dappsSushiswapSwapsCurrentGet[GetSwaps]" \
-            "dappsSushiswapSwapsHistoricalGet[]" \
+            "dappsSushiswapSwapsHistoricalGet[GetSwaps]" \
             "dappsSushiswapTokenDayDataHistoricalGet[]" \
             "dappsSushiswapTokensCurrentGet[GetTokens]" \
-            "dappsSushiswapTokensHistoricalGet[]" \
+            "dappsSushiswapTokensHistoricalGet[GetTokens]" \
             "dappsSushiswapTransactionsHistoricalGet[]" \
             "dappsSushiswapUsersHistoricalGet[]"             "dappsUniswapv2BundlesHistoricalGet[]" \
             "dappsUniswapv2BurnsHistoricalGet[]" \
@@ -369,7 +365,6 @@ case $state in
             "dappsUniswapv2LiquidityPositionHistoricalGet[]" \
             "dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet[]" \
             "dappsUniswapv2MintsHistoricalGet[]" \
-            "dappsUniswapv2PoiHistoricalGet[]" \
             "dappsUniswapv2PoolDayDataHistoricalGet[]" \
             "dappsUniswapv2PoolHourDataHistoricalGet[]" \
             "dappsUniswapv2PoolsCurrentGet[GetPools]" \
@@ -389,7 +384,6 @@ case $state in
             "dappsUniswapv3FactoryHistoricalGet[]" \
             "dappsUniswapv3MintsCurrentGet[GetMints]" \
             "dappsUniswapv3MintsHistoricalGet[]" \
-            "dappsUniswapv3PoiHistoricalGet[]" \
             "dappsUniswapv3PoolDayDataHistoricalGet[]" \
             "dappsUniswapv3PoolHourDataHistoricalGet[]" \
             "dappsUniswapv3PoolsCurrentGet[GetPools]" \
@@ -422,16 +416,6 @@ case $state in
   args)
     case $line[1] in
       dappsCowOrdersHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCowPoiHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -693,16 +677,6 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurvePoiHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       dappsCurvePoolsHistoricalGet)
         local -a _op_arguments
         _op_arguments=(
@@ -849,16 +823,6 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
 "tokenId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsDexPoiHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1028,16 +992,6 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
 "poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsSushiswapPoiHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1216,16 +1170,6 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
 "poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2PoiHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1410,16 +1354,6 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
 "poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PoiHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

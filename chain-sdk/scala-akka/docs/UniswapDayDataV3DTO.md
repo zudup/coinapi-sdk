@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
-**blockNumber** | **Long** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **Long** |  |  [optional]
 **id** | **String** | Timestamp rounded to current day by dividing by 86400. |  [optional]
 **date** | **Int** | Timestamp rounded to current day by dividing by 86400. |  [optional]

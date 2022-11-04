@@ -12,16 +12,15 @@ Method | HTTP request | Description
 [**dappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
 [**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-[**dappsSushiswapPoiHistoricalGet**](SushiswapApi.md#dappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical | 
 [**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | 
+[**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | 
+[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | 
+[**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 
@@ -443,57 +442,6 @@ No authorization required
 - **Accept**: Not defined
 
 
-## dappsSushiswapPoiHistoricalGet
-
-> dappsSushiswapPoiHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
-};
-apiInstance.dappsSushiswapPoiHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
 ## dappsSushiswapPoolDayDataHistoricalGet
 
 > dappsSushiswapPoolDayDataHistoricalGet(opts)
@@ -643,9 +591,9 @@ No authorization required
 
 ## dappsSushiswapPoolsHistoricalGet
 
-> dappsSushiswapPoolsHistoricalGet(opts)
+> [PairDTO] dappsSushiswapPoolsHistoricalGet(opts)
 
-
+GetPools
 
 ### Example
 
@@ -664,7 +612,7 @@ apiInstance.dappsSushiswapPoolsHistoricalGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -682,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[PairDTO]**](PairDTO.md)
 
 ### Authorization
 
@@ -691,7 +639,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## dappsSushiswapSwapsCurrentGet
@@ -735,9 +683,9 @@ No authorization required
 
 ## dappsSushiswapSwapsHistoricalGet
 
-> dappsSushiswapSwapsHistoricalGet(opts)
+> [SwapDTO] dappsSushiswapSwapsHistoricalGet(opts)
 
-
+GetSwaps
 
 ### Example
 
@@ -756,7 +704,7 @@ apiInstance.dappsSushiswapSwapsHistoricalGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -774,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SwapDTO]**](SwapDTO.md)
 
 ### Authorization
 
@@ -783,7 +731,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## dappsSushiswapTokenDayDataHistoricalGet
@@ -880,9 +828,9 @@ No authorization required
 
 ## dappsSushiswapTokensHistoricalGet
 
-> dappsSushiswapTokensHistoricalGet(opts)
+> [TokenDTO] dappsSushiswapTokensHistoricalGet(opts)
 
-
+GetTokens
 
 ### Example
 
@@ -901,7 +849,7 @@ apiInstance.dappsSushiswapTokensHistoricalGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -919,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[TokenDTO]**](TokenDTO.md)
 
 ### Authorization
 
@@ -928,7 +876,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## dappsSushiswapTransactionsHistoricalGet

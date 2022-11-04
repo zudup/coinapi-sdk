@@ -16,41 +16,41 @@ import (
 	"time"
 )
 
-// BurnV3DTO struct for BurnV3DTO
+// BurnV3DTO Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
 type BurnV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// Transaction hash + '#' + index in mints Transaction array.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Transaction burn was included in.
 	Transaction NullableString `json:"transaction,omitempty"`
-	// 
+	// Pool position is within.
 	Pool NullableString `json:"pool,omitempty"`
-	// 
+	// Reference to token0 as stored in pool contract.
 	Token0 NullableString `json:"token_0,omitempty"`
-	// 
+	// Reference to token1 as stored in pool contract.
 	Token1 NullableString `json:"token_1,omitempty"`
-	// 
+	// Timestamp.
 	Timestamp NullableString `json:"timestamp,omitempty"`
-	// 
+	// Owner of position where liquidity was burned.
 	Owner NullableString `json:"owner,omitempty"`
-	// 
+	// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 	Origin NullableString `json:"origin,omitempty"`
-	// 
+	// Amount of liquidity burned.
 	Amount NullableString `json:"amount,omitempty"`
-	// 
+	// Amount of token 0 burned.
 	Amount0 NullableString `json:"amount_0,omitempty"`
-	// 
+	// Amount of token 1 burned.
 	Amount1 NullableString `json:"amount_1,omitempty"`
-	// 
+	// Derived amount based on available prices of tokens.
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
-	// 
+	// Lower tick of position.
 	TickLower NullableString `json:"tick_lower,omitempty"`
-	// 
+	// Upper tick of position.
 	TickUpper NullableString `json:"tick_upper,omitempty"`
-	// 
+	// Position within the transactions.
 	LogIndex NullableString `json:"log_index,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -75,7 +75,7 @@ func NewBurnV3DTOWithDefaults() *BurnV3DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *BurnV3DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *BurnV3DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BurnV3DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *BurnV3DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *BurnV3DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *BurnV3DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *BurnV3DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BurnV3DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *BurnV3DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -139,7 +139,7 @@ func (o *BurnV3DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *BurnV3DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -149,15 +149,15 @@ func (o *BurnV3DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BurnV3DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *BurnV3DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -171,7 +171,7 @@ func (o *BurnV3DTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -183,7 +183,7 @@ func (o *BurnV3DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -213,7 +213,7 @@ func (o *BurnV3DTO) UnsetId() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetTransaction() string {
-	if o == nil || o.Transaction.Get() == nil {
+	if o == nil || isNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -225,7 +225,7 @@ func (o *BurnV3DTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -255,7 +255,7 @@ func (o *BurnV3DTO) UnsetTransaction() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetPool() string {
-	if o == nil || o.Pool.Get() == nil {
+	if o == nil || isNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -267,7 +267,7 @@ func (o *BurnV3DTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -297,7 +297,7 @@ func (o *BurnV3DTO) UnsetPool() {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetToken0() string {
-	if o == nil || o.Token0.Get() == nil {
+	if o == nil || isNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -309,7 +309,7 @@ func (o *BurnV3DTO) GetToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0.Get(), o.Token0.IsSet()
 }
@@ -339,7 +339,7 @@ func (o *BurnV3DTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetToken1() string {
-	if o == nil || o.Token1.Get() == nil {
+	if o == nil || isNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -351,7 +351,7 @@ func (o *BurnV3DTO) GetToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1.Get(), o.Token1.IsSet()
 }
@@ -381,7 +381,7 @@ func (o *BurnV3DTO) UnsetToken1() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetTimestamp() string {
-	if o == nil || o.Timestamp.Get() == nil {
+	if o == nil || isNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -393,7 +393,7 @@ func (o *BurnV3DTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -423,7 +423,7 @@ func (o *BurnV3DTO) UnsetTimestamp() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetOwner() string {
-	if o == nil || o.Owner.Get() == nil {
+	if o == nil || isNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -435,7 +435,7 @@ func (o *BurnV3DTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -465,7 +465,7 @@ func (o *BurnV3DTO) UnsetOwner() {
 
 // GetOrigin returns the Origin field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetOrigin() string {
-	if o == nil || o.Origin.Get() == nil {
+	if o == nil || isNil(o.Origin.Get()) {
 		var ret string
 		return ret
 	}
@@ -477,7 +477,7 @@ func (o *BurnV3DTO) GetOrigin() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetOriginOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Origin.Get(), o.Origin.IsSet()
 }
@@ -507,7 +507,7 @@ func (o *BurnV3DTO) UnsetOrigin() {
 
 // GetAmount returns the Amount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetAmount() string {
-	if o == nil || o.Amount.Get() == nil {
+	if o == nil || isNil(o.Amount.Get()) {
 		var ret string
 		return ret
 	}
@@ -519,7 +519,7 @@ func (o *BurnV3DTO) GetAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetAmountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount.Get(), o.Amount.IsSet()
 }
@@ -549,7 +549,7 @@ func (o *BurnV3DTO) UnsetAmount() {
 
 // GetAmount0 returns the Amount0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetAmount0() string {
-	if o == nil || o.Amount0.Get() == nil {
+	if o == nil || isNil(o.Amount0.Get()) {
 		var ret string
 		return ret
 	}
@@ -561,7 +561,7 @@ func (o *BurnV3DTO) GetAmount0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetAmount0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount0.Get(), o.Amount0.IsSet()
 }
@@ -591,7 +591,7 @@ func (o *BurnV3DTO) UnsetAmount0() {
 
 // GetAmount1 returns the Amount1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetAmount1() string {
-	if o == nil || o.Amount1.Get() == nil {
+	if o == nil || isNil(o.Amount1.Get()) {
 		var ret string
 		return ret
 	}
@@ -603,7 +603,7 @@ func (o *BurnV3DTO) GetAmount1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetAmount1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount1.Get(), o.Amount1.IsSet()
 }
@@ -633,7 +633,7 @@ func (o *BurnV3DTO) UnsetAmount1() {
 
 // GetAmountUsd returns the AmountUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetAmountUsd() string {
-	if o == nil || o.AmountUsd.Get() == nil {
+	if o == nil || isNil(o.AmountUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -645,7 +645,7 @@ func (o *BurnV3DTO) GetAmountUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetAmountUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.AmountUsd.Get(), o.AmountUsd.IsSet()
 }
@@ -675,7 +675,7 @@ func (o *BurnV3DTO) UnsetAmountUsd() {
 
 // GetTickLower returns the TickLower field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetTickLower() string {
-	if o == nil || o.TickLower.Get() == nil {
+	if o == nil || isNil(o.TickLower.Get()) {
 		var ret string
 		return ret
 	}
@@ -687,7 +687,7 @@ func (o *BurnV3DTO) GetTickLower() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetTickLowerOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TickLower.Get(), o.TickLower.IsSet()
 }
@@ -717,7 +717,7 @@ func (o *BurnV3DTO) UnsetTickLower() {
 
 // GetTickUpper returns the TickUpper field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetTickUpper() string {
-	if o == nil || o.TickUpper.Get() == nil {
+	if o == nil || isNil(o.TickUpper.Get()) {
 		var ret string
 		return ret
 	}
@@ -729,7 +729,7 @@ func (o *BurnV3DTO) GetTickUpper() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetTickUpperOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TickUpper.Get(), o.TickUpper.IsSet()
 }
@@ -759,7 +759,7 @@ func (o *BurnV3DTO) UnsetTickUpper() {
 
 // GetLogIndex returns the LogIndex field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BurnV3DTO) GetLogIndex() string {
-	if o == nil || o.LogIndex.Get() == nil {
+	if o == nil || isNil(o.LogIndex.Get()) {
 		var ret string
 		return ret
 	}
@@ -771,7 +771,7 @@ func (o *BurnV3DTO) GetLogIndex() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *BurnV3DTO) GetLogIndexOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.LogIndex.Get(), o.LogIndex.IsSet()
 }
@@ -801,7 +801,7 @@ func (o *BurnV3DTO) UnsetLogIndex() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *BurnV3DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -811,15 +811,15 @@ func (o *BurnV3DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BurnV3DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *BurnV3DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -833,13 +833,13 @@ func (o *BurnV3DTO) SetVid(v int64) {
 
 func (o BurnV3DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -887,7 +887,7 @@ func (o BurnV3DTO) MarshalJSON() ([]byte, error) {
 	if o.LogIndex.IsSet() {
 		toSerialize["log_index"] = o.LogIndex.Get()
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return json.Marshal(toSerialize)

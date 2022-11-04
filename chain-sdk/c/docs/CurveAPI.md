@@ -24,7 +24,6 @@ Method | HTTP request | Description
 [**CurveAPI_dappsCurveGaugeWithdrawHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
 [**CurveAPI_dappsCurveHourlyVolumeHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
 [**CurveAPI_dappsCurveLpTokenHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**CurveAPI_dappsCurvePoiHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurvePoiHistoricalGet) | **GET** /dapps/curve/poi/historical | 
 [**CurveAPI_dappsCurvePoolsHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
 [**CurveAPI_dappsCurveProposalsHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
 [**CurveAPI_dappsCurveProposalsVoteHistoricalGet**](CurveAPI.md#CurveAPI_dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
@@ -614,35 +613,6 @@ Name | Type | Description  | Notes
 **startDate** | **char** |  | [optional] 
 **endDate** | **char** |  | [optional] 
 **poolId** | **char \*** |  | [optional] 
-
-### Return type
-
-void
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **CurveAPI_dappsCurvePoiHistoricalGet**
-```c
-void CurveAPI_dappsCurvePoiHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
 
 ### Return type
 

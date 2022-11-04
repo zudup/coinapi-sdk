@@ -16,61 +16,61 @@ import (
 	"time"
 )
 
-// PoolV3DTO struct for PoolV3DTO
+// PoolV3DTO Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 type PoolV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// 
+	// Pool address.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Creation time.
 	CreatedAtTimestamp *time.Time `json:"created_at_timestamp,omitempty"`
-	// 
+	// Reference to token0 as stored in pool contract.
 	Token0 NullableString `json:"token_0,omitempty"`
-	// 
+	// Reference to token1 as stored in pool contract.
 	Token1 NullableString `json:"token_1,omitempty"`
 	FeeTier *BigInteger `json:"fee_tier,omitempty"`
 	Liquidity *BigInteger `json:"liquidity,omitempty"`
 	SqrtPrice *BigInteger `json:"sqrt_price,omitempty"`
 	FeeGrowthGlobal0x128 *BigInteger `json:"fee_growth_global_0x128,omitempty"`
 	FeeGrowthGlobal1x128 *BigInteger `json:"fee_growth_global_1x128,omitempty"`
-	// 
+	// Token0 per token1.
 	Token0Price NullableString `json:"token_0_price,omitempty"`
-	// 
+	// Token1 per token0.
 	Token1Price NullableString `json:"token_1_price,omitempty"`
 	Tick *BigInteger `json:"tick,omitempty"`
 	ObservationIndex *BigInteger `json:"observation_index,omitempty"`
-	// 
+	// All time token0 swapped.
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
-	// 
+	// All time token1 swapped.
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
-	// 
+	// All time USD swapped.
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// 
+	// All time USD swapped, unfiltered for unreliable USD pools.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// 
+	// Fees in USD.
 	FeesUsd NullableString `json:"fees_usd,omitempty"`
 	TxCount *BigInteger `json:"tx_count,omitempty"`
-	// 
+	// All time fees collected token0.
 	CollectedFeesToken0 NullableString `json:"collected_fees_token_0,omitempty"`
-	// 
+	// All time fees collected token1.
 	CollectedFeesToken1 NullableString `json:"collected_fees_token_1,omitempty"`
-	// 
+	// All time fees collected derived USD.
 	CollectedFeesUsd NullableString `json:"collected_fees_usd,omitempty"`
-	// 
+	// Total token 0 across all ticks.
 	TotalValueLockedToken0 NullableString `json:"total_value_locked_token_0,omitempty"`
 	// 
 	TotalValueLockedToken1 NullableString `json:"total_value_locked_token_1,omitempty"`
-	// 
+	// Total token 1 across all ticks.
 	TotalValueLockedEth NullableString `json:"total_value_locked_eth,omitempty"`
-	// 
+	// Total value locked USD.
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// 
+	// Total value locked derived ETH.
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
-	// 
+	// Liquidity providers count, used to detect new exchanges.
 	LiquidityProviderCount NullableString `json:"liquidity_provider_count,omitempty"`
 	EvaluatedAsk *float64 `json:"evaluated_ask,omitempty"`
 }
@@ -94,7 +94,7 @@ func NewPoolV3DTOWithDefaults() *PoolV3DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -104,15 +104,15 @@ func (o *PoolV3DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -126,7 +126,7 @@ func (o *PoolV3DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -136,15 +136,15 @@ func (o *PoolV3DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -158,7 +158,7 @@ func (o *PoolV3DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -168,15 +168,15 @@ func (o *PoolV3DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -190,7 +190,7 @@ func (o *PoolV3DTO) SetBlockNumber(v int64) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -200,15 +200,15 @@ func (o *PoolV3DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -222,7 +222,7 @@ func (o *PoolV3DTO) SetVid(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -234,7 +234,7 @@ func (o *PoolV3DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -264,7 +264,7 @@ func (o *PoolV3DTO) UnsetId() {
 
 // GetCreatedAtTimestamp returns the CreatedAtTimestamp field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetCreatedAtTimestamp() time.Time {
-	if o == nil || o.CreatedAtTimestamp == nil {
+	if o == nil || isNil(o.CreatedAtTimestamp) {
 		var ret time.Time
 		return ret
 	}
@@ -274,15 +274,15 @@ func (o *PoolV3DTO) GetCreatedAtTimestamp() time.Time {
 // GetCreatedAtTimestampOk returns a tuple with the CreatedAtTimestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetCreatedAtTimestampOk() (*time.Time, bool) {
-	if o == nil || o.CreatedAtTimestamp == nil {
-		return nil, false
+	if o == nil || isNil(o.CreatedAtTimestamp) {
+    return nil, false
 	}
 	return o.CreatedAtTimestamp, true
 }
 
 // HasCreatedAtTimestamp returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasCreatedAtTimestamp() bool {
-	if o != nil && o.CreatedAtTimestamp != nil {
+	if o != nil && !isNil(o.CreatedAtTimestamp) {
 		return true
 	}
 
@@ -296,7 +296,7 @@ func (o *PoolV3DTO) SetCreatedAtTimestamp(v time.Time) {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetToken0() string {
-	if o == nil || o.Token0.Get() == nil {
+	if o == nil || isNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -308,7 +308,7 @@ func (o *PoolV3DTO) GetToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0.Get(), o.Token0.IsSet()
 }
@@ -338,7 +338,7 @@ func (o *PoolV3DTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetToken1() string {
-	if o == nil || o.Token1.Get() == nil {
+	if o == nil || isNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -350,7 +350,7 @@ func (o *PoolV3DTO) GetToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1.Get(), o.Token1.IsSet()
 }
@@ -380,7 +380,7 @@ func (o *PoolV3DTO) UnsetToken1() {
 
 // GetFeeTier returns the FeeTier field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetFeeTier() BigInteger {
-	if o == nil || o.FeeTier == nil {
+	if o == nil || isNil(o.FeeTier) {
 		var ret BigInteger
 		return ret
 	}
@@ -390,15 +390,15 @@ func (o *PoolV3DTO) GetFeeTier() BigInteger {
 // GetFeeTierOk returns a tuple with the FeeTier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetFeeTierOk() (*BigInteger, bool) {
-	if o == nil || o.FeeTier == nil {
-		return nil, false
+	if o == nil || isNil(o.FeeTier) {
+    return nil, false
 	}
 	return o.FeeTier, true
 }
 
 // HasFeeTier returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasFeeTier() bool {
-	if o != nil && o.FeeTier != nil {
+	if o != nil && !isNil(o.FeeTier) {
 		return true
 	}
 
@@ -412,7 +412,7 @@ func (o *PoolV3DTO) SetFeeTier(v BigInteger) {
 
 // GetLiquidity returns the Liquidity field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetLiquidity() BigInteger {
-	if o == nil || o.Liquidity == nil {
+	if o == nil || isNil(o.Liquidity) {
 		var ret BigInteger
 		return ret
 	}
@@ -422,15 +422,15 @@ func (o *PoolV3DTO) GetLiquidity() BigInteger {
 // GetLiquidityOk returns a tuple with the Liquidity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetLiquidityOk() (*BigInteger, bool) {
-	if o == nil || o.Liquidity == nil {
-		return nil, false
+	if o == nil || isNil(o.Liquidity) {
+    return nil, false
 	}
 	return o.Liquidity, true
 }
 
 // HasLiquidity returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasLiquidity() bool {
-	if o != nil && o.Liquidity != nil {
+	if o != nil && !isNil(o.Liquidity) {
 		return true
 	}
 
@@ -444,7 +444,7 @@ func (o *PoolV3DTO) SetLiquidity(v BigInteger) {
 
 // GetSqrtPrice returns the SqrtPrice field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetSqrtPrice() BigInteger {
-	if o == nil || o.SqrtPrice == nil {
+	if o == nil || isNil(o.SqrtPrice) {
 		var ret BigInteger
 		return ret
 	}
@@ -454,15 +454,15 @@ func (o *PoolV3DTO) GetSqrtPrice() BigInteger {
 // GetSqrtPriceOk returns a tuple with the SqrtPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetSqrtPriceOk() (*BigInteger, bool) {
-	if o == nil || o.SqrtPrice == nil {
-		return nil, false
+	if o == nil || isNil(o.SqrtPrice) {
+    return nil, false
 	}
 	return o.SqrtPrice, true
 }
 
 // HasSqrtPrice returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasSqrtPrice() bool {
-	if o != nil && o.SqrtPrice != nil {
+	if o != nil && !isNil(o.SqrtPrice) {
 		return true
 	}
 
@@ -476,7 +476,7 @@ func (o *PoolV3DTO) SetSqrtPrice(v BigInteger) {
 
 // GetFeeGrowthGlobal0x128 returns the FeeGrowthGlobal0x128 field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetFeeGrowthGlobal0x128() BigInteger {
-	if o == nil || o.FeeGrowthGlobal0x128 == nil {
+	if o == nil || isNil(o.FeeGrowthGlobal0x128) {
 		var ret BigInteger
 		return ret
 	}
@@ -486,15 +486,15 @@ func (o *PoolV3DTO) GetFeeGrowthGlobal0x128() BigInteger {
 // GetFeeGrowthGlobal0x128Ok returns a tuple with the FeeGrowthGlobal0x128 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetFeeGrowthGlobal0x128Ok() (*BigInteger, bool) {
-	if o == nil || o.FeeGrowthGlobal0x128 == nil {
-		return nil, false
+	if o == nil || isNil(o.FeeGrowthGlobal0x128) {
+    return nil, false
 	}
 	return o.FeeGrowthGlobal0x128, true
 }
 
 // HasFeeGrowthGlobal0x128 returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasFeeGrowthGlobal0x128() bool {
-	if o != nil && o.FeeGrowthGlobal0x128 != nil {
+	if o != nil && !isNil(o.FeeGrowthGlobal0x128) {
 		return true
 	}
 
@@ -508,7 +508,7 @@ func (o *PoolV3DTO) SetFeeGrowthGlobal0x128(v BigInteger) {
 
 // GetFeeGrowthGlobal1x128 returns the FeeGrowthGlobal1x128 field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetFeeGrowthGlobal1x128() BigInteger {
-	if o == nil || o.FeeGrowthGlobal1x128 == nil {
+	if o == nil || isNil(o.FeeGrowthGlobal1x128) {
 		var ret BigInteger
 		return ret
 	}
@@ -518,15 +518,15 @@ func (o *PoolV3DTO) GetFeeGrowthGlobal1x128() BigInteger {
 // GetFeeGrowthGlobal1x128Ok returns a tuple with the FeeGrowthGlobal1x128 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetFeeGrowthGlobal1x128Ok() (*BigInteger, bool) {
-	if o == nil || o.FeeGrowthGlobal1x128 == nil {
-		return nil, false
+	if o == nil || isNil(o.FeeGrowthGlobal1x128) {
+    return nil, false
 	}
 	return o.FeeGrowthGlobal1x128, true
 }
 
 // HasFeeGrowthGlobal1x128 returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasFeeGrowthGlobal1x128() bool {
-	if o != nil && o.FeeGrowthGlobal1x128 != nil {
+	if o != nil && !isNil(o.FeeGrowthGlobal1x128) {
 		return true
 	}
 
@@ -540,7 +540,7 @@ func (o *PoolV3DTO) SetFeeGrowthGlobal1x128(v BigInteger) {
 
 // GetToken0Price returns the Token0Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetToken0Price() string {
-	if o == nil || o.Token0Price.Get() == nil {
+	if o == nil || isNil(o.Token0Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -552,7 +552,7 @@ func (o *PoolV3DTO) GetToken0Price() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetToken0PriceOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0Price.Get(), o.Token0Price.IsSet()
 }
@@ -582,7 +582,7 @@ func (o *PoolV3DTO) UnsetToken0Price() {
 
 // GetToken1Price returns the Token1Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetToken1Price() string {
-	if o == nil || o.Token1Price.Get() == nil {
+	if o == nil || isNil(o.Token1Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -594,7 +594,7 @@ func (o *PoolV3DTO) GetToken1Price() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetToken1PriceOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1Price.Get(), o.Token1Price.IsSet()
 }
@@ -624,7 +624,7 @@ func (o *PoolV3DTO) UnsetToken1Price() {
 
 // GetTick returns the Tick field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetTick() BigInteger {
-	if o == nil || o.Tick == nil {
+	if o == nil || isNil(o.Tick) {
 		var ret BigInteger
 		return ret
 	}
@@ -634,15 +634,15 @@ func (o *PoolV3DTO) GetTick() BigInteger {
 // GetTickOk returns a tuple with the Tick field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetTickOk() (*BigInteger, bool) {
-	if o == nil || o.Tick == nil {
-		return nil, false
+	if o == nil || isNil(o.Tick) {
+    return nil, false
 	}
 	return o.Tick, true
 }
 
 // HasTick returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasTick() bool {
-	if o != nil && o.Tick != nil {
+	if o != nil && !isNil(o.Tick) {
 		return true
 	}
 
@@ -656,7 +656,7 @@ func (o *PoolV3DTO) SetTick(v BigInteger) {
 
 // GetObservationIndex returns the ObservationIndex field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetObservationIndex() BigInteger {
-	if o == nil || o.ObservationIndex == nil {
+	if o == nil || isNil(o.ObservationIndex) {
 		var ret BigInteger
 		return ret
 	}
@@ -666,15 +666,15 @@ func (o *PoolV3DTO) GetObservationIndex() BigInteger {
 // GetObservationIndexOk returns a tuple with the ObservationIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetObservationIndexOk() (*BigInteger, bool) {
-	if o == nil || o.ObservationIndex == nil {
-		return nil, false
+	if o == nil || isNil(o.ObservationIndex) {
+    return nil, false
 	}
 	return o.ObservationIndex, true
 }
 
 // HasObservationIndex returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasObservationIndex() bool {
-	if o != nil && o.ObservationIndex != nil {
+	if o != nil && !isNil(o.ObservationIndex) {
 		return true
 	}
 
@@ -688,7 +688,7 @@ func (o *PoolV3DTO) SetObservationIndex(v BigInteger) {
 
 // GetVolumeToken0 returns the VolumeToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetVolumeToken0() string {
-	if o == nil || o.VolumeToken0.Get() == nil {
+	if o == nil || isNil(o.VolumeToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -700,7 +700,7 @@ func (o *PoolV3DTO) GetVolumeToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetVolumeToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeToken0.Get(), o.VolumeToken0.IsSet()
 }
@@ -730,7 +730,7 @@ func (o *PoolV3DTO) UnsetVolumeToken0() {
 
 // GetVolumeToken1 returns the VolumeToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetVolumeToken1() string {
-	if o == nil || o.VolumeToken1.Get() == nil {
+	if o == nil || isNil(o.VolumeToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -742,7 +742,7 @@ func (o *PoolV3DTO) GetVolumeToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetVolumeToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeToken1.Get(), o.VolumeToken1.IsSet()
 }
@@ -772,7 +772,7 @@ func (o *PoolV3DTO) UnsetVolumeToken1() {
 
 // GetVolumeUsd returns the VolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetVolumeUsd() string {
-	if o == nil || o.VolumeUsd.Get() == nil {
+	if o == nil || isNil(o.VolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -784,7 +784,7 @@ func (o *PoolV3DTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -814,7 +814,7 @@ func (o *PoolV3DTO) UnsetVolumeUsd() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetUntrackedVolumeUsd() string {
-	if o == nil || o.UntrackedVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -826,7 +826,7 @@ func (o *PoolV3DTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -856,7 +856,7 @@ func (o *PoolV3DTO) UnsetUntrackedVolumeUsd() {
 
 // GetFeesUsd returns the FeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetFeesUsd() string {
-	if o == nil || o.FeesUsd.Get() == nil {
+	if o == nil || isNil(o.FeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -868,7 +868,7 @@ func (o *PoolV3DTO) GetFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetFeesUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.FeesUsd.Get(), o.FeesUsd.IsSet()
 }
@@ -898,7 +898,7 @@ func (o *PoolV3DTO) UnsetFeesUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetTxCount() BigInteger {
-	if o == nil || o.TxCount == nil {
+	if o == nil || isNil(o.TxCount) {
 		var ret BigInteger
 		return ret
 	}
@@ -908,15 +908,15 @@ func (o *PoolV3DTO) GetTxCount() BigInteger {
 // GetTxCountOk returns a tuple with the TxCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetTxCountOk() (*BigInteger, bool) {
-	if o == nil || o.TxCount == nil {
-		return nil, false
+	if o == nil || isNil(o.TxCount) {
+    return nil, false
 	}
 	return o.TxCount, true
 }
 
 // HasTxCount returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasTxCount() bool {
-	if o != nil && o.TxCount != nil {
+	if o != nil && !isNil(o.TxCount) {
 		return true
 	}
 
@@ -930,7 +930,7 @@ func (o *PoolV3DTO) SetTxCount(v BigInteger) {
 
 // GetCollectedFeesToken0 returns the CollectedFeesToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetCollectedFeesToken0() string {
-	if o == nil || o.CollectedFeesToken0.Get() == nil {
+	if o == nil || isNil(o.CollectedFeesToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -942,7 +942,7 @@ func (o *PoolV3DTO) GetCollectedFeesToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetCollectedFeesToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.CollectedFeesToken0.Get(), o.CollectedFeesToken0.IsSet()
 }
@@ -972,7 +972,7 @@ func (o *PoolV3DTO) UnsetCollectedFeesToken0() {
 
 // GetCollectedFeesToken1 returns the CollectedFeesToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetCollectedFeesToken1() string {
-	if o == nil || o.CollectedFeesToken1.Get() == nil {
+	if o == nil || isNil(o.CollectedFeesToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -984,7 +984,7 @@ func (o *PoolV3DTO) GetCollectedFeesToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetCollectedFeesToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.CollectedFeesToken1.Get(), o.CollectedFeesToken1.IsSet()
 }
@@ -1014,7 +1014,7 @@ func (o *PoolV3DTO) UnsetCollectedFeesToken1() {
 
 // GetCollectedFeesUsd returns the CollectedFeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetCollectedFeesUsd() string {
-	if o == nil || o.CollectedFeesUsd.Get() == nil {
+	if o == nil || isNil(o.CollectedFeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -1026,7 +1026,7 @@ func (o *PoolV3DTO) GetCollectedFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetCollectedFeesUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.CollectedFeesUsd.Get(), o.CollectedFeesUsd.IsSet()
 }
@@ -1056,7 +1056,7 @@ func (o *PoolV3DTO) UnsetCollectedFeesUsd() {
 
 // GetTotalValueLockedToken0 returns the TotalValueLockedToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetTotalValueLockedToken0() string {
-	if o == nil || o.TotalValueLockedToken0.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -1068,7 +1068,7 @@ func (o *PoolV3DTO) GetTotalValueLockedToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetTotalValueLockedToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedToken0.Get(), o.TotalValueLockedToken0.IsSet()
 }
@@ -1098,7 +1098,7 @@ func (o *PoolV3DTO) UnsetTotalValueLockedToken0() {
 
 // GetTotalValueLockedToken1 returns the TotalValueLockedToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetTotalValueLockedToken1() string {
-	if o == nil || o.TotalValueLockedToken1.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -1110,7 +1110,7 @@ func (o *PoolV3DTO) GetTotalValueLockedToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetTotalValueLockedToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedToken1.Get(), o.TotalValueLockedToken1.IsSet()
 }
@@ -1140,7 +1140,7 @@ func (o *PoolV3DTO) UnsetTotalValueLockedToken1() {
 
 // GetTotalValueLockedEth returns the TotalValueLockedEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetTotalValueLockedEth() string {
-	if o == nil || o.TotalValueLockedEth.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -1152,7 +1152,7 @@ func (o *PoolV3DTO) GetTotalValueLockedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetTotalValueLockedEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedEth.Get(), o.TotalValueLockedEth.IsSet()
 }
@@ -1182,7 +1182,7 @@ func (o *PoolV3DTO) UnsetTotalValueLockedEth() {
 
 // GetTotalValueLockedUsd returns the TotalValueLockedUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetTotalValueLockedUsd() string {
-	if o == nil || o.TotalValueLockedUsd.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -1194,7 +1194,7 @@ func (o *PoolV3DTO) GetTotalValueLockedUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetTotalValueLockedUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedUsd.Get(), o.TotalValueLockedUsd.IsSet()
 }
@@ -1224,7 +1224,7 @@ func (o *PoolV3DTO) UnsetTotalValueLockedUsd() {
 
 // GetTotalValueLockedUsdUntracked returns the TotalValueLockedUsdUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetTotalValueLockedUsdUntracked() string {
-	if o == nil || o.TotalValueLockedUsdUntracked.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedUsdUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -1236,7 +1236,7 @@ func (o *PoolV3DTO) GetTotalValueLockedUsdUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetTotalValueLockedUsdUntrackedOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedUsdUntracked.Get(), o.TotalValueLockedUsdUntracked.IsSet()
 }
@@ -1266,7 +1266,7 @@ func (o *PoolV3DTO) UnsetTotalValueLockedUsdUntracked() {
 
 // GetLiquidityProviderCount returns the LiquidityProviderCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PoolV3DTO) GetLiquidityProviderCount() string {
-	if o == nil || o.LiquidityProviderCount.Get() == nil {
+	if o == nil || isNil(o.LiquidityProviderCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -1278,7 +1278,7 @@ func (o *PoolV3DTO) GetLiquidityProviderCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PoolV3DTO) GetLiquidityProviderCountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.LiquidityProviderCount.Get(), o.LiquidityProviderCount.IsSet()
 }
@@ -1308,7 +1308,7 @@ func (o *PoolV3DTO) UnsetLiquidityProviderCount() {
 
 // GetEvaluatedAsk returns the EvaluatedAsk field value if set, zero value otherwise.
 func (o *PoolV3DTO) GetEvaluatedAsk() float64 {
-	if o == nil || o.EvaluatedAsk == nil {
+	if o == nil || isNil(o.EvaluatedAsk) {
 		var ret float64
 		return ret
 	}
@@ -1318,15 +1318,15 @@ func (o *PoolV3DTO) GetEvaluatedAsk() float64 {
 // GetEvaluatedAskOk returns a tuple with the EvaluatedAsk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolV3DTO) GetEvaluatedAskOk() (*float64, bool) {
-	if o == nil || o.EvaluatedAsk == nil {
-		return nil, false
+	if o == nil || isNil(o.EvaluatedAsk) {
+    return nil, false
 	}
 	return o.EvaluatedAsk, true
 }
 
 // HasEvaluatedAsk returns a boolean if a field has been set.
 func (o *PoolV3DTO) HasEvaluatedAsk() bool {
-	if o != nil && o.EvaluatedAsk != nil {
+	if o != nil && !isNil(o.EvaluatedAsk) {
 		return true
 	}
 
@@ -1340,22 +1340,22 @@ func (o *PoolV3DTO) SetEvaluatedAsk(v float64) {
 
 func (o PoolV3DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()
 	}
-	if o.CreatedAtTimestamp != nil {
+	if !isNil(o.CreatedAtTimestamp) {
 		toSerialize["created_at_timestamp"] = o.CreatedAtTimestamp
 	}
 	if o.Token0.IsSet() {
@@ -1364,19 +1364,19 @@ func (o PoolV3DTO) MarshalJSON() ([]byte, error) {
 	if o.Token1.IsSet() {
 		toSerialize["token_1"] = o.Token1.Get()
 	}
-	if o.FeeTier != nil {
+	if !isNil(o.FeeTier) {
 		toSerialize["fee_tier"] = o.FeeTier
 	}
-	if o.Liquidity != nil {
+	if !isNil(o.Liquidity) {
 		toSerialize["liquidity"] = o.Liquidity
 	}
-	if o.SqrtPrice != nil {
+	if !isNil(o.SqrtPrice) {
 		toSerialize["sqrt_price"] = o.SqrtPrice
 	}
-	if o.FeeGrowthGlobal0x128 != nil {
+	if !isNil(o.FeeGrowthGlobal0x128) {
 		toSerialize["fee_growth_global_0x128"] = o.FeeGrowthGlobal0x128
 	}
-	if o.FeeGrowthGlobal1x128 != nil {
+	if !isNil(o.FeeGrowthGlobal1x128) {
 		toSerialize["fee_growth_global_1x128"] = o.FeeGrowthGlobal1x128
 	}
 	if o.Token0Price.IsSet() {
@@ -1385,10 +1385,10 @@ func (o PoolV3DTO) MarshalJSON() ([]byte, error) {
 	if o.Token1Price.IsSet() {
 		toSerialize["token_1_price"] = o.Token1Price.Get()
 	}
-	if o.Tick != nil {
+	if !isNil(o.Tick) {
 		toSerialize["tick"] = o.Tick
 	}
-	if o.ObservationIndex != nil {
+	if !isNil(o.ObservationIndex) {
 		toSerialize["observation_index"] = o.ObservationIndex
 	}
 	if o.VolumeToken0.IsSet() {
@@ -1406,7 +1406,7 @@ func (o PoolV3DTO) MarshalJSON() ([]byte, error) {
 	if o.FeesUsd.IsSet() {
 		toSerialize["fees_usd"] = o.FeesUsd.Get()
 	}
-	if o.TxCount != nil {
+	if !isNil(o.TxCount) {
 		toSerialize["tx_count"] = o.TxCount
 	}
 	if o.CollectedFeesToken0.IsSet() {
@@ -1436,7 +1436,7 @@ func (o PoolV3DTO) MarshalJSON() ([]byte, error) {
 	if o.LiquidityProviderCount.IsSet() {
 		toSerialize["liquidity_provider_count"] = o.LiquidityProviderCount.Get()
 	}
-	if o.EvaluatedAsk != nil {
+	if !isNil(o.EvaluatedAsk) {
 		toSerialize["evaluated_ask"] = o.EvaluatedAsk
 	}
 	return json.Marshal(toSerialize)

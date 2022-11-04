@@ -19,7 +19,7 @@ API.Client.TokenV3DayDataDTO.prototype.entryTime;
 API.Client.TokenV3DayDataDTO.prototype.recvTime;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */

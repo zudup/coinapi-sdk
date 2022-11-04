@@ -16,6 +16,7 @@ import type {
 } from './';
 
 /**
+ * Swap are created for each token swap within a pair.
  * @export
  * @interface SwapDTO
  */
@@ -31,79 +32,79 @@ export interface SwapDTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof SwapDTO
      */
     block_number?: number;
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @type {string}
      * @memberof SwapDTO
      */
     id?: string | null;
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @type {string}
      * @memberof SwapDTO
      */
     transaction?: string | null;
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @type {string}
      * @memberof SwapDTO
      */
     timestamp?: string | null;
     /**
-     * 
+     * Reference to pair.
      * @type {string}
      * @memberof SwapDTO
      */
     pair?: string | null;
     /**
-     * 
+     * Address that initiated the swap.
      * @type {string}
      * @memberof SwapDTO
      */
     sender?: string | null;
     /**
-     * 
+     * Amount of token0 sold.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_in?: string | null;
     /**
-     * 
+     * Amount of token1 sold.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_in?: string | null;
     /**
-     * 
+     * Amount of token0 received.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_0_out?: string | null;
     /**
-     * 
+     * Amount of token1 received.
      * @type {string}
      * @memberof SwapDTO
      */
     amount_1_out?: string | null;
     /**
-     * 
+     * Recipient of output tokens.
      * @type {string}
      * @memberof SwapDTO
      */
     to?: string | null;
     /**
-     * 
+     * Event index within transaction.
      * @type {string}
      * @memberof SwapDTO
      */
     log_index?: string | null;
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @type {string}
      * @memberof SwapDTO
      */

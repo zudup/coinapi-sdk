@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **id** | **String** | Timestamp rounded to current day by dividing by 86400. | [optional] |
 | **date** | **Integer** | Timestamp rounded to current day by dividing by 86400. | [optional] |

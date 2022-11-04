@@ -13,24 +13,24 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+Pool address.
 .PARAMETER CreatedAtTimestamp
-
+Creation time.
 .PARAMETER Token0
-
+Reference to token0 as stored in pool contract.
 .PARAMETER Token1
-
+Reference to token1 as stored in pool contract.
 .PARAMETER FeeTier
 No description available.
 .PARAMETER Liquidity
@@ -42,43 +42,43 @@ No description available.
 .PARAMETER FeeGrowthGlobal1x128
 No description available.
 .PARAMETER Token0Price
-
+Token0 per token1.
 .PARAMETER Token1Price
-
+Token1 per token0.
 .PARAMETER Tick
 No description available.
 .PARAMETER ObservationIndex
 No description available.
 .PARAMETER VolumeToken0
-
+All time token0 swapped.
 .PARAMETER VolumeToken1
-
+All time token1 swapped.
 .PARAMETER VolumeUsd
-
+All time USD swapped.
 .PARAMETER UntrackedVolumeUsd
-
+All time USD swapped, unfiltered for unreliable USD pools.
 .PARAMETER FeesUsd
-
+Fees in USD.
 .PARAMETER TxCount
 No description available.
 .PARAMETER CollectedFeesToken0
-
+All time fees collected token0.
 .PARAMETER CollectedFeesToken1
-
+All time fees collected token1.
 .PARAMETER CollectedFeesUsd
-
+All time fees collected derived USD.
 .PARAMETER TotalValueLockedToken0
-
+Total token 0 across all ticks.
 .PARAMETER TotalValueLockedToken1
 
 .PARAMETER TotalValueLockedEth
-
+Total token 1 across all ticks.
 .PARAMETER TotalValueLockedUsd
-
+Total value locked USD.
 .PARAMETER TotalValueLockedUsdUntracked
-
+Total value locked derived ETH.
 .PARAMETER LiquidityProviderCount
-
+Liquidity providers count, used to detect new exchanges.
 .PARAMETER EvaluatedAsk
 No description available.
 .OUTPUTS

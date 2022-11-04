@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
-**BlockNumber** | **Int64** |  | [optional] 
+**BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | **String** |  | [optional] 
-**EthPriceUsd** | **String** |  | [optional] 
+**EthPriceUsd** | **String** | Price of ETH in usd. | [optional] 
 **Vid** | **Int64** |  | [optional] 
 
 ## Examples

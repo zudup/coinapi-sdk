@@ -115,19 +115,6 @@ test_that("DappsUniswapv3MintsHistoricalGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsUniswapv3PoiHistoricalGet", {
-  # tests for DappsUniswapv3PoiHistoricalGet
-  # base path: https://onchain.coinapi.io
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @return [Void]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("DappsUniswapv3PoolDayDataHistoricalGet", {
   # tests for DappsUniswapv3PoolDayDataHistoricalGet
   # base path: https://onchain.coinapi.io

@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class MintV3DTO {
     /**
      * Constructs a new <code>MintV3DTO</code>.
+     * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
      * @alias module:model/MintV3DTO
      */
     constructor() { 
@@ -111,8 +112,84 @@ class MintV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>MintV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>MintV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['transaction'] && !(typeof data['transaction'] === 'string' || data['transaction'] instanceof String)) {
+            throw new Error("Expected the field `transaction` to be a primitive type in the JSON string but got " + data['transaction']);
+        }
+        // ensure the json data is a string
+        if (data['timestamp'] && !(typeof data['timestamp'] === 'string' || data['timestamp'] instanceof String)) {
+            throw new Error("Expected the field `timestamp` to be a primitive type in the JSON string but got " + data['timestamp']);
+        }
+        // ensure the json data is a string
+        if (data['pool'] && !(typeof data['pool'] === 'string' || data['pool'] instanceof String)) {
+            throw new Error("Expected the field `pool` to be a primitive type in the JSON string but got " + data['pool']);
+        }
+        // ensure the json data is a string
+        if (data['token_0'] && !(typeof data['token_0'] === 'string' || data['token_0'] instanceof String)) {
+            throw new Error("Expected the field `token_0` to be a primitive type in the JSON string but got " + data['token_0']);
+        }
+        // ensure the json data is a string
+        if (data['token_1'] && !(typeof data['token_1'] === 'string' || data['token_1'] instanceof String)) {
+            throw new Error("Expected the field `token_1` to be a primitive type in the JSON string but got " + data['token_1']);
+        }
+        // ensure the json data is a string
+        if (data['owner'] && !(typeof data['owner'] === 'string' || data['owner'] instanceof String)) {
+            throw new Error("Expected the field `owner` to be a primitive type in the JSON string but got " + data['owner']);
+        }
+        // ensure the json data is a string
+        if (data['sender'] && !(typeof data['sender'] === 'string' || data['sender'] instanceof String)) {
+            throw new Error("Expected the field `sender` to be a primitive type in the JSON string but got " + data['sender']);
+        }
+        // ensure the json data is a string
+        if (data['origin'] && !(typeof data['origin'] === 'string' || data['origin'] instanceof String)) {
+            throw new Error("Expected the field `origin` to be a primitive type in the JSON string but got " + data['origin']);
+        }
+        // ensure the json data is a string
+        if (data['amount'] && !(typeof data['amount'] === 'string' || data['amount'] instanceof String)) {
+            throw new Error("Expected the field `amount` to be a primitive type in the JSON string but got " + data['amount']);
+        }
+        // ensure the json data is a string
+        if (data['amount_0'] && !(typeof data['amount_0'] === 'string' || data['amount_0'] instanceof String)) {
+            throw new Error("Expected the field `amount_0` to be a primitive type in the JSON string but got " + data['amount_0']);
+        }
+        // ensure the json data is a string
+        if (data['amount_1'] && !(typeof data['amount_1'] === 'string' || data['amount_1'] instanceof String)) {
+            throw new Error("Expected the field `amount_1` to be a primitive type in the JSON string but got " + data['amount_1']);
+        }
+        // ensure the json data is a string
+        if (data['amount_usd'] && !(typeof data['amount_usd'] === 'string' || data['amount_usd'] instanceof String)) {
+            throw new Error("Expected the field `amount_usd` to be a primitive type in the JSON string but got " + data['amount_usd']);
+        }
+        // ensure the json data is a string
+        if (data['tick_lower'] && !(typeof data['tick_lower'] === 'string' || data['tick_lower'] instanceof String)) {
+            throw new Error("Expected the field `tick_lower` to be a primitive type in the JSON string but got " + data['tick_lower']);
+        }
+        // ensure the json data is a string
+        if (data['tick_upper'] && !(typeof data['tick_upper'] === 'string' || data['tick_upper'] instanceof String)) {
+            throw new Error("Expected the field `tick_upper` to be a primitive type in the JSON string but got " + data['tick_upper']);
+        }
+        // ensure the json data is a string
+        if (data['log_index'] && !(typeof data['log_index'] === 'string' || data['log_index'] instanceof String)) {
+            throw new Error("Expected the field `log_index` to be a primitive type in the JSON string but got " + data['log_index']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -125,103 +202,103 @@ MintV3DTO.prototype['entry_time'] = undefined;
 MintV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 MintV3DTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * Transaction hash + '#' + index in mints Transaction array.
  * @member {String} id
  */
 MintV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Which txn the mint was included in.
  * @member {String} transaction
  */
 MintV3DTO.prototype['transaction'] = undefined;
 
 /**
- * 
+ * Time of transaction.
  * @member {String} timestamp
  */
 MintV3DTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Pool address.
  * @member {String} pool
  */
 MintV3DTO.prototype['pool'] = undefined;
 
 /**
- * 
+ * Reference to token0 as stored in pool contract.
  * @member {String} token_0
  */
 MintV3DTO.prototype['token_0'] = undefined;
 
 /**
- * 
+ * Reference to token1 as stored in pool contract.
  * @member {String} token_1
  */
 MintV3DTO.prototype['token_1'] = undefined;
 
 /**
- * 
+ * Owner of position where liquidity minted to.
  * @member {String} owner
  */
 MintV3DTO.prototype['owner'] = undefined;
 
 /**
- * 
+ * The address that minted the liquidity.
  * @member {String} sender
  */
 MintV3DTO.prototype['sender'] = undefined;
 
 /**
- * 
+ * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
  * @member {String} origin
  */
 MintV3DTO.prototype['origin'] = undefined;
 
 /**
- * 
+ * Amount of liquidity minted.
  * @member {String} amount
  */
 MintV3DTO.prototype['amount'] = undefined;
 
 /**
- * 
+ * Amount of token 0 minted.
  * @member {String} amount_0
  */
 MintV3DTO.prototype['amount_0'] = undefined;
 
 /**
- * 
+ * Amount of token 1 minted.
  * @member {String} amount_1
  */
 MintV3DTO.prototype['amount_1'] = undefined;
 
 /**
- * 
+ * Derived amount based on available prices of tokens.
  * @member {String} amount_usd
  */
 MintV3DTO.prototype['amount_usd'] = undefined;
 
 /**
- * 
+ * Lower tick of the position.
  * @member {String} tick_lower
  */
 MintV3DTO.prototype['tick_lower'] = undefined;
 
 /**
- * 
+ * Upper tick of the position.
  * @member {String} tick_upper
  */
 MintV3DTO.prototype['tick_upper'] = undefined;
 
 /**
- * 
+ * Order within the transaction.
  * @member {String} log_index
  */
 MintV3DTO.prototype['log_index'] = undefined;

@@ -12,6 +12,7 @@
  */
 
 /**
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  * @export
  * @interface FactoryV3DTO
  */
@@ -27,85 +28,85 @@ export interface FactoryV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof FactoryV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Factory address.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Amount of pools created.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     pool_count?: string | null;
     /**
-     * 
+     * Amount of transactions all time.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     tx_count?: string | null;
     /**
-     * 
+     * Total volume all time in derived USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_usd?: string | null;
     /**
-     * 
+     * Total volume all time in derived ETH.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_volume_eth?: string | null;
     /**
-     * 
+     * Total swap fees all time in USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_usd?: string | null;
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_fees_eth?: string | null;
     /**
-     * 
+     * All volume even through less reliable USD values.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * Total value locked derived in USD.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd?: string | null;
     /**
-     * 
+     * Total value locked derived in ETH.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth?: string | null;
     /**
-     * 
+     * Total value locked derived in USD untracked.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_usd_untracked?: string | null;
     /**
-     * 
+     * Total value locked derived in ETH untracked.
      * @type {string}
      * @memberof FactoryV3DTO
      */
     total_value_locked_eth_untracked?: string | null;
     /**
-     * 
+     * Current owner of the factory.
      * @type {string}
      * @memberof FactoryV3DTO
      */

@@ -8,14 +8,14 @@ import 'package:built_value/serializer.dart';
 
 part 'bundle_v3_dto.g.dart';
 
-/// BundleV3DTO
+/// The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [id] - 
-/// * [ethPriceUsd] - 
+/// * [ethPriceUsd] - Price of ETH in usd.
 /// * [vid] - 
 @BuiltValue()
 abstract class BundleV3DTO implements Built<BundleV3DTO, BundleV3DTOBuilder> {
@@ -25,7 +25,7 @@ abstract class BundleV3DTO implements Built<BundleV3DTO, BundleV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
@@ -33,7 +33,7 @@ abstract class BundleV3DTO implements Built<BundleV3DTO, BundleV3DTOBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Price of ETH in usd.
   @BuiltValueField(wireName: r'eth_price_usd')
   String? get ethPriceUsd;
 

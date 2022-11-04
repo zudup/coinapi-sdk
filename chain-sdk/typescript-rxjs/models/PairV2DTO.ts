@@ -32,7 +32,7 @@ export interface PairV2DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PairV2DTO
      */
@@ -92,7 +92,7 @@ export interface PairV2DTO {
      */
     reserve_usd?: string | null;
     /**
-     * Total liquidity with only tracked amount (see tracked amounts).
+     * Total liquidity with only tracked amount.
      * @type {string}
      * @memberof PairV2DTO
      */
@@ -145,7 +145,7 @@ export interface PairV2DTO {
      */
     created_at_timestamp?: string;
     /**
-     * 
+     * Total number of LPs.
      * @type {string}
      * @memberof PairV2DTO
      */

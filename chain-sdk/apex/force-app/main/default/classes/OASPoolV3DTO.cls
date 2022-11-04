@@ -11,7 +11,7 @@
  */
 
 /**
- * OASPoolV3DTO
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  */
 public class OASPoolV3DTO implements OAS.MappedProperties {
     /**
@@ -27,7 +27,7 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
@@ -39,25 +39,25 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * 
+     * Pool address.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Creation time.
      * @return createdAtTimestamp
      */
     public Datetime createdAtTimestamp { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @return token1
      */
     public String token1 { get; set; }
@@ -93,13 +93,13 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger feeGrowthGlobal1x128 { get; set; }
 
     /**
-     * 
+     * Token0 per token1.
      * @return token0Price
      */
     public String token0Price { get; set; }
 
     /**
-     * 
+     * Token1 per token0.
      * @return token1Price
      */
     public String token1Price { get; set; }
@@ -117,31 +117,31 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger observationIndex { get; set; }
 
     /**
-     * 
+     * All time token0 swapped.
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * 
+     * All time token1 swapped.
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * 
+     * All time USD swapped.
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * All time USD swapped, unfiltered for unreliable USD pools.
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * Fees in USD.
      * @return feesUsd
      */
     public String feesUsd { get; set; }
@@ -153,25 +153,25 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public OASBigInteger txCount { get; set; }
 
     /**
-     * 
+     * All time fees collected token0.
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * 
+     * All time fees collected token1.
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * 
+     * All time fees collected derived USD.
      * @return collectedFeesUsd
      */
     public String collectedFeesUsd { get; set; }
 
     /**
-     * 
+     * Total token 0 across all ticks.
      * @return totalValueLockedToken0
      */
     public String totalValueLockedToken0 { get; set; }
@@ -183,25 +183,25 @@ public class OASPoolV3DTO implements OAS.MappedProperties {
     public String totalValueLockedToken1 { get; set; }
 
     /**
-     * 
+     * Total token 1 across all ticks.
      * @return totalValueLockedEth
      */
     public String totalValueLockedEth { get; set; }
 
     /**
-     * 
+     * Total value locked USD.
      * @return totalValueLockedUsd
      */
     public String totalValueLockedUsd { get; set; }
 
     /**
-     * 
+     * Total value locked derived ETH.
      * @return totalValueLockedUsdUntracked
      */
     public String totalValueLockedUsdUntracked { get; set; }
 
     /**
-     * 
+     * Liquidity providers count, used to detect new exchanges.
      * @return liquidityProviderCount
      */
     public String liquidityProviderCount { get; set; }

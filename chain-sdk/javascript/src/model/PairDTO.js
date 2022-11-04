@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class PairDTO {
     /**
      * Constructs a new <code>PairDTO</code>.
+     * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
      * @alias module:model/PairDTO
      */
     constructor() { 
@@ -129,8 +130,104 @@ class PairDTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>PairDTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PairDTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['factory'] && !(typeof data['factory'] === 'string' || data['factory'] instanceof String)) {
+            throw new Error("Expected the field `factory` to be a primitive type in the JSON string but got " + data['factory']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['token_0'] && !(typeof data['token_0'] === 'string' || data['token_0'] instanceof String)) {
+            throw new Error("Expected the field `token_0` to be a primitive type in the JSON string but got " + data['token_0']);
+        }
+        // ensure the json data is a string
+        if (data['token_1'] && !(typeof data['token_1'] === 'string' || data['token_1'] instanceof String)) {
+            throw new Error("Expected the field `token_1` to be a primitive type in the JSON string but got " + data['token_1']);
+        }
+        // ensure the json data is a string
+        if (data['reserve_0'] && !(typeof data['reserve_0'] === 'string' || data['reserve_0'] instanceof String)) {
+            throw new Error("Expected the field `reserve_0` to be a primitive type in the JSON string but got " + data['reserve_0']);
+        }
+        // ensure the json data is a string
+        if (data['reserve_1'] && !(typeof data['reserve_1'] === 'string' || data['reserve_1'] instanceof String)) {
+            throw new Error("Expected the field `reserve_1` to be a primitive type in the JSON string but got " + data['reserve_1']);
+        }
+        // ensure the json data is a string
+        if (data['total_supply'] && !(typeof data['total_supply'] === 'string' || data['total_supply'] instanceof String)) {
+            throw new Error("Expected the field `total_supply` to be a primitive type in the JSON string but got " + data['total_supply']);
+        }
+        // ensure the json data is a string
+        if (data['reserve_eth'] && !(typeof data['reserve_eth'] === 'string' || data['reserve_eth'] instanceof String)) {
+            throw new Error("Expected the field `reserve_eth` to be a primitive type in the JSON string but got " + data['reserve_eth']);
+        }
+        // ensure the json data is a string
+        if (data['reserve_usd'] && !(typeof data['reserve_usd'] === 'string' || data['reserve_usd'] instanceof String)) {
+            throw new Error("Expected the field `reserve_usd` to be a primitive type in the JSON string but got " + data['reserve_usd']);
+        }
+        // ensure the json data is a string
+        if (data['tracked_reserve_eth'] && !(typeof data['tracked_reserve_eth'] === 'string' || data['tracked_reserve_eth'] instanceof String)) {
+            throw new Error("Expected the field `tracked_reserve_eth` to be a primitive type in the JSON string but got " + data['tracked_reserve_eth']);
+        }
+        // ensure the json data is a string
+        if (data['token_0_price'] && !(typeof data['token_0_price'] === 'string' || data['token_0_price'] instanceof String)) {
+            throw new Error("Expected the field `token_0_price` to be a primitive type in the JSON string but got " + data['token_0_price']);
+        }
+        // ensure the json data is a string
+        if (data['token_1_price'] && !(typeof data['token_1_price'] === 'string' || data['token_1_price'] instanceof String)) {
+            throw new Error("Expected the field `token_1_price` to be a primitive type in the JSON string but got " + data['token_1_price']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_0'] && !(typeof data['volume_token_0'] === 'string' || data['volume_token_0'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_0` to be a primitive type in the JSON string but got " + data['volume_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_1'] && !(typeof data['volume_token_1'] === 'string' || data['volume_token_1'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_1` to be a primitive type in the JSON string but got " + data['volume_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['tx_count'] && !(typeof data['tx_count'] === 'string' || data['tx_count'] instanceof String)) {
+            throw new Error("Expected the field `tx_count` to be a primitive type in the JSON string but got " + data['tx_count']);
+        }
+        // ensure the json data is a string
+        if (data['liquidity_provider_count'] && !(typeof data['liquidity_provider_count'] === 'string' || data['liquidity_provider_count'] instanceof String)) {
+            throw new Error("Expected the field `liquidity_provider_count` to be a primitive type in the JSON string but got " + data['liquidity_provider_count']);
+        }
+        // ensure the json data is a string
+        if (data['timestamp'] && !(typeof data['timestamp'] === 'string' || data['timestamp'] instanceof String)) {
+            throw new Error("Expected the field `timestamp` to be a primitive type in the JSON string but got " + data['timestamp']);
+        }
+        // ensure the json data is a string
+        if (data['block'] && !(typeof data['block'] === 'string' || data['block'] instanceof String)) {
+            throw new Error("Expected the field `block` to be a primitive type in the JSON string but got " + data['block']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -143,133 +240,133 @@ PairDTO.prototype['entry_time'] = undefined;
 PairDTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 PairDTO.prototype['block_number'] = undefined;
 
 /**
- * 
+ * Pair contract address.
  * @member {String} id
  */
 PairDTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Factory contract address.
  * @member {String} factory
  */
 PairDTO.prototype['factory'] = undefined;
 
 /**
- * 
+ * Friendly name, format: <token0 name>-<token1 name>
  * @member {String} name
  */
 PairDTO.prototype['name'] = undefined;
 
 /**
- * 
+ * Reference to token0 as stored in pair contract.
  * @member {String} token_0
  */
 PairDTO.prototype['token_0'] = undefined;
 
 /**
- * 
+ * Reference to token0 as stored in pair contract.
  * @member {String} token_1
  */
 PairDTO.prototype['token_1'] = undefined;
 
 /**
- * 
+ * Reserve of token0.
  * @member {String} reserve_0
  */
 PairDTO.prototype['reserve_0'] = undefined;
 
 /**
- * 
+ * Reserve of token1.
  * @member {String} reserve_1
  */
 PairDTO.prototype['reserve_1'] = undefined;
 
 /**
- * 
+ * Total supply of liquidity token distributed to LPs.
  * @member {String} total_supply
  */
 PairDTO.prototype['total_supply'] = undefined;
 
 /**
- * 
+ * Total liquidity in pair stored as an amount of ETH.
  * @member {String} reserve_eth
  */
 PairDTO.prototype['reserve_eth'] = undefined;
 
 /**
- * 
+ * Total liquidity amount in pair stored as an amount of USD.
  * @member {String} reserve_usd
  */
 PairDTO.prototype['reserve_usd'] = undefined;
 
 /**
- * 
+ * Total liquidity with only tracked amount.
  * @member {String} tracked_reserve_eth
  */
 PairDTO.prototype['tracked_reserve_eth'] = undefined;
 
 /**
- * 
+ * Token0 per token1.
  * @member {String} token_0_price
  */
 PairDTO.prototype['token_0_price'] = undefined;
 
 /**
- * 
+ * Token1 per token0.
  * @member {String} token_1_price
  */
 PairDTO.prototype['token_1_price'] = undefined;
 
 /**
- * 
+ * Amount of token0 swapped on this pair.
  * @member {String} volume_token_0
  */
 PairDTO.prototype['volume_token_0'] = undefined;
 
 /**
- * 
+ * Amount of token1 swapped on this pair.
  * @member {String} volume_token_1
  */
 PairDTO.prototype['volume_token_1'] = undefined;
 
 /**
- * 
+ * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
  * @member {String} volume_usd
  */
 PairDTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
  * @member {String} untracked_volume_usd
  */
 PairDTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * All time amount of transactions on this pair.
  * @member {String} tx_count
  */
 PairDTO.prototype['tx_count'] = undefined;
 
 /**
- * 
+ * Total number of LPs.
  * @member {String} liquidity_provider_count
  */
 PairDTO.prototype['liquidity_provider_count'] = undefined;
 
 /**
- * 
+ * Timestamp.
  * @member {String} timestamp
  */
 PairDTO.prototype['timestamp'] = undefined;
 
 /**
- * 
+ * Block number in which pair information was created in.
  * @member {String} block
  */
 PairDTO.prototype['block'] = undefined;

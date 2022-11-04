@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 | **id** | **String** | Transaction hash plus index in Transaction swap array. | [optional] |
 | **transaction** | **String** | Reference to transaction swap was included in. | [optional] |

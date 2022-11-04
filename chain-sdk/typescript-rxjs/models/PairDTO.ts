@@ -12,6 +12,7 @@
  */
 
 /**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @export
  * @interface PairDTO
  */
@@ -27,133 +28,133 @@ export interface PairDTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PairDTO
      */
     block_number?: number;
     /**
-     * 
+     * Pair contract address.
      * @type {string}
      * @memberof PairDTO
      */
     id?: string | null;
     /**
-     * 
+     * Factory contract address.
      * @type {string}
      * @memberof PairDTO
      */
     factory?: string | null;
     /**
-     * 
+     * Friendly name, format: <token0 name>-<token1 name>
      * @type {string}
      * @memberof PairDTO
      */
     name?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairDTO
      */
     token_0?: string | null;
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @type {string}
      * @memberof PairDTO
      */
     token_1?: string | null;
     /**
-     * 
+     * Reserve of token0.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_0?: string | null;
     /**
-     * 
+     * Reserve of token1.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_1?: string | null;
     /**
-     * 
+     * Total supply of liquidity token distributed to LPs.
      * @type {string}
      * @memberof PairDTO
      */
     total_supply?: string | null;
     /**
-     * 
+     * Total liquidity in pair stored as an amount of ETH.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_eth?: string | null;
     /**
-     * 
+     * Total liquidity amount in pair stored as an amount of USD.
      * @type {string}
      * @memberof PairDTO
      */
     reserve_usd?: string | null;
     /**
-     * 
+     * Total liquidity with only tracked amount.
      * @type {string}
      * @memberof PairDTO
      */
     tracked_reserve_eth?: string | null;
     /**
-     * 
+     * Token0 per token1.
      * @type {string}
      * @memberof PairDTO
      */
     token_0_price?: string | null;
     /**
-     * 
+     * Token1 per token0.
      * @type {string}
      * @memberof PairDTO
      */
     token_1_price?: string | null;
     /**
-     * 
+     * Amount of token0 swapped on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Amount of token1 swapped on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
      * @type {string}
      * @memberof PairDTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
      * @type {string}
      * @memberof PairDTO
      */
     untracked_volume_usd?: string | null;
     /**
-     * 
+     * All time amount of transactions on this pair.
      * @type {string}
      * @memberof PairDTO
      */
     tx_count?: string | null;
     /**
-     * 
+     * Total number of LPs.
      * @type {string}
      * @memberof PairDTO
      */
     liquidity_provider_count?: string | null;
     /**
-     * 
+     * Timestamp.
      * @type {string}
      * @memberof PairDTO
      */
     timestamp?: string | null;
     /**
-     * 
+     * Block number in which pair information was created in.
      * @type {string}
      * @memberof PairDTO
      */

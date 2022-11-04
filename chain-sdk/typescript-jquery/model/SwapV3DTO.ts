@@ -12,13 +12,16 @@
 
 import * as models from './models';
 
+/**
+ * Swap are created for each token swap within a pair.
+ */
 export interface SwapV3DTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
@@ -28,62 +31,62 @@ export interface SwapV3DTO {
     vid?: number;
 
     /**
-     * 
+     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      */
     id?: string;
 
     /**
-     * 
+     * Pointer to transaction.
      */
     transaction?: string;
 
     /**
-     * 
+     * Timestamp of transaction.
      */
     timestamp?: string;
 
     /**
-     * 
+     * Pool swap occured within.
      */
     pool?: string;
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      */
     token_0?: string;
 
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      */
     token_1?: string;
 
     /**
-     * 
+     * Sender of the swap.
      */
     sender?: string;
 
     /**
-     * 
+     * Recipient of the swap.
      */
     recipient?: string;
 
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      */
     origin?: string;
 
     /**
-     * 
+     * Delta of token0 swapped.
      */
     amount_0?: string;
 
     /**
-     * 
+     * Delta of token1 swapped.
      */
     amount_1?: string;
 
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      */
     amount_usd?: string;
 

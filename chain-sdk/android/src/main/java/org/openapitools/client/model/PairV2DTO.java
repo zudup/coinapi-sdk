@@ -91,9 +91,9 @@ public class PairV2DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -201,9 +201,9 @@ public class PairV2DTO {
   }
 
   /**
-   * Total liquidity with only tracked amount (see tracked amounts).
+   * Total liquidity with only tracked amount.
    **/
-  @ApiModelProperty(value = "Total liquidity with only tracked amount (see tracked amounts).")
+  @ApiModelProperty(value = "Total liquidity with only tracked amount.")
   public String getTrackedReserveEth() {
     return trackedReserveEth;
   }
@@ -299,9 +299,9 @@ public class PairV2DTO {
   }
 
   /**
-   * 
+   * Total number of LPs.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total number of LPs.")
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
   }

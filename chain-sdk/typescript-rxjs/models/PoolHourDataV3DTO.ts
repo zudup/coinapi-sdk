@@ -12,6 +12,7 @@
  */
 
 /**
+ * Hourly stats tracker for pool.
  * @export
  * @interface PoolHourDataV3DTO
  */
@@ -27,127 +28,127 @@ export interface PoolHourDataV3DTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     block_number?: number;
     /**
-     * 
+     * Identifier, format: <pool address>-<day id>
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     id?: string | null;
     /**
-     * 
+     * Unix timestamp for start of hour.
      * @type {number}
      * @memberof PoolHourDataV3DTO
      */
     period_start_unix?: number;
     /**
-     * 
+     * Pointer to pool.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     pool?: string | null;
     /**
-     * 
+     * In range liquidity at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     liquidity?: string | null;
     /**
-     * 
+     * Current price tracker at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     sqrt_price?: string | null;
     /**
-     * 
+     * Price of token0 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_0_price?: string | null;
     /**
-     * 
+     * Price of token1 - derived from sqrtPrice.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     token_1_price?: string | null;
     /**
-     * 
+     * Current tick at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tick?: string | null;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_0x128?: string | null;
     /**
-     * 
+     * Tracker for global fee growth.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fee_growth_global_1x128?: string | null;
     /**
-     * 
+     * Total value locked derived in USD at end of period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tvl_usd?: string | null;
     /**
-     * 
+     * Volume in token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_0?: string | null;
     /**
-     * 
+     * Volume in token1.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_token_1?: string | null;
     /**
-     * 
+     * Volume in USD.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     volume_usd?: string | null;
     /**
-     * 
+     * Fees in USD.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     fees_usd?: string | null;
     /**
-     * 
+     * Number of transactions during period.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     tx_count?: string | null;
     /**
-     * 
+     * Opening price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     open?: string | null;
     /**
-     * 
+     * High price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     high?: string | null;
     /**
-     * 
+     * Low price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */
     low?: string | null;
     /**
-     * 
+     * Close price of token0.
      * @type {string}
      * @memberof PoolHourDataV3DTO
      */

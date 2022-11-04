@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dappsDexBatchHistoricalGet**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical | 
 [**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPoiHistoricalGet**](DexApi.md#dappsDexPoiHistoricalGet) | **GET** /dapps/dex/poi/historical | 
 [**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
 [**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
 [**dappsDexStatsHistoricalGet**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical | 
@@ -103,55 +102,6 @@ Name | Type | Description  | Notes
  **startDate** | **Date**|  | [optional] [default to null]
  **endDate** | **Date**|  | [optional] [default to null]
  **tokenId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsDexPoiHistoricalGet
-
-> dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.DexApi;
-
-DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DexApi#dappsDexPoiHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
 
 ### Return type
 

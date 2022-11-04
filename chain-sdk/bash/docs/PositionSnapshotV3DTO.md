@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recvUnderscoretime** | **string** |  | [optional] [default to null]
 **blockUnderscorenumber** | **integer** |  | [optional] [default to null]
 **id** | **string** |  | [optional] [default to null]
-**owner** | **string** | OWNERINHO | [optional] [default to null]
+**owner** | **string** |  | [optional] [default to null]
 **pool** | **string** |  | [optional] [default to null]
 **position** | **string** |  | [optional] [default to null]
 **timestamp** | **string** |  | [optional] [default to null]

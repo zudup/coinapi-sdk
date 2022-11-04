@@ -1,7 +1,7 @@
 /*
  * TickV3DTO.h
  *
- * 
+ * Ticks are the boundaries between discrete areas in price space.
  */
 
 #ifndef _TickV3DTO_H_
@@ -21,7 +21,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Ticks are the boundaries between discrete areas in price space.
  *
  *  \ingroup Models
  *
@@ -60,11 +60,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
@@ -74,18 +74,18 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get Identifier, format: <pool address>#<tick index>
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Identifier, format: <pool address>#<tick index>
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Pool address.
 	 */
 	std::string getPoolAddress();
 
-	/*! \brief Set 
+	/*! \brief Set Pool address.
 	 */
 	void setPoolAddress(std::string  pool_address);
 	/*! \brief Get 
@@ -95,11 +95,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setTickIdx(BigInteger  tick_idx);
-	/*! \brief Get 
+	/*! \brief Get Pool address.
 	 */
 	std::string getPool();
 
-	/*! \brief Set 
+	/*! \brief Set Pool address.
 	 */
 	void setPool(std::string  pool);
 	/*! \brief Get 
@@ -116,81 +116,81 @@ public:
 	/*! \brief Set 
 	 */
 	void setLiquidityNet(BigInteger  liquidity_net);
-	/*! \brief Get 
+	/*! \brief Get Calculated price of token0 of tick within this pool - constant.
 	 */
 	std::string getPrice0();
 
-	/*! \brief Set 
+	/*! \brief Set Calculated price of token0 of tick within this pool - constant.
 	 */
 	void setPrice0(std::string  price_0);
-	/*! \brief Get 
+	/*! \brief Get Calculated price of token1 of tick within this pool - constant.
 	 */
 	std::string getPrice1();
 
-	/*! \brief Set 
+	/*! \brief Set Calculated price of token1 of tick within this pool - constant.
 	 */
 	void setPrice1(std::string  price_1);
-	/*! \brief Get 
+	/*! \brief Get Lifetime volume of token0 with this tick in range.
 	 */
 	std::string getVolumeToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Lifetime volume of token0 with this tick in range.
 	 */
 	void setVolumeToken0(std::string  volume_token_0);
-	/*! \brief Get 
+	/*! \brief Get Lifetime volume of token1 with this tick in range.
 	 */
 	std::string getVolumeToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Lifetime volume of token1 with this tick in range.
 	 */
 	void setVolumeToken1(std::string  volume_token_1);
-	/*! \brief Get 
+	/*! \brief Get Lifetime volume in derived USD with this tick in range.
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Lifetime volume in derived USD with this tick in range.
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Lifetime volume in untracked USD with this tick in range.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Lifetime volume in untracked USD with this tick in range.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Fees in USD.
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Fees in USD.
 	 */
 	void setFeesUsd(std::string  fees_usd);
-	/*! \brief Get 
+	/*! \brief Get All time collected fees in token0.
 	 */
 	std::string getCollectedFeesToken0();
 
-	/*! \brief Set 
+	/*! \brief Set All time collected fees in token0.
 	 */
 	void setCollectedFeesToken0(std::string  collected_fees_token_0);
-	/*! \brief Get 
+	/*! \brief Get All time collected fees in token1.
 	 */
 	std::string getCollectedFeesToken1();
 
-	/*! \brief Set 
+	/*! \brief Set All time collected fees in token1.
 	 */
 	void setCollectedFeesToken1(std::string  collected_fees_token_1);
-	/*! \brief Get 
+	/*! \brief Get All time collected fees in USD.
 	 */
 	std::string getCollectedFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set All time collected fees in USD.
 	 */
 	void setCollectedFeesUsd(std::string  collected_fees_usd);
-	/*! \brief Get 
+	/*! \brief Get Created time.
 	 */
 	std::string getCreatedAtTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Created time.
 	 */
 	void setCreatedAtTimestamp(std::string  created_at_timestamp);
 	/*! \brief Get 

@@ -17,11 +17,6 @@ void main() {
       // TODO
     });
 
-    //Future dappsDexPoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsDexPoiHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsDexPricesHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test dappsDexPricesHistoricalGet', () async {
       // TODO

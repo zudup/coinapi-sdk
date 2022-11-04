@@ -22,13 +22,6 @@ describe("cow_api", function()
     end)
   end)
 
-  -- unit tests for dapps_cow_poi_historical_get
-  describe("dapps_cow_poi_historical_get test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dapps_cow_settlement_historical_get
   describe("dapps_cow_settlement_historical_get test", function()
     it("should work", function()

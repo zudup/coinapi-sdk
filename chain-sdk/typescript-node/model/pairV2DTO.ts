@@ -20,7 +20,7 @@ export class PairV2DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
@@ -60,7 +60,7 @@ export class PairV2DTO {
     */
     'reserveUsd'?: string | null;
     /**
-    * Total liquidity with only tracked amount (see tracked amounts).
+    * Total liquidity with only tracked amount.
     */
     'trackedReserveEth'?: string | null;
     /**
@@ -93,7 +93,7 @@ export class PairV2DTO {
     */
     'createdAtTimestamp'?: Date;
     /**
-    * 
+    * Total number of LPs.
     */
     'liquidityProviderCount'?: string | null;
     'evaluatedAsk'?: number;

@@ -11,7 +11,6 @@ Feature | HTTP request | Description
 [**dapps_uniswapv2_liquidity_position_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_liquidity_position_historical_get) | **Get** /dapps/uniswapv2/liquidityPosition/historical | 
 [**dapps_uniswapv2_liquidity_position_snapshots_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_liquidity_position_snapshots_historical_get) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**dapps_uniswapv2_mints_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_mints_historical_get) | **Get** /dapps/uniswapv2/mints/historical | 
-[**dapps_uniswapv2_poi_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_poi_historical_get) | **Get** /dapps/uniswapv2/poi/historical | 
 [**dapps_uniswapv2_pool_day_data_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_pool_day_data_historical_get) | **Get** /dapps/uniswapv2/poolDayData/historical | 
 [**dapps_uniswapv2_pool_hour_data_historical_get**](UNISWAPV2_API.md#dapps_uniswapv2_pool_hour_data_historical_get) | **Get** /dapps/uniswapv2/poolHourData/historical | 
 [**dapps_uniswapv2_pools_current_get**](UNISWAPV2_API.md#dapps_uniswapv2_pools_current_get) | **Get** /dapps/uniswapv2/pools/current | GetPools
@@ -230,37 +229,6 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**|  | [optional] [default to null]
  **end_date** | **DATE_TIME**|  | [optional] [default to null]
  **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-{empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_uniswapv2_poi_historical_get**
-> dapps_uniswapv2_poi_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
-
-
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
 
 ### Return type
 

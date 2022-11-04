@@ -6,22 +6,22 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **transaction** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
-| **token_0** | **String** |  | [optional] |
-| **token_1** | **String** |  | [optional] |
-| **timestamp** | **String** |  | [optional] |
-| **owner** | **String** |  | [optional] |
-| **origin** | **String** |  | [optional] |
-| **amount** | **String** |  | [optional] |
-| **amount_0** | **String** |  | [optional] |
-| **amount_1** | **String** |  | [optional] |
-| **amount_usd** | **String** |  | [optional] |
-| **tick_lower** | **String** |  | [optional] |
-| **tick_upper** | **String** |  | [optional] |
-| **log_index** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | Transaction hash + &#39;#&#39; + index in mints Transaction array. | [optional] |
+| **transaction** | **String** | Transaction burn was included in. | [optional] |
+| **pool** | **String** | Pool position is within. | [optional] |
+| **token_0** | **String** | Reference to token0 as stored in pool contract. | [optional] |
+| **token_1** | **String** | Reference to token1 as stored in pool contract. | [optional] |
+| **timestamp** | **String** | Timestamp. | [optional] |
+| **owner** | **String** | Owner of position where liquidity was burned. | [optional] |
+| **origin** | **String** | Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. | [optional] |
+| **amount** | **String** | Amount of liquidity burned. | [optional] |
+| **amount_0** | **String** | Amount of token 0 burned. | [optional] |
+| **amount_1** | **String** | Amount of token 1 burned. | [optional] |
+| **amount_usd** | **String** | Derived amount based on available prices of tokens. | [optional] |
+| **tick_lower** | **String** | Lower tick of position. | [optional] |
+| **tick_upper** | **String** | Upper tick of position. | [optional] |
+| **log_index** | **String** | Position within the transactions. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 
 ## Example

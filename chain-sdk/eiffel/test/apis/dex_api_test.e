@@ -46,22 +46,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dapps_dex_poi_historical_get
-            -- 
-            --
-            -- 
-        local
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-        do
-            -- TODO: Initialize required params.
-
-            -- api.dapps_dex_poi_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
-            assert ("not_implemented", False)
-        end
-
     test_dapps_dex_prices_historical_get
             -- 
             --

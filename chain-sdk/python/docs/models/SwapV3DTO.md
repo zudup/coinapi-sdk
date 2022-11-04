@@ -1,29 +1,31 @@
 # openapi_client.model.swap_v3_dto.SwapV3DTO
 
+Swap are created for each token swap within a pair.
+
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+dict, frozendict.frozendict,  | frozendict.frozendict,  | Swap are created for each token swap within a pair. | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**block_number** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
+**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  |  | [optional] 
-**transaction** | None, str,  | NoneClass, str,  |  | [optional] 
-**timestamp** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**pool** | None, str,  | NoneClass, str,  |  | [optional] 
-**token_0** | None, str,  | NoneClass, str,  |  | [optional] 
-**token_1** | None, str,  | NoneClass, str,  |  | [optional] 
-**sender** | None, str,  | NoneClass, str,  |  | [optional] 
-**recipient** | None, str,  | NoneClass, str,  |  | [optional] 
-**origin** | None, str,  | NoneClass, str,  |  | [optional] 
-**amount_0** | None, str,  | NoneClass, str,  |  | [optional] 
-**amount_1** | None, str,  | NoneClass, str,  |  | [optional] 
-**amount_usd** | None, str,  | NoneClass, str,  |  | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**transaction** | None, str,  | NoneClass, str,  | Pointer to transaction. | [optional] 
+**timestamp** | str, datetime,  | str,  | Timestamp of transaction. | [optional] value must conform to RFC-3339 date-time
+**pool** | None, str,  | NoneClass, str,  | Pool swap occured within. | [optional] 
+**token_0** | None, str,  | NoneClass, str,  | Reference to token0 as stored in pair contract. | [optional] 
+**token_1** | None, str,  | NoneClass, str,  | Reference to token1 as stored in pair contract. | [optional] 
+**sender** | None, str,  | NoneClass, str,  | Sender of the swap. | [optional] 
+**recipient** | None, str,  | NoneClass, str,  | Recipient of the swap. | [optional] 
+**origin** | None, str,  | NoneClass, str,  | Transaction origin: the EOA (Externally Owned Account) that initiated the transaction | [optional] 
+**amount_0** | None, str,  | NoneClass, str,  | Delta of token0 swapped. | [optional] 
+**amount_1** | None, str,  | NoneClass, str,  | Delta of token1 swapped. | [optional] 
+**amount_usd** | None, str,  | NoneClass, str,  | Derived amount of tokens sold in USD. | [optional] 
 **sqrt_price_x96** | [**BigInteger**](BigInteger.md) | [**BigInteger**](BigInteger.md) |  | [optional] 
 **tick** | [**BigInteger**](BigInteger.md) | [**BigInteger**](BigInteger.md) |  | [optional] 
 **log_index** | [**BigInteger**](BigInteger.md) | [**BigInteger**](BigInteger.md) |  | [optional] 

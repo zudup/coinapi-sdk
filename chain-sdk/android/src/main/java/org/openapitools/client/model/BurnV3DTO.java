@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ **/
+@ApiModel(description = "Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.")
 public class BurnV3DTO {
   
   @SerializedName("entry_time")
@@ -79,9 +82,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -90,9 +93,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Transaction hash + '#' + index in mints Transaction array.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction hash + '#' + index in mints Transaction array.")
   public String getId() {
     return id;
   }
@@ -101,9 +104,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Transaction burn was included in.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction burn was included in.")
   public String getTransaction() {
     return transaction;
   }
@@ -112,9 +115,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Pool position is within.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool position is within.")
   public String getPool() {
     return pool;
   }
@@ -123,9 +126,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Reference to token0 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
   public String getToken0() {
     return token0;
   }
@@ -134,9 +137,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Reference to token1 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
   public String getToken1() {
     return token1;
   }
@@ -145,9 +148,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Timestamp.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp.")
   public String getTimestamp() {
     return timestamp;
   }
@@ -156,9 +159,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Owner of position where liquidity was burned.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Owner of position where liquidity was burned.")
   public String getOwner() {
     return owner;
   }
@@ -167,9 +170,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.")
   public String getOrigin() {
     return origin;
   }
@@ -178,9 +181,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Amount of liquidity burned.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of liquidity burned.")
   public String getAmount() {
     return amount;
   }
@@ -189,9 +192,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 0 burned.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 0 burned.")
   public String getAmount0() {
     return amount0;
   }
@@ -200,9 +203,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Amount of token 1 burned.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token 1 burned.")
   public String getAmount1() {
     return amount1;
   }
@@ -211,9 +214,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Derived amount based on available prices of tokens.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -222,9 +225,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Lower tick of position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lower tick of position.")
   public String getTickLower() {
     return tickLower;
   }
@@ -233,9 +236,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Upper tick of position.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Upper tick of position.")
   public String getTickUpper() {
     return tickUpper;
   }
@@ -244,9 +247,9 @@ public class BurnV3DTO {
   }
 
   /**
-   * 
+   * Position within the transactions.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Position within the transactions.")
   public String getLogIndex() {
     return logIndex;
   }

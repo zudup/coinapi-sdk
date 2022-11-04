@@ -13,40 +13,40 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Factory address.
 .PARAMETER PoolCount
-
+Amount of pools created.
 .PARAMETER TxCount
-
+Amount of transactions all time.
 .PARAMETER TotalVolumeUsd
-
+Total volume all time in derived USD.
 .PARAMETER TotalVolumeEth
-
+Total volume all time in derived ETH.
 .PARAMETER TotalFeesUsd
-
+Total swap fees all time in USD.
 .PARAMETER TotalFeesEth
-
+All volume even through less reliable USD values.
 .PARAMETER UntrackedVolumeUsd
-
+All volume even through less reliable USD values.
 .PARAMETER TotalValueLockedUsd
-
+Total value locked derived in USD.
 .PARAMETER TotalValueLockedEth
-
+Total value locked derived in ETH.
 .PARAMETER TotalValueLockedUsdUntracked
-
+Total value locked derived in USD untracked.
 .PARAMETER TotalValueLockedEthUntracked
-
+Total value locked derived in ETH untracked.
 .PARAMETER Owner
-
+Current owner of the factory.
 .PARAMETER Vid
 
 .OUTPUTS

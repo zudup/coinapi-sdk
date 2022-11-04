@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('dappsDexPoiHistoricalGet', function() {
-      it('should call dappsDexPoiHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexPoiHistoricalGet
-        //instance.dappsDexPoiHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsDexPricesHistoricalGet', function() {
       it('should call dappsDexPricesHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsDexPricesHistoricalGet

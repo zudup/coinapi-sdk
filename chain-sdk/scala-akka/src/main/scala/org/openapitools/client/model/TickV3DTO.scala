@@ -17,40 +17,40 @@ import org.openapitools.client.core.ApiModel
 case class TickV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /*  */
+  /* Identifier, format: <pool address>#<tick index> */
   id: Option[String] = None,
-  /*  */
+  /* Pool address. */
   poolAddress: Option[String] = None,
   tickIdx: Option[BigInteger] = None,
-  /*  */
+  /* Pool address. */
   pool: Option[String] = None,
   liquidityGross: Option[BigInteger] = None,
   liquidityNet: Option[BigInteger] = None,
-  /*  */
+  /* Calculated price of token0 of tick within this pool - constant. */
   price0: Option[String] = None,
-  /*  */
+  /* Calculated price of token1 of tick within this pool - constant. */
   price1: Option[String] = None,
-  /*  */
+  /* Lifetime volume of token0 with this tick in range. */
   volumeToken0: Option[String] = None,
-  /*  */
+  /* Lifetime volume of token1 with this tick in range. */
   volumeToken1: Option[String] = None,
-  /*  */
+  /* Lifetime volume in derived USD with this tick in range. */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Lifetime volume in untracked USD with this tick in range. */
   untrackedVolumeUsd: Option[String] = None,
-  /*  */
+  /* Fees in USD. */
   feesUsd: Option[String] = None,
-  /*  */
+  /* All time collected fees in token0. */
   collectedFeesToken0: Option[String] = None,
-  /*  */
+  /* All time collected fees in token1. */
   collectedFeesToken1: Option[String] = None,
-  /*  */
+  /* All time collected fees in USD. */
   collectedFeesUsd: Option[String] = None,
-  /*  */
+  /* Created time. */
   createdAtTimestamp: Option[OffsetDateTime] = None,
   liquidityProviderCount: Option[BigInteger] = None,
   feeGrowthOutside0x128: Option[BigInteger] = None,

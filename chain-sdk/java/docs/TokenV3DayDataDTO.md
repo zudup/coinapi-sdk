@@ -10,7 +10,7 @@ Token data aggregated across all pairs that include token.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Long** |  |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**vid** | **Long** |  |  [optional] |
 |**id** | **String** | Token address concatendated with date. |  [optional] |
 |**date** | **Integer** | Timestamp rounded to current day by dividing by 86400. |  [optional] |

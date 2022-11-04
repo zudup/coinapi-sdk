@@ -55,7 +55,7 @@ class SwapV3DTO {
   ///
   DateTime? recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -73,13 +73,13 @@ class SwapV3DTO {
   ///
   int? vid;
 
-  /// 
+  /// Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
   String? id;
 
-  /// 
+  /// Pointer to transaction.
   String? transaction;
 
-  /// 
+  /// Timestamp of transaction.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -88,31 +88,31 @@ class SwapV3DTO {
   ///
   DateTime? timestamp;
 
-  /// 
+  /// Pool swap occured within.
   String? pool;
 
-  /// 
+  /// Reference to token0 as stored in pair contract.
   String? token0;
 
-  /// 
+  /// Reference to token1 as stored in pair contract.
   String? token1;
 
-  /// 
+  /// Sender of the swap.
   String? sender;
 
-  /// 
+  /// Recipient of the swap.
   String? recipient;
 
-  /// 
+  /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
   String? origin;
 
-  /// 
+  /// Delta of token0 swapped.
   String? amount0;
 
-  /// 
+  /// Delta of token1 swapped.
   String? amount1;
 
-  /// 
+  /// Derived amount of tokens sold in USD.
   String? amountUsd;
 
   ///

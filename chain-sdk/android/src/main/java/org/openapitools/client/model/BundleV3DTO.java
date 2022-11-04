@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+ **/
+@ApiModel(description = "The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.")
 public class BundleV3DTO {
   
   @SerializedName("entry_time")
@@ -53,9 +56,9 @@ public class BundleV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -75,9 +78,9 @@ public class BundleV3DTO {
   }
 
   /**
-   * 
+   * Price of ETH in usd.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Price of ETH in usd.")
   public String getEthPriceUsd() {
     return ethPriceUsd;
   }

@@ -19,7 +19,7 @@ API.Client.PairV2DTO.prototype.entryTime;
 API.Client.PairV2DTO.prototype.recvTime;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */
@@ -89,7 +89,7 @@ API.Client.PairV2DTO.prototype.reserveEth;
 API.Client.PairV2DTO.prototype.reserveUsd;
 
 /**
- * Total liquidity with only tracked amount (see tracked amounts).
+ * Total liquidity with only tracked amount.
  * @type {!string}
  * @export
  */
@@ -151,7 +151,7 @@ API.Client.PairV2DTO.prototype.txCount;
 API.Client.PairV2DTO.prototype.createdAtTimestamp;
 
 /**
- * 
+ * Total number of LPs.
  * @type {!string}
  * @export
  */

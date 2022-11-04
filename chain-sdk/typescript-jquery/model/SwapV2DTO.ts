@@ -21,7 +21,7 @@ export interface SwapV2DTO {
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 

@@ -328,34 +328,6 @@ private class OASUniswapV3ApiTest {
      * 
      */
     @isTest
-    private static void dappsUniswapv3PoiHistoricalGetTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3)
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        api.dappsUniswapv3PoiHistoricalGet(params);
-    }
-
-    /**
-     * 
-     *
-     * 
-     */
-    @isTest
     private static void dappsUniswapv3PoolDayDataHistoricalGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);

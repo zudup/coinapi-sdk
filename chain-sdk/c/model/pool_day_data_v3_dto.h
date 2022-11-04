@@ -1,7 +1,7 @@
 /*
  * pool_day_data_v3_dto.h
  *
- * 
+ * Data accumulated and condensed into day stats for each pool.
  */
 
 #ifndef _pool_day_data_v3_dto_H_

@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // 
+    // Number of block in which entity was recorded.
     // int blockNumber
     test('to test the property `blockNumber`', () async {
       // TODO
@@ -38,73 +38,73 @@ void main() {
       // TODO
     });
 
-    // 
+    // Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
-    // 
+    // Pointer to transaction.
     // String transaction
     test('to test the property `transaction`', () async {
       // TODO
     });
 
-    // 
+    // Timestamp of transaction.
     // DateTime timestamp
     test('to test the property `timestamp`', () async {
       // TODO
     });
 
-    // 
+    // Pool swap occured within.
     // String pool
     test('to test the property `pool`', () async {
       // TODO
     });
 
-    // 
+    // Reference to token0 as stored in pair contract.
     // String token0
     test('to test the property `token0`', () async {
       // TODO
     });
 
-    // 
+    // Reference to token1 as stored in pair contract.
     // String token1
     test('to test the property `token1`', () async {
       // TODO
     });
 
-    // 
+    // Sender of the swap.
     // String sender
     test('to test the property `sender`', () async {
       // TODO
     });
 
-    // 
+    // Recipient of the swap.
     // String recipient
     test('to test the property `recipient`', () async {
       // TODO
     });
 
-    // 
+    // Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
     // String origin
     test('to test the property `origin`', () async {
       // TODO
     });
 
-    // 
+    // Delta of token0 swapped.
     // String amount0
     test('to test the property `amount0`', () async {
       // TODO
     });
 
-    // 
+    // Delta of token1 swapped.
     // String amount1
     test('to test the property `amount1`', () async {
       // TODO
     });
 
-    // 
+    // Derived amount of tokens sold in USD.
     // String amountUsd
     test('to test the property `amountUsd`', () async {
       // TODO

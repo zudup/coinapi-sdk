@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
 #' @field id Transaction hash plus index in Transaction swap array. character [optional]
 #' @field transaction Reference to transaction swap was included in. character [optional]
@@ -64,7 +64,7 @@ SwapV2DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
     #' @param id Transaction hash plus index in Transaction swap array.
     #' @param transaction Reference to transaction swap was included in.
@@ -86,67 +86,95 @@ SwapV2DTO <- R6::R6Class(
     #' @param transaction_id transaction_id
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `transaction` = NULL, `timestamp` = NULL, `pair` = NULL, `sender` = NULL, `from` = NULL, `amount_0_in` = NULL, `amount_1_in` = NULL, `amount_0_out` = NULL, `amount_1_out` = NULL, `to` = NULL, `log_index` = NULL, `amount_usd` = NULL, `evaluated_price` = NULL, `evaluated_amount` = NULL, `evaluated_aggressor` = NULL, `pool_id` = NULL, `transaction_id` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `transaction` = NULL, `timestamp` = NULL, `pair` = NULL, `sender` = NULL, `from` = NULL, `amount_0_in` = NULL, `amount_1_in` = NULL, `amount_0_out` = NULL, `amount_1_out` = NULL, `to` = NULL, `log_index` = NULL, `amount_usd` = NULL, `evaluated_price` = NULL, `evaluated_amount` = NULL, `evaluated_aggressor` = NULL, `pool_id` = NULL, `transaction_id` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`transaction`)) {
-        stopifnot(is.character(`transaction`), length(`transaction`) == 1)
+        if (!(is.character(`transaction`) && length(`transaction`) == 1)) {
+          stop(paste("Error! Invalid data for `transaction`. Must be a string:", `transaction`))
+        }
         self$`transaction` <- `transaction`
       }
       if (!is.null(`timestamp`)) {
-        stopifnot(is.character(`timestamp`), length(`timestamp`) == 1)
+        if (!is.character(`timestamp`)) {
+          stop(paste("Error! Invalid data for `timestamp`. Must be a string:", `timestamp`))
+        }
         self$`timestamp` <- `timestamp`
       }
       if (!is.null(`pair`)) {
-        stopifnot(is.character(`pair`), length(`pair`) == 1)
+        if (!(is.character(`pair`) && length(`pair`) == 1)) {
+          stop(paste("Error! Invalid data for `pair`. Must be a string:", `pair`))
+        }
         self$`pair` <- `pair`
       }
       if (!is.null(`sender`)) {
-        stopifnot(is.character(`sender`), length(`sender`) == 1)
+        if (!(is.character(`sender`) && length(`sender`) == 1)) {
+          stop(paste("Error! Invalid data for `sender`. Must be a string:", `sender`))
+        }
         self$`sender` <- `sender`
       }
       if (!is.null(`from`)) {
-        stopifnot(is.character(`from`), length(`from`) == 1)
+        if (!(is.character(`from`) && length(`from`) == 1)) {
+          stop(paste("Error! Invalid data for `from`. Must be a string:", `from`))
+        }
         self$`from` <- `from`
       }
       if (!is.null(`amount_0_in`)) {
-        stopifnot(is.character(`amount_0_in`), length(`amount_0_in`) == 1)
+        if (!(is.character(`amount_0_in`) && length(`amount_0_in`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_0_in`. Must be a string:", `amount_0_in`))
+        }
         self$`amount_0_in` <- `amount_0_in`
       }
       if (!is.null(`amount_1_in`)) {
-        stopifnot(is.character(`amount_1_in`), length(`amount_1_in`) == 1)
+        if (!(is.character(`amount_1_in`) && length(`amount_1_in`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_1_in`. Must be a string:", `amount_1_in`))
+        }
         self$`amount_1_in` <- `amount_1_in`
       }
       if (!is.null(`amount_0_out`)) {
-        stopifnot(is.character(`amount_0_out`), length(`amount_0_out`) == 1)
+        if (!(is.character(`amount_0_out`) && length(`amount_0_out`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_0_out`. Must be a string:", `amount_0_out`))
+        }
         self$`amount_0_out` <- `amount_0_out`
       }
       if (!is.null(`amount_1_out`)) {
-        stopifnot(is.character(`amount_1_out`), length(`amount_1_out`) == 1)
+        if (!(is.character(`amount_1_out`) && length(`amount_1_out`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_1_out`. Must be a string:", `amount_1_out`))
+        }
         self$`amount_1_out` <- `amount_1_out`
       }
       if (!is.null(`to`)) {
-        stopifnot(is.character(`to`), length(`to`) == 1)
+        if (!(is.character(`to`) && length(`to`) == 1)) {
+          stop(paste("Error! Invalid data for `to`. Must be a string:", `to`))
+        }
         self$`to` <- `to`
       }
       if (!is.null(`log_index`)) {
@@ -154,15 +182,21 @@ SwapV2DTO <- R6::R6Class(
         self$`log_index` <- `log_index`
       }
       if (!is.null(`amount_usd`)) {
-        stopifnot(is.character(`amount_usd`), length(`amount_usd`) == 1)
+        if (!(is.character(`amount_usd`) && length(`amount_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `amount_usd`. Must be a string:", `amount_usd`))
+        }
         self$`amount_usd` <- `amount_usd`
       }
       if (!is.null(`evaluated_price`)) {
-        stopifnot(is.numeric(`evaluated_price`), length(`evaluated_price`) == 1)
+        if (!(is.numeric(`evaluated_price`) && length(`evaluated_price`) == 1)) {
+          stop(paste("Error! Invalid data for `evaluated_price`. Must be a number:", `evaluated_price`))
+        }
         self$`evaluated_price` <- `evaluated_price`
       }
       if (!is.null(`evaluated_amount`)) {
-        stopifnot(is.numeric(`evaluated_amount`), length(`evaluated_amount`) == 1)
+        if (!(is.numeric(`evaluated_amount`) && length(`evaluated_amount`) == 1)) {
+          stop(paste("Error! Invalid data for `evaluated_amount`. Must be a number:", `evaluated_amount`))
+        }
         self$`evaluated_amount` <- `evaluated_amount`
       }
       if (!is.null(`evaluated_aggressor`)) {
@@ -170,11 +204,15 @@ SwapV2DTO <- R6::R6Class(
         self$`evaluated_aggressor` <- `evaluated_aggressor`
       }
       if (!is.null(`pool_id`)) {
-        stopifnot(is.character(`pool_id`), length(`pool_id`) == 1)
+        if (!(is.character(`pool_id`) && length(`pool_id`) == 1)) {
+          stop(paste("Error! Invalid data for `pool_id`. Must be a string:", `pool_id`))
+        }
         self$`pool_id` <- `pool_id`
       }
       if (!is.null(`transaction_id`)) {
-        stopifnot(is.character(`transaction_id`), length(`transaction_id`) == 1)
+        if (!(is.character(`transaction_id`) && length(`transaction_id`) == 1)) {
+          stop(paste("Error! Invalid data for `transaction_id`. Must be a string:", `transaction_id`))
+        }
         self$`transaction_id` <- `transaction_id`
       }
     },
@@ -632,18 +670,19 @@ SwapV2DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#SwapV2DTO$unlock()
+# SwapV2DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#SwapV2DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# SwapV2DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#SwapV2DTO$lock()
+# SwapV2DTO$lock()
 

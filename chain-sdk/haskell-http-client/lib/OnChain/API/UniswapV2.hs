@@ -245,31 +245,6 @@ instance HasOptionalParam DappsUniswapv2MintsHistoricalGet PoolId where
 instance Produces DappsUniswapv2MintsHistoricalGet MimeNoContent
 
 
--- *** dappsUniswapv2PoiHistoricalGet
-
--- | @GET \/dapps\/uniswapv2\/poi\/historical@
--- 
-dappsUniswapv2PoiHistoricalGet
-  :: OnChainRequest DappsUniswapv2PoiHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsUniswapv2PoiHistoricalGet =
-  _mkRequest "GET" ["/dapps/uniswapv2/poi/historical"]
-
-data DappsUniswapv2PoiHistoricalGet  
-instance HasOptionalParam DappsUniswapv2PoiHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsUniswapv2PoiHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsUniswapv2PoiHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsUniswapv2PoiHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsUniswapv2PoiHistoricalGet MimeNoContent
-
-
 -- *** dappsUniswapv2PoolDayDataHistoricalGet
 
 -- | @GET \/dapps\/uniswapv2\/poolDayData\/historical@

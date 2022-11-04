@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class BundleV3DTO {
     /**
      * Constructs a new <code>BundleV3DTO</code>.
+     * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
      * @alias module:model/BundleV3DTO
      */
     constructor() { 
@@ -69,8 +70,28 @@ class BundleV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>BundleV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BundleV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['eth_price_usd'] && !(typeof data['eth_price_usd'] === 'string' || data['eth_price_usd'] instanceof String)) {
+            throw new Error("Expected the field `eth_price_usd` to be a primitive type in the JSON string but got " + data['eth_price_usd']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -83,7 +104,7 @@ BundleV3DTO.prototype['entry_time'] = undefined;
 BundleV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 BundleV3DTO.prototype['block_number'] = undefined;
@@ -95,7 +116,7 @@ BundleV3DTO.prototype['block_number'] = undefined;
 BundleV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Price of ETH in usd.
  * @member {String} eth_price_usd
  */
 BundleV3DTO.prototype['eth_price_usd'] = undefined;

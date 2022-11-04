@@ -24,7 +24,7 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
       -- Token address concatendated with date.
  	period_start_unix: INTEGER_32

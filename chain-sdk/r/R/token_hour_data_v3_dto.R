@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field id Token address concatendated with date. character [optional]
 #' @field period_start_unix Unix timestamp for start of hour. integer [optional]
 #' @field token Pointer to token. character [optional]
@@ -56,7 +56,7 @@ TokenHourDataV3DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param id Token address concatendated with date.
     #' @param period_start_unix Unix timestamp for start of hour.
     #' @param token Pointer to token.
@@ -74,79 +74,113 @@ TokenHourDataV3DTO <- R6::R6Class(
     #' @param vid 
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `period_start_unix` = NULL, `token` = NULL, `volume` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `total_value_locked` = NULL, `total_value_locked_usd` = NULL, `price_usd` = NULL, `fees_usd` = NULL, `open` = NULL, `high` = NULL, `low` = NULL, `close` = NULL, `vid` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `id` = NULL, `period_start_unix` = NULL, `token` = NULL, `volume` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `total_value_locked` = NULL, `total_value_locked_usd` = NULL, `price_usd` = NULL, `fees_usd` = NULL, `open` = NULL, `high` = NULL, `low` = NULL, `close` = NULL, `vid` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`period_start_unix`)) {
-        stopifnot(is.numeric(`period_start_unix`), length(`period_start_unix`) == 1)
+        if (!(is.numeric(`period_start_unix`) && length(`period_start_unix`) == 1)) {
+          stop(paste("Error! Invalid data for `period_start_unix`. Must be an integer:", `period_start_unix`))
+        }
         self$`period_start_unix` <- `period_start_unix`
       }
       if (!is.null(`token`)) {
-        stopifnot(is.character(`token`), length(`token`) == 1)
+        if (!(is.character(`token`) && length(`token`) == 1)) {
+          stop(paste("Error! Invalid data for `token`. Must be a string:", `token`))
+        }
         self$`token` <- `token`
       }
       if (!is.null(`volume`)) {
-        stopifnot(is.character(`volume`), length(`volume`) == 1)
+        if (!(is.character(`volume`) && length(`volume`) == 1)) {
+          stop(paste("Error! Invalid data for `volume`. Must be a string:", `volume`))
+        }
         self$`volume` <- `volume`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`untracked_volume_usd`)) {
-        stopifnot(is.character(`untracked_volume_usd`), length(`untracked_volume_usd`) == 1)
+        if (!(is.character(`untracked_volume_usd`) && length(`untracked_volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `untracked_volume_usd`. Must be a string:", `untracked_volume_usd`))
+        }
         self$`untracked_volume_usd` <- `untracked_volume_usd`
       }
       if (!is.null(`total_value_locked`)) {
-        stopifnot(is.character(`total_value_locked`), length(`total_value_locked`) == 1)
+        if (!(is.character(`total_value_locked`) && length(`total_value_locked`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked`. Must be a string:", `total_value_locked`))
+        }
         self$`total_value_locked` <- `total_value_locked`
       }
       if (!is.null(`total_value_locked_usd`)) {
-        stopifnot(is.character(`total_value_locked_usd`), length(`total_value_locked_usd`) == 1)
+        if (!(is.character(`total_value_locked_usd`) && length(`total_value_locked_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `total_value_locked_usd`. Must be a string:", `total_value_locked_usd`))
+        }
         self$`total_value_locked_usd` <- `total_value_locked_usd`
       }
       if (!is.null(`price_usd`)) {
-        stopifnot(is.character(`price_usd`), length(`price_usd`) == 1)
+        if (!(is.character(`price_usd`) && length(`price_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `price_usd`. Must be a string:", `price_usd`))
+        }
         self$`price_usd` <- `price_usd`
       }
       if (!is.null(`fees_usd`)) {
-        stopifnot(is.character(`fees_usd`), length(`fees_usd`) == 1)
+        if (!(is.character(`fees_usd`) && length(`fees_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `fees_usd`. Must be a string:", `fees_usd`))
+        }
         self$`fees_usd` <- `fees_usd`
       }
       if (!is.null(`open`)) {
-        stopifnot(is.character(`open`), length(`open`) == 1)
+        if (!(is.character(`open`) && length(`open`) == 1)) {
+          stop(paste("Error! Invalid data for `open`. Must be a string:", `open`))
+        }
         self$`open` <- `open`
       }
       if (!is.null(`high`)) {
-        stopifnot(is.character(`high`), length(`high`) == 1)
+        if (!(is.character(`high`) && length(`high`) == 1)) {
+          stop(paste("Error! Invalid data for `high`. Must be a string:", `high`))
+        }
         self$`high` <- `high`
       }
       if (!is.null(`low`)) {
-        stopifnot(is.character(`low`), length(`low`) == 1)
+        if (!(is.character(`low`) && length(`low`) == 1)) {
+          stop(paste("Error! Invalid data for `low`. Must be a string:", `low`))
+        }
         self$`low` <- `low`
       }
       if (!is.null(`close`)) {
-        stopifnot(is.character(`close`), length(`close`) == 1)
+        if (!(is.character(`close`) && length(`close`) == 1)) {
+          stop(paste("Error! Invalid data for `close`. Must be a string:", `close`))
+        }
         self$`close` <- `close`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
     },
@@ -536,18 +570,19 @@ TokenHourDataV3DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#TokenHourDataV3DTO$unlock()
+# TokenHourDataV3DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#TokenHourDataV3DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# TokenHourDataV3DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#TokenHourDataV3DTO$lock()
+# TokenHourDataV3DTO$lock()
 

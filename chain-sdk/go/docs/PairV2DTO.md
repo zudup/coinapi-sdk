@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
-**BlockNumber** | Pointer to **int64** |  | [optional] 
+**BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **NullableString** | Pair contract address. | [optional] 
 **Token0** | Pointer to **NullableString** | Reference to token0 as stored in pair contract. | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **TotalSupply** | Pointer to **NullableString** | Total supply of liquidity token distributed to LPs. | [optional] 
 **ReserveEth** | Pointer to **NullableString** | Total liquidity in pair stored as an amount of ETH. | [optional] 
 **ReserveUsd** | Pointer to **NullableString** | Total liquidity amount in pair stored as an amount of USD. | [optional] 
-**TrackedReserveEth** | Pointer to **NullableString** | Total liquidity with only tracked amount (see tracked amounts). | [optional] 
+**TrackedReserveEth** | Pointer to **NullableString** | Total liquidity with only tracked amount. | [optional] 
 **Token0Price** | Pointer to **NullableString** | Token0 per token1. | [optional] 
 **Token1Price** | Pointer to **NullableString** | Token1 per token0. | [optional] 
 **VolumeToken0** | Pointer to **NullableString** | Amount of token0 swapped on this pair. | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **UntrackedVolumeUsd** | Pointer to **NullableString** | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. | [optional] 
 **TxCount** | Pointer to [**BigInteger**](BigInteger.md) |  | [optional] 
 **CreatedAtTimestamp** | Pointer to **time.Time** | Timestamp contract was created. | [optional] 
-**LiquidityProviderCount** | Pointer to **NullableString** |  | [optional] 
+**LiquidityProviderCount** | Pointer to **NullableString** | Total number of LPs. | [optional] 
 **EvaluatedAsk** | Pointer to **float64** |  | [optional] [readonly] 
 
 ## Methods

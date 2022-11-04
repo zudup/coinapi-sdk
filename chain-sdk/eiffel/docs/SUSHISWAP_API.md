@@ -12,16 +12,15 @@ Feature | HTTP request | Description
 [**dapps_sushiswap_liquidity_position_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_liquidity_position_historical_get) | **Get** /dapps/sushiswap/liquidityPosition/historical | 
 [**dapps_sushiswap_liquidity_position_snapshots_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_liquidity_position_snapshots_historical_get) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**dapps_sushiswap_mints_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_mints_historical_get) | **Get** /dapps/sushiswap/mints/historical | 
-[**dapps_sushiswap_poi_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_poi_historical_get) | **Get** /dapps/sushiswap/poi/historical | 
 [**dapps_sushiswap_pool_day_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_pool_day_data_historical_get) | **Get** /dapps/sushiswap/poolDayData/historical | 
 [**dapps_sushiswap_pool_hour_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_pool_hour_data_historical_get) | **Get** /dapps/sushiswap/poolHourData/historical | 
 [**dapps_sushiswap_pools_current_get**](SUSHISWAP_API.md#dapps_sushiswap_pools_current_get) | **Get** /dapps/sushiswap/pools/current | GetPools
-[**dapps_sushiswap_pools_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_pools_historical_get) | **Get** /dapps/sushiswap/pools/historical | 
+[**dapps_sushiswap_pools_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_pools_historical_get) | **Get** /dapps/sushiswap/pools/historical | GetPools
 [**dapps_sushiswap_swaps_current_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_current_get) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
-[**dapps_sushiswap_swaps_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | 
+[**dapps_sushiswap_swaps_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps
 [**dapps_sushiswap_token_day_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_token_day_data_historical_get) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_tokens_current_get**](SUSHISWAP_API.md#dapps_sushiswap_tokens_current_get) | **Get** /dapps/sushiswap/tokens/current | GetTokens
-[**dapps_sushiswap_tokens_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_tokens_historical_get) | **Get** /dapps/sushiswap/tokens/historical | 
+[**dapps_sushiswap_tokens_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_tokens_historical_get) | **Get** /dapps/sushiswap/tokens/historical | GetTokens
 [**dapps_sushiswap_transactions_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_transactions_historical_get) | **Get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_users_historical_get) | **Get** /dapps/sushiswap/users/historical | 
 
@@ -278,37 +277,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_sushiswap_poi_historical_get**
-> dapps_sushiswap_poi_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
-
-
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
-
-### Return type
-
-{empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **dapps_sushiswap_pool_day_data_historical_get**
 > dapps_sushiswap_pool_day_data_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
 
@@ -401,10 +369,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_pools_historical_get**
-> dapps_sushiswap_pools_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+> dapps_sushiswap_pools_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [PAIR_DTO]
 
 
-
+GetPools
 
 
 ### Parameters
@@ -419,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [PAIR_DTO]**](PairDTO.md)
 
 ### Authorization
 
@@ -428,7 +396,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -458,10 +426,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_swaps_historical_get**
-> dapps_sushiswap_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 )
+> dapps_sushiswap_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SWAP_DTO]
 
 
-
+GetSwaps
 
 
 ### Parameters
@@ -476,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [SWAP_DTO]**](SwapDTO.md)
 
 ### Authorization
 
@@ -485,7 +453,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -547,10 +515,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dapps_sushiswap_tokens_historical_get**
-> dapps_sushiswap_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 )
+> dapps_sushiswap_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [TOKEN_DTO]
 
 
-
+GetTokens
 
 
 ### Parameters
@@ -565,7 +533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [TOKEN_DTO]**](TokenDTO.md)
 
 ### Authorization
 
@@ -574,7 +542,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

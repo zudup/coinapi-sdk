@@ -6,22 +6,22 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **owner** | **String** | THIS IS SUPER OWNER | [optional] |
-| **pool** | **String** |  | [optional] |
-| **position** | **String** |  | [optional] |
-| **timestamp** | **String** |  | [optional] |
-| **liquidity** | **String** |  | [optional] |
-| **deposited_token_0** | **String** |  | [optional] |
-| **deposited_token_1** | **String** |  | [optional] |
-| **withdrawn_token_0** | **String** |  | [optional] |
-| **withdrawn_token_1** | **String** |  | [optional] |
-| **collected_fees_token_0** | **String** |  | [optional] |
-| **collected_fees_token_1** | **String** |  | [optional] |
-| **transaction** | **String** |  | [optional] |
-| **fee_growth_inside_0_last_x128** | **String** |  | [optional] |
-| **fee_growth_inside_1_last_x128** | **String** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
+| **id** | **String** | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] |
+| **owner** | **String** | Owner of the NFT. | [optional] |
+| **pool** | **String** | Pool the position is within. | [optional] |
+| **position** | **String** | Position of which the snap was taken of. | [optional] |
+| **timestamp** | **String** | Timestamp of block in which the snap was created. | [optional] |
+| **liquidity** | **String** | Total position liquidity. | [optional] |
+| **deposited_token_0** | **String** | Amount of token 0 ever deposited to position. | [optional] |
+| **deposited_token_1** | **String** | Amount of token 1 ever deposited to position. | [optional] |
+| **withdrawn_token_0** | **String** | Amount of token 0 ever withdrawn from position (without fees). | [optional] |
+| **withdrawn_token_1** | **String** | Amount of token 1 ever withdrawn from position (without fees). | [optional] |
+| **collected_fees_token_0** | **String** | All time collected fees in token0. | [optional] |
+| **collected_fees_token_1** | **String** | All time collected fees in token1. | [optional] |
+| **transaction** | **String** | Transaction in which the snapshot was initialized. | [optional] |
+| **fee_growth_inside_0_last_x128** | **String** | Variable needed for fee computation. | [optional] |
+| **fee_growth_inside_1_last_x128** | **String** | Variable needed for fee computation. | [optional] |
 | **vid** | **Integer** |  | [optional] |
 
 ## Example

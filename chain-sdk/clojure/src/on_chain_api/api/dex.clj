@@ -77,29 +77,6 @@
         res))))
 
 
-(defn-spec dapps-dex-poi-historical-get-with-http-info any?
-  ""
-  ([] (dapps-dex-poi-historical-get-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/poi/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       []
-              :auth-names    []})))
-
-(defn-spec dapps-dex-poi-historical-get any?
-  ""
-  ([] (dapps-dex-poi-historical-get nil))
-  ([optional-params any?]
-   (let [res (:data (dapps-dex-poi-historical-get-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
-        res))))
-
-
 (defn-spec dapps-dex-prices-historical-get-with-http-info any?
   ""
   ([] (dapps-dex-prices-historical-get-with-http-info nil))

@@ -24,31 +24,31 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Identifier, format: <pool address>-<tick index>-<timestamp>.
  	date: INTEGER_32
-    	 -- 
+    	 -- Timestamp rounded to current day by dividing by 86400.
     pool: detachable STRING_32
-      -- 
+      -- Pointer to pool.
     tick: detachable STRING_32
-      -- 
+      -- Pointer to tick.
     liquidity_gross: detachable STRING_32
-      -- 
+      -- Total liquidity pool has as tick lower or upper at end of period.
     liquidity_net: detachable STRING_32
-      -- 
+      -- How much liquidity changes when tick crossed at end of period.
     volume_token_0: detachable STRING_32
-      -- 
+      -- Hourly volume of token0 with this tick in range.
     volume_token_1: detachable STRING_32
-      -- 
+      -- Hourly volume of token1 with this tick in range.
     volume_usd: detachable STRING_32
-      -- 
+      -- Hourly volume in derived USD with this tick in range.
     fees_usd: detachable STRING_32
-      -- 
+      -- Fees in USD.
     fee_growth_outside_0x128: detachable STRING_32
-      -- 
+      -- Variable needed for fee computation.
     fee_growth_outside_1x128: detachable STRING_32
-      -- 
+      -- Variable needed for fee computation.
  	vid: INTEGER_64
     	 -- 
 

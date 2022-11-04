@@ -278,38 +278,6 @@ class SushiswapApi {
 
     }
 
-    def dappsSushiswapPoiHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/poi/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
     def dappsSushiswapPoolDayDataHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/sushiswap/poolDayData/historical"
 
@@ -430,8 +398,8 @@ class SushiswapApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    PairDTO.class )
 
     }
 
@@ -485,8 +453,8 @@ class SushiswapApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    SwapDTO.class )
 
     }
 
@@ -575,8 +543,8 @@ class SushiswapApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    TokenDTO.class )
 
     }
 

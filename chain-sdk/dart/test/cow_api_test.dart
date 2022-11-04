@@ -22,11 +22,6 @@ void main() {
       // TODO
     });
 
-    //Future dappsCowPoiHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCowPoiHistoricalGet', () async {
-      // TODO
-    });
-
     //Future dappsCowSettlementHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test dappsCowSettlementHistoricalGet', () async {
       // TODO

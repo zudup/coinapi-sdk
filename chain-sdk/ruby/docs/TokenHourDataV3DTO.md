@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **id** | **String** | Token address concatendated with date. | [optional] |
 | **period_start_unix** | **Integer** | Unix timestamp for start of hour. | [optional] |
 | **token** | **String** | Pointer to token. | [optional] |

@@ -13,22 +13,22 @@ part 'position_snapshot_v3_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [owner] - THIS IS SUPER OWNER
-/// * [pool] - 
-/// * [position] - 
-/// * [timestamp] - 
-/// * [liquidity] - 
-/// * [depositedToken0] - 
-/// * [depositedToken1] - 
-/// * [withdrawnToken0] - 
-/// * [withdrawnToken1] - 
-/// * [collectedFeesToken0] - 
-/// * [collectedFeesToken1] - 
-/// * [transaction] - 
-/// * [feeGrowthInside0LastX128] - 
-/// * [feeGrowthInside1LastX128] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - NFT token identifier, format: <NFT token id>#<block number>
+/// * [owner] - Owner of the NFT.
+/// * [pool] - Pool the position is within.
+/// * [position] - Position of which the snap was taken of.
+/// * [timestamp] - Timestamp of block in which the snap was created.
+/// * [liquidity] - Total position liquidity.
+/// * [depositedToken0] - Amount of token 0 ever deposited to position.
+/// * [depositedToken1] - Amount of token 1 ever deposited to position.
+/// * [withdrawnToken0] - Amount of token 0 ever withdrawn from position (without fees).
+/// * [withdrawnToken1] - Amount of token 1 ever withdrawn from position (without fees).
+/// * [collectedFeesToken0] - All time collected fees in token0.
+/// * [collectedFeesToken1] - All time collected fees in token1.
+/// * [transaction] - Transaction in which the snapshot was initialized.
+/// * [feeGrowthInside0LastX128] - Variable needed for fee computation.
+/// * [feeGrowthInside1LastX128] - Variable needed for fee computation.
 /// * [vid] - 
 @BuiltValue()
 abstract class PositionSnapshotV3DTO implements Built<PositionSnapshotV3DTO, PositionSnapshotV3DTOBuilder> {
@@ -38,67 +38,67 @@ abstract class PositionSnapshotV3DTO implements Built<PositionSnapshotV3DTO, Pos
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// NFT token identifier, format: <NFT token id>#<block number>
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// THIS IS SUPER OWNER
+  /// Owner of the NFT.
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
-  /// 
+  /// Pool the position is within.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Position of which the snap was taken of.
   @BuiltValueField(wireName: r'position')
   String? get position;
 
-  /// 
+  /// Timestamp of block in which the snap was created.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Total position liquidity.
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
-  /// 
+  /// Amount of token 0 ever deposited to position.
   @BuiltValueField(wireName: r'deposited_token_0')
   String? get depositedToken0;
 
-  /// 
+  /// Amount of token 1 ever deposited to position.
   @BuiltValueField(wireName: r'deposited_token_1')
   String? get depositedToken1;
 
-  /// 
+  /// Amount of token 0 ever withdrawn from position (without fees).
   @BuiltValueField(wireName: r'withdrawn_token_0')
   String? get withdrawnToken0;
 
-  /// 
+  /// Amount of token 1 ever withdrawn from position (without fees).
   @BuiltValueField(wireName: r'withdrawn_token_1')
   String? get withdrawnToken1;
 
-  /// 
+  /// All time collected fees in token0.
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
-  /// 
+  /// All time collected fees in token1.
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
-  /// 
+  /// Transaction in which the snapshot was initialized.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_inside_0_last_x128')
   String? get feeGrowthInside0LastX128;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_inside_1_last_x128')
   String? get feeGrowthInside1LastX128;
 
@@ -161,7 +161,7 @@ class _$PositionSnapshotV3DTOSerializer implements PrimitiveSerializer<PositionS
       yield r'owner';
       yield serializers.serialize(
         object.owner,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.pool != null) {
@@ -317,8 +317,9 @@ class _$PositionSnapshotV3DTOSerializer implements PrimitiveSerializer<PositionS
         case r'owner':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.owner = valueDes;
           break;
         case r'pool':

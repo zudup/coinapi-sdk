@@ -29,7 +29,6 @@ Method | HTTP request | Description
 [**dapps_curve_gauge_withdraw_historical_get**](CurveApi.md#dapps_curve_gauge_withdraw_historical_get) | **GET** /dapps/curve/gaugeWithdraw/historical | 
 [**dapps_curve_hourly_volume_historical_get**](CurveApi.md#dapps_curve_hourly_volume_historical_get) | **GET** /dapps/curve/hourlyVolume/historical | 
 [**dapps_curve_lp_token_historical_get**](CurveApi.md#dapps_curve_lp_token_historical_get) | **GET** /dapps/curve/lpToken/historical | 
-[**dapps_curve_poi_historical_get**](CurveApi.md#dapps_curve_poi_historical_get) | **GET** /dapps/curve/poi/historical | 
 [**dapps_curve_pools_historical_get**](CurveApi.md#dapps_curve_pools_historical_get) | **GET** /dapps/curve/pools/historical | 
 [**dapps_curve_proposals_historical_get**](CurveApi.md#dapps_curve_proposals_historical_get) | **GET** /dapps/curve/proposals/historical | 
 [**dapps_curve_proposals_vote_historical_get**](CurveApi.md#dapps_curve_proposals_vote_historical_get) | **GET** /dapps/curve/proposalsVote/historical | 
@@ -1030,55 +1029,6 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**|  | [optional] 
  **end_date** | **DATE_TIME**|  | [optional] 
  **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_poi_historical_get**
-> dapps_curve_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_poi_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_poi_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
 
 ### Return type
 

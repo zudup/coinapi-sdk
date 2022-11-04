@@ -68,10 +68,6 @@ UniswapV3API_dappsUniswapv3MintsHistoricalGet(apiClient_t *apiClient, long start
 
 
 void
-UniswapV3API_dappsUniswapv3PoiHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
-
-
-void
 UniswapV3API_dappsUniswapv3PoolDayDataHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

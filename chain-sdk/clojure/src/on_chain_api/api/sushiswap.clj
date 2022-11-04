@@ -215,29 +215,6 @@
         res))))
 
 
-(defn-spec dapps-sushiswap-poi-historical-get-with-http-info any?
-  ""
-  ([] (dapps-sushiswap-poi-historical-get-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/poi/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
-              :form-params   {}
-              :content-types []
-              :accepts       []
-              :auth-names    []})))
-
-(defn-spec dapps-sushiswap-poi-historical-get any?
-  ""
-  ([] (dapps-sushiswap-poi-historical-get nil))
-  ([optional-params any?]
-   (let [res (:data (dapps-sushiswap-poi-historical-get-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
-        res))))
-
-
 (defn-spec dapps-sushiswap-pool-day-data-historical-get-with-http-info any?
   ""
   ([] (dapps-sushiswap-pool-day-data-historical-get-with-http-info nil))
@@ -308,7 +285,7 @@
 
 
 (defn-spec dapps-sushiswap-pools-historical-get-with-http-info any?
-  ""
+  "GetPools"
   ([] (dapps-sushiswap-pools-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/pools/historical" :get
@@ -317,16 +294,16 @@
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
               :form-params   {}
               :content-types []
-              :accepts       []
+              :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-pools-historical-get any?
-  ""
+(defn-spec dapps-sushiswap-pools-historical-get (s/coll-of pair-dto-spec)
+  "GetPools"
   ([] (dapps-sushiswap-pools-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-pools-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
+        (st/decode (s/coll-of pair-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -352,7 +329,7 @@
 
 
 (defn-spec dapps-sushiswap-swaps-historical-get-with-http-info any?
-  ""
+  "GetSwaps"
   ([] (dapps-sushiswap-swaps-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/swaps/historical" :get
@@ -361,16 +338,16 @@
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
               :form-params   {}
               :content-types []
-              :accepts       []
+              :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-swaps-historical-get any?
-  ""
+(defn-spec dapps-sushiswap-swaps-historical-get (s/coll-of swap-dto-spec)
+  "GetSwaps"
   ([] (dapps-sushiswap-swaps-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-swaps-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
+        (st/decode (s/coll-of swap-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -419,7 +396,7 @@
 
 
 (defn-spec dapps-sushiswap-tokens-historical-get-with-http-info any?
-  ""
+  "GetTokens"
   ([] (dapps-sushiswap-tokens-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/tokens/historical" :get
@@ -428,16 +405,16 @@
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
               :form-params   {}
               :content-types []
-              :accepts       []
+              :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-tokens-historical-get any?
-  ""
+(defn-spec dapps-sushiswap-tokens-historical-get (s/coll-of token-dto-spec)
+  "GetTokens"
   ([] (dapps-sushiswap-tokens-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-tokens-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode any? res st/string-transformer)
+        (st/decode (s/coll-of token-dto-spec) res st/string-transformer)
         res))))
 
 

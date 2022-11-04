@@ -40,16 +40,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $dapps_cow_orders_historical_get_result = $api->dapps_cow_orders_historical_get(start_block => $dapps_cow_orders_historical_get_start_block, end_block => $dapps_cow_orders_historical_get_end_block, start_date => $dapps_cow_orders_historical_get_start_date, end_date => $dapps_cow_orders_historical_get_end_date);
 
 #
-# dapps_cow_poi_historical_get test
-#
-# uncomment below and update the test
-#my $dapps_cow_poi_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_poi_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_poi_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_poi_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_poi_historical_get_result = $api->dapps_cow_poi_historical_get(start_block => $dapps_cow_poi_historical_get_start_block, end_block => $dapps_cow_poi_historical_get_end_block, start_date => $dapps_cow_poi_historical_get_start_date, end_date => $dapps_cow_poi_historical_get_end_date);
-
-#
 # dapps_cow_settlement_historical_get test
 #
 # uncomment below and update the test

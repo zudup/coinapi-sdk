@@ -8,28 +8,28 @@ import 'package:built_value/serializer.dart';
 
 part 'mint_v3_dto.g.dart';
 
-/// MintV3DTO
+/// Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [transaction] - 
-/// * [timestamp] - 
-/// * [pool] - 
-/// * [token0] - 
-/// * [token1] - 
-/// * [owner] - 
-/// * [sender] - 
-/// * [origin] - 
-/// * [amount] - 
-/// * [amount0] - 
-/// * [amount1] - 
-/// * [amountUsd] - 
-/// * [tickLower] - 
-/// * [tickUpper] - 
-/// * [logIndex] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Transaction hash + '#' + index in mints Transaction array.
+/// * [transaction] - Which txn the mint was included in.
+/// * [timestamp] - Time of transaction.
+/// * [pool] - Pool address.
+/// * [token0] - Reference to token0 as stored in pool contract.
+/// * [token1] - Reference to token1 as stored in pool contract.
+/// * [owner] - Owner of position where liquidity minted to.
+/// * [sender] - The address that minted the liquidity.
+/// * [origin] - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+/// * [amount] - Amount of liquidity minted.
+/// * [amount0] - Amount of token 0 minted.
+/// * [amount1] - Amount of token 1 minted.
+/// * [amountUsd] - Derived amount based on available prices of tokens.
+/// * [tickLower] - Lower tick of the position.
+/// * [tickUpper] - Upper tick of the position.
+/// * [logIndex] - Order within the transaction.
 /// * [vid] - 
 @BuiltValue()
 abstract class MintV3DTO implements Built<MintV3DTO, MintV3DTOBuilder> {
@@ -39,71 +39,71 @@ abstract class MintV3DTO implements Built<MintV3DTO, MintV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Transaction hash + '#' + index in mints Transaction array.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Which txn the mint was included in.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Time of transaction.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Pool address.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Reference to token0 as stored in pool contract.
   @BuiltValueField(wireName: r'token_0')
   String? get token0;
 
-  /// 
+  /// Reference to token1 as stored in pool contract.
   @BuiltValueField(wireName: r'token_1')
   String? get token1;
 
-  /// 
+  /// Owner of position where liquidity minted to.
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
-  /// 
+  /// The address that minted the liquidity.
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
-  /// 
+  /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
   @BuiltValueField(wireName: r'origin')
   String? get origin;
 
-  /// 
+  /// Amount of liquidity minted.
   @BuiltValueField(wireName: r'amount')
   String? get amount;
 
-  /// 
+  /// Amount of token 0 minted.
   @BuiltValueField(wireName: r'amount_0')
   String? get amount0;
 
-  /// 
+  /// Amount of token 1 minted.
   @BuiltValueField(wireName: r'amount_1')
   String? get amount1;
 
-  /// 
+  /// Derived amount based on available prices of tokens.
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 
-  /// 
+  /// Lower tick of the position.
   @BuiltValueField(wireName: r'tick_lower')
   String? get tickLower;
 
-  /// 
+  /// Upper tick of the position.
   @BuiltValueField(wireName: r'tick_upper')
   String? get tickUpper;
 
-  /// 
+  /// Order within the transaction.
   @BuiltValueField(wireName: r'log_index')
   String? get logIndex;
 

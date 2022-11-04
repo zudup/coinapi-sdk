@@ -13,38 +13,38 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Swap are created for each token swap within a pair.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+Transaction hash plus index in Transaction swap array.
 .PARAMETER Transaction
-
+Reference to transaction swap was included in.
 .PARAMETER Timestamp
-
+Timestamp of swap, used for sorted lookups.
 .PARAMETER Pair
-
+Reference to pair.
 .PARAMETER VarSender
-
+Address that initiated the swap.
 .PARAMETER Amount0In
-
+Amount of token0 sold.
 .PARAMETER Amount1In
-
+Amount of token1 sold.
 .PARAMETER Amount0Out
-
+Amount of token0 received.
 .PARAMETER Amount1Out
-
+Amount of token1 received.
 .PARAMETER To
-
+Recipient of output tokens.
 .PARAMETER LogIndex
-
+Event index within transaction.
 .PARAMETER AmountUsd
-
+Derived amount of tokens sold in USD.
 .PARAMETER Vid
 
 .PARAMETER PoolId

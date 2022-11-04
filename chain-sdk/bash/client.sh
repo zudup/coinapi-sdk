@@ -99,10 +99,6 @@ operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::startBlo
 operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCowPoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowPoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowPoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowPoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::startDate"]=0
@@ -211,10 +207,6 @@ operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::endBl
 operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::startDate"]=0
@@ -280,10 +272,6 @@ operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::endBlock
 operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexPoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexPoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexPoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexPoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::startDate"]=0
@@ -357,10 +345,6 @@ operation_parameters_minimum_occurrences["dappsSushiswapMintsHistoricalGet:::end
 operation_parameters_minimum_occurrences["dappsSushiswapMintsHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapMintsHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapMintsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsSushiswapPoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::startDate"]=0
@@ -431,10 +415,6 @@ operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::end
 operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=0
@@ -499,10 +479,6 @@ operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::end
 operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::startDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoiHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoiHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoiHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoiHistoricalGet:::endDate"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=0
@@ -585,10 +561,6 @@ operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::startBlo
 operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCowPoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowPoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowPoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowPoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::startDate"]=0
@@ -697,10 +669,6 @@ operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::endBl
 operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::startDate"]=0
@@ -766,10 +734,6 @@ operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::endBlock
 operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexPoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexPoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexPoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexPoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::startDate"]=0
@@ -843,10 +807,6 @@ operation_parameters_maximum_occurrences["dappsSushiswapMintsHistoricalGet:::end
 operation_parameters_maximum_occurrences["dappsSushiswapMintsHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapMintsHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapMintsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsSushiswapPoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsSushiswapPoolDayDataHistoricalGet:::startDate"]=0
@@ -917,10 +877,6 @@ operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::end
 operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=0
@@ -985,10 +941,6 @@ operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::end
 operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::startDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoiHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoiHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoiHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoiHistoricalGet:::endDate"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=0
 operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=0
@@ -1068,10 +1020,6 @@ operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::startBlock"]
 operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCowPoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowPoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowPoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowPoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::startDate"]=""
@@ -1180,10 +1128,6 @@ operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::endBlock"
 operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurvePoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurvePoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurvePoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurvePoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::startDate"]=""
@@ -1249,10 +1193,6 @@ operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::endBlock"]="
 operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexPoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexPoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexPoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexPoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsDexPricesHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsDexPricesHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsDexPricesHistoricalGet:::startDate"]=""
@@ -1326,10 +1266,6 @@ operation_parameters_collection_type["dappsSushiswapMintsHistoricalGet:::endBloc
 operation_parameters_collection_type["dappsSushiswapMintsHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsSushiswapMintsHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsSushiswapMintsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsSushiswapPoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsSushiswapPoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsSushiswapPoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsSushiswapPoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsSushiswapPoolDayDataHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsSushiswapPoolDayDataHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsSushiswapPoolDayDataHistoricalGet:::startDate"]=""
@@ -1400,10 +1336,6 @@ operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::endBloc
 operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2PoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=""
@@ -1468,10 +1400,6 @@ operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::endBloc
 operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::startDate"]=""
 operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PoiHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoiHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoiHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoiHistoricalGet:::endDate"]=""
 operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=""
 operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=""
 operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=""
@@ -1927,7 +1855,6 @@ EOF
     echo -e "${BOLD}${WHITE}[cow]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}dappsCowOrdersHistoricalGet${OFF};
-  ${CYAN}dappsCowPoiHistoricalGet${OFF};
   ${CYAN}dappsCowSettlementHistoricalGet${OFF};
   ${CYAN}dappsCowTokensHistoricalGet${OFF};
   ${CYAN}dappsCowTradesHistoricalGet${OFF};
@@ -1957,7 +1884,6 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsCurveGaugeWithdrawHistoricalGet${OFF};
   ${CYAN}dappsCurveHourlyVolumeHistoricalGet${OFF};
   ${CYAN}dappsCurveLpTokenHistoricalGet${OFF};
-  ${CYAN}dappsCurvePoiHistoricalGet${OFF};
   ${CYAN}dappsCurvePoolsHistoricalGet${OFF};
   ${CYAN}dappsCurveProposalsHistoricalGet${OFF};
   ${CYAN}dappsCurveProposalsVoteHistoricalGet${OFF};
@@ -1977,7 +1903,6 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}dappsDexBatchHistoricalGet${OFF};
   ${CYAN}dappsDexOrdersHistoricalGet${OFF};
-  ${CYAN}dappsDexPoiHistoricalGet${OFF};
   ${CYAN}dappsDexPricesHistoricalGet${OFF};
   ${CYAN}dappsDexSolutionHistoricalGet${OFF};
   ${CYAN}dappsDexStatsHistoricalGet${OFF};
@@ -1999,16 +1924,15 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapLiquidityPositionHistoricalGet${OFF};
   ${CYAN}dappsSushiswapLiquidityPositionSnapshotsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapMintsHistoricalGet${OFF};
-  ${CYAN}dappsSushiswapPoiHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolHourDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolsCurrentGet${OFF};GetPools
-  ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};
+  ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};GetPools
   ${CYAN}dappsSushiswapSwapsCurrentGet${OFF};GetSwaps
-  ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};
+  ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};GetSwaps
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapTokensCurrentGet${OFF};GetTokens
-  ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};
+  ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};GetTokens
   ${CYAN}dappsSushiswapTransactionsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapUsersHistoricalGet${OFF};
 EOF
@@ -2023,7 +1947,6 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsUniswapv2LiquidityPositionHistoricalGet${OFF};
   ${CYAN}dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet${OFF};
   ${CYAN}dappsUniswapv2MintsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2PoiHistoricalGet${OFF};
   ${CYAN}dappsUniswapv2PoolDayDataHistoricalGet${OFF};
   ${CYAN}dappsUniswapv2PoolHourDataHistoricalGet${OFF};
   ${CYAN}dappsUniswapv2PoolsCurrentGet${OFF};GetPools
@@ -2049,7 +1972,6 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsUniswapv3FactoryHistoricalGet${OFF};
   ${CYAN}dappsUniswapv3MintsCurrentGet${OFF};GetMints
   ${CYAN}dappsUniswapv3MintsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PoiHistoricalGet${OFF};
   ${CYAN}dappsUniswapv3PoolDayDataHistoricalGet${OFF};
   ${CYAN}dappsUniswapv3PoolHourDataHistoricalGet${OFF};
   ${CYAN}dappsUniswapv3PoolsCurrentGet${OFF};GetPools
@@ -2137,29 +2059,6 @@ print_version() {
 print_dappsCowOrdersHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}dappsCowOrdersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCowPoiHistoricalGet operation
-#
-##############################################################################
-print_dappsCowPoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCowPoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2753,29 +2652,6 @@ print_dappsCurveLpTokenHistoricalGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsCurvePoiHistoricalGet operation
-#
-##############################################################################
-print_dappsCurvePoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurvePoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for dappsCurvePoolsHistoricalGet operation
 #
 ##############################################################################
@@ -3108,29 +2984,6 @@ print_dappsDexOrdersHistoricalGet_help() {
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsDexPoiHistoricalGet operation
-#
-##############################################################################
-print_dappsDexPoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsDexPoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3525,29 +3378,6 @@ print_dappsSushiswapMintsHistoricalGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsSushiswapPoiHistoricalGet operation
-#
-##############################################################################
-print_dappsSushiswapPoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapPoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for dappsSushiswapPoolDayDataHistoricalGet operation
 #
 ##############################################################################
@@ -3619,7 +3449,7 @@ print_dappsSushiswapPoolsCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapPoolsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsHistoricalGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3635,7 +3465,7 @@ print_dappsSushiswapPoolsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3658,7 +3488,7 @@ print_dappsSushiswapSwapsCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapSwapsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsHistoricalGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3674,7 +3504,7 @@ print_dappsSushiswapSwapsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3722,7 +3552,7 @@ print_dappsSushiswapTokensCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapTokensHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapTokensHistoricalGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3738,7 +3568,7 @@ print_dappsSushiswapTokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3949,29 +3779,6 @@ print_dappsUniswapv2MintsHistoricalGet_help() {
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2PoiHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2PoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2PoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4396,29 +4203,6 @@ print_dappsUniswapv3MintsHistoricalGet_help() {
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3PoiHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv3PoiHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoiHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4941,42 +4725,6 @@ call_dappsCowOrdersHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/cow/orders/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCowPoiHistoricalGet operation
-#
-##############################################################################
-call_dappsCowPoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/cow/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5864,42 +5612,6 @@ call_dappsCurveLpTokenHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurvePoiHistoricalGet operation
-#
-##############################################################################
-call_dappsCurvePoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/poi/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call dappsCurvePoolsHistoricalGet operation
 #
 ##############################################################################
@@ -6381,42 +6093,6 @@ call_dappsDexOrdersHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/dex/orders/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsDexPoiHistoricalGet operation
-#
-##############################################################################
-call_dappsDexPoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/dex/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6993,42 +6669,6 @@ call_dappsSushiswapMintsHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/sushiswap/mints/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsSushiswapPoiHistoricalGet operation
-#
-##############################################################################
-call_dappsSushiswapPoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/sushiswap/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7677,42 +7317,6 @@ call_dappsUniswapv2MintsHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/uniswapv2/mints/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv2PoiHistoricalGet operation
-#
-##############################################################################
-call_dappsUniswapv2PoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv2/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -8433,42 +8037,6 @@ call_dappsUniswapv3MintsHistoricalGet() {
     local path
 
     if ! path=$(build_request_path "/dapps/uniswapv3/mints/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3PoiHistoricalGet operation
-#
-##############################################################################
-call_dappsUniswapv3PoiHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/poi/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9454,9 +9022,6 @@ case $key in
     dappsCowOrdersHistoricalGet)
     operation="dappsCowOrdersHistoricalGet"
     ;;
-    dappsCowPoiHistoricalGet)
-    operation="dappsCowPoiHistoricalGet"
-    ;;
     dappsCowSettlementHistoricalGet)
     operation="dappsCowSettlementHistoricalGet"
     ;;
@@ -9529,9 +9094,6 @@ case $key in
     dappsCurveLpTokenHistoricalGet)
     operation="dappsCurveLpTokenHistoricalGet"
     ;;
-    dappsCurvePoiHistoricalGet)
-    operation="dappsCurvePoiHistoricalGet"
-    ;;
     dappsCurvePoolsHistoricalGet)
     operation="dappsCurvePoolsHistoricalGet"
     ;;
@@ -9573,9 +9135,6 @@ case $key in
     ;;
     dappsDexOrdersHistoricalGet)
     operation="dappsDexOrdersHistoricalGet"
-    ;;
-    dappsDexPoiHistoricalGet)
-    operation="dappsDexPoiHistoricalGet"
     ;;
     dappsDexPricesHistoricalGet)
     operation="dappsDexPricesHistoricalGet"
@@ -9624,9 +9183,6 @@ case $key in
     ;;
     dappsSushiswapMintsHistoricalGet)
     operation="dappsSushiswapMintsHistoricalGet"
-    ;;
-    dappsSushiswapPoiHistoricalGet)
-    operation="dappsSushiswapPoiHistoricalGet"
     ;;
     dappsSushiswapPoolDayDataHistoricalGet)
     operation="dappsSushiswapPoolDayDataHistoricalGet"
@@ -9681,9 +9237,6 @@ case $key in
     ;;
     dappsUniswapv2MintsHistoricalGet)
     operation="dappsUniswapv2MintsHistoricalGet"
-    ;;
-    dappsUniswapv2PoiHistoricalGet)
-    operation="dappsUniswapv2PoiHistoricalGet"
     ;;
     dappsUniswapv2PoolDayDataHistoricalGet)
     operation="dappsUniswapv2PoolDayDataHistoricalGet"
@@ -9744,9 +9297,6 @@ case $key in
     ;;
     dappsUniswapv3MintsHistoricalGet)
     operation="dappsUniswapv3MintsHistoricalGet"
-    ;;
-    dappsUniswapv3PoiHistoricalGet)
-    operation="dappsUniswapv3PoiHistoricalGet"
     ;;
     dappsUniswapv3PoolDayDataHistoricalGet)
     operation="dappsUniswapv3PoolDayDataHistoricalGet"
@@ -9900,9 +9450,6 @@ case $operation in
     dappsCowOrdersHistoricalGet)
     call_dappsCowOrdersHistoricalGet
     ;;
-    dappsCowPoiHistoricalGet)
-    call_dappsCowPoiHistoricalGet
-    ;;
     dappsCowSettlementHistoricalGet)
     call_dappsCowSettlementHistoricalGet
     ;;
@@ -9975,9 +9522,6 @@ case $operation in
     dappsCurveLpTokenHistoricalGet)
     call_dappsCurveLpTokenHistoricalGet
     ;;
-    dappsCurvePoiHistoricalGet)
-    call_dappsCurvePoiHistoricalGet
-    ;;
     dappsCurvePoolsHistoricalGet)
     call_dappsCurvePoolsHistoricalGet
     ;;
@@ -10019,9 +9563,6 @@ case $operation in
     ;;
     dappsDexOrdersHistoricalGet)
     call_dappsDexOrdersHistoricalGet
-    ;;
-    dappsDexPoiHistoricalGet)
-    call_dappsDexPoiHistoricalGet
     ;;
     dappsDexPricesHistoricalGet)
     call_dappsDexPricesHistoricalGet
@@ -10070,9 +9611,6 @@ case $operation in
     ;;
     dappsSushiswapMintsHistoricalGet)
     call_dappsSushiswapMintsHistoricalGet
-    ;;
-    dappsSushiswapPoiHistoricalGet)
-    call_dappsSushiswapPoiHistoricalGet
     ;;
     dappsSushiswapPoolDayDataHistoricalGet)
     call_dappsSushiswapPoolDayDataHistoricalGet
@@ -10127,9 +9665,6 @@ case $operation in
     ;;
     dappsUniswapv2MintsHistoricalGet)
     call_dappsUniswapv2MintsHistoricalGet
-    ;;
-    dappsUniswapv2PoiHistoricalGet)
-    call_dappsUniswapv2PoiHistoricalGet
     ;;
     dappsUniswapv2PoolDayDataHistoricalGet)
     call_dappsUniswapv2PoolDayDataHistoricalGet
@@ -10190,9 +9725,6 @@ case $operation in
     ;;
     dappsUniswapv3MintsHistoricalGet)
     call_dappsUniswapv3MintsHistoricalGet
-    ;;
-    dappsUniswapv3PoiHistoricalGet)
-    call_dappsUniswapv3PoiHistoricalGet
     ;;
     dappsUniswapv3PoolDayDataHistoricalGet)
     call_dappsUniswapv3PoolDayDataHistoricalGet

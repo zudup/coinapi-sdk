@@ -14,7 +14,7 @@ part 'pair_v2_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [id] - Pair contract address.
 /// * [token0] - Reference to token0 as stored in pair contract.
@@ -24,7 +24,7 @@ part 'pair_v2_dto.g.dart';
 /// * [totalSupply] - Total supply of liquidity token distributed to LPs.
 /// * [reserveEth] - Total liquidity in pair stored as an amount of ETH.
 /// * [reserveUsd] - Total liquidity amount in pair stored as an amount of USD.
-/// * [trackedReserveEth] - Total liquidity with only tracked amount (see tracked amounts).
+/// * [trackedReserveEth] - Total liquidity with only tracked amount.
 /// * [token0Price] - Token0 per token1.
 /// * [token1Price] - Token1 per token0.
 /// * [volumeToken0] - Amount of token0 swapped on this pair.
@@ -33,7 +33,7 @@ part 'pair_v2_dto.g.dart';
 /// * [untrackedVolumeUsd] - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 /// * [txCount] 
 /// * [createdAtTimestamp] - Timestamp contract was created.
-/// * [liquidityProviderCount] - 
+/// * [liquidityProviderCount] - Total number of LPs.
 /// * [evaluatedAsk] 
 @BuiltValue()
 abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
@@ -43,7 +43,7 @@ abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
@@ -83,7 +83,7 @@ abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
   @BuiltValueField(wireName: r'reserve_usd')
   String? get reserveUsd;
 
-  /// Total liquidity with only tracked amount (see tracked amounts).
+  /// Total liquidity with only tracked amount.
   @BuiltValueField(wireName: r'tracked_reserve_eth')
   String? get trackedReserveEth;
 
@@ -118,7 +118,7 @@ abstract class PairV2DTO implements Built<PairV2DTO, PairV2DTOBuilder> {
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 
-  /// 
+  /// Total number of LPs.
   @BuiltValueField(wireName: r'liquidity_provider_count')
   String? get liquidityProviderCount;
 

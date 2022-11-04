@@ -12,16 +12,15 @@ Method | HTTP request | Description
 [**DappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#DappsSushiswapLiquidityPositionHistoricalGet) | **Get** /dapps/sushiswap/liquidityPosition/historical | 
 [**DappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#DappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**DappsSushiswapMintsHistoricalGet**](SushiswapApi.md#DappsSushiswapMintsHistoricalGet) | **Get** /dapps/sushiswap/mints/historical | 
-[**DappsSushiswapPoiHistoricalGet**](SushiswapApi.md#DappsSushiswapPoiHistoricalGet) | **Get** /dapps/sushiswap/poi/historical | 
 [**DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolDayDataHistoricalGet) | **Get** /dapps/sushiswap/poolDayData/historical | 
 [**DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolHourDataHistoricalGet) | **Get** /dapps/sushiswap/poolHourData/historical | 
 [**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#DappsSushiswapPoolsCurrentGet) | **Get** /dapps/sushiswap/pools/current | GetPools
-[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **Get** /dapps/sushiswap/pools/historical | 
+[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **Get** /dapps/sushiswap/pools/historical | GetPools
 [**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#DappsSushiswapSwapsCurrentGet) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
-[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **Get** /dapps/sushiswap/swaps/historical | 
+[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#DappsSushiswapTokensCurrentGet) | **Get** /dapps/sushiswap/tokens/current | GetTokens
-[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **Get** /dapps/sushiswap/tokens/historical | 
+[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **Get** /dapps/sushiswap/tokens/historical | GetTokens
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **Get** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **Get** /dapps/sushiswap/users/historical | 
 
@@ -587,75 +586,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapPoiHistoricalGet
-
-> DappsSushiswapPoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.DappsSushiswapPoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoiHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsSushiswapPoiHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## DappsSushiswapPoolDayDataHistoricalGet
 
 > DappsSushiswapPoolDayDataHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -861,9 +791,9 @@ No authorization required
 
 ## DappsSushiswapPoolsHistoricalGet
 
-> DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+> []PairDTO DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-
+GetPools
 
 ### Example
 
@@ -892,6 +822,8 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapPoolsHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DappsSushiswapPoolsHistoricalGet`: []PairDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapPoolsHistoricalGet`: %v\n", resp)
 }
 ```
 
@@ -914,7 +846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]PairDTO**](PairDTO.md)
 
 ### Authorization
 
@@ -923,7 +855,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -991,9 +923,9 @@ No authorization required
 
 ## DappsSushiswapSwapsHistoricalGet
 
-> DappsSushiswapSwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+> []SwapDTO DappsSushiswapSwapsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-
+GetSwaps
 
 ### Example
 
@@ -1022,6 +954,8 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapSwapsHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DappsSushiswapSwapsHistoricalGet`: []SwapDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapSwapsHistoricalGet`: %v\n", resp)
 }
 ```
 
@@ -1044,7 +978,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]SwapDTO**](SwapDTO.md)
 
 ### Authorization
 
@@ -1053,7 +987,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1192,9 +1126,9 @@ No authorization required
 
 ## DappsSushiswapTokensHistoricalGet
 
-> DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []TokenDTO DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-
+GetTokens
 
 ### Example
 
@@ -1223,6 +1157,8 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DappsSushiswapTokensHistoricalGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DappsSushiswapTokensHistoricalGet`: []TokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DappsSushiswapTokensHistoricalGet`: %v\n", resp)
 }
 ```
 
@@ -1245,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]TokenDTO**](TokenDTO.md)
 
 ### Authorization
 
@@ -1254,7 +1190,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

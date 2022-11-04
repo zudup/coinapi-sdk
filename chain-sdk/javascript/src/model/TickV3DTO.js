@@ -22,6 +22,7 @@ import BigInteger from './BigInteger';
 class TickV3DTO {
     /**
      * Constructs a new <code>TickV3DTO</code>.
+     * Ticks are the boundaries between discrete areas in price space.
      * @alias module:model/TickV3DTO
      */
     constructor() { 
@@ -124,8 +125,96 @@ class TickV3DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TickV3DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TickV3DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['pool_address'] && !(typeof data['pool_address'] === 'string' || data['pool_address'] instanceof String)) {
+            throw new Error("Expected the field `pool_address` to be a primitive type in the JSON string but got " + data['pool_address']);
+        }
+        // validate the optional field `tick_idx`
+        if (data['tick_idx']) { // data not null
+          BigInteger.validateJSON(data['tick_idx']);
+        }
+        // ensure the json data is a string
+        if (data['pool'] && !(typeof data['pool'] === 'string' || data['pool'] instanceof String)) {
+            throw new Error("Expected the field `pool` to be a primitive type in the JSON string but got " + data['pool']);
+        }
+        // validate the optional field `liquidity_gross`
+        if (data['liquidity_gross']) { // data not null
+          BigInteger.validateJSON(data['liquidity_gross']);
+        }
+        // validate the optional field `liquidity_net`
+        if (data['liquidity_net']) { // data not null
+          BigInteger.validateJSON(data['liquidity_net']);
+        }
+        // ensure the json data is a string
+        if (data['price_0'] && !(typeof data['price_0'] === 'string' || data['price_0'] instanceof String)) {
+            throw new Error("Expected the field `price_0` to be a primitive type in the JSON string but got " + data['price_0']);
+        }
+        // ensure the json data is a string
+        if (data['price_1'] && !(typeof data['price_1'] === 'string' || data['price_1'] instanceof String)) {
+            throw new Error("Expected the field `price_1` to be a primitive type in the JSON string but got " + data['price_1']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_0'] && !(typeof data['volume_token_0'] === 'string' || data['volume_token_0'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_0` to be a primitive type in the JSON string but got " + data['volume_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['volume_token_1'] && !(typeof data['volume_token_1'] === 'string' || data['volume_token_1'] instanceof String)) {
+            throw new Error("Expected the field `volume_token_1` to be a primitive type in the JSON string but got " + data['volume_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['volume_usd'] && !(typeof data['volume_usd'] === 'string' || data['volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `volume_usd` to be a primitive type in the JSON string but got " + data['volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['fees_usd'] && !(typeof data['fees_usd'] === 'string' || data['fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `fees_usd` to be a primitive type in the JSON string but got " + data['fees_usd']);
+        }
+        // ensure the json data is a string
+        if (data['collected_fees_token_0'] && !(typeof data['collected_fees_token_0'] === 'string' || data['collected_fees_token_0'] instanceof String)) {
+            throw new Error("Expected the field `collected_fees_token_0` to be a primitive type in the JSON string but got " + data['collected_fees_token_0']);
+        }
+        // ensure the json data is a string
+        if (data['collected_fees_token_1'] && !(typeof data['collected_fees_token_1'] === 'string' || data['collected_fees_token_1'] instanceof String)) {
+            throw new Error("Expected the field `collected_fees_token_1` to be a primitive type in the JSON string but got " + data['collected_fees_token_1']);
+        }
+        // ensure the json data is a string
+        if (data['collected_fees_usd'] && !(typeof data['collected_fees_usd'] === 'string' || data['collected_fees_usd'] instanceof String)) {
+            throw new Error("Expected the field `collected_fees_usd` to be a primitive type in the JSON string but got " + data['collected_fees_usd']);
+        }
+        // validate the optional field `liquidity_provider_count`
+        if (data['liquidity_provider_count']) { // data not null
+          BigInteger.validateJSON(data['liquidity_provider_count']);
+        }
+        // validate the optional field `fee_growth_outside_0x128`
+        if (data['fee_growth_outside_0x128']) { // data not null
+          BigInteger.validateJSON(data['fee_growth_outside_0x128']);
+        }
+        // validate the optional field `fee_growth_outside_1x128`
+        if (data['fee_growth_outside_1x128']) { // data not null
+          BigInteger.validateJSON(data['fee_growth_outside_1x128']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -138,7 +227,7 @@ TickV3DTO.prototype['entry_time'] = undefined;
 TickV3DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TickV3DTO.prototype['block_number'] = undefined;
@@ -150,13 +239,13 @@ TickV3DTO.prototype['block_number'] = undefined;
 TickV3DTO.prototype['vid'] = undefined;
 
 /**
- * 
+ * Identifier, format: <pool address>#<tick index>
  * @member {String} id
  */
 TickV3DTO.prototype['id'] = undefined;
 
 /**
- * 
+ * Pool address.
  * @member {String} pool_address
  */
 TickV3DTO.prototype['pool_address'] = undefined;
@@ -167,7 +256,7 @@ TickV3DTO.prototype['pool_address'] = undefined;
 TickV3DTO.prototype['tick_idx'] = undefined;
 
 /**
- * 
+ * Pool address.
  * @member {String} pool
  */
 TickV3DTO.prototype['pool'] = undefined;
@@ -183,67 +272,67 @@ TickV3DTO.prototype['liquidity_gross'] = undefined;
 TickV3DTO.prototype['liquidity_net'] = undefined;
 
 /**
- * 
+ * Calculated price of token0 of tick within this pool - constant.
  * @member {String} price_0
  */
 TickV3DTO.prototype['price_0'] = undefined;
 
 /**
- * 
+ * Calculated price of token1 of tick within this pool - constant.
  * @member {String} price_1
  */
 TickV3DTO.prototype['price_1'] = undefined;
 
 /**
- * 
+ * Lifetime volume of token0 with this tick in range.
  * @member {String} volume_token_0
  */
 TickV3DTO.prototype['volume_token_0'] = undefined;
 
 /**
- * 
+ * Lifetime volume of token1 with this tick in range.
  * @member {String} volume_token_1
  */
 TickV3DTO.prototype['volume_token_1'] = undefined;
 
 /**
- * 
+ * Lifetime volume in derived USD with this tick in range.
  * @member {String} volume_usd
  */
 TickV3DTO.prototype['volume_usd'] = undefined;
 
 /**
- * 
+ * Lifetime volume in untracked USD with this tick in range.
  * @member {String} untracked_volume_usd
  */
 TickV3DTO.prototype['untracked_volume_usd'] = undefined;
 
 /**
- * 
+ * Fees in USD.
  * @member {String} fees_usd
  */
 TickV3DTO.prototype['fees_usd'] = undefined;
 
 /**
- * 
+ * All time collected fees in token0.
  * @member {String} collected_fees_token_0
  */
 TickV3DTO.prototype['collected_fees_token_0'] = undefined;
 
 /**
- * 
+ * All time collected fees in token1.
  * @member {String} collected_fees_token_1
  */
 TickV3DTO.prototype['collected_fees_token_1'] = undefined;
 
 /**
- * 
+ * All time collected fees in USD.
  * @member {String} collected_fees_usd
  */
 TickV3DTO.prototype['collected_fees_usd'] = undefined;
 
 /**
- * 
+ * Created time.
  * @member {Date} created_at_timestamp
  */
 TickV3DTO.prototype['created_at_timestamp'] = undefined;

@@ -15,7 +15,7 @@ part 'swap_v2_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [id] - Transaction hash plus index in Transaction swap array.
 /// * [transaction] - Reference to transaction swap was included in.
@@ -43,7 +43,7 @@ abstract class SwapV2DTO implements Built<SwapV2DTO, SwapV2DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

@@ -42,6 +42,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -49,9 +50,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * SwapV3DTO
+ * Swap are created for each token swap within a pair.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Swap are created for each token swap within a pair.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class SwapV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -219,11 +221,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -265,11 +267,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.")
 
   public String getId() {
     return id;
@@ -288,11 +290,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Pointer to transaction.
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to transaction.")
 
   public String getTransaction() {
     return transaction;
@@ -311,11 +313,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Timestamp of transaction.
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamp of transaction.")
 
   public OffsetDateTime getTimestamp() {
     return timestamp;
@@ -334,11 +336,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Pool swap occured within.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool swap occured within.")
 
   public String getPool() {
     return pool;
@@ -357,11 +359,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Reference to token0 as stored in pair contract.
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pair contract.")
 
   public String getToken0() {
     return token0;
@@ -380,11 +382,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Reference to token1 as stored in pair contract.
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pair contract.")
 
   public String getToken1() {
     return token1;
@@ -403,11 +405,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Sender of the swap.
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Sender of the swap.")
 
   public String getSender() {
     return sender;
@@ -426,11 +428,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Recipient of the swap.
    * @return recipient
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Recipient of the swap.")
 
   public String getRecipient() {
     return recipient;
@@ -449,11 +451,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
    * @return origin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction")
 
   public String getOrigin() {
     return origin;
@@ -472,11 +474,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Delta of token0 swapped.
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Delta of token0 swapped.")
 
   public String getAmount0() {
     return amount0;
@@ -495,11 +497,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Delta of token1 swapped.
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Delta of token1 swapped.")
 
   public String getAmount1() {
     return amount1;
@@ -518,11 +520,11 @@ public class SwapV3DTO {
   }
 
    /**
-   * 
+   * Derived amount of tokens sold in USD.
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Derived amount of tokens sold in USD.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -821,9 +823,7 @@ public class SwapV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (SwapV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!SwapV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in SwapV3DTO is not found in the empty JSON string", SwapV3DTO.openapiRequiredFields.toString()));
         }
       }

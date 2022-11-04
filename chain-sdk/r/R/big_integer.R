@@ -35,27 +35,35 @@ BigInteger <- R6::R6Class(
     #' @param sign sign
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `is_power_of_two` = NULL, `is_zero` = NULL, `is_one` = NULL, `is_even` = NULL, `sign` = NULL, ...
-    ) {
+    initialize = function(`is_power_of_two` = NULL, `is_zero` = NULL, `is_one` = NULL, `is_even` = NULL, `sign` = NULL, ...) {
       if (!is.null(`is_power_of_two`)) {
-        stopifnot(is.logical(`is_power_of_two`), length(`is_power_of_two`) == 1)
+        if (!(is.logical(`is_power_of_two`) && length(`is_power_of_two`) == 1)) {
+          stop(paste("Error! Invalid data for `is_power_of_two`. Must be a boolean:", `is_power_of_two`))
+        }
         self$`is_power_of_two` <- `is_power_of_two`
       }
       if (!is.null(`is_zero`)) {
-        stopifnot(is.logical(`is_zero`), length(`is_zero`) == 1)
+        if (!(is.logical(`is_zero`) && length(`is_zero`) == 1)) {
+          stop(paste("Error! Invalid data for `is_zero`. Must be a boolean:", `is_zero`))
+        }
         self$`is_zero` <- `is_zero`
       }
       if (!is.null(`is_one`)) {
-        stopifnot(is.logical(`is_one`), length(`is_one`) == 1)
+        if (!(is.logical(`is_one`) && length(`is_one`) == 1)) {
+          stop(paste("Error! Invalid data for `is_one`. Must be a boolean:", `is_one`))
+        }
         self$`is_one` <- `is_one`
       }
       if (!is.null(`is_even`)) {
-        stopifnot(is.logical(`is_even`), length(`is_even`) == 1)
+        if (!(is.logical(`is_even`) && length(`is_even`) == 1)) {
+          stop(paste("Error! Invalid data for `is_even`. Must be a boolean:", `is_even`))
+        }
         self$`is_even` <- `is_even`
       }
       if (!is.null(`sign`)) {
-        stopifnot(is.numeric(`sign`), length(`sign`) == 1)
+        if (!(is.numeric(`sign`) && length(`sign`) == 1)) {
+          stop(paste("Error! Invalid data for `sign`. Must be an integer:", `sign`))
+        }
         self$`sign` <- `sign`
       }
     },
@@ -237,18 +245,19 @@ BigInteger <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#BigInteger$unlock()
+# BigInteger$unlock()
 #
 ## Below is an example to define the print fnuction
-#BigInteger$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# BigInteger$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#BigInteger$lock()
+# BigInteger$lock()
 

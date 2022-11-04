@@ -12,13 +12,16 @@
 
 import * as models from './models';
 
+/**
+ * Ticks are the boundaries between discrete areas in price space.
+ */
 export interface TickV3DTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
@@ -28,19 +31,19 @@ export interface TickV3DTO {
     vid?: number;
 
     /**
-     * 
+     * Identifier, format: <pool address>#<tick index>
      */
     id?: string;
 
     /**
-     * 
+     * Pool address.
      */
     pool_address?: string;
 
     tick_idx?: models.BigInteger;
 
     /**
-     * 
+     * Pool address.
      */
     pool?: string;
 
@@ -49,57 +52,57 @@ export interface TickV3DTO {
     liquidity_net?: models.BigInteger;
 
     /**
-     * 
+     * Calculated price of token0 of tick within this pool - constant.
      */
     price_0?: string;
 
     /**
-     * 
+     * Calculated price of token1 of tick within this pool - constant.
      */
     price_1?: string;
 
     /**
-     * 
+     * Lifetime volume of token0 with this tick in range.
      */
     volume_token_0?: string;
 
     /**
-     * 
+     * Lifetime volume of token1 with this tick in range.
      */
     volume_token_1?: string;
 
     /**
-     * 
+     * Lifetime volume in derived USD with this tick in range.
      */
     volume_usd?: string;
 
     /**
-     * 
+     * Lifetime volume in untracked USD with this tick in range.
      */
     untracked_volume_usd?: string;
 
     /**
-     * 
+     * Fees in USD.
      */
     fees_usd?: string;
 
     /**
-     * 
+     * All time collected fees in token0.
      */
     collected_fees_token_0?: string;
 
     /**
-     * 
+     * All time collected fees in token1.
      */
     collected_fees_token_1?: string;
 
     /**
-     * 
+     * All time collected fees in USD.
      */
     collected_fees_usd?: string;
 
     /**
-     * 
+     * Created time.
      */
     created_at_timestamp?: string;
 

@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**dappsDexBatchHistoricalGetWithHttpInfo**](DexApi.md#dappsDexBatchHistoricalGetWithHttpInfo) | **GET** /dapps/dex/batch/historical | 
 [**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
 [**dappsDexOrdersHistoricalGetWithHttpInfo**](DexApi.md#dappsDexOrdersHistoricalGetWithHttpInfo) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPoiHistoricalGet**](DexApi.md#dappsDexPoiHistoricalGet) | **GET** /dapps/dex/poi/historical | 
-[**dappsDexPoiHistoricalGetWithHttpInfo**](DexApi.md#dappsDexPoiHistoricalGetWithHttpInfo) | **GET** /dapps/dex/poi/historical | 
 [**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
 [**dappsDexPricesHistoricalGetWithHttpInfo**](DexApi.md#dappsDexPricesHistoricalGetWithHttpInfo) | **GET** /dapps/dex/prices/historical | 
 [**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
@@ -183,92 +181,6 @@ Name | Type | Description  | Notes
  **startDate** | **OffsetDateTime**|  | [optional]
  **endDate** | **OffsetDateTime**|  | [optional]
  **tokenId** | **String**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsDexPoiHistoricalGet
-
-> dappsDexPoiHistoricalGet(dappsDexPoiHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsDexPoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DexApi#dappsDexPoiHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling DexApi#dappsDexPoiHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
 
 ### Return type
 

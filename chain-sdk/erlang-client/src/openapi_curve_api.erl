@@ -20,7 +20,6 @@
          dapps_curve_gauge_withdraw_historical_get/1, dapps_curve_gauge_withdraw_historical_get/2,
          dapps_curve_hourly_volume_historical_get/1, dapps_curve_hourly_volume_historical_get/2,
          dapps_curve_lp_token_historical_get/1, dapps_curve_lp_token_historical_get/2,
-         dapps_curve_poi_historical_get/1, dapps_curve_poi_historical_get/2,
          dapps_curve_pools_historical_get/1, dapps_curve_pools_historical_get/2,
          dapps_curve_proposals_historical_get/1, dapps_curve_proposals_historical_get/2,
          dapps_curve_proposals_vote_historical_get/1, dapps_curve_proposals_vote_historical_get/2,
@@ -449,27 +448,6 @@ dapps_curve_lp_token_historical_get(Ctx, Optional) ->
     Method = get,
     Path = [<<"/dapps/curve/lpToken/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc 
-%% 
--spec dapps_curve_poi_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_curve_poi_historical_get(Ctx) ->
-    dapps_curve_poi_historical_get(Ctx, #{}).
-
--spec dapps_curve_poi_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_curve_poi_historical_get(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/curve/poi/historical">>],
-    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

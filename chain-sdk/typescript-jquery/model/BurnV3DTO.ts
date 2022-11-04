@@ -12,88 +12,91 @@
 
 import * as models from './models';
 
+/**
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ */
 export interface BurnV3DTO {
     entry_time?: string;
 
     recv_time?: string;
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      */
     block_number?: number;
 
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      */
     id?: string;
 
     /**
-     * 
+     * Transaction burn was included in.
      */
     transaction?: string;
 
     /**
-     * 
+     * Pool position is within.
      */
     pool?: string;
 
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      */
     token_0?: string;
 
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      */
     token_1?: string;
 
     /**
-     * 
+     * Timestamp.
      */
     timestamp?: string;
 
     /**
-     * 
+     * Owner of position where liquidity was burned.
      */
     owner?: string;
 
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      */
     origin?: string;
 
     /**
-     * 
+     * Amount of liquidity burned.
      */
     amount?: string;
 
     /**
-     * 
+     * Amount of token 0 burned.
      */
     amount_0?: string;
 
     /**
-     * 
+     * Amount of token 1 burned.
      */
     amount_1?: string;
 
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      */
     amount_usd?: string;
 
     /**
-     * 
+     * Lower tick of position.
      */
     tick_lower?: string;
 
     /**
-     * 
+     * Upper tick of position.
      */
     tick_upper?: string;
 
     /**
-     * 
+     * Position within the transactions.
      */
     log_index?: string;
 

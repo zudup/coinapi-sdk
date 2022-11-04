@@ -186,24 +186,6 @@ class UniswapV3Api(baseUrl: String) {
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   */
-  def dappsUniswapv3PoiHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poi/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
-      
-
-  /**
-   * Expected answers:
-   *   code 200 :  (Success)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
    * @param poolId 
    */
   def dappsUniswapv3PoolDayDataHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Unit] =

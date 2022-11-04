@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("id", {
 
 test_that("period_start_unix", {
   # tests for the property `period_start_unix` (integer)
-  # 
+  # Unix timestamp for start of hour.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`period_start_unix`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("period_start_unix", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
-  # 
+  # Pointer to pool.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("pool", {
 
 test_that("liquidity", {
   # tests for the property `liquidity` (character)
-  # 
+  # In range liquidity at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("liquidity", {
 
 test_that("sqrt_price", {
   # tests for the property `sqrt_price` (character)
-  # 
+  # Current price tracker at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`sqrt_price`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("sqrt_price", {
 
 test_that("token_0_price", {
   # tests for the property `token_0_price` (character)
-  # 
+  # Price of token0 - derived from sqrtPrice.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_0_price`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("token_0_price", {
 
 test_that("token_1_price", {
   # tests for the property `token_1_price` (character)
-  # 
+  # Price of token1 - derived from sqrtPrice.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`token_1_price`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("token_1_price", {
 
 test_that("tick", {
   # tests for the property `tick` (character)
-  # 
+  # Current tick at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tick`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("tick", {
 
 test_that("fee_growth_global_0x128", {
   # tests for the property `fee_growth_global_0x128` (character)
-  # 
+  # Tracker for global fee growth.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_global_0x128`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("fee_growth_global_0x128", {
 
 test_that("fee_growth_global_1x128", {
   # tests for the property `fee_growth_global_1x128` (character)
-  # 
+  # Tracker for global fee growth.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fee_growth_global_1x128`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("fee_growth_global_1x128", {
 
 test_that("tvl_usd", {
   # tests for the property `tvl_usd` (character)
-  # 
+  # Total value locked derived in USD at end of period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tvl_usd`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("tvl_usd", {
 
 test_that("volume_token_0", {
   # tests for the property `volume_token_0` (character)
-  # 
+  # Volume in token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_0`, "EXPECTED_RESULT")
@@ -125,7 +125,7 @@ test_that("volume_token_0", {
 
 test_that("volume_token_1", {
   # tests for the property `volume_token_1` (character)
-  # 
+  # Volume in token1.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_1`, "EXPECTED_RESULT")
@@ -133,7 +133,7 @@ test_that("volume_token_1", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # 
+  # Volume in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -141,7 +141,7 @@ test_that("volume_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # 
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -149,7 +149,7 @@ test_that("fees_usd", {
 
 test_that("tx_count", {
   # tests for the property `tx_count` (character)
-  # 
+  # Number of transactions during period.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tx_count`, "EXPECTED_RESULT")
@@ -157,7 +157,7 @@ test_that("tx_count", {
 
 test_that("open", {
   # tests for the property `open` (character)
-  # 
+  # Opening price of token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`open`, "EXPECTED_RESULT")
@@ -165,7 +165,7 @@ test_that("open", {
 
 test_that("high", {
   # tests for the property `high` (character)
-  # 
+  # High price of token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`high`, "EXPECTED_RESULT")
@@ -173,7 +173,7 @@ test_that("high", {
 
 test_that("low", {
   # tests for the property `low` (character)
-  # 
+  # Low price of token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`low`, "EXPECTED_RESULT")
@@ -181,7 +181,7 @@ test_that("low", {
 
 test_that("close", {
   # tests for the property `close` (character)
-  # 
+  # Close price of token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`close`, "EXPECTED_RESULT")

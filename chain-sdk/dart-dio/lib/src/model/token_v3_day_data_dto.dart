@@ -13,7 +13,7 @@ part 'token_v3_day_data_dto.g.dart';
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
 /// * [id] - Token address concatendated with date.
 /// * [date] - Timestamp rounded to current day by dividing by 86400.
@@ -37,7 +37,7 @@ abstract class TokenV3DayDataDTO implements Built<TokenV3DayDataDTO, TokenV3DayD
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 

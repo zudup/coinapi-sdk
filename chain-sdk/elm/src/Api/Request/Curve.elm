@@ -35,7 +35,6 @@ module Api.Request.Curve exposing
     , dappsCurveGaugeWithdrawHistoricalGet
     , dappsCurveHourlyVolumeHistoricalGet
     , dappsCurveLpTokenHistoricalGet
-    , dappsCurvePoiHistoricalGet
     , dappsCurvePoolsHistoricalGet
     , dappsCurveProposalsHistoricalGet
     , dappsCurveProposalsVoteHistoricalGet
@@ -314,19 +313,6 @@ dappsCurveLpTokenHistoricalGet startBlock_query endBlock_query startDate_query e
         "/dapps/curve/lpToken/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurvePoiHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurvePoiHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/poi/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.succeed ())

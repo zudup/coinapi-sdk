@@ -31,6 +31,8 @@ class PoolV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
     """
 
 

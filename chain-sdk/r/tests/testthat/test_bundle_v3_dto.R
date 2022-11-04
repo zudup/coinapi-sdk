@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("id", {
 
 test_that("eth_price_usd", {
   # tests for the property `eth_price_usd` (character)
-  # 
+  # Price of ETH in usd.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`eth_price_usd`, "EXPECTED_RESULT")

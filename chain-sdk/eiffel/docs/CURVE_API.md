@@ -24,7 +24,6 @@ Feature | HTTP request | Description
 [**dapps_curve_gauge_withdraw_historical_get**](CURVE_API.md#dapps_curve_gauge_withdraw_historical_get) | **Get** /dapps/curve/gaugeWithdraw/historical | 
 [**dapps_curve_hourly_volume_historical_get**](CURVE_API.md#dapps_curve_hourly_volume_historical_get) | **Get** /dapps/curve/hourlyVolume/historical | 
 [**dapps_curve_lp_token_historical_get**](CURVE_API.md#dapps_curve_lp_token_historical_get) | **Get** /dapps/curve/lpToken/historical | 
-[**dapps_curve_poi_historical_get**](CURVE_API.md#dapps_curve_poi_historical_get) | **Get** /dapps/curve/poi/historical | 
 [**dapps_curve_pools_historical_get**](CURVE_API.md#dapps_curve_pools_historical_get) | **Get** /dapps/curve/pools/historical | 
 [**dapps_curve_proposals_historical_get**](CURVE_API.md#dapps_curve_proposals_historical_get) | **Get** /dapps/curve/proposals/historical | 
 [**dapps_curve_proposals_vote_historical_get**](CURVE_API.md#dapps_curve_proposals_vote_historical_get) | **Get** /dapps/curve/proposalsVote/historical | 
@@ -654,37 +653,6 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**|  | [optional] [default to null]
  **end_date** | **DATE_TIME**|  | [optional] [default to null]
  **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-{empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_poi_historical_get**
-> dapps_curve_poi_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
-
-
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
 
 ### Return type
 

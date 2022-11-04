@@ -34,34 +34,6 @@ private class OASCowApiTest {
      * 
      */
     @isTest
-    private static void dappsCowPoiHistoricalGetTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3)
-        };
-
-        OASClient client;
-        OASCowApi api;
-        String js = '';
-
-        api = new OASCowApi(new OASClient());
-
-        api.dappsCowPoiHistoricalGet(params);
-    }
-
-    /**
-     * 
-     *
-     * 
-     */
-    @isTest
     private static void dappsCowSettlementHistoricalGetTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);

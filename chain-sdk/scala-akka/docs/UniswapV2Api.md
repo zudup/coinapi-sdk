@@ -18,8 +18,6 @@ Method | HTTP request | Description
 [**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
 [**dappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
 [**dappsUniswapv2MintsHistoricalGetWithHttpInfo**](UniswapV2Api.md#dappsUniswapv2MintsHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv2/mints/historical | 
-[**dappsUniswapv2PoiHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical | 
-[**dappsUniswapv2PoiHistoricalGetWithHttpInfo**](UniswapV2Api.md#dappsUniswapv2PoiHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv2/poi/historical | 
 [**dappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo**](UniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo) | **GET** /dapps/uniswapv2/poolDayData/historical | 
 [**dappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
@@ -638,92 +636,6 @@ Name | Type | Description  | Notes
  **startDate** | **OffsetDateTime**|  | [optional]
  **endDate** | **OffsetDateTime**|  | [optional]
  **poolId** | **String**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsUniswapv2PoiHistoricalGet
-
-> dappsUniswapv2PoiHistoricalGet(dappsUniswapv2PoiHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV2Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsUniswapv2PoiHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2PoiHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#dappsUniswapv2PoiHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
 
 ### Return type
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
-**block_number** | **integer** |  | [optional] 
+**block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
 **vid** | **integer** |  | [optional] 
 **id** | **character** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **date** | **integer** | Timestamp rounded to current day by dividing by 86400. | [optional] 

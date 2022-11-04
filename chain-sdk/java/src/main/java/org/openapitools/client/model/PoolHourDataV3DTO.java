@@ -40,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * PoolHourDataV3DTO
+ * Hourly stats tracker for pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Hourly stats tracker for pool.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class PoolHourDataV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -203,11 +205,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -226,11 +228,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>-<day id>")
 
   public String getId() {
     return id;
@@ -249,11 +251,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Unix timestamp for start of hour.
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Unix timestamp for start of hour.")
 
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
@@ -272,11 +274,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Pointer to pool.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pointer to pool.")
 
   public String getPool() {
     return pool;
@@ -295,11 +297,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * In range liquidity at end of period.
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "In range liquidity at end of period.")
 
   public String getLiquidity() {
     return liquidity;
@@ -318,11 +320,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Current price tracker at end of period.
    * @return sqrtPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current price tracker at end of period.")
 
   public String getSqrtPrice() {
     return sqrtPrice;
@@ -341,11 +343,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Price of token0 - derived from sqrtPrice.
    * @return token0Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Price of token0 - derived from sqrtPrice.")
 
   public String getToken0Price() {
     return token0Price;
@@ -364,11 +366,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Price of token1 - derived from sqrtPrice.
    * @return token1Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Price of token1 - derived from sqrtPrice.")
 
   public String getToken1Price() {
     return token1Price;
@@ -387,11 +389,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Current tick at end of period.
    * @return tick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current tick at end of period.")
 
   public String getTick() {
     return tick;
@@ -410,11 +412,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Tracker for global fee growth.
    * @return feeGrowthGlobal0x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Tracker for global fee growth.")
 
   public String getFeeGrowthGlobal0x128() {
     return feeGrowthGlobal0x128;
@@ -433,11 +435,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Tracker for global fee growth.
    * @return feeGrowthGlobal1x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Tracker for global fee growth.")
 
   public String getFeeGrowthGlobal1x128() {
     return feeGrowthGlobal1x128;
@@ -456,11 +458,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived in USD at end of period.
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD at end of period.")
 
   public String getTvlUsd() {
     return tvlUsd;
@@ -479,11 +481,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Volume in token0.
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in token0.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -502,11 +504,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Volume in token1.
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in token1.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -525,11 +527,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Volume in USD.
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Volume in USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -548,11 +550,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Fees in USD.
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -571,11 +573,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Number of transactions during period.
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of transactions during period.")
 
   public String getTxCount() {
     return txCount;
@@ -594,11 +596,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Opening price of token0.
    * @return open
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Opening price of token0.")
 
   public String getOpen() {
     return open;
@@ -617,11 +619,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * High price of token0.
    * @return high
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "High price of token0.")
 
   public String getHigh() {
     return high;
@@ -640,11 +642,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Low price of token0.
    * @return low
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Low price of token0.")
 
   public String getLow() {
     return low;
@@ -663,11 +665,11 @@ public class PoolHourDataV3DTO {
   }
 
    /**
-   * 
+   * Close price of token0.
    * @return close
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Close price of token0.")
 
   public String getClose() {
     return close;
@@ -841,9 +843,7 @@ public class PoolHourDataV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PoolHourDataV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!PoolHourDataV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PoolHourDataV3DTO is not found in the empty JSON string", PoolHourDataV3DTO.openapiRequiredFields.toString()));
         }
       }

@@ -237,7 +237,7 @@ __PACKAGE__->method_documentation({
     'block_number' => {
         datatype => 'int',
         base_name => 'block_number',
-        description => '',
+        description => 'Number of block in which entity was recorded.',
         format => '',
         read_only => '',
             },
@@ -307,7 +307,7 @@ __PACKAGE__->method_documentation({
     'tracked_reserve_eth' => {
         datatype => 'string',
         base_name => 'tracked_reserve_eth',
-        description => 'Total liquidity with only tracked amount (see tracked amounts).',
+        description => 'Total liquidity with only tracked amount.',
         format => '',
         read_only => '',
             },
@@ -370,7 +370,7 @@ __PACKAGE__->method_documentation({
     'liquidity_provider_count' => {
         datatype => 'string',
         base_name => 'liquidity_provider_count',
-        description => '',
+        description => 'Total number of LPs.',
         format => '',
         read_only => '',
             },

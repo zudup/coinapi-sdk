@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Token address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("id", {
 
 test_that("factory", {
   # tests for the property `factory` (character)
-  # 
+  # Factory address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`factory`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("factory", {
 
 test_that("symbol", {
   # tests for the property `symbol` (character)
-  # 
+  # Token symbol.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`symbol`, "EXPECTED_RESULT")
@@ -53,7 +53,7 @@ test_that("symbol", {
 
 test_that("name", {
   # tests for the property `name` (character)
-  # 
+  # Token name.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`name`, "EXPECTED_RESULT")
@@ -61,7 +61,7 @@ test_that("name", {
 
 test_that("decimals", {
   # tests for the property `decimals` (character)
-  # 
+  # Token decimals.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`decimals`, "EXPECTED_RESULT")
@@ -69,7 +69,7 @@ test_that("decimals", {
 
 test_that("total_supply", {
   # tests for the property `total_supply` (character)
-  # 
+  # Total supply of liquidity token.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`total_supply`, "EXPECTED_RESULT")
@@ -77,7 +77,7 @@ test_that("total_supply", {
 
 test_that("volume", {
   # tests for the property `volume` (character)
-  # 
+  # Amount of token traded all time across all pairs.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume`, "EXPECTED_RESULT")
@@ -85,7 +85,7 @@ test_that("volume", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # 
+  # Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -93,7 +93,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
-  # 
+  # Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -101,7 +101,7 @@ test_that("untracked_volume_usd", {
 
 test_that("tx_count", {
   # tests for the property `tx_count` (character)
-  # 
+  # Amount of transactions all time in pairs including token.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`tx_count`, "EXPECTED_RESULT")
@@ -109,7 +109,7 @@ test_that("tx_count", {
 
 test_that("liquidity", {
   # tests for the property `liquidity` (character)
-  # 
+  # Total amount of token provided as liquidity across all pairs.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`liquidity`, "EXPECTED_RESULT")
@@ -117,7 +117,7 @@ test_that("liquidity", {
 
 test_that("derived_eth", {
   # tests for the property `derived_eth` (character)
-  # 
+  # ETH per token.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`derived_eth`, "EXPECTED_RESULT")
@@ -125,7 +125,7 @@ test_that("derived_eth", {
 
 test_that("whitelist_pairs", {
   # tests for the property `whitelist_pairs` (array[character])
-  # 
+  # Array of whitelisted pairs.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`whitelist_pairs`, "EXPECTED_RESULT")

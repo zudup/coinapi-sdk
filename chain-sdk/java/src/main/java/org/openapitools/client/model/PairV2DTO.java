@@ -41,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -51,7 +52,7 @@ import org.openapitools.client.JSON;
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 @ApiModel(description = "Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class PairV2DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -209,11 +210,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -439,11 +440,11 @@ public class PairV2DTO {
   }
 
    /**
-   * Total liquidity with only tracked amount (see tracked amounts).
+   * Total liquidity with only tracked amount.
    * @return trackedReserveEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity with only tracked amount (see tracked amounts).")
+  @ApiModelProperty(value = "Total liquidity with only tracked amount.")
 
   public String getTrackedReserveEth() {
     return trackedReserveEth;
@@ -646,11 +647,11 @@ public class PairV2DTO {
   }
 
    /**
-   * 
+   * Total number of LPs.
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total number of LPs.")
 
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
@@ -812,9 +813,7 @@ public class PairV2DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PairV2DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!PairV2DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PairV2DTO is not found in the empty JSON string", PairV2DTO.openapiRequiredFields.toString()));
         }
       }

@@ -15,14 +15,6 @@ Describe -tag 'PSOpenAPITools' -name 'CowApi' {
         }
     }
 
-    Context 'Invoke-DappsCowPoiHistoricalGet' {
-        It 'Test Invoke-DappsCowPoiHistoricalGet' {
-            #$TestResult = Invoke-DappsCowPoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-DappsCowSettlementHistoricalGet' {
         It 'Test Invoke-DappsCowSettlementHistoricalGet' {
             #$TestResult = Invoke-DappsCowSettlementHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

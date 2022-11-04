@@ -16,53 +16,53 @@ import (
 	"time"
 )
 
-// PairDTO struct for PairDTO
+// PairDTO Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 type PairDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// Pair contract address.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Factory contract address.
 	Factory NullableString `json:"factory,omitempty"`
-	// 
+	// Friendly name, format: <token0 name>-<token1 name>
 	Name NullableString `json:"name,omitempty"`
-	// 
+	// Reference to token0 as stored in pair contract.
 	Token0 NullableString `json:"token_0,omitempty"`
-	// 
+	// Reference to token0 as stored in pair contract.
 	Token1 NullableString `json:"token_1,omitempty"`
-	// 
+	// Reserve of token0.
 	Reserve0 NullableString `json:"reserve_0,omitempty"`
-	// 
+	// Reserve of token1.
 	Reserve1 NullableString `json:"reserve_1,omitempty"`
-	// 
+	// Total supply of liquidity token distributed to LPs.
 	TotalSupply NullableString `json:"total_supply,omitempty"`
-	// 
+	// Total liquidity in pair stored as an amount of ETH.
 	ReserveEth NullableString `json:"reserve_eth,omitempty"`
-	// 
+	// Total liquidity amount in pair stored as an amount of USD.
 	ReserveUsd NullableString `json:"reserve_usd,omitempty"`
-	// 
+	// Total liquidity with only tracked amount.
 	TrackedReserveEth NullableString `json:"tracked_reserve_eth,omitempty"`
-	// 
+	// Token0 per token1.
 	Token0Price NullableString `json:"token_0_price,omitempty"`
-	// 
+	// Token1 per token0.
 	Token1Price NullableString `json:"token_1_price,omitempty"`
-	// 
+	// Amount of token0 swapped on this pair.
 	VolumeToken0 NullableString `json:"volume_token_0,omitempty"`
-	// 
+	// Amount of token1 swapped on this pair.
 	VolumeToken1 NullableString `json:"volume_token_1,omitempty"`
-	// 
+	// Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
 	VolumeUsd NullableString `json:"volume_usd,omitempty"`
-	// 
+	// Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// 
+	// All time amount of transactions on this pair.
 	TxCount NullableString `json:"tx_count,omitempty"`
-	// 
+	// Total number of LPs.
 	LiquidityProviderCount NullableString `json:"liquidity_provider_count,omitempty"`
-	// 
+	// Timestamp.
 	Timestamp NullableString `json:"timestamp,omitempty"`
-	// 
+	// Block number in which pair information was created in.
 	Block NullableString `json:"block,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -88,7 +88,7 @@ func NewPairDTOWithDefaults() *PairDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *PairDTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -98,15 +98,15 @@ func (o *PairDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PairDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *PairDTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -120,7 +120,7 @@ func (o *PairDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *PairDTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -130,15 +130,15 @@ func (o *PairDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PairDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *PairDTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -152,7 +152,7 @@ func (o *PairDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *PairDTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -162,15 +162,15 @@ func (o *PairDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PairDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *PairDTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -184,7 +184,7 @@ func (o *PairDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -196,7 +196,7 @@ func (o *PairDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -226,7 +226,7 @@ func (o *PairDTO) UnsetId() {
 
 // GetFactory returns the Factory field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetFactory() string {
-	if o == nil || o.Factory.Get() == nil {
+	if o == nil || isNil(o.Factory.Get()) {
 		var ret string
 		return ret
 	}
@@ -238,7 +238,7 @@ func (o *PairDTO) GetFactory() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetFactoryOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Factory.Get(), o.Factory.IsSet()
 }
@@ -268,7 +268,7 @@ func (o *PairDTO) UnsetFactory() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetName() string {
-	if o == nil || o.Name.Get() == nil {
+	if o == nil || isNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -280,7 +280,7 @@ func (o *PairDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -310,7 +310,7 @@ func (o *PairDTO) UnsetName() {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetToken0() string {
-	if o == nil || o.Token0.Get() == nil {
+	if o == nil || isNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -322,7 +322,7 @@ func (o *PairDTO) GetToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0.Get(), o.Token0.IsSet()
 }
@@ -352,7 +352,7 @@ func (o *PairDTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetToken1() string {
-	if o == nil || o.Token1.Get() == nil {
+	if o == nil || isNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -364,7 +364,7 @@ func (o *PairDTO) GetToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1.Get(), o.Token1.IsSet()
 }
@@ -394,7 +394,7 @@ func (o *PairDTO) UnsetToken1() {
 
 // GetReserve0 returns the Reserve0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetReserve0() string {
-	if o == nil || o.Reserve0.Get() == nil {
+	if o == nil || isNil(o.Reserve0.Get()) {
 		var ret string
 		return ret
 	}
@@ -406,7 +406,7 @@ func (o *PairDTO) GetReserve0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetReserve0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Reserve0.Get(), o.Reserve0.IsSet()
 }
@@ -436,7 +436,7 @@ func (o *PairDTO) UnsetReserve0() {
 
 // GetReserve1 returns the Reserve1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetReserve1() string {
-	if o == nil || o.Reserve1.Get() == nil {
+	if o == nil || isNil(o.Reserve1.Get()) {
 		var ret string
 		return ret
 	}
@@ -448,7 +448,7 @@ func (o *PairDTO) GetReserve1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetReserve1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Reserve1.Get(), o.Reserve1.IsSet()
 }
@@ -478,7 +478,7 @@ func (o *PairDTO) UnsetReserve1() {
 
 // GetTotalSupply returns the TotalSupply field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetTotalSupply() string {
-	if o == nil || o.TotalSupply.Get() == nil {
+	if o == nil || isNil(o.TotalSupply.Get()) {
 		var ret string
 		return ret
 	}
@@ -490,7 +490,7 @@ func (o *PairDTO) GetTotalSupply() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetTotalSupplyOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalSupply.Get(), o.TotalSupply.IsSet()
 }
@@ -520,7 +520,7 @@ func (o *PairDTO) UnsetTotalSupply() {
 
 // GetReserveEth returns the ReserveEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetReserveEth() string {
-	if o == nil || o.ReserveEth.Get() == nil {
+	if o == nil || isNil(o.ReserveEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -532,7 +532,7 @@ func (o *PairDTO) GetReserveEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetReserveEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.ReserveEth.Get(), o.ReserveEth.IsSet()
 }
@@ -562,7 +562,7 @@ func (o *PairDTO) UnsetReserveEth() {
 
 // GetReserveUsd returns the ReserveUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetReserveUsd() string {
-	if o == nil || o.ReserveUsd.Get() == nil {
+	if o == nil || isNil(o.ReserveUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -574,7 +574,7 @@ func (o *PairDTO) GetReserveUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetReserveUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.ReserveUsd.Get(), o.ReserveUsd.IsSet()
 }
@@ -604,7 +604,7 @@ func (o *PairDTO) UnsetReserveUsd() {
 
 // GetTrackedReserveEth returns the TrackedReserveEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetTrackedReserveEth() string {
-	if o == nil || o.TrackedReserveEth.Get() == nil {
+	if o == nil || isNil(o.TrackedReserveEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -616,7 +616,7 @@ func (o *PairDTO) GetTrackedReserveEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetTrackedReserveEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TrackedReserveEth.Get(), o.TrackedReserveEth.IsSet()
 }
@@ -646,7 +646,7 @@ func (o *PairDTO) UnsetTrackedReserveEth() {
 
 // GetToken0Price returns the Token0Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetToken0Price() string {
-	if o == nil || o.Token0Price.Get() == nil {
+	if o == nil || isNil(o.Token0Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -658,7 +658,7 @@ func (o *PairDTO) GetToken0Price() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetToken0PriceOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0Price.Get(), o.Token0Price.IsSet()
 }
@@ -688,7 +688,7 @@ func (o *PairDTO) UnsetToken0Price() {
 
 // GetToken1Price returns the Token1Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetToken1Price() string {
-	if o == nil || o.Token1Price.Get() == nil {
+	if o == nil || isNil(o.Token1Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -700,7 +700,7 @@ func (o *PairDTO) GetToken1Price() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetToken1PriceOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1Price.Get(), o.Token1Price.IsSet()
 }
@@ -730,7 +730,7 @@ func (o *PairDTO) UnsetToken1Price() {
 
 // GetVolumeToken0 returns the VolumeToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetVolumeToken0() string {
-	if o == nil || o.VolumeToken0.Get() == nil {
+	if o == nil || isNil(o.VolumeToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -742,7 +742,7 @@ func (o *PairDTO) GetVolumeToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetVolumeToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeToken0.Get(), o.VolumeToken0.IsSet()
 }
@@ -772,7 +772,7 @@ func (o *PairDTO) UnsetVolumeToken0() {
 
 // GetVolumeToken1 returns the VolumeToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetVolumeToken1() string {
-	if o == nil || o.VolumeToken1.Get() == nil {
+	if o == nil || isNil(o.VolumeToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -784,7 +784,7 @@ func (o *PairDTO) GetVolumeToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetVolumeToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeToken1.Get(), o.VolumeToken1.IsSet()
 }
@@ -814,7 +814,7 @@ func (o *PairDTO) UnsetVolumeToken1() {
 
 // GetVolumeUsd returns the VolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetVolumeUsd() string {
-	if o == nil || o.VolumeUsd.Get() == nil {
+	if o == nil || isNil(o.VolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -826,7 +826,7 @@ func (o *PairDTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -856,7 +856,7 @@ func (o *PairDTO) UnsetVolumeUsd() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetUntrackedVolumeUsd() string {
-	if o == nil || o.UntrackedVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -868,7 +868,7 @@ func (o *PairDTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -898,7 +898,7 @@ func (o *PairDTO) UnsetUntrackedVolumeUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetTxCount() string {
-	if o == nil || o.TxCount.Get() == nil {
+	if o == nil || isNil(o.TxCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -910,7 +910,7 @@ func (o *PairDTO) GetTxCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetTxCountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TxCount.Get(), o.TxCount.IsSet()
 }
@@ -940,7 +940,7 @@ func (o *PairDTO) UnsetTxCount() {
 
 // GetLiquidityProviderCount returns the LiquidityProviderCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetLiquidityProviderCount() string {
-	if o == nil || o.LiquidityProviderCount.Get() == nil {
+	if o == nil || isNil(o.LiquidityProviderCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -952,7 +952,7 @@ func (o *PairDTO) GetLiquidityProviderCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetLiquidityProviderCountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.LiquidityProviderCount.Get(), o.LiquidityProviderCount.IsSet()
 }
@@ -982,7 +982,7 @@ func (o *PairDTO) UnsetLiquidityProviderCount() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetTimestamp() string {
-	if o == nil || o.Timestamp.Get() == nil {
+	if o == nil || isNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -994,7 +994,7 @@ func (o *PairDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -1024,7 +1024,7 @@ func (o *PairDTO) UnsetTimestamp() {
 
 // GetBlock returns the Block field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *PairDTO) GetBlock() string {
-	if o == nil || o.Block.Get() == nil {
+	if o == nil || isNil(o.Block.Get()) {
 		var ret string
 		return ret
 	}
@@ -1036,7 +1036,7 @@ func (o *PairDTO) GetBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *PairDTO) GetBlockOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Block.Get(), o.Block.IsSet()
 }
@@ -1066,7 +1066,7 @@ func (o *PairDTO) UnsetBlock() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *PairDTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -1076,15 +1076,15 @@ func (o *PairDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PairDTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *PairDTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -1098,7 +1098,7 @@ func (o *PairDTO) SetVid(v int64) {
 
 // GetEvaluatedAsk returns the EvaluatedAsk field value if set, zero value otherwise.
 func (o *PairDTO) GetEvaluatedAsk() float64 {
-	if o == nil || o.EvaluatedAsk == nil {
+	if o == nil || isNil(o.EvaluatedAsk) {
 		var ret float64
 		return ret
 	}
@@ -1108,15 +1108,15 @@ func (o *PairDTO) GetEvaluatedAsk() float64 {
 // GetEvaluatedAskOk returns a tuple with the EvaluatedAsk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PairDTO) GetEvaluatedAskOk() (*float64, bool) {
-	if o == nil || o.EvaluatedAsk == nil {
-		return nil, false
+	if o == nil || isNil(o.EvaluatedAsk) {
+    return nil, false
 	}
 	return o.EvaluatedAsk, true
 }
 
 // HasEvaluatedAsk returns a boolean if a field has been set.
 func (o *PairDTO) HasEvaluatedAsk() bool {
-	if o != nil && o.EvaluatedAsk != nil {
+	if o != nil && !isNil(o.EvaluatedAsk) {
 		return true
 	}
 
@@ -1130,13 +1130,13 @@ func (o *PairDTO) SetEvaluatedAsk(v float64) {
 
 func (o PairDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -1202,10 +1202,10 @@ func (o PairDTO) MarshalJSON() ([]byte, error) {
 	if o.Block.IsSet() {
 		toSerialize["block"] = o.Block.Get()
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	if o.EvaluatedAsk != nil {
+	if !isNil(o.EvaluatedAsk) {
 		toSerialize["evaluated_ask"] = o.EvaluatedAsk
 	}
 	return json.Marshal(toSerialize)

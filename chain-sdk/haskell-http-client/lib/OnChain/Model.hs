@@ -143,12 +143,13 @@ mkBigInteger =
 
 -- ** BundleV3DTO
 -- | BundleV3DTO
+-- The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
 data BundleV3DTO = BundleV3DTO
   { bundleV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , bundleV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , bundleV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , bundleV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , bundleV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , bundleV3DTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd" - 
+  , bundleV3DTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd" - Price of ETH in usd.
   , bundleV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -191,25 +192,26 @@ mkBundleV3DTO =
 
 -- ** BurnV3DTO
 -- | BurnV3DTO
+-- Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
 data BurnV3DTO = BurnV3DTO
   { burnV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , burnV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , burnV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , burnV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , burnV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , burnV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , burnV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , burnV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
-  , burnV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
-  , burnV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
-  , burnV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
-  , burnV3DTOAmount :: !(Maybe Text) -- ^ "amount" - 
-  , burnV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
-  , burnV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
-  , burnV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
-  , burnV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
-  , burnV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
-  , burnV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
+  , burnV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , burnV3DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
+  , burnV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction burn was included in.
+  , burnV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
+  , burnV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , burnV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
+  , burnV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
+  , burnV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity was burned.
+  , burnV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+  , burnV3DTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity burned.
+  , burnV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 burned.
+  , burnV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 burned.
+  , burnV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
+  , burnV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of position.
+  , burnV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of position.
+  , burnV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Position within the transactions.
   , burnV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -291,23 +293,24 @@ mkBurnV3DTO =
 
 -- ** FactoryV3DTO
 -- | FactoryV3DTO
+-- The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 data FactoryV3DTO = FactoryV3DTO
   { factoryV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , factoryV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , factoryV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , factoryV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , factoryV3DTOPoolCount :: !(Maybe Text) -- ^ "pool_count" - 
-  , factoryV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
-  , factoryV3DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - 
-  , factoryV3DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - 
-  , factoryV3DTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd" - 
-  , factoryV3DTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth" - 
-  , factoryV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , factoryV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
-  , factoryV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - 
-  , factoryV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
-  , factoryV3DTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked" - 
-  , factoryV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
+  , factoryV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , factoryV3DTOId :: !(Maybe Text) -- ^ "id" - Factory address.
+  , factoryV3DTOPoolCount :: !(Maybe Text) -- ^ "pool_count" - Amount of pools created.
+  , factoryV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions all time.
+  , factoryV3DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - Total volume all time in derived USD.
+  , factoryV3DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - Total volume all time in derived ETH.
+  , factoryV3DTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd" - Total swap fees all time in USD.
+  , factoryV3DTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth" - All volume even through less reliable USD values.
+  , factoryV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All volume even through less reliable USD values.
+  , factoryV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked derived in USD.
+  , factoryV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total value locked derived in ETH.
+  , factoryV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived in USD untracked.
+  , factoryV3DTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked" - Total value locked derived in ETH untracked.
+  , factoryV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Current owner of the factory.
   , factoryV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -383,26 +386,27 @@ mkFactoryV3DTO =
 
 -- ** MintV3DTO
 -- | MintV3DTO
+-- Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
 data MintV3DTO = MintV3DTO
   { mintV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , mintV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , mintV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , mintV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , mintV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , mintV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
-  , mintV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , mintV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , mintV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
-  , mintV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
-  , mintV3DTOSender :: !(Maybe Text) -- ^ "sender" - 
-  , mintV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
-  , mintV3DTOAmount :: !(Maybe Text) -- ^ "amount" - 
-  , mintV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
-  , mintV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
-  , mintV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
-  , mintV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
-  , mintV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
-  , mintV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
+  , mintV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , mintV3DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
+  , mintV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Which txn the mint was included in.
+  , mintV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Time of transaction.
+  , mintV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
+  , mintV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , mintV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
+  , mintV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity minted to.
+  , mintV3DTOSender :: !(Maybe Text) -- ^ "sender" - The address that minted the liquidity.
+  , mintV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+  , mintV3DTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity minted.
+  , mintV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 minted.
+  , mintV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 minted.
+  , mintV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
+  , mintV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
+  , mintV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
+  , mintV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Order within the transaction.
   , mintV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -487,31 +491,32 @@ mkMintV3DTO =
 
 -- ** PairDTO
 -- | PairDTO
+-- Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 data PairDTO = PairDTO
   { pairDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pairDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , pairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , pairDTOId :: !(Maybe Text) -- ^ "id" - 
-  , pairDTOFactory :: !(Maybe Text) -- ^ "factory" - 
-  , pairDTOName :: !(Maybe Text) -- ^ "name" - 
-  , pairDTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , pairDTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
-  , pairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - 
-  , pairDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - 
-  , pairDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
-  , pairDTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - 
-  , pairDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - 
-  , pairDTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - 
-  , pairDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
-  , pairDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
-  , pairDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , pairDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , pairDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , pairDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , pairDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
-  , pairDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
-  , pairDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
-  , pairDTOBlock :: !(Maybe Text) -- ^ "block" - 
+  , pairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , pairDTOId :: !(Maybe Text) -- ^ "id" - Pair contract address.
+  , pairDTOFactory :: !(Maybe Text) -- ^ "factory" - Factory contract address.
+  , pairDTOName :: !(Maybe Text) -- ^ "name" - Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;
+  , pairDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , pairDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token0 as stored in pair contract.
+  , pairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0.
+  , pairDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1.
+  , pairDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
+  , pairDTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - Total liquidity in pair stored as an amount of ETH.
+  , pairDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Total liquidity amount in pair stored as an amount of USD.
+  , pairDTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - Total liquidity with only tracked amount.
+  , pairDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
+  , pairDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
+  , pairDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Amount of token0 swapped on this pair.
+  , pairDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Amount of token1 swapped on this pair.
+  , pairDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+  , pairDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+  , pairDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - All time amount of transactions on this pair.
+  , pairDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Total number of LPs.
+  , pairDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
+  , pairDTOBlock :: !(Maybe Text) -- ^ "block" - Block number in which pair information was created in.
   , pairDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pairDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
@@ -619,7 +624,7 @@ mkPairDTO =
 data PairV2DTO = PairV2DTO
   { pairV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , pairV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , pairV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , pairV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , pairV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , pairV2DTOId :: !(Maybe Text) -- ^ "id" - Pair contract address.
   , pairV2DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
@@ -629,7 +634,7 @@ data PairV2DTO = PairV2DTO
   , pairV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
   , pairV2DTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - Total liquidity in pair stored as an amount of ETH.
   , pairV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Total liquidity amount in pair stored as an amount of USD.
-  , pairV2DTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - Total liquidity with only tracked amount (see tracked amounts).
+  , pairV2DTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - Total liquidity with only tracked amount.
   , pairV2DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
   , pairV2DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
   , pairV2DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Amount of token0 swapped on this pair.
@@ -638,7 +643,7 @@ data PairV2DTO = PairV2DTO
   , pairV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
   , pairV2DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
   , pairV2DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Timestamp contract was created.
-  , pairV2DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
+  , pairV2DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Total number of LPs.
   , pairV2DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -732,30 +737,31 @@ mkPairV2DTO =
 
 -- ** PoolDayDataV3DTO
 -- | PoolDayDataV3DTO
+-- Data accumulated and condensed into day stats for each pool.
 data PoolDayDataV3DTO = PoolDayDataV3DTO
   { poolDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , poolDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , poolDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
-  , poolDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , poolDayDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
-  , poolDayDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - 
-  , poolDayDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
-  , poolDayDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
-  , poolDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
-  , poolDayDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - 
-  , poolDayDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - 
-  , poolDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
-  , poolDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , poolDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , poolDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , poolDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , poolDayDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
-  , poolDayDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
-  , poolDayDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
-  , poolDayDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
-  , poolDayDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , poolDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , poolDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
+  , poolDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400
+  , poolDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , poolDayDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
+  , poolDayDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
+  , poolDayDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
+  , poolDayDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
+  , poolDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
+  , poolDayDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
+  , poolDayDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
+  , poolDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
+  , poolDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
+  , poolDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
+  , poolDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
+  , poolDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , poolDayDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
+  , poolDayDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
+  , poolDayDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
+  , poolDayDataV3DTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
+  , poolDayDataV3DTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
   , poolDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -852,30 +858,31 @@ mkPoolDayDataV3DTO =
 
 -- ** PoolHourDataV3DTO
 -- | PoolHourDataV3DTO
+-- Hourly stats tracker for pool.
 data PoolHourDataV3DTO = PoolHourDataV3DTO
   { poolHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , poolHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , poolHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - 
-  , poolHourDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , poolHourDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
-  , poolHourDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - 
-  , poolHourDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
-  , poolHourDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
-  , poolHourDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
-  , poolHourDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - 
-  , poolHourDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - 
-  , poolHourDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - 
-  , poolHourDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , poolHourDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , poolHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , poolHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , poolHourDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
-  , poolHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - 
-  , poolHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - 
-  , poolHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - 
-  , poolHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - 
+  , poolHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , poolHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
+  , poolHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
+  , poolHourDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , poolHourDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
+  , poolHourDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
+  , poolHourDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
+  , poolHourDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
+  , poolHourDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
+  , poolHourDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
+  , poolHourDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
+  , poolHourDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
+  , poolHourDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
+  , poolHourDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
+  , poolHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
+  , poolHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , poolHourDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
+  , poolHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
+  , poolHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
+  , poolHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
+  , poolHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
   , poolHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -972,39 +979,40 @@ mkPoolHourDataV3DTO =
 
 -- ** PoolV3DTO
 -- | PoolV3DTO
+-- Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 data PoolV3DTO = PoolV3DTO
   { poolV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , poolV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , poolV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , poolV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , poolV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , poolV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , poolV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - 
-  , poolV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , poolV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
+  , poolV3DTOId :: !(Maybe Text) -- ^ "id" - Pool address.
+  , poolV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Creation time.
+  , poolV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , poolV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
   , poolV3DTOFeeTier :: !(Maybe BigInteger) -- ^ "fee_tier"
   , poolV3DTOLiquidity :: !(Maybe BigInteger) -- ^ "liquidity"
   , poolV3DTOSqrtPrice :: !(Maybe BigInteger) -- ^ "sqrt_price"
   , poolV3DTOFeeGrowthGlobal0x128 :: !(Maybe BigInteger) -- ^ "fee_growth_global_0x128"
   , poolV3DTOFeeGrowthGlobal1x128 :: !(Maybe BigInteger) -- ^ "fee_growth_global_1x128"
-  , poolV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - 
-  , poolV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - 
+  , poolV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
+  , poolV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
   , poolV3DTOTick :: !(Maybe BigInteger) -- ^ "tick"
   , poolV3DTOObservationIndex :: !(Maybe BigInteger) -- ^ "observation_index"
-  , poolV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , poolV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , poolV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , poolV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , poolV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
+  , poolV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - All time token0 swapped.
+  , poolV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - All time token1 swapped.
+  , poolV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - All time USD swapped.
+  , poolV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All time USD swapped, unfiltered for unreliable USD pools.
+  , poolV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
   , poolV3DTOTxCount :: !(Maybe BigInteger) -- ^ "tx_count"
-  , poolV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
-  , poolV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
-  , poolV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - 
-  , poolV3DTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0" - 
+  , poolV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time fees collected token0.
+  , poolV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time fees collected token1.
+  , poolV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time fees collected derived USD.
+  , poolV3DTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0" - Total token 0 across all ticks.
   , poolV3DTOTotalValueLockedToken1 :: !(Maybe Text) -- ^ "total_value_locked_token_1" - 
-  , poolV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - 
-  , poolV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - 
-  , poolV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - 
-  , poolV3DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - 
+  , poolV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total token 1 across all ticks.
+  , poolV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked USD.
+  , poolV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived ETH.
+  , poolV3DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Liquidity providers count, used to detect new exchanges.
   , poolV3DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1131,22 +1139,22 @@ mkPoolV3DTO =
 data PositionSnapshotV3DTO = PositionSnapshotV3DTO
   { positionSnapshotV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , positionSnapshotV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , positionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , positionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , positionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner" - THIS IS SUPER OWNER
-  , positionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , positionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position" - 
-  , positionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
-  , positionSnapshotV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
-  , positionSnapshotV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - 
-  , positionSnapshotV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - 
-  , positionSnapshotV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - 
-  , positionSnapshotV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - 
-  , positionSnapshotV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
-  , positionSnapshotV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
-  , positionSnapshotV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , positionSnapshotV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - 
-  , positionSnapshotV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - 
+  , positionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , positionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+  , positionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
+  , positionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool the position is within.
+  , positionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position" - Position of which the snap was taken of.
+  , positionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of block in which the snap was created.
+  , positionSnapshotV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
+  , positionSnapshotV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
+  , positionSnapshotV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
+  , positionSnapshotV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
+  , positionSnapshotV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
+  , positionSnapshotV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , positionSnapshotV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , positionSnapshotV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the snapshot was initialized.
+  , positionSnapshotV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
+  , positionSnapshotV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
   , positionSnapshotV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1228,27 +1236,28 @@ mkPositionSnapshotV3DTO =
 
 -- ** PositionV3DTO
 -- | PositionV3DTO
+-- Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
 data PositionV3DTO = PositionV3DTO
   { positionV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , positionV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , positionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , positionV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , positionV3DTOOwner :: !(Maybe Text) -- ^ "owner" - 
-  , positionV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , positionV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , positionV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
-  , positionV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - 
-  , positionV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - 
-  , positionV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
-  , positionV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - 
-  , positionV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - 
-  , positionV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - 
-  , positionV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - 
-  , positionV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
-  , positionV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
-  , positionV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , positionV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - 
-  , positionV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - 
+  , positionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , positionV3DTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier.
+  , positionV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
+  , positionV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
+  , positionV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , positionV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
+  , positionV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
+  , positionV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
+  , positionV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
+  , positionV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
+  , positionV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
+  , positionV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
+  , positionV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
+  , positionV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , positionV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , positionV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the position was initialized.
+  , positionV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
+  , positionV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
   , positionV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1336,22 +1345,23 @@ mkPositionV3DTO =
 
 -- ** SwapDTO
 -- | SwapDTO
+-- Swap are created for each token swap within a pair.
 data SwapDTO = SwapDTO
   { swapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , swapDTOId :: !(Maybe Text) -- ^ "id" - 
-  , swapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , swapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
-  , swapDTOPair :: !(Maybe Text) -- ^ "pair" - 
-  , swapDTOSender :: !(Maybe Text) -- ^ "sender" - 
-  , swapDTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - 
-  , swapDTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - 
-  , swapDTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - 
-  , swapDTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - 
-  , swapDTOTo :: !(Maybe Text) -- ^ "to" - 
-  , swapDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - 
-  , swapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
+  , swapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , swapDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in Transaction swap array.
+  , swapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to transaction swap was included in.
+  , swapDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of swap, used for sorted lookups.
+  , swapDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , swapDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the swap.
+  , swapDTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - Amount of token0 sold.
+  , swapDTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - Amount of token1 sold.
+  , swapDTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - Amount of token0 received.
+  , swapDTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - Amount of token1 received.
+  , swapDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of output tokens.
+  , swapDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Event index within transaction.
+  , swapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
   , swapDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , swapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
   , swapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
@@ -1448,7 +1458,7 @@ mkSwapDTO =
 data SwapV2DTO = SwapV2DTO
   { swapV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , swapV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , swapV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , swapV2DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in Transaction swap array.
   , swapV2DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to transaction swap was included in.
@@ -1557,23 +1567,24 @@ mkSwapV2DTO =
 
 -- ** SwapV3DTO
 -- | SwapV3DTO
+-- Swap are created for each token swap within a pair.
 data SwapV3DTO = SwapV3DTO
   { swapV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , swapV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , swapV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , swapV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , swapV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , swapV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , swapV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - 
-  , swapV3DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - 
-  , swapV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , swapV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - 
-  , swapV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - 
-  , swapV3DTOSender :: !(Maybe Text) -- ^ "sender" - 
-  , swapV3DTORecipient :: !(Maybe Text) -- ^ "recipient" - 
-  , swapV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - 
-  , swapV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - 
-  , swapV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - 
-  , swapV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - 
+  , swapV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+  , swapV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Pointer to transaction.
+  , swapV3DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of transaction.
+  , swapV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool swap occured within.
+  , swapV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , swapV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
+  , swapV3DTOSender :: !(Maybe Text) -- ^ "sender" - Sender of the swap.
+  , swapV3DTORecipient :: !(Maybe Text) -- ^ "recipient" - Recipient of the swap.
+  , swapV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
+  , swapV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Delta of token0 swapped.
+  , swapV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Delta of token1 swapped.
+  , swapV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
   , swapV3DTOSqrtPriceX96 :: !(Maybe BigInteger) -- ^ "sqrt_price_x96"
   , swapV3DTOTick :: !(Maybe BigInteger) -- ^ "tick"
   , swapV3DTOLogIndex :: !(Maybe BigInteger) -- ^ "log_index"
@@ -1677,22 +1688,23 @@ mkSwapV3DTO =
 
 -- ** TickDayDataV3DTO
 -- | TickDayDataV3DTO
+-- Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 data TickDayDataV3DTO = TickDayDataV3DTO
   { tickDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tickDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tickDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , tickDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , tickDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - 
-  , tickDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
-  , tickDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - 
-  , tickDayDataV3DTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - 
-  , tickDayDataV3DTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - 
-  , tickDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , tickDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , tickDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tickDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , tickDayDataV3DTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128" - 
-  , tickDayDataV3DTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128" - 
+  , tickDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , tickDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
+  , tickDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
+  , tickDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , tickDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Pointer to tick.
+  , tickDayDataV3DTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - Total liquidity pool has as tick lower or upper at end of period.
+  , tickDayDataV3DTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - How much liquidity changes when tick crossed at end of period.
+  , tickDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Hourly volume of token0 with this tick in range.
+  , tickDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Hourly volume of token1 with this tick in range.
+  , tickDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Hourly volume in derived USD with this tick in range.
+  , tickDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , tickDayDataV3DTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128" - Variable needed for fee computation.
+  , tickDayDataV3DTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128" - Variable needed for fee computation.
   , tickDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
@@ -1765,28 +1777,29 @@ mkTickDayDataV3DTO =
 
 -- ** TickV3DTO
 -- | TickV3DTO
+-- Ticks are the boundaries between discrete areas in price space.
 data TickV3DTO = TickV3DTO
   { tickV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tickV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tickV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tickV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , tickV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , tickV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , tickV3DTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - 
+  , tickV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
+  , tickV3DTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Pool address.
   , tickV3DTOTickIdx :: !(Maybe BigInteger) -- ^ "tick_idx"
-  , tickV3DTOPool :: !(Maybe Text) -- ^ "pool" - 
+  , tickV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
   , tickV3DTOLiquidityGross :: !(Maybe BigInteger) -- ^ "liquidity_gross"
   , tickV3DTOLiquidityNet :: !(Maybe BigInteger) -- ^ "liquidity_net"
-  , tickV3DTOPrice0 :: !(Maybe Text) -- ^ "price_0" - 
-  , tickV3DTOPrice1 :: !(Maybe Text) -- ^ "price_1" - 
-  , tickV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - 
-  , tickV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - 
-  , tickV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tickV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , tickV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - 
-  , tickV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - 
-  , tickV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - 
-  , tickV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - 
-  , tickV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - 
+  , tickV3DTOPrice0 :: !(Maybe Text) -- ^ "price_0" - Calculated price of token0 of tick within this pool - constant.
+  , tickV3DTOPrice1 :: !(Maybe Text) -- ^ "price_1" - Calculated price of token1 of tick within this pool - constant.
+  , tickV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Lifetime volume of token0 with this tick in range.
+  , tickV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Lifetime volume of token1 with this tick in range.
+  , tickV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Lifetime volume in derived USD with this tick in range.
+  , tickV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Lifetime volume in untracked USD with this tick in range.
+  , tickV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , tickV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , tickV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , tickV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time collected fees in USD.
+  , tickV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Created time.
   , tickV3DTOLiquidityProviderCount :: !(Maybe BigInteger) -- ^ "liquidity_provider_count"
   , tickV3DTOFeeGrowthOutside0x128 :: !(Maybe BigInteger) -- ^ "fee_growth_outside_0x128"
   , tickV3DTOFeeGrowthOutside1x128 :: !(Maybe BigInteger) -- ^ "fee_growth_outside_1x128"
@@ -1885,23 +1898,24 @@ mkTickV3DTO =
 
 -- ** TokenDTO
 -- | TokenDTO
+-- Stores aggregated information for a specific token across all pairs that token is included in.
 data TokenDTO = TokenDTO
   { tokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
-  , tokenDTOId :: !(Maybe Text) -- ^ "id" - 
-  , tokenDTOFactory :: !(Maybe Text) -- ^ "factory" - 
-  , tokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - 
-  , tokenDTOName :: !(Maybe Text) -- ^ "name" - 
-  , tokenDTODecimals :: !(Maybe Text) -- ^ "decimals" - 
-  , tokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
-  , tokenDTOVolume :: !(Maybe Text) -- ^ "volume" - 
-  , tokenDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
-  , tokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - 
-  , tokenDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
-  , tokenDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - 
-  , tokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - 
-  , tokenDTOWhitelistPairs :: !(Maybe [Text]) -- ^ "whitelist_pairs" - 
+  , tokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , tokenDTOId :: !(Maybe Text) -- ^ "id" - Token address.
+  , tokenDTOFactory :: !(Maybe Text) -- ^ "factory" - Factory address.
+  , tokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
+  , tokenDTOName :: !(Maybe Text) -- ^ "name" - Token name.
+  , tokenDTODecimals :: !(Maybe Text) -- ^ "decimals" - Token decimals.
+  , tokenDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token.
+  , tokenDTOVolume :: !(Maybe Text) -- ^ "volume" - Amount of token traded all time across all pairs.
+  , tokenDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+  , tokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
+  , tokenDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions all time in pairs including token.
+  , tokenDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total amount of token provided as liquidity across all pairs.
+  , tokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - ETH per token.
+  , tokenDTOWhitelistPairs :: !(Maybe [Text]) -- ^ "whitelist_pairs" - Array of whitelisted pairs.
   , tokenDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , tokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
@@ -1985,7 +1999,7 @@ mkTokenDTO =
 data TokenHourDataV3DTO = TokenHourDataV3DTO
   { tokenHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , tokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - Token address concatendated with date.
   , tokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
   , tokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token" - Pointer to token.
@@ -2082,7 +2096,7 @@ mkTokenHourDataV3DTO =
 data TokenV2DTO = TokenV2DTO
   { tokenV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , tokenV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , tokenV2DTOId :: !(Maybe Text) -- ^ "id" - Token address.
   , tokenV2DTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
@@ -2171,7 +2185,7 @@ mkTokenV2DTO =
 data TokenV3DTO = TokenV3DTO
   { tokenV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , tokenV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , tokenV3DTOId :: !(Maybe Text) -- ^ "id" - Token address.
   , tokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
@@ -2280,7 +2294,7 @@ mkTokenV3DTO =
 data TokenV3DayDataDTO = TokenV3DayDataDTO
   { tokenV3DayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , tokenV3DayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , tokenV3DayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , tokenV3DayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , tokenV3DayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , tokenV3DayDataDTOId :: !(Maybe Text) -- ^ "id" - Token address concatendated with date.
   , tokenV3DayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
@@ -2377,7 +2391,7 @@ mkTokenV3DayDataDTO =
 data UniswapDayDataV3DTO = UniswapDayDataV3DTO
   { uniswapDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - 
+  , uniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , uniswapDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
   , uniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Timestamp rounded to current day by dividing by 86400.
   , uniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.

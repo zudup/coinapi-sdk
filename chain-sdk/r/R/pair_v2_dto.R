@@ -9,7 +9,7 @@
 #' @format An \code{R6Class} generator object
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
-#' @field block_number  integer [optional]
+#' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
 #' @field id Pair contract address. character [optional]
 #' @field token_0 Reference to token0 as stored in pair contract. character [optional]
@@ -19,7 +19,7 @@
 #' @field total_supply Total supply of liquidity token distributed to LPs. character [optional]
 #' @field reserve_eth Total liquidity in pair stored as an amount of ETH. character [optional]
 #' @field reserve_usd Total liquidity amount in pair stored as an amount of USD. character [optional]
-#' @field tracked_reserve_eth Total liquidity with only tracked amount (see tracked amounts). character [optional]
+#' @field tracked_reserve_eth Total liquidity with only tracked amount. character [optional]
 #' @field token_0_price Token0 per token1. character [optional]
 #' @field token_1_price Token1 per token0. character [optional]
 #' @field volume_token_0 Amount of token0 swapped on this pair. character [optional]
@@ -28,7 +28,7 @@
 #' @field untracked_volume_usd Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. character [optional]
 #' @field tx_count  \link{BigInteger} [optional]
 #' @field created_at_timestamp Timestamp contract was created. character [optional]
-#' @field liquidity_provider_count  character [optional]
+#' @field liquidity_provider_count Total number of LPs. character [optional]
 #' @field evaluated_ask  numeric [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -66,7 +66,7 @@ PairV2DTO <- R6::R6Class(
     #'
     #' @param entry_time entry_time
     #' @param recv_time recv_time
-    #' @param block_number 
+    #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
     #' @param id Pair contract address.
     #' @param token_0 Reference to token0 as stored in pair contract.
@@ -76,7 +76,7 @@ PairV2DTO <- R6::R6Class(
     #' @param total_supply Total supply of liquidity token distributed to LPs.
     #' @param reserve_eth Total liquidity in pair stored as an amount of ETH.
     #' @param reserve_usd Total liquidity amount in pair stored as an amount of USD.
-    #' @param tracked_reserve_eth Total liquidity with only tracked amount (see tracked amounts).
+    #' @param tracked_reserve_eth Total liquidity with only tracked amount.
     #' @param token_0_price Token0 per token1.
     #' @param token_1_price Token1 per token0.
     #' @param volume_token_0 Amount of token0 swapped on this pair.
@@ -85,87 +85,123 @@ PairV2DTO <- R6::R6Class(
     #' @param untracked_volume_usd Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
     #' @param tx_count tx_count
     #' @param created_at_timestamp Timestamp contract was created.
-    #' @param liquidity_provider_count 
+    #' @param liquidity_provider_count Total number of LPs.
     #' @param evaluated_ask evaluated_ask
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `token_0` = NULL, `token_1` = NULL, `reserve_0` = NULL, `reserve_1` = NULL, `total_supply` = NULL, `reserve_eth` = NULL, `reserve_usd` = NULL, `tracked_reserve_eth` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `tx_count` = NULL, `created_at_timestamp` = NULL, `liquidity_provider_count` = NULL, `evaluated_ask` = NULL, ...
-    ) {
+    initialize = function(`entry_time` = NULL, `recv_time` = NULL, `block_number` = NULL, `vid` = NULL, `id` = NULL, `token_0` = NULL, `token_1` = NULL, `reserve_0` = NULL, `reserve_1` = NULL, `total_supply` = NULL, `reserve_eth` = NULL, `reserve_usd` = NULL, `tracked_reserve_eth` = NULL, `token_0_price` = NULL, `token_1_price` = NULL, `volume_token_0` = NULL, `volume_token_1` = NULL, `volume_usd` = NULL, `untracked_volume_usd` = NULL, `tx_count` = NULL, `created_at_timestamp` = NULL, `liquidity_provider_count` = NULL, `evaluated_ask` = NULL, ...) {
       if (!is.null(`entry_time`)) {
-        stopifnot(is.character(`entry_time`), length(`entry_time`) == 1)
+        if (!is.character(`entry_time`)) {
+          stop(paste("Error! Invalid data for `entry_time`. Must be a string:", `entry_time`))
+        }
         self$`entry_time` <- `entry_time`
       }
       if (!is.null(`recv_time`)) {
-        stopifnot(is.character(`recv_time`), length(`recv_time`) == 1)
+        if (!is.character(`recv_time`)) {
+          stop(paste("Error! Invalid data for `recv_time`. Must be a string:", `recv_time`))
+        }
         self$`recv_time` <- `recv_time`
       }
       if (!is.null(`block_number`)) {
-        stopifnot(is.numeric(`block_number`), length(`block_number`) == 1)
+        if (!(is.numeric(`block_number`) && length(`block_number`) == 1)) {
+          stop(paste("Error! Invalid data for `block_number`. Must be an integer:", `block_number`))
+        }
         self$`block_number` <- `block_number`
       }
       if (!is.null(`vid`)) {
-        stopifnot(is.numeric(`vid`), length(`vid`) == 1)
+        if (!(is.numeric(`vid`) && length(`vid`) == 1)) {
+          stop(paste("Error! Invalid data for `vid`. Must be an integer:", `vid`))
+        }
         self$`vid` <- `vid`
       }
       if (!is.null(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
+        if (!(is.character(`id`) && length(`id`) == 1)) {
+          stop(paste("Error! Invalid data for `id`. Must be a string:", `id`))
+        }
         self$`id` <- `id`
       }
       if (!is.null(`token_0`)) {
-        stopifnot(is.character(`token_0`), length(`token_0`) == 1)
+        if (!(is.character(`token_0`) && length(`token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0`. Must be a string:", `token_0`))
+        }
         self$`token_0` <- `token_0`
       }
       if (!is.null(`token_1`)) {
-        stopifnot(is.character(`token_1`), length(`token_1`) == 1)
+        if (!(is.character(`token_1`) && length(`token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1`. Must be a string:", `token_1`))
+        }
         self$`token_1` <- `token_1`
       }
       if (!is.null(`reserve_0`)) {
-        stopifnot(is.character(`reserve_0`), length(`reserve_0`) == 1)
+        if (!(is.character(`reserve_0`) && length(`reserve_0`) == 1)) {
+          stop(paste("Error! Invalid data for `reserve_0`. Must be a string:", `reserve_0`))
+        }
         self$`reserve_0` <- `reserve_0`
       }
       if (!is.null(`reserve_1`)) {
-        stopifnot(is.character(`reserve_1`), length(`reserve_1`) == 1)
+        if (!(is.character(`reserve_1`) && length(`reserve_1`) == 1)) {
+          stop(paste("Error! Invalid data for `reserve_1`. Must be a string:", `reserve_1`))
+        }
         self$`reserve_1` <- `reserve_1`
       }
       if (!is.null(`total_supply`)) {
-        stopifnot(is.character(`total_supply`), length(`total_supply`) == 1)
+        if (!(is.character(`total_supply`) && length(`total_supply`) == 1)) {
+          stop(paste("Error! Invalid data for `total_supply`. Must be a string:", `total_supply`))
+        }
         self$`total_supply` <- `total_supply`
       }
       if (!is.null(`reserve_eth`)) {
-        stopifnot(is.character(`reserve_eth`), length(`reserve_eth`) == 1)
+        if (!(is.character(`reserve_eth`) && length(`reserve_eth`) == 1)) {
+          stop(paste("Error! Invalid data for `reserve_eth`. Must be a string:", `reserve_eth`))
+        }
         self$`reserve_eth` <- `reserve_eth`
       }
       if (!is.null(`reserve_usd`)) {
-        stopifnot(is.character(`reserve_usd`), length(`reserve_usd`) == 1)
+        if (!(is.character(`reserve_usd`) && length(`reserve_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `reserve_usd`. Must be a string:", `reserve_usd`))
+        }
         self$`reserve_usd` <- `reserve_usd`
       }
       if (!is.null(`tracked_reserve_eth`)) {
-        stopifnot(is.character(`tracked_reserve_eth`), length(`tracked_reserve_eth`) == 1)
+        if (!(is.character(`tracked_reserve_eth`) && length(`tracked_reserve_eth`) == 1)) {
+          stop(paste("Error! Invalid data for `tracked_reserve_eth`. Must be a string:", `tracked_reserve_eth`))
+        }
         self$`tracked_reserve_eth` <- `tracked_reserve_eth`
       }
       if (!is.null(`token_0_price`)) {
-        stopifnot(is.character(`token_0_price`), length(`token_0_price`) == 1)
+        if (!(is.character(`token_0_price`) && length(`token_0_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_0_price`. Must be a string:", `token_0_price`))
+        }
         self$`token_0_price` <- `token_0_price`
       }
       if (!is.null(`token_1_price`)) {
-        stopifnot(is.character(`token_1_price`), length(`token_1_price`) == 1)
+        if (!(is.character(`token_1_price`) && length(`token_1_price`) == 1)) {
+          stop(paste("Error! Invalid data for `token_1_price`. Must be a string:", `token_1_price`))
+        }
         self$`token_1_price` <- `token_1_price`
       }
       if (!is.null(`volume_token_0`)) {
-        stopifnot(is.character(`volume_token_0`), length(`volume_token_0`) == 1)
+        if (!(is.character(`volume_token_0`) && length(`volume_token_0`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_0`. Must be a string:", `volume_token_0`))
+        }
         self$`volume_token_0` <- `volume_token_0`
       }
       if (!is.null(`volume_token_1`)) {
-        stopifnot(is.character(`volume_token_1`), length(`volume_token_1`) == 1)
+        if (!(is.character(`volume_token_1`) && length(`volume_token_1`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_token_1`. Must be a string:", `volume_token_1`))
+        }
         self$`volume_token_1` <- `volume_token_1`
       }
       if (!is.null(`volume_usd`)) {
-        stopifnot(is.character(`volume_usd`), length(`volume_usd`) == 1)
+        if (!(is.character(`volume_usd`) && length(`volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `volume_usd`. Must be a string:", `volume_usd`))
+        }
         self$`volume_usd` <- `volume_usd`
       }
       if (!is.null(`untracked_volume_usd`)) {
-        stopifnot(is.character(`untracked_volume_usd`), length(`untracked_volume_usd`) == 1)
+        if (!(is.character(`untracked_volume_usd`) && length(`untracked_volume_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `untracked_volume_usd`. Must be a string:", `untracked_volume_usd`))
+        }
         self$`untracked_volume_usd` <- `untracked_volume_usd`
       }
       if (!is.null(`tx_count`)) {
@@ -173,15 +209,21 @@ PairV2DTO <- R6::R6Class(
         self$`tx_count` <- `tx_count`
       }
       if (!is.null(`created_at_timestamp`)) {
-        stopifnot(is.character(`created_at_timestamp`), length(`created_at_timestamp`) == 1)
+        if (!is.character(`created_at_timestamp`)) {
+          stop(paste("Error! Invalid data for `created_at_timestamp`. Must be a string:", `created_at_timestamp`))
+        }
         self$`created_at_timestamp` <- `created_at_timestamp`
       }
       if (!is.null(`liquidity_provider_count`)) {
-        stopifnot(is.character(`liquidity_provider_count`), length(`liquidity_provider_count`) == 1)
+        if (!(is.character(`liquidity_provider_count`) && length(`liquidity_provider_count`) == 1)) {
+          stop(paste("Error! Invalid data for `liquidity_provider_count`. Must be a string:", `liquidity_provider_count`))
+        }
         self$`liquidity_provider_count` <- `liquidity_provider_count`
       }
       if (!is.null(`evaluated_ask`)) {
-        stopifnot(is.numeric(`evaluated_ask`), length(`evaluated_ask`) == 1)
+        if (!(is.numeric(`evaluated_ask`) && length(`evaluated_ask`) == 1)) {
+          stop(paste("Error! Invalid data for `evaluated_ask`. Must be a number:", `evaluated_ask`))
+        }
         self$`evaluated_ask` <- `evaluated_ask`
       }
     },
@@ -653,18 +695,19 @@ PairV2DTO <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#PairV2DTO$unlock()
+# PairV2DTO$unlock()
 #
 ## Below is an example to define the print fnuction
-#PairV2DTO$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# PairV2DTO$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#PairV2DTO$lock()
+# PairV2DTO$lock()
 

@@ -11,7 +11,7 @@
  */
 
 /**
- * OASBurnV3DTO
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
 public class OASBurnV3DTO implements OAS.MappedProperties {
     /**
@@ -27,97 +27,97 @@ public class OASBurnV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Transaction hash + \'#\' + index in mints Transaction array.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Transaction burn was included in.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Pool position is within.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pool contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token1 as stored in pool contract.
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * 
+     * Timestamp.
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * 
+     * Owner of position where liquidity was burned.
      * @return owner
      */
     public String owner { get; set; }
 
     /**
-     * 
+     * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @return origin
      */
     public String origin { get; set; }
 
     /**
-     * 
+     * Amount of liquidity burned.
      * @return amount
      */
     public String amount { get; set; }
 
     /**
-     * 
+     * Amount of token 0 burned.
      * @return amount0
      */
     public String amount0 { get; set; }
 
     /**
-     * 
+     * Amount of token 1 burned.
      * @return amount1
      */
     public String amount1 { get; set; }
 
     /**
-     * 
+     * Derived amount based on available prices of tokens.
      * @return amountUsd
      */
     public String amountUsd { get; set; }
 
     /**
-     * 
+     * Lower tick of position.
      * @return tickLower
      */
     public String tickLower { get; set; }
 
     /**
-     * 
+     * Upper tick of position.
      * @return tickUpper
      */
     public String tickUpper { get; set; }
 
     /**
-     * 
+     * Position within the transactions.
      * @return logIndex
      */
     public String logIndex { get; set; }

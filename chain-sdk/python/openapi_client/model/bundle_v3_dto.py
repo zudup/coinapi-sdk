@@ -31,6 +31,8 @@ class BundleV3DTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
     """
 
 

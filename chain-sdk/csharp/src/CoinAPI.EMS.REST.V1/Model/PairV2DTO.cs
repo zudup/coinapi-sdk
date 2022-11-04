@@ -35,7 +35,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
         /// <param name="id">Pair contract address..</param>
         /// <param name="token0">Reference to token0 as stored in pair contract..</param>
@@ -45,7 +45,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="totalSupply">Total supply of liquidity token distributed to LPs..</param>
         /// <param name="reserveEth">Total liquidity in pair stored as an amount of ETH..</param>
         /// <param name="reserveUsd">Total liquidity amount in pair stored as an amount of USD..</param>
-        /// <param name="trackedReserveEth">Total liquidity with only tracked amount (see tracked amounts)..</param>
+        /// <param name="trackedReserveEth">Total liquidity with only tracked amount..</param>
         /// <param name="token0Price">Token0 per token1..</param>
         /// <param name="token1Price">Token1 per token0..</param>
         /// <param name="volumeToken0">Amount of token0 swapped on this pair..</param>
@@ -54,7 +54,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="untrackedVolumeUsd">Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold..</param>
         /// <param name="txCount">txCount.</param>
         /// <param name="createdAtTimestamp">Timestamp contract was created..</param>
-        /// <param name="liquidityProviderCount">liquidityProviderCount.</param>
+        /// <param name="liquidityProviderCount">Total number of LPs..</param>
         public PairV2DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), long vid = default(long), string id = default(string), string token0 = default(string), string token1 = default(string), string reserve0 = default(string), string reserve1 = default(string), string totalSupply = default(string), string reserveEth = default(string), string reserveUsd = default(string), string trackedReserveEth = default(string), string token0Price = default(string), string token1Price = default(string), string volumeToken0 = default(string), string volumeToken1 = default(string), string volumeUsd = default(string), string untrackedVolumeUsd = default(string), BigInteger txCount = default(BigInteger), DateTime createdAtTimestamp = default(DateTime), string liquidityProviderCount = default(string))
         {
             this.Id = id;
@@ -110,8 +110,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
@@ -178,9 +179,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string ReserveUsd { get; set; }
 
         /// <summary>
-        /// Total liquidity with only tracked amount (see tracked amounts).
+        /// Total liquidity with only tracked amount.
         /// </summary>
-        /// <value>Total liquidity with only tracked amount (see tracked amounts).</value>
+        /// <value>Total liquidity with only tracked amount.</value>
         [DataMember(Name="tracked_reserve_eth", EmitDefaultValue=true)]
         public string TrackedReserveEth { get; set; }
 
@@ -240,8 +241,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime CreatedAtTimestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets LiquidityProviderCount
+        /// Total number of LPs.
         /// </summary>
+        /// <value>Total number of LPs.</value>
         [DataMember(Name="liquidity_provider_count", EmitDefaultValue=true)]
         public string LiquidityProviderCount { get; set; }
 

@@ -1,7 +1,7 @@
 /*
  * PoolDayDataV3DTO.h
  *
- * 
+ * Data accumulated and condensed into day stats for each pool.
  */
 
 #ifndef _PoolDayDataV3DTO_H_
@@ -20,7 +20,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Data accumulated and condensed into day stats for each pool.
  *
  *  \ingroup Models
  *
@@ -59,151 +59,151 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get Identifier, format: <pool address>-<day id>.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Identifier, format: <pool address>-<day id>.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Timestamp rounded to current day by dividing by 86400
 	 */
 	int getDate();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp rounded to current day by dividing by 86400
 	 */
 	void setDate(int  date);
-	/*! \brief Get 
+	/*! \brief Get Pointer to pool.
 	 */
 	std::string getPool();
 
-	/*! \brief Set 
+	/*! \brief Set Pointer to pool.
 	 */
 	void setPool(std::string  pool);
-	/*! \brief Get 
+	/*! \brief Get In range liquidity at end of period.
 	 */
 	std::string getLiquidity();
 
-	/*! \brief Set 
+	/*! \brief Set In range liquidity at end of period.
 	 */
 	void setLiquidity(std::string  liquidity);
-	/*! \brief Get 
+	/*! \brief Get Current price tracker at end of period.
 	 */
 	std::string getSqrtPrice();
 
-	/*! \brief Set 
+	/*! \brief Set Current price tracker at end of period.
 	 */
 	void setSqrtPrice(std::string  sqrt_price);
-	/*! \brief Get 
+	/*! \brief Get Price of token0 - derived from sqrtPrice.
 	 */
 	std::string getToken0Price();
 
-	/*! \brief Set 
+	/*! \brief Set Price of token0 - derived from sqrtPrice.
 	 */
 	void setToken0Price(std::string  token_0_price);
-	/*! \brief Get 
+	/*! \brief Get Price of token1 - derived from sqrtPrice.
 	 */
 	std::string getToken1Price();
 
-	/*! \brief Set 
+	/*! \brief Set Price of token1 - derived from sqrtPrice.
 	 */
 	void setToken1Price(std::string  token_1_price);
-	/*! \brief Get 
+	/*! \brief Get Current tick at end of period.
 	 */
 	std::string getTick();
 
-	/*! \brief Set 
+	/*! \brief Set Current tick at end of period.
 	 */
 	void setTick(std::string  tick);
-	/*! \brief Get 
+	/*! \brief Get Tracker for global fee growth.
 	 */
 	std::string getFeeGrowthGlobal0x128();
 
-	/*! \brief Set 
+	/*! \brief Set Tracker for global fee growth.
 	 */
 	void setFeeGrowthGlobal0x128(std::string  fee_growth_global_0x128);
-	/*! \brief Get 
+	/*! \brief Get Tracker for global fee growth.
 	 */
 	std::string getFeeGrowthGlobal1x128();
 
-	/*! \brief Set 
+	/*! \brief Set Tracker for global fee growth.
 	 */
 	void setFeeGrowthGlobal1x128(std::string  fee_growth_global_1x128);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived in USD at end of period.
 	 */
 	std::string getTvlUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived in USD at end of period.
 	 */
 	void setTvlUsd(std::string  tvl_usd);
-	/*! \brief Get 
+	/*! \brief Get Volume in token0.
 	 */
 	std::string getVolumeToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Volume in token0.
 	 */
 	void setVolumeToken0(std::string  volume_token_0);
-	/*! \brief Get 
+	/*! \brief Get Volume in token1.
 	 */
 	std::string getVolumeToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Volume in token1.
 	 */
 	void setVolumeToken1(std::string  volume_token_1);
-	/*! \brief Get 
+	/*! \brief Get Volume in USD.
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Volume in USD.
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Fees in USD.
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Fees in USD.
 	 */
 	void setFeesUsd(std::string  fees_usd);
-	/*! \brief Get 
+	/*! \brief Get Number of transactions during period.
 	 */
 	std::string getTxCount();
 
-	/*! \brief Set 
+	/*! \brief Set Number of transactions during period.
 	 */
 	void setTxCount(std::string  tx_count);
-	/*! \brief Get 
+	/*! \brief Get Opening price of token0.
 	 */
 	std::string getOpen();
 
-	/*! \brief Set 
+	/*! \brief Set Opening price of token0.
 	 */
 	void setOpen(std::string  open);
-	/*! \brief Get 
+	/*! \brief Get High price of token0.
 	 */
 	std::string getHigh();
 
-	/*! \brief Set 
+	/*! \brief Set High price of token0.
 	 */
 	void setHigh(std::string  high);
-	/*! \brief Get 
+	/*! \brief Get Low price of token0.
 	 */
 	std::string getLow();
 
-	/*! \brief Set 
+	/*! \brief Set Low price of token0.
 	 */
 	void setLow(std::string  low);
-	/*! \brief Get 
+	/*! \brief Get Close price of token0.
 	 */
 	std::string getClose();
 
-	/*! \brief Set 
+	/*! \brief Set Close price of token0.
 	 */
 	void setClose(std::string  close);
 	/*! \brief Get 

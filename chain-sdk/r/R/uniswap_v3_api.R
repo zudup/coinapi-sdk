@@ -169,24 +169,6 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PoiHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
 #' \strong{ DappsUniswapv3PoolDayDataHistoricalGet } \emph{  }
 #'
 #' \itemize{
@@ -626,10 +608,10 @@
 #' ####################  DappsUniswapv3BundlesHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -639,7 +621,7 @@
 #' ####################  DappsUniswapv3BurnsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetBurns
 #' api_instance <- UniswapV3Api$new()
@@ -653,11 +635,11 @@
 #' ####################  DappsUniswapv3BurnsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -667,10 +649,10 @@
 #' ####################  DappsUniswapv3DayDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -694,10 +676,10 @@
 #' ####################  DappsUniswapv3FactoryHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -707,7 +689,7 @@
 #' ####################  DappsUniswapv3MintsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetMints
 #' api_instance <- UniswapV3Api$new()
@@ -721,38 +703,25 @@
 #' ####################  DappsUniswapv3MintsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
 #' api_instance$DappsUniswapv3MintsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #'
 #'
-#' ####################  DappsUniswapv3PoiHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3PoiHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
 #' ####################  DappsUniswapv3PoolDayDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -762,11 +731,11 @@
 #' ####################  DappsUniswapv3PoolHourDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -776,7 +745,7 @@
 #' ####################  DappsUniswapv3PoolsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetPools
 #' api_instance <- UniswapV3Api$new()
@@ -790,7 +759,7 @@
 #' ####################  DappsUniswapv3PoolsDayDataCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetPoolsDayData
 #' api_instance <- UniswapV3Api$new()
@@ -804,11 +773,11 @@
 #' ####################  DappsUniswapv3PoolsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -818,7 +787,7 @@
 #' ####################  DappsUniswapv3PoolsHourDataCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetPoolsHourData
 #' api_instance <- UniswapV3Api$new()
@@ -832,11 +801,11 @@
 #' ####################  DappsUniswapv3PositionSnapshotHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -846,7 +815,7 @@
 #' ####################  DappsUniswapv3PositionSnapshotsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetPositionSnapshot
 #' api_instance <- UniswapV3Api$new()
@@ -860,7 +829,7 @@
 #' ####################  DappsUniswapv3PositionsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetPositions
 #' api_instance <- UniswapV3Api$new()
@@ -874,11 +843,11 @@
 #' ####################  DappsUniswapv3PositionsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -888,7 +857,7 @@
 #' ####################  DappsUniswapv3SwapsCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetSwaps
 #' api_instance <- UniswapV3Api$new()
@@ -902,11 +871,11 @@
 #' ####################  DappsUniswapv3SwapsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -916,11 +885,11 @@
 #' ####################  DappsUniswapv3TickDayDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -930,7 +899,7 @@
 #' ####################  DappsUniswapv3TicksCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetTicks
 #' api_instance <- UniswapV3Api$new()
@@ -944,7 +913,7 @@
 #' ####################  DappsUniswapv3TicksDayDataCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id
+#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
 #'
 #' #GetTicksDayData
 #' api_instance <- UniswapV3Api$new()
@@ -958,11 +927,11 @@
 #' ####################  DappsUniswapv3TicksHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_pool_id <- "pool_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -972,11 +941,11 @@
 #' ####################  DappsUniswapv3TokenDayDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_token_id <- "token_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -986,11 +955,11 @@
 #' ####################  DappsUniswapv3TokenHourDataHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_token_id <- "token_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -1000,7 +969,7 @@
 #' ####################  DappsUniswapv3TokensCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_token_id <- "filter_token_id_example" # character | 
+#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
 #' #GetTokens
 #' api_instance <- UniswapV3Api$new()
@@ -1014,7 +983,7 @@
 #' ####################  DappsUniswapv3TokensDayDataCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_token_id <- "filter_token_id_example" # character | 
+#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
 #' #GetTokensDayData
 #' api_instance <- UniswapV3Api$new()
@@ -1028,11 +997,11 @@
 #' ####################  DappsUniswapv3TokensHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
-#' var_token_id <- "token_id_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -1042,7 +1011,7 @@
 #' ####################  DappsUniswapv3TokensHourDataCurrentGet  ####################
 #'
 #' library(openapi)
-#' var_filter_token_id <- "filter_token_id_example" # character | 
+#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
 #' #GetTokensHourData
 #' api_instance <- UniswapV3Api$new()
@@ -1056,10 +1025,10 @@
 #' ####################  DappsUniswapv3TransactionsHistoricalGet  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer | 
-#' var_end_block <- 56 # integer | 
-#' var_start_date <- "start_date_example" # character | 
-#' var_end_date <- "end_date_example" # character | 
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
 #'
 #' api_instance <- UniswapV3Api$new()
 #'
@@ -1165,13 +1134,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[BundleV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -1349,13 +1318,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[BurnV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -1637,13 +1606,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[FactoryV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -1821,13 +1790,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[MintV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -1907,99 +1876,6 @@ UniswapV3Api <- R6::R6Class(
       query_params[["poolId"]] <- `pool_id`
 
       local_var_url_path <- "/dapps/uniswapv3/mints/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3PoiHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoiHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3PoiHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/uniswapv3/poi/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list()
@@ -2299,13 +2175,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PoolV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -2390,13 +2266,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PoolDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -2579,13 +2455,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PoolHourDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -2768,13 +2644,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PositionSnapshotV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -2859,13 +2735,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[PositionV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -3048,13 +2924,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[SwapV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -3335,13 +3211,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[TickV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -3426,13 +3302,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[TickDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -3811,13 +3687,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[TokenV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -3902,13 +3778,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[TokenV3DayDataDTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -4091,13 +3967,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[TokenHourDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -4270,13 +4146,13 @@ UniswapV3Api <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[UniswapDayDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj

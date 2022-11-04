@@ -24,33 +24,33 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Token address.
     factory: detachable STRING_32
-      -- 
+      -- Factory address.
     symbol: detachable STRING_32
-      -- 
+      -- Token symbol.
     name: detachable STRING_32
-      -- 
+      -- Token name.
     decimals: detachable STRING_32
-      -- 
+      -- Token decimals.
     total_supply: detachable STRING_32
-      -- 
+      -- Total supply of liquidity token.
     volume: detachable STRING_32
-      -- 
+      -- Amount of token traded all time across all pairs.
     volume_usd: detachable STRING_32
-      -- 
+      -- Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
     untracked_volume_usd: detachable STRING_32
-      -- 
+      -- Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
     tx_count: detachable STRING_32
-      -- 
+      -- Amount of transactions all time in pairs including token.
     liquidity: detachable STRING_32
-      -- 
+      -- Total amount of token provided as liquidity across all pairs.
     derived_eth: detachable STRING_32
-      -- 
+      -- ETH per token.
     whitelist_pairs: detachable LIST [STRING_32]
-      -- 
+      -- Array of whitelisted pairs.
  	vid: INTEGER_64
     	 -- 
     token_symbol: detachable STRING_32

@@ -40,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +48,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * FactoryV3DTO
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class FactoryV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -175,11 +177,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -198,11 +200,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Factory address.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Factory address.")
 
   public String getId() {
     return id;
@@ -221,11 +223,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Amount of pools created.
    * @return poolCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of pools created.")
 
   public String getPoolCount() {
     return poolCount;
@@ -244,11 +246,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Amount of transactions all time.
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of transactions all time.")
 
   public String getTxCount() {
     return txCount;
@@ -267,11 +269,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total volume all time in derived USD.
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total volume all time in derived USD.")
 
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
@@ -290,11 +292,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total volume all time in derived ETH.
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total volume all time in derived ETH.")
 
   public String getTotalVolumeEth() {
     return totalVolumeEth;
@@ -313,11 +315,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total swap fees all time in USD.
    * @return totalFeesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total swap fees all time in USD.")
 
   public String getTotalFeesUsd() {
     return totalFeesUsd;
@@ -336,11 +338,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * All volume even through less reliable USD values.
    * @return totalFeesEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All volume even through less reliable USD values.")
 
   public String getTotalFeesEth() {
     return totalFeesEth;
@@ -359,11 +361,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * All volume even through less reliable USD values.
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All volume even through less reliable USD values.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -382,11 +384,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived in USD.
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -405,11 +407,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived in ETH.
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in ETH.")
 
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
@@ -428,11 +430,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived in USD untracked.
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD untracked.")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -451,11 +453,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Total value locked derived in ETH untracked.
    * @return totalValueLockedEthUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in ETH untracked.")
 
   public String getTotalValueLockedEthUntracked() {
     return totalValueLockedEthUntracked;
@@ -474,11 +476,11 @@ public class FactoryV3DTO {
   }
 
    /**
-   * 
+   * Current owner of the factory.
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current owner of the factory.")
 
   public String getOwner() {
     return owner;
@@ -631,9 +633,7 @@ public class FactoryV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (FactoryV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!FactoryV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in FactoryV3DTO is not found in the empty JSON string", FactoryV3DTO.openapiRequiredFields.toString()));
         }
       }

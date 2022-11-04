@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// BurnV3DTO
+    /// Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
     /// </summary>
     [DataContract]
     public partial class BurnV3DTO :  IEquatable<BurnV3DTO>, IValidatableObject
@@ -35,22 +35,22 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="transaction">transaction.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="token0">token0.</param>
-        /// <param name="token1">token1.</param>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="owner">owner.</param>
-        /// <param name="origin">origin.</param>
-        /// <param name="amount">amount.</param>
-        /// <param name="amount0">amount0.</param>
-        /// <param name="amount1">amount1.</param>
-        /// <param name="amountUsd">amountUsd.</param>
-        /// <param name="tickLower">tickLower.</param>
-        /// <param name="tickUpper">tickUpper.</param>
-        /// <param name="logIndex">logIndex.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">Transaction hash + &#39;#&#39; + index in mints Transaction array..</param>
+        /// <param name="transaction">Transaction burn was included in..</param>
+        /// <param name="pool">Pool position is within..</param>
+        /// <param name="token0">Reference to token0 as stored in pool contract..</param>
+        /// <param name="token1">Reference to token1 as stored in pool contract..</param>
+        /// <param name="timestamp">Timestamp..</param>
+        /// <param name="owner">Owner of position where liquidity was burned..</param>
+        /// <param name="origin">Transaction origin: the EOA (Externally Owned Account) that initiated the transaction..</param>
+        /// <param name="amount">Amount of liquidity burned..</param>
+        /// <param name="amount0">Amount of token 0 burned..</param>
+        /// <param name="amount1">Amount of token 1 burned..</param>
+        /// <param name="amountUsd">Derived amount based on available prices of tokens..</param>
+        /// <param name="tickLower">Lower tick of position..</param>
+        /// <param name="tickUpper">Upper tick of position..</param>
+        /// <param name="logIndex">Position within the transactions..</param>
         /// <param name="vid">vid.</param>
         public BurnV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string transaction = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string), string timestamp = default(string), string owner = default(string), string origin = default(string), string amount = default(string), string amount0 = default(string), string amount1 = default(string), string amountUsd = default(string), string tickLower = default(string), string tickUpper = default(string), string logIndex = default(string), long vid = default(long))
         {
@@ -103,98 +103,114 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Transaction hash + &#39;#&#39; + index in mints Transaction array.
         /// </summary>
+        /// <value>Transaction hash + &#39;#&#39; + index in mints Transaction array.</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Transaction
+        /// Transaction burn was included in.
         /// </summary>
+        /// <value>Transaction burn was included in.</value>
         [DataMember(Name="transaction", EmitDefaultValue=true)]
         public string Transaction { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pool position is within.
         /// </summary>
+        /// <value>Pool position is within.</value>
         [DataMember(Name="pool", EmitDefaultValue=true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token0
+        /// Reference to token0 as stored in pool contract.
         /// </summary>
+        /// <value>Reference to token0 as stored in pool contract.</value>
         [DataMember(Name="token_0", EmitDefaultValue=true)]
         public string Token0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token1
+        /// Reference to token1 as stored in pool contract.
         /// </summary>
+        /// <value>Reference to token1 as stored in pool contract.</value>
         [DataMember(Name="token_1", EmitDefaultValue=true)]
         public string Token1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Timestamp
+        /// Timestamp.
         /// </summary>
+        /// <value>Timestamp.</value>
         [DataMember(Name="timestamp", EmitDefaultValue=true)]
         public string Timestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// Owner of position where liquidity was burned.
         /// </summary>
+        /// <value>Owner of position where liquidity was burned.</value>
         [DataMember(Name="owner", EmitDefaultValue=true)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// Gets or Sets Origin
+        /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
         /// </summary>
+        /// <value>Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.</value>
         [DataMember(Name="origin", EmitDefaultValue=true)]
         public string Origin { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount
+        /// Amount of liquidity burned.
         /// </summary>
+        /// <value>Amount of liquidity burned.</value>
         [DataMember(Name="amount", EmitDefaultValue=true)]
         public string Amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount0
+        /// Amount of token 0 burned.
         /// </summary>
+        /// <value>Amount of token 0 burned.</value>
         [DataMember(Name="amount_0", EmitDefaultValue=true)]
         public string Amount0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount1
+        /// Amount of token 1 burned.
         /// </summary>
+        /// <value>Amount of token 1 burned.</value>
         [DataMember(Name="amount_1", EmitDefaultValue=true)]
         public string Amount1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountUsd
+        /// Derived amount based on available prices of tokens.
         /// </summary>
+        /// <value>Derived amount based on available prices of tokens.</value>
         [DataMember(Name="amount_usd", EmitDefaultValue=true)]
         public string AmountUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TickLower
+        /// Lower tick of position.
         /// </summary>
+        /// <value>Lower tick of position.</value>
         [DataMember(Name="tick_lower", EmitDefaultValue=true)]
         public string TickLower { get; set; }
 
         /// <summary>
-        /// Gets or Sets TickUpper
+        /// Upper tick of position.
         /// </summary>
+        /// <value>Upper tick of position.</value>
         [DataMember(Name="tick_upper", EmitDefaultValue=true)]
         public string TickUpper { get; set; }
 
         /// <summary>
-        /// Gets or Sets LogIndex
+        /// Position within the transactions.
         /// </summary>
+        /// <value>Position within the transactions.</value>
         [DataMember(Name="log_index", EmitDefaultValue=true)]
         public string LogIndex { get; set; }
 

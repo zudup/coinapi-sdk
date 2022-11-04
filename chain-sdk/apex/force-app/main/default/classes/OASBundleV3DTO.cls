@@ -11,7 +11,7 @@
  */
 
 /**
- * OASBundleV3DTO
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  */
 public class OASBundleV3DTO implements OAS.MappedProperties {
     /**
@@ -27,7 +27,7 @@ public class OASBundleV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
@@ -39,7 +39,7 @@ public class OASBundleV3DTO implements OAS.MappedProperties {
     public String id { get; set; }
 
     /**
-     * 
+     * Price of ETH in usd.
      * @return ethPriceUsd
      */
     public String ethPriceUsd { get; set; }

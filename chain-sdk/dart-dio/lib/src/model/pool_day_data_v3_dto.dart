@@ -8,32 +8,32 @@ import 'package:built_value/serializer.dart';
 
 part 'pool_day_data_v3_dto.g.dart';
 
-/// PoolDayDataV3DTO
+/// Data accumulated and condensed into day stats for each pool.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [date] - 
-/// * [pool] - 
-/// * [liquidity] - 
-/// * [sqrtPrice] - 
-/// * [token0Price] - 
-/// * [token1Price] - 
-/// * [tick] - 
-/// * [feeGrowthGlobal0x128] - 
-/// * [feeGrowthGlobal1x128] - 
-/// * [tvlUsd] - 
-/// * [volumeToken0] - 
-/// * [volumeToken1] - 
-/// * [volumeUsd] - 
-/// * [feesUsd] - 
-/// * [txCount] - 
-/// * [open] - 
-/// * [high] - 
-/// * [low] - 
-/// * [close] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Identifier, format: <pool address>-<day id>.
+/// * [date] - Timestamp rounded to current day by dividing by 86400
+/// * [pool] - Pointer to pool.
+/// * [liquidity] - In range liquidity at end of period.
+/// * [sqrtPrice] - Current price tracker at end of period.
+/// * [token0Price] - Price of token0 - derived from sqrtPrice.
+/// * [token1Price] - Price of token1 - derived from sqrtPrice.
+/// * [tick] - Current tick at end of period.
+/// * [feeGrowthGlobal0x128] - Tracker for global fee growth.
+/// * [feeGrowthGlobal1x128] - Tracker for global fee growth.
+/// * [tvlUsd] - Total value locked derived in USD at end of period.
+/// * [volumeToken0] - Volume in token0.
+/// * [volumeToken1] - Volume in token1.
+/// * [volumeUsd] - Volume in USD.
+/// * [feesUsd] - Fees in USD.
+/// * [txCount] - Number of transactions during period.
+/// * [open] - Opening price of token0.
+/// * [high] - High price of token0.
+/// * [low] - Low price of token0.
+/// * [close] - Close price of token0.
 /// * [vid] - 
 @BuiltValue()
 abstract class PoolDayDataV3DTO implements Built<PoolDayDataV3DTO, PoolDayDataV3DTOBuilder> {
@@ -43,87 +43,87 @@ abstract class PoolDayDataV3DTO implements Built<PoolDayDataV3DTO, PoolDayDataV3
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Identifier, format: <pool address>-<day id>.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Timestamp rounded to current day by dividing by 86400
   @BuiltValueField(wireName: r'date')
   int? get date;
 
-  /// 
+  /// Pointer to pool.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// In range liquidity at end of period.
   @BuiltValueField(wireName: r'liquidity')
   String? get liquidity;
 
-  /// 
+  /// Current price tracker at end of period.
   @BuiltValueField(wireName: r'sqrt_price')
   String? get sqrtPrice;
 
-  /// 
+  /// Price of token0 - derived from sqrtPrice.
   @BuiltValueField(wireName: r'token_0_price')
   String? get token0Price;
 
-  /// 
+  /// Price of token1 - derived from sqrtPrice.
   @BuiltValueField(wireName: r'token_1_price')
   String? get token1Price;
 
-  /// 
+  /// Current tick at end of period.
   @BuiltValueField(wireName: r'tick')
   String? get tick;
 
-  /// 
+  /// Tracker for global fee growth.
   @BuiltValueField(wireName: r'fee_growth_global_0x128')
   String? get feeGrowthGlobal0x128;
 
-  /// 
+  /// Tracker for global fee growth.
   @BuiltValueField(wireName: r'fee_growth_global_1x128')
   String? get feeGrowthGlobal1x128;
 
-  /// 
+  /// Total value locked derived in USD at end of period.
   @BuiltValueField(wireName: r'tvl_usd')
   String? get tvlUsd;
 
-  /// 
+  /// Volume in token0.
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
-  /// 
+  /// Volume in token1.
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
-  /// 
+  /// Volume in USD.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
-  /// 
+  /// Number of transactions during period.
   @BuiltValueField(wireName: r'tx_count')
   String? get txCount;
 
-  /// 
+  /// Opening price of token0.
   @BuiltValueField(wireName: r'open')
   String? get open;
 
-  /// 
+  /// High price of token0.
   @BuiltValueField(wireName: r'high')
   String? get high;
 
-  /// 
+  /// Low price of token0.
   @BuiltValueField(wireName: r'low')
   String? get low;
 
-  /// 
+  /// Close price of token0.
   @BuiltValueField(wireName: r'close')
   String? get close;
 

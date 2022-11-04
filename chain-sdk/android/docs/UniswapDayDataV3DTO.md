@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
-**blockNumber** | **Long** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **Long** |  |  [optional]
 **id** | **String** | Timestamp rounded to current day by dividing by 86400. |  [optional]
 **date** | **Integer** | Timestamp rounded to current day by dividing by 86400. |  [optional]

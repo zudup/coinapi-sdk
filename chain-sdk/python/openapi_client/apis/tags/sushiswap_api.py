@@ -18,7 +18,6 @@ from openapi_client.paths.dapps_sushiswap_hour_data_historical.get import DappsS
 from openapi_client.paths.dapps_sushiswap_liquidity_position_historical.get import DappsSushiswapLiquidityPositionHistoricalGet
 from openapi_client.paths.dapps_sushiswap_liquidity_position_snapshots_historical.get import DappsSushiswapLiquidityPositionSnapshotsHistoricalGet
 from openapi_client.paths.dapps_sushiswap_mints_historical.get import DappsSushiswapMintsHistoricalGet
-from openapi_client.paths.dapps_sushiswap_poi_historical.get import DappsSushiswapPoiHistoricalGet
 from openapi_client.paths.dapps_sushiswap_pool_day_data_historical.get import DappsSushiswapPoolDayDataHistoricalGet
 from openapi_client.paths.dapps_sushiswap_pool_hour_data_historical.get import DappsSushiswapPoolHourDataHistoricalGet
 from openapi_client.paths.dapps_sushiswap_pools_current.get import DappsSushiswapPoolsCurrentGet
@@ -41,7 +40,6 @@ class SushiswapApi(
     DappsSushiswapLiquidityPositionHistoricalGet,
     DappsSushiswapLiquidityPositionSnapshotsHistoricalGet,
     DappsSushiswapMintsHistoricalGet,
-    DappsSushiswapPoiHistoricalGet,
     DappsSushiswapPoolDayDataHistoricalGet,
     DappsSushiswapPoolHourDataHistoricalGet,
     DappsSushiswapPoolsCurrentGet,

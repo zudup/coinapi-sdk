@@ -11,7 +11,7 @@
  */
 
 /**
- * OASSwapDTO
+ * Swap are created for each token swap within a pair.
  */
 public class OASSwapDTO implements OAS.MappedProperties {
     /**
@@ -27,79 +27,79 @@ public class OASSwapDTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * Transaction hash plus index in Transaction swap array.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Reference to transaction swap was included in.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Timestamp of swap, used for sorted lookups.
      * @return timestamp
      */
     public String timestamp { get; set; }
 
     /**
-     * 
+     * Reference to pair.
      * @return pair
      */
     public String pair { get; set; }
 
     /**
-     * 
+     * Address that initiated the swap.
      * @return sender
      */
     public String sender { get; set; }
 
     /**
-     * 
+     * Amount of token0 sold.
      * @return amount0In
      */
     public String amount0In { get; set; }
 
     /**
-     * 
+     * Amount of token1 sold.
      * @return amount1In
      */
     public String amount1In { get; set; }
 
     /**
-     * 
+     * Amount of token0 received.
      * @return amount0Out
      */
     public String amount0Out { get; set; }
 
     /**
-     * 
+     * Amount of token1 received.
      * @return amount1Out
      */
     public String amount1Out { get; set; }
 
     /**
-     * 
+     * Recipient of output tokens.
      * @return to
      */
     public String to { get; set; }
 
     /**
-     * 
+     * Event index within transaction.
      * @return logIndex
      */
     public String logIndex { get; set; }
 
     /**
-     * 
+     * Derived amount of tokens sold in USD.
      * @return amountUsd
      */
     public String amountUsd { get; set; }

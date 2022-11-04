@@ -17,49 +17,49 @@ import org.openapitools.client.core.ApiModel
 case class PairDTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Pair contract address. */
   id: Option[String] = None,
-  /*  */
+  /* Factory contract address. */
   factory: Option[String] = None,
-  /*  */
+  /* Friendly name, format: <token0 name>-<token1 name> */
   name: Option[String] = None,
-  /*  */
+  /* Reference to token0 as stored in pair contract. */
   token0: Option[String] = None,
-  /*  */
+  /* Reference to token0 as stored in pair contract. */
   token1: Option[String] = None,
-  /*  */
+  /* Reserve of token0. */
   reserve0: Option[String] = None,
-  /*  */
+  /* Reserve of token1. */
   reserve1: Option[String] = None,
-  /*  */
+  /* Total supply of liquidity token distributed to LPs. */
   totalSupply: Option[String] = None,
-  /*  */
+  /* Total liquidity in pair stored as an amount of ETH. */
   reserveEth: Option[String] = None,
-  /*  */
+  /* Total liquidity amount in pair stored as an amount of USD. */
   reserveUsd: Option[String] = None,
-  /*  */
+  /* Total liquidity with only tracked amount. */
   trackedReserveEth: Option[String] = None,
-  /*  */
+  /* Token0 per token1. */
   token0Price: Option[String] = None,
-  /*  */
+  /* Token1 per token0. */
   token1Price: Option[String] = None,
-  /*  */
+  /* Amount of token0 swapped on this pair. */
   volumeToken0: Option[String] = None,
-  /*  */
+  /* Amount of token1 swapped on this pair. */
   volumeToken1: Option[String] = None,
-  /*  */
+  /* Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. */
   untrackedVolumeUsd: Option[String] = None,
-  /*  */
+  /* All time amount of transactions on this pair. */
   txCount: Option[String] = None,
-  /*  */
+  /* Total number of LPs. */
   liquidityProviderCount: Option[String] = None,
-  /*  */
+  /* Timestamp. */
   timestamp: Option[String] = None,
-  /*  */
+  /* Block number in which pair information was created in. */
   block: Option[String] = None,
   /*  */
   vid: Option[Long] = None,

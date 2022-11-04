@@ -17,7 +17,7 @@ import org.openapitools.client.core.ApiModel
 case class TokenHourDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
   /* Token address concatendated with date. */
   id: Option[String] = None,

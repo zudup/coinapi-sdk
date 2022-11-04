@@ -83,13 +83,6 @@ export interface DappsUniswapv3MintsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PoiHistoricalGetRequest {
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-}
-
 export interface DappsUniswapv3PoolDayDataHistoricalGetRequest {
     startBlock?: number;
     endBlock?: number;
@@ -393,26 +386,6 @@ export class UniswapV3Api extends BaseAPI {
 
         return this.request<void>({
             url: '/dapps/uniswapv3/mints/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsUniswapv3PoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3PoiHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3PoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3PoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/poi/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

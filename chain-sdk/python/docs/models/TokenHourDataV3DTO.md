@@ -12,7 +12,7 @@ Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
-**block_number** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
+**block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | Token address concatendated with date. | [optional] 
 **period_start_unix** | decimal.Decimal, int,  | decimal.Decimal,  | Unix timestamp for start of hour. | [optional] value must be a 32 bit integer
 **token** | None, str,  | NoneClass, str,  | Pointer to token. | [optional] 

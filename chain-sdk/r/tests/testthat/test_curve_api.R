@@ -276,19 +276,6 @@ test_that("DappsCurveLpTokenHistoricalGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsCurvePoiHistoricalGet", {
-  # tests for DappsCurvePoiHistoricalGet
-  # base path: https://onchain.coinapi.io
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @return [Void]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("DappsCurvePoolsHistoricalGet", {
   # tests for DappsCurvePoolsHistoricalGet
   # base path: https://onchain.coinapi.io

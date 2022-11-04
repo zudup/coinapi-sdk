@@ -16,43 +16,43 @@ import (
 	"time"
 )
 
-// MintV3DTO struct for MintV3DTO
+// MintV3DTO Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
 type MintV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// Transaction hash + '#' + index in mints Transaction array.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Which txn the mint was included in.
 	Transaction NullableString `json:"transaction,omitempty"`
-	// 
+	// Time of transaction.
 	Timestamp NullableString `json:"timestamp,omitempty"`
-	// 
+	// Pool address.
 	Pool NullableString `json:"pool,omitempty"`
-	// 
+	// Reference to token0 as stored in pool contract.
 	Token0 NullableString `json:"token_0,omitempty"`
-	// 
+	// Reference to token1 as stored in pool contract.
 	Token1 NullableString `json:"token_1,omitempty"`
-	// 
+	// Owner of position where liquidity minted to.
 	Owner NullableString `json:"owner,omitempty"`
-	// 
+	// The address that minted the liquidity.
 	Sender NullableString `json:"sender,omitempty"`
-	// 
+	// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 	Origin NullableString `json:"origin,omitempty"`
-	// 
+	// Amount of liquidity minted.
 	Amount NullableString `json:"amount,omitempty"`
-	// 
+	// Amount of token 0 minted.
 	Amount0 NullableString `json:"amount_0,omitempty"`
-	// 
+	// Amount of token 1 minted.
 	Amount1 NullableString `json:"amount_1,omitempty"`
-	// 
+	// Derived amount based on available prices of tokens.
 	AmountUsd NullableString `json:"amount_usd,omitempty"`
-	// 
+	// Lower tick of the position.
 	TickLower NullableString `json:"tick_lower,omitempty"`
-	// 
+	// Upper tick of the position.
 	TickUpper NullableString `json:"tick_upper,omitempty"`
-	// 
+	// Order within the transaction.
 	LogIndex NullableString `json:"log_index,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -77,7 +77,7 @@ func NewMintV3DTOWithDefaults() *MintV3DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *MintV3DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *MintV3DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MintV3DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *MintV3DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *MintV3DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *MintV3DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *MintV3DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MintV3DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *MintV3DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *MintV3DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *MintV3DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *MintV3DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MintV3DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *MintV3DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -173,7 +173,7 @@ func (o *MintV3DTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -185,7 +185,7 @@ func (o *MintV3DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -215,7 +215,7 @@ func (o *MintV3DTO) UnsetId() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetTransaction() string {
-	if o == nil || o.Transaction.Get() == nil {
+	if o == nil || isNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -227,7 +227,7 @@ func (o *MintV3DTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -257,7 +257,7 @@ func (o *MintV3DTO) UnsetTransaction() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetTimestamp() string {
-	if o == nil || o.Timestamp.Get() == nil {
+	if o == nil || isNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -269,7 +269,7 @@ func (o *MintV3DTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -299,7 +299,7 @@ func (o *MintV3DTO) UnsetTimestamp() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetPool() string {
-	if o == nil || o.Pool.Get() == nil {
+	if o == nil || isNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -311,7 +311,7 @@ func (o *MintV3DTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -341,7 +341,7 @@ func (o *MintV3DTO) UnsetPool() {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetToken0() string {
-	if o == nil || o.Token0.Get() == nil {
+	if o == nil || isNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -353,7 +353,7 @@ func (o *MintV3DTO) GetToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetToken0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token0.Get(), o.Token0.IsSet()
 }
@@ -383,7 +383,7 @@ func (o *MintV3DTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetToken1() string {
-	if o == nil || o.Token1.Get() == nil {
+	if o == nil || isNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -395,7 +395,7 @@ func (o *MintV3DTO) GetToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetToken1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Token1.Get(), o.Token1.IsSet()
 }
@@ -425,7 +425,7 @@ func (o *MintV3DTO) UnsetToken1() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetOwner() string {
-	if o == nil || o.Owner.Get() == nil {
+	if o == nil || isNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -437,7 +437,7 @@ func (o *MintV3DTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -467,7 +467,7 @@ func (o *MintV3DTO) UnsetOwner() {
 
 // GetSender returns the Sender field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetSender() string {
-	if o == nil || o.Sender.Get() == nil {
+	if o == nil || isNil(o.Sender.Get()) {
 		var ret string
 		return ret
 	}
@@ -479,7 +479,7 @@ func (o *MintV3DTO) GetSender() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetSenderOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Sender.Get(), o.Sender.IsSet()
 }
@@ -509,7 +509,7 @@ func (o *MintV3DTO) UnsetSender() {
 
 // GetOrigin returns the Origin field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetOrigin() string {
-	if o == nil || o.Origin.Get() == nil {
+	if o == nil || isNil(o.Origin.Get()) {
 		var ret string
 		return ret
 	}
@@ -521,7 +521,7 @@ func (o *MintV3DTO) GetOrigin() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetOriginOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Origin.Get(), o.Origin.IsSet()
 }
@@ -551,7 +551,7 @@ func (o *MintV3DTO) UnsetOrigin() {
 
 // GetAmount returns the Amount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetAmount() string {
-	if o == nil || o.Amount.Get() == nil {
+	if o == nil || isNil(o.Amount.Get()) {
 		var ret string
 		return ret
 	}
@@ -563,7 +563,7 @@ func (o *MintV3DTO) GetAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetAmountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount.Get(), o.Amount.IsSet()
 }
@@ -593,7 +593,7 @@ func (o *MintV3DTO) UnsetAmount() {
 
 // GetAmount0 returns the Amount0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetAmount0() string {
-	if o == nil || o.Amount0.Get() == nil {
+	if o == nil || isNil(o.Amount0.Get()) {
 		var ret string
 		return ret
 	}
@@ -605,7 +605,7 @@ func (o *MintV3DTO) GetAmount0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetAmount0Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount0.Get(), o.Amount0.IsSet()
 }
@@ -635,7 +635,7 @@ func (o *MintV3DTO) UnsetAmount0() {
 
 // GetAmount1 returns the Amount1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetAmount1() string {
-	if o == nil || o.Amount1.Get() == nil {
+	if o == nil || isNil(o.Amount1.Get()) {
 		var ret string
 		return ret
 	}
@@ -647,7 +647,7 @@ func (o *MintV3DTO) GetAmount1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetAmount1Ok() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Amount1.Get(), o.Amount1.IsSet()
 }
@@ -677,7 +677,7 @@ func (o *MintV3DTO) UnsetAmount1() {
 
 // GetAmountUsd returns the AmountUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetAmountUsd() string {
-	if o == nil || o.AmountUsd.Get() == nil {
+	if o == nil || isNil(o.AmountUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -689,7 +689,7 @@ func (o *MintV3DTO) GetAmountUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetAmountUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.AmountUsd.Get(), o.AmountUsd.IsSet()
 }
@@ -719,7 +719,7 @@ func (o *MintV3DTO) UnsetAmountUsd() {
 
 // GetTickLower returns the TickLower field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetTickLower() string {
-	if o == nil || o.TickLower.Get() == nil {
+	if o == nil || isNil(o.TickLower.Get()) {
 		var ret string
 		return ret
 	}
@@ -731,7 +731,7 @@ func (o *MintV3DTO) GetTickLower() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetTickLowerOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TickLower.Get(), o.TickLower.IsSet()
 }
@@ -761,7 +761,7 @@ func (o *MintV3DTO) UnsetTickLower() {
 
 // GetTickUpper returns the TickUpper field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetTickUpper() string {
-	if o == nil || o.TickUpper.Get() == nil {
+	if o == nil || isNil(o.TickUpper.Get()) {
 		var ret string
 		return ret
 	}
@@ -773,7 +773,7 @@ func (o *MintV3DTO) GetTickUpper() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetTickUpperOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TickUpper.Get(), o.TickUpper.IsSet()
 }
@@ -803,7 +803,7 @@ func (o *MintV3DTO) UnsetTickUpper() {
 
 // GetLogIndex returns the LogIndex field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MintV3DTO) GetLogIndex() string {
-	if o == nil || o.LogIndex.Get() == nil {
+	if o == nil || isNil(o.LogIndex.Get()) {
 		var ret string
 		return ret
 	}
@@ -815,7 +815,7 @@ func (o *MintV3DTO) GetLogIndex() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *MintV3DTO) GetLogIndexOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.LogIndex.Get(), o.LogIndex.IsSet()
 }
@@ -845,7 +845,7 @@ func (o *MintV3DTO) UnsetLogIndex() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *MintV3DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -855,15 +855,15 @@ func (o *MintV3DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MintV3DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *MintV3DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -877,13 +877,13 @@ func (o *MintV3DTO) SetVid(v int64) {
 
 func (o MintV3DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -934,7 +934,7 @@ func (o MintV3DTO) MarshalJSON() ([]byte, error) {
 	if o.LogIndex.IsSet() {
 		toSerialize["log_index"] = o.LogIndex.Get()
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return json.Marshal(toSerialize)

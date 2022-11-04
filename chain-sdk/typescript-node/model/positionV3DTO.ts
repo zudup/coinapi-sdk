@@ -12,79 +12,82 @@
 
 import { RequestFile } from './models';
 
+/**
+* Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+*/
 export class PositionV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
-    * 
+    * NFT token identifier.
     */
     'id'?: string | null;
     /**
-    * 
+    * Owner of the NFT.
     */
     'owner'?: string | null;
     /**
-    * 
+    * Pool position is within.
     */
     'pool'?: string | null;
     /**
-    * 
+    * Reference to token0 as stored in pair contract.
     */
     'token0'?: string | null;
     /**
-    * 
+    * Reference to token1 as stored in pair contract.
     */
     'token1'?: string | null;
     /**
-    * 
+    * Lower tick of the position.
     */
     'tickLower'?: string | null;
     /**
-    * 
+    * Upper tick of the position.
     */
     'tickUpper'?: string | null;
     /**
-    * 
+    * Total position liquidity.
     */
     'liquidity'?: string | null;
     /**
-    * 
+    * Amount of token 0 ever deposited to position.
     */
     'depositedToken0'?: string | null;
     /**
-    * 
+    * Amount of token 1 ever deposited to position.
     */
     'depositedToken1'?: string | null;
     /**
-    * 
+    * Amount of token 0 ever withdrawn from position (without fees).
     */
     'withdrawnToken0'?: string | null;
     /**
-    * 
+    * Amount of token 1 ever withdrawn from position (without fees).
     */
     'withdrawnToken1'?: string | null;
     /**
-    * 
+    * All time collected fees in token0.
     */
     'collectedFeesToken0'?: string | null;
     /**
-    * 
+    * All time collected fees in token1.
     */
     'collectedFeesToken1'?: string | null;
     /**
-    * 
+    * Transaction in which the position was initialized.
     */
     'transaction'?: string | null;
     /**
-    * 
+    * Variable needed for fee computation.
     */
     'feeGrowthInside0LastX128'?: string | null;
     /**
-    * 
+    * Variable needed for fee computation.
     */
     'feeGrowthInside1LastX128'?: string | null;
     /**

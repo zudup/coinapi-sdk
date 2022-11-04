@@ -17,7 +17,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Stores aggregated information for a specific token across all pairs that token is included in.
+ **/
+@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
 public class TokenDTO {
   
   @SerializedName("entry_time")
@@ -78,9 +81,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -89,9 +92,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Token address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token address.")
   public String getId() {
     return id;
   }
@@ -100,9 +103,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Factory address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Factory address.")
   public String getFactory() {
     return factory;
   }
@@ -111,9 +114,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Token symbol.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token symbol.")
   public String getSymbol() {
     return symbol;
   }
@@ -122,9 +125,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Token name.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token name.")
   public String getName() {
     return name;
   }
@@ -133,9 +136,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Token decimals.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token decimals.")
   public String getDecimals() {
     return decimals;
   }
@@ -144,9 +147,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Total supply of liquidity token.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total supply of liquidity token.")
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -155,9 +158,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Amount of token traded all time across all pairs.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
   public String getVolume() {
     return volume;
   }
@@ -166,9 +169,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -177,9 +180,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -188,9 +191,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Amount of transactions all time in pairs including token.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of transactions all time in pairs including token.")
   public String getTxCount() {
     return txCount;
   }
@@ -199,9 +202,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Total amount of token provided as liquidity across all pairs.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
   public String getLiquidity() {
     return liquidity;
   }
@@ -210,9 +213,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * ETH per token.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ETH per token.")
   public String getDerivedEth() {
     return derivedEth;
   }
@@ -221,9 +224,9 @@ public class TokenDTO {
   }
 
   /**
-   * 
+   * Array of whitelisted pairs.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Array of whitelisted pairs.")
   public List<String> getWhitelistPairs() {
     return whitelistPairs;
   }

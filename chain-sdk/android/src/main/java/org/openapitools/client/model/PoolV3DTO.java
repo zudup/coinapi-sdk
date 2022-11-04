@@ -17,7 +17,10 @@ import org.openapitools.client.model.BigInteger;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
+ **/
+@ApiModel(description = "Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.")
 public class PoolV3DTO {
   
   @SerializedName("entry_time")
@@ -108,9 +111,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -130,9 +133,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Pool address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
   public String getId() {
     return id;
   }
@@ -141,9 +144,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Creation time.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Creation time.")
   public Date getCreatedAtTimestamp() {
     return createdAtTimestamp;
   }
@@ -152,9 +155,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Reference to token0 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
   public String getToken0() {
     return token0;
   }
@@ -163,9 +166,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Reference to token1 as stored in pool contract.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
   public String getToken1() {
     return token1;
   }
@@ -224,9 +227,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Token0 per token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token0 per token1.")
   public String getToken0Price() {
     return token0Price;
   }
@@ -235,9 +238,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Token1 per token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Token1 per token0.")
   public String getToken1Price() {
     return token1Price;
   }
@@ -266,9 +269,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time token0 swapped.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time token0 swapped.")
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -277,9 +280,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time token1 swapped.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time token1 swapped.")
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -288,9 +291,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time USD swapped.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time USD swapped.")
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -299,9 +302,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time USD swapped, unfiltered for unreliable USD pools.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time USD swapped, unfiltered for unreliable USD pools.")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -310,9 +313,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Fees in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -331,9 +334,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time fees collected token0.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected token0.")
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -342,9 +345,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time fees collected token1.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected token1.")
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -353,9 +356,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * All time fees collected derived USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time fees collected derived USD.")
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
   }
@@ -364,9 +367,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Total token 0 across all ticks.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total token 0 across all ticks.")
   public String getTotalValueLockedToken0() {
     return totalValueLockedToken0;
   }
@@ -386,9 +389,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Total token 1 across all ticks.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total token 1 across all ticks.")
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
   }
@@ -397,9 +400,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Total value locked USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked USD.")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -408,9 +411,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived ETH.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived ETH.")
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -419,9 +422,9 @@ public class PoolV3DTO {
   }
 
   /**
-   * 
+   * Liquidity providers count, used to detect new exchanges.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Liquidity providers count, used to detect new exchanges.")
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
   }

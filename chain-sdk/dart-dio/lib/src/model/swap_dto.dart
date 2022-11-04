@@ -9,24 +9,24 @@ import 'package:built_value/serializer.dart';
 
 part 'swap_dto.g.dart';
 
-/// SwapDTO
+/// Swap are created for each token swap within a pair.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [transaction] - 
-/// * [timestamp] - 
-/// * [pair] - 
-/// * [sender] - 
-/// * [amount0In] - 
-/// * [amount1In] - 
-/// * [amount0Out] - 
-/// * [amount1Out] - 
-/// * [to] - 
-/// * [logIndex] - 
-/// * [amountUsd] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Transaction hash plus index in Transaction swap array.
+/// * [transaction] - Reference to transaction swap was included in.
+/// * [timestamp] - Timestamp of swap, used for sorted lookups.
+/// * [pair] - Reference to pair.
+/// * [sender] - Address that initiated the swap.
+/// * [amount0In] - Amount of token0 sold.
+/// * [amount1In] - Amount of token1 sold.
+/// * [amount0Out] - Amount of token0 received.
+/// * [amount1Out] - Amount of token1 received.
+/// * [to] - Recipient of output tokens.
+/// * [logIndex] - Event index within transaction.
+/// * [amountUsd] - Derived amount of tokens sold in USD.
 /// * [vid] - 
 /// * [poolId] 
 /// * [transactionId] 
@@ -41,55 +41,55 @@ abstract class SwapDTO implements Built<SwapDTO, SwapDTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Transaction hash plus index in Transaction swap array.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Reference to transaction swap was included in.
   @BuiltValueField(wireName: r'transaction')
   String? get transaction;
 
-  /// 
+  /// Timestamp of swap, used for sorted lookups.
   @BuiltValueField(wireName: r'timestamp')
   String? get timestamp;
 
-  /// 
+  /// Reference to pair.
   @BuiltValueField(wireName: r'pair')
   String? get pair;
 
-  /// 
+  /// Address that initiated the swap.
   @BuiltValueField(wireName: r'sender')
   String? get sender;
 
-  /// 
+  /// Amount of token0 sold.
   @BuiltValueField(wireName: r'amount_0_in')
   String? get amount0In;
 
-  /// 
+  /// Amount of token1 sold.
   @BuiltValueField(wireName: r'amount_1_in')
   String? get amount1In;
 
-  /// 
+  /// Amount of token0 received.
   @BuiltValueField(wireName: r'amount_0_out')
   String? get amount0Out;
 
-  /// 
+  /// Amount of token1 received.
   @BuiltValueField(wireName: r'amount_1_out')
   String? get amount1Out;
 
-  /// 
+  /// Recipient of output tokens.
   @BuiltValueField(wireName: r'to')
   String? get to;
 
-  /// 
+  /// Event index within transaction.
   @BuiltValueField(wireName: r'log_index')
   String? get logIndex;
 
-  /// 
+  /// Derived amount of tokens sold in USD.
   @BuiltValueField(wireName: r'amount_usd')
   String? get amountUsd;
 

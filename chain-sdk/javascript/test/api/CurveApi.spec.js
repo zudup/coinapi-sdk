@@ -248,16 +248,6 @@
         done();
       });
     });
-    describe('dappsCurvePoiHistoricalGet', function() {
-      it('should call dappsCurvePoiHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurvePoiHistoricalGet
-        //instance.dappsCurvePoiHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsCurvePoolsHistoricalGet', function() {
       it('should call dappsCurvePoolsHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsCurvePoolsHistoricalGet

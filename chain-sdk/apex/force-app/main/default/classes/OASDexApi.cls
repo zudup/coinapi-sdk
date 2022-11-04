@@ -96,37 +96,6 @@ public class OASDexApi {
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsDexPoiHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/dex/poi/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
      * @param tokenId  (optional)
      * @throws OAS.ApiException if fails to make API call
      */

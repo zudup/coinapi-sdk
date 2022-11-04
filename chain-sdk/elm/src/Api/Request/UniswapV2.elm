@@ -22,7 +22,6 @@ module Api.Request.UniswapV2 exposing
     , dappsUniswapv2LiquidityPositionHistoricalGet
     , dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
     , dappsUniswapv2MintsHistoricalGet
-    , dappsUniswapv2PoiHistoricalGet
     , dappsUniswapv2PoolDayDataHistoricalGet
     , dappsUniswapv2PoolHourDataHistoricalGet
     , dappsUniswapv2PoolsCurrentGet
@@ -131,19 +130,6 @@ dappsUniswapv2MintsHistoricalGet startBlock_query endBlock_query startDate_query
         "/dapps/uniswapv2/mints/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsUniswapv2PoiHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsUniswapv2PoiHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv2/poi/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.succeed ())

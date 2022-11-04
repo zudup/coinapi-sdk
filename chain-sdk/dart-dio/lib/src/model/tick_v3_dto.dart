@@ -9,30 +9,30 @@ import 'package:built_value/serializer.dart';
 
 part 'tick_v3_dto.g.dart';
 
-/// TickV3DTO
+/// Ticks are the boundaries between discrete areas in price space.
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
-/// * [id] - 
-/// * [poolAddress] - 
+/// * [id] - Identifier, format: <pool address>#<tick index>
+/// * [poolAddress] - Pool address.
 /// * [tickIdx] 
-/// * [pool] - 
+/// * [pool] - Pool address.
 /// * [liquidityGross] 
 /// * [liquidityNet] 
-/// * [price0] - 
-/// * [price1] - 
-/// * [volumeToken0] - 
-/// * [volumeToken1] - 
-/// * [volumeUsd] - 
-/// * [untrackedVolumeUsd] - 
-/// * [feesUsd] - 
-/// * [collectedFeesToken0] - 
-/// * [collectedFeesToken1] - 
-/// * [collectedFeesUsd] - 
-/// * [createdAtTimestamp] - 
+/// * [price0] - Calculated price of token0 of tick within this pool - constant.
+/// * [price1] - Calculated price of token1 of tick within this pool - constant.
+/// * [volumeToken0] - Lifetime volume of token0 with this tick in range.
+/// * [volumeToken1] - Lifetime volume of token1 with this tick in range.
+/// * [volumeUsd] - Lifetime volume in derived USD with this tick in range.
+/// * [untrackedVolumeUsd] - Lifetime volume in untracked USD with this tick in range.
+/// * [feesUsd] - Fees in USD.
+/// * [collectedFeesToken0] - All time collected fees in token0.
+/// * [collectedFeesToken1] - All time collected fees in token1.
+/// * [collectedFeesUsd] - All time collected fees in USD.
+/// * [createdAtTimestamp] - Created time.
 /// * [liquidityProviderCount] 
 /// * [feeGrowthOutside0x128] 
 /// * [feeGrowthOutside1x128] 
@@ -44,7 +44,7 @@ abstract class TickV3DTO implements Built<TickV3DTO, TickV3DTOBuilder> {
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
@@ -52,18 +52,18 @@ abstract class TickV3DTO implements Built<TickV3DTO, TickV3DTOBuilder> {
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// 
+  /// Identifier, format: <pool address>#<tick index>
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Pool address.
   @BuiltValueField(wireName: r'pool_address')
   String? get poolAddress;
 
   @BuiltValueField(wireName: r'tick_idx')
   BigInteger? get tickIdx;
 
-  /// 
+  /// Pool address.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
@@ -73,47 +73,47 @@ abstract class TickV3DTO implements Built<TickV3DTO, TickV3DTOBuilder> {
   @BuiltValueField(wireName: r'liquidity_net')
   BigInteger? get liquidityNet;
 
-  /// 
+  /// Calculated price of token0 of tick within this pool - constant.
   @BuiltValueField(wireName: r'price_0')
   String? get price0;
 
-  /// 
+  /// Calculated price of token1 of tick within this pool - constant.
   @BuiltValueField(wireName: r'price_1')
   String? get price1;
 
-  /// 
+  /// Lifetime volume of token0 with this tick in range.
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
-  /// 
+  /// Lifetime volume of token1 with this tick in range.
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
-  /// 
+  /// Lifetime volume in derived USD with this tick in range.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// Lifetime volume in untracked USD with this tick in range.
   @BuiltValueField(wireName: r'untracked_volume_usd')
   String? get untrackedVolumeUsd;
 
-  /// 
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
-  /// 
+  /// All time collected fees in token0.
   @BuiltValueField(wireName: r'collected_fees_token_0')
   String? get collectedFeesToken0;
 
-  /// 
+  /// All time collected fees in token1.
   @BuiltValueField(wireName: r'collected_fees_token_1')
   String? get collectedFeesToken1;
 
-  /// 
+  /// All time collected fees in USD.
   @BuiltValueField(wireName: r'collected_fees_usd')
   String? get collectedFeesUsd;
 
-  /// 
+  /// Created time.
   @BuiltValueField(wireName: r'created_at_timestamp')
   DateTime? get createdAtTimestamp;
 

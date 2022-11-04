@@ -480,57 +480,6 @@ API.Client.SushiswapApi.prototype.dappsSushiswapMintsHistoricalGet = function(op
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
- */
-API.Client.SushiswapApi.prototype.dappsSushiswapPoiHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/poi/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * 
- * 
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
  * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise}
@@ -668,7 +617,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolsCurrentGet = function(opt_e
 }
 
 /**
- * 
+ * GetPools
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -676,7 +625,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolsCurrentGet = function(opt_e
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.PairDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapPoolsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -755,7 +704,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapSwapsCurrentGet = function(opt_e
 }
 
 /**
- * 
+ * GetSwaps
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -763,7 +712,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapSwapsCurrentGet = function(opt_e
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_poolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.SwapDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapSwapsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
@@ -898,7 +847,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapTokensCurrentGet = function(opt_
 }
 
 /**
- * 
+ * GetTokens
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -906,7 +855,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapTokensCurrentGet = function(opt_
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.TokenDTO>>}
  */
 API.Client.SushiswapApi.prototype.dappsSushiswapTokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */

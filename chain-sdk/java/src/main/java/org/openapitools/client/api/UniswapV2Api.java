@@ -133,7 +133,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -141,7 +140,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -154,10 +152,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2BundlesHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2BundlesHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsUniswapv2BundlesHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -283,7 +278,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -291,7 +285,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -304,10 +297,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2BurnsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2BurnsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2BurnsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -431,7 +421,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -439,7 +428,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -452,10 +440,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2DayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2DayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsUniswapv2DayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -576,7 +561,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -584,7 +568,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -597,10 +580,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2FactoryHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2FactoryHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsUniswapv2FactoryHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -726,7 +706,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -734,7 +713,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -747,10 +725,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2LiquidityPositionHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2LiquidityPositionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2LiquidityPositionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -879,7 +854,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -887,7 +861,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -900,10 +873,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1032,7 +1002,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1040,7 +1009,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1053,10 +1021,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2MintsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2MintsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2MintsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1124,151 +1089,6 @@ public class UniswapV2Api {
         return localVarCall;
     }
     /**
-     * Build call for dappsUniswapv2PoiHistoricalGet
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsUniswapv2PoiHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/uniswapv2/poi/historical";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (startBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startBlock", startBlock));
-        }
-
-        if (endBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endBlock", endBlock));
-        }
-
-        if (startDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startDate", startDate));
-        }
-
-        if (endDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endDate", endDate));
-        }
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call dappsUniswapv2PoiHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoiHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public void dappsUniswapv2PoiHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        dappsUniswapv2PoiHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Void> dappsUniswapv2PoiHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        okhttp3.Call localVarCall = dappsUniswapv2PoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, null);
-        return localVarApiClient.execute(localVarCall);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsUniswapv2PoiHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for dappsUniswapv2PoolDayDataHistoricalGet
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1330,7 +1150,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1338,7 +1157,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1351,10 +1169,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2PoolDayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoolDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2PoolDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1483,7 +1298,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1491,7 +1305,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1504,10 +1317,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2PoolHourDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoolHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2PoolHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1616,7 +1426,9 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1624,7 +1436,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1637,10 +1448,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2PoolsCurrentGetValidateBeforeCall(String filterPoolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoolsCurrentGetCall(filterPoolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2PoolsCurrentGetCall(filterPoolId, _callback);
 
     }
 
@@ -1761,7 +1569,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1769,7 +1576,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1782,10 +1588,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2PoolsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2PoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2PoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1889,7 +1692,9 @@ public class UniswapV2Api {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1897,7 +1702,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1910,10 +1714,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2SwapsCurrentGetValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2SwapsCurrentGetCall(_callback);
-        return localVarCall;
+        return dappsUniswapv2SwapsCurrentGetCall(_callback);
 
     }
 
@@ -2031,7 +1832,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2039,7 +1839,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2052,10 +1851,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2SwapsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2SwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsUniswapv2SwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -2184,7 +1980,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2192,7 +1987,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2205,10 +1999,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2TokenDayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2TokenDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        return localVarCall;
+        return dappsUniswapv2TokenDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
 
     }
 
@@ -2312,7 +2103,9 @@ public class UniswapV2Api {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2320,7 +2113,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2333,10 +2125,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2TokensCurrentGetValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2TokensCurrentGetCall(_callback);
-        return localVarCall;
+        return dappsUniswapv2TokensCurrentGetCall(_callback);
 
     }
 
@@ -2454,7 +2243,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2462,7 +2250,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2475,10 +2262,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2TokensHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2TokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        return localVarCall;
+        return dappsUniswapv2TokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
 
     }
 
@@ -2602,7 +2386,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2610,7 +2393,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2623,10 +2405,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2TransactionsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2TransactionsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsUniswapv2TransactionsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2747,7 +2526,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2755,7 +2533,6 @@ public class UniswapV2Api {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2768,10 +2545,7 @@ public class UniswapV2Api {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsUniswapv2UsersHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsUniswapv2UsersHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsUniswapv2UsersHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 

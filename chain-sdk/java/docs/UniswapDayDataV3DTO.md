@@ -10,7 +10,7 @@ Data accumulated and condensed into day stats for all of Uniswap.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Long** |  |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**vid** | **Long** |  |  [optional] |
 |**id** | **String** | Timestamp rounded to current day by dividing by 86400. |  [optional] |
 |**date** | **Integer** | Timestamp rounded to current day by dividing by 86400. |  [optional] |

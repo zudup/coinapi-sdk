@@ -41,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,9 +49,10 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * TickV3DTO
+ * Ticks are the boundaries between discrete areas in price space.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:31.226497Z[Etc/UTC]")
+@ApiModel(description = "Ticks are the boundaries between discrete areas in price space.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:12.430652Z[Etc/UTC]")
 public class TickV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -204,11 +206,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Number of block in which entity was recorded.
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -250,11 +252,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Identifier, format: <pool address>#<tick index>")
 
   public String getId() {
     return id;
@@ -273,11 +275,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Pool address.
    * @return poolAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
 
   public String getPoolAddress() {
     return poolAddress;
@@ -319,11 +321,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Pool address.
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Pool address.")
 
   public String getPool() {
     return pool;
@@ -388,11 +390,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Calculated price of token0 of tick within this pool - constant.
    * @return price0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Calculated price of token0 of tick within this pool - constant.")
 
   public String getPrice0() {
     return price0;
@@ -411,11 +413,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Calculated price of token1 of tick within this pool - constant.
    * @return price1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Calculated price of token1 of tick within this pool - constant.")
 
   public String getPrice1() {
     return price1;
@@ -434,11 +436,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Lifetime volume of token0 with this tick in range.
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume of token0 with this tick in range.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -457,11 +459,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Lifetime volume of token1 with this tick in range.
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume of token1 with this tick in range.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -480,11 +482,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Lifetime volume in derived USD with this tick in range.
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume in derived USD with this tick in range.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -503,11 +505,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Lifetime volume in untracked USD with this tick in range.
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Lifetime volume in untracked USD with this tick in range.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -526,11 +528,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Fees in USD.
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -549,11 +551,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * All time collected fees in token0.
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token0.")
 
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
@@ -572,11 +574,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * All time collected fees in token1.
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in token1.")
 
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
@@ -595,11 +597,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * All time collected fees in USD.
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All time collected fees in USD.")
 
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
@@ -618,11 +620,11 @@ public class TickV3DTO {
   }
 
    /**
-   * 
+   * Created time.
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Created time.")
 
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;
@@ -842,9 +844,7 @@ public class TickV3DTO {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (TickV3DTO.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!TickV3DTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in TickV3DTO is not found in the empty JSON string", TickV3DTO.openapiRequiredFields.toString()));
         }
       }

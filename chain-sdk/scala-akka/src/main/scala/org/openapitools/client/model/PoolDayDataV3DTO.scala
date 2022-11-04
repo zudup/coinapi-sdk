@@ -17,47 +17,47 @@ import org.openapitools.client.core.ApiModel
 case class PoolDayDataV3DTO (
   entryTime: Option[OffsetDateTime] = None,
   recvTime: Option[OffsetDateTime] = None,
-  /*  */
+  /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /*  */
+  /* Identifier, format: <pool address>-<day id>. */
   id: Option[String] = None,
-  /*  */
+  /* Timestamp rounded to current day by dividing by 86400 */
   date: Option[Int] = None,
-  /*  */
+  /* Pointer to pool. */
   pool: Option[String] = None,
-  /*  */
+  /* In range liquidity at end of period. */
   liquidity: Option[String] = None,
-  /*  */
+  /* Current price tracker at end of period. */
   sqrtPrice: Option[String] = None,
-  /*  */
+  /* Price of token0 - derived from sqrtPrice. */
   token0Price: Option[String] = None,
-  /*  */
+  /* Price of token1 - derived from sqrtPrice. */
   token1Price: Option[String] = None,
-  /*  */
+  /* Current tick at end of period. */
   tick: Option[String] = None,
-  /*  */
+  /* Tracker for global fee growth. */
   feeGrowthGlobal0x128: Option[String] = None,
-  /*  */
+  /* Tracker for global fee growth. */
   feeGrowthGlobal1x128: Option[String] = None,
-  /*  */
+  /* Total value locked derived in USD at end of period. */
   tvlUsd: Option[String] = None,
-  /*  */
+  /* Volume in token0. */
   volumeToken0: Option[String] = None,
-  /*  */
+  /* Volume in token1. */
   volumeToken1: Option[String] = None,
-  /*  */
+  /* Volume in USD. */
   volumeUsd: Option[String] = None,
-  /*  */
+  /* Fees in USD. */
   feesUsd: Option[String] = None,
-  /*  */
+  /* Number of transactions during period. */
   txCount: Option[String] = None,
-  /*  */
+  /* Opening price of token0. */
   open: Option[String] = None,
-  /*  */
+  /* High price of token0. */
   high: Option[String] = None,
-  /*  */
+  /* Low price of token0. */
   low: Option[String] = None,
-  /*  */
+  /* Close price of token0. */
   close: Option[String] = None,
   /*  */
   vid: Option[Long] = None

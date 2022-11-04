@@ -60,11 +60,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
@@ -130,11 +130,11 @@ public:
 	/*! \brief Set Total liquidity amount in pair stored as an amount of USD.
 	 */
 	void setReserveUsd(std::string  reserve_usd);
-	/*! \brief Get Total liquidity with only tracked amount (see tracked amounts).
+	/*! \brief Get Total liquidity with only tracked amount.
 	 */
 	std::string getTrackedReserveEth();
 
-	/*! \brief Set Total liquidity with only tracked amount (see tracked amounts).
+	/*! \brief Set Total liquidity with only tracked amount.
 	 */
 	void setTrackedReserveEth(std::string  tracked_reserve_eth);
 	/*! \brief Get Token0 per token1.
@@ -193,11 +193,11 @@ public:
 	/*! \brief Set Timestamp contract was created.
 	 */
 	void setCreatedAtTimestamp(std::string  created_at_timestamp);
-	/*! \brief Get 
+	/*! \brief Get Total number of LPs.
 	 */
 	std::string getLiquidityProviderCount();
 
-	/*! \brief Set 
+	/*! \brief Set Total number of LPs.
 	 */
 	void setLiquidityProviderCount(std::string  liquidity_provider_count);
 	/*! \brief Get 

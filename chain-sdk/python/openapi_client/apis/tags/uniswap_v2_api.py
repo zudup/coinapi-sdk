@@ -17,7 +17,6 @@ from openapi_client.paths.dapps_uniswapv2_factory_historical.get import DappsUni
 from openapi_client.paths.dapps_uniswapv2_liquidity_position_historical.get import DappsUniswapv2LiquidityPositionHistoricalGet
 from openapi_client.paths.dapps_uniswapv2_liquidity_position_snapshots_historical.get import DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
 from openapi_client.paths.dapps_uniswapv2_mints_historical.get import DappsUniswapv2MintsHistoricalGet
-from openapi_client.paths.dapps_uniswapv2_poi_historical.get import DappsUniswapv2PoiHistoricalGet
 from openapi_client.paths.dapps_uniswapv2_pool_day_data_historical.get import DappsUniswapv2PoolDayDataHistoricalGet
 from openapi_client.paths.dapps_uniswapv2_pool_hour_data_historical.get import DappsUniswapv2PoolHourDataHistoricalGet
 from openapi_client.paths.dapps_uniswapv2_pools_current.get import DappsUniswapv2PoolsCurrentGet
@@ -39,7 +38,6 @@ class UniswapV2Api(
     DappsUniswapv2LiquidityPositionHistoricalGet,
     DappsUniswapv2LiquidityPositionSnapshotsHistoricalGet,
     DappsUniswapv2MintsHistoricalGet,
-    DappsUniswapv2PoiHistoricalGet,
     DappsUniswapv2PoolDayDataHistoricalGet,
     DappsUniswapv2PoolHourDataHistoricalGet,
     DappsUniswapv2PoolsCurrentGet,

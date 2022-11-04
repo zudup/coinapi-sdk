@@ -19,7 +19,6 @@ from openapi_client.paths.dapps_uniswapv3_factory_current.get import DappsUniswa
 from openapi_client.paths.dapps_uniswapv3_factory_historical.get import DappsUniswapv3FactoryHistoricalGet
 from openapi_client.paths.dapps_uniswapv3_mints_current.get import DappsUniswapv3MintsCurrentGet
 from openapi_client.paths.dapps_uniswapv3_mints_historical.get import DappsUniswapv3MintsHistoricalGet
-from openapi_client.paths.dapps_uniswapv3_poi_historical.get import DappsUniswapv3PoiHistoricalGet
 from openapi_client.paths.dapps_uniswapv3_pool_day_data_historical.get import DappsUniswapv3PoolDayDataHistoricalGet
 from openapi_client.paths.dapps_uniswapv3_pool_hour_data_historical.get import DappsUniswapv3PoolHourDataHistoricalGet
 from openapi_client.paths.dapps_uniswapv3_pools_current.get import DappsUniswapv3PoolsCurrentGet
@@ -56,7 +55,6 @@ class UniswapV3Api(
     DappsUniswapv3FactoryHistoricalGet,
     DappsUniswapv3MintsCurrentGet,
     DappsUniswapv3MintsHistoricalGet,
-    DappsUniswapv3PoiHistoricalGet,
     DappsUniswapv3PoolDayDataHistoricalGet,
     DappsUniswapv3PoolHourDataHistoricalGet,
     DappsUniswapv3PoolsCurrentGet,

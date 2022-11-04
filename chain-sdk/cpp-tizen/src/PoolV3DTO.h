@@ -1,7 +1,7 @@
 /*
  * PoolV3DTO.h
  *
- * 
+ * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  */
 
 #ifndef _PoolV3DTO_H_
@@ -21,7 +21,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  *
  *  \ingroup Models
  *
@@ -60,11 +60,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
@@ -74,32 +74,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get 
+	/*! \brief Get Pool address.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Pool address.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Creation time.
 	 */
 	std::string getCreatedAtTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Creation time.
 	 */
 	void setCreatedAtTimestamp(std::string  created_at_timestamp);
-	/*! \brief Get 
+	/*! \brief Get Reference to token0 as stored in pool contract.
 	 */
 	std::string getToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token0 as stored in pool contract.
 	 */
 	void setToken0(std::string  token_0);
-	/*! \brief Get 
+	/*! \brief Get Reference to token1 as stored in pool contract.
 	 */
 	std::string getToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token1 as stored in pool contract.
 	 */
 	void setToken1(std::string  token_1);
 	/*! \brief Get 
@@ -137,18 +137,18 @@ public:
 	/*! \brief Set 
 	 */
 	void setFeeGrowthGlobal1x128(BigInteger  fee_growth_global_1x128);
-	/*! \brief Get 
+	/*! \brief Get Token0 per token1.
 	 */
 	std::string getToken0Price();
 
-	/*! \brief Set 
+	/*! \brief Set Token0 per token1.
 	 */
 	void setToken0Price(std::string  token_0_price);
-	/*! \brief Get 
+	/*! \brief Get Token1 per token0.
 	 */
 	std::string getToken1Price();
 
-	/*! \brief Set 
+	/*! \brief Set Token1 per token0.
 	 */
 	void setToken1Price(std::string  token_1_price);
 	/*! \brief Get 
@@ -165,39 +165,39 @@ public:
 	/*! \brief Set 
 	 */
 	void setObservationIndex(BigInteger  observation_index);
-	/*! \brief Get 
+	/*! \brief Get All time token0 swapped.
 	 */
 	std::string getVolumeToken0();
 
-	/*! \brief Set 
+	/*! \brief Set All time token0 swapped.
 	 */
 	void setVolumeToken0(std::string  volume_token_0);
-	/*! \brief Get 
+	/*! \brief Get All time token1 swapped.
 	 */
 	std::string getVolumeToken1();
 
-	/*! \brief Set 
+	/*! \brief Set All time token1 swapped.
 	 */
 	void setVolumeToken1(std::string  volume_token_1);
-	/*! \brief Get 
+	/*! \brief Get All time USD swapped.
 	 */
 	std::string getVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set All time USD swapped.
 	 */
 	void setVolumeUsd(std::string  volume_usd);
-	/*! \brief Get 
+	/*! \brief Get All time USD swapped, unfiltered for unreliable USD pools.
 	 */
 	std::string getUntrackedVolumeUsd();
 
-	/*! \brief Set 
+	/*! \brief Set All time USD swapped, unfiltered for unreliable USD pools.
 	 */
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
-	/*! \brief Get 
+	/*! \brief Get Fees in USD.
 	 */
 	std::string getFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Fees in USD.
 	 */
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
@@ -207,32 +207,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setTxCount(BigInteger  tx_count);
-	/*! \brief Get 
+	/*! \brief Get All time fees collected token0.
 	 */
 	std::string getCollectedFeesToken0();
 
-	/*! \brief Set 
+	/*! \brief Set All time fees collected token0.
 	 */
 	void setCollectedFeesToken0(std::string  collected_fees_token_0);
-	/*! \brief Get 
+	/*! \brief Get All time fees collected token1.
 	 */
 	std::string getCollectedFeesToken1();
 
-	/*! \brief Set 
+	/*! \brief Set All time fees collected token1.
 	 */
 	void setCollectedFeesToken1(std::string  collected_fees_token_1);
-	/*! \brief Get 
+	/*! \brief Get All time fees collected derived USD.
 	 */
 	std::string getCollectedFeesUsd();
 
-	/*! \brief Set 
+	/*! \brief Set All time fees collected derived USD.
 	 */
 	void setCollectedFeesUsd(std::string  collected_fees_usd);
-	/*! \brief Get 
+	/*! \brief Get Total token 0 across all ticks.
 	 */
 	std::string getTotalValueLockedToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Total token 0 across all ticks.
 	 */
 	void setTotalValueLockedToken0(std::string  total_value_locked_token_0);
 	/*! \brief Get 
@@ -242,32 +242,32 @@ public:
 	/*! \brief Set 
 	 */
 	void setTotalValueLockedToken1(std::string  total_value_locked_token_1);
-	/*! \brief Get 
+	/*! \brief Get Total token 1 across all ticks.
 	 */
 	std::string getTotalValueLockedEth();
 
-	/*! \brief Set 
+	/*! \brief Set Total token 1 across all ticks.
 	 */
 	void setTotalValueLockedEth(std::string  total_value_locked_eth);
-	/*! \brief Get 
+	/*! \brief Get Total value locked USD.
 	 */
 	std::string getTotalValueLockedUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked USD.
 	 */
 	void setTotalValueLockedUsd(std::string  total_value_locked_usd);
-	/*! \brief Get 
+	/*! \brief Get Total value locked derived ETH.
 	 */
 	std::string getTotalValueLockedUsdUntracked();
 
-	/*! \brief Set 
+	/*! \brief Set Total value locked derived ETH.
 	 */
 	void setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked);
-	/*! \brief Get 
+	/*! \brief Get Liquidity providers count, used to detect new exchanges.
 	 */
 	std::string getLiquidityProviderCount();
 
-	/*! \brief Set 
+	/*! \brief Set Liquidity providers count, used to detect new exchanges.
 	 */
 	void setLiquidityProviderCount(std::string  liquidity_provider_count);
 	/*! \brief Get 

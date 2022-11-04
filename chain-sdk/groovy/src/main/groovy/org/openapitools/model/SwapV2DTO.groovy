@@ -13,7 +13,7 @@ class SwapV2DTO {
     Date entryTime
     
     Date recvTime
-    /*  */
+    /* Number of block in which entity was recorded. */
     Long blockNumber
     /*  */
     Long vid

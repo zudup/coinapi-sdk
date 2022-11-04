@@ -133,7 +133,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -141,7 +140,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -154,10 +152,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapBundlesHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapBundlesHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapBundlesHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -283,7 +278,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -291,7 +285,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -304,10 +297,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapBurnsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapBurnsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapBurnsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -431,7 +421,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -439,7 +428,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -452,10 +440,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapDayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -576,7 +561,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -584,7 +568,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -597,10 +580,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapFactoryHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapFactoryHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapFactoryHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -721,7 +701,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -729,7 +708,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -742,10 +720,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapHourDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -871,7 +846,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -879,7 +853,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -892,10 +865,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapLiquidityPositionHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapLiquidityPositionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapLiquidityPositionHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1024,7 +994,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1032,7 +1001,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1045,10 +1013,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapLiquidityPositionSnapshotsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapLiquidityPositionSnapshotsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapLiquidityPositionSnapshotsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1177,7 +1142,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1185,7 +1149,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1198,10 +1161,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapMintsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapMintsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapMintsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1269,151 +1229,6 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for dappsSushiswapPoiHistoricalGet
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsSushiswapPoiHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/sushiswap/poi/historical";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (startBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startBlock", startBlock));
-        }
-
-        if (endBlock != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endBlock", endBlock));
-        }
-
-        if (startDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startDate", startDate));
-        }
-
-        if (endDate != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endDate", endDate));
-        }
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call dappsSushiswapPoiHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapPoiHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public void dappsSushiswapPoiHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        dappsSushiswapPoiHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-    }
-
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Void> dappsSushiswapPoiHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate) throws ApiException {
-        okhttp3.Call localVarCall = dappsSushiswapPoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, null);
-        return localVarApiClient.execute(localVarCall);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call dappsSushiswapPoiHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback<Void> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = dappsSushiswapPoiHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for dappsSushiswapPoolDayDataHistoricalGet
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1475,7 +1290,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1483,7 +1297,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1496,10 +1309,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapPoolDayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapPoolDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapPoolDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1628,7 +1438,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1636,7 +1445,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1649,10 +1457,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapPoolHourDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapPoolHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapPoolHourDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
@@ -1756,7 +1561,9 @@ public class SushiswapApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1764,7 +1571,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1777,10 +1583,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapPoolsCurrentGetValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapPoolsCurrentGetCall(_callback);
-        return localVarCall;
+        return dappsSushiswapPoolsCurrentGetCall(_callback);
 
     }
 
@@ -1849,7 +1652,7 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call dappsSushiswapPoolsHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
@@ -1898,7 +1701,9 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1906,7 +1711,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1919,55 +1723,55 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapPoolsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapPoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapPoolsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
     /**
-     * 
+     * GetPools
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List&lt;PairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void dappsSushiswapPoolsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
-        dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    public List<PairDTO> dappsSushiswapPoolsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+        ApiResponse<List<PairDTO>> localVarResp = dappsSushiswapPoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+        return localVarResp.getData();
     }
 
     /**
-     * 
+     * GetPools
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;List&lt;PairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> dappsSushiswapPoolsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+    public ApiResponse<List<PairDTO>> dappsSushiswapPoolsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapPoolsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
+     * GetPools (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1980,13 +1784,14 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapPoolsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapPoolsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<PairDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapPoolsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<List<PairDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -2026,7 +1831,9 @@ public class SushiswapApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2034,7 +1841,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2047,10 +1853,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapSwapsCurrentGetValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapSwapsCurrentGetCall(_callback);
-        return localVarCall;
+        return dappsSushiswapSwapsCurrentGetCall(_callback);
 
     }
 
@@ -2119,7 +1922,7 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call dappsSushiswapSwapsHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
@@ -2168,7 +1971,9 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2176,7 +1981,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2189,55 +1993,55 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapSwapsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapSwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        return localVarCall;
+        return dappsSushiswapSwapsHistoricalGetCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
 
     }
 
     /**
-     * 
+     * GetSwaps
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List&lt;SwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void dappsSushiswapSwapsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
-        dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    public List<SwapDTO> dappsSushiswapSwapsHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+        ApiResponse<List<SwapDTO>> localVarResp = dappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+        return localVarResp.getData();
     }
 
     /**
-     * 
+     * GetSwaps
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;List&lt;SwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> dappsSushiswapSwapsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
+    public ApiResponse<List<SwapDTO>> dappsSushiswapSwapsHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapSwapsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
+     * GetSwaps (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2250,13 +2054,14 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapSwapsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapSwapsHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String poolId, final ApiCallback<List<SwapDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapSwapsHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, poolId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<List<SwapDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -2321,7 +2126,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2329,7 +2133,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2342,10 +2145,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapTokenDayDataHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapTokenDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        return localVarCall;
+        return dappsSushiswapTokenDayDataHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
 
     }
 
@@ -2449,7 +2249,9 @@ public class SushiswapApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "text/plain", "application/json", "text/json"
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2457,7 +2259,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2470,10 +2271,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapTokensCurrentGetValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapTokensCurrentGetCall(_callback);
-        return localVarCall;
+        return dappsSushiswapTokensCurrentGetCall(_callback);
 
     }
 
@@ -2542,7 +2340,7 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call dappsSushiswapTokensHistoricalGetCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
@@ -2591,7 +2389,9 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
+            "text/plain",
+            "application/json",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2599,7 +2399,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2612,55 +2411,55 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapTokensHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapTokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        return localVarCall;
+        return dappsSushiswapTokensHistoricalGetCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
 
     }
 
     /**
-     * 
+     * GetTokens
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
+     * @return List&lt;TokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void dappsSushiswapTokensHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
-        dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    public List<TokenDTO> dappsSushiswapTokensHistoricalGet(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
+        ApiResponse<List<TokenDTO>> localVarResp = dappsSushiswapTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+        return localVarResp.getData();
     }
 
     /**
-     * 
+     * GetTokens
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;List&lt;TokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> dappsSushiswapTokensHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
+    public ApiResponse<List<TokenDTO>> dappsSushiswapTokensHistoricalGetWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId) throws ApiException {
         okhttp3.Call localVarCall = dappsSushiswapTokensHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, tokenId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
+     * GetTokens (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2673,13 +2472,14 @@ public class SushiswapApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dappsSushiswapTokensHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call dappsSushiswapTokensHistoricalGetAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String tokenId, final ApiCallback<List<TokenDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dappsSushiswapTokensHistoricalGetValidateBeforeCall(startBlock, endBlock, startDate, endDate, tokenId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<List<TokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -2739,7 +2539,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2747,7 +2546,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2760,10 +2558,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapTransactionsHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapTransactionsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapTransactionsHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 
@@ -2884,7 +2679,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2892,7 +2686,6 @@ public class SushiswapApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2905,10 +2698,7 @@ public class SushiswapApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call dappsSushiswapUsersHistoricalGetValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = dappsSushiswapUsersHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
-        return localVarCall;
+        return dappsSushiswapUsersHistoricalGetCall(startBlock, endBlock, startDate, endDate, _callback);
 
     }
 

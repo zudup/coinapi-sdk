@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// SwapV3DTO
+    /// Swap are created for each token swap within a pair.
     /// </summary>
     [DataContract(Name = "SwapV3DTO")]
     public partial class SwapV3DTO : IEquatable<SwapV3DTO>, IValidatableObject
@@ -43,20 +43,20 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">id.</param>
-        /// <param name="transaction">transaction.</param>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="token0">token0.</param>
-        /// <param name="token1">token1.</param>
-        /// <param name="sender">sender.</param>
-        /// <param name="recipient">recipient.</param>
-        /// <param name="origin">origin.</param>
-        /// <param name="amount0">amount0.</param>
-        /// <param name="amount1">amount1.</param>
-        /// <param name="amountUsd">amountUsd.</param>
+        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array..</param>
+        /// <param name="transaction">Pointer to transaction..</param>
+        /// <param name="timestamp">Timestamp of transaction..</param>
+        /// <param name="pool">Pool swap occured within..</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract..</param>
+        /// <param name="token1">Reference to token1 as stored in pair contract..</param>
+        /// <param name="sender">Sender of the swap..</param>
+        /// <param name="recipient">Recipient of the swap..</param>
+        /// <param name="origin">Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.</param>
+        /// <param name="amount0">Delta of token0 swapped..</param>
+        /// <param name="amount1">Delta of token1 swapped..</param>
+        /// <param name="amountUsd">Derived amount of tokens sold in USD..</param>
         /// <param name="sqrtPriceX96">sqrtPriceX96.</param>
         /// <param name="tick">tick.</param>
         /// <param name="logIndex">logIndex.</param>
@@ -98,8 +98,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
 
@@ -110,74 +111,86 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
         /// </summary>
+        /// <value>Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Transaction
+        /// Pointer to transaction.
         /// </summary>
+        /// <value>Pointer to transaction.</value>
         [DataMember(Name = "transaction", EmitDefaultValue = true)]
         public string Transaction { get; set; }
 
         /// <summary>
-        /// Gets or Sets Timestamp
+        /// Timestamp of transaction.
         /// </summary>
+        /// <value>Timestamp of transaction.</value>
         [DataMember(Name = "timestamp", EmitDefaultValue = false)]
         public DateTime Timestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pool swap occured within.
         /// </summary>
+        /// <value>Pool swap occured within.</value>
         [DataMember(Name = "pool", EmitDefaultValue = true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token0
+        /// Reference to token0 as stored in pair contract.
         /// </summary>
+        /// <value>Reference to token0 as stored in pair contract.</value>
         [DataMember(Name = "token_0", EmitDefaultValue = true)]
         public string Token0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token1
+        /// Reference to token1 as stored in pair contract.
         /// </summary>
+        /// <value>Reference to token1 as stored in pair contract.</value>
         [DataMember(Name = "token_1", EmitDefaultValue = true)]
         public string Token1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sender
+        /// Sender of the swap.
         /// </summary>
+        /// <value>Sender of the swap.</value>
         [DataMember(Name = "sender", EmitDefaultValue = true)]
         public string Sender { get; set; }
 
         /// <summary>
-        /// Gets or Sets Recipient
+        /// Recipient of the swap.
         /// </summary>
+        /// <value>Recipient of the swap.</value>
         [DataMember(Name = "recipient", EmitDefaultValue = true)]
         public string Recipient { get; set; }
 
         /// <summary>
-        /// Gets or Sets Origin
+        /// Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
         /// </summary>
+        /// <value>Transaction origin: the EOA (Externally Owned Account) that initiated the transaction</value>
         [DataMember(Name = "origin", EmitDefaultValue = true)]
         public string Origin { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount0
+        /// Delta of token0 swapped.
         /// </summary>
+        /// <value>Delta of token0 swapped.</value>
         [DataMember(Name = "amount_0", EmitDefaultValue = true)]
         public string Amount0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Amount1
+        /// Delta of token1 swapped.
         /// </summary>
+        /// <value>Delta of token1 swapped.</value>
         [DataMember(Name = "amount_1", EmitDefaultValue = true)]
         public string Amount1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets AmountUsd
+        /// Derived amount of tokens sold in USD.
         /// </summary>
+        /// <value>Derived amount of tokens sold in USD.</value>
         [DataMember(Name = "amount_usd", EmitDefaultValue = true)]
         public string AmountUsd { get; set; }
 

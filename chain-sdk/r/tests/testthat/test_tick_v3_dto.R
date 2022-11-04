@@ -21,7 +21,7 @@ test_that("recv_time", {
 
 test_that("block_number", {
   # tests for the property `block_number` (integer)
-  # 
+  # Number of block in which entity was recorded.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`block_number`, "EXPECTED_RESULT")
@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # 
+  # Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")
@@ -45,7 +45,7 @@ test_that("id", {
 
 test_that("pool_address", {
   # tests for the property `pool_address` (character)
-  # 
+  # Pool address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool_address`, "EXPECTED_RESULT")
@@ -60,7 +60,7 @@ test_that("tick_idx", {
 
 test_that("pool", {
   # tests for the property `pool` (character)
-  # 
+  # Pool address.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`pool`, "EXPECTED_RESULT")
@@ -82,7 +82,7 @@ test_that("liquidity_net", {
 
 test_that("price_0", {
   # tests for the property `price_0` (character)
-  # 
+  # Calculated price of token0 of tick within this pool - constant.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`price_0`, "EXPECTED_RESULT")
@@ -90,7 +90,7 @@ test_that("price_0", {
 
 test_that("price_1", {
   # tests for the property `price_1` (character)
-  # 
+  # Calculated price of token1 of tick within this pool - constant.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`price_1`, "EXPECTED_RESULT")
@@ -98,7 +98,7 @@ test_that("price_1", {
 
 test_that("volume_token_0", {
   # tests for the property `volume_token_0` (character)
-  # 
+  # Lifetime volume of token0 with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_0`, "EXPECTED_RESULT")
@@ -106,7 +106,7 @@ test_that("volume_token_0", {
 
 test_that("volume_token_1", {
   # tests for the property `volume_token_1` (character)
-  # 
+  # Lifetime volume of token1 with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_token_1`, "EXPECTED_RESULT")
@@ -114,7 +114,7 @@ test_that("volume_token_1", {
 
 test_that("volume_usd", {
   # tests for the property `volume_usd` (character)
-  # 
+  # Lifetime volume in derived USD with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`volume_usd`, "EXPECTED_RESULT")
@@ -122,7 +122,7 @@ test_that("volume_usd", {
 
 test_that("untracked_volume_usd", {
   # tests for the property `untracked_volume_usd` (character)
-  # 
+  # Lifetime volume in untracked USD with this tick in range.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`untracked_volume_usd`, "EXPECTED_RESULT")
@@ -130,7 +130,7 @@ test_that("untracked_volume_usd", {
 
 test_that("fees_usd", {
   # tests for the property `fees_usd` (character)
-  # 
+  # Fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`fees_usd`, "EXPECTED_RESULT")
@@ -138,7 +138,7 @@ test_that("fees_usd", {
 
 test_that("collected_fees_token_0", {
   # tests for the property `collected_fees_token_0` (character)
-  # 
+  # All time collected fees in token0.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_0`, "EXPECTED_RESULT")
@@ -146,7 +146,7 @@ test_that("collected_fees_token_0", {
 
 test_that("collected_fees_token_1", {
   # tests for the property `collected_fees_token_1` (character)
-  # 
+  # All time collected fees in token1.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_token_1`, "EXPECTED_RESULT")
@@ -154,7 +154,7 @@ test_that("collected_fees_token_1", {
 
 test_that("collected_fees_usd", {
   # tests for the property `collected_fees_usd` (character)
-  # 
+  # All time collected fees in USD.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`collected_fees_usd`, "EXPECTED_RESULT")
@@ -162,7 +162,7 @@ test_that("collected_fees_usd", {
 
 test_that("created_at_timestamp", {
   # tests for the property `created_at_timestamp` (character)
-  # 
+  # Created time.
 
   # uncomment below to test the property
   #expect_equal(model.instance$`created_at_timestamp`, "EXPECTED_RESULT")

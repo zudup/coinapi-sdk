@@ -12,16 +12,15 @@ Method | HTTP request | Description
 [**DappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#DappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
 [**DappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#DappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
 [**DappsSushiswapMintsHistoricalGet**](SushiswapApi.md#DappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-[**DappsSushiswapPoiHistoricalGet**](SushiswapApi.md#DappsSushiswapPoiHistoricalGet) | **GET** /dapps/sushiswap/poi/historical | 
 [**DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
 [**DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
 [**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#DappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
-[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | 
+[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#DappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | 
+[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#DappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
-[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | 
+[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 
@@ -402,52 +401,6 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-# **DappsSushiswapPoiHistoricalGet**
-> DappsSushiswapPoiHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- SushiswapApi$new()
-api_instance$DappsSushiswapPoiHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
 # **DappsSushiswapPoolDayDataHistoricalGet**
 > DappsSushiswapPoolDayDataHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
@@ -587,14 +540,16 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapPoolsHistoricalGet**
-> DappsSushiswapPoolsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+> array[PairDTO] DappsSushiswapPoolsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-
+GetPools
 
 ### Example
 ```R
 library(openapi)
 
+# GetPools
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -603,7 +558,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- SushiswapApi$new()
-api_instance$DappsSushiswapPoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$DappsSushiswapPoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$DappsSushiswapPoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -618,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[PairDTO]**](PairDTO.md)
 
 ### Authorization
 
@@ -627,12 +585,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 # **DappsSushiswapSwapsCurrentGet**
 > array[SwapDTO] DappsSushiswapSwapsCurrentGet()
@@ -675,14 +633,16 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapSwapsHistoricalGet**
-> DappsSushiswapSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+> array[SwapDTO] DappsSushiswapSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-
+GetSwaps
 
 ### Example
 ```R
 library(openapi)
 
+# GetSwaps
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -691,7 +651,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- SushiswapApi$new()
-api_instance$DappsSushiswapSwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$DappsSushiswapSwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$DappsSushiswapSwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -706,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[SwapDTO]**](SwapDTO.md)
 
 ### Authorization
 
@@ -715,12 +678,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 # **DappsSushiswapTokenDayDataHistoricalGet**
 > DappsSushiswapTokenDayDataHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
@@ -811,14 +774,16 @@ No authorization required
 | **200** | successful operation |  -  |
 
 # **DappsSushiswapTokensHistoricalGet**
-> DappsSushiswapTokensHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
+> array[TokenDTO] DappsSushiswapTokensHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-
+GetTokens
 
 ### Example
 ```R
 library(openapi)
 
+# GetTokens
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -827,7 +792,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_token_id <- "token_id_example" # character |  (Optional)
 
 api_instance <- SushiswapApi$new()
-api_instance$DappsSushiswapTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$DappsSushiswapTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+result <- api_instance$DappsSushiswapTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+dput(result)
 ```
 
 ### Parameters
@@ -842,7 +810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[TokenDTO]**](TokenDTO.md)
 
 ### Authorization
 
@@ -851,12 +819,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 # **DappsSushiswapTransactionsHistoricalGet**
 > DappsSushiswapTransactionsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)

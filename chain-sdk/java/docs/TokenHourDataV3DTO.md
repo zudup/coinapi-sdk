@@ -10,7 +10,7 @@ Token data aggregated across all pairs that include token.
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Long** |  |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**id** | **String** | Token address concatendated with date. |  [optional] |
 |**periodStartUnix** | **Integer** | Unix timestamp for start of hour. |  [optional] |
 |**token** | **String** | Pointer to token. |  [optional] |

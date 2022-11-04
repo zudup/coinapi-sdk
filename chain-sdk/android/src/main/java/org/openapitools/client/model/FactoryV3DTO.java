@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ **/
+@ApiModel(description = "The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.")
 public class FactoryV3DTO {
   
   @SerializedName("entry_time")
@@ -75,9 +78,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Number of block in which entity was recorded.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of block in which entity was recorded.")
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -86,9 +89,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Factory address.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Factory address.")
   public String getId() {
     return id;
   }
@@ -97,9 +100,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Amount of pools created.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of pools created.")
   public String getPoolCount() {
     return poolCount;
   }
@@ -108,9 +111,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Amount of transactions all time.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Amount of transactions all time.")
   public String getTxCount() {
     return txCount;
   }
@@ -119,9 +122,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total volume all time in derived USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total volume all time in derived USD.")
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
   }
@@ -130,9 +133,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total volume all time in derived ETH.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total volume all time in derived ETH.")
   public String getTotalVolumeEth() {
     return totalVolumeEth;
   }
@@ -141,9 +144,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total swap fees all time in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total swap fees all time in USD.")
   public String getTotalFeesUsd() {
     return totalFeesUsd;
   }
@@ -152,9 +155,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * All volume even through less reliable USD values.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All volume even through less reliable USD values.")
   public String getTotalFeesEth() {
     return totalFeesEth;
   }
@@ -163,9 +166,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * All volume even through less reliable USD values.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "All volume even through less reliable USD values.")
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -174,9 +177,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived in USD.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD.")
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -185,9 +188,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived in ETH.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in ETH.")
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
   }
@@ -196,9 +199,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived in USD untracked.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in USD untracked.")
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -207,9 +210,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Total value locked derived in ETH untracked.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Total value locked derived in ETH untracked.")
   public String getTotalValueLockedEthUntracked() {
     return totalValueLockedEthUntracked;
   }
@@ -218,9 +221,9 @@ public class FactoryV3DTO {
   }
 
   /**
-   * 
+   * Current owner of the factory.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Current owner of the factory.")
   public String getOwner() {
     return owner;
   }

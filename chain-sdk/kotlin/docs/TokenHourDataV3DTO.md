@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**blockNumber** | **kotlin.Long** |  |  [optional]
+**blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **kotlin.String** | Token address concatendated with date. |  [optional]
 **periodStartUnix** | **kotlin.Int** | Unix timestamp for start of hour. |  [optional]
 **token** | **kotlin.String** | Pointer to token. |  [optional]

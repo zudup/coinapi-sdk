@@ -71,14 +71,6 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
         }
     }
 
-    Context 'Invoke-DappsSushiswapPoiHistoricalGet' {
-        It 'Test Invoke-DappsSushiswapPoiHistoricalGet' {
-            #$TestResult = Invoke-DappsSushiswapPoiHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-DappsSushiswapPoolDayDataHistoricalGet' {
         It 'Test Invoke-DappsSushiswapPoolDayDataHistoricalGet' {
             #$TestResult = Invoke-DappsSushiswapPoolDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"

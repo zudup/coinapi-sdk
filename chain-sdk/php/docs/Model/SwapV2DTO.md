@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **\DateTime** |  | [optional]
 **recv_time** | **\DateTime** |  | [optional]
-**block_number** | **int** |  | [optional]
+**block_number** | **int** | Number of block in which entity was recorded. | [optional]
 **vid** | **int** |  | [optional]
 **id** | **string** | Transaction hash plus index in Transaction swap array. | [optional]
 **transaction** | **string** | Reference to transaction swap was included in. | [optional]

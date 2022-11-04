@@ -432,50 +432,6 @@ export default class UniswapV3Api {
     }
 
     /**
-     * Callback function to receive the result of the dappsUniswapv3PoiHistoricalGet operation.
-     * @callback module:api/UniswapV3Api~dappsUniswapv3PoiHistoricalGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {module:api/UniswapV3Api~dappsUniswapv3PoiHistoricalGetCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    dappsUniswapv3PoiHistoricalGet(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/dapps/uniswapv3/poi/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the dappsUniswapv3PoolDayDataHistoricalGet operation.
      * @callback module:api/UniswapV3Api~dappsUniswapv3PoolDayDataHistoricalGetCallback
      * @param {String} error Error message, if any.

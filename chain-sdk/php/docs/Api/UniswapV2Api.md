@@ -11,7 +11,6 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**dappsUniswapv2LiquidityPositionHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical |  |
 | [**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical |  |
 | [**dappsUniswapv2MintsHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical |  |
-| [**dappsUniswapv2PoiHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2PoiHistoricalGet) | **GET** /dapps/uniswapv2/poi/historical |  |
 | [**dappsUniswapv2PoolDayDataHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical |  |
 | [**dappsUniswapv2PoolHourDataHistoricalGet()**](UniswapV2Api.md#dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical |  |
 | [**dappsUniswapv2PoolsCurrentGet()**](UniswapV2Api.md#dappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools |
@@ -428,65 +427,6 @@ try {
 | **start_date** | **\DateTime**|  | [optional] |
 | **end_date** | **\DateTime**|  | [optional] |
 | **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv2PoiHistoricalGet()`
-
-```php
-dappsUniswapv2PoiHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsUniswapv2PoiHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->dappsUniswapv2PoiHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
 
 ### Return type
 

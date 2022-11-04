@@ -31,6 +31,8 @@ class TokenDTO(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Stores aggregated information for a specific token across all pairs that token is included in.
     """
 
 

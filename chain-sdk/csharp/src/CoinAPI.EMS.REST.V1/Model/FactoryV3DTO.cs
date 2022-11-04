@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// FactoryV3DTO
+    /// The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
     /// </summary>
     [DataContract]
     public partial class FactoryV3DTO :  IEquatable<FactoryV3DTO>, IValidatableObject
@@ -35,20 +35,20 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="poolCount">poolCount.</param>
-        /// <param name="txCount">txCount.</param>
-        /// <param name="totalVolumeUsd">totalVolumeUsd.</param>
-        /// <param name="totalVolumeEth">totalVolumeEth.</param>
-        /// <param name="totalFeesUsd">totalFeesUsd.</param>
-        /// <param name="totalFeesEth">totalFeesEth.</param>
-        /// <param name="untrackedVolumeUsd">untrackedVolumeUsd.</param>
-        /// <param name="totalValueLockedUsd">totalValueLockedUsd.</param>
-        /// <param name="totalValueLockedEth">totalValueLockedEth.</param>
-        /// <param name="totalValueLockedUsdUntracked">totalValueLockedUsdUntracked.</param>
-        /// <param name="totalValueLockedEthUntracked">totalValueLockedEthUntracked.</param>
-        /// <param name="owner">owner.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">Factory address..</param>
+        /// <param name="poolCount">Amount of pools created..</param>
+        /// <param name="txCount">Amount of transactions all time..</param>
+        /// <param name="totalVolumeUsd">Total volume all time in derived USD..</param>
+        /// <param name="totalVolumeEth">Total volume all time in derived ETH..</param>
+        /// <param name="totalFeesUsd">Total swap fees all time in USD..</param>
+        /// <param name="totalFeesEth">All volume even through less reliable USD values..</param>
+        /// <param name="untrackedVolumeUsd">All volume even through less reliable USD values..</param>
+        /// <param name="totalValueLockedUsd">Total value locked derived in USD..</param>
+        /// <param name="totalValueLockedEth">Total value locked derived in ETH..</param>
+        /// <param name="totalValueLockedUsdUntracked">Total value locked derived in USD untracked..</param>
+        /// <param name="totalValueLockedEthUntracked">Total value locked derived in ETH untracked..</param>
+        /// <param name="owner">Current owner of the factory..</param>
         /// <param name="vid">vid.</param>
         public FactoryV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), string poolCount = default(string), string txCount = default(string), string totalVolumeUsd = default(string), string totalVolumeEth = default(string), string totalFeesUsd = default(string), string totalFeesEth = default(string), string untrackedVolumeUsd = default(string), string totalValueLockedUsd = default(string), string totalValueLockedEth = default(string), string totalValueLockedUsdUntracked = default(string), string totalValueLockedEthUntracked = default(string), string owner = default(string), long vid = default(long))
         {
@@ -97,86 +97,100 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name="block_number", EmitDefaultValue=false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Factory address.
         /// </summary>
+        /// <value>Factory address.</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets PoolCount
+        /// Amount of pools created.
         /// </summary>
+        /// <value>Amount of pools created.</value>
         [DataMember(Name="pool_count", EmitDefaultValue=true)]
         public string PoolCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TxCount
+        /// Amount of transactions all time.
         /// </summary>
+        /// <value>Amount of transactions all time.</value>
         [DataMember(Name="tx_count", EmitDefaultValue=true)]
         public string TxCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalVolumeUsd
+        /// Total volume all time in derived USD.
         /// </summary>
+        /// <value>Total volume all time in derived USD.</value>
         [DataMember(Name="total_volume_usd", EmitDefaultValue=true)]
         public string TotalVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalVolumeEth
+        /// Total volume all time in derived ETH.
         /// </summary>
+        /// <value>Total volume all time in derived ETH.</value>
         [DataMember(Name="total_volume_eth", EmitDefaultValue=true)]
         public string TotalVolumeEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalFeesUsd
+        /// Total swap fees all time in USD.
         /// </summary>
+        /// <value>Total swap fees all time in USD.</value>
         [DataMember(Name="total_fees_usd", EmitDefaultValue=true)]
         public string TotalFeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalFeesEth
+        /// All volume even through less reliable USD values.
         /// </summary>
+        /// <value>All volume even through less reliable USD values.</value>
         [DataMember(Name="total_fees_eth", EmitDefaultValue=true)]
         public string TotalFeesEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets UntrackedVolumeUsd
+        /// All volume even through less reliable USD values.
         /// </summary>
+        /// <value>All volume even through less reliable USD values.</value>
         [DataMember(Name="untracked_volume_usd", EmitDefaultValue=true)]
         public string UntrackedVolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsd
+        /// Total value locked derived in USD.
         /// </summary>
+        /// <value>Total value locked derived in USD.</value>
         [DataMember(Name="total_value_locked_usd", EmitDefaultValue=true)]
         public string TotalValueLockedUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedEth
+        /// Total value locked derived in ETH.
         /// </summary>
+        /// <value>Total value locked derived in ETH.</value>
         [DataMember(Name="total_value_locked_eth", EmitDefaultValue=true)]
         public string TotalValueLockedEth { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedUsdUntracked
+        /// Total value locked derived in USD untracked.
         /// </summary>
+        /// <value>Total value locked derived in USD untracked.</value>
         [DataMember(Name="total_value_locked_usd_untracked", EmitDefaultValue=true)]
         public string TotalValueLockedUsdUntracked { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalValueLockedEthUntracked
+        /// Total value locked derived in ETH untracked.
         /// </summary>
+        /// <value>Total value locked derived in ETH untracked.</value>
         [DataMember(Name="total_value_locked_eth_untracked", EmitDefaultValue=true)]
         public string TotalValueLockedEthUntracked { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// Current owner of the factory.
         /// </summary>
+        /// <value>Current owner of the factory.</value>
         [DataMember(Name="owner", EmitDefaultValue=true)]
         public string Owner { get; set; }
 

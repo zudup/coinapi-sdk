@@ -16,37 +16,37 @@ import (
 	"time"
 )
 
-// FactoryV3DTO struct for FactoryV3DTO
+// FactoryV3DTO The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 type FactoryV3DTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
 	RecvTime *time.Time `json:"recv_time,omitempty"`
-	// 
+	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// 
+	// Factory address.
 	Id NullableString `json:"id,omitempty"`
-	// 
+	// Amount of pools created.
 	PoolCount NullableString `json:"pool_count,omitempty"`
-	// 
+	// Amount of transactions all time.
 	TxCount NullableString `json:"tx_count,omitempty"`
-	// 
+	// Total volume all time in derived USD.
 	TotalVolumeUsd NullableString `json:"total_volume_usd,omitempty"`
-	// 
+	// Total volume all time in derived ETH.
 	TotalVolumeEth NullableString `json:"total_volume_eth,omitempty"`
-	// 
+	// Total swap fees all time in USD.
 	TotalFeesUsd NullableString `json:"total_fees_usd,omitempty"`
-	// 
+	// All volume even through less reliable USD values.
 	TotalFeesEth NullableString `json:"total_fees_eth,omitempty"`
-	// 
+	// All volume even through less reliable USD values.
 	UntrackedVolumeUsd NullableString `json:"untracked_volume_usd,omitempty"`
-	// 
+	// Total value locked derived in USD.
 	TotalValueLockedUsd NullableString `json:"total_value_locked_usd,omitempty"`
-	// 
+	// Total value locked derived in ETH.
 	TotalValueLockedEth NullableString `json:"total_value_locked_eth,omitempty"`
-	// 
+	// Total value locked derived in USD untracked.
 	TotalValueLockedUsdUntracked NullableString `json:"total_value_locked_usd_untracked,omitempty"`
-	// 
+	// Total value locked derived in ETH untracked.
 	TotalValueLockedEthUntracked NullableString `json:"total_value_locked_eth_untracked,omitempty"`
-	// 
+	// Current owner of the factory.
 	Owner NullableString `json:"owner,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
@@ -71,7 +71,7 @@ func NewFactoryV3DTOWithDefaults() *FactoryV3DTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *FactoryV3DTO) GetEntryTime() time.Time {
-	if o == nil || o.EntryTime == nil {
+	if o == nil || isNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -81,15 +81,15 @@ func (o *FactoryV3DTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FactoryV3DTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || o.EntryTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EntryTime) {
+    return nil, false
 	}
 	return o.EntryTime, true
 }
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *FactoryV3DTO) HasEntryTime() bool {
-	if o != nil && o.EntryTime != nil {
+	if o != nil && !isNil(o.EntryTime) {
 		return true
 	}
 
@@ -103,7 +103,7 @@ func (o *FactoryV3DTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *FactoryV3DTO) GetRecvTime() time.Time {
-	if o == nil || o.RecvTime == nil {
+	if o == nil || isNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -113,15 +113,15 @@ func (o *FactoryV3DTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FactoryV3DTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || o.RecvTime == nil {
-		return nil, false
+	if o == nil || isNil(o.RecvTime) {
+    return nil, false
 	}
 	return o.RecvTime, true
 }
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *FactoryV3DTO) HasRecvTime() bool {
-	if o != nil && o.RecvTime != nil {
+	if o != nil && !isNil(o.RecvTime) {
 		return true
 	}
 
@@ -135,7 +135,7 @@ func (o *FactoryV3DTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *FactoryV3DTO) GetBlockNumber() int64 {
-	if o == nil || o.BlockNumber == nil {
+	if o == nil || isNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -145,15 +145,15 @@ func (o *FactoryV3DTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FactoryV3DTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || o.BlockNumber == nil {
-		return nil, false
+	if o == nil || isNil(o.BlockNumber) {
+    return nil, false
 	}
 	return o.BlockNumber, true
 }
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *FactoryV3DTO) HasBlockNumber() bool {
-	if o != nil && o.BlockNumber != nil {
+	if o != nil && !isNil(o.BlockNumber) {
 		return true
 	}
 
@@ -167,7 +167,7 @@ func (o *FactoryV3DTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetId() string {
-	if o == nil || o.Id.Get() == nil {
+	if o == nil || isNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -179,7 +179,7 @@ func (o *FactoryV3DTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetIdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +209,7 @@ func (o *FactoryV3DTO) UnsetId() {
 
 // GetPoolCount returns the PoolCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetPoolCount() string {
-	if o == nil || o.PoolCount.Get() == nil {
+	if o == nil || isNil(o.PoolCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -221,7 +221,7 @@ func (o *FactoryV3DTO) GetPoolCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetPoolCountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.PoolCount.Get(), o.PoolCount.IsSet()
 }
@@ -251,7 +251,7 @@ func (o *FactoryV3DTO) UnsetPoolCount() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTxCount() string {
-	if o == nil || o.TxCount.Get() == nil {
+	if o == nil || isNil(o.TxCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -263,7 +263,7 @@ func (o *FactoryV3DTO) GetTxCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTxCountOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TxCount.Get(), o.TxCount.IsSet()
 }
@@ -293,7 +293,7 @@ func (o *FactoryV3DTO) UnsetTxCount() {
 
 // GetTotalVolumeUsd returns the TotalVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalVolumeUsd() string {
-	if o == nil || o.TotalVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.TotalVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -305,7 +305,7 @@ func (o *FactoryV3DTO) GetTotalVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalVolumeUsd.Get(), o.TotalVolumeUsd.IsSet()
 }
@@ -335,7 +335,7 @@ func (o *FactoryV3DTO) UnsetTotalVolumeUsd() {
 
 // GetTotalVolumeEth returns the TotalVolumeEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalVolumeEth() string {
-	if o == nil || o.TotalVolumeEth.Get() == nil {
+	if o == nil || isNil(o.TotalVolumeEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -347,7 +347,7 @@ func (o *FactoryV3DTO) GetTotalVolumeEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalVolumeEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalVolumeEth.Get(), o.TotalVolumeEth.IsSet()
 }
@@ -377,7 +377,7 @@ func (o *FactoryV3DTO) UnsetTotalVolumeEth() {
 
 // GetTotalFeesUsd returns the TotalFeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalFeesUsd() string {
-	if o == nil || o.TotalFeesUsd.Get() == nil {
+	if o == nil || isNil(o.TotalFeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -389,7 +389,7 @@ func (o *FactoryV3DTO) GetTotalFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalFeesUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalFeesUsd.Get(), o.TotalFeesUsd.IsSet()
 }
@@ -419,7 +419,7 @@ func (o *FactoryV3DTO) UnsetTotalFeesUsd() {
 
 // GetTotalFeesEth returns the TotalFeesEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalFeesEth() string {
-	if o == nil || o.TotalFeesEth.Get() == nil {
+	if o == nil || isNil(o.TotalFeesEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -431,7 +431,7 @@ func (o *FactoryV3DTO) GetTotalFeesEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalFeesEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalFeesEth.Get(), o.TotalFeesEth.IsSet()
 }
@@ -461,7 +461,7 @@ func (o *FactoryV3DTO) UnsetTotalFeesEth() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetUntrackedVolumeUsd() string {
-	if o == nil || o.UntrackedVolumeUsd.Get() == nil {
+	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -473,7 +473,7 @@ func (o *FactoryV3DTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -503,7 +503,7 @@ func (o *FactoryV3DTO) UnsetUntrackedVolumeUsd() {
 
 // GetTotalValueLockedUsd returns the TotalValueLockedUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalValueLockedUsd() string {
-	if o == nil || o.TotalValueLockedUsd.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -515,7 +515,7 @@ func (o *FactoryV3DTO) GetTotalValueLockedUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalValueLockedUsdOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedUsd.Get(), o.TotalValueLockedUsd.IsSet()
 }
@@ -545,7 +545,7 @@ func (o *FactoryV3DTO) UnsetTotalValueLockedUsd() {
 
 // GetTotalValueLockedEth returns the TotalValueLockedEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalValueLockedEth() string {
-	if o == nil || o.TotalValueLockedEth.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -557,7 +557,7 @@ func (o *FactoryV3DTO) GetTotalValueLockedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalValueLockedEthOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedEth.Get(), o.TotalValueLockedEth.IsSet()
 }
@@ -587,7 +587,7 @@ func (o *FactoryV3DTO) UnsetTotalValueLockedEth() {
 
 // GetTotalValueLockedUsdUntracked returns the TotalValueLockedUsdUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalValueLockedUsdUntracked() string {
-	if o == nil || o.TotalValueLockedUsdUntracked.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedUsdUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -599,7 +599,7 @@ func (o *FactoryV3DTO) GetTotalValueLockedUsdUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalValueLockedUsdUntrackedOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedUsdUntracked.Get(), o.TotalValueLockedUsdUntracked.IsSet()
 }
@@ -629,7 +629,7 @@ func (o *FactoryV3DTO) UnsetTotalValueLockedUsdUntracked() {
 
 // GetTotalValueLockedEthUntracked returns the TotalValueLockedEthUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetTotalValueLockedEthUntracked() string {
-	if o == nil || o.TotalValueLockedEthUntracked.Get() == nil {
+	if o == nil || isNil(o.TotalValueLockedEthUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -641,7 +641,7 @@ func (o *FactoryV3DTO) GetTotalValueLockedEthUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetTotalValueLockedEthUntrackedOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.TotalValueLockedEthUntracked.Get(), o.TotalValueLockedEthUntracked.IsSet()
 }
@@ -671,7 +671,7 @@ func (o *FactoryV3DTO) UnsetTotalValueLockedEthUntracked() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *FactoryV3DTO) GetOwner() string {
-	if o == nil || o.Owner.Get() == nil {
+	if o == nil || isNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -683,7 +683,7 @@ func (o *FactoryV3DTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *FactoryV3DTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-		return nil, false
+    return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -713,7 +713,7 @@ func (o *FactoryV3DTO) UnsetOwner() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *FactoryV3DTO) GetVid() int64 {
-	if o == nil || o.Vid == nil {
+	if o == nil || isNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -723,15 +723,15 @@ func (o *FactoryV3DTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FactoryV3DTO) GetVidOk() (*int64, bool) {
-	if o == nil || o.Vid == nil {
-		return nil, false
+	if o == nil || isNil(o.Vid) {
+    return nil, false
 	}
 	return o.Vid, true
 }
 
 // HasVid returns a boolean if a field has been set.
 func (o *FactoryV3DTO) HasVid() bool {
-	if o != nil && o.Vid != nil {
+	if o != nil && !isNil(o.Vid) {
 		return true
 	}
 
@@ -745,13 +745,13 @@ func (o *FactoryV3DTO) SetVid(v int64) {
 
 func (o FactoryV3DTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EntryTime != nil {
+	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if o.RecvTime != nil {
+	if !isNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if o.BlockNumber != nil {
+	if !isNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -793,7 +793,7 @@ func (o FactoryV3DTO) MarshalJSON() ([]byte, error) {
 	if o.Owner.IsSet() {
 		toSerialize["owner"] = o.Owner.Get()
 	}
-	if o.Vid != nil {
+	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return json.Marshal(toSerialize)

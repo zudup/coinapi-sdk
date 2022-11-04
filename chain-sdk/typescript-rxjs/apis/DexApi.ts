@@ -31,13 +31,6 @@ export interface DappsDexOrdersHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface DappsDexPoiHistoricalGetRequest {
-    startBlock?: number;
-    endBlock?: number;
-    startDate?: string;
-    endDate?: string;
-}
-
 export interface DappsDexPricesHistoricalGetRequest {
     startBlock?: number;
     endBlock?: number;
@@ -140,26 +133,6 @@ export class DexApi extends BaseAPI {
 
         return this.request<void>({
             url: '/dapps/dex/orders/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsDexPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsDexPoiHistoricalGetRequest): Observable<void>
-    dappsDexPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsDexPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsDexPoiHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsDexPoiHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-
-        return this.request<void>({
-            url: '/dapps/dex/poi/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

@@ -1,7 +1,7 @@
 /*
  * bundle_v3_dto.h
  *
- * 
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  */
 
 #ifndef _bundle_v3_dto_H_

@@ -13,50 +13,50 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Ticks are the boundaries between discrete areas in price space.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
-
+Identifier, format: <pool address>#<tick index>
 .PARAMETER PoolAddress
-
+Pool address.
 .PARAMETER TickIdx
 No description available.
 .PARAMETER Pool
-
+Pool address.
 .PARAMETER LiquidityGross
 No description available.
 .PARAMETER LiquidityNet
 No description available.
 .PARAMETER Price0
-
+Calculated price of token0 of tick within this pool - constant.
 .PARAMETER Price1
-
+Calculated price of token1 of tick within this pool - constant.
 .PARAMETER VolumeToken0
-
+Lifetime volume of token0 with this tick in range.
 .PARAMETER VolumeToken1
-
+Lifetime volume of token1 with this tick in range.
 .PARAMETER VolumeUsd
-
+Lifetime volume in derived USD with this tick in range.
 .PARAMETER UntrackedVolumeUsd
-
+Lifetime volume in untracked USD with this tick in range.
 .PARAMETER FeesUsd
-
+Fees in USD.
 .PARAMETER CollectedFeesToken0
-
+All time collected fees in token0.
 .PARAMETER CollectedFeesToken1
-
+All time collected fees in token1.
 .PARAMETER CollectedFeesUsd
-
+All time collected fees in USD.
 .PARAMETER CreatedAtTimestamp
-
+Created time.
 .PARAMETER LiquidityProviderCount
 No description available.
 .PARAMETER FeeGrowthOutside0x128

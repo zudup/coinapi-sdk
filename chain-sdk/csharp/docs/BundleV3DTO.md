@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
-**BlockNumber** | **long** |  | [optional] 
+**BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
 **Id** | **string** |  | [optional] 
-**EthPriceUsd** | **string** |  | [optional] 
+**EthPriceUsd** | **string** | Price of ETH in usd. | [optional] 
 **Vid** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)

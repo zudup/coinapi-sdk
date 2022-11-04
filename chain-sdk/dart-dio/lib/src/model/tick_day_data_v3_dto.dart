@@ -8,24 +8,24 @@ import 'package:built_value/serializer.dart';
 
 part 'tick_day_data_v3_dto.g.dart';
 
-/// TickDayDataV3DTO
+/// Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 ///
 /// Properties:
 /// * [entryTime] 
 /// * [recvTime] 
-/// * [blockNumber] - 
-/// * [id] - 
-/// * [date] - 
-/// * [pool] - 
-/// * [tick] - 
-/// * [liquidityGross] - 
-/// * [liquidityNet] - 
-/// * [volumeToken0] - 
-/// * [volumeToken1] - 
-/// * [volumeUsd] - 
-/// * [feesUsd] - 
-/// * [feeGrowthOutside0x128] - 
-/// * [feeGrowthOutside1x128] - 
+/// * [blockNumber] - Number of block in which entity was recorded.
+/// * [id] - Identifier, format: <pool address>-<tick index>-<timestamp>.
+/// * [date] - Timestamp rounded to current day by dividing by 86400.
+/// * [pool] - Pointer to pool.
+/// * [tick] - Pointer to tick.
+/// * [liquidityGross] - Total liquidity pool has as tick lower or upper at end of period.
+/// * [liquidityNet] - How much liquidity changes when tick crossed at end of period.
+/// * [volumeToken0] - Hourly volume of token0 with this tick in range.
+/// * [volumeToken1] - Hourly volume of token1 with this tick in range.
+/// * [volumeUsd] - Hourly volume in derived USD with this tick in range.
+/// * [feesUsd] - Fees in USD.
+/// * [feeGrowthOutside0x128] - Variable needed for fee computation.
+/// * [feeGrowthOutside1x128] - Variable needed for fee computation.
 /// * [vid] - 
 @BuiltValue()
 abstract class TickDayDataV3DTO implements Built<TickDayDataV3DTO, TickDayDataV3DTOBuilder> {
@@ -35,55 +35,55 @@ abstract class TickDayDataV3DTO implements Built<TickDayDataV3DTO, TickDayDataV3
   @BuiltValueField(wireName: r'recv_time')
   DateTime? get recvTime;
 
-  /// 
+  /// Number of block in which entity was recorded.
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// 
+  /// Identifier, format: <pool address>-<tick index>-<timestamp>.
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  /// 
+  /// Timestamp rounded to current day by dividing by 86400.
   @BuiltValueField(wireName: r'date')
   int? get date;
 
-  /// 
+  /// Pointer to pool.
   @BuiltValueField(wireName: r'pool')
   String? get pool;
 
-  /// 
+  /// Pointer to tick.
   @BuiltValueField(wireName: r'tick')
   String? get tick;
 
-  /// 
+  /// Total liquidity pool has as tick lower or upper at end of period.
   @BuiltValueField(wireName: r'liquidity_gross')
   String? get liquidityGross;
 
-  /// 
+  /// How much liquidity changes when tick crossed at end of period.
   @BuiltValueField(wireName: r'liquidity_net')
   String? get liquidityNet;
 
-  /// 
+  /// Hourly volume of token0 with this tick in range.
   @BuiltValueField(wireName: r'volume_token_0')
   String? get volumeToken0;
 
-  /// 
+  /// Hourly volume of token1 with this tick in range.
   @BuiltValueField(wireName: r'volume_token_1')
   String? get volumeToken1;
 
-  /// 
+  /// Hourly volume in derived USD with this tick in range.
   @BuiltValueField(wireName: r'volume_usd')
   String? get volumeUsd;
 
-  /// 
+  /// Fees in USD.
   @BuiltValueField(wireName: r'fees_usd')
   String? get feesUsd;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_outside_0x128')
   String? get feeGrowthOutside0x128;
 
-  /// 
+  /// Variable needed for fee computation.
   @BuiltValueField(wireName: r'fee_growth_outside_1x128')
   String? get feeGrowthOutside1x128;
 

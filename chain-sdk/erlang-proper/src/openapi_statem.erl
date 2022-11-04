@@ -148,16 +148,6 @@ dapps_uniswapv3_mints_historical_get_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_poi_historical_get
-%%==============================================================================
-
-dapps_uniswapv3_poi_historical_get() ->
-  openapi_api:dapps_uniswapv3_poi_historical_get().
-
-dapps_uniswapv3_poi_historical_get_args(_S) ->
-  [].
-
-%%==============================================================================
 %% dapps_uniswapv3_pool_day_data_historical_get
 %%==============================================================================
 

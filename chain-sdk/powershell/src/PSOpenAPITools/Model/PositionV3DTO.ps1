@@ -13,48 +13,48 @@ No summary available.
 
 .DESCRIPTION
 
-No description available.
+Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
 
 .PARAMETER EntryTime
 No description available.
 .PARAMETER RecvTime
 No description available.
 .PARAMETER BlockNumber
-
+Number of block in which entity was recorded.
 .PARAMETER Id
-
+NFT token identifier.
 .PARAMETER Owner
-
+Owner of the NFT.
 .PARAMETER Pool
-
+Pool position is within.
 .PARAMETER Token0
-
+Reference to token0 as stored in pair contract.
 .PARAMETER Token1
-
+Reference to token1 as stored in pair contract.
 .PARAMETER TickLower
-
+Lower tick of the position.
 .PARAMETER TickUpper
-
+Upper tick of the position.
 .PARAMETER Liquidity
-
+Total position liquidity.
 .PARAMETER DepositedToken0
-
+Amount of token 0 ever deposited to position.
 .PARAMETER DepositedToken1
-
+Amount of token 1 ever deposited to position.
 .PARAMETER WithdrawnToken0
-
+Amount of token 0 ever withdrawn from position (without fees).
 .PARAMETER WithdrawnToken1
-
+Amount of token 1 ever withdrawn from position (without fees).
 .PARAMETER CollectedFeesToken0
-
+All time collected fees in token0.
 .PARAMETER CollectedFeesToken1
-
+All time collected fees in token1.
 .PARAMETER Transaction
-
+Transaction in which the position was initialized.
 .PARAMETER FeeGrowthInside0LastX128
-
+Variable needed for fee computation.
 .PARAMETER FeeGrowthInside1LastX128
-
+Variable needed for fee computation.
 .PARAMETER Vid
 
 .OUTPUTS

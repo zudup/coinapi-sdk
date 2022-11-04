@@ -128,16 +128,6 @@
         done();
       });
     });
-    describe('dappsSushiswapPoiHistoricalGet', function() {
-      it('should call dappsSushiswapPoiHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsSushiswapPoiHistoricalGet
-        //instance.dappsSushiswapPoiHistoricalGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dappsSushiswapPoolDayDataHistoricalGet', function() {
       it('should call dappsSushiswapPoolDayDataHistoricalGet successfully', function(done) {
         //uncomment below and update the code to test dappsSushiswapPoolDayDataHistoricalGet

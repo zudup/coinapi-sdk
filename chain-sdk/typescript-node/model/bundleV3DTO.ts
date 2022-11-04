@@ -12,11 +12,14 @@
 
 import { RequestFile } from './models';
 
+/**
+* The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+*/
 export class BundleV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
@@ -24,7 +27,7 @@ export class BundleV3DTO {
     */
     'id'?: string | null;
     /**
-    * 
+    * Price of ETH in usd.
     */
     'ethPriceUsd'?: string | null;
     /**

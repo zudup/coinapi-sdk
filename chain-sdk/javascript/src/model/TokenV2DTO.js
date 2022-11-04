@@ -101,8 +101,64 @@ class TokenV2DTO {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>TokenV2DTO</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TokenV2DTO</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['symbol'] && !(typeof data['symbol'] === 'string' || data['symbol'] instanceof String)) {
+            throw new Error("Expected the field `symbol` to be a primitive type in the JSON string but got " + data['symbol']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // validate the optional field `total_supply`
+        if (data['total_supply']) { // data not null
+          BigInteger.validateJSON(data['total_supply']);
+        }
+        // ensure the json data is a string
+        if (data['trade_volume'] && !(typeof data['trade_volume'] === 'string' || data['trade_volume'] instanceof String)) {
+            throw new Error("Expected the field `trade_volume` to be a primitive type in the JSON string but got " + data['trade_volume']);
+        }
+        // ensure the json data is a string
+        if (data['trade_volume_usd'] && !(typeof data['trade_volume_usd'] === 'string' || data['trade_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `trade_volume_usd` to be a primitive type in the JSON string but got " + data['trade_volume_usd']);
+        }
+        // ensure the json data is a string
+        if (data['untracked_volume_usd'] && !(typeof data['untracked_volume_usd'] === 'string' || data['untracked_volume_usd'] instanceof String)) {
+            throw new Error("Expected the field `untracked_volume_usd` to be a primitive type in the JSON string but got " + data['untracked_volume_usd']);
+        }
+        // validate the optional field `tx_count`
+        if (data['tx_count']) { // data not null
+          BigInteger.validateJSON(data['tx_count']);
+        }
+        // ensure the json data is a string
+        if (data['total_liquidity'] && !(typeof data['total_liquidity'] === 'string' || data['total_liquidity'] instanceof String)) {
+            throw new Error("Expected the field `total_liquidity` to be a primitive type in the JSON string but got " + data['total_liquidity']);
+        }
+        // ensure the json data is a string
+        if (data['derived_eth'] && !(typeof data['derived_eth'] === 'string' || data['derived_eth'] instanceof String)) {
+            throw new Error("Expected the field `derived_eth` to be a primitive type in the JSON string but got " + data['derived_eth']);
+        }
+        // ensure the json data is a string
+        if (data['token_symbol'] && !(typeof data['token_symbol'] === 'string' || data['token_symbol'] instanceof String)) {
+            throw new Error("Expected the field `token_symbol` to be a primitive type in the JSON string but got " + data['token_symbol']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} entry_time
@@ -115,7 +171,7 @@ TokenV2DTO.prototype['entry_time'] = undefined;
 TokenV2DTO.prototype['recv_time'] = undefined;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @member {Number} block_number
  */
 TokenV2DTO.prototype['block_number'] = undefined;

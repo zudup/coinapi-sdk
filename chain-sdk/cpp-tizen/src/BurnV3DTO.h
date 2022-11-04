@@ -1,7 +1,7 @@
 /*
  * BurnV3DTO.h
  *
- * 
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
 
 #ifndef _BurnV3DTO_H_
@@ -20,7 +20,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  *
  *  \ingroup Models
  *
@@ -59,116 +59,116 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get 
+	/*! \brief Get Transaction hash + '#' + index in mints Transaction array.
 	 */
 	std::string getId();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction hash + '#' + index in mints Transaction array.
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Transaction burn was included in.
 	 */
 	std::string getTransaction();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction burn was included in.
 	 */
 	void setTransaction(std::string  transaction);
-	/*! \brief Get 
+	/*! \brief Get Pool position is within.
 	 */
 	std::string getPool();
 
-	/*! \brief Set 
+	/*! \brief Set Pool position is within.
 	 */
 	void setPool(std::string  pool);
-	/*! \brief Get 
+	/*! \brief Get Reference to token0 as stored in pool contract.
 	 */
 	std::string getToken0();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token0 as stored in pool contract.
 	 */
 	void setToken0(std::string  token_0);
-	/*! \brief Get 
+	/*! \brief Get Reference to token1 as stored in pool contract.
 	 */
 	std::string getToken1();
 
-	/*! \brief Set 
+	/*! \brief Set Reference to token1 as stored in pool contract.
 	 */
 	void setToken1(std::string  token_1);
-	/*! \brief Get 
+	/*! \brief Get Timestamp.
 	 */
 	std::string getTimestamp();
 
-	/*! \brief Set 
+	/*! \brief Set Timestamp.
 	 */
 	void setTimestamp(std::string  timestamp);
-	/*! \brief Get 
+	/*! \brief Get Owner of position where liquidity was burned.
 	 */
 	std::string getOwner();
 
-	/*! \brief Set 
+	/*! \brief Set Owner of position where liquidity was burned.
 	 */
 	void setOwner(std::string  owner);
-	/*! \brief Get 
+	/*! \brief Get Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 	 */
 	std::string getOrigin();
 
-	/*! \brief Set 
+	/*! \brief Set Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
 	 */
 	void setOrigin(std::string  origin);
-	/*! \brief Get 
+	/*! \brief Get Amount of liquidity burned.
 	 */
 	std::string getAmount();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of liquidity burned.
 	 */
 	void setAmount(std::string  amount);
-	/*! \brief Get 
+	/*! \brief Get Amount of token 0 burned.
 	 */
 	std::string getAmount0();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token 0 burned.
 	 */
 	void setAmount0(std::string  amount_0);
-	/*! \brief Get 
+	/*! \brief Get Amount of token 1 burned.
 	 */
 	std::string getAmount1();
 
-	/*! \brief Set 
+	/*! \brief Set Amount of token 1 burned.
 	 */
 	void setAmount1(std::string  amount_1);
-	/*! \brief Get 
+	/*! \brief Get Derived amount based on available prices of tokens.
 	 */
 	std::string getAmountUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Derived amount based on available prices of tokens.
 	 */
 	void setAmountUsd(std::string  amount_usd);
-	/*! \brief Get 
+	/*! \brief Get Lower tick of position.
 	 */
 	std::string getTickLower();
 
-	/*! \brief Set 
+	/*! \brief Set Lower tick of position.
 	 */
 	void setTickLower(std::string  tick_lower);
-	/*! \brief Get 
+	/*! \brief Get Upper tick of position.
 	 */
 	std::string getTickUpper();
 
-	/*! \brief Set 
+	/*! \brief Set Upper tick of position.
 	 */
 	void setTickUpper(std::string  tick_upper);
-	/*! \brief Get 
+	/*! \brief Get Position within the transactions.
 	 */
 	std::string getLogIndex();
 
-	/*! \brief Set 
+	/*! \brief Set Position within the transactions.
 	 */
 	void setLogIndex(std::string  log_index);
 	/*! \brief Get 

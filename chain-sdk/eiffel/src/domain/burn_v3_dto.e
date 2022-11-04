@@ -24,37 +24,37 @@ feature --Access
     recv_time: detachable DATE_TIME
       
  	block_number: INTEGER_64
-    	 -- 
+    	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- 
+      -- Transaction hash + '#' + index in mints Transaction array.
     transaction: detachable STRING_32
-      -- 
+      -- Transaction burn was included in.
     pool: detachable STRING_32
-      -- 
+      -- Pool position is within.
     token_0: detachable STRING_32
-      -- 
+      -- Reference to token0 as stored in pool contract.
     token_1: detachable STRING_32
-      -- 
+      -- Reference to token1 as stored in pool contract.
     timestamp: detachable STRING_32
-      -- 
+      -- Timestamp.
     owner: detachable STRING_32
-      -- 
+      -- Owner of position where liquidity was burned.
     origin: detachable STRING_32
-      -- 
+      -- Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
     amount: detachable STRING_32
-      -- 
+      -- Amount of liquidity burned.
     amount_0: detachable STRING_32
-      -- 
+      -- Amount of token 0 burned.
     amount_1: detachable STRING_32
-      -- 
+      -- Amount of token 1 burned.
     amount_usd: detachable STRING_32
-      -- 
+      -- Derived amount based on available prices of tokens.
     tick_lower: detachable STRING_32
-      -- 
+      -- Lower tick of position.
     tick_upper: detachable STRING_32
-      -- 
+      -- Upper tick of position.
     log_index: detachable STRING_32
-      -- 
+      -- Position within the transactions.
  	vid: INTEGER_64
     	 -- 
 

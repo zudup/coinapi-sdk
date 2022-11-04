@@ -1,7 +1,7 @@
 /*
  * BundleV3DTO.h
  *
- * 
+ * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  */
 
 #ifndef _BundleV3DTO_H_
@@ -20,7 +20,7 @@ namespace Tizen {
 namespace ArtikCloud {
 
 
-/*! \brief 
+/*! \brief The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  *
  *  \ingroup Models
  *
@@ -59,11 +59,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setRecvTime(std::string  recv_time);
-	/*! \brief Get 
+	/*! \brief Get Number of block in which entity was recorded.
 	 */
 	long long getBlockNumber();
 
-	/*! \brief Set 
+	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
 	/*! \brief Get 
@@ -73,11 +73,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setId(std::string  id);
-	/*! \brief Get 
+	/*! \brief Get Price of ETH in usd.
 	 */
 	std::string getEthPriceUsd();
 
-	/*! \brief Set 
+	/*! \brief Set Price of ETH in usd.
 	 */
 	void setEthPriceUsd(std::string  eth_price_usd);
 	/*! \brief Get 

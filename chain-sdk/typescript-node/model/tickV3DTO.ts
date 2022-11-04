@@ -13,11 +13,14 @@
 import { RequestFile } from './models';
 import { BigInteger } from './bigInteger';
 
+/**
+* Ticks are the boundaries between discrete areas in price space.
+*/
 export class TickV3DTO {
     'entryTime'?: Date;
     'recvTime'?: Date;
     /**
-    * 
+    * Number of block in which entity was recorded.
     */
     'blockNumber'?: number;
     /**
@@ -25,62 +28,62 @@ export class TickV3DTO {
     */
     'vid'?: number;
     /**
-    * 
+    * Identifier, format: <pool address>#<tick index>
     */
     'id'?: string | null;
     /**
-    * 
+    * Pool address.
     */
     'poolAddress'?: string | null;
     'tickIdx'?: BigInteger;
     /**
-    * 
+    * Pool address.
     */
     'pool'?: string | null;
     'liquidityGross'?: BigInteger;
     'liquidityNet'?: BigInteger;
     /**
-    * 
+    * Calculated price of token0 of tick within this pool - constant.
     */
     'price0'?: string | null;
     /**
-    * 
+    * Calculated price of token1 of tick within this pool - constant.
     */
     'price1'?: string | null;
     /**
-    * 
+    * Lifetime volume of token0 with this tick in range.
     */
     'volumeToken0'?: string | null;
     /**
-    * 
+    * Lifetime volume of token1 with this tick in range.
     */
     'volumeToken1'?: string | null;
     /**
-    * 
+    * Lifetime volume in derived USD with this tick in range.
     */
     'volumeUsd'?: string | null;
     /**
-    * 
+    * Lifetime volume in untracked USD with this tick in range.
     */
     'untrackedVolumeUsd'?: string | null;
     /**
-    * 
+    * Fees in USD.
     */
     'feesUsd'?: string | null;
     /**
-    * 
+    * All time collected fees in token0.
     */
     'collectedFeesToken0'?: string | null;
     /**
-    * 
+    * All time collected fees in token1.
     */
     'collectedFeesToken1'?: string | null;
     /**
-    * 
+    * All time collected fees in USD.
     */
     'collectedFeesUsd'?: string | null;
     /**
-    * 
+    * Created time.
     */
     'createdAtTimestamp'?: Date;
     'liquidityProviderCount'?: BigInteger;

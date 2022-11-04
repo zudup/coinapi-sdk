@@ -1,7 +1,7 @@
 /*
  * factory_v3_dto.h
  *
- * 
+ * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
 
 #ifndef _factory_v3_dto_H_

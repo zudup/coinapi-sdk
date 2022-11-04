@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// PoolDayDataV3DTO
+    /// Data accumulated and condensed into day stats for each pool.
     /// </summary>
     [DataContract(Name = "PoolDayDataV3DTO")]
     public partial class PoolDayDataV3DTO : IEquatable<PoolDayDataV3DTO>, IValidatableObject
@@ -37,27 +37,27 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
-        /// <param name="blockNumber">blockNumber.</param>
-        /// <param name="id">id.</param>
-        /// <param name="date">date.</param>
-        /// <param name="pool">pool.</param>
-        /// <param name="liquidity">liquidity.</param>
-        /// <param name="sqrtPrice">sqrtPrice.</param>
-        /// <param name="token0Price">token0Price.</param>
-        /// <param name="token1Price">token1Price.</param>
-        /// <param name="tick">tick.</param>
-        /// <param name="feeGrowthGlobal0x128">feeGrowthGlobal0x128.</param>
-        /// <param name="feeGrowthGlobal1x128">feeGrowthGlobal1x128.</param>
-        /// <param name="tvlUsd">tvlUsd.</param>
-        /// <param name="volumeToken0">volumeToken0.</param>
-        /// <param name="volumeToken1">volumeToken1.</param>
-        /// <param name="volumeUsd">volumeUsd.</param>
-        /// <param name="feesUsd">feesUsd.</param>
-        /// <param name="txCount">txCount.</param>
-        /// <param name="open">open.</param>
-        /// <param name="high">high.</param>
-        /// <param name="low">low.</param>
-        /// <param name="close">close.</param>
+        /// <param name="blockNumber">Number of block in which entity was recorded..</param>
+        /// <param name="id">Identifier, format: &lt;pool address&gt;-&lt;day id&gt;..</param>
+        /// <param name="date">Timestamp rounded to current day by dividing by 86400.</param>
+        /// <param name="pool">Pointer to pool..</param>
+        /// <param name="liquidity">In range liquidity at end of period..</param>
+        /// <param name="sqrtPrice">Current price tracker at end of period..</param>
+        /// <param name="token0Price">Price of token0 - derived from sqrtPrice..</param>
+        /// <param name="token1Price">Price of token1 - derived from sqrtPrice..</param>
+        /// <param name="tick">Current tick at end of period..</param>
+        /// <param name="feeGrowthGlobal0x128">Tracker for global fee growth..</param>
+        /// <param name="feeGrowthGlobal1x128">Tracker for global fee growth..</param>
+        /// <param name="tvlUsd">Total value locked derived in USD at end of period..</param>
+        /// <param name="volumeToken0">Volume in token0..</param>
+        /// <param name="volumeToken1">Volume in token1..</param>
+        /// <param name="volumeUsd">Volume in USD..</param>
+        /// <param name="feesUsd">Fees in USD..</param>
+        /// <param name="txCount">Number of transactions during period..</param>
+        /// <param name="open">Opening price of token0..</param>
+        /// <param name="high">High price of token0..</param>
+        /// <param name="low">Low price of token0..</param>
+        /// <param name="close">Close price of token0..</param>
         /// <param name="vid">vid.</param>
         public PoolDayDataV3DTO(DateTime entryTime = default(DateTime), DateTime recvTime = default(DateTime), long blockNumber = default(long), string id = default(string), int date = default(int), string pool = default(string), string liquidity = default(string), string sqrtPrice = default(string), string token0Price = default(string), string token1Price = default(string), string tick = default(string), string feeGrowthGlobal0x128 = default(string), string feeGrowthGlobal1x128 = default(string), string tvlUsd = default(string), string volumeToken0 = default(string), string volumeToken1 = default(string), string volumeUsd = default(string), string feesUsd = default(string), string txCount = default(string), string open = default(string), string high = default(string), string low = default(string), string close = default(string), long vid = default(long))
         {
@@ -100,128 +100,149 @@ namespace CoinAPI.EMS.REST.V1.Model
         public DateTime RecvTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockNumber
+        /// Number of block in which entity was recorded.
         /// </summary>
+        /// <value>Number of block in which entity was recorded.</value>
         [DataMember(Name = "block_number", EmitDefaultValue = false)]
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
         /// </summary>
+        /// <value>Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// Timestamp rounded to current day by dividing by 86400
         /// </summary>
+        /// <value>Timestamp rounded to current day by dividing by 86400</value>
         [DataMember(Name = "date", EmitDefaultValue = false)]
         public int Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pool
+        /// Pointer to pool.
         /// </summary>
+        /// <value>Pointer to pool.</value>
         [DataMember(Name = "pool", EmitDefaultValue = true)]
         public string Pool { get; set; }
 
         /// <summary>
-        /// Gets or Sets Liquidity
+        /// In range liquidity at end of period.
         /// </summary>
+        /// <value>In range liquidity at end of period.</value>
         [DataMember(Name = "liquidity", EmitDefaultValue = true)]
         public string Liquidity { get; set; }
 
         /// <summary>
-        /// Gets or Sets SqrtPrice
+        /// Current price tracker at end of period.
         /// </summary>
+        /// <value>Current price tracker at end of period.</value>
         [DataMember(Name = "sqrt_price", EmitDefaultValue = true)]
         public string SqrtPrice { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token0Price
+        /// Price of token0 - derived from sqrtPrice.
         /// </summary>
+        /// <value>Price of token0 - derived from sqrtPrice.</value>
         [DataMember(Name = "token_0_price", EmitDefaultValue = true)]
         public string Token0Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token1Price
+        /// Price of token1 - derived from sqrtPrice.
         /// </summary>
+        /// <value>Price of token1 - derived from sqrtPrice.</value>
         [DataMember(Name = "token_1_price", EmitDefaultValue = true)]
         public string Token1Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tick
+        /// Current tick at end of period.
         /// </summary>
+        /// <value>Current tick at end of period.</value>
         [DataMember(Name = "tick", EmitDefaultValue = true)]
         public string Tick { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthGlobal0x128
+        /// Tracker for global fee growth.
         /// </summary>
+        /// <value>Tracker for global fee growth.</value>
         [DataMember(Name = "fee_growth_global_0x128", EmitDefaultValue = true)]
         public string FeeGrowthGlobal0x128 { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeeGrowthGlobal1x128
+        /// Tracker for global fee growth.
         /// </summary>
+        /// <value>Tracker for global fee growth.</value>
         [DataMember(Name = "fee_growth_global_1x128", EmitDefaultValue = true)]
         public string FeeGrowthGlobal1x128 { get; set; }
 
         /// <summary>
-        /// Gets or Sets TvlUsd
+        /// Total value locked derived in USD at end of period.
         /// </summary>
+        /// <value>Total value locked derived in USD at end of period.</value>
         [DataMember(Name = "tvl_usd", EmitDefaultValue = true)]
         public string TvlUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken0
+        /// Volume in token0.
         /// </summary>
+        /// <value>Volume in token0.</value>
         [DataMember(Name = "volume_token_0", EmitDefaultValue = true)]
         public string VolumeToken0 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeToken1
+        /// Volume in token1.
         /// </summary>
+        /// <value>Volume in token1.</value>
         [DataMember(Name = "volume_token_1", EmitDefaultValue = true)]
         public string VolumeToken1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeUsd
+        /// Volume in USD.
         /// </summary>
+        /// <value>Volume in USD.</value>
         [DataMember(Name = "volume_usd", EmitDefaultValue = true)]
         public string VolumeUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FeesUsd
+        /// Fees in USD.
         /// </summary>
+        /// <value>Fees in USD.</value>
         [DataMember(Name = "fees_usd", EmitDefaultValue = true)]
         public string FeesUsd { get; set; }
 
         /// <summary>
-        /// Gets or Sets TxCount
+        /// Number of transactions during period.
         /// </summary>
+        /// <value>Number of transactions during period.</value>
         [DataMember(Name = "tx_count", EmitDefaultValue = true)]
         public string TxCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Open
+        /// Opening price of token0.
         /// </summary>
+        /// <value>Opening price of token0.</value>
         [DataMember(Name = "open", EmitDefaultValue = true)]
         public string Open { get; set; }
 
         /// <summary>
-        /// Gets or Sets High
+        /// High price of token0.
         /// </summary>
+        /// <value>High price of token0.</value>
         [DataMember(Name = "high", EmitDefaultValue = true)]
         public string High { get; set; }
 
         /// <summary>
-        /// Gets or Sets Low
+        /// Low price of token0.
         /// </summary>
+        /// <value>Low price of token0.</value>
         [DataMember(Name = "low", EmitDefaultValue = true)]
         public string Low { get; set; }
 
         /// <summary>
-        /// Gets or Sets Close
+        /// Close price of token0.
         /// </summary>
+        /// <value>Close price of token0.</value>
         [DataMember(Name = "close", EmitDefaultValue = true)]
         public string Close { get; set; }
 

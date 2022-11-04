@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
-**block_number** | **INTEGER_64** |  | [optional] [default to null]
+**block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **vid** | **INTEGER_64** |  | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Token address concatendated with date. | [optional] [default to null]
 **date** | **INTEGER_32** | Timestamp rounded to current day by dividing by 86400. | [optional] [default to null]

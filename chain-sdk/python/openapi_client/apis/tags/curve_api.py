@@ -30,7 +30,6 @@ from openapi_client.paths.dapps_curve_gauge_weight_vote_historical.get import Da
 from openapi_client.paths.dapps_curve_gauge_withdraw_historical.get import DappsCurveGaugeWithdrawHistoricalGet
 from openapi_client.paths.dapps_curve_hourly_volume_historical.get import DappsCurveHourlyVolumeHistoricalGet
 from openapi_client.paths.dapps_curve_lp_token_historical.get import DappsCurveLpTokenHistoricalGet
-from openapi_client.paths.dapps_curve_poi_historical.get import DappsCurvePoiHistoricalGet
 from openapi_client.paths.dapps_curve_pools_historical.get import DappsCurvePoolsHistoricalGet
 from openapi_client.paths.dapps_curve_proposals_historical.get import DappsCurveProposalsHistoricalGet
 from openapi_client.paths.dapps_curve_proposals_vote_historical.get import DappsCurveProposalsVoteHistoricalGet
@@ -66,7 +65,6 @@ class CurveApi(
     DappsCurveGaugeWithdrawHistoricalGet,
     DappsCurveHourlyVolumeHistoricalGet,
     DappsCurveLpTokenHistoricalGet,
-    DappsCurvePoiHistoricalGet,
     DappsCurvePoolsHistoricalGet,
     DappsCurveProposalsHistoricalGet,
     DappsCurveProposalsVoteHistoricalGet,

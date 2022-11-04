@@ -10,7 +10,7 @@ Stores aggregated information for a specific token across all pairs that token i
 |------------ | ------------- | ------------- | -------------|
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
-|**blockNumber** | **Long** |  |  [optional] |
+|**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**vid** | **Long** |  |  [optional] |
 |**id** | **String** | Token address. |  [optional] |
 |**symbol** | **String** | Token symbol. |  [optional] |

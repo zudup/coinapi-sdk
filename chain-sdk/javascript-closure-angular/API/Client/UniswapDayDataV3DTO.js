@@ -19,7 +19,7 @@ API.Client.UniswapDayDataV3DTO.prototype.entryTime;
 API.Client.UniswapDayDataV3DTO.prototype.recvTime;
 
 /**
- * 
+ * Number of block in which entity was recorded.
  * @type {!number}
  * @export
  */

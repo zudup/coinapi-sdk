@@ -155,13 +155,6 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for dapps_curve_poi_historical_get
-  describe("dapps_curve_poi_historical_get test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dapps_curve_pools_historical_get
   describe("dapps_curve_pools_historical_get test", function()
     it("should work", function()

@@ -11,7 +11,7 @@
  */
 
 /**
- * OASTickV3DTO
+ * Ticks are the boundaries between discrete areas in price space.
  */
 public class OASTickV3DTO implements OAS.MappedProperties {
     /**
@@ -27,7 +27,7 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
@@ -39,13 +39,13 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * 
+     * Identifier, format: <pool address>#<tick index>
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Pool address.
      * @return poolAddress
      */
     public String poolAddress { get; set; }
@@ -57,7 +57,7 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public OASBigInteger tickIdx { get; set; }
 
     /**
-     * 
+     * Pool address.
      * @return pool
      */
     public String pool { get; set; }
@@ -75,67 +75,67 @@ public class OASTickV3DTO implements OAS.MappedProperties {
     public OASBigInteger liquidityNet { get; set; }
 
     /**
-     * 
+     * Calculated price of token0 of tick within this pool - constant.
      * @return price0
      */
     public String price0 { get; set; }
 
     /**
-     * 
+     * Calculated price of token1 of tick within this pool - constant.
      * @return price1
      */
     public String price1 { get; set; }
 
     /**
-     * 
+     * Lifetime volume of token0 with this tick in range.
      * @return volumeToken0
      */
     public String volumeToken0 { get; set; }
 
     /**
-     * 
+     * Lifetime volume of token1 with this tick in range.
      * @return volumeToken1
      */
     public String volumeToken1 { get; set; }
 
     /**
-     * 
+     * Lifetime volume in derived USD with this tick in range.
      * @return volumeUsd
      */
     public String volumeUsd { get; set; }
 
     /**
-     * 
+     * Lifetime volume in untracked USD with this tick in range.
      * @return untrackedVolumeUsd
      */
     public String untrackedVolumeUsd { get; set; }
 
     /**
-     * 
+     * Fees in USD.
      * @return feesUsd
      */
     public String feesUsd { get; set; }
 
     /**
-     * 
+     * All time collected fees in token0.
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * 
+     * All time collected fees in token1.
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * 
+     * All time collected fees in USD.
      * @return collectedFeesUsd
      */
     public String collectedFeesUsd { get; set; }
 
     /**
-     * 
+     * Created time.
      * @return createdAtTimestamp
      */
     public Datetime createdAtTimestamp { get; set; }

@@ -11,7 +11,7 @@
  */
 
 /**
- * OASPositionV3DTO
+ * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  */
 public class OASPositionV3DTO implements OAS.MappedProperties {
     /**
@@ -27,109 +27,109 @@ public class OASPositionV3DTO implements OAS.MappedProperties {
     public Datetime recvTime { get; set; }
 
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @return blockNumber
      */
     public Long blockNumber { get; set; }
 
     /**
-     * 
+     * NFT token identifier.
      * @return id
      */
     public String id { get; set; }
 
     /**
-     * 
+     * Owner of the NFT.
      * @return owner
      */
     public String owner { get; set; }
 
     /**
-     * 
+     * Pool position is within.
      * @return pool
      */
     public String pool { get; set; }
 
     /**
-     * 
+     * Reference to token0 as stored in pair contract.
      * @return token0
      */
     public String token0 { get; set; }
 
     /**
-     * 
+     * Reference to token1 as stored in pair contract.
      * @return token1
      */
     public String token1 { get; set; }
 
     /**
-     * 
+     * Lower tick of the position.
      * @return tickLower
      */
     public String tickLower { get; set; }
 
     /**
-     * 
+     * Upper tick of the position.
      * @return tickUpper
      */
     public String tickUpper { get; set; }
 
     /**
-     * 
+     * Total position liquidity.
      * @return liquidity
      */
     public String liquidity { get; set; }
 
     /**
-     * 
+     * Amount of token 0 ever deposited to position.
      * @return depositedToken0
      */
     public String depositedToken0 { get; set; }
 
     /**
-     * 
+     * Amount of token 1 ever deposited to position.
      * @return depositedToken1
      */
     public String depositedToken1 { get; set; }
 
     /**
-     * 
+     * Amount of token 0 ever withdrawn from position (without fees).
      * @return withdrawnToken0
      */
     public String withdrawnToken0 { get; set; }
 
     /**
-     * 
+     * Amount of token 1 ever withdrawn from position (without fees).
      * @return withdrawnToken1
      */
     public String withdrawnToken1 { get; set; }
 
     /**
-     * 
+     * All time collected fees in token0.
      * @return collectedFeesToken0
      */
     public String collectedFeesToken0 { get; set; }
 
     /**
-     * 
+     * All time collected fees in token1.
      * @return collectedFeesToken1
      */
     public String collectedFeesToken1 { get; set; }
 
     /**
-     * 
+     * Transaction in which the position was initialized.
      * @return r_transaction
      */
     public String r_transaction { get; set; }
 
     /**
-     * 
+     * Variable needed for fee computation.
      * @return feeGrowthInside0LastX128
      */
     public String feeGrowthInside0LastX128 { get; set; }
 
     /**
-     * 
+     * Variable needed for fee computation.
      * @return feeGrowthInside1LastX128
      */
     public String feeGrowthInside1LastX128 { get; set; }

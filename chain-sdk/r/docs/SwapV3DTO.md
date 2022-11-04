@@ -1,25 +1,26 @@
 # openapi::SwapV3DTO
 
+Swap are created for each token swap within a pair.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
-**block_number** | **integer** |  | [optional] 
+**block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
 **vid** | **integer** |  | [optional] 
-**id** | **character** |  | [optional] 
-**transaction** | **character** |  | [optional] 
-**timestamp** | **character** |  | [optional] 
-**pool** | **character** |  | [optional] 
-**token_0** | **character** |  | [optional] 
-**token_1** | **character** |  | [optional] 
-**sender** | **character** |  | [optional] 
-**recipient** | **character** |  | [optional] 
-**origin** | **character** |  | [optional] 
-**amount_0** | **character** |  | [optional] 
-**amount_1** | **character** |  | [optional] 
-**amount_usd** | **character** |  | [optional] 
+**id** | **character** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**transaction** | **character** | Pointer to transaction. | [optional] 
+**timestamp** | **character** | Timestamp of transaction. | [optional] 
+**pool** | **character** | Pool swap occured within. | [optional] 
+**token_0** | **character** | Reference to token0 as stored in pair contract. | [optional] 
+**token_1** | **character** | Reference to token1 as stored in pair contract. | [optional] 
+**sender** | **character** | Sender of the swap. | [optional] 
+**recipient** | **character** | Recipient of the swap. | [optional] 
+**origin** | **character** | Transaction origin: the EOA (Externally Owned Account) that initiated the transaction | [optional] 
+**amount_0** | **character** | Delta of token0 swapped. | [optional] 
+**amount_1** | **character** | Delta of token1 swapped. | [optional] 
+**amount_usd** | **character** | Derived amount of tokens sold in USD. | [optional] 
 **sqrt_price_x96** | [**BigInteger**](BigInteger.md) |  | [optional] 
 **tick** | [**BigInteger**](BigInteger.md) |  | [optional] 
 **log_index** | [**BigInteger**](BigInteger.md) |  | [optional] 

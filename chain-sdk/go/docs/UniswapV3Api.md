@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**DappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#DappsUniswapv3FactoryHistoricalGet) | **Get** /dapps/uniswapv3/factory/historical | 
 [**DappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#DappsUniswapv3MintsCurrentGet) | **Get** /dapps/uniswapv3/mints/current | GetMints
 [**DappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#DappsUniswapv3MintsHistoricalGet) | **Get** /dapps/uniswapv3/mints/historical | 
-[**DappsUniswapv3PoiHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoiHistoricalGet) | **Get** /dapps/uniswapv3/poi/historical | 
 [**DappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoolDayDataHistoricalGet) | **Get** /dapps/uniswapv3/poolDayData/historical | 
 [**DappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#DappsUniswapv3PoolHourDataHistoricalGet) | **Get** /dapps/uniswapv3/poolHourData/historical | 
 [**DappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#DappsUniswapv3PoolsCurrentGet) | **Get** /dapps/uniswapv3/pools/current | GetPools
@@ -626,75 +625,6 @@ Name | Type | Description  | Notes
  **startDate** | **time.Time** |  | 
  **endDate** | **time.Time** |  | 
  **poolId** | **string** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsUniswapv3PoiHistoricalGet
-
-> DappsUniswapv3PoiHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV3Api.DappsUniswapv3PoiHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV3Api.DappsUniswapv3PoiHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsUniswapv3PoiHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
 
 ### Return type
 

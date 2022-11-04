@@ -6,25 +6,25 @@
 | ---- | ---- | ----------- | ----- |
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
-| **block_number** | **Integer** |  | [optional] |
+| **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool_address** | **String** |  | [optional] |
+| **id** | **String** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] |
+| **pool_address** | **String** | Pool address. | [optional] |
 | **tick_idx** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **pool** | **String** | Pool address. | [optional] |
 | **liquidity_gross** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **liquidity_net** | [**BigInteger**](BigInteger.md) |  | [optional] |
-| **price_0** | **String** |  | [optional] |
-| **price_1** | **String** |  | [optional] |
-| **volume_token_0** | **String** |  | [optional] |
-| **volume_token_1** | **String** |  | [optional] |
-| **volume_usd** | **String** |  | [optional] |
-| **untracked_volume_usd** | **String** |  | [optional] |
-| **fees_usd** | **String** |  | [optional] |
-| **collected_fees_token_0** | **String** |  | [optional] |
-| **collected_fees_token_1** | **String** |  | [optional] |
-| **collected_fees_usd** | **String** |  | [optional] |
-| **created_at_timestamp** | **Time** |  | [optional] |
+| **price_0** | **String** | Calculated price of token0 of tick within this pool - constant. | [optional] |
+| **price_1** | **String** | Calculated price of token1 of tick within this pool - constant. | [optional] |
+| **volume_token_0** | **String** | Lifetime volume of token0 with this tick in range. | [optional] |
+| **volume_token_1** | **String** | Lifetime volume of token1 with this tick in range. | [optional] |
+| **volume_usd** | **String** | Lifetime volume in derived USD with this tick in range. | [optional] |
+| **untracked_volume_usd** | **String** | Lifetime volume in untracked USD with this tick in range. | [optional] |
+| **fees_usd** | **String** | Fees in USD. | [optional] |
+| **collected_fees_token_0** | **String** | All time collected fees in token0. | [optional] |
+| **collected_fees_token_1** | **String** | All time collected fees in token1. | [optional] |
+| **collected_fees_usd** | **String** | All time collected fees in USD. | [optional] |
+| **created_at_timestamp** | **Time** | Created time. | [optional] |
 | **liquidity_provider_count** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **fee_growth_outside_0x128** | [**BigInteger**](BigInteger.md) |  | [optional] |
 | **fee_growth_outside_1x128** | [**BigInteger**](BigInteger.md) |  | [optional] |

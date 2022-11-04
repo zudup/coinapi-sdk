@@ -28,7 +28,7 @@ export interface TokenV3DayDataDTO {
      */
     recv_time?: string;
     /**
-     * 
+     * Number of block in which entity was recorded.
      * @type {number}
      * @memberof TokenV3DayDataDTO
      */
