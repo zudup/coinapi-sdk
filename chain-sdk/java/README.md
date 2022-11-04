@@ -2,7 +2,7 @@
 
 OnChain API
 - API version: v1
-  - Build date: 2022-11-04T10:40:32.387805Z[Etc/UTC]
+  - Build date: 2022-11-04T10:48:16.030140Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
