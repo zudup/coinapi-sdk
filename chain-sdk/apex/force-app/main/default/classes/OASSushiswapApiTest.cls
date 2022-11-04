@@ -372,7 +372,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      *
      * Gets pools.
      */
@@ -414,7 +414,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      *
      * Gets list of pools for given filters.
      */
@@ -464,7 +464,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      *
      * Gets swaps.
      */
@@ -506,7 +506,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      *
      * Gets list of swaps for given filters.
      */
@@ -556,7 +556,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      *
      * Gets tokens.
      */
@@ -598,7 +598,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      *
      * Gets list of tokens for given filters.
      */

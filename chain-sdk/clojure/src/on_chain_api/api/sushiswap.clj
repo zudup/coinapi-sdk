@@ -331,7 +331,7 @@
 
 
 (defn-spec sushiswap-get-pools-current-with-http-info any?
-  "Sushiswap.GetPools (current)
+  "GetPools (current)
   Gets pools."
   []
   (call-api "/dapps/sushiswap/pools/current" :get
@@ -344,7 +344,7 @@
              :auth-names    []}))
 
 (defn-spec sushiswap-get-pools-current (s/coll-of sushiswap/pair-dto-spec)
-  "Sushiswap.GetPools (current)
+  "GetPools (current)
   Gets pools."
   []
   (let [res (:data (sushiswap-get-pools-current-with-http-info))]
@@ -354,7 +354,7 @@
 
 
 (defn-spec sushiswap-get-pools-historical-with-http-info any?
-  "Sushiswap.GetPools (historical)
+  "GetPools (historical)
   Gets list of pools for given filters."
   ([] (sushiswap-get-pools-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
@@ -368,7 +368,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-pools-historical (s/coll-of sushiswap/pair-dto-spec)
-  "Sushiswap.GetPools (historical)
+  "GetPools (historical)
   Gets list of pools for given filters."
   ([] (sushiswap-get-pools-historical nil))
   ([optional-params any?]
@@ -379,7 +379,7 @@
 
 
 (defn-spec sushiswap-get-swaps-current-with-http-info any?
-  "Sushiswap.GetSwaps (current)
+  "GetSwaps (current)
   Gets swaps."
   []
   (call-api "/dapps/sushiswap/swaps/current" :get
@@ -392,7 +392,7 @@
              :auth-names    []}))
 
 (defn-spec sushiswap-get-swaps-current sushiswap/swap-dto-spec
-  "Sushiswap.GetSwaps (current)
+  "GetSwaps (current)
   Gets swaps."
   []
   (let [res (:data (sushiswap-get-swaps-current-with-http-info))]
@@ -402,7 +402,7 @@
 
 
 (defn-spec sushiswap-get-swaps-historical-with-http-info any?
-  "Sushiswap.GetSwaps (historical)
+  "GetSwaps (historical)
   Gets list of swaps for given filters."
   ([] (sushiswap-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
@@ -416,7 +416,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-swaps-historical (s/coll-of sushiswap/swap-dto-spec)
-  "Sushiswap.GetSwaps (historical)
+  "GetSwaps (historical)
   Gets list of swaps for given filters."
   ([] (sushiswap-get-swaps-historical nil))
   ([optional-params any?]
@@ -427,7 +427,7 @@
 
 
 (defn-spec sushiswap-get-tokens-current-with-http-info any?
-  "Sushiswap.GetTokens (current)
+  "GetTokens (current)
   Gets tokens."
   []
   (call-api "/dapps/sushiswap/tokens/current" :get
@@ -440,7 +440,7 @@
              :auth-names    []}))
 
 (defn-spec sushiswap-get-tokens-current sushiswap/token-dto-spec
-  "Sushiswap.GetTokens (current)
+  "GetTokens (current)
   Gets tokens."
   []
   (let [res (:data (sushiswap-get-tokens-current-with-http-info))]
@@ -450,7 +450,7 @@
 
 
 (defn-spec sushiswap-get-tokens-historical-with-http-info any?
-  "Sushiswap.GetTokens (historical)
+  "GetTokens (historical)
   Gets list of tokens for given filters."
   ([] (sushiswap-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
@@ -464,7 +464,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-tokens-historical (s/coll-of sushiswap/token-dto-spec)
-  "Sushiswap.GetTokens (historical)
+  "GetTokens (historical)
   Gets list of tokens for given filters."
   ([] (sushiswap-get-tokens-historical nil))
   ([optional-params any?]

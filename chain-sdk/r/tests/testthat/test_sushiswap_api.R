@@ -184,7 +184,7 @@ test_that("DappsSushiswapUsersHistoricalGet", {
 test_that("SushiswapGetPoolsCurrent", {
   # tests for SushiswapGetPoolsCurrent
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetPools (current)
+  # GetPools (current)
   # Gets pools.
   # @return [array[SushiswapPairDTO]]
 
@@ -195,7 +195,7 @@ test_that("SushiswapGetPoolsCurrent", {
 test_that("SushiswapGetPoolsHistorical", {
   # tests for SushiswapGetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetPools (historical)
+  # GetPools (historical)
   # Gets list of pools for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -211,7 +211,7 @@ test_that("SushiswapGetPoolsHistorical", {
 test_that("SushiswapGetSwapsCurrent", {
   # tests for SushiswapGetSwapsCurrent
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetSwaps (current)
+  # GetSwaps (current)
   # Gets swaps.
   # @return [SushiswapSwapDTO]
 
@@ -222,7 +222,7 @@ test_that("SushiswapGetSwapsCurrent", {
 test_that("SushiswapGetSwapsHistorical", {
   # tests for SushiswapGetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetSwaps (historical)
+  # GetSwaps (historical)
   # Gets list of swaps for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -238,7 +238,7 @@ test_that("SushiswapGetSwapsHistorical", {
 test_that("SushiswapGetTokensCurrent", {
   # tests for SushiswapGetTokensCurrent
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetTokens (current)
+  # GetTokens (current)
   # Gets tokens.
   # @return [SushiswapTokenDTO]
 
@@ -249,7 +249,7 @@ test_that("SushiswapGetTokensCurrent", {
 test_that("SushiswapGetTokensHistorical", {
   # tests for SushiswapGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Sushiswap.GetTokens (historical)
+  # GetTokens (historical)
   # Gets list of tokens for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

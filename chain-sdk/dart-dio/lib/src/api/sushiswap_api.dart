@@ -835,7 +835,7 @@ class SushiswapApi {
     return _response;
   }
 
-  /// Sushiswap.GetPools (current)
+  /// GetPools (current)
   /// Gets pools.
   ///
   /// Parameters:
@@ -907,7 +907,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetPools (historical)
+  /// GetPools (historical)
   /// Gets list of pools for given filters.
   ///
   /// Parameters:
@@ -998,7 +998,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetSwaps (current)
+  /// GetSwaps (current)
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1070,7 +1070,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetSwaps (historical)
+  /// GetSwaps (historical)
   /// Gets list of swaps for given filters.
   ///
   /// Parameters:
@@ -1161,7 +1161,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetTokens (current)
+  /// GetTokens (current)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1233,7 +1233,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetTokens (historical)
+  /// GetTokens (historical)
   /// Gets list of tokens for given filters.
   ///
   /// Parameters:

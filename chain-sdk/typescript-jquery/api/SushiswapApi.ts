@@ -986,7 +986,7 @@ export class SushiswapApi {
 
     /**
      * Gets pools.
-     * @summary Sushiswap.GetPools (current)
+     * @summary GetPools (current)
      */
     public sushiswapGetPoolsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
@@ -1044,7 +1044,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of pools for given filters.
-     * @summary Sushiswap.GetPools (historical)
+     * @summary GetPools (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1122,7 +1122,7 @@ export class SushiswapApi {
 
     /**
      * Gets swaps.
-     * @summary Sushiswap.GetSwaps (current)
+     * @summary GetSwaps (current)
      */
     public sushiswapGetSwapsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: models.SushiswapSwapDTO;  },
@@ -1180,7 +1180,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of swaps for given filters.
-     * @summary Sushiswap.GetSwaps (historical)
+     * @summary GetSwaps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1258,7 +1258,7 @@ export class SushiswapApi {
 
     /**
      * Gets tokens.
-     * @summary Sushiswap.GetTokens (current)
+     * @summary GetTokens (current)
      */
     public sushiswapGetTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: models.SushiswapTokenDTO;  },
@@ -1316,7 +1316,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of tokens for given filters.
-     * @summary Sushiswap.GetTokens (historical)
+     * @summary GetTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

@@ -58,7 +58,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: Sushiswap.GetPools (current)
+      summary: GetPools (current)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -79,7 +79,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sushiswap.SwapDTO'
           description: successful operation
-      summary: Sushiswap.GetSwaps (current)
+      summary: GetSwaps (current)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -100,7 +100,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sushiswap.TokenDTO'
           description: successful operation
-      summary: Sushiswap.GetTokens (current)
+      summary: GetTokens (current)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -167,7 +167,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: Sushiswap.GetPools (historical)
+      summary: GetPools (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -234,7 +234,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: Sushiswap.GetSwaps (historical)
+      summary: GetSwaps (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -301,7 +301,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: Sushiswap.GetTokens (historical)
+      summary: GetTokens (historical)
       tags:
       - Sushiswap
       x-accepts: application/json

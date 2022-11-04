@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapSwapsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapSwapsHistorical unit test stubs
-        Sushiswap.GetSwaps (historical)  # noqa: E501
+        GetSwaps (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

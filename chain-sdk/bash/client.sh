@@ -1929,12 +1929,12 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapTransactionsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapUsersHistoricalGet${OFF};
-  ${CYAN}sushiswapGetPoolsCurrent${OFF};Sushiswap.GetPools (current)
-  ${CYAN}sushiswapGetPoolsHistorical${OFF};Sushiswap.GetPools (historical)
-  ${CYAN}sushiswapGetSwapsCurrent${OFF};Sushiswap.GetSwaps (current)
-  ${CYAN}sushiswapGetSwapsHistorical${OFF};Sushiswap.GetSwaps (historical)
-  ${CYAN}sushiswapGetTokensCurrent${OFF};Sushiswap.GetTokens (current)
-  ${CYAN}sushiswapGetTokensHistorical${OFF};Sushiswap.GetTokens (historical)
+  ${CYAN}sushiswapGetPoolsCurrent${OFF};GetPools (current)
+  ${CYAN}sushiswapGetPoolsHistorical${OFF};GetPools (historical)
+  ${CYAN}sushiswapGetSwapsCurrent${OFF};GetSwaps (current)
+  ${CYAN}sushiswapGetSwapsHistorical${OFF};GetSwaps (historical)
+  ${CYAN}sushiswapGetTokensCurrent${OFF};GetTokens (current)
+  ${CYAN}sushiswapGetTokensHistorical${OFF};GetTokens (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3504,7 +3504,7 @@ print_dappsSushiswapUsersHistoricalGet_help() {
 ##############################################################################
 print_sushiswapGetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - Sushiswap.GetPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - GetPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3520,7 +3520,7 @@ print_sushiswapGetPoolsCurrent_help() {
 ##############################################################################
 print_sushiswapGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - Sushiswap.GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of pools for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3547,7 +3547,7 @@ print_sushiswapGetPoolsHistorical_help() {
 ##############################################################################
 print_sushiswapGetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - Sushiswap.GetSwaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - GetSwaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3563,7 +3563,7 @@ print_sushiswapGetSwapsCurrent_help() {
 ##############################################################################
 print_sushiswapGetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - Sushiswap.GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of swaps for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3590,7 +3590,7 @@ print_sushiswapGetSwapsHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - Sushiswap.GetTokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - GetTokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3606,7 +3606,7 @@ print_sushiswapGetTokensCurrent_help() {
 ##############################################################################
 print_sushiswapGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - Sushiswap.GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of tokens for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""

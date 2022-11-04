@@ -229,7 +229,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_current
-            -- Sushiswap.GetPools (current)
+            -- GetPools (current)
             --
             -- Gets pools.
         local
@@ -242,7 +242,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_historical
-            -- Sushiswap.GetPools (historical)
+            -- GetPools (historical)
             --
             -- Gets list of pools for given filters.
         local
@@ -260,7 +260,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_current
-            -- Sushiswap.GetSwaps (current)
+            -- GetSwaps (current)
             --
             -- Gets swaps.
         local
@@ -273,7 +273,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- Sushiswap.GetSwaps (historical)
+            -- GetSwaps (historical)
             --
             -- Gets list of swaps for given filters.
         local
@@ -291,7 +291,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_current
-            -- Sushiswap.GetTokens (current)
+            -- GetTokens (current)
             --
             -- Gets tokens.
         local
@@ -304,7 +304,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- Sushiswap.GetTokens (historical)
+            -- GetTokens (historical)
             --
             -- Gets list of tokens for given filters.
         local

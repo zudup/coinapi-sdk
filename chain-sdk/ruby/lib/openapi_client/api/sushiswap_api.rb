@@ -859,7 +859,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetPools (current)
+    # GetPools (current)
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairDTO>]
@@ -868,7 +868,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetPools (current)
+    # GetPools (current)
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
@@ -916,7 +916,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetPools (historical)
+    # GetPools (historical)
     # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -930,7 +930,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetPools (historical)
+    # GetPools (historical)
     # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -988,7 +988,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetSwaps (current)
+    # GetSwaps (current)
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [SushiswapSwapDTO]
@@ -997,7 +997,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetSwaps (current)
+    # GetSwaps (current)
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [Array<(SushiswapSwapDTO, Integer, Hash)>] SushiswapSwapDTO data, response status code and response headers
@@ -1045,7 +1045,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetSwaps (historical)
+    # GetSwaps (historical)
     # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1059,7 +1059,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetSwaps (historical)
+    # GetSwaps (historical)
     # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1117,7 +1117,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetTokens (current)
+    # GetTokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [SushiswapTokenDTO]
@@ -1126,7 +1126,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetTokens (current)
+    # GetTokens (current)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<(SushiswapTokenDTO, Integer, Hash)>] SushiswapTokenDTO data, response status code and response headers
@@ -1174,7 +1174,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Sushiswap.GetTokens (historical)
+    # GetTokens (historical)
     # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1188,7 +1188,7 @@ module OpenapiClient
       data
     end
 
-    # Sushiswap.GetTokens (historical)
+    # GetTokens (historical)
     # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 

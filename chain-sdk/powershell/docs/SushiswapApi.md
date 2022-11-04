@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**Invoke-DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**Invoke-DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**Invoke-DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
-[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
-[**Invoke-SushiswapGetPoolsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
-[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
-[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
-[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
-[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
+[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**Invoke-SushiswapGetPoolsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
+[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
+[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 
 
 <a name="Invoke-DappsSushiswapBundlesHistoricalGet"></a>
@@ -687,14 +687,14 @@ No authorization required
 # **Invoke-SushiswapGetPoolsCurrent**
 > SushiswapPairDTO[] Invoke-SushiswapGetPoolsCurrent<br>
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 Gets pools.
 
 ### Example
 ```powershell
 
-# Sushiswap.GetPools (current)
+# GetPools (current)
 try {
     $Result = Invoke-SushiswapGetPoolsCurrent
 } catch {
@@ -730,7 +730,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -742,7 +742,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# Sushiswap.GetPools (historical)
+# GetPools (historical)
 try {
     $Result = Invoke-SushiswapGetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -780,14 +780,14 @@ No authorization required
 # **Invoke-SushiswapGetSwapsCurrent**
 > SushiswapSwapDTO Invoke-SushiswapGetSwapsCurrent<br>
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 Gets swaps.
 
 ### Example
 ```powershell
 
-# Sushiswap.GetSwaps (current)
+# GetSwaps (current)
 try {
     $Result = Invoke-SushiswapGetSwapsCurrent
 } catch {
@@ -823,7 +823,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -835,7 +835,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# Sushiswap.GetSwaps (historical)
+# GetSwaps (historical)
 try {
     $Result = Invoke-SushiswapGetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -873,14 +873,14 @@ No authorization required
 # **Invoke-SushiswapGetTokensCurrent**
 > SushiswapTokenDTO Invoke-SushiswapGetTokensCurrent<br>
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 Gets tokens.
 
 ### Example
 ```powershell
 
-# Sushiswap.GetTokens (current)
+# GetTokens (current)
 try {
     $Result = Invoke-SushiswapGetTokensCurrent
 } catch {
@@ -916,7 +916,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 Gets list of tokens for given filters.
 
@@ -928,7 +928,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# Sushiswap.GetTokens (historical)
+# GetTokens (historical)
 try {
     $Result = Invoke-SushiswapGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {

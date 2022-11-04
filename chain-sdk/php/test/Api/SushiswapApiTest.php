@@ -231,7 +231,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsCurrent
      *
-     * Sushiswap.GetPools (current).
+     * GetPools (current).
      *
      */
     public function testSushiswapGetPoolsCurrent()
@@ -243,7 +243,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsHistorical
      *
-     * Sushiswap.GetPools (historical).
+     * GetPools (historical).
      *
      */
     public function testSushiswapGetPoolsHistorical()
@@ -255,7 +255,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsCurrent
      *
-     * Sushiswap.GetSwaps (current).
+     * GetSwaps (current).
      *
      */
     public function testSushiswapGetSwapsCurrent()
@@ -267,7 +267,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsHistorical
      *
-     * Sushiswap.GetSwaps (historical).
+     * GetSwaps (historical).
      *
      */
     public function testSushiswapGetSwapsHistorical()
@@ -279,7 +279,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensCurrent
      *
-     * Sushiswap.GetTokens (current).
+     * GetTokens (current).
      *
      */
     public function testSushiswapGetTokensCurrent()
@@ -291,7 +291,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensHistorical
      *
-     * Sushiswap.GetTokens (historical).
+     * GetTokens (historical).
      *
      */
     public function testSushiswapGetTokensHistorical()

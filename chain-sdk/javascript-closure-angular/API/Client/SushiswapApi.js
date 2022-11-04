@@ -744,7 +744,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapUsersHistoricalGet = function(op
 }
 
 /**
- * Sushiswap.GetPools (current)
+ * GetPools (current)
  * Gets pools.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
@@ -775,7 +775,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsCurrent = function(opt_extraH
 }
 
 /**
- * Sushiswap.GetPools (historical)
+ * GetPools (historical)
  * Gets list of pools for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -831,7 +831,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHistorical = function(opt_sta
 }
 
 /**
- * Sushiswap.GetSwaps (current)
+ * GetSwaps (current)
  * Gets swaps.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!API.Client.Sushiswap.SwapDTO>}
@@ -862,7 +862,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraH
 }
 
 /**
- * Sushiswap.GetSwaps (historical)
+ * GetSwaps (historical)
  * Gets list of swaps for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -918,7 +918,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 }
 
 /**
- * Sushiswap.GetTokens (current)
+ * GetTokens (current)
  * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!API.Client.Sushiswap.TokenDTO>}
@@ -949,7 +949,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensCurrent = function(opt_extra
 }
 
 /**
- * Sushiswap.GetTokens (historical)
+ * GetTokens (historical)
  * Gets list of tokens for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

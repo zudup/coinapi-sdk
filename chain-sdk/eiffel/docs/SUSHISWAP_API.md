@@ -17,12 +17,12 @@ Feature | HTTP request | Description
 [**dapps_sushiswap_token_day_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_token_day_data_historical_get) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_transactions_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_transactions_historical_get) | **Get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_users_historical_get) | **Get** /dapps/sushiswap/users/historical | 
-[**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
-[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
-[**sushiswap_get_swaps_current**](SUSHISWAP_API.md#sushiswap_get_swaps_current) | **Get** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
-[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
-[**sushiswap_get_tokens_current**](SUSHISWAP_API.md#sushiswap_get_tokens_current) | **Get** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
-[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
+[**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswap_get_swaps_current**](SUSHISWAP_API.md#sushiswap_get_swaps_current) | **Get** /dapps/sushiswap/swaps/current | GetSwaps (current)
+[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
+[**sushiswap_get_tokens_current**](SUSHISWAP_API.md#sushiswap_get_tokens_current) | **Get** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 
 
 # **dapps_sushiswap_bundles_historical_get**
@@ -439,7 +439,7 @@ No authorization required
 > sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 Gets pools.
 
@@ -466,7 +466,7 @@ No authorization required
 > sushiswap_get_pools_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DTO]
 
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -500,7 +500,7 @@ No authorization required
 > sushiswap_get_swaps_current : detachable SUSHISWAP_SWAP_DTO
 
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 Gets swaps.
 
@@ -527,7 +527,7 @@ No authorization required
 > sushiswap_get_swaps_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_SWAP_DTO]
 
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -561,7 +561,7 @@ No authorization required
 > sushiswap_get_tokens_current : detachable SUSHISWAP_TOKEN_DTO
 
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 Gets tokens.
 
@@ -588,7 +588,7 @@ No authorization required
 > sushiswap_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DTO]
 
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 Gets list of tokens for given filters.
 

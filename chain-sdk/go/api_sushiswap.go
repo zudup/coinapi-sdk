@@ -1683,7 +1683,7 @@ func (r ApiSushiswapGetPoolsCurrentRequest) Execute() ([]SushiswapPairDTO, *http
 }
 
 /*
-SushiswapGetPoolsCurrent Sushiswap.GetPools (current)
+SushiswapGetPoolsCurrent GetPools (current)
 
 Gets pools.
 
@@ -1812,7 +1812,7 @@ func (r ApiSushiswapGetPoolsHistoricalRequest) Execute() ([]SushiswapPairDTO, *h
 }
 
 /*
-SushiswapGetPoolsHistorical Sushiswap.GetPools (historical)
+SushiswapGetPoolsHistorical GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -1926,7 +1926,7 @@ func (r ApiSushiswapGetSwapsCurrentRequest) Execute() (*SushiswapSwapDTO, *http.
 }
 
 /*
-SushiswapGetSwapsCurrent Sushiswap.GetSwaps (current)
+SushiswapGetSwapsCurrent GetSwaps (current)
 
 Gets swaps.
 
@@ -2055,7 +2055,7 @@ func (r ApiSushiswapGetSwapsHistoricalRequest) Execute() ([]SushiswapSwapDTO, *h
 }
 
 /*
-SushiswapGetSwapsHistorical Sushiswap.GetSwaps (historical)
+SushiswapGetSwapsHistorical GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -2169,7 +2169,7 @@ func (r ApiSushiswapGetTokensCurrentRequest) Execute() (*SushiswapTokenDTO, *htt
 }
 
 /*
-SushiswapGetTokensCurrent Sushiswap.GetTokens (current)
+SushiswapGetTokensCurrent GetTokens (current)
 
 Gets tokens.
 
@@ -2298,7 +2298,7 @@ func (r ApiSushiswapGetTokensHistoricalRequest) Execute() ([]SushiswapTokenDTO, 
 }
 
 /*
-SushiswapGetTokensHistorical Sushiswap.GetTokens (historical)
+SushiswapGetTokensHistorical GetTokens (historical)
 
 Gets list of tokens for given filters.
 

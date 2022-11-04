@@ -443,7 +443,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @return List<OASSushiswapPairDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -464,7 +464,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -498,7 +498,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @return OASSushiswapSwapDTO
      * @throws OAS.ApiException if fails to make API call
@@ -519,7 +519,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -553,7 +553,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @return OASSushiswapTokenDTO
      * @throws OAS.ApiException if fails to make API call
@@ -574,7 +574,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

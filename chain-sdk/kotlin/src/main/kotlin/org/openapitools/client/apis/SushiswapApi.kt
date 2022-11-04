@@ -1260,7 +1260,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1290,7 +1290,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1327,7 +1327,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1362,7 +1362,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1426,7 +1426,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @return SushiswapSwapDTO
      * @throws IllegalStateException If the request is not correctly configured
@@ -1456,7 +1456,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @return ApiResponse<SushiswapSwapDTO?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1493,7 +1493,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1528,7 +1528,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1592,7 +1592,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @return SushiswapTokenDTO
      * @throws IllegalStateException If the request is not correctly configured
@@ -1622,7 +1622,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @return ApiResponse<SushiswapTokenDTO?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1659,7 +1659,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1694,7 +1694,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

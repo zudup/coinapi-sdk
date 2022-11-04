@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 
 
 # **DappsSushiswapBundlesHistoricalGet**
@@ -640,7 +640,7 @@ No authorization required
 # **SushiswapGetPoolsCurrent**
 > array[SushiswapPairDTO] SushiswapGetPoolsCurrent()
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 Gets pools.
 
@@ -648,7 +648,7 @@ Gets pools.
 ```R
 library(openapi)
 
-# Sushiswap.GetPools (current)
+# GetPools (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -682,7 +682,7 @@ No authorization required
 # **SushiswapGetPoolsHistorical**
 > array[SushiswapPairDTO] SushiswapGetPoolsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -690,7 +690,7 @@ Gets list of pools for given filters.
 ```R
 library(openapi)
 
-# Sushiswap.GetPools (historical)
+# GetPools (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -737,7 +737,7 @@ No authorization required
 # **SushiswapGetSwapsCurrent**
 > SushiswapSwapDTO SushiswapGetSwapsCurrent()
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 Gets swaps.
 
@@ -745,7 +745,7 @@ Gets swaps.
 ```R
 library(openapi)
 
-# Sushiswap.GetSwaps (current)
+# GetSwaps (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -779,7 +779,7 @@ No authorization required
 # **SushiswapGetSwapsHistorical**
 > array[SushiswapSwapDTO] SushiswapGetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -787,7 +787,7 @@ Gets list of swaps for given filters.
 ```R
 library(openapi)
 
-# Sushiswap.GetSwaps (historical)
+# GetSwaps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -834,7 +834,7 @@ No authorization required
 # **SushiswapGetTokensCurrent**
 > SushiswapTokenDTO SushiswapGetTokensCurrent()
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 Gets tokens.
 
@@ -842,7 +842,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# Sushiswap.GetTokens (current)
+# GetTokens (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -876,7 +876,7 @@ No authorization required
 # **SushiswapGetTokensHistorical**
 > array[SushiswapTokenDTO] SushiswapGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 Gets list of tokens for given filters.
 
@@ -884,7 +884,7 @@ Gets list of tokens for given filters.
 ```R
 library(openapi)
 
-# Sushiswap.GetTokens (historical)
+# GetTokens (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

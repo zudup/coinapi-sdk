@@ -408,7 +408,7 @@ instance Produces DappsSushiswapUsersHistoricalGet MimeNoContent
 
 -- | @GET \/dapps\/sushiswap\/pools\/current@
 -- 
--- Sushiswap.GetPools (current)
+-- GetPools (current)
 -- 
 -- Gets pools.
 -- 
@@ -431,7 +431,7 @@ instance Produces SushiswapGetPoolsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/historical@
 -- 
--- Sushiswap.GetPools (historical)
+-- GetPools (historical)
 -- 
 -- Gets list of pools for given filters.
 -- 
@@ -469,7 +469,7 @@ instance Produces SushiswapGetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/current@
 -- 
--- Sushiswap.GetSwaps (current)
+-- GetSwaps (current)
 -- 
 -- Gets swaps.
 -- 
@@ -492,7 +492,7 @@ instance Produces SushiswapGetSwapsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
--- Sushiswap.GetSwaps (historical)
+-- GetSwaps (historical)
 -- 
 -- Gets list of swaps for given filters.
 -- 
@@ -530,7 +530,7 @@ instance Produces SushiswapGetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/current@
 -- 
--- Sushiswap.GetTokens (current)
+-- GetTokens (current)
 -- 
 -- Gets tokens.
 -- 
@@ -553,7 +553,7 @@ instance Produces SushiswapGetTokensCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
--- Sushiswap.GetTokens (historical)
+-- GetTokens (historical)
 -- 
 -- Gets list of tokens for given filters.
 -- 

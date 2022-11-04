@@ -3678,7 +3678,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrent
      *
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3695,7 +3695,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentWithHttpInfo
      *
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3794,7 +3794,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsync
      *
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3814,7 +3814,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsyncWithHttpInfo
      *
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3941,7 +3941,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistorical
      *
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -3963,7 +3963,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalWithHttpInfo
      *
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4067,7 +4067,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsync
      *
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4092,7 +4092,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsyncWithHttpInfo
      *
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4279,7 +4279,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrent
      *
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4296,7 +4296,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentWithHttpInfo
      *
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4395,7 +4395,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsync
      *
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4415,7 +4415,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsyncWithHttpInfo
      *
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4542,7 +4542,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistorical
      *
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -4564,7 +4564,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalWithHttpInfo
      *
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4668,7 +4668,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsync
      *
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4693,7 +4693,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsyncWithHttpInfo
      *
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4880,7 +4880,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrent
      *
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4897,7 +4897,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentWithHttpInfo
      *
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4996,7 +4996,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsync
      *
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5016,7 +5016,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsyncWithHttpInfo
      *
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5143,7 +5143,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistorical
      *
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -5165,7 +5165,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalWithHttpInfo
      *
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5269,7 +5269,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsync
      *
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5294,7 +5294,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsyncWithHttpInfo
      *
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)

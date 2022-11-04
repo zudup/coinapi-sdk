@@ -380,7 +380,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DappsSushiswapUsersHistoricalGetWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetPools (current)
+        /// GetPools (current)
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -391,7 +391,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<SushiswapPairDTO> SushiswapGetPoolsCurrent(int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetPools (current)
+        /// GetPools (current)
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -401,7 +401,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
         ApiResponse<List<SushiswapPairDTO>> SushiswapGetPoolsCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetPools (historical)
+        /// GetPools (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of pools for given filters.
@@ -417,7 +417,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<SushiswapPairDTO> SushiswapGetPoolsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetPools (historical)
+        /// GetPools (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of pools for given filters.
@@ -432,7 +432,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
         ApiResponse<List<SushiswapPairDTO>> SushiswapGetPoolsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetSwaps (current)
+        /// GetSwaps (current)
         /// </summary>
         /// <remarks>
         /// Gets swaps.
@@ -443,7 +443,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         SushiswapSwapDTO SushiswapGetSwapsCurrent(int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current)
+        /// GetSwaps (current)
         /// </summary>
         /// <remarks>
         /// Gets swaps.
@@ -453,7 +453,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of SushiswapSwapDTO</returns>
         ApiResponse<SushiswapSwapDTO> SushiswapGetSwapsCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetSwaps (historical)
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of swaps for given filters.
@@ -469,7 +469,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<SushiswapSwapDTO> SushiswapGetSwapsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical)
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of swaps for given filters.
@@ -484,7 +484,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
         ApiResponse<List<SushiswapSwapDTO>> SushiswapGetSwapsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetTokens (current)
+        /// GetTokens (current)
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -495,7 +495,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         SushiswapTokenDTO SushiswapGetTokensCurrent(int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetTokens (current)
+        /// GetTokens (current)
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -505,7 +505,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of SushiswapTokenDTO</returns>
         ApiResponse<SushiswapTokenDTO> SushiswapGetTokensCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Sushiswap.GetTokens (historical)
+        /// GetTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of tokens for given filters.
@@ -521,7 +521,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<SushiswapTokenDTO> SushiswapGetTokensHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical)
+        /// GetTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of tokens for given filters.
@@ -962,7 +962,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DappsSushiswapUsersHistoricalGetWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetPools (current)
+        /// GetPools (current)
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -974,7 +974,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapGetPoolsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetPools (current)
+        /// GetPools (current)
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -985,7 +985,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapGetPoolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetPools (historical)
+        /// GetPools (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of pools for given filters.
@@ -1002,7 +1002,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapGetPoolsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetPools (historical)
+        /// GetPools (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of pools for given filters.
@@ -1018,7 +1018,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapGetPoolsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetSwaps (current)
+        /// GetSwaps (current)
         /// </summary>
         /// <remarks>
         /// Gets swaps.
@@ -1030,7 +1030,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<SushiswapSwapDTO> SushiswapGetSwapsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current)
+        /// GetSwaps (current)
         /// </summary>
         /// <remarks>
         /// Gets swaps.
@@ -1041,7 +1041,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (SushiswapSwapDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SushiswapSwapDTO>> SushiswapGetSwapsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetSwaps (historical)
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of swaps for given filters.
@@ -1058,7 +1058,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapGetSwapsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical)
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of swaps for given filters.
@@ -1074,7 +1074,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapGetSwapsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetTokens (current)
+        /// GetTokens (current)
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -1086,7 +1086,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<SushiswapTokenDTO> SushiswapGetTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetTokens (current)
+        /// GetTokens (current)
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -1097,7 +1097,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (SushiswapTokenDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SushiswapTokenDTO>> SushiswapGetTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Sushiswap.GetTokens (historical)
+        /// GetTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of tokens for given filters.
@@ -1114,7 +1114,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapGetTokensHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical)
+        /// GetTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets list of tokens for given filters.
@@ -3544,7 +3544,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (current) Gets pools.
+        /// GetPools (current) Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3556,7 +3556,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (current) Gets pools.
+        /// GetPools (current) Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3607,7 +3607,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (current) Gets pools.
+        /// GetPools (current) Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3620,7 +3620,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (current) Gets pools.
+        /// GetPools (current) Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3674,7 +3674,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (historical) Gets list of pools for given filters.
+        /// GetPools (historical) Gets list of pools for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3691,7 +3691,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (historical) Gets list of pools for given filters.
+        /// GetPools (historical) Gets list of pools for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3767,7 +3767,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (historical) Gets list of pools for given filters.
+        /// GetPools (historical) Gets list of pools for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3785,7 +3785,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetPools (historical) Gets list of pools for given filters.
+        /// GetPools (historical) Gets list of pools for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3864,7 +3864,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current) Gets swaps.
+        /// GetSwaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3876,7 +3876,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current) Gets swaps.
+        /// GetSwaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3927,7 +3927,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current) Gets swaps.
+        /// GetSwaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3940,7 +3940,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (current) Gets swaps.
+        /// GetSwaps (current) Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3994,7 +3994,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical) Gets list of swaps for given filters.
+        /// GetSwaps (historical) Gets list of swaps for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4011,7 +4011,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical) Gets list of swaps for given filters.
+        /// GetSwaps (historical) Gets list of swaps for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4087,7 +4087,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical) Gets list of swaps for given filters.
+        /// GetSwaps (historical) Gets list of swaps for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4105,7 +4105,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetSwaps (historical) Gets list of swaps for given filters.
+        /// GetSwaps (historical) Gets list of swaps for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4184,7 +4184,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (current) Gets tokens.
+        /// GetTokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -4196,7 +4196,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (current) Gets tokens.
+        /// GetTokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -4247,7 +4247,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (current) Gets tokens.
+        /// GetTokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -4260,7 +4260,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (current) Gets tokens.
+        /// GetTokens (current) Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -4314,7 +4314,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical) Gets list of tokens for given filters.
+        /// GetTokens (historical) Gets list of tokens for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4331,7 +4331,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical) Gets list of tokens for given filters.
+        /// GetTokens (historical) Gets list of tokens for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4407,7 +4407,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical) Gets list of tokens for given filters.
+        /// GetTokens (historical) Gets list of tokens for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4425,7 +4425,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Sushiswap.GetTokens (historical) Gets list of tokens for given filters.
+        /// GetTokens (historical) Gets list of tokens for given filters.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>

@@ -631,7 +631,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
@@ -668,7 +668,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -717,7 +717,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SushiswapSwapDTO}
@@ -754,7 +754,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -803,7 +803,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @param {module:api/SushiswapApi~sushiswapGetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SushiswapTokenDTO}
@@ -840,7 +840,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

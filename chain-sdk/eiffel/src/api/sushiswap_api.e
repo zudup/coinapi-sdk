@@ -566,7 +566,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- Sushiswap.GetPools (current)
+			-- GetPools (current)
 			-- Gets pools.
 			-- 
 			-- 
@@ -599,7 +599,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- Sushiswap.GetPools (historical)
+			-- GetPools (historical)
 			-- Gets list of pools for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -647,7 +647,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_current : detachable SUSHISWAP_SWAP_DTO
-			-- Sushiswap.GetSwaps (current)
+			-- GetSwaps (current)
 			-- Gets swaps.
 			-- 
 			-- 
@@ -680,7 +680,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- Sushiswap.GetSwaps (historical)
+			-- GetSwaps (historical)
 			-- Gets list of swaps for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -728,7 +728,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_current : detachable SUSHISWAP_TOKEN_DTO
-			-- Sushiswap.GetTokens (current)
+			-- GetTokens (current)
 			-- Gets tokens.
 			-- 
 			-- 
@@ -761,7 +761,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- Sushiswap.GetTokens (historical)
+			-- GetTokens (historical)
 			-- Gets list of tokens for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)

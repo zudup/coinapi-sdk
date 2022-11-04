@@ -2016,7 +2016,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2032,7 +2032,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2049,7 +2049,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (current) (asynchronously)
+     * GetPools (current) (asynchronously)
      * Gets pools.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2156,7 +2156,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2177,7 +2177,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2199,7 +2199,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetPools (historical) (asynchronously)
+     * GetPools (historical) (asynchronously)
      * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2286,7 +2286,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @return SushiswapSwapDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2302,7 +2302,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @return ApiResponse&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2319,7 +2319,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (current) (asynchronously)
+     * GetSwaps (current) (asynchronously)
      * Gets swaps.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2426,7 +2426,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2447,7 +2447,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2469,7 +2469,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetSwaps (historical) (asynchronously)
+     * GetSwaps (historical) (asynchronously)
      * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2556,7 +2556,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @return SushiswapTokenDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2572,7 +2572,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @return ApiResponse&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2589,7 +2589,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (current) (asynchronously)
+     * GetTokens (current) (asynchronously)
      * Gets tokens.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2696,7 +2696,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2717,7 +2717,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2739,7 +2739,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Sushiswap.GetTokens (historical) (asynchronously)
+     * GetTokens (historical) (asynchronously)
      * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

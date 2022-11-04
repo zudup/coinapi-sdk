@@ -255,7 +255,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsCurrent } \emph{ Sushiswap.GetPools (current) }
+#' \strong{ SushiswapGetPoolsCurrent } \emph{ GetPools (current) }
 #' Gets pools.
 #'
 #' \itemize{
@@ -271,7 +271,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsHistorical } \emph{ Sushiswap.GetPools (historical) }
+#' \strong{ SushiswapGetPoolsHistorical } \emph{ GetPools (historical) }
 #' Gets list of pools for given filters.
 #'
 #' \itemize{
@@ -292,7 +292,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsCurrent } \emph{ Sushiswap.GetSwaps (current) }
+#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -308,7 +308,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsHistorical } \emph{ Sushiswap.GetSwaps (historical) }
+#' \strong{ SushiswapGetSwapsHistorical } \emph{ GetSwaps (historical) }
 #' Gets list of swaps for given filters.
 #'
 #' \itemize{
@@ -329,7 +329,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensCurrent } \emph{ Sushiswap.GetTokens (current) }
+#' \strong{ SushiswapGetTokensCurrent } \emph{ GetTokens (current) }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -345,7 +345,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensHistorical } \emph{ Sushiswap.GetTokens (historical) }
+#' \strong{ SushiswapGetTokensHistorical } \emph{ GetTokens (historical) }
 #' Gets list of tokens for given filters.
 #'
 #' \itemize{
@@ -551,7 +551,7 @@
 #'
 #' library(openapi)
 #'
-#' #Sushiswap.GetPools (current)
+#' #GetPools (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -569,7 +569,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #Sushiswap.GetPools (historical)
+#' #GetPools (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -582,7 +582,7 @@
 #'
 #' library(openapi)
 #'
-#' #Sushiswap.GetSwaps (current)
+#' #GetSwaps (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -600,7 +600,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #Sushiswap.GetSwaps (historical)
+#' #GetSwaps (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -613,7 +613,7 @@
 #'
 #' library(openapi)
 #'
-#' #Sushiswap.GetTokens (current)
+#' #GetTokens (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -631,7 +631,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #Sushiswap.GetTokens (historical)
+#' #GetTokens (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1906,10 +1906,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetPools (current)
+    #' GetPools (current)
     #'
     #' @description
-    #' Sushiswap.GetPools (current)
+    #' GetPools (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1927,10 +1927,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetPools (current)
+    #' GetPools (current)
     #'
     #' @description
-    #' Sushiswap.GetPools (current)
+    #' GetPools (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1992,10 +1992,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetPools (historical)
+    #' GetPools (historical)
     #'
     #' @description
-    #' Sushiswap.GetPools (historical)
+    #' GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2018,10 +2018,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetPools (historical)
+    #' GetPools (historical)
     #'
     #' @description
-    #' Sushiswap.GetPools (historical)
+    #' GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2103,10 +2103,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetSwaps (current)
+    #' GetSwaps (current)
     #'
     #' @description
-    #' Sushiswap.GetSwaps (current)
+    #' GetSwaps (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2124,10 +2124,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetSwaps (current)
+    #' GetSwaps (current)
     #'
     #' @description
-    #' Sushiswap.GetSwaps (current)
+    #' GetSwaps (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2189,10 +2189,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetSwaps (historical)
+    #' GetSwaps (historical)
     #'
     #' @description
-    #' Sushiswap.GetSwaps (historical)
+    #' GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2215,10 +2215,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetSwaps (historical)
+    #' GetSwaps (historical)
     #'
     #' @description
-    #' Sushiswap.GetSwaps (historical)
+    #' GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2300,10 +2300,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetTokens (current)
+    #' GetTokens (current)
     #'
     #' @description
-    #' Sushiswap.GetTokens (current)
+    #' GetTokens (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2321,10 +2321,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetTokens (current)
+    #' GetTokens (current)
     #'
     #' @description
-    #' Sushiswap.GetTokens (current)
+    #' GetTokens (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2386,10 +2386,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Sushiswap.GetTokens (historical)
+    #' GetTokens (historical)
     #'
     #' @description
-    #' Sushiswap.GetTokens (historical)
+    #' GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2412,10 +2412,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Sushiswap.GetTokens (historical)
+    #' GetTokens (historical)
     #'
     #' @description
-    #' Sushiswap.GetTokens (historical)
+    #' GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description

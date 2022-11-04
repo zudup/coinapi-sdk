@@ -62,7 +62,7 @@ void
 SushiswapAPI_dappsSushiswapUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// Sushiswap.GetPools (current)
+// GetPools (current)
 //
 // Gets pools.
 //
@@ -70,7 +70,7 @@ list_t*
 SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
 
 
-// Sushiswap.GetPools (historical)
+// GetPools (historical)
 //
 // Gets list of pools for given filters.
 //
@@ -78,7 +78,7 @@ list_t*
 SushiswapAPI_sushiswapGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// Sushiswap.GetSwaps (current)
+// GetSwaps (current)
 //
 // Gets swaps.
 //
@@ -86,7 +86,7 @@ sushiswap_swap_dto_t*
 SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient);
 
 
-// Sushiswap.GetSwaps (historical)
+// GetSwaps (historical)
 //
 // Gets list of swaps for given filters.
 //
@@ -94,7 +94,7 @@ list_t*
 SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// Sushiswap.GetTokens (current)
+// GetTokens (current)
 //
 // Gets tokens.
 //
@@ -102,7 +102,7 @@ sushiswap_token_dto_t*
 SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient);
 
 
-// Sushiswap.GetTokens (historical)
+// GetTokens (historical)
 //
 // Gets list of tokens for given filters.
 //

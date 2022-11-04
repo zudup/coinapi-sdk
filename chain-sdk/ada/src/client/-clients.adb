@@ -1339,7 +1339,7 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Dapps_Sushiswap_Users_Historical_Get;
 
-   --  Sushiswap.GetPools (current)
+   --  GetPools (current)
    --  Gets pools.
    procedure Sushiswap_Get_Pools__current
       (Client : in out Client_Type;
@@ -1356,7 +1356,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pools__current;
 
-   --  Sushiswap.GetPools (historical)
+   --  GetPools (historical)
    --  Gets list of pools for given filters.
    procedure Sushiswap_Get_Pools__historical
       (Client : in out Client_Type;
@@ -1385,7 +1385,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pools__historical;
 
-   --  Sushiswap.GetSwaps (current)
+   --  GetSwaps (current)
    --  Gets swaps.
    procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
@@ -1402,7 +1402,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__current;
 
-   --  Sushiswap.GetSwaps (historical)
+   --  GetSwaps (historical)
    --  Gets list of swaps for given filters.
    procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
@@ -1431,7 +1431,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__historical;
 
-   --  Sushiswap.GetTokens (current)
+   --  GetTokens (current)
    --  Gets tokens.
    procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
@@ -1448,7 +1448,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Tokens__current;
 
-   --  Sushiswap.GetTokens (historical)
+   --  GetTokens (historical)
    --  Gets list of tokens for given filters.
    procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;

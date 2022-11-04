@@ -1692,7 +1692,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetPools (current)
+  * GetPools (current)
   * Gets pools.
    * @return List<SushiswapPairDTO>
   */
@@ -1748,7 +1748,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetPools (current)
+   * GetPools (current)
    * Gets pools.
 
   */
@@ -1808,7 +1808,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetPools (historical)
+  * GetPools (historical)
   * Gets list of pools for given filters.
    * @param startBlock 
    * @param endBlock 
@@ -1874,7 +1874,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetPools (historical)
+   * GetPools (historical)
    * Gets list of pools for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1939,7 +1939,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetSwaps (current)
+  * GetSwaps (current)
   * Gets swaps.
    * @return SushiswapSwapDTO
   */
@@ -1995,7 +1995,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetSwaps (current)
+   * GetSwaps (current)
    * Gets swaps.
 
   */
@@ -2055,7 +2055,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetSwaps (historical)
+  * GetSwaps (historical)
   * Gets list of swaps for given filters.
    * @param startBlock 
    * @param endBlock 
@@ -2121,7 +2121,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetSwaps (historical)
+   * GetSwaps (historical)
    * Gets list of swaps for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -2186,7 +2186,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetTokens (current)
+  * GetTokens (current)
   * Gets tokens.
    * @return SushiswapTokenDTO
   */
@@ -2242,7 +2242,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetTokens (current)
+   * GetTokens (current)
    * Gets tokens.
 
   */
@@ -2302,7 +2302,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * Sushiswap.GetTokens (historical)
+  * GetTokens (historical)
   * Gets list of tokens for given filters.
    * @param startBlock 
    * @param endBlock 
@@ -2368,7 +2368,7 @@ public class SushiswapApi {
   }
 
       /**
-   * Sushiswap.GetTokens (historical)
+   * GetTokens (historical)
    * Gets list of tokens for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */

@@ -30,18 +30,18 @@ Method | HTTP request | Description
 [**dappsSushiswapTransactionsHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
 [**dappsSushiswapUsersHistoricalGetWithHttpInfo**](SushiswapApi.md#dappsSushiswapUsersHistoricalGetWithHttpInfo) | **GET** /dapps/sushiswap/users/historical | 
-[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
-[**sushiswapGetPoolsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
-[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
-[**sushiswapGetPoolsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
-[**sushiswapGetSwapsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
-[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
-[**sushiswapGetSwapsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
-[**sushiswapGetTokensCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
-[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
-[**sushiswapGetTokensHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
+[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswapGetPoolsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswapGetPoolsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPoolsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
+[**sushiswapGetSwapsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
+[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
+[**sushiswapGetSwapsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
+[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswapGetTokensCurrentWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**sushiswapGetTokensHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 
 
 
@@ -1188,7 +1188,7 @@ No authorization required
 
 > sushiswapGetPoolsCurrent(): ApiRequest[Seq[PairDTO]]
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 Gets pools.
 
@@ -1263,7 +1263,7 @@ No authorization required
 
 > sushiswapGetPoolsHistorical(sushiswapGetPoolsHistoricalRequest): ApiRequest[Seq[PairDTO]]
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -1356,7 +1356,7 @@ No authorization required
 
 > sushiswapGetSwapsCurrent(): ApiRequest[SwapDTO]
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 Gets swaps.
 
@@ -1431,7 +1431,7 @@ No authorization required
 
 > sushiswapGetSwapsHistorical(sushiswapGetSwapsHistoricalRequest): ApiRequest[Seq[SwapDTO]]
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -1524,7 +1524,7 @@ No authorization required
 
 > sushiswapGetTokensCurrent(): ApiRequest[TokenDTO]
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 Gets tokens.
 
@@ -1599,7 +1599,7 @@ No authorization required
 
 > sushiswapGetTokensHistorical(sushiswapGetTokensHistoricalRequest): ApiRequest[Seq[TokenDTO]]
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 Gets list of tokens for given filters.
 

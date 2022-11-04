@@ -6099,7 +6099,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary Sushiswap.GetPools (current)
+         * @summary GetPools (current)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options: RequestOptions): FetchArgs {
@@ -6121,7 +6121,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of pools for given filters.
-         * @summary Sushiswap.GetPools (historical)
+         * @summary GetPools (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6163,7 +6163,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary Sushiswap.GetSwaps (current)
+         * @summary GetSwaps (current)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options: RequestOptions): FetchArgs {
@@ -6185,7 +6185,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of swaps for given filters.
-         * @summary Sushiswap.GetSwaps (historical)
+         * @summary GetSwaps (historical)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6227,7 +6227,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary Sushiswap.GetTokens (current)
+         * @summary GetTokens (current)
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options: RequestOptions): FetchArgs {
@@ -6249,7 +6249,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of tokens for given filters.
-         * @summary Sushiswap.GetTokens (historical)
+         * @summary GetTokens (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -6523,7 +6523,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary Sushiswap.GetPools (current)
+         * @summary GetPools (current)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -6538,7 +6538,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of pools for given filters.
-         * @summary Sushiswap.GetPools (historical)
+         * @summary GetPools (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -6553,7 +6553,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary Sushiswap.GetSwaps (current)
+         * @summary GetSwaps (current)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<SushiswapSwapDTO> {
@@ -6568,7 +6568,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of swaps for given filters.
-         * @summary Sushiswap.GetSwaps (historical)
+         * @summary GetSwaps (historical)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
@@ -6583,7 +6583,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary Sushiswap.GetTokens (current)
+         * @summary GetTokens (current)
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<SushiswapTokenDTO> {
@@ -6598,7 +6598,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of tokens for given filters.
-         * @summary Sushiswap.GetTokens (historical)
+         * @summary GetTokens (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {

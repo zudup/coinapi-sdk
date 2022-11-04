@@ -209,7 +209,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__current
-  # Sushiswap.GetPools (current)
+  # GetPools (current)
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapPairDTO>]
@@ -220,7 +220,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__historical
-  # Sushiswap.GetPools (historical)
+  # GetPools (historical)
   # Gets list of pools for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -236,7 +236,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__current
-  # Sushiswap.GetSwaps (current)
+  # GetSwaps (current)
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @return [SushiswapSwapDTO]
@@ -247,7 +247,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__historical
-  # Sushiswap.GetSwaps (historical)
+  # GetSwaps (historical)
   # Gets list of swaps for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -263,7 +263,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__current
-  # Sushiswap.GetTokens (current)
+  # GetTokens (current)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [SushiswapTokenDTO]
@@ -274,7 +274,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__historical
-  # Sushiswap.GetTokens (historical)
+  # GetTokens (historical)
   # Gets list of tokens for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

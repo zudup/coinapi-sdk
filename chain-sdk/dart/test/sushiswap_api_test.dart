@@ -82,7 +82,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetPools (current)
+    // GetPools (current)
     //
     // Gets pools.
     //
@@ -91,7 +91,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetPools (historical)
+    // GetPools (historical)
     //
     // Gets list of pools for given filters.
     //
@@ -100,7 +100,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetSwaps (current)
+    // GetSwaps (current)
     //
     // Gets swaps.
     //
@@ -109,7 +109,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetSwaps (historical)
+    // GetSwaps (historical)
     //
     // Gets list of swaps for given filters.
     //
@@ -118,7 +118,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetTokens (current)
+    // GetTokens (current)
     //
     // Gets tokens.
     //
@@ -127,7 +127,7 @@ void main() {
       // TODO
     });
 
-    // Sushiswap.GetTokens (historical)
+    // GetTokens (historical)
     //
     // Gets list of tokens for given filters.
     //

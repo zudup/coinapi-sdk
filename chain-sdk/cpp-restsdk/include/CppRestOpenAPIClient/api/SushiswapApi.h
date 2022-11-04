@@ -269,7 +269,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// Sushiswap.GetPools (current)
+    /// GetPools (current)
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -277,7 +277,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
-    /// Sushiswap.GetPools (historical)
+    /// GetPools (historical)
     /// </summary>
     /// <remarks>
     /// Gets list of pools for given filters.
@@ -295,7 +295,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// Sushiswap.GetSwaps (current)
+    /// GetSwaps (current)
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -303,7 +303,7 @@ public:
     pplx::task<std::shared_ptr<Sushiswap_SwapDTO>> sushiswap_GetSwaps__current(
     ) const;
     /// <summary>
-    /// Sushiswap.GetSwaps (historical)
+    /// GetSwaps (historical)
     /// </summary>
     /// <remarks>
     /// Gets list of swaps for given filters.
@@ -321,7 +321,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// Sushiswap.GetTokens (current)
+    /// GetTokens (current)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -329,7 +329,7 @@ public:
     pplx::task<std::shared_ptr<Sushiswap_TokenDTO>> sushiswap_GetTokens__current(
     ) const;
     /// <summary>
-    /// Sushiswap.GetTokens (historical)
+    /// GetTokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets list of tokens for given filters.

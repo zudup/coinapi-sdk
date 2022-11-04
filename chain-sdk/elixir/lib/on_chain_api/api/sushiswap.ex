@@ -531,7 +531,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetPools (current)
+  GetPools (current)
   Gets pools.
 
   ### Parameters
@@ -560,7 +560,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetPools (historical)
+  GetPools (historical)
   Gets list of pools for given filters.
 
   ### Parameters
@@ -603,7 +603,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetSwaps (current)
+  GetSwaps (current)
   Gets swaps.
 
   ### Parameters
@@ -632,7 +632,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetSwaps (historical)
+  GetSwaps (historical)
   Gets list of swaps for given filters.
 
   ### Parameters
@@ -675,7 +675,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetTokens (current)
+  GetTokens (current)
   Gets tokens.
 
   ### Parameters
@@ -704,7 +704,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Sushiswap.GetTokens (historical)
+  GetTokens (historical)
   Gets list of tokens for given filters.
 
   ### Parameters

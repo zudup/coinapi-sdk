@@ -897,7 +897,7 @@ class SushiswapApi {
     }
   }
 
-  /// Sushiswap.GetPools (current)
+  /// GetPools (current)
   ///
   /// Gets pools.
   ///
@@ -927,7 +927,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetPools (current)
+  /// GetPools (current)
   ///
   /// Gets pools.
   Future<List<SushiswapPairDTO>?> sushiswapGetPoolsCurrent() async {
@@ -948,7 +948,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Sushiswap.GetPools (historical)
+  /// GetPools (historical)
   ///
   /// Gets list of pools for given filters.
   ///
@@ -1006,7 +1006,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetPools (historical)
+  /// GetPools (historical)
   ///
   /// Gets list of pools for given filters.
   ///
@@ -1039,7 +1039,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Sushiswap.GetSwaps (current)
+  /// GetSwaps (current)
   ///
   /// Gets swaps.
   ///
@@ -1069,7 +1069,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetSwaps (current)
+  /// GetSwaps (current)
   ///
   /// Gets swaps.
   Future<SushiswapSwapDTO?> sushiswapGetSwapsCurrent() async {
@@ -1087,7 +1087,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Sushiswap.GetSwaps (historical)
+  /// GetSwaps (historical)
   ///
   /// Gets list of swaps for given filters.
   ///
@@ -1145,7 +1145,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetSwaps (historical)
+  /// GetSwaps (historical)
   ///
   /// Gets list of swaps for given filters.
   ///
@@ -1178,7 +1178,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Sushiswap.GetTokens (current)
+  /// GetTokens (current)
   ///
   /// Gets tokens.
   ///
@@ -1208,7 +1208,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetTokens (current)
+  /// GetTokens (current)
   ///
   /// Gets tokens.
   Future<SushiswapTokenDTO?> sushiswapGetTokensCurrent() async {
@@ -1226,7 +1226,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Sushiswap.GetTokens (historical)
+  /// GetTokens (historical)
   ///
   /// Gets list of tokens for given filters.
   ///
@@ -1284,7 +1284,7 @@ class SushiswapApi {
     );
   }
 
-  /// Sushiswap.GetTokens (historical)
+  /// GetTokens (historical)
   ///
   /// Gets list of tokens for given filters.
   ///

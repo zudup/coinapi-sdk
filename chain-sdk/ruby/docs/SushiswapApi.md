@@ -17,12 +17,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dapps_sushiswap_token_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dapps_sushiswap_transactions_historical_get**](SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dapps_sushiswap_users_historical_get**](SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical |  |
-| [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current) |
-| [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical) |
-| [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current) |
-| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical) |
-| [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current) |
-| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical) |
+| [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | GetPools (current) |
+| [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) |
+| [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) |
+| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
+| [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) |
+| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) |
 
 
 ## dapps_sushiswap_bundles_historical_get
@@ -940,7 +940,7 @@ No authorization required
 
 > <Array<SushiswapPairDTO>> sushiswap_get_pools__current
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 Gets pools.
 
@@ -953,7 +953,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # Sushiswap.GetPools (current)
+  # GetPools (current)
   result = api_instance.sushiswap_get_pools__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -969,7 +969,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetPools (current)
+  # GetPools (current)
   data, status_code, headers = api_instance.sushiswap_get_pools__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -1001,7 +1001,7 @@ No authorization required
 
 > <Array<SushiswapPairDTO>> sushiswap_get_pools__historical(opts)
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 Gets list of pools for given filters.
 
@@ -1021,7 +1021,7 @@ opts = {
 }
 
 begin
-  # Sushiswap.GetPools (historical)
+  # GetPools (historical)
   result = api_instance.sushiswap_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1037,7 +1037,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetPools (historical)
+  # GetPools (historical)
   data, status_code, headers = api_instance.sushiswap_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1075,7 +1075,7 @@ No authorization required
 
 > <SushiswapSwapDTO> sushiswap_get_swaps__current
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 Gets swaps.
 
@@ -1088,7 +1088,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # Sushiswap.GetSwaps (current)
+  # GetSwaps (current)
   result = api_instance.sushiswap_get_swaps__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -1104,7 +1104,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetSwaps (current)
+  # GetSwaps (current)
   data, status_code, headers = api_instance.sushiswap_get_swaps__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -1136,7 +1136,7 @@ No authorization required
 
 > <Array<SushiswapSwapDTO>> sushiswap_get_swaps__historical(opts)
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 Gets list of swaps for given filters.
 
@@ -1156,7 +1156,7 @@ opts = {
 }
 
 begin
-  # Sushiswap.GetSwaps (historical)
+  # GetSwaps (historical)
   result = api_instance.sushiswap_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1172,7 +1172,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetSwaps (historical)
+  # GetSwaps (historical)
   data, status_code, headers = api_instance.sushiswap_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1210,7 +1210,7 @@ No authorization required
 
 > <SushiswapTokenDTO> sushiswap_get_tokens__current
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 Gets tokens.
 
@@ -1223,7 +1223,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # Sushiswap.GetTokens (current)
+  # GetTokens (current)
   result = api_instance.sushiswap_get_tokens__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -1239,7 +1239,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetTokens (current)
+  # GetTokens (current)
   data, status_code, headers = api_instance.sushiswap_get_tokens__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -1271,7 +1271,7 @@ No authorization required
 
 > <Array<SushiswapTokenDTO>> sushiswap_get_tokens__historical(opts)
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 Gets list of tokens for given filters.
 
@@ -1291,7 +1291,7 @@ opts = {
 }
 
 begin
-  # Sushiswap.GetTokens (historical)
+  # GetTokens (historical)
   result = api_instance.sushiswap_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1307,7 +1307,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Sushiswap.GetTokens (historical)
+  # GetTokens (historical)
   data, status_code, headers = api_instance.sushiswap_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

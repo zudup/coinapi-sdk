@@ -1106,7 +1106,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetPools (current)
+     * GetPools (current)
      * Gets pools.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1163,7 +1163,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetPools (historical)
+     * GetPools (historical)
      * Gets list of pools for given filters.
      * @param startBlock 
      * @param endBlock 
@@ -1248,7 +1248,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetSwaps (current)
+     * GetSwaps (current)
      * Gets swaps.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1305,7 +1305,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetSwaps (historical)
+     * GetSwaps (historical)
      * Gets list of swaps for given filters.
      * @param startBlock 
      * @param endBlock 
@@ -1390,7 +1390,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetTokens (current)
+     * GetTokens (current)
      * Gets tokens.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1447,7 +1447,7 @@ export class SushiswapService {
     }
 
     /**
-     * Sushiswap.GetTokens (historical)
+     * GetTokens (historical)
      * Gets list of tokens for given filters.
      * @param startBlock 
      * @param endBlock 

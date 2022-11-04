@@ -469,7 +469,7 @@ bool dappsSushiswapUsersHistoricalGetAsync(char * accessToken,
 	void(* handler)(Error, void* ) , void* userData);
 
 
-/*! \brief Sushiswap.GetPools (current). *Synchronous*
+/*! \brief GetPools (current). *Synchronous*
  *
  * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -481,7 +481,7 @@ bool sushiswapGetPools (current)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetPools (current). *Asynchronous*
+/*! \brief GetPools (current). *Asynchronous*
  *
  * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -494,7 +494,7 @@ bool sushiswapGetPools (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Sushiswap.GetPools (historical). *Synchronous*
+/*! \brief GetPools (historical). *Synchronous*
  *
  * Gets list of pools for given filters.
  * \param startBlock 
@@ -511,7 +511,7 @@ bool sushiswapGetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetPools (historical). *Asynchronous*
+/*! \brief GetPools (historical). *Asynchronous*
  *
  * Gets list of pools for given filters.
  * \param startBlock 
@@ -529,7 +529,7 @@ bool sushiswapGetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Sushiswap.GetSwaps (current). *Synchronous*
+/*! \brief GetSwaps (current). *Synchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -541,7 +541,7 @@ bool sushiswapGetSwaps (current)Sync(char * accessToken,
 	void(* handler)(Sushiswap.SwapDTO, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetSwaps (current). *Asynchronous*
+/*! \brief GetSwaps (current). *Asynchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -554,7 +554,7 @@ bool sushiswapGetSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Sushiswap.GetSwaps (historical). *Synchronous*
+/*! \brief GetSwaps (historical). *Synchronous*
  *
  * Gets list of swaps for given filters.
  * \param startBlock 
@@ -571,7 +571,7 @@ bool sushiswapGetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetSwaps (historical). *Asynchronous*
+/*! \brief GetSwaps (historical). *Asynchronous*
  *
  * Gets list of swaps for given filters.
  * \param startBlock 
@@ -589,7 +589,7 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Sushiswap.GetTokens (current). *Synchronous*
+/*! \brief GetTokens (current). *Synchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -601,7 +601,7 @@ bool sushiswapGetTokens (current)Sync(char * accessToken,
 	void(* handler)(Sushiswap.TokenDTO, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetTokens (current). *Asynchronous*
+/*! \brief GetTokens (current). *Asynchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -614,7 +614,7 @@ bool sushiswapGetTokens (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Sushiswap.GetTokens (historical). *Synchronous*
+/*! \brief GetTokens (historical). *Synchronous*
  *
  * Gets list of tokens for given filters.
  * \param startBlock 
@@ -631,7 +631,7 @@ bool sushiswapGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Sushiswap.GetTokens (historical). *Asynchronous*
+/*! \brief GetTokens (historical). *Asynchronous*
  *
  * Gets list of tokens for given filters.
  * \param startBlock 

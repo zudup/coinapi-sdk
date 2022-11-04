@@ -1379,7 +1379,7 @@ function Invoke-DappsSushiswapUsersHistoricalGet {
 <#
 .SYNOPSIS
 
-Sushiswap.GetPools (current)
+GetPools (current)
 
 .DESCRIPTION
 
@@ -1454,7 +1454,7 @@ function Invoke-SushiswapGetPoolsCurrent {
 <#
 .SYNOPSIS
 
-Sushiswap.GetPools (historical)
+GetPools (historical)
 
 .DESCRIPTION
 
@@ -1579,7 +1579,7 @@ function Invoke-SushiswapGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-Sushiswap.GetSwaps (current)
+GetSwaps (current)
 
 .DESCRIPTION
 
@@ -1654,7 +1654,7 @@ function Invoke-SushiswapGetSwapsCurrent {
 <#
 .SYNOPSIS
 
-Sushiswap.GetSwaps (historical)
+GetSwaps (historical)
 
 .DESCRIPTION
 
@@ -1779,7 +1779,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-Sushiswap.GetTokens (current)
+GetTokens (current)
 
 .DESCRIPTION
 
@@ -1854,7 +1854,7 @@ function Invoke-SushiswapGetTokensCurrent {
 <#
 .SYNOPSIS
 
-Sushiswap.GetTokens (historical)
+GetTokens (historical)
 
 .DESCRIPTION
 

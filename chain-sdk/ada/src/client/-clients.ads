@@ -528,13 +528,13 @@ package .Clients is
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date);
 
-   --  Sushiswap.GetPools (current)
+   --  GetPools (current)
    --  Gets pools.
    procedure Sushiswap_Get_Pools__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
-   --  Sushiswap.GetPools (historical)
+   --  GetPools (historical)
    --  Gets list of pools for given filters.
    procedure Sushiswap_Get_Pools__historical
       (Client : in out Client_Type;
@@ -545,13 +545,13 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
-   --  Sushiswap.GetSwaps (current)
+   --  GetSwaps (current)
    --  Gets swaps.
    procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapSwapDTO_Type);
 
-   --  Sushiswap.GetSwaps (historical)
+   --  GetSwaps (historical)
    --  Gets list of swaps for given filters.
    procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
@@ -562,13 +562,13 @@ package .Clients is
        Pool_Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
 
-   --  Sushiswap.GetTokens (current)
+   --  GetTokens (current)
    --  Gets tokens.
    procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapTokenDTO_Type);
 
-   --  Sushiswap.GetTokens (historical)
+   --  GetTokens (historical)
    --  Gets list of tokens for given filters.
    procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;
