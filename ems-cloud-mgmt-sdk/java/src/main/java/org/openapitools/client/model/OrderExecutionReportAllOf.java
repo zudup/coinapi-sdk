@@ -43,6 +43,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -53,7 +54,7 @@ import org.openapitools.client.JSON;
  * The order execution report message.
  */
 @ApiModel(description = "The order execution report message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:32.206470Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:10.485981Z[Etc/UTC]")
 public class OrderExecutionReportAllOf {
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "client_order_id_format_exchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)
@@ -404,9 +405,7 @@ public class OrderExecutionReportAllOf {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (OrderExecutionReportAllOf.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!OrderExecutionReportAllOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in OrderExecutionReportAllOf is not found in the empty JSON string", OrderExecutionReportAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -425,14 +424,14 @@ public class OrderExecutionReportAllOf {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("client_order_id_format_exchange") != null && !jsonObj.get("client_order_id_format_exchange").isJsonNull()) && !jsonObj.get("client_order_id_format_exchange").isJsonPrimitive()) {
+      if (!jsonObj.get("client_order_id_format_exchange").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `client_order_id_format_exchange` to be a primitive type in the JSON string but got `%s`", jsonObj.get("client_order_id_format_exchange").toString()));
       }
       if ((jsonObj.get("exchange_order_id") != null && !jsonObj.get("exchange_order_id").isJsonNull()) && !jsonObj.get("exchange_order_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `exchange_order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange_order_id").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("status_history") != null && !jsonObj.get("status_history").isJsonNull()) && !jsonObj.get("status_history").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("status_history") != null && !jsonObj.get("status_history").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `status_history` to be an array in the JSON string but got `%s`", jsonObj.get("status_history").toString()));
       }
       if ((jsonObj.get("error_message") != null && !jsonObj.get("error_message").isJsonNull()) && !jsonObj.get("error_message").isJsonPrimitive()) {

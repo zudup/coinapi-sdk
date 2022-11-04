@@ -35,11 +35,11 @@ MessageReject <- R6::R6Class(
     #' @param rejected_message Value of rejected request, if available.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `type` = NULL, `reject_reason` = NULL, `exchange_id` = NULL, `message` = NULL, `rejected_message` = NULL, ...
-    ) {
+    initialize = function(`type` = NULL, `reject_reason` = NULL, `exchange_id` = NULL, `message` = NULL, `rejected_message` = NULL, ...) {
       if (!is.null(`type`)) {
-        stopifnot(is.character(`type`), length(`type`) == 1)
+        if (!(is.character(`type`) && length(`type`) == 1)) {
+          stop(paste("Error! Invalid data for `type`. Must be a string:", `type`))
+        }
         self$`type` <- `type`
       }
       if (!is.null(`reject_reason`)) {
@@ -47,15 +47,21 @@ MessageReject <- R6::R6Class(
         self$`reject_reason` <- `reject_reason`
       }
       if (!is.null(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
       if (!is.null(`message`)) {
-        stopifnot(is.character(`message`), length(`message`) == 1)
+        if (!(is.character(`message`) && length(`message`) == 1)) {
+          stop(paste("Error! Invalid data for `message`. Must be a string:", `message`))
+        }
         self$`message` <- `message`
       }
       if (!is.null(`rejected_message`)) {
-        stopifnot(is.character(`rejected_message`), length(`rejected_message`) == 1)
+        if (!(is.character(`rejected_message`) && length(`rejected_message`) == 1)) {
+          stop(paste("Error! Invalid data for `rejected_message`. Must be a string:", `rejected_message`))
+        }
         self$`rejected_message` <- `rejected_message`
       }
     },
@@ -239,18 +245,19 @@ MessageReject <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#MessageReject$unlock()
+# MessageReject$unlock()
 #
 ## Below is an example to define the print fnuction
-#MessageReject$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# MessageReject$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#MessageReject$lock()
+# MessageReject$lock()
 

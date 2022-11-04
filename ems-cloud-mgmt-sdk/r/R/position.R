@@ -26,11 +26,11 @@ Position <- R6::R6Class(
     #' @param data data
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `exchange_id` = NULL, `data` = NULL, ...
-    ) {
+    initialize = function(`exchange_id` = NULL, `data` = NULL, ...) {
       if (!is.null(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
       if (!is.null(`data`)) {
@@ -169,18 +169,19 @@ Position <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#Position$unlock()
+# Position$unlock()
 #
 ## Below is an example to define the print fnuction
-#Position$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# Position$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#Position$lock()
+# Position$lock()
 

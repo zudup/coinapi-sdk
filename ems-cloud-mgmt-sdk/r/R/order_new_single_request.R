@@ -53,15 +53,17 @@ OrderNewSingleRequest <- R6::R6Class(
     #' @param exec_inst Order execution instructions are documented in the separate section: <a href=\"#ems-order-params-exec\">EMS / Starter Guide / Order parameters / Execution instructions</a>
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `expire_time` = NULL, `exec_inst` = NULL, ...
-    ) {
+    initialize = function(`exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `expire_time` = NULL, `exec_inst` = NULL, ...) {
       if (!missing(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
       if (!missing(`client_order_id`)) {
-        stopifnot(is.character(`client_order_id`), length(`client_order_id`) == 1)
+        if (!(is.character(`client_order_id`) && length(`client_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id`. Must be a string:", `client_order_id`))
+        }
         self$`client_order_id` <- `client_order_id`
       }
       if (!missing(`amount_order`)) {
@@ -83,11 +85,15 @@ OrderNewSingleRequest <- R6::R6Class(
         self$`time_in_force` <- `time_in_force`
       }
       if (!is.null(`symbol_id_exchange`)) {
-        stopifnot(is.character(`symbol_id_exchange`), length(`symbol_id_exchange`) == 1)
+        if (!(is.character(`symbol_id_exchange`) && length(`symbol_id_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_exchange`. Must be a string:", `symbol_id_exchange`))
+        }
         self$`symbol_id_exchange` <- `symbol_id_exchange`
       }
       if (!is.null(`symbol_id_coinapi`)) {
-        stopifnot(is.character(`symbol_id_coinapi`), length(`symbol_id_coinapi`) == 1)
+        if (!(is.character(`symbol_id_coinapi`) && length(`symbol_id_coinapi`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_coinapi`. Must be a string:", `symbol_id_coinapi`))
+        }
         self$`symbol_id_coinapi` <- `symbol_id_coinapi`
       }
       if (!is.null(`expire_time`)) {
@@ -340,13 +346,17 @@ OrderNewSingleRequest <- R6::R6Class(
       input_json <- jsonlite::fromJSON(input)
       # check the required field `exchange_id`
       if (!is.null(input_json$`exchange_id`)) {
-        stopifnot(is.character(input_json$`exchange_id`), length(input_json$`exchange_id`) == 1)
+        if (!(is.character(input_json$`exchange_id`) && length(input_json$`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", input_json$`exchange_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderNewSingleRequest: the required field `exchange_id` is missing."))
       }
       # check the required field `client_order_id`
       if (!is.null(input_json$`client_order_id`)) {
-        stopifnot(is.character(input_json$`client_order_id`), length(input_json$`client_order_id`) == 1)
+        if (!(is.character(input_json$`client_order_id`) && length(input_json$`client_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id`. Must be a string:", input_json$`client_order_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderNewSingleRequest: the required field `client_order_id` is missing."))
       }
@@ -489,18 +499,19 @@ OrderNewSingleRequest <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderNewSingleRequest$unlock()
+# OrderNewSingleRequest$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderNewSingleRequest$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderNewSingleRequest$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderNewSingleRequest$lock()
+# OrderNewSingleRequest$lock()
 

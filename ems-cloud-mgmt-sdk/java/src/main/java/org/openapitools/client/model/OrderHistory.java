@@ -42,6 +42,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -51,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * OrderHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T18:40:32.206470Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T09:22:10.485981Z[Etc/UTC]")
 public class OrderHistory {
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
@@ -970,9 +971,7 @@ public class OrderHistory {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (OrderHistory.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!OrderHistory.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in OrderHistory is not found in the empty JSON string", OrderHistory.openapiRequiredFields.toString()));
         }
       }
@@ -1005,8 +1004,8 @@ public class OrderHistory {
       if ((jsonObj.get("timeInForce") != null && !jsonObj.get("timeInForce").isJsonNull()) && !jsonObj.get("timeInForce").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `timeInForce` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeInForce").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("execInst") != null && !jsonObj.get("execInst").isJsonNull()) && !jsonObj.get("execInst").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("execInst") != null && !jsonObj.get("execInst").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `execInst` to be an array in the JSON string but got `%s`", jsonObj.get("execInst").toString()));
       }
       if ((jsonObj.get("clientOrderIdFormatExchange") != null && !jsonObj.get("clientOrderIdFormatExchange").isJsonNull()) && !jsonObj.get("clientOrderIdFormatExchange").isJsonPrimitive()) {
@@ -1018,12 +1017,12 @@ public class OrderHistory {
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("statusHistoryStatus") != null && !jsonObj.get("statusHistoryStatus").isJsonNull()) && !jsonObj.get("statusHistoryStatus").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("statusHistoryStatus") != null && !jsonObj.get("statusHistoryStatus").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `statusHistoryStatus` to be an array in the JSON string but got `%s`", jsonObj.get("statusHistoryStatus").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("statusHistoryTime") != null && !jsonObj.get("statusHistoryTime").isJsonNull()) && !jsonObj.get("statusHistoryTime").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("statusHistoryTime") != null && !jsonObj.get("statusHistoryTime").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `statusHistoryTime` to be an array in the JSON string but got `%s`", jsonObj.get("statusHistoryTime").toString()));
       }
       if ((jsonObj.get("errorMessageResult") != null && !jsonObj.get("errorMessageResult").isJsonNull()) && !jsonObj.get("errorMessageResult").isJsonPrimitive()) {
@@ -1035,16 +1034,16 @@ public class OrderHistory {
       if ((jsonObj.get("errorMessageMessage") != null && !jsonObj.get("errorMessageMessage").isJsonNull()) && !jsonObj.get("errorMessageMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `errorMessageMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("errorMessageMessage").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("fillsTime") != null && !jsonObj.get("fillsTime").isJsonNull()) && !jsonObj.get("fillsTime").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("fillsTime") != null && !jsonObj.get("fillsTime").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `fillsTime` to be an array in the JSON string but got `%s`", jsonObj.get("fillsTime").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("fillsPrice") != null && !jsonObj.get("fillsPrice").isJsonNull()) && !jsonObj.get("fillsPrice").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("fillsPrice") != null && !jsonObj.get("fillsPrice").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `fillsPrice` to be an array in the JSON string but got `%s`", jsonObj.get("fillsPrice").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("fillsAmount") != null && !jsonObj.get("fillsAmount").isJsonNull()) && !jsonObj.get("fillsAmount").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("fillsAmount") != null && !jsonObj.get("fillsAmount").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `fillsAmount` to be an array in the JSON string but got `%s`", jsonObj.get("fillsAmount").toString()));
       }
   }

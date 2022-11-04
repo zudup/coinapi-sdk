@@ -16,6 +16,8 @@ import type {
     OrdSide,
     OrdStatus,
     OrdType,
+    OrderExecutionReportAllOf,
+    OrderNewSingleRequest,
     TimeInForce,
 } from './';
 

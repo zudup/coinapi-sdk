@@ -29,19 +29,23 @@ OrderCancelSingleRequest <- R6::R6Class(
     #' @param client_order_id The unique identifier of the order assigned by the client. One of the properties (`exchange_order_id`, `client_order_id`) is required to identify the new order.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `exchange_id`, `exchange_order_id` = NULL, `client_order_id` = NULL, ...
-    ) {
+    initialize = function(`exchange_id`, `exchange_order_id` = NULL, `client_order_id` = NULL, ...) {
       if (!missing(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
       if (!is.null(`exchange_order_id`)) {
-        stopifnot(is.character(`exchange_order_id`), length(`exchange_order_id`) == 1)
+        if (!(is.character(`exchange_order_id`) && length(`exchange_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_order_id`. Must be a string:", `exchange_order_id`))
+        }
         self$`exchange_order_id` <- `exchange_order_id`
       }
       if (!is.null(`client_order_id`)) {
-        stopifnot(is.character(`client_order_id`), length(`client_order_id`) == 1)
+        if (!(is.character(`client_order_id`) && length(`client_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id`. Must be a string:", `client_order_id`))
+        }
         self$`client_order_id` <- `client_order_id`
       }
     },
@@ -152,7 +156,9 @@ OrderCancelSingleRequest <- R6::R6Class(
       input_json <- jsonlite::fromJSON(input)
       # check the required field `exchange_id`
       if (!is.null(input_json$`exchange_id`)) {
-        stopifnot(is.character(input_json$`exchange_id`), length(input_json$`exchange_id`) == 1)
+        if (!(is.character(input_json$`exchange_id`) && length(input_json$`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", input_json$`exchange_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderCancelSingleRequest: the required field `exchange_id` is missing."))
       }
@@ -207,18 +213,19 @@ OrderCancelSingleRequest <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderCancelSingleRequest$unlock()
+# OrderCancelSingleRequest$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderCancelSingleRequest$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderCancelSingleRequest$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderCancelSingleRequest$lock()
+# OrderCancelSingleRequest$lock()
 

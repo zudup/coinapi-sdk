@@ -23,11 +23,11 @@ OrderCancelAllRequest <- R6::R6Class(
     #' @param exchange_id Identifier of the exchange from which active orders should be canceled.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `exchange_id`, ...
-    ) {
+    initialize = function(`exchange_id`, ...) {
       if (!missing(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
     },
@@ -106,7 +106,9 @@ OrderCancelAllRequest <- R6::R6Class(
       input_json <- jsonlite::fromJSON(input)
       # check the required field `exchange_id`
       if (!is.null(input_json$`exchange_id`)) {
-        stopifnot(is.character(input_json$`exchange_id`), length(input_json$`exchange_id`) == 1)
+        if (!(is.character(input_json$`exchange_id`) && length(input_json$`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", input_json$`exchange_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderCancelAllRequest: the required field `exchange_id` is missing."))
       }
@@ -161,18 +163,19 @@ OrderCancelAllRequest <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderCancelAllRequest$unlock()
+# OrderCancelAllRequest$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderCancelAllRequest$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderCancelAllRequest$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderCancelAllRequest$lock()
+# OrderCancelAllRequest$lock()
 

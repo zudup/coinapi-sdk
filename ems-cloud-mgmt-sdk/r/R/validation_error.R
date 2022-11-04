@@ -35,26 +35,32 @@ ValidationError <- R6::R6Class(
     #' @param errors errors
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `type` = NULL, `title` = NULL, `status` = NULL, `traceId` = NULL, `errors` = NULL, ...
-    ) {
+    initialize = function(`type` = NULL, `title` = NULL, `status` = NULL, `traceId` = NULL, `errors` = NULL, ...) {
       if (!is.null(`type`)) {
-        stopifnot(is.character(`type`), length(`type`) == 1)
+        if (!(is.character(`type`) && length(`type`) == 1)) {
+          stop(paste("Error! Invalid data for `type`. Must be a string:", `type`))
+        }
         self$`type` <- `type`
       }
       if (!is.null(`title`)) {
-        stopifnot(is.character(`title`), length(`title`) == 1)
+        if (!(is.character(`title`) && length(`title`) == 1)) {
+          stop(paste("Error! Invalid data for `title`. Must be a string:", `title`))
+        }
         self$`title` <- `title`
       }
       if (!is.null(`status`)) {
         self$`status` <- `status`
       }
       if (!is.null(`traceId`)) {
-        stopifnot(is.character(`traceId`), length(`traceId`) == 1)
+        if (!(is.character(`traceId`) && length(`traceId`) == 1)) {
+          stop(paste("Error! Invalid data for `traceId`. Must be a string:", `traceId`))
+        }
         self$`traceId` <- `traceId`
       }
       if (!is.null(`errors`)) {
-        stopifnot(is.character(`errors`), length(`errors`) == 1)
+        if (!(is.character(`errors`) && length(`errors`) == 1)) {
+          stop(paste("Error! Invalid data for `errors`. Must be a string:", `errors`))
+        }
         self$`errors` <- `errors`
       }
     },
@@ -236,18 +242,19 @@ ValidationError <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#ValidationError$unlock()
+# ValidationError$unlock()
 #
 ## Below is an example to define the print fnuction
-#ValidationError$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# ValidationError$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#ValidationError$lock()
+# ValidationError$lock()
 

@@ -50,15 +50,17 @@ PositionDataInner <- R6::R6Class(
     #' @param raw_data raw_data
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `avg_entry_price` = NULL, `quantity` = NULL, `side` = NULL, `unrealized_pnl` = NULL, `leverage` = NULL, `cross_margin` = NULL, `liquidation_price` = NULL, `raw_data` = NULL, ...
-    ) {
+    initialize = function(`symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `avg_entry_price` = NULL, `quantity` = NULL, `side` = NULL, `unrealized_pnl` = NULL, `leverage` = NULL, `cross_margin` = NULL, `liquidation_price` = NULL, `raw_data` = NULL, ...) {
       if (!is.null(`symbol_id_exchange`)) {
-        stopifnot(is.character(`symbol_id_exchange`), length(`symbol_id_exchange`) == 1)
+        if (!(is.character(`symbol_id_exchange`) && length(`symbol_id_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_exchange`. Must be a string:", `symbol_id_exchange`))
+        }
         self$`symbol_id_exchange` <- `symbol_id_exchange`
       }
       if (!is.null(`symbol_id_coinapi`)) {
-        stopifnot(is.character(`symbol_id_coinapi`), length(`symbol_id_coinapi`) == 1)
+        if (!(is.character(`symbol_id_coinapi`) && length(`symbol_id_coinapi`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_coinapi`. Must be a string:", `symbol_id_coinapi`))
+        }
         self$`symbol_id_coinapi` <- `symbol_id_coinapi`
       }
       if (!is.null(`avg_entry_price`)) {
@@ -78,7 +80,9 @@ PositionDataInner <- R6::R6Class(
         self$`leverage` <- `leverage`
       }
       if (!is.null(`cross_margin`)) {
-        stopifnot(is.logical(`cross_margin`), length(`cross_margin`) == 1)
+        if (!(is.logical(`cross_margin`) && length(`cross_margin`) == 1)) {
+          stop(paste("Error! Invalid data for `cross_margin`. Must be a boolean:", `cross_margin`))
+        }
         self$`cross_margin` <- `cross_margin`
       }
       if (!is.null(`liquidation_price`)) {
@@ -348,18 +352,19 @@ PositionDataInner <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#PositionDataInner$unlock()
+# PositionDataInner$unlock()
 #
 ## Below is an example to define the print fnuction
-#PositionDataInner$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# PositionDataInner$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#PositionDataInner$lock()
+# PositionDataInner$lock()
 
