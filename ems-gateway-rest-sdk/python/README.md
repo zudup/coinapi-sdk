@@ -205,7 +205,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.apis import balances_api
+from openapi_client.apis.tags import balances_api
 from openapi_client.model.balances import Balances
 from openapi_client.model.message_reject import MessageReject
 # Defining the host is optional and defaults to https://ems-gateway-aws-eu-central-1-dev.coinapi.io

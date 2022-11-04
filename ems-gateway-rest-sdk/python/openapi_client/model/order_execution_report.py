@@ -226,7 +226,7 @@ class OrderExecutionReport(
                 cls,
                 *args: typing.Union[dict, frozendict.frozendict, ],
                 amount_open: typing.Union[MetaOapg.properties.amount_open, decimal.Decimal, int, float, ],
-                time_order: typing.Union[MetaOapg.properties.time_order, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                time_order: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
                 client_order_id_format_exchange: typing.Union[MetaOapg.properties.client_order_id_format_exchange, str, ],
                 amount_filled: typing.Union[MetaOapg.properties.amount_filled, decimal.Decimal, int, float, ],
                 status: 'OrdStatus',

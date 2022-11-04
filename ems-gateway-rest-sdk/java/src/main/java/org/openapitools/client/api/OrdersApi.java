@@ -120,7 +120,8 @@ public class OrdersApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "appliction/json"
+            "application/json",
+            "appliction/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -141,15 +142,12 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersCancelAllPostValidateBeforeCall(OrderCancelAllRequest orderCancelAllRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'orderCancelAllRequest' is set
         if (orderCancelAllRequest == null) {
             throw new ApiException("Missing the required parameter 'orderCancelAllRequest' when calling v1OrdersCancelAllPost(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = v1OrdersCancelAllPostCall(orderCancelAllRequest, _callback);
-        return localVarCall;
+        return v1OrdersCancelAllPostCall(orderCancelAllRequest, _callback);
 
     }
 
@@ -254,7 +252,8 @@ public class OrdersApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "appliction/json"
+            "application/json",
+            "appliction/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -275,15 +274,12 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersCancelPostValidateBeforeCall(OrderCancelSingleRequest orderCancelSingleRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'orderCancelSingleRequest' is set
         if (orderCancelSingleRequest == null) {
             throw new ApiException("Missing the required parameter 'orderCancelSingleRequest' when calling v1OrdersCancelPost(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = v1OrdersCancelPostCall(orderCancelSingleRequest, _callback);
-        return localVarCall;
+        return v1OrdersCancelPostCall(orderCancelSingleRequest, _callback);
 
     }
 
@@ -391,7 +387,8 @@ public class OrdersApi {
         }
 
         final String[] localVarAccepts = {
-            "application/json", "appliction/json"
+            "application/json",
+            "appliction/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -399,7 +396,6 @@ public class OrdersApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -412,10 +408,7 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersGetValidateBeforeCall(String exchangeId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = v1OrdersGetCall(exchangeId, _callback);
-        return localVarCall;
+        return v1OrdersGetCall(exchangeId, _callback);
 
     }
 
@@ -533,7 +526,6 @@ public class OrdersApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -546,20 +538,17 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersHistoryGetValidateBeforeCall(String timeStart, String timeEnd, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'timeStart' is set
         if (timeStart == null) {
             throw new ApiException("Missing the required parameter 'timeStart' when calling v1OrdersHistoryGet(Async)");
         }
-        
+
         // verify the required parameter 'timeEnd' is set
         if (timeEnd == null) {
             throw new ApiException("Missing the required parameter 'timeEnd' when calling v1OrdersHistoryGet(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = v1OrdersHistoryGetCall(timeStart, timeEnd, _callback);
-        return localVarCall;
+        return v1OrdersHistoryGetCall(timeStart, timeEnd, _callback);
 
     }
 
@@ -665,7 +654,8 @@ public class OrdersApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "appliction/json"
+            "application/json",
+            "appliction/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -686,15 +676,12 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersPostValidateBeforeCall(OrderNewSingleRequest orderNewSingleRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'orderNewSingleRequest' is set
         if (orderNewSingleRequest == null) {
             throw new ApiException("Missing the required parameter 'orderNewSingleRequest' when calling v1OrdersPost(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = v1OrdersPostCall(orderNewSingleRequest, _callback);
-        return localVarCall;
+        return v1OrdersPostCall(orderNewSingleRequest, _callback);
 
     }
 
@@ -793,7 +780,7 @@ public class OrdersApi {
 
         // create path and map variables
         String localVarPath = "/v1/orders/status/{client_order_id}"
-            .replaceAll("\\{" + "client_order_id" + "\\}", localVarApiClient.escapeString(clientOrderId.toString()));
+            .replace("{" + "client_order_id" + "}", localVarApiClient.escapeString(clientOrderId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -810,7 +797,6 @@ public class OrdersApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -823,15 +809,12 @@ public class OrdersApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call v1OrdersStatusClientOrderIdGetValidateBeforeCall(String clientOrderId, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'clientOrderId' is set
         if (clientOrderId == null) {
             throw new ApiException("Missing the required parameter 'clientOrderId' when calling v1OrdersStatusClientOrderIdGet(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = v1OrdersStatusClientOrderIdGetCall(clientOrderId, _callback);
-        return localVarCall;
+        return v1OrdersStatusClientOrderIdGetCall(clientOrderId, _callback);
 
     }
 

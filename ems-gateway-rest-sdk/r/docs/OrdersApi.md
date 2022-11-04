@@ -222,7 +222,7 @@ library(openapi)
 # Send new order
 #
 # prepare function argument(s)
-var_order_new_single_request <- OrderNewSingleRequest$new("exchange_id_example", "client_order_id_example", 123, 123, OrdSide$new(), OrdType$new(), TimeInForce$new(), "symbol_id_exchange_example", "symbol_id_coinapi_example", "expire_time_example", list("MAKER_OR_CANCEL")) # OrderNewSingleRequest | OrderNewSingleRequest object.
+var_order_new_single_request <- OrderNewSingleRequest$new("exchange_id_example", "client_order_id_example", 123, 123, OrdSide$new(), OrdType$new(), TimeInForce$new(), "symbol_id_exchange_example", "symbol_id_coinapi_example", "expire_time_example", c("MAKER_OR_CANCEL")) # OrderNewSingleRequest | OrderNewSingleRequest object.
 
 api_instance <- OrdersApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.

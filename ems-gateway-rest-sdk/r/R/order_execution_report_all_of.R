@@ -47,11 +47,11 @@ OrderExecutionReportAllOf <- R6::R6Class(
     #' @param fills Relay fill information on working orders.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `exchange_order_id` = NULL, `avg_px` = NULL, `status_history` = NULL, `error_message` = NULL, `fills` = NULL, ...
-    ) {
+    initialize = function(`client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `exchange_order_id` = NULL, `avg_px` = NULL, `status_history` = NULL, `error_message` = NULL, `fills` = NULL, ...) {
       if (!missing(`client_order_id_format_exchange`)) {
-        stopifnot(is.character(`client_order_id_format_exchange`), length(`client_order_id_format_exchange`) == 1)
+        if (!(is.character(`client_order_id_format_exchange`) && length(`client_order_id_format_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id_format_exchange`. Must be a string:", `client_order_id_format_exchange`))
+        }
         self$`client_order_id_format_exchange` <- `client_order_id_format_exchange`
       }
       if (!missing(`amount_open`)) {
@@ -65,7 +65,9 @@ OrderExecutionReportAllOf <- R6::R6Class(
         self$`status` <- `status`
       }
       if (!is.null(`exchange_order_id`)) {
-        stopifnot(is.character(`exchange_order_id`), length(`exchange_order_id`) == 1)
+        if (!(is.character(`exchange_order_id`) && length(`exchange_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_order_id`. Must be a string:", `exchange_order_id`))
+        }
         self$`exchange_order_id` <- `exchange_order_id`
       }
       if (!is.null(`avg_px`)) {
@@ -77,7 +79,9 @@ OrderExecutionReportAllOf <- R6::R6Class(
         self$`status_history` <- `status_history`
       }
       if (!is.null(`error_message`)) {
-        stopifnot(is.character(`error_message`), length(`error_message`) == 1)
+        if (!(is.character(`error_message`) && length(`error_message`) == 1)) {
+          stop(paste("Error! Invalid data for `error_message`. Must be a string:", `error_message`))
+        }
         self$`error_message` <- `error_message`
       }
       if (!is.null(`fills`)) {
@@ -291,7 +295,9 @@ OrderExecutionReportAllOf <- R6::R6Class(
       input_json <- jsonlite::fromJSON(input)
       # check the required field `client_order_id_format_exchange`
       if (!is.null(input_json$`client_order_id_format_exchange`)) {
-        stopifnot(is.character(input_json$`client_order_id_format_exchange`), length(input_json$`client_order_id_format_exchange`) == 1)
+        if (!(is.character(input_json$`client_order_id_format_exchange`) && length(input_json$`client_order_id_format_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id_format_exchange`. Must be a string:", input_json$`client_order_id_format_exchange`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderExecutionReportAllOf: the required field `client_order_id_format_exchange` is missing."))
       }
@@ -392,18 +398,19 @@ OrderExecutionReportAllOf <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderExecutionReportAllOf$unlock()
+# OrderExecutionReportAllOf$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderExecutionReportAllOf$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderExecutionReportAllOf$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderExecutionReportAllOf$lock()
+# OrderExecutionReportAllOf$lock()
 

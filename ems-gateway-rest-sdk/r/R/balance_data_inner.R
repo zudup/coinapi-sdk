@@ -44,42 +44,56 @@ BalanceDataInner <- R6::R6Class(
     #' @param traded Value of the current total traded.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `asset_id_exchange` = NULL, `asset_id_coinapi` = NULL, `balance` = NULL, `available` = NULL, `locked` = NULL, `last_updated_by` = NULL, `rate_usd` = NULL, `traded` = NULL, ...
-    ) {
+    initialize = function(`asset_id_exchange` = NULL, `asset_id_coinapi` = NULL, `balance` = NULL, `available` = NULL, `locked` = NULL, `last_updated_by` = NULL, `rate_usd` = NULL, `traded` = NULL, ...) {
       if (!is.null(`asset_id_exchange`)) {
-        stopifnot(is.character(`asset_id_exchange`), length(`asset_id_exchange`) == 1)
+        if (!(is.character(`asset_id_exchange`) && length(`asset_id_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `asset_id_exchange`. Must be a string:", `asset_id_exchange`))
+        }
         self$`asset_id_exchange` <- `asset_id_exchange`
       }
       if (!is.null(`asset_id_coinapi`)) {
-        stopifnot(is.character(`asset_id_coinapi`), length(`asset_id_coinapi`) == 1)
+        if (!(is.character(`asset_id_coinapi`) && length(`asset_id_coinapi`) == 1)) {
+          stop(paste("Error! Invalid data for `asset_id_coinapi`. Must be a string:", `asset_id_coinapi`))
+        }
         self$`asset_id_coinapi` <- `asset_id_coinapi`
       }
       if (!is.null(`balance`)) {
-        stopifnot(is.numeric(`balance`), length(`balance`) == 1)
+        if (!(is.numeric(`balance`) && length(`balance`) == 1)) {
+          stop(paste("Error! Invalid data for `balance`. Must be a number:", `balance`))
+        }
         self$`balance` <- `balance`
       }
       if (!is.null(`available`)) {
-        stopifnot(is.numeric(`available`), length(`available`) == 1)
+        if (!(is.numeric(`available`) && length(`available`) == 1)) {
+          stop(paste("Error! Invalid data for `available`. Must be a number:", `available`))
+        }
         self$`available` <- `available`
       }
       if (!is.null(`locked`)) {
-        stopifnot(is.numeric(`locked`), length(`locked`) == 1)
+        if (!(is.numeric(`locked`) && length(`locked`) == 1)) {
+          stop(paste("Error! Invalid data for `locked`. Must be a number:", `locked`))
+        }
         self$`locked` <- `locked`
       }
       if (!is.null(`last_updated_by`)) {
         if (!(`last_updated_by` %in% c("INITIALIZATION", "BALANCE_MANAGER", "EXCHANGE"))) {
           stop(paste("Error! \"", `last_updated_by`, "\" cannot be assigned to `last_updated_by`. Must be \"INITIALIZATION\", \"BALANCE_MANAGER\", \"EXCHANGE\".", sep = ""))
         }
-        stopifnot(is.character(`last_updated_by`), length(`last_updated_by`) == 1)
+        if (!(is.character(`last_updated_by`) && length(`last_updated_by`) == 1)) {
+          stop(paste("Error! Invalid data for `last_updated_by`. Must be a string:", `last_updated_by`))
+        }
         self$`last_updated_by` <- `last_updated_by`
       }
       if (!is.null(`rate_usd`)) {
-        stopifnot(is.numeric(`rate_usd`), length(`rate_usd`) == 1)
+        if (!(is.numeric(`rate_usd`) && length(`rate_usd`) == 1)) {
+          stop(paste("Error! Invalid data for `rate_usd`. Must be a number:", `rate_usd`))
+        }
         self$`rate_usd` <- `rate_usd`
       }
       if (!is.null(`traded`)) {
-        stopifnot(is.numeric(`traded`), length(`traded`) == 1)
+        if (!(is.numeric(`traded`) && length(`traded`) == 1)) {
+          stop(paste("Error! Invalid data for `traded`. Must be a number:", `traded`))
+        }
         self$`traded` <- `traded`
       }
     },
@@ -315,18 +329,19 @@ BalanceDataInner <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#BalanceDataInner$unlock()
+# BalanceDataInner$unlock()
 #
 ## Below is an example to define the print fnuction
-#BalanceDataInner$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# BalanceDataInner$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#BalanceDataInner$lock()
+# BalanceDataInner$lock()
 

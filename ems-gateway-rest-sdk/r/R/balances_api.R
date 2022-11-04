@@ -46,7 +46,7 @@
 #' ####################  V1BalancesGet  ####################
 #'
 #' library(openapi)
-#' var_exchange_id <- "KRAKEN" # character | Filter the balances to the specific exchange.
+#' var_exchange_id <- "KRAKEN" # character | Filter the balances to the specific exchange. (Optional)
 #'
 #' #Get balances
 #' api_instance <- BalancesApi$new()
@@ -148,13 +148,13 @@ BalancesApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[Balance]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj

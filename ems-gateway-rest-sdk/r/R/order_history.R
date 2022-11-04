@@ -101,27 +101,35 @@ OrderHistory <- R6::R6Class(
     #' @param createdTime Created time
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `apikey` = NULL, `exchangeId` = NULL, `clientOrderId` = NULL, `symbolIdExchange` = NULL, `symbolIdCoinapi` = NULL, `amountOrder` = NULL, `price` = NULL, `side` = NULL, `orderType` = NULL, `timeInForce` = NULL, `expireTime` = NULL, `execInst` = NULL, `clientOrderIdFormatExchange` = NULL, `exchangeOrderId` = NULL, `amountOpen` = NULL, `amountFilled` = NULL, `avgPx` = NULL, `status` = NULL, `statusHistoryStatus` = NULL, `statusHistoryTime` = NULL, `errorMessageResult` = NULL, `errorMessageReason` = NULL, `errorMessageMessage` = NULL, `fillsTime` = NULL, `fillsPrice` = NULL, `fillsAmount` = NULL, `createdTime` = NULL, ...
-    ) {
+    initialize = function(`apikey` = NULL, `exchangeId` = NULL, `clientOrderId` = NULL, `symbolIdExchange` = NULL, `symbolIdCoinapi` = NULL, `amountOrder` = NULL, `price` = NULL, `side` = NULL, `orderType` = NULL, `timeInForce` = NULL, `expireTime` = NULL, `execInst` = NULL, `clientOrderIdFormatExchange` = NULL, `exchangeOrderId` = NULL, `amountOpen` = NULL, `amountFilled` = NULL, `avgPx` = NULL, `status` = NULL, `statusHistoryStatus` = NULL, `statusHistoryTime` = NULL, `errorMessageResult` = NULL, `errorMessageReason` = NULL, `errorMessageMessage` = NULL, `fillsTime` = NULL, `fillsPrice` = NULL, `fillsAmount` = NULL, `createdTime` = NULL, ...) {
       if (!is.null(`apikey`)) {
-        stopifnot(is.character(`apikey`), length(`apikey`) == 1)
+        if (!(is.character(`apikey`) && length(`apikey`) == 1)) {
+          stop(paste("Error! Invalid data for `apikey`. Must be a string:", `apikey`))
+        }
         self$`apikey` <- `apikey`
       }
       if (!is.null(`exchangeId`)) {
-        stopifnot(is.character(`exchangeId`), length(`exchangeId`) == 1)
+        if (!(is.character(`exchangeId`) && length(`exchangeId`) == 1)) {
+          stop(paste("Error! Invalid data for `exchangeId`. Must be a string:", `exchangeId`))
+        }
         self$`exchangeId` <- `exchangeId`
       }
       if (!is.null(`clientOrderId`)) {
-        stopifnot(is.character(`clientOrderId`), length(`clientOrderId`) == 1)
+        if (!(is.character(`clientOrderId`) && length(`clientOrderId`) == 1)) {
+          stop(paste("Error! Invalid data for `clientOrderId`. Must be a string:", `clientOrderId`))
+        }
         self$`clientOrderId` <- `clientOrderId`
       }
       if (!is.null(`symbolIdExchange`)) {
-        stopifnot(is.character(`symbolIdExchange`), length(`symbolIdExchange`) == 1)
+        if (!(is.character(`symbolIdExchange`) && length(`symbolIdExchange`) == 1)) {
+          stop(paste("Error! Invalid data for `symbolIdExchange`. Must be a string:", `symbolIdExchange`))
+        }
         self$`symbolIdExchange` <- `symbolIdExchange`
       }
       if (!is.null(`symbolIdCoinapi`)) {
-        stopifnot(is.character(`symbolIdCoinapi`), length(`symbolIdCoinapi`) == 1)
+        if (!(is.character(`symbolIdCoinapi`) && length(`symbolIdCoinapi`) == 1)) {
+          stop(paste("Error! Invalid data for `symbolIdCoinapi`. Must be a string:", `symbolIdCoinapi`))
+        }
         self$`symbolIdCoinapi` <- `symbolIdCoinapi`
       }
       if (!is.null(`amountOrder`)) {
@@ -134,11 +142,15 @@ OrderHistory <- R6::R6Class(
         self$`side` <- `side`
       }
       if (!is.null(`orderType`)) {
-        stopifnot(is.character(`orderType`), length(`orderType`) == 1)
+        if (!(is.character(`orderType`) && length(`orderType`) == 1)) {
+          stop(paste("Error! Invalid data for `orderType`. Must be a string:", `orderType`))
+        }
         self$`orderType` <- `orderType`
       }
       if (!is.null(`timeInForce`)) {
-        stopifnot(is.character(`timeInForce`), length(`timeInForce`) == 1)
+        if (!(is.character(`timeInForce`) && length(`timeInForce`) == 1)) {
+          stop(paste("Error! Invalid data for `timeInForce`. Must be a string:", `timeInForce`))
+        }
         self$`timeInForce` <- `timeInForce`
       }
       if (!is.null(`expireTime`)) {
@@ -150,11 +162,15 @@ OrderHistory <- R6::R6Class(
         self$`execInst` <- `execInst`
       }
       if (!is.null(`clientOrderIdFormatExchange`)) {
-        stopifnot(is.character(`clientOrderIdFormatExchange`), length(`clientOrderIdFormatExchange`) == 1)
+        if (!(is.character(`clientOrderIdFormatExchange`) && length(`clientOrderIdFormatExchange`) == 1)) {
+          stop(paste("Error! Invalid data for `clientOrderIdFormatExchange`. Must be a string:", `clientOrderIdFormatExchange`))
+        }
         self$`clientOrderIdFormatExchange` <- `clientOrderIdFormatExchange`
       }
       if (!is.null(`exchangeOrderId`)) {
-        stopifnot(is.character(`exchangeOrderId`), length(`exchangeOrderId`) == 1)
+        if (!(is.character(`exchangeOrderId`) && length(`exchangeOrderId`) == 1)) {
+          stop(paste("Error! Invalid data for `exchangeOrderId`. Must be a string:", `exchangeOrderId`))
+        }
         self$`exchangeOrderId` <- `exchangeOrderId`
       }
       if (!is.null(`amountOpen`)) {
@@ -167,7 +183,9 @@ OrderHistory <- R6::R6Class(
         self$`avgPx` <- `avgPx`
       }
       if (!is.null(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
+        if (!(is.character(`status`) && length(`status`) == 1)) {
+          stop(paste("Error! Invalid data for `status`. Must be a string:", `status`))
+        }
         self$`status` <- `status`
       }
       if (!is.null(`statusHistoryStatus`)) {
@@ -181,15 +199,21 @@ OrderHistory <- R6::R6Class(
         self$`statusHistoryTime` <- `statusHistoryTime`
       }
       if (!is.null(`errorMessageResult`)) {
-        stopifnot(is.character(`errorMessageResult`), length(`errorMessageResult`) == 1)
+        if (!(is.character(`errorMessageResult`) && length(`errorMessageResult`) == 1)) {
+          stop(paste("Error! Invalid data for `errorMessageResult`. Must be a string:", `errorMessageResult`))
+        }
         self$`errorMessageResult` <- `errorMessageResult`
       }
       if (!is.null(`errorMessageReason`)) {
-        stopifnot(is.character(`errorMessageReason`), length(`errorMessageReason`) == 1)
+        if (!(is.character(`errorMessageReason`) && length(`errorMessageReason`) == 1)) {
+          stop(paste("Error! Invalid data for `errorMessageReason`. Must be a string:", `errorMessageReason`))
+        }
         self$`errorMessageReason` <- `errorMessageReason`
       }
       if (!is.null(`errorMessageMessage`)) {
-        stopifnot(is.character(`errorMessageMessage`), length(`errorMessageMessage`) == 1)
+        if (!(is.character(`errorMessageMessage`) && length(`errorMessageMessage`) == 1)) {
+          stop(paste("Error! Invalid data for `errorMessageMessage`. Must be a string:", `errorMessageMessage`))
+        }
         self$`errorMessageMessage` <- `errorMessageMessage`
       }
       if (!is.null(`fillsTime`)) {
@@ -741,18 +765,19 @@ OrderHistory <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderHistory$unlock()
+# OrderHistory$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderHistory$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderHistory$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderHistory$lock()
+# OrderHistory$lock()
 

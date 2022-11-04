@@ -195,7 +195,7 @@
 #' ####################  V1OrdersCancelAllPost  ####################
 #'
 #' library(openapi)
-#' var_order_cancel_all_request <- OrderCancelAllRequest$new() # OrderCancelAllRequest | OrderCancelAllRequest object.
+#' var_order_cancel_all_request <- OrderCancelAllRequest$new("exchange_id_example") # OrderCancelAllRequest | OrderCancelAllRequest object.
 #'
 #' #Cancel all orders request
 #' api_instance <- OrdersApi$new()
@@ -209,7 +209,7 @@
 #' ####################  V1OrdersCancelPost  ####################
 #'
 #' library(openapi)
-#' var_order_cancel_single_request <- OrderCancelSingleRequest$new() # OrderCancelSingleRequest | OrderCancelSingleRequest object.
+#' var_order_cancel_single_request <- OrderCancelSingleRequest$new("exchange_id_example", "exchange_order_id_example", "client_order_id_example") # OrderCancelSingleRequest | OrderCancelSingleRequest object.
 #'
 #' #Cancel order request
 #' api_instance <- OrdersApi$new()
@@ -223,7 +223,7 @@
 #' ####################  V1OrdersGet  ####################
 #'
 #' library(openapi)
-#' var_exchange_id <- "KRAKEN" # character | Filter the open orders to the specific exchange.
+#' var_exchange_id <- "KRAKEN" # character | Filter the open orders to the specific exchange. (Optional)
 #'
 #' #Get open orders
 #' api_instance <- OrdersApi$new()
@@ -252,7 +252,7 @@
 #' ####################  V1OrdersPost  ####################
 #'
 #' library(openapi)
-#' var_order_new_single_request <- OrderNewSingleRequest$new() # OrderNewSingleRequest | OrderNewSingleRequest object.
+#' var_order_new_single_request <- OrderNewSingleRequest$new("exchange_id_example", "client_order_id_example", 123, 123, OrdSide$new(), OrdType$new(), TimeInForce$new(), "symbol_id_exchange_example", "symbol_id_coinapi_example", "expire_time_example", c("MAKER_OR_CANCEL")) # OrderNewSingleRequest | OrderNewSingleRequest object.
 #'
 #' #Send new order
 #' api_instance <- OrdersApi$new()
@@ -376,13 +376,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "MessageReject", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -475,13 +475,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "OrderExecutionReport", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -566,13 +566,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[OrderExecutionReport]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -670,13 +670,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[OrderHistory]", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -769,13 +769,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "OrderExecutionReport", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj
@@ -866,13 +866,13 @@ OrdersApi <- R6::R6Class(
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(local_var_resp$response, data_file)
+          write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "OrderExecutionReport", loadNamespace("openapi")),
           error = function(e) {
-             stop("Failed to deserialize response")
+            stop("Failed to deserialize response")
           }
         )
         local_var_resp$content <- deserialized_resp_obj

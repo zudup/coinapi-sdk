@@ -80,15 +80,17 @@ OrderExecutionReport <- R6::R6Class(
     #' @param fills Relay fill information on working orders.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(
-        `exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `expire_time` = NULL, `exec_inst` = NULL, `exchange_order_id` = NULL, `avg_px` = NULL, `status_history` = NULL, `error_message` = NULL, `fills` = NULL, ...
-    ) {
+    initialize = function(`exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `symbol_id_exchange` = NULL, `symbol_id_coinapi` = NULL, `expire_time` = NULL, `exec_inst` = NULL, `exchange_order_id` = NULL, `avg_px` = NULL, `status_history` = NULL, `error_message` = NULL, `fills` = NULL, ...) {
       if (!missing(`exchange_id`)) {
-        stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
+        if (!(is.character(`exchange_id`) && length(`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", `exchange_id`))
+        }
         self$`exchange_id` <- `exchange_id`
       }
       if (!missing(`client_order_id`)) {
-        stopifnot(is.character(`client_order_id`), length(`client_order_id`) == 1)
+        if (!(is.character(`client_order_id`) && length(`client_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id`. Must be a string:", `client_order_id`))
+        }
         self$`client_order_id` <- `client_order_id`
       }
       if (!missing(`amount_order`)) {
@@ -110,7 +112,9 @@ OrderExecutionReport <- R6::R6Class(
         self$`time_in_force` <- `time_in_force`
       }
       if (!missing(`client_order_id_format_exchange`)) {
-        stopifnot(is.character(`client_order_id_format_exchange`), length(`client_order_id_format_exchange`) == 1)
+        if (!(is.character(`client_order_id_format_exchange`) && length(`client_order_id_format_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id_format_exchange`. Must be a string:", `client_order_id_format_exchange`))
+        }
         self$`client_order_id_format_exchange` <- `client_order_id_format_exchange`
       }
       if (!missing(`amount_open`)) {
@@ -124,11 +128,15 @@ OrderExecutionReport <- R6::R6Class(
         self$`status` <- `status`
       }
       if (!is.null(`symbol_id_exchange`)) {
-        stopifnot(is.character(`symbol_id_exchange`), length(`symbol_id_exchange`) == 1)
+        if (!(is.character(`symbol_id_exchange`) && length(`symbol_id_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_exchange`. Must be a string:", `symbol_id_exchange`))
+        }
         self$`symbol_id_exchange` <- `symbol_id_exchange`
       }
       if (!is.null(`symbol_id_coinapi`)) {
-        stopifnot(is.character(`symbol_id_coinapi`), length(`symbol_id_coinapi`) == 1)
+        if (!(is.character(`symbol_id_coinapi`) && length(`symbol_id_coinapi`) == 1)) {
+          stop(paste("Error! Invalid data for `symbol_id_coinapi`. Must be a string:", `symbol_id_coinapi`))
+        }
         self$`symbol_id_coinapi` <- `symbol_id_coinapi`
       }
       if (!is.null(`expire_time`)) {
@@ -140,7 +148,9 @@ OrderExecutionReport <- R6::R6Class(
         self$`exec_inst` <- `exec_inst`
       }
       if (!is.null(`exchange_order_id`)) {
-        stopifnot(is.character(`exchange_order_id`), length(`exchange_order_id`) == 1)
+        if (!(is.character(`exchange_order_id`) && length(`exchange_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_order_id`. Must be a string:", `exchange_order_id`))
+        }
         self$`exchange_order_id` <- `exchange_order_id`
       }
       if (!is.null(`avg_px`)) {
@@ -152,7 +162,9 @@ OrderExecutionReport <- R6::R6Class(
         self$`status_history` <- `status_history`
       }
       if (!is.null(`error_message`)) {
-        stopifnot(is.character(`error_message`), length(`error_message`) == 1)
+        if (!(is.character(`error_message`) && length(`error_message`) == 1)) {
+          stop(paste("Error! Invalid data for `error_message`. Must be a string:", `error_message`))
+        }
         self$`error_message` <- `error_message`
       }
       if (!is.null(`fills`)) {
@@ -548,13 +560,17 @@ OrderExecutionReport <- R6::R6Class(
       input_json <- jsonlite::fromJSON(input)
       # check the required field `exchange_id`
       if (!is.null(input_json$`exchange_id`)) {
-        stopifnot(is.character(input_json$`exchange_id`), length(input_json$`exchange_id`) == 1)
+        if (!(is.character(input_json$`exchange_id`) && length(input_json$`exchange_id`) == 1)) {
+          stop(paste("Error! Invalid data for `exchange_id`. Must be a string:", input_json$`exchange_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderExecutionReport: the required field `exchange_id` is missing."))
       }
       # check the required field `client_order_id`
       if (!is.null(input_json$`client_order_id`)) {
-        stopifnot(is.character(input_json$`client_order_id`), length(input_json$`client_order_id`) == 1)
+        if (!(is.character(input_json$`client_order_id`) && length(input_json$`client_order_id`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id`. Must be a string:", input_json$`client_order_id`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderExecutionReport: the required field `client_order_id` is missing."))
       }
@@ -588,7 +604,9 @@ OrderExecutionReport <- R6::R6Class(
       }
       # check the required field `client_order_id_format_exchange`
       if (!is.null(input_json$`client_order_id_format_exchange`)) {
-        stopifnot(is.character(input_json$`client_order_id_format_exchange`), length(input_json$`client_order_id_format_exchange`) == 1)
+        if (!(is.character(input_json$`client_order_id_format_exchange`) && length(input_json$`client_order_id_format_exchange`) == 1)) {
+          stop(paste("Error! Invalid data for `client_order_id_format_exchange`. Must be a string:", input_json$`client_order_id_format_exchange`))
+        }
       } else {
         stop(paste("The JSON input `", input, "` is invalid for OrderExecutionReport: the required field `client_order_id_format_exchange` is missing."))
       }
@@ -759,18 +777,19 @@ OrderExecutionReport <- R6::R6Class(
     print = function() {
       print(jsonlite::prettify(self$toJSONString()))
       invisible(self)
-    }),
-    # Lock the class to prevent modifications to the method or field
-    lock_class = TRUE
+    }
+  ),
+  # Lock the class to prevent modifications to the method or field
+  lock_class = TRUE
 )
 ## Uncomment below to unlock the class to allow modifications of the method or field
-#OrderExecutionReport$unlock()
+# OrderExecutionReport$unlock()
 #
 ## Below is an example to define the print fnuction
-#OrderExecutionReport$set("public", "print", function(...) {
-#  print(jsonlite::prettify(self$toJSONString()))
-#  invisible(self)
-#})
+# OrderExecutionReport$set("public", "print", function(...) {
+#   print(jsonlite::prettify(self$toJSONString()))
+#   invisible(self)
+# })
 ## Uncomment below to lock the class to prevent modifications to the method or field
-#OrderExecutionReport$lock()
+# OrderExecutionReport$lock()
 
