@@ -15,12 +15,12 @@ Method | HTTP request | Description
 [**DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolDayDataHistoricalGet) | **Get** /dapps/sushiswap/poolDayData/historical | 
 [**DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolHourDataHistoricalGet) | **Get** /dapps/sushiswap/poolHourData/historical | 
 [**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#DappsSushiswapPoolsCurrentGet) | **Get** /dapps/sushiswap/pools/current | GetPools
-[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **Get** /dapps/sushiswap/pools/historical | GetPools
+[**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical)
 [**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#DappsSushiswapSwapsCurrentGet) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
 [**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#DappsSushiswapTokensCurrentGet) | **Get** /dapps/sushiswap/tokens/current | GetTokens
-[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **Get** /dapps/sushiswap/tokens/historical | GetTokens
+[**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **Get** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **Get** /dapps/sushiswap/users/historical | 
 
@@ -793,7 +793,7 @@ No authorization required
 
 > []PairDTO DappsSushiswapPoolsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetPools
+GetPools (historical)
 
 ### Example
 
@@ -1128,7 +1128,7 @@ No authorization required
 
 > []TokenDTO DappsSushiswapTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokens
+GetTokens (historical)
 
 ### Example
 

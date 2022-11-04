@@ -724,7 +724,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools
+    # GetPools (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -737,7 +737,7 @@ module OpenapiClient
       data
     end
 
-    # GetPools
+    # GetPools (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1040,7 +1040,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens
+    # GetTokens (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1053,7 +1053,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens
+    # GetTokens (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 

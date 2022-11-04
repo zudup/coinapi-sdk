@@ -16,12 +16,12 @@ Method | HTTP request | Description
 [**dapps_sushiswap_pool_day_data_historical_get**](#dapps_sushiswap_pool_day_data_historical_get) | **get** /dapps/sushiswap/poolDayData/historical | 
 [**dapps_sushiswap_pool_hour_data_historical_get**](#dapps_sushiswap_pool_hour_data_historical_get) | **get** /dapps/sushiswap/poolHourData/historical | 
 [**dapps_sushiswap_pools_current_get**](#dapps_sushiswap_pools_current_get) | **get** /dapps/sushiswap/pools/current | GetPools
-[**dapps_sushiswap_pools_historical_get**](#dapps_sushiswap_pools_historical_get) | **get** /dapps/sushiswap/pools/historical | GetPools
+[**dapps_sushiswap_pools_historical_get**](#dapps_sushiswap_pools_historical_get) | **get** /dapps/sushiswap/pools/historical | GetPools (historical)
 [**dapps_sushiswap_swaps_current_get**](#dapps_sushiswap_swaps_current_get) | **get** /dapps/sushiswap/swaps/current | GetSwaps
 [**dapps_sushiswap_swaps_historical_get**](#dapps_sushiswap_swaps_historical_get) | **get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dapps_sushiswap_token_day_data_historical_get**](#dapps_sushiswap_token_day_data_historical_get) | **get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_tokens_current_get**](#dapps_sushiswap_tokens_current_get) | **get** /dapps/sushiswap/tokens/current | GetTokens
-[**dapps_sushiswap_tokens_historical_get**](#dapps_sushiswap_tokens_historical_get) | **get** /dapps/sushiswap/tokens/historical | GetTokens
+[**dapps_sushiswap_tokens_historical_get**](#dapps_sushiswap_tokens_historical_get) | **get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
 [**dapps_sushiswap_transactions_historical_get**](#dapps_sushiswap_transactions_historical_get) | **get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](#dapps_sushiswap_users_historical_get) | **get** /dapps/sushiswap/users/historical | 
 
@@ -1226,7 +1226,7 @@ No authorization required
 <a name="dapps_sushiswap_pools_historical_get"></a>
 > [PairDTO] dapps_sushiswap_pools_historical_get()
 
-GetPools
+GetPools (historical)
 
 ### Example
 
@@ -1255,7 +1255,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPools
+        # GetPools (historical)
         api_response = api_instance.dapps_sushiswap_pools_historical_get(
             query_params=query_params,
         )
@@ -1830,7 +1830,7 @@ No authorization required
 <a name="dapps_sushiswap_tokens_historical_get"></a>
 > [TokenDTO] dapps_sushiswap_tokens_historical_get()
 
-GetTokens
+GetTokens (historical)
 
 ### Example
 
@@ -1859,7 +1859,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokens
+        # GetTokens (historical)
         api_response = api_instance.dapps_sushiswap_tokens_historical_get(
             query_params=query_params,
         )

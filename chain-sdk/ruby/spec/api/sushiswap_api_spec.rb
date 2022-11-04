@@ -180,7 +180,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for dapps_sushiswap_pools_historical_get
-  # GetPools
+  # GetPools (historical)
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -244,7 +244,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for dapps_sushiswap_tokens_historical_get
-  # GetTokens
+  # GetTokens (historical)
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 

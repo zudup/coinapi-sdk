@@ -912,7 +912,7 @@ export class SushiswapApi {
     }
     /**
      * 
-     * @summary GetPools
+     * @summary GetPools (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1288,7 +1288,7 @@ export class SushiswapApi {
     }
     /**
      * 
-     * @summary GetTokens
+     * @summary GetTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

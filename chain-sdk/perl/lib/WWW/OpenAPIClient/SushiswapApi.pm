@@ -1056,7 +1056,7 @@ sub dapps_sushiswap_pools_current_get {
 #
 # dapps_sushiswap_pools_historical_get
 #
-# GetPools
+# GetPools (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1092,7 +1092,7 @@ sub dapps_sushiswap_pools_current_get {
     },
     };
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_pools_historical_get' } = {
-        summary => 'GetPools',
+        summary => 'GetPools (historical)',
         params => $params,
         returns => 'ARRAY[PairDTO]',
         };
@@ -1462,7 +1462,7 @@ sub dapps_sushiswap_tokens_current_get {
 #
 # dapps_sushiswap_tokens_historical_get
 #
-# GetTokens
+# GetTokens (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1498,7 +1498,7 @@ sub dapps_sushiswap_tokens_current_get {
     },
     };
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_tokens_historical_get' } = {
-        summary => 'GetTokens',
+        summary => 'GetTokens (historical)',
         params => $params,
         returns => 'ARRAY[TokenDTO]',
         };

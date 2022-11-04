@@ -15,12 +15,12 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**dappsSushiswapPoolDayDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical |  |
 | [**dappsSushiswapPoolHourDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical |  |
 | [**dappsSushiswapPoolsCurrentGet()**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools |
-| [**dappsSushiswapPoolsHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools |
+| [**dappsSushiswapPoolsHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) |
 | [**dappsSushiswapSwapsCurrentGet()**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
 | [**dappsSushiswapSwapsHistoricalGet()**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
 | [**dappsSushiswapTokenDayDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dappsSushiswapTokensCurrentGet()**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
-| [**dappsSushiswapTokensHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens |
+| [**dappsSushiswapTokensHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) |
 | [**dappsSushiswapTransactionsHistoricalGet()**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dappsSushiswapUsersHistoricalGet()**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical |  |
 
@@ -686,7 +686,7 @@ No authorization required
 dappsSushiswapPoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\PairDTO[]
 ```
 
-GetPools
+GetPools (historical)
 
 ### Example
 
@@ -973,7 +973,7 @@ No authorization required
 dappsSushiswapTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\TokenDTO[]
 ```
 
-GetTokens
+GetTokens (historical)
 
 ### Example
 

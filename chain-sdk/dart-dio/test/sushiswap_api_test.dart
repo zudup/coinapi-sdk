@@ -66,7 +66,7 @@ void main() {
       // TODO
     });
 
-    // GetPools
+    // GetPools (historical)
     //
     //Future<BuiltList<PairDTO>> dappsSushiswapPoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapPoolsHistoricalGet', () async {
@@ -99,7 +99,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens
+    // GetTokens (historical)
     //
     //Future<BuiltList<TokenDTO>> dappsSushiswapTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test dappsSushiswapTokensHistoricalGet', () async {

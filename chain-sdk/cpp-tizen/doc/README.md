@@ -173,8 +173,8 @@ Method | HTTP request | Description
 *dappsSushiswapPoolHourDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolHourData/historical | .
 *dappsSushiswapPoolsCurrentGetSync* | *GET* /dapps/sushiswap/pools/current | GetPools.
 *dappsSushiswapPoolsCurrentGetASync* | *GET* /dapps/sushiswap/pools/current | GetPools.
-*dappsSushiswapPoolsHistoricalGetSync* | *GET* /dapps/sushiswap/pools/historical | GetPools.
-*dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | GetPools.
+*dappsSushiswapPoolsHistoricalGetSync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
+*dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
 *dappsSushiswapSwapsCurrentGetSync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
 *dappsSushiswapSwapsCurrentGetASync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
 *dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
@@ -183,8 +183,8 @@ Method | HTTP request | Description
 *dappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokensCurrentGetSync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
 *dappsSushiswapTokensCurrentGetASync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.
-*dappsSushiswapTokensHistoricalGetSync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens.
-*dappsSushiswapTokensHistoricalGetASync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens.
+*dappsSushiswapTokensHistoricalGetSync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
+*dappsSushiswapTokensHistoricalGetASync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
 *dappsSushiswapTransactionsHistoricalGetSync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapTransactionsHistoricalGetASync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapUsersHistoricalGetSync* | *GET* /dapps/sushiswap/users/historical | .

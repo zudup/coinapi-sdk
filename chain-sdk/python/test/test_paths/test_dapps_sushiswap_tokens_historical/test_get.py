@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapTokensHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapTokensHistorical unit test stubs
-        GetTokens  # noqa: E501
+        GetTokens (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

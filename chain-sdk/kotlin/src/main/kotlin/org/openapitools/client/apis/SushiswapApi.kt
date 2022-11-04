@@ -1051,7 +1051,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1086,7 +1086,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1479,7 +1479,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1514,7 +1514,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

@@ -1,7 +1,12 @@
 import typing_extensions
 
 from openapi_client.paths import PathValues
+from openapi_client.apis.paths.dapps_sushiswap_pools_current import DappsSushiswapPoolsCurrent
 from openapi_client.apis.paths.dapps_sushiswap_swaps_current import DappsSushiswapSwapsCurrent
+from openapi_client.apis.paths.dapps_sushiswap_tokens_current import DappsSushiswapTokensCurrent
+from openapi_client.apis.paths.dapps_sushiswap_pools_historical import DappsSushiswapPoolsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_swaps_historical import DappsSushiswapSwapsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_tokens_historical import DappsSushiswapTokensHistorical
 from openapi_client.apis.paths.dapps_curve_accounts_historical import DappsCurveAccountsHistorical
 from openapi_client.apis.paths.dapps_curve_add_liquidity_event_historical import DappsCurveAddLiquidityEventHistorical
 from openapi_client.apis.paths.dapps_curve_admin_fee_change_log_historical import DappsCurveAdminFeeChangeLogHistorical
@@ -56,11 +61,9 @@ from openapi_client.apis.paths.dapps_uniswapv2_pool_hour_data_historical import 
 from openapi_client.apis.paths.dapps_sushiswap_pool_hour_data_historical import DappsSushiswapPoolHourDataHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_pools_historical import DappsUniswapv3PoolsHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_pools_historical import DappsUniswapv2PoolsHistorical
-from openapi_client.apis.paths.dapps_sushiswap_pools_historical import DappsSushiswapPoolsHistorical
 from openapi_client.apis.paths.dapps_curve_pools_historical import DappsCurvePoolsHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_pools_current import DappsUniswapv3PoolsCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_pools_current import DappsUniswapv2PoolsCurrent
-from openapi_client.apis.paths.dapps_sushiswap_pools_current import DappsSushiswapPoolsCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_pools_day_data_current import DappsUniswapv3PoolsDayDataCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_pools_hour_data_current import DappsUniswapv3PoolsHourDataCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_positions_historical import DappsUniswapv3PositionsHistorical
@@ -77,7 +80,6 @@ from openapi_client.apis.paths.dapps_dex_solution_historical import DappsDexSolu
 from openapi_client.apis.paths.dapps_dex_stats_historical import DappsDexStatsHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_swaps_historical import DappsUniswapv3SwapsHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_swaps_historical import DappsUniswapv2SwapsHistorical
-from openapi_client.apis.paths.dapps_sushiswap_swaps_historical import DappsSushiswapSwapsHistorical
 from openapi_client.apis.paths.dapps_curve_swaps_historical import DappsCurveSwapsHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_swaps_current import DappsUniswapv3SwapsCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_swaps_current import DappsUniswapv2SwapsCurrent
@@ -92,12 +94,10 @@ from openapi_client.apis.paths.dapps_sushiswap_token_day_data_historical import 
 from openapi_client.apis.paths.dapps_uniswapv3_token_hour_data_historical import DappsUniswapv3TokenHourDataHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_tokens_historical import DappsUniswapv3TokensHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_tokens_historical import DappsUniswapv2TokensHistorical
-from openapi_client.apis.paths.dapps_sushiswap_tokens_historical import DappsSushiswapTokensHistorical
 from openapi_client.apis.paths.dapps_curve_tokens_historical import DappsCurveTokensHistorical
 from openapi_client.apis.paths.dapps_cow_tokens_historical import DappsCowTokensHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_tokens_current import DappsUniswapv3TokensCurrent
 from openapi_client.apis.paths.dapps_uniswapv2_tokens_current import DappsUniswapv2TokensCurrent
-from openapi_client.apis.paths.dapps_sushiswap_tokens_current import DappsSushiswapTokensCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_tokens_day_data_current import DappsUniswapv3TokensDayDataCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_tokens_hour_data_current import DappsUniswapv3TokensHourDataCurrent
 from openapi_client.apis.paths.dapps_dex_trades_historical import DappsDexTradesHistorical
@@ -122,7 +122,12 @@ from openapi_client.apis.paths.dapps_dex_withdraw_request_historical import Dapp
 PathToApi = typing_extensions.TypedDict(
     'PathToApi',
     {
+        PathValues.DAPPS_SUSHISWAP_POOLS_CURRENT: DappsSushiswapPoolsCurrent,
         PathValues.DAPPS_SUSHISWAP_SWAPS_CURRENT: DappsSushiswapSwapsCurrent,
+        PathValues.DAPPS_SUSHISWAP_TOKENS_CURRENT: DappsSushiswapTokensCurrent,
+        PathValues.DAPPS_SUSHISWAP_POOLS_HISTORICAL: DappsSushiswapPoolsHistorical,
+        PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKENS_HISTORICAL: DappsSushiswapTokensHistorical,
         PathValues.DAPPS_CURVE_ACCOUNTS_HISTORICAL: DappsCurveAccountsHistorical,
         PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENT_HISTORICAL: DappsCurveAddLiquidityEventHistorical,
         PathValues.DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_HISTORICAL: DappsCurveAdminFeeChangeLogHistorical,
@@ -177,11 +182,9 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_SUSHISWAP_POOL_HOUR_DATA_HISTORICAL: DappsSushiswapPoolHourDataHistorical,
         PathValues.DAPPS_UNISWAPV3_POOLS_HISTORICAL: DappsUniswapv3PoolsHistorical,
         PathValues.DAPPS_UNISWAPV2_POOLS_HISTORICAL: DappsUniswapv2PoolsHistorical,
-        PathValues.DAPPS_SUSHISWAP_POOLS_HISTORICAL: DappsSushiswapPoolsHistorical,
         PathValues.DAPPS_CURVE_POOLS_HISTORICAL: DappsCurvePoolsHistorical,
         PathValues.DAPPS_UNISWAPV3_POOLS_CURRENT: DappsUniswapv3PoolsCurrent,
         PathValues.DAPPS_UNISWAPV2_POOLS_CURRENT: DappsUniswapv2PoolsCurrent,
-        PathValues.DAPPS_SUSHISWAP_POOLS_CURRENT: DappsSushiswapPoolsCurrent,
         PathValues.DAPPS_UNISWAPV3_POOLS_DAY_DATA_CURRENT: DappsUniswapv3PoolsDayDataCurrent,
         PathValues.DAPPS_UNISWAPV3_POOLS_HOUR_DATA_CURRENT: DappsUniswapv3PoolsHourDataCurrent,
         PathValues.DAPPS_UNISWAPV3_POSITIONS_HISTORICAL: DappsUniswapv3PositionsHistorical,
@@ -198,7 +201,6 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_DEX_STATS_HISTORICAL: DappsDexStatsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_HISTORICAL: DappsUniswapv3SwapsHistorical,
         PathValues.DAPPS_UNISWAPV2_SWAPS_HISTORICAL: DappsUniswapv2SwapsHistorical,
-        PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
         PathValues.DAPPS_CURVE_SWAPS_HISTORICAL: DappsCurveSwapsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_CURRENT: DappsUniswapv3SwapsCurrent,
         PathValues.DAPPS_UNISWAPV2_SWAPS_CURRENT: DappsUniswapv2SwapsCurrent,
@@ -213,12 +215,10 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_UNISWAPV3_TOKEN_HOUR_DATA_HISTORICAL: DappsUniswapv3TokenHourDataHistorical,
         PathValues.DAPPS_UNISWAPV3_TOKENS_HISTORICAL: DappsUniswapv3TokensHistorical,
         PathValues.DAPPS_UNISWAPV2_TOKENS_HISTORICAL: DappsUniswapv2TokensHistorical,
-        PathValues.DAPPS_SUSHISWAP_TOKENS_HISTORICAL: DappsSushiswapTokensHistorical,
         PathValues.DAPPS_CURVE_TOKENS_HISTORICAL: DappsCurveTokensHistorical,
         PathValues.DAPPS_COW_TOKENS_HISTORICAL: DappsCowTokensHistorical,
         PathValues.DAPPS_UNISWAPV3_TOKENS_CURRENT: DappsUniswapv3TokensCurrent,
         PathValues.DAPPS_UNISWAPV2_TOKENS_CURRENT: DappsUniswapv2TokensCurrent,
-        PathValues.DAPPS_SUSHISWAP_TOKENS_CURRENT: DappsSushiswapTokensCurrent,
         PathValues.DAPPS_UNISWAPV3_TOKENS_DAY_DATA_CURRENT: DappsUniswapv3TokensDayDataCurrent,
         PathValues.DAPPS_UNISWAPV3_TOKENS_HOUR_DATA_CURRENT: DappsUniswapv3TokensHourDataCurrent,
         PathValues.DAPPS_DEX_TRADES_HISTORICAL: DappsDexTradesHistorical,
@@ -244,7 +244,12 @@ PathToApi = typing_extensions.TypedDict(
 
 path_to_api = PathToApi(
     {
+        PathValues.DAPPS_SUSHISWAP_POOLS_CURRENT: DappsSushiswapPoolsCurrent,
         PathValues.DAPPS_SUSHISWAP_SWAPS_CURRENT: DappsSushiswapSwapsCurrent,
+        PathValues.DAPPS_SUSHISWAP_TOKENS_CURRENT: DappsSushiswapTokensCurrent,
+        PathValues.DAPPS_SUSHISWAP_POOLS_HISTORICAL: DappsSushiswapPoolsHistorical,
+        PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKENS_HISTORICAL: DappsSushiswapTokensHistorical,
         PathValues.DAPPS_CURVE_ACCOUNTS_HISTORICAL: DappsCurveAccountsHistorical,
         PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENT_HISTORICAL: DappsCurveAddLiquidityEventHistorical,
         PathValues.DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_HISTORICAL: DappsCurveAdminFeeChangeLogHistorical,
@@ -299,11 +304,9 @@ path_to_api = PathToApi(
         PathValues.DAPPS_SUSHISWAP_POOL_HOUR_DATA_HISTORICAL: DappsSushiswapPoolHourDataHistorical,
         PathValues.DAPPS_UNISWAPV3_POOLS_HISTORICAL: DappsUniswapv3PoolsHistorical,
         PathValues.DAPPS_UNISWAPV2_POOLS_HISTORICAL: DappsUniswapv2PoolsHistorical,
-        PathValues.DAPPS_SUSHISWAP_POOLS_HISTORICAL: DappsSushiswapPoolsHistorical,
         PathValues.DAPPS_CURVE_POOLS_HISTORICAL: DappsCurvePoolsHistorical,
         PathValues.DAPPS_UNISWAPV3_POOLS_CURRENT: DappsUniswapv3PoolsCurrent,
         PathValues.DAPPS_UNISWAPV2_POOLS_CURRENT: DappsUniswapv2PoolsCurrent,
-        PathValues.DAPPS_SUSHISWAP_POOLS_CURRENT: DappsSushiswapPoolsCurrent,
         PathValues.DAPPS_UNISWAPV3_POOLS_DAY_DATA_CURRENT: DappsUniswapv3PoolsDayDataCurrent,
         PathValues.DAPPS_UNISWAPV3_POOLS_HOUR_DATA_CURRENT: DappsUniswapv3PoolsHourDataCurrent,
         PathValues.DAPPS_UNISWAPV3_POSITIONS_HISTORICAL: DappsUniswapv3PositionsHistorical,
@@ -320,7 +323,6 @@ path_to_api = PathToApi(
         PathValues.DAPPS_DEX_STATS_HISTORICAL: DappsDexStatsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_HISTORICAL: DappsUniswapv3SwapsHistorical,
         PathValues.DAPPS_UNISWAPV2_SWAPS_HISTORICAL: DappsUniswapv2SwapsHistorical,
-        PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
         PathValues.DAPPS_CURVE_SWAPS_HISTORICAL: DappsCurveSwapsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_CURRENT: DappsUniswapv3SwapsCurrent,
         PathValues.DAPPS_UNISWAPV2_SWAPS_CURRENT: DappsUniswapv2SwapsCurrent,
@@ -335,12 +337,10 @@ path_to_api = PathToApi(
         PathValues.DAPPS_UNISWAPV3_TOKEN_HOUR_DATA_HISTORICAL: DappsUniswapv3TokenHourDataHistorical,
         PathValues.DAPPS_UNISWAPV3_TOKENS_HISTORICAL: DappsUniswapv3TokensHistorical,
         PathValues.DAPPS_UNISWAPV2_TOKENS_HISTORICAL: DappsUniswapv2TokensHistorical,
-        PathValues.DAPPS_SUSHISWAP_TOKENS_HISTORICAL: DappsSushiswapTokensHistorical,
         PathValues.DAPPS_CURVE_TOKENS_HISTORICAL: DappsCurveTokensHistorical,
         PathValues.DAPPS_COW_TOKENS_HISTORICAL: DappsCowTokensHistorical,
         PathValues.DAPPS_UNISWAPV3_TOKENS_CURRENT: DappsUniswapv3TokensCurrent,
         PathValues.DAPPS_UNISWAPV2_TOKENS_CURRENT: DappsUniswapv2TokensCurrent,
-        PathValues.DAPPS_SUSHISWAP_TOKENS_CURRENT: DappsSushiswapTokensCurrent,
         PathValues.DAPPS_UNISWAPV3_TOKENS_DAY_DATA_CURRENT: DappsUniswapv3TokensDayDataCurrent,
         PathValues.DAPPS_UNISWAPV3_TOKENS_HOUR_DATA_CURRENT: DappsUniswapv3TokensHourDataCurrent,
         PathValues.DAPPS_DEX_TRADES_HISTORICAL: DappsDexTradesHistorical,

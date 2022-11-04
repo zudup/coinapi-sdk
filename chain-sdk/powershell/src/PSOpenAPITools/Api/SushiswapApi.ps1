@@ -1144,7 +1144,7 @@ function Invoke-DappsSushiswapPoolsCurrentGet {
 <#
 .SYNOPSIS
 
-GetPools
+GetPools (historical)
 
 .DESCRIPTION
 
@@ -1654,7 +1654,7 @@ function Invoke-DappsSushiswapTokensCurrentGet {
 <#
 .SYNOPSIS
 
-GetTokens
+GetTokens (historical)
 
 .DESCRIPTION
 

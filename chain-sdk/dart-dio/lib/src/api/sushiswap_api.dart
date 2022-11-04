@@ -721,7 +721,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools
+  /// GetPools (historical)
   /// 
   ///
   /// Parameters:
@@ -1111,7 +1111,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens
+  /// GetTokens (historical)
   /// 
   ///
   /// Parameters:

@@ -1728,7 +1728,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1749,7 +1749,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1771,7 +1771,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (asynchronously)
+     * GetPools (historical) (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2416,7 +2416,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2437,7 +2437,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2459,7 +2459,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (asynchronously)
+     * GetTokens (historical) (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

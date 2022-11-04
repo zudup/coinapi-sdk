@@ -35,6 +35,34 @@ tags:
 - description: Dex tag descriptor ...
   name: Dex
 paths:
+  /dapps/sushiswap/pools/current:
+    get:
+      description: Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever since
+        the 1500s.
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+          description: successful operation
+      summary: GetPools
+      tags:
+      - Sushiswap
+      x-accepts: application/json
   /dapps/sushiswap/swaps/current:
     get:
       responses:
@@ -57,6 +85,226 @@ paths:
                 type: array
           description: successful operation
       summary: GetSwaps
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/tokens/current:
+    get:
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+          description: successful operation
+      summary: GetTokens
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/pools/historical:
+    get:
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PairDTO'
+                type: array
+          description: successful operation
+      summary: GetPools (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/swaps/historical:
+    get:
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SwapDTO'
+                type: array
+          description: successful operation
+      summary: GetSwaps (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/tokens/historical:
+    get:
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: tokenId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TokenDTO'
+                type: array
+          description: successful operation
+      summary: GetTokens (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -2453,71 +2701,6 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /dapps/sushiswap/pools/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-          description: successful operation
-      summary: GetPools
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/curve/pools/historical:
     get:
       parameters:
@@ -2633,34 +2816,6 @@ paths:
       summary: GetPools
       tags:
       - UniswapV2
-      x-accepts: application/json
-  /dapps/sushiswap/pools/current:
-    get:
-      description: Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever since
-        the 1500s.
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PairDTO'
-                type: array
-          description: successful operation
-      summary: GetPools
-      tags:
-      - Sushiswap
       x-accepts: application/json
   /dapps/uniswapv3/poolsDayData/current:
     get:
@@ -3346,71 +3501,6 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /dapps/sushiswap/swaps/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/SwapDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/SwapDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/SwapDTO'
-                type: array
-          description: successful operation
-      summary: GetSwaps (historical)
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/curve/swaps/historical:
     get:
       parameters:
@@ -4011,71 +4101,6 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /dapps/sushiswap/tokens/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: tokenId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-          description: successful operation
-      summary: GetTokens
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/curve/tokens/historical:
     get:
       parameters:
@@ -4229,31 +4254,6 @@ paths:
       summary: GetTokens
       tags:
       - UniswapV2
-      x-accepts: application/json
-  /dapps/sushiswap/tokens/current:
-    get:
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TokenDTO'
-                type: array
-          description: successful operation
-      summary: GetTokens
-      tags:
-      - Sushiswap
       x-accepts: application/json
   /dapps/uniswapv3/tokensDayData/current:
     get:

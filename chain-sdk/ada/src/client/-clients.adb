@@ -1291,7 +1291,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dapps_Sushiswap_Pools_Current_Get;
 
-   --  GetPools
+   --  GetPools (historical)
    procedure Dapps_Sushiswap_Pools_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -1402,7 +1402,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dapps_Sushiswap_Tokens_Current_Get;
 
-   --  GetTokens
+   --  GetTokens (historical)
    procedure Dapps_Sushiswap_Tokens_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;

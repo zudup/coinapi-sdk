@@ -509,7 +509,7 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.PairDTO_Type_Vectors.Vector);
 
-   --  GetPools
+   --  GetPools (historical)
    procedure Dapps_Sushiswap_Pools_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -548,7 +548,7 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.TokenDTO_Type_Vectors.Vector);
 
-   --  GetTokens
+   --  GetTokens (historical)
    procedure Dapps_Sushiswap_Tokens_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;

@@ -476,7 +476,7 @@ feature -- API Access
 		end
 
 	dapps_sushiswap_pools_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [PAIR_DTO]
-			-- GetPools
+			-- GetPools (historical)
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -681,7 +681,7 @@ feature -- API Access
 		end
 
 	dapps_sushiswap_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [TOKEN_DTO]
-			-- GetTokens
+			-- GetTokens (historical)
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)

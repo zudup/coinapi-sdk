@@ -749,7 +749,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools
+  /// GetPools (historical)
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -805,7 +805,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools
+  /// GetPools (historical)
   ///
   /// Parameters:
   ///
@@ -1088,7 +1088,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens
+  /// GetTokens (historical)
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1144,7 +1144,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens
+  /// GetTokens (historical)
   ///
   /// Parameters:
   ///

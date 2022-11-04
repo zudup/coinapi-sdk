@@ -155,7 +155,7 @@ test_that("DappsSushiswapPoolsCurrentGet", {
 test_that("DappsSushiswapPoolsHistoricalGet", {
   # tests for DappsSushiswapPoolsHistoricalGet
   # base path: https://onchain.coinapi.io
-  # GetPools
+  # GetPools (historical)
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -219,7 +219,7 @@ test_that("DappsSushiswapTokensCurrentGet", {
 test_that("DappsSushiswapTokensHistoricalGet", {
   # tests for DappsSushiswapTokensHistoricalGet
   # base path: https://onchain.coinapi.io
-  # GetTokens
+  # GetTokens (historical)
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)

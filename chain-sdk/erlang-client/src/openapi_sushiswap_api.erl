@@ -253,7 +253,7 @@ dapps_sushiswap_pools_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetPools
+%% @doc GetPools (historical)
 %% 
 -spec dapps_sushiswap_pools_historical_get(ctx:ctx()) -> {ok, [openapi_pair_dto:openapi_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_pools_historical_get(Ctx) ->
@@ -358,7 +358,7 @@ dapps_sushiswap_tokens_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetTokens
+%% @doc GetTokens (historical)
 %% 
 -spec dapps_sushiswap_tokens_historical_get(ctx:ctx()) -> {ok, [openapi_token_dto:openapi_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_tokens_historical_get(Ctx) ->

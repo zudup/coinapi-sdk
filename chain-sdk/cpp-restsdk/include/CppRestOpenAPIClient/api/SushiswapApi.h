@@ -227,7 +227,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<PairDTO>>> dappsSushiswapPoolsCurrentGet(
     ) const;
     /// <summary>
-    /// GetPools
+    /// GetPools (historical)
     /// </summary>
     /// <remarks>
     /// 
@@ -297,7 +297,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<TokenDTO>>> dappsSushiswapTokensCurrentGet(
     ) const;
     /// <summary>
-    /// GetTokens
+    /// GetTokens (historical)
     /// </summary>
     /// <remarks>
     /// 

@@ -441,7 +441,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools
+  GetPools (historical)
 
   ### Parameters
 
@@ -622,7 +622,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens
+  GetTokens (historical)
 
   ### Parameters
 

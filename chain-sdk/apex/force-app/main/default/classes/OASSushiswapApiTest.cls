@@ -329,7 +329,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      *
      * 
      */
@@ -542,7 +542,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      *
      * 
      */

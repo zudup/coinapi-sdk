@@ -351,12 +351,12 @@ case $state in
             "dappsSushiswapPoolDayDataHistoricalGet[]" \
             "dappsSushiswapPoolHourDataHistoricalGet[]" \
             "dappsSushiswapPoolsCurrentGet[GetPools]" \
-            "dappsSushiswapPoolsHistoricalGet[GetPools]" \
+            "dappsSushiswapPoolsHistoricalGet[GetPools (historical)]" \
             "dappsSushiswapSwapsCurrentGet[GetSwaps]" \
             "dappsSushiswapSwapsHistoricalGet[GetSwaps (historical)]" \
             "dappsSushiswapTokenDayDataHistoricalGet[]" \
             "dappsSushiswapTokensCurrentGet[GetTokens]" \
-            "dappsSushiswapTokensHistoricalGet[GetTokens]" \
+            "dappsSushiswapTokensHistoricalGet[GetTokens (historical)]" \
             "dappsSushiswapTransactionsHistoricalGet[]" \
             "dappsSushiswapUsersHistoricalGet[]"             "dappsUniswapv2BundlesHistoricalGet[]" \
             "dappsUniswapv2BurnsHistoricalGet[]" \

@@ -353,7 +353,7 @@ instance Produces DappsSushiswapPoolsCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/historical@
 -- 
--- GetPools
+-- GetPools (historical)
 -- 
 dappsSushiswapPoolsHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')
@@ -495,7 +495,7 @@ instance Produces DappsSushiswapTokensCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
--- GetTokens
+-- GetTokens (historical)
 -- 
 dappsSushiswapTokensHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')

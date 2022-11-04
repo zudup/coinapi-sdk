@@ -193,7 +193,7 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_pools_historical_get
-            -- GetPools
+            -- GetPools (historical)
             --
             -- 
         local
@@ -272,7 +272,7 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_tokens_historical_get
-            -- GetTokens
+            -- GetTokens (historical)
             --
             -- 
         local

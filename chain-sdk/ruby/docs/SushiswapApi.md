@@ -15,12 +15,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dapps_sushiswap_pool_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_pool_day_data_historical_get) | **GET** /dapps/sushiswap/poolDayData/historical |  |
 | [**dapps_sushiswap_pool_hour_data_historical_get**](SushiswapApi.md#dapps_sushiswap_pool_hour_data_historical_get) | **GET** /dapps/sushiswap/poolHourData/historical |  |
 | [**dapps_sushiswap_pools_current_get**](SushiswapApi.md#dapps_sushiswap_pools_current_get) | **GET** /dapps/sushiswap/pools/current | GetPools |
-| [**dapps_sushiswap_pools_historical_get**](SushiswapApi.md#dapps_sushiswap_pools_historical_get) | **GET** /dapps/sushiswap/pools/historical | GetPools |
+| [**dapps_sushiswap_pools_historical_get**](SushiswapApi.md#dapps_sushiswap_pools_historical_get) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) |
 | [**dapps_sushiswap_swaps_current_get**](SushiswapApi.md#dapps_sushiswap_swaps_current_get) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
 | [**dapps_sushiswap_swaps_historical_get**](SushiswapApi.md#dapps_sushiswap_swaps_historical_get) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
 | [**dapps_sushiswap_token_day_data_historical_get**](SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dapps_sushiswap_tokens_current_get**](SushiswapApi.md#dapps_sushiswap_tokens_current_get) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
-| [**dapps_sushiswap_tokens_historical_get**](SushiswapApi.md#dapps_sushiswap_tokens_historical_get) | **GET** /dapps/sushiswap/tokens/historical | GetTokens |
+| [**dapps_sushiswap_tokens_historical_get**](SushiswapApi.md#dapps_sushiswap_tokens_historical_get) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) |
 | [**dapps_sushiswap_transactions_historical_get**](SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical |  |
 | [**dapps_sushiswap_users_historical_get**](SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical |  |
 
@@ -792,7 +792,7 @@ No authorization required
 
 > <Array<PairDTO>> dapps_sushiswap_pools_historical_get(opts)
 
-GetPools
+GetPools (historical)
 
 ### Examples
 
@@ -810,7 +810,7 @@ opts = {
 }
 
 begin
-  # GetPools
+  # GetPools (historical)
   result = api_instance.dapps_sushiswap_pools_historical_get(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -826,7 +826,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools
+  # GetPools (historical)
   data, status_code, headers = api_instance.dapps_sushiswap_pools_historical_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1125,7 +1125,7 @@ No authorization required
 
 > <Array<TokenDTO>> dapps_sushiswap_tokens_historical_get(opts)
 
-GetTokens
+GetTokens (historical)
 
 ### Examples
 
@@ -1143,7 +1143,7 @@ opts = {
 }
 
 begin
-  # GetTokens
+  # GetTokens (historical)
   result = api_instance.dapps_sushiswap_tokens_historical_get(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1159,7 +1159,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens
+  # GetTokens (historical)
   data, status_code, headers = api_instance.dapps_sushiswap_tokens_historical_get_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

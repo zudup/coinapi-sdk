@@ -1437,7 +1437,7 @@ func (r ApiDappsSushiswapPoolsHistoricalGetRequest) Execute() ([]PairDTO, *http.
 }
 
 /*
-DappsSushiswapPoolsHistoricalGet GetPools
+DappsSushiswapPoolsHistoricalGet GetPools (historical)
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiDappsSushiswapPoolsHistoricalGetRequest
@@ -2046,7 +2046,7 @@ func (r ApiDappsSushiswapTokensHistoricalGetRequest) Execute() ([]TokenDTO, *htt
 }
 
 /*
-DappsSushiswapTokensHistoricalGet GetTokens
+DappsSushiswapTokensHistoricalGet GetTokens (historical)
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiDappsSushiswapTokensHistoricalGetRequest

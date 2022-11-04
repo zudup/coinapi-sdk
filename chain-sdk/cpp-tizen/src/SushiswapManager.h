@@ -393,7 +393,7 @@ bool dappsSushiswapPoolsCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools. *Synchronous*
+/*! \brief GetPools (historical). *Synchronous*
  *
  * 
  * \param startBlock 
@@ -410,7 +410,7 @@ bool dappsSushiswapPoolsHistoricalGetSync(char * accessToken,
 	void(* handler)(std::list<PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools. *Asynchronous*
+/*! \brief GetPools (historical). *Asynchronous*
  *
  * 
  * \param startBlock 
@@ -548,7 +548,7 @@ bool dappsSushiswapTokensCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens. *Synchronous*
+/*! \brief GetTokens (historical). *Synchronous*
  *
  * 
  * \param startBlock 
@@ -565,7 +565,7 @@ bool dappsSushiswapTokensHistoricalGetSync(char * accessToken,
 	void(* handler)(std::list<TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens. *Asynchronous*
+/*! \brief GetTokens (historical). *Asynchronous*
  *
  * 
  * \param startBlock 

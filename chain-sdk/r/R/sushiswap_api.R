@@ -216,7 +216,7 @@
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapPoolsHistoricalGet } \emph{ GetPools }
+#' \strong{ DappsSushiswapPoolsHistoricalGet } \emph{ GetPools (historical) }
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -305,7 +305,7 @@
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapTokensHistoricalGet } \emph{ GetTokens }
+#' \strong{ DappsSushiswapTokensHistoricalGet } \emph{ GetTokens (historical) }
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -524,7 +524,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPools
+#' #GetPools (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -600,7 +600,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens
+#' #GetTokens (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1703,10 +1703,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools
+    #' GetPools (historical)
     #'
     #' @description
-    #' GetPools
+    #' GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1729,10 +1729,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools
+    #' GetPools (historical)
     #'
     #' @description
-    #' GetPools
+    #' GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2195,10 +2195,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens
+    #' GetTokens (historical)
     #'
     #' @description
-    #' GetTokens
+    #' GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2221,10 +2221,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens
+    #' GetTokens (historical)
     #'
     #' @description
-    #' GetTokens
+    #' GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description

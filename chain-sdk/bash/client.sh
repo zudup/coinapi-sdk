@@ -1927,12 +1927,12 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapPoolDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolHourDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapPoolsCurrentGet${OFF};GetPools
-  ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};GetPools
+  ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};GetPools (historical)
   ${CYAN}dappsSushiswapSwapsCurrentGet${OFF};GetSwaps
   ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};GetSwaps (historical)
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapTokensCurrentGet${OFF};GetTokens
-  ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};GetTokens
+  ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};GetTokens (historical)
   ${CYAN}dappsSushiswapTransactionsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapUsersHistoricalGet${OFF};
 EOF
@@ -3449,7 +3449,7 @@ print_dappsSushiswapPoolsCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapPoolsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsHistoricalGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapPoolsHistoricalGet - GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3552,7 +3552,7 @@ print_dappsSushiswapTokensCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapTokensHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapTokensHistoricalGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapTokensHistoricalGet - GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \

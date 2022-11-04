@@ -369,7 +369,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPools
+     * GetPools (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -512,7 +512,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokens
+     * GetTokens (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

@@ -3143,7 +3143,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapPoolsHistoricalGet
      *
-     * GetPools
+     * GetPools (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -3165,7 +3165,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapPoolsHistoricalGetWithHttpInfo
      *
-     * GetPools
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3269,7 +3269,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapPoolsHistoricalGetAsync
      *
-     * GetPools
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3294,7 +3294,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapPoolsHistoricalGetAsyncWithHttpInfo
      *
-     * GetPools
+     * GetPools (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4621,7 +4621,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapTokensHistoricalGet
      *
-     * GetTokens
+     * GetTokens (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -4643,7 +4643,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapTokensHistoricalGetWithHttpInfo
      *
-     * GetTokens
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4747,7 +4747,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapTokensHistoricalGetAsync
      *
-     * GetTokens
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4772,7 +4772,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapTokensHistoricalGetAsyncWithHttpInfo
      *
-     * GetTokens
+     * GetTokens (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)

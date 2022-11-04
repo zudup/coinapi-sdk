@@ -617,7 +617,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapPoolsCurrentGet = function(opt_e
 }
 
 /**
- * GetPools
+ * GetPools (historical)
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -847,7 +847,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapTokensCurrentGet = function(opt_
 }
 
 /**
- * GetTokens
+ * GetTokens (historical)
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

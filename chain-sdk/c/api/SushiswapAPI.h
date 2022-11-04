@@ -58,7 +58,7 @@ list_t*
 SushiswapAPI_dappsSushiswapPoolsCurrentGet(apiClient_t *apiClient);
 
 
-// GetPools
+// GetPools (historical)
 //
 list_t*
 SushiswapAPI_dappsSushiswapPoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
@@ -86,7 +86,7 @@ list_t*
 SushiswapAPI_dappsSushiswapTokensCurrentGet(apiClient_t *apiClient);
 
 
-// GetTokens
+// GetTokens (historical)
 //
 list_t*
 SushiswapAPI_dappsSushiswapTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );

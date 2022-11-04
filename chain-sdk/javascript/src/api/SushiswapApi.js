@@ -534,7 +534,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools
+     * GetPools (historical)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -748,7 +748,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 

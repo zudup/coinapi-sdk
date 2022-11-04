@@ -184,7 +184,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      *
      * @throws ApiException if the Api call fails
      */
@@ -252,7 +252,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      *
      * @throws ApiException if the Api call fails
      */

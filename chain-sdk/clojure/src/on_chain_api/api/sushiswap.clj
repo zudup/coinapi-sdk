@@ -285,7 +285,7 @@
 
 
 (defn-spec dapps-sushiswap-pools-historical-get-with-http-info any?
-  "GetPools"
+  "GetPools (historical)"
   ([] (dapps-sushiswap-pools-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/pools/historical" :get
@@ -298,7 +298,7 @@
               :auth-names    []})))
 
 (defn-spec dapps-sushiswap-pools-historical-get (s/coll-of pair-dto-spec)
-  "GetPools"
+  "GetPools (historical)"
   ([] (dapps-sushiswap-pools-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-pools-historical-get-with-http-info optional-params))]
@@ -396,7 +396,7 @@
 
 
 (defn-spec dapps-sushiswap-tokens-historical-get-with-http-info any?
-  "GetTokens"
+  "GetTokens (historical)"
   ([] (dapps-sushiswap-tokens-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/tokens/historical" :get
@@ -409,7 +409,7 @@
               :auth-names    []})))
 
 (defn-spec dapps-sushiswap-tokens-historical-get (s/coll-of token-dto-spec)
-  "GetTokens"
+  "GetTokens (historical)"
   ([] (dapps-sushiswap-tokens-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-tokens-historical-get-with-http-info optional-params))]

@@ -933,7 +933,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPools
+     * GetPools (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1293,7 +1293,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

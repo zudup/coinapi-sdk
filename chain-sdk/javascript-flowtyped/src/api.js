@@ -6006,7 +6006,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @summary GetPools
+         * @summary GetPools (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6175,7 +6175,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @summary GetTokens
+         * @summary GetTokens (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -6496,7 +6496,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
-         * @summary GetPools
+         * @summary GetPools (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapPoolsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<PairDTO>> {
@@ -6570,7 +6570,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
-         * @summary GetTokens
+         * @summary GetTokens (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapTokensHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<TokenDTO>> {

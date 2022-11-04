@@ -368,7 +368,7 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetPools
+     * GetPools (historical)
      */
     dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest): Observable<Array<PairDTO>>
     dappsSushiswapPoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapPoolsHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<PairDTO>>>
@@ -457,7 +457,7 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetTokens
+     * GetTokens (historical)
      */
     dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest): Observable<Array<TokenDTO>>
     dappsSushiswapTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsSushiswapTokensHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<TokenDTO>>>
