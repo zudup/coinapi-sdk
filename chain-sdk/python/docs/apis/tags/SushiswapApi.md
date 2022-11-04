@@ -18,12 +18,12 @@ Method | HTTP request | Description
 [**dapps_sushiswap_token_day_data_historical_get**](#dapps_sushiswap_token_day_data_historical_get) | **get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_transactions_historical_get**](#dapps_sushiswap_transactions_historical_get) | **get** /dapps/sushiswap/transactions/historical | 
 [**dapps_sushiswap_users_historical_get**](#dapps_sushiswap_users_historical_get) | **get** /dapps/sushiswap/users/historical | 
-[**sushiswap_get_pools__current**](#sushiswap_get_pools__current) | **get** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-[**sushiswap_get_pools__historical**](#sushiswap_get_pools__historical) | **get** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-[**sushiswap_get_swaps__current**](#sushiswap_get_swaps__current) | **get** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-[**sushiswap_get_tokens__current**](#sushiswap_get_tokens__current) | **get** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+[**sushiswap_get_pools__current**](#sushiswap_get_pools__current) | **get** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+[**sushiswap_get_pools__historical**](#sushiswap_get_pools__historical) | **get** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+[**sushiswap_get_swaps__current**](#sushiswap_get_swaps__current) | **get** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+[**sushiswap_get_tokens__current**](#sushiswap_get_tokens__current) | **get** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 
 # **dapps_sushiswap_bundles_historical_get**
 <a name="dapps_sushiswap_bundles_historical_get"></a>
@@ -1457,7 +1457,9 @@ No authorization required
 <a name="sushiswap_get_pools__current"></a>
 > [SushiswapPairDTO] sushiswap_get_pools__current()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
+
+Gets pools.
 
 ### Example
 
@@ -1479,7 +1481,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+        # Sushiswap.GetPools (current)
         api_response = api_instance.sushiswap_get_pools__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -1548,7 +1550,9 @@ No authorization required
 <a name="sushiswap_get_pools__historical"></a>
 > [SushiswapPairDTO] sushiswap_get_pools__historical()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
+
+Gets list of pools for given filters.
 
 ### Example
 
@@ -1577,7 +1581,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+        # Sushiswap.GetPools (historical)
         api_response = api_instance.sushiswap_get_pools__historical(
             query_params=query_params,
         )
@@ -1702,7 +1706,9 @@ No authorization required
 <a name="sushiswap_get_swaps__current"></a>
 > SushiswapSwapDTO sushiswap_get_swaps__current()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
+
+Gets swaps.
 
 ### Example
 
@@ -1724,7 +1730,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+        # Sushiswap.GetSwaps (current)
         api_response = api_instance.sushiswap_get_swaps__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -1775,7 +1781,9 @@ No authorization required
 <a name="sushiswap_get_swaps__historical"></a>
 > [SushiswapSwapDTO] sushiswap_get_swaps__historical()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
+
+Gets list of swaps for given filters.
 
 ### Example
 
@@ -1804,7 +1812,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+        # Sushiswap.GetSwaps (historical)
         api_response = api_instance.sushiswap_get_swaps__historical(
             query_params=query_params,
         )
@@ -1929,7 +1937,9 @@ No authorization required
 <a name="sushiswap_get_tokens__current"></a>
 > SushiswapTokenDTO sushiswap_get_tokens__current()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
+
+Gets tokens.
 
 ### Example
 
@@ -1951,7 +1961,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+        # Sushiswap.GetTokens (current)
         api_response = api_instance.sushiswap_get_tokens__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -2002,7 +2012,9 @@ No authorization required
 <a name="sushiswap_get_tokens__historical"></a>
 > [SushiswapTokenDTO] sushiswap_get_tokens__historical()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
+
+Gets list of tokens for given filters.
 
 ### Example
 
@@ -2031,7 +2043,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+        # Sushiswap.GetTokens (historical)
         api_response = api_instance.sushiswap_get_tokens__historical(
             query_params=query_params,
         )

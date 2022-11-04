@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
-[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+[**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+[**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+[**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 
 
 
@@ -681,7 +681,9 @@ No authorization required
 
 > List&lt;SushiswapPairDTO&gt; sushiswapGetPoolsCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
+
+Gets pools.
 
 ### Example
 
@@ -721,7 +723,9 @@ No authorization required
 
 > List&lt;SushiswapPairDTO&gt; sushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
+
+Gets list of pools for given filters.
 
 ### Example
 
@@ -773,7 +777,9 @@ No authorization required
 
 > SushiswapSwapDTO sushiswapGetSwapsCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
+
+Gets swaps.
 
 ### Example
 
@@ -813,7 +819,9 @@ No authorization required
 
 > List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
+
+Gets list of swaps for given filters.
 
 ### Example
 
@@ -865,7 +873,9 @@ No authorization required
 
 > SushiswapTokenDTO sushiswapGetTokensCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
+
+Gets tokens.
 
 ### Example
 
@@ -905,7 +915,9 @@ No authorization required
 
 > List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
+
+Gets list of tokens for given filters.
 
 ### Example
 

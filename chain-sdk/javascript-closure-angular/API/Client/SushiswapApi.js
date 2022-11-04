@@ -744,8 +744,8 @@ API.Client.SushiswapApi.prototype.dappsSushiswapUsersHistoricalGet = function(op
 }
 
 /**
- * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
- * 
+ * Sushiswap.GetPools (current)
+ * Gets pools.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
  */
@@ -775,8 +775,8 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsCurrent = function(opt_extraH
 }
 
 /**
- * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
- * 
+ * Sushiswap.GetPools (historical)
+ * Gets list of pools for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -831,8 +831,8 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHistorical = function(opt_sta
 }
 
 /**
- * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
- * 
+ * Sushiswap.GetSwaps (current)
+ * Gets swaps.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!API.Client.Sushiswap.SwapDTO>}
  */
@@ -862,8 +862,8 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraH
 }
 
 /**
- * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
- * 
+ * Sushiswap.GetSwaps (historical)
+ * Gets list of swaps for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -918,8 +918,8 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 }
 
 /**
- * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
- * 
+ * Sushiswap.GetTokens (current)
+ * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!API.Client.Sushiswap.TokenDTO>}
  */
@@ -949,8 +949,8 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensCurrent = function(opt_extra
 }
 
 /**
- * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
- * 
+ * Sushiswap.GetTokens (historical)
+ * Gets list of tokens for given filters.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 

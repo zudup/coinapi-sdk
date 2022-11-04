@@ -275,6 +275,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets pools.
+   * 
    * Expected answers:
    *   code 200 : Seq[PairDTO] (successful operation)
    */
@@ -284,6 +286,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets list of pools for given filters.
+   * 
    * Expected answers:
    *   code 200 : Seq[PairDTO] (successful operation)
    * 
@@ -304,6 +308,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets swaps.
+   * 
    * Expected answers:
    *   code 200 : SwapDTO (successful operation)
    */
@@ -313,6 +319,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets list of swaps for given filters.
+   * 
    * Expected answers:
    *   code 200 : Seq[SwapDTO] (successful operation)
    * 
@@ -333,6 +341,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets tokens.
+   * 
    * Expected answers:
    *   code 200 : TokenDTO (successful operation)
    */
@@ -342,6 +352,8 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets list of tokens for given filters.
+   * 
    * Expected answers:
    *   code 200 : Seq[TokenDTO] (successful operation)
    * 

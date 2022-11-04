@@ -835,8 +835,8 @@ class SushiswapApi {
     return _response;
   }
 
-  /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-  /// 
+  /// Sushiswap.GetPools (current)
+  /// Gets pools.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -907,8 +907,8 @@ class SushiswapApi {
     );
   }
 
-  /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-  /// 
+  /// Sushiswap.GetPools (historical)
+  /// Gets list of pools for given filters.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -998,8 +998,8 @@ class SushiswapApi {
     );
   }
 
-  /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-  /// 
+  /// Sushiswap.GetSwaps (current)
+  /// Gets swaps.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1070,8 +1070,8 @@ class SushiswapApi {
     );
   }
 
-  /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-  /// 
+  /// Sushiswap.GetSwaps (historical)
+  /// Gets list of swaps for given filters.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -1161,8 +1161,8 @@ class SushiswapApi {
     );
   }
 
-  /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-  /// 
+  /// Sushiswap.GetTokens (current)
+  /// Gets tokens.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1233,8 +1233,8 @@ class SushiswapApi {
     );
   }
 
-  /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-  /// 
+  /// Sushiswap.GetTokens (historical)
+  /// Gets list of tokens for given filters.
   ///
   /// Parameters:
   /// * [startBlock] 

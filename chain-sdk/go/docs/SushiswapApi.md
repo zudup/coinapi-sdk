@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **Get** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **Get** /dapps/sushiswap/users/historical | 
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 
 
 
@@ -941,7 +941,9 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsCurrent(ctx).Execute()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
+
+
 
 ### Example
 
@@ -1000,7 +1002,9 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
+
+
 
 ### Example
 
@@ -1073,7 +1077,9 @@ No authorization required
 
 > SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
+
+
 
 ### Example
 
@@ -1132,7 +1138,9 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
+
+
 
 ### Example
 
@@ -1205,7 +1213,9 @@ No authorization required
 
 > SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
+
+
 
 ### Example
 
@@ -1264,7 +1274,9 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
+
+
 
 ### Example
 

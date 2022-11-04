@@ -469,9 +469,9 @@ bool dappsSushiswapUsersHistoricalGetAsync(char * accessToken,
 	void(* handler)(Error, void* ) , void* userData);
 
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.. *Synchronous*
+/*! \brief Sushiswap.GetPools (current). *Synchronous*
  *
- * 
+ * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -481,9 +481,9 @@ bool sushiswapGetPools (current)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.. *Asynchronous*
+/*! \brief Sushiswap.GetPools (current). *Asynchronous*
  *
- * 
+ * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -494,9 +494,9 @@ bool sushiswapGetPools (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.. *Synchronous*
+/*! \brief Sushiswap.GetPools (historical). *Synchronous*
  *
- * 
+ * Gets list of pools for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -511,9 +511,9 @@ bool sushiswapGetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.. *Asynchronous*
+/*! \brief Sushiswap.GetPools (historical). *Asynchronous*
  *
- * 
+ * Gets list of pools for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -529,9 +529,9 @@ bool sushiswapGetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.. *Synchronous*
+/*! \brief Sushiswap.GetSwaps (current). *Synchronous*
  *
- * 
+ * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -541,9 +541,9 @@ bool sushiswapGetSwaps (current)Sync(char * accessToken,
 	void(* handler)(Sushiswap.SwapDTO, Error, void* )
 	, void* userData);
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.. *Asynchronous*
+/*! \brief Sushiswap.GetSwaps (current). *Asynchronous*
  *
- * 
+ * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -554,9 +554,9 @@ bool sushiswapGetSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.. *Synchronous*
+/*! \brief Sushiswap.GetSwaps (historical). *Synchronous*
  *
- * 
+ * Gets list of swaps for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -571,9 +571,9 @@ bool sushiswapGetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.. *Asynchronous*
+/*! \brief Sushiswap.GetSwaps (historical). *Asynchronous*
  *
- * 
+ * Gets list of swaps for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -589,9 +589,9 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.. *Synchronous*
+/*! \brief Sushiswap.GetTokens (current). *Synchronous*
  *
- * 
+ * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -601,9 +601,9 @@ bool sushiswapGetTokens (current)Sync(char * accessToken,
 	void(* handler)(Sushiswap.TokenDTO, Error, void* )
 	, void* userData);
 
-/*! \brief Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.. *Asynchronous*
+/*! \brief Sushiswap.GetTokens (current). *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -614,9 +614,9 @@ bool sushiswapGetTokens (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.. *Synchronous*
+/*! \brief Sushiswap.GetTokens (historical). *Synchronous*
  *
- * 
+ * Gets list of tokens for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -631,9 +631,9 @@ bool sushiswapGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.. *Asynchronous*
+/*! \brief Sushiswap.GetTokens (historical). *Asynchronous*
  *
- * 
+ * Gets list of tokens for given filters.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 

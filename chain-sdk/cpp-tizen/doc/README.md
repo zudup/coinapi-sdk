@@ -177,18 +177,18 @@ Method | HTTP request | Description
 *dappsSushiswapTransactionsHistoricalGetASync* | *GET* /dapps/sushiswap/transactions/historical | .
 *dappsSushiswapUsersHistoricalGetSync* | *GET* /dapps/sushiswap/users/historical | .
 *dappsSushiswapUsersHistoricalGetASync* | *GET* /dapps/sushiswap/users/historical | .
-*sushiswapGetPools (current)Sync* | *GET* /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO..
-*sushiswapGetPools (current)ASync* | *GET* /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO..
-*sushiswapGetPools (historical)Sync* | *GET* /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters..
-*sushiswapGetPools (historical)ASync* | *GET* /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters..
-*sushiswapGetSwaps (current)Sync* | *GET* /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO..
-*sushiswapGetSwaps (current)ASync* | *GET* /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO..
-*sushiswapGetSwaps (historical)Sync* | *GET* /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters..
-*sushiswapGetSwaps (historical)ASync* | *GET* /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters..
-*sushiswapGetTokens (current)Sync* | *GET* /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO..
-*sushiswapGetTokens (current)ASync* | *GET* /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO..
-*sushiswapGetTokens (historical)Sync* | *GET* /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters..
-*sushiswapGetTokens (historical)ASync* | *GET* /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters..
+*sushiswapGetPools (current)Sync* | *GET* /dapps/sushiswap/pools/current | Sushiswap.GetPools (current).
+*sushiswapGetPools (current)ASync* | *GET* /dapps/sushiswap/pools/current | Sushiswap.GetPools (current).
+*sushiswapGetPools (historical)Sync* | *GET* /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical).
+*sushiswapGetPools (historical)ASync* | *GET* /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical).
+*sushiswapGetSwaps (current)Sync* | *GET* /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current).
+*sushiswapGetSwaps (current)ASync* | *GET* /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current).
+*sushiswapGetSwaps (historical)Sync* | *GET* /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical).
+*sushiswapGetSwaps (historical)ASync* | *GET* /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical).
+*sushiswapGetTokens (current)Sync* | *GET* /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current).
+*sushiswapGetTokens (current)ASync* | *GET* /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current).
+*sushiswapGetTokens (historical)Sync* | *GET* /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical).
+*sushiswapGetTokens (historical)ASync* | *GET* /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical).
 
 
 ### UniswapV2Manager

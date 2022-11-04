@@ -269,18 +269,18 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    /// Sushiswap.GetPools (current)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets pools.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
-    /// Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    /// Sushiswap.GetPools (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets list of pools for given filters.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -295,18 +295,18 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    /// Sushiswap.GetSwaps (current)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets swaps.
     /// </remarks>
     pplx::task<std::shared_ptr<Sushiswap_SwapDTO>> sushiswap_GetSwaps__current(
     ) const;
     /// <summary>
-    /// Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    /// Sushiswap.GetSwaps (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets list of swaps for given filters.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -321,18 +321,18 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    /// Sushiswap.GetTokens (current)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens.
     /// </remarks>
     pplx::task<std::shared_ptr<Sushiswap_TokenDTO>> sushiswap_GetTokens__current(
     ) const;
     /// <summary>
-    /// Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    /// Sushiswap.GetTokens (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets list of tokens for given filters.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>

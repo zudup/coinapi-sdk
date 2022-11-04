@@ -566,8 +566,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-			-- 
+			-- Sushiswap.GetPools (current)
+			-- Gets pools.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DTO]
@@ -599,8 +599,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-			-- 
+			-- Sushiswap.GetPools (historical)
+			-- Gets list of pools for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -647,8 +647,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_current : detachable SUSHISWAP_SWAP_DTO
-			-- Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-			-- 
+			-- Sushiswap.GetSwaps (current)
+			-- Gets swaps.
 			-- 
 			-- 
 			-- Result SUSHISWAP_SWAP_DTO
@@ -680,8 +680,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-			-- 
+			-- Sushiswap.GetSwaps (historical)
+			-- Gets list of swaps for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -728,8 +728,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_current : detachable SUSHISWAP_TOKEN_DTO
-			-- Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-			-- 
+			-- Sushiswap.GetTokens (current)
+			-- Gets tokens.
 			-- 
 			-- 
 			-- Result SUSHISWAP_TOKEN_DTO
@@ -761,8 +761,8 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-			-- 
+			-- Sushiswap.GetTokens (historical)
+			-- Gets list of tokens for given filters.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 

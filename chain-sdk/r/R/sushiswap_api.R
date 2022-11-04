@@ -255,7 +255,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsCurrent } \emph{ Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. }
+#' \strong{ SushiswapGetPoolsCurrent } \emph{ Sushiswap.GetPools (current) }
+#' Gets pools.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{Sushiswap.PairDTO} ) \cr
@@ -270,7 +271,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsHistorical } \emph{ Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. }
+#' \strong{ SushiswapGetPoolsHistorical } \emph{ Sushiswap.GetPools (historical) }
+#' Gets list of pools for given filters.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -290,7 +292,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsCurrent } \emph{ Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. }
+#' \strong{ SushiswapGetSwapsCurrent } \emph{ Sushiswap.GetSwaps (current) }
+#' Gets swaps.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } \link{SushiswapSwapDTO} \cr
@@ -305,7 +308,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsHistorical } \emph{ Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. }
+#' \strong{ SushiswapGetSwapsHistorical } \emph{ Sushiswap.GetSwaps (historical) }
+#' Gets list of swaps for given filters.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -325,7 +329,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensCurrent } \emph{ Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. }
+#' \strong{ SushiswapGetTokensCurrent } \emph{ Sushiswap.GetTokens (current) }
+#' Gets tokens.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } \link{SushiswapTokenDTO} \cr
@@ -340,7 +345,8 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensHistorical } \emph{ Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. }
+#' \strong{ SushiswapGetTokensHistorical } \emph{ Sushiswap.GetTokens (historical) }
+#' Gets list of tokens for given filters.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -545,7 +551,7 @@
 #'
 #' library(openapi)
 #'
-#' #Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+#' #Sushiswap.GetPools (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -563,7 +569,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+#' #Sushiswap.GetPools (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -576,7 +582,7 @@
 #'
 #' library(openapi)
 #'
-#' #Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+#' #Sushiswap.GetSwaps (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -594,7 +600,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+#' #Sushiswap.GetSwaps (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -607,7 +613,7 @@
 #'
 #' library(openapi)
 #'
-#' #Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+#' #Sushiswap.GetTokens (current)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -625,7 +631,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+#' #Sushiswap.GetTokens (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1900,10 +1906,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    #' Sushiswap.GetPools (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    #' Sushiswap.GetPools (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1921,10 +1927,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    #' Sushiswap.GetPools (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    #' Sushiswap.GetPools (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1986,10 +1992,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    #' Sushiswap.GetPools (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    #' Sushiswap.GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2012,10 +2018,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    #' Sushiswap.GetPools (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    #' Sushiswap.GetPools (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2097,10 +2103,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    #' Sushiswap.GetSwaps (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    #' Sushiswap.GetSwaps (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2118,10 +2124,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    #' Sushiswap.GetSwaps (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    #' Sushiswap.GetSwaps (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2183,10 +2189,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    #' Sushiswap.GetSwaps (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    #' Sushiswap.GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2209,10 +2215,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    #' Sushiswap.GetSwaps (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    #' Sushiswap.GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2294,10 +2300,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    #' Sushiswap.GetTokens (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    #' Sushiswap.GetTokens (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2315,10 +2321,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    #' Sushiswap.GetTokens (current)
     #'
     #' @description
-    #' Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    #' Sushiswap.GetTokens (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2380,10 +2386,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    #' Sushiswap.GetTokens (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    #' Sushiswap.GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2406,10 +2412,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    #' Sushiswap.GetTokens (historical)
     #'
     #' @description
-    #' Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    #' Sushiswap.GetTokens (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description

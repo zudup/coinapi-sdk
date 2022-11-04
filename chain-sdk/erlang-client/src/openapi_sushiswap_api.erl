@@ -295,8 +295,8 @@ dapps_sushiswap_users_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-%% 
+%% @doc Sushiswap.GetPools (current)
+%% Gets pools.
 -spec sushiswap_get_pools_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_pools_(current)(Ctx) ->
     sushiswap_get_pools_(current)(Ctx, #{}).
@@ -316,8 +316,8 @@ sushiswap_get_pools_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-%% 
+%% @doc Sushiswap.GetPools (historical)
+%% Gets list of pools for given filters.
 -spec sushiswap_get_pools_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_pools_(historical)(Ctx) ->
     sushiswap_get_pools_(historical)(Ctx, #{}).
@@ -337,8 +337,8 @@ sushiswap_get_pools_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-%% 
+%% @doc Sushiswap.GetSwaps (current)
+%% Gets swaps.
 -spec sushiswap_get_swaps_(current)(ctx:ctx()) -> {ok, openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_swaps_(current)(Ctx) ->
     sushiswap_get_swaps_(current)(Ctx, #{}).
@@ -358,8 +358,8 @@ sushiswap_get_swaps_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-%% 
+%% @doc Sushiswap.GetSwaps (historical)
+%% Gets list of swaps for given filters.
 -spec sushiswap_get_swaps_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_swaps_(historical)(Ctx) ->
     sushiswap_get_swaps_(historical)(Ctx, #{}).
@@ -379,8 +379,8 @@ sushiswap_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-%% 
+%% @doc Sushiswap.GetTokens (current)
+%% Gets tokens.
 -spec sushiswap_get_tokens_(current)(ctx:ctx()) -> {ok, openapi_sushiswap_token_dto:openapi_sushiswap_token_dto(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_tokens_(current)(Ctx) ->
     sushiswap_get_tokens_(current)(Ctx, #{}).
@@ -400,8 +400,8 @@ sushiswap_get_tokens_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-%% 
+%% @doc Sushiswap.GetTokens (historical)
+%% Gets list of tokens for given filters.
 -spec sushiswap_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_tokens_(historical)(Ctx) ->
     sushiswap_get_tokens_(historical)(Ctx, #{}).

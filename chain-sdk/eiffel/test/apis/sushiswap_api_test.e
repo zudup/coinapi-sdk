@@ -229,9 +229,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_current
-            -- Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+            -- Sushiswap.GetPools (current)
             --
-            -- 
+            -- Gets pools.
         local
             l_response: LIST [SUSHISWAP_PAIR_DTO]
         do
@@ -242,9 +242,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_historical
-            -- Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+            -- Sushiswap.GetPools (historical)
             --
-            -- 
+            -- Gets list of pools for given filters.
         local
             l_response: LIST [SUSHISWAP_PAIR_DTO]
             l_start_block: INTEGER_64
@@ -260,9 +260,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_current
-            -- Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+            -- Sushiswap.GetSwaps (current)
             --
-            -- 
+            -- Gets swaps.
         local
             l_response: SUSHISWAP_SWAP_DTO
         do
@@ -273,9 +273,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+            -- Sushiswap.GetSwaps (historical)
             --
-            -- 
+            -- Gets list of swaps for given filters.
         local
             l_response: LIST [SUSHISWAP_SWAP_DTO]
             l_start_block: INTEGER_64
@@ -291,9 +291,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_current
-            -- Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+            -- Sushiswap.GetTokens (current)
             --
-            -- 
+            -- Gets tokens.
         local
             l_response: SUSHISWAP_TOKEN_DTO
         do
@@ -304,9 +304,9 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+            -- Sushiswap.GetTokens (historical)
             --
-            -- 
+            -- Gets list of tokens for given filters.
         local
             l_response: LIST [SUSHISWAP_TOKEN_DTO]
             l_start_block: INTEGER_64

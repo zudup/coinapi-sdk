@@ -631,7 +631,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
      */
@@ -667,7 +668,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -715,7 +717,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SushiswapSwapDTO}
      */
@@ -751,7 +754,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -799,7 +803,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @param {module:api/SushiswapApi~sushiswapGetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SushiswapTokenDTO}
      */
@@ -835,7 +840,8 @@ export default class SushiswapApi {
      */
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 

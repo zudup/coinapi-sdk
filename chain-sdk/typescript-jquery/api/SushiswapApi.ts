@@ -985,8 +985,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Gets pools.
+     * @summary Sushiswap.GetPools (current)
      */
     public sushiswapGetPoolsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
@@ -1043,8 +1043,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Gets list of pools for given filters.
+     * @summary Sushiswap.GetPools (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1121,8 +1121,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Gets swaps.
+     * @summary Sushiswap.GetSwaps (current)
      */
     public sushiswapGetSwapsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: models.SushiswapSwapDTO;  },
@@ -1179,8 +1179,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Gets list of swaps for given filters.
+     * @summary Sushiswap.GetSwaps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1257,8 +1257,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Gets tokens.
+     * @summary Sushiswap.GetTokens (current)
      */
     public sushiswapGetTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: models.SushiswapTokenDTO;  },
@@ -1315,8 +1315,8 @@ export class SushiswapApi {
     }
 
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Gets list of tokens for given filters.
+     * @summary Sushiswap.GetTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

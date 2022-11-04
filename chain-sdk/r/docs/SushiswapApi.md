@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 
 
 # **DappsSushiswapBundlesHistoricalGet**
@@ -640,13 +640,15 @@ No authorization required
 # **SushiswapGetPoolsCurrent**
 > array[SushiswapPairDTO] SushiswapGetPoolsCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
+
+Gets pools.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+# Sushiswap.GetPools (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -680,13 +682,15 @@ No authorization required
 # **SushiswapGetPoolsHistorical**
 > array[SushiswapPairDTO] SushiswapGetPoolsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
+
+Gets list of pools for given filters.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+# Sushiswap.GetPools (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -733,13 +737,15 @@ No authorization required
 # **SushiswapGetSwapsCurrent**
 > SushiswapSwapDTO SushiswapGetSwapsCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
+
+Gets swaps.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+# Sushiswap.GetSwaps (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -773,13 +779,15 @@ No authorization required
 # **SushiswapGetSwapsHistorical**
 > array[SushiswapSwapDTO] SushiswapGetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
+
+Gets list of swaps for given filters.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+# Sushiswap.GetSwaps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -826,13 +834,15 @@ No authorization required
 # **SushiswapGetTokensCurrent**
 > SushiswapTokenDTO SushiswapGetTokensCurrent()
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
+
+Gets tokens.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+# Sushiswap.GetTokens (current)
 #
 
 api_instance <- SushiswapApi$new()
@@ -866,13 +876,15 @@ No authorization required
 # **SushiswapGetTokensHistorical**
 > array[SushiswapTokenDTO] SushiswapGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
+
+Gets list of tokens for given filters.
 
 ### Example
 ```R
 library(openapi)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+# Sushiswap.GetTokens (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

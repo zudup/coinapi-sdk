@@ -215,6 +215,8 @@ dappsSushiswapUsersHistoricalGet startBlock_query endBlock_query startDate_query
 
 
 
+{-| Gets pools.
+-}
 sushiswapGetPoolsCurrent : Api.Request (List Api.Data.SushiswapPairDTO)
 sushiswapGetPoolsCurrent =
     Api.request
@@ -228,6 +230,8 @@ sushiswapGetPoolsCurrent =
 
 
 
+{-| Gets list of pools for given filters.
+-}
 sushiswapGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
 sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
@@ -241,6 +245,8 @@ sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
+{-| Gets swaps.
+-}
 sushiswapGetSwapsCurrent : Api.Request Api.Data.SushiswapSwapDTO
 sushiswapGetSwapsCurrent =
     Api.request
@@ -254,6 +260,8 @@ sushiswapGetSwapsCurrent =
 
 
 
+{-| Gets list of swaps for given filters.
+-}
 sushiswapGetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapSwapDTO)
 sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
@@ -267,6 +275,8 @@ sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
+{-| Gets tokens.
+-}
 sushiswapGetTokensCurrent : Api.Request Api.Data.SushiswapTokenDTO
 sushiswapGetTokensCurrent =
     Api.request
@@ -280,6 +290,8 @@ sushiswapGetTokensCurrent =
 
 
 
+{-| Gets list of tokens for given filters.
+-}
 sushiswapGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDTO)
 sushiswapGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request

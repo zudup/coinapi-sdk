@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapTokensHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapTokensHistorical unit test stubs
-        Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.  # noqa: E501
+        Sushiswap.GetTokens (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

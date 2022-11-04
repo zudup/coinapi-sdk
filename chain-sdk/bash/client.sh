@@ -1929,12 +1929,12 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapTransactionsHistoricalGet${OFF};
   ${CYAN}dappsSushiswapUsersHistoricalGet${OFF};
-  ${CYAN}sushiswapGetPoolsCurrent${OFF};Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-  ${CYAN}sushiswapGetPoolsHistorical${OFF};Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-  ${CYAN}sushiswapGetSwapsCurrent${OFF};Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-  ${CYAN}sushiswapGetSwapsHistorical${OFF};Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-  ${CYAN}sushiswapGetTokensCurrent${OFF};Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-  ${CYAN}sushiswapGetTokensHistorical${OFF};Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+  ${CYAN}sushiswapGetPoolsCurrent${OFF};Sushiswap.GetPools (current)
+  ${CYAN}sushiswapGetPoolsHistorical${OFF};Sushiswap.GetPools (historical)
+  ${CYAN}sushiswapGetSwapsCurrent${OFF};Sushiswap.GetSwaps (current)
+  ${CYAN}sushiswapGetSwapsHistorical${OFF};Sushiswap.GetSwaps (historical)
+  ${CYAN}sushiswapGetTokensCurrent${OFF};Sushiswap.GetTokens (current)
+  ${CYAN}sushiswapGetTokensHistorical${OFF};Sushiswap.GetTokens (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3504,7 +3504,9 @@ print_dappsSushiswapUsersHistoricalGet_help() {
 ##############################################################################
 print_sushiswapGetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - Sushiswap.GetPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3518,7 +3520,9 @@ print_sushiswapGetPoolsCurrent_help() {
 ##############################################################################
 print_sushiswapGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - Sushiswap.GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets list of pools for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3543,7 +3547,9 @@ print_sushiswapGetPoolsHistorical_help() {
 ##############################################################################
 print_sushiswapGetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - Sushiswap.GetSwaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3557,7 +3563,9 @@ print_sushiswapGetSwapsCurrent_help() {
 ##############################################################################
 print_sushiswapGetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - Sushiswap.GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets list of swaps for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3582,7 +3590,9 @@ print_sushiswapGetSwapsHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - Sushiswap.GetTokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3596,7 +3606,9 @@ print_sushiswapGetTokensCurrent_help() {
 ##############################################################################
 print_sushiswapGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - Sushiswap.GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets list of tokens for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \

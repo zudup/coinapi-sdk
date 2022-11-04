@@ -859,7 +859,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    # Sushiswap.GetPools (current)
+    # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairDTO>]
     def sushiswap_get_pools__current(opts = {})
@@ -867,7 +868,8 @@ module OpenapiClient
       data
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    # Sushiswap.GetPools (current)
+    # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
     def sushiswap_get_pools__current_with_http_info(opts = {})
@@ -914,7 +916,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    # Sushiswap.GetPools (historical)
+    # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -927,7 +930,8 @@ module OpenapiClient
       data
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    # Sushiswap.GetPools (historical)
+    # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -984,7 +988,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    # Sushiswap.GetSwaps (current)
+    # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [SushiswapSwapDTO]
     def sushiswap_get_swaps__current(opts = {})
@@ -992,7 +997,8 @@ module OpenapiClient
       data
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    # Sushiswap.GetSwaps (current)
+    # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [Array<(SushiswapSwapDTO, Integer, Hash)>] SushiswapSwapDTO data, response status code and response headers
     def sushiswap_get_swaps__current_with_http_info(opts = {})
@@ -1039,7 +1045,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    # Sushiswap.GetSwaps (historical)
+    # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1052,7 +1059,8 @@ module OpenapiClient
       data
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    # Sushiswap.GetSwaps (historical)
+    # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1109,7 +1117,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    # Sushiswap.GetTokens (current)
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [SushiswapTokenDTO]
     def sushiswap_get_tokens__current(opts = {})
@@ -1117,7 +1126,8 @@ module OpenapiClient
       data
     end
 
-    # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    # Sushiswap.GetTokens (current)
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<(SushiswapTokenDTO, Integer, Hash)>] SushiswapTokenDTO data, response status code and response headers
     def sushiswap_get_tokens__current_with_http_info(opts = {})
@@ -1164,7 +1174,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    # Sushiswap.GetTokens (historical)
+    # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -1177,7 +1188,8 @@ module OpenapiClient
       data
     end
 
-    # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    # Sushiswap.GetTokens (historical)
+    # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 

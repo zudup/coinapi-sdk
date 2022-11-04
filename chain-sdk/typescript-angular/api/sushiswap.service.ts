@@ -1106,7 +1106,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1162,7 +1163,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1246,7 +1248,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1302,7 +1305,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1386,7 +1390,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1442,7 +1447,8 @@ export class SushiswapService {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

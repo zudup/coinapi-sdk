@@ -1285,13 +1285,13 @@ sub dapps_sushiswap_users_historical_get {
 #
 # sushiswap_get_pools__current
 #
-# Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+# Sushiswap.GetPools (current)
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__current' } = {
-        summary => 'Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.',
+        summary => 'Sushiswap.GetPools (current)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -1334,7 +1334,7 @@ sub sushiswap_get_pools__current {
 #
 # sushiswap_get_pools__historical
 #
-# Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+# Sushiswap.GetPools (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1370,7 +1370,7 @@ sub sushiswap_get_pools__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__historical' } = {
-        summary => 'Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.',
+        summary => 'Sushiswap.GetPools (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -1438,13 +1438,13 @@ sub sushiswap_get_pools__historical {
 #
 # sushiswap_get_swaps__current
 #
-# Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+# Sushiswap.GetSwaps (current)
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__current' } = {
-        summary => 'Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.',
+        summary => 'Sushiswap.GetSwaps (current)',
         params => $params,
         returns => 'SushiswapSwapDTO',
         };
@@ -1487,7 +1487,7 @@ sub sushiswap_get_swaps__current {
 #
 # sushiswap_get_swaps__historical
 #
-# Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+# Sushiswap.GetSwaps (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1523,7 +1523,7 @@ sub sushiswap_get_swaps__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__historical' } = {
-        summary => 'Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.',
+        summary => 'Sushiswap.GetSwaps (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1591,13 +1591,13 @@ sub sushiswap_get_swaps__historical {
 #
 # sushiswap_get_tokens__current
 #
-# Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+# Sushiswap.GetTokens (current)
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__current' } = {
-        summary => 'Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.',
+        summary => 'Sushiswap.GetTokens (current)',
         params => $params,
         returns => 'SushiswapTokenDTO',
         };
@@ -1640,7 +1640,7 @@ sub sushiswap_get_tokens__current {
 #
 # sushiswap_get_tokens__historical
 #
-# Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+# Sushiswap.GetTokens (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1676,7 +1676,7 @@ sub sushiswap_get_tokens__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__historical' } = {
-        summary => 'Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.',
+        summary => 'Sushiswap.GetTokens (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };

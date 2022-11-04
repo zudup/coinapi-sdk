@@ -1073,8 +1073,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Gets pools.
+     * @summary Sushiswap.GetPools (current)
      */
     public async sushiswapGetPoolsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pools/current';
@@ -1135,8 +1135,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Gets list of pools for given filters.
+     * @summary Sushiswap.GetPools (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1222,8 +1222,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Gets swaps.
+     * @summary Sushiswap.GetSwaps (current)
      */
     public async sushiswapGetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SushiswapSwapDTO;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/swaps/current';
@@ -1284,8 +1284,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Gets list of swaps for given filters.
+     * @summary Sushiswap.GetSwaps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1371,8 +1371,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Gets tokens.
+     * @summary Sushiswap.GetTokens (current)
      */
     public async sushiswapGetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SushiswapTokenDTO;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/tokens/current';
@@ -1433,8 +1433,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * 
-     * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Gets list of tokens for given filters.
+     * @summary Sushiswap.GetTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

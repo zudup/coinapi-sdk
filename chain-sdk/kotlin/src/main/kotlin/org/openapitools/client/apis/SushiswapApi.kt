@@ -1260,8 +1260,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-     * 
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1290,8 +1290,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-     * 
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1327,8 +1327,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-     * 
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1362,8 +1362,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-     * 
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1426,8 +1426,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-     * 
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @return SushiswapSwapDTO
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1456,8 +1456,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-     * 
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @return ApiResponse<SushiswapSwapDTO?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1493,8 +1493,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-     * 
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1528,8 +1528,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-     * 
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1592,8 +1592,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-     * 
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @return SushiswapTokenDTO
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1622,8 +1622,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-     * 
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @return ApiResponse<SushiswapTokenDTO?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1659,8 +1659,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-     * 
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1694,8 +1694,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-     * 
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)

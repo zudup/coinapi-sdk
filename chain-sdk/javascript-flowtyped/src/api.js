@@ -6098,8 +6098,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+         * Gets pools.
+         * @summary Sushiswap.GetPools (current)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options: RequestOptions): FetchArgs {
@@ -6120,8 +6120,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+         * Gets list of pools for given filters.
+         * @summary Sushiswap.GetPools (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6162,8 +6162,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+         * Gets swaps.
+         * @summary Sushiswap.GetSwaps (current)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options: RequestOptions): FetchArgs {
@@ -6184,8 +6184,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+         * Gets list of swaps for given filters.
+         * @summary Sushiswap.GetSwaps (historical)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6226,8 +6226,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+         * Gets tokens.
+         * @summary Sushiswap.GetTokens (current)
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options: RequestOptions): FetchArgs {
@@ -6248,8 +6248,8 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+         * Gets list of tokens for given filters.
+         * @summary Sushiswap.GetTokens (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -6522,8 +6522,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+         * Gets pools.
+         * @summary Sushiswap.GetPools (current)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -6537,8 +6537,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+         * Gets list of pools for given filters.
+         * @summary Sushiswap.GetPools (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -6552,8 +6552,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+         * Gets swaps.
+         * @summary Sushiswap.GetSwaps (current)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<SushiswapSwapDTO> {
@@ -6567,8 +6567,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+         * Gets list of swaps for given filters.
+         * @summary Sushiswap.GetSwaps (historical)
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
@@ -6582,8 +6582,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+         * Gets tokens.
+         * @summary Sushiswap.GetTokens (current)
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<SushiswapTokenDTO> {
@@ -6597,8 +6597,8 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * 
-         * @summary Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+         * Gets list of tokens for given filters.
+         * @summary Sushiswap.GetTokens (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {

@@ -1683,7 +1683,9 @@ func (r ApiSushiswapGetPoolsCurrentRequest) Execute() ([]SushiswapPairDTO, *http
 }
 
 /*
-SushiswapGetPoolsCurrent Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+SushiswapGetPoolsCurrent Sushiswap.GetPools (current)
+
+Gets pools.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPoolsCurrentRequest
@@ -1810,7 +1812,9 @@ func (r ApiSushiswapGetPoolsHistoricalRequest) Execute() ([]SushiswapPairDTO, *h
 }
 
 /*
-SushiswapGetPoolsHistorical Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+SushiswapGetPoolsHistorical Sushiswap.GetPools (historical)
+
+Gets list of pools for given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPoolsHistoricalRequest
@@ -1922,7 +1926,9 @@ func (r ApiSushiswapGetSwapsCurrentRequest) Execute() (*SushiswapSwapDTO, *http.
 }
 
 /*
-SushiswapGetSwapsCurrent Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+SushiswapGetSwapsCurrent Sushiswap.GetSwaps (current)
+
+Gets swaps.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetSwapsCurrentRequest
@@ -2049,7 +2055,9 @@ func (r ApiSushiswapGetSwapsHistoricalRequest) Execute() ([]SushiswapSwapDTO, *h
 }
 
 /*
-SushiswapGetSwapsHistorical Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+SushiswapGetSwapsHistorical Sushiswap.GetSwaps (historical)
+
+Gets list of swaps for given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetSwapsHistoricalRequest
@@ -2161,7 +2169,9 @@ func (r ApiSushiswapGetTokensCurrentRequest) Execute() (*SushiswapTokenDTO, *htt
 }
 
 /*
-SushiswapGetTokensCurrent Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+SushiswapGetTokensCurrent Sushiswap.GetTokens (current)
+
+Gets tokens.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetTokensCurrentRequest
@@ -2288,7 +2298,9 @@ func (r ApiSushiswapGetTokensHistoricalRequest) Execute() ([]SushiswapTokenDTO, 
 }
 
 /*
-SushiswapGetTokensHistorical Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+SushiswapGetTokensHistorical Sushiswap.GetTokens (historical)
+
+Gets list of tokens for given filters.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetTokensHistoricalRequest

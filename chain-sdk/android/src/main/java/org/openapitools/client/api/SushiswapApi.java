@@ -1692,8 +1692,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-  * 
+  * Sushiswap.GetPools (current)
+  * Gets pools.
    * @return List<SushiswapPairDTO>
   */
   public List<SushiswapPairDTO> sushiswapGetPoolsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1748,8 +1748,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-   * 
+   * Sushiswap.GetPools (current)
+   * Gets pools.
 
   */
   public void sushiswapGetPoolsCurrent (final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1808,8 +1808,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-  * 
+  * Sushiswap.GetPools (historical)
+  * Gets list of pools for given filters.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1874,8 +1874,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-   * 
+   * Sushiswap.GetPools (historical)
+   * Gets list of pools for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
   public void sushiswapGetPoolsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1939,8 +1939,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-  * 
+  * Sushiswap.GetSwaps (current)
+  * Gets swaps.
    * @return SushiswapSwapDTO
   */
   public SushiswapSwapDTO sushiswapGetSwapsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1995,8 +1995,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-   * 
+   * Sushiswap.GetSwaps (current)
+   * Gets swaps.
 
   */
   public void sushiswapGetSwapsCurrent (final Response.Listener<SushiswapSwapDTO> responseListener, final Response.ErrorListener errorListener) {
@@ -2055,8 +2055,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-  * 
+  * Sushiswap.GetSwaps (historical)
+  * Gets list of swaps for given filters.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -2121,8 +2121,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-   * 
+   * Sushiswap.GetSwaps (historical)
+   * Gets list of swaps for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
   public void sushiswapGetSwapsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2186,8 +2186,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-  * 
+  * Sushiswap.GetTokens (current)
+  * Gets tokens.
    * @return SushiswapTokenDTO
   */
   public SushiswapTokenDTO sushiswapGetTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -2242,8 +2242,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-   * 
+   * Sushiswap.GetTokens (current)
+   * Gets tokens.
 
   */
   public void sushiswapGetTokensCurrent (final Response.Listener<SushiswapTokenDTO> responseListener, final Response.ErrorListener errorListener) {
@@ -2302,8 +2302,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-  * 
+  * Sushiswap.GetTokens (historical)
+  * Gets list of tokens for given filters.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -2368,8 +2368,8 @@ public class SushiswapApi {
   }
 
       /**
-   * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-   * 
+   * Sushiswap.GetTokens (historical)
+   * Gets list of tokens for given filters.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
   public void sushiswapGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {

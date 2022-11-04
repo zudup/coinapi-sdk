@@ -17,12 +17,12 @@ Method | HTTP request | Description
 [**Invoke-DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**Invoke-DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
 [**Invoke-DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
-[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-[**Invoke-SushiswapGetPoolsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+[**Invoke-SushiswapGetPoolsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 
 
 <a name="Invoke-DappsSushiswapBundlesHistoricalGet"></a>
@@ -687,12 +687,14 @@ No authorization required
 # **Invoke-SushiswapGetPoolsCurrent**
 > SushiswapPairDTO[] Invoke-SushiswapGetPoolsCurrent<br>
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
+
+Gets pools.
 
 ### Example
 ```powershell
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+# Sushiswap.GetPools (current)
 try {
     $Result = Invoke-SushiswapGetPoolsCurrent
 } catch {
@@ -728,7 +730,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
+
+Gets list of pools for given filters.
 
 ### Example
 ```powershell
@@ -738,7 +742,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+# Sushiswap.GetPools (historical)
 try {
     $Result = Invoke-SushiswapGetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -776,12 +780,14 @@ No authorization required
 # **Invoke-SushiswapGetSwapsCurrent**
 > SushiswapSwapDTO Invoke-SushiswapGetSwapsCurrent<br>
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
+
+Gets swaps.
 
 ### Example
 ```powershell
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+# Sushiswap.GetSwaps (current)
 try {
     $Result = Invoke-SushiswapGetSwapsCurrent
 } catch {
@@ -817,7 +823,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
+
+Gets list of swaps for given filters.
 
 ### Example
 ```powershell
@@ -827,7 +835,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+# Sushiswap.GetSwaps (historical)
 try {
     $Result = Invoke-SushiswapGetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -865,12 +873,14 @@ No authorization required
 # **Invoke-SushiswapGetTokensCurrent**
 > SushiswapTokenDTO Invoke-SushiswapGetTokensCurrent<br>
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
+
+Gets tokens.
 
 ### Example
 ```powershell
 
-# Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+# Sushiswap.GetTokens (current)
 try {
     $Result = Invoke-SushiswapGetTokensCurrent
 } catch {
@@ -906,7 +916,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
+
+Gets list of tokens for given filters.
 
 ### Example
 ```powershell
@@ -916,7 +928,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+# Sushiswap.GetTokens (historical)
 try {
     $Result = Invoke-SushiswapGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {

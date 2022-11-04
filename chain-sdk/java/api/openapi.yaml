@@ -37,6 +37,7 @@ tags:
 paths:
   /dapps/sushiswap/pools/current:
     get:
+      description: Gets pools.
       operationId: Sushiswap.GetPools (current)
       responses:
         "200":
@@ -57,12 +58,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+      summary: Sushiswap.GetPools (current)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/swaps/current:
     get:
+      description: Gets swaps.
       operationId: Sushiswap.GetSwaps (current)
       responses:
         "200":
@@ -77,12 +79,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sushiswap.SwapDTO'
           description: successful operation
-      summary: Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+      summary: Sushiswap.GetSwaps (current)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/tokens/current:
     get:
+      description: Gets tokens.
       operationId: Sushiswap.GetTokens (current)
       responses:
         "200":
@@ -97,12 +100,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sushiswap.TokenDTO'
           description: successful operation
-      summary: Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+      summary: Sushiswap.GetTokens (current)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/pools/historical:
     get:
+      description: Gets list of pools for given filters.
       operationId: Sushiswap.GetPools (historical)
       parameters:
       - explode: true
@@ -163,12 +167,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+      summary: Sushiswap.GetPools (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/swaps/historical:
     get:
+      description: Gets list of swaps for given filters.
       operationId: Sushiswap.GetSwaps (historical)
       parameters:
       - explode: true
@@ -229,12 +234,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+      summary: Sushiswap.GetSwaps (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
   /dapps/sushiswap/tokens/historical:
     get:
+      description: Gets list of tokens for given filters.
       operationId: Sushiswap.GetTokens (historical)
       parameters:
       - explode: true
@@ -295,7 +301,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+      summary: Sushiswap.GetTokens (historical)
       tags:
       - Sushiswap
       x-accepts: application/json

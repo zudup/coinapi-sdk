@@ -2016,8 +2016,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-     * 
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2032,8 +2032,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-     * 
+     * Sushiswap.GetPools (current)
+     * Gets pools.
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2049,8 +2049,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO. (asynchronously)
-     * 
+     * Sushiswap.GetPools (current) (asynchronously)
+     * Gets pools.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2156,8 +2156,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-     * 
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2177,8 +2177,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-     * 
+     * Sushiswap.GetPools (historical)
+     * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2199,8 +2199,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters. (asynchronously)
-     * 
+     * Sushiswap.GetPools (historical) (asynchronously)
+     * Gets list of pools for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2286,8 +2286,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-     * 
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @return SushiswapSwapDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2302,8 +2302,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-     * 
+     * Sushiswap.GetSwaps (current)
+     * Gets swaps.
      * @return ApiResponse&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2319,8 +2319,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO. (asynchronously)
-     * 
+     * Sushiswap.GetSwaps (current) (asynchronously)
+     * Gets swaps.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2426,8 +2426,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-     * 
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2447,8 +2447,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-     * 
+     * Sushiswap.GetSwaps (historical)
+     * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2469,8 +2469,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters. (asynchronously)
-     * 
+     * Sushiswap.GetSwaps (historical) (asynchronously)
+     * Gets list of swaps for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2556,8 +2556,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-     * 
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @return SushiswapTokenDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2572,8 +2572,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-     * 
+     * Sushiswap.GetTokens (current)
+     * Gets tokens.
      * @return ApiResponse&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2589,8 +2589,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO. (asynchronously)
-     * 
+     * Sushiswap.GetTokens (current) (asynchronously)
+     * Gets tokens.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2696,8 +2696,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-     * 
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2717,8 +2717,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
-     * 
+     * Sushiswap.GetTokens (historical)
+     * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2739,8 +2739,8 @@ public class SushiswapApi {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters. (asynchronously)
-     * 
+     * Sushiswap.GetTokens (historical) (asynchronously)
+     * Gets list of tokens for given filters.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)

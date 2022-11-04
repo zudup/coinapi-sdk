@@ -401,12 +401,12 @@ Class | Method | HTTP request | Description
 *SushiswapApi* | [**dapps_sushiswap_token_day_data_historical_get**](docs/SushiswapApi.md#dapps_sushiswap_token_day_data_historical_get) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 *SushiswapApi* | [**dapps_sushiswap_transactions_historical_get**](docs/SushiswapApi.md#dapps_sushiswap_transactions_historical_get) | **GET** /dapps/sushiswap/transactions/historical | 
 *SushiswapApi* | [**dapps_sushiswap_users_historical_get**](docs/SushiswapApi.md#dapps_sushiswap_users_historical_get) | **GET** /dapps/sushiswap/users/historical | 
-*SushiswapApi* | [**sushiswap_get_pools__current**](docs/SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
-*SushiswapApi* | [**sushiswap_get_pools__historical**](docs/SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
-*SushiswapApi* | [**sushiswap_get_swaps__current**](docs/SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
-*SushiswapApi* | [**sushiswap_get_swaps__historical**](docs/SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
-*SushiswapApi* | [**sushiswap_get_tokens__current**](docs/SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
-*SushiswapApi* | [**sushiswap_get_tokens__historical**](docs/SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+*SushiswapApi* | [**sushiswap_get_pools__current**](docs/SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Sushiswap.GetPools (current)
+*SushiswapApi* | [**sushiswap_get_pools__historical**](docs/SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Sushiswap.GetPools (historical)
+*SushiswapApi* | [**sushiswap_get_swaps__current**](docs/SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Sushiswap.GetSwaps (current)
+*SushiswapApi* | [**sushiswap_get_swaps__historical**](docs/SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Sushiswap.GetSwaps (historical)
+*SushiswapApi* | [**sushiswap_get_tokens__current**](docs/SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Sushiswap.GetTokens (current)
+*SushiswapApi* | [**sushiswap_get_tokens__historical**](docs/SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Sushiswap.GetTokens (historical)
 *UniswapV2Api* | [**dapps_uniswapv2_bundles_historical_get**](docs/UniswapV2Api.md#dapps_uniswapv2_bundles_historical_get) | **GET** /dapps/uniswapv2/bundles/historical | 
 *UniswapV2Api* | [**dapps_uniswapv2_burns_historical_get**](docs/UniswapV2Api.md#dapps_uniswapv2_burns_historical_get) | **GET** /dapps/uniswapv2/burns/historical | 
 *UniswapV2Api* | [**dapps_uniswapv2_day_data_historical_get**](docs/UniswapV2Api.md#dapps_uniswapv2_day_data_historical_get) | **GET** /dapps/uniswapv2/dayData/historical | 

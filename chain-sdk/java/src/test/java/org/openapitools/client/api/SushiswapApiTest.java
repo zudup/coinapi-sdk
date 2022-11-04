@@ -211,7 +211,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Sushiswap.GetPools (current)
+     *
+     * Gets pools.
      *
      * @throws ApiException if the Api call fails
      */
@@ -222,7 +224,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Sushiswap.GetPools (historical)
+     *
+     * Gets list of pools for given filters.
      *
      * @throws ApiException if the Api call fails
      */
@@ -238,7 +242,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Sushiswap.GetSwaps (current)
+     *
+     * Gets swaps.
      *
      * @throws ApiException if the Api call fails
      */
@@ -249,7 +255,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Sushiswap.GetSwaps (historical)
+     *
+     * Gets list of swaps for given filters.
      *
      * @throws ApiException if the Api call fails
      */
@@ -265,7 +273,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Sushiswap.GetTokens (current)
+     *
+     * Gets tokens.
      *
      * @throws ApiException if the Api call fails
      */
@@ -276,7 +286,9 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Sushiswap.GetTokens (historical)
+     *
+     * Gets list of tokens for given filters.
      *
      * @throws ApiException if the Api call fails
      */

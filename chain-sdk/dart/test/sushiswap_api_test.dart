@@ -82,42 +82,54 @@ void main() {
       // TODO
     });
 
-    // Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+    // Sushiswap.GetPools (current)
+    //
+    // Gets pools.
     //
     //Future<List<SushiswapPairDTO>> sushiswapGetPoolsCurrent() async
     test('test sushiswapGetPoolsCurrent', () async {
       // TODO
     });
 
-    // Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+    // Sushiswap.GetPools (historical)
+    //
+    // Gets list of pools for given filters.
     //
     //Future<List<SushiswapPairDTO>> sushiswapGetPoolsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetPoolsHistorical', () async {
       // TODO
     });
 
-    // Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+    // Sushiswap.GetSwaps (current)
+    //
+    // Gets swaps.
     //
     //Future<SushiswapSwapDTO> sushiswapGetSwapsCurrent() async
     test('test sushiswapGetSwapsCurrent', () async {
       // TODO
     });
 
-    // Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+    // Sushiswap.GetSwaps (historical)
+    //
+    // Gets list of swaps for given filters.
     //
     //Future<List<SushiswapSwapDTO>> sushiswapGetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetSwapsHistorical', () async {
       // TODO
     });
 
-    // Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+    // Sushiswap.GetTokens (current)
+    //
+    // Gets tokens.
     //
     //Future<SushiswapTokenDTO> sushiswapGetTokensCurrent() async
     test('test sushiswapGetTokensCurrent', () async {
       // TODO
     });
 
-    // Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+    // Sushiswap.GetTokens (historical)
+    //
+    // Gets list of tokens for given filters.
     //
     //Future<List<SushiswapTokenDTO>> sushiswapGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
     test('test sushiswapGetTokensHistorical', () async {

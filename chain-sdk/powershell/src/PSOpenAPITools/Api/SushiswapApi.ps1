@@ -1379,7 +1379,7 @@ function Invoke-DappsSushiswapUsersHistoricalGet {
 <#
 .SYNOPSIS
 
-Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+Sushiswap.GetPools (current)
 
 .DESCRIPTION
 
@@ -1454,7 +1454,7 @@ function Invoke-SushiswapGetPoolsCurrent {
 <#
 .SYNOPSIS
 
-Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+Sushiswap.GetPools (historical)
 
 .DESCRIPTION
 
@@ -1579,7 +1579,7 @@ function Invoke-SushiswapGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+Sushiswap.GetSwaps (current)
 
 .DESCRIPTION
 
@@ -1654,7 +1654,7 @@ function Invoke-SushiswapGetSwapsCurrent {
 <#
 .SYNOPSIS
 
-Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+Sushiswap.GetSwaps (historical)
 
 .DESCRIPTION
 
@@ -1779,7 +1779,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+Sushiswap.GetTokens (current)
 
 .DESCRIPTION
 
@@ -1854,7 +1854,7 @@ function Invoke-SushiswapGetTokensCurrent {
 <#
 .SYNOPSIS
 
-Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+Sushiswap.GetTokens (historical)
 
 .DESCRIPTION
 

@@ -416,7 +416,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+     * Gets pools.
+     * Sushiswap.GetPools (current)
      */
     sushiswapGetPoolsCurrent(): Observable<Array<SushiswapPairDTO>>
     sushiswapGetPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
@@ -428,7 +429,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+     * Gets list of pools for given filters.
+     * Sushiswap.GetPools (historical)
      */
     sushiswapGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPoolsHistoricalRequest): Observable<Array<SushiswapPairDTO>>
     sushiswapGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPoolsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
@@ -450,7 +452,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+     * Gets swaps.
+     * Sushiswap.GetSwaps (current)
      */
     sushiswapGetSwapsCurrent(): Observable<SushiswapSwapDTO>
     sushiswapGetSwapsCurrent(opts?: OperationOpts): Observable<AjaxResponse<SushiswapSwapDTO>>
@@ -462,7 +465,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+     * Gets list of swaps for given filters.
+     * Sushiswap.GetSwaps (historical)
      */
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapsHistoricalRequest): Observable<Array<SushiswapSwapDTO>>
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapSwapDTO>>>
@@ -484,7 +488,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+     * Gets tokens.
+     * Sushiswap.GetTokens (current)
      */
     sushiswapGetTokensCurrent(): Observable<SushiswapTokenDTO>
     sushiswapGetTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<SushiswapTokenDTO>>
@@ -496,7 +501,8 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+     * Gets list of tokens for given filters.
+     * Sushiswap.GetTokens (historical)
      */
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: SushiswapGetTokensHistoricalRequest): Observable<Array<SushiswapTokenDTO>>
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: SushiswapGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDTO>>>

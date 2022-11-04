@@ -184,7 +184,8 @@ test_that("DappsSushiswapUsersHistoricalGet", {
 test_that("SushiswapGetPoolsCurrent", {
   # tests for SushiswapGetPoolsCurrent
   # base path: https://onchain.coinapi.io
-  # Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+  # Sushiswap.GetPools (current)
+  # Gets pools.
   # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation
@@ -194,7 +195,8 @@ test_that("SushiswapGetPoolsCurrent", {
 test_that("SushiswapGetPoolsHistorical", {
   # tests for SushiswapGetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+  # Sushiswap.GetPools (historical)
+  # Gets list of pools for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -209,7 +211,8 @@ test_that("SushiswapGetPoolsHistorical", {
 test_that("SushiswapGetSwapsCurrent", {
   # tests for SushiswapGetSwapsCurrent
   # base path: https://onchain.coinapi.io
-  # Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+  # Sushiswap.GetSwaps (current)
+  # Gets swaps.
   # @return [SushiswapSwapDTO]
 
   # uncomment below to test the operation
@@ -219,7 +222,8 @@ test_that("SushiswapGetSwapsCurrent", {
 test_that("SushiswapGetSwapsHistorical", {
   # tests for SushiswapGetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+  # Sushiswap.GetSwaps (historical)
+  # Gets list of swaps for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -234,7 +238,8 @@ test_that("SushiswapGetSwapsHistorical", {
 test_that("SushiswapGetTokensCurrent", {
   # tests for SushiswapGetTokensCurrent
   # base path: https://onchain.coinapi.io
-  # Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+  # Sushiswap.GetTokens (current)
+  # Gets tokens.
   # @return [SushiswapTokenDTO]
 
   # uncomment below to test the operation
@@ -244,7 +249,8 @@ test_that("SushiswapGetTokensCurrent", {
 test_that("SushiswapGetTokensHistorical", {
   # tests for SushiswapGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+  # Sushiswap.GetTokens (historical)
+  # Gets list of tokens for given filters.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)

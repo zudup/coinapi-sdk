@@ -1339,7 +1339,8 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Dapps_Sushiswap_Users_Historical_Get;
 
-   --  Gets latest ETH.DeFi.DTO.Sushiswap.PairDTO.
+   --  Sushiswap.GetPools (current)
+   --  Gets pools.
    procedure Sushiswap_Get_Pools__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector) is
@@ -1355,7 +1356,8 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pools__current;
 
-   --  Gets list of ETH.DeFi.DTO.Sushiswap.PairDTO data for the given filters.
+   --  Sushiswap.GetPools (historical)
+   --  Gets list of pools for given filters.
    procedure Sushiswap_Get_Pools__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -1383,7 +1385,8 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pools__historical;
 
-   --  Gets latest ETH.DeFi.DTO.Sushiswap.SwapDTO.
+   --  Sushiswap.GetSwaps (current)
+   --  Gets swaps.
    procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapSwapDTO_Type) is
@@ -1399,7 +1402,8 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__current;
 
-   --  Gets list of ETH.DeFi.DTO.Sushiswap.SwapDTO data for the given filters.
+   --  Sushiswap.GetSwaps (historical)
+   --  Gets list of swaps for given filters.
    procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -1427,7 +1431,8 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__historical;
 
-   --  Gets latest ETH.DeFi.DTO.Sushiswap.TokenDTO.
+   --  Sushiswap.GetTokens (current)
+   --  Gets tokens.
    procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapTokenDTO_Type) is
@@ -1443,7 +1448,8 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Tokens__current;
 
-   --  Gets list of ETH.DeFi.DTO.Sushiswap.TokenDTO for the given filters.
+   --  Sushiswap.GetTokens (historical)
+   --  Gets list of tokens for given filters.
    procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
